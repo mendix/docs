@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to configure a list of items in Mendix Studio."
 menu_order: 10
 tags: ["studio", "pages", "list", "how to"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -68,7 +69,7 @@ The **Details** button in the inspection report list should open a page with the
 
 	{{% image_container width="250" %}}![Button Properties](attachments/pages-how-to-configure-form/button-properties.png){{% /image_container %}}
 
-3.  In the **Select Page** dialog box, click **New Page**.
+3.  In the **Select Page** dialog box, click the plus icon in the top right corner.
 
 1.  In the **Create new page** dialog box, set the **Title** to **Reports_Details**, and set the **Layout** to **Atlas_Default**. 
 
@@ -129,7 +130,7 @@ Follow the steps below:
 
 9. Click the **Page** property.
 
-10. In the **Select Page** dialog box, click **New Page**.
+10. In the **Select Page** dialog box, click the plus icon in the top right corner.
 
 11. In the **Create new page** dialog box, set the **Title** to **Checklist_Details** and the **Layout** to **PopupLayout**. 
 

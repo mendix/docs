@@ -7,27 +7,27 @@ tags: ["studio pro", "translation", "languages", "translatable text", "add langu
 
 ## 1 Introduction
 
-Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **Project Settings** allows you to select which languages your app will support.
+Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
 ![](attachments/language/01_project_settings.png)
 
 You can reach this tab in two ways:
 
 1. Select the menu option **Language > Language Settings…**.
-2. Open the **Project {Name} > Settings** dialog box from the [Project Explorer](project-explorer) and select the **Language** tab.
+2. Open the **App{Name} > Settings** dialog box from the [App Explorer](project-explorer) and select the **Language** tab.
 
 ## 2 Setting Default Language
 
-There must be a default app project language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
+There must be a default app language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
 
 Setting the default language has two functions:
 
-* it sets the language which will be displayed to the end-user if the end-user is not associated with a Language entity, or if the end-user's language is not enabled in the app
-* it sets the language which will be used if there is no translation of a translatable text in the end-user's language, even if the app has the language enabled
+* It sets the language which will be displayed to the end-user if the end-user is not associated with a Language entity, or if the end-user's language is not enabled in the app
+* It sets the language which will be used if there is no translation of a translatable text in the end-user's language, even if the app has the language enabled
 
 The initial default language is *English, United States*.
 
-## 3 Adding App Project Languages
+## 3 Adding Languages
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 

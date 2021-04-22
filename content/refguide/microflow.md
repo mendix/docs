@@ -37,9 +37,9 @@ Microflow properties consist of the following sections:
 
 #### 2.2.1 Disallow
 
-The **Disallow** property allows you to specify whether the microflow can be to be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
+The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
 
-Disallowing concurrent execution of a microflow is useful if a microflow would interfere with another running instance. For example, if it accesses a global resource.
+Disallowing concurrent execution of a microflow can be useful if a microflow would interfere with another running instance (for example, if it accesses a global resource).
 
 | Option | Description |
 | --- | --- |
@@ -105,10 +105,20 @@ Default: *No*
 
 ## 3 Expose as Microflow Action
 
-There is one other property which is accessible by right-clicking in the microflow and selecting **Properties**.
+This property is accessible by right-clicking in the microflow and selecting **Properties**.
 
-![Expose as Microflow Actin](attachments/microflows-and-nanoflows/microflow-expose.png)
+![Expose as Microflow Action](attachments/microflows-and-nanoflows/microflow-expose.jpg)
 
-By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
+By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action and use the return type of the microflow to generate outcomes / paths in the workflow. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default microflow call action icon is used. The recommended size for the icon is 16x16 pixels.
+
+## 4 Expose as Workflow Action {#expose-as-workflow-action}
+
+This property is accessible by right-clicking in the microflow and selecting **Properties**.
+
+![Expose As Workflow Action](attachments/microflows-and-nanoflows/workflow-expose.jpg)
+
+By selecting the **Expose as workflow action**  option, you can expose the microflow as a [workflow](workflows) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](workflows) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
+
+The caption and category of the workflow action are required, but the icon is optional. When no icon is selected, the default workflow call action icon is used. The recommended size for the icon is 16x16 pixels.

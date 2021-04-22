@@ -22,14 +22,18 @@ An example of snippet call properties is represented in the image below:
 Snippet call properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 General Section {#general}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 General Section {#general}
 
 This section contains the **Snippet** property, it shows the name of an actual snippet that will be displayed here.
 

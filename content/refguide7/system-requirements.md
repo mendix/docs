@@ -18,7 +18,7 @@ The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
-* Microsoft Visual C++ 2013 Redistributable Package
+* Microsoft Visual C++ 2015 Redistributable Package (for [Mendix 7.23.17](/releasenotes/studio-pro/7.23#72317) and above) or Microsoft Visual C++ 2013 Redistributable Package (for [Mendix 7.23.16](/releasenotes/studio-pro/7.23#72316) and below)
 * AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
@@ -66,7 +66,7 @@ The browser you use needs to have JavaScript turned on.
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](mysql) 5.7, 8.0
 * [Oracle Database](oracle) 12c Release 2, 18, 19
-* PostgreSQL 9.5, 9.6, 10, 11, 12
+* PostgreSQL 9.5, 9.6, 10, 11, 12, 13
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

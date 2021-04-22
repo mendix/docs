@@ -1,6 +1,6 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
-parent: "pluggable-widgets"
+parent: "pluggable-parent-9"
 menu_order: 10
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
@@ -35,10 +35,6 @@ A user can specify multiple classes for every widget. They can do this either di
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
 On native pages, the meaning of a `style` prop is very different. First of all, a user cannot specify the aforementioned inline styles for widgets on a native page. So a `style` prop is used to pass styles computed based on configured classes. A client component will receive an array with a single [style object](/refguide/native-styling-refguide#style-objects) with all applicable styles combined.
-
-{{% alert type="info" %}}
-This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
-{{% /alert %}}
 
 ### 3.4 TabIndex
 
@@ -123,7 +119,7 @@ A component will receive `EditableValue<X>` where `X` depends on the configured 
 
 `status` is similar to one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
 
-The flag `readOnly` indicates whether a value can actually be edited. It will be false, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules). The `readOnly` flag is always false when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
+The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
 The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
@@ -206,30 +202,100 @@ export interface ListValue {
     limit: number;
     setOffset(offset: number): void;
     setLimit(limit: Option<number>): void;
+    requestTotalCount(needTotalCount: boolean): void;
     items?: ObjectItem[];
     hasMoreItems?: boolean;
     totalCount?: number;
 }
 ```
 
+When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
-When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access to a data source, and enables control over the limit and offset of items represented in the list.
+The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
 
-However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action) or [`widgets`](property-types-pluggable-widgets#widgets).
+The following code sample sets the offset and limit to load datasource items for a specific range:
 
+```ts
+this.props.myDataSource.setOffset(20);
+this.props.myDataSource.setLimit(10);
+```
+
+You can use the `setOffset` and `setLimit` methods to create a widget with pagination support (assuming widget properties are configured as follows):
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    pageSize: number;
+}
+```
+
+To set the number of items requested by the datasource you can use the `setLimit` in the constructor of the widget:
+
+```ts
+export default class PagedWidget extends Component<PagedWidgetProps> {
+    constructor(props: PagedWidgetProps) {
+        super(props);
+
+        props.myDataSource.setLimit(props.pageSize);
+    }
+}
+```
+
+To switch to a different page you can change the offset with the `setOffset` method:
+
+```tsx
+const ds = this.props.myDataSource;
+const current = this.props.myDataSource.offset;
+<button onClick={() => ds.setOffset(current - this.props.pageSize)}>
+    Previous
+</button>
+<button onClick={() => ds.setOffset(current + this.props.pageSize)}>
+    Next
+</button>
+```
+
+The `hasMoreItems` property indicates whether there are more objects beyond the limit of the most recent list. When a widget does not show all the records immediately by setting a limit with `setLimit` and allows the user to load additional data, you can use this property to make it clear in the user interface that the user has reached the end of the list.
+
+The following code sample shows a 'load more' button only when there is more data available, and loads additional data when the user clicks the button:
+
+```tsx
+const currentLimit = this.props.myDataSource.limit;
+this.props.myDataSource.hasMoreItems &&
+<button 
+    onClick={() => this.props.myDataSource.setLimit(currentLimit + 10)}
+>
+    Load more
+</button>
+```
+
+The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated needs a total count by calling the `requestTotalCount(true)` method. When possible, please use the `hasMoreItems` instead of the `totalCount` property.
+
+The following code sample shows how to request the total count to be returned:
+
+```ts
+export default class PagedWidget extends Component<PagedWidgetProps> {
+    constructor(props: PagedWidget) {
+        super(props);
+    
+        props.myDataSource.requestTotalCount(true);
+    }
+}
+```
+
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action), or [`widgets`](property-types-pluggable-widgets#widgets).
+ 
 
 ### 4.8 ListActionValue {#listactionvalue}
 
-`ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is a function and its definition is as follows:
+`ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is an object and its definition is as follows:
 
 ```ts
-export type ListActionValue = (item: ObjectItem) => ActionValue;
+export interface ListActionValue {
+    get: (item: ObjectItem) => ActionValue;
+}
 ```
 
-In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue` with the item. See an example below.
-
-
-Assuming widget properties are confgured as follows:
+<a name="get-function"></a>In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
 
 ```ts
 interface MyListWidgetsProps {
@@ -241,28 +307,37 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```
 
-In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
+In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](#actionvalue) for more information about the usage of `ActionValue`.
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
+{{% /alert %}}
 
 ### 4.9 ListAttributeValue {#listattributevalue}
 
 `ListAttributeValue` represents an [attribute property](property-types-pluggable-widgets#attribute) that is linked to a data source.
-This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
+This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
 
 ```ts
-export type ListAttributeValue<T extends AttributeValue> = (item: ObjectItem) => EditableValue<T>;
+export interface ListAttributeValue<T extends AttributeValue> {
+    get: (item: ObjectItem) => EditableValue<T>; // NOTE: EditableValue obtained from ListAttributeValue always readonly
+}
 ```
 
 The type `<T>` depends on the allowed value types as configured for the attribute property.
 
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue` with the item. See an example below.
+{{% alert type="warning" %}}
+Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
+{{% /alert %}}
 
-
-Assuming widget properties are configured as follows (with an attribute of type `string`):
+In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):
 
 ```ts
 interface MyListWidgetsProps {
@@ -274,22 +349,22 @@ interface MyListWidgetsProps {
 The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
-const attributeValue = this.props.myDataSource.myAttributeOnDatasource(this.props.myDataSource.items[0]);
+const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
-
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
-`ListWidgetValue` is a function and its definition is as follows:
+`ListWidgetValue` is an object and its definition is as follows:
 
 ```ts
-export type ListWidgetValue = (item: ObjectItem) => ReactNode;
+export interface ListWidgetValue {
+    get: (item: ObjectItem) => ReactNode;
+}
 ```
-
 
 For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
 
@@ -303,23 +378,29 @@ interface MyListWidgetsProps {
 Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
 
 ```ts
-this.props.myDataSource.items.map(i => this.props.myWidgets(i));
+this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 ```
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
+{{% /alert %}}
 
 
 ### 4.11 ListExpressionValue {#listexpressionvalue}
 
-`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
+`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 
 ```ts
-export type ListExpressionValue<T extends AttributeValue> = (item: ObjectItem) => DynamicValue<T>;
+export interface ListExpressionValue<T extends AttributeValue> {
+    get: (item: ObjectItem) => DynamicValue<T>
+};
 ```
 
 The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
 
-In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue` with the item. See an example below.
-
-Assuming widget properties are configured as follows (with an expression of type `boolean`):
+In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue.get` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
 
 ```ts
 interface MyListWidgetsProps {
@@ -332,9 +413,8 @@ interface MyListWidgetsProps {
 The following code sample shows how to get a `DynamicValue` that represents the value of an expression for the first element from the `myDataSource`.
 
 ```ts
-const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
+const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
-
 
 ## 5 Exposed Modules
 
@@ -344,57 +424,25 @@ Mendix platform exposes two versions of an `Icon` react component: `mendix/compo
 
 ## 6 Exposed Libraries {#exposed-libraries}
 
-### 6.1 React and React Native
+### 6.1 React and React Native {#exposed-react}
 
-Mendix platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
+The Mendix Platform re-exports [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. `react` is available to all components. `react-dom` is available only to components running in web or hybrid mobile apps. `react-native` is available only to components running in native mobile apps.
 
-Mendix provides you with React version 16.9.x (in npm terms `~16.9.0`). Patch versions might change from one minor release of Mendix to another. Mendix will always provide a matching version of react-dom.
+Mendix provides you with `react` version `17.*.*` (in npm terms `^17.0.1`) and a matching version of `react-dom`. For `react-native` Mendix exposes version `0.63.*` (in npm terms `~0.63.3`).
 
-For react-native Mendix exposes a single version: 0.61.5. Mendix also includes the following libraries:
-
-|   Library   |   Version   |
-| ---- | ---- |
-|   [@react-native-community/art](https://www.npmjs.com/package/@react-native-community/art)   |   1.2.0   |
-|   [@react-native-community/async-storage](https://www.npmjs.com/package/@react-native-community/async-storage)   |   1.8.1   |
-|   [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)   | 1.4.0     |
-|  [@react-native-community/datetimepicker](https://www.npmjs.com/package/@react-native-community/datetimepicker)   |  2.3.0  |
-|   [@react-native-community/geolocation](https://www.npmjs.com/package/@react-native-community/geolocation)   |   2.0.2   |
-|   [@react-native-community/masked-view](https://www.npmjs.com/package/@react-native-community/masked-view)   |  0.1.7    |
-|   [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)   | 5.6.2     |
-|   [react-native-ble-plx](https://www.npmjs.com/package/react-native-ble-plx)   |   1.1.1   |
-|   [react-native-calendar-events](https://www.npmjs.com/package/react-native-calendar-events)   |   1.7.3   |
-|   [react-native-camera](https://www.npmjs.com/package/react-native-camera)   |   3.19.2   |
-|   [react-native-code-push](https://www.npmjs.com/package/react-native-code-push)   |   6.1.1   |
-|   [react-native-device-info](https://www.npmjs.com/package/react-native-device-info)   |   5.5.3   |
-|   [react-native-fast-image](https://www.npmjs.com/package/react-native-fast-image)   |   8.1.5   |
-|   [react-native-firebase](https://www.npmjs.com/package/react-native-firebase)   |   5.6.0   |
-|   [react-native-geocoder](https://www.npmjs.com/package/react-native-geocoder)   |   0.5.0   |
-|   [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler)   |   1.6.0   |
-|   [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker)   |   2.3.1   |
-|   [react-native-inappbrowser-reborn](https://www.npmjs.com/package/react-native-inappbrowser-reborn)   |  3.3.4    |
-|   [react-native-localize](https://www.npmjs.com/package/react-native-localize)   |   1.3.4   |
-|   [react-native-maps](https://www.npmjs.com/package/react-native-maps)    |   0.27.0   |
-|   [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)   |   1.7.0   |
-|   [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context)   | 0.7.3     |
-|   [react-native-sound](https://www.npmjs.com/package/react-native-sound)   |   0.11.0   |
-|   [react-native-svg](https://www.npmjs.com/package/react-native-svg)   |   12.0.3   |
-|   [react-native-tab-view](https://www.npmjs.com/package/react-native-tab-view)   |   2.13.0   |
-|   [react-native-touch-id](https://www.npmjs.com/package/react-native-touch-id)   |   4.4.1   |
-|   [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)   |   6.6.0   |
-|   [react-native-video](https://www.npmjs.com/package/react-native-video)   |   5.0.2   |
-|   [react-native-view-shot](https://www.npmjs.com/package/react-native-view-shot)   |   3.1.2   |
-|   [react-native-webview](https://www.npmjs.com/package/react-native-webview)   |   8.1.2   |
-|   [react-navigation](https://www.npmjs.com/package/react-navigation)    |   4.3.1   |
-|   [react-navigation-drawer](https://www.npmjs.com/package/react-navigation-drawer)   |   2.4.4   |
-|   [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.3.1   |
-|   [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.8.4 |
+Patch versions might change from one minor release of Mendix to another. 
 
 ### 6.2 Big.js
 
-The Mendix platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
+The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 9.0 re-exports version 6.0.
 
-## 7 Read More
+## 7 Native Dependencies
+
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](native-dependencies).
+
+## 8 Read More
 
 * [Pluggable Widgets API Documentation](pluggable-widgets)
 * [Pluggable Widget Property Types Documentation](property-types-pluggable-widgets)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+* [Declaring Native Dependencies](native-dependencies)

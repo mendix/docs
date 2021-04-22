@@ -4,11 +4,12 @@ parent: "mendix-cloud-deploy"
 menu_order: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
+On the **Environments** page, there are three tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -96,7 +97,7 @@ There are three types of environment statuses:
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
 {{% /alert %}}
 
-To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+To see the details of the alerts, click **Alerts**. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
 
 **Actions**
 
@@ -126,7 +127,7 @@ You can use the **Search...** box to find a specific environment.
 
 **Reordering Environments**
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can reorder the environments by dragging and dropping:
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) you can reorder the environments by dragging and dropping:
 
 ![](attachments/environments/reorder-environments.gif)
 
@@ -140,7 +141,7 @@ There is no concept of staging, and you need to deploy your app directly to the 
 
 #### 2.2.3 Setup Studios Deployment
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) for an app, you will be see the **Setup Studios Deployment** button which enables you to set the target environment to which apps will be deployed from Studio and Studio Pro. For more information, see [Studio Deployment Settings](studio-deployment-settings).
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for an app, you will be see the **Setup Studios Deployment** button which enables you to set the target environment to which apps will be deployed from Studio and Studio Pro. For more information, see [Studio Deployment Settings](studio-deployment-settings).
 
 ![](attachments/environments/setup-studios-target.png)
 
@@ -148,7 +149,7 @@ If you are the [Technical Contact](/developerportal/company-app-roles/technical-
 
 ![](attachments/environments/activity.png)
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
 
 1. Click **Download to CSV**.
 2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.

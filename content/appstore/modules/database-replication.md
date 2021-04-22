@@ -1,8 +1,8 @@
 ---
 title: "Database Replication"
 category: "Modules"
-description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "database replication", "platform support"]
+description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "database replication", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -35,7 +35,7 @@ You can use the [Database Replication](https://appstore.home.mendix.com/link/app
 
 ## 2 Configuration
 
-After downloading the module, you should place the **DatabaseMapping** page in the menu or put both the **Database_Overview** and **TableMapping_Overview** pages in your menu. With these pages, you can create database connections and table mappings. 
+After downloading the module, you should place the **DatabaseMapping** page in the menu. With this page, you can create database connections and table mappings. 
 
 To use this module, you need a database connection definition and a table mapping. The connection definition points to the location of the database you want to import. The table mapping determines how this database will be mapped to your domain model.
 
@@ -271,7 +271,7 @@ Each import action is executed in a single transaction, which means it is able t
 
 ## 10 Importing & Exporting a File
 
-You can import and export table mappings to an XML file using the **Import/export file** tab.
+You can import and export table mappings to an XML file using the **Table mapping** tab.
 
 ## 11 Troubleshooting
 

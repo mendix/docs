@@ -3,6 +3,9 @@ title: "On Click Event & Events Section"
 parent: "pages"
 menu_order: 130
 tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
+aliases:
+    - /refguide/opening-pages.html
+    - /refguide/starting-microflows.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -32,7 +35,7 @@ The **On click** property specifies what [action](#actions) is executed when a u
 
 This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the on-click event. Selecting **Disabled during action** disables the button until the action is completed or failed.
 
-### 2.2 On Change{#on-change}
+### 2.2 On Change {#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
@@ -62,6 +65,10 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Delete](#delete) 
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
+* [Call workflow](#call-workflow)
+* [Show user task page](#show-user-task-page)
+* [Show workflow admin page](#show-workflow-page)
+* [Complete user task](#complete-task)
 
 ### 3.1 Do Nothing {#do-nothing}
 
@@ -87,7 +94,7 @@ The **Call a microflow** event executes the specified microflow.
 
 {{%alert type="info" %}}
 
-When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (e.g. changing values in input widgets) will be overwritten by the results of the microflow.
+When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input widgets) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
 
 {{%/alert %}}
@@ -230,7 +237,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
 ### 3.8 Cancel Changes {#cancel-changes}
 
@@ -255,6 +262,48 @@ The **Synchronize** event [synchronizes](offline-first#synchronization) the data
 ### 3.12 Sign Out {#sign-out}
 
 The **Sign out** event signs the currently signed-in user out. When no user is signed in, no action is performed.
+
+### 3.13 Call Workflow {#call-workflow}
+
+The **Call workflow** event triggers the specified workflow. 
+
+An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data) defined in the workflow properties. 
+
+The following properties are specific for this event:
+
+* **Workflow** – A [workflow](workflows) that should be executed.
+* **Close page** – Specifies whether the current page should be closed.
+* **Commit** – Specifies whether the data container object should be committed when running a workflow. 
+
+### 3.14 Show Workflow Admin Page {#show-workflow-page}
+
+**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+
+An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
+
+For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
+
+### 3.15 Show User Task Page {#show-user-task-page}
+
+**Show user task page** opens an overview page set for the [user task](user-task) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+
+For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
+
+### 3.16  Complete User Task {#complete-task}
+
+The **Complete user task** event marks the specified user task in the workflow as completed.
+
+An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+
+The following properties are specific for this event:
+
+* **User task** – The [user task](user-task) that should be marked as completed.
+
+* **Outcome** – Lists the outcomes of the selected [user task](user-task) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
+
+* **Close page** – Specifies whether the current page should be closed.
+
+* **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
 
 ## 4 Read More
 

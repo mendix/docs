@@ -60,9 +60,9 @@ Default: *No*
 
 #### 3.3.1 Microflow Is Called from the Client in an Online App
 
-If **Refresh in client** is set to *No*, the change is not reflected in the client.
+If **Refresh in client** is set to *No*, the change is not reflected in any widgets in the client.
 
-If set to *Yes*, [data sources](data-sources) are reloaded.
+If **Commit** and **Refresh in client** are both set to *Yes*, [data sources](data-sources) are reloaded and the new object's values are displayed in relevant widgets.
 
 #### 3.3.2  Microflow Is Called in an Offline, Native, or Hybrid App
 

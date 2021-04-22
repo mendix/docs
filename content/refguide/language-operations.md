@@ -22,7 +22,7 @@ When creating an app in multiple languages, there are a number of tasks which yo
 
 In the **Selection** section of the dialog box, you can select the modules that you want to manage.
 
-For each module, you can see the number of translatable texts which have been entered in each language which contains items. The gray columns indicate languages which are not selected in the project, but which contain translated texts. This enables you to remove a language from the project but still have access to the existing texts.
+For each module, you can see the number of translatable texts which have been entered in each language which contains items. The gray columns indicate languages which are not selected in the app, but which contain translated texts. This enables you to remove a language from the app but still have access to the existing texts.
 
 ## 3 Performing Operations
 

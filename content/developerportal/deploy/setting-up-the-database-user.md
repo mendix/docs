@@ -1,7 +1,8 @@
 ---
-title: "Database User Set Up on SQL Server"
+title: "Database User Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 30
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 General

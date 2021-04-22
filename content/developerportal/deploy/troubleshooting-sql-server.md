@@ -2,6 +2,7 @@
 title: "Troubleshooting SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 80
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -58,7 +59,3 @@ Validate the ‘Status’ of the User. One of the login properties of the user i
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 *   [Setting Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 *   [Setting Up a SQL Server User](setting-up-a-sql-server-user)
-*   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
-*   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
-*   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-*   [U*ix Deployment](unix-like)

@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 menu_order: 30
 tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -20,12 +21,12 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 * Platform administration account
 * **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
 * **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
-* **Bash** (Bourne-again shell) for your machine. If you are running on Windows, you can use something like [**Windows Subsystem for Linux (WSL)**](https://docs.microsoft.com/en-us/windows/wsl/faq) or the **Git Bash emulator** that comes with [git for windows](https://gitforwindows.org/).
+* A command line terminal. In Windows, this could be PowerShell or the Windows Command Prompt.
 * The **deployment package** of a Mendix app made with version 7.23.3 (build 48173) or above
 
 ## 3 Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. This means that they need to have unique and recognizable names; the name is required to identify the app when creating/modifying/deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 
@@ -84,10 +85,17 @@ spec:
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
+    debuggerPassword: V2VsYzBtZSE= # base64 encoded password for debuggerPassword. In this example, 'Welc0me!';
     dtapMode: P # Security & runtime mode: P for production, D for development
     logLevels: # Optional, can be omitted : set custom log levels for specific nodes
       NodeOne: CRITICAL
       NodeTwo: DEBUG
+    microflowConstants: # Optional, can be omitted : set values for microflow constants
+      MyFirstModule.Constant: "1234"
+      Atlas_UI_Resources.Atlas_UI_Resources_Version: "2.5.4"
+    scheduledEventExecution: SPECIFIED # Optional, can be omitted: specify which scheduled events should be enabled: ALL/NONE/SPECIFIED
+    myScheduledEvents: # List which scheduled events should be enabled; should only be used if scheduledEventExecution is set to SPECIFIED
+      - MyFirstModule.MyScheduledEvent
     # Mendix Runtime Jetty options, in JSON format; validated and applied by the mx-m2ee-sidecar container
     jettyOptions: |-
       {
@@ -104,18 +112,22 @@ spec:
         #    key: java-proxy-secret
       - name: JAVA_TOOL_OPTIONS # name of the environment variable
         value: -Dhttp.proxyHost=10.0.0.100 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.0.0.100 -Dhttps.proxyPort=8443 -Dhttp.nonProxyHosts="localhost|host.example.com"
+    clientCertificates: # Optional, can be omitted : set client certificates for TLS authentication
+      - key: Q0VSVElGSUNBVEU= # base64-encoded PKCS12 certificate
+        password: # base64-encoded password for the certificate, cannot be empty
+        pinTo: # Optional, list of web services or domain names where this certificate should be used
+        - "www.example.com"
+        - "service.www.example.com"
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
-        "ScheduledEventExecution": "SPECIFIED",
-        "MyScheduledEvents": "MyFirstModule.MyScheduledEvent",
-        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"Atlas_UI_Resources.Atlas_UI_Resources_Version\":\"2.5.4\"}"
+        "ApplicationRootUrl": "https://myapp1-dev.mendix.example.com"
       }
 ```
 
 You need to make the following changes:
 
-* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda but must be unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
+* **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
@@ -128,10 +140,10 @@ You need to make the following changes:
 * **resources** – change the minimum and maximum container resources your app requires
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
+* **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
-    
     the subscription secret needs to be supplied via the **customConfiguration** using the following values:
 
     * `"License.SubscriptionSecret":"{subscription secret}"`
@@ -158,24 +170,21 @@ You need to make the following changes:
     ```
 
 * **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+* **microflowConstants**: – set values for microflow constants
+* **scheduledEventExecution**: – choose which scheduled events should be enabled - valid values are: `ALL`, `NONE` and `SPECIFIED`
+* **myScheduledEvents**: – list scheduled events which should be enabled - can only be used when **scheduledEventExecution** is set to `SPECIFIED`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
 * **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates**: - specify client certificates to be used for TLS calls to Web Services and REST services
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
-
-To set constant values, first create a key-value JSON with values for each constant.
 
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
 
 ![](attachments/private-cloud-operator/constant-name.png)
 
-For example, to set the `MyFirstModule.Constant` constant to `1234` and `MyModule.AnotherConstant` to `MyValue`, create the following JSON:
-```json
-{"MyFirstModule.Constant":"1234","MyModule.AnotherConstant":"true"}
-```
-
-Next, convert this JSON into a string by escaping it (in particular, replacing all `"` characters with `\"`) and use it as the **MicroflowConstants** value in **customConfiguration**. For example:
+Set the constant values in the **microflowConstants** value in **runtime**. For example:
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
@@ -183,24 +192,22 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    # Add the MicroflowConstants value here
-    customConfiguration: |-
-      {
-        "MicroflowConstants":"{\"MyFirstModule.Constant\":\"1234\",\"MyModule.AnotherConstant\":\"true\"}"
-      }
+    microflowConstants:
+      MyFirstModule.Constant: "1234"
+      MyModule.AnotherConstant: "true"
 ```
 
 #### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
 
-To disable execution of all scheduled events, set the **ScheduledEventExecution** value to `NONE` in **customConfiguration**.
+To disable execution of all scheduled events, set the **scheduledEventExecution** value to `NONE` in **runtime**.
 
-To enable execution of all scheduled events, set the **ScheduledEventExecution** value to `ALL` in **customConfiguration**.
+To enable execution of all scheduled events, set the **scheduledEventExecution** value to `ALL` in **runtime**.
 
-To enable execution for specific scheduled events, set the **ScheduledEventExecution** value to `SPECIFIED` in **customConfiguration**.
-Specify which events should be enabled by listing their full names in the **MyScheduledEvents** value in **customConfiguration**.
+To enable execution for specific scheduled events, set the **scheduledEventExecution** value to `SPECIFIED` in **runtime**.
+Specify which events should be enabled by listing their full names in the **myScheduledEvents** value in **runtime**.
 
 For example, to enable the execution of event `EventOne` in module `MyFirstModule` and event `EventTwo` in `MySecondModule`,
-set the **MyScheduledEvents** value to `MyFirstModule.EventOne,MySecondModule.EventTwo`:
+set the **myScheduledEvents** list to `MyFirstModule.EventOne`, `MySecondModule.EventTwo`:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -209,11 +216,10 @@ metadata:
   name: example-mendixapp
 spec:
   runtime:
-    customConfiguration: |-
-      {
-        "ScheduledEventExecution":"SPECIFIED",
-        "MyScheduledEvents":"MyFirstModule.EventOne,MySecondModule.EventTwo"
-      }
+    scheduledEventExecution: SPECIFIED
+    myScheduledEvents:
+      - MyFirstModule.EventOne
+      - MySecondModule.EventTwo
 ```
 
 The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.
@@ -235,19 +241,19 @@ You can do this in one of two ways:
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```bash
+```shell
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
-##### 3.3.1.1 OpenShift CLI
+##### 3.3.1.2 OpenShift CLI
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1.  Paste the OpenShift login command into Bash as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Creating a Private Cloud Cluster*.
+1.  Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](private-cloud-cluster#openshift-signin) section of *Creating a Private Cloud Cluster*.
 2.  Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
-3.  Paste the following command into Bash:
+3.  Paste the following command into your command line terminal:
 
-```bash
+```shell
 oc apply -f {File containing the CR}
 ```
 

@@ -1,210 +1,306 @@
 ---
-title: "Search for Registered Assets"
+title: "Search in the Data Hub Catalog"
 category: "Data Hub Catalog"
 menu_order: 10
-description: "Introduces the processes and properties of the Mendix Data Hub Catalog."
+description: "Describes how to find data sources and datasets in the Data Hub Catalog."
 tags: ["data hub", "data hub catalog"]
 ---
 
-{{% todo %}}[PC-704 Discoverability]{{% /todo %}}
-
 ## 1 Introduction
 
-Finding the right data to use in your app is made easier by the Data Hub Catalog search functionality. The metadata for a registered service is displayed in the **Search Details** screen to help in identifying the correct data source to use to use in your app development. 
+Finding the right data to use in your app development is made easier using the search functionality in the [Data Hub Catalog](#data-hub-home). The details of registered data assets can be viewed in the [Asset details](#search-details) screen.
 
-{{% todo %}}[AD: please verify that "Search Details" is in the UI to justify capitalizing/bolding; also add a cross-reference to doc where that screen is described more fully (if any).]{{% /todo %}}
+The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications.
 
-You can start searching from the **Data Hub** [Home](#data-hub-home) page or click the Data Hub [Catalog](#search-tab) tab to go to the **Search** pane and **Search Details** screen.
+You can start searching from the [Data Hub Home](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
 
-The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro enables search in the Data Hub Catalog to use and connect to registered entities from your Mendix app.
+{{% alert type="info" %}}The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro integrates the powerful search of the Data Hub Catalog to enable you to find and use registered datasets as external entities in your app development.{{% /alert %}}
 
-This page describes the search functionality of the Data Hub Catalog and the the information that is available.
+Registered assets can be [curated](#curate-bar) to add and edit further information (Catalog metadata) such as **Tags**, **owners**, and **Descriptions** and also set properties to the asset such as **Discoverable** and **Validated** to ensure that they are found for the appropriate uses.
+
+This document describes the functionality of the Data Hub Catalog.
 
 ## 2 Details of Registered Assets
 
-The [search details](#search-details) screen for a registered service, entity, or attribute displays information as provided in the published OData service contract that is used to register assets in the Data Hub Catalog. Registered services and the exposed entities can be curated to provide additional information such as **Tags** and **Descriptions** to ensure that they can be found by the appropriate users.
+The Catalog displays the [details](#search-details) of data sources, datasets, and attributes as provided in the published OData service contract that is used to register assets in the Data Hub Catalog. This section describes important properties of registered assets.
 
-### 2.1 Published OData Service 
+{{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
-The OData service document contains the data that is registered in the Data Hub Catalog. The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service and further links to the metadata of the entities exposed in the service for attributes, associations, types, and accessibility. The published OData service that is registered is shown in search details. 
+### 2.1 Versions
 
-For details on creating a published OData service in Studio Pro, see [How to Register Data Assets](register).
+Every published OData service or data source (as they are known in the Catalog) has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This may result in several versions of a registered data source available in the Catalog that will all be listed as separate items in the search results for the same-named data source.
 
-### 2.2 Versions 
+The version of the selected data source is displayed in the [Asset Details](#search-details).
 
-Every published OData service has a version number, and apps consuming from a service will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. There may be several versions of a service available in the catalog. These will all be listed as separate items in the search results for a service.
+### 2.2 Environments
 
-The [search details](#search-details) screen in the Data Hub Catalog will show all available versions of the service under **Usage** and the number of connections made to each service.
+The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services or data sources published from the apps that are deployed to the same environment. This means that each registered data source is a unique **endpoint** which is the location of the OData service contract that includes the version of the service running in a specific environment.
 
-{{% todo %}}[AD: a screenshot of that Usage section may be useful.]{{% /todo %}}
+The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
-### 2.3 Environments
+Search results show the data source endpoints. Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits of the two endpoints.
 
-The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services published from the apps deployed to an environment. This means that the catalog registers the version of a service running in a specific environment. 
+{{% alert type="info" %}}
+By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
+{{% /alert %}}
 
-The search results will show these service endpoints (where a service endpoint is the combination of a service version deployed on a specific environment). So if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits. 
-
-The environment is therefore a major component of the definition and forms part of the URL for the endpoint being consumed. This, in combination with the OData version number, provides the link to the correct data for the entities that are exposed.
-
-It is possible to filter search in the Data Hub Catalog to the following environments:
-
-* Production
-* Non-production
-* Mendix Free App environment
-
-{{% todo %}}[are we allowed to talk about Sandbox, include the official term; AD: cross-references to definitions/descriptions of environments above may be useful.]{{% /todo %}}
-
-### 2.4 URLs 
-
-The service URLs provide the exact locations of the service documents. In turn, these define the endpoints for exposed entities and attributes and thereby access to the associated datasets by the consuming apps. 
-
-### 2.5 Discoverability 
-
-When a service is registered, by default it is "published" by being set to **Discoverable** in the Data Hub Catalog so that all users can find it and see details about it. Owners and curators of a registered service can set a service to be **non-discoverable**, which means that it can only be found and consumed by them and is not available to other users.
-
-### 2.6 Tags 
-
-Tags help you to group services and entities and categorize them (for example, by department, process, or use). You can use tags to refine the search and filter search results in the Data Hub Catalog by doing the following:
-
-* Add tags to the service as a curate function in the Data Hub Catalog after a service is registered by service owners and [Data Hub Curators](../index#curator)
-* Add different tags to the different versions of the same service, as they will be two separate entries in the catalog (this is also a way to make different version identifiable)
-* Add tags to a service because they also apply to the entities exposed in the service
-* Add tags during the manual registration of OData services using the [register new service](register#new-service) form
-
-### 2.7 Description
-
-The description that is included as part of the published service metadata. This description can be further curated at the service, entity, and attribute level by Data Hub Curators to provide further details of the exposed entities and associated datasets.
+### 2.3 Asset Descriptions
+The description that is included as part of the published service metadata. This description can be further curated at the data source, dataset, and attribute level by owners and curators to provide further details of the exposed datasets and the associated data.
 
 {{% alert type="info" %}}
 In Studio Pro, when publishing an OData service, it is possible to specify a summary of the service and a description. Only the description is included in the OData service contract document and displayed in the Data Hub Catalog.
 {{% /alert %}}
 
-### 2.8 Contacts for Registered Apps and Services  
-
-In the Data Hub Catalog, the search details for a service include a **Technical Owner** (for technical inquiries) and the **Business Owner** who is responsible for the data sets. Both of these owners can curate their registered assets.
-
-## 3 Searching in the Data Hub Catalog {#data-hub-home}
+## 3 Search in the Data Hub Catalog {#data-hub-home}
 
 When searching in the Data Hub Catalog, the following fields are searched:
 
-* Service Endpoint: Name, Description, Tags
+* Data source or service endpoint: Name, Description, Tags
 * Application: Name
-* Entity: Name, Description
+* Dataset: Name, Description
 * Attribute: Name, Description
 * Association: Name
 
-On the **Data Hub Home** page, you can search in the Data Hub Catalog in the following ways:
+### 3.1 Searching for Assets
 
-![](attachments/search/data-hub-home-search.png)
+From the **Data Hub Home** page, you can you can search the Catalog in the following ways:
 
-* Type a search term in the search box and click **Search** (search strings can only include the alphanumeric characters that are allowed for service names or entity names)
-* Click one of the tags given in the **Search suggestions**
-* Click one of the services under  **Most Popular Services**
+![](../share-data/attachments/share-data/data-hub-home.png)
+
+* Type a search term in the search box and click **Search** (search strings can comprise a minimum of 3 characters and include the alphanumeric characters)
+* Click one of the *tags* given in the **Search suggestions**
+* Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab
 
-Any of the above actions will take you to the **Search** screen, which is described below.
+Any of the above actions will take you to the **Search** screen.
 
-## 4 Search Screen {#search-tab}
+### 3.2 Search Screen {#search-tab}
 
-The **Search** screen is divided into the [Search](#search-pane) pane, the [Search Details](#search-details) page, and the [Service Metadata](#metadata) panel.
+The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the centre panel, and the [asset metadata](#metadata) panel on the right.
 
-{{% todo %}}[AD: capitalization/bolding of these terms should be made consistent through all DHG documentation based on whether these appear as UI labels. If they do not - and it does not appear that they do in the screenshot below - they should be neither capitalized nor bolded?]{{% /todo %}}
+![searc details](attachments/search/search-details-page.png)
 
-![](attachments/search/search-details-page.png)
+## 4 Search Pane {#search-pane}
 
-### 4.1 Search Pane {#search-pane}
+The collapsable **Search** pane is used to search for registered assets in the Data Hub Catalog:
 
-The **Search** pane is used to search through registered assets in the Data Hub Catalog. When a search term is entered, search results can be refined by using filters. 
+ {{% image_container width="300" %}}![search pane](attachments/search/search-pane.png){{% /image_container %}}
 
-#### 4.1.1 Search Area
+### 4.1 Specifying the Search
 
-Enter a search term in the **Search** area comprising alpha-numeric characters.
+Enter a search string in the **Search** area comprising a minimum of 3 alpha-numeric characters.
+
+The wildcard `*` can also be used to imply an empty search but it is not necessary as search without specifying any search string will return all registered items.
 
 {{% alert type="info" %}}
-Punctuation cannot be used as part of the search term. 
+Punctuation cannot be used as part of the search term.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Search is case-blind.
+Search is case-insensitive.
 {{% /alert %}}
 
-{{% todo %}}[please explain "case-blind" in a clear non-metaphoric way that is more accessible]{{% /todo %}}
+### 4.2 Filters {#filter}
 
-#### 4.1.2 Filters
+You can filter search results by environment type. By default, the **Production** environment filter is active and this restricts search to assets in the production environment.
 
-To refine search results, you can click **Add Filter**:
+To specify the environment type for the search, click **Filter**:
 
-![](attachments/search/add-filters.png)
+![filter box](attachments/search/dh-filter-box.png)
 
-In the **Add Filters** dialog box,  select the **Environment Type** that you want to confine your search to and click **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
+In the **Filters** dialog box, check the **Environment Type** that you want to restrict your search to and click, **Apply Filters**. The search results will only display hits for the specified search string in the checked environments.
 
-#### 4.1.3 Search Results
+{{% alert type="info" %}}
+The **Sandbox** filter refers to apps deployed to the Mendix Free App environment.
+{{% /alert %}}
 
-The number of items satisfying the search criteria (search string plus filters) are shown at the top of the search results.  Search results will include all registered services, entities, attributes, tags, and descriptions satisfying the search string and filters. Search results are listed in the following order:
+The number of filters that are active for the current search is displayed adjacent to the filter:
+
+{{% image_container width="200" %}}![filter active](attachments/search/filter-active.png){{% /image_container %}}
+
+Click **Clear Filters** to clear all the checked environments and click **Apply Filters** to see search results in all environments.
+
+### 4.3 Search Results {#search-results}
+
+The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. Items in the asset metadata that are searched include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
 
 * Closest match to the search string
-* Popularity of the service (number of connections)
+* Popularity of the service (the number of connections)
+* **Validated** assets before non-validated items
 
-{{% todo %}}[I also had alphabetically - will this happen??]{{% /todo %}}
+ {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
 
-If no search string is specified, all registered services will be listed in the search results in the above order showing the first five entities for each service.
+{{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 
-When an item in the search results is selected, the **Catalog** tab will show the **Search details** and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](../data-hub-landscape/index).
+When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
-{{% alert type="info" %}}
-In Studio Pro, searching the Data Hub Catalog through the **Data Hub** pane requires use of the wildcard `*` for an empty search. It is not possible to use the wildcard in combination with other characters. The wildcard can also be used in the Data Hub Catalog search but it is not necessary. 
-{{% /alert %}}
+## 5 Selected Asset Details {#search-details}
 
-{{% todo %}}[for 0.23 search order is not specified but this is the list that we want to work towards]{{% /todo %}}
+When you click on an asset (data source or dataset) in the search results, the details are displayed in this panel.
 
-### 4.2 Search Details {#search-details}
+### 5.1 Details of a Selected Data Source {#service-details}
 
-The Search Details displays the details of the selected item in the search results. 
+The contract of the published OData service (the *$metadata* document) contains the definitions details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, types, and accessibility. The contract metadata is displayed in the Data Source details along with any Catalog-curated metadata.
 
-#### 4.2.1 Search Details for a Selected Service
+When a data source is selected in the search results, the following details are displayed:
 
-When a service is selected, the full details of the service are displayed:
+![service details](attachments/search/search-details-service.png)
 
-![](attachments/search/search-details-service.png)
+* Application icon
 
-* The name of the Service
-* The name of the environment to the app is deployed
-* The **Version** number of the service
-* The number of connections (**Used in**)
-* A description of the entity as given in the service metadata or curated in the Data Hub Catalog
-* Clicking **Share Service** will copy the link to the service to the clipboard
-* Each **Entity** that is exposed in the service (you can expand an entity to see details of the attributes and associations for the entity, as described below)
+* Name of the data source
 
-#### 4.2.2 Search Details for Selected Entity
+* **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, no icon indicates that it can be seen by all users)
 
-When an **Entity** is selected in the search results, details for the entity are displayed in the **Search Details** window:
+* **Validated** icon – if it has been set for the asset
 
-![](attachments/search/search-details-entity.png)
+* **Environment Name** – where the app is deployed
 
-* The name of the Service
-* **Part of** contains a link that will take you to the **Search Details** of the service in which the entity is exposed
-* The **Version ** number of the service
-* The number of connections (**Used in**)
-* A description of the entity as given in the service metadata or curated in the Data Hub Catalog
-* Clicking **Share Datasource** will copy the deep link of the entity (meaning, the entity endpoint) to the clipboard
-* **Entity Information**
+* **Version** number of the service
 
-{{% todo %}}[AD: please verify they have fixed the button name to "Share Data Source]{{% /todo %}}
+* **Connections** – number of apps that consume the service
 
-For every entity, the attributes exposed in the service are listed showing the attribute types and description.
+* A description of the data source
 
-Under the **Associations** tab for each entity, the associations are shown:
+* All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations)
 
-![](attachments/search/attributes-associations.png)
+ {{% alert type="info" %}}In Mendix Studio Pro, the **Dataset** is the name of the **Entity set** of a published **Entity**, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
-* **Name** –  the name of the association that is exposed in the service
-* **Navigates to** –  the deep link of the entity to which the association navigates
-* **Multiplicity** –  the type of association
+You can perform the following actions from this screen:
 
-{{% todo %}}[find out what the navigates to does]{{% /todo %}}
+* **Copy Data Source URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
+* **Share Data Source** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
+* [Download](#download-contract) – retrieve and save the OData contract from the data source endpoint to your computer.
+* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
-### 4.3 Service Metadata Panel {#metadata}
+### 5.2 Details for a Selected Dataset {#entity-details}
 
-The service metadata panel at the right of the search details page displays details of the registered service from the OData metadata files and values that have been curated in the Data Hub Catalog:
+When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel:
 
-![](attachments/search/metadata.png)
+![search details entity](attachments/search/search-details-entity.png)
+
+* Dataset name
+
+* **Part of** – a link to the data source details page that the dataset is exposed in
+
+* **Version** number of the data source that the dataset is exposed in
+
+* **Connections** – the number of apps that consume this dataset
+
+* A description of the dataset
+
+* **Dataset Information**
+ The **Attributes** that are exposed for the dataset in the OData service are listed showing the attribute types and description.
+
+ Under the **Associations** tab for each dataset, the associations are displayed:
+
+ ![associations info](attachments/search/attributes-associations.png)
+
+* **Name** – the name of the association that is exposed in the OData service contract
+
+* **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
+  * **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
+
+You can perform the following actions from this screen:
+
+* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
+* **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
+
+## 6 Metadata Panel {#metadata}
+
+The metadata panel at the right of the asset details screen displays details from the OData service metadata contract and values that have been curated in the Data Hub Catalog:
+
+ {{% image_container width="300" %}}![metadata pane](attachments/search/metadata.png){{% /image_container %}}
+
+### 6.1 Tags
+
+The tags that have been assigned to the data source during [curation.](curate#tags)
+{{% alert type="info" %}}Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.{{% /alert %}}
+
+### 6.2 Business Owner
+
+A link to the business owner of the data exposed in the data source. Business owners can be added as a curation task. For more information, see [Changing owners of an application](curate#changing-owners).
+
+### 6.3 Technical Owner
+
+The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer that deployed the app. For more information, see [Changing owners of an application](curate#changing-owners).
+
+### 6.4 Discoverability {#discoverability-metadata}
+
+When a data source is registered, by default, it is **Discoverable** in the Data Hub Catalog. When this is set, all users can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
+
+See [Curate Bar](#curate-bar) for changing **Discoverability** as the owner of the data source or curator.
+
+The following discoverability values can be set:
+
+* **Discoverable** – all users of the Data Hub Catalog and Studio Pro can see and consume the asset provided they meet the requirements of the **Classification**
+* **Non-Discoverable** – the asset is not visible in the Catalog and only owners, Data Hub curators, and the Data Hub Admin can find, use, and curate the service.
+  {{% alert type="info" %}}A **Non-discoverable** asset is also not included in the search results in the **Data Hub** pane of Studio Pro, or any other client of the Data Hub API.{{% /alert %}}
+
+### 6.5 Validated
+
+Indicates if the data source has been **Validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner of the data source or curator.
+
+### 6.6 Access Level
+
+Displays the access classification of the data exposed by the service: end-users of the app will only be able to see the information must have the appropriate [user role](/refguide/user-roles) to access the data:
+
+* **Public** – classified as public and available to all users, internal and external to the organization
+* **Internal** – restricted to the members of the organization
+  {{% alert type="info" %}}Classifications at a data source level propagate down to the datasets and attributes exposed in the OData service. {{% /alert %}}
+
+### 6.7 Application
+
+A link to the application from which the data source was published in the given environment.
+
+### 6.8 Environment Type
+
+The environment type indicates the quality and the status of the data that the exposed datasets connect to. The following environment types can be specified:
+
+* **Production**
+* **Non-Production**
+* **Sandbox** (the Mendix Free App environment)
+
+## 7 Curate Bar {#curate-bar}
+
+The **Curate Bar** is displayed in the asset detail screen if you are the owner of the selected asset or a curator:
+
+![called out curate bar](attachments/search/curate-bar.png)
+
+Curators can carry out the following actions:
+
+* **Edit Metadata** – edit information that is displayed in the Catalog for the asset:
+  * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
+  * for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
+* **Discoverable**/**Validated** – set the discoverability of the data source, and set a data source or dataset as validated
+  * **Discoverable** – all users of Data Hub and Studio Pro can see and consume the service in combination with the classification of the data
+  * **Not Discoverable** – the service is not visible; only owners of the service, Data Hub curators, and the Data Hub Admin can access the service
+  * **Validated** – indicates if the data source or dataset has been validated
+
+{{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users.{{% /alert %}}
+
+For further details on see [Curation](./curate).
+
+## 8 Data Source and Dataset URIs
+
+The data source URI is the location of the service contract of the data source – also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI**, respectively. These URIs can be used for directly accessing the contract and resource in other BI applications.
+
+## 9 Download the Metadata Contract of a Data Source {#download-contract}
+
+For a selected data source you can click **Download** to download the OData service contract as a ***.zip*** file. This will include the all the files that make up the full metadata contract. The resulting ***.zip*** file will be named as follows:
+
+```DataHub_<service_name>_<service_version>_<technology>.zip```
+
+The string *technology* identifies the OData version (v3 or v4) in the file name.
+
+For the following example:
+
+![](attachments/search/download_example.png)
+
+When you click **Download** the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`
+
+This zip file cotains the folder: `DataHub_SAP_Intelligence_1.0_OData4` which contains the all the metadata files that define the service.
+
+## 10 Viewing Search Results in the Data Hub Landscape
+
+When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.

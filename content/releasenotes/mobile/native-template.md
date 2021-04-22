@@ -8,6 +8,199 @@ description: "Native Template release notes."
 
 For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
+These are the current versions in active development:
+
+* Native Template v6+ applies to apps built using Studio Pro [9.x](../studio-pro/9.0) and above.
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
+
+## 5.1.10
+
+**Release date: April 6th, 2021**
+
+### Improvements
+ 
+* Android custom developer apps now support deep links. 
+
+### Fixes 
+
+* We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.
+
+## 6.1.3
+
+**Release date: March 31st, 2021**
+
+### Improvements
+
+* iOS apps now use a single window, and handle scene switching with view controllers. This results in better compatibility in some cases.
+
+### Fixes 
+
+* We fixed the App Center scripts so they fail early when something is wrong.
+
+## 5.1.9
+
+**Release date: March 31st, 2021**
+
+### Mobile Toolkit for 5.1.x
+
+Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing offline users a path to auto-configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The CLI supports this command:
+
+`native-mobile-toolkit configure --config-path='./config.json'`
+
+or
+
+`npm run configure`
+
+The Native Mobile Builder writes to the *config.json* and commits assets to relative locations. The CLI then reads the *config* and handles, configuring the projects and moving any assets to the right locations for the projects.
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.0.12
+
+**Release date: March 31st, 2021**
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.1.8 and 5.0.12 {#518and5012}
+
+**Release date: March 17th, 2021**
+
+### Fixes
+
+* We fixed an issue that could crash apps due to the fix released with Native Template v5.1.7.
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.7 and 5.0.11
+
+**Release date: March 12th, 2021**
+
+{{% alert type="warning" %}}
+We have decided to retract versions 5.1.7 and 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
+{{% /alert %}}
+
+### Fixes
+
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.6 and 5.0.10
+
+**Release date: February 15th, 2021**
+
+### Fixes
+ 
+* We updated the **react-native-image-picker** dependency.
+* The **react-native-image-picker** patch now applies correctly on Windows.
+* On iOS, the **PRODUCT_NAME** variable is now settable via the XCConfig file of each target.
+
+## 5.1.5 and 5.0.9
+
+**Release date: February 4th, 2021**
+
+### Fixes
+
+* We fixed the keyboard behavior on Android for inputs in scrollable views.
+* We updated the React Native Device Info library to fix security issues.
+
+## 5.1.4, 5.0.8, and 4.2.6
+
+**Release date: December 22nd, 2020**
+
+### Fixes
+
+* We fixed an issue where iOS apps could crash when opening a push notification.
+
+## 5.1.3, 5.0.7, and 4.2.5
+
+**Release date: November 27th, 2020**
+
+### Improvements
+
+* We updated the iOS peer dependencies.
+
+### Fixes
+
+* We updated the underlying DatePicker library to fix a bug with iOS 14.
+
+## 3.2.2 
+
+**Release date: November 9th, 2020**
+
+We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
+
+### Fixes
+
+* We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
+
+## 5.1.1, 5.0.6, and 4.2.4
+
+**Release date: November 2nd, 2020**
+
+### Disclaimer
+
+* Native Template v5.1.1 applies to apps built using Studio Pro v8.15.x and above.
+* Native Template v5.0.5 applies to apps built using Studio Pro v8.12.1 - 8.14.x.
+* Native Template v4.2.3 applies to apps built using Studio Pro up to 8.12.0.
+
+### Improvements
+
+* This release makes Mendix native mobile apps fully compatible with Xcode 12's build system.
+
+### Fixes
+
+* Base64-encoded images are now fully supported with builds completed using Xcode 12.
+
+## 5.1.0
+
+**Release date: October 27th, 2020**
+
+### Disclaimer
+
+This release is required to use the **Capabilities** support introduced with the new Mendix Native Mobile Builder. You must update to this version or higher in order to use that tool's functionality. The Mendix Native Mobile Builder is included in Mendix Studio Pro v8.15 and above.
+
+### Capabilities Support
+
+With the release of Mendix Native Mobile Builder we are introducing a new approach for linking dependencies.
+
+While previous versions of the Native Template would have all core dependencies linked by default — for example an app would have Firebase linked even though it is not using any functionality — our new approach builds on top of React Native's auto-linking behavior and extends it a step further.
+
+We gathered all core functionalities and grouped them under the platform-specific capabilities' *.json* files. With a simple Boolean toggle, the Native Template is able to link the required dependencies for the enabled capability — even ones without auto-link. This happens as part of the `pod install` step for iOS and the building step on Android. After each change to these files, you must remember to run `pod install` for iOS or build your Android project so that the new files can be generated.
+
+Some steps, like the inclusion of the Google Service configuration or the Google Maps API, are still manual if you are building locally. If you would like to further simplify these steps, consider using the Mendix Native Mobile Builder to just configure your project and build your project however you like.
+
+## 5.0.5 and 4.2.3 
+
+**Release date: October 19th, 2020**
+
+### Improvements
+
+* We added support for the new file system security rules added to Android v10 and above. 
+
+### Fixes
+
+* We set the legacy external storage flag to support Android v10 and below.
+* We added support for missing iPad icons.
+
+## 5.0.4 and 5.0.3 
+
+**Release date: October 9th, 2020**
+
+### Improvements 
+
+* We updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.
+
+## 5.0.2
+
+**Release date: September 2nd, 2020**
+
+### Fixes
+
+* We fixed an exception due to threading that could cause a crash on iOS.
+
 ## 5.0.1
 
 **Release date: August 26th, 2020**
@@ -191,7 +384,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 

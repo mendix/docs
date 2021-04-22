@@ -6,7 +6,7 @@ menu_order: 1
 
 ## 1 Units
 
-If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the Project Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the Project Explorer of Studio Pro is a `unit`.
+If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the App Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the App Explorer of Studio Pro is a `unit`.
 
 Units come in two flavors:
 
@@ -23,7 +23,7 @@ As an example: an entity can have a generalization. If it has none, you see "(no
 
 ### 2.1 Abstract Element Types
 
-A lot of elements (or: element types) share features. For example: microflows and rules share a lot of features which are expressed on a common abstract type `MicroflowBase`. All abstract types are suffixed with `Base` and should never be created directly. However, they are useful (to know about) for analysis: e.g., you can process micro flows and rules in mostly the same way.
+A lot of elements (or: element types) share features. For example: microflows and rules share a lot of features which are expressed on a common abstract type `MicroflowBase`. All abstract types are suffixed with `Base` and should never be created directly. However, they are useful (to know about) for analysis: for example, you can process micro flows and rules in mostly the same way.
 
 ## 3 Properties
 
@@ -44,7 +44,7 @@ As an example, for a domain model the following things are public and therefore 
 * The name and type information of each attribute
 * The name of each (cross-)associations
 
-All other details, such as documentation, validation rules, etc., are not available in the unit interface because these are of no interest to other model units. Using this information you can e.g. refer to an entity from a microflow activity in another unit with only the interface of the domain model unit in memory.
+All other details, such as documentation, validation rules, etc., are not available in the unit interface because these are of no interest to other model units. Using this information you can, for example, refer to an entity from a microflow activity in another unit with only the interface of the domain model unit in memory.
 
 All element types have both an interface and a full form. In the JavaScriptDoc you can see easily the difference in information that is available in for example [the Entity interface](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/domainmodels.ientity.html) and the [full Entity class](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html). The unit interfaces exclusively contain the interface forms of public elements.
 

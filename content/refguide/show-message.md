@@ -3,6 +3,8 @@ title: "Show Message"
 parent: "client-activities"
 menu_order: 4
 tags: ["studio pro", "show message", "client activities"]
+aliases:
+    - /refguide/Show+Message.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -53,7 +55,7 @@ There are three message options:
 
 ### 3.2 Template
 
-**Template** defines the text of the message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2, etc.
+**Template** defines the text of the message. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 ### 3.3 Parameters
 

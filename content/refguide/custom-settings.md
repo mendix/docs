@@ -19,7 +19,11 @@ Each custom setting consists of a name and a value. For example, to enable persi
 
 If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details#runtime-tab) section of *Environment Details*.
 
-If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable. [Reference](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings)
+If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable.
+
+When you are running your app locally, you can set these values in a [Configuration](configuration#custom).
+
+There is more information on how this is done in the Cloud Foundry buildpack in [Configuring Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#configuring-custom-runtime-settings) in the GitHub repo.
 
 ## 2 General Settings
 
@@ -27,28 +31,31 @@ The following custom settings can be configured:
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |
-| **UploadedFilesPath** | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
-| **ApplicationRootUrl** | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
-| **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. | NONE |
-| **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
-| **PersistentSessions** | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
-| **TrackWebServiceUserLastLogin** | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
-| **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
-| <a name="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
-| **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
-| **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
-| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
-| **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110) and above. | |
-| **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
-| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
-| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
-| **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default Value: `12 * 60 * 60` (12 hours). A value of `0` means no cleanup. ||
-| **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 |
-| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
-| **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
-| **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (for example, Pivotal assumes `JSESSIONID` as a session cookie name). | XASSESSIONID |
+| **ApplicationRootUrl** | Can be used within Java actions to get the public location of the application. Useful when the HOST header is not available, for example when including a URL to the application when sending e-mails from a scheduled event. | In Mendix Cloud, https://\[domain\].mendixcloud.com |
+| <a name="ca-certificates"></a>**CACertificates** | A comma-separated list of paths to CA certificates. |   |
+| **ClientCertificatePasswords** | Comma-separated list of passwords for Client Certificates (should match the **ClientCertificates** order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
+| **ClientCertificates** | Comma-separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
+| **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
+| **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
+| **com.mendix.core.isClusterSlave** | Set to `true` in a high-availability scenario when this is *not* the [Cluster Leader](clustered-mendix-runtime#cluster-leader-follower). The buildpack will usually enforce this setting, but it may need to be set for some on-premises deployments. | `false` |
+| **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. At present, `"None"` is the default, but this will change to `"Strict"` in the next major Mendix release. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. This setting is available in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110) and above. | |
+| **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
+| **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
+| **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
+| **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert type="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net.SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](call-rest-action#troubleshooting).{{% /alert %}} | 355 |
+| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
+| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
+| **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
+| **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
+| **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
+| **NoClientCertificateUsages** | Comma-separated list of host names or imported web service names that should never be contacted using a client certificate. |  |
+| **PersistentSessions** | Defines whether sessions will be persisted in the database or not. When sessions are persisted, statistics will be made about logged-in users. When the Runtime server restarts, sessions still exist and users don't have to sign in again. In a clustered environment you must have persistent sessions. The only exception is for on-premises installations which have implemented sticky sessions. The value can be true or false. | true |
+| **ScheduledEventExecution** | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. | NONE |
+| **SessionTimeout** | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
+| **TaskQueue.ShutdownGracePeriod** | Time in ms to wait for task in a task queue to finish when shutting down. |          10000 |
+| **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |
+| **TrackWebServiceUserLastLogin** | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
+| **UploadedFilesPath** | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 
 ## 3 Log File Settings
 
@@ -76,7 +83,6 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
 | **LogMinDurationQuery** | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the number of milliseconds specified here. By default, only the relevant SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to `TRACE` to show more information about the page or the microflow which leads to this query. |   |
 | **OracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS. |   |
-| **ReadCommittedSnapshot** | Defines whether the`READ_COMMITTED_SNAPSHOT` option of Microsoft SQL Server must be enabled or not. For more information, see [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx). The value can be `true` or `false`. | true |
 | **DataStorage.EnableDiagnostics** | This setting can be used to generate a uniqueness constraint violation report. | false |
 | **UseNetworkTimeout** | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | **JdbcLoginTimeout** | This setting defines the database connection establishment time in milliseconds. | 5000 |
@@ -116,7 +122,7 @@ Before the data copy process starts, the source database will also be brought in
 
 ## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
-The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
+The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -139,7 +145,7 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 
 ## 6 Microsoft Azure SQL
 
-These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
+These settings can be changed to use a Microsoft Azure SQL database for your Mendix application. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
@@ -151,9 +157,9 @@ First, you need to create an Azure SQL database (for information on how to do th
 | **DatabaseUserName** | `your-username` |   |
 | **DatabasePassword** | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings
+## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
 
-These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
+These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -175,7 +181,7 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
 
-These settings can be used to store files using the IBM Cloud object storage service.
+These settings can be used to store files using the IBM Cloud object storage service. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
 
 Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
 
@@ -210,9 +216,15 @@ The settings below influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The settings below allow you to use a proxy.
+The settings below allow you to use a proxy. 
+
+{{% alert type="warning" %}}
+These settings have to be set as JVM properties, not as custom Runtime settings.
+{{% /alert %}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| **http.proxyHost** | Defines the hostname of the proxy server. |  |
-| **http.proxyPort** | Defines the port number of the proxy server. |  |
+| **http.proxyHost** | Defines the hostname of the HTTP proxy server. |  |
+| **http.proxyPort** | Defines the port number of the HTTP proxy server. |  |
+| **https.proxyHost** | Defines the hostname of the HTTPS proxy server. |  |
+| **https.proxyPort** | Defines the port number of the HTTPS proxy server. |  |

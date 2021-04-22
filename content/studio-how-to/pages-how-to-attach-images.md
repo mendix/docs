@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to configure image uploader in Mendix Studio."
 menu_order: 60
 tags: ["studio", "pages", "image", "image uploader", "attachment", "attach image"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -101,7 +102,7 @@ Follow the steps below:
 
 10. In the button properties, click **Page**.
 
-11. In the **Select Page** dialog box, click **New Page**.
+11. In the **Select Page** dialog box, click the plus icon in the top right corner.
 
 12. In the **Create new page** dialog box, do the following:
 

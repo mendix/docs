@@ -4,16 +4,17 @@ parent: "metrics"
 menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Please do not rename the anchors in this document as they are used in links from the Developer Portal
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal.
 ---
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
 {{% alert type="info" %}}
-This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](trends).
+This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to the deprecated Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](trends).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 {{% /alert %}}
@@ -24,14 +25,14 @@ To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 
 {{% /alert %}}
 
 Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
-2. Click **Security** under the **Settings** category on the left.
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
+2. Click **Collaborate** > **Security** on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
 5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
@@ -44,8 +45,8 @@ Assign permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
-2. Click **Metrics** under the **Operate** category.
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
+2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
 
 ![](attachments/trends-v4/environment.png)
@@ -217,6 +218,12 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
+Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
+
+If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
+
+Your app will always have access to at least the amount of CPU specified for your container when it needs it.
+
 ### <a name="Trends-appdf"></a>4.10 Application Node Disk Usage in Percentage (%)
 
 The **Application node disk usage (percentage)** graph shows the relative amounts of data that are stored on disk.
@@ -325,7 +332,7 @@ If you see large values here which do not immediately drop back again, it may in
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
 
 {{% alert type="info" %}}
-The units on the graph are mebibtyes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
+The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
 {{% /alert %}}
 
 {{% alert type="info" %}}

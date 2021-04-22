@@ -1,7 +1,7 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 60
+menu_order: 70
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
@@ -26,10 +26,7 @@ If the app does not pass the check, you see the **Checks** button goes red with 
 
 If your app has consistency errors, the **Checks** button will have the red border and the number of errors will be indicated on the button. To display consistency errors for your app and view the impacted elements in it, you can do the following:
 
-1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel:
-
-    ![](attachments/checks/checks-button-red.png)
-
+1. Click the **Checks** button or press the <kbd>C</kbd> shortcut to open the **Checks** panel.
     The panel with the list of consistency errors appears at the bottom of the screen. For more information on the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section below.
 
     ![](attachments/checks/checks-panel.png)
@@ -61,8 +58,6 @@ The items displayed in the table of the **Checks** panel are described below.
 | Document | Indicates the place of your app where the error is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etcetera ). |
 
-## 4 Read More
+## 4 Main Documents in This Category
 
-* [Consistency Errors](consistency-errors)
-* [Previewing & Publishing Your App](publishing-app)
-* [General Info](general)
+* [Consistency Errors](consistency-errors) – provides information on what consistency errors are and how to fix them

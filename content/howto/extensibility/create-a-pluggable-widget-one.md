@@ -36,9 +36,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The following steps will teach you to build a pluggable input widget, and show you how to use the new pluggable widget API.
 
-### 3.1 Creating a Test Project{#creating-a-test-project}
+### 3.1 Creating a Test App {#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**.
+1. Open Mendix Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
 	a. In the domain model of **MyFirstModule**, add a new entity.<br />
 	b. Add a new attribute of type **String**.<br />
@@ -62,7 +62,7 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
-Using a terminal or command line, navigate to your new Mendix app project’s folder, create a new folder named *CustomWidgets*, and start the generator using:
+Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *CustomWidgets*, and start the generator using:
 
 ```
 $ mkdir CustomWidgets
@@ -90,7 +90,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ### 3.3 Adding the Attribute
 
-Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
+Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
@@ -200,20 +200,20 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
-7.  Add a test widget to the project home page:<br />
-	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
+7.  Add a test widget to the proappject home page:<br />
+	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize ProjeAppct Directory** from the Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
-	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test Project](#creating-a-test-project) above.
+	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App ](#creating-a-test-project) above.
 
 	The end result will be similar to the screenshot below:
 
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
-	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm run dev` command again. To refresh your widgets, press F4 or select Project > Synchronize Project Directory from the Mendix Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm run dev` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
-8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
+8.  When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
@@ -285,7 +285,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the Project Directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the app directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 

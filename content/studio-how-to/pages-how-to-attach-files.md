@@ -4,6 +4,7 @@ category: "Pages"
 description: "Describes how to configure file manager in Mendix Studio."
 menu_order: 70
 tags: ["studio", "pages", "file", "upload files", "attachment", "file manager"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -104,7 +105,7 @@ Follow the steps below:
 
     7. Click the **Page** property.
 
-    8. In the **Select Page** dialog box that opens, click **New Page**.
+    8. In the **Select Page** dialog box that opens, click the plus icon in the top right corner to add a new page.
 
     9. In the **Create new page** dialog box, do the following:
 

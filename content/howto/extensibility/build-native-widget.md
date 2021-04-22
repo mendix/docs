@@ -9,7 +9,7 @@ tags: ["native","widget","pluggable","react native","extensibility"]
 
 ## 1 Introduction
 
-Pluggable widgets, introduced in Mendix 8, enable developers to create new widgets beyond the core widgets shipped with Mendix Studio Pro. The pluggable widgets API works for both web and native mobile, offering you unique power and flexibility. For the web platform, the rendering is based on React and the React DOM. For mobile, the rendering uses the React Native framework.
+Pluggable widgets enable developers to create new widgets beyond the core widgets shipped with Mendix Studio Pro. The pluggable widgets API works for both web and native mobile, offering you unique power and flexibility. For the web platform, the rendering is based on React and the React DOM. For mobile, the rendering uses the React Native framework.
 
 In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
 
@@ -33,7 +33,7 @@ Clone this [code sample](https://github.com/mendix/native-group-box-pluggable-wi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro 8.3
+* Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
@@ -58,22 +58,22 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To build a group box widget for native mobile, you will follow these steps:
 
-1. Scaffold a pluggable widget project.
-2. Create a Mendix test project.
+1. Scaffold a pluggable widget app.
+2. Create a Mendix test app.
 3. Build the group box widget.
 
 The following subsections will elaborate on each of these steps.
 
-### 3.1 Scaffolding a Pluggable Widget Project
+### 3.1 Scaffolding a Pluggable Widget App
 
-The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your project folder with a folder structure and certain files recommended by Mendix.
+The Pluggable Widget Generator is the quickest way to start developing a pluggable widget. When you run this generator with Yeoman, Yeoman will scaffold your app folder with a folder structure and certain files recommended by Mendix.
 
-To scaffold your project folder for the group box widget, follow these steps:
+To scaffold your app folder for the group box widget, follow these steps:
 
 1. Open up a terminal.
-2. Change the current working directory to the folder where you want to store your widget project.
+2. Change the current working directory to the folder where you want to store your widget app.
 
-	{{% alert type="info" %}}Make sure to store your widget project in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
+	{{% alert type="info" %}}Make sure to store your widget app in a folder not connected to Dropbox. Dropbox blocks files from being watched, which will prevent you from completing this document. 
 	{{% /alert %}}
 
 3. Start the generator by executing the following command:
@@ -91,7 +91,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 	* License: {*Apache-2.0*}
 	* Initial version: {*1.0.0*}
 	* Author: {*Mendix*}
-	* Mendix Project path: {*./test/MxTestProject/*}
+	* Mendix app path: {*./test/MxTestProject/*}
 	* Programming language: {**TypeScript**}
 	* Widget type: {**For native mobile apps**}
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
@@ -99,16 +99,16 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 	![Pluggable Widget Generator input](attachments/build-native-widget/pluggable-widget-generator-input.png)
 
-5. Your widget will build. If your project has been scaffolded correctly. you will see the following message:
+5. Your widget will build. If your app has been scaffolded correctly. you will see the following message:
 
 	`> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
-### 3.2 Creating a Mendix Test Project
+### 3.2 Creating a Mendix Test App
 
-In order to test your group box widget, you will a Mendix application that uses this widget in various ways. Create a Mendix project for this application by following these steps:
+In order to test your group box widget, you will a Mendix application that uses this widget in various ways. Create a Mendix app for this application by following these steps:
 
 1. Open Studio Pro.
-2. Create a new project by clicking **File** > **New Project**.
+2. Create a new app by clicking **File** > **New App**.
 3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
@@ -118,20 +118,20 @@ In order to test your group box widget, you will a Mendix application that uses 
 
 Optionally, you can remove all unused widgets to optimize the debugging process. To do so, follow these steps:
 
-1. Click **Project** > **Show Project Directory in Explorer**.
+1. Click **App** > **Show App Directory in Explorer**.
 2. Open the **widgets** folder.
 3. Delete all files in this folder.
 
-Follow these steps to add the Mendix project as a test project to your widget project, so that you can start modeling with the new widget:
+Follow these steps to add the Mendix app as a test app to your widget app, so that you can start modeling with the new widget:
 
-1. Close the project in Mendix Studio Pro by clicking **File** > **Close Project**.
-2. Move the contents of the Mendix project folder into **test/MxTestProject**, which is located inside your group box widget project folder.
+1. Close the app in Mendix Studio Pro by clicking **File** > **Close App**.
+2. Move the contents of the Mendix app folder into **test/MxTestProject**, which is located inside your group box widget app folder.
 
 Create a test case by following these steps:
 
-1. Open the Mendix test project in **test/MxTestProject** by selecting **File** > **Open Project**.
+1. Open the Mendix test app in **test/MxTestProject** by selecting **File** > **Open App**.
 2. In the **Open App** dialog box, select **Locally on disk**.
-3. Open the *GroupBoxTestProject.mpr* file inside your group box widget project folder.
+3. Open the *GroupBoxTestProject.mpr* file inside your group box widget app folder.
 4. Open **Home_Native** page.
 5.  Copy the **Home** container and paste it underneath that container:
 
@@ -145,9 +145,9 @@ Create a test case by following these steps:
 
 9. Double-click the widget, fill in your name as the **Default value**, and click **OK**.
 
-You have set up your test project. To verify that your Mendix test project is set up correctly, follow these steps:
+You have set up your test app. To verify that your Mendix test app is set up correctly, follow these steps:
 
-1. In Studio Pro, run the test project locally.
+1. In Studio Pro, run the test app locally.
 2. Use the Make It Native app to open your new app.
 3.  Verify that your app's home page contains the yellow text **Hello {your name}**.
 
@@ -165,7 +165,7 @@ Now that your widget sample code is running, it is time to transform your sample
 6. Add a custom default style.
 7. Add a design property.
 
-The following paragraphs will elaborate on each of these steps. Open up your group box widget project folder in your IDE of choice. From now on, all file references will be relative to this project folder.
+The following paragraphs will elaborate on each of these steps. Open up your group box widget app folder in your IDE of choice. From now on, all file references will be relative to this app folder.
 
 #### 3.3.1 Creating a Static UI
 
@@ -196,8 +196,8 @@ Define the structure and default style of the group box widget with these steps:
 	The **render** method uses two built-in components from React Native: **\<View>** and **\<Text>**. **\<View>** is a component like a \<div> or \<span> from HTML, whereas the **\<Text>** component is used to display some text. To learn more about the built-in components, consult the [React Native website](https://facebook.github.io/react-native/).
 
 3. Open up a terminal.
-4. Change the current working directory to your project folder.
-5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
+4. Change the current working directory to your app folder.
+5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test app:
 
 	```shell
 	$ npm run dev
@@ -205,8 +205,8 @@ Define the structure and default style of the group box widget with these steps:
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
 
-6. Open your Mendix test project in **test/MxTestProject** in Mendix Studio Pro.
-7. Run the project locally.
+6. Open your Mendix test app in **test/MxTestProject** in Mendix Studio Pro.
+7. Run the app locally.
 8. Verify with the Make It Native app that your app looks like the image below:
 
 	![basic app](attachments/build-native-widget/2-header-caption-mobile.png)
@@ -263,7 +263,7 @@ The UI of your widget does not look like a group box yet. Apply a default style 
 	* [\<View> style props](https://facebook.github.io/react-native/docs/view-style-props)
 	* [\<Text> style props](https://facebook.github.io/react-native/docs/text-style-props)
 
-3. Save all files to rebundle and update the Mendix test project.
+3. Save all files to rebundle and update the Mendix test app.
 4. Refresh the Mendix app inside the Make It Native app.
 5. Verify that the group box widget looks like the image below:
 
@@ -319,7 +319,7 @@ For the group box widget it would be nice to have square corners on Android devi
 	};
 	```
 
-3. Save all files to rebundle and update the Mendix test project.
+3. Save all files to rebundle and update the Mendix test app.
 4. Refresh the Mendix app inside the Make It Native app.
 5. Verify that the group box widget looks like the image below (if you are using an Android test device, your border will look a little different):
 
@@ -400,7 +400,7 @@ You are not using the **label** property of the **defaultStyle** constant anymor
 	}
 	```
 
-5. Save all files to rebundle and update the Mendix test project.
+5. Save all files to rebundle and update the Mendix test app.
 6. Refresh the Mendix app inside the Make It Native app.
 7. Verify that the group box widget still looks the same after the refactoring:
 
@@ -473,7 +473,7 @@ Next you will allow the Mendix developer to alter the header caption of your wid
 
 Do these final steps to sync and run your app:
 
-1. In Studio Pro press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
+1. In Studio Pro press <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to sync your app with the changes you made to **src/GroupBox.xml**. 
 2. An error will tell you to update your widget. Right-click the Group Box widget and select **Update widget**. 
 3. Double-click the same widget and you will now see your new property. 
 4. Fill in some caption text, click **OK**, and rerun your app locally to see your caption text in the app:
@@ -556,7 +556,7 @@ You will also want Mendix developers to be able to fill content in the group box
 Verify that the new content property works:
 
 1. Go back to Studio Pro.
-2. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
+2. Press <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes to the **src/GroupBox.xml** file.
 3. Update the group box widget again. A content area will appear in the page editor:
 
 	![content area](attachments/build-native-widget/content-area.png)
@@ -614,7 +614,7 @@ It would be nice to hide the content area of the group box completely when there
 	}
 	```
 
-4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your project and check to see that your new group box with no content shows no empty white box:
+4. To see your changes, drag and drop a new **Group box** widget onto your home page. Run your app and check to see that your new group box with no content shows no empty white box:
 
 	![new group box](attachments/build-native-widget/6-button-inside.png)
 
@@ -917,7 +917,7 @@ Next you have to pass the icons configured by the Mendix developer to your displ
 	```
 
 6. Navigate to Studio Pro.
-7. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+7. Press <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 8. Update the group box widget.
 9. Double-click your widget.
 10. In the **Icon** described as **Icon used to indicate that the group box can be expanded** click **Edit**.
@@ -1305,7 +1305,7 @@ The last thing to do is change the container component so that the properties ge
 	```
 
 3. Navigate to Studio Pro.
-4. Press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
+4. Press <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes you made to the **src/GroupBox.xml** file.
 5. Update the group box widget. Notice that now your widget has the icon you loaded into its *xml*:
 
 	![groupbox 64](attachments/build-native-widget/groupbox-64-icon.png)
@@ -1441,7 +1441,7 @@ The developer needs to have the class names memorized to apply a certain group b
 
 	Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
 
-3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
+3. In Studio Pro click <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes you made to the previous two files.
 
 4. Double-click the group box widget and navigate to the **Appearance** tab.
 

@@ -1,8 +1,8 @@
 ---
 title: "Atlas UI Reference & Custom Styling"
 category: "Themes"
-description: "Describes the configuration and usage of the Atlas UI Reference & Custom Styling theme, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "atlas ui", "atlas ui reference", "custom styling", "page template", "building block", "widget", "platform support"]
+description: "Describes the configuration and usage of the Atlas UI Reference & Custom Styling theme, available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui reference", "custom styling", "page template", "building block", "widget", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +21,7 @@ Use the [Atlas UI Reference & Custom Styling](https://appstore.home.mendix.com/l
 
 ## 2 Configuration
 
-After installing this theme in your app project, run your app locally and do the following:
+After installing this theme in your app, run your app locally and do the following:
 
 * To view the app in a phone wrapper, add `/index-phone-preview.html` after your app's URL 
 * To view the app in a tablet wrapper, add `/index-tablet-preview.html` after your app's URL 

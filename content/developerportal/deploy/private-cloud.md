@@ -2,8 +2,9 @@
 title: "Private Cloud"
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
-menu_order: 45
+menu_order: 48
 tags: ["Deployment", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -14,11 +15,7 @@ Your organization may have a requirement to use a private cloud, perhaps as part
 
 You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Developer Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
 
-The following platforms are officially supported by Mendix for Private Cloud:
-
-* Red Hat OpenShift
-* Amazon Web Services Elastic Kubernetes Service (AWS-EKS)
-* Azure Kubernetes Service (AKS)
+Please see [Supported Providers](private-cloud-supported-environments) for a list of platforms supported by Mendix for Private Cloud.
 
 There are two steps required to achieve this, listed below.
 

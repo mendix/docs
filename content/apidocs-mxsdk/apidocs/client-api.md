@@ -1,7 +1,7 @@
 ---
 title: "Client API"
 category: "API Documentation"
-menu_order: 3
+menu_order: 15
 tags: ["Client API", "API"]
 ---
 
@@ -11,6 +11,7 @@ Enrich the user interface of your applications by building on top of our web cli
 
 ## 2 Client APIs
 
+* [Mendix 9 Client API](https://apidocs.rnd.mendix.com/9/client/index.html)
 * [Mendix 8 Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
 * [Mendix 7 Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * [Mendix 6 Client API](https://apidocs.rnd.mendix.com/6/client/index.html)

@@ -3,7 +3,7 @@ title: "Optimize Retrieve Activities"
 category: "Logic & Business Rules"
 menu_order: 9
 tags: ["microflow", "retrieve", "optimize"]
-#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---
 
 ## 1 Introduction
@@ -44,7 +44,6 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 ## 4 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)

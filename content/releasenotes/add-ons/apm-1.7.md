@@ -75,12 +75,12 @@ This version supports Mendix 6.2.0 and above only. Also only on java 8.
 *   In Mendix 6.6+ there was an issue with validations in the installation Wizard. This is fixed.
 *   An issue with a field length in the performance tool tree is fixed
 *   Updated CustomString widget so trap tool shows the number of exclusions again
-*   Modeller warnings and deprecations removed/fixed, so developers are not hindered by APM Tool warnings/deprecations when modelling.
+*   Modeler warnings and deprecations removed/fixed, so developers are not hindered by APM Tool warnings/deprecations when modeling.
 *   Removed or reduced usage of certain widgets when it was possible to replace the functionality with standard Mendix components.
 *   When creating a trap tool exclusion the message and stack trace strings are now escaped for special characters in the regular expression language, so you can immediately test and get at least 1 result
 *   Fixed a bug in the trap tool where an overload of errors could cause the trap tool and the entire application to become unresponsive.
 *   Added support for explain plan on built-in database
-*   Removed usage of retrieving data from persistent to non-persistent entities to be ready for Mendix 7
+*   Removed usage of retrieving data from persistable to non-persistable entities to be ready for Mendix 7
 *   Moved heapdump feature to separate security group, so on installation you can choose to use this feature or not
 *   Fixed a bug in the performance tool that sometime a (caught) null pointer would show up in the log
 

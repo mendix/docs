@@ -3,18 +3,15 @@ title: "Consumed OData Services"
 parent: "integration"
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
-#This file superseded .
 ---
-
-{{% todo %}}[edit further and add x-refs, and notify https://gitlab.rnd.mendix.com/integration/integration.wiki/-/blob/master/refguide/consumed-odata-services.md that this version is now the latest]{{% /todo %}}
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/index). 
+Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
 
-Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
-For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
+For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](consumed-odata-service).
 
 {{% alert type="info" %}}
 Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
@@ -24,11 +21,11 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-{{% todo %}}[ Consider moving this to External entities doc. or add x-ref . However, it is a summary and all the info is given elsewhere. Next iteration is to analyze all the available data and re-organize]{{% /todo %}}
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
 
-When you use an OData service to retrieve data from an external entity, the OData service is called and the data is returned.
+### 2.1 External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the OData service and returned. These entities have some limitations compared to persistable entities:
+External entities have some limitations compared to persistable entities:
 
 * External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities
@@ -36,12 +33,22 @@ When an external entity is used in an app project, the associated dataset for th
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints) in the access rules of external entities cannot be set
 
-Associations between external entities appear in the domain model. You can only use associations where both sides are exposed.
+Associations between external entities (as defined in the originating app) will be shown in the domain model. You can only use the associations where both sides are exposed.
 
-You can create associations between [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+You can create associations between local [persistable entities](persistability#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+
+### 2.2 Consumed OData Service
+
+When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
+
+In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **App** pane. 
+
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+
+{{% image_container width="300" %}}![Data Hub Pane update](attachments/consumed-odata-service/project-pane-update-available.png){{% /image_container %}}
+
+This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service#updating).
 
 ## 3 Runtime Considerations
 
 The service endpoint is called for every retrieval of consumed OData services. Therefore, the data retrieval for consumed external entities may be slower than local persistable entities.
-
-{{% todo %}}[ what is the value of this? Here?]{{% /todo %}}

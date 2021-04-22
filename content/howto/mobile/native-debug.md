@@ -17,7 +17,7 @@ To start a debugging session, do the following:
 1. Run your Mendix app project locally on your desktop.
 2. Start the Make It Native app.
 3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View** > **View in the Mendix App**.
+4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View App** > **View on your device**.
 5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
 When the Make It Native app finishes loading your app project, do the following:
@@ -27,7 +27,7 @@ When the Make It Native app finishes loading your app project, do the following:
 
 Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If Chrome launches but does not load your app, check that your app project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
+If Chrome launches but does not load your app, check that your app project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click the play button (**Run Locally**) again to restart your app. 
 
 You should see this page:
 
@@ -126,5 +126,4 @@ For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-dev
 ## 5 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Debug a Hybrid Mobile App](debug-a-mobile-app)
-* [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)
+* [Configure Parallels](using-mendix-studio-pro-on-a-mac)

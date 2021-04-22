@@ -20,7 +20,7 @@ If you want to use push notifications with custom apps which created with native
 
 Create a Mendix project using the Native Mobile Quickstart starter app:
 
-1. Open Mendix Studio Pro. **Select File** > **New Project**, and then select the **Native Mobile Quickstart** app.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Native Mobile Quickstart** app.
 1. Click **Use this starting point**.
 1. Click **Create app** to close the dialog box.
 
@@ -66,6 +66,8 @@ To set up a notification widget, do the following:
 1. Drag and drop a data view widget onto your home page and set its **Data source** > **Nanoflow** to **DS_Notification**:
 
     {{% image_container width="300" %}}![Dataview](attachments/native-remote-push/modeler/Dataview.png){{% /image_container %}}
+   
+	Make sure to leave the data view **editable**. Disabling the editability will break the notification functionality.
 
 1. Drag and drop a notifications widget inside of this data view.
 1. Set the notifications widget's GUID to **NativeNotification.objectGUID**:
@@ -104,7 +106,7 @@ To set up actions which will occur after tapping or receiving a notification, do
 
 ### 3.5 Adding Firebase Configurations
 
-Deploy your project and open your administration page in a web browser. Then, do the following:
+Deploy your app and open your administration page in a web browser. Then, do the following:
 
 1. Add a new FCM configuration.
 1. Select **Enabled**.

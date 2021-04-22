@@ -6,7 +6,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert type="warning" %}}
-Please update to Native Builder v3.2.1. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
+Please update to Native Builder v3.2.1 or higher. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 
 {{% /alert %}}
 
 ## 1 Introduction
@@ -219,7 +219,7 @@ native-builder.exe release list --project-name "CoolApp"
 
 ### 2.8 Generating Only the App Bundles
 
-When used, the `bundle` command will only run the MXBuild step (skipping the App Center build step). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
+When used, the `bundle` command **will only run the MXBuild step** (skipping GitHub configuration and the App Center build steps). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
 
 Here is an example of a command featuring `bundle`:
 
@@ -319,7 +319,7 @@ The highest integer Android will allow is 2,147,483,647. Consider starting with 
 
 ### 3.13 --mendix-version
 
-This parameter makes the Native Builder pick a compatible version of the Native Template based on your Mendix project's Studio Pro version. This parameter needs to be a valid semantic version of Studio Pro, for example 8.5.1. The version provided needs to be as specific as possible, as even patch versions might include fixes that might not be compatible with all Native Templates available. To determine which Mendix version you are using check the **About** page or splash screen of your Mendix project's version of Studio Pro.
+This parameter makes the Native Builder pick a compatible version of the Native Template based on your Mendix app's Studio Pro version. This parameter needs to be a valid semantic version of Studio Pro, for example 8.5.1. The version provided needs to be as specific as possible, as even patch versions might include fixes that might not be compatible with all Native Templates available. To determine which Mendix version you are using check the **About** page or splash screen of your Mendix app's version of Studio Pro.
 
 ### 3.14 --verbose {#verbose}
 
@@ -340,7 +340,7 @@ In App Center you can configure your builds at the branch level. If no configura
 
 ### 4.3 Custom Developer App
 
-As your Mendix app project matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). A custom developer app fills this role by serving as a replacement for the Make It Native app, and should be used when you have custom widgets and logic which are not supported by the Make It Native app. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules, and any other requirements to test your evolving app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
+As your Mendix app matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). A custom developer app fills this role by serving as a replacement for the Make It Native app, and should be used when you have custom widgets and logic which are not supported by the Make It Native app. Custom developer apps are apps you can generate yourself using your current project structure, your custom modules, and any other requirements to test your evolving app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps)
 
 ## 5 When to Regenerate Your Native Template {#sync-your-repository}
 
@@ -348,7 +348,7 @@ The Native Template is being continuously developed. This means new versions are
 
 You should update your project's template in the following scenarios:
 
-* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix App Store
+* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix Marketplace
 * You updated your Studio Pro version
 
 The Native Template is tightly tied to the version of Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.

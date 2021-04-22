@@ -1,7 +1,7 @@
 ---
 title: "Stories API"
 category: "API Documentation"
-menu_order: 11
+menu_order: 60
 ---
 
 ## 1 Introduction

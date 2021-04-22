@@ -20,7 +20,7 @@ The purpose of the Partner Profile is to provide the Mendix community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/index))
+* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/))
 
 ## 3 Signing In to the Partner Profile
 
@@ -163,7 +163,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/mendix-profile/index#public) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/mendix-profile/#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 
@@ -179,9 +179,7 @@ To add developers to the Partner Profile, follow these steps:
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview.
 
 {{% alert type="info" %}}
-
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
-
+Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/developerportal/control-center/).
 {{% /alert %}}
 
 ## 8 Editing Testimonials
@@ -220,4 +218,4 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 
 ## 11 Read More
 
-* [Mendix Jobs Board](mendix-job-board)
+* [Jobs Board](mendix-job-board)

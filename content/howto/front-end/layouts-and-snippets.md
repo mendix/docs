@@ -83,7 +83,7 @@ By default, the desktop and phone layouts are available out-of-the-box, and the 
 
 Be careful with how you design these layouts. For example, in the mobile apps, you do not want to have too many regions, or the design will look crowded and confusing to the end-user. On the other hand, a desktop application might require different regions that allow for more content to be shown and details to be displayed.
 
-### 4.1 Layout Examples
+### 4.1 Layout Examples {#layout-examples}
 
 These are some layout examples:
 
@@ -133,10 +133,10 @@ The simple menu bar widget shows a configured menu in the form of a horizontal b
 
 The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the **Navigation** document or a **Menu** page resource: 
 
-* **Project** > **Navigation** — when selected, the menu items are taken from one of the menus defined in this document; use this for the main menu of your application
+* **App** > **Navigation** — when selected, the menu items are taken from one of the menus defined in this document; use this for the main menu of your application
 * **Add Other** > **Menu ** — when selected, the menu items are taken from this page resource; use this menu for auxiliary menus
 
-When you have selected the project navigation as source, the device profile must be determined for the correct navigation menu:
+When you have selected the app navigation as source, the device profile must be determined for the correct navigation menu:
 
 ![](attachments/18448710/edit-menu-bar.png)
 
@@ -144,7 +144,7 @@ For the desktop, use the **Responsive** menu.
 
 For tablet and phone configuration, you need to choose the appropriate profile type. See the section [Device Profiles](#profiles) below for details. 
 
-### 5.5 Project Navigation
+### 5.5 App Navigation
 
 The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menu widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
 
@@ -152,12 +152,13 @@ The **Navigation** document defines the main navigation structure of the applica
 
 At the heart of the navigation model in Mendix, are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while the following Tablet and Phone profiles can be enabled or disabled:
 
-* **Hybrid tablet app online**
-* **Hybrid tablet app offline**
-* **Hybrid phone app online**
-* **Hybrid phone app offline**
-* **Tablet browser**
-* **Phone browser**
+* **Responsive web**
+* **Responsive web offline**
+* **Tablet web**
+* **Tablet web offline**
+* **Phone web**
+* **Phone web**
+* **Native mobile (tablet & phone)**
 
 ![](attachments/18448710/device-profiles.png)
 

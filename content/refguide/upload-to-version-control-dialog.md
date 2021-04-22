@@ -3,6 +3,8 @@ title: "Upload to Version Control Server"
 parent: "version-control-menu"
 menu_order: 70
 tags: ["studio pro"]
+aliases:
+    - /refguide/upload-to-team-server-dialog.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,10 +20,10 @@ Use this setting to select the location where you want to store your app. There 
 
 ### 2.1 New Mendix Team Server
 
-You can create a new app on [Mendix Team Server](/developerportal/develop/team-server).
+You can create a new app on [Mendix Team Server](/developerportal/collaborate/team-server).
 
 * Select **New Mendix Team Server**
-* Enter the name for the new Team Server project and repository in the **App name** field
+* Enter the name for the new Team Server app and repository in the **App name** field
 
 	![Enter App name for New Mendix Team Server](attachments/upload-to-version-control/new-team-server-app.png)
 
@@ -48,4 +50,5 @@ If you select **Private server**, enter the address of the repository to which y
 
 ## 3 Read More
 
-* [How to Work with an On-Premises Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto)
+* [How to Work with an On-Premises SVN Version Control Server](/howto/collaboration-requirements-management/on-premises-svn-howto)
+* [How to Work with an On-Premises Git Version Control Server](/howto/collaboration-requirements-management/on-premises-git-howto)

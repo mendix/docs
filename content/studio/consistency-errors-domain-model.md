@@ -1,9 +1,10 @@
 ---
 title: "Domain Model Consistency Errors"
-category: "Consistency Errors"
+parent: "consistency-errors"
 menu_order: 40
 description: "Describes domain model consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "errors", "domain model"]
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 

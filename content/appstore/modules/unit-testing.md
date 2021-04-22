@@ -1,14 +1,14 @@
 ---
 title: "Unit Testing"
 category: "Modules"
-description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
+description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app project.
+Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app.
 
 ### 1.1 Dependencies
 
@@ -21,12 +21,12 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 
 ## 2 Installation
 
-1. Import the Unit Testing module into your app project.
-2. Download the latest Object Handling module into your app project.
+1. Import the Unit Testing module into your app.
+2. Download the latest Object Handling module into your app.
 3. Map the module role **TestRunner** to the applicable user roles in your app.
 4. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 5. The following steps are optional:
-	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app project settings regarding cloud security into consideration)
+	* For including JUnit tests – set the **UnitTesting.FindJUnitTests** constant to true (take the the app settings regarding cloud security into consideration)
 	* For running remote unit tests via API:
 		* Add the **Startup** flow to your app model's startup sequence
 		* Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
@@ -50,7 +50,7 @@ To create a new microflow test in a module, just add a microflow with a name tha
 
 In addition, it is possible to create a **Setup** and **TearDown** microflow per module. Those microflows are invoked once before and after eacht test run (regardless of whether the test run consists of one or multiple unit tests).
 
-The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (althought using the [microflow debugger](/howto/monitoring-troubleshooting/debug-microflows) is usually more insightful).
+The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (although using the [microflow/nanoflow debugger](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows) is usually more insightful).
 
 ### 4.2 Creating a Java Unit Tests (with JUNit)
 

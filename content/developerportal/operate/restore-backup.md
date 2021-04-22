@@ -4,6 +4,7 @@ parent: "backups"
 menu_order: 30
 description: "How to restore a backup."
 tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -34,6 +35,8 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
+    ![](attachments/restore-a-backup/restore-backup.png)
+
 {{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
@@ -60,7 +63,7 @@ The app previously deployed to the node does not, however, need to have had the 
 
     In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
 
-    In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
+    In the deprecated **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
 4. In Mendix Cloud **v3** you will need to confirm this by clicking **Yes**, because this action will immediately stop your app.
 
@@ -135,7 +138,17 @@ The dump must be created with pg_dump version 9.6.17 or below. If it is created 
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file is stored in a second level location:
+This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource.
+
+#### Mendix Cloud V4
+
+For Mendix Cloud V4 the files are stored in a flat structure.
+
+#### Mendix Cloud V3
+
+The situation for the deprecated Mendix Cloud v3 is slightly different. If you need to restore a backup to Mendix Cloud V3, you will need to implement the structure described below. The restore functionality in Mendix Cloud V4 will also recognize this structure if you are restoring a backup taken on V3 to a V4 environment.
+
+Each file is stored in a second level location:
 
 ```
 /tree

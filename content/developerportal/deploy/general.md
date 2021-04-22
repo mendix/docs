@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 10
 description: "An overview of the DEPLOY section of the Developer Portal"
 tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "IBM", "SAP", "On-premises", "Kubernetes"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -28,15 +29,11 @@ The time it takes to build your model (.mda) depends on the complexity of the mo
 
 ## 3 Managing Your Deployed Apps
 
-For many of the platforms to which Mendix can be deployed, the **Deploy** category in the Developer Portal allows you to deploy and manage your app.
-
-The Deploy category consists of three sections:
+For many of the platforms to which Mendix can be deployed, the following pages in the Developer Portal allow you to deploy and manage your app:
 
 * Environments
 * Mobile App
 * App Services
-
-   ![](attachments/general/deploy.png)
 
 ### 3.1 Environments
 

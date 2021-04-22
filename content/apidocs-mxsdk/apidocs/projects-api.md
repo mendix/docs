@@ -1,6 +1,7 @@
 ---
 title: "Projects API"
 category: "API Documentation"
+menu_order: 50
 ---
 
 ## 1 Introduction
@@ -85,7 +86,7 @@ The DeleteApp operation will remove an application, including all resources that
 
 | Name | Type |	Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
+| ProjectID |	String | ID of the project/app, as can be found under the app settings. |
 | User | String | The email address you use to log into your Mendix account.|
 | ApiKey | String | An API Key associated to the user account of the User.|
 

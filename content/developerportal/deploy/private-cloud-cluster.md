@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 menu_order: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -30,7 +31,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 ### 3.1 Creating a Cluster
 
-1. Click **Cloud Settings** on the **Settings** page of your Mendix app.
+1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     
     ![](attachments/private-cloud-cluster/image2.png)
 
@@ -42,15 +43,19 @@ To create a cluster in your OpenShift context, you need the following:
     
     ![](attachments/private-cloud-cluster/image4.png)
 
-4. Select **Cluster Manager** from the **Apps** menu in the Developer Portal.
+4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
-    ![](attachments/private-cloud-cluster/image5.png)
+    ![](attachments/private-cloud-cluster/go-to-nodes-page.png)
 
-5. Click **Register Cluster**. 
+5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+6. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
-6. Enter the following information:
+7. Enter the following information:
     
   1. **Name** – The name you want to give the cluster you are creating.
   
@@ -58,7 +63,7 @@ To create a cluster in your OpenShift context, you need the following:
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
-7. Click **Create**.
+8. Click **Create**.
 
     ![](attachments/private-cloud-cluster/create-cluster.png)
 
@@ -92,9 +97,9 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    ![](attachments/private-cloud-cluster/image23.png)
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
 
 2. Click **Details** next to the namespace you want to use.
 
@@ -105,17 +110,23 @@ If you are not already on the installation tab for your namespace, go to it by f
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
+    ![](attachments/private-cloud-cluster/choose-operating-system.png)
 
-2. Choose the **Mendix Operator Version** that you would like to install.
-    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
+2. Click **Download Executable**.
+
+    ![](attachments/private-cloud-cluster/download-executable.png)
+
+3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
 	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
+    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-3. Click **Download Executable** and make sure that it is stored somewhere on your path.
 	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
-    ![](attachments/private-cloud-cluster/download-executable.png)
+    ![](attachments/private-cloud-cluster/download-operator-version.png)
+
+4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
 ### 4.2 Signing in to OpenShift{#openshift-signin}
 
@@ -881,9 +892,9 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 ### 6.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](attachments/private-cloud-cluster/image23.png)
+![](attachments/private-cloud-cluster/cluster-manager.png)
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
@@ -975,7 +986,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
 {{% alert type="info" %}}
-You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
 #### 6.2.2 Members
@@ -1049,10 +1060,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### 6.2.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
-
-![](attachments/private-cloud-cluster/image31.png)
-
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
 The following pages can be configured:
 
 * Metrics

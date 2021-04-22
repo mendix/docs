@@ -8,7 +8,7 @@ tags: ["marketplace",  "marketplace component", "connector"]
 
 The connectors available in the Mendix Marketplace can be used to connect your Mendix application with other systems.
 
-When you download these connector modules, they will go into the **Project** > **App Store modules** folder.
+When you download these connector modules, they will go into the **App** > **Marketplace modules** folder.
 
 ## 2 Main Documents in This Category
 

@@ -135,14 +135,14 @@ You can add large attachments such as project files to the request. Please note 
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 ### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 {{% alert type="info" %}}

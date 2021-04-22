@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Best Practices for Private Cloud Environments"
 menu_order: 40
 tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

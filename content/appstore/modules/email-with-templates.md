@@ -10,6 +10,17 @@ tags: ["marketplace", "marketplace component", "email with templates", "token", 
 
 The [Email with Templates](https://appstore.home.mendix.com/link/app/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
 
+For a deep-dive look into using this module, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/GwE17mzGma5NAvDnXrVdFA.jpg"
+  data-uuid="GwE17mzGma5NAvDnXrVdFA"
+  data-v="4"
+  data-type="inline"
+/>
+
 ### 1.1 Typical Use Cases
 
 The typical usage scenario is sending emails with a template system and using tokens to handle all of your outgoing standard emails.

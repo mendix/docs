@@ -6,7 +6,7 @@ parent: "report-widgets"
 
 {{% alert type="info" %}}
 
-This widget been deprecated in version 6.10.0 and is marked for removal in version 8.0.0.
+This widget was deprecated and is marked for removal in version 8.0.0.
 
 {{% /alert %}}
 

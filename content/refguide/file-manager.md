@@ -13,12 +13,10 @@ A file manager is used to upload and/or download files.
 
 ![File Manager](attachments/file-widgets/file-manager.png)
 
-It must be placed inside a data view connected to the entity that is either a System.FileDocument (or a specialization) or an [external entity](external-entities) with a `Contents` binary attribute.
+A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](external-entities) with a `Contents` binary attribute.
 
 {{% alert type="info" %}}
-
-For an external entity to be used as a file source, it must be defined as a media element in the corresponding OData service, such an element can be recognized by having `HasStream` attribute set to `true` in its metadata.  
-
+For an external entity to be used as a file source, it must be defined as a media element in the corresponding OData service. Such an element can be recognized by setting the `HasStream` attribute to `true` in its metadata.  
 {{% /alert %}}
 
 {{% alert type="info" %}}

@@ -268,7 +268,7 @@ this.props.myDataSource.hasMoreItems &&
 </button>
 ```
 
-The situation when a `limit` is set to *0* is handled specially. In that case `ListValue` will avoid sending a request to the server to retrieve data and will immediately return empty result. This property can be used to build widgets that load their data lazily - that is, only when and if a specific condition is met.
+When a `limit` is set to *0*, that case is handled in a special way. In this case `ListValue` will avoid sending a request to the server to retrieve data and will immediately return an empty result. This property can be used to build widgets that load their data "lazily": only when and if a specific condition is met.
 
 The following code sample loads the data only if a button is pressed:
 

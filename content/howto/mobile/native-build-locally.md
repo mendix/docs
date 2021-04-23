@@ -83,12 +83,7 @@ For a Windows machine building an Android app, do the following:
 When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
 {{% /alert %}}
 
-2. Since Native Template 5.1.9 and for Native Template version 6.x we introduced Native Mobile Toolkit. If you are using the latest version you also have to run:
-
-	`npm run configure`
-
-	This ensures that the changes from Mendix Native Mobile Builder are applied to your project.
-
+2.  In Native Template v5.1.9 we introduced the Native Mobile Toolkit for Native Template v6.x and higher. If you are using the latest version you also have to run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your project.
 
 For a Mac OS X machine building an iOS app, do the following:
 

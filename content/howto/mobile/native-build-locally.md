@@ -7,7 +7,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
 {{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and newer) it won't apply changes directly to the project. To apply the changes when building locally please make sure to run `npm run configure` after `npm i` after checking out your latest changes.
+When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and higher), it will not apply changes directly to the project. To apply the changes when building locally, please make sure to run `npm run configure` after `npm i` once you have checked out your latest changes.
 {{% /alert %}}
 
 ## 1 Introduction

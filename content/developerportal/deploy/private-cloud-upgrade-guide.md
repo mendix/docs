@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes how to upgrade the Mendix Operator"
 menu_order: 90
 tags: ["Upgrade", "Private Cloud", "Cluster", "Operator", "Deploy"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -31,10 +32,6 @@ Before downloading the Configuration Tool, choose the version you would like to 
 If you're using an OpenShift cluster, follow the [Signing in to OpenShift](private-cloud-cluster#openshift-signin) instructions.
 
 ## 3 Upgrade Namespace{#upgrade-cluster}
-
-{{% alert type="info" %}}
-Your Agent must be running and have a status of "connected" before you upgrade your namespace.
-{{% /alert %}}
 
 1. Follow the instructions to [Run the Configuration Tool](private-cloud-cluster#running-the-tool). You will see the initial screen:
 

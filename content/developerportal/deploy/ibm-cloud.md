@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 65
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 tags: ["IBM", "IBM Cloud", "Deployment", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -434,7 +435,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on IBM Cloud. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on IBM Cloud. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
 
 ![](attachments/ibm-cloud/leave-app.png)
 

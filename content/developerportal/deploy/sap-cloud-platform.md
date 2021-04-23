@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 40
 description: "Reference documentation on deploying to SAP Business Technology Platform"
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +27,7 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **General Settings** in the left-hand menu of the Development Portal.
 
 ![](attachments/sap-cloud-platform/cloud-settings.png)
 
@@ -534,7 +535,7 @@ During the creation of the environment, the selected PostgreSQL service will be 
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-##### 8.1.1.2 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
+##### 8.1.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
 
 To get help to create the configuration file, click the **Configurator** button.
 
@@ -639,7 +640,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
 
 ![](attachments/sap-cloud-platform/leave-app.png)
 

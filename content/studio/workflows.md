@@ -47,7 +47,6 @@ To open a workflow in Studio, do the following:
 
 2. In the displayed list of workflows, select the one you want to open and click it:
 
-    ![Selecting a Workflow](attachments/workflows/selecting-workflow.jpg)
 
 The selected workflow is opened.
 
@@ -57,9 +56,11 @@ To add a workflow to your  in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
 
-2. Click **New** in the top right corner of the displayed side panel:
+2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
 
     ![New Workflow](attachments/workflows/new-workflow.jpg)
+    
+    For more information on what modules are, see [Domain Model](domain-models).
 
 3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity (for more information on type of entities, see the [Entities and Their Types](domain-models#entity-types) section in *Domain Model*):  
 
@@ -129,8 +130,6 @@ The **Toolbox** tab contains elements that you can drag and drop on a path. Belo
 Elements in the **General** section help you control the workflow path, for example, add parallel paths or end them:
 
 ![General Section](attachments/workflows/general.jpg)
-
-{{% todo %}}[Retake the screenshot above with the Jump to activity.]{{% /todo %}}
 
 The elements of this section are described in the table below:
 

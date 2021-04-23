@@ -58,8 +58,6 @@ To open a page in Studio, do the following:
 
 2.  In the displayed list of app pages, select the one you want to open and click it.
 
-    ![](attachments/page-editor/opening-a-page.png)
-
 The selected page is opened. 
 
 ### 2.2 Creating a New Page {#creating-new-page}
@@ -68,9 +66,11 @@ To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
 
-2.  Click **New** in the top right corner of the displayed side panel.
+2.  Select the module you would like to add a new page to and click the plus icon next to this module.
 
     ![](attachments/page-editor/new-page.png)
+    
+    For more information on what modules are, see [Domain Model](domain-models).
 
 3.  In the **Create new page** dialog box, fill out the title of the page, select a layout and a page template.  
 

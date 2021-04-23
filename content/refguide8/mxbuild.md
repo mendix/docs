@@ -25,6 +25,11 @@ Any public version of Studio Pro in this  [Studio Pro Releases List](https://app
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
 For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
+
+{{% alert type="info" %}}
+Except where specifically mentioned, the examples used in this document are for Windows.
+{{% /alert %}}
+
 ## 2 Command Line
 
 To build your package, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
@@ -34,6 +39,10 @@ MxBuild takes a number of command-line options which control how the Mendix proj
 Use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+
+You can also run MxBuild under Linux using the the following command line format:
+
+`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 

@@ -124,11 +124,9 @@ developerportal:
     - "Mendix Profile"
     - "Apps List"
     - "Control Center"
-    - "Collaboration Tools"
-    - "Development"
+    - "Collaboration"
     - "Deployment"
     - "Operations"
-    - "App Settings"
     - "Community Tools"
     - "Mendix Support"
 studio:

@@ -25,15 +25,24 @@ Any public version of Studio Pro in this  [Studio Pro Releases List](https://app
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
 For details on the system requirements for MxBuild, see [System Requirements](system-requirements#mxbuild).
+
+{{% alert type="info" %}}
+Except where specifically mentioned, the examples used in this document are for Windows.
+{{% /alert %}}
+
 ## 2 Command Line
 
 To build your package, you specify the Mendix app file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The app file should be located inside a Mendix app directory.
 
 MxBuild takes a number of command-line options which control how the Mendix app is processed. These options precede the name of the app file.
 
-Use the following format for the command line:
+In Windows, use the following format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
+
+You can also run MxBuild under Linux using the the following command line format:
+
+`mono mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 
@@ -41,7 +50,7 @@ After creating the deployment package, the MxBuild process quits.
 
 Command-line options are described in the table below:
 
-| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
+| Option | Description |
 | --- | --- |
 | `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
 | `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows the *DIRECTORY* should be enclosed in double-quotes `"`. |
@@ -58,7 +67,7 @@ The following options are only applicable with the `--target=package` option:
 
 Options when creating a package are described in the table below;
 
-| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
 | `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the .mda file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the *current* directory under a name `out.mda`. |
 | `--project-name=NAME` | Changes the name of the application to the one used by the Mendix Runtime.<br />When this option is not specified, the name of the app is used. |

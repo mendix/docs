@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
@@ -85,6 +86,10 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 * **Show debugger information** – shows the settings needed to connect the debugger in Studio Pro to your app — for Mendix Cloud v4, the debugger is *always* enabled — for more information on debugging in the cloud, see [How To Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ![](attachments/environments-details/actions-v3.png)
 
@@ -233,7 +238,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
+For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -353,7 +358,7 @@ IP Addresses must be within the following ranges:
 | 172.32.0.0 | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions
+### 4.4 Path-Based Access Restrictions{#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 

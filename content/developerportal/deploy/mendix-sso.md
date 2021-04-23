@@ -5,6 +5,7 @@ menu_order: 70
 description: "Use the Mendix SSO module to add Single Sign-on to your app using the user's Mendix credentials"
 tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 #draft: true
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #Ownership claimed by Identity Services Team.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -54,7 +55,7 @@ Click **Authorize** to continue using Mendix SSO with this app. After authorizin
 
 ### 2.2 Assigning End-user Roles
 
-Give end-users access to your app through the [Manage App Users](/developerportal/settings/general-settings#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General** page of your app.
+Give end-users access to your app through the [Manage App Users](/developerportal/collaborate/general-settings#managing-app-users) page of the Developer Portal. You can get to this page in the Developer Portal from the **General Settings** page of your app.
 
 ![General page for the app in Developer Portal](attachments/mendix-sso/manage-app-users.png)
 

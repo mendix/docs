@@ -16,6 +16,17 @@ Even with the powerful navigation and search support in Mendix Studio Pro, adher
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
 * A clear structure helps in identifying reusable code
 
+For a deep-dive look into implementing such best practices, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/exmmApZY4jMYxqidrzehEQ.jpg"
+  data-uuid="exmmApZY4jMYxqidrzehEQ"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 App Setup
 
 ### 2.1 The Application Development Language
@@ -325,8 +336,6 @@ Unused and excluded items should be removed from the model when they are no long
 ### 4.4 XPath
 
 [XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
-
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
 
 ### 4.5 Security
 

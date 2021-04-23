@@ -10,9 +10,9 @@ The activities described in this document are in the **Workflow Activities** sec
 
 The following are the workflow activities you can use in your microflow:
 
-* **Complete task** – sets which outcome the specified [user task](user-task) should follow
-* **Open task page** – opens a user task page specified in [user task properties](user-task) 
-* **Open workflow page** – opens a workflow overview page
+* **Complete user task** – sets which outcome the specified [user task](user-task) should follow
+* **Show user task page** – opens a user task page specified in [user task properties](user-task) 
+* **Show workflow admin page** – opens a workflow overview page
 * **Workflow call** – calls a workflow
 
 ## 2 Read More

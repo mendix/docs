@@ -318,8 +318,6 @@ Unused and excluded items should be removed from the model when they are no long
 
 [XPath](/refguide7/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in the Modeler is used with all options enabled.
 
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
-
 ### 4.5 Security
 
 The [security](/howto7/security/) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.

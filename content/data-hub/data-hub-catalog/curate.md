@@ -106,11 +106,11 @@ To add a custom owner follow these steps:
 
   {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
 
-1. Enter the **Name** and **Email** of the owner and click **Save**.
+2. Enter the **Name** and **Email** of the owner and click **Save**.
 
- {{% alert type="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
+  {{% alert type="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-1. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
+3. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
 
 ### 4.2 Changing the Application Icon {#application-icon}
 
@@ -132,11 +132,11 @@ When you want to upload a custom icon or image, the following apply:
 
 * The maximum accepted file size is 50 KB
 
- {{% alert type="info" %}} You will be able to upload a large file, and crop it to reduce the file size during the operation.{{% /alert %}}
+  {{% alert type="info" %}} You will be able to upload a large file, and crop it to reduce the file size during the operation.{{% /alert %}}
 
 * The *minimum* recommended size of the image is 64 pixels x 64 pixels. You can crop larger images and select the area you want to display during the upload operation.
 
- {{% alert type="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
+   {{% alert type="info" %}}If smaller images are selected, they will be expanded to meet the 64 x 64 size which may result in degradation of image quality. Ensure that your original file meets the recommendations for an optimal display.{{% /alert %}}
 
 * Custom icons that are uploaded will be saved to the **Icon Library** and can be used for other apps.
 
@@ -150,19 +150,19 @@ To **upload a different icon** for the app follow these steps:
 
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**:
 
- {{% image_container width="300" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
+    {{% image_container width="300" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
 
- {{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
+  {{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
 
-1. A preview of the application icon is shown. Click **Save** to upload the selected icon.
+4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
- {{% image_container width="300" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
+    {{% image_container width="300" %}}![upload icon](attachments/curate/icon-preview.png){{% /image_container %}}
 
-1. The **Application Metadata** screen will now show the selected icon for the application:
+5. The **Application Metadata** screen will now show the selected icon for the application:
 
-  ![upload icon](attachments/curate/asset-metadata-new-icon.png)
+    ![upload icon](attachments/curate/asset-metadata-new-icon.png)
 
-1. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
+6. Click **Save Changes** to return to the data source details page. The custom icon will be stored in the **Icon Library**.
 
 #### 4.2.2 Select Icon from Library
 
@@ -188,15 +188,15 @@ To edit the asset metadata, follow these steps:
 
 1. In the **Curation Bar**, click **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
-![service metadata](attachments/curate/service-metadata-box.png)
+    ![service metadata](attachments/curate/service-metadata-box.png)
 
 1. The description from the OData service metadata is displayed in the **Contract Description**. This cannot be changed, as it is part of the OData service definition. You can provide an alternative description by toggling **Use the catalog description** to display the **Catalog Description** box:
 
-![edit description](attachments/curate/service-metadata-description.png)
+    ![edit description](attachments/curate/service-metadata-description.png)
 
 1. Add a catalog description. This will be stored with the service details in the Catalog.
 
- {{% alert type="info" %}}If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired. {{% /alert %}}
+    {{% alert type="info" %}}If a **Catalog Description** has been given for a service, both descriptions will be registered with the service in the Catalog. If you have selected to display the **Contract Description**, the **Catalog Description** will be retained providing the option for curators to display this as desired. {{% /alert %}}
 
 1. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
@@ -210,21 +210,19 @@ Add tags to categorize a registered service and provide additional means for fin
 
 2. To add tags, click the empty **Tag** input area:
 
-![tags](attachments/curate/service-metadata-tags.png)
+    ![tags](attachments/curate/service-metadata-tags.png)
 
-1. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. Tags can be made up of alphanumeric and underscore characters. To separate multiple tags, use spaces.
+3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Data Hub Catalog and displayed when you start typing in the **Tag** field. To separate multiple tags, use spaces.
 
-{{% alert type="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters.{{% /alert %}}
+    {{% alert type="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-{{% alert type="info" %}}If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**:
 
-1. You can enter multiple tags separated by spaces. You can remove tags by clicking the **x**:
+    ![tag list](attachments/curate/service-metadata-tags-list.png)
 
-![tag list](attachments/curate/service-metadata-tags-list.png)
+5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-1. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
-
-{{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+    {{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ## 6 Discoverable and Validate {#discoverability}
 
@@ -271,10 +269,10 @@ To change dataset and attribute descriptions, follow these steps:
 
 1. In the **Search Details** screen for the selected dataset, click **Edit Dataset Details** on the **Curate** bar to display the **Dataset Metadata** box:
 
-÷![curate entity metadata](attachments/curate/curate-entity-metadata.png)
+    ![curate entity metadata](attachments/curate/curate-entity-metadata.png)
 
-1. The service metadata contract description is displayed. To edit and use a **Catalog Description**, click the toggle and enter a description.
-1. When there are a large number of attributes for a dataset, you can use the search area to find specific attributes.
-1. Click **Save Changes**.
+2. The service metadata contract description is displayed. To edit and use a **Catalog Description**, click the toggle and enter a description.
+3. When there are a large number of attributes for a dataset, you can use the search area to find specific attributes.
+4. Click **Save Changes**.
 
 {{% alert type="info" %}}If a **Catalog Description** has been specified for a dataset or attribute, this will be retained even if the toggle is set to display the **Contract Description**.{{% /alert %}}

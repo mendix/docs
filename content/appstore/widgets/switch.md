@@ -22,6 +22,8 @@ The widget offers the following for configuration:
 * A **Style** design property for brand styling, influencing the Switch's colors
 * [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
 
+This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
+
 ## 3 Previous Versions' Documentation
 
 ### Widgets Below v3.0.0

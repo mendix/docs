@@ -293,7 +293,7 @@ The resulting ***.zip*** file is named as follows:
 
 ```DataHub_<service_name>_<service_version>_<technology>.zip```
 
-The string *technology* identifies the OData version (`v3` or `v4`) in the file name.
+The string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
 
 For the following example:
 

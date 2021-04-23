@@ -287,19 +287,21 @@ The data source URI is the location of the service contract of the data source â
 
 ## 9 Download the Metadata Contract of a Data Source {#download-contract}
 
-For a selected data source you can click **Download** to download the OData service contract as a ***.zip*** file. This will include the all the files that make up the full metadata contract. The resulting ***.zip*** file will be named as follows:
+For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ***.zip*** file that includes the all the files that make up the full metadata contract is generated and downloaded.
+
+The resulting ***.zip*** file is named as follows:
 
 ```DataHub_<service_name>_<service_version>_<technology>.zip```
 
-The string *technology* identifies the OData version (v3 or v4) in the file name.
+The string *technology* identifies the OData version (`v3` or `v4`) in the file name.
 
 For the following example:
 
-![](attachments/search/download_example.png)
+![download example](attachments/search/download_example.png)
 
 When you click **Download** the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`
 
-This zip file cotains the folder: `DataHub_SAP_Intelligence_1.0_OData4` which contains the all the metadata files that define the service.
+This zip file has the folder: `DataHub_SAP_Intelligence_1.0_OData4` which contains the all the metadata files that define the service.
 
 ## 10 Viewing Search Results in the Data Hub Landscape
 

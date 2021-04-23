@@ -67,11 +67,15 @@ If you do not select any certificates then all the certificates will be valid.
 
 Click **Save** to save the current certificate profile.
 
-#### 2.1.3 Specifying IP Ranges
+#### 2.1.3 Specifying IP Ranges{#ip-ranges}
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports only IPv4 addresses.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
+
+{{% alert type="info" %}}
+IPv6 addresses added to an access restriction profile will be ignored until support for IPv6 addresses is enabled on 24th May 2021.
+{{% /alert %}}
 
 ![](attachments/accessrestrict/ip-range.png)
 

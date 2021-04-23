@@ -8,7 +8,9 @@ tags: ["data hub", "data hub catalog", "security", "entity security", "dataset s
 
 ## 1 Introduction
 
-When sharing data in an organization, access to and security of the data is a primary concern.
+In Data Hub, the [Access Level]{#access-level) indicates the accessibility of a registered data source.
+
+When sharing data in an organization, access to and security of the data that is consumed is a primary concern.
 
 Security for an app can be defined at the app-level, module-level, and entity-level. Further authentication methods can also be specified to control access to the data associated with published datasets.
 
@@ -16,7 +18,7 @@ This security level determines which end-users of the apps will have access to t
 
 For further information, see the [Security](/refguide/published-odata-services#security) section in *Published OData Services*.
 
-Security is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This page shows an example of applying [custom HTTP header validation](#http-header-validation).
+Access to data is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. This page shows an example of applying [custom HTTP header validation](#http-header-validation).
 
 ## 2 OData Security for Shared Datasets
 
@@ -38,9 +40,9 @@ For Mendix apps that publish entities and those that consume the shared entities
 
 For further details, see the [Entity Access](/refguide/module-security#entity-access) section of *Module Security*.
 
-## 3 Access Level of Registered Data Sources
+## 3 Access Level of Registered Data Sources {#access-level}
 
-Registered data sources have the following classifications that apply to the visibility and accessiblity of the data source in the Catalog:
+Registered data sources have the following classifications that apply to the visibility and accessibility of the data source in the Catalog:
 
 * **Public**  – the data source is visible to all internal and external users of Mendix Data Hub
 * **Internal**  – the data source is restricted to the members of the organization

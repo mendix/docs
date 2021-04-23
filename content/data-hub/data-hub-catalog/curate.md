@@ -104,13 +104,13 @@ To add a custom owner follow these steps:
 
 1. From the **Application Metadata screen** if you start typing the name of an owner and it is not in the drop-down list, you will be prompted if you want to **Create** it. Click on the prompt and the **Enter New Custom Owner Details** pop-up is displayed:
 
-  {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
+    {{% image_container width="275" %}}![custom contact create](attachments/curate/custom-contact.png){{% /image_container %}}
 
-2. Enter the **Name** and **Email** of the owner and click **Save**.
+1. Enter the **Name** and **Email** of the owner and click **Save**.
 
-  {{% alert type="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
+    {{% alert type="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Asset Metadata** pane as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-3. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
+1. Click **Save** to return to the **Application Metadata** screen. Click **Save Changes** to return to the asset details screen where the changes will be displayed in **Metadata** pane.
 
 ### 4.2 Changing the Application Icon {#application-icon}
 
@@ -152,7 +152,7 @@ To **upload a different icon** for the app follow these steps:
 
     {{% image_container width="300" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
 
-  {{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
+    {{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 

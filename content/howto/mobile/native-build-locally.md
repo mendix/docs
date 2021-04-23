@@ -7,7 +7,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
 {{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and higher), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
+When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -79,8 +79,8 @@ For a Windows machine building an Android app, do the following:
 1. Run `npm i`  to install the required dependencies.
 
 
-{{% alert type="info" %}}	
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and newer) it won't apply changes directly to the project. To apply the changes when building locally please make sure to run `npm run configure` after `npm i` after checking out your latest changes.
+{{% alert type="info" %}}
+When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
 {{% /alert %}}
 
 2. Since Native Template 5.1.9 and for Native Template version 6.x we introduced Native Mobile Toolkit. If you are using the latest version you also have to run:

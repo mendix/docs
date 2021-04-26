@@ -46,21 +46,21 @@ Arithmetic functions (subtraction, dividing, and multiplying) are being combined
 
 You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> shortcut to display this list. Suggestions can be divided into the following categories:
 
-* **Suggestions from your microflow** – variables or attributes that you have created or retrieved in your microflow
+* **Variables or attributes** – variables or attributes that are available in a current microflow, on a page, or in a workflow
 * **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration) that can be used in an expression
 * **Functions** – operations you can use in an expression (for more information, see the [Expression Types](#expression-types) section below)
-* **Keywords** – key phrases or words that you can use in an expression (for example, **Empty** – a value that can be used to check if a variable is empty)
+* **Keywords** – key phrases or words that you can use in an expression (for example, `empty` – a value that can be used to check if a variable is empty)
 * **Booleans** – true or false expressions
-* **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see the [Expression Types](#expression-types) section below)
+* **Operators** – code elements that perform logical or mathematical operations; you can use Boolean or relational expressions (for more information, see the [Expression Types](#expression-types) section below)
 
-If an error appears in the expression, error messages with explanations will be displayed. 
+If an error appears in the expression, error messages with explanations are displayed: 
 
-{{% image_container width="350" %}}![](attachments/expressions/expression-error.png)
-{{% /image_container %}}
+![](attachments/expressions/expression-error.png)
+
 
 ### 2.3  Expression Examples
 
-Below are two examples that illustrate how expressions can be used. 
+Examples that illustrate how expressions can be used are described below. 
 
 #### 2.3.1 Example 1
 

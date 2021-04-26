@@ -26,7 +26,7 @@ Before submitting a new Menix Support request, check these resources to make sur
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request
+## 3 Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 

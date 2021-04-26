@@ -42,7 +42,7 @@ Only one of the options can be in use any any time. Which one will be determined
 
 The OPC UA Client connector has the following dependencies
 
-* Mendix 8.8.1 or higher
+* Mendix 8.17.0 or higher
 * Encryption Module
 * An OPC UA server – we assume that you are familiar with OPC UA and your OPC UA server(s), these instructions do not include information on how to set up your servers.
 
@@ -330,7 +330,7 @@ You can use the OpcUaClient_ExampleImplementation module (link) as template to s
 
 ### 4.1 Dependencies
 
-* Mx 8.8.1 or higher
+* Mendix 8.17.0 or higher
 * Atlas UI (use, for example, the blank starter app as a basis)
 * The OpcUaClientMx module
 * Any OPC UA server

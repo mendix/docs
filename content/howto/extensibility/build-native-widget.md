@@ -35,11 +35,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
-* Install Long Term Support (LTS) v10.16.3 or any higher version of [Node.js](https://nodejs.org)
+* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
-	$ npm install yo -g
+	$ npm install -g yo
 	```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
@@ -99,9 +99,11 @@ To scaffold your app folder for the group box widget, follow these steps:
 
 	![Pluggable Widget Generator input](attachments/build-native-widget/pluggable-widget-generator-input.png)
 
-5. Your widget will build. If your app has been scaffolded correctly. you will see the following message:
+5. Your widget will build. If your app has been scaffolded correctly, you will see the following message:
 
 	`> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
+
+Note that whenever it's required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.2 Creating a Mendix Test App
 

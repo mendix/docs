@@ -24,12 +24,24 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
-	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
-* Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
-* Install the Mendix Pluggable Widget Generator with the following command: ` $ npm install @mendix/generator-widget -g`
-* Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
+	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
+	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+* Install [Yeoman](https://yeoman.io/) with the following command:
+
+	```shell
+	  $ npm install -g yo
+	```
+
+* Install the Mendix Pluggable Widget Generator with the following command:
+
+	```shell
+	$ npm install -g @mendix/generator-widget
+	```
+
+* Install an integrated development environment (IDE) of your choice (Mendix
+  recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
 ## 3 Creating a TextBox Input Widget
@@ -87,6 +99,8 @@ The generator will ask you a few questions during setup. Answer the questions by
 * End-to-end tests: **No**
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
+
+Note that whenever it's required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.3 Adding the Attribute
 

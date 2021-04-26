@@ -20,7 +20,7 @@ This document describes the different sections of the Mendix Marketplace.
 The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
-* **My Marketplace** – click this to go to [My App Store](#my-app-store)
+* **My Marketplace** – click this to go to [My Marketplace](#my-marketplace)
 * **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
@@ -89,7 +89,7 @@ The details page for a component presents the following item information tabs:
 * **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
-## 4 My App Store {#my-app-store}
+## 4 My Marketplace {#my-marketplace}
 
 ### 4.1 Dashboard {#dashboard}
 

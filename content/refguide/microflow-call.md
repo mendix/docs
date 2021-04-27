@@ -14,7 +14,8 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 The **Microflow call** activity can be used to call a [microflow](microflows). 
 
 {{% image_container width="200" %}}
-![Call Microflow](attachments/action-call-activities/microflow-call.png)
+![Microflowcallwithproperties](https://user-images.githubusercontent.com/3594338/116187304-94fa6b00-a725-11eb-95b6-9e73913e7436.png)
+
 {{% /image_container %}}
 
 Arguments can be passed to the microflow and the result can be stored.
@@ -23,7 +24,7 @@ Arguments can be passed to the microflow and the result can be stored.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-![Microflow Call Properties](attachments/action-call-activities/microflow-call-properties.png)
+![Microflowcallwithproperties](https://user-images.githubusercontent.com/3594338/116187105-2ddcb680-a725-11eb-993a-8130d742f0b7.png)
 
 The **Microflow call** properties pane consists of the following sections:
 

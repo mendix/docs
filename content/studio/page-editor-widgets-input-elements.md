@@ -104,7 +104,7 @@ Editability indicates whether the end-user will be able to change the value disp
 The **Condition is Based on** property is only shown when [Conditional Editability](#editability) is selected. The following options are available:
 
 * **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be editable only when it matches a certain value of the selected attribute. The attribute must be of the Boolean or enumeration type. 
-* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be editable only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](#expressions).
+* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be editable only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](expressions).
 
 ##### 3.3.3.2 Attribute {#attribute}
 
@@ -118,7 +118,7 @@ For example, you would like to make the **City** field editable only when users 
 
 ##### 3.3.3.4 Expression
 
-This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. This property allows you to create an expression. For more information on how to create expressions, see [Expressions](#expressions).
+This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. This property allows you to create an expression. For more information on how to create expressions, see [Expressions](expressions).
 
 #### 3.3.4 Specific Properties
 

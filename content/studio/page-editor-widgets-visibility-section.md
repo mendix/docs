@@ -10,8 +10,8 @@ tags: ["studio", "page editor", "widgets", "on click action", "events"]
 
 The **Conditional Visibility** section in widget properties allows you to show a widget only when certain conditions are met. You can make widgets visible based on the following conditions:
 
-* [An attribute value of a widget](#attribute-based)
-* [User roles in your app](#role-based) 
+* [Visibile based on data](#based-on-data)
+* [Visible based on role](#role-based) 
 
 For example, you have a web shop and you do not want to bother users with filling in the same address twice when the delivery address matches the billing address. You would like to show fields to fill the billing address in only when a user unchecks the **Billing address is the same as delivery address** option (which is checked by default). In this case you can make the billing address fields visible based on an *attribute value*: the field will be displayed only when the *BillingAddressSame* is unticked (set to *false*):
 
@@ -24,7 +24,7 @@ To see which widgets that have conditional visibility configured, click the eye 
 
 ## 2 Conditional Visibility Properties
 
-You can enable conditional visibility based on the selected attribute value and/or a user role. Conditional visibility properties are described below. 
+You can enable conditional visibility based on the outcome of the dynamic data and/or a user role. Conditional visibility properties are described below. 
 
 ### 2.1 Visible Based on Data {#based-on-data}
 
@@ -35,7 +35,7 @@ You can enable conditional visibility based on the selected attribute value and/
 The **Condition is Based on** property is only shown when [Visible Based on Data](#based-on-data) is enabled. The following options are available:
 
 * **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be shown only when it matches a certain value of the selected attribute.
-* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be shown only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](#expressions).
+* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be shown only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](expressions).
 
 ### 2.3 Attribute {#attribute}
 
@@ -53,7 +53,7 @@ For example, you would like to show a special offer price only for customers wit
 
 ### 2.4 Expression
 
-This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. The property allows you to create an expression. For more information, see [Expressions](#expressions).
+This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. The property allows you to create an expression. For more information on how to create expressions, see [Expressions](expressions).
 
 ### 2.5 Visible Based on Role {#role-based}
 

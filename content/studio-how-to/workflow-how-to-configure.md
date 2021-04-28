@@ -341,10 +341,10 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
     1. Start the onboarding process.
-    2. Test the process by doing the following
-       1. Select the HR user role, open the EmployeesToOnboard page and add a new onboarding request.
-       2. Switch to the Manager role, see a new task in the inbox, open task, add data to it, and complete the task.
-       3. Switch to the Facilities user role and continue the process.
+    2. Test the process by doing the following:
+       1. Select the HR user role, open the **EmployeesToOnboard** page and add a new onboarding request.
+       2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
+       3. Switch to the Facilities user role and complete the process.
     3. Open the Workflow Admin Center.
     4. Open the Workflow Dashboard.
 

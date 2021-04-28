@@ -65,7 +65,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 From the **Data Hub Home** page, you can you can search the Catalog in the following ways:
 
-![](../share-data/attachments/share-data/data-hub-home.png)
+![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
 
 * Type a search term in the search box and click **Search** (search strings can comprise a minimum of three characters and include the alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**

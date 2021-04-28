@@ -50,7 +50,7 @@ There are no regular releases for an LTS, as they only start with the release of
 
 ### 2.3 Support with Patch Releases
 
-For the support duration, the LTS will receive [patch](#patch) releases only. 
+For the support duration, the LTS will receive patch releases only. 
 
 ### 2.4 Upgrading Impact
 
@@ -60,7 +60,7 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for General Availability.
 
-In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9 for General Availability, [8.18](8.18) is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9 starting with 9.6.
+In the past, MTS versions have been [8.6](8.6), [8.12](8.12), and [8.18](8.18). However, with the release of version 9 for General Availability, 8.18 is now an LTS, so there are no longer any MTS versions for version 8. Furthermore, there are no current MTS versions for Studio Pro. There will only be upcoming MTS versions for version 9 starting with 9.6.
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
 
@@ -70,11 +70,11 @@ The support duration for an MTS depends on when a new higher major version is re
 
 ### 3.2 Release Cycle
 
-MTS versions are introduced as minor versions approximately every 6 months after a new major version release for General Availability. There will only be [patch](#patch) releases for an MTS on an as-needed basis.
+MTS versions are introduced as minor versions approximately every 6 months after a new major version release for General Availability. There will only be patch releases for an MTS on an as-needed basis.
 
 ### 3.3 Support with Patch Releases
 
-For the support duration, the MTS will receive [patch](#patch) releases only.
+For the support duration, the MTS will receive patch releases only.
 
 ### 3.4 Upgrading Impact
 
@@ -100,7 +100,7 @@ A monthly release only receives patches for critical/security issues if they can
 
 For example, if you are using version 9.1 after 9.2 has been released and you find a critical issue in 9.1, that fix will only be released in the next monthly release, which would be 9.3.
 
-If a bug is found in a monthly-release version for an older major version, it will only be fixed as a patch on the existing LTS (for example, a bug found in [8.16](8.16#8160) will only be fixed for a patch release on the LTS version [8.18](8.18)). 
+If a bug is found in a monthly-release version for an older major version, it will only be fixed as a patch on the existing LTS (for example, a bug found in 8.16 will only be fixed for a patch release on the LTS version 8.18). 
 
 ### 4.4 Upgrading Impact
 
@@ -110,6 +110,6 @@ The impact of upgrading between monthly releases is the highest of these options
 
 The "end of support" for a version means that fixes, updates, investigating, troubleshooting, and other forms of assistance are no longer provided.
 
-If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer [LTS](#lts) version that is supported. 
+If a new major version is nearing release, that means an older major version is nearing its end of support. If you are still using a major version for which support will end, Mendix recommends that you stop using that version and move to a newer LTS version that is supported. 
 
 Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended.

@@ -21,7 +21,7 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
 * **My Marketplace** – click this to go to [My Marketplace](#my-marketplace)
-* **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
+* **{Your company's private Marketplace page}** – click this to go to your [Company Content](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -175,7 +175,7 @@ This page presents the Marketplace content you have [favorited](#saved):
 
 When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
-## 5 Your Company's App Store
+## 5 Your Company's Marketplace
 
 ### 5.1 Company Content {#company-content}
 
@@ -201,7 +201,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 ### 5.3 User Groups {#user-groups}
 
-You can configure user groups for various levels of access to your company's Marketplace. The available configuration tabs for each user group page are described in the sections below.
+You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.

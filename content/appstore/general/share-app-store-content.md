@@ -97,7 +97,7 @@ To add content to the Marketplace, follow these steps:
 4.  Select the location where you want to publish your component:
 
 	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company's App Store](app-store-overview#company-content); selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
+	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](app-store-overview#company-content); selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
 	
 	![](attachments/share-app-store-content/public-private.jpg)
 	
@@ -122,7 +122,7 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/general.jpg)
 
-6. Click **Upload an Image** to upload an icon for the component
+6. Click **Upload an Image** to upload an icon for the component.
 7.  On each page of the upload flow, click one of the following buttons:
 
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page )

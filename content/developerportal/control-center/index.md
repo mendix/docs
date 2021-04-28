@@ -4,10 +4,6 @@ description: "Describes the Mendix Control Center, used for the governance of co
 tags: ["control center", "mendix admin", "developer portal", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 ---
 
-{{% alert type="info" %}}
-For more information on Control Center, see the [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/) blog post.
-{{% /alert %}}
-
 ## 1 Introduction
 
 Users that sign up on the Mendix Platform are able to create new apps, invite others to their teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
@@ -21,8 +17,6 @@ If your company does already have a Mendix Admin (but you yourself are not a Men
 ![](attachments/admin-exists.jpg)
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described in the sections below.
-
-You can access Control Center via the menu item on the navigation pane.
 
 ## 2 Dashboard {#dashboard}
 
@@ -39,7 +33,7 @@ These are some examples of what the dashboard presents:
 * **App Projects Created** – you can filter these [apps](#apps) by date
 * **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
 * **Certification Level** – presents the number of members per [Mendix certification](https://academy.mendix.com/link/certification)
-* **Company Feed** – presents events in your company, such as members joining the company and the created app projects
+* **Company Feed** – presents events in your company, such as members joining the company and the created app
 
 ## 3 App Projects {#apps}
 
@@ -116,7 +110,7 @@ Features on this page are available to try out, but you will not see changes imp
 
 On this page, you can add and edit a **Logo** that will appear on your company page. (Please note your company page will be available in a future iteration of Control Center.)
 
-You can set a **Cover image** to be the the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used.
+You can set a **Cover image** to be the background header of your company page. If you do not set an image by clicking **Upload**, the **Primary** color as set in the **Brand colors** section will be used.
 
 ![](attachments/brand.jpg)
 
@@ -134,7 +128,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 This feature is not yet publicly available. Please talk to your CSM to enable this page.
 {{% /alert %}}
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a premium plan.   
+The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
 
 ![](attachments/cloud.jpg)
 
@@ -145,3 +139,7 @@ There are links to three other pages from this tab to allow you to [make request
 * [Offboard Environment](/developerportal/support/new-app-node-request-template#offboard) – requests that an app is offboarded
 
 These links will open in a new browser tab.
+
+## 10 Read More
+
+* [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)

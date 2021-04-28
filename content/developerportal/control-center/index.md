@@ -18,8 +18,6 @@ If your company does already have a Mendix Admin (but you yourself are not a Men
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described in the sections below.
 
-You can access Control Center via the menu item on the navigation pane.
-
 ## 2 Dashboard {#dashboard}
 
 {{% alert type="info" %}}

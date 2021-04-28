@@ -6,7 +6,7 @@ tags: ["studio", "workflow", "how to", task", "onboarding"]
 
 ## 1 Introduction 
 
-Workflow is a new visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
+Workflow is a new visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
 This how-to explains how to build an employee onboarding process using the workflow editor. For more information on how to build a similar process in Studio Pro, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure).
 
@@ -65,7 +65,7 @@ Good job! You have created a workflow and a workflow-specific entity. For more i
 ## 4 Configuring a Domain Model
 
 1. Open the [domain model](/studio/domain-models). 
-2. Add the following attributes to the **EmployeeOnboarding** entity that you have created in the section above (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models#adding-new-attributes) section in the *Domain Model*):
+2.  The **EmployeeOnboarding** entity you have created will hold the information about the employee to onboard, as well as capture information added during execution of the workflow, such as the laptop model that the new employee requires. Add the following attributes to the **EmployeeOnboarding** entity (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models#adding-new-attributes) section in the *Domain Model*):
     1. Add the **FullName** attribute and set the type to string.
     2. Add the **FirstDay** attribute and set its type to Date and Time.
     3. Add the **WFH** (Work from home) attribute and set its type to Boolean.
@@ -341,7 +341,10 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
     1. Start the onboarding process.
-    2. Test the process: switch users, view inbox for each user, complete tasks, see how new inbox items are created for the user roles you configured at the next task in the process.
+    2. Test the process by doing the following
+       1. Select the HR user role, open the EmployeesToOnboard page and add a new onboarding request.
+       2. Switch to the Manager role, see a new task in the inbox, open task, add data to it, and complete the task.
+       3. Switch to the Facilities user role and continue the process.
     3. Open the Workflow Admin Center.
     4. Open the Workflow Dashboard.
 

@@ -37,7 +37,7 @@ To import a web service using the wizard, follow these steps:
     ![wizard banner](attachments/consume-complex/wizard-import-schema.png)
 
 3. On the **Import Web Service** dialog box, select **Web service operation** and click **Next**.
-4.  In the **New Web Service Operation** dialog box, for** **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
+4.  In the **New Web Service Operation** dialog box, for **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
 
     ![](attachments/consume-complex/wizard-new-operation.png)
 
@@ -63,6 +63,7 @@ To import a web service using the wizard, follow these steps:
 ### 2.1 The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
+
 * The imported service
 * An XML to domain mapping
 * A microflow in which the web service operation is called

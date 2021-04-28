@@ -202,13 +202,11 @@ When you try to publish your app, you may be notified that upgrade of the servic
 ![Upgrade Required](attachments/settings-security/upgrade.png)
 {{% /image_container %}}
 
-A special service makes it possible to manage your app users. As of April 1st, 2020 we are replacing the current service with an improved one. This upgrade will be done automatically for you when you click **Auto-Upgrade**. 
-
-No need to worry if you do not auto-upgrade, your app will still be secured and running, however, you will not be able to publish a newer version of your app until you upgrade. 
+A special service makes it possible to manage your app users. The upgrade to the latest version of this service will be done automatically for you when you click **Auto-Upgrade**. 
 
 If the automatic upgrade fails, this means, the service was customized in Studio Pro, and only manual upgrade in Studio Pro is possible in this case. 
 
-If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. For more technical information on how to upgrade the service in Studio Pro, see [Upgrading to Mendix SSO from AppCloudServices](/developerportal/deploy/upgrading-to-mendix-sso-from-acs).
+If the auto-upgrade detects that the service was customized in Studio Pro by a team member, you will be notified that a manual upgrade in Studio Pro should be performed first. 
 
 ## 7 Read More
 

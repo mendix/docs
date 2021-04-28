@@ -132,7 +132,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
         ![Create Employee Details Page](attachments/workflow-how-to-configure/create-employee-details-page.png)
 
-8. The new page opens. By default all attributes are added to the form. However, the HR specialist needs to specify only the name and the first day of the new hire. Leave the relevant widgets and delete all the other ones from the form:
+8. The new page opens. By default all attributes are added to the form. However, the HR specialist needs to specify only the name and the first day of the new hire. Leave the relevant widgets and delete all other ones from the form:
 
     ![Employee Details Form](attachments/workflow-how-to-configure/employee-details-form.png)
 
@@ -281,7 +281,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
 1. Open the [Navigation Document](/studio/navigation), where some menu items are already preconfigured for you.
 
-2. The HR roles needs to be able to access the EmployeesToOnboard page. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+2. The HR roles needs to be able to access the **EmployeesToOnboard** page. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
 
     1. Set its **On-Click Action** to **Page**.
 
@@ -307,11 +307,11 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     4. Find the **TaskInbox** page in the list and click **Select**.
 
-    5. In the menu item properties, set Caption to **Managers: Task Inbox**.
+    5. In the menu item properties, set **Caption** to **Managers: Task Inbox**.
 
     6. Set **Icon** to **Envelope**.
 
-4. You also need to add menu items for the Facilities department to be able to open their task inbox. Create a new **Facilities: Task Inbox** menu item referring to steps 2a-2f above.
+4. You also need to add menu items for the Facilities department to be able to open their task inbox. Create a new **Facilities: Task Inbox** menu item referring to steps 2a-2e above.
 
 You have configured the navigation for your app and now you can preview and test it 
 
@@ -340,13 +340,13 @@ To test your workflow, you need to switch between different user roles. Follow t
     {{% image_container width="300" %}}![Demo User Role](attachments/workflow-how-to-configure/user-roles.png){{% /image_container %}}
 
 3. You can switch between different demo user roles to test the use case. Do can do the following:
-    1. Start the onboarding process.
-    2. Test the process by doing the following:
-       1. Select the HR user role, open the **EmployeesToOnboard** page and add a new onboarding request.
-       2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
-       3. Switch to the Facilities user role and complete the process.
-    3. Open the Workflow Admin Center.
-    4. Open the Workflow Dashboard.
+    1. Select the HR user role, open the **EmployeesToOnboard** page and add a new onboarding request.
+    2. Switch to the Manager role, see a new task in the inbox, open the task, add data to it, and complete the task.
+    3. Switch to the Facilities user role and complete the process.
+
+4. Open the Workflow Admin Center.
+
+5. Open the Workflow Dashboard.
 
 Great job! You have previewed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app or share your app with other users to try it out in real life. 
 

@@ -103,7 +103,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 	`> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
-Note that whenever it's required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.2 Creating a Mendix Test Project
 

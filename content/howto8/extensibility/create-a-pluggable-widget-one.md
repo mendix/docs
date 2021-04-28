@@ -99,7 +99,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
-Note that whenever it's required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.3 Adding the Attribute
 

@@ -60,7 +60,7 @@ First, you need to enable workflows for your app. Do the following:
 
 8. Click **Create** to confirm your choice once again.
 
-Good job! You have created a workflow and a workflow-specific entity. For more information on workflow entities, see the [Entities and Their Types](domain-models#entity-types) section in *Domain Model*.
+Good job! You have created a workflow and a workflow-specific entity. For more information on workflow entities, see the [Entities and Their Types](/studio/domain-models#entity-types) section in *Domain Model*.
 
 ## 4 Configuring a Domain Model
 
@@ -69,8 +69,8 @@ Good job! You have created a workflow and a workflow-specific entity. For more i
     1. Add the **FullName** attribute and set the type to string.
     2. Add the **FirstDay** attribute and set its type to Date and Time.
     3. Add the **WFH** (Work from home) attribute and set its type to Boolean.
-    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumerations#create-new-enumeration) section in *Enumerations*.
-    5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumerations#create-new-enumeration) section in *Enumerations*.
+    4. Add the **PhoneModel** enumeration with the following enumeration items: iPhone, iPhone_Pro, Samsung. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumeration#create-new-enumeration) section in *Enumerations*.
+    5. Add the **LaptopModel** enumeration with the following enumeration items: Lenovo, Mac, Dell. For more information on enumerations and how to create them, see the [Creating a New Enumeration](/studio/domain-models-enumeration#create-new-enumeration) section in *Enumerations*.
 
 You have configured the **EmployeeOnboarding** entity:
 ![Domain Model](attachments/workflow-how-to-configure/domain-model.png)
@@ -84,7 +84,7 @@ In the [Enabling Workflows](#enable-workflows) section, you have enabled securit
 3. Set the role's name to **HR** and click **Create**.
 4. Repeat steps 2 and 3 to create **Manager** and **Facilities** roles.
 
-Now all necessary roles are created for your app. For more information about security, see [Security, Roles & Permissions](settings-security). 
+Now all necessary roles are created for your app. For more information about security, see [Security, Roles & Permissions](/studio/settings-security). 
 
 ## 6 Triggering the Workflow from a Page
 

@@ -26,33 +26,36 @@ To see which widgets that have conditional visibility configured, click the eye 
 
 You can enable conditional visibility based on the selected attribute value and/or a user role. Conditional visibility properties are described below. 
 
-### 2.1 Attribute-Based {#attribute-based}
+### 2.1 Visible Based on Data {#based-on-data}
 
-**Attribute-Based** visibility allows you to show widgets only when they match a certain value of the selected attribute. 
+**Visible Based on Data** allows you to show widgets based on the outcome of the dynamic data. 
 
-{{% alert type="info" %}}
+### 2.2 Condition Based on {#condition}
 
-The attribute must be of the Boolean or enumeration type. 
+The **Condition is Based on** property is only shown when [Visible Based on Data](#based-on-data) is enabled. The following options are available:
 
-{{% /alert %}}
+* **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be shown only when it matches a certain value of the selected attribute.
+* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be shown only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](#expressions).
 
-{{% alert type="info" %}}
+### 2.3 Attribute {#attribute}
 
-You can only configure attribute-based conditional visibility when a widget is placed in a data container: a data view or a list view.
+This property is shown only when the expression the [Condition is Based on](#condition) is set to **Attribute**. Allows you to select the attribute the condition will be based on. The attribute must be of the Boolean or enumeration type.
 
-{{% /alert %}}
+### 2.3 Attribute Values {#attribute-values}
 
-### 2.2 Attribute Values
+This property is shown only when the attribute is selected for the [Attribute](#attribute) property. The **Attribute Values** property allows you to select certain attribute values.
 
-This property is shown only when an attribute in the [Attribute-Based](#attribute-based) property is selected. The **Attribute Values** property allows you to select certain attribute values.
-
-For example, you would like to show a special offer price only for customers with the **Gold** grade. Select *Grade* in the **Attribute-Based** property and *Gold* in as the **Attribute Value**:
+For example, you would like to show a special offer price only for customers with the **Gold** grade. Select *Grade* in the **Attribute** property and *Gold* in as the **Attribute Value**:
 
 {{% image_container width="300" %}}
 ![](attachments/page-editor-widgets-visibility-section/attribute-based-visibility.png)
 {{% /image_container %}}
 
-### 2.3 Role-Based {#role-based}
+### 2.4 Expression
+
+This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. The property allows you to create an expression. For more information, see [Expressions](#expressions).
+
+### 2.5 Visible Based on Role {#role-based}
 
 The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
 
@@ -62,9 +65,9 @@ You can only configure role-based conditional visibility when security is enable
 
 {{% /alert %}}
 
-### 2.4 Roles
+### 2.6 Roles
 
-The **Roles** property is only shown when the [Role-Based](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget visible for. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
+The **Roles** property is only shown when the [Visible Based on Role](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget visible for. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
 
 {{% image_container width="300" %}}
 ![](attachments/page-editor-widgets-visibility-section/role-based-visbility.png)
@@ -72,61 +75,40 @@ The **Roles** property is only shown when the [Role-Based](#role-based) property
 
 ## 3 Performing Basic Functions
 
-### 3.1 Configuring Attribute-Based Conditional Visibility
+### 3.1 Configuring Visibility Based on Attribute Value
 
-To configure attribute-based visibility, do the following:
+To configure visibility based on the attribute values, follow the steps below:
 
 1. Select a widget you would like to make visible only for certain attribute values and go to its properties.
 
-2. In **Conditional Visibility** section, click the **Attribute-Based** property:
+2. In **Conditional Visibility** section, toggle the **Visible Based on Data** property.
+
+3. The **Condition Based on** is set to **Attribute** by default. Click the **Attribute** property: 
 
     {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/attribute-based-property.png){{% /image_container %}}
 
-3. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
+4. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
 
-4. The **Attribute Values** property is now displayed in properties. Untick the values that does not meet the conditions you would like to set:
+5. The **Attribute Values** property is now displayed in properties. Untick the values that do not meet the conditions you would like to set:
 
     {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/attribute-values.png){{% /image_container %}} 
 
-Attribute-based conditional visibility is set for the widget.
+Conditional visibility based on the attribute value is set for the widget.
 
-### 3.2 Disabling Attribute-Based Conditional Visibility
-
-To disable attribute-based visibility, follow the steps below:
-
-1. Select a widget you would like to disable attribute-based visibility and go to its properties.
-
-2. In **Conditional Visibility** section, click the **Attribute-Based** property.
-
-3. In the **Select Attribute** dialog box, click **Clear**:
-
-    {{% image_container width="400" %}}![](attachments/page-editor-widgets-visibility-section/clear-attribute-based-visibility.png){{% /image_container %}}
-
-The attribute-based conditional visibility is cleared for the widget. 
-
-### 3.3 Configuring Role-Based Conditional Visibility
+### 3.2 Configuring Conditional Visibility Based on a Role
 
 To configure role-based conditional visibility, do the following:
 
 1. Select a widget you would like to make visible only for certain user roles and go to its properties.
 
-2. In **Conditional Visibility** section, toggle the **Role-Based** property.
+2. In **Conditional Visibility** section, toggle the **Visible Based on Role** property.
 
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the roles who would like to hide the widget from:
 
     {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/role-based-example.png){{% /image_container %}} 
     
 
-Role-based conditional visibility is set for the widget.
-
-### 3.4 Disabling Role-Based Conditional Visibility
-
-To disable role-based conditional visibility, follow the steps below:
-
-1. Select a widget you would like to disable role-based visibility and go to its properties.
-2. In **Conditional Visibility** section, disable the **Role-Based** property.
-
-Role-based conditional visibility is disabled for the widget.
+Conditional visibility based on user roles is set for the widget.
 
 ## 4 Read More
 

@@ -12,8 +12,8 @@ Once you created some pages, it is important that your users can access them. Fo
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Create a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Create your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)
+* [How to Create Your First Two Overview and Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Setting a Default Home Page {#home}
 

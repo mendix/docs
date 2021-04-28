@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### April 26th, 2021
+
+#### New Features
+
+* We released the Control Center [Dashboard](/developerportal/control-center/index#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+
 ### March 30th, 2021
 
 #### Improvements
@@ -87,7 +93,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
+* We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
 	* Open the [Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
 	* Deactivate or delete an app or a team member
 

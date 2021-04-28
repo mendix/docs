@@ -3,7 +3,7 @@ title: "Studio"
 frontpage_featured: true
 ---
 
-The release notes for [Mendix Studio](/studio/) are correlated with the version ranges of the [Mendix Studio Pro](/releasenotes/studio-pro/): 
+The release notes for [Mendix Studio](/studio/) are correlated with the version ranges of [Mendix Studio Pro](/releasenotes/studio-pro/): 
 
 * [9.0 & Above](9.0-and-above)
 * [8.7-8.18](8.7-8.18)

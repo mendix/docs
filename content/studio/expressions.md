@@ -12,21 +12,26 @@ aliases:
 
 Expressions changes a value based on a function or combination of functions. 
 
-You can use expressions for microflows and workflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
+You can use expressions for workflows, pages, and microflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
 
 You can use expression for the following elements in a workflow:
 
 * [Decision](workflows-general-activities)
 * **Due date** property of a [workflow](workflow-properties) and a [user task](workflows-user-task)
 
+Expression can be used in the following properties on a page:
+
+* Conditional editability of a widget
+* Conditional visibility of a widget
+
 Expressions can be used for the following activities in a microflow: 
 
-*  End Event
-*  [Decision](microflows-decision)
-*  Create Object
 *  Change Object
-*  Create Variable 
 *  Change Variable
+*  Create Object
+*  Create Variable
+*  [Decision](microflows-decision)
+*  End Event
 
 For more information on setting and changing values for microflow activities, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
 
@@ -44,16 +49,18 @@ $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
 
+You cannot type plain text in an expression, text needs the be written with single quotation marks (`'`) around it. For example, if you would like to return a string `Mendix`, you need to write it as `'Mendix'`.
+
 You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> shortcut to display this list. Suggestions can be divided into the following categories:
 
-* **Variables or attributes** – variables or attributes that are available in a current microflow, on a page, or in a workflow
+* **Variables and their attributes** – variables or attributes that are available in a current microflow, on a page, or in a workflow
 * **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration) that can be used in an expression
 * **Functions** – operations you can use in an expression (for more information, see the [Expression Types](#expression-types) section below)
 * **Keywords** – key phrases or words that you can use in an expression (for example, `empty` – a value that can be used to check if a variable is empty)
-* **Booleans** – true or false expressions
+* **Booleans** – true or false keywords
 * **Operators** – code elements that perform logical or mathematical operations; you can use Boolean or relational expressions (for more information, see the [Expression Types](#expression-types) section below)
 
-If an error appears in the expression, error messages with explanations are displayed: 
+If there is an errors in the expression, the place where the error is, is highlighted red and an error message is shown when you hover over it.  In some cases there are quick fixes available to quickly solve the issue.
 
 ![](attachments/expressions/expression-error.png)
 
@@ -64,12 +71,6 @@ Examples that illustrate how expressions can be used are described below.
 
 #### 2.3.1 Example 1
 
-You have a [user task](workflows-user-task) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
-
-![User Task Expression](attachments/expressions/user-task-due-date.png)
-
-#### 2.3.2 Example 2
-
 You have a [Decision](microflows-decision) in a microflow and you would like to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true):
 
 ![](attachments/expressions/example-decision.png) 
@@ -78,11 +79,17 @@ The expression will look the following way:
 
 ![](attachments/expressions/expression-decision.png)
 
-#### 2.3.2 Example 3
+#### 2.3.2 Example 2
 
 You add a [Decision](microflows-decision) to a microflow to check if an object (in the example below the object is *Customer*) exists. And you also check if the Customer's name matches a particular one (in the example below Customer's name is *Mendix*). The expression will look the following way:
 
 ![](attachments/expressions/customer-empty-and-name-example.png)
+
+#### 2.3.3 Example 3
+
+You have a [user task](workflows-user-task) in a workflow and would like to add a **Due Date** as a reminder that the user task should be done by the day after tomorrow. You can write the following expression for it:
+
+![User Task Expression](attachments/expressions/user-task-due-date.png)
 
 ## 3 Expression Types {#expression-types}
 

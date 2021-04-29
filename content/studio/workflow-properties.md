@@ -39,7 +39,9 @@ The **Data** section contains information on what data context the workflow is u
 
 ![Data Section](attachments/workflow-properties/data.jpg)
 
-**Workflow entity** is an entity that is used as a workflow context. This entity should be of a workflow entity type. For more information, see the [Entities and Their Types](domain-models#entity-types) section in the *Domain Model*.
+**Workflow entity** is an entity that is used as a workflow context. This entity serves as input for the workflow and can hold the data added during the execution of the workflow. For example, for an expense approval process, it holds the amount to approve and the purpose.
+
+This entity should be of a workflow entity type. For more information, see the [Entities and Their Types](domain-models#entity-types) section in the *Domain Model*.
 
 ### 2.3 Display Information Section {#display-info}
 
@@ -66,7 +68,7 @@ This section is only displayed when the security is on. For more information, se
 
 ### 2.4 Due Date Section {#due-date}
 
-The **Due Date** section allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
+The **Due Date** section allows you to set a deadline for the workflow and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show workflows that are overdue in a dashboard.
 
 ![Due Date Section](attachments/workflow-properties/due-date.jpg)
 

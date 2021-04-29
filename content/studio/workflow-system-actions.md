@@ -31,7 +31,7 @@ The section properties are described in the table below:
 
 | Property  | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand. |
+| Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow editor to make the workflow easier to read and understand. |
 | Microflow | The microflow that is called by this element.                |
 
 ### 2.3 Parameters Section {#parameters}

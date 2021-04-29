@@ -142,14 +142,8 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Attend a Mendix Hackathon | 50 | N/A |
 | Successfully refer a friend to Mendix | 25 | N/A |
 | Attend a Mendix Meetup | 25 | N/A |
-| Attend Mendix World 2016 | 25 | N/A |
-| Get a GitHub pull request merged | 15 | N/A |
 | Invite a friend to Mendix | 5 | 50 |
 | Have a user sign up via your referral URL | 5 | 50 |
-
-{{% alert type="info" %}}
-In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information, see the [Social](#social) section below.
-{{% /alert %}}
 
 ### 7.5 Learning Points
 

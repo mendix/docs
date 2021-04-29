@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### April 29th, 2021
+
+#### Improvements
+
+* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home).
+
 ### April 22nd, 2021
 
 #### Improvements

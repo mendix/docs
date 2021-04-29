@@ -29,9 +29,9 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 In the navigation editor properties you can set a page or a microflow as a default home page. 
 
-The **Default Homepage** section consists of the following properties:
+The **Default Home Page** section consists of the following properties:
 
-* **Page** – Allows you to set a page that is opened when an end-user opens the page. A homepage icon is displayed in a list of pages against a page that is set as a homepage.
+* **Page** – Allows you to set a page that is opened when an end-user opens the page. A home page icon is displayed in a list of pages against a page that is set as a home page.
 * **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. 
 
 ## 3 Menu Item Properties {#properties-of-menu-items}

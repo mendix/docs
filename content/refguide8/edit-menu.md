@@ -6,6 +6,10 @@ menu_order: 10
 tags: ["Studio Pro", "view menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](preferences-dialog) dialog that contains user-specific settings. 

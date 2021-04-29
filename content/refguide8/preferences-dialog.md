@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Preferences** option opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro.

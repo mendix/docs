@@ -4,8 +4,11 @@ parent: view-menu
 menu_order: 15
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 tags: ["studio Pro", "data hub", "data hub pane", "data hub catalog"]
-
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 ## 1 Introduction 
 

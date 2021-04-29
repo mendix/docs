@@ -6,6 +6,10 @@ menu_order: 12
 tags: ["Studio Pro", "menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:

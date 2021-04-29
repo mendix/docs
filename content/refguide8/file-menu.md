@@ -6,6 +6,10 @@ menu_order: 5
 tags: ["Studio Pro", "file menu", "file"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **File** menu allows you to manage documents and projects, for example, to create a new project or save changes:

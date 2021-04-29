@@ -6,6 +6,10 @@ description: "Describes the Errors pane in Mendix Studio Pro."
 tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction 
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 

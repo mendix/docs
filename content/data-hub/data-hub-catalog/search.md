@@ -67,7 +67,7 @@ From the **Data Hub Home** page, you can you can search the Catalog in the follo
 
 ![](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (search strings can comprise a minimum of 3 characters and include the alphanumeric characters)
+* Type a search term in the search box and click **Search** (search strings can comprise a minimum of three characters and include the alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab

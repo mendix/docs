@@ -16,6 +16,13 @@ The widget does the following:
 - Also supports QR codes and a wide range of different barcode types.
 - Allows additional styling customizations through Atlas.
 
+{{% alert type="info" %}}
+For security reasons, certain browsers will only allow access to an user device's camera over a HTTPS connection and not a default HTTP connection.
+Since this widget accesses the user device's camera through this method, the same constraints apply for using this widget in both production and local development.
+For production, an appropriate security setting can be applied when deploying to the Mendix cloud.
+For local development, the easiest solution is to set up a local proxy that secures the connection towards your local Mendix application.
+{{% /alert %}}
+
 ## 2 Usage
 
 The only requirement for the Barcode scanner widget is that it needs to be placed inside a data view that provides an object with a string attribute.

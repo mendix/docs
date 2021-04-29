@@ -155,5 +155,5 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 ## 9 Read More
 
-* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
+* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

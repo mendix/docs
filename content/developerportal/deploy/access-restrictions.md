@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 36
 description: "How to limit access to your app using IP addresses and certificates"
 tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -66,11 +67,11 @@ If you do not select any certificates then all the certificates will be valid.
 
 Click **Save** to save the current certificate profile.
 
-#### 2.1.3 Specifying IP Ranges
+#### 2.1.3 Specifying IP Ranges{#ip-ranges}
 
 You can specify a number of different IP ranges. Click **New** to add a new one, or use the **Edit** or **Delete** button to modify an existing IP range.
 
-For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports only IPv4 addresses.
+For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports only IPv4 format addresses.
 
 ![](attachments/accessrestrict/ip-range.png)
 

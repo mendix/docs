@@ -4,9 +4,14 @@ parent: "backups"
 menu_order: 50
 description: "Describes how to restore physical disk space by creating and restoring a database backup."
 tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+These instructions are for apps which are deployed to Mendix Cloud V3 only. Apps deployed to Mendix Cloud V4 will not benefit from following these instructions.
+{{% /alert %}}
 
 Usually. the database of a Mendix application in the Mendix Cloud will grow over time, as shown in this chart:
 

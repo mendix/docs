@@ -3,6 +3,7 @@ title: "Mendix Profile"
 menu_order: 10
 description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -160,15 +161,9 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
 | Pass the [Rapid Developer Certification](https://academy.mendix.com/link/certification/rapid) exam | 25 | N/A |
 | Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
-| Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
 | Attend the [Advanced Developer Course](https://academy.mendix.com/link/classroom/5/Advanced/Course) | 10 | N/A |
 | Attend the [Rapid Developer Course](https://academy.mendix.com/link/classroom/1/Rapid/Course) | 10 | N/A |
-| Make a small contribution to the Mendix documentation | 5 | N/A |
 | Complete a unit in the Mendix Academy | 1 | N/A |
-
-{{% alert type="info" %}}
-For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Documentation](../community-tools/contribute-to-the-mendix-documentation).
-{{% /alert %}}
 
 ### 7.6 Point Levels
 

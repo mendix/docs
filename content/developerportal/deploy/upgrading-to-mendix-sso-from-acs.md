@@ -5,6 +5,7 @@ menu_order: 20
 description: "How to upgrade existing apps using AppCloudServices to use Mendix SSO"
 tags: ["SSO", "Single Sign On", "Upgrade", "AppCloudServices", "Mendix SSO"]
 #Ownership claimed by Identity Services Team.
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

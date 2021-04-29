@@ -5,6 +5,8 @@ menu_order: 40
 description: "Describes the microflow expressions available in Mendix Studio."
 tags: ["studio", "microflow", "expressions", "expression", "set value", "variable"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+aliases:
+    - /studio/expressions.html
 ---
 
 ## 1 Introduction 

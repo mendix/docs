@@ -6,6 +6,7 @@ description: "How to migrate your app from a Mendix Cloud v3 node to a Mendix Cl
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

@@ -38,8 +38,6 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 ![Sign In dialog](attachments/on-premises-git-howto/sign-in-dialog.png)
 
-For instruction on how to set up Personal Access Tokens, see the [Supported Git Service Providers](#supported-providers) section below.
-
 ## 4 Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
@@ -62,8 +60,6 @@ Studio Pro is able to use the following Git server providers:
 You need to create a private repository in the selected provider and create a Personal Access Token (PAT) to provide access to it. The PAT is used as a password.
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
-
-For more information on PAT, see the [Supported Git Service Providers](#supported-providers) section above.
 
 ### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 

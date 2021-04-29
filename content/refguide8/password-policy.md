@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "password policy", "project security", "security"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 You can specify a number of requirements for passwords. These requirements will be applied when creating new users or changing passwords of existing users.

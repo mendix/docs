@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "administrator", "project security", "security"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:

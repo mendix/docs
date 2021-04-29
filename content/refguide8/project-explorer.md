@@ -5,6 +5,10 @@ menu_order: 40
 tags: ["studio pro", "project explorer"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Project Explorer** shows the complete structure of your project including all documents inside the modules:

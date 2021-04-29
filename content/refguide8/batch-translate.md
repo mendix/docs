@@ -5,6 +5,10 @@ menu_order: 30
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Batch translate** allows you to enter texts in one language which correspond to texts in another language.

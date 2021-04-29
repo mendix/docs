@@ -6,6 +6,10 @@ tags: ["studio pro", "project"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A Mendix project consists of project-level documents and a number of modules. Each module can contain many documents. At the project level there are some settings and documents that apply to your project as a whole. For example, navigation is a project-level document; the menu bar is project-wide and can refer to functionality in all modules. Most documents, however, live at the level of a [module](modules).

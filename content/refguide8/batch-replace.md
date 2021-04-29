@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Batch replace** works on the currently selected language and allows you to replace any existing texts with a new one.

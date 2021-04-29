@@ -5,6 +5,10 @@ tags: ["studio pro", "configurations", "configuration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 

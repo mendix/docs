@@ -6,6 +6,10 @@ menu_order: 35
 tags: ["Studio Pro", "run", "run menu"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Run** menu allows you to deploy and monitor your app:

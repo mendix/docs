@@ -5,6 +5,10 @@ description: "Describes checks and changes in the project when security is enabl
 tags: ["studio pro", "security", "studio"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction 
 
 This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio8/settings-security) in the *Studio Guide*. 

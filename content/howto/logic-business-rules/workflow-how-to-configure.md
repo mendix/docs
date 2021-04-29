@@ -1,14 +1,14 @@
 ---
-title: "Configure a Workflow for the Employee Onboarding Process"
+title: "Configure a Workflow in Studio Pro for the Employee Onboarding Process"
 category: "Logic & Business Rules"
-description: "Describes how to configure a workflow in Mendix Studio."
+description: "Describes how to configure a workflow in Mendix Studio Pro."
 menu_order: 1
 tags: ["studio pro", "workflow", "task", "onboarding"]
 ---
 
 ## 1 Introduction 
 
-Workflow is a new visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
+Workflow is a new visual language in Mendix Studio Pro and Mendix Studio that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
 This how-to explains how to build an employee onboarding process using the workflow editor. 
 

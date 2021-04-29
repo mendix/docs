@@ -13,7 +13,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### April 28th, 2021
+### April 29th, 2021
+
+#### Improvement
+
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
+
+    If you need more than 32 instances please contact Mendix Support.
 
 #### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
 

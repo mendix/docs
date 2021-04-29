@@ -17,9 +17,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvement
 
-* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32, and the maximum memory per instance to 32GiB.
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
 
-    If you need more instances or memory per instance, please contact Mendix Support.
+    If you need more than 32 instances please contact Mendix Support.
 
 ### April 15th, 2021
 

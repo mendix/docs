@@ -166,6 +166,18 @@ Do not capitalize.
 
 ## L-N
 
+### LTS (Long-Term Support)
+
+{{% alert type="info" %}}
+As with any acronym the user may not recognize at first, write out the term "long-term support" in full for first usage and use the acronym "LTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+{{% /alert %}}
+
+### MTS (Medium-Term Support)
+
+{{% alert type="info" %}}
+As with any acronym the user may not recognize at first, write out the term "medium-term support" in full for first usage and use the acronym "MTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+{{% /alert %}}
+
 ### Make It Native app
 
 {{% alert type="info" %}}

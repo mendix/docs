@@ -129,7 +129,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Deploy to a licensed node | 1 | 5 |
 | Deploy a Free App | 1 | N/A |
 
-### 7.4 Community Points {#github}
+### 7.4 Community Points
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |

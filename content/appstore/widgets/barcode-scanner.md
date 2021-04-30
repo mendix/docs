@@ -33,7 +33,7 @@ This canvas will provide users the ability to see their device's camera feed and
 
 ### 2.1 Data Source Tab
 
-- **Barcode** - the attribute on the data view object in which the barcode detection, being a string, will be stored in.
+- **Barcode** - the attribute of the data view object which will store the barcode detection result, which is a string.
   This widget property is required.
 
 ### 2.2 Mask Tab

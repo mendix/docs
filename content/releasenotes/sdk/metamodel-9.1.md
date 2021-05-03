@@ -3,7 +3,7 @@ title: "9.1"
 parent: "metamodel-9"
 ---
 
-## 9.1.o
+## 9.1.0
 
 **Release date: April 21st, 2021**
 

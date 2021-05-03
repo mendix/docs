@@ -12,7 +12,7 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
-## 2 Description
+## 2 Description {#description}
 
 The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid.
 

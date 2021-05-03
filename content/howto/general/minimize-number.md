@@ -7,7 +7,11 @@ tags: ["object", "session", "architecture", "stateless", "runtime"]
 
 ## 1 Introduction
 
-Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By *state* we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
+Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. 
+
+The Mendix Client runs on the end-user’s device and handles the interface between the end-user and the app. In most cases, it interacts with the Runtime Server to get or update shared data, or perform additional application logic. You can also run Mendix locally for testing. For more information on what the Mendix Client means for your apps, see the [Description](/refguide/mendix-client#description) section of the *Mendix Client Reference Guide*.
+
+By *state* we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
 
 This new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the Mendix Client.
 

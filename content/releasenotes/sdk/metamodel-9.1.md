@@ -1,37 +1,30 @@
-# Metamodel Release Notes for version 9.1.0
+---
+title: "9.1"
+parent: "metamodel-9"
+---
 
-## DomainModels
+## 9.1.o
 
-### Entity (Element)
+**Release date: April 21st, 2021**
 
+### DomainModels
 
-#### Property 'accessRulesRuntime'
-* Deleted; 
+#### FloatAttributeTypeBase, FloatAttributeType & CurrencyAttributeType (Elements)
 
-### FloatAttributeTypeBase (Element)
-* Deleted; 
+* We deleted these elements.
 
+#### Entity (Element)
 
-### FloatAttributeType (Element)
-* Deleted; 
+* We deleted the `accessRulesRuntime` property.
 
+### Projects
 
-### CurrencyAttributeType (Element)
-* Deleted; 
+#### Module (StructuralUnit)
 
+* We deleted the `isReusableComponent` property.
 
-## Projects
+### Rest
 
-### Module (StructuralUnit)
+#### PublishedODataService (ModelUnit)
 
-
-#### Property 'isReusableComponent'
-* Deleted; 
-
-## Rest
-
-### PublishedODataService (ModelUnit)
-
-
-#### Property 'oDataVersion'
-* Introduced; "The OData version of this service"
+* We introduced the `oDataVersion` property for the OData version of this service.

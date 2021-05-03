@@ -703,19 +703,23 @@ When choosing the **Existing docker-registry secret**, you will need to add this
 
 Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-List all local (including cluster-local) IP addresses and domains in the **No proxy for** field. For more information about how to use this field, see the [documentation](https://pkg.go.dev/golang.org/x/net/http/httpproxy):
+List all local (including cluster-local) IP addresses and domains in the **No proxy for** field. The format is listed below:
 
-> It specifies a string that contains comma-separated values specifying hosts that should be excluded from proxying.
->
-> Each value is represented by an IP address prefix (`1.2.3.4`), an IP address prefix in CIDR notation (`1.2.3.4/8`), a domain name, or a special DNS label (`*`).
->
-> An IP address prefix and domain name can also include a literal port number (`1.2.3.4:80`).
->
-> A domain name matches that name and all subdomains.
-> A domain name with a leading "." matches subdomains only.
->
-> For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
-> A single asterisk (`*`) indicates that no proxying should be done.
+Hosts which should be excluded from proxying are specified as:
+
+* a string containing comma-separated values
+* each value is
+	* an IP address prefix (`1.2.3.4`)
+	* an IP address prefix in CIDR notation (`1.2.3.4/8`)
+	* a domain name
+	* a special DNS label (`*`) indicates that no proxying should be done
+* each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
+* a domain name matches that name and all subdomains
+* a domain name with a leading "." matches subdomains only
+
+	For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+ 
+For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 
 #### 4.3.4 Custom TLS{#custom-tls}
 
@@ -828,7 +832,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 {{% alert type="warning" %}}
-Adjusting options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
+Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
 {{% /alert %}}
 
 ### 5.1 Endpoint (network) configuration

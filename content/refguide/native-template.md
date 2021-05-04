@@ -29,28 +29,25 @@ Please note this key information regarding versioning:
 
 To determine which version of the Native Template you should use, do the following:
 
-1. Note which version of Studio Pro you are using, for example 9.0.0.
+1. Note which version of Studio Pro you are using, for example *9.0.0*.
 1. Navigate to the [Native Template mendix_version.json file](https://github.com/mendix/native-template/blob/master/mendix_version.json).
 
 The keys represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
 {{% image_container width="200" %}}![iOS output](attachments/native-template/mendix-version.png){{% /image_container %}}
 
-So like in the example picture shown above, in the case of Mendix Studio Pro 8.9.x, you could choose any Native Template 
-version from 4.0.0 to the latest. Ideally you should choose the most recent supported version.
+So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template 
+version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
 
-## 4 Auto linking dependencies
+## 4 Auto-Linking Dependencies
 
-React Native Modules, are npm packages, that include dependencies that need to be linked with the platform specific 
-projects so that they can be compiled with the apps.
+React Native modules are npm packages that include dependencies which must be linked with your platform-specific projects so that the React Native modules can be compiled with the apps.
 
-As auto linking, we describe the automated process of linking a React Native Module with the platform specific projects.
+As with auto-linking, we describe the automated process of linking a React Native Module with the platform-specific projects.
 
-Native Template supports fully the [React Native's CLI auto linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto linkable by default will be correctly linked to the platform specific projects. 
+The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto-linkable by default will be correctly linked to the platform-specific projects. 
 
-For libraries that are not fully auto linkable, those are usually libraries that require special initialisation, 
-we extended upon the default auto linking capabilities. For now this process is limited to know capabilities. We will expand the documentation when the API becomes public.
-
+For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to know capabilities. We will expand the documentation when the API becomes public.
 
 ## 5 Native Mobile Toolkit
 

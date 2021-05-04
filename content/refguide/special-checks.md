@@ -133,7 +133,7 @@ An example of an input can be the following:
 isSynced($currentObject)
 ```
 
-## 6 Checking Whether a Synchronization Is Running {#is-syncing}
+## 6 Checking if a Synchronization is Running {#is-syncing}
 
 This function is available only in client-side expressions (expressions in [nanoflows](nanoflows) and [pages](pages)).
 

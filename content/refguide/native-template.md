@@ -59,12 +59,11 @@ The Native Mobile Toolkit includes conversion logic that allows conversion from 
 happens in memory so that it does not conflict with custom implementations. The converted config is outputted in the terminal's console
 for further debugging. 
 
-### 5.1 Mobile Toolkit configuration structure
-Project specific information is defined in a top level config file. 
-The best way to derive the possible config options is to configure a project initially with Mendix Native Mobile Builder
-and note the configuration keys.
+### 5.1 Mobile Toolkit Configuration Structure
 
-The supported properties as of config version 2 are:
+Project-specific information is defined in a top level **config** file. The best way to derive possible config options is to configure a project initially with the Mendix Native Mobile Builder and note the configuration keys.
+
+These are the supported properties as of config version 2:
 
 ```
 interface NativeTemplateConfig {
@@ -119,7 +118,7 @@ export interface Orientation {
 }
 ```
 
-An example of a configured project: 
+This is an example of a configured project: 
 
 ```
 {
@@ -193,8 +192,7 @@ An example of a configured project:
 
 ### 5.2 Assets
 
-Mobile Toolkit supports configuring splash screens and the icons for your project. 
-Assets are expected to be saved relative to the root of the Native Template in a folder named assets.
+The Mobile Toolkit supports configuring splash screens and the icons for your project. Assets are expected to be saved relative to the root of the Native Template in a folder named **assets**.
 
 ```
 - assets
@@ -202,13 +200,13 @@ Assets are expected to be saved relative to the root of the Native Template in a
     - splashScreens
 ```
 
-#### 5.2.1 iOS icons
+#### 5.2.1 iOS Icons
 
-The icons' configuration needs to be defined in a versioned json formatted config file under *assets/icons/ios.json*.
+The icons' configuration needs to be defined in a versioned *JSON* formatted **config** file under **assets/icons/ios.json**.
 
-The actual asset files defined under filename are expected to be available next to the config file.
+The actual asset files defined under filename are expected to be available next to the **config** file.
 
-The version is required and used for backwards compatibility purposes. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. Below you see the config using **version 1**:
 
 ```
 interface IOSIconsConfig {
@@ -223,7 +221,8 @@ interface IOSIconsConfig {
 }
 ```
 
-An example of all keys that are required to successfully configure an app: 
+This is an example of all keys that are required to successfully configure an app: 
+
 ```
 {
     "images": [
@@ -358,7 +357,7 @@ An example of all keys that are required to successfully configure an app:
 }
 ```
 
-#### 5.2.2 Android icons
+#### 5.2.2 Android Icons
 
 The icons' configuration needs to be defined in a versioned json formatted config file under *assets/icons/android.json*.
 

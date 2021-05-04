@@ -16,9 +16,9 @@ To use this widget, place it in a [data container](https://docs.mendix.com/refgu
 
 The widget offers the following for configuration:
 
-* A boolean attribute to toggle on user-interaction
+* A Boolean attribute to toggle on user-interaction
 * An action (such as Microflow or Nanoflow) to trigger when the Switch is toggled
-* A **Device style** design property with two options, `iOS` and `Android`, influencing the Switch's appearance
+* A **Device style** design property with two options (`iOS` and `Android`) influencing the Switch's appearance
 * A **Style** design property for brand styling, influencing the Switch's colors
 * [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
 

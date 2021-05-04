@@ -1,5 +1,5 @@
 ---
-title: "Native Template reference guide"
+title: "Native Template"
 parent: "native-mobile"
 menu_order: 11
 tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
@@ -7,18 +7,13 @@ tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
 
 ## 1 Introduction
 
-To build Mendix Native App a template is needed. This template is conveniently named Native Template. 
-The Native template is essentially describing the native dependencies you project needs and includes two (2) native projects, 
-one for iOS and one for Android that can be independently built to create the apps. 
+A template is required when you build a Mendix native app: specifically the Native Template. In short, the Native Template describes the native dependencies your project needs, and it includes two native projects (one for iOS and one for Android) that can be independently built to create the apps. 
 
-The template also includes tooling to put everything together. Such as the React Native and Mendix auto linking capabilities, 
-to link the native dependencies to platform specific projects, and the Native Mobile toolkit which handles configuring the platform 
-specific projects with things like the version number, app name, splash screens and more. 
+The template also includes tooling to help put everything together. Specifically, the Native Template uses the React Native and Mendix auto-linking capabilities to link the native dependencies to platform-specific projects, and uses the Native Mobile toolkit which configures the platform-specific projects with version numbers, app names, splash screens, and more. 
 
-In addition, the Template can facilitate the creation of Custom Developer Apps. Apps that act like the Make It Native app 
-but are tailored to the specific needs of your project. 
+In addition, the Native Template helps create Custom Developer Apps. These are apps that act like the Make It Native app but are tailored to the specific needs of your project. If you would like to build an app that uses bespoke functionality like custom native widgets see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps). 
 
-Native Template goes hand in hand with the Mendix Native Mobile Builder.
+The Native Template goes hand in hand with the Mendix Native Mobile Builder.
 
 ## 2 Location
 

@@ -8,11 +8,11 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The Data Hub APIs can be used to register your data sources to your organization's Mendix Data Hub. You can also explore and discover data sources that can be used in your app development.
+The Data Hub APIs can be used to register your data sources to the organization's Mendix Data Hub and explore and discover data sources that can be used in your app development.
 
 Using the APIs you can set up a registration flow in the deployment pipeline of your business applications to register new data sources from your applications to the Data Hub Catalog.
 
-For Mendix users deploying their apps to a non-Mendix could they can use the use the the Data Hub Transform API to generate the information required to register using the Data Hub API PUT call.
+For Mendix users deploying their apps to a non-Mendix environment they can use the use the the Data Hub Transform API to generate the information required to register using the Data Hub API PUT call. ???addd the s3 bucket location
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
@@ -84,3 +84,31 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 10. You can delete unused tokens by clicking the "bin" icon for the token.
 
+## 5. The Data Hub Transformation Open API Spec
+
+The metadata contracts for your Mendix data sources (OData services) define the structure and documentation of the datasets. For registering in the Data Hub, further details are required and for Mendix apps deploying to the Mendix cloud, this information is captured from the `dependencies.json` file .
+
+This transformation API will transform a dependencies.json into request bodies that users can copy paste into the PUT published endpoints and PUT consumed endpoints calls to register their services.
+
+Users who do not depoly to a Mendix could can use the transformation API to extract the information that is required from the `dependencies.json` file for subsequent registeration of the data sources (OData services) using the Data Hub API to register Mendix apps outside the Mendix Cloud.
+
+This document describes the additional information that is required and provides example commands of how it can be extracted using the `jq`  utitlity which can be incorporated into the registration pipeline when deploying your Mendix apps to a non-Mendix pipeline.
+
+
+Commands using the jq utility for filtering the values out of a JSON file have been provided. You can download jq from https://stedolan.github.io/jq/download/. It is recommended for this type of work but not strictly required. Alternatively, you can also extract the values manually from the JSON file.
+
+These request bodies will not contain the following optional values because they’re not available from the dependencies.json, they will still have to be specified for the endpoints being registered:
+
+Attribute: `SecurityClassification`
+
+- Values: Allowed values are  "Internal" | "Public" | "Confidential"
+- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.
+
+Attribute: `Discoverable`
+- Values: Allowed values “true” | “false”
+- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.
+
+Attribute: `Validated`
+
+- Values: Allowed values “true” | “false”
+- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.

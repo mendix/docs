@@ -156,7 +156,7 @@ By default, the cluster manager, who created the cluster in Mendix, and anyone a
 
 The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
 
-* Set up operating URLs for the namespace *? DOES THIS MAKE SENSE FOR TENCENT?**
+* Set up operating URLs for the namespace
 * View all environments in the namespace
 * Manage own environments – user can create and manage an environment in any namespace in the cluster
 

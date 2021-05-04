@@ -7,7 +7,7 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
 {{% alert type="info" %}}
-Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**
+The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -29,7 +29,7 @@ To deploy an app to Tencent, you need the following:
 * Mendix Studio Pro China Edition
 
     * You will be able to download Mendix Studio Pro, as part of your initial sign up:
-    ![](attachments/tencent-deploy/download-studio-pro.png)
+       ![](attachments/tencent-deploy/download-studio-pro.png)
     You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
@@ -42,7 +42,7 @@ Go to the Cluster Manager page by clicking the **Switch to** menu and selecting 
 
 ![](attachments/tencent-deploy/cluster-manager-navigation.png)
 
-If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp "Siemens Low-Code Platform on Tencent Cloud")** to go to Tencent and purchase the necessary resources.
+If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp) "Siemens Low-Code Platform on Tencent Cloud"** to go to Tencent and purchase the necessary resources.
 
 ![](attachments/tencent-deploy/purchase-resources.png)
 

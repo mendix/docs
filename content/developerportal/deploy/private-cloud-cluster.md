@@ -712,7 +712,7 @@ Hosts which should be excluded from proxying are specified as:
 	* an IP address prefix (`1.2.3.4`)
 	* an IP address prefix in CIDR notation (`1.2.3.4/8`)
 	* a domain name
-	* a special DNS label (`*`) indicates that no proxying should be done
+	* if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
 * each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
 * a domain name matches that name and all subdomains
 * a domain name with a leading "." matches subdomains only

@@ -11,19 +11,21 @@ A template is required when you build a Mendix native app: specifically the Nati
 
 The template also includes tooling to help put everything together. Specifically, the Native Template uses the React Native and Mendix auto-linking capabilities to link the native dependencies to platform-specific projects, and uses the Native Mobile toolkit which configures the platform-specific projects with version numbers, app names, splash screens, and more. 
 
-In addition, the Native Template helps create Custom Developer Apps. These are apps that act like the Make It Native app but are tailored to the specific needs of your project. If you would like to build an app that uses bespoke functionality like custom native widgets see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps). 
+In addition, the Native Template helps create custom developer Apps. These are apps that act like the Make It Native app but are tailored to the specific needs of your project. If you would like to build an app that uses bespoke functionality like custom native widgets see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps). 
 
 The Native Template goes hand in hand with the Mendix Native Mobile Builder.
 
 ## 2 Location
 
-Native Template is hosted on [GitHub](https://github.com/mendix/native-template) and is publicly available.
+The Native Template is hosted on [GitHub](https://github.com/mendix/native-template) and is publicly available.
 
 ## 3 Versioning
 
-A Native Template is versioned using [semantic versioning](https://semver.org/). 
-A Native Template version is closely related to the Mendix Studio Pro version of the project that is being built.
-Not using a matching version will lead to unexpected behavior.
+Please note this key information regarding versioning:
+
+* A Native Template is versioned using [semantic versioning](https://semver.org/)
+* A Native Template version is closely related to the Mendix Studio Pro version of the project that is being built
+* Not using a matching version will lead to unexpected behavior
 
 To determine which version of the Native Template you should use, do the following:
 

@@ -51,15 +51,11 @@ For libraries that are not fully auto-linkable (those are usually libraries that
 
 ## 5 Native Mobile Toolkit
 
-Native Mobile Toolkit is a Mendix developed NPM module that is used to facilitate the configuration requirements of the 
-platform specific projects. 
+The Native Mobile Toolkit is a Mendix-developed NPM module that is used to facilitate the configuration requirements of platform-specific projects. It lets you define platform-specific features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
 
-It allows for defining platform specific features, like versioning, package id, splash screens and more, in a platform agnostic way.  
+The configuration is written in JSON. The configuration file is versioned using an incremental number. The version is incremented when breaking changes are introduced.
 
-The configuration is written in JSON. 
-The configuration file is versioned using an incremental number. The version is incremented when breaking changes are introduced.
-
-The mobile toolkit includes conversion logic that allows converting from an older to a newer version of the config. This conversion
+The Native Mobile Toolkit includes conversion logic that allows conversion from an older config version to a newer one. This conversion
 happens in memory so that it does not conflict with custom implementations. The converted config is outputted in the terminal's console
 for further debugging. 
 

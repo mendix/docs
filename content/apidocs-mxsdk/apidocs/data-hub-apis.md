@@ -8,30 +8,32 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The Data Hub APIs enable you register your data sources to Mendix Data Hub and to explore and discover data sources that can be used in app development.
+The Data Hub APIs can be used to register your data sources to your organization's Mendix Data Hub. You can also explore and discover data sources that can be used in your app development.
 
 Using the APIs you can set up a registration flow in the deployment pipeline of your business applications to register new data sources from your applications to the Data Hub Catalog.
 
-For Mendix users deploying their apps to a non-Mendix could they must use the Data Hub API???? PUT to register their apps, the Data Hub Transform API
+For Mendix users deploying their apps to a non-Mendix could they can use the use the the Data Hub Transform API to generate the information required to register using the Data Hub API PUT call.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-## 2. The Data Hub API
+## 2. The Data Hub Open API Specs
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is an Open API (formerly Swagger) specification which contains all the APIs for the operations that are currently available which include the following:
+The [Data Hub APIs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) are Open API (formerly Swagger) specifications that are located the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
+
+The the following operations are currently available:
 
 * Registration
 * Search
-
-You can access the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
 {{% alert type="info" %}}
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-To access the API, authentication and authorization are required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+## 3. Authentication and Authorization
+
+When making calls using the API to your organization's Data Hub, authentication and authorization have to be included in the request by specifying a Personal Access Token (PAT). Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
 
 For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 

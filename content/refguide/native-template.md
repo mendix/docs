@@ -47,7 +47,7 @@ As with auto-linking, we describe the automated process of linking a React Nativ
 
 The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking). Libraries that are auto-linkable by default will be correctly linked to the platform-specific projects. 
 
-For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to know capabilities. We will expand the documentation when the API becomes public.
+For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to publicly known capabilities. We will expand the documentation when the API becomes public.
 
 ## 5 Native Mobile Toolkit
 
@@ -563,7 +563,7 @@ location when configuring the app.
 ### 5.4 Running the Native Mobile Toolkit
 
 The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by
-running `npm install` in the Native Template root directory. 
+running `npm install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
 #### 5.4.1 Using the Run Script Defined in Package.json
 

@@ -4,6 +4,7 @@ category: "Operations"
 menu_order: 40
 description: "The Backups page of the Developer Portal described."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -133,4 +134,3 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
 * [How to Restore a Backup Locally](restore-backup-locally)
-* [Database Size Reduction](database-size-reduction)

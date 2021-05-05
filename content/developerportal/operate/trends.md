@@ -6,8 +6,9 @@ description: "Describes how to interpret various graphs and trends in the Mendix
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 aliases:
     - /howtogeneral/mendixcloud/trends.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Please do not rename the anchors in this document as they are used in links from the Developer Portal
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal.
 ---
 
 {{% alert type="warning" %}}
@@ -310,7 +311,6 @@ The **Database node load** value is a composite value, calculated from a range o
 ## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [Database Size Reduction](database-size-reduction)
 * [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)

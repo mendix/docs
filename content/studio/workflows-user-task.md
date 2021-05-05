@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "user task", "task"]
 
 ## 1 Introduction
 
-User task allows you to assign a workflow task to a certain user. 
+User task allows you to assign a workflow task to a certain user or a group of users. 
 
 For example, you can add filters and assign a task to the IT department. When the workflow reaches this user task, the task will appear in their inbox.
 
@@ -32,7 +32,7 @@ User task properties consist of the following sections:
 
 ### 2.2 User Assignment Section {#user-assignment}
 
-**Assign user task using** allows you to manage what users the task will be assigned to. You can filter users or implement a more complicated logic and add several checks using a microflow. 
+**Assign user task using** allows you to manage which users can pick up the task. You can filter users or implement a more complicated logic and add several checks using a microflow. 
 
 ![User Assignment](attachments/workflows-user-task/user-assignment.jpg)
 
@@ -41,17 +41,17 @@ Possible options of this property are described in the table below:
 | Option    | Description                                                  |
 | --------- | ------------------------------------------------------------ |
 | Filter    | Allows you to filter users who should be assigned to the user task. For example, you can assign a certain task only to users with the Administrator user role. For more information on how to use filters, see [Data Filters](data-filters). |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, what users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](microflows). |
+| Microflow | Allows you to assign the user task to certain users. Using a microflow you can check, for example, what users are in the right department and are currently not on vacation and assign the task only to users who passed the check. For more information on microflows, see [Microflows](microflows). |
 
 ### 2.3 Task Page Section {#task-page}
 
-**Page** is an overview page where the allowed roles can track the progress of the user tasks and view its details, such as open tasks, comments to them or attachments:
+**Page** is the page that an assigned user will use to inspect their task and complete it: 
 
 ![Task Page](attachments/workflows-user-task/task-page.jpg)
 
 ### 2.4 Display Information Section {#display-info}
 
-The **Display Information** section defines the user task name and its description that are displayed in the running (published) app. 
+The **Display Information** section defines the user task name and its description that are displayed in the running (published) app, for example, in the user's task inbox and on the task page. 
 
 ![Display Information](attachments/workflows-user-task/display-information.jpg)
 
@@ -64,7 +64,7 @@ The **Display Information** section properties are described in the table below:
 
 ### 2.4 Due Date Section {#due-date}
 
-The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. 
+The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show overdue tasks on a dashboard.
 
 ![Due Date Section](attachments/workflows-user-task/due-date.jpg)
 
@@ -84,7 +84,7 @@ The **Outcomes** property allows you to create new outcomes for the user task. T
 
 ### 2.7 Events Section {#events}
 
-**On Create** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
+**On Create** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task. For example, you can use this setting for a microflow that will send an email notification about the user task to the assigned users.
 
 ![Events Section](attachments/workflows-user-task/events.jpg)
 

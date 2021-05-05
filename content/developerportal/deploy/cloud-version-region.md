@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 24
 description: "How to view the Mendix Cloud Version and Region for your app."
 tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

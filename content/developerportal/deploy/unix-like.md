@@ -4,6 +4,7 @@ parent: "on-premises-design"
 description: "How to install and configure Mendix on a Unix-like system"
 menu_order: 99
 tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 {{% alert type="info" %}}

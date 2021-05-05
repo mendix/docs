@@ -275,7 +275,7 @@ The following call is to register the environment **Production** for the **Howto
 #### 4.2.2 JSON format request body for the Environment
 
 The following request body must be included with the request. 
-
+```json
  {
     "Name": "Production",
     "Location": "https://howtoenv5555.test",
@@ -284,6 +284,7 @@ The following request body must be included with the request.
         "https://api.howto5555.test"
     ]
 }
+```
 
 #### 4.2.3 Successful 201 Created Successful 200 {#env-registerd}
 The following 201 Created response returns the Catalog-generated identifier  `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment `Production`.

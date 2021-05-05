@@ -16,6 +16,17 @@ Using Parallels, you can run Mendix Studio Pro on your Mac device using a Window
 * Run a Mendix app on a test device using your Windows virtual machine
 * Make changes to your app, then view those changes on your test device
 
+For a deep-dive look into installing Studio Pro on a Mac, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/nJ9Tz8VnHPPKPrtSBgHv3U.jpg"
+  data-uuid="nJ9Tz8VnHPPKPrtSBgHv3U"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

@@ -4,7 +4,8 @@ parent: "general"
 menu_order: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
-# NB have left out AWS and Azure Marketplace offerings for now, pending further research.
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+#NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
 
 {{% alert type="info" %}}

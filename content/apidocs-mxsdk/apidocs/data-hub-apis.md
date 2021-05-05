@@ -73,7 +73,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 ## 2. Data Hub Open API Specs {#datahubapis}
 
-The [Data Hub APIs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) are Open API (formerly Swagger) specifications that are located the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
+The [Data Hub APIs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) are Open API (formerly Swagger) specifications that are located the at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
 The the following operations are currently available:
 
@@ -86,33 +86,28 @@ To follow how to use the APIs, see [Using the Data Hub API](/data-hub/general/da
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 5. Data Hub Transformation Open API Spec {#transform}
+## 5. Data Hub Transform Open API Spec {#transform}
 
-For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. During this automated process, information defined in the location constants of the consumed and published services—which is available in the `dependencies.json` file—for the app is used.
+For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. Information that is defined in the location constants of the consumed and published services—located in the `dependencies.json` file for the app—is used.
 
-The transformation API is available for users who do not deploy to a Mendix cloud to extract the information from the `dependencies.json` file. The API response returens the request bodies that users can copy and paste into the PUT published endpoints and PUT consumed endpoints calls to Data Hub API.
+The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the `dependencies.json` file and returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API. Information this is not returned by the Transform API and are required are included in []()
 
+### 5.1 Transform API Location
 
+The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 
-This document describes the additional information that is required and provides example commands of how it can be extracted using the `jq`  utitlity which can be incorporated into the registration pipeline when deploying your Mendix apps to a non-Mendix pipeline.
+{{% alert type="info" %}}
+For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
+{{% /alert %}}
 
-For this call the contents of the **dependencies.json** file have to be included in escaped JSON format. The dependencies.json file for your Mendix app is usually located in your project folder under Mendix\<YourApplicationName>\deployment\model
+### 5.2 Location of the `dependencies.json` file of an App
 
-??? is this relevant now that it is an API???
-Commands using the jq utility for filtering the values out of a JSON file have been provided. You can download jq from https://stedolan.github.io/jq/download/. It is recommended for this type of work but not strictly required. Alternatively, you can also extract the values manually from the JSON file.
+For a Mendix app, the `dependence.json` file is usually located in the project folder of the app under the following directory: `Mendix\<YourApplicationName>\deployment\model`
 
-These request bodies will not contain the following optional values because they’re not available from the dependencies.json, they will still have to be specified for the endpoints being registered:
+### 5.3 Optional Values not Obtained from `dependencies.json`
 
-Attribute: `SecurityClassification`
+The request bodies returned by the Transform API do not contain the values for the following attributes because they’re not available from the `dependencies.json`. When registering endpoints they must still be specified:
 
-- Values: Allowed values are  "Internal" | "Public" | "Confidential"
-- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.
-
-Attribute: `Discoverable`
-- Values: Allowed values “true” | “false”
-- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.
-
-Attribute: `Validated`
-
-- Values: Allowed values “true” | “false”
-- Note: This value should be filled out by the API consumer and is not available from `dependencies.json`.
+* `SecurityClassification`
+* `Discoverable`
+* `Validated`

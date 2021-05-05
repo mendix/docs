@@ -562,22 +562,17 @@ location when configuring the app.
 
 ### 5.4 Running the Native Mobile Toolkit
 
-The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by
-running `npm install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
-
-#### 5.4.1 Using the Run Script Defined in Package.json
+The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `npm install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
 {{% alert type="info" %}}
 The npm script expects that the Native Mobile Toolkit configuration files are at the root of the project, and named **config.json**. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote project.  
 {{% /alert %}}
 
-To run the toolkit, run `npm run configure`.
+To run the toolkit using the run script defined in **package.json**, run `npm run configure`.
 
-#### 5.4.2 Custom configured project
+#### 5.4.1 Specifying Custom Configuration Paths
 
-Having the configuration file relative to the root directory is not a requirement for the toolkit but is rather done for convenience.
-
-To specify a different configuration file path the toolkit can be executed using the following command:
+Having the configuration file relative to the root directory is not required for the toolkit, but is done for convenience. To specify a different configuration file path the toolkit can be executed using the following command:
 
 ```
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
@@ -664,3 +659,8 @@ A CI environment needs to be able to do the following to successfully configure 
 
 How to build the apps is a choice for the implementor. Mendix Native App Builder use App Center for convenience. There are multiple other 
 solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.
+
+## 9 Read More
+
+* [Native Builder Reference Guide](native-builder)
+* [Offline First Reference Guide](offline-first)

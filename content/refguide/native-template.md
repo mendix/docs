@@ -572,15 +572,9 @@ To specify a different configuration file path the toolkit can be executed using
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
 ```
 
-## 6 The bundles
+## 6 Bundle Information
 
-Mendix Native apps are based on React Native. 
-
-When building your Mendix project using Mendix Native Mobile Builder, your project is first compiled to Javascript code and static assets. 
-
-Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. 
-
-These are finally moved to the correct location in Native Template before compiling the final apps.
+Mendix Native apps are based on React Native. When building your Mendix project using Mendix Native Mobile Builder, your project is first compiled to Javascript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
 
 This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. 
 You can read more about MXBuild in the official reference guide [here](mxbuild.md).
@@ -632,33 +626,31 @@ The created bundles need to be copied to the right place in the Native Template 
 * For Android, the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to
 * For iOS, the content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory
 
-### 7 Deriving the Projects' Native Dependencies
+## 7 Deriving the Projects' Native Dependencies
 
-Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. 
-[See here](/apidocs-mxsdk/apidocs/native-dependencies.md) for more information. 
-Prior to that Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies
+](/apidocs-mxsdk/apidocs/native-dependencies.md). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
 
-Gradually when adding Mendix Studio Pro 9 compatible modules, widgets or actions to your project more and more dependencies 
-will be added that will also need be declared in the Native Template of your project prior to building the Native Apps. 
+As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
+will be added that will also need be declared in your project's Native Template prior to building the native apps. 
 
-As this is mostly required for the initial setup of the project we suggest to use Mendix Native Mobile Builder to configure your project.
-Mendix Native Mobile builder is capable of deriving required dependencies and link them with your project's Native Template. 
+As this dependency management is required for your project's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your project.
+The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your project's Native Template. 
 
-### 8 A high level flow for CI
+## 8 Continuous Integration Testing Guidelines
 
-In some advanced cases you might consider setting up a CI. Say if you have multiple environments and prefer testing
+In some advanced cases you might consider setting up continuous integration (CI) testing. This could be useful if you have multiple environments and prefer testing
 any nightly changes in acceptance before pushing to production.
 
-We suggest, to initially develop your project using Mendix Native Mobile Builder until the native dependencies are stable. 
-Having a CI in the early stages will lead to frustration and flux dependencies will lead to unexpected crashes. 
+We suggest you initially develop your project using the Mendix Native Mobile Builder until the native dependencies are stable. Having a CI in the early stages will lead to frustration, and flux dependencies will lead to unexpected crashes. 
 
-An CI environment need to be able to do the following to successfully configure a Native Template for build:   
-* Be able to check out the latest Mendix project from SVN
-* Be able to check out your project's Native Template. This would be the one used when configuring the project
-* Be able to run mxbuild
-* Be able to set up the configuration and move assets as needed.  
-  This can be done with simple shell scripts or any other solution that might fit better. This is open to the implementor.    
-* Be able to run `npm i` && `npm run configure` to configure the project using Mendix Mobile Toolkit before the build.
+A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 
-How to build the apps is open to the implementor. Mendix Native App Builder users App Center for convenience. There are multiple other 
-solutions, on premise or as a service, that can be used for this purpose. We are not endorsing one over the other.
+* Check out the latest Mendix project from SVN
+* Check out your project's Native Template (the one used when configuring the project)
+* Run `mxbuild`
+* Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 
+* Run `npm i` and `npm run configure` to configure the project using Mendix Mobile Toolkit before the build.
+
+How to build the apps is a choice for the implementor. Mendix Native App Builder use App Center for convenience. There are multiple other 
+solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.

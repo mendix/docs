@@ -6,7 +6,7 @@ menu_order: 30
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-the-datbase-user.pdf).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-the-database-user.pdf).
 {{% /alert %}}
 
 ## 1 General

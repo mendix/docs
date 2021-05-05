@@ -7,7 +7,7 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
 {{% /alert %}}
 
 ## 1 Introduction

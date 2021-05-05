@@ -7,7 +7,7 @@ tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
 {{% /alert %}}
 
 ## 1 Introduction

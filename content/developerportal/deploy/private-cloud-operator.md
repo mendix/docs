@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 menu_order: 30
 tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -81,6 +82,9 @@ spec:
     requests: # Lower limit - needs at least these resources
       cpu: 250m
       memory: 256Mi
+  runtimeDeploymentPodAnnotations: # Optional, can be omitted : set custom annotations for Mendix Runtime Pods
+    # example: inject the Linkerd proxy sidecar
+    linkerd.io/inject: enabled
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
@@ -137,6 +141,7 @@ You need to make the following changes:
 * **certificate** and **key** – provide the `tls.crt` and `tls.key` values directly (not recommended for production environments) — cannot be used together with **secretName**
 * **replicas** – by default one replica will be started when you deploy your app
 * **resources** – change the minimum and maximum container resources your app requires
+* **runtimeDeploymentPodAnnotations** - set custom annotations for Mendix Runtime Pods; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-deployment-settings) from `OperatorConfiguration` 
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)

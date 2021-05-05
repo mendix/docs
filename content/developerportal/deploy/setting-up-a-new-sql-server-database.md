@@ -3,6 +3,7 @@ title: "New Database Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 10
 tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", "Extensions", "Role"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 {{% alert type="info" %}}

@@ -4,6 +4,7 @@ parent: "monitoring-application-health"
 #menu_order: 180
 description: "Describes how to receive environment status alerts."
 tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

@@ -72,7 +72,7 @@ The properties that can be configured in the **General** section, are described 
 | Icon            | Set the icon for the menu item here.                         | Nothing                                                      |
 | Set As Homepage | Allows you to set a page or a microflow that is opened/performed when an end-user opens the app. A homepage icon is displayed in a list of pages or microflows against a page/microflow that is set as a homepage. | **On Click Action**, available only when a page or a microflow is selected as an **On Click Action**. For more information, see [Events Section](#events-section-navigation). |
 
-## 3 Creating a Menu Item
+## 3 Creating a Menu Item {#create-new-menu-items}
 
 To create a new menu item, do the following:
 

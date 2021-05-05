@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes which providers are supported by Mendix for Private Cloud"
 menu_order: 50
 tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -25,9 +26,9 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
-Only Kubernetes versions 1.13 through 1.19 are officially supported.
+Only Kubernetes versions 1.13 through 1.20 are officially supported.
 
-Mendix for Private Cloud has not been evaluated against Kubernetes 1.20 and later versions.
+Mendix for Private Cloud has not been evaluated against Kubernetes 1.21 and later versions.
 {{% /alert %}}
 
 ### 2.2 Cluster Requirements
@@ -44,7 +45,7 @@ In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or *OpenShift Pro* because they don't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or *OpenShift Online Pro* because they don't allow the installation of Custom Resource Definitions.
 
 ## 3 Container Registries
 
@@ -225,61 +226,16 @@ Without etcd, MinIO will disable its admin API - which is required by the Mendix
 
 ### 5.3 Amazon S3
 
-[Amazon S3](https://aws.amazon.com/s3/) is supported.
+[Amazon S3](https://aws.amazon.com/s3/) is supported. Mendix for Private Cloud supports multiple ways of managing and accessing S3 buckets: from creating a new S3 bucket and IAM account per environment to sharing an account and bucket by all environments in a namespace.
 
-#### 5.3.1 Amazon S3 (create on-demand)
+A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/private-cloud-cluster#storage-plan)
+configuration details.
 
-{{% alert type="info" %}}
-For every Mendix app environment, a new bucket, IAM user and inline policy will be created so that the app can only access its own bucket.
-{{% /alert %}}
+### 5.4 Azure Blob storage
 
-To use S3, the Mendix Operator will need an IAM account with the following policy so that it can create a new IAM user and bucket for each Mendix app environment:
+An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) container can be attached to Mendix app environments.
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "bucketPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "s3:CreateBucket",
-                "s3:DeleteBucket"
-            ],
-            "Resource": "arn:aws:s3:::mendix-*"
-        },
-        {
-            "Sid": "iamPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "iam:DeleteAccessKey",
-                "iam:PutUserPolicy",
-                "iam:DeleteUserPolicy",
-                "iam:DeleteUser",
-                "iam:CreateUser",
-                "iam:CreateAccessKey"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:user/mendix-*"
-            ]
-        }
-    ]
-}
-```
-
-### 5.3.2 Amazon S3 (existing bucket)
-
-The Mendix Operator can access an existing S3 bucket, with an existing IAM account access and secret key.
-
-{{% alert type="info" %}}
-
-If such a Storage Plan is shared by multiple environments, all environments using that Storage Plan be using the same Access and Secret keys and will have identical permissions.
-
-Each environment will be writing into its own directory inside the bucket.
-
-To avoid compromising security, this type of plan should not be used by multiple environments.
-
-{{% /alert %}}
+Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage containers or accounts.
 
 ## 6 Networking
 
@@ -347,3 +303,5 @@ There are multiple ways of managing TLS certificates:
 * The Ingress controller can have a default certificate with a wildcard domain (for example, *.mendix.example.com*). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
+
+Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP(S) traffic between the Ingress Controller and the Pod running a Mendix app.

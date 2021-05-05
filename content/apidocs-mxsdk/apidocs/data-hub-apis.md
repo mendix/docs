@@ -124,8 +124,10 @@ When making the call to the API the following two object have to be specified:
 
 ### 5.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
 
-The request bodies returned by the Transform API do not contain the values for the following attributes because they’re not available from the `dependencies.json`. When registering endpoints they must still be specified:
+The request bodies returned by the Transform API do not contain the values for the following attributes:
 
 * `SecurityClassification`
 * `Discoverable`
 * `Validated`
+
+They not available in the `dependencies.json`. If you are registering endpoints you must specify them - when not specified, the registration will be made using default values.

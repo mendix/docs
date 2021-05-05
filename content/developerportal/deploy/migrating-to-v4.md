@@ -48,7 +48,7 @@ There are a few other differences between the way you develop and deploy apps in
 
 ## 3 Prerequisites
 
-There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix: **Mendix version 7.0 and above**
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
 
 For further prerequisites see the sections below.
 
@@ -160,6 +160,10 @@ Once you have tested the data migration you are ready to migrate your app to Men
 The final migration will only check that *production* data has been completely transferred to the new V4 app.
 
 If you want to keep all your test and acceptance data, you need to review the migration status yourself. We recommend that you do this before initiating the final migration, but you can migrate non-production data after the final migration if necessary.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+We recommend that you allow at least an hour between starting to replicate the data (section 4.3, above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between your V3 and V4 app.
 {{% /alert %}}
 
 There is one more requirement before you can start the final migration:

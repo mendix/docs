@@ -8,7 +8,13 @@ tags: ["Native", "Parallels", "Mac", "Mobile"]
 
 ## 1 Introduction
 
-Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native mobile apps on your Mac, follow this how-to.
+Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
+
+{{% alert type="warning" %}}
+Studio Pro does not run under Parallels on Apple Silicon Macs, such as the M1.
+{{% /alert %}}
+
+To start making Mendix native mobile apps on your Mac, follow this how-to.
 
 **This how-to will teach you how to do the following:**
 

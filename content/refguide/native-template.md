@@ -63,6 +63,7 @@ for further debugging.
 
 Project-specific information is defined in a top level **config** file. The best way to derive possible config options is to configure a project initially with the Mendix Native Mobile Builder and note the configuration keys.
 
+**<details><summary>To see the supported properties as of config version 2, click here.</summary>**
 These are the supported properties as of config version 2:
 
 ```
@@ -117,8 +118,10 @@ export interface Orientation {
     landscape: boolean;
 }
 ```
+</details>
 
-This is an example of a configured project: 
+**<details><summary>To see an example of a configured project, click here.</summary>**
+This is an example of a configured project:
 
 ```
 {
@@ -189,6 +192,8 @@ This is an example of a configured project:
 }
 
 ```
+</details>
+
 
 ### 5.2 Assets
 
@@ -220,6 +225,8 @@ interface IOSIconsConfig {
     "version": 1
 }
 ```
+
+**<details><summary>To see an example of all the keys required to successfully configure an app, click here.</summary>**
 
 This is an example of all the keys required to successfully configure an app: 
 
@@ -356,6 +363,7 @@ This is an example of all the keys required to successfully configure an app:
     "version": 1
 }
 ```
+</details>
 
 #### 5.2.2 Android Icons
 
@@ -375,6 +383,8 @@ interface AndroidIconsConfig {
     "version": 1
 }
 ```
+
+**<details><summary>To see an example of all the keys required to successfully configure an app, click here.</summary>**
 
 This is an example of all the keys required to successfully configure an app: 
 
@@ -435,6 +445,7 @@ This is an example of all the keys required to successfully configure an app:
     "version": 1
 }
 ```
+</details>
 
 #### 5.2.3 iOS Splash Screens
 

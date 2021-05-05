@@ -10,6 +10,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 4th, 2021
+
+#### Fixes
+
+* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* We fixed a minor bug for anonymous users.
+
 ### April 7th, 2021
 
 #### Improvements
@@ -24,8 +31,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Known Issues
 
-* There is an issue with users having trouble downloading Windows Service. This is planned to be fixed soon.
-	* Workaround: First go to [My Marketplace](https://appstore.home.mendix.com/link/myappstore), then go back to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) and download the Windows Service again. 
+* There is an issue with users having trouble downloading Windows Service.
+	* Fixed on [May 4th, 2021](#windows-service).
 
 ### March 23rd, 2021
 

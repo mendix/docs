@@ -17,7 +17,7 @@ All shareable datasets can be registered in the Data Hub Catalog by exposing the
 
 For Mendix apps deploying to the Mendix cloud, there is a deployment pipeline that registers the published OData v3 services published in the app to expose datasets that can be shared. This means that in Studio Pro, upon deployment of an app (via **Run**), the OData services are automatically registered in the Data Hub Catalog. For further information on deployment on the Mendix Platform, see [Deployment](/developerportal/deploy/) in the *Developer Portal Guide*.
 
-{{% alert type="info" %}}Mendix apps that are not hosted in the Mendix Cloud should use the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) to register their OData v3 services. {{% /alert %}}
+{{% alert type="info" %}}Mendix apps that are not hosted in the Mendix Cloud can use the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis#datahubapis) and the [Transform API](/apidocs-mxsdk/apidocs/data-hub-apis#transform) for their Data Hub registration pipeline. {{% /alert %}}
 
 Datasets from other enterprise applications can also be registered in the Catalog in any of the following ways:
 

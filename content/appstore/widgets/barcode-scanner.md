@@ -1,57 +1,50 @@
 ---
-title: "Barcode scanner"
+title: "Barcode Scanner"
 category: "Widgets"
-description: "Describes the configuration and usage of the Barcode scanner widget, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Barcode Scanner widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "barcode scanner", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Barcode scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables a barcode scanning functionality within your Mendix web application.
+The [Barcode Scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables a barcode scanning functionality within your Mendix web application.
 
 The widget does the following:
 
-- Displays a fullscreen canvas overlay that allows the user to scan a barcode.
-- Also supports QR codes and a wide range of different barcode types.
-- Allows additional styling customizations through Atlas.
+* Displays a full-screen canvas overlay that allows the end-user to scan a barcode
+* Supports QR codes and a wide range of different barcode types
+* Allows for additional styling customizations through Atlas UI
 
 {{% alert type="info" %}}
-For security reasons, certain browsers will only allow access to an user device's camera over a HTTPS connection and not a default HTTP connection.
-Since this widget accesses the user device's camera through this method, the same constraints apply for using this widget in both production and local development.
-For production, an appropriate security setting can be applied when deploying to the Mendix cloud.
-For local development, the easiest solution is to set up a local proxy that secures the connection towards your local Mendix application.
+For security reasons, certain browsers will only allow access to an end-user device's camera over an HTTPS connection and not a default HTTP connection. Since this widget accesses the end-user device's camera through this method, the same constraints apply for using this widget in both production and local development. For production, an appropriate security setting can be applied when deploying to the Mendix Cloud. For local development, the easiest solution is to set up a local proxy that secures the connection towards your local Mendix application.
 {{% /alert %}}
 
 ## 2 Usage
 
-The only requirement for the Barcode scanner widget is that it needs to be placed inside a data view that provides an object with a string attribute.
-The barcode detection result, being a string, will be stored in this attribute.
+The only requirement for the Barcode Scanner widget is that it needs to be placed inside a data view that provides an object with a string attribute. The barcode detection result (being a string) will be stored in this attribute.
 
-When the widget is placed on a page, it will automatically put a black canvas overlay on top of the entire page.
-This canvas will provide users the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.
+When the widget is placed on a page, it will automatically put a black canvas overlay on top of the entire page. This canvas will provide end-users with the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.
 
 ### 2.1 Data Source Tab
 
-- **Barcode** - the attribute of the data view object which will store the barcode detection result, which is a string.
-  This widget property is required.
+* **Barcode** (required) – the attribute of the data view object that will store the barcode detection result as a string
 
 ### 2.2 Mask Tab
 
-- **Show barcode mask** - Whether the black canvas overlay with a focus square is shown on top of the user's camera feed.
-  If this property is disabled, then the entire screen will be the user's camera feed when the barcode scanner is open.
-  This property is by default enabled.
+* **Show barcode mask** (enabled by default) – determines whether the black canvas overlay with a focus square is shown on top of the end-user's camera feed
+  * If this property is disabled, the entire screen will be the end-user's camera feed when the barcode scanner is open
 
 ### 2.3 Events Tab
 
-These widget properties provide control over situations where the users interact with the Barcode scanner widget.
+These widget properties provide control over situations where the end-user interacts with the widget:
 
-- **On detect** – an optional event handler that is triggered when the Barcode scanner detects a barcode.
-- **On close** – an optional nanoflow that is triggered once when the user closes the black canvas overlay of the Barcode scanner widget.
+* **On detect** – an optional event handler that is triggered when the widget detects a barcode
+* **On close** – an optional nanoflow that is triggered once when the end-user closes the black canvas overlay of the widget
 
 ## 3 Supported Barcode Types
 
-| 1D product | 1D industrial       | 2D             |
+| 1D Product | 1D Industrial       | 2D             |
 | ---------- | ------------------- | -------------- |
 | UPC-A      | Code 39             | QR Code        |
 | UPC-E      | Code 128            | Data Matrix    |
@@ -60,5 +53,6 @@ These widget properties provide control over situations where the users interact
 
 ## 4 Styling
 
-Even without additional configuration, the Barcode scanner widget will work out of the box and contain all the necessary styling.
-But if additional customization or personalization is desired for the black canvas overlay, then installing Atlas is required.
+Even without additional configuration, the Barcode Scanner widget will work out of the box and contain all the necessary styling
+
+If additional customization or personalization is desired for the black canvas overlay, then installing Atlas UI is required.

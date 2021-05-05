@@ -45,7 +45,7 @@ React Native modules are npm packages that include dependencies which must be li
 
 As with auto-linking, we describe the automated process of linking a React Native Module with the platform-specific projects.
 
-The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md). Libraries that are auto-linkable by default will be correctly linked to the platform-specific projects. 
+The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking). Libraries that are auto-linkable by default will be correctly linked to the platform-specific projects. 
 
 For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to know capabilities. We will expand the documentation when the API becomes public.
 
@@ -576,8 +576,7 @@ native-mobile-toolkit configure --config-path='./<name of the configuration>.jso
 
 Mendix Native apps are based on React Native. When building your Mendix project using Mendix Native Mobile Builder, your project is first compiled to Javascript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
 
-This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. 
-You can read more about MXBuild in the official reference guide [here](mxbuild.md).
+This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](mxbuild).
 
 ### 6.1 Using MxBuild to Build your Native App
 
@@ -629,7 +628,7 @@ The created bundles need to be copied to the right place in the Native Template 
 ## 7 Deriving the Projects' Native Dependencies
 
 Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies
-](/apidocs-mxsdk/apidocs/native-dependencies.md). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+](/apidocs-mxsdk/apidocs/native-dependencies). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
 
 As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
 will be added that will also need be declared in your project's Native Template prior to building the native apps. 

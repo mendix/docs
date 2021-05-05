@@ -12,7 +12,7 @@ The [Data Hub APIs](#datahubapis) can be used to register your data sources to t
 
 Using the APIs you can set up a registration flow in the deployment pipeline of your business applications to register new data sources from your applications to the Data Hub Catalog.
 
-For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for you Menidx apps.
+For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for you Mendix apps.
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
@@ -90,7 +90,9 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. Information that is defined in the location constants of the consumed and published services—located in the `dependencies.json` file for the app—is used.
 
-The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the `dependencies.json` file and returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API. Information this is not returned by the Transform API and are required are included in []()
+The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the `dependencies.json` file. The API returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API.
+
+Information this is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
 
 ### 5.1 Transform API Location
 
@@ -102,9 +104,25 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 ### 5.2 Location of the `dependencies.json` file of an App
 
-For a Mendix app, the `dependence.json` file is usually located in the project folder of the app under the following directory: `Mendix\<YourApplicationName>\deployment\model`
+For a Mendix app, the `dependencies.json` file is usually located in the project folder of the app under the following directory: `Mendix\<YourApplicationName>\deployment\model`
 
-### 5.3 Optional Values not Obtained from `dependencies.json`
+This file has to be inserted in the call to the API in *escaped json format*.
+
+### 5.3 Making the API Call
+
+When making the call to the API the following two object have to be specified:
+
+* `DependenciesJsonString` – insert the `dependencies.json` file of the app *in escaped json format*.
+* `EndpointLocationConstants` – this object must contain the location constants for the consumed endpoints that are referred to in the `dependencies.json` file. You can find the values in the **constant location** document in the **App Explorer**. For the example given in the Open API  spec in the `dependencies.json` file, the object:
+`"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
+```json  "EndpointLocationConstants": [
+    {
+      "Name": "MyFirstModule.EmployeeManagement_Location",
+      "Value": "https://hr.acmecorp.test/employeeservice/v2"
+    }
+ ```
+
+### 5.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
 
 The request bodies returned by the Transform API do not contain the values for the following attributes because they’re not available from the `dependencies.json`. When registering endpoints they must still be specified:
 

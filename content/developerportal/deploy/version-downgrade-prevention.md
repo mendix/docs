@@ -7,7 +7,7 @@ tags: ["downgrade", "migration", "pre-analysis", "version", "database"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/version-downgrade-prevention.pdf).
 {{% /alert %}}
 
 ## 1 Scenario

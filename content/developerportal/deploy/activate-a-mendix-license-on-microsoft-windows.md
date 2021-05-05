@@ -6,7 +6,7 @@ tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/activate-a-mendix-license-on-microsoft-windows.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

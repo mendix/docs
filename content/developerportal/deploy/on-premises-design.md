@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/on-premises-design.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

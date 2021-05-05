@@ -7,7 +7,7 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA"
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/two-factor-authentication.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

@@ -7,7 +7,7 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/).
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/security-checklist-for-your-on-premises-installation.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

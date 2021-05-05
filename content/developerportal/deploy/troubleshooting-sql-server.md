@@ -5,6 +5,10 @@ menu_order: 80
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-sql-server.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.

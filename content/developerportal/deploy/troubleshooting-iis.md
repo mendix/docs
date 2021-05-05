@@ -7,6 +7,10 @@ tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Consol
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-iis.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This page will help you troubleshoot issues you come across when setting up Microsoft Internet Information Services (IIS) as a webserver in front of Mendix.
@@ -70,7 +74,7 @@ You can see the login page in the browser, but when triggering an action you get
 * Did you have to enable or install additional plugins?
 	
 	If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
-		
+	
 * Did you add new configuration settings, like the rewrite rule?
 	
 	Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option.

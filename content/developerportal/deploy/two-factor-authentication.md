@@ -7,6 +7,10 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/two-factor-authentication.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 When managing apps in the [Developer Portal](http://sprintr.home.mendix.com), there are several operations that require **Two-Factor Authentication** (2FA). In addition, Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.

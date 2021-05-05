@@ -5,6 +5,10 @@ menu_order: 50
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/mendix-sql-maintenance-plans.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to will present guidelines for setting up Mendix SQL maintenance plans.

@@ -221,7 +221,7 @@ interface IOSIconsConfig {
 }
 ```
 
-This is an example of all keys that are required to successfully configure an app: 
+This is an example of all the keys required to successfully configure an app: 
 
 ```
 {
@@ -359,11 +359,11 @@ This is an example of all keys that are required to successfully configure an ap
 
 #### 5.2.2 Android Icons
 
-The icons' configuration needs to be defined in a versioned json formatted config file under *assets/icons/android.json*.
+The icons' configuration needs to be defined in a versioned JSON-formatted **config** file under *assets/icons/android.json*.
 
-The actual asset files defined under filename are expected to be available next to the config file.
+The actual asset files defined under filename are expected to be available next to the **config** file.
 
-The version is required and used for backwards compatibility purposes. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
 ```
 interface AndroidIconsConfig {
@@ -376,7 +376,8 @@ interface AndroidIconsConfig {
 }
 ```
 
-An example of all keys that are required: 
+This is an example of all the keys required to successfully configure an app: 
+
 ```
 {
     "images": [
@@ -435,13 +436,13 @@ An example of all keys that are required:
 }
 ```
 
-#### 5.2.3 iOS splash screens
+#### 5.2.3 iOS Splash Screens
 
-The splash screen configuration needs to be defined in a versioned json formatted config file under *assets/splashScreens/ios.json*.
+The splash screen configuration needs to be defined in a versioned JSON-formatted **config** file under *assets/splashScreens/ios.json*.
 
-The actual asset files defined under filename are expected to be available next to the config file.
+The actual asset files defined under filename are expected to be available next to the **config** file.
 
-The version is required and used for backwards compatibility purposes. For now the config is on version 1.
+The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
 ```
 interface AndroidSplashScreensConfig {
@@ -456,7 +457,8 @@ interface AndroidSplashScreensConfig {
 }
 ```
 
-An example of the file with all required splash screens defined: 
+Here is an example of the file with all required splash screens defined: 
+
 ```
 {
     "images": [
@@ -486,12 +488,13 @@ An example of the file with all required splash screens defined:
 }
 ```
 
-#### 5.2.4 Android splash screens
-The splash screen configuration needs to be defined in a versioned json formatted config file *assets/splashScreens/android.json*.
+#### 5.2.4 Android Splash Screens
 
-The actual asset files defined under filename are expected to be available next to the config file.
+The splash screen configuration needs to be defined in a versioned JSON-formatted **config** file *assets/splashScreens/android.json*.
 
-The version is required and used for backwards compatibility purposes. For now the config is on version 1.
+The actual asset files defined under filename are expected to be available next to the **config** file.
+
+The version is required and used for backwards compatibility purposes. For now the config is on version 1:
 
 ```
 interface AndroidSplashScreensConfig{
@@ -506,7 +509,7 @@ interface AndroidSplashScreensConfig{
 }
 ```
 
-An example of the file with all required splash screens defined: 
+Here is an example of the file with all required splash screens defined: 
 
 ```
 {
@@ -533,7 +536,7 @@ An example of the file with all required splash screens defined:
 
 ### 5.3 Configuring Firebase
 
-Firebase requires special treatment. When enabling the Firebase capabilities via the Native Mobile Toolkit config file, 
+Using Firebase requires special considerations. When enabling the Firebase capabilities via the Native Mobile Toolkit **config** file, 
 the toolkit will look in the **assets/firebase** folder for the appropriate configuration files.
 
 The files are looked up by name. The expected names per platform are the following: 
@@ -543,30 +546,24 @@ The files are looked up by name. The expected names per platform are the followi
 | Android  | google-services.json     |
 | iOS      | GoogleService-Info.plist | 
 
-Mobile Toolkit does not verify the validity of the provided configuration files. It only makes sure to move them to the right 
-location when configuring the project. 
+The Native Mobile Toolkit does not verify the validity of the provided configuration files. It only moves them to the correct 
+location when configuring the app. 
 
-## 5.4 Running the Native Mobile Toolkit
+### 5.4 Running the Native Mobile Toolkit
 
-Native Mobile Toolkit is a Node Module that is included with Native Template. As that it requires to be installed first by
+The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by
 running `npm install` in the Native Template root directory. 
 
-### 5.4.1 Using the run script defined in package.json
-
-The npm script expects that the Native Mobile Toolkit configuration files is at the root of the project and named config.json.
+#### 5.4.1 Using the Run Script Defined in Package.json
 
 {{% alert type="info" %}}
-  
+The npm script expects that the Native Mobile Toolkit configuration files are at the root of the project, and named **config.json**. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote project.  
 {{% /alert %}}
 
-That is always the case when using Mendix Native Mobile Builder to configure a local or a remote project.
+To run the toolkit, run `npm run configure`.
 
-To run the toolkit run: 
-```
-npm run configure
-```
+#### 5.4.2 Custom configured project
 
-### 5.4.2 Custom configured project
 Having the configuration file relative to the root directory is not a requirement for the toolkit but is rather done for convenience.
 
 To specify a different configuration file path the toolkit can be executed using the following command:
@@ -588,24 +585,26 @@ These are finally moved to the correct location in Native Template before compil
 This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. 
 You can read more about MXBuild in the official reference guide [here](mxbuild.md).
 
-### 6.1 Using mxbuild to build your native project
+### 6.1 Using MxBuild to Build your Native App
 
-If for some reason you cannot use Mendix Native Mobile Builder to configure and build your project, for example when operating 
-in a display-less CI environment you will have to explicitly have set up the correct Mendix Studio Pro version for the project 
-you are building and manually run MXBuild.
+If for some reason you cannot use Mendix Native Mobile Builder to configure and build your app, for example when operating 
+in a CI environment which lacks a display, you will have to explicitly have set up the correct Mendix Studio Pro version for the project 
+you are building and then manually run MXBuild.
 
 To do so: 
 
-1. Locate the required Studio Pro installation
-1. Find the path to the executable named mxbuild.exe and note it down. 
-1. Open a command line and run: 
+1. Locate the required Studio Pro installation.
+1. Find the path to the executable **mxbuild.exe** and note it down. 
+1.  Open a command line and run this command: 
    
-    `<path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-projects-mpr>`
+    ```
+    <path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-projects-mpr>
+    ```
 
-This command: 
+This command does the following: 
 
-* Exports the web and native project in the deployment folder as usually.
-* Runs the React Native metro bundler (note flag `--native-packager`) to create the RN bundles and assets for each platform in `/deployment/native/bundle`
+* Exports the web and native projects into the deployment folder as usual.
+* Runs the React Native metro bundler (note flag `--native-packager`) to create the RN bundles and assets for each platform in `/deployment/native/bundle`.
 
 The bundle folder structure will look something like this: 
 
@@ -626,18 +625,14 @@ The bundle folder structure will look something like this:
         - index.ios.bundle
 ```
 
-### 6.2 Copying the bundle to the right location
-The created bundles need to be copied to the right place in the Native Template to be build.
+### 6.2 Copying the Bundle to the Right Location
 
-**Android**
+The created bundles need to be copied to the right place in the Native Template to be built:
 
-For Android the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to.
+* For Android, the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to
+* For iOS, the content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory
 
-**iOS**
-
-The content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory. 
-
-### 7 Deriving the projects Native Dependencies
+### 7 Deriving the Projects' Native Dependencies
 
 Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and Javascript actions. 
 [See here](/apidocs-mxsdk/apidocs/native-dependencies.md) for more information. 
@@ -651,7 +646,7 @@ Mendix Native Mobile builder is capable of deriving required dependencies and li
 
 ### 8 A high level flow for CI
 
-In some more advanced cases you might consider setting up a CI. Say if you have multiple environments and prefer testing
+In some advanced cases you might consider setting up a CI. Say if you have multiple environments and prefer testing
 any nightly changes in acceptance before pushing to production.
 
 We suggest, to initially develop your project using Mendix Native Mobile Builder until the native dependencies are stable. 

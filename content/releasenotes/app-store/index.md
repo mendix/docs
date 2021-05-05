@@ -10,6 +10,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 4th, 2021
+
+#### Fixes
+
+* We fixed the issue with downloading the Windows Service. We also fixed a minor bug for anonymous users.
+
 ### April 7th, 2021
 
 #### Improvements

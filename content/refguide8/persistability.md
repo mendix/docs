@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Persistable** property of an entity in the domain model defines whether an object can be committed to the database.

@@ -6,6 +6,10 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Indexes** are lists of attributes for which a database index is created on the underlying database table of the entity. Indexes improve the speed of retrieving objects if the indexed attributes are used in a search field, the XPath constraint of a data grid or template grid, or a `WHERE` clause of an OQL query. However, search fields where the `Comparison` property has value `Contains` do not take advantage of the improved performance.

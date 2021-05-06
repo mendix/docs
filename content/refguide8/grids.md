@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "grid", "data grid", "template grid"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Grids show a list a objects and include a [data grid](data-grid) and a [template grid](template-grid). The main difference between these grids is the way the list of objects is displayed: a data grid shows it in columns, while a template grid shows it in tiles. 

@@ -9,6 +9,10 @@ aliases:
 #The anchor <menu-item> below is mapped, so it should not be removed or changed.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A menu document defines a navigation menu that can be used by a [menu widget](menu-widgets). Typically the main menus for your application are defined in device types, while you use menu documents for auxiliary menus, for example, a side bar.

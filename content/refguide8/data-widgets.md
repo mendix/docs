@@ -5,6 +5,10 @@ menu_order: 15
 tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Data widgets display contents of one object or a list of objects. 

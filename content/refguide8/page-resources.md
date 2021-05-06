@@ -5,6 +5,10 @@ menu_order: 12
 tags: ["studio pro", "page resources"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The main difference between a page and page resources is that page is an independent document, while a page resource is a helping document that cannot function on its own. For example, a layout cannot function on its own, but it gives structure to a page. 

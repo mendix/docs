@@ -5,6 +5,10 @@ menu_order: 15
 tags: ["domain model", "association", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 There are two ways to edit the properties of an [association](associations). This document describes the properties you can edit from the **Associations** tab in the entity properties. If you want to edit the association as described in [Association Properties](association-properties), you can click **Edit** to open the association properties dialog.

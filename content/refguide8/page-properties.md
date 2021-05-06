@@ -5,6 +5,10 @@ menu_order: 10
 tags: ["studio pro", "page", "properties"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).

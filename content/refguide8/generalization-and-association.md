@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the Mendix Marketplace. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.

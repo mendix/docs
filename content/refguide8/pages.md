@@ -7,6 +7,10 @@ tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #This document also has a redirect from opening-pages (which has been deleted)
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A page is the basic end-user interface of a Mendix application. It is used to display information to the end-user, allow end-users to create and edit information, and enable end-users to trigger additional automated processing.

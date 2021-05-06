@@ -114,7 +114,9 @@ This file has to be inserted in the call to the API in *escaped json format*.
 When making the call to the API the following two object have to be specified:
 
 * `DependenciesJsonString` – insert the `dependencies.json` file of the app *in escaped json format*.
-* `EndpointLocationConstants` – this object must contain the location constants for the consumed endpoints that are referred to in the `dependencies.json` file. You can find the values in the **constant location** document in the **App Explorer**. For the example given in the Open API  spec in the `dependencies.json` file, the object:
+* `EndpointLocationConstants` – this object must contain the location constants for the consumed endpoints that are referred to in the `dependencies.json` file.
+
+    You can find the values in the **constant location** document in the **App Explorer**. For the example given in the Open API  spec in the `dependencies.json` file, the object:
 `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
 ```json  "EndpointLocationConstants": [
     {
@@ -131,4 +133,4 @@ The request bodies returned by the Transform API do not contain the values for t
 * `Discoverable`
 * `Validated`
 
-They not available in the `dependencies.json`. If you are registering endpoints you must specify them - when not specified, the registration will be made using default values.
+They not available in the `dependencies.json`. If you are registering endpoints you must specify them—when not specified, the registration will be made using default values.

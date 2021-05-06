@@ -44,10 +44,10 @@ The full word "application" has a more well-rounded meaning to it (as in, web an
 Always capitalize.
 {{% /alert %}}
 
-### App Team
+### app team
 
 {{% alert type="info" %}}
-Capitalize, because **Team** is capitalized in the Developer Portal UI.
+Does not need to be capitalized, and "team" should be used without the qualifier "app" where possible.
 {{% /alert %}}
 
 ### app template {#app-template}
@@ -62,7 +62,7 @@ Do not use "starter app."
 
 ### App User
 
-For a definition of this term, see the [Managing App Users](/developerportal/settings/general-settings#managing-app-users) section of the *Developer Portal Guide*.
+For a definition of this term, see the [Managing App Users](/developerportal/collaborate/general-settings#managing-app-users) section of the *Developer Portal Guide*.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -84,7 +84,7 @@ Capitalize in all instances (to parallel "Team Server" and "Model Server").
 
 ### Business Engineer
 
-This is an App Team role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
+This is a team role. As such, it differs from the term "business developer," which is used in the Mendix Platform Evaluation Guide as a generic role and persona term.
 
 {{% alert type="info" %}}
 Capitalize in all instances.
@@ -166,6 +166,18 @@ Do not capitalize.
 
 ## L-N
 
+### LTS (Long-Term Support)
+
+{{% alert type="info" %}}
+As with any acronym the user may not recognize at first, write out the term "long-term support" in full for first usage and use the acronym "LTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+{{% /alert %}}
+
+### MTS (Medium-Term Support)
+
+{{% alert type="info" %}}
+As with any acronym the user may not recognize at first, write out the term "medium-term support" in full for first usage and use the acronym "MTS" after that. If possible, link to [LTS, MTS & Monthly Releases](/releasenotes/studio-pro/lts-mts) for more information.
+{{% /alert %}}
+
 ### Make It Native app
 
 {{% alert type="info" %}}
@@ -196,12 +208,12 @@ Capitalize in all instances.
 
 ### Mendix mobile app {#mendix-mobile-app}
 
-[Mendix](/refguide/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps.
+[Mendix](/refguide8/getting-the-mendix-app) is the name for the mobile app available for developers to test hybrid mobile apps.
 
 {{% alert type="info" %}}
 This term replaces "Mendix Developer app" and "Mendix Mobile app" (which are not to be used in the product UI or documentation – for more information, see [Terminology History](terminology-history)).<br />
 <br />
-To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](https://docs.mendix.com/refguide/getting-the-mendix-app) where possible.
+To avoid confusion with "Mendix" in all its other usages, always use "the Mendix mobile app" and cross-reference [Getting the Mendix Mobile App](/refguide8/getting-the-mendix-app) where possible.
 {{% /alert %}}
 
 ### Mendix Client {#client}
@@ -397,7 +409,7 @@ Do not capitalize.
 ### Product Owner
 
 {{% alert type="info" %}}
-Capitalize in all instances of the [App Team role](/developerportal/settings#app-team).
+Capitalize in all instances of the [team role](/developerportal/collaborate/app-roles#team-roles).
 {{% /alert %}}
 
 ### production, acceptance & test environments
@@ -421,7 +433,7 @@ Capitalize in all instances.
 ### Scrum Master
 
 {{% alert type="info" %}}
-This is the correct capitalization for this [App Team role](/developerportal/collaborate/app-roles#app-team-roles)
+This is the correct capitalization for this [team role](/developerportal/collaborate/app-roles#team-roles)
 {{% /alert %}}
 
 ### Sprint

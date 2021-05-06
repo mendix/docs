@@ -26,7 +26,7 @@ Before submitting a new Menix Support request, check these resources to make sur
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request
+## 3 Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 
@@ -135,14 +135,14 @@ You can add large attachments such as project files to the request. Please note 
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 ### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 {{% alert type="info" %}}

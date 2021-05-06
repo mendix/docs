@@ -8,6 +8,8 @@ aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
     - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide/deploying-a-mendix-app-to-cloud-foundry.html    
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -57,7 +59,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 
-1.  Open Studio Pro, click **Run**, and select **Edit Cloud Foundry Settings**:
+1.  Open Studio Pro, choose the menu option **Run > Edit Cloud Foundry Settings**:
 
 	![](attachments/cloud-foundry-deploy/edit-cf-settings.png)
 
@@ -158,7 +160,7 @@ You may need to configure your file store by using environment variables. See th
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
-3.  Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
+3. Choose the menu option **Run > Run on Cloud Foundry**:
 
 	![](attachments/cloud-foundry-deploy/run-on-cf.png) 
 

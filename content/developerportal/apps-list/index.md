@@ -1,30 +1,19 @@
 ---
 title: "Apps List"
 description: "How to manage your apps from the Apps menu item in the Developer Portal"
-tags: ["My Apps", "My Company's Apps", "Nodes"]
+tags: ["My Apps", "My Company's Apps"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-The **Apps** menu item shows you a summary of your apps and, additionally, allows you to see all the apps for your company and all the licensed nodes to which you have access.
-
-You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal and choosing between the following options:
-
-![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.jpg)
-
-The sections below describe these options:
-
-* [My Apps](#my-apps)
-* [My Company's Apps](#my-company-apps)
-* [Nodes](#nodes)
-
-For details on the **Cluster Manager** option, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster).
-
-## 2 My Apps {#my-apps}
-
-You will see all the apps of which you are an [App Team](../collaborate/team) member:
+The **My Apps** page shows you a summary of your apps:
 
 ![Apps tiles](attachments/apps-tiles.jpg)
+
+**All** displays all the apps for which you are an [Team](../collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
+
+## 2 Viewing Apps
 
 Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
@@ -49,40 +38,24 @@ The actions available depend on the app selected:
 
 ### 2.3 Go to Environments {#environments}
 
-To go to the [environments](/developerportal/deploy/environments) of your app, click the cloud icon in the bottom-right corner of the app tile.
+To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
-### 2.4 Favoriting an App {#favoriting}
+## 3 My Company's Apps & Buzz {#my-company-apps}
 
-To favorite an app, click the star so that it turns yellow in the top-left corner of the app's tile:
+In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
-![](attachments/favoriting.jpg)
+![](attachments/company-links.png)
 
-To see all your favorite apps, click the star toggle to the right of the [view drop-down menu](#view):
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
 
-![](attachments/favorites-toggle.jpg)
-
-## 3 My Company's Apps {#my-company-apps}
-
-On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company):
-
-{{% image_container width="400" %}}
-![Apps for my company](attachments/company-apps-list.png)
-{{% /image_container %}}
-
-You cannot change the sort order of your apps.
+You can also sort the order of the apps here.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 
-If you click an app for which you are not an App Team member, you will see the app details:
+If you click an app for which you are not an team member, you will see the app details:
 
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
 
-## 4 Nodes {#nodes}
-
-This shows a list of all the licensed Mendix Cloud nodes to which you have access:
-
-![Licensed Mendix Cloud nodes](attachments/nodes-list.png)
-
-Clicking the **Details button** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
+For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz#company-buzz) section of *Buzz*.

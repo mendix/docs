@@ -57,12 +57,3 @@ Export the module for the Marketplace, including the dependent *userlib* content
 $ gradle extractModule
 ```
 
-## 3 Read More
-
-* [How to Include Push Notifications](/howto/mobile/push-notifications)
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)
-* [How to Send Push Notifications](/howto/mobile/sending-push-notifications)
-* [How to Set Up the Apple Push Notifcation Server](/howto/mobile/setting-up-apple-push-notification-server)
-* [How to Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server)
-* [How to Test the Push Notifications Implementation](/howto/mobile/testing-the-implementation)
-

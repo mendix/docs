@@ -19,7 +19,7 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 
 ## 3 Setting Up App Deep Linking {#set-up}
 
-Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing project or make a new project from scratch. 
+Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing project or make a new app from scratch. 
 
 ### 3.1 Configuring Map Provider
 
@@ -32,7 +32,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 
 ### 3.2 Configuring Maps Capability 
 
-1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the Project menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the project's details and tokens:
+1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the **App** menu as shown in [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app). Complete the wizard and configure the app's details and tokens:
 
 	{{% image_container width="400" %}}![launch native mobile builder](attachments/how-to-maps/launch-native-mobile-app-builder.png){{% /image_container %}}
 

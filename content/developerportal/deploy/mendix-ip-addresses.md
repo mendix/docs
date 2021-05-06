@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 38
 description: "A list of static IP addresses used by the Mendix cloud"
 tags: ["Mendix cloud", "IP address", "Cloud Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -44,6 +45,10 @@ Mendix uses the following static IP addresses. If you need further information, 
 | Mendix Cloud V4 US | Oregon (us-west-2) | `35.160.4.29` <br /> ` 54.190.172.197` <br /> `44.236.131.88` |
 
 #### 2.2.2 Mendix Cloud v3 (XS4/BIT)
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 * `82.94.240.112/28`
 * `2001:888:2177::/48`

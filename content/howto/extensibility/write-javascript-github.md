@@ -28,14 +28,15 @@ In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
 * Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
-## 3 Downloading the Project Package
+## 3 Downloading the App Package
 
 This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
-1. In Mendix Studio Pro, click the AMarketplace icon.
-2. Search for "JavaScript Actions How-To Advanced".
-3. Click the app, then click **Download** to receive an *.mpk* file. 
-4.  Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:
+1. [Download an *.mpk* file with an app package](https://www.dropbox.com/s/2mbssghy754h2jh/JavaScript_Actions_How_To_Advanced.mpk?dl=0).
+2. In Mendix Studio Pro click on **Open app** from **My apps** page.
+1. Select the **Locally on disk** option.
+2. In a file browser dialog box, browse to the directory downloaded *.mpk* file and double-click it (or select it and click **Open**).
+4. Select **New Mendix Team Server**, name your app *JavaScriptActionsHowToAdvanced*, select a **Project Directory**, and click **OK**:
 
 	![import package](attachments/jsactions-advanced/import-package.png)
 
@@ -43,7 +44,7 @@ This how-to comes paired with an app package prepared for you by Mendix. To down
 
 To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
-1.  Add a new **JavaScript action** in your Mendix project:
+1.  Add a new **JavaScript action** in your Mendix app:
 
 	![add javascript action](attachments/jsactions-advanced/add-js-action.png)
 
@@ -67,17 +68,17 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![default code](attachments/jsactions-advanced/default-code.png)
 
-	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your project folder under **javascriptsource/(module name)/actions/(action name).js**. 
+	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your app folder under **javascriptsource/(module name)/actions/(action name).js**. 
 
 6. Now add a check to verify if the required parameter has been set correctly. The action will return an empty list if no `query` was provided:
 
 	```javascript
-	function SearchGitHubUser(query) {
+	export async function SearchGitHubUsers(query) {
 		// BEGIN USER CODE
 		if (!query) {
 			return [];
 		}
-		return Promise.reject("JavaScript action was not implemented");
+		throw new Error("JavaScript action was not implemented");
 		// END USER CODE
 	}
 	```
@@ -85,19 +86,16 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 7. To enable your action to search GitHub users, implement a REST request:
 
 	```javascript
-	function SearchGitHubUser(query) { 
+	export async function SearchGitHubUsers(query) {
 		// BEGIN USER CODE
 		if (!query) {
 			return [];
 		}
-		var url = "https://api.github.com/search/users?q=" + query;
-		return fetch(url) // Fetch returns a promise, gets the url and wait for result
-			.then(function(response) { return response.json() }) // Transform to JSON
-			.then(function(jsonData) { // Process JSON data
-				// log to the console a successful result
-				logger.debug("count results", jsonData.total_count);
-				return []; // return an empty list for now...
-			});
+		const url = "https://api.github.com/search/users?q=" + query;
+		const response = await fetch(url); // Fetch returns a promise, gets the url and wait for result
+		const jsonData = await response.json(); // Transform to JSON
+		logger.debug("count results", jsonData.total_count); // log to the console a successful result
+		return []; // return an empty list for now...
 		// END USER CODE
 	}
 	```
@@ -109,19 +107,17 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 10. Finally, set a `Promise.all` return to wait for all promises to be resolved before the nanoflow can continue:
 
 	```javascript
-	function SearchGitHubUser(query) {
+	export async function SearchGitHubUsers(query) {
 		// BEGIN USER CODE
 		if (!query) {
 			return [];
 		}
-		var url = "https://api.github.com/search/users?q=" + query;
-		return fetch(url)
-			.then(function(response) { return response.json() })
-			.then(function(jsonData) {
-				logger.debug("count", jsonData.total_count);
-				var gitHubUsers = jsonData.items.map(createGitHubUser);
-				return Promise.all(gitHubUsers);
-			});
+		const url = "https://api.github.com/search/users?q=" + query;
+		const response = await fetch(url); 
+		const jsonData = await response.json();
+		logger.debug("count", jsonData.total_count);
+		const gitHubUsers = jsonData.items.map(createGitHubUser);
+		return Promise.all(gitHubUsers);
 
 		function createGitHubUser(user) {
 			return new Promise(function (resolve, reject) {
@@ -147,19 +143,17 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 11. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
 
 	```javascript
-	function SearchGitHubUsers(query, userEntity) {
+	export async function SearchGitHubUsers(query) {
 		// BEGIN USER CODE
 		if (!query) {
 			return [];
 		}
-		var url = "https://api.github.com/search/users?q=" + query;
-		return fetch(url)
-			.then(function(response) { return response.json() })
-			.then(function(jsonData) {
-				logger.debug("count", jsonData.total_count);
-				var gitHubUsers = jsonData.items.map(createGitHubUser);
-				return Promise.all(gitHubUsers);
-			});
+		const url = "https://api.github.com/search/users?q=" + query;
+		const response = await fetch(url); 
+		const jsonData = await response.json();
+		logger.debug("count", jsonData.total_count);
+		const gitHubUsers = jsonData.items.map(createGitHubUser);
+		return Promise.all(gitHubUsers);
 
 		function createGitHubUser(user) {
 			return new Promise(function (resolve, reject) {
@@ -205,16 +199,16 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
-15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
+15.  Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
 	```javascript
 	/**
 	Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
 	@param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
-	@param {string} userEntity - The entity to match the Return type Entity
-	@returns {MxObject[]}
+	@param {string} userEntity - The entity to match the Return type Entity.
+	@returns {Promise.<MxObject[]>}
 	*/
-	function SearchGitHubUsers(query, userEntity) {
+	export async function SearchGitHubUsers(query, userEntity) {
 		// BEGIN USER CODE
 		// Documentation: https://developer.github.com/v3/search/#search-users
 		// Will return JSON structure
@@ -231,14 +225,12 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 		if (!query) {
 			return [];
 		}
-		var url = "https://api.github.com/search/users?q=" + query;
-		return fetch(url) // Fetch returns a promise, gets the URL and wait for results
-			.then(function(response) { return response.json() }) // Transform response to JSON
-			.then(function(jsonData) { // Handle the JSON
-				logger.debug("count", jsonData.total_count);
-				var gitHubUsers = jsonData.items.map(createGitHubUser);
-				return Promise.all(gitHubUsers);
-			});
+		const url = "https://api.github.com/search/users?q=" + query;
+		const response = await fetch(url); 
+		const jsonData = await response.json();
+		logger.debug("count", jsonData.total_count);
+		const gitHubUsers = jsonData.items.map(createGitHubUser);
+		return Promise.all(gitHubUsers);
 
 		function createGitHubUser(user) {
 			// Wrap the Mendix Client API in a promise
@@ -249,7 +241,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 						// Dynamically set attributes
 						mxObject.getAttributes()
 							.forEach(function(attributeName) {
-								var attributeValue = user[attributeName];
+								const attributeValue = user[attributeName];
 								if (attributeValue) {
 									mxObject.set(attributeName, attributeValue);
 								}
@@ -302,11 +294,11 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	
 	![change object](attachments/jsactions-advanced/change-object-final.png)
 
-19. Run your project, then use your new search action to find a GitHub user:
+19. Run your app, then use your new search action to find a GitHub user:
 
 	![find user](attachments/jsactions-advanced/find-user.png)
 
-20. If your project did not function correctly, consult the **Solution** folder to see correct versions of the nanoflow and JavaScript action:
+20. If your app did not function correctly, consult the **Solution** folder to see correct versions of the nanoflow and JavaScript action:
 
 	![solution](attachments/jsactions-advanced/solution.png)
 

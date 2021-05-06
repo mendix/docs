@@ -1,5 +1,5 @@
 ---
-title: "Mendix Forum"
+title: "Forum"
 category: "Community Tools"
 menu_order: 30
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."

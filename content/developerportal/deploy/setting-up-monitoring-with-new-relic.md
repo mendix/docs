@@ -4,7 +4,12 @@ parent: "on-premises-design"
 description: "How to install Mendix behind a load balancer for high availability"
 menu_order: 30
 tags: ["new relic", "on-premises", "monitoring", "setup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-monitoring-with-new-relic.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 

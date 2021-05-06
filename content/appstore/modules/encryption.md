@@ -29,7 +29,3 @@ In version 1.4.1, the AES algorithm used for encrypting/decrypting text was swit
 {{% alert type="warning" %}}
 If you are updating the module from a version below 1.4.1 to 1.4.1 or above, do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
 {{% /alert %}}
-
-## 3 Read More
-
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)

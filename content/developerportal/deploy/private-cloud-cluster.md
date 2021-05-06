@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 menu_order: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -30,7 +31,7 @@ To create a cluster in your OpenShift context, you need the following:
 
 ### 3.1 Creating a Cluster
 
-1. Click **Cloud Settings** on the **Settings** page of your Mendix app.
+1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     
     ![](attachments/private-cloud-cluster/image2.png)
 
@@ -42,15 +43,19 @@ To create a cluster in your OpenShift context, you need the following:
     
     ![](attachments/private-cloud-cluster/image4.png)
 
-4. Select **Cluster Manager** from the **Apps** menu in the Developer Portal.
+4. Click the **Switch-to** menu in the Developer Portal and choose **Cloud**.
 
-    ![](attachments/private-cloud-cluster/image5.png)
+    ![](attachments/private-cloud-cluster/go-to-nodes-page.png)
 
-5. Click **Register Cluster**. 
+5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+6. Click **Register Cluster**. 
 
     ![](attachments/private-cloud-cluster/image6.png)
 
-6. Enter the following information:
+7. Enter the following information:
     
   1. **Name** – The name you want to give the cluster you are creating.
   
@@ -58,7 +63,7 @@ To create a cluster in your OpenShift context, you need the following:
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
-7. Click **Create**.
+8. Click **Create**.
 
     ![](attachments/private-cloud-cluster/create-cluster.png)
 
@@ -92,9 +97,9 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    ![](attachments/private-cloud-cluster/image23.png)
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
 
 2. Click **Details** next to the namespace you want to use.
 
@@ -105,17 +110,23 @@ If you are not already on the installation tab for your namespace, go to it by f
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
+    ![](attachments/private-cloud-cluster/choose-operating-system.png)
 
-2. Choose the **Mendix Operator Version** that you would like to install.
-    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
+2. Click **Download Executable**.
+
+    ![](attachments/private-cloud-cluster/download-executable.png)
+
+3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
 	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
+    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-3. Click **Download Executable** and make sure that it is stored somewhere on your path.
 	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
-    ![](attachments/private-cloud-cluster/download-executable.png)
+    ![](attachments/private-cloud-cluster/download-operator-version.png)
+
+4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
 ### 4.2 Signing in to OpenShift{#openshift-signin}
 
@@ -688,11 +699,29 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-##### 4.3.2.5 Proxy{#proxy}
+#### 4.3.3 Proxy{#proxy}
 
-Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
+Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.3 Custom TLS{#custom-tls}
+List all local (including cluster-local) IP addresses and domains in the **No proxy for** field. The format is listed below:
+
+Hosts which should be excluded from proxying are specified as:
+
+* a string containing comma-separated values
+* each value is
+	* an IP address prefix (`1.2.3.4`)
+	* an IP address prefix in CIDR notation (`1.2.3.4/8`)
+	* a domain name
+	* if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
+* each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
+* a domain name matches that name and all subdomains
+* a domain name with a leading "." matches subdomains only
+
+	For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+ 
+For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
+
+#### 4.3.4 Custom TLS{#custom-tls}
 
 {{% alert type="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
@@ -747,7 +776,7 @@ To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-#### 4.3.4 Review and Apply{#review-apply}
+#### 4.3.5 Review and Apply{#review-apply}
 
 When you have configured all the resources, do the following:
 
@@ -802,7 +831,13 @@ For Kubernetes:
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
-The OperatorConfiguration contains the following user-editable options:
+{{% alert type="warning" %}}
+Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
+{{% /alert %}}
+
+### 5.1 Endpoint (network) configuration
+
+The OperatorConfiguration contains the following user-editable options for network configuration:
 
 When using **Ingress** for network endpoints:
 
@@ -822,6 +857,12 @@ spec:
         nginx.ingress.kubernetes.io/proxy-body-size: 500m
         # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
         cert-manager.io/cluster-issuer: staging-issuer
+        # example: deny access to /rest-doc
+        nginx.ingress.kubernetes.io/configuration-snippet: |
+          location /rest-doc {
+            deny all;
+            return 403;
+          }
       # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
       domain: mendix.example.com
       # Enable or disable TLS
@@ -856,10 +897,6 @@ spec:
       tlsSecretName: 'mendixapps-tls'
 ```
 
-{{% alert type="warning" %}}
-Adjusting options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
-{{% /alert %}}
-
 You can change the following options:
 
 * **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
@@ -875,15 +912,36 @@ You can change the following options:
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
+### 5.2 Mendix app Deployment settings{#advanced-deployment-settings}
+
+The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Optional: provide Mendix app Pods to get a Kubernetes Service Account token
+  runtimeAutomountServiceAccountToken: true
+  # Optional: annotations for Mendix app Pods
+  runtimeDeploymentPodAnnotations:
+    # example: inject the Linkerd proxy sidecar
+    linkerd.io/inject: enabled
+```
+
+You can change the following options:
+
+* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
+* **runtimeDeploymentPodAnnotations**: - specify default annotations for Mendix app Pods
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
 
 ### 6.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the **Apps** menu.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-![](attachments/private-cloud-cluster/image23.png)
+![](attachments/private-cloud-cluster/cluster-manager.png)
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
@@ -975,7 +1033,7 @@ The **Apps** tab of namespace details in the cluster manager page lists all the 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
 {{% alert type="info" %}}
-You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
+You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
 #### 6.2.2 Members
@@ -1049,10 +1107,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### 6.2.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request a page from the Operate category for their app in the Developer Portal, as shown below.
-
-![](attachments/private-cloud-cluster/image31.png)
-
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
 The following pages can be configured:
 
 * Metrics

@@ -2,12 +2,12 @@
 title: "Administrator"
 parent: "project-security"
 menu_order: 20
-tags: ["studio pro", "administrator", "project security", "security"]
+tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
 
-In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:
+In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
 ![](attachments/administrator/project-security-administrator.png)
 
@@ -63,7 +63,7 @@ When your app is not deployed locally, for example to the Mendix Cloud, changes 
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Demo Users](demo-users)
 * [Anonymous Users](anonymous-users)

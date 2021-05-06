@@ -65,7 +65,7 @@ If you wish to implement your changes manually, please follow this section: [Man
 
 The Native Mobile Builder simplifies the process of adding any capabilities to your native mobile app. To enable push notifications, do the following: 
 
-1.  Click **Project** > **Build Native Mobile App**:
+1.  Click **App** > **Build Native Mobile App**:
 
 	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 

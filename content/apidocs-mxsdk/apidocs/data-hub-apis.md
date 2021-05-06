@@ -20,11 +20,11 @@ For both APIs authorization must be included in the API calls as described in [A
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-## 3. Authentication and Authorization{#pat-token}
+## 2. Authentication and Authorization{#pat-token}
 
 When making calls using the APIs described in this document, authentication and authorization have to be included in the request by specifying a Personal Access Token (PAT). Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
 
-### 3.1 Authorization Header
+### 2.1 Authorization Header
 
 For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 
@@ -32,7 +32,7 @@ For every request that is made to the Data Hub API, you must include the followi
 
 Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
-### 3.2. Generating your Personal Access Token {#generatepat}
+### 2.2. Generating your Personal Access Token {#generatepat}
 
 Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps:
 
@@ -72,7 +72,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 10. You can delete unused tokens by clicking the "bin" icon for the token.
 
-## 2. Data Hub Open API Specs {#datahubapis}
+## 3. Data Hub Open API Specs {#datahubapis}
 
 The [Data Hub APIs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) are Open API (formerly Swagger) specifications that are located the at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
@@ -87,7 +87,7 @@ To follow how to use the APIs, see [Using the Data Hub API](/data-hub/general/da
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 5. Data Hub Transform Open API Spec {#transform}
+## 4. Data Hub Transform Open API Spec {#transform}
 
 For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. Information that is defined in the location constants of the consumed and published services—located in the `dependencies.json` file for the app—is used.
 
@@ -95,7 +95,7 @@ The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform
 
 Information that is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
 
-### 5.1 Transform API Location
+### 4.1 Transform API Location
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 
@@ -103,13 +103,13 @@ The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaw
 For the current release, the interactive features of the Open API interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-### 5.2 Location of the `dependencies.json` file of an App
+### 4.2 Location of the `dependencies.json` file of an App
 
 For a Mendix app, the `dependencies.json` file is usually located in the project folder of the app under the following directory: `Mendix\<YourApplicationName>\deployment\model`
 
 This file has to be inserted in the call to the API in *escaped json format*.
 
-### 5.3 Making the API Call
+### 4.3 Making the API Call
 
 When making the call to the API the following two object have to be specified:
 
@@ -125,7 +125,7 @@ When making the call to the API the following two object have to be specified:
     }
  ```
 
-### 5.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
+### 4.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
 
 The request bodies returned by the Transform API do not contain the values for the following attributes:
 

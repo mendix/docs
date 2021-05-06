@@ -176,6 +176,8 @@ This option allows you to generate a multipart/form-data request for multiple pa
 
 FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
 
+For each part, you can specify HTTP headers. By default, the Content-Disposition (for file documents and images) and Content-Type (for all parts) headers are added to each part. You can specify different values for these headers, or add other headers.
+
 #### 6.3.1 Content Type
 
 Setting up a **Content-Type header** for a form-data request will result in a consistency error, as it will automatically be set to **multipart/form-data**. 

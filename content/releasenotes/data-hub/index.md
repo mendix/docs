@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### May 6th, 2021
+
+#### New Feature
+
+The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/data-hub-apis#transform)
+
 ### April 29th, 2021
 
 #### Improvements

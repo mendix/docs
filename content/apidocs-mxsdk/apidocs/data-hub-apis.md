@@ -8,11 +8,11 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The [Data Hub APIs](#datahubapis) can be used to register your data sources to the organization's Mendix Data Hub. You can also explore and discover data sources that can be used in your app development.
+The [Data Hub APIs](#datahubapis) are available to register your data sources to the organization's Mendix Data Hub. You can also explore and discover data sources that can be used in your app development.
 
 Using the APIs you can set up a registration flow in the deployment pipeline of your business applications to register new data sources from your applications to the Data Hub Catalog.
 
-For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for you Mendix apps.
+For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for your Mendix apps.
 
 For both APIs authorization must be included in the API calls as described in [Authentication and Authorization](#pat-token).
 

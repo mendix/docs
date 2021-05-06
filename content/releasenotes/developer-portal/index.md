@@ -26,8 +26,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * Page title of studio landing page fixed.
 * Page links are now opened in the correct tab.
 
-## 2021
-
 ### March 26th, 2021
 
 #### Improvements

@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where for certain users some graphs in the [Dashboard](/developerportal/control-center/index#dashboard) was loading indefinitely. 
+* We fixed an issue where some graphs in the [Dashboard](/developerportal/control-center/index#dashboard) were loading indefinitely. 
 
 ### April 26th, 2021
 

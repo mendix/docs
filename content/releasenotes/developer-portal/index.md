@@ -19,12 +19,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* It's now possible to create a new app with workflow functionality more deeply integrated in the creation flow.
+* It is now possible to create a new app with the [workflows](/refguide/workflows) functionality more deeply integrated in the creation flow.
 
 #### Fixes
 
-* Page title of studio landing page fixed.
-* Page links are now opened in the correct tab.
+* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* Page links now open in the correct tab.
 
 ### March 26th, 2021
 

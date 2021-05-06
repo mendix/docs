@@ -19,7 +19,7 @@ On a phone there is no MindSphere launchpad - therefore the app has to implement
 The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html). But do not worry - the implementation is already part of the app template - just use it.
 To support deep links in your app, you have to create your own [Custom Development App](/howto/mobile/how-to-devapps) and register a deep link corresponding to your app registration.
 
-As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development. You should also be familiar with the basics of the source code management system [git](https://git-scm.com/) as you will have to update the standard [Custom Development App](/howto/mobile/how-to-devapps).
+As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development.
 
 This documentation is structured into two main parts:
 
@@ -33,8 +33,7 @@ The setup of your development environment consists of the following steps:
 1. Register a new mobile app in Developer Cockpit
 2. Create a project based on "Siemens MindSphere Mobile Starter Application"
 3. Build your own development app
-4. Configure `.well-known` files
-5. Try it out
+4. Try it out
 
 ### 2.1 Registration of your mobile app in Developer Cockpit
 
@@ -53,6 +52,10 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
     * ```Version = 1.0.0```
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_CreateApp.png)
+
+1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might trouble the authentication process.
+
+    ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_DeepLink.png)
 
 1. Click **Save** to save your new app.
 
@@ -110,250 +113,27 @@ Change these constants:
 
 * **HostTenant** = name of your tenant
 
-    if you are not working on *eu1.mindsphere.io*:
-
-* **MindSphereGatewayURL**
+* **MindSphereGatewayURL** if you are not working on *eu1.mindsphere.io*:
 
 * **PublicKeyURL**
 
-    in the **NativeMobile** folder:
+In the **NativeMobile** folder:
 
-* **ClientID** = **client_id** from app registration in developer cockpit
+* **ClientID** = **client_id** from app registration in Developer Cockpit
 
-* **ClientSecret** = **client_secret** from app registration in developer cockpit
+* **ClientSecret** = **client_secret** from app registration in Developer Cockpit
 
-Later on, in the section [Well Known Files / Associate Website](#wellknownfiles), you will also provide some values for the **AppleAppSiteAssociation** and **AssetLinks** constants.
+* **Scheme** = **custom_scheme** from app registration in Developer Cockpit
 
 ### 2.3 Build your Own Development App{#buildcustomapp}
 
 In this section you will create your own custom development app and register a deep link.
 
-1. Follow the description on how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there.
+In principal you have to follow the description on how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there. There is only one thing demanded for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be given in the **App capabilities** section in the **Deep link** field.
 
-1. Configure the DeepLink.
+![Studio SSO configuration](attachments/mindsphere-mobile-native/StudioPro_NativeBuilder.png)
 
-    Currently, the configuration of the deep links has to be done separately for Android and iOS. The "Native Builder App" has limited configuration possibilities for deep links so we will create them manually.
-
-If not already done in step 2 clone your github repo locally in order to make the needed changes and checkout the **developer** branch.
-
-#### 2.3.1 Android
-
-On the the **developer** branch two files needs to be modified:
-
-##### AndroidManifest.xml
-
-Open the file `./android/app/src/main/AndroidManifest.xml` with an editor of your choice, for example [Visual Studio Code](https://code.visualstudio.com/).
-
-Set the `android:launchMode` in the main activity to `singleTask`
-
-```xml
-<activity
-    ...
-    android:launchMode="singleTask">
-```
-
-Add the following `<activity>` to the `<application>` tag:
-
-```xml
-...
-<activity android:name="com.mendix.mendixnative.activity.MendixReactActivity">
-    <intent-filter android:autoVerify="true">
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data
-            android:scheme="https"
-            android:host="TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io"
-            android:path="/login" />
-    </intent-filter>
-</activity>
-```
-
-Replace the placeholders `TENANT` and `INTERNAL_NAME` in the `android:host` attribute with your tenant name (twice!) and the **internal_name** of your application registration. For example, for tenant `demo` and internal_name `mmna`:
-
-```xml
-    <data android:scheme="https" android:host="demo-mmna-demo.eu1.mindsphere.io" />
-```
-
-Commit the changed file to your developer branch, push the change to the github repo, and build your developer app again. You can do this with the "Build Native App" application from Mendix Studio Pro, or build it [locally](/howto/mobile/native-build-locally#5-1-building-an-android-app-with-android-studio) with [Android Studio](https://developer.android.com/studio).
-
-#### 2.3.2 iOS
-
-We recommend you to make the required changes with the help of Xcode and build your developer app locally. Details about this process can be found [here](/howto/mobile/native-build-locally#5-2-building-an-ios-app-with-xcode).
-
-Ensure that you have cloned the github repo locally and have checked out the **developer** branch.
-
-* Open a terminal in the project root directory (the folder where you have cloned the github repo) and run the following:
-
-    ```bash
-    npm install
-    ```
-
-    this installs the required dependencies.
-
-* Change to the ios directory by running `cd ios`
-
-* Install the iOS dependencies by running the following:
-
-    ```bash
-    pod install
-    ```
-
-    The iOS project uses CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods documentation.
-
-* Open the .xcodeworkspace in the ios folder using Xcode.
-
-    Navigate to **Signing and Capabilities**, select the target `dev`, and choose your **Team** from the drop-down menu:
-
-    ![Xcode Team](attachments/mindsphere-mobile-native/Xcode_Team.png)
-
-    As with the Android Build Variants, the iOS app makes use of Build Targets to switch between building a custom developer app (target *dev*) or a release app (target *nativeTemplate*).
-
-    Change the `Bundle Identifier` to something unique.
-
-    Click *Capability* and select **Associated Domains**.
-
-    ![Associated Domain](attachments/mindsphere-mobile-native/Xcode_enable_associated_domain.png)
-
-    Add the following domain:
-
-    ```bash
-    applinks:TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io
-    ```
-
-    Replace the placeholders `TENANT` and `INTERNAL_NAME` with your tenant name (twice!) and with the **internal_name** of your application registration in the developer cockpit. For example:
-
-    ```bash
-    applinks:demo-mmna-demo.eu1.mindsphere.io
-    ```
-
-    ![Associated Domain](attachments/mindsphere-mobile-native/Xcode_associated_domain.png)
-
-* In the `project navigator` open the file `nativeTemplate/NativeTemplate/AppDelegate.m`
-
-  Add the following import instruction:
-
-  ```objc
-  #import "React/RCTLinkingManager.h"
-  ```
-
-  and the method `continueUserActivity` with the following definition:
-
-  ```objc
-  - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity
-      restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
-  {
-      return [RCTLinkingManager application:application
-          continueUserActivity:userActivity
-          restorationHandler:restorationHandler];
-  }
-  ```
-
-* From the drop-down menu choose `dev` and the device you would like to run the app on, then click the play button (►) to
-    start a build for your app:
-
-    ![Build ios dev app](attachments/mindsphere-mobile-native/Xcode_build_ios_dev_app.png)
-
-    After the build succeeds the app should be starting on the selected device.
-
-### 2.4 Well Known Files / Associate Website{#wellknownfiles}
-
-For your deep link to work in iOS, you must configure the .well-known files.
-On Android this is optional. If provided, the phone will not ask which app should be opened for the deep link.
-
-#### For iOS
-
-In Mendix Studio Pro, open the *NativeMobile* folder in the **MindSphereSSO** module and modify the constant
-**AppleAppSiteAssociation** to be:
-
-```json
-{
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "TEAM_ID.BUNDLE_IDENTIFIER",
-                "paths": ["/login"]
-            }
-        ]
-    }
-}
-```
-
-Replace the value of the **appID** property with your **TEAM_ID** and your **BUNDLE_IDENTIFIER**.
-Do not remove the "." between the two parts.
-
-{{% alert type="info" %}}
-You can find the **TEAM_ID** in the [Apple developer center](https://developer.apple.com/membercenter). Log into the web site, click on Membership, then look for Team ID in the Membership Information section.
-{{% /alert %}}
-
-{{% alert type="warning" %}}
-You must remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This can be done in a tool like, for example, the [JSON Editor Online](https://jsoneditoronline.org).
-{{% /alert %}}
-
-#### For Android
-
-To generate the .well-known files you must use Android Studio. In the section [build your own development app](#buildcustomapp), above, you have already cloned your github repo locally. Use the developer branch.
-
-1. Open the **root** folder of this repo in a terminal and, if not already done, run `npm install`.
-
-    {{% alert type="info" %}}During our tests we faced issues when we tried to apply one of the patches:<br /><br />![build your own development app](attachments/mindsphere-mobile-native/Problem_npm_install.png)<br /><br />This can be fixed by changing the end of each line in the file **patches/react-native-image-picker+2.3.4.patch** from **CR LF** to **LF**. This can easily be done with editors like Visual Studio Code.{{% /alert %}}
-
-1. Start Android Studio and open the **android** folder as a new project. Android Studio automatically starts some build process, wiat for these to finish before going to the next step.
-
-1. Ensure you use the build variant **devDebug**.
-
-1. Open the **File** menu and click the **Sync Project with Gradle Files**.
-
-   ![SyncGradleBuild](attachments/mindsphere-mobile-native/AndroidStudio_SyncGradle.png)
-
-1. Wait till the Gradle sync is ready and Android Studio activates the **App Links Assistant** in the **Tools** menu.
-
-1. Open the **App Links Assistant** from the **Tools** menu.
-
-   ![AndroidStudioAppLinks](attachments/mindsphere-mobile-native/AndroidStudio_AppLinks.png)
-
-1. Generate your **assetlinks.json** file by clicking the **Generate Digital Asset Links file** button at step 3 in the **App Links Assistant**.
-
-   ![AndroidStudioGenerateAssetLinks](attachments/mindsphere-mobile-native/AndroidStudio_GenerateAssetLinks.png)
-
-1. Copy the content from the preview window and use it as the value for the constant **AssetLinks**.
-   This constant is in the **MindSphereSSO** module in Mendix Studio Pro.
-
-   {{% alert type="warning" %}}You must remove all `/r/n` from the json object before saving the constant in Mendix Studio Pro. This can be done in a tool like, for example, the [JSON Editor Online](https://jsoneditoronline.org).{{% /alert %}}
-
-#### Make your .well-known Files Publicly Available
-
-The **Siemens MindSphere Mobile Starter Application** implements a REST endpoint which serves the .well-known files for you. Click the **Run** button to deploy your app to the Mendix cloud.
-
-Once it is deployed, change the app registration in the Developer Cockpit for the .well-known files.
-
-1. Open your app in the Developer Cockpit and click **Deregister**.
-
-2. Select the tab **Configuration** and fill in the values for android and ios:
-
-    * android = `https://SANDBOXURL/.well-known/assetlinks.json`
-    * ios = `https://SANDBOXURL/.well-known/apple-app-site-association`
-
-3. Replace **SANDBOXURL** with your deployment URL.
-
-4. Click **Register** again to save the changes to MindSphere.
-
-5. Test if the files are served correctly by opening a browser at the following URL:
-
-    ``` bash
-    https://TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io/.well-known/assetlinks.json
-    ```
-
-    and
-
-    ``` bash
-    https://TENANT-INTERNAL_NAME-TENANT.eu1.mindsphere.io/.well-known/apple-app-site-association
-    ```
-
-    Replace **TENANT** (twice!) and **INTERNAL_NAME** with your values.
-
-### 2.5 Try out your application
+### 2.4 Try out your application
 
 You should now be ready to start your application for the very first time on your mobile phone. For this, click the **Run Locally** button so that your own native application can connect to your Mendix Studio Pro.
 When your application is running you should see the login page of the Anonymous user role.
@@ -371,9 +151,9 @@ After a successful login, your app will be restarted and a session created. Then
 If you have trouble signing in to your application, it is a good idea to clear the cookies of your mobile browser. Please see documentation for your browser for further information.
 {{% /alert %}}
 
-### 2.6 Next steps
+### 2.5 Next steps
 
-You now have a blank application which supports authentication for your specific MindSphere application, which is an excellent starting point for feveloping your app further. We also recommend investigating the basic tutorial for MindSphere web applications [Build a MindSphere app with Mendix](https://gettingstarted.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about MindSphere application development in general.
+You now have a blank application which supports authentication for your specific MindSphere application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for MindSphere web applications [Build a MindSphere app with Mendix](https://gettingstarted.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about MindSphere application development in general.
 
 When you enhance your application with MindSphere API calls to use the IoT capabilities of MindSphere you must consider the following two steps:
 

@@ -14,13 +14,15 @@ Using the APIs you can set up a registration flow in the deployment pipeline of 
 
 For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for you Mendix apps.
 
+For both APIs authorization must be included in the API calls as described in [Authentication and Authorization](#pat-token).
+
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-## 3. Authentication and Authorization
+## 3. Authentication and Authorization{#pat-token}
 
-When making calls using the API to your organization's Data Hub, authentication and authorization have to be included in the request by specifying a Personal Access Token (PAT). Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
+When making calls using the APIs described in this document, authentication and authorization have to be included in the request by specifying a Personal Access Token (PAT). Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
 
 ### 3.1 Authorization Header
 
@@ -92,14 +94,14 @@ For Mendix apps deploying to the Mendix cloud, there is a registration pipeline 
 
 The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the `dependencies.json` file. The API returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API.
 
-Information this is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
+Information that is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
 
 ### 5.1 Transform API Location
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 
 {{% alert type="info" %}}
-For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
+For the current release, the interactive features of the Open API interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
 ### 5.2 Location of the `dependencies.json` file of an App

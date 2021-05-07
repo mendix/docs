@@ -7,13 +7,11 @@ tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
 
 ## 1 Introduction
 
-A template is required when you build a Mendix native app: specifically the Native Template. In short, the Native Template describes the native dependencies your project needs, and it includes two native projects (one for iOS and one for Android) that can be independently built to create the apps. 
+A template is required when you build a Mendix native app: specifically the Native Template. In short, the Native Template describes the native dependencies your project needs, and it includes two native projects (one for iOS and one for Android) that can be independently built to create the apps. The Native Template works in conjunction with the Native Mobile Builder which configures it. For more information on the Native Mobile Builders' capabilities, see the [Native Mobile Builder Release Notes](/releasenotes/mobile/mendix-native-mobile-builder).
 
 The template also includes tooling to help put everything together. Specifically, the Native Template uses the React Native and Mendix auto-linking capabilities to link the native dependencies to platform-specific projects, and uses the Native Mobile toolkit which configures the platform-specific projects with version numbers, app names, splash screens, and more. 
 
-In addition, the Native Template helps create custom developer Apps. These are apps that act like the Make It Native app but are tailored to the specific needs of your project. If you would like to build an app that uses bespoke functionality like custom native widgets see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps). 
-
-The Native Template goes hand in hand with the Mendix Native Mobile Builder.
+In addition, the Native Template helps create custom developer apps. These are apps that act like the Make It Native app but are tailored to the specific needs of your project. If you would like to build an app that uses bespoke functionality like custom native widgets see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps). 
 
 ## 2 Location
 
@@ -51,7 +49,7 @@ For libraries that are not fully auto-linkable (those are usually libraries that
 
 ## 5 Native Mobile Toolkit
 
-The Native Mobile Toolkit is a Mendix-developed NPM module that is used to facilitate the configuration requirements of platform-specific projects. It lets you define platform-specific features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
+The Native Mobile Toolkit is a Mendix-developed NPM module that is used to facilitate the configuration requirements of platform-specific projects. It lets you define app features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
 
 The configuration is written in JSON. The configuration file is versioned using an incremental number. The version is incremented when breaking changes are introduced.
 

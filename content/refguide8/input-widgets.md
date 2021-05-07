@@ -6,6 +6,10 @@ description: "Widgets which can be added to pages to view and edit attributes of
 tags: ["studio pro", "input widgets", "widget", "reference selector", "reference set", "association", "edit", "data input"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Input widgets show data to the end-user and, optionally, allow them to edit the data.

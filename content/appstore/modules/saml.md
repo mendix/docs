@@ -26,6 +26,9 @@ With this module, you can authenticate against your Microsoft Active Directory s
 * SAML1.0 is not supported.
 
 ### 1.4 Dependencies
+{{% alert type="warning" %}}
+If you are running your app outside of the Mendix Cloud, please make sure you have [external file storage](/refguide/system-requirements#9-file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data form the file storage.
+{{% /alert %}}
 
 * [MxModelReflection](/appstore/modules/model-reflection)
 

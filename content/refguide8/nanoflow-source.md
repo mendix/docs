@@ -5,6 +5,10 @@ tags: ["studio pro", "nanoflow source", "data source"]
 menu_order: 50
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Nanoflow** data source is available for [data views](data-view) and [list views](list-view). 

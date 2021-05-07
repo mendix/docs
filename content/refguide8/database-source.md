@@ -5,6 +5,10 @@ tags: ["studio pro", "database", "data source"]
 menu_order: 10
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device.

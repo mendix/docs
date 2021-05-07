@@ -5,6 +5,10 @@ menu_order: 25
 tags: ["studio pro", "container widget", "widget"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Container widgets provide structure to your page's content.

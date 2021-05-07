@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "common widgets", "widget"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Common widgets category contain widgets that are commonly used. This category contains the following widgets:

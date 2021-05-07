@@ -5,6 +5,10 @@ tags: ["studio pro", "context", "data source"]
 menu_order: 30
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Context** source is a data source of a data view. Data views with this data source get their object from the context, which can be one of two things:

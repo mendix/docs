@@ -5,6 +5,10 @@ tags: ["studio pro", "association", "data source"]
 menu_order: 60
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Association** source is a data source available to nested [data grids](data-grid), [template grids](template-grid), and [list views](list-view). 

@@ -453,14 +453,14 @@ The version is required and used for backwards compatibility purposes. For now t
 
 ```
 interface AndroidSplashScreensConfig {
-    "images": [
-        "size": "640x960" | "375x667" | "414x736",
-            "idiom": "universal",
-            "scale": "1x" | "2x" | "3x",
-            "type": "splashScreen",
-            "filename": string
-    ],
-    "version": 1
+      "images": Array<{
+              "size": "640x960" | "375x667" | "414x736",
+              "idiom": "universal",
+              "scale": "1x" | "2x" | "3x",
+              "type": "splashScreen",
+              "filename": string
+          }>,
+      "version": 1
 }
 ```
 

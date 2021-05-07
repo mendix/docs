@@ -6,7 +6,12 @@ menu_order: 80
 tags: ["Deployment", "On premises", "Environment"]
 aliases:
     - /deployment/on-premises.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/on-premises-design.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 

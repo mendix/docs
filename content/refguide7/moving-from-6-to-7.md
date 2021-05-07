@@ -5,6 +5,7 @@ menu_order: 20
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
 aliases:
     - /refguide/moving-from-6-to-7.html
+    - /releasenotes/studio-pro/6.10.html
 ---
 
 ## 1 Introduction

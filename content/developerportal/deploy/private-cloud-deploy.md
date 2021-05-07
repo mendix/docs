@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 menu_order: 20
 tags: ["Deploy", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -549,6 +550,10 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
 ### 6.5 ApplicationRootUrl Needs to be Set Manually
+
+{{% alert type="info" %}}
+This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
+{{% /alert %}}
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 

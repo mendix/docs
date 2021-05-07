@@ -4,7 +4,12 @@ parent: "general"
 menu_order: 40
 description: "Issues to take into consideration when running apps in an iframe"
 tags: ["iframe", "samesite", "cookies", "x-frame-options"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/running-in-iframe.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 

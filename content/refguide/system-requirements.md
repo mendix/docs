@@ -13,7 +13,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro {#sp}
 
-Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 release 1803 and above.
+Mendix [Studio Pro](modeling) version 9 is supported on 64-bit versions of Windows 10 release 1803 and above. Studio Pro does not run on Windows emulators on Apple Silicon Macs, such as the M1, or on any other ARM-based machines.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -51,6 +51,48 @@ Always use the version of TortoiseSVN which matches your app model. If you open 
 ### 2.3 File Locations
 
 For active development and running your application locally, your app folder should be on local drive (such as C:) or on a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
+
+### 2.4 Supported Git Service Providers {#supported-providers}
+
+#### 2.4.1 Azure Repos and Azure DevOps Server 
+
+We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
+
+To get a PAT for your user account, see the [Use personal access tokens](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page) instructions in the Microsoft documentation.
+
+You need `Code (full)` permission for your token.
+
+##### 2.4.2 GitHub 
+
+We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
+
+To get a PAT for your user account, see the [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) instructions in the GitHub documentation. 
+
+You need `repo` permissions for your token.
+
+##### 2.4.3 GitLab 
+
+We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
+
+To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
+
+You need `write_repository` permission for the token.
+
+##### 2.4.4 BitBucket 
+
+We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
+
+On BitBucket.org, the Personal Access Tokens are called App Passwords.
+
+To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
+
+BitBucket Server and BitBucket Data Center, on the other hand, still use the term Personal Access Tokens. To set up a personal access token, see [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+
+In both cases you need `repository write` permission.
+
+##### 2.4.5 AWS CodeCommit Limitation
+
+We have a compatibility limitation with AWS CodeCommit in Git Technology Preview for Studio Pro.
 
 ## 3 Team Server {#ts}
 
@@ -109,8 +151,8 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
-* [MariaDB](mysql) 10.2, 10.3
+* [IBM DB2](db2) 11.1 and 11.5 for Linux, Unix, and Windows
+* [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
 * [MySQL](mysql) 8.0

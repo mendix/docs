@@ -75,13 +75,13 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581810.png)
 
-5. Open the **Connector** pane drag the **XMLDocument** entity from the **Connector** to the placeholder:
+5. Open the **Connector** pane and drag the **XMLDocument** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581809.png)
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
-7. Drag the **Customer** entity from the **Connector** to the placeholder:
+6. Drag the **Customer** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581808.png)
 
@@ -89,14 +89,14 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581806.png)
 
-8. In the mapping editor, verify the following:<br />
+7. In the mapping editor, verify the following:<br />
     a. **Method** is set to **By association**<br />
     b. **Association to parent** is set to **XMLDocument_Customer**<br />
-9. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
+8. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     ![](attachments/18448731/18581807.png)
 
-10. Click **OK** to save the mapping.
+9. Click **OK** to save the mapping.
 
 ## 5 Creating the Export Logic
 

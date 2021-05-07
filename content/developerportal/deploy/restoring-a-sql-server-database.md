@@ -2,7 +2,12 @@
 title: "Restore Database on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 70
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -11,6 +16,17 @@ In certain situations (for example, unwanted database updates or data corruption
 **This how-to will teach you how to do the following:**
 
 * Restore the database
+
+For a deep-dive look into this action, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/WZu7QtHZPjtYUTdcV58PKr.jpg"
+  data-uuid="WZu7QtHZPjtYUTdcV58PKr"
+  data-v="4"
+  data-type="inline"
+/>
 
 ## 2 Prerequisites
 

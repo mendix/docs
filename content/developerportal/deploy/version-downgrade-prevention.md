@@ -4,7 +4,12 @@ parent: "general"
 menu_order: 30
 description: "What to do if you cannot migrate a Mendix database to an earlier version"
 tags: ["downgrade", "migration", "pre-analysis", "version", "database"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/version-downgrade-prevention.pdf).
+{{% /alert %}}
 
 ## 1 Scenario
 

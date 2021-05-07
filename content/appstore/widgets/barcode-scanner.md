@@ -24,6 +24,10 @@ For security reasons, certain browsers will only allow access to an end-user dev
 
 The only requirement for the Barcode Scanner widget is that it needs to be placed inside a data view that provides an object with a string attribute. The barcode detection result (being a string) will be stored in this attribute.
 
+{{% alert type="info" %}}
+Please make sure that the length of this string attribute is long enough to store barcode detection results for your use case, otherwise the application will error out. If you're not sure beforehand, then we recommend to set the string attribute length to _Unlimited_.
+{{% /alert %}}
+
 When the widget is placed on a page, it will automatically put a black canvas overlay on top of the entire page. This canvas will provide end-users with the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.
 
 ### 2.1 Data Source Tab

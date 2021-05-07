@@ -111,12 +111,15 @@ The browser you use needs to have JavaScript turned on.
 {{% /alert %}}
 
 ## 5 Cloud Foundry
+
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
 ## 6 Docker
+
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
 ### 6.1 Kubernetes
+
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
@@ -137,7 +140,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### 7.3 Java{#java}
+### 7.3 Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
@@ -164,7 +167,7 @@ Current support:
 Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
 {{% /alert %}}
 
-## 9 File Storage
+## 9 File Storage {#file-storage}
 
 ### 9.1 Storage Services for Containers
 

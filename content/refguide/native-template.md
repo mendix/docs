@@ -41,15 +41,13 @@ version from 4.0.0 to the latest. Ideally, you should choose the most recent sup
 
 React Native modules are npm packages that include dependencies which must be linked with your platform-specific projects so that the React Native modules can be compiled with the apps.
 
-As with auto-linking, we describe the automated process of linking a React Native Module with the platform-specific projects.
-
 The Native Template fully supports the [React Native's CLI auto-linking capabilities](https://github.com/react-native-community/cli/blob/master/docs/autolinking). Libraries that are auto-linkable by default will be correctly linked to the platform-specific projects. 
 
 For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to publicly known capabilities. We will expand the documentation when the API becomes public.
 
 ## 5 Native Mobile Toolkit
 
-The Native Mobile Toolkit is a Mendix-developed NPM module that is used to facilitate the configuration requirements of platform-specific projects. It lets you define app features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
+The Native Mobile Toolkit is a Mendix-developed npm module that is used to facilitate the configuration requirements of platform-specific projects. It lets you define app features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
 
 The configuration is written in JSON. The configuration file is versioned using an incremental number. The version is incremented when breaking changes are introduced.
 
@@ -560,7 +558,7 @@ location when configuring the app.
 
 ### 5.4 Running the Native Mobile Toolkit
 
-The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `npm install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
+The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
 {{% alert type="info" %}}
 The npm script expects that the Native Mobile Toolkit configuration files are at the root of the project, and named **config.json**. This is always the case when using the Mendix Native Mobile Builder to configure a local or a remote project.  

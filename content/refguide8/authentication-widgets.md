@@ -5,6 +5,10 @@ menu_order: 55
 tags: ["authentication", "widgets", "studio pro", "login", "password"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Authentication widgets are used to sign users in and log them out. 

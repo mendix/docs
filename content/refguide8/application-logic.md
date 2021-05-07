@@ -6,6 +6,10 @@ description: "Presents an overview of documentation on microflows and nanoflows.
 tags: ["studio pro", "logic", "microflow", "nanoflow"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 While you can create a simple Mendix app using widgets on pages, you can unleash the power of Mendix by adding application logic to your app.

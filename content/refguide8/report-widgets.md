@@ -6,6 +6,10 @@ tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 {{% alert type="warning" %}}Report widgets are not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction

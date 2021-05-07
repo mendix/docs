@@ -5,6 +5,10 @@ menu_order: 35
 tags: ["studio pro", "file widgets", "widget"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 File widgets allow end-users to upload, download, and display files and images. 

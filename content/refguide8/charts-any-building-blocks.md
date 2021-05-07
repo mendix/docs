@@ -6,6 +6,10 @@ menu_order: 40
 tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Studio Pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Any Chart is a widget which is available in the Mendix Marketplace here: [Any Chart](/appstore/modules/any-chart) module. The Any Chart module enables you to build all the chart types that are possible with Plotly.js up to the version mentioned in the widget description in the Marketplace. More about Plotly.js is available here: https://plot.ly/javascript/reference/.

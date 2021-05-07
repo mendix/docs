@@ -505,14 +505,12 @@ The version is required and used for backwards compatibility purposes. For now t
 
 ```
 interface AndroidSplashScreensConfig{
-    "images": [
-        {
-            "filename": "splash.png";
-            "directory": "drawable-hdpi" | "drawable-xhdpi" | "drawable-xxhdpi",
-            "title": string;
-        }
-    ],
-    "version": 1
+  "images": Array<{
+          "filename": "splash.png";
+          "directory": "drawable-hdpi" | "drawable-xhdpi" | "drawable-xxhdpi",
+          "title": string;
+      }>,
+  "version": 1
 }
 ```
 

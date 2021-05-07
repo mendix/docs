@@ -1,7 +1,7 @@
 ---
 title: "Native Template"
 parent: "native-mobile"
-menu_order: 11
+menu_order: 12
 tags: ["mobile", "template", "native", "iOS", "Android", "reference guide"]
 ---
 
@@ -34,8 +34,7 @@ The keys represent the Mendix Studio Pro version. The `min` and `max` values are
 
 {{% image_container width="200" %}}![Mendix Versions](attachments/native-template/mendix-version.png){{% /image_container %}}
 
-So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template 
-version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
+So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
 
 ## 4 Auto-Linking Dependencies
 
@@ -546,10 +545,10 @@ the toolkit will look in the **assets/firebase** folder for the appropriate conf
 
 The files are looked up by name. The expected names per platform are the following: 
 
-| Platform | Expected name            | 
-|----------|--------------------------|
+| Platform | Expected Name            |
+| -------- | ------------------------ |
 | Android  | google-services.json     |
-| iOS      | GoogleService-Info.plist | 
+| iOS      | GoogleService-Info.plist |
 
 The Native Mobile Toolkit does not verify the validity of the provided configuration files. It only moves them to the correct 
 location when configuring the app. 

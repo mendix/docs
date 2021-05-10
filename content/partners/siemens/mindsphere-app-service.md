@@ -47,17 +47,33 @@ Once your order is processed, your entitlement to the MindSphere App Service wil
 
 On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate a tenant needs to be created within MindSphere.
 
-{{% todo %}}[How is this triggered]{{% /todo %}}
+{{% todo %}}[How is this triggered - there is no link in the latest flow (16 April)]{{% /todo %}}
 
-Once all the resources have been provisioned, the the Mendix Administrator will receive an email with credentials to the MindSphere Tenant consisting of the following:
+Once all the resources have been provisioned, the Mendix Administrator for your company will receive an email confirming that your MindSphere account has been created. The email will also contain the following:
 
-* Client ID
-* Client Secret
-* Client URI
+* The name of your MindSphere account – this is the client URI
+* A link to enable you to [create the binding keys](#binding-keys) – see below for more information
 
 ### 2.3 Linking to Asset Manager
 
+Once you have the name of your MindSphere account, you can use this to link your account to the required assets.
+
+You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation.
+
+Alternatively, you can share existing assets.
+
+To do this, you need to set up a **Collaboration** between the tenant owning the assets and your new MindSphere account, as given in the email you have received. The steps are as follows:
+
+1. Sign in to the MindSphere Launchpad using the credentials of the tenant which owns the assets.
+2. Go to **Settings**.
+3. Click **Collaborations**.
+4. Click **Offer Collaboration**, enter the **Tenant name** of your new tenant, and click **Offer**
+    You now need to accept the collaboration offer.
+5. Sign 
+
 {{% todo %}}[This section to be completed by MindSphere Documentation Team?]{{% /todo %}}
+
+Full information on this can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
 ## 3 Using the MindSphere App Service
 
@@ -69,11 +85,11 @@ Unless you are adding features to an existing app, it is recommended that you st
 
 {{% todo %}}[Need a link to the authenticator module]{{% /todo %}}
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [Mindsphere Iot Authenticator Module](https://example.com).
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere Iot Authenticator Module](https://example.com).
 
-Download the **Mindsphere Iot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere Iot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
 
-### 3.2 Obtaining Binding Keys
+### 3.2 Creating Binding Keys{#binding-keys}
 
 {{% todo %}}[What is the link to do this, cannot do it through the marketplace - are they the same as the credentials provided by email when the tenant has been provisioned]{{% /todo %}}
 

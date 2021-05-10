@@ -29,7 +29,7 @@ You need a MindSphere user account on a developer tenant. This account needs the
 * mdsp:core:StandardUser
 * mdsp:core:TenantUser
 
-### 2.2 Assets
+### 2.2 Assets{#create-assets}
 
 This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
 

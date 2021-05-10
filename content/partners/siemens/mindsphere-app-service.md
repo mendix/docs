@@ -54,24 +54,38 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 * The name of your MindSphere account – this is the client URI
 * A link to enable you to [create the binding keys](#binding-keys) – see below for more information
 
+{{% todo %}}[How do they get the password for the tenant?]{{% /todo %}}
+
 ### 2.3 Linking to Asset Manager
 
 Once you have the name of your MindSphere account, you can use this to link your account to the required assets.
 
-You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation.
+You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindphere-example-app#create-assets).
 
 Alternatively, you can share existing assets.
 
-To do this, you need to set up a **Collaboration** between the tenant owning the assets and your new MindSphere account, as given in the email you have received. The steps are as follows:
+To do this, you need to set up a **Collaboration** between the tenant owning the assets and the tenant in your new MindSphere account, as given in the email you have received. You can then share assets with your new tenant. The steps are as follows:
 
 1. Sign in to the MindSphere Launchpad using the credentials of the tenant which owns the assets.
 2. Go to **Settings**.
 3. Click **Collaborations**.
-4. Click **Offer Collaboration**, enter the **Tenant name** of your new tenant, and click **Offer**
-    You now need to accept the collaboration offer.
-5. Sign 
+    ![](attachments/mindsphere-app-service/collaborations.png)
+4. Click **Offer Collaboration**, enter the **Tenant name** of your new tenant, and click **Offer**.
 
-{{% todo %}}[This section to be completed by MindSphere Documentation Team?]{{% /todo %}}
+    You now need to accept the collaboration offer.
+5. Sign in to the MindSphere Launchpad using the credentials of your new tenant.
+6. Go to **Settings > Collaborations**.
+7. Accept the offer to collaborate.
+
+    You now need to share the asset(s)
+8. Sign in to the MindSphere Launchpad using the credentials of the tenant which owns the assets.
+9. Click  **Asset Manager** and then view your assets.
+10. Choose the asset you want to share and, in the advanced settings, select **Share asset**.
+    ![](attachments/mindsphere-app-service/share-asset.png)
+11. Choose your new tenant as the collaboration you want to share the asset with and click **Share**.
+
+    To confirm the share, you will need to sign in to MindSphere with the credentials of your new tenant and go to the **Asset Manager** there. You will see the offer in the **Sharings** tab.
+    ![](attachments/mindsphere-app-service/sharing-overview.png)
 
 Full information on this can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
@@ -91,23 +105,21 @@ Download the **MindSphere Iot Authenticator Module** by following the instructio
 
 ### 3.2 Creating Binding Keys{#binding-keys}
 
-{{% todo %}}[What is the link to do this, cannot do it through the marketplace - are they the same as the credentials provided by email when the tenant has been provisioned]{{% /todo %}}
+To authenticate your calls you will need to provide the MindSphere IoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
 
-To authenticate your calls you will need to provide the MindSphere IoT Authenticator Module with an access key and a secret key. You need to retrieve these from the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
-
-1. Go to **INSTRUCTIONS ON WHERE TO GO**
+1. Click the link **Create Binding Keys** in the welcome email you received.
 
 2. Choose the **Product Name** *MindSphere IoT*.
 
-3. The **Service Environment** should be left as *Existing Instance*.
+3. Click **Create Binding Keys**.
 
-4. Enter a **Name for Your App Connection** so that you can retrieve this pair of keys from the Developer Portal in future.
+4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
 5. Click **Create Keys**.
 
     ![](attachments/mindsphere-app-service/create-keys.png)
 
-    You will see a pop-up containing your two keys: **One-time Access Key** and **One-time Secret Key**.
+    You will see a pop-up containing your two keys: *Access Key** and **Secret Key**.
 
 6. Click **Copy Key** for each of the two keys and save them somewhere safe – you will not be able to access them again.
 
@@ -128,8 +140,8 @@ In the REST call, an HTTP Header is added called *Authorization* and this is giv
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIotAuthenticator* module:
 
 * **URI** – this is the *Client URI* which is provided in the email you receive after the MindSphere tenant is provisioned 
-* **ClientId** – this is the *Client ID* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *One-time Access Key* in the binding keys you can obtain in the Developer Portal
-* **ClientSecret** – this is the *Client Secret* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *One-time Secret Key* in the binding keys you can obtain in the Developer Portal
+* **ClientId** – this is the *Client ID* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *Access Key* in the binding keys you can obtain in the Developer Portal
+* **ClientSecret** – this is the *Client Secret* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *Secret Key* in the binding keys you can obtain in the Developer Portal
 
 ![](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
 

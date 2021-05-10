@@ -197,6 +197,8 @@ For server-based installations, the following storage types mounted by the OS ar
 * Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
 
+Internet Explorer is [no longer supported](ie-support) in Mendix 9.
+
 ## 11 Mobile Operating Systems {#mobileos}
 
 For Mendix native apps, hybrid apps, and the Mendix Mobile app the following operating systems are supported:

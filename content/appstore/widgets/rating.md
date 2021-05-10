@@ -1,10 +1,36 @@
 ---
-title: "Star Rating"
+title: "Rating"
 category: "Widgets"
 description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "star rating", "star", "glyphicon", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "star rating", "rating", "glyphicon", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+## 1 Introduction
+
+The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
+
+![Example](attachments/rating/example.gif)
+
+## 2 Usage
+
+To use this widget, place it in a [data container](https://docs.mendix.com/refguide/data-sources) that has an Integer, Long or Decimal attribute.
+
+The widget offers the following for configuration:
+
+* An Integer, Long or Decimal attribute to store the rating on user-interaction
+* An action (such as Microflow or Nanoflow) to trigger when the value of rating changes
+* An empty icon, to be shown when the value is not yet selected
+* A selected icon, to be shown when the value is selected
+* An amount to defined the maximum amount of icons to be rendered
+* Animation, to define whether the widget should animate when clicking on the desired icon  
+* A **Size** design property with two options (`Small` and `Large`) influencing the icons' size
+* [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
+
+This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
+
+## 3 Previous Versions' Documentation
+
+### Widgets Below v2.0.0
 
 ## 1 Introduction
 
@@ -35,28 +61,6 @@ In order to overwrite the default star icon, add these classes to your project t
  }
 ```
 The `rating-flag` class should be added to the widget configuration on the **Common** tab.
-
-### 2.2 Configuring the Security
-
-Security is a mandatory feature for ratings. This is an example configuration:
-
-![](attachments/star-rating/star-rating1.png)
-
-For the **Campaign** entity access rules, a **User** should only be able to read the average attribute:
-
-![](attachments/star-rating/star-rating2.png)
-
-For the **Rate** entity access rules, the **User** should be able to only write their own rating:
-
-![](attachments/star-rating/star-rating3.png)
-
-When creating a new rating, its important to use the current user's previous rating as the initial rate value. Use a microflow like on the example below for the custom rate-me button:
-
-![Rate Me](attachments/star-rating/rate-me-microflow.png)
-
-To calculate the average rate, add a microflow like the one in the example below to the after-commit and after-delete event handlers in the domain model:
-
-![Calculate Average Rate](attachments/star-rating/calculate-average-rate.png)
 
 ## 3 Developing This Marketplace Component
 

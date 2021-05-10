@@ -13,11 +13,12 @@ Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to
 ### 1.1 Dependencies
 
 * [Object Handling](/appstore/modules/object-handling)
-* *junit-4.11.jar*
-* *org.apache.commons.io-2.3.0.jar*
-* *org.apache.commons.lang3.jar*
-* *org.apache.httpcomponents.httpclient_4.4.1.jar*
-* *org.apache.httpcomponents.httpcore_4.4.1.jar*
+* *junit-4.13.1.jar*
+* *commons-io-2.8.0.jar*
+* *commons-lang3-3.7.jar*
+* *httpclient5-5.0.3.jar*
+* *httpcore5-5.0.3.jar*
+* *hamcrest-2.2.jar*
 
 ## 2 Installation
 

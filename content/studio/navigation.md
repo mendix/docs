@@ -25,15 +25,23 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 {{% /alert %}}
 
-## 2 Properties of Menu Items {#properties-of-menu-items}
+## 2 Navigation Editor Properties
+
+In the navigation editor properties you can set a page or a microflow as a default home page. 
+
+The **Default Home Page** section consists of the following properties:
+
+* **Page** – Allows you to set a page that is opened when an end-user opens the page. A home page icon is displayed in a list of pages against a page that is set as a home page.
+* **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. 
+
+## 3 Menu Item Properties {#properties-of-menu-items}
 
 Properties of the menu items consists of the following sections:
 
 * [Events](#events-section-navigation) 
 * [General](#general-section-navigation) 
 
-{{% image_container width="300" %}}![](attachments/navigation/navigation-properties.png)
-{{% /image_container %}}
+![](attachments/navigation/navigation-properties.png)
 
 ### 2.1 Events Section {#events-section-navigation}
 
@@ -64,13 +72,10 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 
 ### 2.2 General {#general-section-navigation}
 
-The properties that can be configured in the **General** section, are described in the table below.
+The properties that can be configured in the **General** section are the following:
 
-| Property        | Description                                                  | Depends on                                                   |
-| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Caption         | Fill out the name of the menu item here.                     | Nothing                                                      |
-| Icon            | Set the icon for the menu item here.                         | Nothing                                                      |
-| Set As Homepage | Allows you to set a page or a microflow that is opened/performed when an end-user opens the app. A homepage icon is displayed in a list of pages or microflows against a page/microflow that is set as a homepage. | **On Click Action**, available only when a page or a microflow is selected as an **On Click Action**. For more information, see [Events Section](#events-section-navigation). |
+* **Caption** – Allows you to fill in the name of the menu item.
+* **Icon** – Allows you to set the icon of the menu item.
 
 ## 3 Creating a Menu Item {#create-new-menu-items}
 

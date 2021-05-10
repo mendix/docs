@@ -60,7 +60,7 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 
 Once you have the name of your MindSphere account, you can use this to link your account to the required assets.
 
-You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindphere-example-app#create-assets).
+You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
 
 Alternatively, you can share existing assets.
 
@@ -85,7 +85,7 @@ To do this, you need to set up a **Collaboration** between the tenant owning the
 11. Choose your new tenant as the collaboration you want to share the asset with and click **Share**.
 
     To confirm the share, you will need to sign in to MindSphere with the credentials of your new tenant and go to the **Asset Manager** there. You will see the offer in the **Sharings** tab.
-    ![](attachments/mindsphere-app-service/sharing-overview.png)
+    ![](attachments/mindsphere-app-service/sharings-overview.png)
 
 Full information on this can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 

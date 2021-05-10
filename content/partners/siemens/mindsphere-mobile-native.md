@@ -53,7 +53,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_CreateApp.png)
 
-1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might trouble the authentication process.
+1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might trouble the authentication process. E.g. use a combination of company and app name.
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_DeepLink.png)
 
@@ -113,7 +113,9 @@ Change these constants:
 
 * **HostTenant** = name of your tenant
 
-* **MindSphereGatewayURL** if you are not working on *eu1.mindsphere.io*:
+If you are not working on *eu1.mindsphere.io*:
+
+* **MindSphereGatewayURL**
 
 * **PublicKeyURL**
 

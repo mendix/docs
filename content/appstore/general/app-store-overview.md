@@ -3,7 +3,7 @@ title: "Marketplace Overview"
 category: "General Info"
 menu_order: 10
 description: "Presents an overview of how to find and use content from the Mendix Marketplace."
-tags: ["marketplace", "app store", "widget", "connector", "module", "partner"]
+tags: ["marketplace",  "widget", "connector", "module", "partner"]
 aliases:
     - /community/app-store/app-store-overview.html
     - /developerportal/app-store/app-store-overview.html
@@ -20,8 +20,8 @@ This document describes the different sections of the Mendix Marketplace.
 The home page of the Mendix Marketplace has three main tabs at the top:
 
 * **Discover** – the home page, where you can browse various component categories and filter what is displayed
-* **My Marketplace** – click this to go to [My App Store](#my-app-store)
-* **{Your company's private Marketplace page}** – click this to go to your [company's App Store](#company-content)
+* **My Marketplace** – click this to go to [My Marketplace](#my-marketplace)
+* **{Your company's private Marketplace page}** – click this to go to your [Company Content](#company-content)
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -82,14 +82,14 @@ The details page for a component presents the following item information tabs:
 *  **Overview** – contains the following sections:
 	* **Description** – a description of the component
 	* **Screenshots** – screenshots of the component
-	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review** – a section will open where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
+	* **User Reviews** – user reviews of the component; to leave a review for the component, click **Add Review**, which will open a section where you can add text, rate the component, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page); if you are a developer of the component, you can **Reply** to a review
 *  **Documentation** – can include details on typical use cases, features and limitations, dependencies, installation and configuration, and frequently asked questions
 	* [Platform-supported](app-store-content-support#category) components are documented in the various categories of this *Marketplace Guide*
 	* Click **Edit documentation** to open a text editor where you can edit the Marketplace component's documentation
 * **Pricing**  – lists the pricing options (only for paid components)
 * **Releases** – lists all the versions of the component (any of which can be downloaded by clicking **Download**) along with details like the **Framework version** and the **UUID** (which can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*): 
 
-## 4 My App Store {#my-app-store}
+## 4 My Marketplace {#my-marketplace}
 
 ### 4.1 Dashboard {#dashboard}
 
@@ -113,6 +113,8 @@ You may see the **Company only** label on a component, which means it is your co
 In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
 
 To see the component's [details](#details) page, click **View**.
+
+At the top of this page, there is a check box to **Receive notification** when there is a change made to your components (for example, a new version is published, or a component is unpublished). When checked, you will receive email notifications if a component status has changed. Clear this box to stop receiving these emails.
 
 #### 4.2.1 Managing a Component {#manage}
 
@@ -157,6 +159,8 @@ This page contains reviews of [Your content](#content) by other users as well as
 
 ![](attachments/app-store-overview/your-reviews.png)
 
+At the top of this page, there are check boxes to **Receive notification** of reviews added to your components and of replies to your reviews. When checked, you will receive a relevant email about the review and/or reply. Clear these check boxes to stop receiving emails.
+
 ### 4.6 Notifications {#notifications}
 
 This page presents a history of notifications on content you have contributed to:
@@ -171,7 +175,7 @@ This page presents the Marketplace content you have [favorited](#saved):
 
 When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
-## 5 Your Company's App Store
+## 5 Your Company's Marketplace
 
 ### 5.1 Company Content {#company-content}
 
@@ -197,7 +201,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 ### 5.3 User Groups {#user-groups}
 
-You can configure user groups for various levels of access to your company's Marketplace. The available configuration tabs for each user group page are described in the sections below.
+You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
 {{% alert type="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.

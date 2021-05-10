@@ -2,7 +2,7 @@
 title: "Check Box Set Selector"
 category: "Widgets"
 description: "Describes the configuration and usage of the Check Box Set Selector widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "check box set selector", "check box", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "check box set selector", "check box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "XPath Keywords & System Variables"
 parent: "xpath-constraints"
-tags: ["studio pro"]
+tags: ["studio pro", "BeginOfCurrent"]
 ---
 
 ## 1 Overview

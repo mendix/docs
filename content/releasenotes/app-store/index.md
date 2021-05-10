@@ -1,27 +1,68 @@
 ---
 title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
-tags: ["marketplace", "app store", "connector", "module", "add on", "widget"]
+tags: ["marketplace", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+#ki: "There is an issue with users" - AS-1760 (also WS RN)
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 4th, 2021
+
+#### Fixes
+
+* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* We fixed a minor bug for anonymous users.
+
+### April 7th, 2021
+
+#### Improvements
+
+* We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts#mts).
+	{{% alert type="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!
+	{{% /alert %}}
+
+#### Fixes
+
+* We fixed some performance issues where certain Marketplace sections were not loading properly. This also includes connection issues to the App Store/Marketplace within Studio Pro.
+
+#### Known Issues
+
+* There is an issue with users having trouble downloading Windows Service.
+	* Fixed on [May 4th, 2021](#windows-service).
+
+### March 23rd, 2021
+
+#### Improvements
+
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My Marketplace](/appstore/general/app-store-overview#my-marketplace) section of the of Marketplace.
+* Developers can now reply to reviews of their components.
+
 ### February 9th, 2021
 
+#### Improvements
+
 * You can now download [Windows Service](/releasenotes/studio-pro/windows-service) and **Server Distribution** for the latest Studio Pro version using the **Related Downloads** button on the **Get Studio pro** page.  
-* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the beta tag.
+* Adding beta versions for components is no longer supported. Beta versions of published components and existing drafts have been automatically updated to remove the Beta tag.
 
 ### January 26th, 2021
 
-* You are now able to download Studio Pro versions marked as [beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+#### Improvements
+
+* You are now able to download Studio Pro versions marked as [Beta](/releasenotes/beta-features/) from a separate tab on the **Get Studio Pro** page named **Beta Releases**. The default download option (via the **Release Notes** tab) remains the latest stable release of Studio Pro.
+
+#### Fixes
+
 * We fixed some bugs in the [add new Marketplace content](/appstore/general/share-app-store-content#adding) flow and we made error messages more descriptive.
 
 ## 2020
 
 ### December 15th, 2020
+
+#### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
 * We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
@@ -30,25 +71,25 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### May 27th, 2020
 
-#### Fix
+#### Fixes
 
-As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+* As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
 
 ### May 6th, 2020
 
-#### Improvement
+#### Improvements
 
-You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
+* You can now download previous versions of App Store components from the [Mendix App Store](https://appstore.home.mendix.com/). This can be done in the **All versions** tab on the component's [details page](/appstore/general/app-store-overview#details). This can be used as a workaround for not being able to download private content from the App Store available in older versions of Studio Pro/Desktop Modeler due to the [security issue](#private-fix) described below.
 
-#### Fix
+#### Fixes
 
-As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+* As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
 
 ### May 4th, 2020
 
-#### Fix
+#### Fixes
 
-As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
+* As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
 
 ### April 7th, 2020
 
@@ -56,15 +97,15 @@ As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are abl
 
 Downloading [private content](/appstore/general/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
 
-You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version [6](../studio-pro/6).
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
 
 You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 
 ### February 26th, 2020
 
-#### Improvement
+#### Improvements
 
-We have updated the single sign-on functionality in the App Store to use the latest [Mendix SSO](/developerportal/deploy/mendix-sso). Now, the first time you visit any App Store page requiring authentication, you will see a screen asking you to authorize access to your Mendix account. Click **Authorize** to continue.
+* We have updated the single sign-on functionality in the App Store to use the latest [Mendix SSO](/developerportal/deploy/mendix-sso). Now, the first time you visit any App Store page requiring authentication, you will see a screen asking you to authorize access to your Mendix account. Click **Authorize** to continue.
 
 ## 2019
 
@@ -78,9 +119,9 @@ For more information on these support levels, see [App Store Content Support](/a
 
 ### November 6th, 2019
 
-#### Improvement
+#### Improvements
 
-You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#saved) App Store content are published.
+* You can now subscribe to receive emails when new versions of your [favorite](/appstore/general/app-store-overview#saved) App Store content are published.
 
 ### October 23rd, 2019
 
@@ -94,9 +135,9 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 ### October 1st, 2019
 
-#### Improvement
+#### Improvements
 
-We now display the UUID of a App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
+* We now display the UUID of a App Store component in the [Usage](/appstore/general/app-store-overview#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api#createnewapp) in the *Projects API*.
 
 ### September 11th, 2019
 

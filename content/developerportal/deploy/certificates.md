@@ -2,11 +2,11 @@
 title: "Certificates"
 parent: "mendix-cloud-deploy"
 menu_order: 30
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
 tags: ["client certificate", "certification authority", "PKCS12", "connections"]
 aliases:
     - /deployment/mendixcloud/certificates.html
     - /refguide/certificates.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -52,7 +52,7 @@ Virtually all certificate formats can be converted to the PKCS12 format. For mor
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Developer Portal](http://home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
@@ -78,7 +78,7 @@ Loading certificate authorities works much the same way, although they do not re
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Developer Portal](http://home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
+1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click the **Details** of the desired environment.
 
 2. Select the **Network** tab of an application environment.
 

@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
-parent: "push-notifications"
-menu_order: 40
+parent: "notifications"
+menu_order: 97
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
 
@@ -81,7 +81,7 @@ Do the following to add your app to FCM:
 
 	![](attachments/push-server/firebase/android_setup.png)
 
-Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
+Bundle id must be matching with your package id. Make sure to repeat this step for IOS as well.
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 
@@ -92,7 +92,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 	![](attachments/push_notifications_cloud_messaging.png)
 
-1. On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
+1. On this tab, upload either your APNs key or your APNs certificate(s).
 
 ## 6 Setting Up a Service Account
 
@@ -118,6 +118,5 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 ## 8 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
 * [Set Up Push Notifications](setting-up-native-push-notifications)

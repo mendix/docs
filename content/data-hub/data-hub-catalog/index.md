@@ -17,9 +17,10 @@ From the Data Hub [Home](https://hub.mendix.com) screen, you can carry out the m
 ![Data Hub screen](../share-data/attachments/share-data/data-hub-home.png)
 
 You can navigate to the following tabs:
+
 * **Home** – search in the Data Hub Catalog, manually register a service from different applications, select from the most popular services
 
-* Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset
+* **Catalog** – [search](search) for registered assets in the search pane and see details of the metadata of selected asset
 
 * **Landscape** – gain a graphical view of the organization's available services and exposed datasets showing consuming and publishing dependencies (for further details, see [Data Hub Landscape](/data-hub/data-hub-landscape/)
 
@@ -90,23 +91,21 @@ For details on security and accessibility in the Data Hub Catalog and for regist
 
 In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Data Hub Admin](/data-hub/#admin). 
 
-The information that is registered for services and exposed assets are as follows: 
+The information that is registered for data sources and exposed datasets are as follows: 
 
 * **Endpoints** – All registered assets are defined as endpoints (URLs) in the Catalog. The endpoint of the service is accessed by the consuming app. 
 
 * **Environment** – To complete the location of the asset, the endpoints are published to an environment. The location of the OData service also includes the environment to which the publishing app is deployed. Connecting to a data source in the correct environment is very important. For example, when developing an app, you want to connect to the test data of the app deployed to a non-production test or acceptance environment. However, the final production app will have to access the datasets from the production environment - the actual live or working data. In the Data Hub, the **Environment Type** is also specified which indicates to users the quality of the data. 
 
-  {{% alert type="info" %}}
-  You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane) of Studio Pro, you can expand search results to include non-production environments. 
-  {{% /alert %}}
+	{{% alert type="info" %}}
+  You can filter the search results by environment type in the Data Hub Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Data Hub pane](/refguide/data-hub-pane) of Studio Pro, you can expand search results to include non-production environments. {{% /alert %}}
 
 * **Published OData service** – At the service endpoint there are the OData service metadata contract filesthat define the service. Available data sources are registered in the Data Hub Catalog by exposing  datasets in the [published OData service](/refguide/published-odata-services). This service document or metadata contract also includes the exposed attributes and associations that are relevant for connecting to the data they define. 
 
 * **Versions** – The version number of the OData service contracts is also included in the asset registration. The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment. 
 
-  {{% alert type="info" %}}
-  If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is published with a major update in the version number and also deployed to a different endpoint. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic) in *Consumed OData Service*.
-  {{% /alert %}}
+	{{% alert type="info" %}}
+  If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is published with a major update in the version number and also deployed to a different endpoint. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service#semantic) in *Consumed OData Service*. {{% /alert %}}
 
 ## 5 Main Documents in This Category
 

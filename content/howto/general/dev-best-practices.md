@@ -16,7 +16,18 @@ Even with the powerful navigation and search support in Mendix Studio Pro, adher
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
 * A clear structure helps in identifying reusable code
 
-## 2 Project Setup
+For a deep-dive look into implementing such best practices, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/exmmApZY4jMYxqidrzehEQ.jpg"
+  data-uuid="exmmApZY4jMYxqidrzehEQ"
+  data-v="4"
+  data-type="inline"
+/>
+
+## 2 App Setup
 
 ### 2.1 The Application Development Language
 
@@ -26,13 +37,13 @@ There are some reasons why certain parts of an application may use another langu
 
 For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content).
 
-### 2.2 Project Name
+### 2.2 App Name
 
-Every project is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and will want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.
+Every app is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more apps in the future, and will want to be able to recognize this app. We recommend leaving out dates or Mendix version numbers in the app name, since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
 
-Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** or **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
+Every app has at least one configuration, but it may have many. Every app starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** or **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
@@ -56,7 +67,7 @@ The [module roles](/refguide/module-security#module-role) should have logical na
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes app-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
 
 {{% alert type="info" %}}
 Following these entity naming conventions will prevent issues with naming conflicts between modules and entities. For example, if a module named **Customer** contains an entity named **customer** (note the lower-case "c"), there will be a Java compilation error and the app will not run. Renaming the entity to **Customer** will solve the problem.
@@ -90,15 +101,15 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
-The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your project.
+The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your app.
 
 #### 3.3.1 Process-Related Sources
 
-Every project consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
+Every app consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
 
 #### 3.3.2 Entity-Related Sources
 
-Every project has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
+Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
 ### 3.4 Microflows
 
@@ -163,9 +174,9 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 |-----------------|----------------------|
 | Scheduled Event | ScE\_                 |
 
-#### 3.4.6 Project Microflows
+#### 3.4.6 App Microflows
 
-Your [project settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
+Your [app settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-microflow Prefix |
 |-----------------|----------------|----------------------|
@@ -300,7 +311,7 @@ The normal flow in a microflow should be aligned from left to right to ensure re
 
 Avoid crossing of lines of the links between the microflow elements.
 
-If you decide to color code the different activities in your project, be sure to align within your team on their meaning.
+If you decide to color code the different activities in your app, be sure to align within your team on their meaning.
 
 #### 4.2.4 Complexity
 
@@ -326,8 +337,6 @@ Unused and excluded items should be removed from the model when they are no long
 
 [XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
 
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
-
 ### 4.5 Security
 
 The [security](/howto/security/) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
@@ -340,7 +349,7 @@ Apps should keep up with new Mendix releases as much as possible.
 
 ### 4.7 Marketplace Content
 
-When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
 Marketplace modules should NOT be modified. If an ApMarketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
 

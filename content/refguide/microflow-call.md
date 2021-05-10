@@ -67,7 +67,11 @@ When used inside a nanoflow in an offline profile, only primitives and non-persi
 
 ### 3.3 Task Queue
 
-If you want the microflow to run in the background using a task queue, then you need to do the following:
+{{% alert type="warning" %}}
+You cannot execute microflows in a task queue when calling them from a nanoflow.
+{{% /alert %}}
+
+If you want a microflow to call a microflow to run in the background using a task queue, then you need to do the following:
 
 1. Check **Execute this Microflow in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
@@ -86,6 +90,10 @@ This property determines if the returned value from the called microflow should 
 
 The name of the variable, list, or object returned by the activity.
 
-## 4 Common Section {#common}
+## 4 Microflow Calls in Offline-First Apps
+
+It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information on the differences, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*. 
+
+## 5 Common Section {#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}

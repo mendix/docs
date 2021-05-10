@@ -1,16 +1,17 @@
 ---
 title: "Documents"
-category: "Collaboration Tools"
-menu_order: 50
+category: "Collaboration"
+menu_order: 6
 description: "Describes how to manage the documents in your app."
 tags: ["Documents", "Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
 On the **Documents** page, you can upload files to your app and replace existing files with newer versions.
 
-![](attachments/documents.png)
+![](attachments/documents/documents.png)
 
 ## 2 Actions
 
@@ -20,7 +21,7 @@ You can perform the actions described below via the buttons on your app's **Docu
 
 Click **Upload a file** to upload a new document:
 
-{{% image_container width="400" %}}![](attachments/upload-file.png)
+{{% image_container width="400" %}}![](attachments/documents/upload-file.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -31,7 +32,7 @@ All file types are allowed, and they are scanned for viruses by Mendix.
 
 To add a label to a document or create a new label, use the options under **Label**:
 
-![](attachments/document-label.png)
+![](attachments/documents/document-label.png)
 
 ### 2.3 Downloading a Document
 
@@ -41,7 +42,7 @@ To download a document, select the document and click **Download**.
 
 Click **Details** to see the description of the document, comments, and all the versions of the document:
 
-![](attachments/document-details.png)
+![](attachments/documents/document-details.png)
 
 On the **Document** details page, you can perform the following actions:
 
@@ -56,5 +57,5 @@ To upload a new version of a document directly from the document list, select th
 ## 3 Read More
 
 * [Buzz](buzz)
-* [App Team](team)
+* [Team](team)
 * [Stories](stories)

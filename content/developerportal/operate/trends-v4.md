@@ -4,16 +4,17 @@ parent: "metrics"
 menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Please do not rename the anchors in this document as they are used in links from the Developer Portal
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal.
 ---
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
 {{% alert type="info" %}}
-This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](trends).
+This document describes the trends graphs available in Mendix Cloud v4. If your app is deployed to the deprecated Mendix Cloud v3, please refer to [Trends in Mendix Cloud v3](trends).
 
 If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 {{% /alert %}}
@@ -30,8 +31,8 @@ Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allo
 
 Assign permission by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
-2. Click **Security** under the **Settings** category on the left.
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
+2. Click **Collaborate** > **Security** on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
 5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
@@ -44,8 +45,8 @@ Assign permission by following these steps:
 
 You can find the trends by following these steps:
 
-1. Open your app in the [Developer Portal](http://home.mendix.com).
-2. Click **Metrics** under the **Operate** category.
+1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
+2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
 
 ![](attachments/trends-v4/environment.png)

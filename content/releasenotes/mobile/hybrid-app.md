@@ -14,6 +14,18 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2021
 
+### Hybrid App Base 5.0.5
+
+**Release date: April 16th, 2021**
+
+* We upgraded the push notification library to fix an issue with iOS push notifications.
+
+### Hybrid App Base 5.0.4
+
+**Release date: March 16th, 2021**
+
+* We fixed an issue with file store that sometimes corrupted the runtime tokens.
+
 ### Hybrid App Base 5.0.3
 
 **Release date: March 5th, 2021**

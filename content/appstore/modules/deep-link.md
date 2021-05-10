@@ -2,7 +2,7 @@
 title: "Deep Link"
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "deep link", "platform support"]
+tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +26,7 @@ After importing the module into your application you need to configure it.
 
 ### 2.1 Initializing the Deep Link Module on App Startup
 
-To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
+To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **App** > **Settings** > **Server** > **After startup**). 
 
 If you already have a startup microflow configured in your app, you need to extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
 
@@ -34,7 +34,7 @@ The `/link/` path needs to be added as a request handler in your application. Th
 
 ### 2.2 Security
 
-All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **Project** > **Security** > **User roles**).
+All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
 All other roles—including your guest roles—should have the **DeepLink.User** user role. Otherwise they will not be able to use any link.
 

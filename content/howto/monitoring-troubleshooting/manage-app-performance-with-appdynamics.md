@@ -68,7 +68,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
-1. Open your Mendix application, and then select **Settings** in the **Project Explorer**:
+1. Open your Mendix application, and then select **Settings** in the **App Explorer**:
 2. Open a configuration:
 
      ![](attachments/19202618/19398903.png)
@@ -174,7 +174,7 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Set Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Solve Load & Import Errors](solving-load-and-import-errors)
 * [Debug Microflows Remotely](debug-microflows-remotely)

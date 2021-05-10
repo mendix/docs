@@ -3,7 +3,12 @@ title: "MS Windows: Activate a Mendix License on Microsoft Windows"
 parent: "deploy-mendix-on-microsoft-windows"
 menu_order: 10
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/activate-a-mendix-license-on-microsoft-windows.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 menu_order: 20
 tags: ["Deploy", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ Because you can run several Mendix apps in the same namespace, each environment 
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 8 and Mendix Studio Pro version 7 from version 7.23.3 (build 48173). There is currently no support for beta versions of Mendix Studio Pro version 9.0.
+* Mendix Studio Pro version 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 
 ## 3 Deploying an App for the First Time
@@ -36,7 +37,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **General** page for your app in the Developer Portal.
+1. Open the **General Settings** page for your app in the Developer Portal.
     
       ![](attachments/private-cloud-deploy/image2.png)
 
@@ -509,13 +510,13 @@ If the cluster is running in standalone mode, you need to delete all `MendixApp`
 To confirm that environments and their associated storage have been successfully deleted, run:
 
 For OpenShift:
-```bash
+```shell
 oc get mendixapp -n {namespace}
 oc get storageinstance -n {namespace}
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl get mendixapp -n {namespace}
 kubectl get storageinstance -n {namespace}
 ```
@@ -531,12 +532,12 @@ If the Operator fails to deprovision an app's database or file storage, the `*-d
 To force removal of a StorageInstance `{name}`, run:
 
 For OpenShift:
-```bash
+```shell
 oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 
@@ -549,6 +550,10 @@ After manually removing the StorageInstance, you'll need to manually clean up an
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
 ### 6.5 ApplicationRootUrl Needs to be Set Manually
+
+{{% alert type="info" %}}
+This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
+{{% /alert %}}
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 

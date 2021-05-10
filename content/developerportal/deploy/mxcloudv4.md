@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 50
 description: "Frequently asked questions about Mendix Cloud v4"
 tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 What Is Mendix Cloud v4?
@@ -23,9 +24,9 @@ Mendix Cloud v4 is a mature product, launched in Q1 2017, and has a number of im
 
 ## 2 Can I Upgrade All My Apps?
 
-If you are currently using Mendix Cloud v3, you can to move your app(s) from v3 to v4 using the the instructions in [Migrate to Mendix Cloud v4](migrating-to-v4).
+If you are currently using the deprecated Mendix Cloud v3, you can to move your app(s) from v3 to v4 using the the instructions in [Migrate to Mendix Cloud v4](migrating-to-v4).
 
-The most important thing is that your app needs to be on a supported version of Mendix, that is **Mendix version 6.0 or above**.
+The most important thing is that your app needs to be on a supported version of Mendix, that is **Mendix version 7.0 or above**.
 
 For other considerations, refer to [Migrate to Mendix Cloud v4](migrating-to-v4).
 
@@ -72,11 +73,12 @@ There are a few other considerations to bear in mind when you are running in Men
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
 * It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
 * You can't upload files bigger than 1GB to your app
+* You can't download files bigger than 1GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:
     * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
-    * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above
+    * If using Mendix 7, upgrade to version 7.16 or above
     * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
 * The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!
 

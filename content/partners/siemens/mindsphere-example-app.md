@@ -105,11 +105,11 @@ Open Studio Pro without opening an app and follow these steps:
 
 	![](attachments/mindsphere-example-app/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app:
+4. Click **Download** to create a new app app using this app:
 
 	![](attachments/mindsphere-example-app/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**:
 
 	![](attachments/mindsphere-example-app/app-store-download-project.png)
 
@@ -220,7 +220,7 @@ To use the app:
 
 ### 6.1 Single Sign-On
 
-The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
+The app uses Single Sign-on (SSO) to identify the user. This is initiated in the **Runtime** tab of the **App Settings**, where the microflow **MindSphereSingleSignOn.RegisterSingleSignOn** is called on startup. This microflow sets up two configurations for the user.
 
 #### 6.1.1 User Role
 

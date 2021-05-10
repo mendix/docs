@@ -18,9 +18,21 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 
 Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto8/front-end/sass-eight) for a styling solution which might suit you better.
 
+
+For a deep-dive look into styling with Calypso, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/M2NCccTnfnh7Yx2gjEyBpf.jpg"
+  data-uuid="M2NCccTnfnh7Yx2gjEyBpf"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Prerequisites
 
-* Download Calypso [here](https://www.dropbox.com/sh/46hip6pq8s9ipqp/AAAHBwm-8qcv9bQKSR7BrirCa?dl=0)
+* Download Calypso [here](https://www.dropbox.com/sh/r1vx2kig86v5wa6/AABQC8MJfNi8Ff9skinrIf7Ea?dl=0)
 
 ## 3 Setting Up Calypso
 

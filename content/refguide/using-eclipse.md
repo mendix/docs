@@ -4,7 +4,7 @@ category: "Java Programming"
 tags: ["studio pro"]
 ---
 
-Using Eclipse to write and debug the Java actions in your Mendix project is really easy. When the Mendix model is deployed, an Eclipse project file, classpath file and launch configuration are generated.
+Using Eclipse to write and debug the Java actions in your Mendix app is really easy. When the Mendix model is deployed, an Eclipse project file, classpath file and launch configuration are generated.
 
 In Mendix, all text is saved in UTF-8 encoding. First make sure your source code is also saved in UTF-8\. This can be done by going to the window menu and selecting preferences, then selecting UTF-8 as shown in the screenshot below.
 
@@ -26,11 +26,11 @@ Selecting a default JDK.
 
 Make sure you add a JDK and select it as the default in Eclipse.
 
-To add a Mendix project to Eclipse, you can perform these steps:
+To add a Mendix app to Eclipse, you can perform these steps:
 
 *   Open the File menu and click Import
 *   Open the 'General' folder and select 'Existing projects into Workspace' and click next
-*   Use the option 'select root directory', browse to your Mendix project folder and click finish
+*   Use the option 'select root directory', browse to your Mendix app folder and click finish
 
 {{% alert type="info" %}}
 

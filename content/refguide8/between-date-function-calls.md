@@ -9,6 +9,17 @@ tags: ["studio pro", "between date function calls", "expression", "expressions"]
 
 Between date function calls calculate the differences between two dates.
 
+For a deep-dive look into working with DateTime functions, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/Cjy2qSeKcGhcuKEmkKesp2.jpg"
+  data-uuid="Cjy2qSeKcGhcuKEmkKesp2"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 millisecondsBetween
 
 The `millisecondsBetween` function calculates the difference between the input values in milliseconds.

@@ -1,7 +1,7 @@
 ---
 title: "Create Branch Line"
 parent: "branch-line-manager-dialog"
-menu_order: 90
+menu_order: 10
 tags: ["studio pro", "create branch line"]
 ---
 
@@ -44,11 +44,11 @@ Select from which branch line you want to create another branch line. We recomme
 
 This setting is only available when you select [Tagged version](#tagged-version) in **Create branch from**.  
 
-Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the project.
+Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
 
 ## 6 Branch Name
 
-Enter a name of the new branch line.
+Enter a name for the new branch line.
 
 {{% alert type="warning" %}}
 Branch names cannot include special characters (for example, `@`, `$`, `#`). 

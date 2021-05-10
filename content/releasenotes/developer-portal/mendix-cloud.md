@@ -13,6 +13,82 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### April 29th, 2021
+
+#### Improvement
+
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
+
+    If you need more than 32 instances please contact Mendix Support.
+
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+
+Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
+
+**What does this mean for you?**
+
+We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
+
+You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) is using IPv6, by using [https://ipv6-test.com](https://ipv6-test.com/).
+
+**Impact**
+
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
+
+### April 15th, 2021
+
+#### Fix/Improvement
+
+* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2). (Tickets 117609 and 117622)
+
+### March 30th, 2021
+
+* We have implemented various visual changes to the user interface of the Developer Portal.
+
+### March 18th, 2021
+
+#### Improvements
+
+* We added the ability to completely clear all the data from your database running in a licensed environment.
+* We removed the ability to publish **App Services**. These have been deprecated for some time. You should use a [Published Web Service](/refguide/published-web-services) or a [Published REST Service](/refguide/published-rest-service) instead.
+
+#### Fix
+
+* We fixed an issue where deployments failed if there were too many log nodes. (Ticket 115140)
+
+    As a consequence of this, you will no longer be able to see the log levels of all your [log nodes](/developerportal/deploy/environments-details#log-levels) if your app is not running. Only log nodes which are not set to `Info` will be visible until you restart your app.
+
+### March 16th, 2021
+
+* We updated the Mendix runtime to send back usage information to Mendix for your apps deployed to the Mendix Cloud. See below for more information about this change.
+
+    This will be enabled the next time you redeploy your app. 
+
+**What happens to this information?**
+
+The sole purpose of retrieving this information is to check compliance against your license subscription. The information sent to Mendix allows us to provide you with clear insights into the exact usage of your apps and the number of active users in a given time-period. This can also help you in determining an optimum user plan in the long run.
+
+This information is eventually stored within Mendix and gives us an aggregated view of usage of your apps. 
+
+**What is the information sent back?**
+
+Usage information in this context is the username, project id, app environment name, and date & time of logon. 
+Note that **the username is scrambled using a hashing algorithm**, ensuring that the actual username cannot be discovered. 
+
+**Who is a user?**
+
+Everyone who logs onto the app with a username and password is considered an app user. All anonymous users are treated as a single user for this purpose.
+
+**When and how does this happen?**
+
+In connected environments, this usage information will be sent back to Mendix automatically, at regular intervals — by default this is set to once every day. This transmission will take place at around(randomized) midnight. Data will also be sent when the app is restarted. 
+
 ### March 3rd, 2021
 
 * We updated the [deploy API](/apidocs-mxsdk/apidocs/deploy-api), [Build API](/apidocs-mxsdk/apidocs/build-api), [Team Server API](/apidocs-mxsdk/apidocs/team-server-api), [Backups API V2](/apidocs-mxsdk/apidocs/backups-api), and [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1) to:
@@ -36,7 +112,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17th, 2020
 
-* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
 	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 

@@ -2,7 +2,7 @@
 title: "SAML"
 category: "Modules"
 description: "Describes the configuration and usage of the SAML module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "saml", "idp", "identity provider", "platform support"]
+tags: ["marketplace", "marketplace component", "saml", "idp", "identity provider", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,6 +26,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 * SAML1.0 is not supported.
 
 ### 1.4 Dependencies
+
+{{% alert type="warning" %}}
+If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+{{% /alert %}}
 
 * [MxModelReflection](/appstore/modules/model-reflection)
 
@@ -126,6 +130,7 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unsupported action: [action], only ....."** – The URL is incorrect. Validate that the URL is correctly structured as *action: login, assertion, metadata, discovery*.
 * **“MSIS7046: The SAML protocol parameter ‘RelayState’ was not found or not valid.”** – This error can be shown on the ADFS server, most likely when you are using Mac OSX and a Safari browser. Setting the `BindingURI_Redirect` constant to true might help resolve the issue. By default, Mendix favors the `Post` binding, as the maximum size exceeds that of a `Redirect` binding due to its use of cookies and post information instead of URL parameters. The size can be a factor when using encryption.
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory), and also because it is a good idea to create two unique users (for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com").
+* **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
 ## 6 URLs
 

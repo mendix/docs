@@ -2,7 +2,7 @@
 title: "Mobile Device"
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
+tags: ["marketplace", "marketplace component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -45,7 +45,7 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 ### 1.3 Dependencies
 
-* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [locally built](/howto/mobile/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
+* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your locally built app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
 ### 1.4 Demo App
 

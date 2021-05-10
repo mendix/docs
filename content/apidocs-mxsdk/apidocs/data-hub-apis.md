@@ -95,7 +95,7 @@ The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform
 
 Information that is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
 
-### 4.1 Transform API Location
+### 4.1 Using the Transform API
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 

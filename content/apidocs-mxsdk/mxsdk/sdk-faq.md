@@ -40,7 +40,7 @@ When changing these components, make sure to use the [reverse engineering tool](
 
 ### 1.6 What Are "Promises"?
 
-Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript). We're happy to tell you all about it!
+Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when-js-and-promises-in-typescript). We're happy to tell you all about it!
 
 ## 2 Common Error Messages
 

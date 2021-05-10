@@ -17,13 +17,13 @@ To use this widget, place it in a [data container](https://docs.mendix.com/refgu
 
 The widget offers the following for configuration:
 
-* An Integer, Long or Decimal attribute to store the rating on user-interaction
-* An action (such as Microflow or Nanoflow) to trigger when the value of rating changes
+* An Integer, Long, or Decimal attribute to store the rating on user-interaction
+* An action (such as microflow or nanoflow) to trigger when the value of rating changes
 * An empty icon, to be shown when the value is not yet selected
 * A selected icon, to be shown when the value is selected
-* An amount to defined the maximum amount of icons to be rendered
+* An amount to define the maximum amount of icons to be rendered
 * Animation, to define whether the widget should animate when clicking on the desired icon  
-* A **Size** design property with two options (`Small` and `Large`) influencing the icons' size
+* A **Size** design property with two options (`Small` and `Large`) influencing icon size
 * [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).

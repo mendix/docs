@@ -16,7 +16,7 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Improvements
 
-* AR-specific device features are now *not* mandatory. We added a dialog box which notifies people using unsupported devices. The dialog box informs users that AR might not fully work on their specific device.
+* AR-specific device features are now *not* mandatory. We added a dialog box which notifies people using unsupported devices. The dialog box informs users that AR might not fully work on their specific device. The dialog box will also mention which specific device features prevent AR from working.
 * Devices that do not comply with AR requirements will once again be able to download the [Make It Native 9](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US) app from the Google Play Store. However, Mendix 9 AR features might not be fully testable on such devices.
 
 ## Android 1.0.4 / iOS 1.0.2

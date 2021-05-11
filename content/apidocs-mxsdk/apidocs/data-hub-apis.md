@@ -89,11 +89,9 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 ## 4. Data Hub Transform Open API Spec {#transform}
 
-For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. Information that is defined for the consumed and published services—located in the **dependencies.json** file for the app—is used.
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the registration request body for the PUT published endpoints for the Data Hub API. The Transform API extracts the information from the **dependencies.json** file and the response can be used in the request bodies for the PUT calls to the Data Hub API.
 
-The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the **dependencies.json** file. The API returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API.
-
-Information that is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from **dependencies.json**](#not-in-depfile)
+Information that is not returned by the Transform API and which should be specified separately is listed in [Optional Values not Obtained from **dependencies.json**](#not-in-depfile)
 
 ### 4.1 Using the Transform API
 
@@ -117,11 +115,11 @@ When making the call to the API the following two object have to be specified.
 
 Insert the `dependencies.json` file of the app *in escaped json format*.
 
-#### 4.3.2 * `EndpointLocationConstants`
+#### 4.3.2 `EndpointLocationConstants`
 
-This object must specify the location constants for the consumed endpoints that are referred to in the `dependencies.json` file.
+This object must specify the location constants for the published endpoints that are referred to in the `dependencies.json` file.
 
- You can find the values in the **constant location** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see [Extracting location constants for the Transform API]()
+ You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see [Location Constants Values](/data-hub/general/data-hub-api-how-t#metadata-file) section of the *Using the Data Hub APIs* document.
 
  For the example given in the Open API  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
 

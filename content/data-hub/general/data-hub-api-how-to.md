@@ -339,6 +339,56 @@ In all cases, you are advised to notify all consumers of changes and also new ve
 
 ## 9 Using the Transform API {#transform}
 
+For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. For this registration, the information that is defined in the location constants of the consumed and published services—located in the **dependencies.json** file for the app—is used.
+
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to extract the information from the **dependencies.json** file. The Transform API response can be used for the request bodies for the [PUT published endpoints](#put-service) calls.
+
+{{% alert type="info" %}}There are additional attributes that are not returned by the Transform API. These are specific to information for the Data Hub Catalog that you must add to the request body which are described in [Optional Values not Obtained from **dependencies.json**] {#not-in-depfile}.{{% /alert %}}
+
+The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
+
+### 9.1 Location of the dependencies.json file of an App
+
+For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+
+This file has to be inserted in the call to the API in *escaped json format*.
+
+### 9.2 Method and Endpoint
+
+`POST /applications/{AppUUID}/environments`
+
+#### 9.2.1 Request Body
+
+When making the call to the API the following two object have to be specified.
+
+* `DependenciesJsonString` – insert the `dependencies.json` file of the app *in escaped json format*
+* `EndpointLocationConstants` – this object must specify the [location constants](#metadata-file) for the published endpoints that are referred to in the `dependencies.json` file
+
+#### 9.2.2 Location Constants Values {#metadata-file}
+ You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the project also located in the **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+
+ For the example given in the Open API  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
+
+    ```json  "EndpointLocationConstants": [
+    {
+      "Name": "MyFirstModule.EmployeeManagement_Location",
+      "Value": "https://hr.acmecorp.test/employeeservice/v2"
+    } ```
+
+### 9.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
+
+There are several objects that are specific to the Catalog registration of a data source that can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. These are not available in the `dependencies.json` file. These attributes are the following:
+
+* `PublishedEndointRequestDetails
+  * `SecurityClassification`
+  * `Discoverable`
+  * `Validated`
+* `ServiceVersion`
+    *`Tags`
+
+When the above attributes are not specified, the registration will be made using default values. They can also be changed when the asset is [curated]
+
+You can also specify **Tags** for the data source when adding the above optional values to your request body.
 
 ## 10 Sample Contract File {#sample-contract}
 

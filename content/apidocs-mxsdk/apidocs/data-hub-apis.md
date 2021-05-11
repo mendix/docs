@@ -119,7 +119,7 @@ Insert the `dependencies.json` file of the app *in escaped json format*.
 
 This object must specify the location constants for the published endpoints that are referred to in the `dependencies.json` file.
 
- You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see [Location Constants Values](/data-hub/general/data-hub-api-how-t#metadata-file) section of the *Using the Data Hub APIs* document.
+ You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see [Location Constants Values](/data-hub/general/data-hub-api-how-to#metadata-file) section of the *Using the Data Hub APIs* document.
 
  For the example given in the Open API  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
 
@@ -129,7 +129,7 @@ This object must specify the location constants for the published endpoints that
       "Value": "https://hr.acmecorp.test/employeeservice/v2"
     } ```
 
-### 4.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
+### 4.4 Optional Values not Obtained from dependencies.json {#not-in-depfile}
 
 There are several objects that are specific to the Catalog registration of a data source that can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. These are not available in the `dependencies.json` file. These attributes are the following:
 
@@ -140,7 +140,7 @@ There are several objects that are specific to the Catalog registration of a dat
 * `ServiceVersion`
     *`Tags`
 
-When the above attributes are not specified, the registration will be made using default values. They can also be changed when the asset is [curated]
+When the above attributes are not specified, the registration will be made using default values. The **Discoverable**, **Validated**, and **Tags** can also be added when the asset is curated in the Data Hub Catalog.
 
 You can also specify **Tags** for the data source when adding the above optional values to your request body.
 

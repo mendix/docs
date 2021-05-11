@@ -42,15 +42,19 @@ Before starting this how-to, make sure you have completed the following:
 
 The following list provides an overview the Data Hub API:
 
-- The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
-- The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
-- All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
-- Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details and responses.
-- The following operations can be carried out using the Data Hub API:
+* The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
-  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
+* The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
 
-  - Register data sources (OData services):
+* All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
+
+* Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details and responses.
+
+* The following operations can be carried out using the Data Hub API:
+
+  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
+
+  * Register data sources (OData services):
     The following requests must be made in the given order using the returned UUID values for the subsequent step:
 
     1. Register the application that the dataset originates from: [POST applications](#api-search)
@@ -59,7 +63,7 @@ The following list provides an overview the Data Hub API:
 
     3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
 
-  - Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
+  * Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
 
 ## 4 Making the API Calls and Access to Data Hub {#access}
 
@@ -129,11 +133,11 @@ A successful 200 response returns the all assets from the Data Hub that satisfy 
 
 All the assets (items registered) in the Catalog that will be searched. For each of the assets the items in the metadata that will be searched and therefore included in the search results are the following:
 
-- **Endpoint (data sources, services)**: Name, Description, Tags
-- **Application**: Name
-- **Entity (dataset)**: Name, Description
-- **Attribute**: Name, Description
-- **Association**: Name
+* **Endpoint (data sources, services)**: Name, Description, Tags
+* **Application**: Name
+* **Entity (dataset)**: Name, Description
+* **Attribute**: Name, Description
+* **Association**: Name
 
 #### 5.3.1 Data Returned for the `SearchResults` Object {#api-search-results}
 
@@ -402,12 +406,12 @@ You can add further values to this response body to complete the registration in
 
 There are several objects that are not defined in the service metadata contract and are specific to the Catalog.  These are not also available in the `dependencies.json` file. They can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. You can add them your request body. These attributes are the following:
 
-* `PublishedEndointRequestDetails
+* `PublishedEndointRequestDetails`
   * `SecurityClassification`
   * `Discoverable`
   * `Validated`
 * `ServiceVersion`
-    *`Tags`
+  * `Tags`
 
 When the above attributes are not specified, the registration will be made using default values. They can also be changed when the asset is curated in the Data Hub Catalog.
 
@@ -421,8 +425,8 @@ The following file is an example OData v3 contract that you can use for in this 
 
 ## 10 Read More
 
-- [The Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis)
+* [The Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis)
 
-- [The Data Hub](/data-hub)
+* [The Data Hub](/data-hub)
 
-- [Examples of the Data Hub API Calls](data-hub-api-how-to-examples)
+* [Examples of the Data Hub API Calls](data-hub-api-how-to-examples)

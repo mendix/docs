@@ -10,6 +10,16 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app).
 
+## Android 1.0.5
+
+**Release date: 11 May 2021**
+
+### Improvements
+
+AR specific device features should once again be not mandatory. We added a dialog notifying users' of unsupported devices that AR might not fully work on the specific device.
+Devices that do not comply with the AR requirements will once again be able to download the Make It Native 9 from the Google play store, but Mendix 9 AR features might not be fully testable.
+
+
 ## Android 1.0.4 / iOS 1.0.2
 
 **Release date: 30th March 2021**

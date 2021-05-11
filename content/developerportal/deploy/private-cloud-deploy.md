@@ -569,6 +569,10 @@ To add this setting:
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 
+### 6.6 Deployment Package Size
+
+Mendix for Private Cloud has a limit of 200MB on the size of a deployment package.
+
 ## 7 Troubleshooting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.

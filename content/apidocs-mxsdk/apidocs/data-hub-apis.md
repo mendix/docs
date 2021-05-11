@@ -97,6 +97,8 @@ Information that is not returned by the Transform API and which should be specif
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 
+The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/v1/dependenciesjson.
+
 {{% alert type="info" %}}
 For the current release, the interactive features of the Open API interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
@@ -141,7 +143,4 @@ There are several objects that are specific to the Catalog registration of a dat
     *`Tags`
 
 When the above attributes are not specified, the registration will be made using default values. The **Discoverable**, **Validated**, and **Tags** can also be added when the asset is curated in the Data Hub Catalog.
-
-You can also specify **Tags** for the data source when adding the above optional values to your request body.
-
 

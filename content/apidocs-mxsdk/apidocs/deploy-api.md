@@ -249,7 +249,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc-accp.mendixcloud.com",
         "ModelVersion" :  "1.1.0.253",
         "MendixVersion" :  "6.10.10",
-        "Production" :  "false"
+        "Production" :  false
 
     },
     {
@@ -259,7 +259,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc.mendixcloud.com",
         "ModelVersion" :  "175.0.0.3702",
         "MendixVersion" :  "6.10.12",
-        "Production" :  "false"
+        "Production" :  false
     }
 ]
 ```
@@ -323,7 +323,7 @@ An object with the following key-value pairs:
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",
      "MendixVersion" :  "6.10.10",
-     "Production" :  "false"
+     "Production" :  false
 }
 ```
 

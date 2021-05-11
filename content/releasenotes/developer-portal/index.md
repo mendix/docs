@@ -15,6 +15,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### May 7th, 2021
+
+#### New Features
+
+* It is now possible to create a new app with the [workflows](/refguide/workflows) functionality more deeply integrated in the creation flow.
+
+#### Fixes
+
+* We fixed an issue where some graphs in the Contral Center [Dashboard](/developerportal/control-center/index#dashboard) were loading indefinitely. 
+* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* Page links now open in the correct tab.
+
 ### April 26th, 2021
 
 #### New Features

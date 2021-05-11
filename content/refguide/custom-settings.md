@@ -123,7 +123,11 @@ Before the data copy process starts, the source database will also be brought in
 
 ## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
 
-The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
+The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
+
+{{% alert type="warning" %}}
+For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+{{% /alert %}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |

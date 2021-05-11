@@ -119,13 +119,13 @@ To authenticate your calls you will need to provide the MindSphere IoT Authentic
 
     ![](attachments/mindsphere-app-service/create-keys.png)
 
-    You will see a pop-up containing your two keys: *Access Key** and **Secret Key**.
+    You will see a pop-up containing your two keys: **Access Key** and **Secret Key**.
 
 6. Click **Copy Key** for each of the two keys and save them somewhere safe – you will not be able to access them again.
 
     ![](attachments/mindsphere-app-service/binding-keys.png)
 
-### 3.3 Authenticating MindSphere REST Calls
+### 3.3 Authenticating MindSphere REST Calls {#authenticating}
 
 Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
 

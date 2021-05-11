@@ -1,29 +1,33 @@
 ---
-title: "Using the Data Hub API"
+title: "Using the Data Hub APIs"
 category: "General Info"
 menu_order: 50
-description: "How to use the Data Hub API a guide."
+description: "How to use the Data Hub APIs a guide."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 ---
 
 
 ## 1 Introduction
 
-This guide describes how to use the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub. 
+This guide describes how to use the APis that are available for the Data Hub. Currently APIs are available
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest and complete documentation on the calls that can be made which you can try out. This how-to will guide you through the main processes for searching the Data Hub and registering your data sources. 
+The [Data Hub API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API.  Using the Data Hub API you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development and register apps that consume the shared data sources.
 
-You can see how search, registration and consume using Data Hub works by working through the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
+This how-to will guide you through the main processes for searching the Data Hub and registering your data sources.
 
-Using the Data Hub API you can create a deployment process for your apps to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development.
+Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub. Users in Studio Pro can also directly consume shared datasets through the Data Hub Pane. A step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume is available in [Share Data Between Apps](/data-hub/share-data) . This will illustrate the steps required for using the Data Hub and illustrate the API calls.
+
+An API is available—the [Transform API](#transform)— that enables Mendix users that deploy to a *non-Mendix Cloud* to extract the information that is required to register their apps using the Data Hub API calls.
 
 {{% alert type="info" %}}To use the Mendix Data Hub a license is required. {{% /alert %}}
 
-**This how-to will teach you how to do use the API to do the following:**
+**This how-to will teach you how to do the following:**
 
-- Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
-- Register the service in the Catalog – [Registration](#reg-contract)
-- Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
+* Using the Data Hub APIs:
+  * Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
+  * Register the service in the Catalog – [Registration](#reg-contract)
+  * Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
+* Using the Transform API create the request body for the PUT published endpoint call for
 
 You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). The values for the call bodies are included and also a sample OData v3 file that you can use to try the registration calls.
 
@@ -31,8 +35,8 @@ You can try out the calls described by following the examples that are provided 
 
 Before starting this how-to, make sure you have completed the following:
 
-- Have a registered Mendix Data Hub account
-- Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
+* Have a registered Mendix Data Hub account
+* Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
 ## 3 Overview of the Data Hub API
 
@@ -79,13 +83,13 @@ Insert the value of your PAT token for the string <*your token*>.
 
 If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/). When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.
 
-Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>`). 
+Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>`).
 
 You can set your PAT token as a variable that can be conveniently called for each request.
 
 #### 4.1.2 Using a Command Line Tool such as Curl
 
-If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API then you must include the access header as given in this example of a GET call: 
+If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API then you must include the access header as given in this example of a GET call:
 
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
 --header 'Authorization: MxToken <your_PAT_Token>' \`
@@ -321,19 +325,22 @@ If you now want to remove **App-1-secondaryservice1.0** api to **App1.0** then a
 
 In this example, the services in the two apps, must now be maintained in both apps and owners of the apps consuming from the first app should be notified about the latest version of the app that is available.
 
-In this way, you can maintain a historical version of the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version and giving them time to migrate. 
+In this way, you can maintain a historical version of the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version and giving them time to migrate.
 
 ### 8.2 Services Versions and Endpoints
 
 When there are updates to a services, care must be taken when deciding whether to deploy the new contract at the same endpoint or to a different endpoint as the changes may affect consuming apps.
 
-Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract. 
+Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract.
 
-We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previoulsy registered endpoints. 
+We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previoulsy registered endpoints.
 
-In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints. 
+In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints.
 
-## 9 Sample Contract File {#sample-contract}
+## 9 Using the Transform API {#transform}
+
+
+## 10 Sample Contract File {#sample-contract}
 
 The following file is an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
 

@@ -264,7 +264,7 @@ To create a binding key, go to the **Service Management** dashboard, select a **
 
 ![](attachments/app-store-overview/binding-keys-1.png)
 
-In **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name so that you can retrieve this pair of keys from the Developer Portal in future:
+In **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name for the connection:
 
 ![](attachments/app-store-overview/binding-keys-2.png)
 
@@ -278,15 +278,15 @@ Click **Copy** for each key and save the keys somewhere safe, as you will not be
 Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
-To use the binding keys, see the [section below]().
+To use the binding keys, see the [Using a Binding Key]{#using) section below.
 
-Click **Return to the overview** to go to the main page of the Service Management dashboard. Note that on the main page, you can also hover over the **Binding Keys** column to see the binding keys that have already been created and who created them as well as delete a binding key:
+Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can also hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
 
 ![](attachments/app-store-overview/binding-keys-4.png)
 
-### Using a Binding Key
+### Using a Binding Key {#using}
 
-To use these keys in the MindSphere IoT app service, see the [Authenticating MindSphere REST Calls]() section of *MindSphere App Service*.
+Currently, binding keys can only be used in the MindSphere app service. For more information, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
 ## 6 Read More
 

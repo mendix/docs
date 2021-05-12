@@ -290,6 +290,6 @@ export function getPreviewCss() {
 
 ## 4 Read More
 
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets (Mendix 8)](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8)
+* [Pluggable Widget Property Types (Mendix 8)](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8)
 * [How to Build a Pluggable Native Widget](/howto/extensibility/build-native-widget)

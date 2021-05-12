@@ -334,17 +334,17 @@ If the application for your data source is not registered in the catalog or if t
 
 * **Application Name** – the name of the application as it should appear in the details page of the service.
 
-* **Technical Owner** – the name of the technical owner of the application and data source. The technical owner should be a registered Mendix User who will be able to [curate](/data-hub/data-hub-catalog/curate) the data source. By default this is the person registering the data source. Select from the drop-down list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](data-hub/data-hub-catalog/curate#customowner).
+* **Technical Owner** – the name of the technical owner of the application and data source. The technical owner should be a registered Mendix User who will be able to [curate](/data-hub/data-hub-catalog/curate) the data source. By default this is the person registering the data source. Select from the drop-down list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](/data-hub/data-hub-catalog/#customowner).
 
     {{% alert type="info" %}}If you change the **Technical Owner** you will not be able to curate the data source in the Catalog unless you are also a curator or Data Hub Admin. {{% /alert %}}
 
-* **Business Owner** – the owner of the datasets that are made available through the service. Select from the list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](data-hub/data-hub-catalog/curate#customowner).
+* **Business Owner** – the owner of the datasets that are made available through the service. Select from the list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](/data-hub/data-hub-catalog/#customowner).
 
-	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/#customowner) when you curate the data source in the Catalog. {{% /alert %}}
 
 * **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
 
-	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/curate#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
 
 #### 6.2.5 Environment {#environment}
 

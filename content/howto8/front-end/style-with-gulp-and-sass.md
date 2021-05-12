@@ -43,7 +43,7 @@ To set up the Gulp project, follow these steps:
 
 To run Gulp, follow these steps:
 
-1. You should still be in your root if you just finished the installation, so type `gulp dev` in your root.
+1. You should still be in your root if you just finished the installation, so type `npm run dev` in your root.
 2. Make sure your Mendix project is running.
 3.  For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red:
 
@@ -57,9 +57,9 @@ And that's it! Now you are ready to start styling your Mendix app with Sass.
 
 ## 5 Development & Production
 
-When running `gulp dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
+When running `npm run dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 
-When using this in production, you should run `gulp build` before committing and deploying. This will disable source-mapping and will minify the CSS files to minimize the file size.
+When using this in production, you should run `npm run build` before committing and deploying. This will disable source-mapping and will minify the CSS files to minimize the file size.
 
 ## 6 Developer Portal App Projects
 

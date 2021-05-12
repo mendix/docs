@@ -5,6 +5,10 @@ menu_order: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Activities define the actions that are executed in a microflow or a nanoflow.

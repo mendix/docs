@@ -22,7 +22,7 @@ Import the module APMAgent in the modeler.
 
 ## 4 Delete CLEVR Customized Widgets
 
-CLEVR customized versions of AppStore widgets
+CLEVR customized versions of Marketplace widgets:
 
 * ManTooltip.mpk
 * StringFormatter.mpk

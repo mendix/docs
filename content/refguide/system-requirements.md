@@ -197,7 +197,18 @@ For server-based installations, the following storage types mounted by the OS ar
 * Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
 
-Internet Explorer is [no longer supported](ie-support) in Mendix 9.
+{{% alert type="info" %}}
+Internet Explorer is no longer supported in Mendix 9. As the market is moving away from Internet Explorer 11 and Mendix continues to align with the best practices of the modern web ecosystem, we have decided to drop support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.
+
+As of Mendix 9, users still using IE will be shown a message saying that upgrading to a modern browser is required.
+
+![Unsupported browser](attachments/ie-support/unsupported-browser.png)
+
+This message [can be customized to your needs](/howto/front-end/customize-styling-new##customize-unsupported-browsers).
+
+What if I still need to support IE11
+Mendix 8 and 7 will continue supporting IE11. We suggest using Mendix 8 (or 7) until your users have upgraded. Note that Mendix 8 will still be supported for several years.
+{{% /alert %}}
 
 ## 11 Mobile Operating Systems {#mobileos}
 

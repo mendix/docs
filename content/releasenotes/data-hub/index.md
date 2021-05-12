@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* Validated datasets are now shown in the [search results list](/data-hub/data-hub-catalog/search#search-results).
+* Datasets in the [search results list](/data-hub/data-hub-catalog/search#search-results) that are validated are now clearly indicated as such.
 
 * Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register#registration-form) using the business application connectors from the **Data Hub Home**.
 

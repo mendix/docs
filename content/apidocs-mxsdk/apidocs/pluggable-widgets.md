@@ -230,7 +230,7 @@ Note that the **Common** and **Appearance** tabs are added to your widget config
 
 ## 6 Widget Property
 
-This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](property-types-pluggable-widgets). Every `property` tag in the Widget Properties Definition has a shape similar to this:
+This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
     <property key="cardName" type="textTemplate">
@@ -254,6 +254,6 @@ Here is how a caption and description look in Studio Pro:
 
 ## 7 Read More
 
-* Pluggable Widget API information for [Mendix 9](pluggable-parent-9)
-* Pluggable Widget API information for [Mendix 8](pluggable-parent-8)
+* Pluggable Widget API information for [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9)
+* Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8)
 

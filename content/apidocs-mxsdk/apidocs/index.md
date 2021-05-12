@@ -54,7 +54,7 @@ For details, see [Permissions API](permissions-api).
 
 This API helps you to understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs.
 
-For details, see [Pluggable Widgets API](pluggable-widgets).
+For details, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 
 ## 10 Projects API
 

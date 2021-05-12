@@ -228,7 +228,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 3.1 Icon {#icon}
 
-Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](client-apis-for-pluggable-widgets#icon-value) section of *Client APIs Available to Pluggable Widgets*.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -296,7 +296,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](client-apis-for-pluggable-widgets#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.3.
@@ -357,7 +357,7 @@ The expression property allows a user to configure an [expression](/refguide/exp
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](client-apis-for-pluggable-widgets#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
@@ -407,7 +407,7 @@ The TextTemplate property allows a user to configure a translatable text templat
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](client-apis-for-pluggable-widgets#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.14.
@@ -455,7 +455,7 @@ The action property type allows a user to configure an action which can do thing
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](client-apis-for-pluggable-widgets#listactionvalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.9.
@@ -488,9 +488,9 @@ Then the Studio Pro UI for the property appears like this:
 
 The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#editable-value) section of *Client APIs Available to Pluggable Widgets*.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](client-apis-for-pluggable-widgets#listattributevalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="info" %}}
 Support for the `dataSource` attribute was introduced in Mendix 8.12.
@@ -564,7 +564,7 @@ The object property type allows to create an arbitrary list of properties.
 
 #### 4.5.2 XML Elements
 
-`<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](pluggable-widgets#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
+`<properties>` (required) — This encapsulates the list or properties to be configured. For more information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets#property-groups) section of *Pluggable Widgets API*. Properties must be grouped by `<propertyGroup>` elements. Nested object properties are not supported.
 
 #### 4.5.3 Studio Pro UI
 
@@ -622,7 +622,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.7 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](https://docs.mendix.com/refguide/data-sources#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources#list-widgets) for available data source types.
 
 {{% alert type="info" %}}
 Support for the datasource property type was introduced in Mendix 8.7.
@@ -704,7 +704,7 @@ This property type was introduced in Mendix 8.1.
 
 ### 5.5 Editability {#editability}
 
-The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
+The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#editable-value) its client component receives will have `readOnly` flag.
 
 {{% alert type="info" %}}
 This property type was introduced in Mendix 8.1.
@@ -716,6 +716,6 @@ This property type was introduced in Mendix 8.1.
 
 ## 6 Read More
 
-* [Pluggable Widgets API](pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](client-apis-for-pluggable-widgets)
+* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
 * [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

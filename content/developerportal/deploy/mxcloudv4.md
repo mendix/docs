@@ -36,6 +36,8 @@ The primary hosting locations are as follows:
 
 *   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud US: AWS Oregon
+*   Mendix Cloud Asia Pacific: AWS Singapore
 *   Mendix Cloud Asia Pacific: AWS Tokyo
 *   Mendix Cloud UK: AWS London
 

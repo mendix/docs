@@ -24,7 +24,7 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 
 {{% alert type="info" %}}
 This new feature is currently in Beta.<br />
-
+<br />
 Please provide feedback via the feedback button on the right of the page. For more information, see [Mendix Beta Features](/releasenotes/beta-features/).
 {{% /alert %}}
 

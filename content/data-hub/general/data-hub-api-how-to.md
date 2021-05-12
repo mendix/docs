@@ -1,29 +1,33 @@
 ---
-title: "Using the Data Hub API"
+title: "Using the Data Hub APIs"
 category: "General Info"
 menu_order: 50
-description: "How to use the Data Hub API a guide."
+description: "How to use the Data Hub APIs a guide."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 ---
 
 
 ## 1 Introduction
 
-This guide describes how to use the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for searching and registering your data sources from your business applications to Data Hub. 
+This guide describes how to use the APis that are available for the Data Hub. Currently APIs are available
 
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API. It has the latest and complete documentation on the calls that can be made which you can try out. This how-to will guide you through the main processes for searching the Data Hub and registering your data sources. 
+The [Data Hub API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API.  Using the Data Hub API you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development and register apps that consume the shared data sources.
 
-You can see how search, registration and consume using Data Hub works by working through the how-to [Share Data Between Apps](/data-hub/share-data) . This also demonstrates the integrated functionality of Data Hub in Mendix Studio Pro for registering and consuming data sources. 
+This how-to will guide you through the main processes for searching the Data Hub and registering your data sources.
 
-Using the Data Hub API you can create a deployment process for your apps to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development.
+Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub. Users in Studio Pro can also directly consume shared datasets through the Data Hub Pane. A step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume is available in [Share Data Between Apps](/data-hub/share-data) . This will illustrate the steps required for using the Data Hub and illustrate the API calls.
+
+An API is available—the [Transform API](#transform)— that enables Mendix users that deploy to a *non-Mendix Cloud* to extract the information that is required to register their apps using the Data Hub API calls.
 
 {{% alert type="info" %}}To use the Mendix Data Hub a license is required. {{% /alert %}}
 
-**This how-to will teach you how to do use the API to do the following:**
+**This how-to will teach you how to do the following:**
 
-- Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
-- Register the service in the Catalog – [Registration](#reg-contract)
-- Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
+* Using the Data Hub APIs:
+  * Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
+  * Register the service in the Catalog – [Registration](#reg-contract)
+  * Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
+* Using the Transform API create the request body for the PUT published endpoint call for
 
 You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). The values for the call bodies are included and also a sample OData v3 file that you can use to try the registration calls.
 
@@ -31,22 +35,26 @@ You can try out the calls described by following the examples that are provided 
 
 Before starting this how-to, make sure you have completed the following:
 
-- Have a registered Mendix Data Hub account
-- Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
+* Have a registered Mendix Data Hub account
+* Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
 ## 3 Overview of the Data Hub API
 
 The following list provides an overview the Data Hub API:
 
-- The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
-- The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
-- All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
-- Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details and responses.
-- The following operations can be carried out using the Data Hub API:
+* The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
-  - Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
+* The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
 
-  - Register data sources (OData services):
+* All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
+
+* Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details and responses.
+
+* The following operations can be carried out using the Data Hub API:
+
+  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
+
+  * Register data sources (OData services):
     The following requests must be made in the given order using the returned UUID values for the subsequent step:
 
     1. Register the application that the dataset originates from: [POST applications](#api-search)
@@ -55,7 +63,7 @@ The following list provides an overview the Data Hub API:
 
     3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
 
-  - Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
+  * Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
 
 ## 4 Making the API Calls and Access to Data Hub {#access}
 
@@ -79,13 +87,13 @@ Insert the value of your PAT token for the string <*your token*>.
 
 If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/). When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.
 
-Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>`). 
+Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>`).
 
 You can set your PAT token as a variable that can be conveniently called for each request.
 
 #### 4.1.2 Using a Command Line Tool such as Curl
 
-If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API then you must include the access header as given in this example of a GET call: 
+If you are using the [curl](http://curl.haxx.se/) command to send your HTTP requests to the API then you must include the access header as given in this example of a GET call:
 
 `curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data' \
 --header 'Authorization: MxToken <your_PAT_Token>' \`
@@ -125,11 +133,11 @@ A successful 200 response returns the all assets from the Data Hub that satisfy 
 
 All the assets (items registered) in the Catalog that will be searched. For each of the assets the items in the metadata that will be searched and therefore included in the search results are the following:
 
-- **Endpoint (data sources, services)**: Name, Description, Tags
-- **Application**: Name
-- **Entity (dataset)**: Name, Description
-- **Attribute**: Name, Description
-- **Association**: Name
+* **Endpoint (data sources, services)**: Name, Description, Tags
+* **Application**: Name
+* **Entity (dataset)**: Name, Description
+* **Attribute**: Name, Description
+* **Association**: Name
 
 #### 5.3.1 Data Returned for the `SearchResults` Object {#api-search-results}
 
@@ -321,32 +329,104 @@ If you now want to remove **App-1-secondaryservice1.0** api to **App1.0** then a
 
 In this example, the services in the two apps, must now be maintained in both apps and owners of the apps consuming from the first app should be notified about the latest version of the app that is available.
 
-In this way, you can maintain a historical version of the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version and giving them time to migrate. 
+In this way, you can maintain a historical version of the registered assets, and ensure that consumers are notified of the new version, without affecting those that are consuming the previous version and giving them time to migrate.
 
 ### 8.2 Services Versions and Endpoints
 
 When there are updates to a services, care must be taken when deciding whether to deploy the new contract at the same endpoint or to a different endpoint as the changes may affect consuming apps.
 
-Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract. 
+Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract.
 
-We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previoulsy registered endpoints. 
+We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previoulsy registered endpoints.
 
-In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints. 
+In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints.
 
-## 9 Sample Contract File {#sample-contract}
+## 9 Using the Transform API {#transform}
 
-The following file is an example OData v3 contract that you can use for in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
+For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. For this registration, the information that is defined in the location constants of the consumed and published services—located in the **dependencies.json** file for the app—is used.
 
-### Metadata {#ex-metadata}
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to extract the information from the **dependencies.json** file. The Transform API response can be used for the request bodies for the [PUT published endpoints](#put-service) calls.
+
+{{% alert type="info" %}}There are additional attributes that are not returned by the Transform API. These are specific to information for the Data Hub Catalog that you must add to the request body which are described in [Optional Values not Obtained from **dependencies.json**] {#not-in-depfile}.{{% /alert %}}
+
+The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
+
+The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/v1/dependenciesjson.
+
+### 9.1 Location of the dependencies.json file of an App
+
+For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+
+This file has to be inserted in the call to the API in *escaped json format*.
+
+### 9.2 Method and Endpoint
+
+`POST /applications/{AppUUID}/environments`
+
+### 9.3 Request Body
+
+When making the call to the API the following two object have to be specified.
+
+* `DependenciesJsonString` – insert the `dependencies.json` file of the app *in escaped json format*
+* `EndpointLocationConstants` – this object must specify the [location constants](#metadata-file) for the published endpoints that are referred to in the `dependencies.json` file
+
+#### 9.3.1 Location Constants Values {#location-constants}
+
+ You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the project, also located in the **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+
+#### 9.3.2 Extracting Location Constants Values from the metadata.json file {#metadata-file}
+
+In the **metadata.json** file for the app there is an object called `Constants` which is an array of all the constants used in the app project including the those for the published OData service(s). (In the attached screenshot of a **metadata.json** file the constant for the published OData service for the project is highlighted).
+
+![metadata.json file for app](attachments/data-hub-api-how-to/metadata.json-file.png)
+
+In the **dependencies.json** file the metadata file location constants are defined by the object `constant`.
+
+To following steps describe to take the information from the two files to add the necessary location information to the registration request body.
+
+1. Take the values in the **metadata.json**  for `Constants` that match those given in the **dependencies.json** file for the object `constant`.
+2. For each service, extract the values for `Name` in **metadata.json** and add that as the value to the object `Name`  in the registration body.
+3. For each `Name` take the value for  `DefaultValue` in **metadata.json** and add that as the value to the object `Value` in the registration body.
+4. Add these to the registration body as specified for the `EndpointLocationConstants` array.
+5. For the example given in the screenshot of the **metadata.json** file above the resulting `"constant":"MyFirstModule.SAMPLE_EmployeeDirectory_Location"` is defined with the following values for the location:
+
+    ```json  "EndpointLocationConstants": [
+    {
+      "Name": "MyFirstModule.SAMPLE_EmployeeDirectory_Location",
+      "Value": "https://hrsample.mendixcloud.com/odata/PubOdataEmployeeservice/v2"
+    } ```
+
+### 9.4 200 Transformation Successful response
+
+The 200 transformation successful returns a body that can be used for the Data Hub PUT application call based on the **dependencies.json** file and the location constants information provided.
+
+You can add further values to this response body to complete the registration in Data Hub by adding the [optional values not obtained from **dependencies.json**](#not-in-depfile) described below.
+
+### 9.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
+
+There are several objects that are not defined in the service metadata contract and are specific to the Catalog.  These are not also available in the `dependencies.json` file. They can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. You can add them your request body. These attributes are the following:
+
+* `PublishedEndointRequestDetails`
+  * `SecurityClassification`
+  * `Discoverable`
+  * `Validated`
+* `ServiceVersion`
+  * `Tags`
+
+When the above attributes are not specified, the registration will be made using default values. They can also be changed when the asset is curated in the Data Hub Catalog.
+
+## 10 Sample Contract File {#sample-contract}
+
+The following file is an example OData v3 contract that you can use when trying out the PUT registration service request. The format provided below is in escaped JSON format  so that you can copy it and directly insert it in the PUT request body.
 
 ```json
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>
 ```
 
-## 10 Read More
+## 11 Read More
 
-- [The Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis)
+* [The Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis)
 
-- [The Data Hub](/data-hub)
+* [The Data Hub](/data-hub)
 
-- [Examples of the Data Hub API Calls](data-hub-api-how-to-examples)
+* [Examples of the Data Hub API Calls](data-hub-api-how-to-examples)

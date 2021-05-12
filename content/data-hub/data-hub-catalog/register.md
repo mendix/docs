@@ -80,11 +80,11 @@ This section describes how to register entities from your Mendix app in the Data
 
 {{% alert type="info" %}} A published OData service is an API to your Mendix app. Some apps may have several published services exposing different combinations of entities. In Studio Pro, it is good practice to group them in a separate folder under each [module](/refguide/modules) to make location and maintenance easier. {{% /alert %}}
 
-1.  In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
+1. In the [domain model](/refguide/domain-model), right-click the entity to be exposed and from the menu select **Expose as OData resource**:
 
 	 {{% image_container width="300" %}}![](attachments/register/expose-as-odata-resource.png){{% /image_container %}}
 
-2.  In the **Select Published OData Service** dialog box, select the folder in the module that you want to use to organize your APIs, and click **New** to add a new OData service to that folder:
+2. In the **Select Published OData Service** dialog box, select the folder in the module that you want to use to organize your APIs, and click **New** to add a new OData service to that folder:
 
 	 {{% image_container width="300" %}}![](attachments/register/select-published-odata-service.png){{% /image_container %}}
 
@@ -93,9 +93,10 @@ This section describes how to register entities from your Mendix app in the Data
 4. The OData service document is added to the module, and the **Edit published resource** dialog box is displayed for the selected entity. The information in this will form the metadata definition for the entity:
 
 	![](attachments/register/edit-published-resource-box.png)
-	* **Entity** – the name and module of the entity
-		* **Select** – click to display list of entities available in the module and select another entity to expose
-		* **Show** – click to see the entity in the domain model
+
+* **Entity** – the name and module of the entity
+  ***Select** – click to display list of entities available in the module and select another entity to expose
+  * **Show** – click to see the entity in the domain model
 * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
 
 	* **Exposed entity name** – you can customize the name of the entity in the OData service
@@ -333,17 +334,17 @@ If the application for your data source is not registered in the catalog or if t
 
 * **Application Name** – the name of the application as it should appear in the details page of the service.
 
-* **Technical Owner** – the name of the technical owner of the application and data source. The technical owner must be a registered Mendix User who will be able to [curate](/data-hub/data-hub-catalog/curate) the data source. By default this is the person registering the data source.
+* **Technical Owner** – the name of the technical owner of the application and data source. The technical owner should be a registered Mendix User who will be able to [curate](/data-hub/data-hub-catalog/curate) the data source. By default this is the person registering the data source. Select from the drop-down list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](/data-hub/data-hub-catalog/#customowner).
 
-	{{% alert type="info" %}}If you change the **Technical Owner** you will not be able to curate the data source in the Catalog unless you are also a curator or Data Hub Admin. {{% /alert %}}
+    {{% alert type="info" %}}If you change the **Technical Owner** you will not be able to curate the data source in the Catalog unless you are also a curator or Data Hub Admin. {{% /alert %}}
 
-* **Business Owner** – the owner of the datasets that are made available through the service. Select from the dropdown list. The dropdown list will also
+* **Business Owner** – the owner of the datasets that are made available through the service. Select from the list of registered Mendix users and custom owners (who are indicated by their initials in the avatar). You can also create a new custom owner as described in [Adding a Custom Owner](/data-hub/data-hub-catalog/#customowner).
 
-	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/curate#customowner) when you curate the data source in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}You can also [specify the business owner and technical owners](/data-hub/data-hub-catalog/#customowner) when you curate the data source in the Catalog. {{% /alert %}}
 
 * **Application Icon** – the icon that will be used for the data source and application is displayed. To specify another icon you can **Upload a different icon** or **select one from the library**.
 
-	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/curate#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}You can also [change the icon](/data-hub/data-hub-catalog/#application-icon) when you curate the data source in the Catalog. {{% /alert %}}
 
 #### 6.2.5 Environment {#environment}
 

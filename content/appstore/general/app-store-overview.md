@@ -256,11 +256,11 @@ To delete a group, a Mendix Admin can click **Delete Group**.
 
 ## NEW - Service Management Dashboard
 
-To use an app service, you need a binding key.
+To use an app service, you need binding keys.
 
-### Creating a Binding Key
+### Creating Binding Keys
 
-To create a binding key, go to the **Service Management** dashboard, select a **Product**, and click **Generate Keys** at the bottom of the page:
+To create binding keys, go to the **Service Management** dashboard, select a **Product**, and click **Generate Keys** at the bottom of the page:
 
 ![](attachments/app-store-overview/binding-keys-1.png)
 
@@ -278,13 +278,15 @@ Click **Copy** for each key and save the keys somewhere safe, as you will not be
 Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
-To use the binding keys, see the [Using a Binding Key]{#using) section below.
+To use the binding keys, see [Using the Binding Keys](#using) below.
 
-Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can also hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
+Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
 
 ![](attachments/app-store-overview/binding-keys-4.png)
 
-### Using a Binding Key {#using}
+### Using the Binding Keys {#using}
+
+When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
 Currently, binding keys can only be used in the MindSphere app service. For more information, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 

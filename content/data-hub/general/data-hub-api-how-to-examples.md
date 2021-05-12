@@ -491,6 +491,7 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
 ```
 
 ### 5.3 Successful 200 Created Response
+
 The successful 200 response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is **43**:
 
 ```json

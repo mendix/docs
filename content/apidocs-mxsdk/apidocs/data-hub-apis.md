@@ -28,7 +28,7 @@ When making calls using the APIs described in this document, authentication and 
 
 For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 
- `MxToken <your_token_secret> `
+ `MxToken <your_token_secret>`
 
 Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
@@ -135,7 +135,7 @@ This object must specify the location constants for the published endpoints that
 
 There are several objects that are specific to the Catalog registration of a data source that can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. These are not available in the `dependencies.json` file. These attributes are the following:
 
-* `PublishedEndointRequestDetails
+* `PublishedEndpointRequestDetails
   * `SecurityClassification`
   * `Discoverable`
   * `Validated`

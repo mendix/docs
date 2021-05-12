@@ -288,7 +288,7 @@ Click **Return to the overview** to go to the main page of the Service Managemen
 
 When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
-Currently, binding keys can only be used in the MindSphere app service. For more information, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
 ## 6 Read More
 

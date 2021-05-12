@@ -28,7 +28,7 @@ When making calls using the APIs described in this document, authentication and 
 
 For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
 
- `MxToken <your_token_secret> `
+ `MxToken <your_token_secret>`
 
 Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
@@ -89,48 +89,58 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 ## 4. Data Hub Transform Open API Spec {#transform}
 
-For Mendix apps deploying to the Mendix cloud, there is a registration pipeline that registers the published OData contracts (data sources), and also the consumed entities (datasets) to Data Hub. Information that is defined in the location constants of the consumed and published services—located in the `dependencies.json` file for the app—is used.
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the registration request body for the PUT published endpoints for the Data Hub API. The Transform API extracts the information from the **dependencies.json** file and the response can be used in the request bodies for the PUT calls to the Data Hub API.
 
-The [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users who do not deploy to the Mendix cloud. It extracts the information from the `dependencies.json` file. The API returns a response that can be used in the request bodies for the PUT published endpoints and PUT consumed endpoints calls to the Data Hub API.
+Information that is not returned by the Transform API and which should be specified separately is listed in [Optional Values not Obtained from **dependencies.json**](#not-in-depfile)
 
-Information that is not returned by the Transform API and which should be specified separately are listed in [Optional Values not Obtained from `dependencies.json`](#not-in-depfile)
-
-### 4.1 Transform API Location
+### 4.1 Using the Transform API
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
+
+The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/v1/dependenciesjson.
 
 {{% alert type="info" %}}
 For the current release, the interactive features of the Open API interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-### 4.2 Location of the `dependencies.json` file of an App
+### 4.2 Location of the dependencies.json file of an App
 
-For a Mendix app, the `dependencies.json` file is usually located in the project folder of the app under the following directory: `Mendix\<YourApplicationName>\deployment\model`
+For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**.
 
 This file has to be inserted in the call to the API in *escaped json format*.
 
 ### 4.3 Making the API Call
 
-When making the call to the API the following two object have to be specified:
+When making the call to the API the following two object have to be specified.
 
-* `DependenciesJsonString` – insert the `dependencies.json` file of the app *in escaped json format*.
-* `EndpointLocationConstants` – this object must contain the location constants for the consumed endpoints that are referred to in the `dependencies.json` file.
+#### 4.3.1 `DependenciesJsonString`
 
-    You can find the values in the **constant location** document in the **App Explorer**. For the example given in the Open API  spec in the `dependencies.json` file, the object:
-`"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
-```json  "EndpointLocationConstants": [
+Insert the `dependencies.json` file of the app *in escaped json format*.
+
+#### 4.3.2 `EndpointLocationConstants`
+
+This object must specify the location constants for the published endpoints that are referred to in the `dependencies.json` file.
+
+ You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see [Location Constants Values](/data-hub/general/data-hub-api-how-to#metadata-file) section of the *Using the Data Hub APIs* document.
+
+ For the example given in the Open API  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
+
+    ```json  "EndpointLocationConstants": [
     {
       "Name": "MyFirstModule.EmployeeManagement_Location",
       "Value": "https://hr.acmecorp.test/employeeservice/v2"
-    }
- ```
+    } ```
 
-### 4.4 Optional Values not Obtained from `dependencies.json` {#not-in-depfile}
+### 4.4 Optional Values not Obtained from dependencies.json {#not-in-depfile}
 
-The request bodies returned by the Transform API do not contain the values for the following attributes:
+There are several objects that are specific to the Catalog registration of a data source that can be specified for the Data Hub API `PUT /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints` call. These are not available in the `dependencies.json` file. These attributes are the following:
 
-* `SecurityClassification`
-* `Discoverable`
-* `Validated`
+* `PublishedEndpointRequestDetails
+  * `SecurityClassification`
+  * `Discoverable`
+  * `Validated`
+* `ServiceVersion`
+    *`Tags`
 
-They not available in the `dependencies.json`. If you are registering endpoints you must specify them—when not specified, the registration will be made using default values.
+When the above attributes are not specified, the registration will be made using default values. The **Discoverable**, **Validated**, and **Tags** can also be added when the asset is curated in the Data Hub Catalog.
+

@@ -9,6 +9,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### May 12th, 2021
+
+#### Improvements
+
+* Datasets in the [search results list](/data-hub/data-hub-catalog/search#search-results) that are validated are now clearly indicated as such.
+
+* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register#registration-form) using the business application connectors from the **Data Hub Home**.
+
+* Further styling changes have been made to improve usability.
+
 ### May 6th, 2021
 
 #### New Feature

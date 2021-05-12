@@ -197,12 +197,12 @@ For server-based installations, the following storage types mounted by the OS ar
 * Apple Safari (latest stable desktop version and latest version for each [supported iOS](#mobileos) version)
 * Microsoft Edge (latest stable desktop version)
 
-{{% alert type="info" %}}
-Internet Explorer is no longer supported in Mendix 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.
-
-As of Mendix 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto/front-end/customize-styling-new##customize-unsupported-browsers) to meet your needs.
-
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18) and [7](/releasenotes/studio-pro/7.23) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded.
+{{% alert type="warning" %}}
+Internet Explorer is no longer supported in Studio Pro 9. As the market is moving away from Internet Explorer and Mendix continues to align with the best practices of the modern web ecosystem, we have dropped support for Internet Explorer 11. This allows us to keep in line with user expectations. Removing support has already improved app loading times and performance, and it will enable us to continue making improvements and innovating using modern web features.<br />
+<br />
+As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto/front-end/customize-styling-new##customize-unsupported-browsers) to meet your needs.<br />
+<br />
+If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18) and [7](/releasenotes/studio-pro/7.23) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
 ## 11 Mobile Operating Systems {#mobileos}

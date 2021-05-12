@@ -96,7 +96,7 @@ This section describes how to register entities from your Mendix app in the Data
 
     * **Entity** – the name and module of the entity
 
-      * ***Select** – click to display list of entities available in the module and select another entity to expose
+      * **Select** – click to display list of entities available in the module and select another entity to expose
       * **Show** – click to see the entity in the domain model
     * **Exposed attributes and associations** – click **select** to view and select the attributes and associations to expose for this entity
     * **Exposed entity name** – you can customize the name of the entity in the OData service
@@ -221,9 +221,9 @@ To update a published OData service, follow these steps:
 10. For major changes, and when a new service is published that will replace an existing one, provide deprecation notices to all consuming apps if they have to change to the new version within a certain length of time if the previous version is going to become inactive.
 11. It is good practice to remove old (unused services) from your app by deleting them in the **App Explorer** only when you are sure that they are no longer being consumed by any other apps. You can verify this by looking in [Mendix Data Hub](https://hub.mendix.com/) and searching for the service in the **Catalog** or checking out the network of dependencies in Data Hub **Landscape**.
 
-## 6 Registering Data Sources from Enterprise Applications {#registration-form}
+## 6 Register Data Sources from Enterprise Applications {#registration-form}
 
-You can register data sources from other business applications, such as SAP and Mindsphere, to Data Hub. The available datasets must be exposed in an OData service in the business application and manually registered from the Data Hub **Home** using the connector of your business application.
+You can register data sources from other business applications, such as SAP and Mindsphere, to Data Hub. The available datasets must be exposed in an OData service in the business application and manually registered from the Data Hub **Home**. Connectors are available for many business application.
 
 This section will take you through the steps to upload the metadata contract and specify all the information that is necessary for a successful registration.
 
@@ -243,23 +243,23 @@ For all business applications except for Mendix apps, data sources that comprise
 
 The file formats of the OData v4 Service contracts that are accepted in this registration process are *.xml* (for single files) and *.zip* (when the contract includes several files).
 
-### 6.2 Manually Registering a Data Source for an Enterprise Application
+### 6.2 Registration Process
 
-The registration process is tailored for each application type. On the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for any of these applications.
+The registration process is tailored for each business application connector this is offered on the Data Hub **Home** page you will see buttons for registering specific enterprise applications. The steps that are described in this section can be followed for any of these applications.
 
 {{% alert type="info" %}} If the application for the data source you would like to register is not shown, you can register it using the **OData** button. {{% /alert %}}
 
-#### 6.2.1 Selecting the Enterprise Application {#application}
+#### 6.2.1 Business Application Connector {#application}
 
-On the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) screen, click the button for the source application of the data source that you want to register:
+On the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) screen, click the connector for the business application of the data source that you want to register:
 
 ![upload contract](attachments/register/register-data-source-home.png)
 
-If the source application is not displayed, you can register your OData v4 service by clicking the generic **OData** connector.
+If there is no connector for the data source business application, you can register your OData v4 service by clicking the generic **OData** connector.
 
 {{% alert type="info" %}}Datasets from all business applications except for Mendix apps must be published as OData v4 services. When registering Mendix apps using the **Mendix**  connector only OData v3 services are accepted. {{% /alert %}}
 
-#### 6.2.2 Upload Contract File of Data Source {#contract}
+#### 6.2.2 Upload Contract File {#contract}
 
 In the **Contract** screen upload the file of the data source (the OData v4 service metadata contract) that you want to register.
 
@@ -271,7 +271,7 @@ The selected file is uploaded and verified. When successfully uploaded, you can 
 
 {{% image_container width="400" %}}![upload contract](attachments/register/register-data-source-validate.png){{% /image_container %}}
 
-#### 6.2.3 Details of the Data Source {#data-source}
+#### 6.2.3 Data Source Details {#data-source}
 
 In the **Details of Data Source** screen specify the following details:
 
@@ -306,7 +306,7 @@ In the **Details of Data Source** screen specify the following details:
 
 When all the required information has been specified click **Go to next step**.
 
-#### 6.2.4 Details of the Application {#application}
+#### 6.2.4 Application Details {#application}
 
 Specify the details of the source application of the data source (from which the OData v4 service was published). This information will be displayed in the **Data Source Details** and provide the link to the app.
 
@@ -350,7 +350,7 @@ If the application is already registered in the Catalog – for example, when yo
 
 {{% alert type="info" %}}If there are no environments registered in the Catalog for the selected business application, you will only see **Register a new environment**.{{% /alert %}}
 
-##### 6.2.5.1 Use Existing Environment
+##### 6.2.5.1 Select Existing Environment
 
 Click **Select environment** and select the environment from the drop-down list. The details of the selected environment is displayed.
 

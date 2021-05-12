@@ -20,9 +20,9 @@ If you don't have installed an SVN client like Tortoise SVN make a copy of the w
 Import the module APMAgent in the modeler.
 ![](attachments/ig-one-uninstall-steps/Commit.png)
 
-## 4 Delete Mansystems Customized Widgets
+## 4 Delete CLEVR Customized Widgets
 
-Mansystems customized versions of AppStore widgets
+CLEVR customized versions of Marketplace widgets:
 
 * ManTooltip.mpk
 * StringFormatter.mpk

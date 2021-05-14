@@ -14,6 +14,22 @@ These are the current versions in active development:
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 
+## 5.1.11
+
+**Release date: May 14th, 2021**
+
+### Fixes 
+
+* We fixed an issue with the Firebase module dependencies being automatically linked on the iOS application even when the Firebase capability is disabled.
+
+## 6.1.5
+
+**Release date: May 12th, 2021**
+
+### Fixes 
+
+* A new version of Google Firebase has been released and this breaks compatibility with the version used in the Firebase-related pluggable widgets. Without this fix, Android builds would fail when Firebase push notifications is enabled in your application.
+
 ## 5.1.10
 
 **Release date: April 6th, 2021**

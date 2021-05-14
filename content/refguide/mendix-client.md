@@ -14,7 +14,7 @@ This description of the Mendix Client is based on using the Runtime Server of an
 
 ## 2 Description {#description}
 
-The Mendix Client is used for all applications built with Mendix: web, mobile, and hybrid.
+The Mendix Client is a part of every application built with Mendix: web, mobile, and hybrid.
 
 For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 

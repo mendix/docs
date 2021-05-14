@@ -25,7 +25,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We fixed an issue where our Mendix Support was not always able to adjust the app permissions on behalf of customers.
 * We fixed an issue where you could not always see the avatars of other users in the same app.
-* We fixed an issue where there were styling glitches visible when adding a description to a newly created story.
+* We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/collaborate/stories).
 
 ### May 7th, 2021
 

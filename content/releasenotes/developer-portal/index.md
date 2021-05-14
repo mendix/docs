@@ -15,6 +15,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### May 17th, 2021
+
+#### Improvements
+
+* We made some minor changes to the look and feel over several pages, buttons and UI components in line with the recent redeisgn of the developer portal.
+
+#### Fixes
+
+* We fixed an issue where our support team was not always able to adjust project permissions on bahalf of customers.
+* We fixed an issue where some users would not always see the avatars of other users in the same projects.
+* We fixed an issue where some users would experience styling glitches when adding a description to a newly created story.
+
 ### May 7th, 2021
 
 #### New Features

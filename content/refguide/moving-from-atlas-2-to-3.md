@@ -9,13 +9,19 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary](#changes) section below.
 
+Please note that for the majority of users migrating from Atlas 2 to Atlas 3, the process you need to follow is simple. If you have not made major custom changes to your Atlas styling, you will follow these steps:
+
+1. Complete steps 1 and 2 in the [Modify Existing Module](#modify-existing) section below.
+2. Complete the [Modify Existing Module (Continued)](#modify-2) section below.
+3. Fix errors per the [Expected Issues After Upgrading to Atlas 3](#expected-issues) section below.
+
 ## 2 Upgrade from Atlas 2 to Atlas 3 {#upgrade}
 
 Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
 Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
-### 2.1 Modify Existing Module
+### 2.1 Modify Existing Module {#modify-existing}
 
 To upgrade to Atlas 3, please do the steps below as they apply to your use case:
 

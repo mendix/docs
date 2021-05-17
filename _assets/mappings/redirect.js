@@ -1377,5 +1377,9 @@ module.exports = {
       from: "/apidocs-mxsdk/apidocs/native-dependencies",
       to: "/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies"
     },
+    {
+      from: "/apidocs-mxsdk/apidocs/property-types-pluggable-widgets",
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/property-types"
+    },
   ]
 }

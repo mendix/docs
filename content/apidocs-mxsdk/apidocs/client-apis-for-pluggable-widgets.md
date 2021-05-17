@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable",  "JavaScript"]
 
 ## 1 Introduction
 
-The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 
 The Mendix platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -38,7 +38,7 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 
 ### 3.4 TabIndex
 
-If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## 4 Property Values
 
@@ -79,7 +79,7 @@ export const enum ValueStatus {
 }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#expression) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -93,7 +93,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute). It is defined as follows:
+EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -135,7 +135,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### 4.4 IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {
@@ -162,7 +162,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 ### 4.5 ImageValue{#imagevalue}
 
-`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
+`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#image) property. `ImageValue` is defined as follows:
 
 ```ts
 export interface WebImage {
@@ -178,7 +178,7 @@ export type ImageValue = WebImage | NativeImage;
 
 ### 4.6 FileValue {#filevalue}
 
-`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#file) property. `FileValue` is defined as follows:
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#file) property. `FileValue` is defined as follows:
 
 ```ts
 export interface FileValue {
@@ -189,7 +189,7 @@ export interface FileValue {
 
 ### 4.7 ListValue{#listvalue}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#datasource) property.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) property.
 
 ```ts
 export interface ObjectItem {
@@ -297,7 +297,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute), [`action`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#action), or [`widgets`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets).
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets).
  
 
 ### 4.8 ListActionValue {#listactionvalue}
@@ -337,7 +337,7 @@ You can obtain an instance of `ActionValue` by using the `ListActionValue` as a 
 
 ### 4.9 ListAttributeValue {#listattributevalue}
 
-`ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) that is linked to a data source.
+`ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute) that is linked to a data source.
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
 
 ```ts
@@ -371,7 +371,7 @@ Note: in this code sample checks of status of `myDataSource` and availability of
 
 ### 4.10 ListWidgetValue {#listwidgetvalue}
 
-`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets) that is linked to a data source. 
+`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is an object and its definition is as follows:
 
@@ -405,7 +405,7 @@ You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a fu
 
 ### 4.11 ListExpressionValue {#listexpressionvalue}
 
-`ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#expression) or [text template property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
+`ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 
 ```ts
 export interface ListExpressionValue<T extends AttributeValue> {
@@ -458,6 +458,6 @@ Sometimes for widgets it is necessary to rely on the existing community librarie
 ## 8 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies)

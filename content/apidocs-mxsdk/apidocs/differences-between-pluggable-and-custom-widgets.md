@@ -21,18 +21,18 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
-| Access to attribute data                                          | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute)    | Yes                                                                   |
-| Retrieve additional data over associations, microflows, or nanoflows | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#datasource) (with [widgets](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets) only)   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.get)          |  |
-| Template Text; combine data and translatable text                 | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#texttemplate) | No                                                                    |
-| Expressions; logic combined with data                             | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#expression)   | No                                                                    |
-| File support; download, and open                           | [yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#file)                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
+| Access to attribute data                                          | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute)    | Yes                                                                   |
+| Retrieve additional data over associations, microflows, or nanoflows | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) (with [widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets) only)   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.get)          |  |
+| Template Text; combine data and translatable text                 | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#texttemplate) | No                                                                    |
+| Expressions; logic combined with data                             | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#expression)   | No                                                                    |
+| File support; download, and open                           | [yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#file)                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
 | File support; upload                          | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
-| Use conditional visibility                                        | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#visibility)   | No                                                                    |
-| Use conditional editability                                       | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#editability)  | No                                                                    |
-| Use glyph icons                                                   | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#icon)         | No                                                                    |
-| Show input label                                                  | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#label)        | No                                                                    |
-| Trigger an action on change of attribute                          | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute)    | No                                                                    |
-| Widgets can contain other widgets                                 | [Yes](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets)   
+| Use conditional visibility                                        | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#visibility)   | No                                                                    |
+| Use conditional editability                                       | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#editability)  | No                                                                    |
+| Use glyph icons                                                   | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#icon)         | No                                                                    |
+| Show input label                                                  | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#label)        | No                                                                    |
+| Trigger an action on change of attribute                          | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute)    | No                                                                    |
+| Widgets can contain other widgets                                 | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets)   
 
 
 ## 3 Read More

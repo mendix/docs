@@ -453,7 +453,7 @@ The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## 7 Native Dependencies
 
-Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](native-dependencies).
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
 
 ## 8 Read More
 

@@ -28,7 +28,7 @@ These are the current versions in active development:
 
 ### Fixes 
 
-* A new version of Google Firebase has been released and this breaks compatibility with the version used in the Firebase-related pluggable widgets. Without this fix, Android builds would fail when Firebase push notifications is enabled in your application.
+* A new version of Google Firebase has been released. This breaks compatibility with the version used in the Firebase-related pluggable widgets. Without this release's fix, Android builds would fail when Firebase push notifications are enabled in your app.
 
 ## 5.1.10
 

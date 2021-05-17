@@ -8,18 +8,17 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The [Data Hub APIs](#datahubapis) are Open API 3.0 specs are available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
+The [Data Hub APIs](#datahubapis) are Open API 3.0 specs available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
 
-The following APIs are available:
+From this page the following APIs are available:
 
 * Search API — search and explore data sources that can be used in your app development
 
 * [Data Hub Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
 {{% alert type="info" %}}
-The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to use the latest Registration and Search API URLs.
+The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to this API and use the latest Registration and Search API URLs.
 {{% /alert %}}
-
 
 When using any of the Data Hub APIs authorization must be included in the headers of the API calls as described in [Authentication and Authorization](#pat-token).
 
@@ -29,7 +28,7 @@ To use the Mendix Data Hub a license is required.
 
 ## 2. Authentication and Authorization{#pat-token}
 
-When making calls using the APIs described in this document, authentication and authorization have to be included in the request by specifying a Personal Access Token (PAT). Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
+When making calls to the Data Hub APIs, authentication and authorization have to be included in the request headers. Users must send a Personal Access Token (PAT) that will enable access to the organization's Data Hub. Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
 
 ### 2.1 Authorization Header
 
@@ -37,21 +36,21 @@ For every request that is made to the Data Hub API, you must include the followi
 
  `MxToken <your_token_secret>`
 
-Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
+where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
 
 ### 2.2. Generating your Personal Access Token {#generatepat}
 
-Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps:
+Mendix users (with a registered account) can obtain a PAT using the Mendix **Warden** app by following these steps:
 
-1. You can access the **Warden** app at: https://warden.mendix.com/.
+1. To access the **Warden** app go to: https://warden.mendix.com/.
 
-2. When you are prompted, sign-in using your username and password. The Warden Home page is shown:
+2. At the prompt, sign-in using your username and password. The Warden Home page is displayed:
 
     ![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
 
-3. To create a new personal access token, click **Add** to go to the **Create a Personal Access Token** screen.
+3. To create a new personal access token, click **Add**;  the **Create a Personal Access Token** screen is displayed.
 
-4. Enter a **Name** for the token. This name will be used when generated tokens are listed on the Warden home screen—that also identifies which tokens are being used.
+4. Enter a unique **Name** for the token. This name will be listed displayed in the generated tokens list on the Warden home screen.
 
 5. For the **Select scopes that can be used with this token:** under Data Hub, check both the **mx:datahub:services:read** and **mx:datahub:services:write**:
 
@@ -65,19 +64,23 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
     {{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.  {{% /alert %}}
 
-    {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
+    {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the header for the object `Authorization`:
 
     ```MxToken <your_token_secret>```
 
-    Insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
+    Insert the **Token secret** that was generated for the *your_token_secret* string. This provides access to your organization’s Data Hub{{% /alert %}}
 
-8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
+8. Click **Close** to return to the **Personal Access Tokens** home screen.
+
+### 2.3. Operations from the Warden Home Screen
+
+The **Warden Home Screen** displays a list of all the tokens:
 
     ![token list](attachments/dta-hub-apis/token-list.png)
 
-9. For each token, **Last Used:** will show when the token was last used.
+* **Last Used:** indicates when the token was last used
 
-10. You can delete unused tokens by clicking the "bin" icon for the token.
+* Delete unused tokens by clicking the "bin" icon for the token
 
 ## 3. Data Hub Open API Specs {#datahubapis}
 

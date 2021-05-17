@@ -102,6 +102,7 @@ This section concerns modifications you have made to the **app** folder of your 
 theme_atlas2/styles/web/sass/app/_
 ```
 
+To move you additional stylesheets that you have added here to **Atlas 3**, there are two options: 
 
 **Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
 

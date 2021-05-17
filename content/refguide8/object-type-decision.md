@@ -9,6 +9,10 @@ aliases:
 ---
 
 {{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
+{{% alert type="info" %}}
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 

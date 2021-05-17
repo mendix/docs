@@ -5,6 +5,10 @@ menu_order: 80
 tags: ["studio pro", "loop", "iterate over"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A loop is used to iterate over a list of objects and is visualized as a frame. For each object the flow inside the loop is executed. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. The name of the object is shown in black and the entity type of the object is in blue. 

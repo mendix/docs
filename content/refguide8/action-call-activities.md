@@ -5,6 +5,10 @@ menu_order: 30
 tags: ["studio pro", "action call", "action call activities"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The following are the action call activities you can use in your microflow or nanoflow:

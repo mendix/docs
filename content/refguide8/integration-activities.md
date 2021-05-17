@@ -4,6 +4,11 @@ parent: "activities"
 menu_order: 60
 tags: ["studio pro"]
 ---
+
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 These activities can only be used in **Microflows**.
 {{% /alert %}}

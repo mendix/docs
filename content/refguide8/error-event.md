@@ -6,6 +6,10 @@ tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
+{{% alert type="info" %}}
 This event can only be used in **Microflows**.
 {{% /alert %}}
 

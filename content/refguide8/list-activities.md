@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "microflow", "list"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 When working with the Mendix Platform, you can use microflows to manipulate not only single objects but whole lists of entities with a single activity.

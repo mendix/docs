@@ -5,6 +5,10 @@ menu_order: 4
 tags: ["studio pro", "continue event", "event", "loop"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 {{% alert type="warning" %}}

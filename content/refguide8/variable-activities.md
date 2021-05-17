@@ -5,6 +5,10 @@ menu_order: 40
 tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A *variable* is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name.

@@ -5,6 +5,10 @@ menu_order: 90
 tags: ["studio pro", "event", "events"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Events are elements that are displayed as circles on a flow of your microflow and are usually placed at the end or the beginning of the flow:

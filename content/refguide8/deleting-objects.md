@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}

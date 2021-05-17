@@ -5,6 +5,10 @@ tags: ["studio pro", "change variable", "variable", "variable activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -14,8 +18,6 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 Change variable allows you to change the value of an existing variable. For example, if you have a *$Discount* variable that gives customers a 50% discount on certain items, you can change this variable and assign a new value to it. You can use this value to give new customers a bigger discount:
 
 ![Change Variable](attachments/variable-activities/change-variable.png)
-
-
 
 ## 2 Properties
 

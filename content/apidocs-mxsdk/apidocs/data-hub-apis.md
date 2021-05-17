@@ -8,9 +8,13 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The [Data Hub APIs](#datahubapis) are available to register your data sources to the organization's Mendix Data Hub. You can also explore and discover data sources that can be used in your app development.
+The [Data Hub APIs](#datahubapis) are Open API 3.0 specs are available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
 
-Using the APIs you can set up a registration flow in the deployment pipeline of your business applications to register new data sources from your applications to the Data Hub Catalog.
+APIs are available to do the following:
+
+* register your data sources to the organization's Mendix Data Hub
+
+* search and explore data sources that can be used in your app development
 
 For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for your Mendix apps.
 
@@ -74,7 +78,7 @@ Mendix users (with a registered account) can obtain the necessary PAT using the 
 
 ## 3. Data Hub Open API Specs {#datahubapis}
 
-The [Data Hub APIs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) are Open API (formerly Swagger) specifications that are located the at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are Open API (formerly Swagger) specifications that are located the at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
 
 The the following operations are currently available:
 

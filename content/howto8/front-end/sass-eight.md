@@ -68,7 +68,7 @@ To prepare your app project, follow these steps:
 	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
 	{{% /alert %}}
 
-8.  Write `gulp dev`. Your screen should then look like this:
+8.  Write `npm run dev`. Your screen should then look like this:
 
 	![](attachments/set-up-sass/gulp-dev.png)
 

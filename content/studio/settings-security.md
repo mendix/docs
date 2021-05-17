@@ -53,6 +53,12 @@ When security is enabled, these two app roles will have full access to your app.
 
 For more information on managing app users, see the [Managing App Users](#managing-app-users) section.
 
+When a new page/microflow/workflow is created, Studio default permissions are set for them, which means that all existing roles in the app will have access to the newly created document.
+
+{{% alert type="warning" %}}
+When a page/microflow/workflow is copy-pasted, Studio default permissions are set for the new document. We recommend you to review permissions for that document.
+{{% /alert %}}
+
 The **Roles and Permissions** screen consist of the following tabs:
 
 * Roles
@@ -127,14 +133,6 @@ You cannot delete or edit the Administrator role.
 {{% /alert %}}
 
 ### 3.4 Setting Access to Specific Pages/Microflows/Workflows
-
-Studio default permissions are set for all newly created pages/microflows/workflows, which means that all existing roles in the app will have access to that new document by default.
-
-{{% alert type="warning" %}}
-
-When a page/microflow/workflow is copy-pasted, Studio default permissions will be set to the new document. We recommend you to review permissions for that document.
-
-{{% /alert %}}
 
 There are two ways to change access for specific pages/microflows/workflows in your app:
 

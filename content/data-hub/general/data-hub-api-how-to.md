@@ -67,7 +67,7 @@ The following list provides an overview the Data Hub APIs:
 
 ## 4 Making the API Calls and Access to Data Hub {#access}
 
-This how-to is a guide in using the Data Hub API. For full details and the complete definitions of what must be specified when making calls and the details of the responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
+This how-to is a guide in the general use of the Data Hub APIs. For the complete definitions of what must be specified when making calls and the details of the different API responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
 For each request described in this document, the method and URL is given for the base call with a description of the parameters and body that may be required for the request. An example is given for each of the calls in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try them out.
 
@@ -110,19 +110,27 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 ## 5 Searching in the Catalog{#api-search}
 
-Search in the Catalog returns the registered assets that satisfy the search string and specified filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items). For more details see [Searching in the Data Hub]( /data-hub/data-hub-catalog/search).
+Search in the Catalog returns the registered assets that satisfy the search string and specified filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
 
-To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex)
+The Data Hub Search API URL is: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html.
 
-### 5.1 Method and Endpoint
+The primary method for this call is GET.
 
-`GET /data`
+To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex).
+
+For more details see [Searching in the Data Hub](/data-hub/data-hub-catalog/search).
+
+### 5.1 Base URL, Method and Endpoint
+
+`GET https://hub.mendix.com/rest/search/v3/data`
+
+The relative endpoint `/data` searches and retrieve registered items from the Data Hub that satisfy the specified parameters.
 
 ### 5.2 Request Parameters
 
-The complete list of request parameters for the call are provided at [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
+The complete list of request parameters for the GET call are specified at [Data Hub Search API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
-The `query` parameter is used to specify the string that you want to search for. The string must be a minimum of 3 characters, and can include alphanumeric characters only. All other characters are not allowed for the search string.
+The `query` parameter can be used to specify the string of characters that you want to base your search upon. The string must be a minimum of 3 characters, and can only include alphanumeric characters. All other characters are not allowed for the search string.
 
 The `productionEndpointsOnly` parameter is a Boolean, which when set to `true` will only search for assets in **Production** environments. `false` will search in all environments.
 

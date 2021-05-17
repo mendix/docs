@@ -21,40 +21,252 @@ Before upgrading, please note that in Atlas 3 all hybrid content is removed beca
 
 Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
-### 2.1 Modify Existing Module {#modify-existing}
+### 2.1 Upgrading your theme directory
 
-To upgrade to Atlas 3, please do the steps below as they apply to your use case:
+To upgrade your theme directory to Atlas 3, please complete the following steps:
 
-1. Rename your **theme** directory. We suggest naming it *theme_atlas2*.
-2. Download this [theme.zip](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. Ensure the folder structure is **Mendix project root**, then **theme**, then **web** and **native**.
-3. If you have made any modifications to Atlas 2 in your Mendix project, the following actions need to be taken (otherwise you can skip to [this section](#modify-2) below. Modifications include changes to pages, layouts, design properties and custom styles added to the `Atlas_UI_Resources` module:
+1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*.
 
-| Section    | Atlas 2 Context                                              | Action Required                                              |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| For Web    |                                                              |                                                              |
-| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom-variables.scss*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these should be moved into *theme/web/custom-variables.scss*</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/web/custom-variables.scss*</li></ul> |
-| 2          | Modifications to Atlas styling in:<ul><li>*theme_atlas2/styles/web/sass/app/_custom.scss*</li> | There are two options based on your requirements: <ul><li>If the styling applies to the app level, these should be moved into *theme/web/main.scss*</li><li>If you want to extract the styles into a reusable module, move them to a module you have created in *themesource/your-module/web/main.scss*</li></ul> |
-| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/web/sass/app/</li><li>any custom *.scss* file</li></ul> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/web/*. Remember to include `@import<file name>` in *theme/web/main.scss* to include your additional files in SCSS compilation.</li></ul> |
-| 4          | Modifications to Atlas HTML in:<ul><li>*theme_atlas2/login.html*</li><li>*theme_atlas2/login-with-sso.html*</li></ul> | <ul><li>Any HTML or document changes in *theme_atlas2/login.html* not included in *theme/web/login.html* should be moved to *theme/web/login.html*.</li><li>Any HTML or document changes in *theme_atlas2/login-with-sso.html* no included in *theme/web/login-with-mendixsso-button.html* should be moved to *theme/web/login-with-mendixsso-button.html*.</li></ul> |
-| 5          | Additional (user-defined) HTML in:<ul><li>*theme_atlas2/<filename>.html*</li> | Move these files into *theme/web*.                           |
-| 6          | Additional static resources (for example, images) in:<ul><li>*theme_atlas2/resources*</li> | Move these files into *theme/web/resources*.                 |
-| 7          | Additional static resources (for example, images) in:<ul><li>*theme_atlas2*</li> | Move these files into *theme/web*.                           |
-| 8          | User-defined design properties in:<ul><li>*theme_atlas2/settings/json*</li> In Atlas 2's *theme_atlas2/settings.json* it is possible to both extend platform-supported widgets with design properties (for these platform widgets: Widget, DivContainer, Button, ListView, DataGrid, TemplateGrid, GroupBox, StaticImageViewer, DynamicImageViewer, Label, DynamicText) as well as define design properties for community-supported widgets. Both scenarios will be addressed in the **Action Required** cell to the right as well as the [Fixing User-Defined Design Properties](#user-design-props) section below. | Generally, the design properties need to be moved into *themesource/your-module/web/design-properties.json* where your-module is a module created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. Follow one or both of the scenarios below in [Fixing User-Defined Design Properties](#user-design-props) for detailed instructions. |
-| For Native |                                                              |                                                              |
-| 1          | Modifications to Atlas' variables in:<ul><li>*theme_atlas2/styles/native/sass/app/custom-variables.js*</li> | There are two options based on your requirements: <ul><li>If the variables apply to the app level, these changes should be moved into *theme/native/custom-variables.js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/native/main.js*.</li></ul> |
-| 2          | Modifications to Atlas' styling in:<ul><li>*theme_atlas2/styles/native/sass/app/custom.js*</li> | There are two options based on your requirements: <ul><li>If the changes apply to the app level, these changes should be moved into *theme/native/main/js*.</li><li>If you want to extract the variables into a reusable module, move them to a module you have created in *themesource/your-module/native/main.js*.</li></ul> |
-| 3          | Additional styling files in:<ul><li>*theme_atlas2/styles/native/app/</li><li>any custom *.js* file</li></ul> | There are two options based on your requirements:<ul><li>If the changes are on the app level the changes should be moved into *theme/native*. Remember to import the file using JavaScript's `import` syntax in *theme/native/main.js* and export the variable exposed by the imported file.</li><li>If you want to extract the changes into a reusable module, move the variables to a module you have created in *themesource/your-module/native*. Remember to import the file using JavaScript's `import` syntax in *themesource/your-module/native/main.js* and export the variable exposed by the imported file.</li></ul> |
-| 4          | User-defined design properties in:<ul><li>*theme_atlas2/settings-native.json*</li> | Refer to **Web Cell 8** for this case. However, changes should be moved to *themesource/your-module/native/design-properties.json* where your-module is created by you, **not** *Atlas_Core*, *Atlas_Web_Content*, or *Atlas_NativeMobile_Content*. |
+2. Download the Atlas 3 [**theme.zip**](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. The folder structure should look similar to the example below. **Mendix project root**, then **theme**, then **web** and **native**.
 
-#### 2.1.1 Fixing User-Defined Design Properties {#user-design-props}
+   [add screenshot]
 
-Please take action based on which of the two scenarios below fits your use case.
+### 2.2 Moving your web styling from Atlas 2 to Atlas 3
 
-##### 2.1.1.1 Scenario 1: Design Properties for Platform-Supported Widgets
+This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section **Migrating UI content from Atlas 2 to Atlas 3**.
 
-Follow this guide if, in Atlas 2, you have extended one or more platform supported widgets with your own design property similar to the following example.
+Modifications to the **Atlas 2 theme** include the following: 
 
-In this example all container widgets are extended with a toggle type `“Border”` design property to add a border to a container, which can be seen in the fragment below. Note that for design properties the `Element` name is called `DivContainer`.
+- Changes to custom variables
+- Adding of additional custom styling
+- Changes to design properties
+- Changes made to Login.html and index.html
+
+If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 5 sections: 
+
+- [Web custom variables](#Web-custom-variables)
+- Web custom styling
+- Web additonal custom styling
+- Web design properties 
+- Web resources
+
+#### 2.2.1 Web custom variables
+
+This section concerns modifications you have made to the **custom-variables** scss file of your **Atlas 2 theme**.
+
+```
+theme_atlas2/styles/web/sass/app/_custom-variables.scss
+```
+
+To move your custom variable modifications to **Atlas 3**, there are two options: 
+
+**Option 1** - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
+
+```
+theme/web/custom-variables.scss
+```
+
+**Option 2** - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
+
+```
+themesource/your-module/web/custom-variables.scss
+```
+
+#### 2.2.2 Web custom styling
+
+This section concerns modifications you have made to the **custom** scss file of your **Atlas 2 theme**.
+
+```
+theme_atlas2/styles/web/sass/app/_custom.scss
+```
+
+To move your custom styling modifications to **Atlas 3**, there are two options: 
+
+**Option 1** - If the custom styling apply to the app level, then the modifications should be moved into the **main** scss file of the **Atlas 3 theme** directory. 
+
+```
+theme/web/main.scss
+```
+
+**Option 2** - If you want to extract the custom styling into a reusable module, move them into the **main** scss file of a module you have created in the **themesource** directory.
+
+```
+themesource/your-module/web/main.scss
+```
+
+#### 2.2.3 Web additional custom styling
+
+This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional scss stylesheets that you might have added. 
+
+```
+theme_atlas2/styles/web/sass/app/_
+```
+
+
+**Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
+
+```
+theme/web/_
+```
+
+Remember to include `@import <file name>` in ***theme/web/main.scss*** to include your additional files in the compilation of the SCSS. 
+
+**Option 2** - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
+
+```
+themesource/your-module/web/_
+```
+
+Remember to include `@import<file name>` in ***themesource/your-module/web/main.scss*** to include your additional files in the compilation of the SCSS. 
+
+#### 2.2.4 Web design properties
+
+This section concerns modifications you have made to the **settings.json file** of your **Atlas 2 theme**.
+
+```
+theme_atlas2/settings.json
+```
+
+Custom **design properties** that you have added to **settings.json**, need to be moved into the web's **design-property** json file of a module you have created in the **themesource** directory. 
+
+```
+themesource/your-module/web/design-properties.json*
+```
+
+Do not add to the modules **Atlas Core** or **Atlas Web Content**.
+
+If you have user defined **design properties** for platform supported or community supported widgets, follow the two scenarios below.  
+
+#### 2.2.5 Web resources
+
+This section concerns modifications you have made to documents **login.html** and **index.html**, as well as additional static resources e.g. font libraries, images, etc...
+
+Any custom index.html or login.html pages that you have created in your **Atlas 2 theme** need to be moved to the **web** directory of the **Atlas 3 theme**. 
+
+```
+theme/web/login.html
+```
+
+The same applies to additional HTML documents that you may have created. 
+
+Additional static resources such as images, font libraries need to be moved to the **resources** directory of **web** in the **Atlas 3 theme.** 
+
+```
+theme/web/resources
+```
+
+### 2.3 Moving your native styling from Atlas 2 to Atlas 3
+
+This section can be skipped if you have not made any modifications to the **native** section of your **Atlas 2 theme** and you can continue to the section **moving your UI content from Atlas 2 to Atlas 3**.
+
+Modifications to the **Atlas 2 theme** include the following: 
+
+- Changes to custom variables
+- Adding of additional custom styling
+- Changes to design properties
+
+If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 4 sections: 
+
+- Native custom variables
+- Native custom styling
+- Native additonal custom styling
+- Native design properties 
+
+#### 2.3.1 Native custom variables
+
+This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
+
+```
+theme_atlas2/styles/native/sass/app/custom-variables.js
+```
+
+To move your custom variable modifications to **Atlas 3**, there are two options: 
+
+**Option 1** - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
+
+```
+theme/native/custom-variables.js
+```
+
+**Option 2** - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
+
+```
+themesource/your-module/native/custom-variables.js
+```
+
+#### 2.3.2 Native custom styling
+
+This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
+
+```
+theme_atlas2/styles/native/sass/app/_custom.js
+```
+
+To move your custom styling modifications to **Atlas 3**, there are two options: 
+
+**Option 1** - If the custom styling apply to the app level, then the modifications should be moved into the **main** js file of the **Atlas 3 theme** directory. 
+
+```
+theme/native/main.js
+```
+
+**Option 2** - If you want to extract the custom styling into a reusable module, move them into the **main** js file of a module you have created in the **themesource** directory.
+
+```
+themesource/your-module/native/main.js
+```
+
+#### 2.3.3 Native additonal custom styling
+
+This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
+
+```
+theme_atlas2/styles/native/sass/app/_
+```
+
+To move you additional stylesheets that you have added here to **Atlas 3**, there are two options: 
+
+**Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
+
+```
+theme/native/_
+```
+
+Remember to import the file using JavaScript's `import` syntax in *theme/native/main.js* and export the variable exposed by the imported file. 
+
+**Option 2** - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
+
+```
+themesource/your-module/native/_
+```
+
+Remember to import the file using JavaScript's `import` syntax in *themesource/your-module/native/main.js* and export the variable exposed by the imported file.
+
+#### 2.2.4 Native design properties
+
+This section concerns modifications you have made to the **settings-native.json file** of your **Atlas 2 theme**.
+
+```
+theme_atlas2/settings-native.json
+```
+
+Custom **design properties** that you have added to **settings-native.json**, need to be moved into the native's **design-property** json file of a module you have created in the **themesource** directory. 
+
+```
+themesource/your-module/web/design-properties.json*
+```
+
+Do not add to the modules **Atlas Core** or **Atlas Native Content**.
+
+If you have custom defined **design properties** for platform supported or community supported widgets, see the section **migrating custom defined design properties**.
+
+### 2.3 Migrating custom defined design properties
+
+#### 2.3.1 Adding Design Properties for Platform-Supported Widgets
+
+If you have extended one or more platform supported widgets with your own design property similar to the following example.
+
+You have extended the **container widget** with a design property **border** to add a border to an instance of the container. Note that for design properties the `Element` name is called `DivContainer`.
 
 ```
 {
@@ -62,6 +274,28 @@ In this example all container widgets are extended with a toggle type `“Border
  "cssFiles": ["styles/web/css/main.css"],
  "designProperties": {
   "DivContainer": [
+  	{
+  		"name": "Align content",
+  		"type": "Dropdown",
+  		"description": "Align content of this element left, right or center it. Align elements 					inside the container as a row or as a column.",
+  		"options": [
+  				{
+  					"name": "Left align as a row",
+  					"oldNames": ["Left align as row"],
+  					"class": "row-left"
+  				},
+  				{
+  					"name": "Center align as a row",
+    				"oldNames": ["Center align as row"],
+  					"class": "row-center"
+  				},
+  				{
+  					"name": "Right align as a row",
+  					"oldNames": ["Right align as row"],
+  					"class": "row-right"
+   				}
+   		]
+   },
    {
     "name": "Border", // custom design property targeting the platform's DivContainer
     "type": "Toggle",
@@ -73,7 +307,7 @@ In this example all container widgets are extended with a toggle type `“Border
 }
 ```
 
-As this was a custom-added design property, this needs to be added to *themesource/your-module/web/design-properties.json* including the widget name, which would result in something similar to this:
+In the example above we have two design properties: **align content** and **border**. Align content is a Atlas 3 defined design property, while border is custom-defined design property. To avoid conflicts with the Atlas 3 defined design properties, its recommended to export only your custom-defined design properties to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similiar to the below example. 
 
 ```
 {
@@ -88,11 +322,11 @@ As this was a custom-added design property, this needs to be added to *themesour
 }
 ```
 
-##### 2.1.1.2 Scenario 2: Design Properties for Community Widgets
+#### 2.3.2 Adding Design Properties for Community-Supported Widgets
 
-Follow this guide if you have defined your own design property for a community-supported widget in your project.
+If you have defined your own design property for a community-supported widget in your project, similar to the following example, follow these steps.
 
-In the following example a design property `“Opacity”` is added for MyCustomWidget widgets. In Atlas 2 it would appear as follows in *theme_atlas2/settings.json*: 
+You have added a design property `“Opacity”` for MyCustomWidget, in **Atlas 2**. As shown below in the **settings.json** file. 
 
 ```
 {
@@ -120,11 +354,7 @@ In the following example a design property `“Opacity”` is added for MyCustom
 }
 ```
 
-Note that depending on your Atlas 2 project, you may or may not have design properties for platform or community-supported widgets. In the example image above, the design properties for platform supported widgets are folded.
-
-Copy and paste the design property key, array, and design property object from *theme_atlas2/settings.json* into the root object in *themesource/your-module/web/design-properties.json* where your-module is a module of your choosing. 
-
-In this example, the result is as follows:
+As this is a custom-defined design property, this needs to be added to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similiar to the below example.
 
 ```
 {
@@ -148,19 +378,39 @@ In this example, the result is as follows:
 }
 ```
 
-### 2.2 Modify Existing Module (Continued) {#modify-2}
+#### 2.3.3 Merging options for design properties
 
-Once you have completed the necessary steps above, finish modifying existing files by doing the following: 
+Currently the merging of design property options across themesource modules is not yet supported.
 
-1.  Rename the *Atlas_UI_Resources* module to *Atlas_Core* in Studio Pro by right-clicking the module then clicking **Rename**:
+### 2.4  *Migrating UI content from Atlas 2 to Atlas 3
 
-	![](attachments/atlas-mig/2-rename.png)
+**Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
-2.  Download the [Atlas Core module](https://marketplace.mendix.com/link/component/117187) from the Marketplace and replace the existing *Atlas_UI_Resources* renamed to *Atlas_Core*:
+- **Atlas Core** - Contains Atlas core styling and layouts
+- **Atlas Web Content** - Contains Atlas's web page templates and building blocks
+- **Atlas Native Content** - Contains Atlas's native page templates and building blocks
 
-	![](attachments/atlas-mig/3-import.png)
+#### 2.4.1 Upgrading Atlas UI Resources to Atlas Core
 
-{{% todo %}}[add atlas core files later, and add this text to step 2 For internal testing, download **Atlas_Core** file below this step]{{% /todo %}}
+1.  If you have modified any of the Atlas UI content found in Atlas UI Resources, its recommended to move the UI content from this folder to a user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
+
+2. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
+
+   ![](attachments/atlas-mig/2-rename.png)
+
+3. Download **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** from the Marketplace and replace the existing ***Atlas_UI_Resources*** renamed to ***Atlas_Core***:
+
+   ![](attachments/atlas-mig/3-import.png)
+
+#### 2.4.2 Adding Atlas Web content to your app
+
+1. Download **Atlas Web Content** from Marketplace
+2. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
+
+#### 2.4.3 Adding Atlas Native content to your app
+
+1. Download **Atlas Native Content** from Marketplace
+2. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**
 
 ## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 
@@ -214,155 +464,7 @@ To fix this, right-click the error then select **Go to Navigation profile ‘Hyb
 	
 ![](attachments/atlas-mig/set-hybrid-nav.png)
 
-## 5 Modified Design Properties for Native Mobile
-
-Here are the modified design properties for native mobile:
-
-| Parent                                                       | Property                  | Removed                                                      | Added                                                        |
-| ------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| All                                                          | Background color          | {<br>    "name": "Primary",<br>    "class": "backgroundPrimary"<br>},<br>{<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>}, | {<br>    "name": "Background Primary",<br>    "oldNames": ["Background Default"],<br>    "class": "background-main"<br>},<br>{<br>    "name": "Background Secondary",<br>    "oldNames": ["Background Dashboard"],<br>    "class": "background-secondary"<br>}, |
-| Widget                                                       | Spacing top               |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterTopSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterTopLarger"<br>}, |
-| Widget                                                       | Spacing bottom            |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterBottomSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterBottomLarger"<br>}, |
-| Widget                                                       | Spacing right             |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterRightSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterRightLarger"<br>}, |
-| Widget                                                       | Spacing left              |                                                              | {<br>    "name": "Smaller",<br>    "class": "spacingOuterLeftSmaller"<br>},<br>{<br>    "name": "Larger",<br>    "class": "spacingOuterLeftLarger"<br>}, |
-| DivContainer                                                 | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
-| ScrollContainer                                              | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
-| Image                                                        | No longer exists          | No longer exists                                             | No longer exists                                             |
-| StaticImageViewer                                            | Shape                     |                                                              | {<br>    "name": "Square",<br>    "class": "imageSquare"<br>},<br>{<br>    "name": "Circle",<br>    "class": "imageCircle"<br>} |
-| StaticImageViewer                                            | Size                      |                                                              | {<br>    "name": "Icon",<br>    "class": "imageIcon",<br>    "oldNames": ["imageCircleIcon", "imageSquareIcon"]<br>},<br>{<br>    "name": "Small",<br>    "class": "imageSmall",<br>    "oldNames": ["imageCircleSmall", "imageSquareSmall"]<br>},<br>{<br>    "name": "Medium",<br>    "class": "imageMedium",<br>    "oldNames": ["imageCircleMedium", "imageSquareMedium"]<br>},<br>{<br>    "name": "Large",<br>    "class": "imageLarge",<br>    "oldNames": ["imageCircleLarge", "imageSquareLarge"]<br>},<br>{<br>    "name": "Larger",<br>    "class": "imageLarger",<br>    "oldNames": ["imageCircleLarger", "imageSquareLarger"]<br>},<br>{<br>    "name": "FullSize",<br>    "class": "imageFullSize"<br>} |
-| DynamicImage                                                 | No longer exists          | No longer exists                                             | No longer exists                                             |
-| DynamicImageViewer                                           | Same as StaticImageViewer | Same as StaticImageViewer                                    | Same as StaticImageViewer                                    |
-| DynamicText                                                  | Color                     | {<br>    "name": "Contrast lowest",<br>    "class": "textContrastLowest"<br>},<br>{<br>    "name": "Contrast lower",<br>    "class": "textContrastLower"<br>},<br>{<br>    "name": "Contrast low",<br>    "class": "textContrastLow"<br>},<br>{<br>    "name": "Contrast default",<br>    "class": "textContrastDefault"<br>},<br>{<br>    "name": "Contrast high",<br>    "class": "textContrastHigh"<br>},<br>{<br>    "name": "Contrast higher",<br>    "class": "textContrastHigher"<br>},<br>{<br>    "name": "Contrast highest",<br>    "class": "textContrastHighest"<br>} | {<br>    "name": "Paragraph",<br>    "class": "textParagraph"<br>},<br>{<br>    "name": "Disabled",<br>    "class": "textDisabled"<br>},<br>{<br>    "name": "Black",<br>    "class": "textBlack"<br>}, |
-| DynamicText                                                  | Size                      |                                                              | {<br>    "name": "Smallest",<br>    "class": "textSmallest"<br>},<br>{<br>    "name": "Largest",<br>    "class": "textLargest"<br>} |
-| DynamicText                                                  | Weight                    | {<br>    "name": "Light",<br>    "class": "textLight"<br>},<br>{<br>    "name": "Semibold",<br>    "class": "textSemiBold"<br>}, |                                                              |
-|                                                              | Decoration (New)          |                                                              | {<br>    "name": "Underline",<br>    "class": "textUnderline"<br>},<br>{<br>    "name": "Line Through",<br>    "class": "textLineThrough"<br>} |
-| LayoutGrid (New)                                             |                           |                                                              |                                                              |
-| LayoutGridRow (New)                                          |                           |                                                              |                                                              |
-| LayoutGridColumn (New)                                       |                           |                                                              |                                                              |
-| ListView                                                     | Background color (new)    |                                                              | {<br>    "name": "Primary",<br>    "class": "backgroundPrimary"<br>},<br>{<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Primary",<br>    "class": "backgroundBrandPrimary"<br>},<br>{<br>    "name": "Brand Success",<br>    "class": "backgroundBrandSuccess"<br>},<br>{<br>    "name": "Brand Warning",<br>    "class": "backgroundBrandWarning"<br>},<br>{<br>    "name": "Brand Danger",<br>    "class": "backgroundBrandDanger"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
-| com.mendix.widget.native.animation.Animation                 | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
-| com.mendix.widget.native.floatingactionbutton.FloatingActionButton | Style                     |                                                              | {<br>    "name": "Secondary",<br>    "class": "floatingActionButtonSecondary"<br>}, |
-| com.mendix.widget.native.safeareaview.SafeAreaView           | Background color          | {<br>    "name": "Secondary",<br>    "class": "backgroundSecondary"<br>}, | {<br>    "name": "Gray",<br>    "class": "backgroundGray"<br>},<br>{<br>    "name": "Brand Info",<br>    "class": "backgroundBrandInfo"<br>} |
-
-## 6 Modified Design Properties for Web
-
-Here are the modified design properties for web:
-
-| Parent                                                       | Property                     | Removed                                                      | Added                                                        | Renamed                                                      |
-| ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Widget                                                       | Spacing Top                  |                                                              | {"name": "Inner none","class": "spacing-inner-top-none"},{"name": "Inner small","class": "spacing-inner-top"},{"name": "Inner medium","class": "spacing-inner-top-medium"},{"name": "Inner large","class": "spacing-inner-top-large"} | “None” => "Outer none”“Small” => “Outer small”“Medium” => “Outer medium”“Large” => “Outer large” |
-| Widget                                                       | Spacing bottom               |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
-| Widget                                                       | Spacing right                |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
-| Widget                                                       | Spacing left                 |                                                              | Same as Spacing Top                                          | Same as Spacing Top                                          |
-| DivContainer                                                 | Background color             | {  "name": "Brand Default",  "oldNames": [    "Default"  ],  "class": "background-default"},{  "name": "Brand Inverse",  "oldNames": ["Inverse"],  "class": "background-inverse"},{  "name": "Brand Info",  "oldNames": ["Info"],  "class": "background-info"}, | {  "name": "Background Primary",  "oldNames": ["Background Default"],  "class": "background-main"},{  "name": "Brand Secondary",  “oldNames”: [“Brand Default”, “Default”]  "class": "background-secondary"},{  "name": "Brand Gradient",  "class": "background-brand-gradient"} |                                                              |
-| DivContainer                                                 | Shade (new)                  |                                                              | {"name": "Light","class": "background-light"},{"name": "Dark","class": "background-dark"} |                                                              |
-| GroupBox                                                     | Style                        | {"name": "Brand Default","oldNames": ["Default"],"class": "groupbox-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "groupbox-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "groupbox-info"}, | {"name": "Brand Secondary","oldNames": ["Default", "Brand Default"],"class": "groupbox-secondary"}, |                                                              |
-| StaticImageViewer                                            | Fit (new)                    |                                                              | {"name": "Fill","class": "img-fill"},{"name": "Contain","class": "img-contain"},{"name": "Cover","class": "img-cover"},{"name": "Scale-down","class": "img-scale-down"} |                                                              |
-| DynamicImageViewer                                           | Fit (new)                    |                                                              | Same as StaticImageViewer                                    |                                                              |
-| Label                                                        | Style                        | {"name": "Brand Default","oldNames": ["Default"],"class": "label-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "label-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "label-info"}, | {"name": "Brand Secondary","oldNames": ["Default", "Brand Default"],"class": "label-secondary"}, |                                                              |
-| TabContainer (new)                                           |                              |                                                              |                                                              |                                                              |
-| DynamicText                                                  | FontWeight renamed to Weight |                                                              |                                                              |                                                              |
-| DynamicText                                                  | Size (new)                   |                                                              | {"name": "Small","class": "text-small"},{"name": "Large","class": "text-large"} |                                                              |
-| DynamicText                                                  | Color                        | {"name": "Brand Default","oldNames": ["Default"],"class": "text-default"},{"name": "Brand Inverse","oldNames": ["Inverse"],"class": "text-inverse"},{"name": "Brand Info","oldNames": ["Info"],"class": "text-info"}, | {"name": "White","class": "text-white"},{  "name": "Brand Secondary",  "oldNames": ["Default", "Brand Default"],  "class": "text-secondary"}, |                                                              |
-| Table (new )                                                 |                              |                                                              |                                                              |                                                              |
-| com.mendix.widget.custom.badge.Badge (new)                   |                              |                                                              |                                                              |                                                              |
-| com.mendix.widget.custom.progressbar.ProgressBar (new)       |                              |                                                              |                                                              |                                                              |
-| com.mendix.widget.custom.badgebutton.BadgeButton (new)       |                              |                                                              |                                                              |                                                              |
-| com.mendix.widget.custom.progresscircle.ProgressCircle (new) |                              |                                                              |                                                              |                                                              |
-
-## 7 Building Blocks and Page Templates
-
-If you are using building blocks or page templates, please make sure you download the corresponding modules from **Marketplace**.
-
-For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module.
-
-For native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module.
-
-## 8 Atlas 3 Change Summary {#changes}
-
-Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
-
-{{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
-
-On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
-
-### 8.1 New Theme
-
-Our new theme has the following advantages:
-
-* Updated color palette
-* Values changed in variables
-* Introduced exclusion variables for widget default styling
-* Changed from Mendix blue to Ultramarine
-* MxDock added to template to create one unified platform experience
-
-### 8.2 Grid System
-
-Our new grid system has the following advantages:
-
-* Moved to an 8 pixel grid system
-* This new system provides good basic unit to work with (the numbers 4 and 8 are easily multiplied)
-* Created more uniformity in design
-
-### 8.3 Float Removal
-
-Our removal of float has the following advantages:
-
-* Removal of the use of “float: left” and “float:right” throughout Atlas core
-* Migration of float to flex layout
-* Removal of the reliance on floats for layout (flex is more a modern option compared to float)
-
-### 8.4 Design Properties 
-
-Consult the table below for a summary of the changes to existing design properties.
-
-| Spacing options - <br>added spacing-inner, spacing-inner-medium, spacing-inner-large | Introduction of options for inner spacing to all components. Align design properties with that with of native. Design in the two mediums of native and web should be the same experience.                                              |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Spacing outer options                                                                | Previous spacing options are renamed to outer to be more explicit and to refer to “margin”, while inner refers to “padding”. Aligning design implementation between native and web.                                                    |
-| Streamlined style options                                                            | Across a number of widgets we have streamlined the options available for style to primary, secondary, success, warning and danger. The options of “brand-inverse” and “brand-info” are still actionable classes in the sass framework. |
-
-Consult the table below for a summary of additional design properties.
-
-| Tab Container                    | Addition of design properties for tab styling and positioning.                                                                                    |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Datagrid 2                       | Addition of design properties for styling and layout of the datagrid 2.                                                                           |
-| Badge                            | Addition of style design property for styling the new updated badge.                                                                              |
-| Badge Button                     | Addition of design properties for design of the badge button, same properties as that of the standard button: style, size, full-width and border. |
-| Progress Circle                  | Addition of design properties for styling the new updated progress circle. Properties including bar color and bar thickness.                      |
-| Progress Bar                     | Addition of design properties for the styling the new updated progress bar. Properties including bar color and bar thickness.                     |
-| Additional background variants   | Dark and light variations can be added to your background colors via design properties.                                                           |
-| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. options include fill, contain, cover and scale-down.                      |
-
-### 8.5 Web Environment Changes
-
-Here is a list of key changes pertaining to the web environment:
-
-* The color palette has been improved which influences all aspects of design and user-experience, from widgets to page templates
-* Layout and spacing now relies on a “8px” system, creating more uniformity in design
-* Display type “flex” has been used instead of “float” where possible
-* Many design properties have been introduced or options added:
-    * “Inner” spacing options allowing users to configure “padding” for widgets. This applies to all widgets
-        * Previous spacing options are now renamed to “Outer” to be more explicit and apply to “margin” for widgets
-    * Container widgets get a new “gradient” option for background color
-    * Container widgets get a “shade” design property with options to apply shades to background colors
-    * List View widgets get a “style” option to add horizontal borders at the top and bottom of each list item
-    * Static and Dynamic images each get a new design property to assist with fitting images (for example fill, contain, cover, or scale-down)
-    * Tab Container widgets get new design properties to style and space tabs
-    * Text widgets get a new “color” option to color text white
-    * Table widgets get new design properties for styling and layout
-* Helper classes have been added to assist with (in *core/base/_spacing.scss*):
-    * Spacing
-    * Shadows
-    * Widget height
-    * Widget width
-    * Widget borders
-* Some design properties have been removed:
-    * Info and Inverse brand styles for all widgets
-* Some design properties have been deprecated:
-    * List View widgets’ “styleless” option
-* Design Properties such as Style, Color, and Background color that had a “Brand Default” option are now called “Brand Secondary”
-
-## 9 Troubleshoot
+## 5 Troubleshoot
 
 To troubleshoot common Atlas problems, do the following:
 
@@ -371,3 +473,10 @@ To troubleshoot common Atlas problems, do the following:
 * If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
 	*  Adjust the layout the page uses to include a placeholder with matching name.
 	* On the page, move the content out of the placeholder.
+
+## 5 Read more
+
+Atlas 3 change summary
+
+
+

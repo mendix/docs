@@ -11,7 +11,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 This guide describes how to use the Data Hub APIs.
 
-The [Data Hub API](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are published as OpenAPI 3.0 (formerly Swagger) specifications which enables you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
 
 This how-to will guide you through the sequence of steps for searching the Data Hub and registering your data sources.
 
@@ -69,7 +69,7 @@ The following list provides an overview the Data Hub APIs:
 
 This how-to is a guide in the general use of the Data Hub APIs. For the complete definitions of what must be specified when making calls and the details of the different API responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
-For each request described in this document, the method and URL is given for the base call with a description of the parameters and body that may be required for the request. An example is given for each of the calls in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try them out.
+For each request described in this document, the method and the base URL is given with a description of the general parameters and body that can be used for a typical request. An example is given for each of the calls in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try them out.
 
 For some examples, an example [curl](http://curl.haxx.se/) command is also given. You must enter the specifics for your own registration such as the returned values for your requests and you PAT token value.
 
@@ -81,7 +81,7 @@ To gain access to your organization’s Data Hub you must include your personal 
 
 ​   `Authorization`: `MxToken <your_PAT_Token>`.
 
-Insert the value of your PAT token for the string <*your token*>.
+Insert the value of your PAT token for the string <*your_PAT_Token*>.
 
 #### 4.1.1 Using Postman
 
@@ -106,7 +106,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 * {*AppUUID}* — insert the value returned in the API response for the UUID of the application
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
-* ```<your_PAT_Token>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
+* <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
 ## 5 Searching in the Catalog{#api-search}
 

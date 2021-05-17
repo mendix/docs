@@ -6,6 +6,10 @@ description: Describes how to deploy your first Mendix native mobile app with th
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 ---
 
+{{% alert type="warning" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to will teach you how to go from a blank slate to an app running on a device.

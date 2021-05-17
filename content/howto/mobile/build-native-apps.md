@@ -6,6 +6,10 @@ description: Tutorials for building native mobile apps.
 tags: ["mobile", "native", "react", "ios", "android"]
 ---
 
+{{% alert type="warning" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
+
 These step-by-step guides will teach you to build native mobile applications and more. Many of these guides use the Native Builder UI tool included in Mendix Studio Pro v8.15 and above:
 
 * [Deploy Your First Mendix Native Mobile App](deploying-native-app) – Go from a blank slate to an app running on a device.

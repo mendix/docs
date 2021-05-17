@@ -12,8 +12,8 @@ The [Data Hub APIs](#datahubapis) are Open API 3.0 specs available at https://da
 
 From this page the following APIs are available:
 
+* Register API — register data sources to the organization's Mendix Data Hub
 * Search API — search and explore data sources that can be used in your app development
-
 * [Data Hub Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
 {{% alert type="info" %}}
@@ -84,14 +84,19 @@ The **Warden Home Screen** displays a list of all the tokens:
 
 ## 3. Data Hub Open API Specs {#datahubapis}
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are Open API (formerly Swagger) specifications that are located the at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are Open API (formerly Swagger) specifications located at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
 
-The the following operations are currently available:
+The following APIs are currently available:
 
-* Registration
-* Search
+* [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
+* [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)
+* [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html)
 
-To follow how to use the APIs, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to) that provides the step-by-step instruction for registering your data sources and searching.
+For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). [Data Hub Transform Open API Spec](#transform) describes how to generate the registration request bodies for Mendix Apps.
+
+{{% alert type="info" %}}
+The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to this API and use the latest Registration and Search API URLs.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
@@ -140,7 +145,6 @@ This object must specify the location constants for the published endpoints that
       "Name": "MyFirstModule.EmployeeManagement_Location",
       "Value": "https://hr.acmecorp.test/employeeservice/v2"
     }
-
 
 ### 4.4 Optional Values not Obtained from dependencies.json {#not-in-depfile}
 

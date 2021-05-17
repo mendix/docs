@@ -9,15 +9,17 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 ## 1 Introduction
 
-This guide describes how to use the APis that are available for the Data Hub. Currently APIs are available
+This guide describes how to use the Data Hub APIs.
 
-The [Data Hub API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API.  Using the Data Hub API you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the API you can also search for suitable data sources that you can use in your app development and register apps that consume the shared data sources.
+The [Data Hub API](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) is published as an OpenAPI 3.0 (formerly Swagger) specification which enables you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
 
-This how-to will guide you through the main processes for searching the Data Hub and registering your data sources.
+This how-to will guide you through the sequence of steps for searching the Data Hub and registering your data sources.
 
-Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub. Users in Studio Pro can also directly consume shared datasets through the Data Hub Pane. A step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume is available in [Share Data Between Apps](/data-hub/share-data) . This will illustrate the steps required for using the Data Hub and illustrate the API calls.
+Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub upon deployment. Users in Studio Pro can also directly consume shared datasets through the [Data Hub Pane](/refguide/data-hub-pane).
 
-An API is available—the [Transform API](#transform)— that enables Mendix users that deploy to a *non-Mendix Cloud* to extract the information that is required to register their apps using the Data Hub API calls.
+A step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume is available in [Share Data Between Apps](/data-hub/share-data) . This will illustrate the steps required for using the Data Hub and illustrate the API calls.
+
+The [Transform API](#transform) enables Mendix users that deploy to a *non-Mendix Cloud* to extract the information that is required to register their apps using the Data Hub API calls.
 
 {{% alert type="info" %}}To use the Mendix Data Hub a license is required. {{% /alert %}}
 
@@ -38,38 +40,36 @@ Before starting this how-to, make sure you have completed the following:
 * Have a registered Mendix Data Hub account
 * Obtain your own Personal Access Token (PAT) as described in [Generating your Personal Access Token](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) to authenticate your API requests
 
-## 3 Overview of the Data Hub API
+## 3 Overview of the Data Hub APIs
 
-The following list provides an overview the Data Hub API:
+The following list provides an overview the Data Hub APIs:
 
-* The latest Data Hub API is available at: [http://datahub-spec.s3-website.eu-central-1.amazonaws.com](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
-
-* The base URL for all calls to the API is: https://hub.mendix.com/rest/datahubservice/v2/.
+* The latest Data Hub APIs are available at: [https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html). The full specification details, descriptions  and responses are provided for each of the APIs available.
 
 * All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
 
-* Refer to [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) for the full specification details and responses.
+* The following operations can be carried out using the Data Hub APIs:
 
-* The following operations can be carried out using the Data Hub API:
+  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using the [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)which is described in (#api-search)
 
-  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using [GET /data](#api-search)
-
-  * Register data sources (OData services):
+  * Register data sources (OData services) using the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) as described in [Registering Applications, Environments, Data Sources](#reg-contract):
     The following requests must be made in the given order using the returned UUID values for the subsequent step:
 
-    1. Register the application that the dataset originates from: [POST applications](#api-search)
+    1. Register the application that the dataset originates from: [POST applications](#register-app)
 
-    2. Register the environment that the dataset is deployed to: [POST environment](#api-search)
+    2. Register the environment that the dataset is deployed to: [POST environment](#register-env)
 
     3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
 
   * Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
 
+  * Create a registration call body for Mendix apps *not* deployed to a Mendix Cloud using the [Transform API](#transform).
+
 ## 4 Making the API Calls and Access to Data Hub {#access}
 
-This how-to guides users in using the Data Hub API. For the complete definitions of all the schemas that make up the API and the parameters and objects that must be provided and are returned, refer to the [Data Hub OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com).
+This how-to is a guide in using the Data Hub API. For full details and the complete definitions of what must be specified when making calls and the details of the responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
-For each request described in this document, the method and URL is given for the base call with a description of the parameters and body that may be required for the request. An example is given for each of the calls described here in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try out the calls.
+For each request described in this document, the method and URL is given for the base call with a description of the parameters and body that may be required for the request. An example is given for each of the calls in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try them out.
 
 For some examples, an example [curl](http://curl.haxx.se/) command is also given. You must enter the specifics for your own registration such as the returned values for your requests and you PAT token value.
 
@@ -87,7 +87,7 @@ Insert the value of your PAT token for the string <*your token*>.
 
 If you prefer to use a tool with a graphical user interface when working with APIs, you can use a REST API client, for example, [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/). When using Postman, for each request, provide the request URI, the HTTP method, and, if required, the request parameters and body.
 
-Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string `<your_PAT_Token>`).
+Access to your Data Hub is specified in the request **Header** using the key `Authorization` and setting the value to this key as `MxToken <your_PAT_Token>` (inserting the value of your PAT token for the string <*your_PAT_Token*>).
 
 You can set your PAT token as a variable that can be conveniently called for each request.
 
@@ -104,7 +104,6 @@ Insert the value of your PAT token for the string <*your token*> for every reque
 
 For convenience and conciseness, throughout this how-to the following variables are used and should be substituted by the relevant values or those that are returned in prior responses:
 
-* {{baseURL}} — the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 * {*AppUUID}* — insert the value returned in the API response for the UUID of the application
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
 * ```<your_PAT_Token>``` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
@@ -169,7 +168,7 @@ You can register the entities that are consumed by a registered app that consume
 
 You can try out the example calls for registering a data source as described in [Registering an Example OData Contract](data-hub-api-how-to-examples#reg-contract-ex).
 
-### 6.1 Registering an Application in the Catalog using POST
+### 6.1 Registering an Application in the Catalog using POST {#register-app}
 
 The first step is to register the application that the data source or service originates from.
 
@@ -189,7 +188,7 @@ There are no parameters to this request only a payload that specifies the detail
 
 A successful 201 response will indicate that the application has been registered in the Catalog. The response will return an application `UUID`, which is the Catalog identifier for the registered app that must be used when referring to the application in the next steps of the registration.
 
-### 6.2 Registering an Environment
+### 6.2 Registering an Environment {#register-env}
 
 The next step is to register the environment where the app and the service is deployed.
 

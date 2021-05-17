@@ -31,8 +31,6 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Node and NPM](https://nodejs.org/en/download/)
-* Download the Native Builder [executable](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) to a folder of your preference and extract all contents
-   * Use v3.0.0 with Mendix 9.0 and above
 
 For iOS builds:
 
@@ -47,7 +45,7 @@ For Android Builds:
 
 The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
-The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Builder this is handled internally using the `--mendix-version` parameter. For more information on parameters, see the [Expanded Parameter Explanations](/refguide/native-builder#parameters) section of the *Native Builder Reference Guide*.
+The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Mobile Builder this is handled automatically when the tool is started form Studio Pro.
 
 ### 3.1 Determining Which Native Template Version to Use
 
@@ -108,28 +106,21 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, the Native Builder supports an offline command that runs MXBuild (a headless version of Mendix Studio's app compiler) and generates the required bundle and assets. To bundle your app, do the following:
+For bundling your resources, Mendix Studio Pro comes with a helpfull tool called [MxBuild](/refguide/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (e.g. C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
 
 1. Run the following command:
 
 	```
-	native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles" --project-path "<absolute-path>" --java-home "<absolute-path>" --mxbuild-path "<absolute-path>"
+	mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check [path-to-project-mpr-file]
 	```
-
-The output path can be any location files could go. This command will do the following:
+The bundles will be generated relatively to the `project-directory\deployment\native\bundles`
 
 1. Run MXBuild against your project to generate the required bundle and assets.
-1. Zip the output.
-1. Move the zipped bundle and assets to the `--output-path`.
 
-When completed you should have two zipped binaries: one for Android and one for iOS. Continue by doing the following:
+When completed there should be a folder under the project's deployment folder `project-directory\deployment\native\bundles` with two folders. One named `ios`, and one named `android`:
 
-1.  Unzip the iOS binary. The folder structure should be the following:
-
-	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/ios-output.png){{% /image_container %}}
-
-1. Move the folder's content to *{your Native Template root}/ios/Bundle*.
-1.  Unzip the Android binary. The folder structure should be the following:
+1. Move the ios folder's content to *{your Native Template root}/ios/Bundle*.
+1. The `android` folder structure should be the following:
 
 	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 

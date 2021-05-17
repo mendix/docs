@@ -1373,5 +1373,9 @@ module.exports = {
       from: "/refguide7/title-(document-template)",
       to: "/refguide7/title-document-template"
     },
+    {
+      from: "/apidocs-mxsdk/apidocs/native-dependencies",
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies"
+    },
   ]
 }

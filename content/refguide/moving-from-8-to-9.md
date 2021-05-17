@@ -45,7 +45,9 @@ To upgrade to Mendix 8.18, follow these steps:
 
 Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9.
 
-You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
+You should run your app, test all functionality, and ensure it works without error. If you app uses app services, you should remove them before upgrading as app services are deprecated in Mendix 9.
+
+You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
 
 ### 3.4 Save Your Version 8 App
 

@@ -7,6 +7,10 @@ tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/unix-like.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix can be installed on-premises on systems running Unix-like operating systems. The installation consists of the following:

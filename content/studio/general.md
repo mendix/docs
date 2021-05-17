@@ -131,14 +131,14 @@ The top menu bar items are described in the table below:
 
 You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
-### 8.1 Copy/Paste Pages, Microflows, and Enumerations {#copy-paste-documents}
+### 8.1 Copy/Paste Workflows, Pages, Microflows, and Enumerations {#copy-paste-documents}
 
-Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+Workflows, pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste them to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate workflows, pages, microflows, and enumerations, see [Workflows](workflows), [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
 
 Mind the following when copying and pasting pages, microflows, and enumerations:
 
-* You can copy/paste pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
-* You can copy/paste pages, microflows, and enumerations only between instances of the same browser
+* You can copy/paste workflows, pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
+* You can copy/paste workflows, pages, microflows, and enumerations only between instances of the same browser
 * You *cannot* copy/paste from Studio to Studio Pro or vice versa
 
 ### 8.2 Cut/Copy/Paste Separate Elements

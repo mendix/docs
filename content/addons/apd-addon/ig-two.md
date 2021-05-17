@@ -8,7 +8,7 @@ aliases:
 
 ## 1 Introduction
 
-This is the installation guide for Mansystems APM 2.
+This is the installation guide for CLEVR APM 2.
 
 Note the following:
 

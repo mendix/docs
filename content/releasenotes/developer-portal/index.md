@@ -15,6 +15,36 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### May 17th, 2021
+
+#### Improvements
+
+* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redeisgn of Mendix Developer Portal.
+
+#### Fixes
+
+* We fixed an issue where you could not always see the avatars of other users in the same app.
+* We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/collaborate/stories).
+* We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
+
+### May 7th, 2021
+
+#### New Features
+
+* It is now possible to create a new app with the [workflows](/refguide/workflows) functionality more deeply integrated in the creation flow.
+
+#### Fixes
+
+* We fixed an issue where some graphs in the Contral Center [Dashboard](/developerportal/control-center/index#dashboard) were loading indefinitely. 
+* We fixed the page title of the [Mendix Studio](/studio/) landing page.
+* Page links now open in the correct tab.
+
+### April 26th, 2021
+
+#### New Features
+
+* We released the Control Center [Dashboard](/developerportal/control-center/index#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+
 ### March 30th, 2021
 
 #### Improvements
@@ -87,7 +117,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We have updated the [App Projects](/developerportal/control-center/#projects) tab of Control Center, where you can now do the following:
+* We have updated the [App Projects](/developerportal/control-center/#apps) tab of Control Center, where you can now do the following:
 	* Open the [Team](/developerportal/collaborate/team#managing) page from the project details page in order to manage team members and add yourself to a team (if you are a Mendix Admin)
 	* Deactivate or delete an app or a team member
 

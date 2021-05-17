@@ -217,6 +217,11 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 ## 5 Deploy Package{#DeployPackage}
 
+{{% alert type="warning" %}}
+SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
+{{% /alert %}}
+
+
 ### 5.1 Deploy to an Environment
 
 1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP BTP.

@@ -7,6 +7,10 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/security-checklist-for-your-on-premises-installation.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This how-to serves as a checklist for implementing security for your on-premises installation.

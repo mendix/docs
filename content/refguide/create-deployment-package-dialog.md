@@ -10,6 +10,16 @@ A deployment package can be deployed to the Mendix Cloud, another cloud provider
 
 ![Create Deployment Package dialog](attachments/project-menu/create-deployment-package.png)
 
+{{% alert type="warning" %}}
+Most deployment targets have a limit on the size of deployment package you can deploy. For example:
+
+| Target | Maximum Deployment Package Size |
+| --- | --- |
+| Mendix Cloud | 1GB |
+| SAP BTP | 1.5GM |
+| Mendix for Private Cloud | 200MB |
+{{% /alert %}}
+
 ## 2 Versioned
 
 Here you can decide whether you will create a versioned deployment package or not.

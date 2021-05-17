@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data 
 
 ## 1 Introduction
 
-This document provides examples of the calls that are described in the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at http://datahub-spec.s3-website.eu-central-1.amazonaws.com/. 
+This document provides examples of the calls that are described in the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at <http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.>
 
 In some cases the example curl command is provided.
 
@@ -18,18 +18,18 @@ In some cases the example curl command is provided.
 
 For convenience and conciseness, the following variables are used and should be substituted by the values given or those that are returned in your responses when you send the requests:
 
-
 - {{baseURL}} – the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value the UUID of the application
 - {EnvironmentUUID} – insert the value of the UUID of the environment
 - `<your_PAT_Token>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
 ## 3 Searching in the Catalog for the string: sample {#get-data-ex}
+
 This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
 
-- the search string `sample` 
+- the search string `sample`
 - in the production environments only (value `true`)
-- for all registered contract types 
+- for all registered contract types
 
 ### 3.1 Base Request URL
 
@@ -46,6 +46,7 @@ curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/dat
 
 
 ### 3.2 Successful 200 Response
+
 The 200 OK response returned that the `TotalResults` are that **11 assets** were found that statisfy the search string and parameters.
 
 The response payload is shown below:
@@ -171,7 +172,7 @@ The same search in the Data Hub would look like the following screenshot showing
 
 ## 4 Registering an OData Contract {#reg-contract-ex}
 
-This example takes you through all the steps required to reigster an app, the environment that it is deployed to, and the data source that is published by the app in this environment. 
+This example takes you through all the steps required to reigster an app, the environment that it is deployed to, and the data source that is published by the app in this environment.
 
 This registration must done in the following order:
 
@@ -179,9 +180,9 @@ This registration must done in the following order:
 2. Environment that the data source is deployed to: `POST environment`
 3. The published services from the application (data sources) : `PUT published-endpoints`
 
-When the application and environment is already registered in the Catalog, then you can proceed to the [`PUT published-endpoints`](#reg-service-ex). 
+When the application and environment is already registered in the Catalog, then you can proceed to the [`PUT published-endpoints`](#reg-service-ex).
 
-An example Odata v3 service – **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#ex-metadata) (in the required escaped JSON format) that you can use when you are trying out the API calls. 
+An example Odata v3 service – **DataHub_Sample_1.0.0_OData3** – is provided in [Sample Contract File](#sample-contract) (in the required escaped JSON format) that you can use when you are trying out the API calls.
 
 {{% alert type="info" %}}OData service contract files must be included in the request body in escaped JSON format. There are several online converters available for converting your *.xml* files into this format such as one available from [Freeformatter.com](https://www.freeformatter.com/json-escape.html#ad-output). Just paste the contents of your files and convert them to the escaped format. {{% /alert %}}
 
@@ -217,7 +218,7 @@ Copy the contents of this body, or save it to a file, and include it as part of 
 
 #### 4.1.3 The example curl command
 
-The full curl command would be: 
+The full curl command would be:
 
 ```curl
 curl --location --request POST '{{BaseURL}}' \
@@ -241,7 +242,7 @@ curl --location --request POST '{{BaseURL}}' \
 ```
 
 #### 4.1.3 Successful 201 Response Application Created {#app-registered}
-The 201 response that is returned to indicate that the application is registered is given below: 
+The 201 response that is returned to indicate that the application is registered is given below:
 
 {{% alert type="info" %}}The response returned the `"UUID": "2ab1410e-06d4-4e07-a82d-cc04b21d2622"`, which is the Catalog identifier for the application that must be used to identify it in subsequent steps of the registration of the data source. This value for the app UUID will be represented as {*AppUUID}* in the rest of this document. {{% /alert %}}
 
@@ -267,14 +268,16 @@ The 201 response that is returned to indicate that the application is registered
 
 ### 4.2 Registering the Environment `Production` for the Howto5-App {#reg-env-ex}
 
-The following call is to register the environment **Production** for the **Howto5-App** that was reigstered in the previous section. 
+The following call is to register the environment **Production** for the **Howto5-App** that was reigstered in the previous section.
 
 #### 4.2.1 Base request URL:
+
 `POST {{baseURL}} /applications/{appUUID}/environments`
 
 #### 4.2.2 JSON format request body for the Environment
 
-The following request body must be included with the request. 
+The following request body must be included with the request.
+
 ```json
  {
     "Name": "Production",
@@ -287,6 +290,7 @@ The following request body must be included with the request.
 ```
 
 #### 4.2.3 Successful 201 Created Successful 200 {#env-registerd}
+
 The following 201 Created response returns the Catalog-generated identifier  `"UUID": "236c9acc-830c-48d9-a0ef-e1104a15d26d"` for the for the registered environment `Production`.
 
 ```json
@@ -314,7 +318,7 @@ In this example call, the service **5how-toODatav3-sample-service** is registere
 
 Two tags, `odata` and `sample` are also included as part of the registration that will be added to the Catalog metadata that is shown for the asset and also used for searching for the asset.
 
-For the `Contracts` object you can use the example OData v3 contract given in [Sample Contract](#sample-contract) for the key-value pair: ` “Type”: “Metadata”`.
+For the `Contracts` object you can use the example OData v3 contract given in [Sample Contract](#sample-contract) for the key-value pair: `“Type”: “Metadata”`.
 
 {{% alert type="info" %}}If you are using one of your own contracts then ensure that you include all the files that define the contract. {{% /alert %}}
 
@@ -323,9 +327,10 @@ For the `Contracts` object you can use the example OData v3 contract given in [S
 `PUT` `{{baseURL}}/applications/{appUUID}/environments/{envUUID}/published-endpoints`
 
 #### 4.3.2 JSON format request body for the `Endpoints` **Object**
-The file tthat is used in this example is provided in escaped JSON format in [Sample Contract](#sample-contract). 
 
-{{% alert type="info" %}}For conciseness the contents of the contract file is not included in the following payload – it is represented as *<Insert example metadata from [metadata](#ex-metadata) >*. You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. {{% /alert %}}
+The file tthat is used in this example is provided in escaped JSON format in [Sample Contract](#sample-contract).
+
+{{% alert type="info" %}}For conciseness the contents of the contract file is not included in the following payload – it is represented as *<Insert example metadata from [metadata](#sample-contract) >*. You must insert the example contract file provided in [Sample Contract](#sample-contract) , or alternatively use your own contract files – in escaped JSON format. {{% /alert %}}
 
 ```json
 {
@@ -367,7 +372,7 @@ The file tthat is used in this example is provided in escaped JSON format in [Sa
                 "Contracts": [
                     {
                         "Type": "Metadata",
-                        "Value": "<Insert example metadata from [metadata](#ex-metadata) >
+                        "Value": "<Insert example metadata from [metadata](#sample-contract) >
                     }
                 ]
             }
@@ -441,21 +446,17 @@ For the above request the following 200 OK response is received returning the re
 
 #### 4.3.4 Registered Service in the Data Hub Catalog and Landscape {#ex-service-reg}
 
-The resulting entry in the Catalog for the registered service the entry in the Catalog is the following: 
+The resulting entry in the Catalog for the registered service the entry in the Catalog is the following:
 
 ![registered service](attachments/data-hub-api-how-to/registered-service.png)
-
-
 
 This is shown in the Landscape as:
 
 ![registered service-landscape](attachments/data-hub-api-how-to/registered-service-landscape.png)
 
-
-
 ## 5 Registering Consumed Endpoints by the Howto5-App {#consumed-ep-ex}
 
-This example provides the request to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**. 
+This example provides the request to register that the **Howto5-App** consumes 2 datasets: **Employees** and **Offices** from the service **SAMPLE_EmployeeDirectory**.
 
 {{% alert type="info" %}}For this example, the `Namespace` object for the `consumedItems` is called `DefaultNamespace` which is the default namespace for Mendix services.{{% /alert %}}
 
@@ -465,7 +466,7 @@ This example provides the request to register that the **Howto5-App** consumes 2
 
 ### 5.2. JSON Format Request Body to Register Consuming from SampleDH-App
 
-To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1 the following body must be included as part of the request. 
+To register the two consumed entities **Employees** and **Offices** from the HR Sample service at https://hrsampleapp.mendixcloud.com/odata/PubOdataEmployeeDirectory/v1 the following body must be included as part of the request.
 
 ```json
 {
@@ -490,7 +491,8 @@ To register the two consumed entities **Employees** and **Offices** from the HR 
 ```
 
 ### 5.3 Successful 200 Created Response
-The successful 200 response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is **43**: 
+
+The successful 200 response that is returned shows the full details of the consumed service as part of the `Endpoints` object. The total number of connections to the service is **43**:
 
 ```json
 {
@@ -600,19 +602,13 @@ This registration is shown in the Data Hub Landscape for the **SampleDHApp.** It
 
 ![registered service](attachments/data-hub-api-how-to/consume1service.png)
 
-
 When the **SAMPLE_EmployeeDirectory** is viewed in the Data Hub Landscape, **Howto5-App** is one of the network of apps consuming it:
 
-
 ![HRapp 43 connections](attachments/data-hub-api-how-to/SAMPLEHR-app43connections.png)
-
-
 
 ## 6 Sample Contract File {#sample-contract}
 
 The following file is an example OData v3 contract that you can use in this how-to for the PUT registration service request. The format provided below is in escaped JSON format contract and you can copy it and directly insert it in the PUT request body.
-
-### Metadata {#ex-metadata}
 
 ```json
 <?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\" xmlns:mx=\"http:\/\/www.mendix.com\/Protocols\/MendixData\">\r\n  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\">\r\n    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\">\r\n      <EntityType Name=\"Department\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Color\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Department\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Employee\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"firstName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"lastName\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"email\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"phone\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"city\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"zip\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"country\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Department\" Relationship=\"DefaultNamespace.Employee_Department\" FromRole=\"Employees\" ToRole=\"Department\" \/>\r\n        <NavigationProperty Name=\"Office\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Employees\" ToRole=\"Office\" \/>\r\n      <\/EntityType>\r\n      <EntityType Name=\"Office\">\r\n        <Key>\r\n          <PropertyRef Name=\"ID\" \/>\r\n        <\/Key>\r\n        <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" \/>\r\n        <Property Name=\"Number\" Type=\"Edm.Int64\" \/>\r\n        <Property Name=\"Name\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Street\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"StreetNumber\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"ZIP\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"City\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"Country\" Type=\"Edm.String\" \/>\r\n        <Property Name=\"CountryCode\" Type=\"Edm.String\" \/>\r\n        <NavigationProperty Name=\"Employees\" Relationship=\"DefaultNamespace.Employee_Office\" FromRole=\"Office\" ToRole=\"Employees\" \/>\r\n      <\/EntityType>\r\n      <Association Name=\"Employee_Department\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Department\" Multiplicity=\"0..1\" Role=\"Department\" \/>\r\n      <\/Association>\r\n      <Association Name=\"Employee_Office\">\r\n        <End Type=\"DefaultNamespace.Employee\" Multiplicity=\"*\" Role=\"Employees\" \/>\r\n        <End Type=\"DefaultNamespace.Office\" Multiplicity=\"0..1\" Role=\"Office\" \/>\r\n      <\/Association>\r\n      <EntityContainer Name=\"SAP\/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n        <EntitySet Name=\"Departments\" EntityType=\"DefaultNamespace.Department\" \/>\r\n        <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" \/>\r\n        <EntitySet Name=\"Offices\" EntityType=\"DefaultNamespace.Office\" \/>\r\n        <AssociationSet Name=\"Employee_Department\" Association=\"DefaultNamespace.Employee_Department\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Department\" EntitySet=\"Departments\" \/>\r\n        <\/AssociationSet>\r\n        <AssociationSet Name=\"Employee_Office\" Association=\"DefaultNamespace.Employee_Office\">\r\n          <End Role=\"Employees\" EntitySet=\"Employees\" \/>\r\n          <End Role=\"Office\" EntitySet=\"Offices\" \/>\r\n        <\/AssociationSet>\r\n      <\/EntityContainer>\r\n    <\/Schema>\r\n  <\/edmx:DataServices>\r\n<\/edmx:Edmx>

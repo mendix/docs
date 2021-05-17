@@ -6,7 +6,7 @@ menu_order: 1
 
 ## 1 Introduction
 
-This is the installation guide for Mansystems APD 3, the successor to [APM 2](ig-two).
+This is the installation guide for CLEVR APD 3, the successor to [APM 2](ig-two).
 
 ## 2 Prerequisites
 

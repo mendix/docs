@@ -19,7 +19,7 @@ ATS is now offered as a service. There is a single multi-tenant instance in the 
 
 [http://ats.mendix.com](http://ats.mendix.com)
 
-This instance is operated and maintained by Mansystems and Mendix. As a customer, you can enjoy the typical SaaS benefits. Mansystems and Mendix deliver maintenance, updates, and fixes faster than ever. You can access new features as soon as we publish a new release.
+This instance is operated and maintained by CLEVR and Mendix. As a customer, you can enjoy the typical SaaS benefits. CLEVR and Mendix deliver maintenance, updates, and fixes faster than ever. You can access new features as soon as we publish a new release.
 
 All customers can use this instance without affecting each other's work. Data is strictly separated per app. Each user can only access the data from their apps.
 

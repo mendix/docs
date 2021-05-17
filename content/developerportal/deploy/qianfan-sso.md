@@ -1,5 +1,5 @@
 ---
-title: "千帆玉符 SSO - QianFan Single Sign-On"
+title: "千帆玉符 SSO – QianFan Single Sign-On"
 parent: "tencent-deploy"
 menu_order: 48
 description: "Use the QianFan SSO module (千帆玉符 SSO) to add Single Sign-on to your Tencent app using the user's QianFan credentials"

@@ -10,15 +10,18 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 The [Data Hub APIs](#datahubapis) are Open API 3.0 specs are available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
 
-APIs are available to do the following:
+The following APIs are available:
 
-* register your data sources to the organization's Mendix Data Hub
+* Search API — search and explore data sources that can be used in your app development
 
-* search and explore data sources that can be used in your app development
+* [Data Hub Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
-For Mendix users deploying their apps to a non-Mendix environment the [Data Hub Transform API](#transform) is available to generate the request bodies required to register your data sources for your Mendix apps.
+{{% alert type="info" %}}
+The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to use the latest Registration and Search API URLs.
+{{% /alert %}}
 
-For both APIs authorization must be included in the API calls as described in [Authentication and Authorization](#pat-token).
+
+When using any of the Data Hub APIs authorization must be included in the headers of the API calls as described in [Authentication and Authorization](#pat-token).
 
 {{% alert type="info" %}}
 To use the Mendix Data Hub a license is required.

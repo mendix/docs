@@ -513,7 +513,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/xml-element.png)
+![](./attachments/property-types/attribute.png)
 
 ### 4.5 Object{#object}
 

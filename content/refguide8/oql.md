@@ -4,6 +4,10 @@ parent: "data-sets"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Mendix Object Query Language (OQL) is a relational query language just like [SQL](http://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that it uses entity and association names instead of actual database table names.

@@ -4,6 +4,10 @@ parent: "oql"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The `FROM` clause specifies the entities or other source from which the data must be retrieved. This clause starts with the `FROM` keyword, following by an entity name. To select data from other entities as well, add these entities via the `JOIN` keywords. This syntax is a little more strict than the official `SQL FROM` clause syntax.

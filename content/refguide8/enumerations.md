@@ -9,6 +9,10 @@ aliases:
 #The anchor <enum-value-properties> below is mapped, so it should not be removed or changed.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 An enumeration defines a list of predefined values. Enumerations are used for the enumeration attribute type. For example, the status of an order can be *Open*, *Closed*, or *In Progress*. So, the enumeration for the order status will consist of three values: *Open*, *Closed*, and *In_Progress*. 

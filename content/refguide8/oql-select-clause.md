@@ -4,6 +4,10 @@ parent: "oql"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 The SELECT clause specifies which entity attributes or other specified data must be retrieved. The `SELECT` clause consists of the term `SELECT` and one or more expressions. These expressions must be separated by a comma. Each expression defines a column in the result.
 Each expression can have an alias, which will be the name of the column in the result.
 

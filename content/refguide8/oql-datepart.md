@@ -4,6 +4,9 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 The DATEPART function retrieves a specified element from a date/time values. This element is of type integer.
 

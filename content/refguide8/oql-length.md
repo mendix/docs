@@ -4,6 +4,9 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 The LENGTH function returns the length of a String value.
 

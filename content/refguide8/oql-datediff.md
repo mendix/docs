@@ -4,6 +4,9 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 The DATEDIFF function returns the difference between two given date/time values. The difference is given in the specified unit.
 

@@ -4,6 +4,9 @@ parent: "oql"
 tags: ["studio pro", "queries", "where"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 The WHERE clause specifies how the data being retrieved must be constrained.
 

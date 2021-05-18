@@ -4,6 +4,9 @@ parent: "oql"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 With the limit clause a portion of the result of a query can be returned.
 

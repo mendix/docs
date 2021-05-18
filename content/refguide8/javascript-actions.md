@@ -7,6 +7,10 @@ tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}

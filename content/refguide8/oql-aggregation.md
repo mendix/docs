@@ -4,6 +4,9 @@ parent: "oql-expressions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 Aggregations perform specific calculations on the values of the retrieved column(s). The following aggregate functions are possible:
 

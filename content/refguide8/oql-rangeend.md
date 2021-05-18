@@ -4,6 +4,10 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Description
 
 The `RANGEEND` function extracts the end value of a range parameter.

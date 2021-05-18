@@ -4,6 +4,10 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Description
 
 The `RANGEBEGIN` function extracts the initial value of a range parameter.

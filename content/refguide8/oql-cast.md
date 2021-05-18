@@ -4,6 +4,10 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 The CAST function converts an expression to a specific data type.

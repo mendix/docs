@@ -4,6 +4,9 @@ parent: "oql-expressions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
 
 The following operators can be used in OQL expressions:
 

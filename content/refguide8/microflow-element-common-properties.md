@@ -5,6 +5,10 @@ menu_order: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes common properties that are shared by many elements in the microflow editor.

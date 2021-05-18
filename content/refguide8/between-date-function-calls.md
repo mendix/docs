@@ -5,6 +5,10 @@ menu_order: 100
 tags: ["studio pro", "between date function calls", "expression", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Between date function calls calculate the differences between two dates.

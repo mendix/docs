@@ -5,6 +5,10 @@ menu_order: 110
 tags: ["studio pro", "expressions", "add date function"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Add date function calls add a time period to a date and time and return the modified value. 

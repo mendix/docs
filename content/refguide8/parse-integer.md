@@ -6,6 +6,10 @@ description: "Describes the function for parsing integer from strings in Mendix.
 tags: ["studio pro", "expressions", "parse", "integer"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes functions that convert a string to an integer.

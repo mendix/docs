@@ -5,6 +5,10 @@ menu_order: 120
 tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 These are functions to round off dates to different time units.

@@ -6,6 +6,10 @@ description: "Describes relational expressions in Mendix."
 tags: ["studio pro", "relational expression", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Relational expressions allow users to compare values and to make changes and perform actions based upon that information. The return type of such expressions is always Boolean.

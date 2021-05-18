@@ -5,6 +5,10 @@ menu_order: 60
 tags: ["studio pro", "if expression", "expression", "if statement", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 If expressions can be used to define conditional actions in expressions. The correct syntax is the following:

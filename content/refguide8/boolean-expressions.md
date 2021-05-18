@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Boolean expressions can be used to perform logical operations that return either true or false.

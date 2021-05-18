@@ -5,6 +5,10 @@ menu_order: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Enumerations are referenced by `<modulename>.<enumerationname>.<enumerationvalue>`.

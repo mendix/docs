@@ -5,6 +5,10 @@ menu_order: 130
 tags: ["studio pro", "to string", "expression", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Intriduction
 
 Basic functions to convert values of various data types to string.

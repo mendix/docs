@@ -5,6 +5,10 @@ menu_order: 10
 tags: ["studio pro", "unary expression", "expression", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 An unary minus operator is used to convert a number from negative to positive or vice versa. 

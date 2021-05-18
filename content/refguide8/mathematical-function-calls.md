@@ -5,6 +5,10 @@ menu_order: 70
 tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 

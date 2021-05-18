@@ -6,7 +6,7 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 id: "pluggable-widgets/property-types"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
-menu_order: 20
+menu_order: 10
 ---
 
 ## 1 Introduction

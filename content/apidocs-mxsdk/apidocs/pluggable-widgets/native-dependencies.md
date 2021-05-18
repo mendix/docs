@@ -6,7 +6,7 @@ tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 id: "pluggable-widgets/native-dependencies"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
-menu_order: 10
+menu_order: 40
 ---
 
 ## 1 Introduction

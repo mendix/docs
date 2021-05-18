@@ -6,7 +6,7 @@ tags: ["Widget", "Pluggable",  "JavaScript"]
 id: "pluggable-widgets/client-apis"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
-menu_order: 10
+menu_order: 20
 ---
 
 ## 1 Introduction

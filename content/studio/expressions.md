@@ -175,6 +175,10 @@ The list of expressions that are used in Studio the most is represented below. F
 * [`addMonths`](/refguide/add-date-function-calls) – adds months to a date
 * [`addYears`](/refguide/add-date-function-calls) – adds years to a date
 
+### 3.11 Parse & Format Decimal Function Calls
+
+* [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls) – converts a decimal to a string 
+
 ## 4 Read More
 
 * [Microflows](microflows)

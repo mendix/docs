@@ -1374,6 +1374,10 @@ module.exports = {
       to: "/refguide7/title-document-template"
     },
     {
+      from: "/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets",
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis"
+    },
+    {
       from: "/apidocs-mxsdk/apidocs/native-dependencies",
       to: "/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies"
     },

@@ -609,5 +609,5 @@ Your code alterations will produce the following result:
 
 * [Build a Pluggable Web Widget: Part 1](create-a-pluggable-widget-one)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)

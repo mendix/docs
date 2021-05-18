@@ -8,7 +8,7 @@ tags: ["API", "pluggable","widget"]
 
 The following Mendix 9 pluggable widget API documents are available here:
 
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets) for Mendix 9
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis) for Mendix 9
 * [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies) for Mendix 9
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types) for Mendix 9
 * [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets) for Mendix 9

@@ -1389,5 +1389,9 @@ module.exports = {
       from: "/apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets",
       to: "/apidocs-mxsdk/apidocs/pluggable-widgets/studio-apis"
     },
+    {
+      from: "/apidocs-mxsdk/apidocs/pluggable-parent-9",
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets"
+    },
   ]
 }

@@ -88,6 +88,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Arabic | Yemen | ar_YE |
 | Armenian | Armenia | hy_AM |
 | Belarusian | Belarus | be_BY |
+| Bengali | Bangladesh | bn_BD |
+| Bengali | India | bn_IN |
 | Bulgarian | Bulgaria | bg_BG |
 | Catalan | Spain | ca_ES |
 | Chinese (Simplified) | China | zh_CN |
@@ -135,6 +137,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Japanese (Gregorian calendar) | Japan | ja_JP |
 | Japanese (Imperial calendar) | Japan | ja_JP_JP |
 | Khmer | Cambodia | km_KH |
+| Kinyarwanda | Rwanda | rw_RW |
 | Korean | South Korea | ko_KR |
 | Lao | Laos | lo_LA |
 | Latvian | Latvia | lv_LV |
@@ -153,6 +156,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Polish | Poland | pl_PL |
 | Portuguese | Brazil | pt_BR |
 | Portuguese | Portugal | pt_PT |
+| Punjabi | Pakistan | pa_PK |
+| Punjabi | India | pa_IN |
 | Romanian | Romania | ro_RO |
 | Russian | Russia | ru_RU |
 | Serbian (Cyrillic) | Bosnia and Herzegovina | sr_BA |
@@ -186,6 +191,9 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Swahili | Tanzania | sw_TZ |
 | Swahili | Uganda | sw_UG |
 | Tagalog | Philippines | tl_PH |
+| Tamil | India | ta_IN |
+| Tamil | Sri Lanka | ta_LK |
+| Tamil | Singapore | ta_SG |
 | Thai (Western digits) | Thailand | th_TH |
 | Thai (Thai digits) | Thailand | th_TH_TH |
 | Turkish | Turkey | tr_TR |

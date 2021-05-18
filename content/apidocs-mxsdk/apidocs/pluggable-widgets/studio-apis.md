@@ -1,9 +1,12 @@
 ---
 title: "Preview Appearance APIs for Pluggable Widgets"
-parent: "pluggable-parent-9"
-menu_order: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
+
+id: "pluggable-widgets/property-types"
+dir: "/apidocs-mxsdk/apidocs/"
+parent: "pluggable-widgets"
+menu_order: 30
 ---
 
 ## 1 Introduction

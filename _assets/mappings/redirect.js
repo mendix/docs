@@ -1385,5 +1385,9 @@ module.exports = {
       from: "/apidocs-mxsdk/apidocs/property-types-pluggable-widgets",
       to: "/apidocs-mxsdk/apidocs/pluggable-widgets/property-types"
     },
+    {
+      from: "/apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets",
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/studio-apis"
+    },
   ]
 }

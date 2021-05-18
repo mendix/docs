@@ -12,17 +12,12 @@ aliases:
 
 Expressions changes a value based on a function or combination of functions. 
 
-You can use expressions for workflows, pages, and microflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
+You can use expressions for workflows and microflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
 
 You can use expression for the following elements in a workflow:
 
 * [Decision](workflows-general-activities)
 * **Due date** property of a [workflow](workflow-properties) and a [user task](workflows-user-task)
-
-Expression can be used in the following properties on a page:
-
-* Conditional editability of a widget
-* Conditional visibility of a widget
 
 Expressions can be used for the following activities in a microflow: 
 
@@ -53,7 +48,7 @@ You cannot type plain text in an expression, text needs the be written with sing
 
 You can use a list of suggestions to help you write an expression. Use <kbd>Ctrl</kbd> + <kbd>Space</kbd> shortcut to display this list. Suggestions can be divided into the following categories:
 
-* **Variables and their attributes** – variables or attributes that are available in a current microflow, on a page, or in a workflow
+* **Variables and their attributes** – variables or attributes that are available in a current microflow or in a workflow
 * **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration) that can be used in an expression
 * **Functions** – operations you can use in an expression (for more information, see the [Expression Types](#expression-types) section below)
 * **Keywords** – key phrases or words that you can use in an expression (for example, `empty` – a value that can be used to check if a variable is empty)

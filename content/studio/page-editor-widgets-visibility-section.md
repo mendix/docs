@@ -98,9 +98,8 @@ To disable attribute-based visibility, follow the steps below:
 
 2. In **Conditional Visibility** section, click the **Attribute-Based** property.
 
-3. In the **Select Attribute** dialog box, click **Clear**:
+3. In the **Select Attribute** dialog box, click **Clear**.
 
-    {{% image_container width="400" %}}![](attachments/page-editor-widgets-visibility-section/clear-attribute-based-visibility.png){{% /image_container %}}
 
 The attribute-based conditional visibility is cleared for the widget. 
 

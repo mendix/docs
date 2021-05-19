@@ -5,6 +5,10 @@ description: "This documentation will give you insight into creating documents w
 tags: ["Document", "Generate", "Word", "PDF", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 Have you been wondering how to create your own documents with Mendix? This reference will tell you how to do it!

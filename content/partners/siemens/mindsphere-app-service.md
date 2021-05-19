@@ -53,6 +53,8 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 
 ### 2.3 Linking to Asset Manager
 
+#### 2.3.1 Setting up Assets
+
 Once you have the name of your MindSphere account, you can use this to link your account to the required assets.
 
 You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
@@ -84,29 +86,51 @@ To do this, you need to set up a **Collaboration** between the tenant owning the
 
 Full information on this can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
-## 3 Using the MindSphere App Service
+#### 2.3.2 Publishing Assets to Data Hub
 
-The MindSphere App Service can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to MindSphere, such as the **Siemens MindSphere Starter Application**, the **Siemens MindSphere Pump Asset Example**, or an app which is using the **Siemens MindSphere SSO** module.
+There are two ways to use the Mendix App Service.
 
-Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
+* You can make REST calls to the standard MindSphere end points for your tenant. Instructions for doing this are in [Using the MindSphere App Service Through REST Calls](#using-rest).
 
-### 3.1 Downloading the IIoT Authenticator Module
+    In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
 
-{{% todo %}}[Need a link to the authenticator module]{{% /todo %}}
+* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities) in your domain model. In this case, you first have to publish your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane) in Studio Pro.
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://example.com).
+    The instructions for doing this are below, and instructions for using the external entities are in [Using the MindSphere App Service Through Mendix Data Hub](#using-data-hub).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+To publish your assets to Mendix Data Hub, do the following:
 
-### 3.2 Creating Binding Keys{#binding-keys}
+1. Go to the **Asset Manager** in the MindSphere Launchpad.
 
-To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
+2. Select **Publish to Mendix DataHub** from the additional menu options in the top right of the page.
 
-1. Click the link **Create Binding Keys** in the welcome email you received.
+    ![](attachments/mindsphere-app-service/publish-to-data-hub.png)
 
-2. Choose the **Product Name** *MindSphere IoT*.
+3. Select the **Asset Types** that you want published to Data Hub and click **Next**.
 
-3. Click **Create Binding Keys**.
+    ![](attachments/mindsphere-app-service/dh-asset-types.png)
+
+    The **Application Name** and **Environment** will be pre-filled for you.
+
+4. Enter the **Display Name** and **Version** which identifies this data in Data Hub.
+
+    ![](attachments/mindsphere-app-service/dh-contract.png)
+
+5. Click **Publish** to publish the data from your MindSphere tenant to Data Hub.
+
+Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
+
+## 3 Creating Binding Keys{#binding-keys}
+
+To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
+
+{{% todo %}}[Check images]{{% /todo %}}
+
+1. Go to the [Mendix Marketplace](https://marketplace.mendix.com/) and open the **Service Management Dashboard**.
+
+2. Choose the **Product** *MindSphere IoT*.
+
+3. Click **Generate Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
@@ -114,13 +138,37 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![](attachments/mindsphere-app-service/create-keys.png)
 
-    You will see a pop-up containing your two keys: **Access Key** and **Secret Key**.
+    You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
-6. Click **Copy Key** for each of the two keys and save them somewhere safe – you will not be able to access them again.
+6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
     ![](attachments/mindsphere-app-service/binding-keys.png)
 
-### 3.3 Authenticating MindSphere REST Calls {#authenticating}
+You can find more information about managing binding keys in the *Binding Keys* section of [Marketplace Overview](/appstore/general/app-store-overview).
+
+## 4 Using the MindSphere App Service Through Mendix Data Hub{#using-data-hub}
+
+### 4.1 Adding External Entities to the Domain Model
+
+### 4.2 Authenticating Calls to External Entities
+
+{{% todo %}}[Need information on authentication]{{% /todo %}}
+
+## 5 Using the MindSphere App Service Through REST Calls{#using-rest}
+
+The MindSphere App Service can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to MindSphere, such as the **Siemens MindSphere Starter Application**, the **Siemens MindSphere Pump Asset Example**, or an app which is using the **Siemens MindSphere SSO** module.
+
+Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
+
+### 5.1 Downloading the IIoT Authenticator Module
+
+{{% todo %}}[Need a link to the authenticator module]{{% /todo %}}
+
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://example.com).
+
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+
+### 5.3 Authenticating MindSphere REST Calls {#authenticating}
 
 Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
 
@@ -140,19 +188,19 @@ However, authentication will only be successful if the correct credentials are p
 
 ![](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
 
-#### 3.3.1 Authenticating During Development
+#### 5.3.1 Authenticating During Development
 
 When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration) within your project settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 
-#### 3.3.2 Authenticating for Deployment
+#### 5.3.2 Authenticating for Deployment
 
 When you deploy your app, you should remove the values of **ClientID** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry environment variable) during the deployment.
 
 For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants) for information on how to set these values on other deployment platforms.
 
-## 4 MindSphere Widgets
+## 6 MindSphere Widgets
 
 If you want to use the [Siemens MindSphere Web Components Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *MindSphere API Reverse Proxy*.
 

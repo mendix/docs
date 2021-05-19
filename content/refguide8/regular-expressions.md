@@ -6,6 +6,10 @@ tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A regular expression resource document is used in the [validation rules](validation-rules) of an entity to describe a set of criteria that a string must match.

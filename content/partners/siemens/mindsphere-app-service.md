@@ -28,9 +28,7 @@ The MindSphere App Service is easy to add to your app but has the following limi
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
 * You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app
 
-{{% todo %}}[Add correct link to product sheet - contact Rima Fetzer]{{% /todo %}}
-
-App Service packages come in various sizes. Please see the [Product Sheet](https://example.com) for full details.
+App Service packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
 ## 2 Setting Up MindSphere App Service
 

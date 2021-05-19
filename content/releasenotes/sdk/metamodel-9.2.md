@@ -1,36 +1,32 @@
-# Metamodel Release Notes for version 9.2.0
+---
+title: "9.2"
+parent: "metamodel-9"
+---
 
-## DomainModels
+## 9.2.0
 
-### Annotation (Element)
+**Release date: May 17th, 2021**
 
+### DomainModels
 
-#### Property 'width'
+#### Annotation (Element)
 
+* We introduced the `width` property. 
 
-## Microflows
+### Microflows
 
-### FormDataPart (Element)
+#### FormDataPart (Element)
 
+* We introduced the `headerEntries` property.
 
-#### Property 'headerEntries'
-* Introduced; 
+### Settings
 
-## Settings
+#### WebUIProjectSettingsPart (Element)
 
-### WebUIProjectSettingsPart (Element)
+* We deleted the `theme` and `themeModuleName` properties.
 
+### Pages
 
-#### Property 'theme'
-* Deleted; 
+#### AttributeWidget (Element)
 
-#### Property 'themeModuleName'
-* Deleted; 
-
-## Pages
-
-### AttributeWidget (Element)
-
-
-#### Property 'ariaRequired'
-* Introduced; 
+* We introduced the `ariaRequired` property.

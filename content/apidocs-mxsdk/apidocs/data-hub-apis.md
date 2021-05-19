@@ -88,8 +88,8 @@ The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.htm
 
 The following APIs are currently available:
 
-* [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
 * [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)
+* [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
 * [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html)
 
 For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). [Data Hub Transform Open API Spec](#transform) describes how to generate the registration request bodies for Mendix Apps.

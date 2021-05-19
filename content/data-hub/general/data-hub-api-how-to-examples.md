@@ -170,6 +170,9 @@ The same search in the Data Hub would look like the following screenshot showing
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
+### 3.4 Retrieve full details of a Specific Endpoint????
+
+
 ## 4 Registering an OData Contract {#reg-contract-ex}
 
 This example takes you through all the steps required to reigster an app, the environment that it is deployed to, and the data source that is published by the app in this environment.

@@ -162,39 +162,42 @@ For the full specification, refer to the [OpenAPI 3.0 spec](http://datahub-spec.
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
-### 5.4 Retrieve Details of a Specific Service
+### 5.4 Retrieve specific Endpoints for a Specified App (???verify)
 
-Using GET You can retrieve details of a specific data source such as all the available versions and also ?????ask Georg if this should be included or just a description
+Using GET You can retrieve details of specific data sources published by a specified app such as all the available versions and also ?????ask Georg if this should be included or just a description???
 
 #### 5.4.1 Base URL, Method and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
 Retrieves details of all the versions and their endpoints for a specified service.
 
+#### 5.4.1 Base URL, Method and Endpoint
 `/applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
 
-Retrieves details of all the versions and their endpoints for a specified service.
+Retrieves details of specified endpoint in the environement.
 
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 
-This section describes the steps for registering data sources – this can be OData v3 or OData v4 contracts. All the files that make up the contract must be included in the registration call.
+This section describes how to use the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html). It goes through the sequence of steps for registering data sources—OData v3 or OData v4 service contracts. All the files that make up the contract must be included in the registration call.
 
-A data source must be registered to an app deployed to a given environment. Therefore, registration of the app, environment and service must be done in the following order:
+The Data Hub Register API URL is: https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html.
 
-1. Register the application that the data source originates from: `POST application`
-2. Register the environment that the data source is deployed to: `POST environment`
-3. Register the services published by the application (data sources) : `PUT published-endpoints`
+A data source must be registered to an app deployed to a given environment. Therefore, the following sequence of steps must be followed in the given order:
 
-You can register the entities that are consumed by a registered app that consumes from a registered data source as described in [Registering Endpoints Consumed by an App](#consumed-ep). This information is maintained in the Data Hub Catalog and displayed in the [Data Hub Landscape](/data-hub/data-hub-landscape) showing the network of connected apps, data sources and dependent apps.
+1. Register the application that the data source originates from: `POST application`.
+2. Register the environment that the data source is deployed to: `POST environment`.
+3. Register the services published by the application (data sources) : `PUT published-endpoints`.
 
-You can try out the example calls for registering a data source as described in [Registering an Example OData Contract](data-hub-api-how-to-examples#reg-contract-ex).
+You can register the datasets that are consumed by a registered app as described in [Registering Endpoints Consumed by an App](#consumed-ep). This information is also displayed in the [Data Hub Landscape](/data-hub/data-hub-landscape) showing the network of connected apps, data sources and dependent apps.
+
+To try out the example calls for registering a data source see [Registering an Example OData Contract](data-hub-api-how-to-examples#reg-contract-ex).
 
 ### 6.1 Registering an Application in the Catalog using POST {#register-app}
 
-The first step is to register the application that the data source or service originates from.
+The first step in registering your data sources and available datasets is to register the application that publishes the data source (OData service).
 
-{{% alert type="info" %}}If the application and environment of the service is already registered in the Catalog (for previously registered services, for example), you can proceed to [Registering the Published Services](#put-service) and use the `AppUUID` and `EnvUUID` as the input parameters. These objects can be obtained from search results as described in [Search request response](#api-search-results). {{% /alert %}}
+{{% alert type="info" %}}If the application and environment of the service is already registered in the Catalog, you can proceed to [Registering the Published Services](#put-service) and use the `AppUUID` and `EnvUUID` as the input parameters. These objects can be obtained from search results as described in [Search request response](#api-search-results). {{% /alert %}}
 
 You can try this call by following the example given in [Registering the Howto5-App](data-hub-api-how-to-examples#ex-reg-app).
 

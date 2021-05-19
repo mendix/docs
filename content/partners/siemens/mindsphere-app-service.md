@@ -19,21 +19,9 @@ The MindSphere App Service is easy to add to your app but has the following limi
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
 * You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app
 
-App Service packages come in various sizes. Depending on the App Service package you purchase, you will be able to have up to:
+{{% todo %}}[Add correct link to product sheet - contact Rima Fetzer]{{% /todo %}}
 
-* 100 users
-* 50 asset types
-* 2000 assets
-* 100 event types
-* 2,500,000 events
-* 100 connected agents
-* 10,000 notifications per month
-* 1500 calls to the analytics services API
-* 100KB/s ingestion of time series data
-* 3TB of time series data
-* 500GB of files storage
-* 600GB outbound traffic per month
-* 1,500,000 calls to the token manager API
+App Service packages come in various sizes. Please see the [Product Sheet](https://example.com) for full details.
 
 ## 2 Setting Up MindSphere App Service
 

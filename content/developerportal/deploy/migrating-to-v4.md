@@ -126,9 +126,14 @@ Now that you have your new Mendix Cloud V4 environment, you can start replicatin
 
 The migration page lists all the ongoing migrations including the following information:
 
-* **Describe migration page here**
-
-{{% todo %}}[Need a picture of the migration page]{{% /todo %}}
+* the source and target environments
+* UUID of the source production environment
+* whether the tool is current **Replicating** data to the V4 environment or is **Stopped**
+* what proportion of the source data has been replicated, listed for both files and database
+* UUID of the target production environment
+* a button to **Stop replication** if the tool is currently replicating, or **Start replication** if the tool is currently stopped
+* the **Migrate button** which triggers the [final migration](#final-migration)
+    ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
 
 ### 4.4 Testing the Replicated Data
 
@@ -152,7 +157,7 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 7. Stop your V4 app at the end of the test and restart the replication so you can continue to copy data from your V3 app.
 
-### 4.5 Final Migration
+### 4.5 Final Migration{#final-migration}
 
 Once you have tested the data migration you are ready to migrate your app to Mendix Cloud V4.
 

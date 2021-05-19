@@ -156,11 +156,25 @@ For the full specification see the [OpenAPI 3.0 spec](http://datahub-spec.s3-web
 
 A representation of what is returned in the response for `Data` is shown below.
 
-The blue indicates that an object that is made up of a collection (of further sub-objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response. Not all sub-levels of the schemas are shown in the representation below.
+The color blue indicates that an object that is made up of a collection (of further sub-objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response. Not all sub-levels of the schemas are shown in the representation below.
 
 For the full specification, refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
+
+### 5.4 Retrieve Details of a Specific Service
+
+Using GET You can retrieve details of a specific data source such as all the available versions and also ?????ask Georg if this should be included or just a description
+
+#### 5.4.1 Base URL, Method and Endpoint
+`GET /applications/{AppUUID}/services/{ServiceName}`
+
+Retrieves details of all the versions and their endpoints for a specified service.
+
+`/applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
+
+Retrieves details of all the versions and their endpoints for a specified service.
+
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 

@@ -95,17 +95,17 @@ The MindSphere App Service can be used in any Mendix app, for example an app whi
 
 Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
 
-### 3.1 Downloading the IoT Authenticator Module
+### 3.1 Downloading the IIoT Authenticator Module
 
 {{% todo %}}[Need a link to the authenticator module]{{% /todo %}}
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere Iot Authenticator Module](https://example.com).
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://example.com).
 
-Download the **MindSphere Iot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
 
 ### 3.2 Creating Binding Keys{#binding-keys}
 
-To authenticate your calls you will need to provide the MindSphere IoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
+To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
 
 1. Click the link **Create Binding Keys** in the welcome email you received.
 
@@ -129,7 +129,7 @@ To authenticate your calls you will need to provide the MindSphere IoT Authentic
 
 Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
 
-This is done by adding an **Access Token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
+This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
 ![](attachments/mindsphere-app-service/access-token.png)
 
@@ -139,21 +139,21 @@ In the REST call, an HTTP Header is added called *Authorization* and this is giv
 
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIotAuthenticator* module:
 
-* **URI** – this is the *Client URI* which is provided in the email you receive after the MindSphere tenant is provisioned 
-* **ClientId** – this is the *Client ID* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *Access Key* in the binding keys you can obtain in the Developer Portal
+* **TokenURL** – this is the *Token URL* which is provided in the email you receive after the MindSphere tenant is provisioned 
+* **ClientID** – this is the *Client ID* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *Access Key* in the binding keys you can obtain in the Developer Portal
 * **ClientSecret** – this is the *Client Secret* which is provided in the email you receive after the MindSphere tenant is provisioned and is also the *Secret Key* in the binding keys you can obtain in the Developer Portal
 
 ![](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
 
 #### 3.3.1 Authenticating During Development
 
-When you are developing your app, you can set the **ClientId** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration) within your project settings.
+When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration) within your project settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 
 #### 3.3.2 Authenticating for Deployment
 
-When you deploy your app, you should remove the values of **ClientId** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry environment variable) during the deployment.
+When you deploy your app, you should remove the values of **ClientID** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry environment variable) during the deployment.
 
 For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants) for information on how to set these values on other deployment platforms.
 

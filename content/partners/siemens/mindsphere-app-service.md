@@ -1,14 +1,23 @@
 ---
-title: "MindSphere App Service"
+title: "MindSphere IIoT for Makers"
 parent: "mindsphere"
 menu_order: 5
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
-tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
+tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service"]
 ---
 
 ## 1 Introduction
 
-The MindSphere App Service is the ideal solution if you want to add MindSphere information to an existing app which runs in the Mendix Cloud or another platform. It makes it easy to combine MindSphere data with information from other sources, such as SAP.
+MindSphere IIoT for Makers provides you with an Account to connect Industrial equipment and consume the IoT data in Mendix applications.
+With MindSphere IIoT for Makers you can:
+
+* Easily connect and manage Industrial machinery,
+* Build or extend a Mendix application with MindSphere IIoT for Makers capabilities,
+* Use standard IoT applications in MindSphere,
+* Use a seamless single-sign-on between MindSphere and Mendix accounts,
+* Simply consume IoT data from MindSphere in your Mendix applications.
+
+With the use of MindSphere IIoT for Makers, you have an integrated developer experience to build and integrate personalized Industrial IoT applications with Mendix.
 
 ### 1.1 Limitations
 
@@ -33,7 +42,7 @@ Once your order is processed, your entitlement to the MindSphere App Service wil
 
 ### 2.2 Provisioning a MindSphere Tenant
 
-On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate a tenant needs to be created within MindSphere.
+On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate the creation of a dedicated tenant account within MindSphere.
 
 {{% todo %}}[How is this triggered - there is no link in the latest flow (16 April)]{{% /todo %}}
 

@@ -7,12 +7,6 @@ parent: "metamodel-9"
 
 **Release date: May 17th, 2021**
 
-### DomainModels
-
-#### Annotation (Element)
-
-* We introduced the `width` property. 
-
 ### Microflows
 
 #### FormDataPart (Element)

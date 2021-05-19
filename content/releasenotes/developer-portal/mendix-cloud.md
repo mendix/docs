@@ -13,6 +13,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### May 18th, 2021
+
+#### Improvements
+
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
+  authenticate DNS lookups. There is nothing that you need to do for this
+  change to take effect. Going forward, all DNS requests to these domains
+  will automatically use DNSSEC.
+
 ### May 12th, 2021
 
 #### Improvements

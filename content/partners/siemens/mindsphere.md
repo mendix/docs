@@ -13,7 +13,7 @@ There are two ways that Mendix allows you to access MindSphere:
 
 {{% todo %}}[Add link to authenticator module]{{% /todo %}}
 
-1. You can purchase the MindSphere App Service and use the [IoT Authenticator Module](https://example.com) to authenticate your REST calls to MindSphere. See [MindSphere App Service](#app-service), below, for more information.
+1. You can purchase the MindSphere App Service and use the [IIoT Authenticator Module](https://example.com) to authenticate your REST calls to MindSphere. See [MindSphere App Service](#app-service), below, for more information.
 2. You can utilize the full power of MindSphere and deploy your apps to the MindSphere platform and have them appear in the  MindSphere Developer Cockpit. See [Full MindSphere Integration](#integration), below, for more information.
 
 ## 2 MindSphere App Service{#app-service}

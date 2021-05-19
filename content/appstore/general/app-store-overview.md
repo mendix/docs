@@ -59,7 +59,6 @@ The header for each component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-	
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -254,6 +253,42 @@ To remove a component from the user group, click **Remove**.
 On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Mendix Admin can click **Delete Group**.
+
+## NEW - Service Management Dashboard
+
+To use an app service, you need binding keys.
+
+### Creating Binding Keys
+
+To create binding keys, go to the **Service Management** dashboard, select a **Product**, and click **Generate Keys** at the bottom of the page:
+
+![](attachments/app-store-overview/binding-keys-1.png)
+
+In **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name for the connection:
+
+![](attachments/app-store-overview/binding-keys-2.png)
+
+After you click **Create Keys**, a page will appear with your keys: **clientID**, **TokenURL**, and **clientSecret**:
+
+![](attachments/app-store-overview/binding-keys-3.png)
+
+Click **Copy** for each key and save the keys somewhere safe, as you will not be able to access them again.
+
+{{% alert type="warning" %}}
+Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
+{{% /alert %}}
+
+To use the binding keys, see [Using the Binding Keys](#using) below.
+
+Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
+
+![](attachments/app-store-overview/binding-keys-4.png)
+
+### Using the Binding Keys {#using}
+
+When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
 ## 6 Read More
 

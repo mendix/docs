@@ -135,7 +135,7 @@ export interface ListActionValue {
 }
 ```
 
-<a name="get-function"></a>In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
+In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
 
 ```ts
 interface MyListWidgetsProps {
@@ -157,7 +157,7 @@ In this code sample, checks of status `myDataSource` and availability of items a
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.2 ListAttributeValue {#listattributevalue}
@@ -194,6 +194,12 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% /alert %}}
+
 ### 3.3 ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets) that is linked to a data source. 
@@ -224,7 +230,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
-You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
+You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 
@@ -255,4 +261,10 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 ```ts
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
+
+{{% alert type="info" %}}
+The `get` method was introduced in Mendix 9.0.
+
+You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% /alert %}}
 

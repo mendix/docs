@@ -12,6 +12,10 @@ This how-to will teach you how to go from a blank slate to an app running on a d
 
 The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all projects with a native mobile navigation profile.
 
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
+
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:

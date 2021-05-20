@@ -164,7 +164,7 @@ You can call a microflow from a [workflow](/refguide/workflows). See the list of
 
 | Event Type       | Prefix | Description                                                  |
 | ---------------- | ------ | ------------------------------------------------------------ |
-| User assignment  | WFA_   | Returns a list of users that could perform the workflow task. |
+| User assignment  | WFA_   | Returns a list of users who can perform the workflow task.   |
 | System action    | WFS_   | Accepts a workflow object and returns a workflow task result. |
 | On Created Event | WFC_   | Starts when a user task is created, accepts a workflow object. |
 
@@ -344,9 +344,9 @@ Complex processes and important business logic (like workflow processing or vali
 
 Guidelines below can help you choose a short yet meaningful name for your workflow:
 
-* Same as Context entity name
-* Noun + Verb (e.g. *EmployeeOnboarding*)
-* Reflecting what the process is about, what the goal of the process is
+* The name matches the context entity name
+* The name consists of a noun + verb (e.g. *EmployeeOnboarding*)
+* The name reflects what the process is about, what the goal of the process is
 
 ### 4.4 Warnings & Studio Pro Feedback
 

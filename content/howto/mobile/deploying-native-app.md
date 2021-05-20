@@ -82,9 +82,9 @@ From Studio Pro:
 	{{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1.  In the **Tokens** screen fill in your GitHub and App Center API tokens. The tool will verify the tokens grant sufficient access to valid accounts and will notify you if they do not:
+1.  In the **Build Type** screen fill in your GitHub and App Center API tokens. The tool will verify the tokens grant sufficient access to valid accounts and will notify you if they do not:
 
-	{{% image_container width="350" %}}![Wizard Tokens](attachments/nbui/wizard-tokens.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Wizard Tokens](attachments/nbui/wizard-buildtype-cloud.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
 1.  Select **Choose your icon** if you already have an image you would like to use as an icon. If you continue without adding a custom image, your app will use the default images displayed below. You can change app icon later if you wish:

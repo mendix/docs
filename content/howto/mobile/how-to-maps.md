@@ -6,13 +6,13 @@ description: This guide will teach you to set up native mobile maps capabilities
 tags: ["maps", "google maps", "native", "mobile"]
 ---
 
-{{% alert type="warning" %}}
-The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Maps module allows you to work with maps. Consult the instructions below to include map capabilities in your native mobile apps.
+
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
 
 ## 2 Prerequisites
 

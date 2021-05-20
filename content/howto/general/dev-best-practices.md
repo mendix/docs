@@ -243,7 +243,7 @@ Pages that are used to make a selection of one object have a suffix of **_Selec
 
 Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
-Pages that are called when a [user task](/refguide/user-task) in a workflow is executed, have suffix **_Workflow**. There is one task page per user task. These pages always have a WorkflowUserTask data view and are specific to performing workflow tasks. Without this suffix every workflow page would be suffixed with **_Edit**.
+Pages that are called when a [user task](/refguide/user-task) in a workflow is executed, have suffix **_Workflow**. There is one task page per user task. These pages always have a WorkflowUserTask data view and are specific to performing workflow tasks. 
 
 | Page Purpose                             | Suffix |
 |-------------------------------------------|--------|

@@ -108,13 +108,14 @@ For convenience and conciseness, throughout this how-to the following variables 
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
 * <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
-## 5 Searching in the Catalog{#api-search}
+## 5 Search API {#api-search}
 
-Search in the Catalog returns the registered assets that satisfy the search string and specified filters. The search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
+The primary method in the search API is GET. This is used to search in the Catalog for registered assets that satisfy a search string and specified filters. ???It can also be used to retreive details of registered data sources???
+
+Search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
 
 The Data Hub Search API URL is: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html.
 
-The primary method for this call is GET.
 
 To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex).
 
@@ -175,7 +176,6 @@ Retrieves details of all the versions and their endpoints for a specified servic
 `/applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
 
 Retrieves details of specified endpoint in the environement.
-
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 

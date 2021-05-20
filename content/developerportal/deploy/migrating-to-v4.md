@@ -56,6 +56,10 @@ For further prerequisites see the sections below.
 
 Mendix has written a migration tool to help you transfer your data from your V3 app to a new V4 environment. It also switches to your new environment for you when it is ready to go.
 
+{{% alert type="info" %}}
+The migration tool is currently a [beta](/releasenotes/beta-features/) version.
+{{% /alert %}}
+
 We strongly advise you to use this method to migrate your app to Mendix Cloud V4 as it makes the migration much easier to initiate and monitor.
 
 The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original, Mendix Cloud V3, environment and the new Mendix Cloud V4 environment at each stage.

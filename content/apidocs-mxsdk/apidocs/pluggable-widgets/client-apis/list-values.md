@@ -23,16 +23,24 @@ export interface ObjectItem {
 
 export interface ListValue {
     status: ValueStatus;
+
     offset: number;
     limit: number;
     setOffset(offset: number): void;
     setLimit(limit: Option<number>): void;
     requestTotalCount(needTotalCount: boolean): void;
-    items?: ObjectItem[];
     hasMoreItems?: boolean;
     totalCount?: number;
+    items?: ObjectItem[];
+
+    sortOrder: SortInstruction[];
+    filter: Option<FilterCondition>;
+    setSortOrder(sortOrder: Option<SortInstruction[]>): void;
+    setFilter(filter: Option<FilterCondition>): void;
 }
 ```
+
+### 2.1 Pagination {#listvalue-pagination}
 
 The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
 
@@ -120,8 +128,54 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets).
- 
+### 2.3 Sorting {#listvalue-sorting}
+
+It is possible to set specific sort orders for items in the list using `setSortOrder()` method an get the current sort order via `sortOrder` field. When a new sort order is set widget will receive sorted new results on next re-renders.
+
+`SortInstruction` is defined as and array of two elements:
+
+```ts
+type SortInstruction = [id: ListAttributeId, dir: SortDirection];
+```
+
+The first element of the `SortInstruction` is `id` of an attribute property liked to the datasource. See [ListAttributeValue](#listattributevalue) section for information about attribute `id`s. It is possible to sort only on attributes that are linked to the data source.
+
+The second attribute of the `SortInstruction` is a literal string representing the sort direction, either `"asc"` or `"desc"`.
+
+The following code examples shows how to apply sorting to the property `myDataSource` based on `myAttributeOnDatasource` attribute and clear it:
+
+```ts
+interface MyListWidgetsProps {
+    myDataSource: ListValue;
+    myAttributeOnDatasource: ListAttributeValue<string>;
+}
+```
+
+Set descending sort order based on attribute represented by `myAttributeOnDatasource` with the follwoing code:
+
+```ts
+if (this.props.myAttributeOnDatasource.sortable) {
+    const sortInstr = [this.props.myAttributeOnDatasource.id, "desc"];
+    this.props.myDataSource.setSortOrder(sortInstr);
+} else {
+    console.warn("Can't apply sorting. Attribute is not sortable");
+}
+
+```
+
+Reset sort order to default by passing `undefined` with the following code:
+
+```ts
+this.props.myDataSource.setSortOrder(undefined);
+```
+
+### 2.4 Filtering {#listvalue-filtering}
+
+// TODO:
+
+### 2.5 Working With Actual Data
+
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
 
 ## 3 Linked Property Values
 
@@ -168,16 +222,27 @@ This allows the client component to access attribute values on individual items 
 ```ts
 export interface ListAttributeValue<T extends AttributeValue> {
     get: (item: ObjectItem) => EditableValue<T>; // NOTE: EditableValue obtained from ListAttributeValue always readonly
+
+    id: ListAttributeId;
+    sortable: boolean;
+    filterable: boolean;
+
+    type: AttributeType;
+
+    formatter: ValueFormatter<T>;
+    universe: Option<T[]>; // only for attributes of type Enumeration
 }
 ```
 
-The type `<T>` depends on the allowed value types as configured for the attribute property.
+#### 3.2.1 Obtainging Attribute Value
 
 {{% alert type="warning" %}}
 Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
 {{% /alert %}}
 
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):
+In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue<T>` should be obtained by calling `ListAttributeValue.get` with the item. The type `<T>` depends on the allowed value types as configured for the attribute property. 
+
+Lets take a look at some example. Assuming widget properties are configured as follows with `myAttributeOnDatasource` property allowing attribute of type `string`:
 
 ```ts
 interface MyListWidgetsProps {
@@ -186,19 +251,47 @@ interface MyListWidgetsProps {
 }
 ```
 
-The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
+The following code sample shows how to get an `EditableValue<string>` that represents a read-only value of an attribute of the first element from the `myDataSource`.
 
 ```ts
 const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) for more information about usage of `EditableValue`.
 
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 
 You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
+
+#### 3.2.2 Attribute ID, Sortable and Filterable Flags
+
+`id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting or/and filtering. Check [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections for more information.
+
+`sortable` and `filterable` fields specify if the attribute could be used for sorting or/and filtering. Those flags have to be checked before a widget applyes filtering or sorting on a liked data source property. An attempt to filter on a non-filterable attribute or sort on a non-sortable attribute would lead to an error during the execution time.
+
+#### 3.2.3 Attribute Type
+
+[Attribute](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute) property determines which attribute types could be configured for that property. For example a property may allow attributes of type `String` and `Integer` in order to present progress. While this is convinient for users it may require some additional work for a developer by processing different data types.
+
+It is possible to determine the attribute type of a configured attribute by checking `type` field. The following code sample shows how to check the attribute type of a property named `myAttributeOnDatasource`:
+
+```ts
+if (this.props.myAttributeOnDatasource.type === "String") {
+    console.log("String attribute");
+} else if (this.props.myAttributeOnDatasource.type === "Integer") {
+    console.log("Integer attribute");
+} else {
+    console.log("Not a String/Integer attribute");
+}
+```
+
+#### 3.2.4 Formatter and Universe
+
+`formatter` field represents the default formatter that is going to be used on values obtained by `get` function.
+
+`universe` field represents the an array of possible values of an attribute when the attribute type is an enumeration. For any other attribute types this filed is `undefined`.
 
 ### 3.3 ListWidgetValue {#listwidgetvalue}
 

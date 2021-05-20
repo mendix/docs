@@ -170,7 +170,7 @@ The same search in the Data Hub would look like the following screenshot showing
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
 
-### 3.4 Retrieve full details of a Specific Endpoint????
+### 3.4 Retrieve full details of a Specific Endpoint???? - does PM want this illustrated???
 
 
 ## 4 Registering an OData Contract {#reg-contract-ex}

@@ -34,12 +34,14 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](migrating-to-v4)
 
 The primary hosting locations are as follows:
 
-*   Mendix Cloud EU: AWS Frankfurt
-*   Mendix Cloud US: AWS North Virginia
-*   Mendix Cloud US: AWS Oregon
 *   Mendix Cloud Asia Pacific: AWS Singapore
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud EU: AWS Dublin
+*   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud UK: AWS London
+*   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud US: AWS Oregon
+
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location.
 

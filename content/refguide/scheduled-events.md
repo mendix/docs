@@ -133,3 +133,5 @@ Whenever you set up an event to run every day at a certain time, it will start a
 But this is only applicable depending on the locale (timezone) your server is hosted in. No matter what option you pick from your perspective, if you are in a country that adapts daylight savings, you will notice the scheduled event run an hour off schedule. When scheduling an event to start at a certain UTC time, the platform technically won't have a problem, because UTC doesn't know daylight saving. However your users will still experience the event to run at a different hour.
 
 Unfortunately there isn't a great workaround for this issue. You could create a similar solution as described above. This can be done with the same type of expressions, except instead of using date format expression 'dd', you should use 'HH' (0-23 hours), or 'kk' (1-24 hours).
+
+If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.

@@ -32,7 +32,7 @@ The following diagram shows the flow of objects in detail:
 
 Because all the objects necessary for a microflow are transferred between the Mendix Client and server for each request, the network traffic will grow when more objects are used at the same time. This can become a bottleneck, especially on mobile devices.
 
-That is why the primary best practice for app performance is to minimize the number of in-use objects in your session. By *in-use objects* we mean non-persistable objects and uncommitted persistable objects.
+That is why the primary best practice for app performance is to minimize the number of in-use objects in your session. By *in-use objects* we mean non-persistable objects and uncommitted persistable objects. This guideline applies to both native and PWA apps.
 
 It is not possible to eliminate the need for in-use objects entirely, unless you want your app to be completely read-only. However, there are several common ways to inadvertently create more objects than necessary. The rest of this document presents ways to reduce the number of in-use objects.
 

@@ -1,6 +1,6 @@
 ---
 title: "Use the Siemens MindSphere Pump Asset Example App"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 110
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---

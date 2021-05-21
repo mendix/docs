@@ -1,6 +1,6 @@
 ---
 title: "MindSphere Asset Management Connector"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 30
 description: "Documentation of the MindSphere Asset Management Connector"
 tags: ["MindSphere", "Asset", "Asset Type", "Connector"]

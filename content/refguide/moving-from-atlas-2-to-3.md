@@ -174,9 +174,9 @@ Modifications to the **Atlas 2 theme** include the following:
 
 If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 4 sections: 
 
-- [Native custom variables]({#native-custom-variables})
-- [Native custom styling]({#native-custom-styling})
-- [Native additonal custom styling](native-additonal-custom-variables)
+- [Native custom variables](#native-custom-variables)
+- [Native custom styling](#native-custom-styling)
+- [Native additonal custom styling](#native-additonal-custom-variables)
 - [Native design properties](#native-design-properties)
 
 #### 2.3.1 Native custom variables {#native-custom-variables}
@@ -399,11 +399,11 @@ Currently the merging of design property options across themesource modules is n
 
 #### 2.5.1 Upgrading Atlas UI Resources to Atlas Core
 
-1.  If you have modified any of the Atlas UI content found in Atlas UI Resources, its recommended to move the UI content from this folder to another user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
+1.  If you have modified any of the Atlas UI content found in **Atlas UI Resources** e.g. building blocks, page templates or layouts, it is recommended to move the UI content you have modified to another user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
 
 2. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
-   ![](attachments/atlas-mig/atlas-web-content.png)
+   ![](attachments/atlas-mig/2-rename.png)
 
 3. Download **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** from the Marketplace and replace the existing ***Atlas_UI_Resources*** renamed to ***Atlas_Core***:
 

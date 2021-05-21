@@ -7,13 +7,17 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ## 1 Introduction
 
-Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary](#changes) section below.
+Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, visit the [Atlas 3 Change Summary](#changes).
 
-Please note that for the majority of users migrating from Atlas 2 to Atlas 3, the process you need to follow is simple. If you have not made major custom changes to your Atlas styling, you will follow these steps:
+The upgrade from Atlas 2 to Atlas 3 topic of this document, has been divided into the following sections: 
 
-1. Complete steps 1 and 2 in the [Modify Existing Module](#modify-existing) section below.
-2. Complete the [Modify Existing Module (Continued)](#modify-2) section below.
-3. Fix errors per the [Expected Issues After Upgrading to Atlas 3](#expected-issues) section below.
+- Upgrading your Theme directory 
+- Migrating your Web styling
+- Migrating your Native styling
+- Migrating custom defined design properties
+- Migrating your UI content
+
+This final sections of this document reference known issues and some troublehsooting issues that may occur when upgrading to Atlas 3. 
 
 ## 2 Upgrade from Atlas 2 to Atlas 3 {#upgrade}
 
@@ -27,15 +31,17 @@ To upgrade your theme directory to Atlas 3, please complete the following steps:
 
 1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*.
 
+   ![atlas2-themefolder](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas2-themefolder.png)
+
 2. Download the Atlas 3 [**theme.zip**](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. The folder structure should look similar to the example below. **Mendix project root**, then **theme**, then **web** and **native**.
 
-   [add screenshot]
+![atlas3-themefolder](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas3-themefolder.png)
 
-### 2.2 Moving your web styling from Atlas 2 to Atlas 3
+### 2.2 Migrating your web styling
 
-This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section **Migrating UI content from Atlas 2 to Atlas 3**.
+This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section on **[Migrating UI content](#migrating-ui-content)**.
 
-Modifications to the **Atlas 2 theme** include the following: 
+Modifications to the **Atlas 2 web theme** include the following: 
 
 - Changes to custom variables
 - Adding of additional custom styling
@@ -45,12 +51,12 @@ Modifications to the **Atlas 2 theme** include the following:
 If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 5 sections: 
 
 - [Web custom variables](#Web-custom-variables)
-- Web custom styling
-- Web additonal custom styling
-- Web design properties 
-- Web resources
+- [Web custom styling]((#Web-custom-styling))
+- [Web additonal custom styling]((#Web-additional-custom-variables))
+- [Web design properties]((#Web-design-properties)) 
+- [Web resources]((#Web-resources))
 
-#### 2.2.1 Web custom variables
+#### 2.2.1 Web custom variables {#web-custom-variables}
 
 This section concerns modifications you have made to the **custom-variables** scss file of your **Atlas 2 theme**.
 
@@ -72,7 +78,7 @@ theme/web/custom-variables.scss
 themesource/your-module/web/custom-variables.scss
 ```
 
-#### 2.2.2 Web custom styling
+#### 2.2.2 Web custom styling {#web-custom-styling}
 
 This section concerns modifications you have made to the **custom** scss file of your **Atlas 2 theme**.
 
@@ -94,7 +100,7 @@ theme/web/main.scss
 themesource/your-module/web/main.scss
 ```
 
-#### 2.2.3 Web additional custom styling
+#### 2.2.3 Web additional custom styling {#web-additional-custom-styling}
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional scss stylesheets that you might have added. 
 
@@ -120,7 +126,7 @@ themesource/your-module/web/_
 
 Remember to include `@import<file name>` in ***themesource/your-module/web/main.scss*** to include your additional files in the compilation of the SCSS. 
 
-#### 2.2.4 Web design properties
+#### 2.2.4 Web design properties {#web-design-properties}
 
 This section concerns modifications you have made to the **settings.json file** of your **Atlas 2 theme**.
 
@@ -138,7 +144,7 @@ Do not add to the modules **Atlas Core** or **Atlas Web Content**.
 
 If you have user defined **design properties** for platform supported or community supported widgets, follow the two scenarios below.  
 
-#### 2.2.5 Web resources
+#### 2.2.5 Web resources {#web-resources}
 
 This section concerns modifications you have made to documents **login.html** and **index.html**, as well as additional static resources e.g. font libraries, images, etc...
 
@@ -156,7 +162,7 @@ Additional static resources such as images, font libraries need to be moved to t
 theme/web/resources
 ```
 
-### 2.3 Moving your native styling from Atlas 2 to Atlas 3
+### 2.3 Migrating your native styling
 
 This section can be skipped if you have not made any modifications to the **native** section of your **Atlas 2 theme** and you can continue to the section **moving your UI content from Atlas 2 to Atlas 3**.
 
@@ -168,12 +174,12 @@ Modifications to the **Atlas 2 theme** include the following:
 
 If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 4 sections: 
 
-- Native custom variables
-- Native custom styling
-- Native additonal custom styling
-- Native design properties 
+- [Native custom variables]({#Native-custom-variables})
+- [Native custom styling]({#Native-custom-styling})
+- [Native additonal custom styling](Native-additonal-custom-variables)
+- [Native design properties](#Native-design-properties)
 
-#### 2.3.1 Native custom variables
+#### 2.3.1 Native custom variables {#Native-custom-variables}
 
 This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
 
@@ -195,7 +201,7 @@ theme/native/custom-variables.js
 themesource/your-module/native/custom-variables.js
 ```
 
-#### 2.3.2 Native custom styling
+#### 2.3.2 Native custom styling {#Native-custom-styling}
 
 This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
 
@@ -217,7 +223,7 @@ theme/native/main.js
 themesource/your-module/native/main.js
 ```
 
-#### 2.3.3 Native additonal custom styling
+#### 2.3.3 Native additonal custom styling {#Native-additional-custom-styling}
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
@@ -243,7 +249,7 @@ themesource/your-module/native/_
 
 Remember to import the file using JavaScript's `import` syntax in *themesource/your-module/native/main.js* and export the variable exposed by the imported file.
 
-#### 2.2.4 Native design properties
+#### 2.2.4 Native design properties {#Native-design-properties}
 
 This section concerns modifications you have made to the **settings-native.json file** of your **Atlas 2 theme**.
 
@@ -261,9 +267,9 @@ Do not add to the modules **Atlas Core** or **Atlas Native Content**.
 
 If you have custom defined **design properties** for platform supported or community supported widgets, see the section **migrating custom defined design properties**.
 
-### 2.3 Migrating custom defined design properties
+### 2.4 Migrating custom defined design properties {#migrating-design-properties}
 
-#### 2.3.1 Adding Design Properties for Platform-Supported Widgets
+#### 2.4.1 Adding Design Properties for Platform-Supported Widgets
 
 If you have extended one or more platform supported widgets with your own design property similar to the following example.
 
@@ -323,7 +329,7 @@ In the example above we have two design properties: **align content** and **bord
 }
 ```
 
-#### 2.3.2 Adding Design Properties for Community-Supported Widgets
+#### 2.4.2 Adding Design Properties for Community-Supported Widgets
 
 If you have defined your own design property for a community-supported widget in your project, similar to the following example, follow these steps.
 
@@ -379,39 +385,49 @@ As this is a custom-defined design property, this needs to be added to the web's
 }
 ```
 
-#### 2.3.3 Merging options for design properties
+#### 2.4.3 Merging options for design properties
 
 Currently the merging of design property options across themesource modules is not yet supported.
 
-### 2.4  *Migrating UI content from Atlas 2 to Atlas 3
+### 2.5  Migrating UI content {#migrating-ui-content}
 
 **Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
-- **Atlas Core** - Contains Atlas core styling and layouts
-- **Atlas Web Content** - Contains Atlas's web page templates and building blocks
-- **Atlas Native Content** - Contains Atlas's native page templates and building blocks
+- **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** - Contains Atlas core styling and layouts
+- [**Atlas Web Content**](https://marketplace.mendix.com/link/component/117183) - Contains Atlas's web page templates and building blocks
+- [**Atlas Native Content**](https://marketplace.mendix.com/link/component/117175) - Contains Atlas's native page templates and building blocks
 
-#### 2.4.1 Upgrading Atlas UI Resources to Atlas Core
+#### 2.5.1 Upgrading Atlas UI Resources to Atlas Core
 
-1.  If you have modified any of the Atlas UI content found in Atlas UI Resources, its recommended to move the UI content from this folder to a user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
+1.  If you have modified any of the Atlas UI content found in Atlas UI Resources, its recommended to move the UI content from this folder to another user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
 
 2. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
-   ![](attachments/atlas-mig/2-rename.png)
+   ![](/Users/chrishodges/Mendix/Github/docs/content/refguide/attachments/atlas-mig/atlas-web-content.png)
 
 3. Download **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** from the Marketplace and replace the existing ***Atlas_UI_Resources*** renamed to ***Atlas_Core***:
 
    ![](attachments/atlas-mig/3-import.png)
 
-#### 2.4.2 Adding Atlas Web content to your app
+#### 2.5.2 Adding Atlas Web content to your app
 
-1. Download **Atlas Web Content** from Marketplace
+1. Download **[Atlas Web Content](https://marketplace.mendix.com/link/component/117183)** from Marketplace
+
+   ![atlas-web-content-marketplace](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-web-content-marketplace.png)
+
 2. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-#### 2.4.3 Adding Atlas Native content to your app
+   ![atlas-web-content-folder-structure](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-web-content-folder-structure.png)
 
-1. Download **Atlas Native Content** from Marketplace
+#### 2.5.3 Adding Atlas Native content to your app
+
+1. Download **[Atlas Native Content](https://marketplace.mendix.com/link/component/117175)** from Marketplace
+
+   ![atlas-native-content-marketplace](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-native-content-marketplace.png)
+
 2. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**
+
+![atlas-native-content-folder](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-native-content-folder.png)
 
 ## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 
@@ -477,7 +493,12 @@ To troubleshoot common Atlas problems, do the following:
 
 ## 5 Read more
 
-Atlas 3 change summary
+- [Atlas 3 Website](https://www.mendix.com/atlas/)
+- [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)
+- [Atlas 3 Change Summary](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/atlas3-change-summary.md)
+- [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)
+
+
 
 
 

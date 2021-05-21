@@ -100,11 +100,11 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module.
 
-![atlas-web-content-marketplace](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-web-content-marketplace.png)
+![](attachments/atlas-mig/atlas-web-content-marketplace.png)
 
 For native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module.
 
-![atlas-native-content-marketplace](/Users/chrishodges/Documents (Local)/Github/docs/content/refguide/attachments/atlas-mig/atlas-native-content-marketplace.png)
+![](attachments/atlas-mig/atlas-native-content-marketplace.png)
 
 ## 4 Design properties for Web
 

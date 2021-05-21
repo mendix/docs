@@ -236,6 +236,10 @@ Alternatively, you can upload an MDA which has already been created from the app
 
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
+{{% alert type="info" %}}
+There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+{{% /alert %}}
+
 ## 5 Deploy Package{#DeployPackage}
 
 ### 5.1 Deploy to an Environment

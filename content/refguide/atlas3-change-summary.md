@@ -1,7 +1,7 @@
 ---
 title: "Atlas 3 change summary"
 parent: "moving-from-atlas-2-to-3"
-menu_order: 6
+menu_order: 7
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ---
@@ -13,8 +13,6 @@ This document is a high-level summary of the changes Atlas 3 brings to Mendix.
 ## 2 High level summary
 
 Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our Reference Apps. 
-
-{{% todo %}}[show atlas 2 and 3 RA comparison in paragraph above]{{% /todo %}}
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 
@@ -100,11 +98,11 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module.
 
-![](attachments/atlas-mig/atlas-web-content-marketplace.png)
+![Atlas web content](attachments/atlas-mig/atlas-web-content-marketplace.png)
 
 For native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module.
 
-![](attachments/atlas-mig/atlas-native-content-marketplace.png)
+![Atlas native content](attachments/atlas-mig/atlas-native-content-marketplace.png)
 
 ## 4 Design properties for Web
 

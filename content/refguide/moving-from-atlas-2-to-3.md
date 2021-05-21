@@ -11,11 +11,11 @@ Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To
 
 The upgrade from Atlas 2 to Atlas 3 topic of this document, has been divided into the following sections: 
 
-- Upgrading your Theme directory 
-- Migrating your Web styling
-- Migrating your Native styling
-- Migrating custom defined design properties
-- Migrating your UI content
+- [Upgrading your Theme directory](#upgrade-theme-directory)
+- [Migrating your Web styling](#upgrade-web-styling)
+- [Migrating your Native styling](#upgrade-native-styling)
+- [Migrating custom defined design properties](#upgrade-design-properties)
+- [Migrating your UI content](#upgrade-ui-content)
 
 This final sections of this document reference known issues and some troublehsooting issues that may occur when upgrading to Atlas 3. 
 
@@ -25,19 +25,19 @@ Before upgrading, please note that in Atlas 3 all hybrid content is removed beca
 
 Before you start the upgrading process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
-### 2.1 Upgrading your theme directory
+### 2.1 Upgrading your theme directory {#upgrade-theme-directory}
 
 To upgrade your theme directory to Atlas 3, please complete the following steps:
 
 1. Rename you Atlas 2 **theme** directory. We suggest naming it to *theme_atlas2*.
 
-   ![](attachments/atlas-mig/atlas2-themefolder.png)
+   ![Atlas2 folder](attachments/atlas-mig/atlas2-themefolder.png)
 
 2. Download the Atlas 3 [**theme.zip**](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. The folder structure should look similar to the example below. **Mendix project root**, then **theme**, then **web** and **native**.
 
-![](attachments/atlas-mig/atlas3-themefolder.png)
+![Atlas 3 folder](attachments/atlas-mig/atlas3-themefolder.png)
 
-### 2.2 Migrating your web styling
+### 2.2 Migrating your web styling {#upgrade-web-styling}
 
 This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section on **[Migrating UI content](#migrating-ui-content)**.
 
@@ -162,9 +162,9 @@ Additional static resources such as images, font libraries need to be moved to t
 theme/web/resources
 ```
 
-### 2.3 Migrating your native styling
+### 2.3 Migrating your native styling {#upgrade-native-styling}
 
-This section can be skipped if you have not made any modifications to the **native** section of your **Atlas 2 theme** and you can continue to the section **moving your UI content from Atlas 2 to Atlas 3**.
+This section can be skipped if you have not made any modifications to the **native** section of your **Atlas 2 theme** and you can continue to the section **migrating your UI content** {#upgrade-ui-content}.
 
 Modifications to the **Atlas 2 theme** include the following: 
 
@@ -389,7 +389,7 @@ As this is a custom-defined design property, this needs to be added to the web's
 
 Currently the merging of design property options across themesource modules is not yet supported.
 
-### 2.5  Migrating UI content {#migrating-ui-content}
+### 2.5  Migrating UI content {#upgrade-ui-content}
 
 **Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
@@ -413,29 +413,29 @@ Currently the merging of design property options across themesource modules is n
 
 1. Download **[Atlas Web Content](https://marketplace.mendix.com/link/component/117183)** from Marketplace
 
-   ![](attachments/atlas-mig/atlas-web-content-marketplace.png)
+   ![Atlas web content](attachments/atlas-mig/atlas-web-content-marketplace.png)
 
 2. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-   ![](attachments/atlas-mig/atlas-web-content-folder-structure.png)
+   ![Atlas web content folder](attachments/atlas-mig/atlas-web-content-folder-structure.png)
 
 #### 2.5.3 Adding Atlas Native content to your app
 
 1. Download **[Atlas Native Content](https://marketplace.mendix.com/link/component/117175)** from Marketplace
 
-   ![](attachments/atlas-mig/atlas-native-content-marketplace.png)
+   ![Atlas native content](attachments/atlas-mig/atlas-native-content-marketplace.png)
 
 2. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**
 
-![](attachments/atlas-mig/atlas-native-content-folder.png)
+![Atlas native content folder](attachments/atlas-mig/atlas-native-content-folder.png)
 
-## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
+## 3 Expected Issues After Upgrading to Atlas 3
 
 When you have completed the sections above, you may have errors in your error list:
 
 *   For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
-	![](attachments/atlas-mig/4-errors.png)
+	![errors](attachments/atlas-mig/4-errors.png)
 	
 * For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
 	* Delete the layout

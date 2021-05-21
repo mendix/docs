@@ -40,6 +40,10 @@ This password is only used when Mendix is running locally. You can change the pa
 {{% /alert %}}
 
 {{% alert type="info" %}}
+To first-time log in to a sandbox: in studio pro go to App => Security. Set ‘Demo users’ to ‘enable demo users’ and add a demo_admin having Userrole Administrator. Deploy your app to the sandbox by clicking ‘Run’, log in using the demo-admin and create some useraccounts.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 Since this is general knowledge, it is safer to change this to a custom password.
 {{% /alert %}}
 

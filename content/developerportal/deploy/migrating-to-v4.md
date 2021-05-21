@@ -133,7 +133,9 @@ The migration page lists all the ongoing migrations including the following info
 * the source and target environments
 * UUID of the source production environment
 * whether the tool is current **Replicating** data to the V4 environment or is **Stopped**
-* what proportion of the source data has been replicated, listed for both files and database
+* what proportion of the source data has been replicated, listed for both files and database – this will sometimes show zero
+    * if replication isn't running
+    * during the replication process when the process checks whether files are synchronized
 * UUID of the target production environment
 * a button to **Stop replication** if the tool is currently replicating, or **Start replication** if the tool is currently stopped
 * the **Migrate button** which triggers the [final migration](#final-migration)

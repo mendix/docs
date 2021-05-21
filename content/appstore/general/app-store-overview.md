@@ -284,6 +284,8 @@ Click **Return to the overview** to go to the main page of the Service Managemen
 
 ![](attachments/app-store-overview/binding-keys-4.png)
 
+You can also highlight a product and click **Manage** to manage the keys already created. [VERIFY]
+
 ### 6.2 Using the Binding Keys {#using}
 
 When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).

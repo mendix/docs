@@ -39,7 +39,7 @@ To upgrade your theme directory to Atlas 3, please complete the following steps:
 
 ### 2.2 Migrating your web styling {#upgrade-web-styling}
 
-This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section on **[Migrating UI content](#migrating-ui-content)**.
+This section can be skipped if you have not made any modifications to the **web** section of your **Atlas 2 theme** and you can continue to the section on **[Migrating UI content](#upgrade-ui-content)**.
 
 Modifications to the **Atlas 2 web theme** include the following: 
 
@@ -52,7 +52,7 @@ If you have made any of the above modifications, please follow the following ste
 
 - [Web custom variables](#web-custom-variables)
 - [Web custom styling](#web-custom-styling)
-- [Web additonal custom styling](#web-additional-custom-variables)
+- [Web additonal custom styling](#web-additional-custom-styling)
 - [Web design properties](#web-design-properties)
 - [Web resources](#web-resources)
 
@@ -267,7 +267,7 @@ Do not add to the modules **Atlas Core** or **Atlas Native Content**.
 
 If you have custom defined **design properties** for platform supported or community supported widgets, see the section **migrating custom defined design properties**.
 
-### 2.4 Migrating custom defined design properties {#migrating-design-properties}
+### 2.4 Migrating custom defined design properties {#upgrade-design-properties}
 
 #### 2.4.1 Adding Design Properties for Platform-Supported Widgets
 
@@ -459,7 +459,7 @@ When you have completed the sections above, you may have errors in your error li
 
 	![](attachments/atlas-mig/7-errors.png)
 
-*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [Fixing User-Defined Design Properties](#user-design-props) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties).
+*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties).
 
 	![](attachments/atlas-mig/8-errors-background.png)
 

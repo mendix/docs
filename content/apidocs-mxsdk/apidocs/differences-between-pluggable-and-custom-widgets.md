@@ -22,18 +22,18 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
 | Access to attribute data                                          | [Yes](property-types-pluggable-widgets#attribute)    | Yes                                                                   |
-| Retrieve additional data over associations, microflows, or nanoflows | [Yes](property-types-pluggable-widgets#datasource) (with [widgets](property-types-pluggable-widgets#widgets) only)   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.get)          |  |
+| Retrieve additional data over associations, microflows, or nanoflows | [Yes](property-types-pluggable-widgets#datasource) (with [widgets](property-types-pluggable-widgets#widgets) only)   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.get) |
 | Template Text; combine data and translatable text                 | [Yes](property-types-pluggable-widgets#texttemplate) | No                                                                    |
 | Expressions; logic combined with data                             | [Yes](property-types-pluggable-widgets#expression)   | No                                                                    |
-| File support; download, and open                           | [yes](property-types-pluggable-widgets#file)                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
-| File support; upload                          | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; download, and open                                  | [yes](property-types-pluggable-widgets#file)         | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
+| File support; upload                                              | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.saveDocument) |
 | Use conditional visibility                                        | [Yes](property-types-pluggable-widgets#visibility)   | No                                                                    |
 | Use conditional editability                                       | [Yes](property-types-pluggable-widgets#editability)  | No                                                                    |
 | Use glyph icons                                                   | [Yes](property-types-pluggable-widgets#icon)         | No                                                                    |
 | Show input label                                                  | [Yes](property-types-pluggable-widgets#label)        | No                                                                    |
 | Trigger an action on change of attribute                          | [Yes](property-types-pluggable-widgets#attribute)    | No                                                                    |
-| Widgets can contain other widgets                                 | [Yes](property-types-pluggable-widgets#widgets)   
-
+| Widgets can contain other widgets                                 | [Yes](property-types-pluggable-widgets#widgets)      | No                                                                    |
+| Widgets can create new objects                                    | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.create)   |
 
 ## 3 Read More
 

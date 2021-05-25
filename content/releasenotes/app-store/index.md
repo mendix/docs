@@ -10,6 +10,21 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 31st, 2021
+
+#### New Features
+
+The “Solutions” Category will not have any downloadable content. You can now upload the solution which will not have any downloadable content under “Solutions” Category. You will not see the option to upload the source file for Solutions category.
+  
+#### Improvements
+
+* You can only set the Category in the initial version of your content. You cannot change this setting by updating the content later.
+* We have started supporting rich characters in declined message. You can see them on publish and review step.
+
+#### Fixes
+
+* We fixed some bugs in the [add new Marketplace content](/appstore/general/share-app-store-content#adding) flow.
+
 ### May 4th, 2021
 
 #### Fixes

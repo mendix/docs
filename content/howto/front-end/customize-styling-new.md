@@ -302,7 +302,7 @@ The compilation of the *.scss* files is done in the following order:
 3. Custom variables from theme folder (_theme/web/custom-variables.scss_).
 4. _main.scss_ from **theme** folder (_theme/web/main.scss_).
 
-If there are errors during the SASS compilation, these will be shown in Studio Pro in a pop-up. This error gives hints on what went wrong and what should be fixed:
+If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives hints on what went wrong and what should be fixed:
 
 ![theme compilation error](attachments/customize-styling/compilation-error.png)
 

@@ -254,9 +254,9 @@ On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Mendix Admin can click **Delete Group**.
 
-## 6 Service Management Dashboard
+## 6 Service Management Dashboard {#service-management}
 
-To use an app service in your app, you need binding keys. You can create and manage these keys on the **Service Management**.
+To use an app service in your app, you need binding keys. You can create and manage these keys on the **Service Management** dashboard.
 
 ### 6.1 Creating Binding Keys
 
@@ -284,7 +284,13 @@ Click **Return to the overview** to go to the main page of the Service Managemen
 
 ![](attachments/app-store-overview/binding-keys-4.png)
 
-You can also highlight a product and click **Manage** to manage the keys already created. [VERIFY]
+You can also highlight a product and click **Manage** to go to the app service provider's configuration page, where you can do further app service-specific configuration:
+
+![](attachments/app-store-overview/binding-keys-5.png)
+
+{{% alert type="info" %}}
+This additional management option is only available for specific app services where necessary.
+{{% /alert %}}
 
 ### 6.2 Using the Binding Keys {#using}
 

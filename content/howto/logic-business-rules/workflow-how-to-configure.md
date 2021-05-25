@@ -122,7 +122,7 @@ You need to create a workflow that you will add activities to and create pages f
 
 2.  In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
 
-3. To open the workflow properties, click the start activity or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
+3. To open the workflow properties, click the start event or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
 
 4. Click the **Allowed roles** property to set security for the workflow.
 

@@ -27,7 +27,9 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 ## 2 Navigation Editor Properties
 
-In the navigation editor properties you can set a page or a microflow as a default home page. 
+In the navigation editor properties you can set a page or a microflow as a default home page:
+
+![Default Home Page](attachments/navigation/default-home-page.jpg)
 
 The **Default Home Page** section consists of the following properties:
 

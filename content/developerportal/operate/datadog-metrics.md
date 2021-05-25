@@ -393,7 +393,7 @@ You can decide whether a metric for the disk storage size available to the datab
 
 ### 5.4 Email Address Redaction{#redact-emails}
 
-Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_READACTION** to *false*.
+Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 

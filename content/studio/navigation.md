@@ -27,6 +27,8 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 ## 2 Navigation Editor Properties
 
+### 2.1 Default Home Page
+
 In the navigation editor properties you can set a page or a microflow as a default home page:
 
 ![Default Home Page](attachments/navigation/default-home-page.jpg)
@@ -35,6 +37,29 @@ The **Default Home Page** section consists of the following properties:
 
 * **Page** – Allows you to set a page that is opened when an end-user opens the page. A home page icon is displayed in a list of pages against a page that is set as a home page.
 * **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. 
+
+### 2.2 Role-Specific Home Page
+
+You can set a separate home page per each role. For example, an Administrator role can have a Admin_Dashboard page as its home page, while other users will have a default home page opened when they open the app:
+
+![](attachments/navigation/role-based-home-page.jpg)
+
+Role-specific home page has the following properties:
+
+* **Role** – defines what role has a dedicated home page.
+* **Type** – defines whether a page or a microflow is opened/performed when the user opens the app. You can select one of the following options:
+  * Page – 
+  * Microflow –
+
+### 2.3 Adding Role-Specific Home Page
+
+To add a role-specific home page, do the following:
+
+1. Make sure your security is enabled and configured.
+2. Open the navigation editor > Navigation editor properties.
+3. In the **Role-Specific Home Page** section, click the **Add Role-Specific Home Page**.
+4. In the **Role** property, Select a role that will have a dedicated home page.
+5. 
 
 ## 3 Menu Item Properties {#properties-of-menu-items}
 
@@ -79,7 +104,7 @@ The properties that can be configured in the **General** section are the followi
 * **Caption** – Allows you to fill in the name of the menu item.
 * **Icon** – Allows you to set the icon of the menu item.
 
-## 3 Creating a Menu Item {#create-new-menu-items}
+### 2.3 Creating a Menu Item {#create-new-menu-items}
 
 To create a new menu item, do the following:
 

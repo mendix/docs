@@ -130,7 +130,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 This feature is not yet publicly available. Please talk to your CSM to enable this page.
 {{% /alert %}}
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
+The **Paid Environments** on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
 
 ![](attachments/cloud.jpg)
 
@@ -140,7 +140,11 @@ There are links to three other pages from this tab to allow you to [make request
 * [Resize Environment](/developerportal/support/new-app-node-request-template#resize) – requests a container size change
 * [Offboard Environment](/developerportal/support/new-app-node-request-template#offboard) – requests that an app is offboarded
 
+{{% alert type="info" %}}
 These links will open in a new browser tab.
+{{% /alert %}}
+
+The **Free Environments** tab presents details on your company's free environments.
 
 ## 10 Read More
 

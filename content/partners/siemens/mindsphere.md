@@ -17,7 +17,7 @@ There are two ways that Mendix allows you to access MindSphere:
 2. You can utilize the full power of MindSphere and deploy your apps to the MindSphere platform and have them appear in the  MindSphere Developer Cockpit. See [Mendix on MindSphere](#mendix-on-mindsphere), below, for more information.
 
 ## 2 MindSphere IIoT for Makers{#iiot-for-makers}
-
+<!-- In addition to REST - oData via Datahub is possible. -->
 The MindSphere IIoT for Makers is the ideal solution if you want to add MindSphere information to an existing app which runs in the Mendix Cloud or another platform, especially when you are combining MindSphere data with information from other sources.
 
 The MindSphere IIoT for Makers is easy to add to your app but has the following limitations:

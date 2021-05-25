@@ -19,8 +19,7 @@ Follow the following high level steps in the next paragraphs to create your own 
 
 Create a new app. You can give this a name to your liking, for example MyCompany Design System.
 
-{{% todo %}}[Mendix Design System app link can be added when released on the market place. Add this text after this todo: The Design System app app contains pages to showcase the components and patterns, as well as the possible design variations and principles of use.
-]{{% /todo %}}
+For advice on how to design an app, consult the  [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website. This website contains pages which showcase key components, often-used patterns, as well as possible design variations and principles of use.
 
 ## 3 Add a Company Theme Module
 

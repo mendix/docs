@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### June 1st, 2021
+
+#### Improvements
+
+* We added a page to the Cloud overview in Control Center that shows the free environments.
+
 ### May 17th, 2021
 
 #### Improvements

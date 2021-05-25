@@ -106,7 +106,7 @@ For native platform, download the [Atlas Native Mobile Content](https://marketpl
 
 ## 4 Design Properties for Web
 
-These are the design properties chnages for Atlas 3 Web. 
+These are the design properties changes for Atlas 3 Web. 
 
 | Parent   | Property   | Removed  | Added  | Renamed   |
 | --- | --- | --- | --- | --- |

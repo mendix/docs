@@ -8,14 +8,13 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-Mendix on MindSphere is the right solution if you want to build, run and offer multi tenant apps which are fully integrated into the
-MindSphere Launchpad.
+If you would like to offer your Mendix Application within the MindSphere Eco System to other MindSphere Customers (Multitenancy) and optionally also use MindSpheres hosting offering, then Mendix on MindSphere would be the right choice.
 
 ## 2 Mendix on MindSphere {#mendix-on-mindsphere}
 
-Mendix can also be deployed to Siemens MindSphere and integrated with the MindSphere Developer Cockpit. To find out how to deploy your app to Siemens MindSphere, see [Siemens MindSphere – Deployment](/developerportal/deploy/deploying-to-mindsphere).
+A Mendix App can be fully integrated into Siemens MindSpheres application lifecycle. This includes the capability to provide your app to third parties in the MindSphere Eco System. To find out how to develop and deploy your app to Siemens MindSphere, see [Siemens MindSphere – Deployment](/developerportal/deploy/deploying-to-mindsphere).
 
-Once your app is deployed to MindSphere, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following four documents.
+Once your app is registered in MindSphere, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following four documents.
 
 
 * [MindSphere Development Considerations](mindsphere-development-considerations) – covers things which you should address when developing for MindSphere, including the following:

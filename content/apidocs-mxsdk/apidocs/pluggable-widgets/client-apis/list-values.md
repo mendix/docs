@@ -195,7 +195,7 @@ It is possible to set filtering conditions for items of a datasource. `setFilter
 
 Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes.
 
-The following code sample shown how to use filter builders and apply filtering to a data source property with three linked attributes:
+The following code samples show how to use filter builders and apply filtering to a data source property with three linked attributes:
 
 ```ts
 interface MyListWidgetsProps {
@@ -211,11 +211,11 @@ interface MyListWidgetsProps {
 To apply a simple filter based on the value of an attribute represented by `myAttributeString` property the following code may be used:
 
 ```ts
-import { attribute, literal, startsWith } from "mendix/filters/buildres";
+import { attribute, literal, startsWith } from "mendix/filters/builders";
 
 // in the widget code
 if (this.props.myAttributeString.filterable) {
-    const filterCond = startsWith(attribute(this.props.myAttributeString.id), literal("B"))
+    const filterCond = startsWith(attribute(this.props.myAttributeString.id), literal("B"));
     this.props.myDataSource.setFilter(filterCond);
 } else {
     console.log("Attribute is not filterable");
@@ -227,11 +227,11 @@ First step the code takes is checking for the possibility to use filtering on `m
 Similarly, to apply a condition where the value on an attribute represented by `myAttributeBoolean` property is set to true:
 
 ```ts
-import { attribute, literal, equals } from "mendix/filters/buildres";
+import { attribute, literal, equals } from "mendix/filters/builders";
 
 // in the widget code
 if (this.props.myAttributeBoolean.filterable) {
-    const filterCond = equals(attribute(this.props.myAttributeBoolean.id), literal(true))
+    const filterCond = equals(attribute(this.props.myAttributeBoolean.id), literal(true));
     this.props.myDataSource.setFilter(filterCond);
 } else {
     console.log("Attribute is not filterable");
@@ -243,7 +243,7 @@ if (this.props.myAttributeBoolean.filterable) {
 In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10`. In order to construct such condition special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that check for `filterable` flags omitted for simplicity. Real widgets should always take `filterable` flag into account.
 
 ```ts
-import { attribute, literal, startsWith, equals, greaterThan, and, or } from "mendix/filters/buildres";
+import { attribute, literal, startsWith, equals, greaterThan, and, or } from "mendix/filters/builders";
 
 // in the widget code
 if (/* check that all properties are filterable */) {
@@ -253,7 +253,7 @@ if (/* check that all properties are filterable */) {
             equals(attribute(this.props.myAttributeBoolean.id), literal(true))
         ),
         greaterThan(attribute(his.props.myAttributeNumber.id), literal(10))
-    )
+    );
     this.props.myDataSource.setFilter(filterCond);
 } else {
     console.log("Some attribute is not filterable");
@@ -344,7 +344,7 @@ The following code sample shows how to get an `EditableValue<string>` that repre
 const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) for more information about usage of `EditableValue`.
 
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
@@ -354,9 +354,9 @@ You can obtain an instance of `EditableValue` by using the `ListAttributeValue` 
 
 #### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
-`id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting or/and filtering. Check [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections for more information.
+`id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting and/or filtering. Check [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections for more information.
 
-Fields `sortable` and `filterable` specify if the attribute could be used for sorting or/and filtering. Those flags have to be checked before a widget applies filtering or sorting on a liked data source property. An attempt to filter on a non-filterable attribute or sort on a non-sortable attribute would lead to an error during the execution time.
+Fields `sortable` and `filterable` specify if the attribute could be used for sorting and/or filtering. Those flags have to be checked before a widget applies filtering or sorting on a data source property. An attempt to filter on a non-filterable attribute or sort on a non-sortable attribute would lead to an error during the execution time.
 
 #### 3.2.3 Attribute Type
 
@@ -378,7 +378,7 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 `formatter` field represents the default formatter that is going to be used on values obtained by `get` function.
 
-`universe` field represents an array of possible values of an attribute when the attribute type is of type enumeration. For any other attribute types this filed is `undefined`.
+Optional `universe` field represents an array of possible values of an attribute. See `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) for more information.
 
 ### 3.3 ListWidgetValue {#listwidgetvalue}
 
@@ -420,7 +420,7 @@ You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a fu
 
 ```ts
 export interface ListExpressionValue<T extends AttributeValue> {
-    get: (item: ObjectItem) => DynamicValue<T>
+    get: (item: ObjectItem) => DynamicValue<T>;
 };
 ```
 
@@ -453,7 +453,7 @@ You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` 
 
 ### 4.1 Value helpers {#filter-value-helpers}
 
-Two basic helpers that allow to represent attributes and literal values in filter conditions are `attribute` and `literal` helpers. When creating a filter condition, every attribute or literal value have to be wrapped with a corresponding helper.
+Two basic helpers that allow to represent attributes and literal values in filter conditions are `attribute` and `literal` helpers. When creating a filter condition, every attribute or literal value has to be wrapped with a corresponding helper.
 
 #### 4.1.1 `attribute`
 
@@ -531,7 +531,7 @@ const attrA = attribute(this.props.myAttributeA.id);
 const name = literal("Bob");
 
 // filter keeps items where value not equal to "Bob"
-const filterCondition = notEqual(attrA, name)
+const filterCondition = notEqual(attrA, name);
 ```
 
 #### 4.2.3 `greaterThan`
@@ -599,7 +599,7 @@ const filterCondition = lessThanOrEqual(attr, meaningOfLife);
 #### 4.3.1 `contains`
 
 `contains` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
-Allows only `String`, `Integer`, `Long` `Decimal` attributes and `String` literals.
+Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `contains` helper:
 
@@ -612,7 +612,6 @@ const subStr = literal("secret");
 const filterCondition1 = contains(attrStr, subStr);
 
 // also works with numeric attributes
-
 const attrNum = attribute(this.props.myAttributeB.id); // integer attribute
 const subNum = literal("1337");
 
@@ -624,7 +623,7 @@ const filterCondition2 = contains(attrNum, substrNum);
 #### 4.3.2 `startsWith`
 
 `startsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
-Allows only `String`, `Integer`, `Long` `Decimal` attributes and `String` literals.
+Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `startsWith` helper:
 
@@ -637,7 +636,6 @@ const subStr = literal("secret");
 const filterCondition1 = startsWith(attrStr, subStr);
 
 // also works with numeric attributes
-
 const attrNum = attribute(this.props.myAttributeB.id); // integer attribute
 const subNum = literal("1337");
 
@@ -649,7 +647,7 @@ const filterCondition2 = startsWith(attrNum, substrNum);
 #### 4.3.3 `endsWith`
 
 `endsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
-Allows only `String`, `Integer`, `Long` `Decimal` attributes and `String` literals.
+Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `endsWith` helper:
 
@@ -662,7 +660,6 @@ const subStr = literal("secret");
 const filterCondition1 = startsWith(attrStr, subStr);
 
 // also works with numeric attributes
-
 const attrNum = attribute(this.props.myAttributeB.id); // integer attribute
 const subNum = literal("1337");
 

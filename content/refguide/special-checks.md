@@ -26,9 +26,9 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                | Type    |
-| ------------------------------------ | ------- |
-| Returns whether the object is empty. | Boolean |
+| Value    | Type    |
+| ---------- | ------- |
+| Returns whether the object is empty | Boolean |
 
 ### 2.3 Example
 
@@ -60,7 +60,7 @@ The output is described in the table below:
 
 | Value                                   | Type    |
 | --------------------------------------- | ------- |
-| Returns whether the attribute is empty. | Boolean |
+| Returns whether the attribute is empty | Boolean |
 
 ### 3.3 Examples
 

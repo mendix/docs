@@ -27,11 +27,11 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 ## 2 Navigation Editor Properties
 
-In the navigation editor properties, you can set a [default home page](#default-home-page) and [home pages specific for certain roles](#role-specific-home-page). 
+In navigation editor properties, you can set a [default home page](#default-home-page) and [role-specific home pages](#role-specific-home-page). 
 
 ### 2.1 Default Home Page {#default-home-page}
 
-In the navigation editor properties you can set a page or a microflow as a default home page:
+You can set a page or a microflow as a default home page:
 
 ![Default Home Page](attachments/navigation/default-home-page.jpg)
 
@@ -100,7 +100,7 @@ Properties of the menu items consists of the following sections:
 
 ![](attachments/navigation/navigation-properties.png)
 
-### 2.1 Events Section {#events-section-navigation}
+### 3.1 Events Section {#events-section-navigation}
 
 You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. 
 
@@ -127,14 +127,14 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 
 {{% /alert %}}
 
-### 2.2 General {#general-section-navigation}
+### 3.2 General {#general-section-navigation}
 
 The properties that can be configured in the **General** section are the following:
 
 * **Caption** – Allows you to fill in the name of the menu item.
 * **Icon** – Allows you to set the icon of the menu item.
 
-### 2.3 Creating a Menu Item {#create-new-menu-items}
+### 3.3 Creating a Menu Item {#create-new-menu-items}
 
 To create a new menu item, do the following:
 

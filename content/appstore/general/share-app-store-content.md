@@ -90,6 +90,7 @@ To add content to the Marketplace, follow these steps:
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
 2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+
 	![](attachments/share-app-store-content/category.jpg)
 
 3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
@@ -109,7 +110,7 @@ To add content to the Marketplace, follow these steps:
 5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
 	a. Enter a **Name** for your component.<br />
 	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
-	c. Seleted **Category** from Category selection page will get listed here. You can change it in case needed.<br />
+	c. The **Category** you selected earlier will be listed here. You can change this if necessary.<br />
 	
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change Category after inital version is published.
 	{{% /alert %}}
@@ -135,9 +136,8 @@ To add content to the Marketplace, follow these steps:
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-8.  On the **Package** page, select your content source:
-
-	* If you are using **Solutions** Category, you will not see the option to select your content source.
+8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
+	
 	* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
 		* When you are finished, click **OK**

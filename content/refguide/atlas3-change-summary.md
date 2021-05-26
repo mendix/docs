@@ -12,7 +12,7 @@ This document is a high-level summary of the changes Atlas 3 brings to Mendix.
 
 ## 2 High-Level Summary
 
-Atlas 3 includes many changes around style and branding. It has a different, more modern look and feel. The differences are best expressed through comparison, using our reference apps. 
+Atlas 3 includes many changes to style and branding, and has a more modern look and feel. The differences between Atlas 2 and Atlas 3 are best expressed through comparison, using our reference apps. 
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 
@@ -23,7 +23,7 @@ Our new theme has the following advantages:
 * Updated color palette
 * Values changed in variables
 * Introduced exclusion variables for widget default styling
-* Changed from Mendix blue to Ultramarine
+* Changed from Mendix Blue to Ultramarine
 * MxDock added to template to create one unified platform experience
 
 ### 2.2 Grid System
@@ -32,7 +32,7 @@ Our new grid system has the following advantages:
 
 * Moved to an 8 pixel grid system
 * Provides a good basic unit to work with (the numbers 4 and 8 are easily multiplied)
-* Boasts more uniformity in design
+* Offers more uniformity in design
 
 ### 2.3 Float Removal
 
@@ -68,7 +68,7 @@ Consult the table below for a summary of additional design properties.
 Here is a list of key changes pertaining to the web environment:
 
 * The color palette has been improved which influences all aspects of design and user-experience, from widgets to page templates
-* Layout and spacing now relies on a “8px” system, creating more uniformity in design
+* Layout and spacing now relies on an “8px” system, creating more uniformity in design
 * Display type “flex” has been used instead of “float” where possible
 * Many design properties have been introduced or options added:
   * “Inner” spacing options allowing users to configure “padding” for widgets. This applies to all widgets

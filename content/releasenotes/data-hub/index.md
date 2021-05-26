@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### May 27th, 2021
+
+#### Improvements
+
+*  A connector to [register](/data-hub/data-hub-catalog/register#registration-form) Opcenter data sources has been added to the **Data Hub Home**.
+*  **Mindsphere** applications will now be clearly indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
+
 ### May 12th, 2021
 
 #### Improvements

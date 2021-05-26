@@ -166,7 +166,7 @@ To add content to the Marketplace, follow these steps:
 	
 	You can also optionally add a **Video** and **Demo**.
 	
-12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+12. <a name="publish"></a>Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 	![](attachments/share-app-store-content/publish.jpg)
 

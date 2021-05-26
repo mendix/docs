@@ -132,7 +132,9 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 
 It is possible to set a specific sort order for items in the list using `setSortOrder` method and get the current sort order via `sortOrder` field. When a new sort order is set, widget will receive new results on next re-render.
 
-`setSortOrder` method accepts one argument which should be an array of `SortInstruction`s. `SortInstruction` itself is defined as an array of two elements:
+`setSortOrder` method accepts one argument which should be an array of `SortInstruction`s. Also `undefined` could be passed to `setSortOrder` to restore default sort order. 
+
+`SortInstruction` is defined as an array of two elements:
 
 ```ts
 type SortInstruction = [id: ListAttributeId, dir: SortDirection];
@@ -191,7 +193,7 @@ this.props.myDataSource.setSortOrder(undefined);
 
 It is possible to set filtering conditions for items of a datasource. `setFilter()` method accepts filter conditions and applies filtering. `filter` field represents the current filter condition.
 
-`setFilter` accepts only a specially created object of type `FilterCondition` that describes desired filtering behavior. It is possible to create a filter conditions object using functions provided in `mendix` module under `mendix/filters/builders` path. Those functions we call filter builders.
+`setFilter` accepts only a specially created object of type `FilterCondition` that describes desired filtering behavior. It is possible to create a filter conditions object using functions provided in `mendix` module under `mendix/filters/builders` path. Those functions we call filter builders. Also `undefined` could be passed to `setFilter` to clear filtering conditions.
 
 Some examples of builder functions are `equals`, `greaterThan`, `lessThanOrEqual` for filtering on `DateTime` or `Decimal` attributes. Functions like `startsWith`, `contains` are useful for filtering on `String` attributes.
 
@@ -236,6 +238,12 @@ if (this.props.myAttributeBoolean.filterable) {
 } else {
     console.log("Attribute is not filterable");
 }
+```
+
+The following code sample shows how to remove current filtering condition:
+
+```ts
+this.props.myDataSource.setFilter(undefined);
 ```
 
 #### 2.4.2 Advanced filtering

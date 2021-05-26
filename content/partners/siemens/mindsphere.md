@@ -17,7 +17,7 @@ Mendix offers powerful integration options to incorporate IIoT data provided by 
 
 MindSphere IIoT for Makers is the ideal solution if you want to add IIoT Data coming from MindSphere to an existing app which runs in the Mendix Cloud or another platform, especially when you are combining MindSphere data with information from other sources. 
 
-With MindSphere IIoT for Makers, you can use either REST or oData via Datahub for integration.  
+With MindSphere IIoT for Makers, you can use either REST or, in the future, OData via Datahub for integration.  
 
 MindSphere IIoT for Makers uses [IIoT Authenticator Module](https://example.com) to authenticate your REST & oData calls to MindSphere. 
 

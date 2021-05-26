@@ -1,5 +1,5 @@
 ---
-title: "Atlas 3 change summary"
+title: "Atlas 3 Change Summary"
 parent: "moving-from-atlas-2-to-3"
 menu_order: 7
 tags: ["Atlas", "UI", "UX", "user experience", "design"]
@@ -38,7 +38,7 @@ Our new grid system has the following advantages:
 
 Our removal of float has the following advantages:
 
-* Removal of the use of “float: left” and “float:right” throughout Atlas core
+* Removal of the use of “float: left” and “float: right” throughout Atlas core
 * Migration of float to flex layout
 * Removal of the reliance on floats for layout (flex is more a modern option than float)
 
@@ -94,19 +94,19 @@ Here is a list of key changes pertaining to the web environment:
 
 ## 3 UI Content
 
-If you are using building blocks or page templates, please make sure you download the corresponding modules from **Marketplace**.
+If you are using building blocks or page templates, please make sure you download the corresponding modules from the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module:
 
 ![Atlas web content](attachments/atlas-mig/atlas-web-content-marketplace.png)
 
-For native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module:
+For the native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module:
 
 ![Atlas native content](attachments/atlas-mig/atlas-native-content-marketplace.png)
 
 ## 4 Design Properties for Web
 
-These are the design properties changes for Atlas 3 Web. 
+These are the design property changes for Atlas 3 web:
 
 | Parent   | Property   | Removed  | Added  | Renamed   |
 | --- | --- | --- | --- | --- |
@@ -130,9 +130,9 @@ These are the design properties changes for Atlas 3 Web.
 | com.mendix.widget.custom.badgebutton.BadgeButton (new)       |   |    |   |   |
 | com.mendix.widget.custom.progresscircle.ProgressCircle (new) |   |    |   |   |
 
-## 5 Design Properties for Native mobile
+## 5 Design Properties for Native Mobile
 
-These are the design properties chnages for Atlas 3 Native mobile. 
+These are the design property changes for Atlas 3 native mobile:
 
 | Parent  | Property  | Removed  | Added  |
 | --- | --- | --- | --- |

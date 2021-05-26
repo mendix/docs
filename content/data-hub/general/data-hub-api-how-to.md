@@ -151,19 +151,19 @@ All the assets (items registered) in the Catalog that will be searched. For each
 
 The `SearchResults` object includes the total number of items, `TotalResults`, that satisfy the search request and the `Data` object is the array of the endpoints of the objects that satisfy the search string.
 
-For the full specification see the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+For the full specification see the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
 #### 5.3.2 `Data` Objects
 
 A representation of what is returned in the response for `Data` is shown below.
 
-The color blue indicates that an object that is made up of a collection (of further sub-objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response. Not all sub-levels of the schemas are shown in the representation below.
+The blue boxes indicate that an object is made up of a collection (of objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response. Not all sub-levels of the schemas are shown in the representation below.
 
-For the full specification, refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+For the full specification, refer to the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
-### 5.4 Retrieve specific Endpoints for a Specified App (???verify)
+### 5.4 Retrieve specific Endpoints for a Specified App (???verify?? that this should be included)
 
 Using GET You can retrieve details of specific data sources published by a specified app such as all the available versions and also ?????ask Georg if this should be included or just a description???
 
@@ -217,7 +217,7 @@ A successful 201 response will indicate that the application has been registered
 
 The next step is to register the environment where the app and the service is deployed.
 
-For apps deployed to multiple environements, there must be a separate call for each environment.
+For apps deployed to multiple environments, there must be a separate call for each environment.
 
 You can follow a real example in [Registering the Environment `Production`.](data-hub-api-how-to-examples#reg-env-ex)
 
@@ -265,9 +265,9 @@ The request body is made up of the collection of objects for the `PutPublishedEn
 
 When defining each service in the `ServiceVersion` object the details of the endpoints or service must be specified which includes the name, version number, and the location of the contract files that is provided by the relative path `Path` . The `Contracts` object contains the metadata files that form the contract and must be included in the body an escaped JSON string format.
 
-A representation of the objects that can be specified for the request body is shown below. Not all of the sub-level arrays and objects are shown, for the full schema definition refer to the [OpenAPI 3.0 spec](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/).
+A representation of the objects that can be specified for the request body is shown below. Not all of the sub-level arrays and objects are shown, for the full schema definition refer to the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration.html).
 
-(Blue indicates that the constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
+(Blue boxes indicate that constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
 
 ![published endpoints mindmap](attachments/data-hub-api-how-to/putpublishedendpointsrequest.png)
 

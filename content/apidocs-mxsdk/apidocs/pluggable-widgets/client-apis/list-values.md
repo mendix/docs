@@ -682,12 +682,13 @@ const filterCondition2 = startsWith(attrNum, substrNum);
 
 `and` helper is used to combine other conditions in *logical and* operation. Takes 2 or more arguments.
 
-The following usage example specifies that *both conditions have to be true* for an object in order to appear in the resulting filtered set:
+The following usage example specifies that *all conditions have to be true* for an object in order to appear in the resulting filtered set:
 
 ```ts
 const filterCondition = and(
     startsWith(attribute(this.props.myAttributeA.id), literal("Hi")), // myAttributeA starts with string "Hi"
-    equals(attribute(this.props.myAttributeB.id), literal(5)) // myAttributeB equals 5
+    equals(attribute(this.props.myAttributeB.id), literal(5)), // myAttributeB equals 5
+    greaterThan(attribute(this.props.myAttributeC.id), literal(new Date())) // myAttributeC greaterThan current date and time
 );
 ```
 

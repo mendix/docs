@@ -106,7 +106,7 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (e.g. C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
+For bundling your resources, Mendix Studio Pro comes with a helpful tool called [MxBuild](/refguide/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (for example C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
 
 1. Run the following command:
 
@@ -117,14 +117,14 @@ The bundles will be generated relatively to the `project-directory\deployment\na
 
 1. Run MXBuild against your project to generate the required bundle and assets.
 
-When completed there should be a folder under the project's deployment folder `project-directory\deployment\native\bundles` with two folders. One named `ios`, and one named `android`:
+When completed there should be a folder under the project's deployment folder **project-directory\deployment\native\bundles** with two folders: one named **ios** and one named **android**. After confirming these folders are correct, do the following:
 
-1. Move the ios folder's content to *{your Native Template root}/ios/Bundle*.
-1. The `android` folder structure should be the following:
+1. Move the **ios** folder's content to *{your Native Template root}/ios/Bundle*.
+1.  The **android** folder structure should be the following:
 
 	{{% image_container width="250" %}}![iOS output](attachments/native-build-locally/android-output.png){{% /image_container %}}
 
-1. Move the folder's content to *{your Native Template root}/android/app/src/main*. Choose to overwrite if requested to do so.
+1. Move the **android** folder's content to *{your Native Template root}/android/app/src/main*. Choose to overwrite if requested to do so.
 1. Open *{your Native Template root}/android/app/src/main/res/raw/runtime_url* using a text editor.
 1. Replace the URL with the correct URL for your runtime.
 1. Open *{your Native Template root}/ios/Config/config.xcconfig*, then replace the value of `RUNTIME_URL=` with the correct URL for your runtime.

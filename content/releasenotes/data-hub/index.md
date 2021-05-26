@@ -19,6 +19,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 * **Mindsphere** applications are clearly indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
 
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+
 ### May 12th, 2021
 
 #### Improvements

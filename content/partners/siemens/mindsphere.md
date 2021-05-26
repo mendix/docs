@@ -26,6 +26,7 @@ The MindSphere IIoT for Makers is easy to add to your app but has the following 
 * You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot leverage the MindSphere Application Lifecycle including the deployment to third partys
 * You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app
+* It is not possible to use Sub- / Cross Tenancy
 
 For full information on using the MindSphere IIoT for Makers see the [MindSphere IIoT for Makers](mindsphere-app-service) documentation.
 

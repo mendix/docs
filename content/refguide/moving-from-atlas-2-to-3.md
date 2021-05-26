@@ -9,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 Atlas 3 brings a new degree of power and sophistication to styling in Mendix. To upgrade from Atlas 2 to Atlas 3, see the [Upgrade from Atlas 2 to Atlas 3](#upgrade) section below. To view a high-level summary of the changes Atlas 3 brings to Mendix, see the [Atlas 3 Change Summary Reference Guide](/refguide/atlas3-change-summary).
 
-The upgrade from Atlas 2 to Atlas 3 topic of this document has been divided into the following sections: 
+To upgrade from Atlas 2 to Atlas 3, you must complete the [Upgrading from Atlas 2 to Atlas 3](#upgrade) section below. **If you have not added custom styling into your Atlas**, completing these subsections of *Upgrading from Atlas 2 to Atlas 3* is all you need to do: 
 
 * [Upgrading Your Theme Directory](#upgrade-theme-directory)
 * [Migrating Your UI Content](#upgrade-ui-content)
@@ -17,7 +17,11 @@ The upgrade from Atlas 2 to Atlas 3 topic of this document has been divided into
 * [Migrating Your Native Styling](#upgrade-native-styling)
 * [Migrating Custom Defined Design Properties](#upgrade-design-properties)
 
-This final sections of this document reference known issues and some troublehsooting issues that may occur when upgrading to Atlas 3. 
+The sections after the upgrade instructions reference known issues and some troublehsooting issues that may occur when upgrading to Atlas 3. **You will probably only need to consult them if you introduced custom styling into your Atlas**: 
+
+* [Expected Issues After Upgrading to Atlas 3](#expected-issues)
+* [Edge Case Issues After Upgrading to Atlas 3](#edge-cases)
+* [Troubleshooting Common Atlas Problems](#troubleshoot)
 
 ## 2 Upgrading from Atlas 2 to Atlas 3 {#upgrade}
 
@@ -430,7 +434,7 @@ As this is a custom-defined design property, this needs to be added to the web's
 
 Currently the merging of design property options across themesource modules is not yet supported.
 
-## 3 Expected Issues After Upgrading to Atlas 3
+## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 
 When you have completed the sections above, you may have errors in your error list:
 
@@ -472,7 +476,7 @@ When you have completed the sections above, you may have errors in your error li
 
 * If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
 
-## 4 Edge Case Issues After Upgrading to Atlas 3
+## 4 Edge Case Issues After Upgrading to Atlas 3 {#edge-cases}
 
 In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
 
@@ -482,7 +486,7 @@ To fix this, right-click the error then select **Go to Navigation profile ‘Hyb
 	
 ![](attachments/atlas-mig/set-hybrid-nav.png)
 
-## 5 Troubleshoot
+## 5 Troubleshooting Common Atlas Problems {#troubleshoot}
 
 To troubleshoot common Atlas problems, do the following:
 

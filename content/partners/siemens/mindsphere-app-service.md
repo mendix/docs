@@ -23,9 +23,10 @@ With the use of MindSphere IIoT for Makers, you have an integrated developer exp
 
 The MindSphere App Service is easy to add to your app but has the following limitations:
 
+* Currently, you can only communicate with [MindSphere Services](https://developer.mindsphere.io/apis/index.html) using *REST APIs* — support for OData using Mendix Data Hub will be provided in a matter of weeks.
 * You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
-* You cannot use MindSphere credentials to sign in to your app, you must handle app security yourself within your app
+* End users cannot use MindSphere credentials to sign in to your app, so MindSphere does not know anything about individual app end users — you must design your app to handle any required security for each end user
 
 App Service packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
@@ -54,34 +55,9 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 
 Once you have the name of your MindSphere account, you can use this to link your account to the required assets.
 
-You can either set up new assets by following the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
+To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is also an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
 
-Alternatively, you can share existing assets.
-
-To do this, you need to set up a **Collaboration** between the tenant owning the assets and the tenant in your new MindSphere account, as given in the email you have received. You can then share assets with your new tenant. The steps are as follows:
-
-1. Sign in to the MindSphere Launchpad using the credentials of the tenant which owns the assets.
-2. Go to **Settings**.
-3. Click **Collaborations**.
-    ![](attachments/mindsphere-app-service/collaborations.png)
-4. Click **Offer Collaboration**, enter the **Tenant name** of your new tenant, and click **Offer**.
-
-    You now need to accept the collaboration offer.
-5. Sign in to the MindSphere Launchpad using the credentials of your new tenant.
-6. Go to **Settings > Collaborations**.
-7. Accept the offer to collaborate.
-
-    You now need to share the asset(s)
-8. Sign in to the MindSphere Launchpad using the credentials of the tenant which owns the assets.
-9. Click  **Asset Manager** and then view your assets.
-10. Choose the asset you want to share and, in the advanced settings, select **Share asset**.
-    ![](attachments/mindsphere-app-service/share-asset.png)
-11. Choose your new tenant as the collaboration you want to share the asset with and click **Share**.
-
-    To confirm the share, you will need to sign in to MindSphere with the credentials of your new tenant and go to the **Asset Manager** there. You will see the offer in the **Sharings** tab.
-    ![](attachments/mindsphere-app-service/sharings-overview.png)
-
-Full information on this can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
+Full information can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
 ## 3 Using the MindSphere App Service
 
@@ -99,13 +75,13 @@ Download the **MindSphere IIot Authenticator Module** by following the instructi
 
 ### 3.2 Creating Binding Keys{#binding-keys}
 
-To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Developer Portal once the MindSphere tenant has been provisioned. This can be done as follows:
+To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an access key and a secret key. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
 
-1. Click the link **Create Binding Keys** in the welcome email you received.
+1. Go to the [Mendix Marketplace](https://marketplace.mendix.com/) and open the **Service Management Dashboard**.
 
-2. Choose the **Product Name** *MindSphere IoT*.
+2. Choose the **Product** *MindSphere IoT*.
 
-3. Click **Create Binding Keys**.
+3. Click **Generate Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
@@ -113,11 +89,13 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![](attachments/mindsphere-app-service/create-keys.png)
 
-    You will see a pop-up containing your two keys: **Access Key** and **Secret Key**.
+    You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
-6. Click **Copy Key** for each of the two keys and save them somewhere safe – you will not be able to access them again.
+6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
     ![](attachments/mindsphere-app-service/binding-keys.png)
+
+You can find more information about managing binding keys in the *Binding Keys* section of [Marketplace Overview](/appstore/general/app-store-overview).
 
 ### 3.3 Authenticating MindSphere REST Calls {#authenticating}
 

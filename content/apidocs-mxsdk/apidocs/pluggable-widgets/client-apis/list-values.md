@@ -130,40 +130,58 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 
 ### 2.3 Sorting {#listvalue-sorting}
 
-It is possible to set specific sort orders for items in the list using `setSortOrder()` method and get the current sort order via `sortOrder` field. After a new sort order is set, widget will receive sorted new results on next re-renders.
+It is possible to set a specific sort order for items in the list using `setSortOrder` method and get the current sort order via `sortOrder` field. When a new sort order is set, widget will receive new results on next re-render.
 
-`SortInstruction` is defined as and array of two elements:
+`setSortOrder` method accepts one argument which should be an array of `SortInstruction`s. `SortInstruction` itself is defined as an array of two elements:
 
 ```ts
 type SortInstruction = [id: ListAttributeId, dir: SortDirection];
 ```
 
-The first element of the `SortInstruction` is `id` of an attribute property liked to the datasource. See [ListAttributeValue](#listattributevalue) section for information about attribute `id`s. It is possible to sort only on attributes that are linked to the data source.
+The first element of `SortInstruction` type is `id` of an attribute property liked to the datasource. This lets widget so specify which attribute should be used for sorting. Though not every attribute could be used for sorting, for some attributes sorting may be disallowed. To determine if an attribute could be used for sorting `sortable` flag of its attribute property has to be checked. This flag specifies if it is possible to use particular attribute for sorting. See [Attribute ID, Sortable and Filterable Flags](##listattributevalue-id-sortable-filterable) section for more information about attribute `id` and `sortable` flag.
 
-The second attribute of the `SortInstruction` is a literal string representing the sort direction, either `"asc"` or `"desc"`.
+The second attribute of `SortInstruction` type is a literal string representing the sort direction, either `"asc"` or `"desc"`.
 
-The following code examples shows how to apply sorting to the property `myDataSource` based on `myAttributeOnDatasource` attribute and clear it:
+The following code examples show how to apply sorting to the property `myDataSource` based on linked attributes `attributeAge` and `attributeName`:
 
 ```ts
 interface MyListWidgetsProps {
     myDataSource: ListValue;
-    myAttributeOnDatasource: ListAttributeValue<string>;
+    attributeAge: ListAttributeValue<BigJS>; // Integer
+    attributeName: ListAttributeValue<BigJS>; // String
 }
 ```
 
-Set descending sort order based on attribute represented by `myAttributeOnDatasource` with the following code:
+Set ascending sort order based on attribute represented by `attributeAge` property with the following code:
 
 ```ts
-if (this.props.myAttributeOnDatasource.sortable) {
-    const sortInstr = [this.props.myAttributeOnDatasource.id, "desc"];
-    this.props.myDataSource.setSortOrder(sortInstr);
+if (this.props.attributeAge.sortable) {
+    // sort by age ascending
+    const sortInstrs = [
+        [this.props.attributeAge.id, "asc"]
+    ]; 
+    this.props.myDataSource.setSortOrder(sortInstrs);
 } else {
-    console.warn("Can't apply sorting. Attribute is not sortable");
+    console.warn("Can't apply sorting. Attribute Age is not sortable");
 }
-
 ```
 
-Reset to default sort order by passing `undefined` with the following code:
+The following code sample shows how to sort on multiple attributes at the same time:
+
+```ts
+if (this.props.attributeAge.sortable && this.props.attributeName.sortable) {
+    // sort by age descending, and then by name ascending (within age groups)
+    const sortInstrs = [
+        [this.props.attributeAge.id, "desc"],
+        [this.props.attributeName.id, "asc"],
+    ]; 
+    this.props.myDataSource.setSortOrder(sortInstrs);
+} else {
+    console.warn("Can't apply sorting. Attribute Age and/or Name is not sortable");
+}
+```
+
+Reset to default sort order by passing `undefined` as the following code shows:
 
 ```ts
 this.props.myDataSource.setSortOrder(undefined);
@@ -334,7 +352,7 @@ The `get` method was introduced in Mendix 9.0.
 You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
-#### 3.2.2 Attribute ID, Sortable and Filterable Flags
+#### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
 `id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting or/and filtering. Check [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections for more information.
 

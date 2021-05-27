@@ -72,7 +72,7 @@ The flow below shows the stages of using the migration tool, and an indication o
 
 To migrate your app from Mendix Cloud V3 to Mendix Cloud V4, you need to following prerequisites:
 
-* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available. This **must have the name `<current-app-name>-v4`**. To request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM). In most cases, the node will have the same environments as the V3 app you are migrating
+* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available. This **must have the subdomain name `<current-app-name>-v4`**. To request a licensed v4 Cloud Node, use the [Request New App Node](https://newnode.mendix.com/) app. In most cases, the node will have the same environments as the V3 app you are migrating
 * Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 
 ### 4.2 Preparing the New Environment
@@ -120,7 +120,7 @@ Now that you have your new Mendix Cloud V4 environment, you can start replicatin
 
 6. Click **Replicate data and files**.
 
-    The replication process will copy all the data in the database, and files based on `FileDocument` entities, such as images, which are stored in the S3 storage.
+    The replication process will copy all the data in the database, and files based on `FileDocument` entities, such as images, which are stored in the storage of the V3 appnode.
 
     The replication will continue to run, so any changes to the data while your V3 app is still running are reflected in the replicated data.
 
@@ -177,9 +177,10 @@ If you want to keep all your test and acceptance data, you need to review the mi
 We recommend that you allow at least an hour between starting to replicate the data (section 4.3, above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between your V3 and V4 app.
 {{% /alert %}}
 
-There is one more requirement before you can start the final migration:
+There are two more requirements before you can start the final migration:
 
-* The replication process for the production environments must have transferred all the data at some point in time, even if more data has been added since — in other words, the replication process for production must have reached 100% at least once.
+* The replication process for the production environments must have transferred all the data at some point in time, even if more data has been added since — in other words, the replication process for production must have reached 100% at least once
+* The replication process must be in a *Replicating* state
 
 To do the final migration of your app from Mendix Cloud V3 to Mendix Cloud V4, do the following:
 
@@ -188,15 +189,11 @@ To do the final migration of your app from Mendix Cloud V3 to Mendix Cloud V4, d
     1. Stops the app running on Mendix Cloud V4
     2. Stops the app running on Mendix Cloud V3
     3. Runs the replication process for the *Production* environments until it reaches 100%
-    4. Renames the original app and **all** environments to be `<current-app-name>-v3`
-    5. Removes the `-v4` suffix from the new V4 app and **all** environments
+    4. Renames the subdomain of the original app and **all** environments to be `<current-app-name>-v3`
+    5. Removes the `-v4` suffix from the subdomain name of the new V4 app and **all** environments
     6. Restarts both the new v4 app and the original v3 app.
 
-### 4.6 Issues and Rollback
-
-The following issues might occur, or you might decide to "Rollback" a successful migration.
-
-#### 4.6.1 Rollback
+### 4.6 Rollback
 
 If you encounter issues with your app when running on Mendix Cloud V4, then you can revert to the Mendix Cloud V3 version. This could happen, for example, if one of the differences between V3 and V4 listed above causes an unexpected issue.
 
@@ -204,15 +201,19 @@ If you encounter issues with your app when running on Mendix Cloud V4, then you 
 
     1. Stops the app running on Mendix Cloud V4
     2. Stops the app running on Mendix Cloud V3
-    3. Renames the app running on Mendix Cloud V4 and **all** environments to be `<current-app-name>-v4`
-    4. Removes the `-v3` suffix from the original V3 app and **all** environments
+    3. Renames the subdomain of the app running on Mendix Cloud V4 and **all** environments to be `<current-app-name>-v4`
+    4. Removes the `-v3` suffix from the subdomain name of the original V3 app and **all** environments
     5. Restarts the original v3 app
 
 {{% alert type="warning" %}}
 This will not copy any new data from the V4 environment back to the V3 environment. Any data added to the V4 database before the rollback is effectively lost.
 {{% /alert %}}
 
-#### 4.6.2 Data Replication Fails or Times Out
+### 4.7 Issues
+
+The following issues might occur, or you might decide to "Rollback" a successful migration.
+
+#### 4.7.1 Data Replication Fails or Times Out
 
 If the replication process fails during the final migration, or it times out (the timeout is fixed at 20 minutes), then the apps and environments will not be renamed and the apps in the original V3 environments will be restarted.
 
@@ -220,7 +221,7 @@ It is safe to restart replicating the data to bring the data replicated back up 
 
 Please contact Mendix Support if you encounter this problem so that we can identify any common issues.
 
-#### 4.6.3 Rename and Restart Failures
+#### 4.7.2 Rename and Restart Failures
 
 If the apps and environments cannot be successfully renamed, or the apps cannot be successfully restarted, the changes will be rolled back as described above.
 
@@ -238,7 +239,7 @@ To manually migrate your app from a v3 node to a v4 node in the Mendix Cloud, fo
 
 Before starting a manual migration, make sure you have completed the following prerequisites:
 
-* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
+* Have a [Mendix Cloud](mendix-cloud-deploy) v4 node available (to request a licensed v4 Cloud Node, request one through the [Request New App Node](https://newnode.mendix.com/) app)
 * Have the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 * Create two new temporary Free Apps without Free App environments – instructions for unlinking a Free App from its environment are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
 

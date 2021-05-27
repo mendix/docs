@@ -84,8 +84,6 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 ### 2.3 Migrating Your Web Styling {#upgrade-web-styling}
 
-You may skip this section if you have not made any modifications to the **web** section of your **Atlas 2 theme**. In that case, you should continue to the [Migrating UI content](#upgrade-ui-content) section below.
-
 Modifications to the **Atlas 2 web theme** include the following: 
 
 * Changes to custom variables

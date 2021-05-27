@@ -19,8 +19,6 @@ To follow how to add external entites from the **Data Hub** pane see [Adding Ext
 A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
 {{% /alert %}}
 
-
-
 ## 2 Adding an External Entity to an App {#adding-external-entities}
 
 To add an external entity to your app model, follow these steps:

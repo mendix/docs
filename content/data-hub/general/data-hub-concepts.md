@@ -264,7 +264,7 @@ In Studio Pro, external data sources registered in the Data Hub Catalog and can 
 
 ## Entity sets
 
-To make data from your apps available to others, you can publish the datasets in an **OData service** and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Further details such as the location of the registered dataset are also captured: for Mendix app deploying to the Mendix cloud this information is taken during the deployment process. 
+To make data from your apps available to others, you can publish the datasets in an **OData service** and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Further details such as the location of the registered dataset are also captured: for a Mendix app deploying to the Mendix Cloud this information is captured during the deployment process. 
 
 
 

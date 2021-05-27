@@ -9,7 +9,7 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-This information is for apps which are deployed to MindSphere. It does not apply to the MindSphere IoT App Service.
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
 {{% /alert %}}
 
 When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:

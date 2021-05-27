@@ -19,7 +19,7 @@ The pruning schedule applies to nightly backups *and* backups initiated by users
 
 The following backups are retained:
 
-* Nightly backups: two weeks
+* Nightly backups: 30 days
 * Weekly backups (Sunday night): three months
 * Monthly backups (First Sunday night of the month): one year
 * Manual (user-initiated) backups: three months

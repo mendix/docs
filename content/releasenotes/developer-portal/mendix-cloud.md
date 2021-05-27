@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### May 28th, 2021
+
+#### Improvements
+
+* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+
 ### May 18th, 2021
 
 #### Improvements

@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3. Setting up App Deep Linking {#set-up}
 
-If you do not already have a native template for your app, you can create one by following the sections below.
+If you do not already have a native template for your app, you can create one by following the section below.
 
 ### 3.1 Using the Native Mobile App Builder
 

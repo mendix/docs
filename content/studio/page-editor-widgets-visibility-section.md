@@ -28,7 +28,9 @@ You can enable conditional visibility based on the outcome of the dynamic data a
 
 ### 2.1 Visible Based on Data {#based-on-data}
 
-**Visible Based on Data** allows you to show widgets based on the outcome of the dynamic data. 
+**Visible Based on Data** allows you to show widgets based on the outcome of the dynamic data. For example, you would like to show a special offer price only for customers with the **Gold** grade:
+
+![Visible Based on Data](attachments/page-editor-widgets-visibility-section/visible-based-on-data.jpg)
 
 ### 2.2 Condition Based on {#condition}
 
@@ -45,7 +47,7 @@ This property is shown only when the expression the [Condition is Based on](#con
 
 This property is shown only when the attribute is selected for the [Attribute](#attribute) property. The **Attribute Values** property allows you to select certain attribute values.
 
-For example, you would like to show a special offer price only for customers with the **Gold** grade. Select *Grade* in the **Attribute** property and *Gold* in as the **Attribute Value**:
+If you would like to show a special offer price only for customers with the **Gold** grade, you need to select *Grade* in the **Attribute** property and *Gold* in as the **Attribute Value**:
 
 {{% image_container width="300" %}}
 ![](attachments/page-editor-widgets-visibility-section/attribute-based-visibility.png)
@@ -57,7 +59,9 @@ This property is shown only when the expression the [Condition is Based on](#con
 
 ### 2.5 Visible Based on Role {#role-based}
 
-The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles.
+The widget can be made visible to a specific of the user roles available in your app. When enabled, this setting will render the widget visible to all users that are linked to one of the selected user roles. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
+
+![Visible Based on Role](attachments/page-editor-widgets-visibility-section/visible-based-on-role.jpg)
 
 {{% alert type="info" %}}
 
@@ -67,11 +71,7 @@ You can only configure role-based conditional visibility when security is enable
 
 ### 2.6 Roles
 
-The **Roles** property is only shown when the [Visible Based on Role](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget visible for. For example, in a taxi booking app, you would like to show a taxi driver rating to customers and administrators, but hide it from taxi drivers:
-
-{{% image_container width="300" %}}
-![](attachments/page-editor-widgets-visibility-section/role-based-visbility.png)
-{{% /image_container %}}
+The **Roles** property is only shown when the [Visible Based on Role](#role-based) property is enabled and shows a list of roles available in your app. Select the roles that you would like to make a widget visible for. 
 
 ## 3 Performing Basic Functions
 
@@ -85,7 +85,7 @@ To configure visibility based on the attribute values, follow the steps below:
 
 3. The **Condition Based on** is set to **Attribute** by default. Click the **Attribute** property: 
 
-    {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/attribute-based-property.png){{% /image_container %}}
+    ![](attachments/page-editor-widgets-visibility-section/attribute-based-property.png)
 
 4. In the **Select Attribute** dialog box, select an attribute of the Boolean or enumeration type and click **Select**.
 
@@ -105,8 +105,7 @@ To configure role-based conditional visibility, do the following:
 
 3. A list of roles available in your app is displayed in the **Roles** property. Untick the roles who would like to hide the widget from:
 
-    {{% image_container width="300" %}}![](attachments/page-editor-widgets-visibility-section/role-based-example.png){{% /image_container %}} 
-    
+    ![](attachments/page-editor-widgets-visibility-section/role-based-example.png)    
 
 Conditional visibility based on user roles is set for the widget.
 

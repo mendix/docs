@@ -113,11 +113,11 @@ For bundling your resources, Mendix Studio Pro comes with a helpful tool called 
 	```
 	mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check [path-to-project-mpr-file]
 	```
-The bundles will be generated relatively to the `project-directory\deployment\native\bundles`
+The bundles will be generated relatively to the `project-directory\deployment\native\bundle`
 
 1. Run MXBuild against your project to generate the required bundle and assets.
 
-When completed there should be a folder under the project's deployment folder **project-directory\deployment\native\bundles** with two folders: one named **ios** and one named **android**. After confirming these folders are correct, do the following:
+When completed there should be a folder under the project's deployment folder **project-directory\deployment\native\bundle** with two folders: one named **ios** and one named **android**. After confirming these folders are correct, do the following:
 
 1. Move the **ios** folder's content to *{your Native Template root}/ios/Bundle*.
 1.  The **android** folder structure should be the following:

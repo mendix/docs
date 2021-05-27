@@ -1,18 +1,16 @@
 ---
-title: "Release Over the Air Updates with App Center's CodePush using the CLI (Legacy)"
+title: "Release Over the Air Updates with App Center's CodePush using the CLI"
 parent: "use-cli-docs"
 menu_order: 71
 description: A tutorial for pushing over the air updates (OTA).
 tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
-{{% alert type="info" %}}
-We strongly suggest to migrate your project to the Mendix Native Mobile Builder. 
-If you have not migrated your project to the Native Mobile Builder or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow [the guide to migrate from the CLI to the Native Mobile Builder](#from-cli-to-ui) and update your Native Template. 
-If for whatever reason it's not possible to migrate your project to a newer version of Native Template continue with this guide.
-{{% /alert %}}
-
 ## 1 Introduction
+
+{{% alert type="info" %}}
+This document is for legacy cases when older projects cannot use the Mendix Native Mobile Builder. However, we *strongly suggest* you migrate your project to the Mendix Native Mobile Builder. If you have not migrated your project to the Native Mobile Builder, or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow [the guide to migrate from the CLI to the Native Mobile Builder](#from-cli-to-ui) to update your Native Template. If for whatever reason it's not possible to migrate your project to a newer version of Native Template, continue with this guide.
+{{% /alert %}}
 
 Using Native Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA).
 OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).

@@ -93,4 +93,3 @@ The next time you build your app, the Native Mobile Builder will take care of en
 ## 5 Read More
 
 * [How to Use Local Notifications](local-notif-parent)
-* [Native Builder Reference Guide](/refguide/native-builder)

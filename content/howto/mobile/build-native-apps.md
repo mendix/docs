@@ -13,3 +13,7 @@ These step-by-step guides will teach you to build native mobile applications and
 * [Debug Native Mobile Apps (Advanced)](native-debug) – Debug native mobile apps using the Make It Native app.
 * [Create a Custom Developer App](how-to-devapps) – Create a custom developer app: a substitute for the Make It Native app which accommodates custom dependencies such as native widgets or fonts.
 * [Add Fonts to Your Native App](native-custom-fonts) - Add custom fonts to your native mobile apps.
+
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}

@@ -228,7 +228,7 @@ To users, the **dataset**  data, regardless of the system “owning” the data.
 
 An **entity** is the modelling construct for a dataset - or more specifically in Mendix, the **entityset** - which is the connection to the available data.
 
-The **external entity** in the consuming app connects to the dataset that is maintained in the originating app via the published service (the API to the originating app) registered in the DHC. Currently datasets for external entities are updated in the source application of the data source. Data is retrieved on the initiative by the consuming app (pull-based), so Data Hub does not play a role in updating the consuming apps: the consuming apps receive the latest data when they “request it” through the API.
+The **external entity** in the consuming app connects to the dataset that is maintained in the originating app via the published service (the API to the originating app) registered in the Data Hub Catalog. Datasets for external entities are updated in the source application of the data source. Data is retrieved on the initiative by the consuming app (pull-based), so Data Hub does not play a role in updating the consuming apps: the consuming apps receive the latest data when they request it through the API.
 
 #  Services
 

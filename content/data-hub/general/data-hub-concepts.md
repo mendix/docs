@@ -262,7 +262,7 @@ In Studio Pro, external data sources registered in the Data Hub Catalog and can 
 
 
 
-## Entitysets
+## Entity sets
 
 To make data from your apps available to others, you can publish the datasets in an **OData service** and register it in the Data Hub. In a Mendix app, the datasets are the **Entity sets** for a defined **Entity**. Further details such as the location of the registered dataset are also captured: for Mendix app deploying to the Mendix cloud this information is taken during the deployment process. 
 
@@ -425,4 +425,3 @@ The Data Hub Landscape presents a graphical view of the registered endpoints  an
 App (**Cloud** **Application)** - Cloud node that contains one or more environments on which the app can run. Managed in Cloud Portal (created by CS, assigned to Sprintr App Project by user).
 
 **Environment** - Where app models are deployed. Part of Cloud Application. - unique identifier: **Environment UUID**
-

@@ -12,7 +12,7 @@ This document is a high-level summary of the changes Atlas 3 brings to Mendix.
 
 ## 2 High-Level Summary
 
-Atlas 3 includes many changes to style and branding, and has a more modern look and feel. The differences between Atlas 2 and Atlas 3 are best expressed through comparison, using our reference apps. 
+Atlas 3 includes many changes to style and branding, and has a more modern look and feel. The differences between Atlas 2 and Atlas 3 are best expressed through comparison, using our reference apps. To learn more about how your app can look with Atlas 3, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
 On both web and native, improvements have been made to layouts, widgets, building blocks, and page templates. These changes include but are not limited to layout and spacing, colors and aesthetics, and user experience.
 

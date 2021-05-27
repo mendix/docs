@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### May 27th, 2021
+
+#### Improvements
+
+* We have added support for the [Deep Link](/appstore/modules/deep-link) module for apps using the SAP XSUAA Connector. When you set up the module, you need to set the **LoginLocation** constant to `/xsauaalogin/` to ensure your end users are logged in.
+
 ### March 28th, 2021
 
 #### Fix

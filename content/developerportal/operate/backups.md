@@ -19,7 +19,7 @@ The pruning schedule applies to nightly backups *and* backups initiated by users
 
 The following backups are retained:
 
-* Nightly backups: two weeks
+* Nightly backups: 30 days
 * Weekly backups (Sunday night): three months
 * Monthly backups (First Sunday night of the month): one year
 * Manual (user-initiated) backups: three months
@@ -28,8 +28,11 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 
 | Region | Start Time (UTC) | Local Time | Estimated Duration |
 | --- | --- | --- | --- |
+| Dublin | 23:00 | 00:00 |  3 hours |
 | Frankfurt | 00:00 | 01:00 | 3 hours |
 | London | 23:00 | 23:00 | 2 hours |
+| Oregon | 07:00 | 00:00 | 1 hour |
+| Singapore | 17:00 | 01:00 | 1 hour |
 | Tokyo | 16:00 | 01:00 | 1 hour |
 | N. Virginia | 05:00 | 00:00 | 4 hours |
 

@@ -9,11 +9,10 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-This document is for legacy cases when older projects cannot use the Mendix Native Mobile Builder. However, we *strongly suggest* you migrate your project to the Mendix Native Mobile Builder. If you have not migrated your project to the Native Mobile Builder, or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow [the guide to migrate from the CLI to the Native Mobile Builder](#from-cli-to-ui) to update your Native Template. If for whatever reason it's not possible to migrate your project to a newer version of Native Template, continue with this guide.
+This document is for legacy cases when older projects cannot use the Mendix Native Mobile Builder. However, we *strongly suggest* you migrate your project to the Mendix Native Mobile Builder. If you have not migrated your project to the Native Mobile Builder, or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow the [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](/howto8/mobile/how-to-ota#from-cli-to-ui) section of *How to Release Over the Air Updates with App Center's CodePush* to update your Native Template. If for whatever reason it's not possible to migrate your project to a newer version of Native Template, continue with this guide.
 {{% /alert %}}
 
-Using Native Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA).
-OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).
+Using Native Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA). OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).
 
 Native apps are separated into two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
 

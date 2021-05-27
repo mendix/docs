@@ -217,12 +217,12 @@ Modifications to the **Atlas 2 theme** include the following:
 
 If you have made any of the above modifications, please follow the following steps below. The steps have been divided into 4 sections: 
 
-* [Native custom variables](#native-custom-variables)
-* [Native custom styling](#native-custom-styling)
-* [Native additonal custom styling](#native-additonal-custom-variables)
-* [Native design properties](#native-design-properties)
+* [Native Custom Variables](#native-custom-variables)
+* [Native Custom Styling](#native-custom-styling)
+* [Native Additonal Custom Styling](#native-additonal-custom-styling)
+* [Native Design Properties](#native-design-properties)
 
-#### 2.4.1 Native custom variables {#native-custom-variables}
+#### 2.4.1 Native Custom Variables {#native-custom-variables}
 
 This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
 
@@ -244,7 +244,7 @@ theme/native/custom-variables.js
 themesource/your-module/native/custom-variables.js
 ```
 
-#### 2.4.2 Native custom styling {#native-custom-styling}
+#### 2.4.2 Native Custom Styling {#native-custom-styling}
 
 This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
 
@@ -266,7 +266,7 @@ theme/native/main.js
 themesource/your-module/native/main.js
 ```
 
-#### 2.4.3 Native additonal custom styling {#native-additional-custom-styling}
+#### 2.4.3 Native Additonal Custom Styling {#native-additional-custom-styling}
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
@@ -292,7 +292,7 @@ themesource/your-module/native/_
 
 Remember to import the file using JavaScript's `import` syntax in *themesource/your-module/native/main.js* and export the variable exposed by the imported file.
 
-#### 2.4.4 Native design properties {#native-design-properties}
+#### 2.4.4 Native Design Properties {#native-design-properties}
 
 This section concerns modifications you have made to the **settings-native.json file** of your **Atlas 2 theme**.
 
@@ -428,7 +428,7 @@ As this is a custom-defined design property, this needs to be added to the web's
 }
 ```
 
-#### 2.5.3 Merging options for design properties
+#### 2.5.3 Merging Options for Design Properties
 
 Currently the merging of design property options across themesource modules is not yet supported.
 
@@ -494,7 +494,7 @@ To troubleshoot common Atlas problems, do the following:
 	*  Adjust the layout the page uses to include a placeholder with matching name.
 	* On the page, move the content out of the placeholder.
 
-## 5 Read more
+## 5 Read More
 
 * [Atlas 3 Website](https://www.mendix.com/atlas/)
 * [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)

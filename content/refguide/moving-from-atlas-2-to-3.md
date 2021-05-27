@@ -491,10 +491,10 @@ To troubleshoot common Atlas problems, do the following:
 * If you have **Layout X no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
 * If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
 * If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
-	*  Adjust the layout the page uses to include a placeholder with matching name.
+	* Adjust the layout the page uses to include a placeholder with matching name.
 	* On the page, move the content out of the placeholder.
 
-## 5 Read More
+## 6 Read More
 
 * [Atlas 3 Website](https://www.mendix.com/atlas/)
 * [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)

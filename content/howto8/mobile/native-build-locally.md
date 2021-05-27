@@ -80,7 +80,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Run `npm install` in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
-1. After synchronizing the app your Android Studio should look something like this:
+1. After synchronizing the app your Android Studio should look something like this.**Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
 
 	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 

@@ -76,7 +76,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Run `npm install` in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
-1. After synchronizing the app your Android Studio should look something like this:
+1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
 
 	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 
@@ -89,6 +89,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
 	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
+
 
 ### 4.2 Building an iOS App with XCode
 

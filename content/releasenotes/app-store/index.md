@@ -19,7 +19,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
   
 #### Fixes
 
-* We have started supporting rich characters in a declined message. You can see these on the [Publish](/appstore/general/share-app-store-content#publish) page for the review and publish steps.
+* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/general/share-app-store-content#publish) page.
 * We fixed some bugs in the flow for adding new Marketplace content.
 
 ### May 4th, 2021

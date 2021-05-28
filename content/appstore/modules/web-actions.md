@@ -16,26 +16,26 @@ The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module cont
 | Set focus | Sets the focus to the element found with the selector. The element should be able to hold focus like a link, button, or input. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`). |
 | Take picture | Allows users to take a picture from the back and front camera in a web or PWA app. |
 
-## 1 How to use
+## 1 Usage
 
-### Take picture
+### 1.1 Take Picture
 
-For the take picture action you will need to create an entity that extends `System.Image` entity. Following the example below.
+1.  To use the **Take picture** action you will need to create an entity that extends the **System.Image** entity:
 
-![Example entity](attachments/web-actions/entity.png)
+  ![Example entity](attachments/web-actions/entity.png)
 
-Next step is drag and drop the Take picture action from Studio Pro toolbar to your nanoflow like the example below. For that you need to pass an object for the action.
+1.  Next, drag and drop the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
 
-![Example nanoflow](attachments/web-actions/nanoflow.png)
+  ![Example nanoflow](attachments/web-actions/nanoflow.png)
 
-In the action you need to select which object are you passing to the action to fill with the image properties. 
+1.  In the action you need to select which object you are passing to the action to fill with the image properties:
 
-![Properties](attachments/web-actions/properties.png)
+  ![Properties](attachments/web-actions/properties.png)
 
-We also provide an option to show a confirmation screen where users can either choose to accept or retake the picture,
+1.  You can also configure an option which shows a confirmation screen allowing users to accept or retake the picture:
 
-![Confirmation Screen](attachments/web-actions/confirmation.png)
+  ![Confirmation Screen](attachments/web-actions/confirmation.png)
 
-The value returned from the action is a `Boolean` so in the end of the execution you can check if the picture was taken or not following the example below.
+1.  The value returned from the action is a Boolean, so after the execution you can check if the picture was taken or not:
 
-![Check](attachments/web-actions/check.png)
+  ![Check](attachments/web-actions/check.png)

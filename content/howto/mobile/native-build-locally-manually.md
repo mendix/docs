@@ -178,52 +178,37 @@ After the build succeeds the app should be running on the selected device and co
 
 ## 6 Adding Dependencies{#adding-dependencies}
 
-At some point you will want to enhance your project with native pluggable widgets and functionality that will require the inclusion of React Native modules and libraries.
+Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the project and automatically adds them to the package.json of the project's Native Template. This works with all auto-linkable Native Dependencies. 
+
+In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your project and add it manually.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
 
-### 6.1 Adding Dependencies For Native Templates v4.0.0 and Above
+### 6.1 Adding Dependencies Which Support Auto-Linking
 
-From Native Template v4.0.0 and above Mendix supports RN 0.6.x and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies for Native Template v4.0.0 and above, do the following:
+Mendix supports RN and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 6.2 Adding Dependencies For Native Templates Below v4.0.0
+### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
 
-Native Template versions below v4.0.0 do not support React Native's auto-linking. Therefore always follow the manual steps of the dependency to add it to the Android and iOS projects.
+If a dependency does not suport auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS projects.
 
 ## 7 Removing Dependencies{#removing-dependencies}
 
 As the requirements of a project might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
-### 7.1 Removing Dependencies Which Support Auto-Linking for v4.0.0 and Above
+### 7.1 Removing Dependencies Which Support Auto-Linking
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 7.2 Removing Dependencies Which Do Not Support Auto-Linking or for v.3.x and Bellow
+### 7.2 Removing Dependencies Which Do Not Support Auto-Linking
 
-To remove dependencies which do not support auto-linking, do the following:
-
-1. Remove the dependency's entry from the *package.json* file.
-1. Remove the dependency's entry from the *ios/Podfile* file.
-1. Remove the dependency's `include` and `project` entries from the *android/setting.gradle*. For example, to remove the Firebase module remove the following: 
-
-	```
-	include ':react-native-firebase'
-	project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-	```
-
-1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
-
-	```
-	implementation project(":react-native-firebase")
-	```
-
-1. Remove any custom code included in the iOS or Android project.
+To remove dependencies which do not support auto-linking, revert the steps you applied when adding the dependency.
 
 ## 8 Read More
 

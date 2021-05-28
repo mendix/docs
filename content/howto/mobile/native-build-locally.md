@@ -111,7 +111,41 @@ In the sections below you can see the basic steps to get an app up and running o
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
-## 5 Read More
+## 5 Adding Dependencies{#adding-dependencies}
+
+Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the project and automatically adds them to the package.json of the project's Native Template. This works with all auto-linkable Native Dependencies. 
+
+In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your project and add it manually.
+
+Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a project. The same rules apply as with any React Native project.
+
+### 5.1 Adding Dependencies Which Support Auto-Linking
+
+Mendix supports RN and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native projects. To add dependencies do the following:
+
+1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
+1. If the dependency supports auto-linking when `npm install` is run it will automatically add itself correctly to the Android and iOS project. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
+
+### 5.2 Adding Dependencies Which Do Not Support Auto-Linking
+
+If a dependency does not suport auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS projects.
+
+## 6 Removing Dependencies{#removing-dependencies}
+
+As the requirements of a project might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
+
+### 6.1 Removing Dependencies Which Support Auto-Linking
+
+To remove dependencies which support auto-linking, do the following:
+
+1. Remove the dependency entry from the *package.json* file.
+1. Run `npm i`.
+
+### 6.2 Removing Dependencies Which Do Not Support Auto-Linking
+
+To remove dependencies which do not support auto-linking, revert the steps you applied when adding the dependency.
+
+## 7 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](deploying-native-app)
 * [How to Create a Custom Developer App](how-to-devapps)

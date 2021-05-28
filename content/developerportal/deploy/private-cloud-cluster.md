@@ -9,7 +9,7 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
@@ -22,7 +22,7 @@ Once you have created your namespace, you can invite additional team members who
 To create a cluster in your OpenShift context, you need the following:
 
 * A Kubernetes platform or OpenShift version 3.11 or above
-* An administration account for your platform
+* An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
@@ -59,7 +59,7 @@ To create a cluster in your OpenShift context, you need the following:
     
   1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Type** – choose the correct type for your cluster.
+  2. **Type** – choose the correct type for your cluster. See [Supported Providers](private-cloud-supported-environments) for more information.
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 

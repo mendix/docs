@@ -1,5 +1,5 @@
 ---
-title: "Build a Mendix Native Mobile App Locally using Mendix Native Builder"
+title: "Build a Mendix Native Mobile App Locally using the Mendix Native Builder"
 parent: "build-native-apps"
 menu_order: 30
 description: Describes how to build your first Mendix native mobile app locally using Mendix Native Mobile Builder.
@@ -50,7 +50,7 @@ For Android Builds:
 
 	{{% image_container width="350" %}}![Build type](attachments/nbui/advanced-buildtype-local.png){{% /image_container %}}
 
-	As you already selected to use the Advanced flow with this project it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your project and commit your changes. But keep in mind that Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
+	As you already selected to use the Advanced flow with this project it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your project and commit your changes. But keep in mind that the Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
 
 1. Select **Configure app locally** and fill in the information as needed for your app.
 {{% image_container width="350" %}}![Build type](attachments/nbui/advanced-configure-app-locally.png){{% /image_container %}}

@@ -1,11 +1,15 @@
 ---
 title: "Use the Siemens MindSphere Pump Asset Example App"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 110
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for the MindSphere Pump Asset Example App. This app cannot be used with MindSphere IIoT for Makers.
+{{% /alert %}}
 
 You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
@@ -25,7 +29,7 @@ You need a MindSphere user account on a developer tenant. This account needs the
 * mdsp:core:StandardUser
 * mdsp:core:TenantUser
 
-### 2.2 Assets
+### 2.2 Assets{#create-assets}
 
 This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
 

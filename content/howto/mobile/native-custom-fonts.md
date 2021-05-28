@@ -91,7 +91,7 @@ Before [adding fonts manually](#manual):
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your project. It configures both Android and iOS projects and also provides the snippets needed to simply copy and paste in your Mendix project's native styles. To add custom fonts to your project, follow these steps: 
 
-1. Start the Native Builder:
+1. Start the Mendix Native Mobile Builder:
 
     {{% image_container width="350" %}}![Start Native Builer](attachments/nbui/start-nbui.png){{% /image_container %}}
 

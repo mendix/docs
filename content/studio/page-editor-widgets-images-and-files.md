@@ -116,17 +116,17 @@ This property only appears if **Show Label** is enabled. Specify the name that w
 
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
-* **Editable** – the value displayed by the widget is editable
+* **Editable** – The value displayed by the widget is editable.
 
-* **Read-only** – the value is in read-only mode
+* **Read-Only** – The value is in read-only mode.
 
-* **Conditional** – the widget is editable only if specified conditions are met based on an attribute value or based on an expression.
+* **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression.
 
     {{%alert type="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
 ##### 3.1.2.4 Condition Based on {#condition}
 
-The **Condition is Based on** property is only shown when [Conditional Editability](#editability) is selected. The following options are available:
+The **Condition Based on** property is only shown when [Conditional Editability](#editability) is selected. The following options are available:
 
 * **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be editable only when it matches a certain value of the selected attribute. The attribute must be of the Boolean or enumeration type.
 * **Expression** – Defines whether the condition is based on the expression. In this case the widget will be editable only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](expressions).
@@ -143,7 +143,7 @@ For example, you would like to allow users upload images only when their *email 
 
 ##### 3.1.2.7 Expression
 
-This property is shown only when the expression the [Condition is Based on](#condition) is set to **Expression**. This property allows you to create an expression. For more information on how to create expressions, see [Expressions](expressions).
+This property allows you to create an expression and is shown only when the expression the [Condition Based on](#condition) is set to **Expression**. The expression should be of the Boolean type. For more information on how to create expressions, see [Expressions](expressions).
 
 #### 3.1.3 Controls Section
 

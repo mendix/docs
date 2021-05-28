@@ -131,7 +131,7 @@ When completed there should be a folder under the project's deployment folder `p
 
 Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app project.
 
-## 5 Building your Native Mobile App Project{#building-app-project}
+## 5 Building Your Native Mobile App Project{#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the app with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 

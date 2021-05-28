@@ -10,6 +10,15 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 28th, 2021
+
+#### New Features
+
+* We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
+	* Automatic provisioning of the app service on subscription.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#service-management), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+
+
 ### May 4th, 2021
 
 #### Fixes

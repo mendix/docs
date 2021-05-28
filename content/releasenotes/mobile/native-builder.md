@@ -8,7 +8,7 @@ description: "Native Builder release notes."
 ---
 
 {{% alert type="warning" %}}
-The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the UI instead. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app) using the Native Mobile Builder.
+The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Native Mobile Builder — a UI tool that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the Native Mobile Builder UI tool instead of the CLI tool. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app) using the Native Mobile Builder.
 {{% /alert %}}
 
 The [Native Builder](/refguide8/native-builder) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 

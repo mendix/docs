@@ -1,6 +1,6 @@
 ---
 title: "MindSphere Module Details"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
@@ -12,6 +12,10 @@ aliases:
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
 
 This page contains detailed information about the content of MindSphere modules for Mendix apps and what they are used for. If you want to deploy a Mendix app to MindSphere, the instructions are in [Deployment on Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 

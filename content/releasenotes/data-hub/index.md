@@ -9,6 +9,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### May 27th, 2021
+
+#### New Feature
+
+* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register#registration-form) Siemens Opcenter data sources.
+
+#### Improvements
+
+* **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
+
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+
 ### May 12th, 2021
 
 #### Improvements

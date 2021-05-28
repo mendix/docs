@@ -8,12 +8,6 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}
-Before using this document, please ensure compatibility. If you have not migrated your project to the Native Mobile Builder or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.1 and below), either follow [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](#from-cli-to-ui) section below **before** implementing OTA updates, or update your Native Template. 
-
-If you cannot migrate your project to a newer version of Native Template, for example if you have to use an older version of Studio Pro, use [Release Over the Air Updates with App Center's CodePush using the CLI](how-to-ota-cli) instead of this document.
-{{% /alert %}}
-
 Using Native Mobile Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA). OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).
 
 Native apps are separated into two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Mobile Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
@@ -37,6 +31,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](deploying-native-app#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
 * Install your app on a test device or emulator.
 * Read the [Offline First Reference Guide](/refguide/offline-first).
+
+{{% alert type="info" %}}
+Before using this document, please ensure compatibility. If you have not migrated your project to the Native Mobile Builder or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.1 and below), either follow [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](#from-cli-to-ui) section below **before** implementing OTA updates, or update your Native Template. 
+
+If you cannot migrate your project to a newer version of Native Template, for example if you have to use an older version of Studio Pro, use [Release Over the Air Updates with App Center's CodePush using the CLI](how-to-ota-cli) instead of this document.
+{{% /alert %}}
 
 ## 3 When to Use OTA Updates
 

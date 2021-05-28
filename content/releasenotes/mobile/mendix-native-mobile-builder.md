@@ -13,74 +13,70 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 **Release date: May 28th, 2021**
 
-#### New features 
-#### Local project configuration support
-*This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects please update your Native Template.* 
+#### New Features 
 
-Until now, Native Mobile Builder required at least GitHub to function correctly. We expanded our offering to make it possible to use
-the Mendix Native Mobile Builder to configure your project locally too. For a how-to, on using this feature search on Mendix docs for [Build a Mendix Native App Locally](/howto/native-build-locally).
+##### Local Project Configuration Support
 
-New projects, as part of the wizard can be configured to use one of the following two (2) build types:  
+*This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 
-* Default: Build automatically using cloud services
-* Advanced: Create a local copy for additional customizations or to build locally
+Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/native-build-locally).
 
-Already configured projects will default to the **Default** build type, that is with cloud services enabled.
-If App Center was disabled it will still remain optional until toggled on and configured with a valid App Center token.
-**Projects in this state will continue functioning as before and nothing needs to be changed!**
-The build type can be changed via the **Build type** page in Native Mobile Builder.
+In the wizard, new projects can be configured to use one of 2 build types:  
 
-##### Default: Build automatically using cloud services
-Using cloud services remains the default selection. In this mode it is not possible anymore to opt out of using App Center.
+* **Default**: Build automatically using cloud services
+* **Advanced**: Create a local copy for additional customizations, or use this option to build locally
 
-##### Advanced: Create a local copy for additional customizations or to build locally
-Advanced gives the option to select a local directory to set up your project. Native Mobile Builder will then use this folder to
-do the configurations and set up the Android and iOS projects.
+More key information from this release is as follows:
 
-In addition, in this mode, one can opt in to use cloud services similarly to the default mode. Native Mobile Builder will then configure the 
-local copy, push the changes to the repository and finally use App Center to build your apps.
+* Already configured projects will default to the **Default** build type, that is with cloud services enabled
+* If App Center was disabled it will still remain optional until toggled on and configured with a valid App Center token
+* **Projects in this state will continue functioning as before, and nothing needs to be changed** 
+* The build type can be changed via the **Build type** page in the Native Mobile Builder.
 
-##### Caveats
-**Mendix Native Builder is not a replacement of a fully featured Git client! Committing your changes is the equivalent operation of uploading the whole project's Native Template, minus the ignored files to your repository and not just diffs.**
+**Default: Build Automatically Using Cloud Services**
 
-**When switching from default to the advanced build type, if the directory selected does not have a valid Native Template a fresh Native Template will be checked out and not the repository used before!**
-**If GitHub is enabled, and the repository exists, the local changes will be committed back to the repository the next time you choose to configure and commit the changes.**
+Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
 
-**Going from default to advanced build type is, for now, an irreversible action. From here on you cannot switch back to the default build type.**
+**Advanced: Create a Local Copy for Additional Customizations or Build Locally**
 
-#### Native permissions support
+**Advanced** gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
 
-Every mobile app requires certain features and hence certain permissions users would need to accept in order for the
-features to work correctly. We therefore compiled a list of commonly requested permissions per platform (Android and
-iOS) and introduced a new Advanced page to modify these permissions whenever necessary.
+In addition, in this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
+
+**Caveats**
+
+Please pay close attention to these caveats as you use the Mendix Native Builder:
+
+* The Mendix Native Builder is *not* a replacement of a fully-featured Git client. Committing your changes is the equivalent operation of uploading the whole project's Native Template, minus the ignored files to your repository and not just diffs.
+
+* When switching from the **Default** to **Advanced** build types, if the directory selected does not have a valid Native Template, a fresh Native Template will be checked out and not the repository used before.
+* If GitHub is enabled, and the repository exists, the local changes will be committed back to the repository the next time you choose to configure and commit the changes.
+* Going from the **Default** to **Advanced** build type is, for now, *an irreversible action*. Once switched, you cannot switch back to the **Default** build type.
+
+##### Native Permissions Support
+
+Every mobile app requires certain features, as well as certain permissions users need to accept for the features to work. Therefore, we compiled a list of commonly requested permissions per platform (Android and iOS) and introduced a new **Advanced** page for you to modify these permissions whenever necessary.
 
 #### Improvements
 
--   We removed the warning text that would display when uploading a Firebase configuration that does not contain the
-    developer build application identifier. This warning has been removed in favor of the existing warning pop-up that
-    occurs when the developer application build is being initiated.
+* We removed the warning text that would display when uploading a Firebase configuration that does not contain the developer build application identifier. This warning has been removed in favor of the existing warning pop-up that occurs when the developer application build is being initiated.
 
 #### Fixes
 
-- We fixed typos and wrongly defined info boxes.
-- General bugfixes.
-
+* We fixed typos and wrongly defined info boxes.
+* We made general bugfixes.
 
 ### Release 1.0.86
 
 **Release date: April 1st, 2021**
 
-#### Soothing animal sounds (Aprils fools joke)
+#### Soothing Animal Sounds (Aprils Fools Joke)
 
-Research over the years has argued that animal sounds can have stress relieving effects. 
-
-As our ceaseless effort to simplify building Native Apps continues, we decided to level up our game. 
-
-Mendix Native Mobile Builder is now able to derive stress levels based on your clicking habits and play animal sounds accordingly.
+Research has shown that animal sounds can relieve stress. As we work to simplify building Native Apps, we decided to add some stress relief. Now, the Mendix Native Mobile Builder is able to derive your stress levels based on your clicking habits and play animal sounds accordingly.
 
 #### Fixes 
 
-- We fixed an issue with build exception resulting in an abstract error popup instead of a readable message.
+* We fixed an issue with build exception resulting in an abstract error popup instead of a readable message.
 
 ### Release 1.0.84
 

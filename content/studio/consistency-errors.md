@@ -16,6 +16,7 @@ Errors need to be solved before your app can be previewed or published. An examp
 
 Consistency errors can occur in the following editors of Mendix Studio:
 
+* Workflows (For information on consistency errors in workflows, see [Workflow Consistency Errors](consistency-errors-workflows))
 * Pages (For information on consistency error in the page editor, see [Page Consistency Errors](consistency-errors-pages))
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors](consistency-errors-navigation))
 * Microflows (For information on consistency error in the microflow editor, see [Microflow Consistency Errors](consistency-errors-microflows))

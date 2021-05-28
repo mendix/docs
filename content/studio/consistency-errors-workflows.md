@@ -10,7 +10,7 @@ tags: ["studio", "consistency errors", "checks", "errors", "workflows"]
 
 In this document, we explain how to solve complex consistency errors that can occur when configuring [workflows](workflows) in Mendix Studio. For more information on workflows, see [Workflows](workflows).
 
-An example of a consistency error is when . 
+An example of a consistency error is when you did not select a page for a new user task. 
 
 {{% alert type="info" %}}
 

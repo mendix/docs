@@ -53,12 +53,7 @@ You will use these later to complete your work with the Native Mobile Builder an
 
 ## 4 Enabling Push Notifications for your Native Apps
 
-To enable push notifications for your application you will have to follow one of the following sections. Please choose the section that fits which tools you can use.
-
-With the release of Native Mobile Builder in Mendix Studio Pro v8.15, the process of enabling push notifications has been simplified. The Native Mobile Builder, integrated into Mendix Studio Pro, is the recommended method for setting up any capabilities in your app. If you can use this tooling, please follow this section: [Enabling Push Notification with the Native Mobile Builder (UI)](#auto-changes).
-
-
-If you wish to implement your changes manually, please follow this section: [Manually Implementing Changes](#manually-implementing-changes).
+With the release of Native Mobile Builder in Mendix Studio Pro v8.15, the process of enabling push notifications has been simplified. The Native Mobile Builder, integrated into Mendix Studio Pro, is the recommended method for setting up any capabilities in your app. To enable push notifications with the Native Mobile Builder, follow the section below.
 
 ### 4.1 Implementing Push Changes With the Native Mobile Builder {#auto-changes}
 

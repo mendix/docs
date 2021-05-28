@@ -2,24 +2,25 @@
 title: "Build a Mendix Native Mobile App Locally using Mendix Native Builder"
 parent: "build-native-apps"
 menu_order: 30
-description: Describes how to build your first Mendix native mobile app locally using Mendix Native Mobile Builder.
+description: Describes how to build your first Mendix native mobile app locally using the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
-{{% alert type="info" %}}
-For this how-to Mendix Studio Pro 8.15.1 is required. If you are using an older Studio Pro version, please follow the how to [Build a Mendix Native Mobile App Locally Manually](native-build-locally-manually).
-{{% /alert %}}
-
 ## 1 Introduction
+
+{{% alert type="info" %}}
+For this how-to, Mendix Studio Pro v8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](native-build-locally-manually).
+{{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
 
-Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
+Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. For further customization options for your local builds, see the [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below.
 
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
-* Studio Pro 8.15.1 or later.
+
+* Studio Pro 8.15.1 or above
 * Install [Node and NPM](https://nodejs.org/en/download/)
 
 For iOS builds:
@@ -31,45 +32,52 @@ For Android Builds:
 
 * Install [Android SDK](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
 
-## 3 Use Mendix Native Mobile Builder to setup your local project
+## 3 Use the Mendix Native Mobile Builder to Set Up Your Local Project
 
-1.  Run Mendix Native Mobile Builder from your project: 
+1.  Run the Mendix Native Mobile Builder from your project: 
 
-	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 
-1. When Mendix Native Mobile Builder launches you will see the home screen:
+1.  When the Mendix Native Mobile Builder launches you will see the home screen:
 
 	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
+	
 1. Select **Build app for distribution**.
 1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name in some other way:
 
 	{{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1.  In the **Build type** choose the **Advanced** checkbox. 
+1.  In **Build type**, select the **Advanced** checkbox:
+ 
 	{{% image_container width="350" %}}![Build type](attachments/nbui/wizard-buildtype-local.png){{% /image_container %}}
-1. Select the folder you want your project's Native Template to be created. Valid choises, is an empty directory or a directory with a Native Template.
+	
+1. Select the folder where you want your project's Native Template to be created. Valid choices are either an empty directory or a directory with a Native Template.
 1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
 1. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
 1. Select **Build type** from the side bar. 
 
 	{{% image_container width="350" %}}![Build type](attachments/nbui/advanced-buildtype-local.png){{% /image_container %}}
 
-	As you already selected to use the Advanced flow with this project it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your project and commit your changes. But keep in mind that Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
+	As you already selected to use the **Advanced** flow with this project it is not possible to switch back to just using **Cloud** services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your project and commit your changes. But keep in mind that Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
 
-1. Select **Configure app locally** and fill in the information as needed for your app.
-{{% image_container width="350" %}}![Build type](attachments/nbui/advanced-configure-app-locally.png){{% /image_container %}}
-1. Click **Configure locally**
+1.  Select **Configure app locally** and fill in the information as needed for your app:
 
-	The process will start and it will:
-	* Run MxBuild to build your project's app bundles
-	* Checkout the correct version of Native Template for the Mendix Studio Pro version you are using
-	* Configure the project
+	{{% image_container width="350" %}}![Build type](attachments/nbui/advanced-configure-app-locally.png){{% /image_container %}}
+	
+1. Click **Configure locally**:
 
-	If GitHub is enabled, in addition to the previous steps, it will: 
-	* Commit the whole local copy to the project's repository
+The process will start and do the following:
 
-## 4 Building your Native Mobile App Project{#building-app-project}
+* Run MxBuild to build your project's app bundles
+* Checkout the correct version of Native Template for the Mendix Studio Pro version you are using
+* Configure the project
+
+If GitHub is enabled, in addition to the previous steps, it will do the following: 
+
+* Commit the whole local copy to the project's repository
+
+## 4 Building Your Native Mobile App Project{#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the app with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
@@ -142,7 +150,7 @@ To remove dependencies which support auto-linking, do the following:
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 6.2 Removing Dependencies Which Do Not Support Auto-Linking or for Native Templates v.3.x and Bellow
+### 6.2 Removing Dependencies Which Do Not Support Auto-Linking or for Native Templates v.3.x and Below
 
 To remove dependencies which do not support auto-linking, do the following:
 

@@ -1,16 +1,16 @@
 ---
-title: "Build a Mendix Native Mobile App Locally Manually"
+title: "Build a Mendix Native Mobile App Locally and Manually"
 parent: "build-native-apps"
 menu_order: 30
-description: Describes how to build your first Mendix native mobile app locally, without Mendix Native Mobile Builder.
+description: Describes how to build your first Mendix native mobile app locally, without using the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
-{{% alert type="info" %}}
-When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
-{{% /alert %}}
-
 ## 1 Introduction
+
+{{% alert type="info" %}}
+When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the project. To apply the changes when building locally, check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
+{{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 

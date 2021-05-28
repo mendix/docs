@@ -296,6 +296,8 @@ This additional management option is only available for specific app services wh
 
 When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+
 ## 7 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

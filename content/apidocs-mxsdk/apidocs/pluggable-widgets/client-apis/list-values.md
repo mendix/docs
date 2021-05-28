@@ -278,9 +278,9 @@ View state is a mechanism of storing the current state of a page when user navig
 
 View state works transparently for a widget, no additional steps needed from the widget in order to benefit from view state mechanism. 
 
-THe following information of a `ListView` is getting automatically stored and restored: 
+The following information of a `ListView` is getting automatically stored and restored: 
  - pagination state (`limit` and `offset` fields)
- - sorting state (`sortOrder` filed)
+ - sorting state (`sortOrder` field)
  - filtering state (`filter` field)
 
 ## 3 Linked Property Values

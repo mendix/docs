@@ -81,7 +81,7 @@ For a Windows machine building an Android app, do the following:
 When Mendix Native Mobile Builder identifies a Mobile Toolkit capable Native Template version (v5.1.9 and above), it will not apply changes directly to the project. To apply the changes when building locally check out your latest changes, run `npm install`, then make sure to run `npm run configure`.
 {{% /alert %}}
 
-2. Instances of the Native Template v5.1.9 and higher include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the npm run configure command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your project.
+2. Instances of the Native Template v5.1.9 and above include the Native Mobile Toolkit. Therefore, if you are using one of these versions you also must run the `npm run configure` command. This ensures that the changes from the Mendix Native Mobile Builder are applied to your project.
 
 For a Mac OS X machine building an iOS app, do the following:
 
@@ -139,7 +139,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 ### 5.1 Building an Android App with Android Studio
 
-1. Run npm install in the app root to install the required dependencies.
+1. Run `npm install` in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
 1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:

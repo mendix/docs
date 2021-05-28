@@ -36,12 +36,21 @@ The password is used to sign into the application as the Administrator. Click **
 Default: *1*
 
 {{% alert type="info" %}}
-This password is only used when Mendix is running locally. You can change the password for your other [environments](/developerportal/deploy/environments-details) in the Developer Portal.
+Since the value of the password is general knowledge, it is safer to change this to a custom password.
+
+This password is only used when Mendix is running locally. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details) in the Developer Portal.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-Since this is general knowledge, it is safer to change this to a custom password.
-{{% /alert %}}
+#### 2.2.1 Free Apps
+
+You cannot set a password for MxAdmin for Free Apps published to the cloud. To log in for the first time to a Free App deployed to the cloud, do the following:
+
+1. In Studio Pro, go to **App > Security**.
+2. With **Security level** set to **Production**, open the **Demo users** tab.
+3. Set **Enable demo users** to **Yes**.
+4. Add a demo_administrator having **User role** *Administrator*.
+5. Deploy your Free App to the cloud environment by clicking **Publish**.
+6. Log in using the demo-administrator and you can then create some user accounts.
 
 ### 2.3 User Role {#user-role}
 

@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#customowner) owners.
+Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#custom-owner) owners.
 
 Users who can curate assets in Data Hub Catalog are as follows:
 
@@ -94,7 +94,7 @@ To change the **Business Owner** or **Technical Owner**, from the **Application 
 
 ![adding custom icons](attachments/curate/custom-avatar.png)
 
-#### 4.1.2 Adding a Custom Owner {#customowner}
+#### 4.1.2 Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 

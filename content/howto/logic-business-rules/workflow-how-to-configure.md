@@ -77,7 +77,7 @@ Do the following:
 
 5. You need to assign the **User** user role to Facilities for all other modules. Double-click the newly created Facilities role.
 
-6. In the **User Role** dialog box, click **Edit** in the **Module roles** section {{% todo %}}[Check if this screenshot needs to be updated]{{% /todo %}}.
+6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 
@@ -122,7 +122,7 @@ You need to create a workflow that you will add activities to and create pages f
 
 2.  In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
 
-3. To open the workflow properties, click the start activity or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
+3. To open the workflow properties, click the start event or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
 
 4. Click the **Allowed roles** property to set security for the workflow.
 

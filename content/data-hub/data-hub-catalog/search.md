@@ -45,6 +45,7 @@ By default, search results in the Data Hub Catalog are filtered to show only hit
 {{% /alert %}}
 
 ### 2.3 Asset Descriptions
+
 The description that is included as part of the published service metadata. This description can be further curated at the data source, dataset, and attribute level by owners and curators to provide further details of the exposed datasets and the associated data.
 
 {{% alert type="info" %}}
@@ -63,11 +64,11 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 ### 3.1 Searching for Assets
 
-From the **Data Hub Home** page, you can you can search the Catalog in the following ways:
+From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
 ![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (search strings can comprise a minimum of three characters and include the alphanumeric characters)
+* Type a search term in the search box and click **Search** (search strings can be a minimum of three characters and consist of alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab
@@ -100,6 +101,14 @@ Punctuation cannot be used as part of the search term.
 Search is case-insensitive.
 {{% /alert %}}
 
+The search is carried out asset metadata that includes the following:
+
+* all application names
+* data sources, datasets (or entity sets)
+* attribute
+* tags
+* descriptions
+
 ### 4.2 Filters {#filter}
 
 You can filter search results by environment type. By default, the **Production** environment filter is active and this restricts search to assets in the production environment.
@@ -122,17 +131,17 @@ Click **Clear Filters** to clear all the checked environments and click **Apply 
 
 ### 4.3 Search Results {#search-results}
 
-The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. Items in the asset metadata that are searched include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. The order of the items presented in the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated items
 
- {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
+ {{% alert type="info" %}}The weighting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
 
 {{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 
-When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
+When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 5 Selected Asset Details {#search-details}
 

@@ -20,7 +20,7 @@ The Wikipedia REST service allows you to retrieve the summary of a page. This se
 
 We will start by providing the Modeler as an example of what the REST service returns:
 
-1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti)
+1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
    * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
 
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
@@ -34,7 +34,7 @@ We will start by providing the Modeler as an example of what the REST service re
 
     ![](attachments/consume-a-rest-service/json-structure.png)
 
-5. Click **OK**
+5. Click **OK**.
 
 ## 3 Creating an Import Mapping
 

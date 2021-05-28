@@ -95,6 +95,10 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
 
+{{% alert type="warning" %}}
+The Mendix Cloud has a limit of 1GB on the size of a deployment package.
+{{% /alert %}}
+
 ### 3.1 Deploying via the Studio Pro
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
@@ -208,7 +212,6 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| XS20 | 1GB | 0.5 | 1GB | 1  | 5GB | 10GB |
 | S20 | 2GB | 0.5 | 2GB | 1  | 10GB | 20GB |
 | M20 | 4GB | 1 | 4GB | 1  | 20GB | 40GB |
 | L20 | 8GB | 2 | 8GB | 1  | 40GB | 80GB |

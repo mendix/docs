@@ -248,7 +248,7 @@ Mendix for Private Cloud will use the existing ingress controller.
 We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available.
 
 NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
-NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates.
+NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller  and the Pod running a Mendix app.
 
 These features will likely be required once your application is ready for production.
 {{% /alert %}}
@@ -275,10 +275,10 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 ### 6.2 Ingress
 
-We currently support the following ingress controllers:
+Mendix for Private Cloud is compatible with the following ingress controllers:
 
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
-* [Traefik 1.7](https://containo.us/traefik/)
+* [Traefik](https://traefik.io/traefik/)
 
 For ingress, it is possible to do the following:
 

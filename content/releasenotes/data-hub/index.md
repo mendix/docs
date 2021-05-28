@@ -9,6 +9,28 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### May 27th, 2021
+
+#### New Feature
+
+* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register#registration-form) Siemens Opcenter data sources.
+
+#### Improvements
+
+* **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
+
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Datasets in the [search results list](/data-hub/data-hub-catalog/search#search-results) that are validated are now clearly indicated as such.
+
+* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register#registration-form) using the business application connectors from the **Data Hub Home**.
+
+* Further styling changes have been made to improve usability.
+
 ### May 6th, 2021
 
 #### New Feature
@@ -139,7 +161,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 ### November 19th, 2020
 
 #### New Features
-* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
+* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#custom-owner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners) which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements

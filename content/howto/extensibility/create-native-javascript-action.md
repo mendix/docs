@@ -78,14 +78,14 @@ Your Mendix app should looks something like this:
 
 ### 3.2 Building a Native Custom Developer App {#custom-developer-app}
 
-When developing a native mobile app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide/native-builder). The Native Builder can create a custom developer app which you use to see and test your app. 
+When developing a native mobile app, you can use the [Make it Native](/refguide/getting-the-make-it-native-app) app to quickly get started. However, this app is bundled with a limited number of functionalities. This tutorial's app requires an NFC module in order to access the native NFC capabilities. This can only be achieved by using the [Native Builder](/refguide8/native-builder). The Native Builder can create a custom developer app which you use to see and test your app. 
 
 In this section, you will create a normal custom developer app to learn the process. In the subsequent section [Installing a Dependency in Your Custom Developer App](#installing-dependency-app) you will create a tailored custom developer app suited for NFC tasks.
 
 Now you will build a native custom developer app and install it on your phone:
 
 1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app#3-getting-your-tokens) section of *Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to get your authentication codes.
-1. Complete the [Preparing Your Project](/howto/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
+1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
 
 	``` shell
 	native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
@@ -374,7 +374,7 @@ Now that you added NFC capability to your app's source code, you must rebuild yo
 
 {{% alert type="info" %}}
 
-Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide/native-builder#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
+Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
 
 {{% /alert %}}
 
@@ -488,7 +488,7 @@ Congratulations on making your own native JavaScript action! Please use your own
 
 Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have to make a build that includes the bundled Mendix app.
 
-For the full explanation on how to build, sign, and distribute your app to an app store see [Deploy Your First Mendix Native Mobile App with the Native Builder CLI](/howto/mobile/deploying-native-app-cli) as well as the tutorial's subsequent sections.
+For the full explanation on how to build, sign, and distribute your app to an app store see [Deploy Your First Mendix Native Mobile App with the Native Builder CLI](/howto8/mobile/deploying-native-app-cli) as well as the tutorial's subsequent sections.
 
 {{% alert type="info" %}}
 

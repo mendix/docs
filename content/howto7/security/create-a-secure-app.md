@@ -50,15 +50,15 @@ To see the results of this how-to, you must set up a test project with test data
 8. Double-click the new button and in the button's properties editor, enter *Set Processing to Complete* for the **Caption**.
 9. Set **On click** to **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow you just created:
    
-    ![](attachments/8785360/8946804.png)
+	![](attachments/8785360/8946804.png)
 
 10. Add the following customer data to your app:
     
-    ![](attachments/18448705/18581374.png)
+	![](attachments/18448705/18581374.png)
 
 11. Add the following order data to your app:
     
-    ![](attachments/18448705/18581373.png)
+	![](attachments/18448705/18581373.png)
 
 ## 4 Setting the Security Level to Prototype/Demo
 

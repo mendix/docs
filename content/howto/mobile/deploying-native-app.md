@@ -2,7 +2,7 @@
 title: "Deploy Your First Mendix Native Mobile App"
 parent: "build-native-apps"
 menu_order: 10
-description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
+description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 ---
 
@@ -11,6 +11,10 @@ tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", 
 This how-to will teach you how to go from a blank slate to an app running on a device.
 
 The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all projects with a native mobile navigation profile.
+
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -35,7 +39,7 @@ If you plan to deploy your app for testing on an Android device, make sure you h
 
 ## 3 Getting Your Tokens
 
-To use the Native Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
+To use the Mendix Native Mobile Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
 
 ### 3.1 GitHub Token {#github-token}
 
@@ -43,7 +47,7 @@ To use the Native Builder, you will first need to get tokens to authenticate wit
 2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the top-right corner of the page.
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
-5. In the **Note** field, write *Native Builder*.
+5. In the **Note** field, write *Mendix Native Mobile Builder*.
 6. Under **Select scopes**, select **repo** and **workflows**.
 7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.

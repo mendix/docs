@@ -8,6 +8,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+For the Simplified Chinese translation, click [here]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A dynamic label is used for the same kind of attributes as a text box from the page editor. It can be used to display a text value.

@@ -54,7 +54,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first))
 
-### 3.2 When a Full Release Is Required
+### 3.2 When a Full Release is Required
 
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases:
 

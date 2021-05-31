@@ -59,9 +59,9 @@ Now when a user clicks the navigation item, a new object of type *ProgramItem* w
 
 If you set a page that expects an object to be passed to it as the home page (for example, a page with a data view), you will get a consistency error.
 
-For example, you have set **Customer Details** page as the home page in your **Navigation**. 
+For example, you have set **Customer Details** page as the default home page in your **Navigation**. 
 
-![Navigation Item Properties](attachments/consistency-errors-navigation/navigation-item-properties.png)
+![Navigation Item Properties](attachments/consistency-errors-navigation/home-page.png)
 
 You have the **Customer Details** page with a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
@@ -74,7 +74,7 @@ In this example, the best way to solve the error is to set another page as the h
 
 However, you can also solve this error by creating a microflow that will create a new *Customer* object and pass it to the page, do the following:
 
-1. Open **Navigation** > properties of the home page menu item.
+1. Open **Navigation** > properties of the menu item set as the home page.
 
 2.  Change the **On Click Action** from **Page** to **Microflow**. 
 

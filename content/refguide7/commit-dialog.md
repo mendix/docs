@@ -14,7 +14,7 @@ The **Commit** dialog box is used for committing changes to the Team Server. You
 At the top of the dialog box you will see the branch which you are committing. This will be one of the following:
 
 | Branch Description | Notes |
-| :-- | --- |
+| --- | --- |
 | ![](attachments/commit-dialog/commit-main.png) |  you are committing the main line |
 | ![](attachments/commit-dialog/commit-branch.png) |  you are committing the specified branch |
 

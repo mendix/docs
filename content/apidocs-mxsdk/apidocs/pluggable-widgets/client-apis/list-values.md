@@ -208,7 +208,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-#### 2.4.1 Simple filtering
+#### 2.4.1 Simple Filtering
 
 To apply a simple filter based on the value of an attribute represented by `myAttributeString` property the following code may be used:
 
@@ -246,7 +246,7 @@ The following code sample shows how to remove current filtering condition:
 this.props.myDataSource.setFilter(undefined);
 ```
 
-#### 2.4.2 Advanced filtering
+#### 2.4.2 Advanced Filtering
 
 In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10`. In order to construct such condition special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that check for `filterable` flags omitted for simplicity. Real widgets should always take `filterable` flag into account.
 
@@ -470,46 +470,46 @@ You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` 
 
 ## 4 Filter Helpers
 
-### 4.1 Value helpers {#filter-value-helpers}
+### 4.1 Value Helpers {#filter-value-helpers}
 
 Two basic helpers that allow to represent attributes and literal values in filter conditions are `attribute` and `literal` helpers. When creating a filter condition, every attribute or literal value has to be wrapped with a corresponding helper.
 
-#### 4.1.1 `attribute`
+#### 4.1.1 Attribute
 
-`attribute` helper takes one argument of type `ListAttributeId`. See [ListAttributeValue](#listattributevalue).
+The `attribute` helper takes one argument of type `ListAttributeId`. See [ListAttributeValue](#listattributevalue).
 
 The following code sample shows how to apply `attribute` helper and use its result in constructing a filter condition:
+
 ```ts
 const attrA = attribute(this.props.myAttributeA.id);
 const filterCondition = equals(attrA, literal("Bob"));
 ```
 
 Attribute types available for filtering:
- - `Boolean`
- - `DateTime`
- - `AutoNumber`
- - `Integer`
- - `Long`
- - `Decimal`
- - `Enum`
- - `String`
- - `HashString`
+* `Boolean`
+* `DateTime`
+* `AutoNumber`
+* `Integer`
+* `Long`
+* `Decimal`
+* `Enum`
+* `String`
+* `HashString`
 
 Attribute types **not** available for filtering:
- - `Binary`
- - `EnumSet`
- - `ObjectReference`
- - `ObjectReferenceSet`
+* `Binary`
+* `EnumSet`
+* `ObjectReference`
+* `ObjectReferenceSet`
 
-#### 4.1.2 `literal`
+#### 4.1.2 Literal
 
-`literal` helper takes one argument. Accepted argument types are:
-
- - boolean values for `Boolean` attribute types
- - string literals for `String`, `HashString` and `Enumeration` attribute types 
- - `BigJS` numbers for `AutoNumber`, `Integer`, `Long` and `Decimal` attribute types
- - `Date` objects for `DateTime` attribute type
- - `undefined` for any attribute type
+The `literal` helper takes one argument. Accepted argument types are:
+* Boolean values for `Boolean` attribute types
+* String literals for `String`, `HashString` and `Enumeration` attribute types 
+* `BigJS` numbers for `AutoNumber`, `Integer`, `Long` and `Decimal` attribute types
+* `Date` objects for `DateTime` attribute type
+* `undefined` for any attribute type
 
 The following code sample shows how to use `literal` helper:
 
@@ -523,9 +523,9 @@ const undef = literal(undefined);
 
 ### 4.2 Basic Helpers
 
-#### 4.2.1 `equals`
+#### 4.2.1 Equals
 
-`equals` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `equals` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Accepts attributes and literals of any type.
 
 The following code sample shows how to use `equals` helper:
@@ -538,9 +538,9 @@ const name = literal("Bob");
 const filterCondition = equals(attrA, name);
 ```
 
-#### 4.2.2 `notEqual`
+#### 4.2.2 NotEqual
 
-`notEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `notEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Accepts attributes and literals of any type.
 
 The following code sample shows how to use `notEqual` helper:
@@ -553,9 +553,9 @@ const name = literal("Bob");
 const filterCondition = notEqual(attrA, name);
 ```
 
-#### 4.2.3 `greaterThan`
+#### 4.2.3 GreaterThan
 
-`greaterThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `greaterThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
 
 The following code sample shows how to use `greaterThan` helper:
@@ -568,9 +568,9 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = greaterThan(attr, meaningOfLife);
 ```
 
-#### 4.2.4 `lessThan`
+#### 4.2.4 LessThan
 
-`lessThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `lessThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
 
 The following code sample shows how to use `lessThan` helper:
@@ -583,9 +583,9 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = lessThan(attr, meaningOfLife); 
 ```
 
-#### 4.2.5 `greaterThanOrEqual`
+#### 4.2.5 GreaterThanOrEqual
 
-`greaterThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `greaterThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
 
 The following code sample shows how to use `greaterThanOrEqual` helper:
@@ -598,9 +598,9 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = greaterThanOrEqual(attr, meaningOfLife); 
 ```
 
-#### 4.2.6 `lessThanOrEqual`
+#### 4.2.6 LessThanOrEqual
 
-`lessThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `lessThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
 
 The following code sample shows how to use `lessThanOrEqual` helper:
@@ -615,9 +615,9 @@ const filterCondition = lessThanOrEqual(attr, meaningOfLife);
 
 ### 4.3 String Conditions
 
-#### 4.3.1 `contains`
+#### 4.3.1 Contains
 
-`contains` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `contains` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `contains` helper:
@@ -639,9 +639,9 @@ const subNum = literal("1337");
 const filterCondition2 = contains(attrNum, substrNum);
 ```
 
-#### 4.3.2 `startsWith`
+#### 4.3.2 StartsWith
 
-`startsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `startsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `startsWith` helper:
@@ -663,9 +663,9 @@ const subNum = literal("1337");
 const filterCondition2 = startsWith(attrNum, substrNum);
 ```
 
-#### 4.3.3 `endsWith`
+#### 4.3.3 EndsWith
 
-`endsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
+The `endsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
 
 The following code sample shows how to use `endsWith` helper:
@@ -689,9 +689,9 @@ const filterCondition2 = startsWith(attrNum, substrNum);
 
 ### 4.4 Logic Conditions
 
-#### 4.4.1 `and`
+#### 4.4.1 And
 
-`and` helper is used to combine other conditions in *logical and* operation. Takes 2 or more arguments.
+The `and` helper is used to combine other conditions in *logical and* operation. Takes 2 or more arguments.
 
 The following usage example specifies that *all conditions have to be true* for an object in order to appear in the resulting filtered set:
 
@@ -703,9 +703,9 @@ const filterCondition = and(
 );
 ```
 
-#### 4.4.2 `or`
+#### 4.4.2 Or
 
-`or` helper is used to combine other conditions in *logical or* operation. Takes 2 or more arguments.
+The `or` helper is used to combine other conditions in *logical or* operation. Takes 2 or more arguments.
 
 The following usage example specifies that *at least one condition have to be true* for an object in order to appear in the resulting filtered set:
 
@@ -717,9 +717,9 @@ const filterCondition = or(
 );
 ```
 
-#### 4.4.3 `not`
+#### 4.4.3 Not
 
-`not` helper inverts a condition. Takes one argument.
+The `not` helper inverts a condition. It takes one argument.
 
 The following usage example specifies that `myAttributeA` have to start with any letter except `"X"` by inverting `startsWith` condition:
 

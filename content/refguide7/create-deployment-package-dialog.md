@@ -21,11 +21,11 @@ Choose the revision of the selected development line for which you want to creat
 
 ## 5 New Version (for Versioned)
 
-Choose a version for the deployment package. The version consists of four numbers: major version, minor version, patch and revision. The revision is fixed and determined by the revision you selected for **Revision**.
+Choose a version for the deployment package. The version consists of four numbers: major version, minor version, patch, and revision. The revision is fixed and determined by the revision you selected for **Revision**.
 
 The other numbers are free to choose but it is wise to use a convention for the numbering. Major versions typically contain major new feature or rewrites of existing features. A minor version contains small new features and fixes. A patch solves minor issues and should not change the data model of the application. A patch release should be interchangeable with another patch release with no changes to the data.
 
-The Modeler will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
+The Modeler will show you the latest version that you created a package for (if any). You can increase major, minor, or patch according to the convention you use.
 
 ## 6 Description (for Versioned)
 

@@ -38,4 +38,4 @@ See [Create Branch Line Dialog](create-branch-line-dialog) for a description of 
 
 ## 4 Deleting Branch Lines
 
-Yo can delete existing branch lines by selecting them and then clicking **Delete**. Note that this operation cannot be undone.
+You can delete existing branch lines by selecting them and then clicking **Delete**. Note that this operation cannot be undone.

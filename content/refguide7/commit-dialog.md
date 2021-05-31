@@ -5,7 +5,7 @@ parent: "dialogs"
 
 ## 1 Introduction
 
-The **Commit** dialog box is used for committing changes to the Team Server. You can enter a message and - if applicable - select related stories.
+The **Commit** dialog box is used for committing changes to the Team Server. You can enter a message and — if applicable — select related stories.
 
 ![ ](attachments/commit-dialog/commit-dialog-stories.png)
 
@@ -14,7 +14,7 @@ The **Commit** dialog box is used for committing changes to the Team Server. You
 At the top of the dialog box you will see the branch which you are committing. This will be one of the following:
 
 | Branch Description | Notes |
-| --- | --- |
+| :-- | --- |
 | ![](attachments/commit-dialog/commit-main.png) |  you are committing the main line |
 | ![](attachments/commit-dialog/commit-branch.png) |  you are committing the specified branch |
 

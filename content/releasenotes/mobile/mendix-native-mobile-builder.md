@@ -23,8 +23,11 @@ Until now, the Native Mobile Builder required at least GitHub to function correc
 
 In the wizard, new projects can be configured to use one of 2 build types:  
 
-* **Default**: Build automatically using cloud services
-* **Advanced**: Create a local copy for additional customizations, or use this option to build locally
+* **Default**: Build automatically using cloud services.
+  * Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
+* **Advanced**: Create a local copy for additional customizations, or use this option to build locally.
+  * This option gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
+  * In this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
 
 More key information from this release is as follows:
 
@@ -33,22 +36,9 @@ More key information from this release is as follows:
 * **Projects in this state will continue functioning as before, and nothing needs to be changed** 
 * The build type can be changed via the **Build type** page in the Native Mobile Builder.
 
-**Default: Build Automatically Using Cloud Services**
-
-Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
-
-**Advanced: Create a Local Copy for Additional Customizations or Build Locally**
-
-**Advanced** gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
-
-In addition, in this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
-
-**Caveats**
-
-Please pay close attention to these caveats as you use the Mendix Native Builder:
+Please pay close attention to these **caveats** as you use the Mendix Native Builder:
 
 * The Mendix Native Builder is *not* a replacement of a fully-featured Git client. Committing your changes is the equivalent operation of uploading the whole project's Native Template, minus the ignored files to your repository and not just diffs.
-
 * When switching from the **Default** to **Advanced** build types, if the directory selected does not have a valid Native Template, a fresh Native Template will be checked out and not the repository used before.
 * If GitHub is enabled, and the repository exists, the local changes will be committed back to the repository the next time you choose to configure and commit the changes.
 * Going from the **Default** to **Advanced** build type is, for now, *an irreversible action*. Once switched, you cannot switch back to the **Default** build type.

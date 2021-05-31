@@ -11,9 +11,7 @@ Mendix offers Atlas UI, a cross-platform UI framework that gives teams the found
 
 If you use an older version of Mendix Studio Pro, see [atlas2.mendix.com](https://atlas2.mendix.com/) for information on Atlas 2.
 
-Atlas comes with a default design system which can be fully tailored and extended. New apps are based on this design system. 
-
-{{% todo %}}[add the atlas 3 design system live app url when it's live]{{% /todo %}}
+Atlas comes with a default design system which can be fully tailored and extended. New apps are based on this design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
 The styling of apps can be fully customized. For progressive and web apps SASS (SCSS) is used and for native mobile apps JavaScript is used. For more information about styling apps, see [Customize Styling](customize-styling-new).
 

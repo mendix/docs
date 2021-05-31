@@ -8,10 +8,10 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-Using Native Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA).
+Using Native Mobile Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA).
 OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).
 
-Native apps are separated into two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
+Native apps are separated into two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Mobile Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
@@ -117,7 +117,7 @@ To release a new version OTA, follow these steps:
 	{{% image_container width="350" %}}![OTA build step success](attachments/nbui/advanced-ota-success.png){{% /image_container %}}
 
 	{{% image_container width="350" %}}![OTA App Center page](attachments/nbui/advanced-ota-appcenter-page.png){{% /image_container %}}
-1. Wait for the Native Builder to complete.
+1. Wait for the Native Mobile Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
 	{{% image_container width="300" %}}![Update available prompt](attachments/how-to-ota/phone-update-prompt.png){{% /image_container %}}
@@ -140,7 +140,7 @@ Generally, you should avoid doing destructive changes to offline-synced entities
 
 ### 6.1 Offline Apps and Data Loss
 
-Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine.
+Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Mobile Builder to push a new update to the apps. All seems to work fine.
 
 That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
 
@@ -194,7 +194,6 @@ If the OTA release button remains disabled. Verify that the app names added in t
 ## 8 Read More
 
 * [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
-* [Native Builder Reference Guide](/refguide/native-builder)
 * [Offline First Reference Guide](/refguide/offline-first)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
 * [Using the CodePush UI](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/using-ui)

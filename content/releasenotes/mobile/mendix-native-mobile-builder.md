@@ -33,9 +33,9 @@ In the wizard, new projects can be configured to use one of 2 build types:
 
 More key information from this release is as follows:
 
-* Already configured projects will default to the **Default** build type, that is with cloud services enabled
-* If App Center was disabled it will still remain optional until toggled on and configured with a valid App Center token
-* **Projects in this state will continue functioning as before, and nothing needs to be changed** 
+* Already configured projects will default to the **Default** build type, that is with cloud services enabled.
+* If App Center was disabled it will still remain optional until toggled on and configured with a valid App Center token.
+* **Projects in this state will continue functioning as before, and nothing needs to be changed**.
 * The build type can be changed via the **Build type** page in the Native Mobile Builder.
 
 Please pay close attention to these **caveats** as you use the Mendix Native Builder:
@@ -62,7 +62,9 @@ Every mobile app requires certain features, as well as certain permissions users
 
 **Release date: April 1st, 2021**
 
-#### Soothing Animal Sounds (Aprils Fools Joke)
+#### New Features
+
+##### Soothing Animal Sounds (Aprils Fools Joke)
 
 Research has shown that animal sounds can relieve stress. As we work to simplify building Native Apps, we decided to add some stress relief. Now, the Mendix Native Mobile Builder is able to derive your stress levels based on your clicking habits and play animal sounds accordingly.
 
@@ -74,9 +76,11 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 **Release date: March 17th, 2021**
 
-#### OTA based on App Center CodePush
+#### New Features
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. 
+##### OTA based on App Center CodePush
+
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
 
 #### Improvements 
 
@@ -89,7 +93,6 @@ still fail if the keystore values are invalid.
 
 * We fixed an issue with android certificates not being verified correctly.
 * We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
-
 
 ### Release v1.0.81
 
@@ -110,8 +113,7 @@ still fail if the keystore values are invalid.
 
 #### Local Notifications for Mendix 9 
 
-With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile 
-Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
+With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
 
 For Mendix 8 projects, the local notification option will remain non-interactive, but local notifications will still be enabled when Firebase 
 is included in the project.

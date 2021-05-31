@@ -10,7 +10,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
-### June 1st, 2021
+### June 3rd, 2021
 
 #### Fixes
 We fixed a bug in Studio Pro, where certain components did not load properly.

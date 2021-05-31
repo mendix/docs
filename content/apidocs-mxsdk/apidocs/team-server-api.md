@@ -135,7 +135,7 @@ An object with the following key-value pairs:
 
 ### 3.3 Retrieve Revisions
 
-Retrieves all revisions of a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
+Retrieves the last 20 revisions of a specific branch that belongs to the Team Server project of a specific app which the authenticated user has access to as a regular user.
 
 ```http
 HTTP Method: GET

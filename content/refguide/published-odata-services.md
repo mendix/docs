@@ -51,14 +51,6 @@ You can configure security for the OData service when [App Security](project-sec
 
 #### 3.2.1 Requires Authentication {#authentication}
 
-{{% alert type="info" %}}
-
-The **No Authentication** feature was introduced in version 8.0.0. In earlier versions, it was always **Username and password**.
-
-The **Active Session** and **Custom** authentications were also introduced in version 8.0.0.
-
-{{% /alert %}}
-
 Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
 
 Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](anonymous-users).

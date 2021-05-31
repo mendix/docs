@@ -655,5 +655,4 @@ solutions, on premise or as a service, that can be used for this purpose. We do 
 
 ## 9 Read More
 
-* [Native Builder Reference Guide](native-builder)
 * [Offline First Reference Guide](offline-first)

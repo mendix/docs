@@ -64,7 +64,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 ### 3.1 Searching for Assets
 
-From the **Data Hub Home** page, you can you can search the Catalog in the following ways:
+From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
 ![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
 

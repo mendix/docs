@@ -318,8 +318,6 @@ You have configured the navigation for your app and now you can preview and test
 
 ![Configured Navigation](attachments/workflow-how-to-configure/configured-navigation.png)
 
-{{% todo %}}[Update this screenshot with preconfigured menu later]{{% /todo %}}
-
 ## 11 Testing the Workflow {#test-workflow}
 
 Now you can test your workflow from the perspective of different users. 

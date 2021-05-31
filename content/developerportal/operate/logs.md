@@ -27,7 +27,7 @@ You can view the live (current) log, download it, or view and download an archiv
 The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
  
-Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 3 months.
+Logs on Mendix Cloud v4 are rotated and archived every day. The logs are kept for at least 6 months.
 
 ![Logs Page v4](attachments/logs/log-v4.png)
 

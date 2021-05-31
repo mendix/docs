@@ -1,9 +1,13 @@
 ---
-title: "Native Builder"
+title: "Native Builder (CLI)"
 parent: "native-mobile"
 menu_order: 70
-tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
+tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---
+
+{{% alert type="warning" %}}
+The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app).
+{{% /alert %}}
 
 {{% alert type="warning" %}}
 Please update to Native Builder v3.2.1 or higher. Native Builder v3.2.1 includes the fixes required to addresses GitHub's transition from using **master** to using **main** as its default repository branch name. 

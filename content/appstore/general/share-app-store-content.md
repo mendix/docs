@@ -89,7 +89,7 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+2.  Select the category of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
 
 	![](attachments/share-app-store-content/category.JPG)
 

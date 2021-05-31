@@ -17,8 +17,10 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ##### Local Project Configuration Support
 
-*This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
-
+{{% alert type="info" %}}
+This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
+{{% /alert %}}
+ 
 Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/mobile/native-build-locally).
 
 In the wizard, new projects can be configured to use one of 2 build types:  

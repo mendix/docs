@@ -10,6 +10,18 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### May 31st, 2021
+
+#### Improvements
+
+* When [adding new Marketplace content](/appstore/general/share-app-store-content#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
+* When you create a new component in the **Solutions** category, you will not be able to upload a source file, as solutions will no longer have downloadable content.
+* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/general/share-app-store-content#publish) page.
+  
+#### Fixes
+
+* We fixed some bugs in the flow for adding new Marketplace content.
+
 ### May 28th, 2021
 
 #### New Features
@@ -17,7 +29,6 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
 	* Automatic provisioning of the app service on subscription.
 	* The [Service Management Dashboard](/appstore/general/app-store-overview#service-management), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
-
 
 ### May 4th, 2021
 

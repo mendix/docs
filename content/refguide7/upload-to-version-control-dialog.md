@@ -13,7 +13,7 @@ To open this dialog box, go to **Project > More Versioning > Upload to Version C
 
 With this dialog box you can upload an application that is not yet stored in a version control server.
 
-![](/Users/Luyao.Zhang/docs/content/refguide7/attachments/upload-to-version-control-dialog/upload-to-version-control-server-dialog.png)
+![](attachments/upload-to-version-control-dialog/upload-to-version-control-server-dialog.png)
 ## 2 Where Should We Upload Your App
 
 Use this setting to select the location where you want to store your app.

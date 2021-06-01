@@ -8,8 +8,8 @@ menu_order: 50
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 
-{{% alert type="info" %}}
-As of Sunday 20 June you will no longer be able to create app projects using app templates created in a Mendix version older than 7.23.14. Please update your templates to the LTS version of 7 or younger before creating app projects based on those templates.
+{{% alert type="warning" %}}
+As of June 20th, 2021, you can no longer create apps using app templates created in a Studio Pro version older than [7.23.14](/releasenotes/studio-pro/7.23#72314). Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above when creating apps based on those templates.
 {{% /alert %}}
 
 ## 2 Error Handling

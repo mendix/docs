@@ -7,6 +7,8 @@ id: "pluggable-widgets/property-types"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
 menu_order: 30
+aliases:
+- /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets
 ---
 
 ## 1 Introduction

@@ -7,6 +7,8 @@ id: "pluggable-widgets/native-dependencies"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
 menu_order: 40
+aliases:
+ - /apidocs-mxsdk/apidocs/native-dependencies
 ---
 
 ## 1 Introduction

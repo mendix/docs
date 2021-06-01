@@ -4,6 +4,8 @@ category: "API Documentation"
 description: A guide for understanding pluggable widgets.
 menu_order: 45
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
+aliases:
+ - /apidocs-mxsdk/apidocs/pluggable-parent-9
 ---
 
 ## 1 Introduction

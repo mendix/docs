@@ -7,6 +7,8 @@ id: "pluggable-widgets/client-apis"
 dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
 menu_order: 20
+aliases:
+ - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
 ---
 
 ## 1 Introduction

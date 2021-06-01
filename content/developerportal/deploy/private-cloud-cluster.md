@@ -1049,7 +1049,7 @@ You can only see the environment details of an app if you are a member of the te
 
 #### 6.2.2 Members
 
-By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
 * Add and delete namespaces
 * Add, activate, or deactivate plans

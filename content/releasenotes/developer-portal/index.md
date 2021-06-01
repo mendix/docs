@@ -17,7 +17,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### June 1st, 2021
 
-* We are deprecating part of the options to create an app project based on an app template. As of Sunday 20 June you will no longer be able to create app projects through the [public API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/index#navigation) using app templates created in a Mendix version older than 7.23.14. Please update your templates to the LTS version of 7 or younger before creating app projects based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/index#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
 
 ### May 17th, 2021
 

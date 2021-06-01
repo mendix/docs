@@ -39,6 +39,10 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
 * If the type of a key property is `String`, it needs to have a limited length. That is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, but you know that the string is limited in length, you can still use the entity when you specify the max length of the attribute in the the domain model.
 
+{{% alert type="info" %}}
+The feature of using entities with keys that don't have their max length specified in the contract was introduced in Studio Pro 9.3.0. In earlier versions, you need to change the contract and add `MaxLength` there.
+{{% /alert %}}
+
 ### 3.2 Attributes
 
 {{% alert type="warning" %}}

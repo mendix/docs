@@ -20,13 +20,13 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 ## 3 Message
 
-Enter a message describing the changes you have made. This message may contain multiple lines. If you want to confirm the form by keyboard and you are inside the message box you can use <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
+In the **Message** field, enter a message describing the changes you have made. This message may contain multiple lines. If you want to confirm the form by keyboard and you are inside the message box you can use <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
 
 ## 4 Commit Tabs
 
 ### 4.1 Related Stories {#stories}
 
-Select the check boxes next to the stories that are related to your commit. We recommended small sets of changes and then there is usually just one related story.
+Select the check boxes next to the stories that are related to your commit. We recommend small sets of changes so that there is usually just one related story.
 
 ### 4.2 Changes in Model
 

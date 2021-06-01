@@ -4,11 +4,11 @@ parent: "dialogs"
 ---
 
 ## 1 Introduction
-Use this dialog box to create and delete [branch lines](version-control) of an app that is stored on a version control server.
+Use this dialog box to create and delete [branch lines](version-control#branch-line) of an app that is stored on a version control server.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
-* To do maintenance development on a version of your app that is running in production. You can keep on developing in the main line while you fix issues in the branch line.
-* If you are starting the development of a very large feature that will take more than a day to develop. By doing this in a branch line you can commit the half-implemented feature (possibly even with errors) without disturbing other development in the main line.
+* To do maintenance development in the branch line on a version of your app that is running in production, while still keeping on developing in the main line
+* To start deveoping a very large feature that will take more than a day to develop in the branch line, without disturbing other development in the main line
 
 ## 2 Location
 
@@ -16,7 +16,7 @@ Use this setting to select the location where your app is stored. This can be ei
 
 ### 2.1 Mendix Team Server
 
-Select the Team Server app of which you want to manage the branch lines. If you have an app open in the Modeler it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
+Select the Team Server app of which you want to manage the branch lines. If you have an app open in the Desktop Modeler it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
 ### 2.2 Other SVN Server
 
@@ -24,7 +24,7 @@ In the **SVN repository address** field, enter the address of the app you want t
 
 {{% alert type="warning" %}}
 
-This option is only available when support for other SVN servers is enabled in the [Preferences dialog box](preferences-dialog).
+This option is only available when support for other SVN servers is enabled in the [Preferences dialog box](preferences-dialog#enabled).
 
 {{% /alert %}}
 

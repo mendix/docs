@@ -37,7 +37,7 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified)
 * Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
-* If the type is `String`, a `MaxLength` must be specified either in remote entity or can be set-up within Domain Model in Mendix. 
+* If the type is `String`, a `MaxLength` must be specified
 
 ### 3.2 Attributes
 

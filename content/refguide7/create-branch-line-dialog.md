@@ -15,7 +15,7 @@ A branch line allows independent development from other development lines. There
 
 ## 2 Create Branch From
 
-Choose where you want to create the branch line from. If you are doing maintenance on a deployed version you probably want to select a tagged version here. Select *Main line* if you want to develop a large feature independently of the main line. It is also possible to create a branch line from another branch line, but we don't recommend this unless you know what you are doing.
+Choose where you want to create the branch line from. If you are doing maintenance on a deployed version you probably want to select a tagged version here. Select ***Main line** if you want to develop a large feature independently of the main line. It is also possible to create a branch line from another branch line, but we do not recommend this unless you know what you are doing.
 
 ## 3 Tagged Version (for Tagged Version)
 

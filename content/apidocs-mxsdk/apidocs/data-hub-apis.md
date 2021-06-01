@@ -82,11 +82,11 @@ The **Warden Home Screen** displays a list of all the tokens:
 
 * Delete unused tokens by clicking the "bin" icon for the token
 
-## 3. Data Hub Open API Specs {#datahubapis}
+## 3. Data Hub Open API Index Page {#datahubapis}
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are Open API (formerly Swagger) specifications located at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) Open API (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
 
-The following APIs are currently available:
+From this page the following APIs are currently available:
 
 * [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)
 * [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
@@ -95,14 +95,32 @@ The following APIs are currently available:
 For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). The [Data Hub Transform Open API Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
 
 {{% alert type="info" %}}
-The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to this API and use the latest Registration and Search API URLs.
+The Data Hub API v2 version  is now deprecated and will be removed. Users should update their calls to the latest APIs and use the latest Registration and Search API URLs.
 {{% /alert %}}
 
 {{% alert type="info" %}}
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 4. Data Hub Transform Open API Spec {#transform}
+## 4. The Data Hub Search API
+
+The [Search Open API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
+
+The API also includes calls to retrieve all versions of a data source and full details of specific services.
+
+The [Search Open API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
+
+The API also includes calls to retrieve all versions of a data source and full details of specific services.
+
+## 5. The Data Hub Registeration API
+
+The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments and services or data sources.
+
+The API includes POST methods for registering new assets, and also PUT calls to *update* assets that are already registered.
+
+Apps consuming registered assets can also be registered to ensure that a complete network of shared assets can be maintained.
+
+## 6. Data Hub Transform Open API Spec {#transform}
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the registration request body for the PUT published endpoints for the Data Hub API. The Transform API extracts the information from the **dependencies.json** file and the response can be used in the request bodies for the PUT calls to the Data Hub API.
 

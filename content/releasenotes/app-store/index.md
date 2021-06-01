@@ -3,7 +3,6 @@ title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#ki: "There is an issue with users" - AS-1760 (also WS RN)
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
@@ -13,7 +12,8 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 ### June 3rd, 2021
 
 #### Fixes
-We fixed a bug in Studio Pro, where certain components did not load properly.
+
+* We fixed a bug in Studio Pro where certain components did not load properly.
 
 ### May 31st, 2021
 

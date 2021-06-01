@@ -79,7 +79,7 @@ For some examples, an example [curl](http://curl.haxx.se/) command is also given
 
 To gain access to your organization’s Data Hub you must include your personal access token ([PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat)). *Authorization* is not required for your API calls, however, you must include the following key:value pair as part of the *header* for *each* request:
 
-​   `Authorization`: `MxToken <your_PAT_Token>`.
+   `Authorization`: `MxToken <your_PAT_Token>`.
 
 Insert the value of your PAT token for the string <*your_PAT_Token*>.
 

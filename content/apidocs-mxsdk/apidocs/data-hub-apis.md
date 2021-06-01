@@ -12,7 +12,7 @@ The [Data Hub APIs](#datahubapis) are Open API 3.0 specs available at https://da
 
 From this page the following APIs are available:
 
-* Register API — register data sources to the organization's Mendix Data Hub
+* Register API — register and update data sources to the organization's Mendix Data Hub
 * Search API — search and explore data sources that can be used in your app development
 * [Data Hub Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
@@ -92,7 +92,7 @@ The following APIs are currently available:
 * [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
 * [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html)
 
-For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). [Data Hub Transform Open API Spec](#transform) describes how to generate the registration request bodies for Mendix Apps.
+For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). The [Data Hub Transform Open API Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
 
 {{% alert type="info" %}}
 The Data Hub API v2 version of the API is now deprecated and will be removed. Users should update their calls to this API and use the latest Registration and Search API URLs.

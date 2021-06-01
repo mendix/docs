@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 ## 1. Introduction
 
-The [Data Hub APIs](#datahubapis) are Open API 3.0 specs available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
+The [Data Hub APIs](#datahubapis) are OpenAPI 3.0 specs available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
 
 From this page the following APIs are available:
 
@@ -82,9 +82,9 @@ The **Warden Home Screen** displays a list of all the tokens:
 
 * Delete unused tokens by clicking the "bin" icon for the token
 
-## 3. Data Hub Open API Index Page {#datahubapis}
+## 3. Data Hub OpenAPI Index Page {#datahubapis}
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) Open API (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) OpenAPI (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
 
 From this page the following APIs are currently available:
 
@@ -92,7 +92,7 @@ From this page the following APIs are currently available:
 * [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
 * [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html)
 
-For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). The [Data Hub Transform Open API Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
+For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). The [Data Hub Transform OpenAPI Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
 
 {{% alert type="info" %}}
 The Data Hub API v2 version  is now deprecated and will be removed. Users should update their calls to the latest APIs and use the latest Registration and Search API URLs.
@@ -104,11 +104,11 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 ## 4. The Data Hub Search API
 
-The [Search Open API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
+The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
-The [Search Open API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
+The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
@@ -120,7 +120,7 @@ The API includes POST methods for registering new assets, and also PUT calls to 
 
 Apps consuming registered assets can also be registered to ensure that a complete network of shared assets can be maintained.
 
-## 6. Data Hub Transform Open API Spec {#transform}
+## 6. Data Hub Transform OpenAPI Spec {#transform}
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the registration request body for the PUT published endpoints for the Data Hub API. The Transform API extracts the information from the **dependencies.json** file and the response can be used in the request bodies for the PUT calls to the Data Hub API.
 
@@ -133,7 +133,7 @@ The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaw
 The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/v1/dependenciesjson.
 
 {{% alert type="info" %}}
-For the current release, the interactive features of the Open API interface are not operational and therefore the **Try it out** feature does not work.
+For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
 ### 4.2 Location of the dependencies.json file of an App
@@ -156,7 +156,7 @@ This object must specify the location constants for the published endpoints that
 
  You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see the section [Location Constants Values](/data-hub/general/data-hub-api-how-to#metadata-file) in  *Using the Data Hub APIs* document.
 
- For the example given in the Open API  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
+ For the example given in the OpenAPI  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
 
      "EndpointLocationConstants": [
     {

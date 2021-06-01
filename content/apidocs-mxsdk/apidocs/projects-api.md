@@ -8,6 +8,10 @@ menu_order: 50
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 
+{{% alert type="info" %}}
+As of Sunday 20 June you will no longer be able to create app projects using app templates created in a Mendix version older than 7.23.14. Please update your templates to the LTS version of 7 or younger before creating app projects based on those templates.
+{{% /alert %}}
+
 ## 2 Error Handling
 
 The following errors might be returned by the service. As this API is implemented as an app service, it will only give a HTTP status code 500 in case an error occurs.

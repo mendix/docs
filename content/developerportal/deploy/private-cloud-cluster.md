@@ -21,7 +21,7 @@ Once you have created your namespace, you can invite additional team members who
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform or OpenShift version 3.11 or above
+* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
@@ -128,7 +128,7 @@ Now you can download the Configuration Tool by doing the following:
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
-### 4.2 Signing in to OpenShift{#openshift-signin}
+### 4.2 Signing in to the Platform{#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -202,6 +202,8 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+![](attachments/private-cloud-cluster/configure-namespace.png)
+
 The options do the following:
 
 * **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
@@ -234,6 +236,8 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
+A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -243,7 +247,14 @@ Once you have entered the details you can apply two validation checks by clickin
 
 ![Database Plan Configuration](attachments/private-cloud-cluster/database-plan-config.png)
 
-The supported **Database Types** are described below:
+The following **Database Types** are supported:
+
+* PostgreSQL
+* Ephemeral
+* SQL Server
+* Dedicated JDBC
+
+They are described in more detail below:
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -758,7 +769,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -806,7 +817,7 @@ When you have configured all the resources, do the following:
 
 ### 4.4 Confirming Namespace Configuration
 
-When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
+When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 

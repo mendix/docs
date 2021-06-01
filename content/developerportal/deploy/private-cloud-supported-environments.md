@@ -14,7 +14,7 @@ This document covers which providers and services are officially supported by th
 
 ## 2 Kubernetes Cluster Types
 
-### 2.1 Supported Cluster Types
+### 2.1 Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:
 
@@ -101,6 +101,15 @@ To use an ECR registry, the Mendix Operator will need an AWS Identity and Access
 The EKS cluster should be configured so that it can [pull images from ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
 ## 4 Databases
+
+The following databases are supported, and provide the features listed.
+
+| Database | Data Persists | Provisioned by Operator |
+| === | === | === |
+| Ephemeral | No | Yes |
+| Standard PostgreSQL | Yes | Yes |
+| Microsoft SQL Server | Yes | Yes |
+| Dedicated JDBC | Yes | No |
 
 ### 4.1 Ephemeral Database
 

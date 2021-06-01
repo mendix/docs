@@ -11,27 +11,26 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 This guide describes how to use the Data Hub APIs.
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are published as OpenAPI 3.0 (formerly Swagger) specifications which enables you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
+Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub upon deployment. Users in Studio Pro can also directly consume shared datasets through the [Data Hub Pane](/refguide/data-hub-pane). For registering data sources from other business applications, the  [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are available.
 
-This how-to will guide you through the sequence of steps for searching the Data Hub and registering your data sources.
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are published as OpenAPI 3.0 (formerly Swagger) specifications which enable you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
 
-Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub upon deployment. Users in Studio Pro can also directly consume shared datasets through the [Data Hub Pane](/refguide/data-hub-pane).
+This how-to will guide you through the sequence of steps for searching the Data Hub and registering your data sources. It provides further guidance and information that supplements the published OpenAPI specs.
 
-A step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume is available in [Share Data Between Apps](/data-hub/share-data) . This will illustrate the steps required for using the Data Hub and illustrate the API calls.
+There is a a step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume in [Share Data Between Apps](/data-hub/share-data) . This illustrates the steps required for using the Data Hub for your app development and data sharing and illustrates the API calls that are available through the  [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
-The [Transform API](#transform) enables Mendix users that deploy to a *non-Mendix Cloud* to extract the information that is required to register their apps using the Data Hub API calls.
+For Mendix users that deploy to a *non-Mendix Cloud* the [Transform API](#transform) can be used to extract the information that is required to register assets using the Data Hub API calls.
 
 {{% alert type="info" %}}To use the Mendix Data Hub a license is required. {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
-* Using the Data Hub APIs:
-  * Search the catalog for a string of characters – [Searching in the Catalog](#api-search)
-  * Register the service in the Catalog – [Registration](#reg-contract)
-  * Register consumed datasets by an App – [Registering Consumed Endpoints](#consumed-ep)
-* Using the Transform API create the request body for the PUT published endpoint call for
+* Search the catalog for registered assets – [Searching in the Catalog](#api-search)
+* Register assets in the Catalog – [Registering Applications, Environments, Data Sources](#reg-contract)
+* Register consumed datasets by an App – [Registering Consumed Endpoints by an App](#consumed-ep)
+* Use the [Transform API](#transform) to create the request body for registering Mendix services deployed to a non-Mendix environment using the Data Hub API.
 
-You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). The values for the call bodies are included and also a sample OData v3 file that you can use to try the registration calls.
+You can try out the calls described by following the examples that are provided in the accompanying document: [Data Hub API Examples](data-hub-api-how-to-examples). Examples for the call bodies are included and also a sample OData v3 file that you can use to try the registration calls.
 
 ## 2 Prerequisites
 
@@ -108,7 +107,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
 * <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
-## 5 Search API {#api-search}
+## 5 Searching in the Catalog {#api-search}
 
 The primary method in the search API is GET. This is used to search in the Catalog for registered assets that satisfy a search string and specified filters. ???It can also be used to retreive details of registered data sources???
 

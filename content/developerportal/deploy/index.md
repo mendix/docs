@@ -6,7 +6,11 @@ tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubern
 ---
 
 {{% alert type="info" %}}
-![](attachments/chinese-translation/china.png?display=inline-block) For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
+![](attachments/chinese-translation/china.png) For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

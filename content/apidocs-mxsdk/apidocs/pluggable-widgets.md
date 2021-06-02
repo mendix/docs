@@ -4,6 +4,8 @@ category: "API Documentation"
 description: A guide for understanding pluggable widgets.
 menu_order: 45
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
+aliases:
+ - /apidocs-mxsdk/apidocs/pluggable-parent-9
 ---
 
 ## 1 Introduction
@@ -119,15 +121,15 @@ After widget attributes, you will see a description of a widget that will be pre
 ```
 In Mendix Studio Pro, the widget described above would look like this:
 
-![basic widget](attachments/pluggable-widgets/basic-widget.png)
+![basic widget](pluggable-widgets/attachments/basic-widget.png)
 
-![basic progress card](attachments/pluggable-widgets/basic-widget-progress-card.png)
+![basic progress card](pluggable-widgets/attachments/basic-widget-progress-card.png)
 
 #### 4.2.1 Help Page {#help}
 
 You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
 
-![basic widget](attachments/pluggable-widgets/widget-dialog-help-button.png)
+![basic widget](pluggable-widgets/attachments/widget-dialog-help-button.png)
 
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
@@ -218,11 +220,11 @@ Before examining properties themselves, it is useful to understand property grou
 
 This is how the property group structure is represented in Studio Pro:
 
-![edit progress general](attachments/pluggable-widgets/edit-progress-card.png)
+![edit progress general](pluggable-widgets/attachments/edit-progress-card.png)
 
-![edit progress visual](attachments/pluggable-widgets/edit-visual-tab.png)
+![edit progress visual](pluggable-widgets/attachments/edit-visual-tab.png)
 
-![properties widget](attachments/pluggable-widgets/properties-widget.png)
+![properties widget](pluggable-widgets/attachments/properties-widget.png)
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
@@ -230,7 +232,7 @@ Note that the **Common** and **Appearance** tabs are added to your widget config
 
 ## 6 Widget Property
 
-This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](property-types-pluggable-widgets). Every `property` tag in the Widget Properties Definition has a shape similar to this:
+This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
     <property key="cardName" type="textTemplate">
@@ -248,12 +250,15 @@ Some properties can or must have more attributes or tags. This depends on the `t
 
 Here is how a caption and description look in Studio Pro:
 
-![caption](attachments/pluggable-widgets/card-icon.png)
+![caption](pluggable-widgets/attachments/card-icon.png)
 
-![description](attachments/pluggable-widgets/card-description.png)
+![description](pluggable-widgets/attachments/card-description.png)
 
 ## 7 Read More
 
-* Pluggable Widget API information for [Mendix 9](pluggable-parent-9)
-* Pluggable Widget API information for [Mendix 8](pluggable-parent-8)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis)
+* [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)
+* [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/studio-apis)
+* Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8)
 

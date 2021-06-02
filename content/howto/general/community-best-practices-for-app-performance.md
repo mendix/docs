@@ -38,8 +38,7 @@ If you made a simple and sound design of the app's domain models, consider the f
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
 * Do not use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
-* Avoid using more than one association between entities, especially if such associations give different access level. Instead, use enumerations within one of the entities or add an intermittent entity between the entities that would contain an enumeration with the association type.
-For example, in case of different user types accessing a document, do not create associations `Document_Owner`,  `Document_Editor`, `Document_Viewer`, etc. Instead, add an intermittent entity named `DocumentAccess` between the entities that would contain an enumeration filed `AccessType` with possible values `Owner`, `Editor`, `Viewer`.
+* Avoid using more than one [association](/refguide/associations) between entities, especially if such associations give different access levels. Instead, use [enumerations](/refguide/enumerations) within one of the entities, or add an intermediary entity between the entities that contains an enumeration with the association type. For example, if different user types are accessing a document, do not create the associations **Document_Owner**, **Document_Editor**, **Document_Viewer**, etc. Instead, add an intermediary entity named **DocumentAccess** between the entities that contains an enumeration named **AccessType**, with the possible values of **Owner**, **Editor**, and **Viewer**.
 
 ##  3 Index Best Practices
 

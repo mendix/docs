@@ -47,7 +47,7 @@ On the **Active App Projects** tab of this page, you can see a list of the activ
 When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
 
 * **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to an team via this page.
+* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
 * **Project Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
 When you select one or more apps via the check boxes on the **Active App Projects** or **Deactivated App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
@@ -130,7 +130,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 This feature is not yet publicly available. Please talk to your CSM to enable this page.
 {{% /alert %}}
 
-The **Cloud Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
+The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
 
 ![](attachments/cloud.jpg)
 
@@ -140,7 +140,11 @@ There are links to three other pages from this tab to allow you to [make request
 * [Resize Environment](/developerportal/support/new-app-node-request-template#resize) – requests a container size change
 * [Offboard Environment](/developerportal/support/new-app-node-request-template#offboard) – requests that an app is offboarded
 
+{{% alert type="info" %}}
 These links will open in a new browser tab.
+{{% /alert %}}
+
+The **Free Environments** tab presents details on your company's free environments.
 
 ## 10 Read More
 

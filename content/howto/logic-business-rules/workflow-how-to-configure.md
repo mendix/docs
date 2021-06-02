@@ -77,7 +77,7 @@ Do the following:
 
 5. You need to assign the **User** user role to Facilities for all other modules. Double-click the newly created Facilities role.
 
-6. In the **User Role** dialog box, click **Edit** in the **Module roles** section {{% todo %}}[Check if this screenshot needs to be updated]{{% /todo %}}.
+6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 

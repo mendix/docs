@@ -89,7 +89,10 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+2.  Select the category of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+
+	![](attachments/share-app-store-content/category.JPG)
+
 3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)
@@ -107,8 +110,13 @@ To add content to the Marketplace, follow these steps:
 5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
 	a. Enter a **Name** for your component.<br />
 	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
-	c. Select the **Studio Pro Version** on which you built the content.<br />
-	<a name="license"></a>d. Select the type of **License** you want applied to your app (if applicable):<br />
+	c. The **Category** you selected earlier will be listed here. You can change this if necessary.<br />
+	
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change Category after inital version is published.
+	{{% /alert %}}
+
+	d. Select the **Studio Pro Version** on which you built the content.<br />
+	<a name="license"></a>e. Select the type of **License** you want applied to your app (if applicable):<br />
 
 	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
 	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
@@ -128,8 +136,8 @@ To add content to the Marketplace, follow these steps:
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-8.  On the **Package** page, select your content source:
-
+8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
+	
 	* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
 		* When you are finished, click **OK**
@@ -162,13 +170,13 @@ To add content to the Marketplace, follow these steps:
 
 11. Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-	![](attachments/share-app-store-content/enable.jpg)
+	![](attachments/share-app-store-content/enable.png)
 	
 	You can also optionally add a **Video** and **Demo**.
 	
-12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+12. <a name="publish"></a>Finally, on the **Review & publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-	![](attachments/share-app-store-content/publish.jpg)
+	![](attachments/share-app-store-content/publish.png)
 
 <a name="approval"></a>After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the Marketplace.
 

@@ -40,7 +40,7 @@ To download content from the Marketplace via Studio Pro, follow these steps:
 
 4.  On the Marketplace overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
 
-	![](attachments/app-store-content/18582345.png)
+	![](attachments/app-store-content/marketplace.png)
     
 	{{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.
 	{{% /alert %}}
@@ -55,7 +55,7 @@ To download content from the Marketplace via Studio Pro, follow these steps:
 
     Make sure that you download the correct version of the content from the Marketplace, because the widget or module version needs to be compatible with the Studio Pro version you are using. Do not download a widget that has a higher release version than the Studio Pro you are using. You can access older versions of the widgets in the **All Versions** tab in the Marketplace and download the most compatible version:
 
-    ![](attachments/app-store-content/18580437.png)
+    ![](attachments/app-store-content/versionspng)
 
 ## 4 Using a Widget in Studio Pro {#widget}
 
@@ -85,9 +85,7 @@ To add the Radio Button List widget from the Marketplace via Studio Pro, follow 
 
 ### 4.2 Using the Widget
 
-Each widget that you download from the Marketplace is different and has different ways of being used. For more information on what the widget does and how it can be implemented, check out the **Documentation** tab specific to each widget in the Marketplace:
-
-![](attachments/app-store-content/18580433.png)
+Each widget that you download from the Marketplace is different and has different ways of being used. For more information on what the widget does and how it can be implemented, check out the **Documentation** tab specific to each widget in the Marketplace.
 
 Most widgets will require you to configure them. This is why when you drop the widget into a page, you will often see an error in the **Errors** list.
 

@@ -1,11 +1,8 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
+parent: "pluggable-widgets"
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
-
-id: "pluggable-widgets/client-apis"
-dir: "/apidocs-mxsdk/apidocs/"
-parent: "pluggable-widgets"
 menu_order: 20
 aliases:
  - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
@@ -194,7 +191,7 @@ export interface FileValue {
 
 ### 4.7 List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis/list-values) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) property. See [List Values](list-values) for more information about usage of `ListValue` and associated property values.
 
 ## 5 Exposed Modules
 

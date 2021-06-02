@@ -9,13 +9,13 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "PAT"]
 
 ## 1 Introduction
 
-This guide describes how to use the Data Hub APIs.
+This how-to is a general guide for using  the Data Hub APIs. For the complete definitions the APIs and the responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
 Data sources that are published as OData Services in Mendix Studio Pro for apps that deploy to a Mendix cloud are automatically registered in the Data Hub upon deployment. Users in Studio Pro can also directly consume shared datasets through the [Data Hub Pane](/refguide/data-hub-pane). For registering data sources from other business applications, the  [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are available.
 
 The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are published as OpenAPI 3.0 (formerly Swagger) specifications which enable you to visualize the API.  Using the Data Hub APIs you can create a deployment process to register OData v3 and OData v4 services that define your shared data sources to your organization's Data Hub. Using the APIs you can also search for suitable data sources to use in your app development and register apps that consume the shared data sources.
 
-This how-to will guide you through the sequence of steps for searching the Data Hub and registering your data sources. It provides further guidance and information that supplements the published OpenAPI specs.
+This how-to will guide you in using the APIs that are available for searching the Data Hub and registering your data sources. It provides information to supplement the published OpenAPI specs.
 
 There is a a step-by-step guide on using the Data Hub and the Data Hub integration in Studio Pro to search, register and consume in [Share Data Between Apps](/data-hub/share-data) . This illustrates the steps required for using the Data Hub for your app development and data sharing and illustrates the API calls that are available through the  [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
@@ -25,6 +25,7 @@ For Mendix users that deploy to a *non-Mendix Cloud* the [Transform API](#transf
 
 **This how-to will teach you how to do the following:**
 
+* Incorporating the [PAT](#pat) token into your API calls to ensure that you can access your organizations API.
 * Search the catalog for registered assets – [Searching in the Catalog](#api-search)
 * Register assets in the Catalog – [Registering Applications, Environments, Data Sources](#reg-contract)
 * Register consumed datasets by an App – [Registering Consumed Endpoints by an App](#consumed-ep)
@@ -41,32 +42,23 @@ Before starting this how-to, make sure you have completed the following:
 
 ## 3 Overview of the Data Hub APIs
 
-The following list provides an overview the Data Hub APIs:
+The latest Data Hub APIs are available as OpenAPI specs at: [https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
 
-* The latest Data Hub APIs are available at: [https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html). The full specification details, descriptions  and responses are provided for each of the APIs available.
+All requests to the Data Hub API must include the personal access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
 
-* All requests to the Data Hub API must include the access token ([PAT](#pat)) to gain access to the organization’s Data Hub. For more details see: [API calls and Access to Data Hub](#access).
+* The following Data Hub APIs are available:
 
-* The following operations can be carried out using the Data Hub APIs:
+  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using the [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) which is described in [Searching in the Catalog](#api-search).
+  * Register and update data sources (OData services) using the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) as described in [Registering Applications, Environments, Data Sources](#reg-contract). Data sources are registered to applications, deployed to an  environment. The UUID values are required.
+    1. Applications can be registered using [POST](#register-app) for new applications or PUT to update or register to a named UUID.
 
-  * Search for registered assets (data sources, datasets, attributes and associations) in the Catalog using the [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)which is described in (#api-search)
-
-  * Register data sources (OData services) using the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) as described in [Registering Applications, Environments, Data Sources](#reg-contract):
-    The following requests must be made in the given order using the returned UUID values for the subsequent step:
-
-    1. Register the application that the dataset originates from: [POST applications](#register-app)
-
-    2. Register the environment that the dataset is deployed to: [POST environment](#register-env)
+    2. Register the environment that the dataset is deployed using [POST ](#register-env) for new applications or PUT to update or register to a named UUID.
 
     3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
-
   * Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
-
   * Create a registration call body for Mendix apps *not* deployed to a Mendix Cloud using the [Transform API](#transform).
 
-## 4 Making the API Calls and Access to Data Hub {#access}
-
-This how-to is a guide in the general use of the Data Hub APIs. For the complete definitions of what must be specified when making calls and the details of the different API responses, refer to the [Data Hub OpenAPI 3.0 spec](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html).
+## 4 Making the API Calls and Access to your Data Hub {#access}
 
 For each request described in this document, the method and the base URL is given with a description of the general parameters and body that can be used for a typical request. An example is given for each of the calls in [Data Hub API Examples](data-hub-api-how-to-examples) so that you can try them out.
 
@@ -109,16 +101,16 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 ## 5 Searching in the Catalog {#api-search}
 
-The primary method in the search API is GET. This is used to search in the Catalog for registered assets that satisfy a search string and specified filters. ???It can also be used to retreive details of registered data sources???
+The primary method in the [Search API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html) is GET. This is used to search in the Catalog for registered assets that satisfy a search string and specified filters. It can also be used to retrieve specific registered data sources.
 
-Search is carried out on all discoverable registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
+Search is carried out on all **discoverable** registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
 
 The Data Hub Search API URL is: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html.
 
 
 To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex).
 
-For more details see [Searching in the Data Hub](/data-hub/data-hub-catalog/search).
+For general details on Searching in the Data Hub Catalog see [Searching in the Data Hub](/data-hub/data-hub-catalog/search).
 
 ### 5.1 Base URL, Method and Endpoint
 

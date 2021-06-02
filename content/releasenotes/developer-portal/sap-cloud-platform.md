@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### June 2nd, 2021
+
+#### Improvements
+
+* We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
+
 ### May 27th, 2021
 
 #### Improvements

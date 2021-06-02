@@ -1,4 +1,4 @@
----
+versionspng---
 title: "Use Marketplace Content in Studio Pro"
 category: "General Info"
 menu_order: 20
@@ -55,7 +55,7 @@ To download content from the Marketplace via Studio Pro, follow these steps:
 
     Make sure that you download the correct version of the content from the Marketplace, because the widget or module version needs to be compatible with the Studio Pro version you are using. Do not download a widget that has a higher release version than the Studio Pro you are using. You can access older versions of the widgets in the **All Versions** tab in the Marketplace and download the most compatible version:
 
-    ![](attachments/app-store-content/versionspng)
+    ![](attachments/app-store-content/versions.png)
 
 ## 4 Using a Widget in Studio Pro {#widget}
 

@@ -40,7 +40,7 @@ Choose the branch line that you want to merge. It is not necessary to select ind
 
 While normally you would only merge (revisions of) a branch line to the main line, the advanced merge scenario offers the possibility to merge from the main line to a branch line, or from one branch line to another.
 
- {{% alert type=“warning” %}}
+ {{% alert type="warning" %}}
 
 This scenario may be used for merge actions that are only needed in exceptional circumstances. Use this option with caution.
 

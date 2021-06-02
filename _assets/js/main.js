@@ -209,6 +209,13 @@
       pages.forEach(function (page) {
         var $item = $('<li />');
         var subpages = data.pages.filter(function (rootpage) {
+          if (rootpage.p && rootpage.p.indexOf("/") !== -1) {
+            // path normalization
+            const a = new URL(rootpage.d + rootpage.p, window.location);
+            const b = new URL(page.d + page.i, window.location);
+
+            return a.pathname === b.pathname;
+          }
           return rootpage.p && rootpage.p.toLowerCase() === page.i.toLowerCase() && rootpage.d.indexOf(page.d) !== -1;
         });
         var title = typeof page.mt !== 'undefined' ? page.mt : page.t;

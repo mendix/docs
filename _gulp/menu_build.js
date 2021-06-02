@@ -116,7 +116,7 @@ const checkSpaces = (spaceArray) =>
         log(`File ${cyan(file.basePath)} has category ${cyan(file.category)} which has no file associated to it or is not used in ${cyan('spaces.yml')}`);
         return false;
       }
-      if (file.parent && !_.find(files, f => f.url === normalizeSafe(path.join(file.dir, file.parent)))) {
+      if (file.parent && !_.find(files, f => normalizeSafe(path.join(f.dir, f.id)) === normalizeSafe(path.join(file.dir, file.parent)))) {
         log(`File ${cyan(file.basePath)} has parent ${cyan(file.parent)} which would resolve to ${cyan(normalizeSafe(path.join(file.dir, file.parent)))}, but this does not exist`);
         return false;
       }

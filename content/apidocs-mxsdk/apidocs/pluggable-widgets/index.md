@@ -6,6 +6,8 @@ menu_order: 45
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 aliases:
  - /apidocs-mxsdk/apidocs/pluggable-parent-9
+
+parent: "../index"
 ---
 
 ## 1 Introduction
@@ -121,15 +123,15 @@ After widget attributes, you will see a description of a widget that will be pre
 ```
 In Mendix Studio Pro, the widget described above would look like this:
 
-![basic widget](pluggable-widgets/attachments/basic-widget.png)
+![basic widget](attachments/basic-widget.png)
 
-![basic progress card](pluggable-widgets/attachments/basic-widget-progress-card.png)
+![basic progress card](attachments/basic-widget-progress-card.png)
 
 #### 4.2.1 Help Page {#help}
 
 You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
 
-![basic widget](pluggable-widgets/attachments/widget-dialog-help-button.png)
+![basic widget](attachments/widget-dialog-help-button.png)
 
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
@@ -220,11 +222,11 @@ Before examining properties themselves, it is useful to understand property grou
 
 This is how the property group structure is represented in Studio Pro:
 
-![edit progress general](pluggable-widgets/attachments/edit-progress-card.png)
+![edit progress general](attachments/edit-progress-card.png)
 
-![edit progress visual](pluggable-widgets/attachments/edit-visual-tab.png)
+![edit progress visual](attachments/edit-visual-tab.png)
 
-![properties widget](pluggable-widgets/attachments/properties-widget.png)
+![properties widget](attachments/properties-widget.png)
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
@@ -250,9 +252,9 @@ Some properties can or must have more attributes or tags. This depends on the `t
 
 Here is how a caption and description look in Studio Pro:
 
-![caption](pluggable-widgets/attachments/card-icon.png)
+![caption](attachments/card-icon.png)
 
-![description](pluggable-widgets/attachments/card-description.png)
+![description](attachments/card-description.png)
 
 ## 7 Read More
 

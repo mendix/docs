@@ -7,11 +7,11 @@ tags: ["domain model", "entity", "entities", "attribute", "external entities", "
 ---
 ## 1 Introduction
 
-External entities can be added to the Domain Model through the [Data Hub pane](data-hub-pane). They are displayed as *purple* entity containers in the domain model and they represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). The datasets are maintained and stored in the application and data sources, are collections of entity sets published in OData services. 
+External entities can be added to the Domain Model through the [Data Hub pane](data-hub-pane). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
 Datasets are maintained and updated in the source application. You can integrate or *consume* these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
-External entities can be used them with local entities however, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
+External entities can be used with local entities, however, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
 To follow how to add external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
 
@@ -25,7 +25,7 @@ To add an external entity to your app model, follow these steps:
 
 1. In the the Domain Model of you app model search in the **Data Hub** pane for the entity or data source that you want to use in your app. 
 
-    {{% alert type="info" %}}In the [Data Hub Catalog](/data-hub-catalog/search), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
+    {{% alert type="info" %}}In the [Data Hub Catalog](/data-hub/data-hub-catalog/search), an OData service may be registered mulitple times with different version numbers or deployed to different environments, all exposing the entity (dataset)) that you may want to use. Search the Data Hub Catalog first and find the one most relevant to the requirements for your app.{{% /alert %}}
 
 3. Drag and drop the entity in the Domain Model. 
 
@@ -51,6 +51,10 @@ If there is a newer version of a consumed service becomes available in the Data 
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.
+
+{{% alert type="info" %}}
+If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
+{{% /alert %}}
 
 For more information on using published OData services and entities through the Data Hub Catalog, see [How to Consume Registered Assets](/data-hub/data-hub-catalog/consume) in the *Data Hub Guide*.
 

@@ -106,7 +106,7 @@ The following settings are available:
 	* **URL** – click **Edit** to specify the URL for the metadata
 	* **File** – click **Browse** to select an XML metadata file
 
-Support for basic authentication was added from [version 8.16.0](/releasenotes/studio-pro/8.16). When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
+When downloading the metadata from a URL, the server may request a username and password (basic authentication). In that case, a dialog box will prompt you to enter your username and password. If the metadata file refers to other metadata files on the same server within the same realm, the username and password are re-used.
 
 {{% alert type="info" %}}
 This information is not stored, so if you download the metadata from the same server again, you will have to enter your username and password again.

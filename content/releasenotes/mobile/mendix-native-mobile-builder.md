@@ -9,6 +9,91 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+### Release 1.0.89
+
+**Release date: May 28th, 2021**
+
+#### New Features 
+
+##### Local Project Configuration Support
+
+{{% alert type="info" %}}
+This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
+{{% /alert %}}
+ 
+Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/mobile/native-build-locally).
+
+In the wizard, new projects can be configured to use one of 2 build types:  
+
+* **Default**: Build automatically using cloud services.
+  * Using cloud services remains the **Default** selection. In this mode **it is no longer possible** to opt out of using App Center.
+* **Advanced**: Create a local copy for additional customizations, or use this option to build locally.
+  * This option gives the option to select a local directory to set up your project. The Native Mobile Builder will then use this folder to do the configurations and set up the Android and iOS projects.
+  * In this mode, you can opt in to use cloud services similarly to the default mode. The Native Mobile Builder will then configure the local copy, push the changes to the repository, and finally use App Center to build your apps.
+
+More key information from this release is as follows:
+
+* Already configured projects will default to the **Default** build type, that is with cloud services enabled.
+* If App Center was disabled it will still remain optional until toggled on and configured with a valid App Center token.
+* **Projects in this state will continue functioning as before, and nothing needs to be changed**.
+* The build type can be changed via the **Build type** page in the Native Mobile Builder.
+
+Please pay close attention to these **caveats** as you use the Mendix Native Builder:
+
+* The Mendix Native Builder is *not* a replacement of a fully-featured Git client. Committing your changes is the equivalent operation of uploading the whole project's Native Template, minus the ignored files to your repository and not just diffs.
+* When switching from the **Default** to **Advanced** build types, if the directory selected does not have a valid Native Template, a fresh Native Template will be checked out and not the repository used before.
+* If GitHub is enabled, and the repository exists, the local changes will be committed back to the repository the next time you choose to configure and commit the changes.
+* Going from the **Default** to **Advanced** build type is, for now, *an irreversible action*. Once switched, you cannot switch back to the **Default** build type.
+
+##### Native Permissions Support
+
+Every mobile app requires certain features, as well as certain permissions users need to accept for the features to work. Therefore, we compiled a list of commonly requested permissions per platform (Android and iOS) and introduced a new **Advanced** page for you to modify these permissions whenever necessary.
+
+#### Improvements
+
+* We removed the warning text that would display when uploading a Firebase configuration that does not contain the developer build application identifier. This warning has been removed in favor of the existing warning pop-up that occurs when the developer application build is being initiated.
+
+#### Fixes
+
+* We fixed typos and wrongly defined info boxes.
+* We made general bugfixes.
+
+### Release 1.0.86
+
+**Release date: April 1st, 2021**
+
+#### New Features
+
+##### Soothing Animal Sounds (Aprils Fools Joke)
+
+Research has shown that animal sounds can relieve stress. As we work to simplify building Native Apps, we decided to add some stress relief. Now, the Mendix Native Mobile Builder is able to derive your stress levels based on your clicking habits and play animal sounds accordingly.
+
+#### Fixes 
+
+* We fixed an issue with build exception resulting in an abstract error popup instead of a readable message.
+
+### Release 1.0.84
+
+**Release date: March 17th, 2021**
+
+#### New Features
+
+##### OTA based on App Center CodePush
+
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
+
+#### Improvements 
+
+* We improved the error logs for certain occasions during the build process.
+* Android keystore validation should be non-blocking if the tool cannot verify the validity of the key. The build will 
+still fail if the keystore values are invalid.
+* We now include dependencies associated with certain capabilities (Local notifications, Push notifications, Google Maps and Firebase Crashlytics) if they are not expressly required by the Mendix Studio Pro project.
+  
+#### Fixes
+
+* We fixed an issue with android certificates not being verified correctly.
+* We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
+
 ### Release v1.0.81
 
 **Release date: March 2nd, 2021**
@@ -28,8 +113,7 @@ still fail if the keystore values are invalid.
 
 #### Local Notifications for Mendix 9 
 
-With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile 
-Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
+With Mendix 9 we separated local notifications and push notifications. Local notifications can now be enabled using the Mendix Native Mobile Builder without any extra configuration. They can also be used as they were before this update from the JavaScript actions or nanoflows in your app. 
 
 For Mendix 8 projects, the local notification option will remain non-interactive, but local notifications will still be enabled when Firebase 
 is included in the project.

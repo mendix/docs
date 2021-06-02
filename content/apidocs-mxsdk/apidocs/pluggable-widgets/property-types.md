@@ -91,7 +91,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/string.png)
+![](attachments/property-types/string.png)
 
 When the property is defined as follows:
 
@@ -104,7 +104,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/string-multiline.png)
+![](attachments/property-types/string-multiline.png)
 
 ### 2.2 Boolean{#boolean}
 
@@ -131,7 +131,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/boolean.png)
+![](attachments/property-types/boolean.png)
 
 ### 2.3 Integer{#integer}
 
@@ -158,7 +158,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/integer.png)
+![](attachments/property-types/integer.png)
 
 ### 2.4 Decimal{#decimal}
 
@@ -185,7 +185,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![decimal](./attachments/property-types/decimal.png)
+![decimal](attachments/property-types/decimal.png)
 
 ### 2.5 Enumeration{#enumeration}
 
@@ -227,7 +227,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/enumeration.png)
+![](attachments/property-types/enumeration.png)
 
 ## 3 Component Types
 
@@ -255,7 +255,7 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](./attachments/property-types/icon.png)
+![](attachments/property-types/icon.png)
 
 ### 3.2 Image {#image}
 
@@ -285,7 +285,7 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](./attachments/property-types/image.png)
+![](attachments/property-types/image.png)
 
 ### 3.3 Widgets {#widgets}
 
@@ -317,7 +317,7 @@ When the component is defined without the `dataSource` attribute as follows:
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](./attachments/property-types/widgets.png)
+![studio pro ui](attachments/property-types/widgets.png)
 
 #### 3.3.3 Using the DataSource Attribute
 
@@ -332,7 +332,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](./attachments/property-types/widgets_with_ds.png)
+![studio pro ui](attachments/property-types/widgets_with_ds.png)
 
 ## 4 Dynamic Types
 
@@ -380,7 +380,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/expression.png)
+![](attachments/property-types/expression.png)
 
 ### 4.2 TextTemplate{#texttemplate}
 
@@ -423,7 +423,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/text.png)
+![](attachments/property-types/text.png)
 
 ### 4.3 Action{#action}
 
@@ -454,7 +454,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/action.png)
+![](attachments/property-types/action.png)
 
 ### 4.4 Attribute{#attribute}
 
@@ -515,7 +515,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/attribute.png)
+![](attachments/property-types/attribute.png)
 
 ### 4.5 Object{#object}
 
@@ -559,7 +559,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/object.png)
+![](attachments/property-types/object.png)
 
 ### 4.6 File {#file}
 
@@ -586,7 +586,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/file.png)
+![](attachments/property-types/file.png)
 
 ### 4.7 Datasource {#datasource}
 
@@ -618,7 +618,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](./attachments/property-types/datasource.png)
+![](attachments/property-types/datasource.png)
 
 ## 5 System Properties {#system-properties}
 

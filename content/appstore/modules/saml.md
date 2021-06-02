@@ -48,7 +48,7 @@ If you are running your app outside of the Mendix Cloud, make sure you have [ext
 Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
 
 {{% alert type="info" %}}
-The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings#2-general-settings) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
+The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
 {{% /alert %}}
 
 You can choose what you want to enter for the entity ID, organization, and contact person. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 

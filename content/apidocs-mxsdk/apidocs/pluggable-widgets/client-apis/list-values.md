@@ -312,7 +312,7 @@ const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.my
 actionOnFirstItem.execute();
 ```
 
-In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](#actionvalue) for more information about the usage of `ActionValue`.
+In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#actionvalue) for more information about the usage of `ActionValue`.
 
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.

@@ -12,8 +12,8 @@ The [Data Hub APIs](#datahubapis) are OpenAPI 3.0 specs available at https://dat
 
 From this page the following APIs are available:
 
-* Register API — register and update data sources to the organization's Mendix Data Hub
-* Search API — search and explore data sources that can be used in your app development
+* **Register API** — register and update data sources to the organization's Mendix Data Hub
+* **Search API** — search and retrieve information on regisered assets that can be used in your app development
 * [Data Hub Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 
 {{% alert type="info" %}}
@@ -108,17 +108,14 @@ The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.h
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
-The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
-
-The API also includes calls to retrieve all versions of a data source and full details of specific services.
-
 ## 5. The Data Hub Registeration API
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments and services or data sources.
 
-The API includes POST methods for registering new assets, and also PUT calls to *update* assets that are already registered.
+The API includes POST methods for registering new assets where a UUID is generated and returned for the asset in the response body. 
+There are also PUT calls to *update* assets that are already registered and also for registering new applications and environments where you provide the UUID.
 
-Apps consuming registered assets can also be registered to ensure that a complete network of shared assets can be maintained.
+Apps that consume registered assets can also be registered to ensure that a complete network of shared assets can be maintained.
 
 ## 6. Data Hub Transform OpenAPI Spec {#transform}
 

@@ -12,7 +12,7 @@ For information about Java actions in Studio Pro, see [Java Actions](java-action
 
 ## 2 Writing Code in .java Files of Your Java Actions
 
-In *java* files of your Java actions, the method `executeAction` is called by the Runtime when the Java action is being executed. The method throws all exceptions that occur. This means you can do error handling in the microflow calling this Java action. If you would like to do your own error handling within the action, use `try` / `catch` statements.
+In *.java* files of your Java actions, the method `executeAction` is called by the Mendix Runtime when the Java action is being executed. The method throws all exceptions that occur. This means you can do error handling in the microflow calling this Java action. If you would like to do your own error handling within the action, use `try` / `catch` statements.
 
 Between the lines `// BEGIN USER CODE` and `// END USER CODE`, you can write custom code that will always be called when executing the action. You can call other methods in the section between `// BEGIN EXTRA CODE` and `// END EXTRA CODE`.
 
@@ -65,7 +65,7 @@ public class JavaAction_1 extends CustomJavaAction<java.lang.Void>
 You can use the Mendix Java library in the Java code that you write for your Java actions.
 
 {{% alert type="info" %}}
-You can find the Javadoc at [Mendix 9 Server Runtime API](http://apidocs.rnd.mendix.com/9/runtime/index.html) or in the directory Studio Pro is installed in (for example, *C:\Program Files\Mendix\9.0.0\runtime\javadoc*).
+You can find the Javadoc at [Runtime API](/apidocs-mxsdk/apidocs/runtime-api) or in the directory Studio Pro is installed in (for example, *C:\Program Files\Mendix\9.0.0\runtime\javadoc*).
 {{% /alert %}}
 
 This library is automatically added to your libraries when you import your app into Eclipse, it is called *mxruntime.jar*.

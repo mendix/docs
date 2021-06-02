@@ -8,7 +8,7 @@ Use this dialog box to create and delete [branch lines](version-control#branch-l
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 * To do maintenance development in the branch line on a version of your app that is running in production, while still keeping on developing in the main line
-* To start deveoping a very large feature that will take more than a day to develop in the branch line, without disturbing other development in the main line
+* To start developing a very large feature that will take more than a day to develop in the branch line, without disturbing other development in the main line
 
 ## 2 Location
 

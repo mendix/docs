@@ -7,16 +7,17 @@ aliases:
 ---
 ## 1 Introduction
 
-To open this dialog box, go to **Project > More Versioning > Upload to Version Control Server**.
-
-![](attachments/upload-to-version-control-dialog/project-more-versioning-upload-to-version-control-server.png)
-
 With this dialog box you can upload an application that is not yet stored in a version control server.
 
 ![](attachments/upload-to-version-control-dialog/upload-to-version-control-server-dialog.png)
+
+To open the **Upload to Version Control Server** dialog box, go to **Project > More Versioning > Upload to Version Control Server**.
+
+![](attachments/upload-to-version-control-dialog/project-more-versioning-upload-to-version-control-server.png)
+
 ## 2 Where Should We Upload Your App
 
-Use this setting to select the location where you want to store your app.
+Use this setting to select the location where you want to store your app. This can be the Team Server, a private server (an SVN server other than the Team Server), or a local disk.
 
 ### 2.1 New Mendix Team Server
 

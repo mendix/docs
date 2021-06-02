@@ -2,38 +2,60 @@
 title: "Import Project Package"
 parent: "dialogs"
 ---
-Use this dialog to create a new app from a Mendix project package (.mpk) file. The new app can either be stored in a version control server or locally on disk.
+## 1 Introduction
 
-Project packages can be created using the [Export Project Package](export-project-package-dialog) dialog.
+To create a new app from a Mendix project package (*.mpk*) file, you need to import an app package. The new app can either be stored in a version control server or locally on disk.
 
-## Location
+To open this dialog box,  go to **File > Import App Package**, browse to the *.mpk* file, and then open it.
 
-Use this setting to select the location where you want to store your app. This can be the Team Server, an SVN server other than the Team Server, or a local disk.
+![](attachments/import-project-package-dialog/import-project-package.png)
 
-### Mendix Team Server
+## 2 Where Should We Store Your App
 
-When uploading the app to the Team Server, you can choose between creating a new repository, or uploading to an existing one. In the former case, a new Team Server project will also be created.
+Use this setting to select the location where you want to store your app. This can be the [Team Server](#team-server), a [private server](#private-server) (an SVN server other than the Team Server), or a [local disk](#local).
 
-When creating a new repository, enter the name for the new Team Server project and repository in the *App name* field.
+### 2.1 Mendix Team Server
 
-Should you wish to use an existing repository, then select the corresponding Team Server app from the list. Note that this only works when the existing repository is empty.
+When uploading the app to the [Mendix Team Server](team-server), you can choose between creating a new repository, or uploading to an existing one.
 
-For more information about the Mendix Team Server, see [Team Server](team-server).
+#### 2.1.1 New Mendix Team Server
 
-### Other SVN server
+If you select to store your app in a new Mendix Team Server, a new Team Server app will be created. You need to enter the name for the new Team Server app and repository in the **App name** field. 
 
-In the *SVN repository address* field, enter the address of the repository you want to upload your app to.
+#### 2.1.2 Existing Mendix Team Server
+
+If you want to use an existing repository, select the app in the **Team Server App** option.
 
 {{% alert type="warning" %}}
 
-The *Other SVN server* option is only available when support for other SVN servers is enabled in the Preferences dialog.
+This only works when the existing repository is empty.
 
 {{% /alert %}}
 
-### Locally on disk
+### 2.2 Private Server
 
-Select this option if you don't need to upload the new app to a version control server. In this case it will only be stored on the local disk of the computer that's running the Modeler.
+In the **App repository address** field, enter the address of the repository you want to upload your app to.
 
-## Disk location
+{{% alert type="warning" %}}
 
-Use this field to choose the directory where the project files of the app will be stored. If version control is enabled, the suggested name includes ends with `-main` to indicate this will be the main development line of the app.
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable).
+
+{{% /alert %}}
+
+### 2.3 Locally on Disk
+
+If you select this option, the app will be stored on the local disk of the computer that is  running Desktop Modeler.
+
+{{% alert type="warning" %}}
+
+Select this option if you do not need to upload the new app to a version control server. 
+
+{{% /alert %}}
+
+## 3 Disk Location
+
+Use this field to choose the directory where the project files of the app will be stored. If version control is enabled, the suggested name includes ends with **-main** to indicate this will be the main development line of the app.
+
+## 4 Read More
+
+* [Export Project Packge dialog](export-project-package-dialog)

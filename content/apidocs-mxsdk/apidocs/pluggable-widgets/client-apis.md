@@ -1,14 +1,19 @@
 ---
 title: "Client APIs Available to Pluggable Widgets"
-parent: "pluggable-parent-9"
-menu_order: 10
 description: A guide for understanding the client APIs available to pluggable widgets.
 tags: ["Widget", "Pluggable",  "JavaScript"]
+
+id: "pluggable-widgets/client-apis"
+dir: "/apidocs-mxsdk/apidocs/"
+parent: "pluggable-widgets"
+menu_order: 20
+aliases:
+ - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
 ---
 
 ## 1 Introduction
 
-The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](property-types-pluggable-widgets). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 
 The Mendix platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -38,7 +43,7 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 
 ### 3.4 TabIndex
 
-If a widget uses a TabIndex prop [system property](property-types-pluggable-widgets#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## 4 Property Values
 
@@ -79,7 +84,7 @@ export const enum ValueStatus {
 }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](property-types-pluggable-widgets#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](property-types-pluggable-widgets#expression) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -93,7 +98,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](property-types-pluggable-widgets#attribute). It is defined as follows:
+EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -135,7 +140,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### 4.4 IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](property-types-pluggable-widgets#attribute) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {
@@ -162,7 +167,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 ### 4.5 ImageValue{#imagevalue}
 
-`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](property-types-pluggable-widgets#image) property. `ImageValue` is defined as follows:
+`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#image) property. `ImageValue` is defined as follows:
 
 ```ts
 export interface WebImage {
@@ -178,7 +183,7 @@ export type ImageValue = WebImage | NativeImage;
 
 ### 4.6 FileValue {#filevalue}
 
-`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](property-types-pluggable-widgets#file) property. `FileValue` is defined as follows:
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#file) property. `FileValue` is defined as follows:
 
 ```ts
 export interface FileValue {
@@ -187,249 +192,9 @@ export interface FileValue {
 }
 ```
 
-### 4.7 ListValue{#listvalue}
+### 4.7 List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](property-types-pluggable-widgets#datasource) property.
-
-```ts
-export interface ObjectItem {
-    id: GUID;
-}
-
-export interface ListValue {
-    status: ValueStatus;
-    offset: number;
-    limit: number;
-    setOffset(offset: number): void;
-    setLimit(limit: Option<number>): void;
-    requestTotalCount(needTotalCount: boolean): void;
-    items?: ObjectItem[];
-    hasMoreItems?: boolean;
-    totalCount?: number;
-}
-```
-
-When a `datasource` property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
-
-The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
-
-The following code sample sets the offset and limit to load datasource items for a specific range:
-
-```ts
-this.props.myDataSource.setOffset(20);
-this.props.myDataSource.setLimit(10);
-```
-
-You can use the `setOffset` and `setLimit` methods to create a widget with pagination support (assuming widget properties are configured as follows):
-
-```ts
-interface MyListWidgetsProps {
-    myDataSource: ListValue;
-    pageSize: number;
-}
-```
-
-To set the number of items requested by the datasource you can use the `setLimit` in the constructor of the widget:
-
-```ts
-export default class PagedWidget extends Component<PagedWidgetProps> {
-    constructor(props: PagedWidgetProps) {
-        super(props);
-
-        props.myDataSource.setLimit(props.pageSize);
-    }
-}
-```
-
-To switch to a different page you can change the offset with the `setOffset` method:
-
-```tsx
-const ds = this.props.myDataSource;
-const current = this.props.myDataSource.offset;
-<button onClick={() => ds.setOffset(current - this.props.pageSize)}>
-    Previous
-</button>
-<button onClick={() => ds.setOffset(current + this.props.pageSize)}>
-    Next
-</button>
-```
-
-The `hasMoreItems` property indicates whether there are more objects beyond the limit of the most recent list. When a widget does not show all the records immediately by setting a limit with `setLimit` and allows the user to load additional data, you can use this property to make it clear in the user interface that the user has reached the end of the list.
-
-The following code sample shows a 'load more' button only when there is more data available, and loads additional data when the user clicks the button:
-
-```tsx
-const currentLimit = this.props.myDataSource.limit;
-this.props.myDataSource.hasMoreItems &&
-<button 
-    onClick={() => this.props.myDataSource.setLimit(currentLimit + 10)}
->
-    Load more
-</button>
-```
-
-When a `limit` is set to *0*, that case is handled in a special way. In this case `ListValue` will avoid sending a request to the server to retrieve data and will immediately return an empty result. This property can be used to build widgets that load their data "lazily": only when and if a specific condition is met.
-
-The following code sample loads the data only if a button is pressed:
-
-```tsx
-export default const LazyWidget = (props: LazyWidgetProps) => {
-    useMemo(() => props.myDataSource.setLimit(0), []);
-    return props.myDataSource.items?.length ? (
-        props.myDataSource.items.map((i) => <div key={i.id}>Item</div>)
-    ) : (
-        <button onClick={() => props.myDataSource.setLimit(undefined)}>Load data</button>
-    );
-}
-```
-
-The `totalCount` property is the total number of objects the datasource can return. Calculating a total count might consume significant resources and is only returned when the widget indicated needs a total count by calling the `requestTotalCount(true)` method. When possible, please use the `hasMoreItems` instead of the `totalCount` property.
-
-The following code sample shows how to request the total count to be returned:
-
-```ts
-export default class PagedWidget extends Component<PagedWidgetProps> {
-    constructor(props: PagedWidgetProps) {
-        super(props);
-    
-        props.myDataSource.requestTotalCount(true);
-    }
-}
-```
-
-The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](property-types-pluggable-widgets#attribute), [`action`](property-types-pluggable-widgets#action), or [`widgets`](property-types-pluggable-widgets#widgets).
- 
-
-### 4.8 ListActionValue {#listactionvalue}
-
-`ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is an object and its definition is as follows:
-
-```ts
-export interface ListActionValue {
-    get: (item: ObjectItem) => ActionValue;
-}
-```
-
-<a name="get-function"></a>In order to call an action on a particular item of a `ListValue` first an instance of `ActionValue` should be obtained by calling `ListActionValue.get` with the item (assuming widget properties are configured as follows):
-
-```ts
-interface MyListWidgetsProps {
-    myDataSource: ListValue;
-    myListAction: ListActionValue;
-}
-```
-
-The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
-
-```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
-
-actionOnFirstItem.execute();
-```
-
-In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](#actionvalue) for more information about the usage of `ActionValue`.
-
-{{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
-
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
-{{% /alert %}}
-
-### 4.9 ListAttributeValue {#listattributevalue}
-
-`ListAttributeValue` represents an [attribute property](property-types-pluggable-widgets#attribute) that is linked to a data source.
-This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
-
-```ts
-export interface ListAttributeValue<T extends AttributeValue> {
-    get: (item: ObjectItem) => EditableValue<T>; // NOTE: EditableValue obtained from ListAttributeValue always readonly
-}
-```
-
-The type `<T>` depends on the allowed value types as configured for the attribute property.
-
-{{% alert type="warning" %}}
-Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
-{{% /alert %}}
-
-In order to work with the attribute value of a particular item of a `ListValue` first an instance of `EditableValue` should be obtained by calling `ListAttributeValue.get` with the item (assuming widget properties are configured as follows with an attribute of type `string`):
-
-```ts
-interface MyListWidgetsProps {
-    myDataSource: ListValue;
-    myAttributeOnDatasource: ListAttributeValue<string>;
-}
-```
-
-The following code sample shows how to get an `EditableValue` that represents a read-only value of an attribute of the first element from the `myDataSource`.
-
-```ts
-const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
-```
-
-Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
-
-### 4.10 ListWidgetValue {#listwidgetvalue}
-
-`ListWidgetValue` represents a [widget property](property-types-pluggable-widgets#widgets) that is linked to a data source. 
-This allows the client component to render child widgets with items from a `ListValue`.
-`ListWidgetValue` is an object and its definition is as follows:
-
-```ts
-export interface ListWidgetValue {
-    get: (item: ObjectItem) => ReactNode;
-}
-```
-
-For clarity, consider the following example using `ListValue` together with the `widgets` property type. When the `widgets` property named `myWidgets` is configured to be tied to a `datasource` named `myDataSource`, the client component props appear as follows:
-
-```ts
-interface MyListWidgetsProps {
-    myDataSource: ListValue;
-    myWidgets: (i: ObjectItem) => ReactNode;
-}
-```
-
-Because of the above configurations, the client component may render every instance of widgets with a specific item from the list like this:
-
-```ts
-this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
-```
-
-{{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
-
-You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function as described [above](#get-function).
-{{% /alert %}}
-
-
-### 4.11 ListExpressionValue {#listexpressionvalue}
-
-`ListExpressionValue` represents an [expression property](property-types-pluggable-widgets#expression) or [text template property](property-types-pluggable-widgets#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
-
-```ts
-export interface ListExpressionValue<T extends AttributeValue> {
-    get: (item: ObjectItem) => DynamicValue<T>
-};
-```
-
-The type `<T>` depends on the return type as configured for the expression property. For a text template property, this type is always `string`.
-
-In order to work with the expression or text template value of a particular item of a `ListValue`, first an instance of `DynamicValue` should be obtained by calling `ListExpressionValue.get` with the item (assuming widget properties are configured as follows with an expression of type `boolean`):
-
-```ts
-interface MyListWidgetsProps {
-    myDataSource: ListValue;
-    myExpressionOnDatasource: ListExpressionValue<boolean>;
-    myTextTemplateOnDatasource: ListExpressionValue<string>;
-}
-```
-
-The following code sample shows how to get a `DynamicValue` that represents the value of an expression for the first element from the `myDataSource`.
-
-```ts
-const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
-```
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis/list-values) for more information about usage of `ListValue` and associated property values.
 
 ## 5 Exposed Modules
 
@@ -453,11 +218,11 @@ The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## 7 Native Dependencies
 
-Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](native-dependencies).
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies).
 
 ## 8 Read More
 
-* [Pluggable Widgets API Documentation](pluggable-widgets)
-* [Pluggable Widget Property Types Documentation](property-types-pluggable-widgets)
+* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
+* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
-* [Declaring Native Dependencies](native-dependencies)
+* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies)

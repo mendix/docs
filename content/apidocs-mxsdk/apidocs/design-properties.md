@@ -176,7 +176,7 @@ Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com
 
 ### 5.1 Widget Types for Pluggable Widgets
 
-When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
+When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
 ## 6 Renaming Design Properties{#old-names}
 

@@ -10,13 +10,14 @@ tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 
 {{% alert type="info" %}}
 This documentation is only relevant to customers deploying their Mendix app on the Tencent Cloud.
+
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
 The Qianfan SSO module enables your app end-users to sign in with single sign-on (SSO) using an iDaaS account when your app is deployed to the Tencent Cloud. This document explains how to integrate the Qianfan SSO module with your Mendix app.
 
-Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 
 ## 2 Purchasing and Launching the Service
 

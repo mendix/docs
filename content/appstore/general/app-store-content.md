@@ -1,4 +1,4 @@
-versionspng---
+---
 title: "Use Marketplace Content in Studio Pro"
 category: "General Info"
 menu_order: 20

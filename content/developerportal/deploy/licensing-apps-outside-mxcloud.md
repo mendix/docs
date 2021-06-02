@@ -9,7 +9,7 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/licensing-apps-outside-mxcloud.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/licensing-apps-outside-mxcloud.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

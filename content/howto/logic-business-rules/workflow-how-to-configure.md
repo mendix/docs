@@ -112,6 +112,32 @@ You need to create demo users for the newly created project roles to be able to 
 
 You have configured demo users for your project. 
 
+### 3.3 Configuring Entity Access
+
+The next step in setting up security is to configure the entity access otherwise you might run into consistency errors. For more information on what the entity access is, see the [Entity Access](/refguide/module-security#entity-access) section in *Module Security*. Follow the steps below:
+
+1. Open the domain model.
+
+2. Double-click the **EmployeeOnboarding** entity to open its properties.
+
+3. In the **Properties** dialog box, open the **Access rules** tab and click **New**:
+
+    ![Entity Properties](attachments/workflow-how-to-configure/entity-properties.png) 
+
+4. In the **New Access rule** dialog box, do the following:
+
+    1. In the **Rule applies to the following modules** section, select all roles.
+
+    2. In the **Member read and write rights** section, click the Access right drop-down menu and select **Read, Write**.
+
+        ![New Access Rule](attachments/workflow-how-to-configure/new-access-rule.png)
+
+5. Click **OK** to save the settings.
+
+6. Click **OK** in the **Properties** dialog box.
+
+You have set up the entity access. 
+
 ## 4 Creating a Workflow
 
 You need to create a workflow that you will add activities to and create pages for. Do the following:

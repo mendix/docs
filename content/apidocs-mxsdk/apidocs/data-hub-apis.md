@@ -66,7 +66,7 @@ Mendix users (with a registered account) can obtain a PAT using the Mendix **War
 
     {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the header for the object `Authorization`:
 
-    ```MxToken <your_PAT_Token>```
+    `MxToken <your_PAT_Token>`
 
     Insert the **Token secret** that was generated for the <*your_PAT_Token*> string. This provides access to your organization’s Data Hub{{% /alert %}}
 
@@ -104,7 +104,7 @@ For the current release, the interactive features of the OpenAPI interface are n
 
 ## 4. The Data Hub Search API {#search-API}
 
-The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
+The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 

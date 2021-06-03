@@ -234,7 +234,7 @@ Note that the **Common** and **Appearance** tabs are added to your widget config
 
 ## 6 Widget Property
 
-This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types). Every `property` tag in the Widget Properties Definition has a shape similar to this:
+This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
 ```xml
     <property key="cardName" type="textTemplate">
@@ -258,9 +258,9 @@ Here is how a caption and description look in Studio Pro:
 
 ## 7 Read More
 
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis)
-* [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)
-* [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/studio-apis)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis)
+* [Declaring Native Dependencies for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types)
+* [Preview Appearance APIs for Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis)
 * Pluggable Widget API information for [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8)
 

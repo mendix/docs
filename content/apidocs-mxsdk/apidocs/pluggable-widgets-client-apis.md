@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
+The main API the Mendix platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
 
 The Mendix platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -41,7 +41,7 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 
 ### 3.4 TabIndex
 
-If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## 4 Property Values
 
@@ -82,7 +82,7 @@ export const enum ValueStatus {
 }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#expression) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -96,7 +96,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### 4.3 EditableValue {#editable-value}
 
-EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute). It is defined as follows:
+EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -138,7 +138,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### 4.4 IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#attribute) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {
@@ -165,7 +165,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 ### 4.5 ImageValue{#imagevalue}
 
-`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#image) property. `ImageValue` is defined as follows:
+`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#image) property. `ImageValue` is defined as follows:
 
 ```ts
 export interface WebImage {
@@ -181,7 +181,7 @@ export type ImageValue = WebImage | NativeImage;
 
 ### 4.6 FileValue {#filevalue}
 
-`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#file) property. `FileValue` is defined as follows:
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#file) property. `FileValue` is defined as follows:
 
 ```ts
 export interface FileValue {
@@ -192,7 +192,7 @@ export interface FileValue {
 
 ### 4.7 List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis/list-values) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/list-values) for more information about usage of `ListValue` and associated property values.
 
 ## 5 Exposed Modules
 
@@ -216,7 +216,7 @@ The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## 7 Native Dependencies
 
-Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies).
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies).
 
 ## 8 Read More
 

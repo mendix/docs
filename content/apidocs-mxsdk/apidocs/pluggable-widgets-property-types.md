@@ -315,7 +315,7 @@ When the component is defined without the `dataSource` attribute as follows:
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](attachments/pluggable-widgets-property-types/widgets.png)
+![studio pro ui](attachments/pluggable-widgets/property-types/widgets.png)
 
 #### 3.3.3 Using the DataSource Attribute
 

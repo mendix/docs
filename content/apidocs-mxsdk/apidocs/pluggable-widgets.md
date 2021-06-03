@@ -7,7 +7,6 @@ tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 aliases:
  - /apidocs-mxsdk/apidocs/pluggable-parent-9
 
-parent: "index"
 ---
 
 ## 1 Introduction

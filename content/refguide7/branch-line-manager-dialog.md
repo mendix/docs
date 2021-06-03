@@ -5,7 +5,7 @@ parent: "dialogs"
 
 ## 1 Introduction
 
-Use this dialog box to create and delete [branch lines](version-control#branch-line) of an app that is stored on a version control server.
+Use this dialog box to create and delete [branch lines](version-control#branch-line) of an application that is stored on a version control server.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 

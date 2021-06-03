@@ -27,12 +27,69 @@ In Studio, you are viewing and editing a Responsive type of the navigation profi
 
 ## 2 Navigation Editor Properties
 
-In the navigation editor properties you can set a page or a microflow as a default home page. 
+In navigation editor properties, you can set a [default home page](#default-home-page) and [role-specific home pages](#role-specific-home-page). 
+
+### 2.1 Default Home Page {#default-home-page}
+
+You can set a page or a microflow as a default home page:
+
+![Default Home Page](attachments/navigation/default-home-page.jpg)
 
 The **Default Home Page** section consists of the following properties:
 
-* **Page** – Allows you to set a page that is opened when an end-user opens the page. A home page icon is displayed in a list of pages against a page that is set as a home page.
+* **Page** – Allows you to set a page that is opened when an end-user opens the app. 
 * **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. 
+
+A home page icon is displayed in a list of pages or microflows against a page or microflow that is set as a home page:
+
+![Home Icon](attachments/navigation/home-icon.jpg)
+
+### 2.2 Role-Specific Home Page {#role-specific-home-page}
+
+A role-specific home page is a home page that that overrides the [default home page](#default-home-page) and is opened only for users with the specified role. You can set a separate home page per each role in your app. For more information on roles and how to create them, see [Security, Roles & Permissions](settings-security).
+
+For example, an Administrator role can have the **Admin_Dashboard** page as its home page, while other users will have the default home page opened when they open the app:
+
+![Role-Specific Home Page](attachments/navigation/role-specific-home-page.jpg)
+
+When adding or editing the role-specific home page, you can set the following properties:
+
+* **Role** – Defines what role has a dedicated home page.
+
+* **Type** – Defines whether a page or a microflow is opened/performed when the user opens the app. The following types are available:
+
+  * **Page** – A page is set as a home page.
+  * **Microflow** – A microflow is set as a home page, i.e. a microflow is performed when a user opens the app.
+
+* **Page** – This property is only available when the **Type** is set to **Page**. Allows you to set a dedicated home page that is opened for the selected role.
+
+* **Microflow** – This property is only available when **Type** is set to **Microflow**. Allows you to set a microflow that is performed when a user with the selected role opens the app.
+
+    ![](attachments/navigation/role-specific-home-page-properties.jpg)
+
+A role-specific home page icon is displayed in a list of pages or microflows against a page or microflow that is set as a home page:
+
+![Role-Specific Home Page Icon](attachments/navigation/role-specific-home-page-icon.jpg)
+
+### 2.3 Adding a Role-Specific Home Page
+
+To add a role-specific home page, do the following:
+
+1. Make sure your [security](settings-security) is enabled and configured.
+
+2. Open the navigation editor > Navigation Editor properties.
+
+3. In the **Role-Specific Home Page** section, click the **Add Role-Specific Home Page**.
+
+4. In the **Role** drop-down menu, select a role that will have a dedicated home page:
+
+   ![Selecting a Role](attachments/navigation/selecting-role.jpg)
+
+5. Select the **Type** of the home page: a page or a microflow.
+
+6. Depending on the selected type, choose either a page or a microflow that is be opened or performed when the user with the selected role opens the app.  
+
+The role-specific home page is set.
 
 ## 3 Menu Item Properties {#properties-of-menu-items}
 
@@ -43,7 +100,7 @@ Properties of the menu items consists of the following sections:
 
 ![](attachments/navigation/navigation-properties.png)
 
-### 2.1 Events Section {#events-section-navigation}
+### 3.1 Events Section {#events-section-navigation}
 
 You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a menu item. 
 
@@ -70,14 +127,14 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 
 {{% /alert %}}
 
-### 2.2 General {#general-section-navigation}
+### 3.2 General {#general-section-navigation}
 
 The properties that can be configured in the **General** section are the following:
 
 * **Caption** – Allows you to fill in the name of the menu item.
 * **Icon** – Allows you to set the icon of the menu item.
 
-## 3 Creating a Menu Item {#create-new-menu-items}
+### 3.3 Creating a Menu Item {#create-new-menu-items}
 
 To create a new menu item, do the following:
 

@@ -39,23 +39,23 @@ Follow these steps to create a simple app in Studio Pro and populate it. You wil
 3. Double-click the entity to open its properties and change its **Name** to *Customer*.
 4. In the **Attributes** tab, click **New** to create the following attributes for the entity:
 
- 	| Name | Type |
- 	| :---------- | :--------- |
- 	| CustomerID | Autonumber |
- 	| FirstName   | String     |
- 	| LastName    | String     |
- 	| CompanyName | String     |
- 	| Address     | String     |
+    | Name | Type |
+    | :---------- | :--------- |
+    | CustomerID | Autonumber |
+    | FirstName   | String     |
+    | LastName    | String     |
+    | CompanyName | String     |
+    | Address     | String     |
 
- ![entity properties](attachments/share-data/entity-properties-pane.png)
+    ![entity properties](attachments/share-data/entity-properties-pane.png)
 
 5. Click **OK** to see the entity and attributes in the domain model.
 6. Right-click the entity and from the menu, select **Generate overview pages**.
 7. In the **Generate pages** dialog box, select **Atlas_Default (Atlas_UI_Resources)** as the **Content layout** and click **OK**. Click **OK** to accept the informational box. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
-	![over pages](attachments/share-data/overview-pages-for-customer-entity.png)
+    ![over pages](attachments/share-data/overview-pages-for-customer-entity.png)
 
-7.  In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
+7. In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
 8. From the **App Explorer** drag **Customer_Overview** into the **Auto-fill** container under the "Welcome" banner.
 
  You have now created a simple app with the entity **Customer** and a web page where you can add data and view and edit details for this entity. Go ahead and customize your Home page further by changing the banner text.
@@ -126,7 +126,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
     ![Data Hub screen](attachments/share-data/data-hub-home.png)
 
-2. In the search field, enter the search term *customer*. All services and datasets that satisfy this search string will be displayed in the **Search Results** pane in the **Search Details** screen.
+2. In the search field, enter the search term *customer*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen.
 
 3. When you look for your app in the search results you will not find it there. This is because there is a **Filter** active which is indicated by the **1**:
 
@@ -174,7 +174,7 @@ To do this follow these steps:
     {{% image_container width="200" %}}![view data hub](attachments/share-data/view-data-hub.png){{% /image_container %}}
 
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
-4. The search results will be listed in the **Data Hub** pane showing all the registered assets (services, datasets, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
+4. The search results are listed in the **Data Hub** pane showing all the registered assets (services, datasets, and attributes) satisfying this search string. You will note that the app that you have created previously is not listed.
 5. By default, search in the **Data Hub** pane will only show services in production environments. The app that you have deployed in this how-to was deployed to the Mendix Cloud for Free Apps, **Sandbox**.
 6. Click the **Filter** icon next to the search area to include this non-production environment in your search:
 
@@ -246,7 +246,7 @@ You can view the two apps that you have created in the Data Hub Landscape and se
 
 1. Open the [Data Hub](https://hub.mendix.com/#/home) home page.
 2. Click the **Landscape** tab to see a graphical representation of your company's data landscape
-3. Find your app using the search pane. Remember to use the filter to ensure you can see sandbox apps:
+3. Find your app using the search pane. Remember to use the filter to ensure you can see apps in the Mendix free app environment (Sandbox):
 
     ![landscape](attachments/share-data/landscape-full-screen.png)
 

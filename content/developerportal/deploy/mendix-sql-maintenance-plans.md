@@ -6,7 +6,7 @@ menu_order: 50
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/mendix-sql-maintenance-plans.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/mendix-sql-maintenance-plans.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

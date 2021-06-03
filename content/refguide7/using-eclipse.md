@@ -28,9 +28,9 @@ Make sure you add a JDK and select it as the default in Eclipse.
 
 To add a Mendix project to Eclipse, you can perform these steps:
 
-*   Open the File menu and click Import
-*   Open the 'General' folder and select 'Existing projects into Workspace' and click next
-*   Use the option 'select root directory', browse to your Mendix project folder and click finish
+1. Open the **File** menu and click **Import**.
+2. Open the **General** folder and select **Existing projects into Workspace** and click **Next**.
+3. Use the option **Select root directory**, browse to your Mendix project folder and click **Finish**.
 
 {{% alert type="info" %}}
 

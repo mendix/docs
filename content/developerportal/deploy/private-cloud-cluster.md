@@ -1127,19 +1127,11 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 ![](attachments/private-cloud-cluster/image33.png)
 
-From this tab you can perform the following action:
-
-##### 6.2.4.1 Adding a Plan
-
-Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
-
-![](attachments/private-cloud-cluster/image34.png)
-
-##### 6.2.4.2 Deactivating a Plan
+##### 6.2.4.1 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-##### 6.2.4.3 Activating a Plan
+##### 6.2.4.2 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
@@ -1205,11 +1197,37 @@ When running the installation tool over SSH, make sure that the SSH client suppo
 
 ## 8 Troubleshooting
 
-This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
-
 ### 8.1 Status Reporting
 
+This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+
+### 8.2 Windows PowerShell
+
+This section covers how to troubleshoot an issue you may find when running the installation tool with Windows PowerShell Terminal.
+
+### 8.2.1 Enable Copy and Paste in Windows PowerShell
+
+If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
+
+![](attachments/private-cloud-cluster/image34.png)
+
+Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste**
+
+![](attachments/private-cloud-cluster/image35.png)
+
+You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
+
+### 8.2.2 Unable to Click a Button
+
+![](attachments/private-cloud-cluster/image36.png)
+
+If you highlight a button instead of clicking the button, you may need to disable the **Quick Edit Mode** from the Windows PowerShell Properties.
+
+![](attachments/private-cloud-cluster/image37.png)
+
+After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
 
 ## 9 Containerized Mendix App Architecture {#containerized-architecture}
 

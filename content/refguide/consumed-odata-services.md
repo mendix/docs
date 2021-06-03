@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/). 
+Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/).
 
 Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
@@ -21,7 +21,7 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 ### 2.1 External Entities
 
@@ -41,9 +41,9 @@ You can create associations between local [persistable entities](persistability#
 
 When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
 
-In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **App** pane. 
+In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **App** pane.
 
-If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow:
 
 {{% image_container width="300" %}}![Data Hub Pane update](attachments/consumed-odata-service/project-pane-update-available.png){{% /image_container %}}
 

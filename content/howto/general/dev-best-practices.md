@@ -158,7 +158,17 @@ For attributes, you can choose to store the value in the database or to calculat
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
 | Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
-#### 3.4.4 Validation Microflows
+#### 3.4.4 Workflow Microflows
+
+You can call a microflow from a [workflow](/refguide/workflows). See the list of examples and prefixes in the table below:
+
+| Event Type       | Prefix | Description                                                  |
+| ---------------- | ------ | ------------------------------------------------------------ |
+| User assignment  | WFA_   | Returns a list of users who can perform the workflow task.   |
+| System action    | WFS_   | Accepts a workflow object and returns a workflow task result. |
+| On Created Event | WFC_   | Starts when a user task is created, accepts a workflow object. |
+
+#### 3.4.5 Validation Microflows
 
 Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **VAL_**.
 
@@ -166,7 +176,7 @@ Microflows that are used for [data validation](/howto/data-models/setting-up-dat
 |-----------------|----------------------|
 | Validation      | VAL\_                 |
 
-#### 3.4.5 Scheduled Event Microflows
+#### 3.4.6 Scheduled Event Microflows
 
 For the microflow that you use in your [scheduled events](/refguide/scheduled-events), use the prefix **SCE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
 
@@ -174,7 +184,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 |-----------------|----------------------|
 | Scheduled Event | SCE\_                 |
 
-#### 3.4.6 App Microflows
+#### 3.4.7 App Microflows
 
 Your [app settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
@@ -184,7 +194,7 @@ Your [app settings](/refguide/project-settings) provide three events that can tr
 | Before shutdown | BeforeShutDown | BSD\_                 |
 | Health check    | HealthCheck    | HCH\_                 |
 
-#### 3.4.7 Unit Test Microflows
+#### 3.4.8 Unit Test Microflows
 
 Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **TEST_**.
 
@@ -192,7 +202,7 @@ Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-u
 |-----------------|----------------------|
 | Unit Test       | TEST\_                |
 
-#### 3.4.8 Integration Microflows
+#### 3.4.9 Integration Microflows
 
 For integrations, you have the following types of microflow:
 
@@ -233,6 +243,8 @@ Pages that are used to make a selection of one object have a suffix of **_Selec
 
 Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
+Pages that are called when a [user task](/refguide/user-task) in a workflow is executed, have suffix **_Workflow**. There is one task page per user task. These pages always have a WorkflowUserTask data view and are specific to performing workflow tasks. 
+
 | Page Purpose                             | Suffix |
 |-------------------------------------------|--------|
 | List objects of a single entity type  | \_Overview |
@@ -243,6 +255,7 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 | Select a single object | \_Select |
 | Select multiple objects | \_MultiSelect |
 | Tooltip | \_Tooltip |
+| Interact with a user task | _Workflow |
 
 #### 3.5.4 Integration Documents
 
@@ -327,27 +340,35 @@ Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
-### 4.3 Warnings & Studio Pro Feedback
+### 4.3 Workflows
+
+Guidelines below can help you choose a short yet meaningful name for your workflow:
+
+* The name matches the context entity name
+* The name consists of a noun + verb (e.g. *EmployeeOnboarding*)
+* The name reflects what the process is about, what the goal of the process is
+
+### 4.4 Warnings & Studio Pro Feedback
 
 No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 
 Unused and excluded items should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
 
-### 4.4 XPath
+### 4.5 XPath
 
 [XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
 
-### 4.5 Security
+### 4.6 Security
 
 The [security](/howto/security/) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 Assigning default rights to new members when defining entity access is NOT recommended. This will ensure that access is only granted after a conscious decision.
 
-### 4.6 Mendix Version
+### 4.7 Mendix Version
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 Marketplace Content
+### 4.8 Marketplace Content
 
 When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 

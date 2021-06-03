@@ -3,7 +3,7 @@ title: "List Values"
 tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 
 id: "pluggable-widgets/client-apis/list-values"
-parent: "client-apis"
+parent: "pluggable-widgets/client-apis"
 dir: "/apidocs-mxsdk/apidocs/"
 ---
 

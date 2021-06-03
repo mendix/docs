@@ -171,7 +171,7 @@ Retrieves details of all the versions and their endpoints for the specified serv
 
 A successful response returns details of the data source and full details of the application that published the data source. The `Versions` object returns a collection of all the versions of the named service that are available and details of the endpoints which also includes all the environments that the data source is deployed to.
 
-### 5.5 Retrieve all Endpoint Details for a Specified Data Source
+### 5.5 Retrieve all Contract Files and Endpoint Details for a Data Source
 
 This GET call retrieves full details of a specified service or data source as specified by the unique identifiers of the app and environment UUID and service version. The response also returns the contracts at the data source endpoint.
 

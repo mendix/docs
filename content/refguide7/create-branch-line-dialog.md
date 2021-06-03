@@ -1,5 +1,7 @@
+---
 title: "Create Branch Line Dialog"
 parent: "dialogs"
+---
 
 ## 1 Introduction
 

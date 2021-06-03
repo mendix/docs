@@ -114,7 +114,7 @@ You have configured demo users for your project.
 
 ### 3.3 Configuring Entity Access
 
-The next step in setting up security is to configure the entity access otherwise you might run into consistency errors. For more information on what the entity access is, see the [Entity Access](/refguide/module-security#entity-access) section in *Module Security*. Follow the steps below:
+The next step in setting up security is to configure the entity access otherwise you might run into consistency errors and the users of your app will see too much or too little information. For more information on what the entity access is, see the [Entity Access](/refguide/module-security#entity-access) section in *Module Security*. Follow the steps below:
 
 1. Open the domain model.
 
@@ -137,6 +137,12 @@ The next step in setting up security is to configure the entity access otherwise
 6. Click **OK** in the **Properties** dialog box.
 
 You have set up the entity access. 
+
+{{% alert type="info" %}}
+
+In some cases you may want to restrict access to the entity or to some of its attributes by configuring the access rules more specifically.
+
+{{% /alert %}}
 
 ## 4 Creating a Workflow
 

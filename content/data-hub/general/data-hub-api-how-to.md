@@ -52,7 +52,7 @@ All requests to the Data Hub API must include the personal access token ([PAT](#
   * Register and update data sources (OData services) using the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) as described in [Registering Applications, Environments, Data Sources](#reg-contract). Data sources are registered to applications, deployed to an  environment. The UUID values are required.
     1. Applications can be registered using [POST](#register-app) for new applications or PUT to update or register to a named UUID.
 
-    2. Register the environment that the dataset is deployed using [POST ](#register-env) for new applications or PUT to update or register to a named UUID.
+    2. Register the environment that the dataset is deployed using [POST](#register-env) for new applications or PUT to update or register to a named UUID.
 
     3. Register the published services (data source) of the application: [PUT published endpoints](#put-service)
   * Register consumed services (data sources) and entities by an application: [PUT consumed endpoints](#consumed-ep)
@@ -105,8 +105,7 @@ The primary method in the [Search API](http://datahub-spec.s3-website.eu-central
 
 Search is carried out on all **discoverable** registered assets in the Catalog (data sources, data sets, attributes, and descriptions of the registered items).
 
-The Data Hub Search API URL is: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html.
-
+The Data Hub Search API URL is: <http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html.>
 
 To try out an example search request using the call described in this section, see [Searching for Registered Assets in the Catalog that have the string: `sample`](data-hub-api-how-to-examples#get-data-ex).
 
@@ -114,7 +113,7 @@ For general details on Searching in the Data Hub Catalog see [Searching in the D
 
 ### 5.1 Base URL, Method and Endpoint
 
-The Base URL for the search API is: https://hub.mendix.com/rest/search/v3
+The Base URL for the search API is: <https://hub.mendix.com/rest/search/v3>
 
 To search and retrieve registered assets the following method and endpoint must be used:
 
@@ -146,7 +145,7 @@ All the assets (items registered) in the Catalog that are searched. For each of 
 
 The results include the total number of items, `TotalResults`, that satisfy the search request and the `Data` object is the array of the endpoints of the objects that satisfy the search string.
 
-For the full specification see the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
+For the full specification see the [<http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).>
 
 #### 5.3.2 `Data` Objects
 
@@ -154,7 +153,7 @@ A representation of what is returned in the response for `Data` is shown below.
 
 The blue boxes indicate that an object is made up of a collection (of objects, data and arrays); the red an array of data; and the solid outline indicates if the item is always returned in the response. Not all sub-levels of the schemas are shown in the representation below.
 
-For the full specification, refer to the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
+For the full specification, refer to the [Search API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
@@ -163,11 +162,12 @@ For the full specification, refer to the [http://datahub-spec.s3-website.eu-cent
 Using GET you can retrieve details of a named data source or service. This returns all service versions and the details of all the endpoint.
 
 #### 5.4.1 Method, and Endpoint
+
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
 Retrieves details of all the versions and their endpoints for the specified service. Both parameters must be specified and the exact name of the specified service must be included.
 
-#### 5.4.2  Successful 200 Response 
+#### 5.4.2  Successful 200 Response
 
 A successful response returns details of the data source and full details of the application that published the data source. The `Versions` object returns a collection of all the versions of the named service that are available and details of the endpoints which also includes all the environments that the data source is deployed to.
 
@@ -177,9 +177,9 @@ This GET call retrieves full details of a specified service or data source as sp
 
 #### 5.5.1 Method and Endpoint
 
- `GET /applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
+ `GET /applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion}`
 
-#### 5.5.2  Successful 200 Response 
+#### 5.5.2  Successful 200 Response
 
 The registration details of the specified data source is retrieved and includes the OData contract files for the service. These can be parsed into business applications so that shared datasets can be consumed.
 
@@ -187,7 +187,7 @@ The registration details of the specified data source is retrieved and includes 
 
 This section describes how to use the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html). It goes through the sequence of steps for registering data sources—OData v3 or OData v4 service contracts. When registering a data source, all the files that make up the OData v3 or v4 contract must be included in the registration call.
 
-The Data Hub Register API URL is: https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html.
+The Data Hub Register API URL is: <https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html.>
 
 A data source must be registered to an app deployed to a given environment. Therefore, the following sequence of steps must be followed in the given order:
 
@@ -271,7 +271,7 @@ The request body is made up of the collection of objects for the `PutPublishedEn
 
 When defining each service in the `ServiceVersion` object the details of the endpoints or service must be specified which includes the name, version number, and the location of the contract files that is provided by the relative path `Path` . The `Contracts` object contains the metadata files that form the contract and must be included in the body an escaped JSON string format.
 
-A representation of the objects that can be specified for the request body is shown below. Not all of the sub-level arrays and objects are shown, for the full schema definition refer to the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration.html).
+A representation of the objects that can be specified for the request body is shown below. Not all of the sub-level arrays and objects are shown, for the full schema definition see to the [Registration API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration.html).
 
 (Blue boxes indicate that constituent objects are a collection, the red an array, and the solid outline indicates if the object is required.)
 
@@ -367,7 +367,7 @@ When there are updates to a services, care must be taken when deciding whether t
 
 Contract files deployed to the same endpoint of a registered service will mean that consuming apps must reload the changed contract.
 
-We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previoulsy registered endpoints.
+We recommend that you use semantic numbering for service versions to maintain a historical record and indicate the severity of changes. Further you should implement a strict protocol that defines when updates are deployed to previously registered endpoints.
 
 In all cases, you are advised to notify all consumers of changes and also new versions deployed to new endpoints.
 
@@ -379,13 +379,13 @@ Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform AP
 
 {{% alert type="info" %}}There are additional attributes that are not returned by the Transform API. These are specific to information for the Data Hub Catalog that you must add to the request body which are described in [Optional Values not Obtained from **dependencies.json**] {#not-in-depfile}.{{% /alert %}}
 
-The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
+The Transform API is available at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.>
 
-The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/v1/dependenciesjson.
+The base URL for all calls to the API is: <https://hub.mendix.com/rest/transform/v1/dependenciesjson.>
 
 ### 9.1 Location of the dependencies.json file of an App
 
-For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
 
 This file has to be inserted in the call to the API in *escaped json format*.
 
@@ -402,11 +402,11 @@ When making the call to the API the following two object have to be specified.
 
 #### 9.3.1 Location Constants Values {#location-constants}
 
- You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the project, also located in the **Mendix\<YourApplicationName>\deployment\model**, where <YourApplicationName> is the name of your application.
+ You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the project, also located in the **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
 
 #### 9.3.2 Extracting Location Constants Values from the metadata.json file {#metadata-file}
 
-In the **metadata.json** file for the app there is an object called `Constants` which is an array of all the constants used in the app project including the those for the published OData service(s). (In the attached screenshot of a **metadata.json** file the constant for the published OData service for the project is highlighted).
+In the **metadata.json** file for the app there is an object called `Constants` which is an array of all the constants used in the app project including the those for the published OData service(s). (In the attached screenshot of a **metadata.json** file the constant for the published OData service for the project is highlighted.)
 
 ![metadata.json file for app](attachments/data-hub-api-how-to/metadata.json-file.png)
 
@@ -443,7 +443,7 @@ There are several objects that are not defined in the service metadata contract 
 * `ServiceVersion`
   * `Tags`
 
-When the above attributes are not specified, the registration will be made using default values. They can also be changed when the asset is curated in the Data Hub Catalog.
+When the above attributes are not specified, the registration is made using default values. They can also be changed when the asset is curated in the Data Hub Catalog.
 
 ## 10 Sample Contract File {#sample-contract}
 

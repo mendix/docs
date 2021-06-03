@@ -102,17 +102,17 @@ The Data Hub API v2 version  is now deprecated and will be removed. Users should
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 4. The Data Hub Search API
+## 4. The Data Hub Search API {#search-API}
 
 The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html)enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
-## 5. The Data Hub Registeration API
+## 5. The Data Hub Registration API {#registration-api}
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments and services or data sources.
 
-The API includes POST methods for registering new assets where a UUID is generated and returned for the asset in the response body. 
+The API includes POST methods for registering new assets where a UUID is generated and returned for the asset in the response body.
 There are also PUT calls to *update* assets that are already registered and also for registering new applications and environments where you provide the UUID.
 
 Apps that consume registered assets can also be registered to ensure that a complete network of shared assets can be maintained.

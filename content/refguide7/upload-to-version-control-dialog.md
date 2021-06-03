@@ -15,7 +15,7 @@ To open the **Upload to Version Control Server** dialog box, go to **Project > M
 
 ![](attachments/upload-to-version-control-dialog/project-more-versioning-upload-to-version-control-server.png)
 
-## 2 Where Should We Upload Your App
+## 2 Where Should We Upload Your App?
 
 Use this setting to select the location where you want to store your app. This can be the Team Server, a private server (an SVN server other than the Team Server), or a local disk.
 
@@ -27,7 +27,7 @@ In the **App name** field, enter the name for the new Team Server project and re
 
 In the **Team Server App** list, select the corresponding Team Server app. After you click **OK**, you app will be uploaded to the selected repository.
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This only works when the existing repository is empty.
 
@@ -37,7 +37,7 @@ This only works when the existing repository is empty.
 
 In the **App repository address** field, enter the repository address you want to upload your app to. After you click **OK**, you app will be uploaded to this repository.
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable).
 

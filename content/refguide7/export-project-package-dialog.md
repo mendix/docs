@@ -25,7 +25,7 @@ If you select **No data**,  the project package will be exported without data in
 
 If you select **Existing snapshot**, the existing database snapshot will be included in the export. After you click **Export**, the package with the existing snapshot will be exported to the selected package destination.
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This option is only available when a snapshot is already present. Snapshots can be created via **Project** > **More Versioning** > **Add Snapshot of Data**.
 
@@ -35,7 +35,7 @@ This option is only available when a snapshot is already present. Snapshots can 
 
 If you select **New snapshot from current database**, a new snapshot will be created from the database and included in the export. After you click **Export**, the package with the new snapshot database will be exported to the selected package destination.
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This option becomes available after you run the app locally at least once, because a local database will be created when running the app for the first time.
 

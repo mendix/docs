@@ -1,5 +1,5 @@
 ---
-title: "Examples of the Data Hub API Calls"
+title: "Examples Calls to the Data Hub APIs"
 parent: "data-hub-api-how-to"
 description: "Examples of the how to use the Data Hub API."
 tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data hub api examples"]
@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub API", "registration", "api", "api-requests", "data 
 
 ## 1 Introduction
 
-This document provides examples of the calls that are described in the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub OpenAPI 3.0 spec is available at <http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.>
+This document provides examples of the calls that are described in the [Using the Data Hub API How-to](data-hub-api-how-to). The latest Data Hub APIs are provided at <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html>.
 
 In some cases the example curl command is provided.
 
@@ -18,14 +18,13 @@ In some cases the example curl command is provided.
 
 For convenience and conciseness, the following variables are used and should be substituted by the values given or those that are returned in your responses when you send the requests:
 
-- {{baseURL}} – the base URL for the Data Hub API: https://hub.mendix.com/rest/datahubservice/v2/data
 - {*AppUUID}* – insert the value the UUID of the application
 - {EnvironmentUUID} – insert the value of the UUID of the environment
-- `<your_PAT_Token>` – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
+- <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
 ## 3 Searching in the Catalog for the string: sample {#get-data-ex}
 
-This example provides the GET request to the Data Hub API when you want to search in the Data Hub Catalog for the following:
+This example takes you through using the [Data Hub Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) to search in the Data Hub Catalog for the following:
 
 - the search string `sample`
 - in the production environments only (value `true`)
@@ -35,19 +34,20 @@ This example provides the GET request to the Data Hub API when you want to searc
 
 **The GET request URL is as follows**:
 
-`GET {{baseURl}}/data?query=sample&productionEndpointsOnly=true`
+`GET https://hub.mendix.com/rest/search/v3/data?query=sample&productionEndpointsOnly=true`
 
 **The example curl command for the above search is**:
 
 ```curl
-curl --location --request GET 'https://hub.mendix.com/rest/datahubservice/v2/data?query=sample&productionEndpointsOnly=true' \
+curl -X 'GET' \
+  'https://hub.mendix.com/rest/search/v3/data?query=sample&productionEndpointsOnly=true' \
 --header 'Authorization: MxToken <your_PAT_Token>'
 ```
-
+where <*your_PAT_Token*> is the value for your PAT token
 
 ### 3.2 Successful 200 Response
 
-The 200 OK response returned that the `TotalResults` are that **11 assets** were found that statisfy the search string and parameters.
+The 200 OK response returned that the `TotalResults` are that **11 assets** were found that satisfy the search string and parameters.
 
 The response payload is shown below:
 
@@ -169,6 +169,9 @@ The response payload is shown below:
 The same search in the Data Hub would look like the following screenshot showing the total list in the search results pane on the left and the details of the selected **SAMPLE_EmployeeDirectory** :
 
 ![search results](attachments/data-hub-api-how-to/dh-search-sample.png)
+
+### 3.4 Retrieve full details of a Specific Endpoint???? - does PM want this illustrated???
+
 
 ## 4 Registering an OData Contract {#reg-contract-ex}
 

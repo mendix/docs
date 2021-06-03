@@ -13,10 +13,10 @@ The **Commit** dialog box is used for committing changes to the Team Server. You
 
 At the top of the dialog box you will see the branch which you are committing. This will be one of the following:
 
-| Branch Description | Notes |
+| Branch type | Description |
 | --- | --- |
-| ![](attachments/commit-dialog/commit-main.png) |  you are committing the main line |
-| ![](attachments/commit-dialog/commit-branch.png) |  you are committing the specified branch |
+| ![](attachments/commit-dialog/commit-main.png) | You are committing the main line. |
+| ![](attachments/commit-dialog/commit-branch.png) | You are committing the specified branch. |
 
 ## 3 Message
 
@@ -26,12 +26,12 @@ In the **Message** field, enter a message describing the changes you have made. 
 
 ### 4.1 Related Stories {#stories}
 
-Select the check boxes next to the stories that are related to your commit. We recommend small sets of changes so that there is usually just one related story.
+On the **Related stories** tab page, select the check boxes next to the stories that are related to your commit. We recommend small sets of changes so that there is usually just one related story.
 
 ### 4.2 Changes in Model
 
-If there are changes in the model this tab page will show a summary of those changes in the form of a grid.
+If there are changes in the model, the **Changes in model** tab page will show a summary of those changes in the form of a grid.
 
 ### 4.3 Changes on Disk
 
-If there are changes on disk this tab page will show a summary of those changes in the form of a grid. The tab page will be hidden if there are no disk changes. In the very common case that there are model changes and the only change on disk is the project file (.mpr) it will also be hidden, because it does not add useful information in that case.
+If there are changes on disk, the **Changes on disk** tab page will show a summary of those changes in the form of a grid. The tab page will be hidden if there are no disk changes. In the very common case that there are model changes and the only change on disk is the project file (.mpr) it will also be hidden, because it does not add useful information in that case.

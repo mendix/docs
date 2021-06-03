@@ -4,12 +4,13 @@ parent: "dialogs"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
+
 When creating a new app, you can do the following with this dialog box:
 
 * Enter an **App name**.
-* Select whether to **Enable online services** provided by the Mendix Platform
-* Select the **Default language**
-* Enter the location of the **Project directory** where the project files for your app are stored
+* Select whether to **Enable online services** provided by the Mendix Platform.
+* Select the **Default language**.
+* Enter the location of the **Project directory** where the project files for your app are stored.
 
 These settings are optional. You can click **Create app** to create your app with the default settings.
 ![](attachments/app-settings-dialog/app-settings-dialg-box.png)

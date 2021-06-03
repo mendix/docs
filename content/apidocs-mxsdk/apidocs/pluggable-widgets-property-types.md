@@ -3,8 +3,6 @@ title: "Pluggable Widget Property Types"
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
-id: "pluggable-widgets/property-types"
-dir: "/apidocs-mxsdk/apidocs/"
 parent: "pluggable-widgets"
 menu_order: 10
 aliases:
@@ -91,7 +89,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/string.png)
+![](attachments/pluggable-widgets/property-types/string.png)
 
 When the property is defined as follows:
 
@@ -104,7 +102,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/string-multiline.png)
+![](attachments/pluggable-widgets/property-types/string-multiline.png)
 
 ### 2.2 Boolean{#boolean}
 
@@ -131,7 +129,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/boolean.png)
+![](attachments/pluggable-widgets/property-types/boolean.png)
 
 ### 2.3 Integer{#integer}
 
@@ -158,7 +156,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/integer.png)
+![](attachments/pluggable-widgets/property-types/integer.png)
 
 ### 2.4 Decimal{#decimal}
 
@@ -185,7 +183,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![decimal](attachments/property-types/decimal.png)
+![decimal](attachments/pluggable-widgets/property-types/decimal.png)
 
 ### 2.5 Enumeration{#enumeration}
 
@@ -227,13 +225,13 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/enumeration.png)
+![](attachments/pluggable-widgets/property-types/enumeration.png)
 
 ## 3 Component Types
 
 ### 3.1 Icon {#icon}
 
-Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#icon-value) section of *Client APIs Available to Pluggable Widgets*.
+Properties of type icon allows a user to configure an icon similar to one used by a [button](/refguide/button-properties#icon). It is passed as `DynamicValue<IconValue>` prop to a client component. For more information, see the [IconValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#icon-value) section of *Client APIs Available to Pluggable Widgets*.
 
 #### 3.1.1 XML Attributes
 
@@ -255,11 +253,11 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](attachments/property-types/icon.png)
+![](attachments/pluggable-widgets/property-types/icon.png)
 
 ### 3.2 Image {#image}
 
-Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
+Image allows a user to configure a static image from an [image collection](/refguide/image-collection). It also allows a user to configure an image from an object that is a specialization of **System.Image**. It is passed as an `DynamicValue<ImageValue>` prop to a client component (for more information, see the [ImageValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#imagevalue) section of *Client APIs Available to Pluggable Widgets*). See the [Images Reference Guide](/refguide/images) for more information about supported image formats.
 
 {{% alert type="warning" %}}
 GIF images are not supported in native mobile apps on Android devices.
@@ -285,11 +283,11 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](attachments/property-types/image.png)
+![](attachments/pluggable-widgets/property-types/image.png)
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="warning" %}}
 Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
@@ -317,7 +315,7 @@ When the component is defined without the `dataSource` attribute as follows:
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](attachments/property-types/widgets.png)
+![studio pro ui](attachments/pluggable-widgets/property-types/widgets.png)
 
 #### 3.3.3 Using the DataSource Attribute
 
@@ -332,7 +330,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](attachments/property-types/widgets_with_ds.png)
+![studio pro ui](attachments/pluggable-widgets/property-types/widgets_with_ds.png)
 
 ## 4 Dynamic Types
 
@@ -342,7 +340,7 @@ The expression property allows a user to configure an [expression](/refguide/exp
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
 #### 4.1.1 XML Attributes
 
@@ -380,7 +378,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/expression.png)
+![](attachments/pluggable-widgets/property-types/expression.png)
 
 ### 4.2 TextTemplate{#texttemplate}
 
@@ -388,7 +386,7 @@ The TextTemplate property allows a user to configure a translatable text templat
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.2.1 XML Attributes
 
@@ -423,7 +421,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/text.png)
+![](attachments/pluggable-widgets/property-types/text.png)
 
 ### 4.3 Action{#action}
 
@@ -431,7 +429,7 @@ The action property type allows a user to configure an action which can do thing
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listactionvalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.3.1 XML Attributes
 
@@ -454,15 +452,15 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/action.png)
+![](attachments/pluggable-widgets/property-types/action.png)
 
 ### 4.4 Attribute{#attribute}
 
 The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#editable-value) section of *Client APIs Available to Pluggable Widgets*.
 
-When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listattributevalue). For more information, see the [Datasource](#datasource) section below.
+When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
 #### 4.4.1 XML 
 
@@ -515,7 +513,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/attribute.png)
+![](attachments/pluggable-widgets/property-types/attribute.png)
 
 ### 4.5 Object{#object}
 
@@ -559,11 +557,11 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/object.png)
+![](attachments/pluggable-widgets/property-types/object.png)
 
 ### 4.6 File {#file}
 
-The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#filevalue) prop to a client component.
+The file property type allows a user to configure a file from an object that is a specialization of **System.File**. It is passed as a [`DynamicValue<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#filevalue) prop to a client component.
 
 #### 4.6.1 XML Attributes
 
@@ -586,11 +584,11 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/file.png)
+![](attachments/pluggable-widgets/property-types/file.png)
 
 ### 4.7 Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets/list-values#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources#list-widgets) for available data source types.
+The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources#list-widgets) for available data source types.
 
 {{% alert type="warning" %}}
 Only list datasources are supported, therefore specifying `isList="true"` is required.
@@ -618,7 +616,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/datasource.png)
+![](attachments/pluggable-widgets/property-types/datasource.png)
 
 ## 5 System Properties {#system-properties}
 
@@ -664,7 +662,7 @@ Every pluggable widget can be [conditionally hidden](/refguide/common-widget-pro
 
 ### 5.5 Editability {#editability}
 
-The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis#editable-value) its client component receives will have `readOnly` flag.
+The editability property allows a pluggable widget to have an editable configuration similar to a [core input widget](/refguide/text-box#editability). When a widget is marked as read-only or conditionally editable with condition being false, all [editable values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#editable-value) its client component receives will have `readOnly` flag.
 
 ```xml
 <systemProperty key="Editability"/>
@@ -673,5 +671,5 @@ The editability property allows a pluggable widget to have an editable configura
 ## 6 Read More
 
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis)
 * [Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)

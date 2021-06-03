@@ -83,7 +83,7 @@ To add a role-specific home page, do the following:
 
 4. In the **Role** drop-down menu, select a role that will have a dedicated home page:
 
-   ![Selecting a Role](attachments/navigation/selecting-role.jpg)
+    ![Selecting a Role](attachments/navigation/selecting-role.jpg)
 
 5. Select the **Type** of the home page: a page or a microflow.
 
@@ -142,7 +142,7 @@ To create a new menu item, do the following:
 
 2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-   ![](attachments/navigation/adding-navigation-items.png)
+    ![](attachments/navigation/adding-navigation-items.png)
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 

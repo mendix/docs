@@ -114,23 +114,27 @@ For general details on Searching in the Data Hub Catalog see [Searching in the D
 
 ### 5.1 Base URL, Method and Endpoint
 
-`GET https://hub.mendix.com/rest/search/v3/data`
+The Base URL for the search API is: https://hub.mendix.com/rest/search/v3
 
-The relative endpoint `/data` searches and retrieve registered items from the Data Hub that satisfy the specified parameters.
+To search and retrieve registered assets the following method and endpoint must be used:
+
+`GET /data`
+
+The relative endpoint `/data` searches and retrieve registered items from the Data Hub that satisfy the parameters that are included in the request. If no parameters are specified, all assets in the Catalog are returned.
 
 ### 5.2 Request Parameters
 
-The complete list of request parameters for the GET call are specified at [Data Hub Search API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
+The complete list of possible request parameters for the `/data` call are specified at [Data Hub Search API](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
-The `query` parameter can be used to specify the string of characters that you want to base your search upon. The string must be a minimum of 3 characters, and can only include alphanumeric characters. All other characters are not allowed for the search string.
+The `query` parameter can be used to search for a specific string of characters. The string must be a minimum of 3 characters, and can only include alphanumeric characters. All other characters are not allowed for the search string.
 
 The `productionEndpointsOnly` parameter is a Boolean, which when set to `true` will only search for assets in **Production** environments. `false` will search in all environments.
 
 ### 5.3 Successful 200 OK Response
 
-A successful 200 response returns the all assets from the Data Hub that satisfy the search string and the specified filters in the JSON object `SearchResults`.
+A successful 200 response returns the all assets from the Data Hub that satisfy the search string and the specified filters in the JSON object `Data`.
 
-All the assets (items registered) in the Catalog that will be searched. For each of the assets the items in the metadata that will be searched and therefore included in the search results are the following:
+All the assets (items registered) in the Catalog that are searched. For each of the assets the following items in the metadata are searched and therefore included in the search results:
 
 * **Endpoint (data sources, services)**: Name, Description, Tags
 * **Application**: Name
@@ -138,9 +142,9 @@ All the assets (items registered) in the Catalog that will be searched. For each
 * **Attribute**: Name, Description
 * **Association**: Name
 
-#### 5.3.1 Data Returned for the `SearchResults` Object {#api-search-results}
+#### 5.3.1 Data Returned in the Search Results {#api-search-results}
 
-The `SearchResults` object includes the total number of items, `TotalResults`, that satisfy the search request and the `Data` object is the array of the endpoints of the objects that satisfy the search string.
+The results include the total number of items, `TotalResults`, that satisfy the search request and the `Data` object is the array of the endpoints of the objects that satisfy the search string.
 
 For the full specification see the [http://datahub-spec.s3-website.eu-central-1.amazonaws.com/search.html).
 
@@ -154,23 +158,34 @@ For the full specification, refer to the [http://datahub-spec.s3-website.eu-cent
 
 ![search results](attachments/data-hub-api-how-to/data-object-schematic.png)
 
-### 5.4 Retrieve specific Endpoints for a Specified App (???verify?? that this should be included)
+### 5.4 Retrieve all Endpoints for a Named Data Source or Service
 
-Using GET You can retrieve details of specific data sources published by a specified app such as all the available versions and also ?????ask Georg if this should be included or just a description???
+Using GET you can retrieve details of a named data source or service. This returns all service versions and the details of all the endpoint.
 
-#### 5.4.1 Base URL, Method and Endpoint
+#### 5.4.1 Method, and Endpoint
 `GET /applications/{AppUUID}/services/{ServiceName}`
 
-Retrieves details of all the versions and their endpoints for a specified service.
+Retrieves details of all the versions and their endpoints for the specified service. Both parameters must be specified and the exact name of the specified service must be included.
 
-#### 5.4.1 Base URL, Method and Endpoint
-`/applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
+#### 5.4.2  Successful 200 Response 
 
-Retrieves details of specified endpoint in the environement.
+A successful response returns details of the data source and full details of the application that published the data source. The `Versions` object returns a collection of all the versions of the named service that are available and details of the endpoints which also includes all the environments that the data source is deployed to.
+
+### 5.5 Retrieve all Endpoint Details for a Specified Data Source
+
+This GET call retrieves full details of a specified service or data source as specified by the unique identifiers of the app and environment UUID and service version. The response also returns the contracts at the data source endpoint.
+
+#### 5.5.1 Method and Endpoint
+
+ `GET /applications/{AppUUID}/environments/{EnvironmentUUID}/services/{ServiceName}/{ServiceVersion} `
+
+#### 5.5.2  Successful 200 Response 
+
+
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 
-This section describes how to use the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html). It goes through the sequence of steps for registering data sources—OData v3 or OData v4 service contracts. All the files that make up the contract must be included in the registration call.
+This section describes how to use the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html). It goes through the sequence of steps for registering data sources—OData v3 or OData v4 service contracts. When registering a data source, all the files that make up the OData v3 or v4 contract must be included in the registration call.
 
 The Data Hub Register API URL is: https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html.
 

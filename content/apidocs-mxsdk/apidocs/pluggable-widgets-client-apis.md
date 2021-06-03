@@ -192,7 +192,7 @@ export interface FileValue {
 
 ### 4.7 List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/list-values) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values) for more information about usage of `ListValue` and associated property values.
 
 ## 5 Exposed Modules
 
@@ -221,6 +221,6 @@ Sometimes for widgets it is necessary to rely on the existing community librarie
 ## 8 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/property-types)
+* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets)
-* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets/native-dependencies)
+* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies)

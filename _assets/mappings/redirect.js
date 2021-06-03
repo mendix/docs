@@ -1375,7 +1375,7 @@ module.exports = {
     },
     {
       from: "/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets",
-      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis"
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/client-apis/"
     },
     {
       from: "/apidocs-mxsdk/apidocs/native-dependencies",
@@ -1391,7 +1391,7 @@ module.exports = {
     },
     {
       from: "/apidocs-mxsdk/apidocs/pluggable-parent-9",
-      to: "/apidocs-mxsdk/apidocs/pluggable-widgets"
+      to: "/apidocs-mxsdk/apidocs/pluggable-widgets/"
     },
   ]
 }

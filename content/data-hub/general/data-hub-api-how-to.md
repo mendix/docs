@@ -181,7 +181,7 @@ This GET call retrieves full details of a specified service or data source as sp
 
 #### 5.5.2  Successful 200 Response 
 
-
+The registration details of the specified data source is retrieved and includes the OData contract files for the service. These can be parsed into business applications so that shared datasets can be consumed.
 
 ## 6 Registering Applications, Environments, Data Sources {#reg-contract}
 

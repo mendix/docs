@@ -1,8 +1,9 @@
 ---
 title: "List Values"
+description: A guide to understanding the list of objects for the datasource property.
 tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 
-parent: "./index"
+parent: "pluggable-widgets-client-apis"
 ---
 
 ## 1 Introduction

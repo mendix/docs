@@ -3,7 +3,7 @@ title: "Pluggable Widget Property Types"
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 
-parent: "index"
+parent: "pluggable-widgets"
 menu_order: 10
 aliases:
 - /apidocs-mxsdk/apidocs/property-types-pluggable-widgets
@@ -89,7 +89,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/string.png)
+![](attachments/pluggable-widgets/property-types/string.png)
 
 When the property is defined as follows:
 
@@ -102,7 +102,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/string-multiline.png)
+![](attachments/pluggable-widgets/property-types/string-multiline.png)
 
 ### 2.2 Boolean{#boolean}
 
@@ -129,7 +129,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/boolean.png)
+![](attachmentspluggable-widgets/property-types/boolean.png)
 
 ### 2.3 Integer{#integer}
 
@@ -156,7 +156,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/integer.png)
+![](attachments/pluggable-widgets/property-types/integer.png)
 
 ### 2.4 Decimal{#decimal}
 
@@ -183,7 +183,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![decimal](attachments/property-types/decimal.png)
+![decimal](attachments/pluggable-widgets/property-types/decimal.png)
 
 ### 2.5 Enumeration{#enumeration}
 
@@ -225,7 +225,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/enumeration.png)
+![](attachments/pluggable-widgets/property-types/enumeration.png)
 
 ## 3 Component Types
 
@@ -253,7 +253,7 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](attachments/property-types/icon.png)
+![](attachments/pluggable-widgets/property-types/icon.png)
 
 ### 3.2 Image {#image}
 
@@ -283,7 +283,7 @@ When the component is defined as follows:
 
 Then the Studio Pro UI for the component appears like this:
 
-![](attachments/property-types/image.png)
+![](attachments/pluggable-widgets/property-types/image.png)
 
 ### 3.3 Widgets {#widgets}
 
@@ -315,7 +315,7 @@ When the component is defined without the `dataSource` attribute as follows:
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](attachments/property-types/widgets.png)
+![studio pro ui](attachments/pluggable-widgets/property-types/widgets.png)
 
 #### 3.3.3 Using the DataSource Attribute
 
@@ -330,7 +330,7 @@ When the component is defined with the `dataSource` attribute, assuming `myDataS
 
 then the Studio Pro UI for the component appears like this:
 
-![studio pro ui](attachments/property-types/widgets_with_ds.png)
+![studio pro ui](attachments/pluggable-widgets/property-types/widgets_with_ds.png)
 
 ## 4 Dynamic Types
 
@@ -378,7 +378,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/expression.png)
+![](attachments/pluggable-widgets/property-types/expression.png)
 
 ### 4.2 TextTemplate{#texttemplate}
 
@@ -421,7 +421,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/text.png)
+![](attachments/pluggable-widgets/property-types/text.png)
 
 ### 4.3 Action{#action}
 
@@ -452,7 +452,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/action.png)
+![](attachments/pluggable-widgets/property-types/action.png)
 
 ### 4.4 Attribute{#attribute}
 
@@ -513,7 +513,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/attribute.png)
+![](attachments/pluggable-widgets/property-types/attribute.png)
 
 ### 4.5 Object{#object}
 
@@ -557,7 +557,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/object.png)
+![](attachments/pluggable-widgets/property-types/object.png)
 
 ### 4.6 File {#file}
 
@@ -584,7 +584,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/file.png)
+![](attachments/pluggable-widgets/property-types/file.png)
 
 ### 4.7 Datasource {#datasource}
 
@@ -616,7 +616,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-![](attachments/property-types/datasource.png)
+![](attachments/pluggable-widgets/property-types/datasource.png)
 
 ## 5 System Properties {#system-properties}
 

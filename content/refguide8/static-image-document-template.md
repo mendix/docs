@@ -8,6 +8,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
+{{% /alert %}}
+
 ## 1 Introduction
 
 A static image shows a predefined image. It can be put either inside or outside a data view or template grid.

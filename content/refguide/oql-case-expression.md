@@ -4,40 +4,49 @@ parent: "oql-operators"
 tags: ["studio pro"]
 ---
 
+## 1 Description
 
-The CASE expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the CASE expression is the result that follows the condition, and the remainder of the CASE expression is not processed. If the condition's result is not true, any subsequent WHEN clauses are examined in the same manner. If no WHEN condition yields true, the value of the CASE expression is the result of the ELSE clause. If the ELSE clause is omitted and no condition is true, the result is null.
+The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
 
-The CASE expression can be used on two manners:
+## 2 Usage
 
-_Simple_
+The `CASE` expression can be used in two ways:
 
-```
-CASE input_expression
-WHEN when_expression THEN result_expression [ ...n ]
-ELSE else_result_expression
-END
-```
+1. Simple
 
-_Extended_
+	```sql
+		CASE input_expression
+		WHEN when_expression THEN result_expression [ ...n ]
+		ELSE else_result_expression
+		END
+	```
 
-```
-CASE
-WHEN boolean_expression THEN result_expression [ ...n ] 
-ELSE else_result_expression
-END
-```
+2. Extended
 
-**input_expression**
-The expression that will be compared to the when_expression. If the input_expression matches the when_expression, the result of the whole CASE expression will be the result_expression given after THEN.
+	```sql
+		CASE
+		WHEN boolean_expression THEN result_expression [ ...n ] 
+		ELSE else_result_expression
+		END
+	```
 
-**when_expression**
-An expression which will be compared to the input_expression. When the input_expression matches this when_expression, the result of the whole CASE expression will be the result_expression given after THEN.
+## 3 Syntax
 
-**boolean_expression**
-An expression which result must be a Boolean value. When this expression returns true, the result of the whole CASE expression will be the result_expression given after THEN.
+### 3.1 input_expression
+`input_expression` is the expression that will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
-**result_expression**
-A possible result of the whole CASE expression.
+### 3.2 when_expression
 
-**else_result_expression**
-When none of the result_expressions are possible, the result of the whole CASE expression will be this else_result_expression.
+`when_expression` is an expression which will be compared to `input_expression`. When `input_expression` matches this `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+
+### 3.3 boolean_expression
+
+`boolean_expression` is an expression which must result in a Boolean value. When this expression returns true, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+
+### 3.4 result_expression
+
+`result_expression` is a possible result of the whole `CASE` expression.
+
+### 3.5 else_result_expression
+
+`else_result_expression` is the result of the whole `CASE` expression, when no `result_expression` is possible.

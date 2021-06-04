@@ -64,7 +64,7 @@ Mendix users (with a registered account) can obtain a PAT using the Mendix **War
 
     {{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.  {{% /alert %}}
 
-    {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following key value pair as a header `Authorization: MxToken <your_PAT_Token>`. <br/><br/> Insert the *Token secret* that was generated for the `<your_PAT_Token>` string. This provides access to your organization’s Data Hub{{% /alert %}}
+    {{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following key value pair as a header <br/> `Authorization: MxToken <your_PAT_Token>`. <br/> Insert the *Token secret* that was generated for the `<your_PAT_Token>` string. This provides access to your organization’s Data Hub.{{% /alert %}}
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen.
 
@@ -80,7 +80,7 @@ The **Warden Home Screen** displays a list of all the tokens:
 
 ## 3. Data Hub OpenAPI Index Page {#datahubapis}
 
-The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) OpenAPI (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.>
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) OpenAPI (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html>.
 
 From this page the following APIs are currently available:
 

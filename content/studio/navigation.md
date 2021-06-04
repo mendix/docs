@@ -150,5 +150,6 @@ A new menu item or a sub-item is added to the navigation.
 
 ## 4 Read More
 
+* [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure)
 * [General Info](general)
 * [Navigation Consistency Errors](consistency-errors-navigation)

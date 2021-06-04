@@ -7,7 +7,7 @@ tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
 {{% /alert %}}
 
 ## 1 Introduction

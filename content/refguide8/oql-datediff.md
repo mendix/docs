@@ -5,7 +5,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
 {{% /alert %}}
 
 The DATEDIFF function returns the difference between two given date/time values. The difference is given in the specified unit.

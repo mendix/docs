@@ -6,7 +6,7 @@ tags: ["studio pro", "login id", "authentication widget", "authentication"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
 {{% /alert %}}
 
 {{% alert type="warning" %}}The **Login ID text box** widget is not supported on native mobile pages.{{% /alert %}}

@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
 {{% /alert %}}
 
 {{% alert type="warning" %}}

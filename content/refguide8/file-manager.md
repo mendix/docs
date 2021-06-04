@@ -6,7 +6,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here]().
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文]().
 {{% /alert %}}
 
 {{% alert type="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}

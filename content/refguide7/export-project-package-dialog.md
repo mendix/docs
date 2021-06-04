@@ -6,6 +6,7 @@ parent: "dialogs"
 
 ## 1 Introduction
 With this dialog box, you can export a Mendix project package (*.mpk*) from the Mendix Modeler. You can export a project package for backup purposes or to share it with other Mendix developers. This is useful if you want to give someone the entire application, or if you need to provide a test app when submitting a ticket.
+
 To open the **Export Project Package** dialog box, open your project in the Mendix Modeler and then go to **File > Export Project Package**.
 
 ![](attachments/export-a-project-package/export-project-package-dialog.png)
@@ -18,8 +19,9 @@ In the **Package destination** field, enter the location of the package file. Th
 
 You can export a Mendix project package without data or with a database snapshot included. If you include a database snapshot, you need to select whether you include an existing snapshot or you include a new snapshot.
 
-### 3.1  No Data
-If you select **No data**,  the project package will be exported without data included. After you click **Export**, the package will be exported to the selected package destination.
+### 3.1 No Data
+
+If you select **No data**, the project package will be exported without data included. After you click **Export**, the package will be exported to the selected package destination.
 
 ### 3.2 Existing Snapshot
 
@@ -43,4 +45,4 @@ This option becomes available after you run the app locally at least once, becau
 
 ## 4 Read More
 
-* [Import Project Package dialog box](import-project-package-dialog)
+* [Import Project Package Dialog](import-project-package-dialog)

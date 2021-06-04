@@ -10,7 +10,7 @@ Use this dialog to specify the information necessary for deploying your app to a
 
 {{% alert type="info" %}}
 
-For more information on deploying to Cloud Foundry, see [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
+For more information on deploying to Cloud Foundry, see [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy) in *Developer Portal Guide*.
 
 {{% /alert %}}
 

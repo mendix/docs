@@ -38,7 +38,7 @@ If you select this option, the app will be stored on a private server. You need 
 
 {{% alert type="info" %}}
 
-This option is only available when support for other servers is enabled in the [Preferences dialog box](preferences-dialog#enabled).
+This option is only available when support for other servers is enabled in the [Preferences dialog box](preferences-dialog#enable).
 
 {{% /alert %}}
 

@@ -134,9 +134,9 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode{#rounding}
+### 3.10 Rounding Numbers{#rounding}
 
-The rounding mode is used to select how to round numbers when performing calculations.
+The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
@@ -166,40 +166,6 @@ In production, this only works with licenses based on concurrent users.
 {{% /alert %}}
 
 Default: *Yes*
-
-### 3.12 Uniqueness Validation
-
-This option can have two different values: **Runtime** and **Database**. **Database** will be the default value.
-
-#### 3.12.1 Database
-
-When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
-
-Database is the recommended setting, because it ensures data accuracy at the highest level.
-
-#### 3.12.2 Runtime
-
-When **Runtime** is selected, the uniqueness of attributes and associations is handled in the Mendix Runtime and not at the database level.
-
-#### 3.12.3 Switching Uniqueness Validation Values
-
-You can always switch between **Runtime** and **Database**.
-
-##### 3.12.3.1 Switching from Runtime to Database
-
-Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
-
-Before switching to the Database option, the **DataStorage.EnableDiagnostics** custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
-
-For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
-
-##### 3.12.3.2 Switching from Database to Runtime
-
-Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
-
-### 3.13 Web Service Calls {#web-service-calls}
-
-The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
 
 ## 4 Languages Tab
 

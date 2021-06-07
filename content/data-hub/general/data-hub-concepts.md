@@ -15,46 +15,49 @@ tags: ["data hub catalog", "data hub", "virtual entities", "landscape", "publish
 
 # 1 Introduction
 
-This document describes the concepts behind using the Mendix Data Hub and sharing datasets in your app development.
+This document describes the concepts behind using the Mendix Data Hub and defines the terminology behind sharing and managing data sources and datasets and using them in your app.
 
-Catalog allows governance of which data is used by whom, and life cycle management informing people of changes, and with good versioning of OData contracts.
+###  1.1 Overview of using Data Hub to Share Data in your App Development 
 
-##  1.1 The Data Hub Components
+The Data Hub is the hub in an organization is where developers can find resources that can be used in their app developement. It also enables these sources to be managed so that users can find the data that they want to work with easily, and ensure that users are kept upto date with any changes and update.
 
-Data Hub is made up of the following components:
+The Data Hub means that in an organization reliable sources can be made available and governed according to the data sharing policies. 
 
-- **Home** -  Search the Catalog by entering a search string, by selecting the most popular tags, or view the most popular data sources in your Data Hub. Register new data sources from your business apps. 
-- **Catalog** provides information on registered data sources and datasets that can be used in app development.  **Search** for registered assets that satisfy the search criteria and filters.  Information about the data source that is provided with the service contract - the **contract metadata** - is displayed in the **Asset Details**. 
-- **Landscape** gives a graphical representation of the network and dependencies between apps, data sources and datasets.
-- **Curate** enables governance (management) of registered assets, adding further information such as owners, tags, app logos, to manage the assets and increase discoverability.
-- **Administration** is to enable management of Data Hub, curators, owners. 
-
- 
-
-###  1.2 Overview of using Data Hub to share data sources 
-
-A visual example:
+ The process below describes how Data Hub can be typically used in an organization and introduces the terminology behind Data Hub and data sharing and management. 
 
 - [ ] Change this diag to show the steps outlined below.
 
 ![image-20210313122809029](./attachments/introducingDH/overview-processes.png)
 
-1. A developer of **Sales APP** has a database of Customer data.  The owners of this data - the sales manager establishes that information of completed sales can be shared with the rest of the company so that they can take this base information and develop their own apps for continued support of the customer, for billing, for post sales activities, etc.
-2. The developer publishes useful groups of the customer information, defined by entities (the datasets) in different **OData v3 services**  or **Data Sources** that are to orient towards specific use cases and levels of access. These services do not include all the information of the dataset only the **entity sets**,  **attributes** and any **associations** that are relevant to consume the datasets for a specific case are published in the services.
-3. The developer assigns a **version number** to each service that is deployed in each **environment** that the app is deployed to. The different environments that the services are deployed to indicate the quality or purpose of the data: **non-production** environments will have test data, **production** environments will have the live data.
-4. There are several ways to register the services in the Catalog:
+1. A developer of **Sales APP** has a database of Customer data.  The **owner of this data**—the sales manager—establishes that information of completed sales can be shared with the rest of the company so that they can take this base information and develop their own apps for continued support of the customer, for billing, for post sales activities, etc.
+2. The developer of the app—the **technical owner**— publishes useful groups of the customer information, the **datasets**, that are defined by the **entities** in the original app, in REST-based **OData services**. These services are referred to as **data sources** in Data Hub as it is a register of sources of data that can be shared. 
+3. Part of the service definition includes how the data sources are organized, the specific use cases and also the levels of access for the published datasets. These services are published according to the OData standard that defines the information about the dataset such as the **entity sets**,  **attributes** and any **associations** and provides the necessary location of the datasets for access by **consumers**.
+4. The developer assigns a **version number** to each service that is deployed in each **environment** that the app is deployed to. The different environments that the services are deployed to indicate the quality or purpose of the data: **non-production** environments will have test data, **production** environments will have the live data.
+5. There are several ways to register the services in the Catalog:
    1. Mendix app deployed to the Mendix cloud: upon **deployment**, the services are automatically **registered** in Data Hub. 
    2. For Mendix apps deployed to a non-Mendix cloud and for other business applications, a registration "pipeline" can be established using the **Data Hub API** to ensure that data sources are registered.
    3. For business applications: the **Connectors** on the Data Hub **Home** Screen can be used to register data sources.
-5. In Data Hub, the developer who is the **technical owner** or an assigned **curator** **curates** the registered assets. Curation includes adding further information to the **metadata** such as  **tags** that indicate the relevancy of the dataset. They may also indicate, for example, that datasets are the "official", "reliable" datasets for this kind of data by setting the sources as **validated**, and identify the source app that the data sources originated from by adding a customized logo.
-6. Developers of the **Delivery APP** and **Invoicing APP** discover the customer datasets for their specific requirements in the Data Hub Catalog. They searched for suitable data to use in their apps using the search string and tags.
-7. They qualify the originating app, the data owners, and the *quality* of the data from the **Metadata** that is displayed for the data source. Further, they can examine which groups of data sources will be most suited for their use. They see that there are several data sources available from the app.  
-8. In Mendix Studio Pro the consuming developers use the **Data Hub Pane** to find the appropriate data source, for the stage of development that they are in. 
-9. The required datasets, are dragged into the **Domain Model** as **external entities ** which can immediately be used in their app modeling. The **OData service contract** at the service **endpoint** is consumed, but only the required entities are accessed and displayed in the Domain Model. 
-10. During the app modelling, the **external entities** entities can be edited to only include attributes and associations that are required by the consuming app. Other fields that can be removed. 
-11. The **consumed entities** are available in all micro-flows and UX components as part of the consuming app's Domain Model.
-12. Depending on the stage of development of their apps, in order to fully test out their apps with representative data, services are consumed from the **non-production** environments. For the final deployed app, they will consume the services in the  **production** environments so that that actual data is available.
-13. During run-time, when the end users of the **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in **real-time**. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
+6. In Data Hub, the developer who is the **technical owner** or an assigned **curator** **curates** the registered assets. Curation includes adding further information to the **metadata** such as  **tags** that indicate the relevancy of the dataset. They may also indicate, for example, that datasets are the "official", "reliable" datasets for this kind of data by setting the sources as **validated**, and identify the source app that the data sources originated from by adding a customized logo.
+7. Developers of the **Delivery APP** and **Invoicing APP** discover the customer datasets for their specific requirements in the Data Hub Catalog. They searched for suitable data to use in their apps using the search string and tags.
+8. They qualify the originating app, the data owners, and the *quality* of the data from the **Metadata** that is displayed for the data source. Further, they can examine which groups of data sources will be most suited for their use. They see that there are several data sources available from the app.  
+9. In Mendix Studio Pro the consuming developers use the **Data Hub Pane** to find the appropriate data source, for the stage of development that they are in. 
+10. The required datasets, are dragged into the **Domain Model** as **external entities ** which can immediately be used in their app modeling. The **OData service contract** at the service **endpoint** is consumed, but only the required entities are accessed and displayed in the Domain Model. 
+11. During the app modelling, the **external entities** entities can be edited to only include attributes and associations that are required by the consuming app. Other fields that can be removed. 
+12. The **consumed entities** are available in all micro-flows and UX components as part of the consuming app's Domain Model.
+13. Depending on the stage of development of their apps, in order to fully test out their apps with representative data, services are consumed from the **non-production** environments. For the final deployed app, they will consume the services in the  **production** environments so that that actual data is available.
+14. During run-time, when the end users of the **Delivery APP** and **Invoicing APP** do something that requires the **Customer** data, it is automatically retrieved from **Sales APP** in **real-time**. Filtering, paging and selecting in the protocol itself and only the requested fields and records are retrieved. 
+
+
+
+##  1.1 The Data Hub Components
+
+Data Hub is made up of the following components:
+
+- **Home** -  From theSearch the Catalog by entering a search string, by selecting the most popular tags, or view the most popular data sources in your Data Hub. Register new data sources from your business apps. 
+- **Catalog** provides information on registered data sources and datasets that can be used in app development.  **Search** for registered assets that satisfy the search criteria and filters.  Information about the data source that is provided with the service contract - the **contract metadata** - is displayed in the **Asset Details**. 
+- **Landscape** gives a graphical representation of the network and dependencies between apps, data sources and datasets.
+- **Curate** enables governance (management) of registered assets, adding further information such as owners, tags, app logos, to manage the assets and increase discoverability.
+- **Administration** is to enable management of Data Hub, curators, owners. 
 
 # 2 OData Services, Versions and Endpoints
 

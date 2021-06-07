@@ -15,7 +15,7 @@ You can extend the functionality of the runtime by writing Java actions. The API
 ## Integration API documentation
 
 {{% alert type="info" %}}
-Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
+Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`). `/api-doc` is available only if there is at least one published service.
 {{% /alert %}}
 
 ## Logging

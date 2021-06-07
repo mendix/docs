@@ -21,11 +21,11 @@ In the **App name** field, enter the name of your new app. This name is used as 
 
 ## 3 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](version-control), cloud deployment, and collaboration. If you select **Yes** for **Enable online services**, this will create a project in the Developer Portal and a corresponding version control repository. If you choose **No** for **Enable online services**, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
+The Mendix Platform offers online services such as [version control](version-control), cloud deployment, and collaboration. If you select **Yes** for **Enable online services**, this will create a project in the Developer Portal and a corresponding version control repository. If you choose **No**, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 
 ## 4 Default Language
 
-From the **Default language** down-down list, select the language of the user interface of your app. Choose the language that you will initially use in your forms and other user interface elements. You can always add additional languages to your app later.
+From the **Default language** drop-down list, select the language of the user interface of your app. Choose the language that you will initially use in your forms and other user interface elements. You can always add additional languages to your app later.
 
 ## 5 Project Directory
 

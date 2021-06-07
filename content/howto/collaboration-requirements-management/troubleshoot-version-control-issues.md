@@ -85,7 +85,7 @@ Follow these steps:
 4. Double-click the `svn:ignore` property. The **Edit Properties** dialog box opens.
 5. Copy all text of the **Property value** via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 6. Paste the text into a new document in Notepad++ (or another editor that understands newline conventions).
-7. In the lower right, double-click **Windows (CR LF)** and select **Unix (LF)** instead. This will change the newline type from CRLF to LF.
+7. In the lower right, double-click **Windows (CR LF)** and select **Unix (LF)** instead. This changes the newline type from CRLF to LF.
 8. Copy all text again.
 9. Go back to the **Edit Properties** dialog box.
 10. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.

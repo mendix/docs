@@ -77,7 +77,7 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 ### 4.1 Manage Users
 
-When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
+When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
 {{% image_container width="450" %}}
 ![](attachments/general-settings/app-user-management-users.png)

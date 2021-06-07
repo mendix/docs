@@ -1,14 +1,19 @@
 ---
 title: "Siemens MindSphere"
 category: "Deployment"
-menu_order: 45
+menu_order: 42
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #launchpad below is mapped from the MindSphere themepack in the Marketplace, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for deploying apps to the MindSphere platform. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
 
 MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
@@ -200,6 +205,10 @@ Just click the Publish Button in Mendix Studio Pro.
 Once your app is deployed you can automatically register the app in your MindSphere tenant.
 
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
+
+{{% alert type="info" %}}
+There is a limit of 1.5GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
+{{% /alert %}}
 
 #### 5.2.1 Pushing to Cloud Foundry
 

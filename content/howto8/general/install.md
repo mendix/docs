@@ -35,7 +35,6 @@ Mendix Studio Pro can be installed on your machine with a Windows executable fil
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://appstore.home.mendix.com/link/modeler/).
 2.  Click the **Download** button in the top-right corner to download the latest Mendix Studio Pro.
 
-
 ## 4 Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
@@ -76,7 +75,7 @@ The prerequisites are the following:
 
 * [Microsoft .NET Framework 4.7.2](https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
-* [Microsoft Visual C++ 2010 SP1 Redistributable Package](http://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe)
+* [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 
@@ -97,8 +96,8 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 5. Rename the following dependencies:
 	* The `.NET Framework 4.7.2` executable to `dotnetfx472.exe`
 	* The `Java Development Kit 11 (x64)` *msi* to `adoptopenjdk_11_x64.msi`
- 	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
- 	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
+	* The `Visual C++ 2010 SP1 Redistributable (x64)` executable to `vcredist2010_x64.exe`
+	* The `Visual C++ Redistributable for Visual Studio 2015 (x64)` executable to `vcredist2015_x64.exe`
 	* The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 

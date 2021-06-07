@@ -13,7 +13,7 @@ This document describes the requirements for an OData service that is going to b
 
 ## 2 Requirements for a Consumed OData Service
 
-The requirements for a consumed OData service used in a Mendix app are the following: 
+The requirements for a consumed OData service used in a Mendix app are the following:
 
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
 * It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, and `$count` (or `$inlinecount`)
@@ -68,7 +68,7 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 ### 3.3 Generalizations
 
-The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity. 
+The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity.
 
 This means that when you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specialization. The specialization will now be an entity with all the attributes and associations of the generalization.
 
@@ -84,6 +84,12 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
+### 3.5 Associations
+
+An OData v3 association can only be used if it has two ends.
+
+An OData v4 navigation property can only be used as an association if it has a partner.
+
 ## 4 Data Hub License Limitations {#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
@@ -93,11 +99,11 @@ There are two types of Data Hub licenses currently available:
 * **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed.
 
 
-* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data. 
+* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
 The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
   {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a Mendix license (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
+  {{% alert type="info" %}}Apps running without a Mendix license (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
 
 Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
 ### 4.1 Local development

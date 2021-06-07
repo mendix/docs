@@ -3,12 +3,44 @@ title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#ki: "There is an issue with users" - AS-1760 (also WS RN)
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
+
+### June 3rd, 2021
+
+#### Fixes
+
+* We fixed a bug in Studio Pro where certain components did not load properly.
+
+### May 31st, 2021
+
+#### Improvements
+
+* When [adding new Marketplace content](/appstore/general/share-app-store-content#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
+* When you create a new component in the **Solutions** category, you will not be able to upload a source file, as solutions will no longer have downloadable content.
+* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/general/share-app-store-content#publish) page.
+  
+#### Fixes
+
+* We fixed some bugs in the flow for adding new Marketplace content.
+
+### May 28th, 2021
+
+#### New Features
+
+* We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
+	* Automatic provisioning of the app service on subscription.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#service-management), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+
+### May 4th, 2021
+
+#### Fixes
+
+* <a name="windows-service"></a>We fixed the issue with downloading the Windows Service. 
+* We fixed a minor bug for anonymous users.
 
 ### April 7th, 2021
 
@@ -24,14 +56,14 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Known Issues
 
-* There is an issue with users having trouble downloading Windows Service. This is planned to be fixed soon.
-	* Workaround: First go to [My Marketplace](https://appstore.home.mendix.com/link/myappstore), then go back to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) and download the Windows Service again. 
+* There is an issue with users having trouble downloading Windows Service.
+	* Fixed on [May 4th, 2021](#windows-service).
 
 ### March 23rd, 2021
 
 #### Improvements
 
-* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My App Store](/appstore/general/app-store-overview#my-app-store) section of the of Marketplace.
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of notifications in the [My Marketplace](/appstore/general/app-store-overview#my-marketplace) section of the of Marketplace.
 * Developers can now reply to reviews of their components.
 
 ### February 9th, 2021

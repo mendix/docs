@@ -6,6 +6,7 @@ description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:
     - /developerportal/settings/general-settings
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
 ---
@@ -124,7 +125,7 @@ For details on the **Deactivate App**, **Leave App**, and **Delete App** options
 
 ## 6 Managing Webhooks {#webhooks}
 
-Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
+Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert type="info" %}}
 Only [Mendix Admins](/developerportal/control-center/#company) or users with the **App Settings** permission can manage webhooks.

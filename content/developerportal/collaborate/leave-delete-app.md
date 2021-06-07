@@ -5,6 +5,7 @@ description: "Describes how to leave, delete, and deactivate an app in the Devel
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
 aliases:
     - /developerportal/settings/leave-delete-app
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -15,7 +16,7 @@ Your ability to delete and deactivate an app depends on your team role:
 
 * A **Scrum Master** is allowed to deactivate and delete an app
 * A custom role with the **App Settings** permission is also allowed to deactivate and delete an app
-* A [Mendix Admin](/developerportal/control-center/#projects) is allowed to delete, deactivate, and activate all the company's apps (with or without team members for the app)
+* A [Mendix Admin](/developerportal/control-center/#apps) is allowed to delete, deactivate, and activate all the company's apps (with or without team members for the app)
 
 For more information on roles, see [App Roles](/developerportal/collaborate/app-roles).
 

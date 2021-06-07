@@ -4,13 +4,14 @@ parent: "licensing-apps"
 menu_order: 20
 description: "Obtaining a Mendix Basic Package Node"
 tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, cannot be scaled and has limited operational information available.
 
-If you have a single app which you want to license, you can do this simply and cost-effectively by ordering the **Mendix Basic** package. This can be done online.
+If you have an app which you want to license, you can do this simply and cost-effectively by ordering the **Mendix Basic** package. This can be done online.
 
 {{% alert type="info" %}}
 Your order is made immediately but the provisioning of your licensed node will take 48 hours.
@@ -23,7 +24,11 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment, the **standard XS* described in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud*, together with the ability to preview and test in Studio Pro and Studio.
+* Has a limited amount of resources and a single cloud environment on Mendix Cloud V4, together with the ability to preview and test in Studio Pro and Studio. The cloud environment has the following features:
+    * 1GB App RAM
+    * 0.25 vCPU
+    * 1GB database schema as a part of a shared database — your schema is private to your app and some database monitoring graphs are not available (see [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4) for more information)
+    * 1GB file storage for `FileDocument` and `Image` entities
 * The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but please note the following:
     * You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
     * Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.

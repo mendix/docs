@@ -4,6 +4,7 @@ parent: "backups"
 menu_order: 30
 description: "How to restore a backup."
 tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -132,12 +133,22 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 {{% alert type="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
 
-The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the upload will fail.
+The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file is stored in a second level location:
+This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource.
+
+#### Mendix Cloud V4
+
+For Mendix Cloud V4 the files are stored in a flat structure.
+
+#### Mendix Cloud V3
+
+The situation for the deprecated Mendix Cloud v3 is slightly different. If you need to restore a backup to Mendix Cloud V3, you will need to implement the structure described below. The restore functionality in Mendix Cloud V4 will also recognize this structure if you are restoring a backup taken on V3 to a V4 environment.
+
+Each file is stored in a second level location:
 
 ```
 /tree

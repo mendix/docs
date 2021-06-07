@@ -13,6 +13,61 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### May 27th, 2021
+
+#### Improvements
+
+* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+
+### May 18th, 2021
+
+#### Improvements
+
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
+  authenticate DNS lookups. There is nothing that you need to do for this
+  change to take effect. Going forward, all DNS requests to these domains
+  will automatically use DNSSEC.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
+
+### April 29th, 2021
+
+#### Improvement
+
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
+
+    If you need more than 32 instances please contact Mendix Support.
+
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+
+Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
+
+**What does this mean for you?**
+
+We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
+
+You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) is using IPv6, by using [https://ipv6-test.com](https://ipv6-test.com/).
+
+**Impact**
+
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
+
+### April 15th, 2021
+
+#### Fix/Improvement
+
+* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2). (Tickets 117609 and 117622)
+
 ### March 30th, 2021
 
 * We have implemented various visual changes to the user interface of the Developer Portal.

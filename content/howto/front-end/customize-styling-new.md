@@ -241,11 +241,11 @@ When this approach is used we recommend you create a company starter app. Out-of
 
 Depending on the type of app you are building, the preview of styling or a theme change is different.
 
-### 5.1. Web apps
+### 5.1 Web apps
 
 Mendix monitors the file system in the **theme** and **themesource** folder for changes in the `.scss` files. When a change is detected, the `.scss` files are compiled to CSS and the app is automatically reloaded (if it is running), so no additional tooling is needed. For more information on how the SCSS is compiled see the [Styling Output](#styling-output) section below.
 
-### 5.2. Native Mobile Apps
+### 5.2 Native Mobile Apps
 
 Mendix monitors the file system in the **theme** and **themesource** folders for changes in the `.js` files. When loading a native mobile app in the Make it Native app there you will see the **Enable developer mode** option. If this setting is not enabled, after making a styling change, you can reload the app with a three-finger tap.
 
@@ -257,38 +257,38 @@ For more information, see the Getting the [Make It Native App Reference Guide](/
 
 Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level for app-specific styling, and styling can be put in modules for re-use.
 
-To facilitate app- and module-level styling, the following file and folder structure is used; the **theme** folder is used for app-specific styling and the **themesource** folder is used for re-usable module styling.
+To facilitate app- and module-level styling, the following file and folder structure is used; the **theme** folder is used for app-specific styling and the **themesource** folder is used for re-usable module styling and resources.
 
-The table below describes the file structure for the theme folder and for modules.
+The bullets below describe the file structure for the theme folder and for modules:
 
-| theme       |                       |                       |                        | This folder contains app specific styling resources.                                                                                                                                                                                                                                                                                                                                                                                                                |
-|-------------|-----------------------|-----------------------|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|             | **web**                   |                       |                        | This folder contains app specific styling resources for (progressive)  web apps.                                                                                                                                                                                                                                                                                                                                                                                  |
-|             |                       | _custom-variables.scss_ |                        | This file contains the theme setting which can be configured to easily change colors, font, spacing etc.                                                                                                                                                                                                                                                                                                                                                            |
-|             |                       | _main.scss_             |                        | This file is the starting point for adding custom styling.                                                                                                                                                                                                                                                                                                                                                                                                          |
-|             |                       | _exclusion-variables.scss_ |                     | This file contains variables that can be toggled to optionally exclude Atlas core styling.                                         |
-|             |                       | _settings.json_         |                        | This file contains the (external) CSS files that should be loaded. This includes the CSS result of the SASS compilation.                                                                                                                                                                                                                                                                                                                                         |
-|             | **native**                |                       |                        | This folder contains app specific styling resources for native mobile apps.                                                                                                                                                                                                                                                                                                                                                                                         |
-|             |                       | _custom-variables.js_   |                        | This file contains the theme setting which can be configured to easily change colors, font, spacing etc.                                                                                                                                                                                                                                                                                                                                                            |
-|             |                       | _main.js_               |                        | This file is the starting point for adding custom styling.                                                                                                                                                                                                                                                                                                                                                                                                          |
-|             |                       | _exclusionVariables.js_ |                        | This file contains variables that can be toggled to optionally exclude Atlas core styling.      |
-| **themesource** |                       |                       |                        | This folder contains module specific styling. Every module has a folder that can contain styling resources.                                                                                                                                                                                                                                                                                                                                                         |
-|             | **Atlas_core** (required) |                       |                        | This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of a project as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below. |
-|             |                       | **web**                   |                        | This folder (and  subfolders) contain the web resources for the standard Mendix supported widgets                                                                                                                                                                                                                                                                                                                                                                 |
-|             |                       | **native**                |                        | This folder (and  subfolders) contain the native mobile resources for the standard Mendix supported widgets                                                                                                                                                                                                                                                                                                                                                       |
-|             | **MODULE_NAME**           |                       |                        | Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps                                                                                                                                                                                                                                                                                                                                             |
-|             |                       | **web**                   |                        | This folder contains re-useable web resources                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|             |                       |                       | _main.scss_              | This file is the starting point for the module web based styling,                                                                                                                                                                                                                                                                                                                                                                                                   |
-|             |                       |                       | _design-properties.json_ | This file contains additional design properties that are based on the classes defined in this module.                                                                                                                                                                                                                                                                                                                                                               |
-|             |                       | **native**                |                        | This folder contains re-useable native mobile resources                                                                                                                                                                                                                                                                                                                                                                                                             |
-|             |                       |                       | _main.js_                | This file is the starting point for the module native mobile based styling,                                                                                                                                                                                                                                                                                                                                                                                         |
-|             |                       |                       | _design-properties.json_ | This file contains additional design properties that are based on the classes defined in this module.                                                                                                                                                                                                                                                                                                                                                               |
+* **theme**
+	* **web** — This folder contains app specific styling resources for (progressive) web apps.
+		* *custom-variables.scss* — This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
+		* *main.scss* — This file is the starting point for adding custom styling.
+		* *exclusion-variables.scss* — This file contains variables that can be toggled to optionally exclude Atlas core styling.
+		* *settings.json* — This file contains the (external) CSS files that should be loaded. This includes the CSS result of the SASS compilation.
+	* **native** — This folder contains app specific styling resources for native mobile apps.
+		* *custom-variables.js* — This file contains the theme setting which can be configured to easily change colors, font, spacing etc.
+		* *main.js* — This file is the starting point for adding custom styling.
+		* *exclusionVariables.js* — This file contains variables that can be toggled to optionally exclude Atlas core styling.
+* **themesource** — This folder contains module specific styling and resources. Every module has a folder that can contain styling resources.
+	* **Atlas_core** (required) — This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of a project as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
+		* **web** — This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
+		* **native** — This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
+	* **MODULE_NAME** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
+		* **web** — This folder contains re-useable web resources
+			* *main.scss* — This file is the starting point for the module web based styling.
+			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
+		* **native** — This folder contains re-useable native mobile resources.
+			* *main.js* — This file is the starting point for the module native mobile based styling.
+			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
+		* **public** - This folder can contain other re-useable resources, for example a custom *login.html* page.
 
-## 7. Styling output {#styling-output}
+## 7 Styling output {#styling-output}
 
 With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio (Pro) automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
 
-### 7.1. Web Apps
+### 7.1 Web Apps
 
 Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output and necessary resources are saved in a folder named **theme-cache**.
 
@@ -303,7 +303,7 @@ The compilation of the *.scss* files is done in the following order:
 3. Custom variables from theme folder (_theme/web/custom-variables.scss_).
 4. _main.scss_ from **theme** folder (_theme/web/main.scss_).
 
-If there are errors during the SASS compilation, these will be shown in Studio Pro in a pop-up. This error gives hints on what went wrong and what should be fixed:
+If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives hints on what went wrong and what should be fixed:
 
 ![theme compilation error](attachments/customize-styling/compilation-error.png)
 
@@ -320,7 +320,7 @@ If there are errors during the bundling, these will be shown in Studio Pro and t
 
 For more details on styling native mobile apps see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
 
-## 8. Disabling default styling from Atlas Core {#disable-default}
+## 8 Disabling default styling from Atlas Core {#disable-default}
 
 Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling and variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
 
@@ -428,7 +428,7 @@ All supported exclusion variables for web are:
 - $exclude-typography-helpers
 ```
 
-### 8.2. Disable Default Native Mobile Widget Styling
+### 8.2 Disable Default Native Mobile Widget Styling
 
 To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **<Mendix project>/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
@@ -537,6 +537,6 @@ All supported exclusion variables for native mobile are:
 
 By default, Mendix generates the _index.html_ (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called _index.html_ in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy _index-example.html_ from the **deployment/web** folder to the **theme/web**, rename it to _index.html_, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
-## 10 Customizing Unsupported Browsers (Web)
+## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called _unsupported-browser.html_ in the **theme/web** folder. If desired, you can copy _unsupported-browser.html_ from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.

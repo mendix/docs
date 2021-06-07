@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 menu_order: 20
 tags: ["Deploy", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -550,9 +551,13 @@ If you attempt to deploy an app with security not set to production into a produ
 
 ### 6.5 ApplicationRootUrl Needs to be Set Manually
 
+{{% alert type="info" %}}
+This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
+{{% /alert %}}
+
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 
@@ -563,6 +568,10 @@ To add this setting:
 {{% alert type="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
+
+### 6.6 Deployment Package Size
+
+Mendix for Private Cloud has a limit of 200MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 

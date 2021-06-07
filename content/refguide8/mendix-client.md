@@ -135,7 +135,7 @@ These are described in the sections below.
 
 Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
-In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets). These Dojo implementations are gradually being replaced.
+In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#widgets). These Dojo implementations are gradually being replaced.
 
 ### 3.1 Pluggable Widgets
 

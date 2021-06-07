@@ -4,6 +4,7 @@ parent: "metrics"
 menu_order: 50
 description: "How to configure Mendix Cloud v4 to enable monitoring and analysis with Datadog."
 tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -392,7 +393,7 @@ You can decide whether a metric for the disk storage size available to the datab
 
 ### 5.4 Email Address Redaction{#redact-emails}
 
-Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_READACTION** to *false*.
+Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 

@@ -30,11 +30,11 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| ![Start Activity](attachments/workflows/start-event.png)    | Start activity                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
+| ![Start Event](attachments/workflows/start-event.png)    | Start event                    | The starting point of a workflow. Workflows are triggered either by the [Call workflow](on-click-event#call-workflow) on-click event on pages or by the [Workflow call](workflow-call) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | ![Decision](attachments/workflows/decision.png)             | [Decision](decision-in-workflows) | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | ![Parallel Split](attachments/workflows/parallel-split.png) | [Parallel split](parallel-split)  | Adds two parallel paths to your workflow.                    |
 | ![Jump Activity](attachments/workflows/jump.png)            | [Jump](jump-activity)             | Allows you to jump to other activities in the workflow.      |
-| ![End Activity](attachments/workflows/end-event.png)        | End activity                      | Ends the path of the workflow                                |
+| ![End event](attachments/workflows/end-event.png)        | End event                      | Ends the path of the workflow                                |
 
 {{% alert type="info" %}}
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](microflow#expose-as-workflow-action) section in *Microflow Properties*.
@@ -155,5 +155,5 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 ## 9 Read More
 
-* [How to Configure a Workflow for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
+* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

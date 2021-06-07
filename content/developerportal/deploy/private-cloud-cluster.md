@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 menu_order: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -109,17 +110,23 @@ If you are not already on the installation tab for your namespace, go to it by f
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
+    ![](attachments/private-cloud-cluster/choose-operating-system.png)
 
-2. Choose the **Mendix Operator Version** that you would like to install.
-    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even into other namespaces.{{% /alert %}}
+2. Click **Download Executable**.
+
+    ![](attachments/private-cloud-cluster/download-executable.png)
+
+3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
 	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
+    {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-3. Click **Download Executable** and make sure that it is stored somewhere on your path.
 	{{% alert type="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the Configuration tool that is compatible with the Mendix Operator you have installed.{{% /alert %}}
 
-    ![](attachments/private-cloud-cluster/download-executable.png)
+    ![](attachments/private-cloud-cluster/download-operator-version.png)
+
+4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
 ### 4.2 Signing in to OpenShift{#openshift-signin}
 
@@ -692,11 +699,29 @@ For **Amazon Elastic Container Registry**, you will need to configure registry a
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
 
-##### 4.3.2.5 Proxy{#proxy}
+#### 4.3.3 Proxy{#proxy}
 
-Choose **Yes** if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
+Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
-#### 4.3.3 Custom TLS{#custom-tls}
+List all local (including cluster-local) IP addresses and domains in the **No proxy for** field. The format is listed below:
+
+Hosts which should be excluded from proxying are specified as:
+
+* a string containing comma-separated values
+* each value is
+	* an IP address prefix (`1.2.3.4`)
+	* an IP address prefix in CIDR notation (`1.2.3.4/8`)
+	* a domain name
+	* if you use the special DNS label (`*`) this indicates that there are no exceptions and everything will be proxied 
+* each IP address prefix or domain name can also include a literal port number (`1.2.3.4:80`)
+* a domain name matches that name and all subdomains
+* a domain name with a leading "." matches subdomains only
+
+	For example "foo.com" matches "foo.com" and "bar.foo.com"; ".y.com" matches "x.y.com" but not "y.com".
+ 
+For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
+
+#### 4.3.4 Custom TLS{#custom-tls}
 
 {{% alert type="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide) the Mendix Operator to version 1.7.0 or later.
@@ -751,7 +776,7 @@ To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-#### 4.3.4 Review and Apply{#review-apply}
+#### 4.3.5 Review and Apply{#review-apply}
 
 When you have configured all the resources, do the following:
 
@@ -806,7 +831,13 @@ For Kubernetes:
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
-The OperatorConfiguration contains the following user-editable options:
+{{% alert type="warning" %}}
+Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
+{{% /alert %}}
+
+### 5.1 Endpoint (network) configuration
+
+The OperatorConfiguration contains the following user-editable options for network configuration:
 
 When using **Ingress** for network endpoints:
 
@@ -826,6 +857,12 @@ spec:
         nginx.ingress.kubernetes.io/proxy-body-size: 500m
         # example: use the specified cert-manager ClusterIssuer to generate TLS certificates with Let's Encrypt
         cert-manager.io/cluster-issuer: staging-issuer
+        # example: deny access to /rest-doc
+        nginx.ingress.kubernetes.io/configuration-snippet: |
+          location /rest-doc {
+            deny all;
+            return 403;
+          }
       # App URLs will be generated for subdomains of this domain, unless an app is using a custom appURL
       domain: mendix.example.com
       # Enable or disable TLS
@@ -860,10 +897,6 @@ spec:
       tlsSecretName: 'mendixapps-tls'
 ```
 
-{{% alert type="warning" %}}
-Adjusting options which are not listed here can cause the Mendix Operator to configure environments incorrectly. Making a backup before applying any changes is strongly recommended.
-{{% /alert %}}
-
 You can change the following options:
 
 * **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
@@ -878,6 +911,27 @@ You can change the following options:
 {{% alert type="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
+
+### 5.2 Mendix app Deployment settings{#advanced-deployment-settings}
+
+The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Optional: provide Mendix app Pods to get a Kubernetes Service Account token
+  runtimeAutomountServiceAccountToken: true
+  # Optional: annotations for Mendix app Pods
+  runtimeDeploymentPodAnnotations:
+    # example: inject the Linkerd proxy sidecar
+    linkerd.io/inject: enabled
+```
+
+You can change the following options:
+
+* **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
+* **runtimeDeploymentPodAnnotations**: - specify default annotations for Mendix app Pods
 
 ## 6 Cluster and Namespace Management
 
@@ -1073,19 +1127,11 @@ The **Plans** tab shows you the database and storage plans which are currently c
 
 ![](attachments/private-cloud-cluster/image33.png)
 
-From this tab you can perform the following action:
-
-##### 6.2.4.1 Adding a Plan
-
-Click **Add** and you will be able to enter the name of an existing plan and add it to the plans linked to this namespace. You should only use this when adding plans using the namespace Reconfiguration Script fails to add them correctly.
-
-![](attachments/private-cloud-cluster/image34.png)
-
-##### 6.2.4.2 Deactivating a Plan
+##### 6.2.4.1 Deactivating a Plan
 
 Click **Deactivate** next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-##### 6.2.4.3 Activating a Plan
+##### 6.2.4.2 Activating a Plan
 
 Click **Activate** next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
@@ -1151,11 +1197,37 @@ When running the installation tool over SSH, make sure that the SSH client suppo
 
 ## 8 Troubleshooting
 
-This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
-
 ### 8.1 Status Reporting
 
+This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+
+### 8.2 Windows PowerShell
+
+This section covers how to troubleshoot an issue you may find when running the installation tool with Windows PowerShell Terminal.
+
+### 8.2.1 Enable Copy and Paste in Windows PowerShell
+
+If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
+
+![](attachments/private-cloud-cluster/image34.png)
+
+Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste**
+
+![](attachments/private-cloud-cluster/image35.png)
+
+You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
+
+### 8.2.2 Unable to Click a Button
+
+![](attachments/private-cloud-cluster/image36.png)
+
+If you highlight a button instead of clicking the button, you may need to disable the **Quick Edit Mode** from the Windows PowerShell Properties.
+
+![](attachments/private-cloud-cluster/image37.png)
+
+After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
 
 ## 9 Containerized Mendix App Architecture {#containerized-architecture}
 

@@ -12,3 +12,4 @@ These step-by-step guides will teach you to build native mobile applications usi
 
 * [How to Deploy Your First Mendix Native Mobile App with the Native Builder CLI](deploying-native-app-cli) – Go from a blank slate to an app running on a device.
 * [How to Create a Custom Developer App with the Native Builder CLI](how-to-devapps-cli) – Create a custom developer app: a substitute for the Make It Native app which accommodates custom dependencies such as native widgets or fonts.
+* [Release Over the Air Updates with App Center's CodePush using the CLI](how-to-ota-cli) - Make your over the air updatable using App Center's CodePush service and Native Builder CLI.

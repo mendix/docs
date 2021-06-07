@@ -1,7 +1,7 @@
 ---
 title: "Workflows"
 description: "Describes the workflows in Mendix Studio."
-menu_order: 55
+menu_order: 15
 tags: ["workflow", "workflows", "Studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,15 +12,15 @@ This functionality is in Beta. For more information on Beta products, see [Mendi
 
 ## 1 Introduction
 
-Workflow is a visual language in Mendix Studios that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
+Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to to solve your business problems that involve processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
-The main difference of workflows from [microflows](microflows) is a waiting aspect – the workflow is paused until it gets an input from an end-user. For example, an employee sends a travel request (triggering the start of the workflow) and then the workflow is paused until a manager approves the request by clicking a button. 
+The main difference between workflows and [microflows](microflows) is a waiting aspect – the workflow is paused until it gets an input from an end-user. For example, an employee sends a travel request (triggering the start of the workflow) and then the workflow is paused until a manager approves the request by clicking a button. 
 
-To view the workflows of your  in Studio, click the **Workflows** icon in the left menu bar:
+To view the workflows of your app in Studio, click the **Workflows** icon in the left menu bar:
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
 
-Workflows is a visual way of expressing application logic. A workflow looks like a flow chart. On a new workflow a *start activity* (a starting point of the workflow) and an *end activity* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
+Workflows are a visual way of processing logic in your application. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
@@ -52,7 +52,7 @@ The selected workflow is opened.
 
 ### 3.2 Adding a Workflow {#create}
 
-To add a workflow to your  in Studio, do the following:
+To add a workflow to your app in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.
 
@@ -94,7 +94,7 @@ To copy and paste a workflow, do the following:
 
 3. Open the Studio app where you want to paste the workflow and press <kbd>Ctrl</kbd> +<kbd>V</kbd> or <kbd>Cmd</kbd> +<kbd>V</kbd>. 
 
-Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
+Your workflow is pasted. For more information on copy/paste function in Studio, see the [Copy/Paste Workflows, Pages, Microflows, and Enumerations](general#copy-paste-documents) section in *General Info*. 
 
 ### 3.5 Deleting a Workflow {#delete}
 
@@ -135,21 +135,21 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start activity                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](page-editor-widgets-events-section#call-workflow) on-click event on pages or by the [Workflow call](microflows#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
+| Start event                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](page-editor-widgets-events-section#call-workflow) on-click event on pages or by the [Workflow call](microflows#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | [Jump activity](workflows-general-activities#jump)           | Allows you to jump to other activities in the workflow.      |
-| [Parallel split](workflows-general-activities#parallel-split) | Adds two parallel paths to your workflow.                    |
+| [Parallel split](workflows-general-activities#parallel-split) | Adds two or more parallel paths to your workflow.            |
 | [End activity](workflows-general-activities#end)             | Ends the path of the workflow                                |
 
 ### 4.2 User Actions {#user-actions}
 
-[User task](workflows-user-task) – a central element in a workflow that allows you to assign a task to a certain user using filters or microflows. 
+[User task](workflows-user-task) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 ![User Actions](attachments/workflows/user-actions.jpg)
 
 ### 4.3 System Actions {#system}
 
-[Call microflow](workflow-system-actions) activity calls a selected microflow. 
+[Call microflow](workflow-system-actions) activity calls a selected microflow. You can use this activity to add application logic to the path of the workflow that does not need user interaction. 
 
 ![System Actions](attachments/workflows/system-actions.jpg)
 

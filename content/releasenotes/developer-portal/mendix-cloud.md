@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### June 8th, 2021
+
+#### Improvements
+
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
+  used to run your Mendix application will be automatically updated to the
+  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+
 ### May 27th, 2021
 
 #### Improvements

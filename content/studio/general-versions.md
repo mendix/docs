@@ -20,7 +20,7 @@ The **Mendix Studio version** and the **Mendix version** can be viewed by clicki
 
 ## 2 Relation Between Studio Ranges and Mendix Versions 
 
-Studio supports a range of **Mendix versions**. For example, Studio supports Mendix versions 7.15 – 7.22 (including all minor versions and path releases) as one range. This means that if one *Studio Pro* user has a project of Mendix 7.15.3 version, and another has a project of Mendix 7.22.0 version, for both users Studio interface and functionality will look the same, because it is one Studio range.
+Studio supports a range of **Mendix versions**. For example, Studio supports Mendix versions 7.15 – 7.22 (including all minor versions and path releases) as one range. This means that if one *Studio Pro* user has an app of Mendix 7.15.3 version, and another has an app of Mendix 7.22.0 version, for both users Studio interface and functionality will look the same, because it is one Studio range.
 
 Studio introduces a new range when there are breaking changes in a model that prevent your app from functioning properly without an upgrade.  An example of a breaking change is introduction of a new functionality. 
 
@@ -30,13 +30,13 @@ The *Studio version* is updated continuously (even daily), which will provide yo
 
 ![](attachments/general-versions/top-bar-upgrade.png)
 
-This means that when you upgrade, you upgrade your whole project to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
+This means that when you upgrade, you upgrade your whole app to a new Mendix version. As Mendix version contains Mendix Studio Pro version, this also means that you or your team members need to install and use the new version for Studio Pro as well. 
 
 When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. When you upgrade, you will automatically be upgraded to the latest version possible, even if it is in a new Studio range. 
 
 {{% alert type="info" %}} 
 
-Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your project is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio.  
+Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio.  
 
 {{% /alert %}}
 
@@ -60,7 +60,7 @@ Once you have upgraded to the newest version, you cannot revert the upgrade. Als
 
 Users on the business side and in IT who want to leverage both Studio and Studio Pro to collaborate on the same application may not want to upgrade right away (for example, because upgrading Studio Pro may not be desired until later). Also, specific company policies may be in place for approving software upgrades.
 
-While we encourage users to upgrade to a new Mendix Studio Pro version as soon as possible, in many cases it is possible to postpone the upgrade. Even when you are editing an app that is not upgraded to the latest Mendix version, an older version of Studio will automatically be loaded when you open this project in Studio. 
+While we encourage users to upgrade to a new Mendix Studio Pro version as soon as possible, in many cases it is possible to postpone the upgrade. Even when you are editing an app that is not upgraded to the latest Mendix version, an older version of Studio will automatically be loaded when you open this app in Studio. 
 
 ## 4 Read More
 

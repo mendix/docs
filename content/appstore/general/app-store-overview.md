@@ -260,7 +260,7 @@ To use an app service in your app, you need binding keys. You can create and man
 
 ### 6.1 Creating Binding Keys
 
-To create binding keys, go to the **Service Management** dashboard, select a **Product**, and click **Generate Keys** at the bottom of the page:
+To create binding keys, go to the **Service Management** dashboard via the link provided in your subscription confirmation email, select a **Product**, and click **Generate Keys** at the bottom of the page:
 
 ![](attachments/app-store-overview/binding-keys-1.png)
 

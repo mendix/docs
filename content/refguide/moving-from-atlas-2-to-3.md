@@ -41,46 +41,44 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 	![Atlas 3 folder](attachments/atlas-mig/atlas3-themefolder.png)
 
-### 2.2  Migrating UI content {#upgrade-ui-content}
+### 2.2  Migrating UI Content {#upgrade-ui-content}
 
 **Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 seperate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 
-- [**Atlas Core**](https://marketplace.mendix.com/link/component/117187) - Contains Atlas core styling and layouts
-- [**Atlas Web Content**](https://marketplace.mendix.com/link/component/117183) - Contains Atlas's web page templates and building blocks
-- [**Atlas Native Content**](https://marketplace.mendix.com/link/component/117175) - Contains Atlas's native page templates and building blocks
+* [**Atlas Core**](https://marketplace.mendix.com/link/component/117187) - Contains Atlas core styling and layouts
+* [**Atlas Web Content**](https://marketplace.mendix.com/link/component/117183) - Contains Atlas's web page templates and building blocks
+* [**Atlas Native Content**](https://marketplace.mendix.com/link/component/117175) - Contains Atlas's native page templates and building blocks
 
 #### 2.2.1 Upgrading Atlas UI Resources to Atlas Core
 
-1.  If you have modified any of the Atlas UI content found in **Atlas UI Resources** e.g. building blocks, page templates or layouts, it is recommended to move the UI content you have modified to another user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
+1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** e.g. building blocks, page templates or layouts, it is recommended to move the UI content you have modified to another user defined module within your app. **Skip this step** if you have not modifed any of Atlas UI's content.
+1.  Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
-2. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
+	![](attachments/atlas-mig/2-rename.png)
 
-   ![](attachments/atlas-mig/2-rename.png)
+1.  Download **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** from the Marketplace and replace the existing ***Atlas_UI_Resources*** renamed to ***Atlas_Core***:
 
-3. Download **[Atlas Core](https://marketplace.mendix.com/link/component/117187)** from the Marketplace and replace the existing ***Atlas_UI_Resources*** renamed to ***Atlas_Core***:
+	![](attachments/atlas-mig/3-import.png)
 
-   ![](attachments/atlas-mig/3-import.png)
+#### 2.2.2 Adding Atlas Web Content to Your App
 
-#### 2.2.2 Adding Atlas Web content to your app
+1.  Download **[Atlas Web Content](https://marketplace.mendix.com/link/component/117183)** from Marketplace
 
-1. Download **[Atlas Web Content](https://marketplace.mendix.com/link/component/117183)** from Marketplace
+	![Atlas web content](attachments/atlas-mig/atlas-web-content-marketplace.png)
 
-   ![Atlas web content](attachments/atlas-mig/atlas-web-content-marketplace.png)
+1.  **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-2. **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
+	![Atlas web content folder](attachments/atlas-mig/atlas-web-content-folder-structure.png)
 
-   ![Atlas web content folder](attachments/atlas-mig/atlas-web-content-folder-structure.png)
+#### 2.2.3 Adding Atlas Native Content to Your App
 
-#### 2.2.3 Adding Atlas Native content to your app
+1.  Download **[Atlas Native Content](https://marketplace.mendix.com/link/component/117175)** from Marketplace:
 
-1. Download **[Atlas Native Content](https://marketplace.mendix.com/link/component/117175)** from Marketplace
+	![Atlas native content](attachments/atlas-mig/atlas-native-content-marketplace.png)
 
-   ![Atlas native content](attachments/atlas-mig/atlas-native-content-marketplace.png)
+1.  **Atlas Native Content** will appear as a new module inside **Marketplace Modules**:
 
-2. **Atlas Native Content** will appear as a new module inside **Marketplace Modules**
-
-![Atlas native content folder](attachments/atlas-mig/atlas-native-content-folder.png)
-
+	![Atlas native content folder](attachments/atlas-mig/atlas-native-content-folder.png)
 
 ### 2.3 Migrating Your Web Styling {#upgrade-web-styling}
 
@@ -436,10 +434,10 @@ Currently the merging of design property options across themesource modules is n
 
 When you have completed the sections above, you may have errors in your error list:
 
-*   For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
+*  For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
 
 	![errors](attachments/atlas-mig/4-errors.png)
-	
+
 * For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
 	* Delete the layout
 	* Delete the widget in the layout
@@ -481,7 +479,7 @@ In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is r
 ![](attachments/atlas-mig/10-edge.png)
 
 To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
-	
+
 ![](attachments/atlas-mig/set-hybrid-nav.png)
 
 ## 5 Troubleshooting Common Atlas Problems {#troubleshoot}

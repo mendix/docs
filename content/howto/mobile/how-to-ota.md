@@ -154,8 +154,8 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 
 1. Navigate to [App Center](https://appcenter.ms).
 1. While logged in, find the Android and iOS apps used for building your app.
-1. Check the URLs and note down the application ID as seen in the URLs. For example, in **https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push**, **App-Android** is the Android app's ID. 
-1. If your app is built under an organization the URL might look like this: **https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push**. In this case, note the **org-name** as seen in the URL.
+1. Check the URLs and note down the application ID as seen in the URLs. For example, in `https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push`, **App-Android** is the Android app's ID. 
+1. If your app is built under an organization the URL might look like this: `https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push`. In this case, note the **org-name** as seen in the URL.
 
 ### 7.2 Move Your App to the Mendix Native Mobile Builder
 

@@ -197,7 +197,7 @@ The new support for multiple configurations will convert your Mendix Native Mobi
 
 The projects converted to the new version of the Native Mobile Builder UI when opened in the older builder versions will be seen as **not configured**.
 
-If you are working with multiple people on the same project please make sure they using the latest version of the Mendix Native Mobile Builder either via the background update feature or by simply downloading the latest one-click installer from [here](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe) and installing the new version.
+If you are working with multiple people on the same project please make sure they using the latest version of the Mendix Native Mobile Builder either via the background update feature or by simply downloading the latest one-click installer from [here](https://artifacts.rnd.mendix.com/native-builders/latest.exe) and installing the new version.
 
 #### Improvements
 

@@ -24,7 +24,7 @@ If you select this option, a new Team Server repository will be created to store
 
 #### 2.1.2 Existing Mendix Team Server
 
-If you select this option, the app will be uploaded to an existing Team Server repository. You need to select the repository in the **Team Server App** drop-down list.
+If you select this option, the app will be uploaded to an existing Team Server repository. You need to select the repository in the **Team Server App** drop-down menu.
 
 {{% alert type="info" %}}
 
@@ -38,7 +38,7 @@ If you select this option, the app will be stored on a private server. You need 
 
 {{% alert type="info" %}}
 
-This option is only available when support for other servers is enabled in the [Preferences dialog box](preferences-dialog#enable).
+This option is only available when support for other servers is enabled in the [Preferences](preferences-dialog#enable) dialog box.
 
 {{% /alert %}}
 
@@ -58,4 +58,5 @@ In the **Project directory** field, specify the directory where the project file
 
 ## 4 Read More
 
-* [Export Project Packge Dialog](export-project-package-dialog)
+* [Export Project Package](export-project-package-dialog)
+

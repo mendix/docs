@@ -105,7 +105,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your project.
 
 1.  Extend the list using the arrow to the right. Verify the expected fonts are available. You can continue by adding as many fonts as you prefer:
 
-	{{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png)
+	{{% image_container width="350" %}}![Custom fonts screen filled & extended](attachments/nbui/advanced-fonts2.png){{% /image_container %}}
 
 1.  Click the snippet button to get the code snippet which you can copy to your styles:
 

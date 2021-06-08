@@ -42,7 +42,7 @@ This setting is only available when you select **Main line** or **Branch line** 
 
 ## 4 Branch Line
 
-From the **Branch line** drop-down list, select from which branch line you want to create another branch line.
+In the **Branch line** drop-down menu, select from which branch line you want to create another branch line.
 
 {{% alert type="info" %}}
 
@@ -52,7 +52,7 @@ This setting is only available when you select **Branch line** in the **Create b
 
 ## 5 Tagged Version
 
-From the **Tagged version** drop-down list, select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
+In the **Tagged version** drop-down menu, select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
 
 {{% alert type="info" %}}
 

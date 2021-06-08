@@ -26,7 +26,7 @@ Use this setting to select the location where your app is stored. You can choose
 
 ### 2.1 Mendix Team Server
 
-From the **Team Server App** drop-down list, select the Team Server app you wish to open, and then choose the development line you want to download from the **Development line** drop-down list.
+In the **Team Server App** drop-down menu, select the Team Server app you wish to open, and then choose the development line you want to download in the **Development line** drop-down menu.
 
 ![](attachments/download-from-version-control-server-dialog/download-from-version-control-server.png)
 
@@ -36,13 +36,13 @@ For more information about development lines, see [Version Control Concepts](ver
 
 ### 2.2 Private Server
 
-In the **App repository address** field, enter the repository address of the app you want to open and click **Connect** to load the development lines from the repository. Then choose the development line you want to download from the **Development line** drop-down list.
+In the **App repository address** field, enter the repository address of the app you want to open and click **Connect** to load the development lines from the repository. Then choose the development line you want to download in the **Development line** drop-down menu.
 
 ![](attachments/download-from-version-control-server-dialog/download-from-private-server.png)
 
 {{% alert type="info" %}}
 
-This option is only available when support for other servers is enabled in the [Preferences dialog box](preferences-dialog#enable).
+This option is only available when support for other servers is enabled in the [Preferences](preferences-dialog#enable) dialog box.
 
 {{% /alert %}}
 

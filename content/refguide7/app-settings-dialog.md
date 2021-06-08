@@ -25,7 +25,7 @@ The Mendix Platform offers online services such as [version control](version-con
 
 ## 4 Default Language
 
-From the **Default language** drop-down list, select the language of the user interface of your app. Choose the language that you will initially use in your forms and other user interface elements. You can always add additional languages to your app later.
+In the **Default language** drop-down menu, select the language of the user interface of your app. Choose the language that you will initially use in your forms and other user interface elements. You can always add additional languages to your app later.
 
 ## 5 Project Directory
 

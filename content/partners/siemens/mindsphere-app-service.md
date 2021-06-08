@@ -71,7 +71,7 @@ Download the **MindSphere IIot Authenticator Module** by following the instructi
 
 To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an clientID and a clientSecret. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
 
-1. Go to the [Mendix Marketplace](https://marketplace.mendix.com/) and open the **Service Management Dashboard**.
+1. Open the **Service Management Dashboard** of the [Mendix Marketplace](https://marketplace.mendix.com/) using the link provided in your confirmation email.
 
 2. Choose the **Product** *MindSphere IoT*.
 

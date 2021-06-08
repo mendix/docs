@@ -40,33 +40,27 @@ The AUT is the deployed Mendix application that you want to test.
 
 ## 3 Deployment Options
 
-There is one standard deployment option in addition to three alternative options. The standard option is recommended, since it is optimized in terms of setup, ease of use, maintenance, and features.
+There are three deployment options. We recommend option 1.
 
-### 3.1 Standard {#standard}
-
-![Standard Option](attachments/ov-deployment/standard-option.jpg)
-
-The standard option is highly recommended for all customers. It supports all current and future features, is easy to set up, is maintenance-free, and gets the best support.
-
-### 3.2 SaaS Selenium Provider
+### 3.1 SaaS Selenium Provider
 
 ![SaaS Selenium Option](attachments/ov-deployment/deploymentoption_standard.png)
 
-This option is very similar to the [standard option](#standard) described above with the difference that it uses a SaaS Selenium Provider instead of the built-in ATSelenium. Use this option only if there is a specific SaaS-provided feature that is not available with ATSelenium.
+This option is highly recommended for all customers. It supports all current and future features, is easy to set up, is maintenance-free (the SaaS provider takes care of that), and gets the best support.
 
-### 3.3 Public App On-Premises
+### 3.2 Public App On-Premises
 
 ![Public app on-premise](attachments/ov-deployment/deploymentoption_alternative1.png)
 
 This option is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
 
-### 3.4 Private App On-Premises
+### 3.3 Private App On-Premises
 
 ![Private app on-premise](attachments/ov-deployment/deploymentoption_alternative2.png)
 
 This option is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
-### 3.5 Customer-Hosted Selenium
+### 3.4 Customer-Hosted Selenium
 
 ![Customer hosted Selenium](attachments/ov-deployment/deploymentoption_alternative3.png)
 
@@ -130,7 +124,6 @@ ATS does not support the uploading of files in every situation. This table prese
 | Selenium Setup | Uploading Your Own File | Uploading a File | Uploading Possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
 | Local Selenium Server (Docker) | ![](attachments/ov-deployment/grey.png) Limited<sup>1</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
-| ATSelenium | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
 | BrowserStack (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
 | SauceLabs (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
 | Selenium SaaS Agent | ![](attachments/ov-deployment/grey.png) Limited<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |

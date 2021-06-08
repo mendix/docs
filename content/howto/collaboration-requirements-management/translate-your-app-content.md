@@ -108,7 +108,7 @@ Now that your current language is Russian, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate {#translate-multiple-items-of-text}
+## 6 Using Batch Translate {#change-multiple-items-of-text}
 
 You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 

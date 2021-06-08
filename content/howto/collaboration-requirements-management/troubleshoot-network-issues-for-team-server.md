@@ -35,7 +35,7 @@ Mendix reserves the right to change the IP address at any time and without notif
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
+Contact your network administrator and give them this information to allow them to configure your network (for example, firewall, and proxy settings) correctly.
 {{% /alert %}}
 
 ## 3 Still Having Problems?

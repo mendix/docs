@@ -128,7 +128,7 @@ The SSO module supports two ways to get a valid MindSphere token locally. The me
 * **Application Credentials**: which is the default and recommended way
 * **Service Credentials**: which is the backup method for when Application Credentials are not possible
 
-#### 5.1.1 Application Credentials{#app-creds}
+#### 5.2.1 Application Credentials{#app-creds}
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen on app startup if the constant *AskForCredentialsOnStartUp* is true - otherwise communication to MindSphere is not possible.
 
@@ -137,21 +137,21 @@ When you run your app locally, you will not be able to use SSO to get your crede
 This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
 
 {{% alert type="info" %}}
-Tip: Use the autofill feature based on a local environment variable for the *Client Secret*:
+**Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
 
-Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user specific environment variable with *Variable name* equals your *Client ID* value and the *Variable value* equals your *Client Secret* value. See also step 6 below on how to get these values.
+Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/envvariables.png){{% /image_container %}}
 
-On startup, the system checks if there is an environment variable present with name equals your *Clienct ID* value and uses the value of it as *ClientSecret*.
-The *ClientID* is build from the combination of:
+On startup, the system checks if there is an environment variable present with the name equal to your *Client ID* value and uses its value as *ClientSecret*.
+The *ClientID* is built from the combination of:
 
 ```*Host tenant*-*Cockpit application name*-*Cockpit application version*```
 
 Ensure you have filled these constants accordingly.
 If everything is setup correctly the form is auto filled and submitted.
 
-Don't forget to restart Studio Pro after you changed / added the environment variable.
+Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}
 
 

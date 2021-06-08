@@ -11,12 +11,12 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 ## 1 Introduction
 
 This documentation describes the adaptations needed to develop Mendix native mobile apps for MindSphere. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations, and allows access to all native device capabilities.
-Details about building native mobile apps with Mendix can be found [here](/howto/mobile/native-mobile).
+Details about building native mobile apps with Mendix can be found [the Native Mobile How Tos](/howto/mobile/native-mobile) section.
 
 The **Siemens MindSphere Mobile Starter Application** is an app template which is based on the **Native Mobile Quickstart** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
 
 On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown to the user at startup.
-The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found [here](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html). But do not worry - the implementation is already part of the app template - just use it.
+The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found in [Developing Mobile Apps for MindSphere](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) in the MindSphere documentation. But do not worry - the implementation is already part of the app template - just use it.
 To support deep links in your app, you have to create your own [Custom Development App](/howto/mobile/how-to-devapps) and register a deep link corresponding to your app registration.
 
 As a prerequisite, we recommend that you follow the [build a native mobile inspection-app](https://academy.mendix.com/link/path/66/Build-a-Native-Mobile-Inspection-App) tutorial from the Mendix Academy to get yourself familiar with mobile app development.
@@ -31,15 +31,15 @@ This documentation is structured into two main parts:
 The setup of your development environment consists of the following steps:
 
 1. Register a new mobile app in Developer Cockpit
-2. Create a project based on "Siemens MindSphere Mobile Starter Application"
+2. Create a project based on the "Siemens MindSphere Mobile Starter Application"
 3. Build your own development app
 4. Try it out
 
-### 2.1 Registration of your mobile app in Developer Cockpit
+### 2.1 Registering your Mobile App in Developer Cockpit
 
-The **Siemens MindSphere Mobile Starter Application** template provides the ability for a user to sign in to MindSphere from within a mobile application. To get the mobile authentication running it is necessary that the application itself is registered within MindSphere. This registration can be done with the MindSphere Developer Cockpit by following the steps below.
+The **Siemens MindSphere Mobile Starter Application** template provides the ability for a user to sign in to MindSphere from within a mobile application. To get the mobile authentication running, it is necessary that the application itself is registered within MindSphere. This registration can be done with the MindSphere Developer Cockpit by following the steps below.
 
-1. Open the *Developer Cockpit* via the Launchpad of your *Developer Tenant*.
+1. Open the **Developer Cockpit** via the Launchpad of your *Developer Tenant*.
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png)
 
@@ -47,13 +47,13 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     * ```Type = Mobile```
     * ```Infrastructure = none```
-    * ```Display Name``` give your app a nice display Name. Currently this name is only used in Developer Cockpit
-    * ```Internal Name``` give an internal name. We need this name later and will call this name **internal_name**
+    * ```Display Name``` — give your app a nice display Name. Currently this name is only used in Developer Cockpit
+    * ```Internal Name``` — give an internal name. We need this name later and will call it **internal_name**
     * ```Version = 1.0.0```
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_CreateApp.png)
 
-1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might interfere with the authentication process. E.g. use a combination of company and app name.
+1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might interfere with the authentication process. For example, use a combination of company and app name to ensure that it is unique.
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_DeepLink.png)
 
@@ -67,17 +67,17 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_Configure.png)
 
-1. Extend the **Application Scopes** section and click the **Create Scope** button.
+1. Extend the **Application Scopes** section and click **Create Scope**.
 
 1. Add a scope with name **admin** and assign it the role **admin**.
 
-1. Click the **Create Scope** button again and enter **user** as the scope name and assign it to the **admin** and **user** role.
+1. Click **Create Scope** again and enter **user** as the scope name and assign it to the **admin** and **user** roles.
 
 1. The final result should look similar to:
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_ScopesRoles.png)
 
-1. Click **Back to App** and **Register** to finalize the registration at MindSphere:
+1. Click **Back to App** and **Register** to finalize the registration on MindSphere:
 
      ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_Register.png)
 
@@ -85,7 +85,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_AppCred.png)
 
-    We will need the **Client ID** and the **Client Secret** later - so copy them somewhere - we will call these constants **client_id** and **client_secret**.
+    We will need the **Client ID** and the **Client Secret** later, so copy them somewhere – we will call these constants **client_id** and **client_secret**.
 
 1. The last step is to grant yourself the *user* or *admin* role in the app **Settings**.
 
@@ -96,12 +96,12 @@ You now have successfully registered your application within the Developer Cockp
 {{% alert type="info" %}}
 The **MindSphere Mobile Starter Application** can be used to build applications for both native mobile apps and 'normal' web applications.
 
-Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but both together. If you need access in a web browser, set up another registration in the Developer Cockpit for your web application as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere#launchpad). This app can then be added to the MindSphere Launchpad.
+Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but not both together. If you need access in a web browser, set up another registration in the Developer Cockpit for your web application as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere#launchpad). This app can then be added to the MindSphere Launchpad.
 {{% /alert %}}
 
 ### 2.2 Start Developing your App with Mendix Studio Pro
 
-Firstly, you have to create a new Mendix Team Server project based on the **Siemens MindSphere Mobile Starter Application** template.
+You have now created a new Mendix Team Server project based on the **Siemens MindSphere Mobile Starter Application** template.
 
 Now, you need to make some configuration changes in the app itself.
 
@@ -127,11 +127,11 @@ In the **NativeMobile** folder:
 
 * **Scheme** = **custom_scheme** from app registration in Developer Cockpit
 
-### 2.3 Build your Own Development App{#buildcustomapp}
+### 2.3 Building your Own Development App{#buildcustomapp}
 
 In this section you will create your own custom development app and register a deep link.
 
-In principal you have to follow the description of how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
+In principle, you have to follow the description of how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
 
 ![Studio SSO configuration](attachments/mindsphere-mobile-native/StudioPro_NativeBuilder.png)
 
@@ -150,7 +150,7 @@ The default browser of your phone will open and show you the MindSphere credenti
 After a successful login, your app will be restarted and a session created. Then your native home page is displayed.
 
 {{% alert type="info" %}}
-If you have trouble signing in to your application, it is a good idea to clear the cookies of your mobile browser. Please see documentation for your browser for further information.
+If you have trouble signing in to your application, it is a good idea to clear the cookies of your mobile browser. See your browser's documentation for further information.
 {{% /alert %}}
 
 ### 2.5 Next steps
@@ -162,17 +162,17 @@ When you enhance your application with MindSphere API calls to use the IoT capab
 * Authorize your MindSphere API calls.
 * Add MindSphere API roles to your existing MindSphere gateway registration.
 
-#### 2.6.1 Authorize your MindSphere API calls
+#### 2.5.1 Authorize your MindSphere API calls
 
 With each MindSphere API call you have to ensure that the corresponding user token is part of the request. Do this by adding the **MindSphere Access Token** action before your REST calls and set the **Authorization** header accordingly.
 
 ![Mobile](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-#### 2.6.2 Extend your application registration with MindSphere API roles
+#### 2.5.2 Extend your application registration with MindSphere API roles
 
-As of now your application has the user roles **admin** and **user**, but none of those roles has the rights to access MindSphere APIs. Do the following steps to achieve this.
+As of now your application has the user roles **admin** and **user**, but none of those roles has the rights to access MindSphere APIs. Perform the following steps to achieve this.
 
-1. Open the *Developer Cockpit* via the Launchpad of your *Developer Tenant*.
+1. Open the **Developer Cockpit** via the Launchpad of your *Developer Tenant*.
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png)
 
@@ -190,9 +190,9 @@ As of now your application has the user roles **admin** and **user**, but none o
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_ChooseAPIRole.png)
 
-    Your application has now been updated to be allowed for the API calls
+    Your application has now been updated to be allowed to make API calls
     
-    {{% alert type="info" %}}To get this active for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
+    {{% alert type="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
 
 ## 3 Module Details{#moduledetails}
 
@@ -204,11 +204,11 @@ Authentication is based on the usage of **Anonymous** users and is enabled in th
 
 ![StudioPro](attachments/mindsphere-mobile-native/StudioPro_Security_Anonymous.png)
 
-When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name he wants to authenticate against. To get this to work, the **Login** page is registered as the default homepage for the Anonymous role.
+When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default homepage for the Anonymous role.
 
 ![StudioPro](attachments/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png)
 
-A click on the **Sign in** button calls the nanoflow **ACT_Login** which opens the browser so that the user can provide his credentials.
+Clicking the **Sign in** button calls the nanoflow **ACT_Login** which opens the browser so that the user can provide their credentials.
 After a successful login, the deep link handler of the SSO module will fetch the MindSphere Mobile Token and will start the user session accordingly.
 At the end of the authentication process the app will be restarted and show the home page of the corresponding user role.
 
@@ -216,26 +216,26 @@ If something went wrong during the authentication process, the corresponding err
 
 ### 3.2 MindSphere APIs and Token Handling
 
-If you have already developed a Web application for MindSphere, you will be aware that you need the **Access Token** action included and used with your REST calls.
+If you have already developed a Web application for MindSphere, you will be aware that you need to use the included **Access Token** action with your REST calls.
 
 ![StarterMobile](attachments/mindsphere-mobile-native/StarterMobileAccessToken.png)
 
- The good news for native mobile is: this do not change. You can use the very same microflows for Web apps and native apps to fetch MindSphere APIs.
+The good news for native mobile is: this do not change. You can use the same microflows for Web apps and native apps to fetch MindSphere APIs.
 
 If you are new to MindSphere app development please check out [MindSphere Development Considerations](mindsphere-development-considerations) to learn more about this topic.
 
-To support mobile native applications, MindSphere provides a special mobile token, which is called **MindSphere Mobile Token**. As a Mendix developer you luckily don't have to do much with this token as this has been done in the **Siemens MindSphere Mobile Starter Application**, but it is maybe worthwhile to have some details to understand the impact on your application better.
+To support mobile native applications, MindSphere provides a special mobile token, which is called the **MindSphere Mobile Token**. As a Mendix developer you luckily don't have to do much with this token as this has been dealt with in the **Siemens MindSphere Mobile Starter Application**, but it is may be worthwhile to present some details to help you understand the impact on your application better.
 
 Actually the Mobile Token is not only one token. It contains two tokens
 
-* the **Access Token** which you need to fetch the MindSphere APIs and which has an expiration time of half-an-hour
-* the **Refresh Token** which will be used to refresh the Access Token when this expires. The refresh token itself is valid for 12 hours. After this time the user must sign in again into the application to acquire a new token.
+* the **Access Token**, which you need to fetch the MindSphere APIs and which has an expiration time of half-an-hour
+* the **Refresh Token**, which will be used to refresh the Access Token when this expires. The refresh token itself is valid for 12 hours. After this time the user must sign into the application again to acquire a new token.
 
-As tokens can expire, there are some events in the lifecycle of a mobile app which needs to be considered. For each event the tokens have to be checked and one of the following three things will happen:
+As tokens can expire, there are some events in the lifecycle of a mobile app which need to be considered. For each event, the tokens have to be checked and one of the following three things will happen:
 
 1. The token is still valid and nothing has to be done.
-2. The access token which is only valid for half an hour is no longer valid but the refresh token is still valid. In this case refreshing your access token is sufficient.
-3. Both the access token as well as the refresh token has expired. In this case the user will be logged out and has to sign in again.
+2. The access token, which is only valid for half an hour, is no longer valid but the refresh token is still valid. In this case refreshing your access token is sufficient.
+3. Both the access token and the refresh token have expired. In this case the user will be logged out and has to sign in again.
 
 As you need a valid MindSphere token to call MindSphere APIs, it is very important that these checks are done before you call a flow to access a MindSphere API. The **Siemens MindSphere Mobile Starter Application** helps you to ensure this by taking care of the following events:
 
@@ -243,18 +243,20 @@ As you need a valid MindSphere token to call MindSphere APIs, it is very importa
 
     ![StarterMobile](attachments/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png)
 
-* Application resume: Within the provided Data view also an **App events** element is placed where the **On resume** event will call the nanoflow **MindSphereSingleSignOn.OnResume** which do the checks mentioned above.
+* Application resume: an **App events** element is placed within the provided Data view which causes the **On resume** event to call the nanoflow `MindSphereSingleSignOn.OnResume` which does the checks mentioned above.
 
     ![StarterMobile](attachments/mindsphere-mobile-native/StarterMobile_OnResume.png)
 
-* Application comes online: The same as on application resume but now the **On online** event of the App events will call the OnResume nanoflow.
+* Application comes online: The same as on application resume but now the **On online** event of the App events will call the `OnResume` nanoflow.
 
-* Periodically your token needs to be checked while your app is running. Therefore the **MindSphereSingleSignOn.OnRefresh** nanoflow is configured to be called every minute.
+* Periodically your token needs to be checked while your app is running. Therefore the `MindSphereSingleSignOn.OnRefresh` nanoflow is configured to be called every minute.
 
     ![StarterMobile](attachments/mindsphere-mobile-native/StarterMobile_OnRefresh.png)
 
-You will want to change the provided home page to fit with the rest of your home page. Please do this, but always make sure not to delete the initially provided Data view and App events.
+{{% alert type="warning" %}}
+You will want to change the home page to fit with the rest of your app. Please do this, but do not delete the initially provided Data view and App events.
+{{% /alert %}}
 
 ### 3.3 Additional User Role Home Pages
 
-If you want to create new home pages for different user roles, please ensure that they include the data view with the **OnSessionStartup** nanoflow and the **AppEvents** as provided via the default mobile home page as well. This ensures that the MindSphere token handling works properly for this user role as well.
+If you want to create new home pages for different user roles, please ensure that they also include the data view with the `OnSessionStartup` nanoflow and the **AppEvents** as provided in the default mobile home page. This ensures that the MindSphere token handling also works properly for this user role.

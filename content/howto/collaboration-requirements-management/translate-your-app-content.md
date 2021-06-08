@@ -71,7 +71,7 @@ To add an additional language, do the following:
 2. Click the **Add** button and select a second language. In this example, we will be using **Russian, Russia**, but you can use any language you like.
 
 	{{% alert type="info" %}}
-	It is recommended that you **don't** choose *Dutch, Netherlands* as this already contains translations for many of the translatable texts.
+	We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.
 	{{% /alert %}}
 	
 3. Click **OK** to confirm.
@@ -133,7 +133,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 	
 6. Click **OK**.
 
-	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the *Russian, Russia* column. The **#** column shows the number of times each text appears in the selected module(s).
+	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the **Russian, Russia** column. The **#** column shows the number of times each text appears in the selected module(s).
 	
 	![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
 	
@@ -210,7 +210,7 @@ To use batch replace, do the following.
 
 ## 8 Copying to a New Language{#copy-to-a-new-language}
 
-Having translated your app, you may want to translate it into another, related, language. For example *Dutch, Netherlands* into *Dutch, Belgium*, *English, United States* into *English, United Kingdom*, or *Russian, Russia* into *Belarusian, Belarus*. Many of the translations will be the same so you don't want to type them again.
+Having translated your app, you may want to translate it into another, related, language, for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Russian, Russia** into **Belarusian, Belarus**. Many of the translations will be the same so you do not want to type them again.
 
 To copy our Russian translations into a Belarusian dictionary you can do the following:
 
@@ -221,8 +221,8 @@ To copy our Russian translations into a Belarusian dictionary you can do the fol
 2. Open the menu option **Language** > **Language Operations…**.
 3. Select **MyFirstModule**. You can see that there are 11 translations in the Russian dictionary.
 4. Click **Copy** for the **Operation**.
-5. Select *Russian, Russia* as the **Source language**.
-6. Select *Belarusian, Belarus* as the **Destination language**.
+5. Select **Russian, Russia** as the **Source language**.
+6. Select **Belarusian, Belarus** as the **Destination language**.
 7. Click **Apply**.
 
 	![Copy all Russian translations in MyFirstModule to the Belarusian dictionary](attachments/translate-your-app-content/language-operations-copy.png)

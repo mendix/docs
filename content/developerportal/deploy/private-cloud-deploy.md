@@ -391,11 +391,15 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 ##### 5.1.3.4 Clear Admin Password
 
-This allows you to clear the password for the local admin user set in the Private Cloud environment. This ensures that the local admin user password is the one set in Studio Pro.
+This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
 
 ##### 5.1.3.5 Change Admin Password
 
-This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
+This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed.
+
+{{% alert type="info" %}}
+By default, there will be no admin password set for your environment. This means that the Mendix administration account will be inactive unless you set (change) a password.
+{{% /alert %}}
 
 ##### 5.1.3.6 Delete Environment
 

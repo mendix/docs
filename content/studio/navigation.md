@@ -19,11 +19,25 @@ The **Navigation Document** consists of menu items that allow end-users navigate
 
 You can also add a sub-item to a menu item. Mind that you cannot assign an action to the menu item that has the sub-item.  
 
+To create a new menu item, do the following:
+
+1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
+
+2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
+
+   ![](attachments/navigation/adding-navigation-items.png)
+
+3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
+
+A new menu item or a sub-item is added to the navigation.
+
 {{% alert type="info" %}}
 
 In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see the [Profiles](/refguide/navigation#profiles) section in *Navigation* in the *Studio Pro Guide*. 
 
 {{% /alert %}}
+
+For more information on how to configure navigation in your app, see [How to Configure a Navigation Bar](/studio-how-to/navigation-how-to-configure).
 
 ## 2 Navigation Editor Properties
 
@@ -38,7 +52,7 @@ You can set a page or a microflow as a default home page:
 The **Default Home Page** section consists of the following properties:
 
 * **Page** – Allows you to set a page that is opened when an end-user opens the app. 
-* **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. 
+* **Microflow** – Allows you to set a microflow that is performed when an end-user opens the app. A microflow can be used to execute some logic or gather specific data that should be passed to the homepage.
 
 A home page icon is displayed in a list of pages or microflows against a page or microflow that is set as a home page:
 
@@ -59,7 +73,7 @@ When adding or editing the role-specific home page, you can set the following pr
 * **Type** – Defines whether a page or a microflow is opened/performed when the user opens the app. The following types are available:
 
   * **Page** – A page is set as a home page.
-  * **Microflow** – A microflow is set as a home page, i.e. a microflow is performed when a user opens the app.
+  * **Microflow** – A microflow is set as a home page, i.e. a microflow is performed when a user opens the app. A microflow can be used to execute some logic or gather specific data that should be passed to the homepage.
 
 * **Page** – This property is only available when the **Type** is set to **Page**. Allows you to set a dedicated home page that is opened for the selected role.
 
@@ -133,20 +147,6 @@ The properties that can be configured in the **General** section are the followi
 
 * **Caption** – Allows you to fill in the name of the menu item.
 * **Icon** – Allows you to set the icon of the menu item.
-
-### 3.3 Creating a Menu Item {#create-new-menu-items}
-
-To create a new menu item, do the following:
-
-1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
-
-2. Click a plus at the bottom of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
-
-    ![](attachments/navigation/adding-navigation-items.png)
-
-3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
-
-A new menu item or a sub-item is added to the navigation.
 
 ## 4 Read More
 

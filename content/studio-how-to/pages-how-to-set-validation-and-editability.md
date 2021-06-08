@@ -57,7 +57,7 @@ To make a field read-only, do the following:
 
 3. In the **General** section, set the **Editability** property to read-only:
 
-    {{% image_container width="250" %}}![](attachments/pages-how-to-set-validation-and-editability/editability.png){{% /image_container %}}
+    ![](attachments/pages-how-to-set-validation-and-editability/editability.png)
 
 4. Select the **Employee number** field and open its properties.
 

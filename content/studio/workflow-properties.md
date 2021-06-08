@@ -53,8 +53,8 @@ The **Display Information** section properties are described in the table below:
 
 | Property             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data), the value of which will be displayed to the end-users. For example, you can select the **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data), the value of which will be displayed to the end-users. For example, you can add the **FirstDay** attribute from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
+| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can display the outcome of the **FullName** attribute value from the **Employee Onboarding** data to display the name of the new employee. The expression should be return a string value. |
+| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the outcome of the **FirstDay** attribute value from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
 
 ### 2.4 Permissions Section {#permissions}
 

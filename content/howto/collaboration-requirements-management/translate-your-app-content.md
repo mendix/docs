@@ -108,7 +108,7 @@ Now that your current language is Russian, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate {#change-multiple-items-of-text}
+## 6 Using Batch Translate {#translate-multiple-items-of-text}
 
 You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 
@@ -187,7 +187,7 @@ To solve this issue, you can do the following:
 
 You can now check that the correct translation has been applied to the other instances of *Order*. For example on the **Order_Overview** page.
 
-## 7 Replacing Text in Current Language
+## 7 Replacing Text in Current Language {#change-multiple-items-of-text}
 
 Once you have made some translations, you may want to look at just the translations to check for spelling or consistency. To do this, use **Batch replace…**.
 

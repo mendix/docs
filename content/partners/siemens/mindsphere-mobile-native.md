@@ -53,7 +53,7 @@ The **Siemens MindSphere Mobile Starter Application** template provides the abil
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_CreateApp.png)
 
-1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might trouble the authentication process. E.g. use a combination of company and app name.
+1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might interfere with the authentication process. E.g. use a combination of company and app name.
 
     ![DeveloperCockpit](attachments/mindsphere-mobile-native/DC_DeepLink.png)
 
@@ -131,7 +131,7 @@ In the **NativeMobile** folder:
 
 In this section you will create your own custom development app and register a deep link.
 
-In principal you have to follow the description on how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there. There is only one thing demanded for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be given in the **App capabilities** section in the **Deep link** field.
+In principal you have to follow the description of how to create a [Custom Development App](/howto/mobile/how-to-devapps), and install it on your device or emulator as described there. There is only one additional thing required for the MindSphere integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
 
 ![Studio SSO configuration](attachments/mindsphere-mobile-native/StudioPro_NativeBuilder.png)
 

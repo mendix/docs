@@ -433,3 +433,68 @@ Currently the merging of design property options across themesource modules is n
 ## 3 Expected Issues After Upgrading to Atlas 3 {#expected-issues}
 
 When you have completed the sections above, you may have errors in your error list:
+
+*  For errors relating to renamed design properties, right-click a related error and click **Updated all renamed design properties in project**:
+
+	![errors](attachments/atlas-mig/4-errors.png)
+
+* For errors about the **Phone** or **Tablet** navigation profile no longer existing, right-click the error and select **Go to** which will navigate you to the widget that points to a missing Phone or Tablet profile — use one of these methods to solve the error:
+	* Delete the layout
+	* Delete the widget in the layout
+	* Add the **Phone web** or **Tablet web** navigation profile to your Mendix application
+	* In the widget's properties pane change the **Profile** to an already existed profile, like **Responsive web**
+
+	Note that navigation profiles have changed in Mendix 9. See the [Mendix 9 Release Notes](/releasenotes/studio-pro/9.0) for more information.
+
+	![](attachments/atlas-mig/5-nav.png)
+
+*  If you are using Hybrid phone profiles, please make sure you change them to their equivalent web profiles by clicking **Change profile type** in your navigation profile:
+	* Hybrid tablet app offline → Tablet web offline
+	* Hybrid tablet app online → Tablet web
+	* Hybrid phone app offline → Phone web offline
+	* Hybrid phone app online → Phone web
+
+	![](attachments/atlas-mig/6-hybrid-phone.png)
+
+*  If you are using Badge, Progress Circle, Progress Bar, or Maps widgets, please make sure you update the definitions of the widgets and reconfigure following the new properties added for each widget:
+
+	![](attachments/atlas-mig/7-errors.png)
+
+*  If you have **Design property X is not supported by your theme** errors, it either means a design property has been removed in Atlas 3 or you need to add your own design properties to the new file structure as instructed in the [migrating custom defined design properties](#upgrade-design-properties) section above. To suppress the error, right-click the error, then select **Remove property**. To check how to extend your design properties, please follow [How to Extend Design Properties](/howto/front-end/extend-design-properties).
+
+	![](attachments/atlas-mig/8-errors-background.png)
+
+* If you have errors saying **Unknown option X for design property**, it means the design property option has been removed in Atlas 3. Use one of the following methods to solve the error: 
+	* Set the design property to its default option: right-click the error, then select **Set property X to default**
+	* Search for the design property option's CSS class in *theme_atlas2/settings.json* for web and *theme_atlas2/settings-native.json* for native, then add it to the applicable [widget's style property](common-widget-properties#style)  
+
+	![](attachments/atlas-mig/9-set-prop.png)
+
+* If you have errors saying **Nanoflow commons/Native mobile resources are not compatible** get the new major versions from **Marketplace**.
+
+## 4 Edge Case Issues After Upgrading to Atlas 3 {#edge-cases}
+
+In Mendix 9 the Hybrid profile is deprecated. In Atlas 3 all hybrid content is removed. When upgrading from Atlas 2 to Atlas 3, you may have errors about pages used as the default home page for a hybrid profile which no longer exists:
+
+![](attachments/atlas-mig/10-edge.png)
+
+To fix this, right-click the error then select **Go to Navigation profile ‘HybridPhone’** and change the default home page:
+
+![](attachments/atlas-mig/set-hybrid-nav.png)
+
+## 5 Troubleshooting Common Atlas Problems {#troubleshoot}
+
+To troubleshoot common Atlas problems, do the following:
+
+* If you have **Layout X no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
+* If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
+* If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
+	* Adjust the layout the page uses to include a placeholder with matching name.
+	* On the page, move the content out of the placeholder.
+
+## 6 Read More
+
+* [Atlas 3 Website](https://www.mendix.com/atlas/)
+* [Atlas Design System App](https://atlasdesignsystem.mendixcloud.com/)
+* [Atlas 3 Change Summary](/refguide/atlas3-change-summary)
+* [Studio Pro 9 Release Notes](/releasenotes/studio-pro/9.0)

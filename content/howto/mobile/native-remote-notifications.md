@@ -28,8 +28,8 @@ Create a Mendix project using the Native Mobile Quickstart starter app:
 
 To install your module, do the following:
 
-1. Add the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module to your app project.
-1. Add the [Encryption](/appstore/modules/encryption) module to your app project.
+1. Add the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module to your app.
+1. Add the [Encryption](/appstore/modules/encryption) module to your app.
 1. Set the encryption private key by doing the following:<br />
 	a. Double-click **Settings**.<br />
 	b. Click **Edit**.<br />
@@ -39,7 +39,7 @@ To install your module, do the following:
 
 	{{% image_container width="300" %}}![Capabilities](attachments/native-remote-push/modeler/setEncryption.png){{% /image_container %}}
 
-1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app project.
+1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app.
 
 ### 3.2 Setting Up a Notification Widget
 

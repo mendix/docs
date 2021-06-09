@@ -40,35 +40,35 @@ The AUT is the deployed Mendix application that you want to test.
 
 ## 3 Deployment Options
 
-There are three deployment options. We recommend option 1.
+There are three deployment options. We recommend the first option with SaaS Selenium provider.
 
 ### 3.1 SaaS Selenium Provider
 
-![SaaS Selenium Option](attachments/ov-deployment/deploymentoption_standard.png)
+This option is highly recommended for all customers. It supports all current and future features, is easy to set up, annd is maintenance-free (the SaaS provider takes care of that). It also gets the best support.
 
-This option is highly recommended for all customers. It supports all current and future features, is easy to set up, is maintenance-free (the SaaS provider takes care of that), and gets the best support.
+![SaaS Selenium Option](attachments/ov-deployment/deploymentoption_standard.png)
 
 ### 3.2 Public App On-Premises
 
-![Public app on-premise](attachments/ov-deployment/deploymentoption_alternative1.png)
-
 This option is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
+
+![Public app on-premise](attachments/ov-deployment/deploymentoption_alternative1.png)
 
 ### 3.3 Private App On-Premises
 
-![Private app on-premise](attachments/ov-deployment/deploymentoption_alternative2.png)
-
 This option is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
-### 3.4 Customer-Hosted Selenium
+![Private app on-premise](attachments/ov-deployment/deploymentoption_alternative2.png)
 
-![Customer hosted Selenium](attachments/ov-deployment/deploymentoption_alternative3.png)
+### 3.4 Customer-Hosted Selenium
 
 This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner. Because of the large effort this requires, this option should only be a last resort if no other option fits your use case.
 
 {{% alert type="warning" %}}
 Selenium is an open-source third-party component and there is no active support from Mendix.
 {{% /alert %}}
+
+![Customer hosted Selenium](attachments/ov-deployment/deploymentoption_alternative3.png)
 
 Since the Selenium Runner offers fewer features compared to Selenium SaaS Providers, it is not possible to make use of the full ATS feature set.
 

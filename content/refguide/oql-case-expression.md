@@ -10,42 +10,41 @@ The `CASE` expression is a conditional expression, similar to if/else statements
 
 ## 2 Usage
 
-The `CASE` expression can be used in two ways:
+The `CASE` expression can be used in two ways – simple:
 
-1. Simple
+```sql
+	CASE input_expression
+	WHEN when_expression THEN result_expression [ ...n ]
+	ELSE else_result_expression
+	END
+```
 
-	```sql
-		CASE input_expression
-		WHEN when_expression THEN result_expression [ ...n ]
-		ELSE else_result_expression
-		END
-	```
+or extended:
 
-2. Extended
-
-	```sql
-		CASE
-		WHEN boolean_expression THEN result_expression [ ...n ] 
-		ELSE else_result_expression
-		END
-	```
+```sql
+	CASE
+	WHEN boolean_expression THEN result_expression [ ...n ] 
+	ELSE else_result_expression
+	END
+```
 
 ## 3 Syntax
 
 ### 3.1 input_expression
-`input_expression` is the expression that will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+
+`input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
 ### 3.2 when_expression
 
-`when_expression` is an expression which will be compared to `input_expression`. When `input_expression` matches this `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+`when_expression` will be compared to `input_expression`. When `input_expression` matches this `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
 ### 3.3 boolean_expression
 
-`boolean_expression` is an expression which must result in a Boolean value. When this expression returns true, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+`boolean_expression` must result in a Boolean value. When this expression returns true, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
 ### 3.4 result_expression
 
-`result_expression` is a possible result of the whole `CASE` expression.
+`result_expression` is the possible result of the whole `CASE` expression.
 
 ### 3.5 else_result_expression
 

@@ -63,7 +63,7 @@ Similar to `entity_name`, double quotes can be used.
 
 `[ ON <constraint> ]` constrains the specified entity in the `JOIN` part of the `FROM` clause. The constraint syntax is similar to that of the `WHERE` clause. Only the entities and `FROM` aliases from the current and preceding `JOIN` elements can be used in the constraint.
 
-Using constraints is optional—the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
+Using constraints is optional – the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
 
 #### 2.3.3 JOIN Types
 

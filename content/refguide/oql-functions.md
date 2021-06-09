@@ -4,7 +4,7 @@ parent: "oql-expressions"
 tags: ["studio pro"]
 ---
 
-For more information on OQL functions, see the links below.
+For more information on OQL functions, see the pages below.
 
 * [OQL CAST](oql-cast)
 * [OQL COALESCE](oql-coalesce)

@@ -18,7 +18,7 @@ DATEPART ( datepart , date_expression )
 
 ### 2.1 datepart
 
-`datepart` specifies the part of the date/time value to retrieve. See the datepart column in the table below for possible values.
+`datepart` specifies the part of the date/time value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
 
 ### 2.2 date_expression
 

@@ -29,7 +29,7 @@ Use this module to brand your Atlas UI app with your own brand or customer brand
 
 When using this module in an existing app, it is necessary to change the navigation layouts in the existing pages.
 
-When using this module in an existing app with a custom theme, the custom theme will be copied to the  **theme_old** folder in the project directory.
+When using this module in an existing app with a custom theme, the custom theme will be copied to the  **theme_old** folder in the app directory.
     
 ## 3 Read More
 

@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To build NFC JavaScript actions, you will do the following:
 
-1. Create a Mendix project.
+1. Create a Mendix app.
 1. Build a native mobile app.
 1. Add a native dependency.
 1. Make two NFC JavaScript actions.
@@ -46,9 +46,9 @@ This tutorial's commands assume your software is installed in the following plac
 * Mendix project: **C:\MendixProjects\**
 {{% /alert %}}
 
-### 3.1 Creating a Mendix Project {#test-project}
+### 3.1 Creating a Mendix App {#test-project}
 
-Follow these instructions to set up your NFC project:
+Follow these instructions to set up your NFC app:
 
 1. Open Mendix Studio Pro.
 1. Select **File** > **New App**.
@@ -85,7 +85,7 @@ In this section, you will create a normal custom developer app to learn the proc
 Now you will build a native custom developer app and install it on your phone:
 
 1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto/mobile/deploying-native-app#3-getting-your-tokens) section of *Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to get your authentication codes.
-1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
+1. Complete the [Preparing Your App](/howto8/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
 
 	``` shell
 	native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
@@ -105,7 +105,7 @@ Now you will build a native custom developer app and install it on your phone:
 	native-builder.exe build dev-app --project-name "Native NFC App"
 	```
 	
-	The project name should match the project names from your `prepare` command. 
+	The project name should match the app names from your `prepare` command. 
 
 Your apps are now available in the *C:\native-builder\builds\* folder, where you will find *Native-NFC-App-Android-1.zip* for an Android app and *Native-NFC-App-iOS-1.zip* for an iOS app.
 
@@ -200,8 +200,8 @@ For Android devices, you must add code which checks if a user permits the module
 
 For iOS you have to add permission to use NFC capabilities:
 
-1. Open your project in xCode.
-1. Select your project in the left menu.
+1. Open your app in Xcode.
+1. Select your app in the left menu.
 1. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
 	
 	![ios capabilities](attachments/create-native-javascript-action/xcode-capabilities-nfc.png)

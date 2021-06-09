@@ -9,6 +9,15 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### June 10th, 2021
+
+#### Improvements
+
+* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and on the [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home), the magnifying glass appears on the right side.
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the filters have been re-styled.
+* All cancel and discard buttons now have matching styles for improved usability.
+
+
 ### June 3rd, 2021
 
 #### New Feature

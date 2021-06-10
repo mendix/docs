@@ -91,7 +91,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 	* License: {*Apache-2.0*}
 	* Initial version: {*1.0.0*}
 	* Author: {*Mendix*}
-	* Mendix app path: {*./test/MxTestProject/*}
+	* Mendix app path: {*./test/MxTestApp/*}
 	* Programming language: {**TypeScript**}
 	* Widget type: {**For native mobile apps**}
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
@@ -114,7 +114,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
-	* App name: *GroupBoxTestProject*
+	* App name: *GroupBoxTestApp*
 	* Enable online services: *No*
 6. Click **Create app**.
 
@@ -127,13 +127,13 @@ Optionally, you can remove all unused widgets to optimize the debugging process.
 Follow these steps to add the Mendix app as a test app to your widget app, so that you can start modeling with the new widget:
 
 1. Close the app in Mendix Studio Pro by clicking **File** > **Close App**.
-2. Move the contents of the Mendix app folder into **test/MxTestProject**, which is located inside your group box widget app folder.
+2. Move the contents of the Mendix app folder into **test/MxTestApp**, which is located inside your group box widget app folder.
 
 Create a test case by following these steps:
 
-1. Open the Mendix test app in **test/MxTestProject** by selecting **File** > **Open App**.
+1. Open the Mendix test app in **test/MxTestApp** by selecting **File** > **Open App**.
 2. In the **Open App** dialog box, select **Locally on disk**.
-3. Open the *GroupBoxTestProject.mpr* file inside your group box widget app folder.
+3. Open the *GroupBoxTestApp.mpr* file inside your group box widget app folder.
 4. Open **Home_Native** page.
 5.  Copy the **Home** container and paste it underneath that container:
 
@@ -207,7 +207,7 @@ Define the structure and default style of the group box widget with these steps:
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
 
-6. Open your Mendix test app in **test/MxTestProject** in Mendix Studio Pro.
+6. Open your Mendix test app in **test/MxTestApp** in Mendix Studio Pro.
 7. Run the app locally.
 8. Verify with the Make It Native app that your app looks like the image below:
 
@@ -1320,7 +1320,7 @@ The last thing to do is change the container component so that the properties ge
 
 Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget receives basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
-1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
+1. Open **test/MxTestApp/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
 
 2. Add the following imports and constant to *custom.js* to define a default custom style:
 
@@ -1351,7 +1351,7 @@ Although you have an extensively featured group box widget, you can still improv
 
 It would be nice to provide the developer with some pre-defined styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
 
-1. In **test/MxTestProject/theme/styles/native/app/custom.js**, add the following constants to end of the file:
+1. In **test/MxTestApp/theme/styles/native/app/custom.js**, add the following constants to end of the file:
 
 	```js
 	export const groupBoxSuccess = {
@@ -1398,11 +1398,11 @@ It would be nice to provide the developer with some pre-defined styles that can 
 
 	![warning styling](attachments/build-native-widget/10-warning-styling.png)
 
-Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
+Defining all the different styles inside **test/MxTestApp/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
 
-1. Create a new file **test/MxTestProject/theme/styles/native/app/group-box.js**.
-2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
-3. Add the following import to **test/MxTestProject/theme/styles/native/app/custom.js**:
+1. Create a new file **test/MxTestApp/theme/styles/native/app/group-box.js**.
+2. Move all the code from **test/MxTestApp/theme/styles/native/app/custom.js** into the new file.
+3. Add the following import to **test/MxTestApp/theme/styles/native/app/custom.js**:
 
 	```js
 	export * from "./group-box";
@@ -1414,7 +1414,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 
 The developer needs to have the class names memorized to apply a certain group box style. By using a design property this will no longer be necessary:
 
-1. Open **test/MxTestProject/theme/settings-native.json**.
+1. Open **test/MxTestApp/theme/settings-native.json**.
 2. At the bottom after the "com.mendix.widget.native.slider.Slider" property, add the following property:
 
 	```json

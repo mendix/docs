@@ -43,7 +43,7 @@ This tutorial's commands assume your software is installed in the following plac
 * GitHub working folder: **C:\github\**
 * Native Builder: **C:\native-builder\**
 * Studio Pro: **C:\Program Files\Mendix\8.6.0.715\**
-* Mendix project: **C:\MendixProjects\**
+* Mendix app: **C:\MendixApps\**
 {{% /alert %}}
 
 ### 3.1 Creating a Mendix App {#test-project}
@@ -88,7 +88,7 @@ Now you will build a native custom developer app and install it on your phone:
 1. Complete the [Preparing Your App](/howto8/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
 
 	``` shell
-	native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
+	native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "Y:\MendixsApps\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
 	```
 
 	As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
@@ -219,14 +219,14 @@ For both platforms, you need to store your changes in the template. Push your ch
 1. Commit the files with the command `git commit -m "Add NFC Manager dependency"`.
 1. Now the files are committed, but they are only stored locally on your machine. Push them to your repository with the command `git push`. This will make the changes available so that the Native Builder can create a new app with NFC support.
 
-### 3.4 Installing a Dependency in Your Project {#install-dependency-project}
+### 3.4 Installing a Dependency in Your App {#install-dependency-project}
 
 The dependency is split into two parts: the native device part, and the client JavaScript part. In this section we will add the dependency JavaScript for the client bundle. For the bundling we need add the dependency builder can add the `react-native-nfc-manager` JavaScript code.
 
 1. In your CLI, open the module folder which contains your JavaScript action:
 
 	```
-	cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions
+	cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
 	```
 
 1. Make sure *HasNFCSupport.js* is in this folder so you know you are in the right place.
@@ -384,7 +384,7 @@ Making software is an iterative process. If you integrate your own module or bui
 	native-builder.exe build dev-app --project-name "Native NFC App"
 	```
 
-	This builder will use the configuration you set during the [Install a Dependency in Your Project](#install-dependency-project) section above.
+	This builder will use the configuration you set during the [Install a Dependency in Your App](#install-dependency-project) section above.
 1. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 1. Uninstall the previous version of the app on your device.
 1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto/mobile/deploying-native-app#distributing) section of *Deploy Your First Mendix Native Mobile App*.
@@ -411,7 +411,7 @@ To implement these capabilities, replace all the **USER CODE** in the **ReadNFCT
 // - the import list
 // - the code between BEGIN USER CODE and END USER CODE
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
-// Other code you write will be lost the next time you deploy the project.
+// Other code you write will be lost the next time you deploy the app.
 import { Big } from "big.js";
 import { BackHandler, NativeModules, Platform } from "react-native";
 import NfcManager, { Ndef } from "react-native-nfc-manager";

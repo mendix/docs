@@ -50,7 +50,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 
 ### 3.2 When a Full Release Is Required
 
-If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases:
+If you have made any changes directly to your iOS or Android app, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases:
 
 * The initial release of your app
 * A Mendix Studio Pro version upgrade that requires a new Native Template version
@@ -159,7 +159,7 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
 
 ### 7.2 Move Your App to the Mendix Native Mobile Builder
 
-1. Launch the Mendix Native Mobile Builder for your project.
+1. Launch the Mendix Native Mobile Builder for your app.
 1. If you have not yet completed the setup wizard, please complete it now.
 1. Quit the tool completely. 
 1. Navigate to your app's directory and find the **nativemobile** folder (for example **C:\Users\user\Documents\Mendix\App\nativemobile**).
@@ -185,9 +185,9 @@ The transition from the CLI to Mendix Native Mobile Builder for OTA supporting a
     
     If the file does not exist add it manually. Either way, **make sure to change the names to reflect the IDs of your App Center apps**. Then make sure the newly changed file is still a valid JSON.
     
-1. Restart the Mendix Native Mobile Builder for your project. If the tool does not start, verify once more that the *.config* file is a valid JSON.
+1. Restart the Mendix Native Mobile Builder for your app. If the tool does not start, verify once more that the *.config* file is a valid JSON.
 
-Try to push an OTA update for an unreleased version of your app, for example v0.1.0. If the OTA update shows up on your App Center app's CodePush administration page, congratulations! You successfully transferred your project over to the Mendix Native Mobile Builder.
+Try to push an OTA update for an unreleased version of your app, for example v0.1.0. If the OTA update shows up on your App Center app's CodePush administration page, congratulations! You successfully transferred your app over to the Mendix Native Mobile Builder.
 
 If the OTA release button remains disabled. Verify that the app names added in the configuration are correct and make sure to add the organization property if your apps are under an organization. After you corrected the mistakes, restart the Mendix Native Mobile Builder and try again.
 

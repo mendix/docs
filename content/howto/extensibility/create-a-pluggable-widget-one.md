@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix Project path: *../../*
+* Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
@@ -219,7 +219,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
-	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App ](#creating-a-test-project) above.
+	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
 
 	The end result will be similar to the screenshot below:
 

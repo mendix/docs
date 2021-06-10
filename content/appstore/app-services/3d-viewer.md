@@ -10,8 +10,8 @@ This app service does the heavy-lifting for you so you do not have to build a 3D
 
 Here is an overview of what the 3DViewer contains:
 
-| Category                                   | Name                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Category | Name |
+| -------- | ---- |
 * Perform 3D measurement on distance, angle, area, radius and and length
   
 ### 1.3 Limitations {#limitations}
@@ -237,7 +237,7 @@ We provide one-month free trial. After the trial period ends, you are subject to
 
 ### 8.3 How to request a LicenseToken
 
-For the time being, to request free-trial and offical subscription `LicenseToken`, please provide **your company legal name**, **your email address**, **your full name**, and send these information to Jacky.Xu@mendix.com. You may be asked to provide more information. In the end you will receive a `LicenseToken` with an agreed expiration date.
+For the time being, to request free-trial and offical subscription `LicenseToken`, please provide **your company legal name**, **your email address**, **your full name**, and send these information to DIS_MXAWS_3DViewer_Support@mendix.com. You may be asked to provide more information. In the end you will receive a `LicenseToken` with an agreed expiration date.
 
 ### 8.4 How to configure LisenseToken for your app deployment
 

@@ -16,7 +16,7 @@ These are the current versions in active development:
 
 ## 6.1.6
 
-**Release date: June 10th, 2021**
+**Release date: June 11th, 2021**
 
 ### Improvements
 

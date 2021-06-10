@@ -140,7 +140,7 @@ The **Round Numbers** setting is used to select how to round numbers when perfor
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
-This table presents the results of rounding the input to one digit with the given rounding mode:
+This table presents the results of rounding the input to one digit with the given method of rounding numbers:
 
 | Input Number | Half Away from Zero  *(default)* | Half to the Nearest Even Number |
 | --- | --- | --- |

@@ -11,19 +11,19 @@ Delivering your Mendix app in multiple languages is an important capability for 
 
 **This how-to will teach you how to do the following:**
 
-* [Add a new language to your app](#add-new-language)
-* [Change the working language](#change-working-language)
-* [Translate individual items of text](#translate-individual-items-of-text)
-* [Translate multiple items of text in one operation](#translate-multiple-items-of-text)
-* [Change multiple items of text in one operation](#change-multiple-items-of-text)
-* [Copy a translation from one language to another](#copy-to-a-new-language)
+* Add a new language to your app
+* Change the working language
+* Translate individual items of text
+* Translate multiple items of text in one operation
+* Change multiple items of text in one operation
+* Copy a translation from one language to another
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know the basics of creating new apps
-* Know how to edite apps
+* Know how to edit apps
 
 ## 2 Creating a Sample App
 
@@ -39,16 +39,16 @@ To create your app, do the following:
 
 	* **Order** with the integer attribute **OrderNumber**
 	* **Product** with the string attribute **ProductName**
-
-		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
 	
+		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
+
 4. Right-click one of the entities and select **Generate overview pages…**.
 5. Ensure both entities are selected and click **OK**.
 
 	![Options selected for Generate Pages](attachments/translate-your-app-content/generate-pages.png)
 	
 	This will generate some pages containing text for you to translate.
-	
+
 6. Open the page **Product_NewEdit** and add a new **Button** widget.
 7. Label the new button **Order**. This button will be used to allow the end-user to order the product they are viewing. Ignore any warnings about the setup of this button.
 
@@ -59,7 +59,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Languages {#add-new-language}
+## 3 Adding App Languages
 
 You can now add an additional language to your app.
 
@@ -73,14 +73,14 @@ To add an additional language, do the following:
 	{{% alert type="info" %}}
 	We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.
 	{{% /alert %}}
-	
+
 3. Click **OK** to confirm.
 
 	![Language settings tab in the app settings dialog](attachments/translate-your-app-content/language-settings.png)
 
 You will see that the default language is still **English, United States**, which is what you want the end-user to see if they do not choose Russian as their language.
 
-## 4 Changing the Current Language {#change-working-language}
+## 4 Changing the Current Language
 
 The current language is the language of the dictionary where any text you enter is stored. You can see which language is the current language in the status bar at the bottom right of the Studio Pro window.
 
@@ -95,7 +95,7 @@ To change your current language to Russian, do the following:
 If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
 {{% /alert %}}
 
-## 5 Translating an Individual Piece of Text {#translate-individual-items-of-text}
+## 5 Translating an Individual Piece of Text
 
 Now that your current language is Russian, you can translate some of the texts into that language.
 
@@ -108,7 +108,7 @@ Now that your current language is Russian, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate {#translate-multiple-items-of-text}
+## 6 Using Batch Translate
 
 You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 
@@ -122,7 +122,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 2. Select **English, United States** as the **Source language** and **Russian, Russia** as the **Destination language**.
 
 	![Select English and Russian as source and destination languages](attachments/translate-your-app-content/batch-translate-languages.png)
-	
+
 3. Click **OK**.
 
 	You initially want to work just on your module, rather than everything.
@@ -130,17 +130,17 @@ To translate multiple occurrences and multiple texts from the default language, 
 5. Check only the module **MyFirstModule** to restrict batch translation to this module.
 
 	![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
-	
+
 6. Click **OK**.
 
 	You can now see all the translatable texts in your module. The individual translations you made in the previous section are shown in the **Russian, Russia** column. The **#** column shows the number of times each text appears in the selected module(s).
 	
 	![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
-	
+
 7. Enter translations in the destination language (**Russian, Russia**) column for a few terms: **Cancel**, **Delete**, and **Edit** for example.
 
 	![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
-	
+
 8. Click **Translate** to save the current translations.
 9. **Close** the batch translate dialog box and look at the page **Product_NewEdit**. You will see that these terms now have Russian translations.
 
@@ -150,7 +150,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 Sometimes a single word in the source language does not have a single translation in the destination language.
 
-Follow the steps below to see how to deal with this situation.
+Follow the steps below to see how to deal with this situation:
 
 1. Follow steps **1** through **6** in the previous section to again see a list of texts in your module which can be translated from **English, United States** to **Russian, Russia**.
 2. Type *Order* in the **Source text contains** field.
@@ -159,7 +159,7 @@ Follow the steps below to see how to deal with this situation.
 	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)
 	
 	One of the locations of the text `Order` is an action button on the **Product_NewEdit** page. This was the button we added above whose purpose is to allow the end-user to order the product.
-	
+
 4. Double-click on the **Action button …** object to confirm that this is the button we were planning to use to order the product.
 
 	![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
@@ -173,7 +173,7 @@ To solve this issue, you can do the following:
 3. Edit the text on the button to reflect the verb *to order*. In Russian this is `заказать`.
 
 	![Order button on Product New Edit page translated into Russian](attachments/translate-your-app-content/product-new-edit-order-russian.png)
-	
+
 4. Reopen the **Language** > **Batch Translate…** dialog box and search for *Order* in the module **MyFirstModule**.
 
 	You will see that the translations for *Order* have now been split between the one with the translation `заказать` and the one with no translation.
@@ -187,7 +187,7 @@ To solve this issue, you can do the following:
 
 You can now check that the correct translation has been applied to the other instances of *Order*. For example on the **Order_Overview** page.
 
-## 7 Replacing Text in Current Language {#change-multiple-items-of-text}
+## 7 Replacing Text in Current Language
 
 Once you have made some translations, you may want to look at just the translations to check for spelling or consistency. To do this, use **Batch replace…**.
 
@@ -208,7 +208,7 @@ To use batch replace, do the following.
 
 4. Click **Replace** to update the translation dictionary.
 
-## 8 Copying to a New Language{#copy-to-a-new-language}
+## 8 Copying to a New Language
 
 Having translated your app, you may want to translate it into another, related, language, for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Russian, Russia** into **Belarusian, Belarus**. Many of the translations will be the same so you do not want to type them again.
 
@@ -217,7 +217,7 @@ To copy our Russian translations into a Belarusian dictionary you can do the fol
 1. Add *Belarusian, Belarus* as an app language.
 
 	![Belarusian added to the app](attachments/translate-your-app-content/language-settings-belarusian.png)
-	
+
 2. Open the menu option **Language** > **Language Operations…**.
 3. Select **MyFirstModule**. You can see that there are 11 translations in the Russian dictionary.
 4. Click **Copy** for the **Operation**.

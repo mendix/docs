@@ -2,6 +2,7 @@
 title: "Import Project Package"
 parent: "dialogs"
 ---
+
 ## 1 Introduction
 
 To create a new app from a Mendix project package (*.mpk*) file, you need to import an app package. The new app can either be stored in a version control server or locally on disk.
@@ -14,7 +15,7 @@ To open this dialog box,  go to **File > Import App Package**, browse to the *.m
 
 Use this setting to select the location where you want to store your app. This can be the [Team Server](#team-server), a [private server](#private-server) (an SVN server other than the Team Server), or a [local disk](#local).
 
-### 2.1 Mendix Team Server
+### 2.1 Mendix Team Server {#team-server}
 
 When uploading the app to the [Mendix Team Server](team-server), you can choose between creating a new repository, or uploading to an existing one.
 
@@ -32,7 +33,7 @@ This only works when the existing repository is empty.
 
 {{% /alert %}}
 
-### 2.2 Private Server
+### 2.2 Private Server {#private-server}
 
 In the **App repository address** field, enter the address of the repository you want to upload your app to.
 
@@ -42,7 +43,7 @@ This option is only available when support for other servers is enabled in **Edi
 
 {{% /alert %}}
 
-### 2.3 Locally on Disk
+### 2.3 Locally on Disk {#local}
 
 If you select this option, the app will be stored on the local disk of the computer that is  running Desktop Modeler.
 

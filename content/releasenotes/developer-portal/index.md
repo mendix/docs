@@ -15,6 +15,25 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### June 1st, 2021
+
+#### Improvements
+
+* We added a tab on the [Cloud](/developerportal/control-center#cloud) page in Control Center that displays details on **Free Environments**.
+* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/index#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+
+### May 17th, 2021
+
+#### Improvements
+
+* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redeisgn of Mendix Developer Portal.
+
+#### Fixes
+
+* We fixed an issue where you could not always see the avatars of other users in the same app.
+* We fixed an issue where there were styling glitches visible when adding a description to a newly created [story](/developerportal/collaborate/stories).
+* We fixed an issue where Mendix Support was not always able to adjust app permissions on behalf of customers.
+
 ### May 7th, 2021
 
 #### New Features

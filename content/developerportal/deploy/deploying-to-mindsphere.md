@@ -12,7 +12,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-This information is for deploying apps to the MindSphere platform. It does not apply to the MindSphere IoT App Service.
+This information is for deploying apps to the MindSphere platform. It does not apply to MindSphere IIoT for Makers.
 {{% /alert %}}
 
 MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
@@ -205,6 +205,10 @@ Just click the Publish Button in Mendix Studio Pro.
 Once your app is deployed you can automatically register the app in your MindSphere tenant.
 
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
+
+{{% alert type="info" %}}
+There is a limit of 1.5GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
+{{% /alert %}}
 
 #### 5.2.1 Pushing to Cloud Foundry
 

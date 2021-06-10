@@ -24,7 +24,7 @@ It can be used both for troubleshooting, and to aid in designing your published 
 
 Technical details of the JSON Schema which is created to support import and export mappings for an OpenApi (Swagger) documentation page.
 
-### 2.3 [Open API 2.0 Documentation](open-api)
+### 2.3 [OpenAPI 2.0 Documentation](open-api)
 
 Technical details of the *swagger.jso* file which is created to describe the published REST service on an OpenApi (Swagger) documentation page.
 

@@ -8,7 +8,7 @@ menu_order: 2
 
 The Application Performance Monitor (APM) is a solution that helps to analyze performance issues as well as support users in analyzing runtime behaviour.
 
-This is the reference guide for the Mansystems APM for Mendix. It has the following chapters:
+This is the reference guide for the CLEVR APM for Mendix. It has the following chapters:
 
 *   [Dashboard](rg-one-dashboard)
 *   [Configuration](rg-one-configuration)

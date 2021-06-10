@@ -117,7 +117,7 @@ function loadAllDocumentsAsPromise(documents: projects.IDocument[]): when.Promis
 }
 ```
 
-In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the documents[] array into a Promise of an array of Documents. Using [when.all](https://github.com/cujojs/when/wiki/Examples#whenall), you return a promise that resolves only when all documents have been loaded. Only then you can make sure that you do not enter `done()` before the promise has been resolved.
+In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the documents array into a Promise of an array of Documents. Using [when.all](https://github.com/cujojs/when/wiki/Examples#whenall), you return a promise that resolves only when all documents have been loaded. Only then you can make sure that you do not enter `done()` before the promise has been resolved.
 
 {{% alert type="info" %}}
 

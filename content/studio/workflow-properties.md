@@ -53,8 +53,8 @@ The **Display Information** section properties are described in the table below:
 
 | Property             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data), the value of which will be displayed to the end-users. For example, you can select the **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain attributes of the [Workflow entity](#data), the value of which will be displayed to the end-users. For example, you can add the **FirstDay** attribute from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
+| Workflow Name        | **Workflow name** is displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FullName** attribute value from the **Employee Onboarding** data to display the name of the new employee. The expression should be return a string value. |
+| Workflow Description | **Workflow Description** is a description of the workflow displayed in the running app. The **Workflow name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FirstDay** attribute value from the **Employee Onboarding** data to display the start date of the new employee and assign them to a training group. |
 
 ### 2.4 Permissions Section {#permissions}
 
@@ -78,7 +78,7 @@ The **Due Date** section properties are described in the table below:
 | ---------- | ------------------------------------------------------------ |
 | None       | No due date is set.                                          |
 | Duration   | You can set the deadline for the workflow with the **Due In** option, which indicates the number of hours, days, or weeks the workflow is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
-| Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
+| Expression | You can set a due date for the workflow writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. For more information on expressions, see [Expressions](expressions). |
 
 ### 2.5 Admin Page Section {#admin-page}
 

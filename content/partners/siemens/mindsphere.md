@@ -9,7 +9,7 @@ tags: ["Siemens", "MindSphere"]
 
 Mendix offers powerful integration options to incorporate IIoT data provided by Siemens MindSphere into your Mendix Applications. There are two ways to leverage these integrations. 
 
-1. If you would like to have a standalone Mendix application and want to incorporate IIoT Data coming from MindSphere into your business logic, then [MindSphere IIoT for Makers](#app-service) is the right choice for you.
+1. If you would like to have a standalone Mendix application and want to incorporate IIoT Data coming from MindSphere into your business logic, then [MindSphere IIoT for Makers](#iiot-for-makers) is the right choice for you.
 
 2. If you would like to offer your Mendix application within the MindSphere eco system to other MindSphere customers (multitenancy) and, optionally, use MindSphere's hosting offering, then [Mendix on MindSphere](#mendix-on-mindsphere) would be the right choice. 
 

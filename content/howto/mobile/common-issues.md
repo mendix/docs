@@ -57,4 +57,3 @@ To use Studio Pro on a Mac device, you will first need to install and configure 
 ## 4 Read More
 
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)
-* [Native Builder Reference Guide](/refguide/native-builder)

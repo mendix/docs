@@ -114,4 +114,3 @@ To create logic to call the web service, follow these steps:
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Security How-to's](../security/)

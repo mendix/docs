@@ -26,7 +26,7 @@ The APM Tool has now an OData source so users can use their own reporting agains
 
 ### New feature: Load test recorder
 
-Mansystems has a load test tool that can be used in projects by our consultants. The tool is likely to be productized in the future and is NOT INCLUDED in the APM Tool. This tool needs a recorder to record sessions. These sessions can then be scripted/parametrized for usage in the load test.
+CLEVR has a load test tool that can be used in projects by our consultants. The tool is likely to be productized in the future and is NOT INCLUDED in the APM Tool. This tool needs a recorder to record sessions. These sessions can then be scripted/parametrized for usage in the load test.
 The APM Tool now includes the load test recorder, so APM Tool users are immediately ready for a load test and need not again add a module to their App.
 Load test customers will need the APM Tool for measurements and hence also benefit from the addition.
 This feature is visible in the addional tools menu.
@@ -67,6 +67,6 @@ When the before shutdown microflow is not configured and some tools are running 
 
 In Mendix 5 and above the microflow names are taken from the action caption. So if the action caption is changed in the modeler the call microflow action in the performance tool does not drill down. Also the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name, but in different modules the performance tool cannot pick the right one.
 
-The CustomString widget on Mendix 6.2.0 does not render. A newer version from the AppStore solves this.
+The CustomString widget on Mendix 6.2.0 does not render. A newer version from the Mendix Marketplace solves this.
 
 In a sandbox or on Cloud Foundry the instances will have a separate hostname/ip every time. The license will not work after a restart. This is fixed in 1.7.0.

@@ -3,12 +3,37 @@ title: "Marketplace"
 description: "Release notes for updates to the Mendix Marketplace"
 tags: ["marketplace", "connector", "module", "add on", "widget"]
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
-#ki: "There is an issue with users" - AS-1760 (also WS RN)
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
+
+### June 3rd, 2021
+
+#### Fixes
+
+* We fixed a bug in Studio Pro where certain components did not load properly.
+
+### May 31st, 2021
+
+#### Improvements
+
+* When [adding new Marketplace content](/appstore/general/share-app-store-content#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
+* When you create a new component in the **Solutions** category, you will not be able to upload a source file, as solutions will no longer have downloadable content.
+* We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/general/share-app-store-content#publish) page.
+  
+#### Fixes
+
+* We fixed some bugs in the flow for adding new Marketplace content.
+
+### May 28th, 2021
+
+#### New Features
+
+* We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
+	* Automatic provisioning of the app service on subscription.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#service-management), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 

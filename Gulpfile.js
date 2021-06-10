@@ -12,7 +12,6 @@ const CONFIG = require('./_gulp/config');
 const server = require('./_gulp/server');
 const jsonServer = require('./_gulp/json');
 const hugo = require('./_gulp/hugo');
-const redirect_mappings = require('./_gulp/mappings_redirects');
 const asset_mappings = require('./_gulp/mappings_assets');
 const htmlproofer = require('./_gulp/htmlproofer');
 const algolia = require('./_gulp/algolia');
@@ -45,15 +44,6 @@ gulp.task('clean:css', `Cleanup the ${CONFIG.PATHS.styles.dest} directory`, () =
 /*************************************************
   MAPPINGS
 **************************************************/
-gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${CONFIG.DIST_FOLDER}/mappings/redirect.map`, done => {
-  redirect_mappings()
-    .then(done)
-    .catch(err => {
-      gulpErr('write:mapping', err);
-      return process.exit(2);
-    });
-});
-
 gulp.task('write:assetmappings', `Write asset mappings to ${CONFIG.DIST_FOLDER}/mappings/assets.map`, done => {
   asset_mappings(CONFIG.CURRENTFOLDER)
     .then(done)
@@ -203,7 +193,7 @@ gulp.task('build:hugo', `Build`, [], done => {
 /*************************************************
   MAIN BUILD TASKS
 **************************************************/
-gulp.task('build', `BUILD. Used for production`, gulp.series('clean', 'write:mappings', gulp.parallel('build:menu', 'build:sass', 'build:js'), 'write:assetmappings', 'build:hugo', 'check', (done) => {
+gulp.task('build', `BUILD. Used for production`, gulp.series('clean', gulp.parallel('build:menu', 'build:sass', 'build:js'), 'write:assetmappings', 'build:hugo', 'check', (done) => {
   //if any error happened in the previous tasks, exit with a code > 0
   // if (err) {
   //   var exitCode = 2;

@@ -190,7 +190,7 @@ An object with the following key-value pairs:
 
 #### 3.3.1 Description
 
-After a request for download backup is submitted, you can check the progress this job using the `archive_id`. This job will eventually reach one of the following end states: *completed* or *failed*. When it's completed, the `url` attribute is populated with direct link to your requested backup. This link is valid for 10 minutes since completion.
+After a request to download the backup is submitted, you can check the progress this job using the `archive_id`. This job will eventually reach one of the following end states: *completed* or *failed*. When it is completed, the `url` attribute is populated with direct link to your requested backup. This link is valid for eight hours after completion.
 
 ```bash
 HTTP Method: GET

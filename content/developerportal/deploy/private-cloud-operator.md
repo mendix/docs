@@ -57,7 +57,7 @@ spec:
   storage: # Specification of Storage CR
     servicePlan: dev
   mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image
-  sourceURL: https://example.com/example-app.mda # URL of App's source MDA or MPK
+  sourceURL: https://example.com/example-app.mda # URL of App's source MDA
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
   tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
     # Enable or disable TLS for the app
@@ -318,7 +318,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl variable](https://docs.mendix.com/refguide/custom-settings#2-general-settings) in `customConfiguration` to the app's URL. For example: 
+For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings#general) in `customConfiguration` to the app's URL. For example: 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp

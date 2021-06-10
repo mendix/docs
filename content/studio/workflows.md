@@ -20,7 +20,7 @@ To view the workflows of your app in Studio, click the **Workflows** icon in the
 
 ![Workflow Icon](attachments/workflows/workflow-icon.jpg)
 
-Workflows are a visual way of processing logic in your application. A workflow looks like a flow chart. On a new workflow a *start activity* (a starting point of the workflow) and an *end activity* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
+Workflows are a visual way of processing logic in your application. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
@@ -135,7 +135,7 @@ The elements of this section are described in the table below:
 
 | Element                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Start activity                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](page-editor-widgets-events-section#call-workflow) on-click event on pages or by the [Workflow call](microflows#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
+| Start event                                               | The starting point of a workflow. Workflows are triggered either by the [Call workflow](page-editor-widgets-events-section#call-workflow) on-click event on pages or by the [Workflow call](microflows#microflow-workflow-activities) action in microflows. <br />Click the start event to open [workflow properties](workflow-properties). |
 | [Decision](workflows-general-activities#decision)            | Makes a choice based on a condition and follows one and only one of the outgoing paths. |
 | [Jump activity](workflows-general-activities#jump)           | Allows you to jump to other activities in the workflow.      |
 | [Parallel split](workflows-general-activities#parallel-split) | Adds two or more parallel paths to your workflow.            |

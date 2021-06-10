@@ -13,7 +13,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### June 10th, 2021
+### June 11th, 2021
 
 #### Mendix Cloud V3 Archived Logs
 

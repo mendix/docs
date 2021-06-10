@@ -58,7 +58,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 
 ### 4.2 Version Control
 
-#### 4.2.1 Enable Private Version Control {#enable}
+#### 4.2.1 Enable Private Version Control {#enabled}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](team-server), but in another SVN server to which you have access. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, managing branch lines, or importing an app package.
 

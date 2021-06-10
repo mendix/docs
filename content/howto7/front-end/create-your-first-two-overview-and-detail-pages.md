@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Creating an Overview Page
 
-To create a new overview page and add it to your project, follow these steps:
+To create a new overview page and add it to your app, follow these steps:
 
 1.  Right-click the module and select **Add** > **Page**.
 2. Click **Responsive**.

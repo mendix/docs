@@ -49,7 +49,7 @@ To prepare your app, follow these steps:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
+4.  Copy the address as text from your main app folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 
@@ -148,7 +148,7 @@ color: green;
 }
 ```
 
-To implement this in your app, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
+To implement this in your app, open the app in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
 
 ![](attachments/set-up-sass/class-name.png)
 
@@ -181,7 +181,7 @@ You can test this by changing the color of `.pageheader-subtitle` from green to 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 
 * Make sure Powershell is working properly, or else your code will not be registered Studio Pro
-* Use the following to install gulp for each new project:
+* Use the following to install gulp for each new app:
 	* `npm install`
 	* `npm install dev`
 	* `npm install gulp-cli -g`

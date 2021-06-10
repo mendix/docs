@@ -24,7 +24,7 @@ If you select this option, a new Team Server repository will be created to store
 
 #### 2.1.2 Existing Mendix Team Server
 
-If you select this option, the app will be uploaded to an existing Team Server repository. You need to select the repository in the **Team Server App** drop-down menu.
+If you select this option, the app will be uploaded to an existing Team Server repository. You need to select the repository in the **Team Server App** drop-down list.
 
 {{% alert type="info" %}}
 

@@ -52,11 +52,11 @@ Either **Select existing app** if you want to use an existing app environment, o
 
 #### 3.3.1 Select Existing App
 
-If you **Select existing app** you will be able to choose the correct app in a drop-down menu.
+If you **Select existing app** you will be able to choose the correct app in a drop-down list.
 
 #### 3.3.2 Create New App
 
-If you **Create new app**, you need to select the **Domain** in which the app will run in the drop-down menu, and then enter the **App name** for the app.
+If you **Create new app**, you need to select the **Domain** in which the app will run in the drop-down list, and then enter the **App name** for the app.
 
 The URL for your app will be {App name}.(Domain)
 

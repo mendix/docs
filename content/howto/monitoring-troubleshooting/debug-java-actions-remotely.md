@@ -41,12 +41,12 @@ To configure IntelliJ, follow these steps:
 
 To configure Eclipse, follow these steps:
 
-1. Open the project in Eclipse.
+1. Open the app in Eclipse.
 2. Open the menu with the bug icon or the **Run** menu.
 3. Select **Debug Configurations**.
 4. In the left menu bar, select **Remote Java Application**.
 5. Right-click **New**.
-6. Be sure your current project is under **App**, and change the port to 5005 (view the JVM parameters).
+6. Be sure your current app is under **App**, and change the port to 5005 (view the JVM parameters).
 7. Click **Debug**.
 
 ## 4 Read More

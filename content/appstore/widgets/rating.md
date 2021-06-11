@@ -5,6 +5,7 @@ description: "Describes the configuration and usage of the Star Rating widget, w
 tags: ["marketplace", "marketplace component", "widget", "star rating", "rating", "glyphicon", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
 ## 1 Introduction
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
@@ -28,15 +29,9 @@ The widget offers the following for configuration:
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 
-## 3 Previous Versions' Documentation
+## 3 For Widgets Version 2.0.0 and Below
 
-### Widgets Below v2.0.0
-
-## 1 Introduction
-
-The [Star Rating](https://appstore.home.mendix.com/link/app/54611/) widget enables rating an object with stars or custom icons.
-
-### 1.1 Features
+### 3.1 Features
 
 * Rate an object with stars
 * Display average rating
@@ -46,9 +41,7 @@ The [Star Rating](https://appstore.home.mendix.com/link/app/54611/) widget enabl
 * Flexible number of stars
 * Support for mobile touch events
 
-## 2 Configuration
-
-### 2.1 Customizing the Rating Icon
+### 3.2 Customizing the Rating Icon
 
 In order to overwrite the default star icon, add these classes to your project theme and replace the content with your preferred glyphicon:
 
@@ -62,7 +55,7 @@ In order to overwrite the default star icon, add these classes to your project t
 ```
 The `rating-flag` class should be added to the widget configuration on the **Common** tab.
 
-## 3 Developing This Marketplace Component
+## 4 Developing This Marketplace Component
 
 To contribute to the development of this widget, follow these steps:
 

@@ -12,17 +12,17 @@ A dataset can be used to define the data shown in [reporting widgets](report-wid
 
 A dataset is defined using either an [OQL query](oql) or a custom [Java action](java-actions). To constrain a dataset, parameters can be defined which can be used in the OQL query or Java action.
 
-Fields for datasets are described below.
-
 ## 2 General
 
-* **Name** – The name of the dataset.
-* **Description** – The description of the dataset, this is only relevant as documentation.
+Fields for datasets contain the following properties:
+
+* **Name** – This is the name of the dataset.
+* **Description** – This is the description of the dataset, it is only relevant as documentation.
 
 ## 3 Source
 
-* **OQL query** – The [OQL query](oql) which defines the dataset.
-*  **Java action** – The interface of the Java action which returns a dataset. The columns and [data types](data-types) of the columns need to be specified in Studio Pro. Based on this specification Studio Pro will create a template for this action.
+* **OQL query** – This is the [OQL query](oql) which defines the dataset.
+* **Java action** – This is the interface of the Java action which returns a dataset. The columns and [data types](data-types) of the columns need to be specified in Studio Pro. Based on this specification, Studio Pro will create a template for this action.
 
 The following shows an example OQL query that calculates the aggregated total order amount for all orders of a customer for a specific group of customers:
 
@@ -46,8 +46,10 @@ In OQL, parameters can be called using a **$** symbol, for example: **$Month**.
 
 A parameter has the following configurable properties:
 
-* **Name** – The name of the parameter
-* **Type** – The type of the parameter: Object, Enumeration or a primitive (for example, Date and time, Integer, Boolean, etc). See [Data Types](data-types) for the possible parameter types.
-* **Constraints** – The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end-user. Constraints can be associated with user roles in the dataset security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
-* **Ranges** – When a parameter is defined as a range the drop-down box in the report shows each range instead of all values within the ranges. Decimal parameters are always ranges.
-* **XPath Constraints** – An XPath constraint can be defined using [XPath](xpath). Multiple constraints can be defined on a parameter and each constraint can be associated with a [user role](user-roles).
+* **Name** – This is the name of the parameter.
+* **Type** – The type of the parameter can be: **Boolean**, **Date and time**, **Enumeration**, **Decimal**, **Integer/Long**, or **String**.
+* **Constraints** – The constraints on a parameter influence which values can be selected for parameter input values by the end-user. Constraints can be associated with [user roles](user-roles) in dataset security. There are two types of constraints: 
+  * Ranges which apply to numeric and date parameters
+  * XPath constraints which apply to object parameters
+* **Ranges** – When a parameter is defined as a range, the drop-down box in the report shows each range instead of all values within the ranges. Decimal parameters are always ranges.
+* **XPath Constraints** – An XPath constraint can be defined using [XPath](xpath). Multiple constraints can be defined on a parameter and each constraint can be associated with a user role.

@@ -4,7 +4,9 @@ parent: "dialogs"
 ---
 ## 1 Introduction
 
-With this dialog box you can set user-specific preferences which apply to the whole Desktop Modeler.
+With the **Preferences** dialog box you can set user-specific preferences which apply to the whole Desktop Modeler.
+
+To open the **Preferences** dialog box, go to **Edit > Preferences**.
 
 ![](attachments/preferences-dialog/preferences-dialog-box.png)
 

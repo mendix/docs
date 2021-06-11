@@ -14,6 +14,24 @@ These are the current versions in active development:
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 
+## 5.1.12 and 6.1.6
+
+**Release date: June 11th, 2021**
+
+### Improvements
+
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link).
+
+### Breaking Change
+
+On iOS there are now two implementations of `AppDelegate.m.`: one for release apps, and one for developer apps. The more features we added, the more boilerplate we had to add to support the more complex requirements of custom developer apps. By splitting the implementation, release apps now receive a clean and simple implementation with the more complex implementation abstracted away. 
+
+This should make it easier to add custom code by simply following a dependency's documentation. 
+
+{{% alert type="warning" %}}
+Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).**
+{{% /alert %}}
+
 ## 5.1.11
 
 **Release date: May 14th, 2021**

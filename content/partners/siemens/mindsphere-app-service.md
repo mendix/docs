@@ -57,7 +57,7 @@ Once you have the name of your MindSphere account, you can use this to link your
 
 #### 2.3.1 Creating New Assets
 
-To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is also an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
+To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. 
 
 Full information can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
@@ -69,7 +69,7 @@ There are two ways to use the Mendix App Service.
 
     In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
 
-* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities) in your domain model. In this case, you first have to publish your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane) in Studio Pro.
+* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane) in Studio Pro.
 
     The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
 
@@ -94,6 +94,18 @@ To publish your assets to Mendix Data Hub, do the following:
     ![](attachments/mindsphere-app-service/dh-contract.png)
 
 5. Click **Publish** to publish the data from your MindSphere tenant to Data Hub.
+
+   {{% alert type="info" %}}
+   In Mendix every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api#4-1-1-user-account)). All users with the same email - domain are part of the same company ([Company](/apidocs-mxsdk/apidocs/user-management-api#4-1-2-company-account)).
+   
+   Published contracts are only visible in Mendix DataHub for users that belong to the same company. 
+   
+   In MindSphere you can invite users with different email - domains to your tenant. If you have users with different email - domains in you MindSphere Tenant only the users with the same email - domain as the one who is publishing the first contract to Mendix DataHub
+   will see the contracts there.
+   
+   Ensure that only users which have an email account within your company domain create contracts on Mendix DataHub
+
+   {{% /alert %}}
 
 Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
 

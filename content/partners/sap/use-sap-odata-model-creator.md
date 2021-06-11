@@ -34,10 +34,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 OData Model Creator for SAP solutions will produce a module which is in Mendix version 7.23.6. To use the module you will have to create your app in, or upgrade your app to, Mendix version 7.23.6 or above.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-OData Model Creator for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
-{{% /alert %}}
-
 ## 3 Generating a Data Model
 
 The OData Model Creator for SAP solutions is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/). 

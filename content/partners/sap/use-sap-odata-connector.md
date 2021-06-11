@@ -16,10 +16,6 @@ The OData Connector for SAP solutions is a specific SAP connector for integratin
 * Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
-{{% alert type="warning" %}}
-The OData Connector for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
-{{% /alert %}}
-
 ## 2 Prerequisites{#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:

@@ -19,9 +19,10 @@ To open the **Create Branch Line** dialog box, go to **Project > More Versioning
 ## 2 Create Branch From
 
 **Create branch from** allows you to choose where you want to create the branch line from.  You can choose one of the following options:
-- **Main line** – generally if you want to develop a large feature independently of the main line
-- **Branch line** – if you want to create a branch line from another branch line
-- **Tagged version** – probably if you are doing maintenance on a deployed version
+
+* **Main line** – generally if you want to develop a large feature independently of the main line
+* **Branch line** – if you want to create a branch line from another branch line
+* **Tagged version** – probably if you are doing maintenance on a deployed version
 
 {{% alert type="warning" %}}
 
@@ -41,7 +42,7 @@ This setting is only available when you select **Main line** or **Branch line** 
 
 ## 4 Branch Line
 
-From the **Branch line** drop-down list, select from which branch line you want to create another branch line.
+In the **Branch line** drop-down list, select from which branch line you want to create another branch line.
 
 {{% alert type="info" %}}
 
@@ -51,7 +52,7 @@ This setting is only available when you select **Branch line** in the **Create b
 
 ## 5 Tagged Version
 
-From the **Tagged version** drop-down list, select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
+In the **Tagged version** drop-down list, select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
 
 {{% alert type="info" %}}
 
@@ -63,7 +64,7 @@ This setting is only available when you select **Tagged version** in the **Creat
 
 Enter a name of the new **Branch line**.
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 Branch names cannot include special characters (for example, `@`, `$`, `#`).
 

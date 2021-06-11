@@ -28,91 +28,107 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [Marketplace Overview](app-store-overview)
 
-## 3 Downloading Content from the Marketplace {#downloading2}
+## 3 Downloading Content from the Marketplace {#downloading}
 
 To download content from the Marketplace via Studio Pro, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
-2. Open the project in which you would like to install a component.
+
+2. Open the project in which you want to install a component.
+
 3.  Click the Marketplace icon in the top menu bar to open it in Studio Pro:
 
 	![](attachments/app-store-content/toolbar.png)
 
-4.  On the Marketplace overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
+4.  On the Marketplace overview page, find the content to use in your app. The **Categories** gives you an overview of which types of contents you can download. You can use the **Search** bar to find the specific project or component.
 
 	![](attachments/app-store-content/marketplace.png)
     
-	{{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.
+	{{% alert type="info" %}}
+	Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.
 	{{% /alert %}}
 
-5.  Click the title of the item or **Read more** to view the item details:
+5.  Click the content or **Read more** to view the details of the content:
 
-	![](attachments/app-store-content/item_details.png)
+		![](attachments/app-store-content/item_details.png)
 
-6. When you have found the Marketplace component you want to download into your app, click **Download**:
-    * A project will be created on your hard-drive and will be opened in Studio Pro
-    * A component will be downloaded directly into your project
+6. Click **Download** to download the content to your app. 
 
-    Make sure that you download the correct version of the content from the Marketplace, because the widget or module version needs to be compatible with the Studio Pro version you are using. Do not download a widget that has a higher release version than the Studio Pro you are using. You can access older versions of the widgets in the **All Versions** tab in the Marketplace and download the most compatible version:
+    Make sure that you download the correct version. In the **Overview**, check the **Mendix Version**. The version must be compatible with the Studio Pro version that you use. Do not download the content that requires a higher **Mendix version** than the Studio Pro that you use. You can access older versions of the content in the **All Versions** tab and download older versions:
 
     ![](attachments/app-store-content/versions.png)
 
-## 4 Using a Widget in Studio Pro {#widget}
+After you download the content:
+* If it is a project, it is created on your hard-drive and is opened in Studio Pro
+* If it is a component, it is downloaded directly into your project
+## 4 Using Content in Studio Pro {#widget}
 
-In this section, you will learn how to add a widget to your app. You can follow the same steps to download any Marketplace widget you need.
+After you download the content, you can use the content in your app. 
 
-### 4.1 Adding the Widget
+{{% alert type="info" %}}
+For more information on what the content does and how it can be used, go to the **Documentation** tab specific to this content in the Marketplace.
+{{% /alert %}}
 
-To add the Radio Button List widget from the Marketplace via Studio Pro, follow these steps:
+![](attachments/app-store-content/widget-documentation.png)
 
-1. Download the [Radio Button List](../widgets/radio-button-list) widget (for reference, follow the steps in the [Downloading Content from the Marketplace](#downloading2) section above).
-2.  A widget downloaded from the Marketplace is placed in your app structure. You can find the widget and start using it in the following ways:
 
-	* Click **Add widget**, then browse the list of **Add-on widgets**:
 
-		{{% image_container width="350" %}}![](attachments/app-store-content/18580440.png)
-		{{% /image_container %}}
+### 4.1 Using a Widget
 
-	* Right-click the drop-zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
+In this section, we will use the Rating widget as an example.
 
-		![](attachments/app-store-content/18580439.png)
+#### 4.1.1 Adding the Widget
 
-	To delete a widget, remove the *.mpk* file from your project's widgets folder.
+To add the Rating widget from the Marketplace in Studio Pro, follow these steps:
 
-3.  Select the **Attribute Radio Button List** widget, which will be placed in your app page:
+1. [Download the Rating widget from the marketplace to your project](#downloading).
 
-	![](attachments/app-store-content/18580438.png)
+2. Click **Add widget**. The **Select Widget** dialog box opens.
 
-### 4.2 Using the Widget
+   ![](attachments/app-store-content/add-widget.png)
 
-Each widget that you download from the Marketplace is different and has different ways of being used. For more information on what the widget does and how it can be implemented, check out the **Documentation** tab specific to each widget in the Marketplace.
+3. In the **Filter** bar, enter *Rating*. The downloaded widget is shown in the **Add-on** widgets category. 
 
-Most widgets will require you to configure them. This is why when you drop the widget into a page, you will often see an error in the **Errors** list.
+   ![](attachments/app-store-content/select-widget.png)
 
-To resolve this widget error, follow these steps:
+4. Select the **Rating** widget and click **Select**. 
 
-1.  Open the error view and review the error message:
+5. In the page, click where you want to drop the widget. After you release the mouse button, the widget is placed in the page.
 
-	![](attachments/app-store-content/18580436.png)
+   ![](attachments/app-store-content/widget-dropped-in-page.png)
 
-	In this example, the **Target attribute** property in the radio button is required.
+   {{% alert type="info" %}}
+   If you want to delete a widget from the project, you can go to **App** > **Show App Directory in Explorer**, and remove the *.mpk* file from the **widgets** folder.
+   {{% /alert %}}
 
-2.  Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target attribute** is empty or set to none:
+#### 4.1.2 Configuring a Widget
 
-	![](attachments/app-store-content/18580435.png)
+After you place a widget in your page, there can be new errors in **Errors** pane. That is because you need to configure the widget.
 
-3.  Click **Select**, which will open the **Select Attribute** dialog box.
-4.  Select the attribute that you want to display as a radio button. Note that the radio button works on Booleans and enumeration attribute types.
+To configure the widget follow these steps:
 
-	![](attachments/app-store-content/18580434.png)
+1. Go to the **Errors** pane to check the error message. For example, this error is there after you drop the **Rating** widget into the page:
 
-## 5 Using a Module in Studio Pro {#downloading}
+   ![](attachments/app-store-content/widget-errors.png)
+
+2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens. The **Attribute** field shows **(none)**, which means no attribute is assigned.
+
+   ![](attachments/app-store-content/edit-rating.png)
+
+
+3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. It is the attribute of an entity that we already created.
+
+   ![](attachments/app-store-content/select-attribute.png)
+
+4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should be resolved.
+
+### 4.2 Using a Module
 
 In addition to widgets, you can download entire modules from the Marketplace (for example, the [Excel Importer](/appstore/modules/excel-importer)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
 
 In this section, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any Marketplace module you need.
 
-### 5.1 Adding the Module
+#### 4.2.1 Adding the Module
 
 To add the Google Maps module from the Marketplace via Studio Pro, follow these steps:
 
@@ -129,7 +145,7 @@ To add the Google Maps module from the Marketplace via Studio Pro, follow these 
 
 	![](attachments/app-store-content/18580430.png)
 
-### 5.2 Using the Module
+#### 4.2.1 Configuring the Module
 
 Each module that you download from the Marketplace is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the [Excel Importer](/appstore/modules/excel-importer) module, you will also need to download the Mx Model Reflection module to make the errors disappear. If you run into any problems, always check the **Documentation** tab specific to the Marketplace component for installation guidelines and details on any dependencies.
 
@@ -145,11 +161,7 @@ To use the Google Maps module in Studio Pro, follow these steps:
 
 2. Review the Google Map by running your app locally and adding some locations.
 
-## 6 Using Other Marketplace Content
-
-There are also guidelines for using projects, layouts, and themes from the Marketplace.
-
-### 6.1 Using a Project or Layout {#project-layout}
+### 4.3  Using a Project or Layout {#project-layout}
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a window will appear where you can specify how the project should be created.
 
@@ -157,13 +169,13 @@ Downloading a project or layout will create a new project structure in the the l
 You cannot create a new project in an existing repository that is not empty.
 {{% /alert %}}
 
-### 6.2 Using a Theme
+### 4.4 Using a Theme
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure, in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app  project **Settings**.
 
 To delete a theme, remove the ZIP file from your project's **theme** folder.
 
-## 7 Read More
+## 5 Read More
 
 * [Marketplace Overview](app-store-overview)
 * [How to Share Marketplace Content](share-app-store-content)

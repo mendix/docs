@@ -179,7 +179,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 When you click a story title, the **Story Details** page opens:
 
 {{% image_container width="500" %}}
-![](attachments/stories/story-details.jpg)
+![](attachments/stories/story-details.png)
 {{% /image_container %}}
 
 On this page, you can perform a number of actions:
@@ -187,6 +187,7 @@ On this page, you can perform a number of actions:
 * Change the **Title** or **Description** by clicking it
 * Add or remove **Labels**
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
+* Assign a team member to work on the story
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
 * Leave a **Comment** on the story to collaborate with your team

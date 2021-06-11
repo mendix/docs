@@ -29,7 +29,7 @@ On iOS there are now two implementations of `AppDelegate.m.`: one for release ap
 This should make it easier to add custom code by simply following a dependency's documentation. 
 
 {{% alert type="warning" %}}
-Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).**
+Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).
 {{% /alert %}}
 
 ## 5.1.11
@@ -53,7 +53,7 @@ Please note that if your app requires custom initialization, for example due to 
 **Release date: April 6th, 2021**
 
 ### Improvements
- 
+
 * Android custom developer apps now support deep links. 
 
 ### Fixes 
@@ -126,7 +126,7 @@ We have decided to retract versions 5.1.7 and 5.0.11 after we received reports t
 **Release date: February 15th, 2021**
 
 ### Fixes
- 
+
 * We updated the **react-native-image-picker** dependency.
 * The **react-native-image-picker** patch now applies correctly on Windows.
 * On iOS, the **PRODUCT_NAME** variable is now settable via the XCConfig file of each target.
@@ -332,7 +332,6 @@ This version of the Native Template is required to be able to release your Mendi
 ### Fix
 
 * We fixed an issue in iOS apps where OTA updates did not trigger correctly, and therefore did not update apps.
-  
 ## 3.1.1
 
 **Release date: February 6th, 2020**

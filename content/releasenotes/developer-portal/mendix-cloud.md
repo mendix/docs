@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### June 14th, 2021
+
+#### Improvements
+
+* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
+
 ### June 11th, 2021
 
 #### Mendix Cloud V3 Archived Logs

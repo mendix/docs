@@ -70,7 +70,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have released our new [platform navigation](/developerportal/index) solution with these main features:
-	* The **Switcher** on the left side of the top bar provides access to different parts of the Mendix Platform.
+	* The **Switch to** menu on the left side of the top bar provides access to different parts of the Mendix Platform.
 	* The top bar contains sub-navigation items (for example, **Company Buzz**).
 	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
 	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.

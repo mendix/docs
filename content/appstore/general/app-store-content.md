@@ -126,7 +126,7 @@ To configure the widget, follow these steps:
 
 You can also download entire modules from the Marketplace. The modules include whole functionality and integrations that can be very helpful when you are building your applications.
 
-In this section, we will use the [Image Crop](../modules/image-crop) module as an example. You can follow the steps to use any module from the Marketplace.
+In this section, we will use the [Data View 2](../modules/data-grid-2) module as an example. You can follow the steps to use any module from the Marketplace.
 
 #### 4.2.1 Adding the Module
 
@@ -143,7 +143,7 @@ To add the Image Crop module from the Marketplace via Studio Pro, follow these s
 
    {{% alert type="warning" %}}
 
-   **Replace existing module** option overrides all of your changes. If you made changes to a module that you downloaded, after you select this option, you have the standard Marketplace content again—with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. 
+   When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded—once the files are replaced, you will have the new, standard Marketplace module, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. 
 
    We recommend that you do not make changes to the downloaded modules, unless you will not update your content in the future and understand the implications of your changes.
    {{% /alert %}}

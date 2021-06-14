@@ -25,7 +25,6 @@ MindSphere IIoT for Makers packages come in various sizes. Please see the [Produ
 
 MindSphere IIoT for Makers is easy to add to your app but has the following limitations:
 
-* Currently, you can only communicate with [MindSphere Services](https://developer.mindsphere.io/apis/index.html) using *REST APIs* — support for OData using Mendix Data Hub will be provided in a matter of weeks.
 * You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
 * End users cannot use MindSphere credentials to sign in to your app, so MindSphere does not know anything about individual app end users — you must design your app to handle any required security for each end user
@@ -53,11 +52,11 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 
 ### 2.3 Linking to Asset Manager
 
-Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (userid and password).
+Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (user ID and password).
 
 #### 2.3.1 Creating New Assets
 
-To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. 
+To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation.
 
 Full information can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
@@ -75,34 +74,53 @@ There are two ways to use the Mendix App Service.
 
 #### 2.3.3 Publishing Assets to Data Hub
 
-To publish your assets to Mendix Data Hub, do the following:
+To publish your asset information to Mendix Data Hub, you have to create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
 
 1. Go to the **Asset Manager** in the MindSphere Launchpad.
 
-2. Select **Publish to Mendix DataHub** from the additional menu options in the top right of the page.
+1. On the home page you find a card showing the numbers of already existing contracts.
 
-    ![](attachments/mindsphere-app-service/publish-to-data-hub.png)
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_card.png)
 
-3. Select the **Asset Types** that you want published to Data Hub and click **Next**.
+1. Click the link **View contracts**.
 
-    ![](attachments/mindsphere-app-service/dh-asset-types.png)
+1. You will now see the lists of your already existing contracts or an indication that no contracts are created by now.
 
-    The **Application Name** and **Environment** will be pre-filled for you.
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_first.png)
 
-4. Enter the **Display Name** and **Version** which identifies this data in Data Hub.
+    In the case that no contracts are available click the  **Create contract** button to start with your first one. If you have already some contracts click the **Add contracts** button to add another one.
 
-    ![](attachments/mindsphere-app-service/dh-contract.png)
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_add.png)
 
-5. Click **Publish** to publish the data from your MindSphere tenant to Data Hub.
+1. On the left side you can select the asset types you like to share within this contract. On the right side you will see a preview of all selected types.
 
-   {{% alert type="info" %}}
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step1.png)
+
+1. Confirm your selection by pressing the **Next** button.
+
+1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note the application name is already pre-filled and is a combination from the prefix **mdsp_** and your tenant name. This will help you to search for all contracts within Mendix for your particular tenant.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step2.png)
+
+1. Confirm your meta information by pressing the **Next** button.
+
+1. On the last step you can specify to:
+    * Save your contract (always enabled).
+    * Download your contract, if you like to store the contract by your own or if you like to use it with another OData provider other than the Mendix Data Hub
+    * To publish the contract to the Mendix Data Hub. This needs to be done if you like to use the asset information within your Mendix project and is therefore already preselected.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step3.png)
+
+1. Click the **Submit** button to finalize the creation of your contract.
+
+{{% alert type="info" %}}
    In Mendix every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api#4-1-1-user-account)). All users with the same email - domain are part of the same company ([Company](/apidocs-mxsdk/apidocs/user-management-api#4-1-2-company-account)).
-   
-   Published contracts are only visible in Mendix DataHub for users that belong to the same company. 
-   
+
+   Published contracts are only visible in Mendix DataHub for users that belong to the same company.
+
    In MindSphere you can invite users with different email - domains to your tenant. If you have users with different email - domains in you MindSphere Tenant only the users with the same email - domain as the one who is publishing the first contract to Mendix DataHub
    will see the contracts there.
-   
+
    Ensure that only users which have an email account within your company domain create contracts on Mendix DataHub
 
    {{% /alert %}}
@@ -123,13 +141,13 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 5. Click **Create Keys**.
 
-    ![](attachments/mindsphere-app-service/create-keys.png)
+    ![Binding](attachments/mindsphere-app-service/create-keys.png)
 
     You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
 6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
-    ![](attachments/mindsphere-app-service/binding-keys.png)
+    ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
 You can find more information about managing binding keys in the [Service Management Dashboard](/appstore/general/app-store-overview#service-management) section of *Marketplace Overview*.
 
@@ -157,7 +175,7 @@ In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the fo
 
 In the Consumed OData Service document associated with your MindSphere service, set the **Headers from microflow** to be *MindSphereIIoTAuthenticator.AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are passed as HTTP headers with every call to authenticate your app to MindSphere.
 
-![](attachments/mindsphere-app-service/data-hub-authentication.png)
+![Binding](attachments/mindsphere-app-service/data-hub-authentication.png)
 
 ## 5 Using MindSphere IIoT for Makers Through REST Calls{#using-rest}
 
@@ -175,11 +193,11 @@ To extract data from MindSphere, your calls to the MindSphere API need to be aut
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
-![](attachments/mindsphere-app-service/access-token.png)
+![Authentication](attachments/mindsphere-app-service/access-token.png)
 
 In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
 
-![](attachments/mindsphere-app-service/call-rest.png)
+![Authentication](attachments/mindsphere-app-service/call-rest.png)
 
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIIotAuthenticator* module:
 
@@ -187,7 +205,7 @@ However, authentication will only be successful if the correct credentials are p
 * **ClientID** – this is the *clientID* from the binding keys you generated
 * **ClientSecret** – this is the *clientSecret* from the binding keys you generated
 
-![](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
+![Authentication](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
 
 ## 6 Authentication Considerations
 

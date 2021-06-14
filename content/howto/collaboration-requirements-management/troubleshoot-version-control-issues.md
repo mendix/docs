@@ -145,7 +145,7 @@ Merging the branch to the main line will result in the following information mes
 A conflict is reported on the app *folder*. This usually means that there is a conflict on the `svn:ignore` property.
 {{% /alert %}}
 
-To resolve a conflict on the `svn:ignore` property, do these steps:
+To resolve a conflict on the `svn:ignore` property, follow these steps:
 
 1.  Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
 
@@ -183,8 +183,8 @@ You have resolved the conflict and can commit from Studio Pro.
 If you get this error, try the following options:
 
 * In the [Developer Portal](/developerportal/collaborate/team), check whether the user has access to the app:
-	* If they do not have access, invite them to the app.
-	* If they do have access, remove them from the app and add them back—this will re-sync the access rules.
+	* If they do not have access, invite them to the app
+	* If they do have access, remove them from the app and add them back—this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network. This protocol is [required](/refguide/system-requirements) by Studio Pro for [version control](/refguide/version-control) to work, but it might be blocked by your proxy server or other software like a firewall.
 
 ## 3 Other Problems

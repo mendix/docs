@@ -2,8 +2,6 @@
 title: "Published OData Services"
 parent: "integration"
 tags: ["studio pro"]
-aliases:
-    - /refguide/consumed-odata-services.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,11 +11,11 @@ In Studio Pro, entities can be exposed as [OData resources](published-odata-reso
 
 The standards used for OData in Mendix are:
 
-* [OData version 3](http://www.odata.org/documentation/odata-version-3-0) with the default representation set to Atom XML, and
-* [OData version 4](http://www.odata.org/documentation) with the default representation set to Atom XML.
+* [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
+* [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert type="info" %}}
-The OData version 4 feature was introduced in Studio Pro [9.3.0](/releasenotes/studio-pro/9.3).
+The OData version 4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4).
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
@@ -55,7 +53,7 @@ A [resource](published-odata-resource) is a network-accessible data object repre
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
 {{% alert type="info" %}}
-This setting was introduced in Studio Pro [9.3.0](/releasenotes/studio-pro/9.3). In earlier versions, all published OData services were OData 3.
+This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
 ### 3.2 Associations

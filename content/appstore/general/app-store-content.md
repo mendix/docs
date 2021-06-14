@@ -156,7 +156,7 @@ To add the Image Crop module from the Marketplace via Studio Pro, follow these s
 
 Unlike a widget, a module will be visible in your App Explorer. It will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
 
-![](attachments/app-store-content/imagecrop-app-explorer.png)
+![](attachments/app-store-content/data-grid-app-explorer.png)
 
 #### 4.2.1 Configuring the Module
 

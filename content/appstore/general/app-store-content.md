@@ -24,7 +24,7 @@ This how-to covers the basics of accessing the Marketplace from Studio Pro and p
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Familiarize yourself with the [Marketplace Overview](app-store-overview)
 
@@ -50,23 +50,23 @@ To download content from the Marketplace via Studio Pro, follow these steps:
 
 5.  Click the content or **Read more** to view the details of the content:
 
-		![](attachments/app-store-content/item_details.png)
+	![](attachments/app-store-content/item-details.png)
 
 6. Click **Download** to download the content to your app. 
 
-    Make sure that you download the correct version. In the **Overview**, check the **Mendix Version**. The version must be compatible with the Studio Pro version that you use. Do not download the content that requires a higher **Mendix version** than the Studio Pro that you use. You can access older versions of the content in the **All Versions** tab and download older versions:
+    Make sure that you download the correct version. The version must be compatible with the Studio Pro version that you use. Check the **Mendix Version** in the **Overview**. Do not download the content that requires a higher **Mendix version** than the Studio Pro that you use. You can download older versions of the content in the **All Versions** tab.
 
     ![](attachments/app-store-content/versions.png)
 
 After you download the content:
-* If it is a project, it is created on your hard-drive and is opened in Studio Pro
-* If it is a component, it is downloaded directly into your project
+* If the content is a project, it is created on your hard-drive and is opened in Studio Pro
+* If the content is a component, it is downloaded directly into your project
 ## 4 Using Content in Studio Pro {#widget}
 
 After you download the content, you can use the content in your app. 
 
 {{% alert type="info" %}}
-For more information on what the content does and how it can be used, go to the **Documentation** tab specific to this content in the Marketplace.
+For more information on what the content works, go to the **Documentation** tab on the page of this content in the Marketplace.
 {{% /alert %}}
 
 ![](attachments/app-store-content/widget-documentation.png)
@@ -75,11 +75,11 @@ For more information on what the content does and how it can be used, go to the 
 
 ### 4.1 Using a Widget
 
-In this section, we will use the Rating widget as an example.
+You can download a widget from the Marketplace and use it in your project. We will use the [Rating](../widgets/rating) widget as an example. You can follow the steps to use any widget from the Marketplace.
 
 #### 4.1.1 Adding the Widget
 
-To add the Rating widget from the Marketplace in Studio Pro, follow these steps:
+To add the Rating widget from the Marketplace via Studio Pro, follow these steps:
 
 1. [Download the Rating widget from the marketplace to your project](#downloading).
 
@@ -87,36 +87,36 @@ To add the Rating widget from the Marketplace in Studio Pro, follow these steps:
 
    ![](attachments/app-store-content/add-widget.png)
 
-3. In the **Filter** bar, enter *Rating*. The downloaded widget is shown in the **Add-on** widgets category. 
+3. In the **Filter** bar, enter *Rating*. The downloaded widget is found in the **Add-on** widgets category. 
 
    ![](attachments/app-store-content/select-widget.png)
 
-4. Select the **Rating** widget and click **Select**. 
+4. Click the **Rating** widget and click **Select**. 
 
-5. In the page, click where you want to drop the widget. After you release the mouse button, the widget is placed in the page.
+5. In the page of your project, click where you want to drop the widget. After you release the mouse button, the widget is placed in the page.
 
    ![](attachments/app-store-content/widget-dropped-in-page.png)
 
    {{% alert type="info" %}}
-   If you want to delete a widget from the project, you can go to **App** > **Show App Directory in Explorer**, and remove the *.mpk* file from the **widgets** folder.
+   If you want to delete a widget from the project, go to **App** > **Show App Directory in Explorer**, and remove the *.mpk* file from the **widgets** folder.
    {{% /alert %}}
 
 #### 4.1.2 Configuring a Widget
 
-After you place a widget in your page, there can be new errors in **Errors** pane. That is because you need to configure the widget.
+After you place a widget in your page, there can be some new errors in the **Errors** pane. That is because you need to configure the widget.
 
-To configure the widget follow these steps:
+To configure the widget, follow these steps:
 
-1. Go to the **Errors** pane to check the error message. For example, this error is there after you drop the **Rating** widget into the page:
+1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
    ![](attachments/app-store-content/widget-errors.png)
 
-2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens. The **Attribute** field shows **(none)**, which means no attribute is assigned.
+2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens. The **Attribute** field shows **(none)** . This means that no attribute is assigned, which causes the error.
 
    ![](attachments/app-store-content/edit-rating.png)
 
 
-3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. It is the attribute of an entity that we already created.
+3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
    ![](attachments/app-store-content/select-attribute.png)
 
@@ -124,26 +124,39 @@ To configure the widget follow these steps:
 
 ### 4.2 Using a Module
 
-In addition to widgets, you can download entire modules from the Marketplace (for example, the [Excel Importer](/appstore/modules/excel-importer)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
+You can also download entire modules from the Marketplace. The modules include whole functionality and integrations that can be very helpful when you are building your applications.
 
-In this section, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any Marketplace module you need.
+In this section, we will use the [Image Crop](../modules/image-crop) module as an example. You can follow the steps to use any module from the Marketplace.
 
 #### 4.2.1 Adding the Module
 
-To add the Google Maps module from the Marketplace via Studio Pro, follow these steps:
+To add the Image Crop module from the Marketplace via Studio Pro, follow these steps:
 
-1. Download the [Google Maps Module](https://appstore.home.mendix.com/link/app/174/).
-2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
+1. [Download the Image Crop module from the marketplace to your project](#downloading). 
 
-	![](attachments/app-store-content/18580431.png)
+   The **Import Module** dialog box opens:
 
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
-	{{% /alert %}}
+   ![](attachments/app-store-content/import-module.png)
 
-3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4.  Open the **App Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your App Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
+   * **Add as a new module** – if you select this option, new entities are created in your project
+   * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
 
-	![](attachments/app-store-content/18580430.png)
+   {{% alert type="warning" %}}
+
+   **Replace existing module** option overrides all of your changes. If you made changes to a module that you downloaded, after you select this option, you have the standard Marketplace content again—with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. 
+
+   We recommend that you do not make changes to the downloaded modules, unless you will not update your content in the future and understand the implications of your changes.
+   {{% /alert %}}
+
+2. In the **Import Module** dialog box, click **Import**. Wait until a pop-up window shows **The module was successfully imported into your project.** 
+
+3. Click **OK**.
+
+4. Open the **App Explorer** and find the Image Crop module.
+
+Unlike a widget, a module will be visible in your App Explorer. It will contain a domain model, pages, and microflow logic. A module downloaded from the Marketplace will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the Marketplace will have a light blue icon to differentiate it from the development modules.
+
+![](attachments/app-store-content/imagecrop-app-explorer.png)
 
 #### 4.2.1 Configuring the Module
 

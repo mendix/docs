@@ -49,19 +49,21 @@ It is good practice to *always* redeploy your Mendix app before pushing a new OT
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first))
 
-{{% todo %}}[Maybe unclear what 'Widgets shipped with Mendix added or removed" entails']{{% /todo %}}
+{{% todo %}}[Maybe unclear what 'Widgets shipped with Mendix added or removed" entails]{{% /todo %}}
 
 ### 3.2 When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
 * The initial release of your app
-* A Mendix Studio Pro version upgrade that requires a new Native Template version
+* A Studio Pro version upgrade that requires a new [Native Template](/refguide/native-template) version
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple — your app might be removed if you do not comply)
 * A new native module has been added
 * The app has been renamed
 * The app's launcher icons have been changed
 * The splash screen has been changed
+
+{{% todo %}}[Example of native module that could be added?]{{% /todo %}}
 
 ## 4 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 

@@ -69,7 +69,9 @@ If you have made any changes directly to your iOS or Android project, you will h
 
 Apps built using the Mendix Native Mobile Builder have OTA updates with App Center's CodePush disabled by default. To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. 
 
-Next you must build new binaries with this capability toggled on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these general steps:
+Next you must build new binaries with this capability toggled on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these steps:
+
+{{% todo %}}[A lot of these screenshots need a standard border]{{% /todo %}}
 
 1. Click **Project** > **Build Native Mobile App**.
 1.  Navigate to **App Capabilities**: 
@@ -81,11 +83,11 @@ Next you must build new binaries with this capability toggled on, and then relea
 	{{% image_container width="350" %}}![OTA capability enabled](attachments/nbui/advanced-capabilities-ota.png){{% /image_container %}}
 
 1. Click **Save**.
-1.  Now build an application for distribution and make a note of the version number used: 
+1.  Build an application for distribution and make a note of the version number used: 
 
 	{{% image_container width="350" %}}![Build release app page](attachments/nbui/build-release-app-for-ota.png){{% /image_container %}}
 
-1. To make the OTA update functionality available to your users, please release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
+1. To make the OTA update functionality available to your users, release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
 ## 5 Deploying An Over the Air Update
 

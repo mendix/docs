@@ -18,13 +18,6 @@ Delivering your Mendix app in multiple languages is an important capability for 
 * Change multiple items of text in one operation
 * Copy a translation from one language to another
 
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Know the basics of creating new apps
-* Know how to edit apps
-
 ## 2 Creating a Sample App
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.

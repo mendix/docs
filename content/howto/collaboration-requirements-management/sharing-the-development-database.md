@@ -57,7 +57,7 @@ On the left pane, all tables from all modules in the running application are sho
 
 You can execute queries in two ways:
 
-* Directly from the command line on the upper-right pane using SQL script (for more information about SQL, see [W3Schools SQL Tutorial](http://www.w3schools.com/sql/))
+* Directly from the command line on the upper-right pane using SQL script
 
 * Via the database explorer on the left pane
 

@@ -127,7 +127,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data source only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items`  property.
+The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items`  property.
 
 ### 2.3 Sorting {#listvalue-sorting}
 
@@ -190,10 +190,10 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
-The `setSort` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend, for all the other data sources the sorting will be done by the client.
+The `setSort` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
 
 {{% alert type="info" %}}
-This feature was introduced in Mendix 9.3.
+This feature was introduced in Mendix Studio Pro v9.3.
 {{% /alert %}}
 
 ### 2.4 Filtering {#listvalue-filtering}
@@ -215,10 +215,10 @@ interface MyListWidgetsProps {
 }
 ```
 
-The `setFilter` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend, for all the other data sources the filtering will be done by the client. In both cases the widget will receive the filtered items in the `items` property.
+The `setFilter` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert type="info" %}}
-This feature was introduced in Mendix 9.3.
+This feature was introduced in Mendix Studio Pro v9.3.
 {{% /alert %}}
 
 #### 2.4.1 Simple Filtering
@@ -328,7 +328,7 @@ actionOnFirstItem.execute();
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#actionvalue) for more information about the usage of `ActionValue`.
 
 {{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
+The `get` method was introduced in Mendix Studio Pro v9.0.
 
 You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
@@ -379,7 +379,7 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#editable-value) for more information about usage of `EditableValue`.
 
 {{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
+The `get` method was introduced in Mendix Studio Pro v9.0.
 
 You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
@@ -439,10 +439,10 @@ Because of the above configurations, the client component may render every insta
 this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 ```
 
-When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property, in the example above`myWidgets`, will be `undefined`.
+When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above`myWidgets`).
 
 {{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
+The `get` method was introduced in Mendix Studio Pro v9.0.
 
 You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
@@ -477,7 +477,7 @@ const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(thi
 ```
 
 {{% alert type="info" %}}
-The `get` method was introduced in Mendix 9.0.
+The `get` method was introduced in Mendix Studio Pro v9.0.
 
 You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}

@@ -15,6 +15,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### June 15th, 2021
+
+#### Improvements
+
+* Git is coming: we have prepared the Developer Portal for the handling of Git-supported apps.
+* We added a button to the [Stories](/developerportal/collaborate/stories) overview that allows you to [create a new label](/developerportal/collaborate/stories#new-label).
+* We made some minor changes to the look and feel across the Developer Portal.
+
+#### Fixes
+
+* We fixed a broken link to the documentation on the [Team Server](/developerportal/collaborate/team-server) page.
+
 ### June 1st, 2021
 
 #### Improvements

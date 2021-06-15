@@ -14,7 +14,7 @@ These are the current versions in active development:
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
 
-## 5.1.12 and 6.1.6
+## 6.1.6 and 5.1.12
 
 **Release date: June 11th, 2021**
 

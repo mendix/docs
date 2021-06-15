@@ -12,7 +12,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
-### June ??th, 2021
+### June 16th, 2021
 
 #### Improvements
 

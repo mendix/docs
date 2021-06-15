@@ -127,6 +127,8 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
+The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data source only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items`  property.
+
 ### 2.3 Sorting {#listvalue-sorting}
 
 It is possible to set a specific sort order for items in the list using `setSortOrder` method and get the current sort order via `sortOrder` field. When a new sort order is set, widget will receive new results on next re-render.
@@ -188,6 +190,8 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
+The `setSort` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend, for all the other data sources the sorting will be done by the client.
+
 {{% alert type="info" %}}
 This feature was introduced in Mendix 9.3.
 {{% /alert %}}
@@ -210,6 +214,8 @@ interface MyListWidgetsProps {
     myAttributeNumber: ListAttributeValue<BigJS>;
 }
 ```
+
+The `setFilter` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend, for all the other data sources the filtering will be done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix 9.3.

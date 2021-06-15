@@ -188,6 +188,10 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.3.
+{{% /alert %}}
+
 ### 2.4 Filtering {#listvalue-filtering}
 
 It is possible to set filtering conditions for items of a datasource. `setFilter()` method accepts filter conditions and applies filtering. `filter` field represents the current filter condition.
@@ -206,6 +210,10 @@ interface MyListWidgetsProps {
     myAttributeNumber: ListAttributeValue<BigJS>;
 }
 ```
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.3.
+{{% /alert %}}
 
 #### 2.4.1 Simple Filtering
 

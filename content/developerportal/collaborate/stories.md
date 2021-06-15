@@ -67,14 +67,14 @@ For more information on stories, see the [Story Actions](#story-actions) section
 
 ### 2.3 Creating a New Label {#new-label}
 
-Click **New Label** to create a new label for your project.
+Click **New Label** to create a new label for your app:
 
 {{% image_container width="400" %}}
 ![](attachments/stories/new-label.png)
 {{% /image_container %}}
 
-* **Label caption** - the caption of the label
-* **Label color** - pick a color for easy visibility
+* **Label caption** – the caption of the label
+* **Label color** – pick a color for easy visibility
 
 ### 2.4 More Actions
 

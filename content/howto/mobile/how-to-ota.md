@@ -162,7 +162,7 @@ That same morning however, your engineers were hard at work gathering field data
 
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 
-## 7 Transfering a CLI OTA-Compatible App to Native Mobile Builder {#from-cli-to-ui}
+## 7 Transferring a CLI OTA-Compatible App to Native Mobile Builder {#from-cli-to-ui}
 
 The transition from the CLI to Mendix Native Mobile Builder for OTA-supporting apps requires a few manual steps. These steps ensure you do not have to release your apps to the app stores again. 
 

@@ -439,6 +439,8 @@ Because of the above configurations, the client component may render every insta
 this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 ```
 
+When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property, in the example above`myWidgets`, will be `undefined`.
+
 {{% alert type="info" %}}
 The `get` method was introduced in Mendix 9.0.
 

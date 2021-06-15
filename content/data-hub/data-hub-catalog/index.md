@@ -37,6 +37,7 @@ From the **Home** screen, you can do the following:
 * **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub  (for further details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
 
 * **Popular Data Sources** – click on the most popular data sources
+* **Popular Data Sources** – click on the most popular data sources 
 
 Data Hub is also integrated in Mendix Studio Pro to find and connect to shared data sources in your apps. For further details on using Data Hub in Studio Pro, see [Data Hub Pane](/refguide/data-hub-pane) in the *Studio Pro Guide*.
 
@@ -91,7 +92,7 @@ For details on security and accessibility in the Data Hub Catalog and for regist
 
 In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Data Hub Admin](/data-hub/#admin).
 
-The information that is registered for data sources and exposed datasets are as follows:
+The following information is registered for data sources and exposed datasets: 
 
 * **Endpoints** – All registered assets are defined as endpoints (URLs) in the Catalog. The endpoint of the service is accessed by the consuming app.
 

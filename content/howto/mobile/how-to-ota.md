@@ -8,10 +8,10 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-Using Native Mobile Builder and Mendix Studio Pro, you can update your Mendix Native Apps over the air (OTA).
-OTA updates are a fast and painless way of updating things like layouts, pages, assets, or even you app's business logic (such as nanoflows and JavaScript actions).
+Using Native Mobile Builder and Mendix Studio Pro, you can update your Mendix native apps over the air (OTA).
+OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions).
 
-Native apps are separated into two parts: a wrapper that is basically a native iOS or Android app and a bundle that is being loaded dynamically by said wrapper. Things like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Mobile Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your app's users will be updated to the latest version and continue their business as usual.
+Native apps are separated into two parts: a wrapper that is a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. When you have changes you want to deploy, the Native Mobile Builder can bundle them in a new, updated bundle and painlessly deploy them. On the next app restart, your end-users will be updated to the latest version and continue their business as usual.
 
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
@@ -23,15 +23,16 @@ Currently OTA  does not update your app while the app is open or minimized.
 
 * Push an OTA update for a released app
 
+{{% todo %}}[Add a couple more things taught for a long how-to?]{{% /todo %}}
+
 ## 2 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro v8.15 or above using the online installer (the offline installer does not include the Mendix Native Mobile Builder dependency)
 * Deploy your app by completing [How to Deploy Your First Mendix Native Mobile App](deploying-native-app).
 * Ensure you have set up and configured App Center for your app. For information on setting up App Center, see the [App Center Token](deploying-native-app#appcenter-token) section of *How to Deploy Your First Mendix Native Mobile App*. If you previously opted out of configuring App Center while building your app, you must navigate to the **Tokens** screen and toggle on the **I want to use App Center** option.
 * Install your app on a test device or emulator.
-* Read the [Offline First Reference Guide](/refguide/offline-first).
+* Read the [Offline-First](/refguide/offline-first) reference guide.
 
 ## 3 When to Use OTA Updates
 

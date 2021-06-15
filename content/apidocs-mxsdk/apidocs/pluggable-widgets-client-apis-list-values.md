@@ -127,7 +127,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items`  property.
+The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
 
 ### 2.3 Sorting {#listvalue-sorting}
 

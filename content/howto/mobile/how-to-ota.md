@@ -36,22 +36,24 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 When to Use OTA Updates
 
-### 3.1 Safely Pushing OTA Updates Without Redeploying Your Mendix App {#safeToUpdate}
+### 3.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
 
-It is good practice to *always* redeploy your Mendix App before pushing a new over the air update. However, releasing an OTA update without redeploying your Mendix App to Mendix Cloud in these cases is usually safe:
+It is good practice to *always* redeploy your Mendix app before pushing a new OTA update. However, releasing an OTA update without redeploying your Mendix app to Mendix Cloud in these cases is usually safe:
 
 * Style changes
-* Changes to static images, text, or other static assets
+* Static images, text, or other static asset changes
 * Layout changes
 * Nanoflow changes
 * JavaScript action changes
 * Widgets shipped with Mendix added or removed
 * A new custom Javascript-only widget or module was added
-* Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide/offline-first))
+* Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first))
+
+{{% todo %}}[Maybe unclear what 'Widgets shipped with Mendix added or removed" entails']{{% /todo %}}
 
 ### 3.2 When a Full Release Is Required
 
-If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases:
+If you have made any changes directly to your iOS or Android project, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
 * The initial release of your app
 * A Mendix Studio Pro version upgrade that requires a new Native Template version

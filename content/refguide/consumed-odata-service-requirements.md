@@ -92,20 +92,12 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 ## 4 Data Hub License Limitations {#license-limitations}
 
-Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
+Mendix Data Hub is a separately licensed product.
 
-There are two types of Data Hub licenses currently available:
+Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
-* **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed.
+With a Data Hub license, apps are not limited.
 
-
-* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
-The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
-
-  {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert type="info" %}}Apps running without a Mendix license (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
+{{% alert type="info" %}}Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.{{% /alert %}}
 
 Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
-### 4.1 Local development
-
-Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

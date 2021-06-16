@@ -38,17 +38,17 @@ To deploy an app to your private cloud platform, you need the following:
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
 1. Open the **General Settings** page for your app in the Developer Portal.
-    
+   
       ![](attachments/private-cloud-deploy/image2.png)
 
 2. Click **Cloud Settings**.
 
 3. Click **Mendix for Private Cloud**.
-    
+   
     ![](attachments/private-cloud-deploy/image3.png)
 
 4. Click **Set up Mendix for Private Cloud**.
-    
+   
     ![](attachments/private-cloud-deploy/image4.png)
 
 5. Your app is now configured for private cloud.
@@ -71,14 +71,14 @@ First you need to create an environment:
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
 5. Select the **Purpose**.
-    
+   
   1. For development of the app, for example acceptance testing, choose **Development**.
   2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/create-environment.png)
 
 7. Select **Core Resources**.
@@ -99,7 +99,7 @@ First you need to create an environment:
 8. Select a **Database plan** from the list of plans set up in the namespace.
 
 9. Select a **Storage plan** from the list of plans set up in the namespace.
-    
+   
     ![](attachments/private-cloud-deploy/image7.png)
 
 10. Click **Create Environment**.
@@ -115,15 +115,15 @@ You will not be able to deploy to this environment until it has been fully prepa
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-    
+   
     ![](attachments/private-cloud-deploy/image9.png)
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/image10.png)
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/image11.png)
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
@@ -131,7 +131,7 @@ Before you can deploy your app, you will need to create a deployment package. En
 5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
-    
+   
     ![](attachments/private-cloud-deploy/image12.png)
 
 7. Confirm the information message and you will be returned to the **Environments** page.
@@ -165,7 +165,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 3. Confirm that the **Status** is *Ready*.
 
 4. Click **Transport**.
-    
+   
     ![](attachments/private-cloud-deploy/image15.png)
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
@@ -173,7 +173,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
 
 7. Click **Continue** to continue to the Start Application confirmation page.
-    
+   
     ![](attachments/private-cloud-deploy/image16.png)
 
 8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
@@ -411,7 +411,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
+For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.

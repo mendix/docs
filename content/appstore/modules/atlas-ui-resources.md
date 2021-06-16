@@ -34,5 +34,5 @@ When using this module in an existing app with a custom theme, the custom theme 
 ## 3 Read More
 
 * [How to Migrate Existing Apps to Atlas UI](https://docs.mendix.com/howto/front-end/migrate-existing-projects-to-atlasui)
-* [Atlas UI How-to's](https://docs.mendix.com/howto/front-end/atlas-ui)
+* [Atlas UI How-to's](../../howto/front-end/atlas-ui)
 * [Troubleshooting Atlas UI Changes](https://docs.mendix.com/refguide/migration-atlas)

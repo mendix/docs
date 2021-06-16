@@ -9,7 +9,7 @@ Build status:
 
 ## Contribute
 
-Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation).
+Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](content/developerportal/community-tools/contribute-to-the-mendix-documentation).
 
 ## Development
 

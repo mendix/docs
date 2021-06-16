@@ -18,6 +18,10 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator) which supports SAP OData Gateway Services which use OData version 4. This is in addition to support for OData versions 2 and 3.
 
+#### Fix
+
+* We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
+
 ### June 2nd, 2021
 
 #### Improvements

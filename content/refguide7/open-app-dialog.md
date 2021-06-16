@@ -28,7 +28,7 @@ In the **SVN repository address** field, enter the address of the app you want t
 
 {{% alert type="info" %}}
 
-The **Other SVN server** option is only available when support for other SVN servers is enabled in the [Preferences](preferences-dialog#enable) dialog box.
+The **Other SVN server** option is only available when support for other SVN servers is enabled in the [Preferences](preferences-dialog#enabled) dialog box.
 
 {{% /alert %}}
 

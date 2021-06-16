@@ -8,11 +8,9 @@ description: "Describes how to make your app service Marketplace-ready."
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your app service in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Partner](#partner), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your app service in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
 {{% todo %}}[**Verify slide to be included; need higher quality image; do not capitalize "app service"; add serial commas after "validation" in validation and maintenance" and after "legal" in "legal and compliance"**{{% /todo %}}
-
-{{% todo %}}[**Cross-reference to doc describing how to become a Marketplace partner?**{{% /todo %}}
 
 ![](attachments/suppliers/benefits.png)
 
@@ -20,30 +18,20 @@ App services are domain-focused packaged business capabilities delivered as a co
 
 **This how-to will teach you how to do the following:**
 
-* Join the Mendix Partner Program as a Marketplace Partner
+* Join the Marketplace Vendor Program
 * Make your app service Marketplace-ready
 
-## Marketplace Partner Program {#partner}
+## 2 Becoming a Marketplace Vendor {#vendor}
 
-The [Mendix Partner Program](https://www.mendix.com/become-a-partner/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV.
+The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
-If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program.  There you will find information about how you qualify to become an ISV, what solutions are relevant for the program, and we explain how we work with you throughout the application process to make your onboarding experience as simple as possible.  
+Whether you are supplying an app service as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your onboarding experience as simple as possible.
 
+## 3 App Service Guidelines
 
-https://www.mendix.com/marketplace-vendor-program/
+The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption.
 
-
-
-### Marketplace Partner Program
-
-Whether you are supplying an App Service as an individual with your own business, or you are acting on behalf of your organization, you’ll be in great company by joining the Mendix Partner Program as a Marketplace Partner.  We only need a few pieces of key information from you before you’re ready to offer your product through the Mendix Marketplace.
-
-
-## Guidelines
-
-The Marketplace provides a trustworthy experience for Makers to share and consume App Services and other products.  This is achieved through proven curation and governance processes, and compliance checks conducted at the point of consumption.
-
-To help us maintain the high quality of content available on the Marketplace we’ve provided you with some clear guidelines for what it takes for you to prepare and submit “marketplace ready” content.
+To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines for what is necessary when preparing and submitting your Marketplace-ready content.
 
 Use these comprehensive onboarding resources to turn your App Service idea into reality. Learn how to design, develop, market, and monetize your App Service and be supported by best practices and success stories from other like-minded Marketplace Partners.
 

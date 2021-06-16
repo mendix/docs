@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 It is good practice to *always* redeploy your Mendix app before pushing a new OTA update. However, releasing an OTA update without redeploying your Mendix app to Mendix Cloud in these cases is usually safe:
 
 * Style changes
-* Static images, text, or other static asset changes
+* Static image, text, or other static asset changes
 * Layout changes
 * Nanoflow changes
 * JavaScript action changes

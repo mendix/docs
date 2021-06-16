@@ -39,7 +39,7 @@ In the **App repository address** field, enter the address of the repository you
 
 {{% alert type="info" %}}
 
-This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enable).
+This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](preferences-dialog#enabled).
 
 {{% /alert %}}
 

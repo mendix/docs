@@ -34,9 +34,12 @@ Before you become a Marketplace Partner, there are a few prerequisites to take c
 
 {{% todo %}}[**How do they contact? Cannot include without direct contact info**{{% /todo %}}
 
+## 3 App Service Guidelines
+
+Mendix uses the industry-standard [Open Service Broker API](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your app service. For more information on this method, see 
 
 
-On the technical side of things we use an industry standard method known as the [Open Service Broker API](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your app service **(link to Technical Readiness section)**.
+**(link to Technical Readiness section)**.
 
 To walk you through the process of submitting content to the Marketplace, we’ve provided the Add Content wizard.  It’s an intuitive, step-by-step guide to adding and publishing your App Service.
 
@@ -47,7 +50,8 @@ The Marketplace APIs [](http://)are also available for you to automate your work
 
 ![](attachments/suppliers/3.png)
 
-## 3 App Service Guidelines
+
+
 
 The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption.
 
@@ -58,86 +62,83 @@ To help us maintain the high quality of content available on the Marketplace, we
 **Step 1: Pre-requisites**
 **Technical**
 
-    **OSBAPI Compatibility**
-        To onboard an App Service to the Marketplace it needs to be compatible to OSBAPI.  This allows the service to be automatically provisioned and it provides the connection details for users when they try or buy it.
+**OSBAPI Compatibility**
+
+To onboard an App Service to the Marketplace it needs to be compatible to OSBAPI.  This allows the service to be automatically provisioned and it provides the connection details for users when they try or buy it.
         
-        Although OSBAPI supports many endpoints for many operations as specified in the [OSBAPI specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), the three main concepts to consider while implementing your service broker for your App Service are:
+Although OSBAPI supports many endpoints for many operations as specified in the [OSBAPI specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), the three main concepts to consider while implementing your service broker for your App Service are:
         
-        1. **Service Catalog (GET /v2/catalog)** ****to list your services available to the broker
-        2. **Provisioning (PUT /v2/service_instances/{instance_id})** ****to provision your service
-        3. **Binding (PUT /v2/service_instances/{instance_id}/service_bindings/{binding_id})** ****this creates the connection and connection details to connect your service to an application during provisioning
+1. **Service Catalog (GET /v2/catalog)** ****to list your services available to the broker
+2. **Provisioning (PUT /v2/service_instances/{instance_id})** ****to provision your service
+3. **Binding (PUT /v2/service_instances/{instance_id}/service_bindings/{binding_id})** ****this creates the connection and connection details to connect your service to an application during provisioning
 
+For additional assistance, follow this link to see an example of how to provision and bind an application to a logging service [+Logging - As a App Service](https://paper.dropbox.com/doc/Logging-As-a-App-Service-5B6CSVzCohsUXj6tBrYYN)
 
-        For additional assistance, follow this link to see an example of how to provision and bind an application to a logging service [+Logging - As a App Service](https://paper.dropbox.com/doc/Logging-As-a-App-Service-5B6CSVzCohsUXj6tBrYYN)
+**Identity and Access Management (IAM)**
 
+When you onboard your App Service to the Marketplace you can choose how it integrates with the Mendix platform’s foundational IAM service.  In this way, you can ‘consume’ authentication, authorisation decisions and user profiles and focus on your domain logic, while we manage the identities and access policies. 
 
-    **Identity and Access Management (IAM)**
-    When you onboard your App Service to the Marketplace you can choose how it integrates with the Mendix platform’s foundational IAM service.  In this way, you can ‘consume’ authentication, authorisation decisions and user profiles and focus on your domain logic, while we manage the identities and access policies. 
-
-
-    There are currently three models for integrating with Mendix IAM and it depends how your App Service is architected as to which model(s) is(are) most applicable.  Models 1 and 2 apply at an App/App Service level whereas model 3 applies at an individual user level:
+There are currently three models for integrating with Mendix IAM and it depends how your App Service is architected as to which model(s) is(are) most applicable.  Models 1 and 2 apply at an App/App Service level whereas model 3 applies at an individual user level:
         
-    - **Model 1 -** **Enable an App to communicate with your App Service via an API**
-        In this model Makers can use Mendix low code artefacts you supply within their Apps to invoke your API
+- **Model 1 -** **Enable an App to communicate with your App Service via an API**
+In this model Makers can use Mendix low code artefacts you supply within their Apps to invoke your API
 
+- **Model 2 -** **Enable Makers and End Users to** **have** **a Single Sign-On (****SSO****)** ******e****xperience between Apps,** **App** **Services and** **the Mendix** **Platform**
+This model is applicable when your App Service requires user identity.  For example, your App Service may support SSO when accessed by an end user from within an App, or when it’s being configured by a Maker at design time through a configuration user interface.
 
-    - **Model 2 -** **Enable Makers and End Users to** **have** **a Single Sign-On (****SSO****)** ******e****xperience between Apps,** **App** **Services and** **the Mendix** **Platform**
-        This model is applicable when your App Service requires user identity.  For example, your App Service may support SSO when accessed by an end user from within an App, or when it’s being configured by a Maker at design time through a configuration user interface.
+- **Model 3 -** **Enable end user a****ccess** **c****ontrol** **to your App S****ervice** **from within an** **App**
+In this model, end user access to your App Service is managed centrally by the Mendix IAM service
 
+For more information, follow this link [+Service provider - IAM requirements](https://paper.dropbox.com/doc/Service-provider-IAM-requirements-hooivk3hshSdZ1llrmxGm) 
 
-    - **Model 3 -** **Enable end user a****ccess** **c****ontrol** **to your App S****ervice** **from within an** **App**
-        In this model, end user access to your App Service is managed centrally by the Mendix IAM service
-
-
-​    
-​    For more information, follow this link [+Service provider - IAM requirements](https://paper.dropbox.com/doc/Service-provider-IAM-requirements-hooivk3hshSdZ1llrmxGm) 
-
-    **Metering**
-    - Usage based metering (via the API Gateway)
-        - API (payload, count)
-        - An asynchronous service 
-    - Active users (via the MX runtime)
-        - Widget
-    - Metering (via service’s own solution) 
+**Metering**
+- Usage based metering (via the API Gateway)
+	- API (payload, count)
+	- An asynchronous service 
+- Active users (via the MX runtime)
+	- Widget
+- Metering (via service’s own solution) 
     
-    **Product Documentation**
+**Product Documentation**
 
 **Commercial**
 
-    **Export Control** 
-        Export control is an area of legislation that regulates and restricts the export of goods, information, software and technology which could be potentially useful for purposes that are contrary the interest of the exporting country. These items are considered to be *controlled*. 
-    
-        If your App Service is a controlled item we’ll need to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases you’ll typically need to request an export control license from a local government department, and you’ll need to confirm ownership of such a license before we can list your App Service on the Marketplace.
-        
-        If you are unclear what this means to you and your App Service there are lots of useful resources online.  We recommend xyz.com and if you are still stuck you can contact our compliance team at compliance@mendix.com for guidance.
+**Export Control** 
 
-​    **App Service Pricing and Free Trials**
-​        As a Marketplace Partner it’s important that you choose the pricing model that will maximise the business opportunity for your App Service.  
-​        
-​        Once you’ve decided on your preferred pricing model and whether you want to offer it as a free trial, we’ve made the process of applying these options to your App Service simple by adding them as steps to the Add Content wizard.
+Export control is an area of legislation that regulates and restricts the export of goods, information, software and technology which could be potentially useful for purposes that are contrary the interest of the exporting country. These items are considered to be *controlled*. 
+    
+If your App Service is a controlled item we’ll need to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases you’ll typically need to request an export control license from a local government department, and you’ll need to confirm ownership of such a license before we can list your App Service on the Marketplace.
+        
+If you are unclear what this means to you and your App Service there are lots of useful resources online.  We recommend xyz.com and if you are still stuck you can contact our compliance team at compliance@mendix.com for guidance.
 
-        **Pricing Models**
-        The Marketplace supports two pricing models, per-user subscription and usage based. It can be tricky to find a standard definition for these terms so we define them as:
+**App Service Pricing and Free Trials**
+
+As a Marketplace Partner it’s important that you choose the pricing model that will maximise the business opportunity for your App Service. 
+
+Once you’ve decided on your preferred pricing model and whether you want to offer it as a free trial, we’ve made the process of applying these options to your App Service simple by adding them as steps to the Add Content wizard.
+
+**Pricing Models**
+The Marketplace supports two pricing models, per-user subscription and usage based. It can be tricky to find a standard definition for these terms so we define them as:
     
-        - Per User
-            This is a model where a single user pays a fixed monthly price.  When a second user is added the monthly price doubles, and so on.
+- Per User
+This is a model where a single user pays a fixed monthly price.  When a second user is added the monthly price doubles, and so on.
+- Usage based
+This is a model where users pay for what they consume. In this way it directly relates the price your users pay for your App Service to their usage; the more they use, the more they pay and conversely, the less they use, the less they pay.
+        
+When you onboard your App Service you can choose whether to have it metered by ‘payload size’ or ‘count’    
     
-        - Usage based
-            This is a model where users pay for what they consume. In this way it directly relates the price your users pay for your App Service to their usage; the more they use, the more they pay and conversely, the less they use, the less they pay.
-        
-            When you onboard your App Service you can choose whether to have it metered by ‘payload size’ or ‘count’    
+**Free Trials**
+The benefits of a free trial are well documented as a means to increase user adoption, and having offered trials for many of our own App Services we recommend that you consider offering a trial for yours too.
     
-        **Free Trials**
-        The benefits of a free trial are well documented as a means to increase user adoption, and having offered trials for many of our own App Services we recommend that you consider offering a trial for yours too.
-    
-        The Marketplace supports time-based trials.  You must clearly define the Terms and Conditions of your trial offering so users are aware of what they are signing up to.  As a minimum you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
+The Marketplace supports time-based trials.  You must clearly define the Terms and Conditions of your trial offering so users are aware of what they are signing up to.  As a minimum you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
         
-        The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
+The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
         
-    **Payments**
-        One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your App Service according to the pricing model you specify for it. The Marketplace meters usage of your App Service and sends a bill to the user.  You can see monthly billing reports in your Partner Portal and you’ll also be emailed them for completeness.
+**Payments**
+One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your App Service according to the pricing model you specify for it. The Marketplace meters usage of your App Service and sends a bill to the user.  You can see monthly billing reports in your Partner Portal and you’ll also be emailed them for completeness.
         
-        Under our standard Marketplace terms and conditions we support the following subscription/billing model:  
+Under our standard Marketplace terms and conditions we support the following subscription/billing model:
+
 | Subscription duration     | 12 months              |
 | ------------------------- | ---------------------- |
 | Subscription auto-renewal | Not Supported          |
@@ -145,41 +146,41 @@ To help us maintain the high quality of content available on the Marketplace, we
 | Billing day               | 15th day of each month |
 | Billing timing            | In Arrears             |
 
-    **Marketplace Operating Fees**
-        The Mendix Marketplace is free to use unless you want to sell paid App Services through it. When you sell your App Service via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing, and payment provided by the Marketplace.
+**Marketplace Operating Fees**
+The Mendix Marketplace is free to use unless you want to sell paid App Services through it. When you sell your App Service via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing, and payment provided by the Marketplace.
     
-        See [+Mendix Ecosystem - The Composable Enterprise & PBC Monetization](https://paper.dropbox.com/doc/Mendix-Ecosystem-The-Composable-Enterprise-PBC-Monetization-SYmPTLdAc3p7NztBCqnMI) 
+See [+Mendix Ecosystem - The Composable Enterprise & PBC Monetization](https://paper.dropbox.com/doc/Mendix-Ecosystem-The-Composable-Enterprise-PBC-Monetization-SYmPTLdAc3p7NztBCqnMI) 
     
-    **Supported Regions**
-        Subject to the compliance requirements for your specific App Service, the Marketplace supports global access to free, and trials of paid, App Services.
+**Supported Regions**
+Subject to the compliance requirements for your specific App Service, the Marketplace supports global access to free, and trials of paid, App Services.
         
-        To sell paid App Services you must be a permanent resident or a legal business entity in one of the following countries:
+To sell paid App Services you must be a permanent resident or a legal business entity in one of the following countries:
 
 | Netherlands |
 | ----------- |
 | …           |
 |             |
 
-
 - Licensing Agreement
-    - App Services must comply with all legal requirements in any location where you make them available…
+	- App Services must comply with all legal requirements in any location where you make them available…
 - Support Agreement
 - FOSS?
 
 **Step 2: Create Account**
+
 **Basic Account Information**
 Whether you are an individual App Service supplier with your own business or you are supplying an App Service on behalf of your company, you’ll need to create a Marketplace Partner Account.
 
 Since your Marketplace Partner Account is associated with your Mendix ID you first need to create a [Mendix Platform Account](https://signup.mendix.com/).  When creating your Marketplace Partner Account we ask for basic information including your legal name and address.  We will use this information to check whether you want to sell your App Service, or offer it for free.  As the creator of the account you must have permission to legally bind your company to Mendix.
 
-| **Marketplace Partner Account** |                                                                            |
-| ------------------------------- | -------------------------------------------------------------------------- |
-| Account Owner                   | Account creator’s email address                                            |
-| Logo                            |                                                                            |
-| Name                            | Supplier name (could be a company/brand/individual)                        |
-| Description                     | Describe your (company’s) purpose, products and services                   |
-| Company Name                    | The legal name of the entity which will sell or offer your free service    |
-| Company Address                 | The legal address of the entity which will sell or offer your free service |
+| **Marketplace Partner Account** | --- |
+| --- | --- |
+| Account Owner | Account creator’s email address |
+| Logo |  |
+| Name | Supplier name (could be a company/brand/individual) |
+| Description | Describe your (company’s) purpose, products and services |
+| Company Name | The legal name of the entity which will sell or offer your free service |
+| Company Address | The legal address of the entity which will sell or offer your free service |
 
 **Legal and Compliance Checks**
 The Company registered against your account is the legal entity against which Mendix will be bound.  For this reason we will perform screening checks to ensure we’re legally permitted to undertake business transactions together.
@@ -187,9 +188,9 @@ The Company registered against your account is the legal entity against which Me
 The checks involved are:
 
 - SPS
-- …
 
 **Step 3: Commercial Setup**
+
 **Marketplace Partner License Agreement**
 Whether you are offering a free or paid App Service through the Marketplace you’ll have to accept our Marketplace Partner License Agreement which is an agreement between Mendix and you as a Marketplace Partner within the Marketplace Partner Program.
 
@@ -210,13 +211,13 @@ Similar concept to the Paid Applications agreement within the [Apple Developer P
 
 **Seller Account Information**
 
-| **Seller Account Information** |                                                                                           |
-| ------------------------------ | ----------------------------------------------------------------------------------------- |
-| Bank Name                      | Name of branch where account is held                                                      |
-| Bank Address                   | Address of branch where account is held                                                   |
-| Account Number                 | Account number for the legal entity or individual who signed the Seller License Agreement |
-| Account Holder Name            | The name registered against the account                                                   |
-## As You Submit
+| **Seller Account Information** | --- |
+| --- | --- |
+| Bank Name | Name of branch where account is held |
+| Bank Address | Address of branch where account is held |
+| Account Number | Account number for the legal entity or individual who signed the Seller License Agreement |
+| Account Holder Name | The name registered against the account                                                   |
+### As You Submit
 
 While you are developing your App Service, it’s good practice to create a draft version with basic information such as name, description, and keywords in preparation for publishing it to the Marketplace as soon as you’ve finished creating it. 
 
@@ -276,13 +277,13 @@ Once your App Service is available on the public Marketplace you can gain insigh
 
 Marketplace Reviews - discipline of supplier comments  
 
-# Brand Guidelines
+## Brand Guidelines
 
 Use of Mendix logo
 Branded imagery sizes
 Legal requirements. credit lines trademarks
 
-# UX Design Guidelines
+## UX Design Guidelines
 
 Atlas
 Principles

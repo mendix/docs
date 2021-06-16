@@ -653,7 +653,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 *   _ProjectId_ (String): Unique project identifier. Can be looked up via the [developer portal](/developerportal/deploy/environments-details) or [apps API](deploy-api#list-apps).
 *   _EnvironmentId_ (String): Unique environment identifier. Can be looked up via the [developer portal](/developerportal/deploy/environments-details) or [environments API](deploy-api#list-environments).
-*   _RestoreId_ (String): Identifier the request to restore the data.
+*   _RestoreId_ (String): Identifier of the request to restore the data.
 
 **Example Request**
 

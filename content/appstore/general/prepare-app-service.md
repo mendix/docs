@@ -27,18 +27,16 @@ The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) 
 
 Whether you are supplying an app service as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your onboarding experience as simple as possible.
 
-## 3 App Service Guidelines
 
-The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption.
+### 2.1 Prerequisites
 
-To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines for what is necessary when preparing and submitting your Marketplace-ready content.
+Before you become a Marketplace Partner, there are a few prerequisites to take care of.  In addition to defining the business case for your app service (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product.  We know export control can be confusing, so if you are still unclear on what you need to do, you can contact our Marketplace Compliance team.
 
-Use these comprehensive onboarding resources to turn your App Service idea into reality. Learn how to design, develop, market, and monetize your App Service and be supported by best practices and success stories from other like-minded Marketplace Partners.
+{{% todo %}}[**How do they contact? Cannot include without direct contact info**{{% /todo %}}
 
 
-### Simple Steps to becoming a Marketplace Partner
 
-Before you become a Marketplace Partner there are a few pre-requisites to take care of.  In addition to working through the business case for your App Service including how it will be licensed, priced and supported, you need to make sure you meet the export control requirements for your product.  We know export control can be confusing so if you’re still unclear what you need to do you can contact our Marketplace Compliance team.  On the technical side of things we use an industry standard method known as [OSBAPI](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update and connect makers to your App Services (link to Technical Readiness section)  
+On the technical side of things we use an industry standard method known as the [Open Service Broker API](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your app service **(link to Technical Readiness section)**.
 
 To walk you through the process of submitting content to the Marketplace, we’ve provided the Add Content wizard.  It’s an intuitive, step-by-step guide to adding and publishing your App Service.
 
@@ -48,6 +46,12 @@ The Marketplace APIs [](http://)are also available for you to automate your work
 
 
 ![](attachments/suppliers/3.png)
+
+## 3 App Service Guidelines
+
+The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption.
+
+To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your Marketplace-ready content. Use these comprehensive resources to turn your app service idea into reality by learning how to design, develop, market, and monetize your app service and get support via best practices and success stories from like-minded Marketplace Partners.
 
 ### Before You Submit
 

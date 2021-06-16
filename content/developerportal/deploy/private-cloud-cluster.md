@@ -947,6 +947,167 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
 * **runtimeDeploymentPodAnnotations**: - specify default annotations for Mendix app Pods
 
+### 5.3 Mendix app resource customization{#advanced-resource-customization}
+
+The Deployment object that controls de Pod of a given Mendix application contains user-editable options for fine-tuning the execution to application's runtime resources.
+
+The Deployment's name has the following format:
+```
+<internal environment name>-master
+```
+
+In this specific example is `b8nn6lq5-master`
+
+Let's consider as a reference example, the Deployment definition of this app:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 0
+  # ...
+  # omitted lines for brevity
+  # ...
+  template:
+    metadata:
+      # ...
+      # omitted lines for brevity
+      # ...
+      creationTimestamp: null
+      labels:
+        app: b8nn6lq5
+        component: mendix-app
+        node-type: master
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - env:
+        - name: M2EE_ADMIN_LISTEN_ADDRESSES
+          value: 127.0.0.1
+        - name: M2EE_ADMIN_PORT
+          value: "9000"
+        - name: M2EE_ADMIN_PASS
+          valueFrom:
+            secretKeyRef:
+              key: adminpassword
+              name: b8nn6lq5-m2ee
+        image: image-registry.openshift-image-registry.svc:5000/test-app/b8nn6lq5
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+          name: mendix-app
+          protocol: TCP
+        name: mendix
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+          path: /
+          port: mendix-app
+          scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: mendix-app
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+# ...
+# omitted lines for brevity
+# ...
+```
+
+#### 5.3.1 Customize liveness probe to resolve crash loopback scenarios
+
+The `liveness probe` serves the purpose of informing the cluster whether the Pod is dead or alive. Failing to respond to the liveness probe will cause the Pod to be restarted (`crash loopback`).
+
+On the other hand, the `readiness probe` is designed to check if the cluster is allowed to send network traffic to the Pod. Failing to pass this probe will cease any requests to the Pod.
+
+{{% alert type="warning" %}}
+The **Readiness probe** does not contribute to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
+{{% /alert %}}
+
+Let's now analyse the `liveness probe` section from the initial application deployment example:
+
+```yaml
+livenessProbe:
+  failureThreshold: 3
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  initialDelaySeconds: 60
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 1
+```
+
+The following fields can be configured:
+
+* `initialDelaySeconds`: Number of seconds after the container has started before liveness or readiness probes are initiated. Minimum value is 0.
+* `periodSeconds`: How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+* `timeoutSeconds`: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
+* `successThreshold`: Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
+* `failureThreshold`: When a probe fails, Kubernetes will try failureThreshold times before giving up. Giving up in case of liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
+
+{{% alert type="info" %}}
+In case we need to deploy a larger application, that takes considerably more time to start than the defined 60 seconds, we will observe that it restarts multiple times. To solve this scenario we must edit the **Liveness probe** field `initialDelaySeconds` to a substantially larger value.
+{{% /alert %}}
+
+#### 5.3.2 Customize container resources: memory and CPU
+
+Let's now analyse the `resource` section from the initial application deployment example:
+
+```yaml
+resources:
+  limits:
+    cpu: "1"
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 512Mi
+```
+
+This section allows the configuration of the lower and upper bound resource boundaries, the `requests` and `limits` respectively.
+
+This means that if the server node where a Pod is running has enough of a given resource available (either CPU or memory), it is possible, and allowed for a container to use more resource than its `request` for that resource specifies. However, a container is not allowed to use more than its resource `limit`.
+
+##### 5.3.2.1 Meaning of CPU
+
+Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
+
+Fractional requests are allowed. For instance, in the example, we are requesting **100m**, which can be read as *"one hundred millicpu"*, and limiting to a maximum of 1 CPU or **1000m**.
+
+A precision finer than 1m is not allowed.
+
+##### 5.3.2.2 Meaning of memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
+
+For instance, in the example, we are requesting and limiting memory usage to roughly **512MB**.
+
+{{% alert type="warning" %}}
+Modifying resource configuration should be performed carefully as that might have direct implications on the performance of your application, and resource usage of the server node.
+{{% /alert %}}
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

@@ -1,7 +1,7 @@
 ---
 title: "Share Marketplace Content"
 category: "General Info"
-menu_order: 30
+menu_order: 40
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
 aliases:
@@ -80,6 +80,10 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * For example pages and microflows to be copied to another module, select the **Exclude from project** option for the document in order to encourage duplication and reduce dependency errors 
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
+
+### 3.4 App Service Guidelines
+
+For details on how to make your app service Marketplace-ready, see [Prepare Your App Service for the Marketplace](prepare-app-service).
 
 ## 4 Adding New Marketplace Content {#adding}
 

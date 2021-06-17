@@ -43,5 +43,4 @@ For a demo app that has been deployed with this widget, see [here](https://react
 
 ## 3 Developing This Marketplace Component
 
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/calendar](https://github.com/mendixlabs/calendar/issues).
-
+We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/widgets-resources](https://github.com/mendix/widgets-resources).

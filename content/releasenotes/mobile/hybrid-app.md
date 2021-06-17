@@ -14,6 +14,16 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2021
 
+### Hybrid App Base 5.0.6
+
+**Release date: June 17th, 2021**
+
+### Improvements
+- Hybrid apps have now support for Android API 30.
+
+### Fixes 
+- Updated the allowed navigation tags with the correct Mendix hosts.
+
 ### Hybrid App Base 5.0.5
 
 **Release date: April 16th, 2021**

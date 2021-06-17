@@ -71,9 +71,9 @@ Although OSB API supports endpoints for many operations (as specified in the [Op
 * **Provisioning** (`PUT /v2/service_instances/{instance_id}`) – for provisioning your service
 * **Binding** (`PUT /v2/service_instances/{instance_id}/service_bindings/{binding_id}`)  – for creating the connection and connection details to connect your service to an application during provisioning
 
-For additional assistance and an example of how to provision and bind an app to a logging service, see  [Logging - As a app service](https://paper.dropbox.com/doc/Logging-As-a-App-Service-5B6CSVzCohsUXj6tBrYYN).
+For additional assistance and an example of how to provision and bind an app to a logging service, see **Logging as an App Service**.
 
-{{% todo %}}[**We do not publish links to Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
+{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
 ### 4.1.2 Identity and Access Management (IAM)
 
@@ -85,9 +85,9 @@ There are currently three models for integrating with Mendix IAM, the applicabil
 * **Model 2: Enable Mendix developers and app end-users to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform** – this model is applicable when your app service requires a user identity (for example, your app service may support SSO when accessed by an end-user from within an app or when it is being configured by a developer at design time through a configuration UI)
 * **Model 3: Enable end-user access control to your app service from within an app** – in this model, end-user access to your app service is managed centrally by the Mendix IAM service
 
-For more information, follow this link [Service provider - IAM requirements](https://paper.dropbox.com/doc/Service-provider-IAM-requirements-hooivk3hshSdZ1llrmxGm).
+For more information, see **Service Provider IAM Requirements**.
 
-{{% todo %}}[**We do not publish links to Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
+{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
 ### 4.1.3 Metering
 
@@ -162,9 +162,9 @@ Under our standard [Marketplace terms and conditions](https://www.mendix.com/ter
 
 The Mendix Marketplace is free to use unless you want to sell paid app services through it. When you sell your app service via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing as well as the payment provided by the Marketplace.
     
-For more information, see [+Mendix Ecosystem - The Composable Enterprise & PBC Monetization](https://paper.dropbox.com/doc/Mendix-Ecosystem-The-Composable-Enterprise-PBC-Monetization-SYmPTLdAc3p7NztBCqnMI) 
+For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monetization**.
 
-{{% todo %}}[**We do not publish links to Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
+{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
 #### 4.1.7.5 Supported Regions
 
@@ -252,37 +252,40 @@ While you are developing your app service, it’s good practice to create a draf
 Remember your listing represents your brand so be sure to keep it updated, use quality images and clearly explain the benefits of your app service. Refer to section 4 of https://docs.mendix.com/appstore/general/share-app-store-content for a complete list of supported metadata, and Brand Guidelines to learn more about our brand guidelines  
 
 #### Step 4: Add your app service {#add-app-service}
+
 At this stage you’ve confirmed the commercial feasibility of your app service, you’ve signed up as a Marketplace Vendor, and you’re technically ready to onboard it to the Marketplace.
 
-As a helping hand we’ve provided this checklist of items to consider as the final step to successfully listing your app service:
+As a helping hand we’ve provided this list of items to consider as the final step to successfully listing your app service:
 
-- **Dependencies** -
-    [ ] Provide a list of resources/dependencies from Marketplace that might be needed to use your component
-    [ ] Make sure the dependency mentioned is compatible with your component
-- **Technical Readiness** -
-    [ ] While importing the component, there might still be errors that exist, because it is expected that the end-user needs to hook up some information from their existing modules into the new components. This should be fine, as long as there is an explanation in the Documentation section of “how to set-up” the component
-    [ ] Errors existing with no explanation of how to address them should not exist, when importing the component
-    [ ] Test your component for crashes and bugs
-- **Accurate Metadata** - 
-    [ ] Customers should know what they’re getting when they download or buy your app, so make sure all your app metadata, including privacy information, your component description, screenshots, and previews accurately reflect the components core experience and remember to keep them up-to-date with new versions
-    [ ] Ensure that all app information and metadata is complete and accurate
-    [ ] Include detailed explanations of non-obvious features and including supporting documentation where appropriate
-    [ ] Select the most appropriate category for your app, and check out the [Marketplace Store Category Definitions](https://paper.dropbox.com/doc/App-Store-Quick-Reference-Card--BI1ABkUNXWwfPdO7~ND3lD4iAg-EvYnmdiq6zCsS2ZBe0jDM) if you need help. If you’re way off base, we may change the category for you
-    [ ] [Update your contact information](https://sprintr.home.mendix.com/link/profilesettings/generalinfo) in case component Review needs to reach you
-    [ ] Check the details on how to select the details while submitting a component follows [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) as mentioned in the documentation
-    [ ] Spell check the content you are about to submit
-- **Versioning -**  
-    [ ] Component should work fine for the specified Studio Pro version it was marked as being compatible with
-    [ ] Keep versioning pattern consistent in terms of naming and version numbers for your component
-    [ ] Also provide release notes
-- **Branding** -
-    [ ] Screenshots should show the app in use, and not merely the title art, log-in page, or splash screen. They may also include text and image overlays
-- **Usability -**
-    [ ] Make sure inclusion of README snippet and USEME folders which helps the user on how to use the component
-    [ ] Make sure that there are no unnecessary dependencies bundled when exporting the module from the Desktop Modeler
-        [ ] For instance, if the module only mentions needing a jar file `fancystuff.jar`, but the userlib includes 10 other jar files ← these are unnecessary dependencies
-    [ ] If you attempt to cheat the system (for example, by trying to trick the review process, steal user data, copy another developer’s work, manipulate ratings) your components will be removed from the Marketplace.
-    [ ] Keep updating your components on a timely basis or the components will be removed if not updated for longer period from Marketplace
+[**TURN INTO A TABLE WITH A "DONE" COLUMN?**]
+
+* **Dependencies**
+	* Provide a list of resources/dependencies from Marketplace that might be needed to use your component
+	* Make sure the dependency mentioned is compatible with your component
+* **Technical Readiness**
+	* While importing the component, there might still be errors that exist, because it is expected that the end-user needs to hook up some information from their existing modules into the new components. This should be fine, as long as there is an explanation in the Documentation section of “how to set-up” the component
+	* Errors existing with no explanation of how to address them should not exist, when importing the component
+	* Test your component for crashes and bugs
+* **Accurate Metadata**
+	* Customers should know what they’re getting when they download or buy your app, so make sure all your app metadata, including privacy information, your component description, screenshots, and previews accurately reflect the components core experience and remember to keep them up-to-date with new versions
+	* Ensure that all app information and metadata is complete and accurate
+	* Include detailed explanations of non-obvious features and including supporting documentation where appropriate
+	* Select the most appropriate category for your app, and check out the [Marketplace Store Category Definitions](https://paper.dropbox.com/doc/App-Store-Quick-Reference-Card--BI1ABkUNXWwfPdO7~ND3lD4iAg-EvYnmdiq6zCsS2ZBe0jDM) if you need help. If you’re way off base, we may change the category for you
+	* [Update your contact information](https://sprintr.home.mendix.com/link/profilesettings/generalinfo) in case component Review needs to reach you
+	* Check the details on how to select the details while submitting a component follows [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) as mentioned in the documentation
+	* Spell check the content you are about to submit
+* **Versioning ** 
+	* Component should work fine for the specified Studio Pro version it was marked as being compatible with
+	* Keep versioning pattern consistent in terms of naming and version numbers for your component
+	* Also provide release notes
+* **Branding**
+	* Screenshots should show the app in use, and not merely the title art, log-in page, or splash screen. They may also include text and image overlays
+* **Usability**
+	* Make sure inclusion of README snippet and USEME folders which helps the user on how to use the component
+	*  Make sure that there are no unnecessary dependencies bundled when exporting the module from the Desktop Modeler
+		* For instance, if the module only mentions needing a jar file `fancystuff.jar`, but the userlib includes 10 other jar files ← these are unnecessary dependencies
+	* If you attempt to cheat the system (for example, by trying to trick the review process, steal user data, copy another developer’s work, manipulate ratings) your components will be removed from the Marketplace.
+	* Keep updating your components on a timely basis or the components will be removed if not updated for longer period from Marketplace
 
 **Setting pricing plan**
 
@@ -297,7 +300,7 @@ When your app service is ready to be published to the Marketplace it is submitte
 
 The Marketplace Governance team’s mission is to manage the quality of content while keeping the submission process as frictionless as possible.  They achieve this by maintaining this comprehensive set of guidelines, which when followed will maximise the chances of your submission being approved first time round. The more complex your app service, the more likely it is to require multiple approval iterations to get it into great shape but the Marketplace Governance team are on hand to advise you throughout the process.
 
-### After You Submit
+## 6 After You Submit
 
 Once you’ve submitted your app service you can keep track of your submission by subscribing to receive status notifications and if you need more help you can contact the Marketplace Governance team.
 

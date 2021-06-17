@@ -11,7 +11,7 @@ The **My Apps** page shows you a summary of your apps:
 
 ![Apps tiles](attachments/apps-tiles.jpg)
 
-**All** displays all the apps for which you are an [Team](../collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
+**All** displays all the apps for which you are an [Team](/developerportal/collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
 ## 2 Viewing Apps
 

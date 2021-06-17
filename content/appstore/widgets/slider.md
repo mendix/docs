@@ -63,4 +63,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 ## 5 Read More
 
-* [Native Mobile Styling Reference Guide](../../refguide/native-styling-refguide)
+* [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)

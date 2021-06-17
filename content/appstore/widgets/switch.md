@@ -12,7 +12,7 @@ The [Switch](https://appstore.home.mendix.com/link/app/50324/) widget enables to
 
 ## 2 Usage
 
-To use this widget, place it in a [data container](../../refguide/data-sources) that has a Boolean attribute.
+To use this widget, place it in a [data container](/refguide/data-sources) that has a Boolean attribute.
 
 The widget offers the following for configuration:
 
@@ -20,7 +20,7 @@ The widget offers the following for configuration:
 * An action (such as Microflow or Nanoflow) to trigger when the Switch is toggled
 * A **Device style** design property with two options (`iOS` and `Android`) influencing the Switch's appearance
 * A **Style** design property for brand styling, influencing the Switch's colors
-* [Common properties](../../refguide/common-widget-properties)
+* [Common properties](/refguide/common-widget-properties)
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 
@@ -71,4 +71,4 @@ We are actively maintaining this widget. Please report any issues or suggestions
 
 #### 4 Read More
 
-* [CAB.02 - Switch](../../addons/ats-addon/ht-two-cab-02-switch)
+* [CAB.02 - Switch](/addons/ats-addon/ht-two-cab-02-switch)

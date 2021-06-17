@@ -344,7 +344,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/hc/en-us).
 
-If you wan to run Mendix apps on Windows server you will need the [Windows Service](../../releasenotes/studio-pro/windows-service). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows).
+If you wan to run Mendix apps on Windows server you will need the [Windows Service](/releasenotes/studio-pro/windows-service). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows).
 
 If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/hc/en-us).
 

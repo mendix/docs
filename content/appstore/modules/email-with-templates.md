@@ -54,4 +54,5 @@ To configure this module, follow these steps:
 
 ## 3 Read More
 
-* [Sending Email](../../developerportal/deploy/sending-email)
+* [Sending Email](/developerportal/deploy/sending-email)
+

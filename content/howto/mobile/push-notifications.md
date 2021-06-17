@@ -48,4 +48,4 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 
 ## 6 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository).

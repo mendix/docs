@@ -15,7 +15,7 @@ To debug the Java actions used in a Mendix microflow, you need to make some conf
 
 ## 2 Editing the Server Configuration with Extra JVM Parameters
 
-In this section, you will learn how to configure the security at the [Prototype / demo](../security/create-a-secure-app#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), setting [Production](../security/create-a-secure-app#production) security is mandatory.
+In this section, you will learn how to configure the security at the [Prototype / demo](/howto8/security/create-a-secure-app#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), setting [Production](/howto8/security/create-a-secure-app#production) security is mandatory.
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
@@ -53,6 +53,6 @@ To configure Eclipse, follow these steps:
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions](debug-java-actions)

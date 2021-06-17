@@ -347,4 +347,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Read More
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](../widget-development/use-the-widget-development-plugin-for-adobe-brackets)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets)

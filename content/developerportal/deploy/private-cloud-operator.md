@@ -85,6 +85,21 @@ spec:
   runtimeDeploymentPodAnnotations: # Optional, can be omitted : set custom annotations for Mendix Runtime Pods
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
+  serviceAnnotations: # Optional, can be omitted : specify the Service annotations
+    # example: enable use of Google network endpoint groups for Ingress
+    cloud.google.com/neg: '{"ingress": true}'
+  endpointAnnotations: # Optional, can be omitted : set custom annotations for Ingress or OpenShift Route objects
+    # example: allow uploads of files up 100 MB in the NGINX Ingress Controller
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    # example: deny access to /rest-doc
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      location /rest-doc {
+        deny all;
+        return 403;
+      }
+  ingressClassName: gce # Optional, can be omitted : specify the Ingress class
+  ingressPath: "/" # Optional, can be omitted : specify the Ingress path
+  ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
@@ -141,7 +156,10 @@ You need to make the following changes:
 * **certificate** and **key** – provide the `tls.crt` and `tls.key` values directly (not recommended for production environments) — cannot be used together with **secretName**
 * **replicas** – by default one replica will be started when you deploy your app
 * **resources** – change the minimum and maximum container resources your app requires
-* **runtimeDeploymentPodAnnotations** - set custom annotations for Mendix Runtime Pods; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-deployment-settings) from `OperatorConfiguration` 
+* **serviceAnnotations** - set custom annotations for network Services; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **endpointAnnotations** - set custom annotations for Ingress (or OpenShift Route) objects; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **ingressPath** - specify a custom Ingress path; this overrides the [default ingress path](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **ingressPathType** - specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)

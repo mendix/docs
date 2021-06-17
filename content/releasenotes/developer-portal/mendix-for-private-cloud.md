@@ -13,6 +13,28 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### June ???, 2021
+
+#### Mendix Operator v1.12.0 and Mendix Gateway Agent v1.11.0
+
+* We have added more networking configuration options, allowing to use new Ingress and Service types.
+  * You use templates in Ingress and Service annotations.
+  * You use a Service without creating an Ingress - for example to use a Load Balancer Service, or to manually create your own Ingress object.
+  * You customise the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
+  * You can customize the Ingress Class.
+  * You can customize the Service type.
+  * You can customize the Service port(s).
+* We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
+  * Ingress annotations;
+  * Service annotations;
+  * Ingress class;
+  * Ingress path and path type.
+* When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
+* We have fixed a incorrect *Runtime has a empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775)
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
 ### May 4th, 2021
 
 #### Mendix Operator v1.11.0 and Mendix Gateway Agent v1.10.0

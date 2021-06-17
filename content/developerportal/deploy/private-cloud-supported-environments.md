@@ -279,11 +279,15 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
+* [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [Google Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
 
 For ingress, it is possible to do the following:
 
 * Turn TLS on and off
 * Add ingress annotations
+* Add service annotations
+* Specify the ingress class, path and path type
 * Provide the name of an existing TLS secret to use
 * Provide a domain name (for example, mendix.example.com)
 
@@ -305,3 +309,13 @@ There are multiple ways of managing TLS certificates:
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 
 Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP(S) traffic between the Ingress Controller and the Pod running a Mendix app.
+
+### 6.3 Service only
+
+Mendix for Private Cloud can create Services without an Ingress.
+This way, the Ingress objects can be managed separately from Mendix for Private Cloud.
+
+Mendix for Private Cloud can create Services that are compatible with:
+
+* [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
+* AWS Classic Load Balancer

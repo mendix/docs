@@ -849,7 +849,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
 {{% /alert %}}
 
-### 5.1 Endpoint (network) configuration
+### 5.1 Endpoint (network) configuration{#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:
 
@@ -861,8 +861,12 @@ kind: OperatorConfiguration
 spec:
   # Endpoint (Network) configuration
   endpoint:
-    # Endpoint type: ingress or openshiftRoute
+    # Endpoint type: ingress, openshiftRoute or service
     type: ingress
+    # Optional, can be omitted: Service annotations
+    serviceAnnotations:
+      # example: enable use of Google network endpoint groups for Ingress
+      cloud.google.com/neg: '{"ingress": true}'
     # Ingress configuration: used only when type is set to ingress
     ingress:
       # Optional, can be omitted: annotations which should be applied to all Ingress Resources
@@ -884,6 +888,12 @@ spec:
       # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
       # This example is a template which lets cert-manager to generate a unique certificate for each app
       tlsSecretName: '{{.Name}}-tls'
+      # Optional: specify the Ingress class name
+      ingressClassName: gce
+      # Optional, can be omitted : specify the Ingress path
+      path: "/"
+      # Optional, can be omitted : specify the Ingress pathType
+      pathType: ImplementationSpecific
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -894,7 +904,7 @@ kind: OperatorConfiguration
 spec:
   # Endpoint (Network) configuration
   endpoint:
-    # Endpoint type: ingress or openshiftRoute
+    # Endpoint type: ingress, openshiftRoute or service
     type: openshiftRoute
     # OpenShift Route configuration: used only when type is set to openshiftRoute
     openshiftRoute:
@@ -911,15 +921,41 @@ spec:
       tlsSecretName: 'mendixapps-tls'
 ```
 
+When using **Services** for network endpoints (without an Ingress or OpenShift route):
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress, openshiftRoute or service
+    type: service
+    # Optional, can be omitted: the Service type
+    serviceType: ClusterIP
+    # Optional, can be omitted: Service annotations
+    serviceAnnotations:
+      # example: enable use of Google network endpoint groups for Ingress
+      cloud.google.com/neg: '{"ingress": true}'
+    # Optional, can be omitted: Service ports
+    servicePorts: [80, 443]
+```
+
 You can change the following options:
 
-* **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
+* **type**: – select the Endpoint type, possible options are `ingress`, `openshiftRoute` and `service`; this parameter is also configured through the **Configuration Tool**
 * **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
 * **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
-* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
+* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR, and {{.Domain}} will be replaced with the application's domain name
+* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR, and {{.Domain}} will be replaced with the application's domain name
+* **ingressClassName**: - optional, can be used to specify the Ingress Class name
+* **path**: - optional, can be used to specify the Ingress path; default value is `/`
+* **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
 * **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
 * **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
 * **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+* **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
+* **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
 
 
 {{% alert type="info" %}}

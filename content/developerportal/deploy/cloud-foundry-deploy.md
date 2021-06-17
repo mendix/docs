@@ -55,7 +55,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download the latest version of Studio Pro from the [Mendix Marketplace](https://appstore.home.mendix.com/link/modelers)
 * Have access to a service account with the rights to create new applications and services.
 
-## 3 Configuring Cloud Foundry in Studio Pro {#3}
+## 3 Configuring Cloud Foundry in Studio Pro {#configuring-cloud-foundry-in-studio-pro}
 
 To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 

@@ -87,7 +87,7 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 	Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
-## 6 Creating Your Own Classes {#6-creating-your-own-classes}
+## 6 Creating Your Own Classes {#creating-your-own-classes}
 
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 

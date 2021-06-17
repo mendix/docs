@@ -70,7 +70,7 @@ The design properties are located in *theme/settings-native.json*, and more info
 
 #### 3.2.3 Create the App Layouts
 
-The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/howto8/front-end/create-company-atlas-ui-resources#4-moving-from-local-to-atlas-ui-resources).
+The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/front-end/create-company-atlas-ui-resources#moving-from-local-to-atlas-ui-resources).
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 

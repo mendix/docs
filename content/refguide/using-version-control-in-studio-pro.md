@@ -318,7 +318,7 @@ If you are using a different hosting environment, you create a deployment packag
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-28_13-44-04.png)
 
-## 9 Working Outside Studio Pro
+## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 
 Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 

@@ -72,7 +72,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 ![](attachments/app-building/creating_bb_toolbox.png)
 
-## 4 Moving from Local to Atlas UI Resources
+## 4 Moving from Local to Atlas UI Resources {#moving-from-local-to-atlas-ui-resources}
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 

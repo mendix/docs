@@ -42,7 +42,7 @@ In the **App repository address** field, enter the repository address of the app
 
 {{% alert type="info" %}}
 
-This option is only available when support for other servers is enabled in the [Preferences](preferences-dialog#enable) dialog box.
+This option is only available when support for other servers is enabled in the [Preferences](preferences-dialog#enabled) dialog box.
 
 {{% /alert %}}
 

@@ -221,7 +221,7 @@ The `setFilter` method is supported for all [data sources](https://docs.mendix.c
 This feature was introduced in Mendix Studio Pro v9.3.
 {{% /alert %}}
 
-#### 2.4.1 Simple Filtering
+#### 2.4.1 Simple Filtering {#simple-filtering}
 
 To apply a simple filter based on the value of an attribute represented by `myAttributeString` property the following code may be used:
 
@@ -259,7 +259,7 @@ The following code sample shows how to remove current filtering condition:
 this.props.myDataSource.setFilter(undefined);
 ```
 
-#### 2.4.2 Advanced Filtering
+#### 2.4.2 Advanced Filtering {#advanced-filtering}
 
 In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10`. In order to construct such condition special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that check for `filterable` flags omitted for simplicity. Real widgets should always take `filterable` flag into account.
 

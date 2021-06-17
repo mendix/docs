@@ -67,8 +67,6 @@ Apps built using the Mendix Native Mobile Builder have OTA updates with App Cent
 
 Next you must build new binaries with this capability toggled on, and then release the apps to their respective app stores (only users with the new apps will be able to receive OTA updates). To do these things, follow these steps:
 
-{{% todo %}}[A lot of these screenshots need a standard border]{{% /todo %}}
-
 1. Click **Project** > **Build Native Mobile App**.
 1.  Navigate to **App Capabilities**: 
 
@@ -91,16 +89,11 @@ OTA updates let you correct mistakes in your published apps without issuing a ne
 
 {{% image_container width="300" %}}![Typo in welcome screen](attachments/how-to-ota/phone-error-text.png){{% /image_container %}}
 
-{{% todo %}}[Don't need whole phone/image here, can crop and fade]{{% /todo %}}
-
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 
 To release a new version OTA, follow these steps:
 
-1.  Correct the title and message as follows:
-
-	{{% image_container width="300" %}}![Make some changes](attachments/how-to-ota/modeller-correct.png){{% /image_container %}}
-
+1. Correct the message to *Welcome to your new native mobile app. Thank you for using this app!*
 1. Save your changes.
 1. Note the version and build number of the app build you want to update. This how to assumes an app version of 1.0.0 and a build number of 1.
 1. Click **Project** > **Build Native Mobile App**.

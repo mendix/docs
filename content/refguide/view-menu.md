@@ -126,7 +126,7 @@ The **Breakpoints** pane shows all the breakpoints in your app. You can enable a
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables
+#### 3.11.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 

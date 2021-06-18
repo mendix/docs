@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The **Planning** page of the Developer Portal provides an overview of the progression of the [stories](../collaborate/stories) for the app.
+The **Planning** page of the Developer Portal provides an overview of the progression of the [stories](/developerportal/collaborate/stories) for the app.
 
 ![](attachments/planning/planning.png)
 
@@ -19,7 +19,7 @@ This page has three tabs, which are described below.
 
 ## 2 Sprint Status
 
-On this tab, there is a Kanban overview of the [stories](../collaborate/stories) in the current Sprint. 
+On this tab, there is a Kanban overview of the [stories](/developerportal/collaborate/stories) in the current Sprint. 
 
 There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
 
@@ -27,7 +27,7 @@ There is also a percentage bar of the stories that are done and the deadline dat
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
-When you click **Details** for a story, you will be taken to the [Story Details](../collaborate/stories#story-details) page.
+When you click **Details** for a story, you will be taken to the [Story Details](/developerportal/collaborate/stories#story-details) page.
 
 {{% alert type="info" %}}
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.

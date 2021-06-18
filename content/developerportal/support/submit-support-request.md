@@ -132,7 +132,7 @@ You can add large attachments such as project files to the request. Please note 
 
 ### 5.3 Team Server Problems & Project Issues
 
-* [App ID](../settings/general-settings)
+* [App ID](/developerportal/settings/general-settings)
 
 ### 5.4 Studio & Studio Pro Problems
 

@@ -14,9 +14,9 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
 
 * **Data Hub Admin**:
   * Assign curators
-  * Manage the list of custom owners that have been added as **Business** or **Technical Owners** when a service has been [Curated](../data-hub-catalog/curate#custom-owner).
+  * Manage the list of custom owners that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner).
 * **Curators**:
-  Manage the list of custom owners that have been added as **Business** or **Technical Owners** when a service has been [Curated](../data-hub-catalog/curate#custom-owner).
+  Manage the list of custom owners that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner).
 
 {{% alert type="info" %}}
 In the current release of Data Hub, the Data Hub Admin for the organization is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
@@ -55,7 +55,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 ## 3 Managing Custom Owners {#customowners}
 
-Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](../data-hub-catalog/curate#custom-owner) or have been specified during app registration.
+Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](/data-hub/data-hub-catalog/curate#custom-owner) or have been specified during app registration.
 
 They are  the contacts for registered assets. Adding a custom owner does not give them access rights to the Catalog. Custom owners are displayed in the drop-down lists by an avatar that only displays their intitial (Mendix users have their peronalized avatar displayed).
 
@@ -78,4 +78,4 @@ From this screen, the following functions can be carried out:
 
 	{{% alert type="info" %}}If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.{{% /alert %}}
 
-New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](../data-hub-catalog/curate#custom-owner).
+New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).

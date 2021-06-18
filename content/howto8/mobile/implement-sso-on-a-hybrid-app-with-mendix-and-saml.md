@@ -156,7 +156,6 @@ To use the hybrid app package, follow these steps:
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
-    
 ### 5.3 The SAML Module 
 
 {{% alert type="warning" %}}
@@ -172,5 +171,5 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 * [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Debug a Hybrid Mobile App](debug-a-mobile-app)
-* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

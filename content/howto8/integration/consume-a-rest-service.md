@@ -36,7 +36,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
-4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide8/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+4. Create a module and name it *RESTconsume*. To add a new [JSON structure](/refguide8/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
@@ -46,7 +46,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide8/import-mappings) specifies how the JSON relates to [entities](../../refguide8/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide8/import-mappings) specifies how the JSON relates to [entities](/refguide8/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **Project Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -99,7 +99,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide8/microflows) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](/refguide8/microflows) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 

@@ -144,7 +144,7 @@ To add content to the Marketplace, follow these steps:
 	* If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
 		* When you are finished, click **Save**
 
-9.  If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
+9.  <a name="version"></a>If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
 	![](attachments/share-app-store-content/package.jpg)
 

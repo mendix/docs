@@ -12,15 +12,15 @@ You can build native mobile apps with custom styling in Mendix Studio Pro. Styli
 
 ## 2 Theme Folder Structure
 
-For each app project, styling is stored in the **theme** and **themesource** folder. From there styling is split into **native** and **web** folders. Both have the same structure. 
+For each app project, styling is stored in the **theme** and **themesource** folders. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
 These folders have strict protocols:
 
-* Users should only add or change styling in the **theme/native** or in their own user defined module **themesource/your-module/native** folder (if they plan to create a reusable themeing module)
+* Users should only add or change styling in **theme/native** or in their own user-defined module **themesource/your-module/native** folder (if they plan to create a reusable theming module)
 * The **native** folder has two files: *main.js* and *custom-variables.js* — when changing the styling, always copy the variable you want to change from *themesource/atlas_core/native/variables.js* to *theme/native/custom-variables.js*
 * The *custom-variables.js* file will overwrite the *variables.js* file — do not change anything in the **themesource/atlas_core/native** folder directly, as this makes updating Atlas more difficult
 * Any variables you want to change or add should be put in *custom-variables.js* 
-* Any classes you want to change or add should be put in *theme/native/main.js* or in your own user defined module's *themesource/your-module/native/main.js*.
+* Any classes you want to change or add should be put in *theme/native/main.js* or in your own user-defined module's *themesource/your-module/native/main.js*.
 
 The **themesource/atlas_core/native/core/base** folder contains global helper classes. These classes are generic and can be put on all widgets. Some of them are also available as design properties in Mendix Studio Pro.
 

@@ -26,9 +26,9 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                | Type    |
-| ------------------------------------ | ------- |
-| Returns whether the object is empty. | Boolean |
+| Value    | Type    |
+| ---------- | ------- |
+| Returns whether the object is empty | Boolean |
 
 ### 2.3 Example
 
@@ -60,7 +60,7 @@ The output is described in the table below:
 
 | Value                                   | Type    |
 | --------------------------------------- | ------- |
-| Returns whether the attribute is empty. | Boolean |
+| Returns whether the attribute is empty | Boolean |
 
 ### 3.3 Examples
 
@@ -131,4 +131,28 @@ An example of an input can be the following:
 
 ```java
 isSynced($currentObject)
+```
+
+## 6 Checking if a Synchronization is Running {#is-syncing}
+
+This function is available only in client-side expressions (expressions in [nanoflows](nanoflows) and [pages](pages)).
+
+### 6.1 Input Parameters
+
+No input parameter is required for this check.
+
+### 6.1 Output
+
+The output is described in the table below:
+
+| Value                                                        | Type    |
+| ------------------------------------------------------------ | ------- |
+| Returns `true` when there is a [synchronization](synchronize) process running, otherwise it returns `false`.| Boolean |
+
+### 6.3 Example
+
+An example of an input can be the following:
+
+```java
+isSyncing()
 ```

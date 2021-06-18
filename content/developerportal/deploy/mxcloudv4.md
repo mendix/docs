@@ -34,10 +34,14 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](migrating-to-v4)
 
 The primary hosting locations are as follows:
 
-*   Mendix Cloud EU: AWS Frankfurt
-*   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud Asia Pacific: AWS Singapore
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud EU: AWS Dublin
+*   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud UK: AWS London
+*   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud US: AWS Oregon
+
 
 Backups will always be stored in at least one secondary location, separate from the primary hosting location.
 
@@ -73,6 +77,7 @@ There are a few other considerations to bear in mind when you are running in Men
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
 * It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
 * You can't upload files bigger than 1GB to your app
+* You can't download files bigger than 1GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:

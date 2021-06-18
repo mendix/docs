@@ -124,7 +124,7 @@ $block: 'mx';
       blockquote {
         border-left: 4px solid #e8e8e8;
         padding-left: 20px;
-        font-size: 18px;
+        font-size: 14px;  /* Too big - set font size as defaul */
         opacity: .6;
         letter-spacing: -1px;
         font-style: italic;

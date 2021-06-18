@@ -36,7 +36,7 @@ This is perhaps the easiest combination of a mobile target platform and a develo
 
 ### 3.1 macOS Configuration
 
-Since Mendix Studio Pro only runs on Mendix, you need to make sure that your virtual (Windows) machine can be accessed by the outside world. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
+Since Mendix Studio Pro only runs on Windows, you need to make sure that your virtual (Windows) machine can be accessed by the outside world. To do that, the network setting must be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
 1. Open the Parallels **Configure** dialog:
 

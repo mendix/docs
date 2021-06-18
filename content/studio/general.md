@@ -125,20 +125,20 @@ The top menu bar items are described in the table below:
 | [Publish button](publishing-app) | You can publish your app with this button. Click **Publish** > **Update** to publish the latest changes you made in Studio. For more information, see [Previewing & Publishing Your App](publishing-app) |
 | [Checks button](checks) | Displays consistency errors (if any) that prevent your app from being previewed and published. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use <kbd>C</kbd> shortcut to view the **Checks** panel. |
 | Help icon | Opens the **Help & Learning** side menu, where you can find just-in-time help – videos and how-to's that will provide you explanations and instructions in the context of your current task. For example, when working in the domain model, you will see videos and how-to's on the domain model, entities, and attributes as a recommended topic for you. However, you can also browse through the categories and other topics that cover all the main features in Studio. |
-| **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| **More Options** icon | Provides additional information. You will find the following:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Open App Buzz** – takes you to the [App Buzz](/developerportal/collaborate/buzz#app-buzz) in the Developer Portal</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 
 You can copy and paste pages and microflows. You can also cut, copy, and paste separate elements such as widgets or microflow activities. 
 
-### 8.1 Copy/Paste Pages, Microflows, and Enumerations {#copy-paste-documents}
+### 8.1 Copy/Paste Workflows, Pages, Microflows, and Enumerations {#copy-paste-documents}
 
-Pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste pages, microflows, and enumerations to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate pages, microflows, and enumerations, see [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
+Workflows, pages, microflows, and enumerations can be copied to clipboard and then pasted to a different Studio app. You can also copy and paste them to the same app, however, there is the **Duplicate** option you can use for this purpose. For more information on how to copy, paste, or duplicate workflows, pages, microflows, and enumerations, see [Workflows](workflows), [Pages](page-editor), [Microflows](microflows), and [Enumerations](domain-models-enumeration) respectively.  
 
 Mind the following when copying and pasting pages, microflows, and enumerations:
 
-* You can copy/paste pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
-* You can copy/paste pages, microflows, and enumerations only between instances of the same browser
+* You can copy/paste workflows, pages, microflows, and enumerations only to Studio apps that have the same Mendix version 
+* You can copy/paste workflows, pages, microflows, and enumerations only between instances of the same browser
 * You *cannot* copy/paste from Studio to Studio Pro or vice versa
 
 ### 8.2 Cut/Copy/Paste Separate Elements

@@ -22,11 +22,9 @@ A WSDL describes the operations of a web service and can be imported in Studio P
 
 To import a WSDL, follow these steps:
 
-1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**:
-
-2. Enter a name for the new consumed web service, for example, **TemperatureConverter** and click **OK**. 
-
-3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
+1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**.
+2. Enter a name for the new consumed web service (for example, **TemperatureConverter**) and click **OK**.
+3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**:
 
     ![](attachments/18448738/wsdl-source.png)
 
@@ -34,7 +32,7 @@ To import a WSDL, follow these steps:
 
     ![](attachments/18448738/18582065.png)
 
-5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** are imported into the app.
+5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** are imported into the app:
 
     ![](attachments/18448738/18582084.png)
 
@@ -116,4 +114,3 @@ To create logic to call the web service, follow these steps:
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Security How-to's](../security/)

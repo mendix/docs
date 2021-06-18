@@ -27,6 +27,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
+{{% alert type="warning" %}}
+If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+{{% /alert %}}
+
 * [MxModelReflection](/appstore/modules/model-reflection)
 
 ## 2 Installation
@@ -42,6 +46,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 ## 3 Configuration
 
 Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+
+{{% alert type="info" %}}
+The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
+{{% /alert %}}
 
 You can choose what you want to enter for the entity ID, organization, and contact person. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 
 

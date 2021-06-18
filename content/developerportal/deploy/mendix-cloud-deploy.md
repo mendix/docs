@@ -95,6 +95,10 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
 
+{{% alert type="warning" %}}
+The Mendix Cloud has a limit of 1GB on the size of a deployment package.
+{{% /alert %}}
+
 ### 3.1 Deploying via the Studio Pro
 
 1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
@@ -192,23 +196,22 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 |Standard|||||||
-| XS | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XS21 | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 |Premium|||||||
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
-| XXL | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
 
  The cloud resource packs below are still being used but are not available to new customers.
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| XS20 | 1GB | 0.5 | 1GB | 1  | 5GB | 10GB |
 | S20 | 2GB | 0.5 | 2GB | 1  | 10GB | 20GB |
 | M20 | 4GB | 1 | 4GB | 1  | 20GB | 40GB |
 | L20 | 8GB | 2 | 8GB | 1  | 40GB | 80GB |

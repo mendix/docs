@@ -6,7 +6,7 @@ menu_order: 10
 
 ## 1 Introduction
 
-The APD tools are used extensively by [Mansystems](https://www.mansystems.com/) Developers and Support Engineers. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without proper information, and they have grown ino to an application performance diagnosis suite.
+The APD tools are used extensively by [CLEVR](https://www.CLEVR.com/) Developers and Support Engineers. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without proper information, and they have grown ino to an application performance diagnosis suite.
 
 ## 2 Generic
 

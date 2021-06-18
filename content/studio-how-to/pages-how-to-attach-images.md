@@ -169,7 +169,7 @@ After users attach the images, it would be nice to display their attachments and
     3. In the **General** section > the **Caption** property, change the button caption from *Details* to *Delete*. 
     4. In the **Style** property, change **Default** to **Danger**. 
 
-    	{{% image_container width="250" %}}![](attachments/pages-how-to-upload-images/button-properties.png){{% /image_container %}}
+    	![](attachments/pages-how-to-upload-images/button-properties.png)
 
 Great job! Now you have the image list that shows attached images and your users will be able to delete images from the list if necessary:
 

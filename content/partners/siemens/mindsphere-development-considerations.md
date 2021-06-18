@@ -1,12 +1,16 @@
 ---
 title: "MindSphere Development Considerations"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
 
 When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
 

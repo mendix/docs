@@ -13,11 +13,58 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### April 21st, 2021
+### June 14th, 2021
 
-#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **May 24th, 2021**
+#### Improvements
 
-To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on May 24th, 2021**, we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
+
+### June 11th, 2021
+
+#### Mendix Cloud V3 Archived Logs
+
+* We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+
+### June 8th, 2021
+
+#### Improvements
+
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
+  used to run your Mendix application will be automatically updated to the
+  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+
+### May 27th, 2021
+
+#### Improvements
+
+* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+
+### May 18th, 2021
+
+#### Improvements
+
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
+  authenticate DNS lookups. There is nothing that you need to do for this
+  change to take effect. Going forward, all DNS requests to these domains
+  will automatically use DNSSEC.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
+
+### April 29th, 2021
+
+#### Improvement
+
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
+
+    If you need more than 32 instances please contact Mendix Support.
+
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
 
 Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
 
@@ -25,7 +72,7 @@ Enabling support for IPv6 means that clients who access your Mendix applications
 
 We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
 
-You can configure IPv6 ranges before May 24th, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
 
 **Test your clients**
 
@@ -33,7 +80,7 @@ You can test whether your client (browser or integrating client) is using IPv6, 
 
 **Impact**
 
-Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **May 24th, 2021** onwards.
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
 
 ### April 15th, 2021
 

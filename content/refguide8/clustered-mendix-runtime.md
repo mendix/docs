@@ -5,6 +5,10 @@ description: "Using the cluster functionality, you can set up your Mendix applic
 tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/clustered-mendix-runtime.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This page describes the behavior and impact of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.

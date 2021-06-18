@@ -37,7 +37,7 @@ It is technically required for you to upgrade your app to Mendix 8.12 first to b
 
 To upgrade to Mendix 8.18, follow these steps:
 
-1. Download the latest patch release of Studio Pro [v8.18](/releasenotes/studio-pro/8.18).
+1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18).
 1. Open your app in Studio Pro v8.18.
 1. Allow it to upgrade the app, if necessary.
 
@@ -45,7 +45,9 @@ To upgrade to Mendix 8.18, follow these steps:
 
 Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 9.
 
-You should run your app, test all functionality, and ensure it works without error. You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
+You should run your app, test all functionality, and ensure it works without error. If you app uses app services, you should remove them before upgrading as app services are deprecated in Mendix 9.
+
+You should also fix any depreciation warnings you see both in development in Studio Pro, as well as in the runtime using your console and browser console.
 
 ### 3.4 Save Your Version 8 App
 
@@ -116,7 +118,7 @@ Client APIs that were deprecated and marked for removal in Mendix 9 were indeed 
 
 Mendix 9 native apps no longer include non-essential native libraries like `react-native-maps`, `react-native-ble-plx`, `react-native-geocoder`, and others by default. Instead, new functionality of declaring native dependencies for components has been introduced in Mendix 9. Every pluggable widget or JavaScript action must declare which native libraries it uses. This way, native apps can be bundled with only the libraries they need while unnecessary libraries are not included.
 
-If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
+If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies).
 
 ## 8 XPath Query Engine 9 {#query-engine-9}
 

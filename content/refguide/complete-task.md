@@ -3,6 +3,7 @@ title: "Complete Task"
 parent: "workflow-activities"
 menu_order: 10
 tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}

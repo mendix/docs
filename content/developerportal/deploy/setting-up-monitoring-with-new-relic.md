@@ -7,6 +7,10 @@ tags: ["new relic", "on-premises", "monitoring", "setup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-monitoring-with-new-relic.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 When setting up a Mendix application on premises, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.

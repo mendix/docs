@@ -175,7 +175,7 @@ For more information, see [Custom Domains](custom-domains).
 
 ## 4 Access Restriction Profiles {#asp}
 
-In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
+In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, then any match on either the IP range or the client certificate will grant access. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
 
 For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
 

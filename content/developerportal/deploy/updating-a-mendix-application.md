@@ -5,9 +5,13 @@ menu_order: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1. Introduction
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/updating-a-mendix-application.pdf).
+{{% /alert %}}
 
-A Mendix application on a Windows server can be updated using the Mendix Service Console. Before beginning the server update, you need to make sure that you have a versioned deployment archive (*.mda file) accessible on your server and that the same version of the server distribution is either installed or else is available as an installation package on the server.
+## 1 Introduction
+
+A Mendix application on a Windows server can be updated using the Mendix Service Console. Before beginning the server update, you need to make sure that you have a versioned deployment archive (*.mda* file) accessible on your server and that the same version of the server distribution is either installed or else is available as an installation package on the server.
 
 The service console creates a backup of the project files, this allows you to restore a previous deployment.
 
@@ -32,7 +36,6 @@ Before every update it is recommended that you create a backup of your data and 
 4.  To update the application click **Update app**. Select the new deployment archive (.mda) and click **Open**. The update process will start immediately.
 
     ![Step 4, Choose the latest .mda package](attachments/updating-a-mendix-app/4_browse_mda.png)
-
 
 This process will copy the new version of the project software into the configured location. All models will be extracted, and a symbolic link to the `mxclientsystem` folder is automatically created so the JavaScript libraries can be easily included without any additional configuration in IIS.
 
@@ -62,11 +65,8 @@ This should be something like:
 ```bash
 D:\Mendix\MyApplications\Servers
 ```
-
 {{% alert type="info" %}}
-
-The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could just grant access to the specific server distribution but that would mean that you would have to update the folder access after every platform version update.
-
+The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could just grant access to the specific server distribution, but that would mean that you would have to update the folder access after every platform version update.
 {{% /alert %}}
 
 ## 4 Start Application
@@ -74,7 +74,6 @@ The user that is configured as the Service Account should have Read&Execute priv
 After updating, don't forget to start your app service again!
 
 ## 5 Read More
-
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

@@ -197,13 +197,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-## 4 Developing This Marketplace Component
-
-For details on development, see [Development](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/Development.md).
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/charts](https://github.com/mendixlabs/charts/issues).
-
-## 5 Read More
+## 4 Read More
 
 * [Charts Configuration](/refguide/charts-configuration)
 * [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning)

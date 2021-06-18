@@ -26,7 +26,7 @@ Before submitting a new Menix Support request, check these resources to make sur
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request
+## 3 Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 
@@ -54,6 +54,9 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
+
+        {{% alert type="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
+
 	* **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
 	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
 	* **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))

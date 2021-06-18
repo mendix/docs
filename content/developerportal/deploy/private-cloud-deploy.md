@@ -557,7 +557,7 @@ This workaround is only required for Mendix Operator versions below 1.10.0. Mend
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 
@@ -568,6 +568,10 @@ To add this setting:
 {{% alert type="info" %}}
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
+
+### 6.6 Deployment Package Size
+
+Mendix for Private Cloud has a limit of 200MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 

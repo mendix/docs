@@ -1,10 +1,14 @@
 ---
-title: "腾讯 – Tencent"
+title: "Tencent Cloud (腾讯云)"
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app to the Tencent Cloud"
 menu_order: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
+
+{{% alert type="info" %}}
+The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -24,9 +28,8 @@ To deploy an app to Tencent, you need the following:
 
 * Mendix Studio Pro China Edition
 
-    You will be able to download Mendix Studio Pro, as part of your initial sign up:
-    ![](attachments/tencent-deploy/download-studio-pro.png)
-    
+    * You will be able to download Mendix Studio Pro, as part of your initial sign up:
+       ![](attachments/tencent-deploy/download-studio-pro.png)
     You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
@@ -39,7 +42,7 @@ Go to the Cluster Manager page by clicking the **Switch to** menu and selecting 
 
 ![](attachments/tencent-deploy/cluster-manager-navigation.png)
 
-If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **Go To Tencent Cloud Portal** to go to Tencent and purchase some resources.
+If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp) "Siemens Low-Code Platform on Tencent Cloud"** to go to Tencent and purchase the necessary resources.
 
 ![](attachments/tencent-deploy/purchase-resources.png)
 
@@ -153,7 +156,7 @@ By default, the cluster manager, who created the cluster in Mendix, and anyone a
 
 The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
 
-* Set up operating URLs for the namespace *? DOES THIS MAKE SENSE FOR TENCENT?**
+* Set up operating URLs for the namespace
 * View all environments in the namespace
 * Manage own environments – user can create and manage an environment in any namespace in the cluster
 
@@ -290,6 +293,10 @@ You will not be able to deploy to this environment until it has been fully prepa
 ### 4.2 Creating a Deployment Package {#create-deployment-package}
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
+
+{{% alert type="warning" %}}
+There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+{{% /alert %}}
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
     
@@ -662,7 +669,7 @@ If you attempt to deploy an app with security not set to production into a produ
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 

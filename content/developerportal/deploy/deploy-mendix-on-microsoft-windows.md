@@ -9,6 +9,10 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy-mendix-on-microsoft-windows.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes the installation and configuration of Mendix software on a system running Microsoft (MS) Windows. It covers:

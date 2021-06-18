@@ -148,7 +148,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 10. Open the **Product_NewEdit** page. The related terms now have Russian translations.
 
-   ![Product New Edit page showing the cancel button translated into Russian](attachments/translate-your-app-content/product-new-edit-partial-translation.png)
+	![Product New Edit page showing the cancel button translated into Russian](attachments/translate-your-app-content/product-new-edit-partial-translation.png)
 
 ### 6.2 Dealing With More Complex Translations
 
@@ -164,28 +164,34 @@ To deal with this situation, follow the steps below:
 
 	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)
 	
-4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**. In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
+4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
-	![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
+   ![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
+
+   In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
 5. If you made any translations, click **Translate** to save them.
+
 6. **Close** the dialog box.
+
 7. In our app, the text *Order* is used as the command to order a product, and also used to refer to the Order entity. However, in Russia the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
+
 8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
 
-	![Order button on Product New Edit page translated into Russian](attachments/translate-your-app-content/product-new-edit-order-russian.png)
+   ![Order button on Product New Edit page translated into Russian](attachments/translate-your-app-content/product-new-edit-order-russian.png)
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
-	
-	Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
 
-	![All source texts containing the word 'order' showing that ones with different translations are shown separately. ](attachments/translate-your-app-content/batch-translate-order-split.png)
+   Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
+
+   ![All source texts containing the word 'order' showing that ones with different translations are shown separately. ](attachments/translate-your-app-content/batch-translate-order-split.png)
 
 10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
 
-	![All source texts containing the word 'order' showing two different translations for Order. ](attachments/translate-your-app-content/batch-translate-order-2-translations.png)
+    ![All source texts containing the word 'order' showing two different translations for Order. ](attachments/translate-your-app-content/batch-translate-order-2-translations.png)
 
 11. Click **Translate** to save the translation.
+
 12. **Close** the dialog box.
 
 You can now check that the correct translation has been applied to the other instances of *Order*, for example on the **Order_Overview** page.
@@ -223,7 +229,7 @@ To copy our Russian translations into a Belarusian dictionary, you can do the fo
 
 2. Click **Add** to add **Belarusian, Belarus** as an app language.
 
-  ![Belarusian added to the app](attachments/translate-your-app-content/language-settings-belarusian.png)
+   ![Belarusian added to the app](attachments/translate-your-app-content/language-settings-belarusian.png)
 
 3. Click **OK** to save the changes and close the **App Settings** dialog box.
 

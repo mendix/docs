@@ -20,6 +20,7 @@ App services are domain-focused packaged business capabilities delivered as a co
 
 * Join the Marketplace Vendor Program
 * Make your app service Marketplace-ready
+* Complete specific tasks before you submit, as you submit, and after you submit your app service to the Mendix Marketplace
 
 ## 2 Becoming a Marketplace Vendor {#vendor}
 
@@ -51,7 +52,7 @@ The **Marketplace APIs** are also available for you to automate your workflow an
 
 {{% todo %}}[**Where are these APIs published, how to link to them?**{{% /todo %}}
 
-{{% todo %}}[**Verify slide to be included; need higher quality image**{{% /todo %}}
+{{% todo %}}[**Verify slide to be included**{{% /todo %}}
 
 ![](attachments/suppliers/journey.png)
 
@@ -139,14 +140,14 @@ The benefits of a free trial are well know as a means to increase user adoption.
 
 {{% todo %}}[**What are these "trials for many of our own app services" when there is only 1 app service currently available (Mindsphere)?**]{{% /todo %}}
 
-The Marketplace supports time-based trias, so you must clearly define the terms and conditions of your trial offering so users are aware of what they are signing up for.  As a minimum, you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
+The Marketplace supports time-based trials, so you must clearly define the terms and conditions of your trial offering so users are aware of what they are signing up for.  As a minimum, you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
 
 The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
         
 #### 4.1.7.3 Payments
 
 One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your app service according to the pricing model you specify for it. The Marketplace meters usage of your app service and sends a bill to the user.  You can see monthly billing reports in your Partner Portal, and you will also be emailed them for completeness.
-        
+
 Under our standard [Marketplace terms and conditions](https://www.mendix.com/terms-of-use/), we support the following subscription/billing model:
 
 {{% todo %}}[**Verify correct link to T&Cs**]{{% /todo %}}
@@ -169,7 +170,7 @@ For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monet
 #### 4.1.7.5 Supported Regions
 
 Subject to the compliance requirements for your specific app service, the Marketplace supports global access to free and trials of paid app services.
-        
+
 To sell a paid app service, you must be a permanent resident or a legal business entity in one of the following countries:
 
 * Netherlands
@@ -245,57 +246,67 @@ These are similar concepts to those in the Paid Applications Agreement in the [A
 
 {{% todo %}}[**Keep reference to this example?**{{% /todo %}}
 
+### 4.4 Preparing a Draft in the Marketplace
+
+While you are developing your app service, it is a good practice to [create a draft version](share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your app service to the Marketplace as soon as you finish creating it. 
+
+Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your app service. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
+
 ## 5 As You Submit
 
-While you are developing your app service, it’s good practice to create a draft version with basic information such as name, description, and keywords in preparation for publishing it to the Marketplace as soon as you’ve finished creating it. 
+At this stage, you have confirmed the commercial feasibility of your app service, you have signed up as a Marketplace Vendor, and you are technically ready to publish your app service to the Marketplace.
 
-Remember your listing represents your brand so be sure to keep it updated, use quality images and clearly explain the benefits of your app service. Refer to section 4 of https://docs.mendix.com/appstore/general/share-app-store-content for a complete list of supported metadata, and Brand Guidelines to learn more about our brand guidelines  
+#### 5.1 Completing the Final Checklist
 
-#### Step 4: Add your app service {#add-app-service}
+As a helping hand, the sections below present items to consider in the final step to successfully publishing your app service:
 
-At this stage you’ve confirmed the commercial feasibility of your app service, you’ve signed up as a Marketplace Vendor, and you’re technically ready to onboard it to the Marketplace.
+**Dependencies**
 
-As a helping hand we’ve provided this list of items to consider as the final step to successfully listing your app service:
+- [ ] Provide a list of resources and dependencies from the Marketplace that might be needed to use your app service.
+- [ ]  Verify the listed dependencies are compatible with your component.
 
-[**TURN INTO A TABLE WITH A "DONE" COLUMN?**]
+**Technical Readiness**
 
-* **Dependencies**
-	* Provide a list of resources/dependencies from Marketplace that might be needed to use your component
-	* Make sure the dependency mentioned is compatible with your component
-* **Technical Readiness**
-	* While importing the component, there might still be errors that exist, because it is expected that the end-user needs to hook up some information from their existing modules into the new components. This should be fine, as long as there is an explanation in the Documentation section of “how to set-up” the component
-	* Errors existing with no explanation of how to address them should not exist, when importing the component
-	* Test your component for crashes and bugs
-* **Accurate Metadata**
-	* Customers should know what they’re getting when they download or buy your app, so make sure all your app metadata, including privacy information, your component description, screenshots, and previews accurately reflect the components core experience and remember to keep them up-to-date with new versions
-	* Ensure that all app information and metadata is complete and accurate
-	* Include detailed explanations of non-obvious features and including supporting documentation where appropriate
-	* Select the most appropriate category for your app, and check out the [Marketplace Store Category Definitions](https://paper.dropbox.com/doc/App-Store-Quick-Reference-Card--BI1ABkUNXWwfPdO7~ND3lD4iAg-EvYnmdiq6zCsS2ZBe0jDM) if you need help. If you’re way off base, we may change the category for you
-	* [Update your contact information](https://sprintr.home.mendix.com/link/profilesettings/generalinfo) in case component Review needs to reach you
-	* Check the details on how to select the details while submitting a component follows [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) as mentioned in the documentation
-	* Spell check the content you are about to submit
-* **Versioning ** 
-	* Component should work fine for the specified Studio Pro version it was marked as being compatible with
-	* Keep versioning pattern consistent in terms of naming and version numbers for your component
-	* Also provide release notes
-* **Branding**
-	* Screenshots should show the app in use, and not merely the title art, log-in page, or splash screen. They may also include text and image overlays
-* **Usability**
-	* Make sure inclusion of README snippet and USEME folders which helps the user on how to use the component
-	*  Make sure that there are no unnecessary dependencies bundled when exporting the module from the Desktop Modeler
-		* For instance, if the module only mentions needing a jar file `fancystuff.jar`, but the userlib includes 10 other jar files ← these are unnecessary dependencies
-	* If you attempt to cheat the system (for example, by trying to trick the review process, steal user data, copy another developer’s work, manipulate ratings) your components will be removed from the Marketplace.
-	* Keep updating your components on a timely basis or the components will be removed if not updated for longer period from Marketplace
+- [ ] While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new components. Make sure you explain how to set up the app service and how to address all errors in the [Documentation section](share-app-store-content#doc) when you are preparing for publication.
+- [ ] Test your component for crashes and bugs.
+
+**Accurate Metadata**
+
+- [ ] Users should know what they are getting when they download or buy your app service, so make sure all your app metadata (including privacy information, component description, screenshots, and previews) is complete and accurately reflects the app service's core experience. Remember to keep this up-to-date with new versions.
+- [ ] Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
+- [ ] Select the most appropriate [category](app-store-overview#catalog) for your app service.
+- [ ] Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
+- [ ] Check the details on how to select the details while submitting a component follows [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) as mentioned in the documentation
+- [ ] Spell check the content you are about to submit
+
+{{% todo %}}[**Is there going to be an "app service" category added that will be available when uploading? If not, it is not clear what an "app service" is and what the purpose of this doc is while it consistently refers to "app services"**{{% /todo %}}
+
+**Versioning ** 
+
+- [ ] Component should work fine for the specified Studio Pro version it was marked as being compatible with
+- [ ] Keep versioning pattern consistent in terms of naming and version numbers for your component
+- [ ] Also provide release notes
+
+**Branding**
+
+- [ ] Screenshots should show the app in use, and not merely the title art, log-in page, or splash screen. They may also include text and image overlays
+
+**Usability**
+
+- [ ] Make sure inclusion of README snippet and USEME folders which helps the user on how to use the component
+- [ ] Make sure that there are no unnecessary dependencies bundled when exporting the module from the Desktop Modeler; for instance, if the module only mentions needing a jar file `fancystuff.jar`, but the userlib includes 10 other jar files ← these are unnecessary dependencies
+- [ ] If you attempt to cheat the system (for example, by trying to trick the review process, steal user data, copy another developer’s work, manipulate ratings) your components will be removed from the Marketplace.
+- [ ] Keep updating your components on a timely basis or the components will be removed if not updated for longer period from Marketplace
 
 **Setting pricing plan**
 
-**Picking license** 
-Customers using paid via Atlassian apps are subject the [Marketplace Terms of Use](https://www.atlassian.com/licensing/marketplace/termsofuse). Similarly, this agreement is between Atlassian and your app customers. Your customers agree to the terms when they purchase or use your app
+**Picking a license** 
 
-We have enabled onboarding and publishing of a Component without License. We are planning to onboard FSM solution with this strategy.
-i.e. Do no display License at all. Just add text under documentation mentioning “Commercial license terms applied” under ‘License’ Bullet Item.
+- [ ] Customers using paid via Atlassian apps are subject the [Marketplace Terms of Use](https://www.atlassian.com/licensing/marketplace/termsofuse). Similarly, this agreement is between Atlassian and your app customers. Your customers agree to the terms when they purchase or use your app
+- [ ] We have enabled onboarding and publishing of a Component without License. We are planning to onboard FSM solution with this strategy. i.e. Do no display License at all. Just add text under documentation mentioning “Commercial license terms applied” under ‘License’ Bullet Item.
 
-**Step 5: Publish app service**
+#### 5.2 Publishing Your App Service
+
 When your app service is ready to be published to the Marketplace it is submitted to the Marketplace Governance team for approval.  This is vital to maintaining high-quality Marketplace content and an improved overall user experience, and we’ve made it simple to trigger from within the Add Content wizard.
 
 The Marketplace Governance team’s mission is to manage the quality of content while keeping the submission process as frictionless as possible.  They achieve this by maintaining this comprehensive set of guidelines, which when followed will maximise the chances of your submission being approved first time round. The more complex your app service, the more likely it is to require multiple approval iterations to get it into great shape but the Marketplace Governance team are on hand to advise you throughout the process.

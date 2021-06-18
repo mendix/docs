@@ -938,7 +938,9 @@ spec:
       # example: enable use of Google network endpoint groups for Ingress
       cloud.google.com/neg: '{"ingress": true}'
     # Optional, can be omitted: Service ports
-    servicePorts: [80, 443]
+    servicePorts:
+      - 80
+      - 443
 ```
 
 You can change the following options:

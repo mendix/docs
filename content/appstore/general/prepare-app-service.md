@@ -6,6 +6,8 @@ tags: ["marketplace", "app service"]
 description: "Describes how to make your app service Marketplace-ready."
 ---
 
+{{% todo %}}[**What is an "app service" in the context of the Marketplace? This is not defined anywhere. Is an app service just a monetized Marketplace component? This will inform the title of this doc, its purposes, and terminology used throughout.**{{% /todo %}}
+
 ## 1 Introduction
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your app service in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
@@ -26,9 +28,7 @@ App services are domain-focused packaged business capabilities delivered as a co
 
 The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Vendors). ISVs and Marketplace Vendors are not mutually exclusive, because an ISV may also be a Marketplace Vendor, and a Marketplace Vendor may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
-Whether you are supplying an app service as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your onboarding experience as simple as possible.
-
-For more information, see the [Creating a Marketplace Vendor Account](#creating-account) section below.
+Whether you are supplying an app service as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
 ### 2.1 Prerequisites
 
@@ -36,7 +36,36 @@ Before you become a Marketplace Vendor, there are a few prerequisites to take ca
 
 {{% todo %}}[**How do they contact? Cannot include without direct contact info**{{% /todo %}}
 
+### 2.2 Creating a Marketplace Vendor Account {#creating-account}
+
+Whether you are an individual app service supplier with your own business or you are supplying an app service on behalf of your company, you need to create a Marketplace Vendor account.
+
+Since your Marketplace Vendor account is associated with your Mendix ID, you first need to create a [Mendix Platform account](https://signup.mendix.com/). When creating your Marketplace Vendor account, Mendix asks for basic information, including your legal name and address. This information is used to check whether you want to sell your app service or offer it for free.  As the creator of the account, you must have the permission to legally bind your company to Mendix.
+
+| Account Detail | Description |
+| --- | --- |
+| Account Owner | Account creator’s email address |
+| Logo |  |
+| Name | Supplier name (could be a company/brand/individual.) |
+| Description | Describe your (company’s) purpose, products, and service.s |
+| Company Name | The legal name of the entity that will sell or offer your free service. |
+| Company Address | The legal address of the entity that will sell or offer your free service. |
+
+### 2.3 Legal & Compliance Checks
+
+The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
+
+The checks involved are:
+
+* SPS
+
+{{% todo %}}[**More information to be added above?**{{% /todo %}}
+
+For more information on what you need to do as a Marketplace Vendor to submit an app service, see the [Commercial Setup](#commercial-setup) section below.
+
 ## 3 App Service Overview
+
+{{% todo %}}[**Need a definition of an app service here**{{% /todo %}}
 
 The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
 
@@ -56,7 +85,7 @@ The **Marketplace APIs** are also available for you to automate your workflow an
 
 ![](attachments/suppliers/journey.png)
 
-## 4 Before You Submit
+## 4 Before You Submit Your App Service
 
 To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your app service. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your app service and get support via best practices and success stories from like-minded Marketplace Vendors.
 
@@ -64,7 +93,7 @@ To help us maintain the high quality of content available on the Marketplace, we
 
 ### 4.1.1 OSB API Compatibility
 
-To upload an app service to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
+To submit an app service to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
         
 Although OSB API supports endpoints for many operations (as specified in the [Open Service Broker API specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), these are the three main concepts to consider while implementing your service broker for your app service are:
 
@@ -78,7 +107,7 @@ For additional assistance and an example of how to provision and bind an app to 
 
 ### 4.1.2 Identity and Access Management (IAM)
 
-When you upload your app service to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
+When you sumbit your app service to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
 
 There are currently three models for integrating with Mendix IAM, the applicability of which depend on how your app service is architected.  Models 1 and 2 apply at the app/app service level, whereas model 3 applies at an individual user level:
 
@@ -119,7 +148,7 @@ If you are unclear what this means to you and your app service, there are useful
 
 {{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
-### 4.1.7 Pricing and Free Trials
+### 4.1.7 Pricing & Free Trials
 
 As a Marketplace Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your app service. Once you have decided on your preferred pricing model and whether you want to offer your app service as a free trial, you can apply these these options to your app service via steps in the Add Content wizard.
 
@@ -130,7 +159,7 @@ The Marketplace supports two pricing models:
 * **Per User** (subscription) – In this model, a single user pays a fixed monthly price.  When a second user is added, the monthly price doubles, and so on.
 * **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your app service to their usage. The more they use, the more they pay and conversely, the less they use, the less they pay.
 
-When you upload your app service, you can choose whether to have it metered by **Payload size** or **Count**. 
+When you submit your app service, you can choose whether to have it metered by **Payload size** or **Count**. 
 
 {{% todo %}}[**Do we need separate definitions for Payload size and Count, or are those supposed to reflect the two pricing models?**]{{% /todo %}}
 
@@ -186,36 +215,9 @@ Further conditions apply:
 
 {{% todo %}}[**More information to be added above?**{{% /todo %}}
 
-### 4.2 Creating a Marketplace Vendor Account {#creating-account}
+### 4.2 Commercial Setup {#commercial-setup}
 
-#### 4.2.1 Basic Account Information
-
-Whether you are an individual app service supplier with your own business or you are supplying an app service on behalf of your company, you need to create a Marketplace Vendor account.
-
-Since your Marketplace Vendor account is associated with your Mendix ID, you first need to create a [Mendix Platform account](https://signup.mendix.com/). When creating your Marketplace Vendor account, Mendix asks for basic information, including your legal name and address. This information is used to check whether you want to sell your app service or offer it for free.  As the creator of the account, you must have the permission to legally bind your company to Mendix.
-
-| Account Detail | Description |
-| --- | --- |
-| Account Owner | Account creator’s email address |
-| Logo |  |
-| Name | Supplier name (could be a company/brand/individual.) |
-| Description | Describe your (company’s) purpose, products, and service.s |
-| Company Name | The legal name of the entity that will sell or offer your free service. |
-| Company Address | The legal address of the entity that will sell or offer your free service. |
-
-#### 4.2.2 Legal and Compliance Checks
-
-The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
-
-The checks involved are:
-
-* SPS
-
-{{% todo %}}[**More information to be added above?**{{% /todo %}}
-
-### 4.3 Commercial Setup
-
-#### 4.3.1 Marketplace Vendor License Agreement
+#### 4.2.1 Marketplace Vendor License Agreement
 
 Whether you are offering a free or paid app service through the Marketplace, you have to accept our Marketplace Vendor License Agreement, which is an agreement between Mendix and you as a Marketplace Vendor within the Marketplace Vendor Program.
 
@@ -231,7 +233,7 @@ These are similar concepts to those in the Developer Program License Agreement i
 
 {{% todo %}}[**Keep reference to these examples?**{{% /todo %}}
 
-#### 4.3.2 Seller License Agreement
+#### 4.2.2 Seller License Agreement
 
 For paid app services, you have to accept our Marketplace Seller Agreement and provide seller account information, including the following:
 
@@ -246,13 +248,13 @@ These are similar concepts to those in the Paid Applications Agreement in the [A
 
 {{% todo %}}[**Keep reference to this example?**{{% /todo %}}
 
-### 4.4 Preparing a Draft in the Marketplace
+### 4.3 Preparing a Draft in the Marketplace
 
 While you are developing your app service, it is a good practice to [create a draft version](share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your app service to the Marketplace as soon as you finish creating it. 
 
 Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your app service. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
 
-## 5 As You Submit
+## 5 Submitting Your App Service
 
 At this stage, you have confirmed the commercial feasibility of your app service, you have signed up as a Marketplace Vendor, and you are technically ready to publish your app service to the Marketplace.
 
@@ -281,55 +283,50 @@ As a helping hand, the sections below present items to consider in the final ste
 
 {{% todo %}}[**Is there going to be an "app service" category added that will be available when uploading? If not, it is not clear what an "app service" is and what the purpose of this doc is while it consistently refers to "app services"**{{% /todo %}}
 
-**Versioning ** 
+**Versioning **
 
-- [ ] Component should work fine for the specified Studio Pro version it was marked as being compatible with
-- [ ] Keep versioning pattern consistent in terms of naming and version numbers for your component
-- [ ] Also provide release notes
+- [ ] Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
+- [ ] Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](share-app-store-content#updating).
+- [ ] Provide [release notes](share-app-store-content#version) for the app service release.
 
 **Branding**
 
-- [ ] Screenshots should show the app in use, and not merely the title art, log-in page, or splash screen. They may also include text and image overlays
+- [ ] Make sure [screenshots](share-app-store-content#screenshot) show the app service in use (and not merely the name, login page, or splash screen). Screenshots can also include text and image overlays.
 
 **Usability**
 
-- [ ] Make sure inclusion of README snippet and USEME folders which helps the user on how to use the component
-- [ ] Make sure that there are no unnecessary dependencies bundled when exporting the module from the Desktop Modeler; for instance, if the module only mentions needing a jar file `fancystuff.jar`, but the userlib includes 10 other jar files ← these are unnecessary dependencies
-- [ ] If you attempt to cheat the system (for example, by trying to trick the review process, steal user data, copy another developer’s work, manipulate ratings) your components will be removed from the Marketplace.
-- [ ] Keep updating your components on a timely basis or the components will be removed if not updated for longer period from Marketplace
+- [ ] Include a *README* snippet and *USEME* folders that will help with using the app service
+- [ ] Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *ancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, these are unnecessary dependencies that should be removed..
+- [ ] If you attempt to cheat the Mendix review system (for example, by trying to trick the review process, steal user data, copy another developer’s work, or manipulate ratings), your app services  will be removed from the Marketplace.
+- [ ] Keep updating your app service on a timely basis. Your app service will be removed from the Marketplace if not updated for a longer period.
+
+{{% todo %}}[**Need a specific time period beyond general "longer period."**{{% /todo %}}
 
 **Setting pricing plan**
 
+{{% todo %}}[**Content to be added?**]{{% /todo %}}
+
 **Picking a license** 
 
-- [ ] Customers using paid via Atlassian apps are subject the [Marketplace Terms of Use](https://www.atlassian.com/licensing/marketplace/termsofuse). Similarly, this agreement is between Atlassian and your app customers. Your customers agree to the terms when they purchase or use your app
-- [ ] We have enabled onboarding and publishing of a Component without License. We are planning to onboard FSM solution with this strategy. i.e. Do no display License at all. Just add text under documentation mentioning “Commercial license terms applied” under ‘License’ Bullet Item.
+- [ ] Users using paid Atlassian apps are subject to the [Atlassian Marketplace Terms of Use](https://www.atlassian.com/licensing/marketplace/termsofuse). Accordingly, this agreement is between Atlassian and your app service customers. Your customers agree to the terms when they purchase or use your app service.
+- [ ] We have enabled submitting and publishing app services without a license. In the documentation for your app service, state "Commercial license terms applied” under the "‘License" item.
 
-#### 5.2 Publishing Your App Service
+{{% todo %}}[**Verify above about no license**]{{% /todo %}}
 
-When your app service is ready to be published to the Marketplace it is submitted to the Marketplace Governance team for approval.  This is vital to maintaining high-quality Marketplace content and an improved overall user experience, and we’ve made it simple to trigger from within the Add Content wizard.
+#### 5.2 Submiting & Publishing Your App Service
 
-The Marketplace Governance team’s mission is to manage the quality of content while keeping the submission process as frictionless as possible.  They achieve this by maintaining this comprehensive set of guidelines, which when followed will maximise the chances of your submission being approved first time round. The more complex your app service, the more likely it is to require multiple approval iterations to get it into great shape but the Marketplace Governance team are on hand to advise you throughout the process.
+When your app service is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 
-## 6 After You Submit
+Mendix's mission in regards to thd governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible.  We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
-Once you’ve submitted your app service you can keep track of your submission by subscribing to receive status notifications and if you need more help you can contact the Marketplace Governance team.
+## 6 After You Submit Your App Service
 
-**Step 6: Monitor Status and Usage**
-Once your app service is available on the public Marketplace you can gain insights into its usage through the Subscription Overview in the Control Centre, and you can engage with Makers at they use it via My Marketplace Reviews.
+Once you have submitted your app service, you can keep track of your submission by subscribing to receive status notifications. If you need more help, you can contact the Marketplace Governance Team.
 
-Marketplace Reviews - discipline of supplier comments  
+{{% todo %}}[**Is this contact really available? How?**]{{% /todo %}}
 
-## Brand Guidelines
+Once your app service is available in the public Marketplace, you can gain insights into its usage through the Subscription Overview in the [Mendix Control Center](/developerportal/control-center/). You can engage with your customers at they use your app service via [Reviews](app-store-overview#my-reviews).
 
-Use of Mendix logo
-Branded imagery sizes
-Legal requirements. credit lines trademarks
+{{% todo %}}[**Notes with no content: Brand Guidelines, Use of Mendix logo, Branded imagery sizes, Legal requirements. credit lines trademarks**]{{% /todo %}}
 
-## UX Design Guidelines
-
-Atlas
-Principles
-Themes
-Styles
-Fonts
+{{% todo %}}[**Notes with no content:  UX Design Guidelines, Atlas, Principles, Themes, Styles, Fonts**]{{% /todo %}}

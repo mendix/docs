@@ -865,8 +865,10 @@ spec:
     type: ingress
     # Optional, can be omitted: Service annotations
     serviceAnnotations:
-      # example: enable use of Google network endpoint groups for Ingress
-      cloud.google.com/neg: '{"ingress": true}'
+      # example: custom AWS CLB configuration
+      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
+      service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
     # Ingress configuration: used only when type is set to ingress
     ingress:
       # Optional, can be omitted: annotations which should be applied to all Ingress Resources
@@ -889,7 +891,7 @@ spec:
       # This example is a template which lets cert-manager to generate a unique certificate for each app
       tlsSecretName: '{{.Name}}-tls'
       # Optional: specify the Ingress class name
-      ingressClassName: gce
+      ingressClassName: alb
       # Optional, can be omitted : specify the Ingress path
       path: "/"
       # Optional, can be omitted : specify the Ingress pathType
@@ -932,11 +934,13 @@ spec:
     # Endpoint type: ingress, openshiftRoute or service
     type: service
     # Optional, can be omitted: the Service type
-    serviceType: ClusterIP
+    serviceType: LoadBalancer
     # Optional, can be omitted: Service annotations
     serviceAnnotations:
-      # example: enable use of Google network endpoint groups for Ingress
-      cloud.google.com/neg: '{"ingress": true}'
+      # example: annotations required for AWS NLB
+      service.beta.kubernetes.io/aws-load-balancer-type: external
+      service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+      service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
     # Optional, can be omitted: Service ports
     servicePorts:
       - 80

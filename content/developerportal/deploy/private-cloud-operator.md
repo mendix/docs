@@ -86,8 +86,10 @@ spec:
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
   serviceAnnotations: # Optional, can be omitted : specify the Service annotations
-    # example: enable use of Google network endpoint groups for Ingress
-    cloud.google.com/neg: '{"ingress": true}'
+    # example: custom AWS CLB configuration
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
   endpointAnnotations: # Optional, can be omitted : set custom annotations for Ingress or OpenShift Route objects
     # example: allow uploads of files up 100 MB in the NGINX Ingress Controller
     nginx.ingress.kubernetes.io/proxy-body-size: 100m
@@ -97,7 +99,7 @@ spec:
         deny all;
         return 403;
       }
-  ingressClassName: gce # Optional, can be omitted : specify the Ingress class
+  ingressClassName: alb # Optional, can be omitted : specify the Ingress class
   ingressPath: "/" # Optional, can be omitted : specify the Ingress path
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime

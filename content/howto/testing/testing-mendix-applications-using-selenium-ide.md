@@ -129,10 +129,10 @@ In this example scenario, you need to do the following:
 
 * [Automated Tests with TestNG](create-automated-tests-with-testng)
 * [Test Microflows Using the Unit Testing Module](testing-microflows-using-the-unittesting-module)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
 * [Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx)
 
 Learn more about this topic using the following helpful link:
 

@@ -20,7 +20,7 @@ For convenience and conciseness, the following variables are used and should be 
 
 - {*AppUUID}* – insert the value the UUID of the application
 - {EnvironmentUUID} – insert the value of the UUID of the environment
-- <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
+- <*your_PAT_Token*> – insert the value of your [PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Using the Data Hub API How-to](data-hub-api-how-to#pat)
 
 ## 3 Searching in the Catalog for the string: sample {#get-data-ex}
 

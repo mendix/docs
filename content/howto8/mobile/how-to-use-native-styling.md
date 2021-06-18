@@ -180,5 +180,5 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 * [How to Implement Native Mobile Styling](native-styling)
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto8/front-end/atlas-ui)
 * [How to Get Started with Native Mobile](getting-started-with-native-mobile)

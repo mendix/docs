@@ -82,5 +82,5 @@ While we encourage users to upgrade to a new Mendix Studio Pro version as soon a
 
 ## 4 Read More
 
-* [Studio Release Notes](../../releasenotes/studio)
-* [Studio Pro Release Notes](../../releasenotes/studio-pro)
+* [Studio Release Notes](/releasenotes/studio)
+* [Studio Pro Release Notes](/releasenotes/studio-pro)

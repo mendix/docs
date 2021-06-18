@@ -12,7 +12,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 
 ## 2 Installation
 
-1. Download this connector as well as the [Community Commons Function Library](../modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app.
+1. Download this connector as well as the [Community Commons Function Library](/appstore/modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app.
 2. In order to use this connector, you must have an account on the Box developer site of box, so go to [BoxDEV](https://developer.box.com/) and click **Log in** > **Sign up** in the upper-right corner of the page.
 3. Fill in the form with your credentials and submit.
 4. Validate your account via an email, which will then give you access to the dashboard of your Box account.

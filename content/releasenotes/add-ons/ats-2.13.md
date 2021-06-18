@@ -9,7 +9,7 @@ parent: "ats-2"
 
 ### Mendix 8 Compatibility
 
-Apps built with [Studio Pro 8](../studio-pro/8) can now be tested using ATS.
+Apps built with [Studio Pro 8](/releasenotes/studio-pro/8) can now be tested using ATS.
 
 ### Fixes
 

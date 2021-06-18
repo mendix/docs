@@ -170,7 +170,7 @@ Variable ‘Variable’ is never used.
 ## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [How to Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
 * [How to Configure Log Levels](log-levels)

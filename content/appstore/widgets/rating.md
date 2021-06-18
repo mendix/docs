@@ -14,7 +14,7 @@ The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables
 
 ## 2 Usage
 
-To use this widget, place it in a [data container](https://docs.mendix.com/refguide/data-sources) that has an Integer, Long or Decimal attribute.
+To use this widget, place it in a [data container](/refguide/data-sources) that has an Integer, Long or Decimal attribute.
 
 The widget offers the following for configuration:
 
@@ -25,7 +25,7 @@ The widget offers the following for configuration:
 * An amount to define the maximum amount of icons to be rendered
 * Animation, to define whether the widget should animate when clicking on the desired icon  
 * A **Size** design property with two options (`Small` and `Large`) influencing icon size
-* [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
+* [Common properties](/refguide/common-widget-properties)
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 

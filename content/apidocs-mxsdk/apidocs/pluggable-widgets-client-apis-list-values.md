@@ -127,7 +127,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
+The `setOffset` and `setLimit` are supported on all [data sources](/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
 
 ### 2.3 Sorting {#listvalue-sorting}
 
@@ -190,7 +190,7 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
-The `setSort` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
+The `setSort` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.
@@ -215,13 +215,13 @@ interface MyListWidgetsProps {
 }
 ```
 
-The `setFilter` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
+The `setFilter` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.
 {{% /alert %}}
 
-#### 2.4.1 Simple Filtering
+#### 2.4.1 Simple Filtering {#simple-filtering}
 
 To apply a simple filter based on the value of an attribute represented by `myAttributeString` property the following code may be used:
 
@@ -259,7 +259,7 @@ The following code sample shows how to remove current filtering condition:
 this.props.myDataSource.setFilter(undefined);
 ```
 
-#### 2.4.2 Advanced Filtering
+#### 2.4.2 Advanced Filtering {#advanced-filtering}
 
 In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10`. In order to construct such condition special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that check for `filterable` flags omitted for simplicity. Real widgets should always take `filterable` flag into account.
 

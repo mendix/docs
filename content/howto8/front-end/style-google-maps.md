@@ -85,5 +85,5 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 * [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+*   [Setting Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

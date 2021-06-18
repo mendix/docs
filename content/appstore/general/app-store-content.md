@@ -18,9 +18,8 @@ This how-to covers the basics of accessing the Marketplace from Studio Pro and p
 
 **This how-to will teach you how to do the following:**
 
-* Install content from the Marketplace via Studio Pro
-* Download widgets and modules from the Marketplace into Studio Pro
-* Use other Marketplace content in Studio Pro
+* Download content from the Marketplace via Studio Pro
+* Use content (for example, widgets, modules, and others) downloaded from the Marketplace in Studio Pro
 
 ## 2 Prerequisites
 
@@ -158,9 +157,7 @@ To add the Email with template module from the Marketplace via Studio Pro, follo
 Unlike a widget, you can see a module in your App Explorer. A module contains a domain model, pages, and microflow logic. A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). In addition, a module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
 {{% alert type="info" %}}
-
 Sometimes additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
-
 {{% /alert %}}
 
 #### 4.2.2 Configuring the Module
@@ -181,7 +178,9 @@ You cannot create a new project in an existing repository that is not empty.
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the project structure – in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your project. You can find out which theme is active for your project in the app project **Settings**.
 
+{{% alert type="info" %}}
 To delete a theme, remove the ZIP file from your project's **theme** folder.
+{{% /alert %}}
 
 ## 5 Read More
 

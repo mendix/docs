@@ -65,3 +65,7 @@ This is exactly the same as [AdvancedPageTracker](#advancedpagetracker), but wit
 These tools allow you to focus on the quality of your web application. For more information on what this means for your Mendix application, see [Google Search Console](https://search.google.com/search-console/about).
 
 This widget will place a `META` verification tag inside the `html` tag so that the webmaster tools can be activated and help with SEO on Mendix applications.
+
+## 4 Limitations
+
+If you are using an advertisement blocker like "AdBlocker" or "uBlocker" browser extension or even defining the configurations of your browser to not allow tracking it might result in your page being broken due to the widgets files being blocked by them.

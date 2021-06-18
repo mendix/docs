@@ -131,7 +131,7 @@ To add content to the Marketplace, follow these steps:
 	![](attachments/share-app-store-content/general.jpg)
 
 6. Click **Upload an Image** to upload an icon for the component.
-7.  On each page of the upload flow, click one of the following buttons:
+7.  <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow

@@ -49,3 +49,11 @@ The table below describes which `CAST` conversions are supported:
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 * [1] – BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.
 * [2] – The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.
+* 
+
+## 4 Examples
+
+Dates get shown by an OQL as datetime-stamp. An especially useful usecase is converting a date to a readable format. Function CAST does that for you:
+```sql
+CAST ( somedatesvariablename AS string )
+```  

@@ -53,7 +53,8 @@ The table below describes which `CAST` conversions are supported:
 
 ## 4 Examples
 
-Dates get shown by an OQL as datetime-stamp. An especially useful usecase is converting a date to a readable format. Function CAST does that for you:
+A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type: 
+	
 ```sql
-CAST ( somedatesvariablename AS string )
-```  
+CAST ( your_datetime_variable AS string )
+```

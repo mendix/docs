@@ -51,7 +51,7 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-menu.png){{% /image_container %}}
+![View menu](attachments/progressive-web-app/view-menu.png)
 
 You can also open PWA profiles on your device via the **View on your device** option:
 

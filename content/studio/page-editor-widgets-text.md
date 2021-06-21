@@ -17,7 +17,7 @@ Text is a group of [widgets](page-editor-widgets) that consists of [Text, Paragr
 
 You can use **Text**, **Paragraph**, or **Heading** widgets to display a text to the end-user. In **Properties** > **General**, you can type the text that will be displayed, define if it contains attribute values, and set the [render mode](#render-mode). 
 
-### 2.1 Content
+### 2.1 Content {#content}
 
 In **Content**, you define the text that is shown to end-users. You can also display dynamic data here: attribute values and expression outcomes. 
 

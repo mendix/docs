@@ -133,7 +133,7 @@ Before starting your app in Mendix Cloud v4, make sure it has the same configura
 
 Now that the app on Mendix Cloud v4 contains your data and is configured, deploy the deployment package to an environment and start your app.
 
-To learn how to do this, see [How to Deploy the App to an Environment](mendix-cloud-deploy#4-deploy-the-app-to-an-environment).
+To learn how to do this, see [How to Deploy the App to an Environment](mendix-cloud-deploy#deploy-the-app-to-an-environment).
 
 ### 4.3 Unlink the App from the v3 Node
 

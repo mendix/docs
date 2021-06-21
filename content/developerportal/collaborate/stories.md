@@ -17,7 +17,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
 {{% /alert %}}
 
-![](attachments/stories/stories.jpg)
+![](attachments/stories/stories.png)
 
 ## 2 Main Actions
 
@@ -65,7 +65,18 @@ You can also create a story via the [New Story](#new-story) button for Sprint or
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 
-### 2.3 More Actions
+### 2.3 Creating a New Label {#new-label}
+
+Click **New Label** to create a new label for your app:
+
+{{% image_container width="400" %}}
+![](attachments/stories/new-label.png)
+{{% /image_container %}}
+
+* **Label caption** – the caption of the label
+* **Label color** – pick a color for easy visibility
+
+### 2.4 More Actions
 
 Click **More** to access the following options::
 
@@ -74,7 +85,7 @@ Click **More** to access the following options::
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
 
-#### 2.3.1 Importing & Exporting to Excel {#import-export}
+#### 2.4.1 Importing & Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 
@@ -94,7 +105,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or one level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-#### 2.3.2 Managing Labels {#managing-labels}
+#### 2.4.2 Managing Labels {#managing-labels}
 
 The **Manage labels** page is where you can add or remove your labels:
 
@@ -109,7 +120,7 @@ The following buttons are available:
 * **Merge Label** – enables merging the selected label into another label; all stories which have the selected label are labeled with the other label and the selected label is deleted
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied; the label is then deleted
 
-#### 2.3.3 Completed Sprints {#completed-sprints}
+#### 2.4.3 Completed Sprints {#completed-sprints}
 
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
@@ -125,7 +136,7 @@ The following buttons are available:
 * **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
-#### 2.3.4 History {#history}
+#### 2.4.4 History {#history}
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
@@ -168,7 +179,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 When you click a story title, the **Story Details** page opens:
 
 {{% image_container width="500" %}}
-![](attachments/stories/story-details.jpg)
+![](attachments/stories/story-details.png)
 {{% /image_container %}}
 
 On this page, you can perform a number of actions:
@@ -176,6 +187,7 @@ On this page, you can perform a number of actions:
 * Change the **Title** or **Description** by clicking it
 * Add or remove **Labels**
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
+* Assign a team member to work on the story
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
 * Leave a **Comment** on the story to collaborate with your team

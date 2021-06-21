@@ -18,7 +18,7 @@ The roles defined in Developer Portal for an [app](/developerportal/apps-list/) 
 
 ## 2 Team Member
 
-If you want to join an a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
+If you want to join an a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [App Contact](/developerportal/settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
 
 ## 3 Team Roles {#team-roles}
 

@@ -103,4 +103,4 @@ The completed flag will be `false` as long as the test run is not finished. The 
 
 ## 6 Read More
 
-* [How to Test Microflows Using the UnitTesting Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)
+* [How to Test Microflows Using the UnitTesting Module](/howto/testing/testing-microflows-using-the-unittesting-module)

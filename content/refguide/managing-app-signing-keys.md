@@ -70,7 +70,7 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 
 Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
 
-### 3.1 Generating a Keystore
+### 3.1 Generating a Keystore {#generating-a-keystore}
 
 To generate a keystore for Android, follow these steps:
 

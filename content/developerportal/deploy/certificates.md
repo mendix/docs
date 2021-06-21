@@ -37,7 +37,7 @@ Do not pin these certificates in your solutions.
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.
 
-## 3 Outgoing – Client Certificates{#client-certificates}
+## 3 Outgoing – Client Certificates {#outgoing-client-certificates}
 
 For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container which includes:
 

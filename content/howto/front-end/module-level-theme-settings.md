@@ -1,6 +1,5 @@
 ---
 title: "Configure Module-Level Theme Settings"
-category: "Front-End"
 parent: "atlas-ui"
 menu_order: 25
 description: "Understand the advanced options of module-level theme settings."

@@ -44,6 +44,7 @@ By excluding [layouts](/refguide/layout) and [page templates](/refguide/page-tem
             "layouts": true,
             "pageTemplates": true
         }
+    }
 }
 ```
 

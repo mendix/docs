@@ -155,6 +155,8 @@ You can find more information about managing binding keys in the [Service Manage
 
 The easiest way to get your data from MindSphere is to use Mendix Data Hub. To do this you will need a [Data Hub license](/refguide/consumed-odata-service-requirements#license-limitations).
 
+See [Data Hub Limitations](#dh-limitations) for information on restrictions and workarounds when using Mendix Data Hub.
+
 ### 4.1 Adding External Entities to the Domain Model
 
 To add the external entities representing your MindSphere data to the domain model, search in the [Data Hub pane](/refguide/data-hub-pane) for your MindSphere service.
@@ -229,3 +231,62 @@ To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
 2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/project-settings#after-startup) microflow(s) which are run when the app is started.
+
+## 8 Data Hub Limitations{#dh-limitations}
+
+### 8.1 Read-only Access
+
+Data Hub only supports reading of data from MindSphere. This means that you cannot create, update, or delete data on MindSphere. If you need to do this, you should [Use MindSphere IIoT for Makers Through REST Calls](#using-rest).
+
+### 8.2 Associations Between Contracts
+
+You cannot create associations between external entities. To work around this, always publish related asset types in a single contract so that your app can identify the association between them.
+
+For example, imagine that you have an Asset Type `CNGTurbine` which has a derived Asset Type `LPGTurbine`. If you publish an OData contract for `CNGTurbine` and a separate contract for `LPGTurbine`, you cannot create a association directly between `LPGTurbine` and `CNGTurbine` in the Mendix Domain Model as these are two different contracts. If you publish them in a single contract, you can also publish the association and use the fact that `LPGTurbine` is derived from `CNGTurbine`.
+
+### 8.3 Date and Time Attributes
+
+Mendix Data Hub treats OData time fields as strings. This means that, when you want to specify date (for example, a date range for a Time Series entity), you will have to provide the data and time in the form `YYYY-MM-DDTHH:mm:ss`.
+
+### 8.4 Enumeration Values
+
+Mendix Data Hub does not limit the selections on a query to valid values. When you are creating your Mendix app, you should validate your values before using them in a query.
+
+For example, the interval unit on a Time Series can only be `days`, `minutes`, or `seconds`. If you allow the user to specify `day`, then MindSphere will return an error.
+
+### 8.5 MindSphere Query Limitations
+
+Mendix will allow you to query all types of Data Hub external entities using all the attributes of those entities and a wide range of operators. There are some limitations on which attributes you can query with which operators in MindSphere, but Mendix does not know about these. You should therefore stay within the guidelines listed below.
+
+| Entity Type | Search with Attributes | Use operators |
+| --- | --- | --- |
+| Asset | `assetId`, `name`, `parentId`, `timezone`, and `typeId` | `eq` (equal), `contains`, `startsWith`, and `endsWith` |
+| Time Series | `assetId` | `eq` |
+| Time Series | `timestamp` | `after` (greater than), and `before` (less than or equal to) |
+| Time Series Aggregate | `assetId`, `aggregationType`, `variableName`, `intervalUnit`, `intervalValue`, and `intervalCount` | `eq` |
+| Time Series Aggregate | `timestamp` | `after` (greater than), and `before` (less than or equal to) |
+
+These limits also apply to REST queries.
+
+### 8.6 Number and Count of Time Series Objects Returned
+
+MindSphere will not return more than 2000 MindSphere Time Series and Aggregates objects in a data grid using pagination. Mendix does not enforce this limitation, as this does not apply to entities in the Mendix database.
+
+If you need to retrieve more than 2000 objects, use multiple time intervals for your query modify your query criteria using the `timestamp` attribute to return fewer than 2000 objects for each time interval.
+
+In addition, the total number of objects returned by a Time Series or Aggregate query will not be correctly calculated.
+
+This limitation also applies to REST queries.
+
+### 8.7 Unsupported OData Queries
+
+It is possible to construct a query in Mendix which is not supported by the MindSphere OData contract. If you attempt an unsupported query you will receive an error message.
+
+For example, if you are measuring the current through a pump you will get an error if you try to sort Time Series data on the value of the `Current` attribute.
+
+## 9 Troubleshooting
+
+### 9.1 "An error occurred…" Error Message
+
+If your app returns the message "An error occurred, please contact your system administrator", this could be due to a MindSphere error that Mendix is unable to handle. Always check the log to see if there is more information to help you resolve this issue.
+

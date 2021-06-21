@@ -68,4 +68,4 @@ This widget will place a `META` verification tag inside the `html` tag so that t
 
 ## 4 Limitations
 
-If you are using an advertisement blocker like "AdBlocker" or "uBlocker" browser extension or even defining the configurations of your browser to not allow tracking it might result in your page being broken due to the widgets files being blocked by them.
+If you are using an advertisement blocker (such as the AdBlocker browser extension) or have configured your browser to not allow tracking, it might result in your page being broken. This is because certain advertisement blockers and tracking restrictions can block this widget's files. 

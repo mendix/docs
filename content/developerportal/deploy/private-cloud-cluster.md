@@ -1108,6 +1108,61 @@ For instance, in the example, we are requesting and limiting memory usage to rou
 Modifying resource configuration should be performed carefully as that might have direct implications on the performance of your application, and resource usage of the server node.
 {{% /alert %}}
 
+#### 5.3.3 Resource definition via Operator Configuration manifest
+
+For a given namespace **all the resource information is aggregated** in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configurations explained above.
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  sidecarResources:
+    limits:
+      cpu: 250m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  metricsSidecarResources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  buildResources:
+    limits:
+      cpu: '1'
+      memory: 256Mi
+    requests:
+      cpu: 250m
+      memory: 64Mi
+  runtimeResources:
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+  runtimeLivenessProbe:
+    initialDelaySeconds: 60
+    periodSeconds: 15
+  runtimeReadinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 1
+```
+
+The following fields can be configured:
+
+* `Liveness` and `readiness` probes: used for all MendixApp deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource.
+* `sidecarResources`: used for all m2ee-sidecar containers in the namespace.
+* `metricsSidecarResources`: used for all m2ee-metrics containers in the namespace.
+* `runtimeResources`: used for `mendix-runtime` containers in the namespace (i and only if, the MendixApp CRD doesn't have a resources block).
+* `buildResources` are used for the main container in `*-build` Pods.
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.

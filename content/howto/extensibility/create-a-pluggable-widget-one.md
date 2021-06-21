@@ -233,7 +233,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 
 ### 3.4 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#3-standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 

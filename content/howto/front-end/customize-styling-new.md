@@ -1,6 +1,5 @@
 ---
 title: "Customize Styling"
-category: "Front-End"
 parent: "atlas-ui"
 menu_order: 20
 description: "This describes how developers can change apps styling and create re-usable styling."

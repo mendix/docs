@@ -110,9 +110,23 @@ A theme module is useful for styling which can be easily re-used through modules
 
 This can be done by creating a theme module and making the *custom-variables* file in the **theme** folder point to the custom variables file in your theme module. For creating a full design system see [How to Create a Company Design System](create-a-company-design-system).
 
-See the example below for more information on creating a re-usable theme module.
+See the examples below for more information on creating a re-usable theme module.
 
-### 4.1 Web
+### 4.1 Mark as UI resources module
+
+Modules that contain theme styling should be marked as UI resources modules (Right-click the **Module <name>** in the App Explorer, then click **Mark as UI resources module**). This will make them appear with a green icon, which makes it easy to distinguish theme modules from other modules, and also allows influencing the order in which styling will be applied from those modules.
+
+![green module](attachments/customize-styling/green-module.png)
+
+#### 4.2 Ordering UI resource modules
+
+When a module contains styling (SCSS/CSS), it is often important in which order they are added to the compiled theme CSS file. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it's important that the theme module is added *after* **Atlas_Core**. You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set an explicit order, in which they are added to the css file. Note that the lower the module in the list, the higher the precedence. For example, an app that uses a company theme module could be ordered as follows:
+
+![app theme settings](attachments/customize-styling/app-theme-settings.png)
+
+### 4.3 Examples
+
+#### 4.3.1 Web
 
 As an example, the following variables in _theme/web/custom-variables.scss_ will be modularised into a re-usable theme module:
 
@@ -128,7 +142,7 @@ $brand-danger: #e33f4e;
 
 To create a re-usable theme module, do the following:
 
-1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add new module…**. Give it a name. For this example the module’s name is "mytheme".
+1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
    
 2. In your Mendix app directory, create a new file _themesource/mytheme/web/custom-variables.scss_.
 
@@ -140,7 +154,7 @@ To open your Mendix app directory from Studio Pro, click **App** in the top menu
    
 4. In _theme/web/custom-variables.scss_ add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
 
-The two files should end up looking list this:
+The two files should end up looking like this:
 
 _theme/web/custom-variables.scss:_
 
@@ -168,7 +182,7 @@ To test the theme for all the widgets, page templates, and building blocks it ca
 Note: if this is done, the Theme customizer in Studio will not work any more as it depends on the custom variables in the **theme** folder.
 {{% /alert %}}
 
-### 4.2. Native Mobile
+#### 4.3.2 Native Mobile
 
 As an example, the following variables in _theme/native/custom-variables.js_ will be modularised into a re-usable theme module:
 
@@ -189,7 +203,7 @@ export const brand = {
 
 Steps:
 
-1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add new module…**. Give it a name, for this example the module’s name is “mytheme”.
+1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add module…**. Give it a name, For this example the module’s name is “mytheme”.
    
 2. In your Mendix app directory, create a new file _themesource/mytheme/native/custom-variables.js_.
 
@@ -295,12 +309,16 @@ Studio and Studio Pro combines the different *.scss* files in a certain order an
 The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Teamserver. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
 {{% /alert %}}
 
+If a module contains styling, such as a design system module, it's generally a best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings (see [Create a Theme Module](#create-theme-mod)).
+
 The compilation of the *.scss* files is done in the following order:
 
-1. All _main.css_ files from the **themesource** folders of Market Place modules, in alphabetical order of the names of the modules.
-2. All _main.css_ files from the **themesource** folders of user modules, ordered as in Studio Pro.
-3. Custom variables from theme folder (_theme/web/custom-variables.scss_).
-4. _main.scss_ from **theme** folder (_theme/web/main.scss_).
+1. The _main.scss_ files from the **themesource** folders in the following order:
+   1. Non-UI Market Place modules, in alphabetical order.
+   1. UI resources modules, ordered as in **App Settings** > **Theme**.
+   1. Non-UI user modules, ordered as in the app explorer in Studio Pro.
+1. Custom variables from theme folder (_theme/web/custom-variables.scss_).
+1. _main.scss_ from **theme** folder (_theme/web/main.scss_).
 
 If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives hints on what went wrong and what should be fixed:
 
@@ -310,10 +328,12 @@ If SASS compilation fails, it will be shown in Studio Pro as a consistency error
 
 For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
 
-1. All _main.js_ files from the **themesource** folders of Market Place modules, in alphabetical order of the name of the modules.
-2. All _main.js_ files from the **themesource** folders of user modules, ordered as in Studio Pro.
-3. _main.js_ from theme folder (_theme/native/main.js_).
-4. Original _styles.js_ in the **theme** folder if it exists (_theme/styles.js_).
+1. All _main.js_ files from the **themesource** folders in the following order:
+   1. Non-UI Market Place modules, in alphabetical order.
+   1. UI resources modules, ordered as in **App Settings** > **Theme**.
+   1. Non-UI user modules, ordered as in Studio Pro.
+1. _main.js_ from theme folder (_theme/native/main.js_).
+1. Original _styles.js_ in the **theme** folder if it exists (_theme/styles.js_).
 
 If there are errors during the bundling, these will be shown in Studio Pro and the Make it Native app. For details on the error, it can be helpful to look at the native packager logs in _<Mendix app directory>/deployment/log/native_packager_log.txt_.
 

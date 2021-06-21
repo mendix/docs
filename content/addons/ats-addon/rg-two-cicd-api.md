@@ -39,7 +39,7 @@ Configure the following options in the **New CI/CD Template** dialog box:
 
 For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](rg-two-supported-selenium-hub-provider).
 
-## 3 API
+## 3 API {#api}
 
 The ATS CI/CD API is based on the SOAP web service protocol. Currently there are three services available: **Run Job**, **Get Job Status**, and **RerunNotPassed**. The following sections show the structures of the request-and-response messages of these services.
 

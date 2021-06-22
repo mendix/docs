@@ -6,7 +6,7 @@ tags: ["marketplace", "app service"]
 description: "Describes how to make your app service Marketplace-ready."
 ---
 
-{{% todo %}}[**What is an "app service" in the context of the Marketplace? This is not defined anywhere. Is an app service a new category for Marketplace components (available to select as a category when submitting a component)? Or is an app service just a monetized Marketplace component? This will inform the title of this doc, its purposes, and terminology used throughout.**{{% /todo %}}
+{{% todo %}}[**What is an "app service" in the context of the Marketplace? Will it be a new category for Marketplace components (available to select as a category when submitting a component)? This will inform the title of this doc, its purposes, and terminology used throughout.**{{% /todo %}}
 
 ## 1 Introduction
 
@@ -65,7 +65,9 @@ For more information on what you need to do as a Marketplace Vendor to submit an
 
 ## 3 App Service Overview
 
-{{% todo %}}[**Need a definition of an app service here**{{% /todo %}}
+{{% todo %}}[**Verify definition of an app service here - also verify whether this doc applies to app services or to any monetized component (affects title)**{{% /todo %}}
+
+An app service is a domain-focused business capability delivered in the form of a collection of composable Mendix native UI components, APIs, and web services. They are flexible building blocks with out-of-the-box integration into the Mendix development experience, enabling users to imagine new apps, extend the capability of existing apps, and significantly decrease time-to-value.They address the problems and needs of specific industries and use cases for Mendix users.
 
 The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
 

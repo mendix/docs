@@ -130,7 +130,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 #### 4.3.1 Web
 
-As an example, the following variables in _theme/web/custom-variables.scss_ will be modularised into a re-usable theme module:
+As an example, the following variables in *theme/web/custom-variables.scss* will be made into a re-usable theme module:
 
 ```scss
 $gray-primary: #e7e7e9;
@@ -186,7 +186,7 @@ Note: if this is done, the Theme customizer in Studio will not work any more as 
 
 #### 4.3.2 Native Mobile
 
-As an example, the following variables in _theme/native/custom-variables.js_ will be modularised into a re-usable theme module:
+As an example, the following variables in _theme/native/custom-variables.js_ will be made into a re-usable theme module:
 
 ```javascript
 export const brand = {
@@ -308,17 +308,17 @@ With the modular structure of the styling of Mendix app, the styling files are p
 Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output and necessary resources are saved in a folder named **theme-cache**.
 
 {{% alert type="info" %}}
-The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Teamserver. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
+The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
 {{% /alert %}}
 
 If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.
 
 The *.scss* files compile in the following order:
 
-1. The _main.scss_ files from the **themesource** folders, specifically:
-   1. Non-UI Market Place modules, in alphabetical order.
+1. The *main.scss* files from the **themesource** folders, specifically:
+   1. Non-UI Marketplace modules, in alphabetical order.
    1. UI resources modules, ordered as in **App Settings** > **Theme**.
-   1. Non-UI user modules, ordered as in the app explorer in Studio Pro.
+   1. Non-UI user modules, ordered as in the Studio Pro **App explorer**.
 1. Custom variables from the **theme** folder (*theme/web/custom-variables.scss*).
 1. *main.scss* from the **theme** folder (*theme/web/main.scss*).
 
@@ -330,16 +330,16 @@ If SASS compilation fails, it will be shown in Studio Pro as a consistency error
 
 For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
 
-1. All _main.js_ files from the **themesource** folders in the following order:
-   1. Non-UI Market Place modules, in alphabetical order.
+1. All *main.js* files from the **themesource** folders in the following order:
+   1. Non-UI Marketplace modules, in alphabetical order.
    1. UI resources modules, ordered as in **App Settings** > **Theme**.
    1. Non-UI user modules, ordered as in Studio Pro.
-1. _main.js_ from theme folder (_theme/native/main.js_).
-1. Original _styles.js_ in the **theme** folder if it exists (_theme/styles.js_).
+1. *main.js* from theme folder (*theme/native/main.js*).
+1. Original *styles.js* in the **theme** folder if it exists (*theme/styles.js*).
 
-If there are errors during the bundling, these will be shown in Studio Pro and the Make it Native app. For details on the error, it can be helpful to look at the native packager logs in _<Mendix app directory>/deployment/log/native_packager_log.txt_.
+If there are errors during the bundling, these will be shown in Studio Pro and the Make it Native app. For details on the error, it can be helpful to look at the native packager logs in *{Mendix app directory}/deployment/log/native_packager_log.txt*.
 
-For more details on styling native mobile apps see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
+For more details on styling native mobile apps see the [Native Mobile Styling](/refguide/native-styling-refguide) Reference Guide.
 
 ## 8 Disabling default styling from Atlas Core {#disable-default}
 

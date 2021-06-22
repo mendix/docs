@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "mobile device", "cordo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:

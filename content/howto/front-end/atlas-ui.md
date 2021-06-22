@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ## 1 Introduction
 
-Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3 site](https://www.mendix.com/atlas/) for more information about Atlas.
+Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3](https://atlas.mendix.com) site for more information about Atlas.
 
 If you use an older version of Mendix Studio Pro, see [atlas2.mendix.com](https://atlas2.mendix.com/) for information on Atlas 2.
 
@@ -22,5 +22,4 @@ The following how-to's are available here:
 * [Configure Module-Level Theme Settings](module-level-theme-settings) — Use module-level theme settings to control theme system behavior. This allows you to control which elements your developers can and cannot use.
 * [Create a Company Design System](create-a-company-design-system) — Create a company design system: a "UI kit" which  contains all the elements that a team needs to design, realize, and develop a product.
 * [Extend Design Properties](extend-design-properties) — Learn the basics of design properties and how to make your own.
-
 

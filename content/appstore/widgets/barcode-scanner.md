@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "barcode scanner", "pla
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Barcode Scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables a barcode scanning functionality within your Mendix web application.

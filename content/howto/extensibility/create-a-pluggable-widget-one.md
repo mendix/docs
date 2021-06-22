@@ -24,7 +24,7 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
 	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
 	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
@@ -136,7 +136,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute) only allows the selection of string attributes from the domain model
   
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm start`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 
@@ -225,7 +225,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
-	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm run dev` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
 8.  When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 

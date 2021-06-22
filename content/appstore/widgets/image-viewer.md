@@ -6,11 +6,15 @@ tags: ["marketplace", "marketplace component", "widget", "image viewer", "platfo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 3 Previous Versions' Documentation
+
+### Widgets Below v2.0.0
+
+#### 1 Introduction
 
 The [Image Viewer](https://marketplace.mendix.com/link/component/65122/) widget displays an image and optionally performs an on-click action (enlarging to mobile-friendly, opening a page, or calling a mircoflow).
 
-### 1.1 Features
+##### 1.1 Features
 
 * Supports different data sources:
 	* Set a static image
@@ -22,11 +26,11 @@ The [Image Viewer](https://marketplace.mendix.com/link/component/65122/) widget 
 	* Open page
 	* Call a microflow or nanoflow
 
-### 1.2 Demo App
+##### 1.2 Demo App
 
 For a demo app that has been deployed with these widgets, see [here](https://imageviewer.mxapps.io/).
 
-## 2 Usage
+#### 2 Usage
 
 The widget requires a context via the following available data sources:
 

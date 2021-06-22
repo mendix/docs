@@ -144,15 +144,4 @@ When you filter against associations, null literals can be quite useful. For exa
 
 ## 9 Passing Query Options in the Request Body
 
-If the OData Url is too long to send over the URL due to limitations, you can pass the entire query or some part to the request body. A specific keyword in OData allows you to pass, which is `/$query`. Let's assume that we have a `Products` resource, and we want to send a query request over this resource. The URL would seem like this;
-
-POST: `/Products/$query` 
-Content-Type : `text-plain`
-
-And the remaining part can be placed in the body of the request. The important point here is that the request **MUST** be **POST**, and `Content-Type` **MUST** be `text-plain` for this operation. Another example is; you can pass some part of the query to the request, in this case, our query looks like this; 
-
-POST: `/Products/$query?$filter=Age gt 65` 
-Content-Type: `text-plain`
-Request Body: `$select=Name,Price`
-
-Please note that; since the **Request Body** is `text-plain`, it **MUST** adhere to the _URL encoding_ principles. Meaning, no spaces, tabs, or newlines are allowed.
+If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. Note that the body must adhere to *URL encoding* principles. So for isntance spaces, tabs, and newlines are not allowed.

@@ -40,19 +40,19 @@ In the following example a custom style is added to change any matching element'
 
 Steps: 
 
-1.  In _theme/web/custom-variables.scss_ add a SCSS variable by adding the following code to the file: 
+1.  In *theme/web/custom-variables.scss* add a SCSS variable by adding the following code to the file: 
 
 	```scss
 	$company-header-text-size: 30px;
 	```
 
-2.  Create a new file _theme/web/company-header.scss_. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
+2.  Create a new file *theme/web/company-header.scss*. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
 	```scss
 	.company-header { font-size: $company-header-text-size; }
 	```
 
-3.  Import the new file in _theme/web/main.scss_ by adding the following:
+3.  Import the new file in *theme/web/main.scss* by adding the following:
 
 	```scss
 	@import “company-header”;
@@ -64,20 +64,20 @@ This ensures the SCSS is included in CSS compilation.
 
 In this example we will be creating a custom style which will change the font size of text upon use:
 
-1.  Add a JavaScript variable in _theme/native/custom-variables.js_ with the following code: 
+1.  Add a JavaScript variable in *theme/native/custom-variables.js* with the following code: 
    
 	```javascript
 	export const companyHeaderTextSize = 30;
 	```
 
-2.  Create a new file _theme/native/company-header.js_. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
+2.  Create a new file *theme/native/company-header.js*. In the new file, the newly defined variable defined in step needs to be imported. Create a variable with an object value, containing property `fontSize` with the value referencing the newly defined custom-variable, then export the variable. The following code achieves this:
 
 	```javascript
 	import { companyHeaderTextSize } from “./custom-variables”;
 	export const companyHeader = { fontSize: companyHeaderTextSize };
 	```
 
-3.  Import the object defined in _company-header.js_ and expose it in _theme/native/main.js_ as follows:
+3.  Import the object defined in *company-header.js* and expose it in *theme/native/main.js* as follows:
 
 	```javascript
 	import {companyHeader} from “./company-header”;
@@ -86,9 +86,9 @@ In this example we will be creating a custom style which will change the font si
 
 ### 2.3 Importing CSS (Web Only)
 
-An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in _theme/web/settings.json_.
+An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in *theme/web/settings.json*.
 
-See the following fragment as an example of how additional CSS can be added to your app. Below, a third-party CSS file _water.css_ is added and will be applied to the app. The third-party CSS file should be in **theme/web**:
+See the following fragment as an example of how additional CSS can be added to your app. Below, a third-party CSS file *water.css* is added and will be applied to the app. The third-party CSS file should be in **theme/web**:
 
 ```json
 {
@@ -146,25 +146,25 @@ To create a re-usable theme module, do the following:
 
 1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
    
-2. In your Mendix app directory, create a new file _themesource/mytheme/web/custom-variables.scss_.
+2. In your Mendix app directory, create a new file *themesource/mytheme/web/custom-variables.scss*.
 
 {{% alert type="info" %}}
 To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
 {{% /alert %}}
 
-3. Cut the variables from _theme/web/custom-variables.scss_ and paste them in _themesource/mytheme/web/custom-variables.scss_.
+3. Cut the variables from *theme/web/custom-variables.scss* and paste them in *themesource/mytheme/web/custom-variables.scss*.
    
-4. In _theme/web/custom-variables.scss_ add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
+4. In *theme/web/custom-variables.scss* add `@import "../../themesource/mytheme/web/custom-variables.scss` to the top of the file, replacing “mytheme” with your module name.
 
 The two files should end up looking like this:
 
-_theme/web/custom-variables.scss:_
+*theme/web/custom-variables.scss*:
 
 ```scss
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
 
-_themesource/mytheme/web/custom-variables.scss:_
+*themesource/mytheme/web/custom-variables.scss*:
 
 ```scss
 $gray-primary: #e7e7e9;
@@ -176,7 +176,7 @@ $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
 ```
 
-You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to _theme/web/custom-variables.scss_ for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
+You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](create-a-company-design-system).
 
@@ -186,7 +186,7 @@ Note: if this is done, the Theme customizer in Studio will not work any more as 
 
 #### 4.3.2 Native Mobile
 
-As an example, the following variables in _theme/native/custom-variables.js_ will be made into a re-usable theme module:
+As an example, the following variables in *theme/native/custom-variables.js* will be made into a re-usable theme module:
 
 ```javascript
 export const brand = {
@@ -207,15 +207,15 @@ Steps:
 
 1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name, for this example the module’s name is “mytheme”.
    
-2. In your Mendix app directory, create a new file _themesource/mytheme/native/custom-variables.js_.
+2. In your Mendix app directory, create a new file *themesource/mytheme/native/custom-variables.js*.
 
 {{% alert type="info" %}}
 Note: To open your Mendix app directory from Studio Pro, click **App** in the top menu-bar, then click **Show App Directory in Explorer**.
 {{% /alert %}}
 
-3. Cut the export statement and variables from _theme/native/custom-variables.js_ and paste in _themesource/mytheme/native/custom-variables.js_.
+3. Cut the export statement and variables from *theme/native/custom-variables.js* and paste in *themesource/mytheme/native/custom-variables.js*.
    
-4.  In _theme/native/custom-variables.js_ add the following code to the top of the file, replacing “mytheme” with your module name:
+4.  In *theme/native/custom-variables.js* add the following code to the top of the file, replacing “mytheme” with your module name:
 
 	```javascript
 	export * from "../../themesource/mytheme/native/custom-variables";
@@ -223,13 +223,13 @@ Note: To open your Mendix app directory from Studio Pro, click **App** in the to
 
 The two files should end up looking list this:
 
-_theme/native/custom-variables.js:_
+*theme/native/custom-variables.js*:
 
 ```javascript
 export * from "../../themesource/mytheme/native/custom-variables";
 ```
 
-_themesource/mytheme/native/custom-variables.js:_
+*themesource/mytheme/native/custom-variables.js*:
 
 ```javascript
 export const brand = {
@@ -290,7 +290,7 @@ The bullets below describe the file structure for the theme folder and for modul
 	* **Atlas_core** (required) — This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of an app as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
 		* **web** — This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
 		* **native** — This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
-	* **MODULE_NAME** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
+	* **{MODULE_NAME}** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
 		* **web** — This folder contains re-useable web resources
 			* *main.scss* — This file is the starting point for the module web based styling.
 			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
@@ -347,7 +347,7 @@ Mendix provides styling for the platform supported widgets in the Atlas core mod
 
 ### 8.1 Disabling Default Web Widget Styling
 
-To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **{Mendix app}/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a web widget, open the *exclusion-variables.scss* file located in the folder **{Mendix app}/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the *exclusion-variables.scss* file in the app specific theme folder point to the exclusion variables file in your theme module.
 
 Pick the button widget as an example. The success button is by default styled as in **Figure 1**:
 
@@ -451,7 +451,7 @@ All supported exclusion variables for web are:
 
 ### 8.2 Disabling Default Native Mobile Widget Styling
 
-To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **{Mendix app}/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a native mobile widget, open the *exclusionVariables.js* file located in the folder **{Mendix app}/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the *exclusionVariables.js* file in the app specific theme folder point to the exclusion variables file in your theme module.
 
 Pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
 
@@ -556,8 +556,8 @@ All supported exclusion variables for native mobile are:
 
 ## 9 Customizing index.html (Web)
 
-By default, Mendix generates the _index.html_ (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called _index.html_ in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy _index-example.html_ from the **deployment/web** folder to the **theme/web**, rename it to _index.html_, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+By default, Mendix generates the *index.html* (the page that is loaded to start the app), based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
 ## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
-When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called _unsupported-browser.html_ in the **theme/web** folder. If desired, you can copy _unsupported-browser.html_ from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.
+When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called *unsupported-browser.html* in the **theme/web** folder. If desired, you can copy *unsupported-browser.html* from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.

@@ -144,15 +144,21 @@ When you filter against associations, null literals can be quite useful. For exa
 
 ## 9 Passing Query Options in the Request Body
 
-If the OData Url is too long to send over the URL due to limitations, you can pass the entire query or some part to the request body. A specific keyword in OData allows you to pass, which is `/$query`. Let's assume that we have a `Products` resource, and we want to send a query request over this resource. The URL would seem like this;
+If the OData URL is too long to send over the URL due to limitations, you can pass the entire query or some part to the request body. The specific `/$query` keyword in OData allows you to pass. 
+
+In an example scenario, you have a `Products` resource and want to send a query request over this resource. The URL would look like this:
 
 POST: `/Products/$query` 
-Content-Type : `text-plain`
+Content-Type: `text-plain`
 
-And the remaining part can be placed in the body of the request. The important point here is that the request **MUST** be **POST**, and `Content-Type` **MUST** be `text-plain` for this operation. Another example is; you can pass some part of the query to the request, in this case, our query looks like this; 
+The remaining part can be placed in the body of the request. The important point here is that the request must be **POST**, and the **Content-Type** must be `text-plain` for this operation. 
+
+Another example scenario involves passing some part of the query to the request. In this case, the query would look like this:
 
 POST: `/Products/$query?$filter=Age gt 65` 
 Content-Type: `text-plain`
 Request Body: `$select=Name,Price`
 
-Please note that; since the **Request Body** is `text-plain`, it **MUST** adhere to the _URL encoding_ principles. Meaning, no spaces, tabs, or newlines are allowed.
+{{% alert type="info" %}}
+Since the **Request Body** is `text-plain`, it **MUST** adhere to the _URL encoding_ principles. Meaning, no spaces, tabs, or new lines are allowed.
+{{% /alert %}}

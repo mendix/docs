@@ -293,3 +293,7 @@ If your app returns the message "An error occurred, please contact your system a
 To ensure that you get full information about MindSphere responses that cause Mendix to return these generic errors, set the **Log Level** for `ODataConsume` to **Trace**, using the instructions in [How To Set Log Levels](/howto/monitoring-troubleshooting/log-levels#standard-log-levels).
 
 ![Example of setting the Log Level for ODataConsume](attachments/mindsphere-app-service/odata-log-levels.png)
+
+{{% alert type="info" %}}
+Setting log levels to trace can have in impact on performance and should only be done during testing.
+{{% /alert %}}

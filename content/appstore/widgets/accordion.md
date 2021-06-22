@@ -35,14 +35,23 @@ Configuring the accordion widget is really straightforward. Drag the widget onto
 
 ### 2.2 Advanced Tab
 
-* **Advanced options** (disabled by default) – determines whether the advanced configuration properties including the visualization tab become visible.
+* **Advanced options** (disabled by default) – determines whether the advanced configuration properties become visible. The advanced properties are:
+
+  | Tab           | Property      |
+  |---------------|---------------|
+  | General       | Animate       |
+  | Visualization | Show icon     |
+  | Visualization | Icon          |
+  | Visualization | Expand icon   |
+  | Visualization | Collapse icon |
+  | Visualization | Animate icon  |
 
 ### 2.3 Visualization Tab
 
 * **Show icon** (Right by default) – determines whether to show the icon on the left or right side of the header content or not at all.
 * **Icon** (configurable when animating the icon) – the icon to be displayed and to be animated in the header.
-* **Expand icon** (configurable when not animating the icon) – the icon to be displayed in the header to indicate the content can be expanded.
-* **Collapse icon** (configurable when not animating the icon) – the icon to be displayed in the header to indicate the content can be collapsed.
+* **Expand icon** (configurable when not animating the icon) – the icon to be displayed in the header to indicate that the content can be expanded.
+* **Collapse icon** (configurable when not animating the icon) – the icon to be displayed in the header to indicate that the content can be collapsed.
 * **Animate icon** (enabled by default) – determines whether the icon is animated during collapsing and expanding of the content.
 
 ## 4 Styling

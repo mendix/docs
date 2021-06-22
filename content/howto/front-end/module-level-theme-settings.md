@@ -108,4 +108,4 @@ Atlas Core provides the base functionalities required by your design system. The
 ## 3 Read More
 
 * [Create a Company Design System](create-a-company-design-system)
-* [Atlas 3 Site](https://www.mendix.com/atlas/)
+* [Atlas 3 Site](https://atlas.mendix.com)

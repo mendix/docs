@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell

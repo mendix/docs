@@ -122,7 +122,7 @@ Modules that contain theme styling should be marked as UI resources modules (rig
 
 When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 
-You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is located in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
+You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
 ![app theme settings](attachments/customize-styling/app-theme-settings.png)
 
@@ -144,7 +144,7 @@ $brand-danger: #e33f4e;
 
 To create a re-usable theme module, do the following:
 
-1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
+1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
    
 2. In your Mendix app directory, create a new file _themesource/mytheme/web/custom-variables.scss_.
 
@@ -205,7 +205,7 @@ export const brand = {
 
 Steps:
 
-1. Create a new module in Studio Pro. Right-click **App <name>** in the App Explorer, then click **Add module…**. Give it a name, For this example the module’s name is “mytheme”.
+1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name, for this example the module’s name is “mytheme”.
    
 2. In your Mendix app directory, create a new file _themesource/mytheme/native/custom-variables.js_.
 
@@ -311,18 +311,18 @@ Studio and Studio Pro combines the different *.scss* files in a certain order an
 The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Teamserver. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
 {{% /alert %}}
 
-If a module contains styling, such as a design system module, it's generally a best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings (see [Create a Theme Module](#create-theme-mod)).
+If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.
 
-The compilation of the *.scss* files is done in the following order:
+The *.scss* files compile in the following order:
 
-1. The _main.scss_ files from the **themesource** folders in the following order:
+1. The _main.scss_ files from the **themesource** folders, specifically:
    1. Non-UI Market Place modules, in alphabetical order.
    1. UI resources modules, ordered as in **App Settings** > **Theme**.
    1. Non-UI user modules, ordered as in the app explorer in Studio Pro.
-1. Custom variables from theme folder (_theme/web/custom-variables.scss_).
-1. _main.scss_ from **theme** folder (_theme/web/main.scss_).
+1. Custom variables from the **theme** folder (*theme/web/custom-variables.scss*).
+1. *main.scss* from the **theme** folder (*theme/web/main.scss*).
 
-If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives hints on what went wrong and what should be fixed:
+If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives information on what went wrong and what should be fixed:
 
 ![theme compilation error](attachments/customize-styling/compilation-error.png)
 

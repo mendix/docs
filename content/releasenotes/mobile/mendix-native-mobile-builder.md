@@ -11,14 +11,12 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.90
 
-**Release date: June 22th, 2021**
+**Release date: June 22nd, 2021**
 
 #### Fixes
 
-* We fixed an issue with how file copying operations are handled by the Native Mobile Toolkit when said files are still
-in use by other processes on the machine.
-* We fixed a behavior on the Native Mobile Toolkit that persisted Firebase-related configurations even when the status
-of the capability is disabled.
+* We fixed an issue with how file copying operations are handled by the Native Mobile Toolkit when files are still in use by other processes on the machine.
+* We fixed a behavior in the Native Mobile Toolkit that persisted Firebase-related configurations even after the Firebase capability was disabled.
 
 ### Release 1.0.89
 

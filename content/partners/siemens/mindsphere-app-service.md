@@ -74,7 +74,7 @@ There are two ways to use the Mendix App Service.
 
 #### 2.3.3 Publishing Assets to Data Hub
 
-To publish your asset information to Mendix Data Hub, you have to create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
+To access your IoT data using the OData technology provided by the Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
 
 1. Go to the **Asset Manager** in the MindSphere Launchpad.
 
@@ -282,7 +282,7 @@ This limitation also applies to REST queries.
 
 It is possible to construct a query in Mendix which is not supported by the MindSphere OData contract. If you attempt an unsupported query you will receive an error message.
 
-For example, if you are measuring the current through a pump you will get an error if you try to sort Time Series data on the value of the `Current` attribute.
+For example, Time Series can only be sorted using the timestamp attribute. If you are displaying a Time Series for the current through a pump using an attribute `current`, you will get an error if you try to sort Time Series data on the value of the `current` attribute.
 
 ## 9 Troubleshooting
 
@@ -290,3 +290,6 @@ For example, if you are measuring the current through a pump you will get an err
 
 If your app returns the message "An error occurred, please contact your system administrator", this could be due to a MindSphere error that Mendix is unable to handle. Always check the log to see if there is more information to help you resolve this issue.
 
+To ensure that you get full information about MindSphere responses that cause Mendix to return these generic errors, set the **Log Level** for `ODataConsume` to **Trace**, using the instructions in [How To Set Log Levels](/howto/monitoring-troubleshooting/log-levels#standard-log-levels).
+
+![Example of setting the Log Level for ODataConsume](attachments/mindsphere-app-service/odata-log-levels.png)

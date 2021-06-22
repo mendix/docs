@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "url redirector", "url"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [URL Redirector](https://appstore.home.mendix.com/link/app/113/) widget enables configuring redirects to other web pages.

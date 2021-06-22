@@ -6,6 +6,10 @@ tags: ["marketplace",  "marketplace component", "box", "boxdev", "box platform"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
+{{% alert type="warning" %}}
+This connector is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.

@@ -19,7 +19,7 @@ To begin testing your push notifications, you will need to build new versions of
 4. Click **Publish for Mobile App Stores**.
 5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
 
-This will give you a *zip* project that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The project contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
+This will give you a *zip* app that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The *zip* app contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
 
 To successfully use FCM push notifications, you must put the *google-services.json* and *GoogleService-Info.plist* files – obtained in the [Downloading the Google Services Config Files](setting-up-google-firebase-cloud-messaging-server#downloading-the-google-services-config-files) section of *Set Up the Google Firebase Cloud Messaging Server* – in your app's **config** folder.
 

@@ -30,7 +30,7 @@ When using a custom design system, you might want to prevent your developers fro
 As the code snippet demonstrates, you can exclude the UI elements of a specific module by grouping them under a module name.
 
 {{% alert type="info" %}}
-By excluding a UI element, you can no longer use it across your project.
+By excluding a UI element, you can no longer use it across your app.
 {{% /alert %}}
 
 ### 2.1 Excluding Layouts and Page Templates

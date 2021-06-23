@@ -32,7 +32,7 @@ Push notifications will not work in XCode's Simulator. For iOS, notifications on
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Deploy Your First Mendix Native Mobile App](deploying-native-app) through the end of the *Preparing Your Project* section. Once you finish those sections, you will have a generated a GitHub repository with all the files you will need.
+* Complete [How to Deploy Your First Mendix Native Mobile App](deploying-native-app) until you have a generated a GitHub repository with all the files you will need.
 * Learn the basics of [Git](https://www.atlassian.com/git) (only if you cannot use the Mendix Native Mobile Builder or need to modify your app manually)
 
 ## 3 Setting up Firebase Cloud Messaging Service {#firebase-setup}

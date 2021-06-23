@@ -93,7 +93,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
 
-    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets).
+    To prevent repeating the previous steps for every page in your app, Studio Pro supports something called layouts. With layouts you can define a base structure for pages in your app. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets).
 
 ## 6 Read More
 

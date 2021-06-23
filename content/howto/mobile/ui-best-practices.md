@@ -24,7 +24,7 @@ For most apps, development teams should include the following roles in their ove
 * **UX design** – Designing the user experience (such as the flow of the app), determining which use cases to support, and deciding how certain functions should work.
 * **Widget development (optional)** – Building new widgets to provide new interaction patterns or UI components that are not offered out of the box by Mendix or available though the Mendix Marketplace.
 
-As mentioned above, not all projects require five different persons each handling one of these roles. Different team configurations are common.
+As mentioned above, not all apps require five different persons each handling one of these roles. Different team configurations are common.
 
 ### 2.2 Roles, Staff, and Types of Apps
 
@@ -127,7 +127,7 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Combine and reuse parts of classes by using the spread operator `…`
 * Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large—if you have multiple custom styling files, use *theme/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
 * *Custom.js* should not contain classes—only `export * from …*` statements to include classes from other files
-* Put the styling for building blocks and page templates in *theme/native/ui_resources/{YOUR_PROJECT_OR_MODULE_NAME}* and include it in *theme/native/main.js*
+* Put the styling for building blocks and page templates in *theme/native/ui_resources/{YOUR_APP_OR_MODULE_NAME}* and include it in *theme/native/main.js*
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
 

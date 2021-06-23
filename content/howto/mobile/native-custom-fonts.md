@@ -121,7 +121,7 @@ To use the new fonts to style your content, follow these instructions:
 
 	{{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
 
-1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](https://docs.mendix.com/howto/mobile/how-to-use-native-styling#1-introduction):
+1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](how-to-use-native-styling):
 
 	{{% image_container width="350" %}}![Custom variables file](attachments/nbui/custom-variables.png){{% /image_container %}}
 

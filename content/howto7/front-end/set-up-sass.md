@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To prepare your app, follow these steps:
 
-1. Open the [app directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
+1. Open the [app directory](/howto7/general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
 2.  Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)

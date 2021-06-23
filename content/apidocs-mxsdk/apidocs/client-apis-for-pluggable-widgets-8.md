@@ -18,7 +18,7 @@ Mendix does not provide you code as an *npm package*, which is the approach comm
 
 This process can be cumbersome, so it is recommended you use this [tools package](https://www.npmjs.com/package/@mendix/pluggable-widgets-tools) which contains the correctly-configured bundlers to work with pluggable widgets. If you follow best practices and use the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget) to scaffold your widget, then this package is added automatically.
 
-## 3 Standard Properties
+## 3 Standard Properties {#standard-properties}
 
 Alongside the props that correspond to the properties specified in widget definition XML file, the props listed below are always passed to a client component.
 

@@ -59,8 +59,8 @@ The **Display Information** section properties are described in the table below:
 
 | Property         | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain attributes of the [Workflow entity](workflow-properties#data), the value of which will be displayed to the end-users. For example, you can select a **FullName** attribute from the **Employee Onboarding** data to display the name of the new employee. |
-| Task Description | **Task Description** is a description of the workflow displayed in the running app. The **Task Description** can contain attributes of the [Workflow entity](workflow-properties#data), the value of which will be displayed to the end-users. For example, you can add a **PhoneModel** attribute from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
+| Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FullName** attribute value from the **Employee Onboarding** data to display the name of the new employee. |
+| Task Description | **Task Description** is a description of the workflow displayed in the running app. The **Task Description** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **PhoneModel** attribute value from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
 
 ### 2.4 Due Date Section {#due-date}
 

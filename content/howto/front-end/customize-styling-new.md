@@ -1,6 +1,5 @@
 ---
 title: "Customize Styling"
-category: "Front-End"
 parent: "atlas-ui"
 menu_order: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
@@ -15,7 +14,7 @@ This page describes how developers can change the styling of apps and create re-
 
 Developers have several options to change an app's look and feel. Depending on whether you are a Studio or Studio Pro user, there are different options.
 
-### 2.1 Change the Default Theme Settings
+### 2.1 Changing the Default Theme Settings
 
 When tailoring your app's look, a simple first step is to change the theme settings. This quickly adjusts the theme to a company's brand by changing the colors.
 
@@ -25,7 +24,7 @@ For Studio Pro users there are more options to change the default theme settings
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
-### 2.2 Add Custom Styling
+### 2.2 Adding Custom Styling
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
@@ -97,15 +96,15 @@ See the following fragment as an example of how additional CSS can be added to y
 }
 ```
 
-## 3 Create Re-Usable Styling
+## 3 Creating Re-Usable Styling
 
-The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](customize-styling-new) or a [company design system](create-a-company-design-system).
+The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](#create-theme-mod) or a [company design system](create-a-company-design-system).
 
 Adding styling to a module is similar to adding styling to an app, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
 For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information see [How to Extend design properties](extend-design-properties)
 
-## 4 Create a Theme Module {#create-theme-mod}
+## 4 Creating a Theme Module {#create-theme-mod}
 
 A theme module is useful for styling which can be easily re-used through modules across apps. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be re-used to create a consistent look and feel across apps.
 
@@ -237,7 +236,7 @@ If you get errors, double check if the imports point to valid files.
 When this approach is used we recommend you create a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
-## 5 Preview a Styling Change {#previewing-styling}
+## 5 Previewing a Styling Change {#previewing-styling}
 
 Depending on the type of app you are building, the preview of styling or a theme change is different.
 
@@ -324,7 +323,7 @@ For more details on styling native mobile apps see the [Native Mobile Styling Re
 
 Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling and variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
 
-### 8.1 Disable Default Web Widget Styling
+### 8.1 Disabling Default Web Widget Styling
 
 To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **<Mendix app>/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
@@ -428,7 +427,7 @@ All supported exclusion variables for web are:
 - $exclude-typography-helpers
 ```
 
-### 8.2 Disable Default Native Mobile Widget Styling
+### 8.2 Disabling Default Native Mobile Widget Styling
 
 To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **<Mendix app>/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 

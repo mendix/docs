@@ -11,7 +11,7 @@ In the **Administrator** tab of **App Security**, you can change the default cre
 
 ![](attachments/administrator/project-security-administrator.png)
 
-## 2 Administrator Properties
+## 2 Administrator Properties {#administrator-properties}
 
 In the **Administrator** tab the following properties are available:
 

@@ -81,20 +81,3 @@ To design the background of the view, follow these steps:
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 
 You can use other custom widgets (for example, [EnumClass](https://appstore.home.mendix.com/link/app/2641/)) to change the classes dynamically at runtime. 
-
-## 4 Developing This Marketplace Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe/issues).

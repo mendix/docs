@@ -25,7 +25,7 @@ To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 
 {{% /alert %}}
 

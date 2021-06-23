@@ -24,11 +24,11 @@ The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module cont
 
     ![Example entity](attachments/web-actions/entity.png)
 
-2.  Drag the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
+2.  Drag and drop the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
 
     ![Example nanoflow](attachments/web-actions/nanoflow.png)
 
-3.  Double-click the **Take picture** action and select which object you are passing to the action to fill with the image properties:
+3.  Double-click **Take picture** action and select which object you are passing to the action to fill with the image properties:
 
     ![Properties](attachments/web-actions/properties.png)
 

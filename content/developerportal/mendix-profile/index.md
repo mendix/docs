@@ -196,7 +196,7 @@ You can also view details in the following sections.
 
 ### 9.1 Latest Messages
 
-In this section, you can see all the notifications from [Buzz](../collaborate/buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+In this section, you can see all the notifications from [Buzz](/developerportal/collaborate/buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
 
 ### 9.2 Documents
 
@@ -279,7 +279,7 @@ For more information, see the following:
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Manage App API Keys](../settings/api-key)
+* [How to Manage App API Keys](/developerportal/settings/api-key)
 
 ### 10.6 Advanced
 

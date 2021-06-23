@@ -4,14 +4,16 @@ parent: "oql-functions"
 tags: ["studio pro"]
 ---
 
+## 1 Description
 
-The LENGTH function returns the length of a String value.
+The `LENGTH` function returns the length of a string value.
+
+## 2 Syntax
 
 The syntax is as follows:
 
-```
+```sql
 LENGTH ( expression )
 ```
 
-**expression**
-Specifies an expression of type String.
+`expression` specifies an expression of type string.

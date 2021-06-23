@@ -39,7 +39,7 @@ This domain model mirrors the asset manager data model, which is described in de
 
 A **GetQueryParams** object is used to control which objects which are returned. This object needs to be populated and passed to the microflow action. If no GetQueryParams object is passed, then the defaults are used.
 
-GetQueryParams has the following attributes, which match the parameters of the APIs described on the MindSphere developer site here: [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api-swagger-3-9-0.html).
+GetQueryParams has the following attributes, which match the parameters of the APIs described on the MindSphere developer site here: [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api.html).
 
 | **Attribute** | **Description**                                                                                                    | **Default** | **Example**          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------- |
@@ -96,7 +96,7 @@ This populates the following entities in the domain model:
 * AspectType
 * Variable
 
-For more information about these entities, and what is returned by the *GET /assets* API call, see the *Models* and *GET /assets* sections of the [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api-swagger-3-9-0.html).
+For more information about these entities, and what is returned by the *GET /assets* API call, see the *Models* and *GET /assets* sections of the [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api.html).
 
 {{% alert type="warning" %}}
 By default, MindSphere limits the data returned to the first ten assets. This behavior can be modified through a GetQueryParams object.

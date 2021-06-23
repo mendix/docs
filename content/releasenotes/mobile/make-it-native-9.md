@@ -23,4 +23,4 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 **Release date: 30th March 2021**
 
-This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app project on any supported mobile platform.
+This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.

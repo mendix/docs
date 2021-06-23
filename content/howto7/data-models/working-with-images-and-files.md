@@ -53,7 +53,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![](attachments/18448741/18582126.png)
 
-6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
+6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](/howto7/front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
 
     ![](attachments/18448741/18582125.png)
 
@@ -63,8 +63,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 5 Navigation and Security
 
-1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
-2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [How to Create a Secure App](../security/create-a-secure-app).
+1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure).
+2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [How to Create a Secure App](/howto7/security/create-a-secure-app).
 
 ## 6 Read More
 
@@ -73,6 +73,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   [How to Work with Object Events](working-with-object-events)
 *   [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 *   [How to Set Up Data Validation](setting-up-data-validation)
-*   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Stories](/developerportal/collaborate/stories)
 

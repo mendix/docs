@@ -89,9 +89,8 @@ To view your app on a mobile device, follow these steps:
 
     ![View Current App](attachments/publishing-app/view-current-app.jpg)
 
-3. Scan the QR code to view your app on your mobile device: 
+3. Scan the QR code to view your app on your mobile device.
 
-    ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile.jpg)
 
 Your app is opened on your mobile device.
 

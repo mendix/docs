@@ -14,7 +14,7 @@ For this how-to, Mendix Studio Pro v8.15.1 is required. If you are using an olde
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
 
-Follow the sections below through [Building Your Native App Project](#building-app-project) to complete your builds. For further customization options for your local builds, see the [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below.
+Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. For further customization options for your local builds, see the [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below.
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -77,7 +77,7 @@ If GitHub is enabled, in addition to the previous steps, it will do the followin
 
 * Commit the whole local copy to the project's repository
 
-## 4 Building Your Native Mobile App Project{#building-app-project}
+## 4 Building Your Native Mobile App {#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the app with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 

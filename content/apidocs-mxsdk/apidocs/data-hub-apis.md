@@ -6,7 +6,7 @@ menu_order: 20
 tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
 ---
 
-## 1. Introduction
+## 1 Introduction
 
 The [Data Hub APIs](#datahubapis) are OpenAPI 3.0 specs available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html.
 
@@ -26,7 +26,7 @@ When using any of the Data Hub APIs authorization must be included in the header
 To use the Mendix Data Hub a license is required.
 {{% /alert %}}
 
-## 2. Authentication and Authorization{#pat-token}
+## 2 Authentication and Authorization {#pat-token}
 
 When making calls to the Data Hub APIs, authentication and authorization have to be included in the request headers. Users must send a Personal Access Token (PAT) that will enable access to the organization's Data Hub. Mendix users can obtain a PAT as described in [Generating your Personal Access Token](#generatepat).
 
@@ -38,7 +38,7 @@ For every request that is made to the Data Hub API, you must include the followi
 
 where you insert the PAT in place of the <*your_PAT_Token*> string. This line will ensure that you have access your organization’s Data Hub.
 
-### 2.2. Generating your Personal Access Token {#generatepat}
+### 2.2 Generating Your Personal Access Token {#generatepat}
 
 Mendix users (with a registered account) can obtain a PAT using the Mendix **Warden** app by following these steps:
 
@@ -68,17 +68,16 @@ Mendix users (with a registered account) can obtain a PAT using the Mendix **War
 
 8. Click **Close** to return to the **Personal Access Tokens** home screen.
 
-### 2.3. Operations from the Warden Home Screen
+### 2.3 Operations from the Warden Home Screen
 
 The **Warden Home Screen** displays a list of all the tokens:
 
 ![token list](attachments/dta-hub-apis/token-list.png)
 
 * **Last Used:** indicates when the token was last used
-
 * Delete unused tokens by clicking the "bin" icon for the token
 
-## 3. Data Hub OpenAPI Index Page {#datahubapis}
+## 3 Data Hub OpenAPI Index Page {#datahubapis}
 
 The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) OpenAPI (formerly Swagger) specifications that can be accessed from the Data Hub PI Index Page at: <https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html>.
 
@@ -98,13 +97,13 @@ The Data Hub API v2 version  is now deprecated and will be removed. Users should
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 4. The Data Hub Search API {#search-API}
+## 4 Data Hub Search API {#search-API}
 
 The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
-## 5. The Data Hub Registration API {#registration-api}
+## 5 Data Hub Registration API {#registration-api}
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments and services or data sources.
 
@@ -113,13 +112,13 @@ There are also PUT calls to *update* assets that are already registered and also
 
 Apps that consume registered assets can also be registered to ensure that a complete network of shared assets can be maintained.
 
-## 6. Data Hub Transform OpenAPI Spec {#transform}
+## 6 Data Hub Transform OpenAPI Spec {#transform}
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the registration request body for the PUT published endpoints for the Data Hub API. The Transform API extracts the information from the **dependencies.json** file and the response can be used in the request bodies for the PUT calls to the Data Hub API.
 
 Information that is not returned by the Transform API and which should be specified separately is listed in [Optional Values not Obtained from **dependencies.json**](#not-in-depfile)
 
-### 4.1 Using the Transform API
+### 6.1 Using the Transform API
 
 The Transform API is available at: https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html.
 
@@ -129,21 +128,21 @@ The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-### 4.2 Location of the dependencies.json file of an App
+### 6.2 Location of the dependencies.json File of an App
 
 For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**.
 
 This file has to be inserted in the call to the API in *escaped json format*.
 
-### 4.3 Making the API Call
+### 6.3 Making the API Call
 
 When making the call to the API the following two object have to be specified.
 
-#### 4.3.1 `DependenciesJsonString`
+#### 6.3.1 `DependenciesJsonString`
 
 Insert the `dependencies.json` file of the app *in escaped json format*.
 
-#### 4.3.2 `EndpointLocationConstants`
+#### 6.3.2 `EndpointLocationConstants`
 
 This object must specify the location constants for the published endpoints that are referred to in the `dependencies.json` file.
 
@@ -157,7 +156,7 @@ This object must specify the location constants for the published endpoints that
       "Value": "https://hr.acmecorp.test/employeeservice/v2"
     }
 
-### 4.4 Optional Values not Obtained from dependencies.json {#not-in-depfile}
+### 6.4 Optional Values not Obtained from dependencies.json {#not-in-depfile}
 
 The `dependencies.json` file response body does not contain the values of the following objects that are specific to the Catalog registration of a data source:
 
@@ -170,4 +169,3 @@ The `dependencies.json` file response body does not contain the values of the fo
 
 They can be added to the generated response body.
 When the above attributes are not specified, the registration will be made using default values. The **Discoverable**, **Validated**, and **Tags** can also be added when the asset is curated in the Data Hub Catalog.
-

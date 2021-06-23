@@ -27,7 +27,7 @@ To use push notifications with apps created with the Native Mobile Builder, make
 {{% /alert %}}
 
 
-## 3 Creating a Project and Configuring Notifications
+## 3 Creating an App and Configuring Notifications
 
 Follow the instructions below to set up your first local notification:
 

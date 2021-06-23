@@ -38,7 +38,7 @@ For every request that is made to the Data Hub API, you must include the followi
 
 where you insert the PAT in place of the <*your_PAT_Token*> string. This line will ensure that you have access your organization’s Data Hub.
 
-### 2.2 Generating your Personal Access Token {#generatepat}
+### 2.2 Generating Your Personal Access Token {#generatepat}
 
 Mendix users (with a registered account) can obtain a PAT using the Mendix **Warden** app by following these steps:
 
@@ -97,13 +97,13 @@ The Data Hub API v2 version  is now deprecated and will be removed. Users should
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-## 4 The Data Hub Search API {#search-API}
+## 4 Data Hub Search API {#search-API}
 
 The [Search OpenAPI](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in the Data Hub that satisfy specified search criteria.
 
 The API also includes calls to retrieve all versions of a data source and full details of specific services.
 
-## 5 The Data Hub Registration API {#registration-api}
+## 5 Data Hub Registration API {#registration-api}
 
 The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments and services or data sources.
 
@@ -128,7 +128,7 @@ The base URL for all calls to the API is: https://hub.mendix.com/rest/transform/
 For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
 {{% /alert %}}
 
-### 6.2 Location of the dependencies.json file of an App
+### 6.2 Location of the dependencies.json File of an App
 
 For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**.
 

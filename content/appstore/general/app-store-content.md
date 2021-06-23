@@ -29,48 +29,48 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Downloading Content from the Marketplace {#downloading}
 
-To download content from the Marketplace via Studio Pro, follow these steps:
+To download a component from the Marketplace via Studio Pro, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
 
-2. Open the app in which you want to install content from the Marketplace.
+2. Open the app in which you want to install the component from the Marketplace.
 
 3.  Click the Marketplace icon in the top menu bar to open it in Studio Pro:
 
-	![marketplace icon](attachments/app-store-content/toolbar.png)
+    ![Marketplace icon](attachments/app-store-content/toolbar.png)
 
-4.  On the Marketplace overview page, find the content to use in your app. The **Categories** menu item gives you an overview of which types of content you can download. You can use the **Search** bar to find the component.
+4.  On the Marketplace overview page, find the component to use in your app. The **Categories** menu item gives you an overview of which types of content you can download. You can use the **Search** bar to find the component.
 
-	![search result for rating](attachments/app-store-content/marketplace.png)
+	![Search result for rating](attachments/app-store-content/marketplace.png)
     
-	![{{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.{{% /alert %}}
+	 {{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.{{% /alert %}}
 
 5.  Click the component or **Read more** to view the details of the component.
 
-	![item details](attachments/app-store-content/item-details.png)
+	![Details of Rating widget](attachments/app-store-content/item-details.png)
 
-6. Click **Download** to download the content to your app. 
+6. Click **Download** to download the component to your app. 
 
-    Make sure that you download the correct version. The version must be compatible with the Studio Pro version that you use. Do check the **Mendix Version** on the **Overview** tab. Do not download the content that requires a higher **Mendix version** than the Studio Pro that you use. You can download older versions of a component on the **All Versions** tab.
+    Make sure that you download the correct version. The version must be compatible with the Studio Pro version that you use. Do check the **Mendix Version** on the **Overview** tab. Do not download a compontent that requires a higher **Mendix version** than the Studio Pro that you use. You can download older versions of the component on the **All Versions** tab.
 
-    ![all versions tab](attachments/app-store-content/versions.png)
+    ![All Versions tab](attachments/app-store-content/versions.png)
 
-After you download the content:
+After you download a component:
 
-* If the content is an app, it is created on your hard drive and is opened in Studio Pro
-* If the content is a component, it is downloaded directly into your app
+* If the component is an app, it is created on your hard drive and is opened in Studio Pro
+* If the component is not an app, it is downloaded directly into your app
 
 ## 4 Using Content in Studio Pro
 
-After you download the content, you can use the content in your app. 
+After you download a component, you can use the component in your app. 
 
 {{% alert type="info" %}}
 
-For more information on how the content works, check the **Documentation** tab on the page of the content in the Marketplace.
+For more information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
 
 {{% /alert %}}
 
-![documentation tab](attachments/app-store-content/widget-documentation.png)
+![Documentation tab](attachments/app-store-content/widget-documentation.png)
 
 ### 4.1 Using a Widget  {#widget}
 
@@ -84,17 +84,17 @@ To add the Rating widget from the Marketplace via Studio Pro, follow these steps
 
 2. Click **Add widget**. The **Select Widget** dialog box opens.
 
-   ![add widget](attachments/app-store-content/add-widget.png)
+   ![Add widget](attachments/app-store-content/add-widget.png)
 
 3. In the **Filter** bar, enter *Rating*. The downloaded widget is found in the **Add-on** widgets category. 
 
-   ![rating widget found](attachments/app-store-content/select-widget.png)
+   ![Rating widget highlighted in Select Widget dialog box](attachments/app-store-content/select-widget.png)
 
 4. Click the **Rating** widget and then click **Select**. 
 
 5. In the page of your app, click where you want to drop the widget. After you release the mouse button, the widget is placed in the page.
 
-   ![widget dropped in the page](attachments/app-store-content/widget-dropped-in-page.png)
+   ![Rating widget in the page](attachments/app-store-content/widget-dropped-in-page.png)
 
    {{% alert type="info" %}}
    If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the *.mpk* file from the **widgets** folder.
@@ -108,16 +108,16 @@ To configure the widget, follow these steps:
 
 1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
-   ![error pane](attachments/app-store-content/widget-errors.png)
+   ![Errors pane](attachments/app-store-content/widget-errors.png)
 
 2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
-   ![edit rating dialog box](attachments/app-store-content/edit-rating.png)
+   ![Edit Rating dialog box](attachments/app-store-content/edit-rating.png)
 
 
 3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
-   ![select attribute](attachments/app-store-content/select-attribute.png)
+   ![ProductRating selected in Select Attribute dialog box](attachments/app-store-content/select-attribute.png)
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
 
@@ -129,7 +129,7 @@ In this section, we will use the [Email with Templates](/appstore/modules/email-
 
 #### 4.2.1 Adding the Module
 
-To add the Email with template module from the Marketplace via Studio Pro, follow these steps:
+To add the Email with Template module from the Marketplace via Studio Pro, follow these steps:
 
 1. [Download](#downloading) the Email with Templates module from the marketplace to your app. The **Import Module** dialog box opens.
 
@@ -138,9 +138,9 @@ To add the Email with template module from the Marketplace via Studio Pro, follo
    * **Add as a new module** – if you select this option, new entities are created in your app
    * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
    
-   ![import module](attachments/app-store-content/import-module.png)
+   ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
-   {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your content in the future and understand the implications of your changes.{{% /alert %}}
+   {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 
@@ -148,7 +148,7 @@ To add the Email with template module from the Marketplace via Studio Pro, follo
 
 5. Open the **App Explorer** and find the **EmailTemplate** module.
 
-![module in the app explorer](attachments/app-store-content/email-template-app-explorer.png)
+	![EmailTemplate module](attachments/app-store-content/email-template-app-explorer.png)
 
 Unlike a widget, you can see a module in your App Explorer. A module contains a domain model, pages, and microflow logic. A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). In addition, a module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
@@ -160,7 +160,7 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, when you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
-For details on configurating the Email with Templates module in Studio Pro, see [Email with Templates](/appstore/modules/email-with-templates).
+For details on configuring the Email with Templates module in Studio Pro, see [Email with Templates](/appstore/modules/email-with-templates).
 
 ### 4.3  Using an App or Layout {#project-layout}
 
@@ -172,7 +172,7 @@ You cannot create a new app in an existing repository that is not empty.
 
 ### 4.4 Using a Theme
 
-Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the app structure – in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your app. You can find out which theme is active for your app in the app project **Settings**.
+Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the app structure – in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your app. You can find out which theme is active for your app in the app **Settings**.
 
 {{% alert type="info" %}}
 If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the ZIP file from the **theme** folder.

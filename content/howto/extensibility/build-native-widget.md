@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
@@ -540,7 +540,7 @@ You will also want Mendix developers to be able to fill content in the group box
 	```tsx
 	render(): ReactNode {
 		const { children, headerCaption } = this.props;
-
+	
 		return (
 			<View style={this.styles.container}>
 				<View style={this.styles.header}>
@@ -860,9 +860,9 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 				{this.renderIcon()}
 			</View>
 		);
-
+	
 		const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
-
+	
 		return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
 	};
 	```
@@ -1119,52 +1119,52 @@ First change the widget property configuration:
 	c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
 
  	```xml
-	<?xml version="1.0" encoding="utf-8" ?>
-	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-		xmlns="http://www.mendix.com/widget/1.0/"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-		<name>Group box</name>
-		<description />
-		<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
-		<properties>
-			<propertyGroup caption="General">
-				<propertyGroup caption="General">
-					<property key="content" type="widgets" required="false">
-						<caption>Content</caption>
-						<description>Widgets to place inside.</description>
-					</property>
-					<property key="collapsible" type="enumeration" defaultValue="no">
-						<caption>Collapsible</caption>
-						<description />
-						<enumerationValues>
-							<enumerationValue key="no">No</enumerationValue>
-							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-							<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-						</enumerationValues>
-					</property>
-				</propertyGroup>
-				<propertyGroup caption="Header">
-					<property key="headerCaption" type="string" required="false">
-						<caption>Caption</caption>
-						<description />
-					</property>
-					<property key="expandIcon" type="icon" required="false">
-						<caption>Expand icon</caption>
-						<description>Icon used to indicate that the group box can be expanded.</description>
-					</property>
-					<property key="collapseIcon" type="icon" required="false">
-						<caption>Collapse icon</caption>
-						<description>Icon used to indicate that the group box can be collapsed.</description>
-					</property>
-				</propertyGroup>
-				<propertyGroup caption="Common">
-					<systemProperty key="Name" />
-					<systemProperty key="Visibility" />
-				</propertyGroup>
-			</propertyGroup>
-		</properties>
-	</widget>
-	```
+ 	<?xml version="1.0" encoding="utf-8" ?>
+ 	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
+ 		xmlns="http://www.mendix.com/widget/1.0/"
+ 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+ 		<name>Group box</name>
+ 		<description />
+ 		<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
+ 		<properties>
+ 			<propertyGroup caption="General">
+ 				<propertyGroup caption="General">
+ 					<property key="content" type="widgets" required="false">
+ 						<caption>Content</caption>
+ 						<description>Widgets to place inside.</description>
+ 					</property>
+ 					<property key="collapsible" type="enumeration" defaultValue="no">
+ 						<caption>Collapsible</caption>
+ 						<description />
+ 						<enumerationValues>
+ 							<enumerationValue key="no">No</enumerationValue>
+ 							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
+ 							<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
+ 						</enumerationValues>
+ 					</property>
+ 				</propertyGroup>
+ 				<propertyGroup caption="Header">
+ 					<property key="headerCaption" type="string" required="false">
+ 						<caption>Caption</caption>
+ 						<description />
+ 					</property>
+ 					<property key="expandIcon" type="icon" required="false">
+ 						<caption>Expand icon</caption>
+ 						<description>Icon used to indicate that the group box can be expanded.</description>
+ 					</property>
+ 					<property key="collapseIcon" type="icon" required="false">
+ 						<caption>Collapse icon</caption>
+ 						<description>Icon used to indicate that the group box can be collapsed.</description>
+ 					</property>
+ 				</propertyGroup>
+ 				<propertyGroup caption="Common">
+ 					<systemProperty key="Name" />
+ 					<systemProperty key="Visibility" />
+ 				</propertyGroup>
+ 			</propertyGroup>
+ 		</properties>
+ 	</widget>
+ 	```
 
 5. Save the *.xml* file.
 
@@ -1264,11 +1264,11 @@ Now support this section's two features with your display component:
 	render(): ReactNode {
 		const renderedHeader = this.renderHeader();
 		const renderedContent = this.renderContent();
-
+	
 		if (!renderedHeader && !renderedContent) {
 			return null;
 		}
-
+	
 		return (
 			<View style={this.styles.container}>
 				{renderedHeader}
@@ -1456,7 +1456,6 @@ The developer needs to have the class names memorized to apply a certain group b
 7. Rerun the app locally and verify the new success style in the Make It Native App:
 
 	![mobile success](attachments/build-native-widget/11-success.png)
-	
 ## 4 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)

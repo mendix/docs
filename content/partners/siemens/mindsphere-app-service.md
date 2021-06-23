@@ -297,3 +297,10 @@ To ensure that you get full information about MindSphere responses that cause Me
 {{% alert type="info" %}}
 Setting log levels to trace can have in impact on performance and should only be done during testing.
 {{% /alert %}}
+
+### 9.2 Internal Server Error and Long Names
+
+Publishing contracts to Data Hub can fail with a *HTTP 500 INTERNAL SERVER ERROR* when the combination of Asset Type,  Aspect Type, and Aspect Name is very long. The publish operation will fail if the string `AGGR_{AspectType}_{AspectName}_{AssetType}` is more than 200 characters long.
+
+For example, consider an **Asset Type** *CNGTurbine*, with **Aspect Type** *PowerConsumption* and **Aspect** *PrimaryMotor*. This would produce the string `AGGR_PowerConsumption_PrimaryMotor_CNGTurbine` (45 characters) which is less than 200 characters long and can be published successfully. If it were longer than 200 characters, publication would fail.
+

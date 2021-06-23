@@ -7,7 +7,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 ## 1 Introduction
 
-This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean project.
+This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
 **This how-to will teach you how to do the following:**
 
@@ -34,7 +34,7 @@ To get more information, double-click or right-click the warning.
 
 {{% /alert %}}
 
-* This will not affect the project in this version of Studio Pro, but it may cause problems when upgrading
+* This will not affect the app in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert type="warning" %}}

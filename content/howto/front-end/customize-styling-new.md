@@ -325,7 +325,7 @@ Mendix provides styling for the platform supported widgets in the Atlas core mod
 
 ### 8.1 Disabling Default Web Widget Styling
 
-To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **<Mendix app>/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a web widget, open the _exclusion-variables.scss_ file located in the folder **{Mendix app}/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusion-variables.scss_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
 Pick the button widget as an example. The success button is by default styled as in **Figure 1**:
 
@@ -429,7 +429,7 @@ All supported exclusion variables for web are:
 
 ### 8.2 Disabling Default Native Mobile Widget Styling
 
-To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **<Mendix app>/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
+To disable the default styling of a native mobile widget, open the _exclusionVariables.js_ file located in the folder **{Mendix app}/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the _exclusionVariables.js_ file in the app specific theme folder point to the exclusion variables file in your theme module.
 
 Pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
 

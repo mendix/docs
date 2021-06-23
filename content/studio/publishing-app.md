@@ -65,7 +65,7 @@ The Mendix Cloud is the default deployment option when you get started with the 
 
 ## 4 Viewing Your App {#viewing-your-app}
 
-After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
+After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app and manage app users. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
 
 ### 4.1 Viewing Your App in a Browser 
 

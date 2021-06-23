@@ -297,7 +297,7 @@ The bullets below describe the file structure for the theme folder and for modul
 		* **native** — This folder contains re-useable native mobile resources.
 			* *main.js* — This file is the starting point for the module native mobile based styling.
 			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
-		* **public** - This folder can contain other re-useable resources, for example a custom *login.html* page.
+		* **public** — This folder can contain other re-useable resources, for example a custom *login.html* page, or images and fonts to be used from your web styling.
 
 ## 7 Styling output {#styling-output}
 
@@ -305,7 +305,7 @@ With the modular structure of the styling of Mendix app, the styling files are p
 
 ### 7.1 Web Apps
 
-Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output and necessary resources are saved in a folder named **theme-cache**.
+Studio and Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
 {{% alert type="info" %}}
 The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. It is required to see the correct styling in Studio, which is why it's strongly recommended to commit any changes when the styling has changed.
@@ -325,6 +325,12 @@ The *.scss* files compile in the following order:
 If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives information on what went wrong and what should be fixed:
 
 ![theme compilation error](attachments/customize-styling/compilation-error.png)
+
+The content from the *public* folder will be copied to the same folder as the `theme.compiled.css` file when deployed, which allows you to reference those resources using a relative path in the theme module's scss.
+
+For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg)`.
+
+Note that public folders will be copied in the same order as compilation of *.scss* files, if two modules have the same public resource, the last to be copied will end up in the deployment folder.
 
 ### 7.2 Native Mobile Apps
 

@@ -233,7 +233,7 @@ The look and feel of a Mendix application is governed by the [UI resources packa
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 

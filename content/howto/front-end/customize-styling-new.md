@@ -271,7 +271,7 @@ The bullets below describe the file structure for the theme folder and for modul
 		* *main.js* — This file is the starting point for adding custom styling.
 		* *exclusionVariables.js* — This file contains variables that can be toggled to optionally exclude Atlas core styling.
 * **themesource** — This folder contains module specific styling and resources. Every module has a folder that can contain styling resources.
-	* **Atlas_core** (required) — This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of a app as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
+	* **Atlas_core** (required) — This folder from the Atlas core module which is the core for all Mendix apps. This module should always be part of an app as other modules depend on this and it contains all the styling for the Mendix widget. The content of this folder should not be changed as that will cause issues with migrating/updating to newer versions. For information about disabling default styling from this module see [Disabling Default Styling](#disable-default) below.
 		* **web** — This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
 		* **native** — This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
 	* **MODULE_NAME** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.

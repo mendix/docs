@@ -182,7 +182,7 @@ Mendix Studio Pro 9 and later support a new format for widgets and JS actions, a
 
 In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
 
-Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in a app. The same rules apply as with any React Native app.
+Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 
 ### 6.1 Adding Dependencies Which Support Auto-Linking
 
@@ -197,7 +197,7 @@ If a dependency does not suport auto-linking follow the steps of the dependency'
 
 ## 7 Removing Dependencies{#removing-dependencies}
 
-As the requirements of a app might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
+As the requirements of an app might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
 ### 7.1 Removing Dependencies Which Support Auto-Linking
 

@@ -56,7 +56,7 @@ for further debugging.
 
 ### 5.1 Mobile Toolkit Configuration Structure
 
-App-specific information is defined in a top level **config** file. The best way to derive possible config options is to configure a app initially with the Mendix Native Mobile Builder and note the configuration keys.
+App-specific information is defined in a top level **config** file. The best way to derive possible config options is to configure an app initially with the Mendix Native Mobile Builder and note the configuration keys.
 
 **<details><summary>To see the supported properties as of config version 2, click here.</summary>**
 These are the supported properties as of config version 2:

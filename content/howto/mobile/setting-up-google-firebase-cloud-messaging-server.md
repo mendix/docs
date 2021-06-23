@@ -94,7 +94,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 1. On this tab, upload either your APNs key or your APNs certificate(s).
 
-## 6 Setting Up a Service Account
+## 6 Setting Up a Service Account {#setting-up-a-service-account}
 
 In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 

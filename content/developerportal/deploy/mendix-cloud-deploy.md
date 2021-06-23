@@ -129,7 +129,7 @@ An app can also be deployed without using Studio Pro. To do this, follow these s
 
 The package will now be deployed to the cloud.
 
-## 4 Deploy the App to an Environment
+## 4 Deploy the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 

@@ -11,7 +11,7 @@ There are many custom settings in Mendix, most of which are described in [Runtim
 
 However, a few of the more commonly used custom settings can be misunderstood or have effects that one might not expect. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
-## 2 Session Duration
+## 2 Session Duration {#session-duration}
 
 ### 2.1 Web Client Settings
 

@@ -3,6 +3,7 @@ title: "Workflow Call"
 parent: "workflow-activities"
 menu_order: 40
 tags: ["studio pro", "call workflow", "workflow call"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="warning" %}}

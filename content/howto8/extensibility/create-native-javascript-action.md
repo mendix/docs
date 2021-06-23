@@ -84,7 +84,7 @@ In this section, you will create a normal custom developer app to learn the proc
 
 Now you will build a native custom developer app and install it on your phone:
 
-1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto8/mobile/deploying-native-app#3-getting-your-tokens) section of *Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to get your authentication codes.
+1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto8/mobile/deploying-native-app#getting-your-tokens) section of *Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to get your authentication codes.
 1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
 
 	``` shell
@@ -99,7 +99,7 @@ Now you will build a native custom developer app and install it on your phone:
 
 	![Github template repo](attachments/create-native-javascript-action/github-template-repo.png)
 
-1. To build the app for the first time, complete the [Build Your Developer App](/howto8/mobile/how-to-devapps#3-build-your-developer-app) section of *Create a Custom Developer App* using this build command:
+1. To build the app for the first time, complete the [Build Your Developer App](/howto8/mobile/how-to-devapps#build-your-developer-app) section of *Create a Custom Developer App* using this build command:
 
 	``` shell
 	native-builder.exe build dev-app --project-name "Native NFC App"

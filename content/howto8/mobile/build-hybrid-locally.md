@@ -97,7 +97,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Install [AndroidStudio](https://developer.android.com/studio)
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
 * Install JDK 1.8
-* Create a keystore using [generating-a-keystore](/refguide/managing-app-signing-keys#3-1-generating-a-keystore)
+* Create a keystore using [Generating a Keystore](/refguide/managing-app-signing-keys#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
 ### 3.1 Prepare Your App for Building

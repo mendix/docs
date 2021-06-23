@@ -131,7 +131,7 @@ To add content to the Marketplace, follow these steps:
 	![](attachments/share-app-store-content/general.jpg)
 
 6. Click **Upload an Image** to upload an icon for the component.
-7.  On each page of the upload flow, click one of the following buttons:
+7.  <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
@@ -144,7 +144,7 @@ To add content to the Marketplace, follow these steps:
 	* If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
 		* When you are finished, click **Save**
 
-9.  If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
+9.  <a name="version"></a>If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
 	![](attachments/share-app-store-content/package.jpg)
 
@@ -168,7 +168,7 @@ To add content to the Marketplace, follow these steps:
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
 
-11. Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+11. <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 	![](attachments/share-app-store-content/enable.png)
 	

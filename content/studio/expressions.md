@@ -14,15 +14,16 @@ Expressions changes a value based on a function or combination of functions.
 
 You can use expressions for workflows, pages, and microflows. The expressions are usually used to configure a condition for a certain activity or property, for example, a condition for a decision in a microflow or a workflow. 
 
-You can use expression for the following elements in a workflow:
+You can use expressions for the following elements in a workflow:
 
 * [Decision](workflows-general-activities)
 * **Due date** property of a [workflow](workflow-properties) and a [user task](workflows-user-task)
 
-Expression can be used in the following properties on a page:
+Expressions can be used in the following properties on a page:
 
 * Conditional editability of a widget
 * Conditional visibility of a widget
+* **Content** property of a [text widget](page-editor-widgets-text)
 
 Expressions can be used for the following activities in a microflow: 
 

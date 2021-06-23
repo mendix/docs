@@ -17,7 +17,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 * Complete [How to Get Started with Native Mobile](getting-started-with-native-mobile)
 * Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](deploying-native-app)
 
-## 3 Build Your Developer App
+## 3 Build Your Developer App {#build-your-developer-app}
 
 1. Run Mendix Native Mobile Builder from your project: 
 ![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png)

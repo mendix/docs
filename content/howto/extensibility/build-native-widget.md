@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
@@ -1320,7 +1320,7 @@ The last thing to do is change the container component so that the properties ge
 
 Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget receives basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
-1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
+1. Open **test/MxTestProject/theme/styles/native/custom.js**. This file will let you define a custom default style for your group box widget.
 
 2. Add the following imports and constant to *custom.js* to define a default custom style:
 

@@ -13,7 +13,7 @@ The [Image Viewer]() widget enables an image to be displayed within your Mendix 
 
 The widget:
 
-* can display an image from within the Mendix application, an image from the internet by link, or an icon
+* can display an image from the modeler, an image from the internet by link, or an icon
 * includes a responsive mode for images out of the box
 * supports configuration of accessibility features
 * allows optional configuration of different on-click actions, like enlarging the image, opening a page, calling a microflow, or other Mendix related actions
@@ -28,7 +28,7 @@ The Image Viewer widget has a lot of different configuration possibilities. In t
 
 There are several ways to configure a data source for the Image Viewer widget.
 
-* **Image** - use an image from the modeler. This can be either a static image from the system's image collections or a dynamic image retrieved from an Image entity in the context object.
+* **Image** - use an image from the modeler. This can be either a static image from the system's image collections or a dynamic image retrieved from an Image entity of the context object.
 * **Image link** - use a link to retrieve an image from the internet. The image link can either be static or dynamically retrieved from a String attribute of the context object.
 * **Icon** - to display a glyphicon instead of an image.
 
@@ -50,16 +50,16 @@ These widget properties provide control over accessibility features of images, w
 The following widget properties allow you to configure the dimensions of the image to best suit its purpose in your application.
 
 * **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
-	* The available **Width unit** options are **Auto**, **Pixels**, and **Percentage**.
+	* The available **Width unit** options are **Auto** (default), **Pixels**, and **Percentage**.
 	* Choosing **Auto** will preserve the width of the original image.
 	* If you opt for **Pixels** or **Percentage**, then the **Width** can be set as an appropriate CSS value.
 	* In those cases, these two properties need to be used together to work.
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
-	* The available **Height unit** options **Auto** and **Pixels**.
+	* The available **Height unit** options **Auto** (default) and **Pixels**.
 	* Choosing **Auto** will preserve the height of the original image.
-	* If you opt for **Pixels** or **Percentage**, then the **Height** can be set as an appropriate CSS value.
+	* If you opt for **Pixels**, then the **Height** can be set as an appropriate CSS value.
 	* In those cases, these two properties need to be used together to work.
-* **Display as** - the format at which the image is displayed. This feature only works if the image is displayed from an **Image** data source.
+* **Display as** - the format at which the image is displayed. This feature only works if an image is displayed from an **Image** data source.
 	* **Thumbnail** - show the smaller sized thumbnail of the image.
 	* **Full image** (default) - display the image in its original sized format.
 * **Responsive** (enabled by default) - when enabled, the image will never get larger than its original size. However, it can become smaller and scale with the container.

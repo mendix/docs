@@ -42,7 +42,7 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [Monitor Mendix using JMX](monitoring-mendix-using-jmx)
 * [Log Levels](log-levels)
 * [Debug Microflows](debug-microflows)

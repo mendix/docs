@@ -8,7 +8,7 @@ tags: ["studio pro", "app"]
 
 ## 1 Introduction
 
-A Mendix app consists of app-level documents and a number of modules. Each module can contain many documents. At the app level, there are some settings and documents that apply to your app as a whole. For example, navigation is a app-level document; the menu bar is app-wide and can refer to functionality in all modules. Most documents, however, live at the level of a [module](modules).
+A Mendix app consists of app-level documents and a number of modules. Each module can contain many documents. At the app level, there are some settings and documents that apply to your app as a whole. For example, navigation is an app-level document; the menu bar is app-wide and can refer to functionality in all modules. Most documents, however, live at the level of a [module](modules).
 
 ## 2 Settings
 

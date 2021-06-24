@@ -25,11 +25,11 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To make changes to an existing repository, follow these guidelines:
 
-* Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
-* To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-	* Avoiding working directly on the master branch is advised
+* Create a new branch from where you want to base your work on your fork (this is usually the repository's **master** branch)
+* To quickly create a branch based on **master**, use `git checkout -b fix/master/my_contribution master`
+	* Avoid working directly on the **master** branch
 * Make commits of logical units
-* Check for unnecessary whitespace with `git diff --check` before committing.
+* Check for unnecessary whitespace with `git diff --check` before committing
 * Make sure you have added the necessary tests for your changes
 * Run all the tests to assure nothing was accidentally broken
 
@@ -39,9 +39,8 @@ To submit changes, follow these guidelines:
 
 * Push your changes to the branch in your fork of the repository
 * Submit a pull request to the appropriate repository in the Mendix organization (for more information, see [About Pull Requests](https://help.github.com/articles/using-pull-requests/))
-* Mention the ID's for any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
-* After feedback has been given, Mendix expects a response within two weeks
-	* After two weeks, we may close the pull request if it isn't showing any activity
+* Mention the numbers of any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
+* After feedback has been given, Mendix expects a response within two weeks – after two weeks, we may close the pull request if it is not showing any activity
 
 ## 5 Read More
 

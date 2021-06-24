@@ -24,7 +24,7 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
 	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
 	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix Project path: *../../*
+* Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
@@ -100,7 +100,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
-Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.3 Adding the Attribute
 
@@ -136,7 +136,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
 	* The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute) only allows the selection of string attributes from the domain model
   
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm start`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 
@@ -219,13 +219,13 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
-	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App ](#creating-a-test-project) above.
+	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
 
 	The end result will be similar to the screenshot below:
 
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
-	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm run dev` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
 8.  When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
@@ -233,7 +233,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 
 ### 3.4 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#3-standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 

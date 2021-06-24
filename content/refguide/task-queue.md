@@ -224,7 +224,7 @@ Under normal circumstances, a task is executed exactly once, but in the face of 
 
 ### 4.4 Replacing Process Queue{#process-queue}
 
-The **Task Queue** supersedes the earlier [Process Queue](https://docs.mendix.com/appstore/modules/process-queue) Marketplace module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
+The **Task Queue** supersedes the earlier [Process Queue](/appstore/modules/process-queue) Marketplace module, which has been deprecated with the release of Mendix 9. There are several differences between the Process Queue module and the **Task Queue**:
 
 * The **Task Queue** supports a multi-node cluster setup and can therefore be used in a horizontally scaled environment.
 * The **Task Queue** does not require additional entities to be created, since Microflows or Java actions can simply be marked to execute in the background.

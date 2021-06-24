@@ -158,7 +158,7 @@ To learn more about importing content from the Marketplace, see [How to Use Mark
 
 ### 3.1 Exporting Complete App Packages
 
-To export a app, follow these steps:
+To export an app, follow these steps:
 
 1. Click the **File** menu in  and select **Export App Package**.
 

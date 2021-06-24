@@ -49,8 +49,8 @@ To publish your app in the Google Play store, do the following:
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
-2. Go to the project of the Mendix app that you want to publish.
-3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
+2. Go to the app of the Mendix app that you want to publish.
+3. Go to the **Deploy > Mobile app** entry in the side menu of the app.
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 
    ![mobile app page](attachments/publishing-a-hybrid-app/mobile-app-page.png)

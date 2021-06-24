@@ -34,7 +34,7 @@ There are several ways to configure a data source for the Image Viewer widget.
 
 ### 2.2 Events
 
-These widget properties provide control over situations where the end-user interacts with the widget through clicking.
+These widget properties provide control over situations where the end-user interacts with the widget through mouse or keyboard interaction.
 
 * **Action** - allows you to configure a custom **On click** event handler with Mendix actions, like calling a microflow, opening a page, doing nothing, and more.
 * **Enlarge** - enlarges the image in a mobile-friendly lightbox.

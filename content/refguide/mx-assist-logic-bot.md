@@ -36,7 +36,7 @@ For more information on preferences, see [Preferences](preferences-dialog).
 
 ## 3 Using MxAssist Logic Bot to Build Microflows
 
-MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](https://docs.mendix.com/refguide/microflows):
+MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows):
 
 ![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png)
 

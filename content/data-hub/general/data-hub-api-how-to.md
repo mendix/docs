@@ -97,7 +97,7 @@ For convenience and conciseness, throughout this how-to the following variables 
 
 * {*AppUUID}* — insert the value returned in the API response for the UUID of the application
 * {*EnvironmentUUID*} – insert the value returned in the API response for the UUID of the environment
-* <*your_PAT_Token*> – insert the value of your [PAT](https://docs.mendix.com/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
+* <*your_PAT_Token*> – insert the value of your [PAT](/apidocs-mxsdk/apidocs/data-hub-apis#generatepat) as described in [Access](#pat)
 
 ## 5 Searching in the Catalog {#api-search}
 

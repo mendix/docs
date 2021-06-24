@@ -32,13 +32,13 @@ This is what the original chart looks like:
 
 To create a custom layout, follow these steps:
 
-1. Open a project containing a chart.
+1. Open an app containing a chart.
 2. Open the page with the charts widget.
 3. Open the charts widget settings.
 4. Go to the tab **Advanced**.
 5. Set the **Mode** to **Developer**.
     ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
-6. Run the project.
+6. Run the app.
 7. In your browser, open the page with the chart.
 8. Click on the button **Toggle Editor**.
 9. In the **Layout** section add the following **Custom setting**:

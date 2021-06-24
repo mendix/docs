@@ -16,5 +16,4 @@ The [Navigation Layout](https://appstore.home.mendix.com/link/app/23446/) module
 
 ## 2 Read More
 
-* [Layout](https://docs.mendix.com/refguide/layout)
-
+* [Layout](/refguide/layout)

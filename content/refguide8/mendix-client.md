@@ -23,7 +23,7 @@ For **mobile applications** Mendix Client acts as a React Native application. Th
 The three supported types of wrappers for mobile applications are as follows:
 
 * [Make It Native app](getting-the-make-it-native-app)
-* [Custom Developer apps](/howto8/mobile/how-to-devapps#1-introduction)
+* [Custom Developer apps](/howto8/mobile/how-to-devapps)
 * [Native apps](/howto8/mobile/deploying-native-app)
 
 The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto8/mobile/how-to-ota) later.

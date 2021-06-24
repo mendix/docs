@@ -144,4 +144,8 @@ When you filter against associations, null literals can be quite useful. For exa
 
 ## 9 Passing Query Options in the Request Body
 
-If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. Note that the body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. 
+
+{{% alert type="info" %}}
+The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+{{% /alert %}}

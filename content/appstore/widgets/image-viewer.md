@@ -36,8 +36,9 @@ There are several ways to configure a data source for the Image Viewer widget.
 
 These widget properties provide control over situations where the end-user interacts with the widget through mouse or keyboard interaction.
 
-* **Action** - allows you to configure a custom **On click** event handler to execute a Mendix action, like calling a microflow, opening a page, doing nothing, and more.
-* **Enlarge** - enlarges the image in a mobile-friendly lightbox.
+* **On click type** - type of the event handler on end-user interaction
+	* **Action** (default) - allows you to configure a custom **On click** event handler to execute a Mendix action, like calling a microflow, opening a page, doing nothing, and more.
+	* **Enlarge** - enlarges the image in a mobile-friendly lightbox.
 
 ### 2.3 Accessibility
 

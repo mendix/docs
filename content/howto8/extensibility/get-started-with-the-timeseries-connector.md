@@ -47,7 +47,7 @@ After importing the module, there are a couple of settings you need to configure
 
 There are three constants that you can configure. Follow these steps to configure them:
 
-1. Expand your project and go to **App Store modules** > **TimeSeriesConnector** > **Settings**.
+1. Expand your app and go to **App Store modules** > **TimeSeriesConnector** > **Settings**.
 2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 

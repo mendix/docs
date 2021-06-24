@@ -301,7 +301,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 	![](attachments/datadog-metrics/datadog_metricsagentconfig.png)
 
 4. Click **Save**.
-5. Restart your app to apply the new settings.
+5. Restart your app to apply the new settings if you have already [connected your node to Datadog](#connect-node). If you are in the process of connecting your node to Datadog, you must *redeploy* your application to apply the changes.
 
 ## 4 Setting Up Datadog For Your Mendix App
 

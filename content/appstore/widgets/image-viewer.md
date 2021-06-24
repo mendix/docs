@@ -36,7 +36,7 @@ There are several ways to configure a data source for the Image Viewer widget.
 
 These widget properties provide control over situations where the end-user interacts with the widget through mouse or keyboard interaction.
 
-* **Action** - allows you to configure a custom **On click** event handler with Mendix actions, like calling a microflow, opening a page, doing nothing, and more.
+* **Action** - allows you to configure a custom **On click** event handler to execute a Mendix action, like calling a microflow, opening a page, doing nothing, and more.
 * **Enlarge** - enlarges the image in a mobile-friendly lightbox.
 
 ### 2.3 Accessibility
@@ -52,13 +52,11 @@ The following widget properties allow you to configure the dimensions of the ima
 * **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
 	* The available **Width unit** options are **Auto** (default), **Pixels**, and **Percentage**.
 	* Choosing **Auto** will preserve the width of the original image.
-	* If you opt for **Pixels** or **Percentage**, then the **Width** can be set as an appropriate CSS value.
-	* In those cases, these two properties need to be used together to work.
+	* If you opt for **Pixels** or **Percentage**, then the **Width** can be set as an appropriate CSS value. These two properties need to be used together to work.
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
 	* The available **Height unit** options are **Auto** (default) and **Pixels**.
 	* Choosing **Auto** will preserve the height of the original image.
-	* If you opt for **Pixels**, then the **Height** can be set as an appropriate CSS value.
-	* In those cases, these two properties need to be used together to work.
+	* If you opt for **Pixels**, then the **Height** can be set as an appropriate CSS value. These two properties need to be used together to work.
 * **Display as** - the format at which the image is displayed. This feature only works if an image is displayed from an **Image** data source.
 	* **Thumbnail** - show the smaller sized thumbnail of the image.
 	* **Full image** (default) - display the image in its original sized format.

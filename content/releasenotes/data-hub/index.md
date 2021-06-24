@@ -14,9 +14,9 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Feature
 
 * New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
-  * GET all published endpoints
-  * GET, POST, and PUT one individual published endpoint
-=======
+  * `GET` all published endpoints
+  * `GET`, `POST`, and `PUT` one individual published endpoint
+
 ### June 10th, 2021
 
 #### Improvements

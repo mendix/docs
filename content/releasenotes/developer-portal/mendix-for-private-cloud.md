@@ -31,7 +31,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
   * Ingress path and path type.
 * When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
 * We have fixed a incorrect *Runtime has a empty (trial) license* log message which appeared when using a Subscription Secret license.
-* We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775)
+* We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 

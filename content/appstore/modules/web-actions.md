@@ -22,20 +22,20 @@ The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module cont
 
 1.  To use the **Take picture** action, create an entity that extends the **System.Image** entity:
 
-	![Example entity](attachments/web-actions/entity.png)
+    ![Example entity](attachments/web-actions/entity.png)
 
-2.  Drag and drop the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
+2.  Drag the **Take picture** action from the Studio Pro toolbar to your nanoflow like in the example below. For that you need to pass an object for the action:
 
-	![Example nanoflow](attachments/web-actions/nanoflow.png)
+    ![Example nanoflow](attachments/web-actions/nanoflow.png)
 
-3.  In the action, select which object you are passing to the action to fill with the image properties:
+3.  Double-click the **Take picture** action and select which object you are passing to the action to fill with the image properties:
 
-	![Properties](attachments/web-actions/properties.png)
+    ![Properties](attachments/web-actions/properties.png)
 
 4.  You can also configure an option which shows a confirmation screen allowing users to accept or retake the picture:
 
-	![Confirmation Screen](attachments/web-actions/confirmation.png)
+    ![Confirmation Screen](attachments/web-actions/confirmation.png)
 
 5.  The value returned from the action is a Boolean, so after the execution you can check if the picture was taken or not:
 
-	![Check](attachments/web-actions/check.png)
+    ![Check](attachments/web-actions/check.png)

@@ -7,7 +7,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/input-reference-set-selector.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}The **input reference set selector** widget is not supported on native mobile pages.{{% /alert %}}

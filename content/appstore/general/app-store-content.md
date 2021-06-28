@@ -138,7 +138,7 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
    
     ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
-   {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
+    {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 

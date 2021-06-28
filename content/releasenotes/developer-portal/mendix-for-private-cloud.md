@@ -17,20 +17,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v1.12.0 and Mendix Gateway Agent v1.11.0
 
-* We have added more networking configuration options, allowing to use new Ingress and Service types.
-  * You use templates in Ingress and Service annotations.
-  * You use a Service without creating an Ingress - for example to use a Load Balancer Service, or to manually create your own Ingress object.
-  * You customise the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
-  * You can customize the Ingress Class.
-  * You can customize the Service type.
-  * You can customize the Service port(s).
+* We have added more networking configuration options, allowing to use new Ingress and Service types. You can now:
+  * use templates in Ingress and Service annotations.
+  * use a Service without creating an Ingress – for example to use a load balancer service, or to manually create your own Ingress object.
+  * customize the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
+  * customize the Ingress class.
+  * customize the Service type.
+  * customize the Service port(s).
 * We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
-  * Ingress annotations;
-  * Service annotations;
-  * Ingress class;
-  * Ingress path and path type.
+  * Ingress annotations
+  * Service annotations
+  * Ingress class
+  * Ingress path and path type
 * When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
-* We have fixed a incorrect *Runtime has a empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We have fixed a incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
 * We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
@@ -262,7 +262,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
 * We added support for using registry credentials from an existing .dockerconfigjson secret.
-* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually - this will be done by the (re)configuration script.
+* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually – this will be done by the (re)configuration script.
 * We have updated all images to be based on the latest ubi8 image so that they include the latest security patches.
 * We have fixed an issue where changing the App URL in OpenShift resulted in an exception.
 

@@ -555,7 +555,7 @@ If you attempt to deploy an app with security not set to production into a produ
 This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
 {{% /alert %}}
 
-In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
 For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 

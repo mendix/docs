@@ -953,7 +953,7 @@ You can change the following options:
 * **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
 * **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
 * **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR, and {{.Domain}} will be replaced with the application's domain name
-* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR, and {{.Domain}} will be replaced with the application's domain name
+* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
 * **ingressClassName**: - optional, can be used to specify the Ingress Class name
 * **path**: - optional, can be used to specify the Ingress path; default value is `/`
 * **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects

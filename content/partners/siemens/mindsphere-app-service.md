@@ -82,46 +82,45 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_card.png)
 
-1. Click the link **View contracts**.
+1. Click **View contracts**.
 
-1. You will now see the lists of your already existing contracts or an indication that no contracts are created by now.
+1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_first.png)
 
-    In the case that no contracts are available click the  **Create contract** button to start with your first one. If you have already some contracts click the **Add contracts** button to add another one.
+    If no contracts are available, click **Create contract** to start your first one. If you have already some contracts, click **Add contracts** to add another one.
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_add.png)
 
-1. On the left side you can select the asset types you like to share within this contract. On the right side you will see a preview of all selected types.
+1. On the left-hand side, you can select the asset types you want to share within this contract. On the right side you will see a preview of all selected types.
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step1.png)
 
-1. Confirm your selection by pressing the **Next** button.
+1. Confirm your selection by clicking **Next**.
 
-1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note the application name is already pre-filled and is a combination from the prefix **mdsp_** and your tenant name. This will help you to search for all contracts within Mendix for your particular tenant.
+1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step2.png)
 
-1. Confirm your meta information by pressing the **Next** button.
+1. Confirm your meta information by clicking **Next**.
 
-1. On the last step you can specify to:
+1. In the last step you can specify the following:
     * Save your contract (always enabled).
-    * Download your contract, if you like to store the contract by your own or if you like to use it with another OData provider other than the Mendix Data Hub
-    * To publish the contract to the Mendix Data Hub. This needs to be done if you like to use the asset information within your Mendix project and is therefore already preselected.
+    * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
 
     ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step3.png)
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
 {{% alert type="info" %}}
-   In Mendix every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api#4-1-1-user-account)). All users with the same email - domain are part of the same company ([Company](/apidocs-mxsdk/apidocs/user-management-api#4-1-2-company-account)).
+   In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api#company-account).
 
    Published contracts are only visible in Mendix DataHub for users that belong to the same company.
 
-   In MindSphere you can invite users with different email - domains to your tenant. If you have users with different email - domains in you MindSphere Tenant only the users with the same email - domain as the one who is publishing the first contract to Mendix DataHub
-   will see the contracts there.
+   In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
 
-   Ensure that only users which have an email account within your company domain create contracts on Mendix DataHub
+   Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
 
    {{% /alert %}}
 

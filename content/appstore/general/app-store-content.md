@@ -41,13 +41,13 @@ To download a component from the Marketplace via Studio Pro, follow these steps:
 
 4.  On the Marketplace overview page, find the component to use in your app. The **Categories** menu item gives you an overview of which types of content you can download. You can use the **Search** bar to find the component.
 
-	![Search result for rating](attachments/app-store-content/marketplace.png)
+    ![Search result for rating](attachments/app-store-content/marketplace.png)
     
-	 {{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.{{% /alert %}}
+    {{% alert type="warning" %}}Results for Marketplace content searches done in Studio Pro may differ from those done in the [online Marketplace](app-store-overview) due to sync issues.{{% /alert %}}
 
 5.  Click the component or **Read more** to view the details of the component.
 
-	![Details of Rating widget](attachments/app-store-content/item-details.png)
+    ![Details of Rating widget](attachments/app-store-content/item-details.png)
 
 6. Click **Download** to download the component to your app. 
 
@@ -65,9 +65,7 @@ After you download a component:
 After you download a component, you can use the component in your app. 
 
 {{% alert type="info" %}}
-
 For more information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
-
 {{% /alert %}}
 
 ![Documentation tab](attachments/app-store-content/widget-documentation.png)
@@ -84,21 +82,21 @@ To add the Rating widget from the Marketplace via Studio Pro, follow these steps
 
 2. Click **Add widget**. The **Select Widget** dialog box opens.
 
-   ![Add widget](attachments/app-store-content/add-widget.png)
+    ![Add widget](attachments/app-store-content/add-widget.png)
 
 3. In the **Filter** bar, enter *Rating*. The downloaded widget is found in the **Add-on** widgets category. 
 
-   ![Rating widget highlighted in Select Widget dialog box](attachments/app-store-content/select-widget.png)
+    ![Rating widget highlighted in Select Widget dialog box](attachments/app-store-content/select-widget.png)
 
 4. Click the **Rating** widget and then click **Select**. 
 
 5. In the page of your app, click where you want to drop the widget. After you release the mouse button, the widget is placed in the page.
 
-   ![Rating widget in the page](attachments/app-store-content/widget-dropped-in-page.png)
+    ![Rating widget in the page](attachments/app-store-content/widget-dropped-in-page.png)
 
-   {{% alert type="info" %}}
-   If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the *.mpk* file from the **widgets** folder.
-   {{% /alert %}}
+{{% alert type="info" %}}
+If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the *.mpk* file from the **widgets** folder.
+{{% /alert %}}
 
 #### 4.1.2 Configuring a Widget
 
@@ -108,16 +106,16 @@ To configure the widget, follow these steps:
 
 1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
 
-   ![Errors pane](attachments/app-store-content/widget-errors.png)
+    ![Errors pane](attachments/app-store-content/widget-errors.png)
 
 2. In the page, double-click the Rating widget. The **Edit Rating** dialog box opens and the **Attribute** field shows **(none)** – this means that no attribute is assigned, which causes the error.
 
-   ![Edit Rating dialog box](attachments/app-store-content/edit-rating.png)
+    ![Edit Rating dialog box](attachments/app-store-content/edit-rating.png)
 
 
 3. Click **Select** to select an attribute. In this example, we select the attribute **ProductRating**. This is the attribute of an entity that we already created.
 
-   ![ProductRating selected in Select Attribute dialog box](attachments/app-store-content/select-attribute.png)
+    ![ProductRating selected in Select Attribute dialog box](attachments/app-store-content/select-attribute.png)
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
 
@@ -135,12 +133,12 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
 2. Select one of these options:
 
-   * **Add as a new module** – if you select this option, new entities are created in your app
-   * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
+    * **Add as a new module** – if you select this option, new entities are created in your app
+    * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
    
-   ![Import Module dialog box](attachments/app-store-content/import-module.png)
+    ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
-   {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
+    {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 
@@ -148,7 +146,7 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
 5. Open the **App Explorer** and find the **EmailTemplate** module.
 
-	![EmailTemplate module](attachments/app-store-content/email-template-app-explorer.png)
+    ![EmailTemplate module](attachments/app-store-content/email-template-app-explorer.png)
 
 Unlike a widget, you can see a module in your App Explorer. A module contains a domain model, pages, and microflow logic. A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). In addition, a module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 

@@ -16,6 +16,8 @@ You can expose a microflow as a workflow action and add it to the workflow toolb
 
 **This how-to will teach you how to do the following:**
 
+* Call a microflow
+* Add microflow input parameters and return values
 * Expose the microflow as the workflow action
 
 ## 2 Prerequisites
@@ -23,26 +25,38 @@ You can expose a microflow as a workflow action and add it to the workflow toolb
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
-* Your project has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Core_Content, and DataGrid.
+* Your project has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 ## 3 Exposing the Microflow as the Workflow Action
 
-For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_PASS_DATA** that passed details to your HR system. To be able to quickly reuse the logic of this microflow in the Employee_Onboarding workflow and other workflows, do the following:
+For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns yes or no answer. To be able to reuse the logic of this microflow in the Employee_Onboarding workflow, you can call this microflow from a new microflow that will be accept a workflow object and return the workflow outcome. Do the following:
 
-1. Open the microflow.
+1. First you need to create a new microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 
-2. Right-click the working area of the microflow and select **Properties**.
+2. Make sure that the input parameters of the microflow are mapped to the workflow definition. For the Employee_Onboarding workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
 
-3. In the **Microflow properties** dialog box, open the **Expose as workflow action** tab.
+3. In **Toolbox**, select **Microflow call** and drag and drop it to the flow:
 
-4. Select the **Expose as workflow action** check-box:
+    ![Microflow call action](attachments/add-action-to-workflow-toolbox/microflow-call.png)
+
+4. Double-click the **Microflow call** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
+
+5. Click the **End event** and navigate to the **Properties** pane.
+
+6. Set the **Return value** for it to .
+
+7. Right-click the working area of the microflow and select **Properties**.
+
+8. In the **Microflow properties** dialog box, open the **Expose as workflow action** tab.
+
+9. Select the **Expose as workflow action** check-box:
 
     ![Expose as Workflow Action](attachments/add-action-to-workflow-toolbox/expose-as-workflow-action.png)
 
-5. The properties for the new workflow action appear. Do the following:
+10. The properties for the new workflow action appear. Do the following:
 
-    1. Set the **Caption** to **Pass details to SAP**.
+    1. Set the **Caption** to **Inventory check: laptop**.
 
     2. Set **Category** to **Integration**.
 
@@ -50,7 +64,7 @@ For example, you have the Employee Onboarding process set up in your app. For mo
 
         ![Expose as Workflow Action Settings](attachments/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png)
 
-6. Click **OK**.
+11. Click **OK**.
 
 Good job! You have configured the custom workflow action.
 

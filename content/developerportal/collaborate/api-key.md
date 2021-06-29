@@ -1,7 +1,8 @@
 ---
 title: "API Keys"
+parent: "general-settings"
 category: "Collaboration"
-menu_order: 8
+menu_order: 2
 description: "Describes creating API keys for your app."
 tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]
 aliases:

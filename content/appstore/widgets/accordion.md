@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "accordion", "group box
 
 ## 1 Introduction
 
-The [Accordion]() widget enables to group and collapse content within your Mendix web application.
+The [Accordion](https://marketplace.mendix.com/link/component/117895) widget enables to group and collapse content within your (progressive) web apps.
 
 ### 1.1 Features
 

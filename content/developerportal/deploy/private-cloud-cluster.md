@@ -1023,7 +1023,7 @@ spec:
           timeoutSeconds: 1
         resources:
           limits:
-            cpu: "1"
+            cpu: 1
             memory: 512Mi
           requests:
             cpu: 100m
@@ -1077,7 +1077,7 @@ Let us now analyze the `resources` section from the example application deployme
 ```yaml
 resources:
   limits:
-    cpu: "1"
+    cpu: 1
     memory: 512Mi
   requests:
     cpu: 100m

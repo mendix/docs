@@ -106,6 +106,9 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
+## 5 API Keys
+Latieda
+
 ## 5 Editing App Info {#editing}
 
 {{% alert type="info" %}}
@@ -161,4 +164,5 @@ To leave the app, click **Leave App**. For details on leaving, deleting, and dea
 ## 8 Read More
 
 * [Leave & Delete an App](leave-delete-app)
+* [API Keys](api-keys)
 * [Manage Deep Links](manage-deeplinks)

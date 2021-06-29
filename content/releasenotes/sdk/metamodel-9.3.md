@@ -5,17 +5,11 @@ parent: "metamodel-9"
 
 ## 9.3.0
 
+**Release date: June 16th, 2021**
+
 ### DomainModels
 
-#### Entity (Element)
-
-* We introduced the `exportLevel` property.
-
-#### Attribute (Element)
-
-* We introduced the `exportLevel` property.
-
-#### AssociationBase (Element)
+#### Entity, Attribute & AssociationBase (Elements)
 
 * We introduced the `exportLevel` property.
 
@@ -32,24 +26,19 @@ parent: "metamodel-9"
 ### Queues
 
 #### Queue (ModelUnit)
-* Removed experimental
 
+* We removed the experimental status of this model unit.
 
-#### QueueConfig (Element)
-* Removed experimental
+#### QueueConfig & BasicQueueConfig (Elements)
 
-
-#### BasicQueueConfig (Element)
-* Removed experimental
-
+* We removed the experimental status of these elements.
 
 ### Settings
-
-#### WebUIProjectSettingsPart (Element)
-
-* We introduced the `themeModuleOrder` property.
 
 #### ThemeModuleEntry (Element)
 
 * We introduced this element.
 
+#### WebUIProjectSettingsPart (Element)
+
+* We introduced the `themeModuleOrder` property.

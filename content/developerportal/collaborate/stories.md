@@ -133,7 +133,7 @@ The **Completed Sprints** page presents an overview of Sprints that have been co
 The following buttons are available:
 
 * **Search** – enables searching Sprints based on their ID or title
-* **Edit** – enables editing the selected Sprint
+* **View** – View the full details of the archived Sprint
 * **View Stories** – enables viewing the stories of the selected Sprint
 * **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories

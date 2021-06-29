@@ -65,132 +65,141 @@ Click **Edit…** to open a dialog box which will provide a full reference for t
 
 The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
 
-| Language | Country | Locale |
-| --- | --- | --- |
-| Albanian | Albania | sq_AL |
-| Amharic | Ethiopia | am_ET |
-| Arabic | Algeria | ar_DZ |
-| Arabic | Bahrain | ar_BH |
-| Arabic | Egypt | ar_EG |
-| Arabic | Iraq | ar_IQ |
-| Arabic | Jordan | ar_JO |
-| Arabic | Kuwait | ar_KW |
-| Arabic | Lebanon | ar_LB |
-| Arabic | Libya | ar_LY |
-| Arabic | Morocco | ar_MA |
-| Arabic | Oman | ar_OM |
-| Arabic | Qatar | ar_QA |
-| Arabic | Saudi Arabia | ar_SA |
-| Arabic | Sudan | ar_SD |
-| Arabic | Syria | ar_SY |
-| Arabic | Tunisia | ar_TN |
-| Arabic | United Arab Emirates | ar_AE |
-| Arabic | Yemen | ar_YE |
-| Armenian | Armenia | hy_AM |
-| Belarusian | Belarus | be_BY |
-| Bulgarian | Bulgaria | bg_BG |
-| Catalan | Spain | ca_ES |
-| Chinese (Simplified) | China | zh_CN |
-| Chinese (Simplified) | Singapore | zh_SG |
-| Chinese (Traditional) | Hong Kong | zh_HK |
-| Chinese (Traditional) | Taiwan | zh_TW |
-| Croatian | Croatia | hr_HR |
-| Czech | Czech Republic | cs_CZ |
-| Dari | Afghanistan | fa_AF |
-| Danish | Denmark | da_DK |
-| Dutch | Belgium | nl_BE |
-| Dutch | Netherlands | nl_NL |
-| English | Australia | en_AU |
-| English | Canada | en_CA |
-| English | India | en_IN |
-| English | Ireland | en_IE |
-| English | Malta | en_MT |
-| English | New Zealand | en_NZ |
-| English | Philippines | en_PH |
-| English | Singapore | en_SG |
-| English | South Africa | en_ZA |
-| English | United Kingdom | en_GB |
-| English | United States | en_US |
-| Estonian | Estonia | et_EE |
-| Finnish | Finland | fi_FI |
-| French | Belgium | fr_BE |
-| French | Canada | fr_CA |
-| French | France | fr_FR |
-| French | Luxembourg | fr_LU |
-| French | Switzerland | fr_CH |
-| German | Austria | de_AT |
-| German | Germany | de_DE |
-| German | Luxembourg | de_LU |
-| German | Switzerland | de_CH |
-| Greek | Cyprus | el_CY |
-| Greek | Greece | el_GR |
-| Hebrew | Israel | iw_IL |
-| Hindi | India | hi_IN |
-| Hungarian | Hungary | hu_HU |
-| Icelandic | Iceland | is_IS |
-| Indonesian | Indonesia | in_ID |
-| Irish | Ireland | ga_IE |
-| Italian | Italy | it_IT |
-| Italian | Switzerland | it_CH |
-| Japanese (Gregorian calendar) | Japan | ja_JP |
-| Japanese (Imperial calendar) | Japan | ja_JP_JP |
-| Khmer | Cambodia | km_KH |
-| Korean | South Korea | ko_KR |
-| Lao | Laos | lo_LA |
-| Latvian | Latvia | lv_LV |
-| Lithuanian | Lithuania | lt_LT |
-| Macedonian | Macedonia | mk_MK |
-| Malay | Malaysia | ms_MY |
-| Maltese | Malta | mt_MT |
-| Mongolian | Mongolia | mn_MN |
-| Myanmar (Burmese) | Myanmar | my_MM |
-| Nepali | Nepal | ne_NP |
-| Norwegian (Bokmål) | Norway | no_NO |
-| Norwegian (Nynorsk) | Norway | no_NO_NY |
-| Pashto | Afghanistan | ps_AF |
-| Persian (Farsi) | Iran | fa_IR |
-| Persian (Farsi) | Tajikistan | fa_TJ |
-| Polish | Poland | pl_PL |
-| Portuguese | Brazil | pt_BR |
-| Portuguese | Portugal | pt_PT |
-| Romanian | Romania | ro_RO |
-| Russian | Russia | ru_RU |
-| Serbian (Cyrillic) | Bosnia and Herzegovina | sr_BA |
-| Serbian (Cyrillic) | Serbia and Montenegro | sr_CS |
-| Slovak | Slovakia | sk_SK |
-| Slovenian | Slovenia | sl_SI |
-| Somali | Somalia | so_SO |
-| Spanish | Argentina | es_AR |
-| Spanish | Bolivia | es_BO |
-| Spanish | Chile | es_CL |
-| Spanish | Colombia | es_CO |
-| Spanish | Costa Rica | es_CR |
-| Spanish | Dominican Republic | es_DO |
-| Spanish | Ecuador | es_EC |
-| Spanish | El Salvador | es_SV |
-| Spanish | Guatemala | es_GT |
-| Spanish | Honduras | es_HN |
-| Spanish | Mexico | es_MX |
-| Spanish | Nicaragua | es_NI |
-| Spanish | Panama | es_PA |
-| Spanish | Paraguay | es_PY |
-| Spanish | Peru | es_PE |
-| Spanish | Puerto Rico | es_PR |
-| Spanish | Spain | es_ES |
-| Spanish | United States | es_US |
-| Spanish | Uruguay | es_UY |
-| Spanish | Venezuela | es_VE |
-| Swedish | Sweden | sv_SE |
-| Swahili | Kenya | sw_KE |
-| Swahili | Rwanda | sw_RW |
-| Swahili | Tanzania | sw_TZ |
-| Swahili | Uganda | sw_UG |
-| Tagalog | Philippines | tl_PH |
-| Thai (Western digits) | Thailand | th_TH |
-| Thai (Thai digits) | Thailand | th_TH_TH |
-| Turkish | Turkey | tr_TR |
-| Ukrainian | Ukraine | uk_UA |
-| Urdu | India | ur_IN |
-| Urdu | Pakistan | ur_PK |
-| Vietnamese | Vietnam | vi_VN |
-| Welsh | Wales | cy_GB |
+| Language | Country | Locale | Available Since |
+| --- | --- | --- | --- |
+| Albanian | Albania | sq_AL | 9.0.5 |
+| Amharic | Ethiopia | am_ET | 9.2.0 |
+| Arabic | Algeria | ar_DZ | 9.0.5 |
+| Arabic | Bahrain | ar_BH | 9.0.5 |
+| Arabic | Egypt | ar_EG | 9.0.5 |
+| Arabic | Iraq | ar_IQ | 9.0.5 |
+| Arabic | Jordan | ar_JO | 9.0.5 |
+| Arabic | Kuwait | ar_KW | 9.0.5 |
+| Arabic | Lebanon | ar_LB | 9.0.5 |
+| Arabic | Libya | ar_LY | 9.0.5 |
+| Arabic | Morocco | ar_MA | 9.0.5 |
+| Arabic | Oman | ar_OM | 9.0.5 |
+| Arabic | Qatar | ar_QA | 9.0.5 |
+| Arabic | Saudi Arabia | ar_SA | 9.0.5 |
+| Arabic | Sudan | ar_SD | 9.0.5 |
+| Arabic | Syria | ar_SY | 9.0.5 |
+| Arabic | Tunisia | ar_TN | 9.0.5 |
+| Arabic | United Arab Emirates | ar_AE | 9.0.5 |
+| Arabic | Yemen | ar_YE | 9.0.5 |
+| Armenian | Armenia | hy_AM | 9.2.0 |
+| Belarusian | Belarus | be_BY | 9.0.5 |
+| Bengali | Bangladesh | bn_BD | 9.3.0 |
+| Bengali | India | bn_IN | 9.3.0 |
+| Bulgarian | Bulgaria | bg_BG | 9.0.5 |
+| Catalan | Spain | ca_ES | 9.0.5 |
+| Chinese (Simplified) | China | zh_CN | 9.0.5 |
+| Chinese (Simplified) | Singapore | zh_SG | 9.0.5 |
+| Chinese (Traditional) | Hong Kong | zh_HK | 9.0.5 |
+| Chinese (Traditional) | Taiwan | zh_TW | 9.0.5 |
+| Croatian | Croatia | hr_HR | 9.0.5 |
+| Czech | Czech Republic | cs_CZ | 9.0.5 |
+| Dari | Afghanistan | fa_AF | 9.2.0 |
+| Danish | Denmark | da_DK | 9.0.5 |
+| Dutch | Belgium | nl_BE | 9.0.5 |
+| Dutch | Netherlands | nl_NL | 9.0.5 |
+| English | Australia | en_AU | 9.0.5 |
+| English | Canada | en_CA | 9.0.5 |
+| English | India | en_IN | 9.0.5 |
+| English | Ireland | en_IE | 9.0.5 |
+| English | Malta | en_MT | 9.0.5 |
+| English | New Zealand | en_NZ | 9.0.5 |
+| English | Philippines | en_PH | 9.0.5 |
+| English | Singapore | en_SG | 9.0.5 |
+| English | South Africa | en_ZA | 9.0.5 |
+| English | United Kingdom | en_GB | 9.0.5 |
+| English | United States | en_US | 9.0.5 |
+| Estonian | Estonia | et_EE | 9.0.5 |
+| Finnish | Finland | fi_FI | 9.0.5 |
+| French | Belgium | fr_BE | 9.0.5 |
+| French | Canada | fr_CA | 9.0.5 |
+| French | France | fr_FR | 9.0.5 |
+| French | Luxembourg | fr_LU | 9.0.5 |
+| French | Switzerland | fr_CH | 9.0.5 |
+| German | Austria | de_AT | 9.0.5 |
+| German | Germany | de_DE | 9.0.5 |
+| German | Luxembourg | de_LU | 9.0.5 |
+| German | Switzerland | de_CH | 9.0.5 |
+| Greek | Cyprus | el_CY | 9.0.5 |
+| Greek | Greece | el_GR | 9.0.5 |
+| Hebrew | Israel | iw_IL | 9.0.5 |
+| Hindi | India | hi_IN | 9.0.5 |
+| Hungarian | Hungary | hu_HU | 9.0.5 |
+| Icelandic | Iceland | is_IS | 9.0.5 |
+| Indonesian | Indonesia | in_ID | 9.0.5 |
+| Irish | Ireland | ga_IE | 9.0.5 |
+| Italian | Italy | it_IT | 9.0.5 |
+| Italian | Switzerland | it_CH | 9.0.5 |
+| Japanese (Gregorian calendar) | Japan | ja_JP | 9.0.5 |
+| Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 |
+| Khmer | Cambodia | km_KH | 9.0.5 |
+| Kinyarwanda | Rwanda | rw_RW | 9.3.0 |
+| Korean | South Korea | ko_KR | 9.0.5 |
+| Lao | Laos | lo_LA | 9.0.5 |
+| Latvian | Latvia | lv_LV | 9.0.5 |
+| Lithuanian | Lithuania | lt_LT | 9.0.5 |
+| Macedonian | Macedonia | mk_MK | 9.0.5 |
+| Malay | Malaysia | ms_MY | 9.0.5 |
+| Maltese | Malta | mt_MT | 9.0.5 |
+| Mongolian | Mongolia | mn_MN | 9.2.0 |
+| Myanmar (Burmese) | Myanmar | my_MM | 9.0.5 |
+| Nepali | Nepal | ne_NP | 9.2.0 |
+| Norwegian (Bokmål) | Norway | no_NO | 9.0.5 |
+| Norwegian (Nynorsk) | Norway | no_NO_NY | 9.0.5 |
+| Pashto | Afghanistan | ps_AF | 9.2.0 |
+| Persian (Farsi) | Iran | fa_IR | 9.2.0 |
+| Persian (Farsi) | Tajikistan | fa_TJ | 9.2.0 |
+| Polish | Poland | pl_PL | 9.0.5 |
+| Portuguese | Brazil | pt_BR | 9.0.5 |
+| Portuguese | Portugal | pt_PT | 9.0.5 |
+| Punjabi | Pakistan | pa_PK | 9.3.0 |
+| Punjabi | India | pa_IN | 9.3.0 |
+| Romanian | Romania | ro_RO | 9.0.5 |
+| Russian | Russia | ru_RU | 9.0.5 |
+| Serbian (Cyrillic) | Bosnia and Herzegovina | sr_BA | 9.0.5 |
+| Serbian (Cyrillic) | Serbia and Montenegro | sr_CS | 9.0.5 |
+| Sinhala | Sri Lanka | si_LK | 9.3.0 |
+| Slovak | Slovakia | sk_SK | 9.0.5 |
+| Slovenian | Slovenia | sl_SI | 9.0.5 |
+| Somali | Somalia | so_SO | 9.2.0|
+| Spanish | Argentina | es_AR | 9.0.5 |
+| Spanish | Bolivia | es_BO | 9.0.5 |
+| Spanish | Chile | es_CL | 9.0.5 |
+| Spanish | Colombia | es_CO | 9.0.5 |
+| Spanish | Costa Rica | es_CR | 9.0.5 |
+| Spanish | Dominican Republic | es_DO | 9.0.5 |
+| Spanish | Ecuador | es_EC | 9.0.5 |
+| Spanish | El Salvador | es_SV | 9.0.5 |
+| Spanish | Guatemala | es_GT | 9.0.5 |
+| Spanish | Honduras | es_HN | 9.0.5 |
+| Spanish | Mexico | es_MX | 9.0.5 |
+| Spanish | Nicaragua | es_NI | 9.0.5 |
+| Spanish | Panama | es_PA | 9.0.5 |
+| Spanish | Paraguay | es_PY | 9.0.5 |
+| Spanish | Peru | es_PE | 9.0.5 |
+| Spanish | Puerto Rico | es_PR | 9.0.5 |
+| Spanish | Spain | es_ES | 9.0.5 |
+| Spanish | United States | es_US | 9.0.5 |
+| Spanish | Uruguay | es_UY | 9.0.5 |
+| Spanish | Venezuela | es_VE | 9.0.5 |
+| Swedish | Sweden | sv_SE | 9.0.5 |
+| Swahili | Kenya | sw_KE | 9.2.0 |
+| Swahili | Rwanda | sw_RW | 9.2.0 |
+| Swahili | Tanzania | sw_TZ | 9.2.0 |
+| Swahili | Uganda | sw_UG | 9.2.0 |
+| Tagalog | Philippines | tl_PH | 9.2.0 |
+| Tamil | India | ta_IN | 9.3.0 |
+| Tamil | Sri Lanka | ta_LK | 9.3.0 |
+| Tamil | Singapore | ta_SG | 9.3.0 |
+| Thai (Western digits) | Thailand | th_TH | 9.0.5 |
+| Thai (Thai digits) | Thailand | th_TH_TH | 9.0.5 |
+| Turkish | Turkey | tr_TR | 9.0.5 |
+| Ukrainian | Ukraine | uk_UA | 9.0.5 |
+| Urdu | India | ur_IN | 9.2.0 |
+| Urdu | Pakistan | ur_PK | 9.2.0 |
+| Vietnamese | Vietnam | vi_VN | 9.0.5 |
+| Welsh | Wales | cy_GB | 9.0.5 |

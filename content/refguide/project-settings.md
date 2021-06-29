@@ -31,7 +31,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -167,7 +167,7 @@ In production, this only works with licenses based on concurrent users.
 
 Default: *Yes*
 
-## 4 Languages Tab
+## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](translatable-texts).
 
@@ -233,7 +233,7 @@ The look and feel of a Mendix application is governed by the [UI resources packa
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 

@@ -210,6 +210,14 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
 
+{{% alert type="info" %}}
+If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
+
+* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall.
+
+* All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
+{{% /alert %}}
+
 #### 4.3.2 Configure Namespace{#configure-namespace}
 
 You can now configure the resources required for your namespace.

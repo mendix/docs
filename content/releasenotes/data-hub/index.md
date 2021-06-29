@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### June 24th, 2021
+
+#### New Feature
+
+* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
+  * `GET` all published endpoints
+  * `GET`, `POST`, and `PUT` one individual published endpoint
+
 ### June 10th, 2021
 
 #### Improvements
@@ -22,8 +30,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Feature
 
 * All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
-  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) — includes GET calls for getting details of data sources
-  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) — PUT calls are added to enable users to update or register applications and environments by specifying a UUID
+  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) – includes GET calls for getting details of data sources
+  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
 ### May 27th, 2021
 

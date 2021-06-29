@@ -42,7 +42,7 @@ The app will be downloaded from the Team Server and opened in Studio Pro.
 
 ## 4 Day-to-Day Development
 
-Let us say you have a working copy of a app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
+Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
 
 When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update and retrieve those changes.
 
@@ -181,7 +181,7 @@ The involved document is marked as conflicted and you can see the reason in the 
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
-You can resolve a app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
 
 ## 7 Using Branches
 
@@ -318,7 +318,7 @@ If you are using a different hosting environment, you create a deployment packag
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-28_13-44-04.png)
 
-## 9 Working Outside Studio Pro
+## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 
 Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 

@@ -9,7 +9,9 @@ tags: ["studio pro"]
 
 In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content).
 
-## 2 Preparation
+## 2 Prerequisites
+
+Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a [GitHub account](https://github.com/join)
 * Read the [Create a Repo](https://help.github.com/articles/create-a-repo) GitHub guide

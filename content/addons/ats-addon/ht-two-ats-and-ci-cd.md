@@ -54,7 +54,7 @@ Continuous deployment is an excellent way to accelerate the feedback loop with y
 The CI/CD process ensures that everything committed is tested and deployed. An example:
 A Mendix developer commits a change into his team server branch. The branch is then automatically deployed into the test environment and tested. If the tests passes, the branch is deployed into the acceptance environment and also tested. You can even use Continuous Deployment to directly deploy to production and perform a regression test.
 
-## 4 ATS & CI/CD {#four}
+## 4 ATS & CI/CD {#ats-and-ci-cd}
 
 ATS can do the testing of your Mendix app in the CI/CD pipeline. In ATS 2.0 a CI/CD API is added, so that customers can access their test cases or test suites from outside ATS. This way you can use a CI/CD tool to execute your test cases and test suites in ATS and retrieve the results. To access those specific test cases and test suites you must generate a CI/CD API key. This chapter explains how to generate a CI/CD API key for accessing ATS and how to generate a CI/CD template for a test case or test suite. The CI/CD template is a pre-configured test case or test suite with a set run configuration which can be fired from a CI/CD pipeline.
 

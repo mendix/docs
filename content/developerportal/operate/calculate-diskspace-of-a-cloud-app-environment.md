@@ -78,5 +78,5 @@ The total amount of disk space for this app is: ``(28.43 * 100) / 37.74 = 75.3 
 
 ## 5 Read More
 
-* [Mendix Cloud](../deploy/mendix-cloud-deploy)
-* [Environments](../deploy/environments)
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
+* [Environments](/developerportal/deploy/environments)

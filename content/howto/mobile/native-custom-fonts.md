@@ -89,7 +89,7 @@ Before [adding fonts manually](#manual):
 
 ## 3 Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
-The Mendix Native Mobile Builder simplifies adding custom fonts to your project. It configures both Android and iOS projects and also provides the snippets needed to simply copy and paste in your Mendix project's native styles. To add custom fonts to your project, follow these steps: 
+The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It configures both Android and iOS app and also provides the snippets needed to simply copy and paste in your Mendix app's native styles. To add custom fonts to your app, follow these steps: 
 
 1.  Start the Mendix Native Mobile Builder:
 
@@ -113,7 +113,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your project.
 
 1. Build your app to get a new binary with fonts included. 
 
-## 4 Use Custom Fonts in Your Project
+## 4 Use Custom Fonts in Your App
 
 To use the new fonts to style your content, follow these instructions:
 
@@ -121,7 +121,7 @@ To use the new fonts to style your content, follow these instructions:
 
 	{{% image_container width="350" %}}![Custom fonts screen code snippet](attachments/nbui/advanced-fonts4.png){{% /image_container %}}
 
-1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](https://docs.mendix.com/howto/mobile/how-to-use-native-styling#1-introduction):
+1.  Open your styles *js* file and paste the snippet there. For this example, the *custom-variables.js* file is being used. For more information on styling your app, see [How to Style Your Mendix Native Mobile App](how-to-use-native-styling):
 
 	{{% image_container width="350" %}}![Custom variables file](attachments/nbui/custom-variables.png){{% /image_container %}}
 
@@ -133,7 +133,7 @@ To use the new fonts to style your content, follow these instructions:
 
 While the Mendix Native Mobile Builder simplifies adding fonts, you might find yourself in a situation where you must add fonts manually instead.
 
-### 5.1 Add Custom Fonts to an Android Project
+### 5.1 Add Custom Fonts to an Android App
 
 To manually add custom fonts to your Android app, follow these instructions: 
 
@@ -147,17 +147,17 @@ To manually add custom fonts to your Android app, follow these instructions:
     * TimesNewRomanPS-BoldMT, for bold
 
 1. Copy the renamed fonts to the `android\app\src\main\assets\fonts` folder.
-1.  If you plan on using the tool to build your project, commit your changes:
+1.  If you plan on using the tool to build your app, commit your changes:
 
 	{{% image_container width="350" %}}![GitHub repo after uploading cutom fonts](attachments/nbui/custom-fonts-android-repo.png){{% /image_container %}}
 
 1. Build your Android app using your preferred method.
 
-Congratulations, you have learned how to add fonts to an Android project.
+Congratulations, you have learned how to add fonts to an Android app.
 
-### 5.2 Add Custom Fonts to an iOS Project
+### 5.2 Add Custom Fonts to an iOS App
 
-Use XCode to manually add fonts to an iOS project:
+Use XCode to manually add fonts to an iOS app:
 
 1. Collect all the fonts you would like to use.
 1.  Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
@@ -191,13 +191,13 @@ Use XCode to manually add fonts to an iOS project:
 
 	{{% image_container width="350" %}}![Plist fonts key filled](attachments/nbui/xcode-plist-fonts-filled.png){{% /image_container %}}
 
-1.  If you plan on using the tool to build your project, commit your changes:
+1.  If you plan on using the tool to build your app, commit your changes:
 
 	{{% image_container width="350" %}}![GitHub repo after uploading cutom fonts](attachments/nbui/custom-fonts-ios-repo.png){{% /image_container %}}
 
 1. Build your iOS app with your preferred method.
 
-Congratulations, you have learned how to add fonts to an iOS project. 
+Congratulations, you have learned how to add fonts to an iOS app. 
 
 ## 6 Read More
 

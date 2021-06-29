@@ -25,14 +25,14 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-<a name="catalog"></a>It also presents various content catalogs:
+<a name="catalog"></a>It also presents various content categories:
 
 | Catalog | Description |
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
-| [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
-| [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
-| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
+| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| [Connectors](/appstore/connectors/) | Connectors are for connecting data. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
+| [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Fully-formed solutions for your apps. |
 

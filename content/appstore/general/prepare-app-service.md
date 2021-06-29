@@ -1,5 +1,5 @@
 ---
-title: "Prepare to Sell Your Component in the Marketplace"
+title: "Sell Your Component in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "component", app service"]
@@ -63,9 +63,9 @@ For more information on what you need to do as a Marketplace Vendor to submit an
 
 ## 3 Before You Submit Your Component
 
-{{% todo %}}[**Verify definition of an app service below. Also: why is this definition necessary in this doc, if the doc is about all monetized components? This definition should be on the overview page for platform-supported app services, like this definition for modules: https://docs.mendix.com/appstore/modules/**{{% /todo %}}
-
 An app service is a domain-focused business capability delivered in the form of a collection of composable Mendix native UI components, APIs, and web services. They are flexible building blocks with out-of-the-box integration into the Mendix development experience, enabling users to imagine new apps, extend the capability of existing apps, and significantly decrease time-to-value.They address the problems and needs of specific industries and use cases for Mendix users.
+
+{{% todo %}}[**Verify definition of an app service above. Also: why is this definition necessary in this doc, if the doc is about all monetized components? This definition should be on the overview page for platform-supported app services, like this definition for modules: https://docs.mendix.com/appstore/modules/**{{% /todo %}}
 
 The Marketplace provides a trustworthy experience for sharing and consuming components.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your component.
 

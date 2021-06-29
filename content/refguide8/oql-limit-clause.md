@@ -5,7 +5,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/oql-limit-clause.pdf).
 {{% /alert %}}
 
 With the limit clause a portion of the result of a query can be returned.

@@ -114,7 +114,7 @@ See the examples below for more information on creating a re-usable theme module
 
 ### 4.1 Marking as a UI Resources Module
 
-Modules that contain theme styling should be marked as UI resources modules (right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**). This will make them appear with a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
+Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
 ![green module](attachments/customize-styling/green-module.png)
 

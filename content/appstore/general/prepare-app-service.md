@@ -1,22 +1,20 @@
 ---
-title: "Prepare Your App Service for the Marketplace"
+title: "Prepare to Sell Your Component in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "app service"]
 description: "Describes how to make your app service Marketplace-ready."
 ---
 
-{{% todo %}}[**What is an "app service" in the context of the Marketplace? Will it be a new category for Marketplace components (available to select as a category when submitting a component)? This will inform the title of this doc, its purposes, and terminology used throughout.**{{% /todo %}}
+{{% todo %}}[**This doc is for preparing ALL types of components (modules, widgets, etc.) to sell in the Marketplace, not just an app service, correct? **{{% /todo %}}
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your app service in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
 {{% todo %}}[**Verify slide to be included; need higher quality image**{{% /todo %}}
 
 ![](attachments/suppliers/benefits.png)
-
-App services are domain-focused packaged business capabilities delivered as a collection of composable Mendix native UI components and APIs.  In other words, they are flexible building blocks with out-of-the-box integration into the Mendix development experience, enabling users to imagine new apps, extend the capability of existing apps, and significantly decrease time-to-value.
 
 **This how-to will teach you how to do the following:**
 
@@ -63,15 +61,15 @@ The checks involved are:
 
 For more information on what you need to do as a Marketplace Vendor to submit an app service, see the [Commercial Setup](#commercial-setup) section below.
 
-## 3 App Service Overview
+## 3 Before You Submit Your Component
 
-{{% todo %}}[**Verify definition of an app service here - also verify whether this doc applies to app services or to any monetized component (affects title)**{{% /todo %}}
+{{% todo %}}[**Verify definition of an app service below. Also: why is this definition necessary in this doc, if the doc is about all monetized components? This definition should be on the overview page for platform-supported app services, like this definition for modules: https://docs.mendix.com/appstore/modules/**{{% /todo %}}
 
 An app service is a domain-focused business capability delivered in the form of a collection of composable Mendix native UI components, APIs, and web services. They are flexible building blocks with out-of-the-box integration into the Mendix development experience, enabling users to imagine new apps, extend the capability of existing apps, and significantly decrease time-to-value.They address the problems and needs of specific industries and use cases for Mendix users.
 
-The Marketplace provides a trustworthy experience for sharing and consuming app services and other products.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
+The Marketplace provides a trustworthy experience for sharing and consuming components.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your component.
 
-Once you have submitted your app service, you can manage all the business related to it, and you can access your commercial agreements and account information via the **Partner Portal**.  [My Marketplace](app-store-overview#my-marketplace) enables keeping track of and communicating with the users of your app service. 
+Once you have submitted your component, you can manage all the business related to it, and you can access your commercial agreements and account information via the **Partner Portal**.  [My Marketplace](app-store-overview#my-marketplace) enables keeping track of and communicating with the users of your app service. 
 
 {{% todo %}}[**Where is the Partner Portal? Will this be added to My Marketplace UI?**{{% /todo %}}
 
@@ -85,13 +83,11 @@ The **Marketplace APIs** are also available for you to automate your workflow an
 
 ![](attachments/suppliers/journey.png)
 
-## 4 Before You Submit Your App Service
-
 To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your app service. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your app service and get support via best practices and success stories from like-minded Marketplace Vendors.
 
-### 4.1 Prerequisites
+### 3.1 Prerequisites
 
-### 4.1.1 OSB API Compatibility
+### 3.1.1 OSB API Compatibility
 
 To submit an app service to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
         
@@ -105,7 +101,7 @@ For additional assistance and an example of how to provision and bind an app to 
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-### 4.1.2 Identity and Access Management (IAM)
+### 3.1.2 Identity and Access Management (IAM)
 
 When you submit your app service to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
 
@@ -119,7 +115,7 @@ For more information, see **Service Provider IAM Requirements**.
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-### 4.1.3 Metering
+### 3.1.3 Metering
 
 App service metering consists of the following:
 
@@ -130,15 +126,15 @@ App service metering consists of the following:
 	* Widget
 * Metering (via the app service’s own solution) 
 
-### 4.1.4 Product Documentation
+### 3.1.4 Product Documentation
 
 {{% todo %}}[**Content to be added?**]{{% /todo %}}
 
-### 4.1.5 Commercial
+### 3.1.5 Commercial
 
 {{% todo %}}[**Content to be added?**]{{% /todo %}}
 
-### 4.1.6 Export Control
+### 3.1.6 Export Control
 
 Export control is an area of legislation that regulates and restricts the export of goods, information, software, and technology that could be potentially useful for purposes that are contrary the interest of the exporting country. These items are considered to be *controlled*. 
 
@@ -148,11 +144,11 @@ If you are unclear what this means to you and your app service, there are useful
 
 {{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
-### 4.1.7 Pricing & Free Trials
+### 3.1.7 Pricing & Free Trials
 
 As a Marketplace Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your app service. Once you have decided on your preferred pricing model and whether you want to offer your app service as a free trial, you can apply these these options to your app service via steps in the Add Content wizard.
 
-#### 4.1.7.1 Pricing Models
+#### 3.1.7.1 Pricing Models
 
 The Marketplace supports two pricing models: 
 
@@ -163,7 +159,7 @@ When you submit your app service, you can choose whether to have it metered by *
 
 {{% todo %}}[**Do we need separate definitions for Payload size and Count, or are those supposed to reflect the pricing models?**]{{% /todo %}}
 
-#### 4.1.7.2 Free Trials
+#### 3.1.7.2 Free Trials
 
 The benefits of a free trial are well know as a means to increase user adoption. Having offered trials for many of our own app services, Mendix recommends that you consider offering a trial for yours, too.
 
@@ -171,7 +167,7 @@ The Marketplace supports time-based trials, so you must clearly define the terms
 
 The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
         
-#### 4.1.7.3 Payments
+#### 3.1.7.3 Payments
 
 One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your app service according to the pricing model you specify for it. The Marketplace meters usage of your app service and sends a bill to the user.  You can see monthly billing reports in your Partner Portal, and you will also be emailed them for completeness.
 
@@ -186,7 +182,7 @@ Under our standard [Mendix  Terms of Use](https://www.mendix.com/terms-of-use/),
 | Billing day | 15th day of each month |
 | Billing timing | In arrears |
 
-#### 4.1.7.4 Marketplace Operating Fees
+#### 3.1.7.4 Marketplace Operating Fees
 
 The Mendix Marketplace is free to use unless you want to sell paid app services through it. When you sell your app service via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing as well as the payment provided by the Marketplace.
     
@@ -194,7 +190,7 @@ For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monet
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-#### 4.1.7.5 Supported Regions
+#### 3.1.7.5 Supported Regions
 
 Subject to the compliance requirements for your specific app service, the Marketplace supports global access to free and trials of paid app services.
 
@@ -211,9 +207,9 @@ Further conditions apply:
 
 {{% todo %}}[**More information to be added above?**{{% /todo %}}
 
-### 4.2 Commercial Setup {#commercial-setup}
+### 3.2 Commercial Setup {#commercial-setup}
 
-#### 4.2.1 Marketplace Vendor License Agreement
+#### 3.2.1 Marketplace Vendor License Agreement
 
 Whether you are offering a free or paid app service through the Marketplace, you have to accept our Marketplace Vendor License Agreement, which is an agreement between Mendix and you as a Marketplace Vendor within the Marketplace Vendor Program.
 
@@ -229,7 +225,7 @@ These are similar concepts to those in the Developer Program License Agreement i
 
 {{% todo %}}[**Keep references to these examples?**{{% /todo %}}
 
-#### 4.2.2 Seller License Agreement
+#### 3.2.2 Seller License Agreement
 
 For paid app services, you have to accept our Marketplace Seller Agreement and provide seller account information, including the following:
 
@@ -244,17 +240,17 @@ These are similar concepts to those in the Paid Applications Agreement in the [A
 
 {{% todo %}}[**Keep reference to this example?**{{% /todo %}}
 
-### 4.3 Preparing a Draft in the Marketplace
+### 3.3 Preparing a Draft in the Marketplace
 
 While you are developing your app service, it is a good practice to [create a draft version](share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your app service to the Marketplace as soon as you finish creating it. 
 
 Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your app service. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
 
-## 5 Submitting Your App Service
+## 4 Submitting Your App Service
 
 At this stage, you have confirmed the commercial feasibility of your app service, you have signed up as a Marketplace Vendor, and you are technically ready to publish your app service to the Marketplace.
 
-#### 5.1 Completing the Final Checklist
+#### 4.1 Completing the Final Checklist
 
 As a helping hand, the sections below present items to consider in the final step to successfully publishing your app service:
 
@@ -309,13 +305,13 @@ As a helping hand, the sections below present items to consider in the final ste
 
 {{% todo %}}[**Verify above about no license**]{{% /todo %}}
 
-#### 5.2 Submitting & Publishing Your App Service
+#### 4.2 Submitting & Publishing Your App Service
 
 When your app service is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 
 Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible.  We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
-## 6 After You Submit Your App Service
+## 5 After You Submit Your App Service
 
 Once you have submitted your app service, you can keep track of your submission by subscribing to receive status notifications. If you need more help, you can contact the Marketplace Governance Team.
 

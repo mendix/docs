@@ -15,16 +15,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
-
 ### June 30th, 2021
 
 #### Improvements
 
-* You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details)
-* We moved the old stories page. You can now access it via the [More button](/developerportal/collaborate/stories#2-4-more-actions) on the new stories page 
-* We removed the Team read-only overview page and send you straight to the [Manage Team page](/developerportal/collaborate/team#managing)
-* We moved the [Project API Keys](/developerportal/collaborate/api-key) page to the [General Settings page](/developerportal/collaborate/general-settings)
-* We implemented a new responsive search panel
+* You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
+* We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
+* We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
+* We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
+* We implemented a new responsive search panel.
 
 ### June 15th, 2021
 

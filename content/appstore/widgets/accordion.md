@@ -37,17 +37,17 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 
 **Advanced options**, disabled by default, determines whether the advanced configuration properties become visible. The advanced tabs and their properties are as follows:
 
-* General:
+* **General**:
 	* Animate
-* Visualization:
+* **Visualization**:
 	* Show icon
-* Visualization:
+* **Visualization**:
 	* Icon
-* Visualization:
+* **Visualization**:
 	* Expand icon
-* Visualization:
+* **Visualization**:
 	* Collapse icon 
-* Visualization:
+* **Visualization**:
 	* Animate icon 
 
 ### 2.3 Visualization Tab

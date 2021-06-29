@@ -53,9 +53,10 @@ Fill in the following details:
 * **Title** – the title of the story
 * **Description** – a description of the story
 * **Story type** – select whether the story describes a **Feature** or **Bug**
-* **Story points** – the size of the story
 * **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
 * **Story status** – select **To-do** (default), **Running**, or **Done**
+* **Assignee** - select a team member you wish to assign to this story
+* **Story points** – the size of the story
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 

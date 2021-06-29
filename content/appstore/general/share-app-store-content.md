@@ -81,9 +81,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-### 3.4 App Service Guidelines
+### 3.4 Guidelines for Selling Components
 
-For details on how to make your app service Marketplace-ready, see [Prepare Your App Service for the Marketplace](prepare-app-service).
+For details on how to prepare your component to sell it in the Marketplace, see [How to Sell Your Component in the Marketplace](prepare-component-to-sell).
 
 ## 4 Adding New Marketplace Content {#adding}
 

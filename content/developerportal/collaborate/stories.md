@@ -76,7 +76,7 @@ Click **New Label** to create a new label for your app:
 * **Label caption** – the caption of the label
 * **Label color** – pick a color for easy visibility
 
-### 2.4 More Actions
+### 2.4 More Actions {#more}
 
 Click **More** to access the following options::
 

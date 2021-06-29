@@ -1,5 +1,5 @@
 ---
-title: "Sell Your Component in the Marketplace"
+title: "Prepare to Sell Your Component in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "component", app service"]
@@ -7,6 +7,8 @@ description: "Describes how to make your component Marketplace-ready."
 ---
 
 {{% todo %}}[**This doc is for preparing ALL types of components (modules, widgets, etc.) to sell in the Marketplace, not just an app service, correct? **{{% /todo %}}
+
+{{% todo %}}[**Best title?**{{% /todo %}}
 
 ## 1 Introduction
 

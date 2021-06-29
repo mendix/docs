@@ -1,64 +1,55 @@
-# Metamodel Release Notes for version 9.3.0
+---
+title: "9.3"
+parent: "metamodel-9"
+---
 
-## DomainModels
+## 9.3.0
 
-### Entity (Element)
+### DomainModels
 
+#### Entity (Element)
 
-#### Property 'exportLevel'
-* Introduced; 
+* We introduced the `exportLevel` property.
 
-### Attribute (Element)
+#### Attribute (Element)
 
+* We introduced the `exportLevel` property.
 
-#### Property 'exportLevel'
-* Introduced; 
+#### AssociationBase (Element)
 
-### AssociationBase (Element)
+* We introduced the `exportLevel` property.
 
+### Projects
 
-#### Property 'exportLevel'
-* Introduced; 
+#### Module (StructuralUnit)
 
-## Projects
+* We introduced the `exportLevel` and `isThemeModule` properties.
 
-### Module (StructuralUnit)
+#### Document (ModelUnit)
 
+* We introduced the `exportLevel` property.
 
-#### Property 'exportLevel'
-* Introduced; 
+### Queues
 
-#### Property 'isThemeModule'
-* Introduced; 
-
-### Document (ModelUnit)
-
-
-#### Property 'exportLevel'
-* Introduced; 
-
-## Queues
-
-### Queue (ModelUnit)
+#### Queue (ModelUnit)
 * Removed experimental
 
 
-### QueueConfig (Element)
+#### QueueConfig (Element)
 * Removed experimental
 
 
-### BasicQueueConfig (Element)
+#### BasicQueueConfig (Element)
 * Removed experimental
 
 
-## Settings
+### Settings
 
-### WebUIProjectSettingsPart (Element)
+#### WebUIProjectSettingsPart (Element)
 
+* We introduced the `themeModuleOrder` property.
 
-#### Property 'themeModuleOrder'
-* Introduced; 
+#### ThemeModuleEntry (Element)
 
-### ThemeModuleEntry (Element)
-* Introduced; 
+* We introduced this element.
 

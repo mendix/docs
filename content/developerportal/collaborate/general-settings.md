@@ -108,7 +108,7 @@ After they provide authorization, they will be brought to your deployed app.
 
 ## 5 API Keys
 
-Here you can manage your project's API keys. For more information on managing API Keys, see [API Keys](api-keys)
+Here you can manage your project's API keys. For more information on managing API Keys, see [Manage API Keys](api-key).
 
 ## 6 Editing App Info {#editing}
 
@@ -165,5 +165,5 @@ To leave the app, click **Leave App**. For details on leaving, deleting, and dea
 ## 9 Read More
 
 * [Leave & Delete an App](leave-delete-app)
-* [API Keys](api-keys)
+* [Manage API Keys](api-key)
 * [Manage Deep Links](manage-deeplinks)

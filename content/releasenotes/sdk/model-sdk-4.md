@@ -4,6 +4,13 @@ parent: "model-sdk"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.52.0 {#452}
+
+**Release date: June 16th, 2021**
+
+* We added support for Mendix [9.3.0](../studio-pro/9).
+* We added support for Mendix Metamodel [9.3.0](metamodel-9.3).
+
 ## 4.51.0 {#451}
 
 **Release date: May 17th, 2021**

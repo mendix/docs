@@ -7,7 +7,7 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-![](attachments/install/download.png](https://marketplace.mendix.com/link/studiopro/)
+[![](attachments/install/download.png)](https://marketplace.mendix.com/link/studiopro/)
 
 ## 1 Introduction
 

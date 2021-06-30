@@ -119,17 +119,17 @@ The response payload is shown below:
 ​            "Application": {
 ​                "Type": "Mendix",
 ​                "TechnicalOwner": {
-​                    "Email": "nam.nguyen@mendix.com",
+​                    "Email": "{Email}",
 ​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae",
-​                    "Name": "Nam Nguyen"
+​                    "Name": "{Name}"
 ​                },
 ​                "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
 ​                "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
 ​                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
 ​                "BusinessOwner": {
-​                    "Email": "georg.maureder@mendix.com",
+​                    "Email": "{Email}",
 ​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb",
-​                    "Name": "Georg Maureder"
+​                    "Name": "{Name}"
 ​                },
 ​                "Name": "HR Sample App"
 ​            },
@@ -536,13 +536,13 @@ The successful 200 response that is returned shows the full details of the consu
 ​                    "Type": "Mendix",
 ​                    "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
 ​                    "TechnicalOwner": {
-​                        "Email": "nam.nguyen@mendix.com",
-​                        "DisplayName": "Nam Nguyen",
+​                        "Email": "{Email}",
+​                        "DisplayName": "{Name}",
 ​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae"
 ​                    },
 ​                    "BusinessOwner": {
-​                        "Email": "georg.maureder@mendix.com",
-​                        "DisplayName": "Georg Maureder",
+​                        "Email": "{Email}",
+​                        "DisplayName": "{Name}",
 ​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb"
 ​                    }
 ​                }

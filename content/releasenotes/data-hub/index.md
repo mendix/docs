@@ -13,8 +13,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-- Updated the example in specification for `PUT` published endpoints to match the behavior.
-- Fixed an issue where the Administration pages could time-out for a Data Hub admin.
+* We updated the example in the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) for `PUT` published endpoints to match the behavior.
+* We fixed an issue where the [Administration](/data-hub/general/data-hub-admin-functions) pages timed out for a Data Hub Admin.
 
 ### June 24th, 2021
 

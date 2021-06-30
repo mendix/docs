@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Common Native Mobile Issues"
-parent: "native-mobile"
-menu_order: 80
+parent: "get-started"
+menu_order: 40
 description: Troubleshoot common issues associated with building and running native mobile apps.
 tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 ---

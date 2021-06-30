@@ -1,7 +1,7 @@
 ---
 title: "Set Up Maps in Native Mobile Apps"
-parent: "native-mobile"
-menu_order: 78
+parent: "implementation"
+menu_order: 40
 description: This guide will teach you to set up native mobile maps capabilities for Android and Apple devices.
 tags: ["maps", "google maps", "native", "mobile"]
 ---

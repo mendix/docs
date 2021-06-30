@@ -10,7 +10,7 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 You can expose a microflow as a workflow action and add it to the workflow toolbox. This is particularly useful if you plan to reuse the microflow logic several times and turning it into a custom workflow action is a good alternative to using the [Call microflow](/refguide/call-microflow) action. There are the following advantages to having the custom workflow action: 
 
-* It Makes logic more reusable.
+* It makes logic more reusable.
 * The workflow process is more visualized and understandable.
 * It saves you time: dragging and dropping a ready-to-use action is faster than configuring the **Call microflow** action.  
 
@@ -30,11 +30,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Exposing the Microflow as the Workflow Action
 
-For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns yes or no answer. To be able to reuse the logic of this microflow in the Employee_Onboarding workflow, you can call this microflow from a new microflow that will be accept a workflow object and return the workflow outcome. Do the following:
+For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the Employee_Onboarding workflow, you can call this microflow from a new microflow that will accept a workflow object and return the workflow outcome. Do the following:
 
-1. First you need to create a new microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
+1. Create a new microflow that calls **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 
-2. Make sure that the input parameters of the microflow are mapped to the workflow definition. For the Employee_Onboarding workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
+2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the Employee_Onboarding workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
 
 3. In **Toolbox**, select **Microflow call** and drag and drop it to the flow:
 

@@ -33,7 +33,11 @@ When you click **Details** for a story, you will be taken to the [Story Details]
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 {{% /alert %}}
 
-## 3 Burndown Chart
+## 3 Burndown Chart {#burndown}
+
+{{% alert type="info" %}}
+This tab will be removed on the August 31st, 2021.
+{{% /alert %}}
 
 This tab graphically presents the progress of the current Sprint:
 
@@ -45,7 +49,11 @@ This tab graphically presents the progress of the current Sprint:
 
 Under **Sprint History**, you can view burndown charts for completed sprints.
 
-## 4 Release Plan Tab
+## 4 Release Plan {#release-plan}
+
+{{% alert type="info" %}}
+This tab will be removed on the August 31st, 2021. Make sure that you save your data before it is removed by using the **Export to Excel** button.
+{{% /alert %}}
 
 Under this tab, you will get an overview of all the springs.
 

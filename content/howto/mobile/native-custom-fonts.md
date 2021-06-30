@@ -1,7 +1,7 @@
 ---
 title: "Add Fonts to Your Native Mobile App"
-parent: "native-mobile"
-menu_order: 42
+parent: "implementation"
+menu_order: 20
 description: "This tutorial will teach you to enrich the design of your native mobile app with custom fonts."
 tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 ---

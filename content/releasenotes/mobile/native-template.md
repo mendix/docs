@@ -14,6 +14,22 @@ These are the current versions in active development:
 * Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15) and above.
 * Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
 
+## 6.1.7
+
+**Release date: June 30th, 2021**
+
+### Fixes
+
+* We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.
+
+## 5.1.13
+
+**Release date: June 30th, 2021**
+
+### Fixes
+- We identified and fixed an issue on iOS Custom Dev Apps with Deep links.
+- We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.
+
 ## 6.1.6 and 5.1.12
 
 **Release date: June 11th, 2021**

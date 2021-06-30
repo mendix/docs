@@ -16,7 +16,7 @@ Most deployment targets have a limit on the size of deployment package you can d
 | Target | Maximum Deployment Package Size |
 | --- | --- |
 | Mendix Cloud | 1GB |
-| SAP BTP | 1.5GM |
+| SAP BTP | 1.5GB |
 | Mendix for Private Cloud | 200MB |
 {{% /alert %}}
 

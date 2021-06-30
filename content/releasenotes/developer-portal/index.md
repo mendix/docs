@@ -24,6 +24,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
 * We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
 * We implemented a new responsive search panel.
+* We will be removing the [Burndown Chart](/developerportal/collaborate/development#3-burndown-chart) and [Release Plan](/developerportal/collaborate/development#4-release-plan-tab) from the Developer Portal on 31 August 2021
 
 ### June 15th, 2021
 

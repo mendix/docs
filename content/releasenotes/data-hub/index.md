@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### July 1st, 2021
+
+#### Fixes
+
+- Updated the example in specification for `PUT` published endpoints to match the behavior.
+- Fixed an issue where the Administration pages could time-out for a Data Hub admin.
+
 ### June 24th, 2021
 
 #### New Feature

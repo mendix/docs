@@ -17,7 +17,7 @@ The **General** settings page presents an overview of your app with the followin
 
 * A **Description** of the app
 * The [App Contact](/developerportal/collaborate/app-roles#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app
-* Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
+* Whether the app is enabled for **Mendix Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
 {{% image_container width="450" %}}

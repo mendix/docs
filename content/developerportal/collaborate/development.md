@@ -35,7 +35,9 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 3 Burndown Chart
 
-{{% alert type="info" %}} Burndown chart tab will be removed on the 31st of August 2021. {{% /alert %}}
+{{% alert type="info" %}}
+This tab will be removed on the August 31st, 2021.
+{{% /alert %}}
 
 This tab graphically presents the progress of the current Sprint:
 
@@ -49,7 +51,9 @@ Under **Sprint History**, you can view burndown charts for completed sprints.
 
 ## 4 Release Plan Tab
 
-{{% alert type="info" %}} Release plan tab will be removed on the 31st of August 2021. Make sure that you save your data before it gets removed by using the "Export to Excel" button. {{% /alert %}}
+{{% alert type="info" %}}
+This tab will be removed on the August 31st, 2021. Make sure that you save your data before it is removed by using the **Export to Excel** button.
+{{% /alert %}}
 
 Under this tab, you will get an overview of all the springs.
 

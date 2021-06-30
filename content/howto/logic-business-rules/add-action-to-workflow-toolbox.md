@@ -44,7 +44,7 @@ For example, you have the Employee Onboarding process set up in your app. For mo
 
 5. Click the **End event** and navigate to the **Properties** pane.
 
-6. Set the **Return value** for it to .
+6. Set the **Return value** for it to **Boolean**.
 
 7. Right-click the working area of the microflow and select **Properties**.
 

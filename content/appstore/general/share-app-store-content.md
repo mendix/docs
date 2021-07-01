@@ -46,16 +46,15 @@ You can add information the end-user should know to the component [Documentation
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
-* The widget (and test app) must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
+* The widget should be [pluggable](/howto/extensibility/create-a-pluggable-widget-one)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
 * Add code comments
 * Use descriptive variable and function names in both XML and JavaScript
-* Always add `"use strict";` functions
-* A function may not be larger than 200 lines of code
-* A function may only do one thing, and it should do it properly
-* Internal variables should start with an underscore (`_`)
-* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
-* Create test pages for mobile when content is mobile-supported
+* A function should not be more than 200 lines of code
+* A function should only do one thing, and it should do it properly
+* Use hooks and functional components over class components
+* Use TypeScript over JavaScript
+* Create test pages for mobile when content is made for mobile platforms
 
 ### 3.3 Module Guidelines
 

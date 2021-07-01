@@ -8,7 +8,11 @@ tags: ["mobile", "push notification", "remote", "push", "notification"]
 
 ## 1 Introduction
 
-This tutorial will teach you to configure and test push notifications (also known as remote notifications). Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.
+This tutorial will teach you to configure and test push notifications (also known as remote notifications).
+
+{{% alert type="info" %}}
+Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.
+{{% /alert %}}
 
 ## 2 Prerequisites
 

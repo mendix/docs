@@ -1,46 +1,48 @@
 ---
-title: "Prepare to Sell Your Component in the Marketplace"
+title: "Sell Your Component in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "component", app service"]
 description: "Describes how to make your component Marketplace-ready."
 ---
 
-{{% todo %}}[**This doc is for preparing ALL types of components (modules, widgets, etc.) to sell in the Marketplace, not just an app service, correct? **{{% /todo %}}
-
-{{% todo %}}[**Best title?**{{% /todo %}}
+{{% todo %}}[**Verify title**{{% /todo %}}
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Partner](#partner), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
-{{% todo %}}[**Verify slide to be included; need higher quality image**{{% /todo %}}
+{{% todo %}}[**Verify slide to be included; need higher quality image**]{{% /todo %}}
 
 ![](attachments/suppliers/benefits.png)
 
 **This how-to will teach you how to do the following:**
 
-* Join the Marketplace Vendor Program
+* Join the Marketplace Partner Program
 * Make your component ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your component to the Mendix Marketplace
 
-## 2 Becoming a Marketplace Vendor {#vendor}
+## 2 Becoming a Marketplace Partner {#partner}
 
-The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Vendors). ISVs and Marketplace Vendors are not mutually exclusive, because an ISV may also be a Marketplace Vendor, and a Marketplace Vendor may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
+The [Mendix Partner Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
-Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
+Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Partner Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
 ### 2.1 Prerequisites
 
-Before you become a Marketplace Vendor, there are a few prerequisites to take care of.  In addition to defining the business case for yourcomponent (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product.  We know export control can be confusing, so if you are still unclear on what you need to do, you can contact Mendix at *compliance@mendix.com*.
+Before you become a Marketplace Partner, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/link/signup/?source=direct) before you can create a Marketplace Partner account.
+
+In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product.  We know export control can be confusing, so if you are still unclear on what you need to do, you can contact Mendix at *compliance@mendix.com*.
 
 {{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
-### 2.2 Creating a Marketplace Vendor Account {#creating-account}
+### 2.2 Creating a Marketplace Partner Account {#creating-account}
 
-Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to create a Marketplace Vendor account.
+Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to create a Marketplace Partner account.
 
-Since your Marketplace Vendor account is associated with your Mendix ID, you first need to create a [Mendix Platform account](https://signup.mendix.com/). When creating your Marketplace Vendor account, Mendix asks for basic information, including your legal name and address. This information is used to check whether you want to sell your component or offer it for free.  As the creator of the account, you must have the permission to legally bind your company to Mendix.
+Since your Marketplace Partner account is associated with your Mendix ID, you first need to create a [Mendix Platform account](https://signup.mendix.com/). 
+
+When creating your Marketplace Partner account, Mendix asks for basic information, including your legal name and address. This information is used to check whether you want to sell your component or offer it for free.
 
 | Account Detail | Description |
 | --- | --- |
@@ -51,7 +53,38 @@ Since your Marketplace Vendor account is associated with your Mendix ID, you fir
 | Company Name | The legal name of the entity that will sell or offer your free service. |
 | Company Address | The legal address of the entity that will sell or offer your free service. |
 
-### 2.3 Legal & Compliance Checks
+As the creator of the Marketplace Partner account, you must have permission to legally bind your company to Mendix. If you are not the right person to do this, you can forward a request to one of your colleagues:
+
+![](attachments/suppliers/representative.png)
+
+### 2.3 Marketplace Partner License Agreement {#partner-license}
+
+Whether you are offering a free or paid component through the Marketplace, you have to accept our Marketplace Partner License Agreement, which is an agreement between Mendix and you as a Marketplace Partner within the Marketplace Partner Program.
+
+![](attachments/suppliers/partner-license.png)
+
+For ease of reference, here are some of the main points of the license agreement you need to be aware of:
+
+* Components must be free from any known security vulnerabilities
+* Components must not contain default passwords, authorization keys, or any other credentials
+* Components must not include software that collects and exports customer data without the customer's knowledge and express consent
+* Components must be production-ready and must include a defined support policy
+* Mendix reserves the right to reject components that do not comply with these guidelines or the requirements described in the license agreement
+
+### 2.4 Seller License Agreement {#seller-license}
+
+To receive payments from Mendix, you need need to accept the [Seller License Agreement](#seller-license) and provide some key information:
+
+![](attachments/suppliers/payment.png)
+
+| Account Detail | Description |
+| --- | --- |
+| Bank Name | The name of the branch where the account is held. |
+| Bank Address | The address of the branch where the account is held. |
+| Account Number | The account number for the legal entity or individual who signed the Seller License Agreement. |
+| Account Holder Name | The name registered with the account. |
+
+### 2.5 Legal & Compliance Checks
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 
@@ -61,13 +94,9 @@ The checks involved are:
 
 {{% todo %}}[**More information to be added above?**{{% /todo %}}
 
-For more information on what you need to do as a Marketplace Vendor to submit an component, see the [Commercial Setup](#commercial-setup) section below.
+For more information on what you need to do as a Marketplace Partner to submit an component, see the [Commercial Setup Before You Submit](#commercial-setup) section below.
 
-## 3 Before You Submit Your Component
-
-An app service is a domain-focused business capability delivered in the form of a collection of composable Mendix native UI components, APIs, and web services. They are flexible building blocks with out-of-the-box integration into the Mendix development experience, enabling users to imagine new apps, extend the capability of existing apps, and significantly decrease time-to-value.They address the problems and needs of specific industries and use cases for Mendix users.
-
-{{% todo %}}[**Verify definition of an app service above. Also: why is this definition necessary in this doc, if the doc is about all monetized components? This definition should be on the overview page for platform-supported app services, like this definition for modules: https://docs.mendix.com/appstore/modules/**{{% /todo %}}
+## 3 Making Your Component Marketplace-Ready
 
 The Marketplace provides a trustworthy experience for sharing and consuming components.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your component.
 
@@ -75,27 +104,21 @@ Once you have submitted your component, you can manage all the business related 
 
 {{% todo %}}[**Where is the Partner Portal? Will this be added to My Marketplace UI?**{{% /todo %}}
 
-Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your component.
-
-The **Marketplace APIs** are also available for you to automate your workflow and access data about your component.
+Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your component. The **Marketplace APIs** are also available for you to automate your workflow and access data about your component. For details, see the next selection.
 
 {{% todo %}}[**Where are these APIs published, how to link to them?**{{% /todo %}}
 
-{{% todo %}}[**Verify slide to be included**{{% /todo %}}
-
 ![](attachments/suppliers/journey.png)
 
-To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your component. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your component and get support via best practices and success stories from like-minded Marketplace Vendors.
+To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your component. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your component and get support via best practices and success stories from like-minded Marketplace Partners.
 
-### 3.1 Prerequisites
+## 4 Submission Prerequisites
 
-### 3.1.1 OSB API Compatibility for App Services
+### 4.1 OSB API Compatibility for Components
 
-{{% todo %}}[**Is this prereq specific to app services, or it applies to all components?**{{% /todo %}}
+To submit a component to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
 
-To submit an app service to the Marketplace, it needs to be compatible to the OSB API.  This allows the service to be automatically provisioned, and it provides the connection details for users when they try or buy it.
-        
-Although OSB API supports endpoints for many operations (as specified in the [Open Service Broker API specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), these are the three main concepts to consider while implementing your service broker for your app service are:
+Although OSB API supports endpoints for many operations (as specified in the [Open Service Broker API specification](https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md), these are the three main concepts to consider while implementing your service broker for your component are:
 
 * **Service Catalog** (`GET /v2/catalog`) – for listing your services available to the broker
 * **Provisioning** (`PUT /v2/service_instances/{instance_id}`) – for provisioning your service
@@ -105,79 +128,74 @@ For additional assistance and an example of how to provision and bind an app to 
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-### 3.1.2 Identity and Access Management (IAM)
+### 4.2 Identity & Access Management (IAM)
 
-{{% todo %}}[**Is this prereq specific to app services, or it applies to all components?**{{% /todo %}}
+When you submit your component to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
 
-When you submit your app service to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
+There are  three models for integrating with Mendix IAM, the applicability of which depends on how your component is architected. Models 1 and 2 apply at the app/component level, whereas model 3 applies at an individual user level:
 
-There are currently three models for integrating with Mendix IAM, the applicability of which depend on how your app service is architected.  Models 1 and 2 apply at the app/app service level, whereas model 3 applies at an individual user level:
-
-* **Model 1: Enable an app to communicate with your app service via an API** – in this model, users can use the Mendix low-code artefacts you supply within their apps to invoke your API
-* **Model 2: Enable Mendix developers and app end-users to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform** – this model is applicable when your app service requires a user identity (for example, your app service may support SSO when accessed by an end-user from within an app or when it is being configured by a developer at design time through a configuration UI)
-* **Model 3: Enable end-user access control to your app service from within an app** – in this model, end-user access to your app service is managed centrally by the Mendix IAM service
+* **Model 1: Enable an app to communicate with your component via an API** – in this model, users can use the Mendix low-code artefacts you supply within their apps to invoke your API
+* **Model 2: Enable Mendix developers and app end-users to have a single sign-on (SSO) experience between apps, components, and the Mendix Platform** – this model is applicable when your component requires a user identity (for example, your component may support SSO when accessed by an end-user from within an app or when it is being configured by a developer at design time through a configuration UI)
+* **Model 3: Enable end-user access control to your component from within an app** – in this model, end-user access to your component is managed centrally by the Mendix IAM service
 
 For more information, see **Service Provider IAM Requirements**.
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-### 3.1.3 Metering
+### 4.3 Metering
 
-{{% todo %}}[**Is this prereq specific to app services, or it applies to all components?**{{% /todo %}}
-
-App service metering consists of the following:
+Component metering consists of the following:
 
 * Usage-based metering (via the API gateway)
 	* API (payload, count)
 	* An asynchronous service 
 * Active users (via Mendix Runtime)
 	* Widget
-* Metering (via the app service’s own solution) 
+* Metering (via the component’s own solution) 
 
-### 3.1.4 Product Documentation
+### 4.4 Product Documentation
 
-{{% todo %}}[**Content to be added?**]{{% /todo %}}
+Comprehensive product documentation can have a significant impact on the success of your component product. This is why we check for its completeness as part of our review prior to your product being published in the Marketplace.
 
-### 3.1.5 Commercial
+Document how your component is used while the component is being developed (for example, using API documentation, release notes, and technical reference documentation). You should also explain how your component is designed to behave for users through typical use cases and best practices.
 
-{{% todo %}}[**Content to be added?**]{{% /todo %}}
+We recommend you look at the [Mendix Documentation](https://docs.mendix.com/) for examples of developer documentation.
 
-### 3.1.6 Export Control
-
-{{% todo %}}[**Is this prereq specific to app services, or it applies to all components?**{{% /todo %}}
+### 4.5 Export Control
 
 Export control is an area of legislation that regulates and restricts the export of goods, information, software, and technology that could be potentially useful for purposes that are contrary the interest of the exporting country. These items are considered to be *controlled*. 
 
-If your app service is a controlled item, Mendix needs to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases, you typically need to request an export control license from a local government department, and you need to confirm ownership of such a license before we can list your app service in the Marketplace.
+If your component is a controlled item, Mendix needs to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases, you typically need to request an export control license from a local government department, and you need to confirm ownership of such a license before we can list your component in the Marketplace.
 
-If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, you can contact Mendix at *compliance@mendix.com* for guidance.
+If you are unclear what this means to you and your component, there are useful resources online.  If you are stuck, you can contact Mendix at *compliance@mendix.com* for guidance.
 
 {{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
-### 3.1.7 Pricing & Free Trials
+### 4.6 Pricing & Free Trials
 
-As a Marketplace Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your component. Once you have decided on your preferred pricing model and whether you want to offer your component as a free trial, you can apply these these options to your component via steps in the Add Content wizard.
+As a Marketplace Partner, it is important that you choose the pricing model that will maximize the business opportunity for your component. Once you have decided on your preferred pricing model and whether you want to offer your component as a free trial, you can apply these these options to your component via steps in the Add Content wizard.
 
-#### 3.1.7.1 Pricing Models
+#### 4.6.1 Pricing Models
 
-The Marketplace supports two pricing models: 
+The Marketplace supports three pricing models. Before you submit your component, you specify the plan in your service broker implementation.
 
-* **Per User** (subscription) – In this model, a single user pays a fixed monthly price.  When a second user is added, the monthly price doubles, and so on.
-* **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your component to their usage. The more they use, the more they pay and conversely, the less they use, the less they pay.
+* **Flat Fee** –  As you submit your component, you specify the flat-fee price.
+* * **Per User**  – As you submit your component, you specify price per user per month. 
+* **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your component to their usage. The more they use, the more they pay. You can determine the metrics on which the cost is based, along with the price per unit for each of the metrics (via `SUM` or `COUNT` functions).
 
 When you submit your component you can choose whether to have it metered by **Payload size** or **Count**. 
 
 {{% todo %}}[**Do we need separate definitions for Payload size and Count, or are those supposed to reflect the pricing models?**]{{% /todo %}}
 
-#### 3.1.7.2 Free Trials
+#### 4.6.2 Free Trials
 
 The benefits of a free trial are well know as a means to increase user adoption. Having offered trials for many of our own components, Mendix recommends that you consider offering a trial for yours, too.
 
 The Marketplace supports time-based trials, so you must clearly define the terms and conditions of your trial offering so users are aware of what they are signing up for.  As a minimum, you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
 
 The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
-        
-#### 3.1.7.3 Payments
+
+#### 4.6.3 Payments
 
 One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your component according to the pricing model you specify for it. The Marketplace meters usage of your component and sends a bill to the user.  You can see monthly billing reports in your Partner Portal, and you will also be emailed them for completeness.
 
@@ -192,75 +210,43 @@ Under our standard [Mendix  Terms of Use](https://www.mendix.com/terms-of-use/),
 | Billing day | 15th day of each month |
 | Billing timing | In arrears |
 
-#### 3.1.7.4 Marketplace Operating Fees
+#### 4.6.4 Marketplace Operating Fees
 
 The Mendix Marketplace is free to use unless you want to sell paid components through it. When you sell your component via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing as well as the payment provided by the Marketplace.
-    
+
 For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monetization**.
 
 {{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
-#### 3.1.7.5 Supported Regions
+### 4.7 Supported Regions
 
 Subject to the compliance requirements for your specific component, the Marketplace supports global access to free and trials of paid components.
 
-To sell a paid component, you must be a permanent resident or a legal business entity in one of the following countries:
+To sell a paid component in the Mendix Marketplace, you must be a permanent resident or a legal business entity in one of the following countries:
 
 * Netherlands
+* Belgium)
 
 Further conditions apply:
 
 * Licensing agreement
-	* App services must comply with all legal requirements in any location where you make them available
+	* Components must comply with all legal requirements in any location where you make them available
 * Support agreement
 * FOSS
 
 {{% todo %}}[**More information to be added above?**{{% /todo %}}
 
-### 3.2 Commercial Setup {#commercial-setup}
+## 5 Submitting Your Component
 
-#### 3.2.1 Marketplace Vendor License Agreement
+At this stage, you have confirmed the commercial feasibility of your component, you have signed up as a Marketplace Partner, and you are technically ready to publish your component to the Marketplace.
 
-Whether you are offering a free or paid component through the Marketplace, you have to accept our Marketplace Vendor License Agreement, which is an agreement between Mendix and you as a Marketplace Vendor within the Marketplace Vendor Program.
-
-For ease of reference, here are some of the main points of the license agreement you need to be aware of:
-
-* App services must be free from any known security vulnerabilities
-* App services must not contain default passwords, authorization keys, or any other credentials
-* App services must not include software that collects and exports customer data without the customer's knowledge and express consent
-* App services must be production-ready and must include a defined support policy
-* Mendix reserves the right to reject components that do not comply with these guidelines or the requirements described in the license agreement
-
-These are similar concepts to those in the Developer Program License Agreement in the [Apple Developer Program](https://help.apple.com/app-store-connect/#/devb6df5ee51) and [Atlassian Marketplace Vendor Agreement](https://www.atlassian.com/licensing/marketplace/partneragreement).
-
-{{% todo %}}[**Keep references to these examples?**{{% /todo %}}
-
-#### 3.2.2 Seller License Agreement
-
-For paid components, you have to accept our Marketplace Seller Agreement and provide seller account information, including the following:
-
-| Seller Account Information | Description |
-| --- | --- |
-| Bank Name | The name of the branch where the account is held. |
-| Bank Address | The address of the branch where the account is held. |
-| Account Number | The account number for the legal entity or individual who signed the Seller License Agreement. |
-| Account Holder Name | The name registered with the account. |
-
-These are similar concepts to those in the Paid Applications Agreement in the [Apple Developer Program](https://help.apple.com/app-store-connect/#/devb6df5ee51).
-
-{{% todo %}}[**Keep reference to this example?**{{% /todo %}}
-
-### 3.3 Preparing a Draft in the Marketplace
+### 5.1 Preparing a Draft in the Marketplace
 
 While you are developing your component, it is a good practice to [create a draft version](share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your component to the Marketplace as soon as you finish creating it. 
 
 Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your component. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
 
-## 4 Submitting Your Component
-
-At this stage, you have confirmed the commercial feasibility of your component, you have signed up as a Marketplace Vendor, and you are technically ready to publish your component to the Marketplace.
-
-#### 4.1 Completing the Final Checklist
+#### 5.2 Completing the Final Checklist
 
 As a helping hand, the sections below present items to consider in the final step to successfully publishing your component:
 
@@ -271,17 +257,18 @@ As a helping hand, the sections below present items to consider in the final ste
 
 **Technical Readiness**
 
-- [ ] While importing the component, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new components. Make sure you explain how to set up the component and how to address all errors in the component's [documentation](share-app-store-content#doc) when you are preparing for publication.
-- [ ] Test your component for crashes and bugs.
+- [ ] Verify  your component for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
+- [ ] While importing the component, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new components. Make sure you explain how to set up the component and how to address all errors in the [component's documentation](share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the component that do not have an explanation.
 
 **Accurate Metadata**
 
-- [ ] Users should know what they are getting when they download or buy your component, so make sure all your app metadata (including privacy information, component description, screenshots, and previews) is complete and accurately reflects the component's core experience. Remember to keep this up-to-date with new versions.
+- [ ] Users should know what they are getting when they download or buy your component, so make sure all of your component's metadata (including privacy information, component description, and screenshots) is complete and accurately reflects the component's core experience. Remember to keep this up-to-date with new versions.
 - [ ] Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
-- [ ] Select the most appropriate [category](app-store-overview#catalog) for your component (for example, **App Service**, **Module**, or **Connector**)
+- [ ] Select the most appropriate [category](app-store-overview#catalog) for your component (for example, **App Service**, **Module**, or **Connector**).
 - [ ] Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
-- [ ] Check the details on how to select the details while submitting a component follows [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) as mentioned in the documentation
-- [ ] Spell check the content you are about to submit
+- [ ] Follow the general [guidelines](https://docs.mendix.com/appstore/general/share-app-store-content#submission) when submitting your component.
+- [ ] By default, you will see a template for the component's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (font size, spacing, indentation, and other formatting) and headings for this documentation content are consistent.
+- [ ] Spell-check the content you are about to submit
 
 {{% todo %}}[**Verify there will indeed be an App Service category to select when submitting a component**{{% /todo %}}
 
@@ -290,38 +277,48 @@ As a helping hand, the sections below present items to consider in the final ste
 - [ ] Verify the component works well for the specified Studio Pro version it is marked as being compatible with.
 - [ ] Keep the versioning pattern consistent in terms of naming and version numbers for your component [releases](share-app-store-content#updating).
 - [ ] Provide [release notes](share-app-store-content#version) for the component release.
+- [ ] Keep your component up to date with new versions.
 
 **Branding**
 
-- [ ] Make sure [screenshots](share-app-store-content#screenshot) show the component in use (and not merely the name, login page, or splash screen). Screenshots can also include text and image overlays.
+- [ ] Make sure [screenshots](share-app-store-content#screenshot) show the component in use (and not merely the name, login page, or splash screen). These can also include text and image overlays.
+- [ ] Screenshots should be of a similar size (if possible).
+- [ ] Do not upload any blurred or trimmed screenshots or other images.
+- [ ] Ensure the logo and images of your component always relates to its functionality. Images uploaded that do not relate to your component's functionality will lead to the rejection of your component during the submission review.
 
-**Usability**
+**General**
 
-- [ ] Include a *README* snippet and *USEME* folders that will help with using the component
-- [ ] Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *ancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, these are unnecessary dependencies that should be removed..
-- [ ] If you attempt to cheat the Mendix review system (for example, by trying to trick the review process, steal user data, copy another developer’s work, or manipulate ratings), your components  will be removed from the Marketplace.
-- [ ] Keep updating your component on a timely basis. Your component will be removed from the Marketplace if not updated for a longer period.
-
-{{% todo %}}[**Need a specific time period beyond general "longer period."**{{% /todo %}}
-
-**Setting pricing plan**
-
-{{% todo %}}[**Content to be added?**]{{% /todo %}}
+- [ ] Include a *README* snippet and *USEME* folders that will help with using the component.
+- [ ] Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *fancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, remove these unnecessary dependencies.
+- [ ] If you try to manipulate the Marketplace system (for example, by stealing user data, copying another developer’s work, or manipulating ratings), your components will be removed from the Marketplace.
+- [ ] Update your component regularly and support it as defined in its SLA. To ensure the quality of Marketplace content, Mendix monitors the status of components, and we will contact you if our data suggests your component is due for an update.
 
 **Picking a license** 
 
-- [ ] Users using paid Atlassian apps are subject to the [Atlassian Marketplace Terms of Use](https://www.atlassian.com/licensing/marketplace/termsofuse). Accordingly, this agreement is between Atlassian and your component customers. Your customers agree to the terms when they purchase or use your component.
-- [ ] We have enabled submitting and publishing components without a license. In the documentation for your component, write *Commercial license terms applied* under the **License** item.
+- [ ] Ensure that as the supplier, you determine the appropriate license for your component, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin under the **Documentation** section if you need your users to accept your own commercial terms and conditions.
 
-{{% todo %}}[**Verify above about no license**]{{% /todo %}}
+**Setting pricing plan**
 
-#### 4.2 Submitting & Publishing Your Component
+- [ ] The pricing model you choose for your component determines what information you need to supply when publishing it. This specifies how the component is provisioned so that it can be appropriately metered when it is being used.
+This section defines the information you need to supply while you are submitting your component and how the Marketplace uses that information to catalog, meter, and bill the users of your component. [**TIE TO SECTION WHERE TABLE IS**]
+
+{{% todo %}}[**Reorganize sections to avoid duplication and scattered info.**{{% /todo %}}
+
+#### 5.3 Submitting Your Component
 
 When your component is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 
 Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible.  We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your component is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
-## 5 After You Submit Your Component
+Select your license when creating your package:
+
+![](attachments/suppliers/package.png)
+
+Select your pricing plan:
+
+![](attachments/suppliers/pricing.png)
+
+## 6 After You Submit Your Component
 
 Once you have submitted your component, you can keep track of your submission by subscribing to receive status notifications. If you need more help, you can contact the Marketplace Governance Team.
 

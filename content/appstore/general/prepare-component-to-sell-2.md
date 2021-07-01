@@ -6,13 +6,9 @@ tags: ["marketplace", "component", app service"]
 description: "Describes how to make your component Marketplace-ready."
 ---
 
-{{% todo %}}[**Verify title**{{% /todo %}}
-
 ## 1 Introduction
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Partner](#partner), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
-
-{{% todo %}}[**Verify slide to be included; need higher quality image**]{{% /todo %}}
 
 ![](attachments/suppliers/benefits.png)
 
@@ -33,8 +29,6 @@ Whether you are supplying a component as an individual with your own business or
 Before you become a Marketplace Partner, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/link/signup/?source=direct) before you can create a Marketplace Partner account.
 
 In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product.  We know export control can be confusing, so if you are still unclear on what you need to do, you can contact Mendix at *compliance@mendix.com*.
-
-{{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
 ### 2.2 Creating a Marketplace Partner Account {#creating-account}
 
@@ -92,8 +86,6 @@ The checks involved are:
 
 * SPS
 
-{{% todo %}}[**More information to be added above?**{{% /todo %}}
-
 For more information on what you need to do as a Marketplace Partner to submit an component, see the [Commercial Setup Before You Submit](#commercial-setup) section below.
 
 ## 3 Making Your Component Marketplace-Ready
@@ -102,11 +94,7 @@ The Marketplace provides a trustworthy experience for sharing and consuming comp
 
 Once you have submitted your component, you can manage all the business related to it, and you can access your commercial agreements and account information via the **Partner Portal**.  [My Marketplace](app-store-overview#my-marketplace) enables keeping track of and communicating with the users of your component. 
 
-{{% todo %}}[**Where is the Partner Portal? Will this be added to My Marketplace UI?**{{% /todo %}}
-
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your component. The **Marketplace APIs** are also available for you to automate your workflow and access data about your component. For details, see the next selection.
-
-{{% todo %}}[**Where are these APIs published, how to link to them?**{{% /todo %}}
 
 ![](attachments/suppliers/journey.png)
 
@@ -126,8 +114,6 @@ Although OSB API supports endpoints for many operations (as specified in the [Op
 
 For additional assistance and an example of how to provision and bind an app to a logging service, see **Logging as an App Service**.
 
-{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
-
 ### 4.2 Identity & Access Management (IAM)
 
 When you submit your component to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
@@ -139,8 +125,6 @@ There are  three models for integrating with Mendix IAM, the applicability of wh
 * **Model 3: Enable end-user access control to your component from within an app** – in this model, end-user access to your component is managed centrally by the Mendix IAM service
 
 For more information, see **Service Provider IAM Requirements**.
-
-{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
 
 ### 4.3 Metering
 
@@ -169,8 +153,6 @@ If your component is a controlled item, Mendix needs to ensure it is prevented f
 
 If you are unclear what this means to you and your component, there are useful resources online.  If you are stuck, you can contact Mendix at *compliance@mendix.com* for guidance.
 
-{{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
-
 ### 4.6 Pricing & Free Trials
 
 As a Marketplace Partner, it is important that you choose the pricing model that will maximize the business opportunity for your component. Once you have decided on your preferred pricing model and whether you want to offer your component as a free trial, you can apply these these options to your component via steps in the Add Content wizard.
@@ -184,8 +166,6 @@ The Marketplace supports three pricing models. Before you submit your component,
 * **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your component to their usage. The more they use, the more they pay. You can determine the metrics on which the cost is based, along with the price per unit for each of the metrics (via `SUM` or `COUNT` functions).
 
 When you submit your component you can choose whether to have it metered by **Payload size** or **Count**. 
-
-{{% todo %}}[**Do we need separate definitions for Payload size and Count, or are those supposed to reflect the pricing models?**]{{% /todo %}}
 
 #### 4.6.2 Free Trials
 
@@ -216,8 +196,6 @@ The Mendix Marketplace is free to use unless you want to sell paid components th
 
 For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monetization**.
 
-{{% todo %}}[**We do not publish links to internal Dropbox Paper - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
-
 ### 4.7 Supported Regions
 
 Subject to the compliance requirements for your specific component, the Marketplace supports global access to free and trials of paid components.
@@ -233,8 +211,6 @@ Further conditions apply:
 	* Components must comply with all legal requirements in any location where you make them available
 * Support agreement
 * FOSS
-
-{{% todo %}}[**More information to be added above?**{{% /todo %}}
 
 ## 5 Submitting Your Component
 
@@ -270,8 +246,6 @@ As a helping hand, the sections below present items to consider in the final ste
 - [ ] By default, you will see a template for the component's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (font size, spacing, indentation, and other formatting) and headings for this documentation content are consistent.
 - [ ] Spell-check the content you are about to submit
 
-{{% todo %}}[**Verify there will indeed be an App Service category to select when submitting a component**{{% /todo %}}
-
 **Versioning **
 
 - [ ] Verify the component works well for the specified Studio Pro version it is marked as being compatible with.
@@ -302,8 +276,6 @@ As a helping hand, the sections below present items to consider in the final ste
 - [ ] The pricing model you choose for your component determines what information you need to supply when publishing it. This specifies how the component is provisioned so that it can be appropriately metered when it is being used.
 This section defines the information you need to supply while you are submitting your component and how the Marketplace uses that information to catalog, meter, and bill the users of your component. [**TIE TO SECTION WHERE TABLE IS**]
 
-{{% todo %}}[**Reorganize sections to avoid duplication and scattered info.**{{% /todo %}}
-
 #### 5.3 Submitting Your Component
 
 When your component is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
@@ -322,8 +294,4 @@ Select your pricing plan:
 
 Once you have submitted your component, you can keep track of your submission by subscribing to receive status notifications. If you need more help, you can contact the Marketplace Governance Team.
 
-{{% todo %}}[**Is this contact available? How?**]{{% /todo %}}
-
 Once your component is available in the public Marketplace, you can gain insights into its usage through the **Subscription Overview** in the [Mendix Control Center](/developerportal/control-center/). You can engage with your customers at they use your component via [Reviews](app-store-overview#my-reviews).
-
-{{% todo %}}[**Control Center update?**]{{% /todo %}}

@@ -67,7 +67,7 @@ First, you need to create three project roles for a manager, Facilities, and HR 
 
 Do the following:
 
-1. In the Project Explorer, open **Project** > **Security**.
+1. In the Project Explorer, open **Project** > **Security** and set security to **Production**.
 
 2. Open the **User roles** tab and click **New**. 
 
@@ -158,7 +158,7 @@ You need to create a workflow that you will add activities to and create pages f
 
 4. Click the **Allowed roles** property to set security for the workflow.
 
-5. In the **Select Module Roles** dialog box, select the **Workflow Administrator** and the **HR** role and click **OK**. These roles are now able to start the workflow. 
+5. In the **Select Module Roles** dialog box, select the **WorkflowAdministrator** and the **HR** role and click **OK**. These roles are now able to start the workflow. 
 
 6. Click the **Workflow entity** property:
 
@@ -296,7 +296,6 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
         ![Specify Location Form](attachments/workflow-how-to-configure/specify-location-form.png)
 
     5. To restrict access of the page to the Manager role only, follow step 13 of the [Selecting a Device for the New Hire](#select-device) section.
-    
 
 You have created the user task for the Manager to specify whether the new employee is working from home or not.
 

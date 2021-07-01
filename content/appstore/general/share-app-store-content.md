@@ -46,15 +46,15 @@ You can add information the end-user should know to the component [Documentation
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
-* The widget should be [Pluggable](howto/extensibility/create-a-pluggable-widget-one)
+* The widget should be [pluggable](howto/extensibility/create-a-pluggable-widget-one)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
 * Add code comments
 * Use descriptive variable and function names in both XML and JavaScript
-* A function may not be larger than 200 lines of code
-* A function may only do one thing, and it should do it properly
-* Prefer using hooks and functional components over class components
-* Prefer using TypeScript over JavaScript
-* Create test pages for mobile when content is mobile-supported
+* A function cannot be larger than 200 lines of code
+* A function should only do one thing, and it should do it properly
+* Use hooks and functional components over class components
+* Use TypeScript over JavaScript
+* Create test pages for mobile when content is made for mobile platforms
 
 ### 3.3 Module Guidelines
 

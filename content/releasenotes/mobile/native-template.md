@@ -20,7 +20,7 @@ These are the current versions in active development:
 
 ### Fixes
 
-* We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
 
 ## 5.1.13
 
@@ -28,11 +28,12 @@ These are the current versions in active development:
 
 ### Improvements
 
-When installing pods (`pod install`) the Native Template is able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
+* When installing pods (`pod install`) the Native Template is now able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
 
 ### Fixes
-- We identified and fixed an issue on iOS Custom Dev Apps with Deep links.
-- We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.
+
+* We fixed an issue on iOS custom developer apps related to deep links.
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
 
 ## 6.1.6 and 5.1.12
 

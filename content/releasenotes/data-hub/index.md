@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### July 1st, 2021
+
+#### Fixes
+
+* We updated the example in the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) for `PUT` published endpoints to match the behavior.
+
 ### June 24th, 2021
 
 #### New Feature

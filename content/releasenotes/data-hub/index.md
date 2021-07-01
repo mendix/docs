@@ -17,7 +17,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### June 24th, 2021
 
-#### New Feature
+#### New Features
 
 * New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
   * `GET` all published endpoints
@@ -33,7 +33,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### June 3rd, 2021
 
-#### New Feature
+#### New Features
 
 * All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
   * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) – includes GET calls for getting details of data sources
@@ -41,7 +41,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### May 27th, 2021
 
-#### New Feature
+#### New Features
 
 * A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register#registration-form) Siemens Opcenter data sources.
 
@@ -60,7 +60,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### May 6th, 2021
 
-#### New Feature
+#### New Features
 
 The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/data-hub-apis#transform).
 
@@ -139,9 +139,11 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 ### January 7th, 2021
 
 #### New Features
+
 * The [asset details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
 
 #### Improvements
+
 * There have been several improvements in the Data Hub user interface.
 
 ## 2020
@@ -149,10 +151,12 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 ### December 24th, 2020
 
 #### New Features
+
 * The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
+
 * Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/data-hub-catalog/register#registration-form) or when using the `PUT` services API call for OData v4 services.
 
 ### December 17th, 2020
@@ -170,6 +174,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 ### November 26th, 2020
 
 #### Improvements
+
 * The Service [Metadata](/data-hub/data-hub-catalog/search#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
 
 #### Fixes
@@ -189,6 +194,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 * We made several styling improvements and removed the empty last tab on the asset details page.
 
 #### Fixes
+
 * The [Validated](/data-hub/data-hub-catalog/curate#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
 * We fixed an issue on the [Curation List](/data-hub/data-hub-catalog/curate#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
 

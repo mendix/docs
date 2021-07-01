@@ -26,6 +26,10 @@ These are the current versions in active development:
 
 **Release date: June 30th, 2021**
 
+### Improvements
+
+When installing pods (`pod install`) the Native Template is able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
+
 ### Fixes
 - We identified and fixed an issue on iOS Custom Dev Apps with Deep links.
 - We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.

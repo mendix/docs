@@ -46,7 +46,7 @@ You can add information the end-user should know to the component [Documentation
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
-* The widget should be [pluggable](howto/extensibility/create-a-pluggable-widget-one)
+* The widget should be [pluggable](/howto/extensibility/create-a-pluggable-widget-one)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
 * Add code comments
 * Use descriptive variable and function names in both XML and JavaScript

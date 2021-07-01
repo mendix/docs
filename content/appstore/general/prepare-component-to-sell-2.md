@@ -246,7 +246,7 @@ As a helping hand, the sections below present items to consider in the final ste
 - [ ] By default, you will see a template for the component's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (font size, spacing, indentation, and other formatting) and headings for this documentation content are consistent.
 - [ ] Spell-check the content you are about to submit
 
-**Versioning **
+**Versioning**
 
 - [ ] Verify the component works well for the specified Studio Pro version it is marked as being compatible with.
 - [ ] Keep the versioning pattern consistent in terms of naming and version numbers for your component [releases](share-app-store-content#updating).

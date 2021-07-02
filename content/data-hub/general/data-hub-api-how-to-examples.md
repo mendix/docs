@@ -119,17 +119,17 @@ The response payload is shown below:
 ​            "Application": {
 ​                "Type": "Mendix",
 ​                "TechnicalOwner": {
-​                    "Email": "{Email}",
-​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae",
-​                    "Name": "{Name}"
+​                    "Email": "kate.jones@example.com",
+​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=c0bdc602-a2d2-42f3-b819-7ac489e2c3d8",
+​                    "Name": "Kate Jones"
 ​                },
 ​                "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
 ​                "UUID": "30aaf7ca-415f-306d-bd6e-458e6f821f06",
 ​                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/98c8f370-7bbe-4df5-8289-031c10383ece",
 ​                "BusinessOwner": {
-​                    "Email": "{Email}",
-​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb",
-​                    "Name": "{Name}"
+​                    "Email": "alex.smits@example.com",
+​                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3fd87f36-e309-48c8-afd5-2acadd882cbf",
+​                    "Name": "Alex Smits"
 ​                },
 ​                "Name": "HR Sample App"
 ​            },
@@ -536,14 +536,14 @@ The successful 200 response that is returned shows the full details of the consu
 ​                    "Type": "Mendix",
 ​                    "Icon": "https://hub.mendix.com/rest/documents/v1/images/944a6477-e83c-4236-a6b8-3374c6551657",
 ​                    "TechnicalOwner": {
-​                        "Email": "{Email}",
-​                        "DisplayName": "{Name}",
-​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=81b8f360-0e75-4195-b1b7-30aed6018eae"
+​                        "Email": "kate.jones@example.com",
+​                        "DisplayName": "Kate Jones",
+​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=c0bdc602-a2d2-42f3-b819-7ac489e2c3d8"
 ​                    },
 ​                    "BusinessOwner": {
-​                        "Email": "{Email}",
-​                        "DisplayName": "{Name}",
-​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=283b4e98-cee5-4181-88e9-3c87624944bb"
+​                        "Email": "alex.smits@example.com",
+​                        "DisplayName": "Alex Smits",
+​                        "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3fd87f36-e309-48c8-afd5-2acadd882cbf"
 ​                    }
 ​                }
 ​            },

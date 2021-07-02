@@ -220,7 +220,7 @@ You can also define the default value of the widget which will be predefined as 
 
 ![Example of default drop-down filter](attachments/data-grid-2/dropdown-filter.png)
 
-**Drop-down filter** allows users to match enumeration values or a Boolean attribute. To configure the available options when you press the drop-down filter, you can manually add them in the options list or enable **Automatic options** to automatically load the values:
+**Drop-down filter** allows users to match enumeration values or a Boolean attribute. To configure the available options when you press the drop-down filter, you can manually add them in the options list or select **Automatic options** to automatically load the values:
 
 ![Example of settings for drop-down filter](attachments/data-grid-2/dropdown-filter-settings.png)
 

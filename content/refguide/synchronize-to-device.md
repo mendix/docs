@@ -7,7 +7,7 @@ menu_order: 60
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Microflows**.
+This activity can only be used in **Microflows** that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
 ## 1 Introduction

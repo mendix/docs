@@ -8,7 +8,7 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/scheduled-events.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

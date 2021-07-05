@@ -7,7 +7,7 @@ tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/published-rest-path-parameter.pdf).
 {{% /alert %}}
 
 The operation path in the [published REST operation](published-rest-operation) specifies the last part of the location (URL) of the operation. 

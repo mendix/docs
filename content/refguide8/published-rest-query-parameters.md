@@ -8,7 +8,7 @@ tags: ["published REST", "query", "parameters", "Date and Time format", "studio 
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/published-rest-query-parameters.pdf).
 {{% /alert %}}
 
 The specification of a [published REST operation](published-rest-operation) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.

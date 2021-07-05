@@ -6,7 +6,7 @@ tags: ["studio pro", "password text box", "authentication widget", "authenticati
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/password-text-box.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}The **Password text box** widget is not supported on native mobile pages.{{% /alert %}}

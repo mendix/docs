@@ -7,7 +7,7 @@ tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/report-widgets.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}Report widgets are not supported on native mobile pages.{{% /alert %}}

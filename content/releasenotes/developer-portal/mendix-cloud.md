@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### July 5th, 2021
+
+#### Fix
+
+* We fixed an issue where long-running restore jobs appear to fail when using [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1).  (Tickets 122197 and 125707)
+
+#### Announcement
+
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api) which handles long-running backup and restore jobs more robustly.
+
 ### June 14th, 2021
 
 #### Improvements

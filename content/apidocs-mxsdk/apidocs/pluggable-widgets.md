@@ -144,6 +144,27 @@ For more complex help pages you can link to a markdown page. For security reason
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
 
+#### 4.2.2 Toolbox Category {#toolbox-category}
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.4.
+{{% /alert %}}
+
+To provide better user experience for Studio and Studio Pro users you can specify a toolbox category for your widgets. When provided this category would determine toolbox category for a widget in Studio and Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. When an existing category is specified then your widget placed in it, next to existing built-in widgets. When a new category is specified then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only Studio Pro category is specified then that category also used in Studio.
+
+A category can by provided through `studioCategory` and `studioProCategory` tags:
+
+```xml
+   <studioProCategory>Open Street Maps</studioProCategory>
+   <studioCategory>Maps</studioCategory>
+```
+
+In the example above a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that *widgets* is added automatiacally in Studio Pro UI. In Studio a widget will end up in **Maps** category.
+
+{{% alert type="info" %}}
+When your widget is published in Marketplace and a special toolbox category is assigned to your widget by the Marketplace team, then that special toolbox category would be used in Studio instead.
+{{% /alert %}}
+
 ### 4.3 Widget Properties Definition {#properties-definition}
 
 This section is represented by the `properties` tag in the widget XML file. It describes widget properties used in Studio and Studio Pro to configure the widget. Here is an example of a properties definition section for a widget which shows a progress card for a dashboard:

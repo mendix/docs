@@ -246,7 +246,7 @@ While you are developing your component, it is a good practice to [create a draf
 
 Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your component. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
 
-#### 5.2 Completing the Final Checklist
+### 5.2 Completing the Final Checklist
 
 As a helping hand, the sections below present items to consider in the final step to successfully publishing your component:
 
@@ -304,7 +304,7 @@ This section defines the information you need to supply while you are submitting
 
 {{% todo %}}[**Reorganize sections to avoid duplication and scattered info.**{{% /todo %}}
 
-#### 5.3 Submitting Your Component
+### 5.3 Submitting Your Component
 
 When your component is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 

@@ -1259,9 +1259,13 @@ When you delete a cluster, this removes the cluster from the Developer Portal. H
 
 ### 6.2 Namespace Management
 
-If you are a member of a namespace, you can also manage a namespace in the cluster.
+If you are a member of a namespace, you can also manage a namespace in the cluster, and configure the annotations for the namespace.
 
-Click the **Details** button for the namespace you want to manage.
+{{% alert type="info" %}}
+You need to have the Mendix Operator version 1.12.0 installed in your namespace to configure all the available annotations.
+{{% /alert %}}
+
+Click the **Details** button to manage other aspects of the Namespace.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
@@ -1270,6 +1274,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Operate
 * Plans
 * Installation
+* Additional information
 
 See the sections below for more information.
 
@@ -1316,6 +1321,29 @@ If you are a team member of the app, click **Details** to go to the *Environment
 
 {{% alert type="info" %}}
 You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
+{{% /alert %}}
+
+If you are a cluster administrator, you can also click **Configure** to configure the environment by adding annotations for pods, ingress, and service.
+
+##### 6.2.1.1 Configure Environment
+
+You can add, edit, and delete annotations for your environment.
+
+{{% alert type="info" %}}
+You need to have the Mendix Operator version 1.12.0 or above installed in your namespace to configure all the available annotations. You need version 1.11.0 to use pod annotations.
+{{% /alert %}}
+
+To add a new annotation, do the following.
+
+1. Click **Add**.
+2. Choose the **Annotation type** from the dropdown.
+3. Enter the **Key** and the **Value** for the annotation.
+4. Click **Save**.
+
+You can also **Edit** or **Delete** an existing annotation by selecting it and clicking the appropriate button.
+
+{{% alert type="warning" %}}
+The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
 #### 6.2.2 Members
@@ -1424,6 +1452,10 @@ The **Installation** tab shows you the Configuration Tool which you used to crea
 You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
 
 You can also download the Configuration Tool again, if you wish.
+
+#### 6.2.6 Additional Information
+
+This tab shows information on the
 
 ## 7 Current Limitations
 

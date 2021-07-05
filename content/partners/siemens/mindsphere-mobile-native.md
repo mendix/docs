@@ -96,7 +96,7 @@ You now have successfully registered your application within the Developer Cockp
 {{% alert type="info" %}}
 The **MindSphere Mobile Starter Application** can be used to build applications for both native mobile apps and 'normal' web applications.
 
-Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but not both together. If you need access in a web browser, set up another registration in the Developer Cockpit for your web application as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere#launchpad). This app can then be added to the MindSphere Launchpad.
+Currently you can register either a mobile app or a web app in the MindSphere Developer Cockpit but not both together. If you need access in a web browser, please push your application to the Mendix cloud and set up another registration via the Auto Registration for your web application as described in [Setting up MindSphere Launchpad](/developerportal/deploy/deploying-to-mindsphere#launchpad). This app can then be added to the MindSphere Launchpad. Please note, pushing a Mendix Mobile Native application to the MindSphere Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
 {{% /alert %}}
 
 ### 2.2 Start Developing your App with Mendix Studio Pro
@@ -193,6 +193,10 @@ As of now your application has the user roles **admin** and **user**, but none o
     Your application has now been updated to be allowed to make API calls
     
     {{% alert type="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
+
+### 2.6 Deploying your app
+
+Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy) feature. Deployments from Mendix Mobile native applications to the MindSphere Cloud Foundry environment are currently not supported, so please use always one of the Mendix cloud environments.
 
 ## 3 Module Details{#moduledetails}
 

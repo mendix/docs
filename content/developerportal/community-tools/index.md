@@ -5,7 +5,7 @@ description: "Describes the main tools that Mendix maintains to support the awes
 
 ## 1 Introduction
 
-You can go to the [Mendix Community site](https://community.mendix.com/p/community) for all the information you need as a member of the Mendix community. Each section of the site represents a community tool that is continuously updated with new content and exciting developments. In addition, the content on the site is not only created for Mendix community developers, it is created by Mendix community developers.
+You can go to the [Mendix Community Hub](https://community.mendix.com/p/community) for all the information you need as a member of the Mendix community. Each section of the site represents a community tool that is continuously updated with new content and exciting developments. In addition, the content on the site is not only created for Mendix community developers, it is created by Mendix community developers.
 
 ![](attachments/site.png)
 

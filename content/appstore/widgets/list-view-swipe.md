@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "list view swipe", "pla
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
@@ -65,7 +69,7 @@ Use the following details for styling:
 	* `.will-accept-swipe`
 	* `.swiping-right`
 	* `.swiping-left`
-	
+
 ### 3.1 Designing the Background
 
 To design the background of the view, follow these steps:

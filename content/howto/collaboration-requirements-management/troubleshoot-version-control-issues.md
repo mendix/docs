@@ -26,25 +26,17 @@ Below is a list of known errors and the steps to fix them.
 
 This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 
-<<<<<<< HEAD
-The proxy settings can be changed in Studio Pro by selecting **Edit** > **Preferences** > the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
-=======
 Follow these steps:
 
 1. Go to **Edit** > **Preferences**.
 2. Go to the **Advanced** tab. 
 3.  In the **Proxy server** section, change the **Proxy server** settings. Fill in the correct **User name** and **Password**.
->>>>>>> development
 
-![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
+    ![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
-<<<<<<< HEAD
-To resolve this issue, sign out of Studio Pro and then log back in.
-=======
 When this error occurs, sign out of Studio Pro and then log back in to resolve it.
->>>>>>> development
 
 ### 2.3 Getting an Error with the Message `Connection timed out`
 
@@ -104,17 +96,10 @@ To solve this issue, follow the steps below:
 
 13. Restart Studio Pro.
 
-<<<<<<< HEAD
-In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on the Team Server.
-=======
 You can now commit your app.
->>>>>>> development
 
 ### 2.7 Resolving Conflicts on the `svn:ignore` Property {#svn-ignore}
 
-<<<<<<< HEAD
-You will need to resolve the conflict before you can commit your app project to the Team Server.
-=======
 When you merge or update branches, a conflict is sometimes reported on the app folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
 In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on Team Server.
@@ -122,7 +107,6 @@ In the `svn:ignore` property, Subversion records which files should be ignored. 
 For example, the **deployment** directory is necessary for running your app, but it should not be on the Team Server. Each user has their own version of the **deployment** folder on their hard disk.
 
 You will need to resolve the conflict before you can commit your app to Team Server.
->>>>>>> development
 
 #### 2.7.1 Example
 

@@ -7,11 +7,7 @@ tags: ["studio pro", "GitHub", "repository", "repo"]
 
 ## 1 Introduction
 
-<<<<<<< HEAD:content/howto/collaboration-requirements-management/set-up-repo.md
-In this document, you will learn best practices in how to set up a GitHub repository to publish an App Store item. The repository will contain your development content and can be shared for others to contribute to an application or [App Store component](/appstore/general/share-app-store-content).
-=======
-In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content).
->>>>>>> development:content/howto/collaboration-requirements-management/starting-your-own-repository.md
+In this document, you will learn best practices in how to set up a GitHub repository to publish an Marketplace item. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content).
 
 ## 2 Prerequisites
 
@@ -22,11 +18,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Creating Your Repo
 
-<<<<<<< HEAD:content/howto/collaboration-requirements-management/set-up-repo.md
-First of all, name your repo. You should use the same name that will be used for the item published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
-=======
 First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
->>>>>>> development:content/howto/collaboration-requirements-management/starting-your-own-repository.md
 
 The description should say what the item does. This description can also be used in the Mendix Marketplace.
 

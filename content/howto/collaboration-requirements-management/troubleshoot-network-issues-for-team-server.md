@@ -8,15 +8,7 @@ tags: ["Team Server", "network", "troubleshoot", "firewall"]
 
 ## 1 Introduction
 
-<<<<<<< HEAD
-Mendix Studio Pro needs to connect to the Team Server, where all your projects are stored. This document describes which permissions and settings are required to connect to the Team Server.
-=======
-Mendix Studio Pro needs to connect to Team Server, which is where all your apps are stored.
-
-**This how-to explains the following:**
-
-* Which permissions and settings are required to connect to Team Server
->>>>>>> development
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. This document describes which permissions and settings are required to connect to the Team Server.
 
 ## 2 Troubleshooting Team Server App Network Settings
 
@@ -39,11 +31,7 @@ Mendix reserves the right to change the IP address at any time and without notif
 {{% /alert %}}
 
 {{% alert type="info" %}}
-<<<<<<< HEAD
-Contact your network administrator and give them this information to configure your network (for example, firewall and proxy settings) correctly.
-=======
 Contact your network administrator and give them this information to allow them to configure your network (for example, firewall, and proxy settings) correctly.
->>>>>>> development
 {{% /alert %}}
 
 If this solution does not work, submit a request to [Mendix Support](https://support.mendix.com/).

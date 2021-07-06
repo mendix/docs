@@ -293,6 +293,10 @@ Value | Explanation
 **xact updated** | Number of tuples updated per second.
 **xact deleted** | Number of tuples deleted per second.
 
+The most common cause of rollbacks is a (unexpected) reboot of the application.
+
+Rollbacks appearing during normal operation indicate a problem and should be investigated. A common cause is that two or more processes are attempting a mutation of the same object. If you have more than one instance, remember that these processes might be running on different instances.
+
 ### <a name="Trends-dbmxruntimepgstatactivity"></a>5.4 Number of Database Connections
 
 The **Number of database connections** graph shows the number of connections to the PostgreSQL server.

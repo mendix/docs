@@ -13,6 +13,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### July 6th, 2021
+
+#### Portal Improvements
+
+* We added the ability to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
+
+#### Portal Fixes
+
+* We resolved an issue where environment variables were limited to 200 characters.
+* We resolved an issue where changing the cluster name or description could remove other cluster managers from the cluster.
+
 ### June 29th, 2021
 
 #### Mendix Operator v1.12.0 and Mendix Gateway Agent v1.11.0

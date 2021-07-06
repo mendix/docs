@@ -30,7 +30,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your project has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your app has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it. 
 
@@ -63,11 +63,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 3.1 Configuring User Roles
 
-First, you need to create three project roles for a manager, Facilities, and HR and configure them correctly.
+Administrator, User, and Workflow Administrator roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly.
 
 Do the following:
 
-1. In the Project Explorer, open **Project** > **Security** and set security to **Production**.
+1. In the App Explorer, open **App** > **Security** and set security to **Production**.
 
 2. Open the **User roles** tab and click **New**. 
 
@@ -91,14 +91,14 @@ Do the following:
 
 10. Repeat steps 2-8 to create and configure the HR role.
 
-You have configured new project roles for Facilities, Manager, and HR. 
+You have configured new app roles for Facilities, Manager, and HR. 
 
 
 ### 3.2 Configuring Demo Users
 
-You need to create demo users for the newly created project roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
+You need to create demo users for the newly created app roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
-1. In the Project Explorer, open **Project** > **Security** > the **Demo users** tab and click **New**.
+1. In the App Explorer, open **App** > **Security** > the **Demo users** tab and click **New**.
 
 2.   In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
 
@@ -110,7 +110,7 @@ You need to create demo users for the newly created project roles to be able to 
 
 6.   Repeat steps 2-4 to add the **demo_hr** demo user.
 
-You have configured demo users for your project. 
+You have configured demo users for your app. 
 
 ### 3.3 Configuring Entity Access
 
@@ -148,7 +148,7 @@ In some cases you may want to restrict access to the entity or to some of its at
 
 You need to create a workflow that you will add activities to and create pages for. Do the following:
 
-1. In the Project Explorer, right-click the **MyFirstModule** module and select Add workflow in the drop-down menu.
+1. In the App Explorer, right-click the **MyFirstModule** module and select Add workflow in the drop-down menu.
 
     ![Add Workflow](attachments/workflow-how-to-configure/add-workflow.png)
 
@@ -158,7 +158,7 @@ You need to create a workflow that you will add activities to and create pages f
 
 4. Click the **Allowed roles** property to set security for the workflow.
 
-5. In the **Select Module Roles** dialog box, select the **WorkflowAdministrator** and the **HR** role and click **OK**. These roles are now able to start the workflow. 
+5. In the **Select Module Roles** dialog box, select the **WorkflowAdministrator** and the **HR** roles and click **OK**. These roles are now able to start the workflow. 
 
 6. Click the **Workflow entity** property:
 
@@ -214,7 +214,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 3. To be able to differentiate this user task from other ones, set the **Name** property to **Specify_Device**. 
 
-4. Set the **Caption** property to **Manager: Specify Device** to easily see who this task should be assigned to.
+4. Set the **Caption** property to **Manager: Specify Device** to easily see who this task should be assigned to:
 
     ![SpecifyDevice Properties](attachments/workflow-how-to-configure/specify-device-properties.png) 
 
@@ -238,7 +238,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 10. In the **Edit assigned to** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
-11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the Project Explorer, double-click the **SpecifyDevice** page to open it.
+11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the App Explorer, double-click the **SpecifyDevice** page to open it.
 
 12. By default, all attributes are added to the data view with the employee details. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
 
@@ -268,7 +268,7 @@ Great job! You have created the user task for the Manager role:
 
 ## 7 Specifying a Location for the New Hire {#specify-location}
 
-To proceed with the onboarding, the Manager needs to indicate whether the new hire is working home (WFH) or not. Follow the steps below:
+To proceed with the onboarding, the Manager needs to indicate whether the new hire is working from home (WFH) or not. Follow the steps below:
 
 1. Open the workflow.
 
@@ -279,7 +279,7 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
     3. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
     4. Restrict the **Specify Location** user task to the Manager role referring to steps 7-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
-3. Now you need to make sure that only the relevant information is displayed on the **SpecifyLocation** page and that only the Manager role has access to it. In the Project Explorer, double-click the **SpecifyLocation** page to open it.
+3. Now you need to make sure that only the relevant information is displayed on the **SpecifyLocation** page and that only the Manager role has access to it. In the App Explorer, double-click the **SpecifyLocation** page to open it.
 
 4. By default, all attributes are added to the employee detail form, while you need to leave only the attributes which are related to the task. You also need to make sure that the Manager can change only specific fields in the form. 
 
@@ -305,7 +305,7 @@ Depending on whether the new hire is working from the office or home, there are 
 
 Do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Specify Location** user task. 
+1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Specify Location** user task:
 
     ![Adding a Decision](attachments/workflow-how-to-configure/decision.png)
     
@@ -313,11 +313,11 @@ Do the following:
 
     1. Set the **Caption** to **WFH?**.
     2. Click the ellipsis icon in the **Condition** property.
-    3. In the **Condition** dialog box, type in the expression that will split the flow into two depending on the **Location** attribute: `$workflowData/WFH`.
+    3. In the **Condition** dialog box, type in the expression that will split the flow into two depending on the **WFH** attribute: `$workflowData/WFH`.
 
         ![Decision Properties](attachments/workflow-how-to-configure/decision-properties.png)
 
-3. Since the WFH attribute is a Boolean, it has a true (when the new hire works from home) and a false (when they work from the office) outcome. These outcomes are added to the workflow automatically: 
+3. Since the WFH attribute is a Boolean, it has a `true` (when the new hire works from home) and a `false` (when they work from the office) outcome. These outcomes are added to the workflow automatically: 
 
     ![Decision Outcomes](attachments/workflow-how-to-configure/decision-outcomes.png)
 
@@ -333,7 +333,7 @@ Do the following:
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
-5. You need to make sure that only the relevant information is displayed on the **PrepareDesk** page. In the Project Explorer, double-click the **PrepareDesk** page to open it.
+5. You need to make sure that only the relevant information is displayed on the **PrepareDesk** page. In the App Explorer, double-click the **PrepareDesk** page to open it.
 
 6. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
    
@@ -356,7 +356,7 @@ Do the following:
     3. Set a new page called **ShipDevices** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
     4. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
-10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the Project Explorer, double-click the **ShipDevices** page to open it.
+10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices** page to open it.
 
 11. Repeat steps 6-7 above to make the employee detail form read-only and to restrict the page access to the Facilities role.
 

@@ -1261,7 +1261,7 @@ When you delete a cluster, this removes the cluster from the Developer Portal. H
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
-Click the **Details** button to manage other aspects of the Namespace.
+Click the **Details** button for the namespace you want to manage.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
@@ -1451,7 +1451,7 @@ You can also download the Configuration Tool again, if you wish.
 
 #### 6.2.6 Additional Information
 
-This tab shows information on the
+This tab shows information on the versions of the various components installed in your namespace.
 
 ## 7 Current Limitations
 

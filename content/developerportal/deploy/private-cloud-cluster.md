@@ -1259,11 +1259,7 @@ When you delete a cluster, this removes the cluster from the Developer Portal. H
 
 ### 6.2 Namespace Management
 
-If you are a member of a namespace, you can also manage a namespace in the cluster, and configure the annotations for the namespace.
-
-{{% alert type="info" %}}
-You need to have the Mendix Operator version 1.12.0 installed in your namespace to configure all the available annotations.
-{{% /alert %}}
+If you are a member of a namespace, you can also manage a namespace in the cluster.
 
 Click the **Details** button to manage other aspects of the Namespace.
 
@@ -1313,7 +1309,7 @@ You can also see an activity log containing the following information for all na
 
 #### 6.2.1 Apps
 
-The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
+The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
 ![](attachments/private-cloud-cluster/image27.png)
 

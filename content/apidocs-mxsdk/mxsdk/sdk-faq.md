@@ -40,7 +40,7 @@ When changing these components, make sure to use the [reverse engineering tool](
 
 ### 1.6 What Are "Promises"?
 
-Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript). We're happy to tell you all about it!
+Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when-js-and-promises-in-typescript). We're happy to tell you all about it!
 
 ## 2 Common Error Messages
 
@@ -50,6 +50,6 @@ This error message is shown when making changes on a model, but the connection t
 
 ### 2.2 JS Allocation Failed, Process Out of Memory
 
-This can happen when you open a huge model and then load a lot of documents (e.g. pages, microflows). You can increase the memory available to your script by running it using the max-old-space-size flag and an appropriate memory size in MB:
+This can happen when you open a huge model and then load a lot of documents (for example, pages, microflows). You can increase the memory available to your script by running it using the max-old-space-size flag and an appropriate memory size in MB:
 
 `node --max-old-space-size=4096 script.js`

@@ -20,9 +20,9 @@ The charts widget provides a basic implementation of different types of chart (f
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix App Store
+* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix Marketplace
 
-## 3 Implementing the Charts Widget in an Existing Project
+## 3 Implementing the Charts Widget in an Existing App
 
 In this section, you will create a chart with basic sample data.
 
@@ -100,7 +100,7 @@ To configure a Charts widget, follow these steps:
 
 To view the chart, follow these steps:
 
-1. Run the project.
+1. Run the app.
 
 2. In your browser, open the data entry page.
 

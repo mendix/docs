@@ -77,6 +77,10 @@ This property determines if the returned value from the called microflow should 
 
 The name of the variable, list, or object returned by the activity.
 
-## 4 Common Section {#common}
+## 4 Microflow Calls in Offline-First Apps
 
-{{% snippet file="refguide/microflow-common-section-link.md" %}}
+It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information on the differences, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*. 
+
+## 5 Common Section {#common}
+
+{{% snippet file="refguide8/microflow-common-section-link.md" %}}

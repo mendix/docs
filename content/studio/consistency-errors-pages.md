@@ -4,6 +4,8 @@ parent: "consistency-errors"
 menu_order: 10
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
+#To update screenshots in this document, use the Consistency Errors app.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -150,6 +152,7 @@ Some of the most common errors of this type are described in the table below:
 | CE0551     | Microflow {name of the microflow} does not return a list.    | The data source of a list view is set to **Microflow**, but the microflow does not return a list. | Open the microflow and configure it to return a list. Do the following: <ol><li>Select the end event.</li><li> In its properties, set **Return Value** from **Nothing** to **Value**.</li><li>Set the **Data Type**  to *List*.</li><li>Set the **Entity** option.</li><li>Configure the **Value**.</li></ol> |
 | CE1573     | Selected microflow has a parameter {Name of the parameter} but there is no available data for it on the page. Place {Name of the widget} inside a data container with {Name of the entity} as the data source. | You selected a microflow as an on-click action of a widget (for example, of a button) and the microflow contains a parameter, but no data (for example, objects) is available for the widget to pass to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
 | CE1574     | Selected microflow has a parameter {Name of the parameter} but there is no data on the page (surrounding {name of the widget}) that can be used. Available data is {list of data available}. | You selected a microflow as the data source of a widget, but data (for example, an object) available for this widget does not match the parameter(s) of the microflow. | Make sure that object available for the widget matches the **Entity** property of the microflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
+| CE1843     | A button with {Name of the workflow-related on-click action} on-click action should be placed inside a data container with {Name of the entity} as its context. | There can be the following reasons for this error depending on the on-click action you are using: <ol><li>A widget with the **Call Workflow** action is not placed inside a data container with the workflow context entity.</li><li>A widget with the **Show Task Page** action is not placed inside a data container with the **UserTaskInstance** entity.</li><li>A widget with the **Show Workflow Page** action is not placed inside a data container with the **WorkflowInstance** entity.</li><li>A widget with the **Complete Task** action is not placed inside a data container with the **UserTaskInstance** entity.</li></ol>For more information on on-click actions, see [Events Section](page-editor-widgets-events-section). | Place the widget inside the data container with the specified entity. |
 
 ### 5.1 Error Fix Example for CE1573 {#error-fix-example-3}
 
@@ -181,7 +184,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow as an on-click action for a widget, and this microflow expects a certain data (for example, an object), but a different object is available to the widget, this will result in an error. 
 
-For example, on a page called *Customers* you have a button that calls a microflow (i.e. an **On Click Action** of the button is set to *Microflow*):
+For example, on a page called *Customers* you have a button that calls a microflow (meaning, an **On Click Action** of the button is set to *Microflow*):
 
 ![](attachments/consistency-errors-pages/button-on-click-action.png)
 

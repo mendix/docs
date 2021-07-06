@@ -18,7 +18,7 @@ You can reach this tab in two ways:
 
 ## 2 Setting Default Language
 
-There must be a default app project language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
+There must be a default app language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
 
 Setting the default language has two functions:
 
@@ -27,7 +27,7 @@ Setting the default language has two functions:
 
 The initial default language is *English, United States*.
 
-## 3 Adding App Project Languages
+## 3 Adding App Languages
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 

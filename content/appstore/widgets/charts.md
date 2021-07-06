@@ -1,8 +1,8 @@
 ---
 title: "Charts"
 category: "Widgets"
-description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
+description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,9 +21,9 @@ These are the available charts:
 * Heat chart
 * Bubble chart
 
-### 1.1 Demo App Project
+### 1.1 Demo App
 
-For a demo app project that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
+For a demo app that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
 
 ## 2 Basic Configuration
 
@@ -144,7 +144,7 @@ For the full Plotly API reference, see [JavaScript Figure Reference](https://plo
 
 ### 3.5 Theme-Based Advanced Configuration
 
-The settings above can also be added in a global context via the **theme** folder of your Mendix app project root directory.
+The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
 Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON should be in the following format:
 
@@ -197,13 +197,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-## 4 Developing This App Store Component
-
-For details on development, see [Development](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/Development.md).
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/charts](https://github.com/mendixlabs/charts/issues).
-
-## 5 Read More
+## 4 Read More
 
 * [Charts Configuration](/refguide/charts-configuration)
 * [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning)

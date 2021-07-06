@@ -1,5 +1,5 @@
 ---
-title: "Mendix Jobs Board"
+title: "Jobs Board"
 category: "Community Tools"
 menu_order: 40
 description: "Describes the board where the Mendix community can post and find job opportunities."
@@ -66,7 +66,7 @@ To post a job listing, you need a Mendix job dashboard account:
 * If you have an account already, click **Sign in**
 * If you are posting a job for the first time, fill out your details and an account will be automatically created for you
 	* Your username will be created based on the email address you enter
-	* With this account, you can manage all of your job listings (for more details, see the [Mendix Job Dashboard](#MendixJobDashboard) section)
+	* With this account, you can manage all of your job listings
 
 ![](attachments/mendix-job-board/post_job.png)
 
@@ -74,23 +74,7 @@ After you enter all the details for the job, press **Preview** at the bottom of 
 
 Each submitted job listing is reviewed and proofread by Mendix. If there is any issue or question, you will be contacted to update the job listing and resubmit it.
 
-## 4 Mendix Job Dashboard {#MendixJobDashboard}
 
-With a Mendix job dashboard account, you can post job listings regularly on the Mendix job board as well as manage these listings. To manage the job listings, click **Access job dashboard** on the main page of the Mendix jobs board.
+## 4 Read More
 
-The [Mendix job dashboard](https://developers.mendix.com/jobs/job-dashboard/) lists the jobs you have posted. Hovering your mouse cursor over a job listing will enable the following action buttons:
-
-* **Edit** — click this to edit any detail of the listing 
-    * You can edit jobs you have already submitted as well as jobs that are still pending approval
-    * This way, you can easily edit these details without having to contact Mendix or post a new job
-* **Mark filled** – click this to mark the job as filled
-    * This will grey out the job on the job board, but it will not remove the listing
-    * This way, the Mendix community can see what the job offering was, even though the position has been filled
-* **Duplicate** — click this to duplicate the selected job into a new draft job for editing
-    * This is useful when you're posting multiple positions that have similar descriptions
-* **Delete** — click this to delete old and obsolete jobs
-    * Keep in mind that this is permanent and cannot be reversed!
-
-## 5 Read More
-
-* [Mendix Profile](../mendix-profile/index)
+* [Mendix Profile](/developerportal/mendix-profile/)

@@ -120,19 +120,6 @@ To access the license agreement, go to the the **Checks** section of the pull re
 
 This only needs to be done once.
 
-## 7 Gaining Mendix Points {#GainingMendixPoints}
-
-As you add knowledge to the documentation that will help your fellow Mendix developers, you will gain Mendix points for each contribution!
-
-Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Profile. For more information, see the [Authorizing GitHub Connection](/developerportal/mendix-profile/index#github) section in *Mendix Profile*
-
-The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
-
-* For a small contribution to the documentation – 5 points
-* For a large contribution to the documentation – 15 points
-
-The points are awarded when the pull request is merged.
-
-## 8 Read More
+## 7 Read More
 
 * [Documentation Writing Guidelines](documentation-writing-guidelines)

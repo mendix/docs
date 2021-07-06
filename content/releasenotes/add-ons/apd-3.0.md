@@ -13,7 +13,7 @@ APM has been renamed to [Application Performance Diagnostics (APD)](/addons/apd-
 
 ### SMART Digital Factory APIs
 
-* Because APD is a part of the [Mansystems SMART Digital Factory](https://www.mansystems.com/mansystems-launches-the-smart-digital-factory-during-mendix-world-2019/), APD has an API so that the SMART Digital Factory can use APD functions like statistics snapshots and recording.
+* Because APD is a part of the CLEVR SMART Digital Factory, APD has an API so that the SMART Digital Factory can use APD functions like statistics snapshots and recording.
 * For SMART Digital Factory users, APD can now run your unit tests from our CI/CD via the APD runtime agent.
 
 ### Scalability

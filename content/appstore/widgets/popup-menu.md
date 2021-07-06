@@ -1,8 +1,8 @@
 ---
 title: "Pop-Up Menu"
 category: "Widgets"
-description: "Describes the configuration and usage of the Pop-Up Menu widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "popup", "pop-up", "popup menu", "pop-up menu", "platform support"]
+description: "Describes the configuration and usage of the Pop-Up Menu widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "popup", "pop-up", "popup menu", "pop-up menu", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -25,6 +25,6 @@ Place the widget anywhere you want on a page in your app.
 
 If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view) and configure the widget as **Render = Custom**.
 
-## 3 Developing This App Store Component
+## 3 Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/widgets-resources](https://github.com/mendix/widgets-resources/issues).

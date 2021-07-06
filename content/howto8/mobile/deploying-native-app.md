@@ -17,7 +17,7 @@ The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Mendix Studio Pro v8.15 and above installed using the online installer. The offline installer does not include the Mendix Native Mobile Builder dependency.
-* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
+* Read [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
@@ -33,7 +33,7 @@ If you plan to deploy your app for testing on an iOS device, make sure you have 
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
-## 3 Getting Your Tokens
+## 3 Getting Your Tokens {#getting-your-tokens}
 
 To use the Mendix Native Mobile Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
 
@@ -184,14 +184,14 @@ Depending on whether you chose to sign your iOS app or not, the output of the bu
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"
 --username "YOUR_APPSTORE_USER_EMAIL" --password "YOUR_APPSTORE_PASSWORD"
 ```
 
-Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your App Store password.
+Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your Apple App Store password.
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
@@ -199,7 +199,7 @@ The command will first verify your IPA is packaged correctly and ready to be shi
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and development team is required. If one is available, do the following:
 
 1. Using Xcode, double-click the *nativeTemplate.xcarchive* file. It should open with the built-in **Application Loader** software.
 1.  Click the *Distribute App* button to start the local signing flow:
@@ -236,4 +236,4 @@ A signed Android APK can be uploaded to Google Play store directly. For more inf
 
 ## 7 Read More
 
-* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [How To Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)

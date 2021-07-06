@@ -7,7 +7,7 @@ tags: ["domain model", "association", "inheritance", "one-to-one", "generalizati
 
 ## 1 Introduction
 
-Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the Mendix App Store. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
+Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the Mendix Marketplace. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
 
 Mendix developers have to choose on a daily basis whether or not they want to use inheritance or associations. One example which occurs in most projects is deciding how you want to set up your users. Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**? In this case, it would be bad practice to add additional information directly to the System.User entity and, in fact, Mendix prevents you from doing so.
 
@@ -15,11 +15,11 @@ When defining closely related structures, it can be difficult to decide on the b
 
 ## 2 Generalization, Specialization & Inheritance
 
-The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (i.e. the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
+The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/wiki/Class_diagram) in [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (meaning, the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
 
 ![example of generalization notation](attachments/domain-model/generalization-indication.png)
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers) or [delete behavior/prevention](/refguide/association-properties#delete-behavior).
+UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide8/event-handlers) or [delete behavior/prevention](/refguide8/association-properties#delete-behavior).
 
 ### 2.1 Performance
 

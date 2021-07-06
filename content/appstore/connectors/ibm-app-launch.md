@@ -1,10 +1,14 @@
 ---
 title: "IBM App Launch"
 category: "Connectors"
-description: "Describes the configuration and usage of the IBM App Launch connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "ibm app launch", "app launch"]
+description: "Describes the configuration and usage of the IBM App Launch connector, which is available in the Mendix Marketplace."
+tags: ["marketplace",  "marketplace component", "ibm app launch", "app launch"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
+
+{{% alert type="warning" %}}
+This connector is deprecated.
+{{% /alert %}}
 
 ## 1 Introduction
 

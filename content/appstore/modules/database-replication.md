@@ -1,8 +1,8 @@
 ---
 title: "Database Replication"
 category: "Modules"
-description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "database replication", "platform support"]
+description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "database replication", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -271,7 +271,7 @@ Each import action is executed in a single transaction, which means it is able t
 
 ## 10 Importing & Exporting a File
 
-You can import and export table mappings to an XML file using the **Import/export file** tab.
+You can import and export table mappings to an XML file using the **Table mapping** tab.
 
 ## 11 Troubleshooting
 

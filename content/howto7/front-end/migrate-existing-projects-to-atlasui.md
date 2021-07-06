@@ -1,5 +1,5 @@
 ---
-title: "Migrate Existing Projects to Atlas UI"
+title: "Migrate Existing Apps to Atlas UI"
 parent: "atlas-ui"
 menu_order: 20
 tags: ["Atlas", "UI", "UX", "user experience"]
@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-Atlas UI and the Web Modeler bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and the Web Modeler, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
+Atlas UI and the Web Modeler bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and the Web Modeler, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix apps to Atlas UI.
 
 **This how-to will teach you how to do the following:**
 
@@ -29,8 +29,8 @@ To get the full experience of Atlas UI, it’s necessary to import the Atlas UI 
 To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
-2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources) module from the Mendix App Store.
-3.  When the Atlas UI Resources module is downloaded from the Mendix App Store, it will be found in **App Store modules**:
+2. Download and import the [Atlas UI Resources](/appstore/modules/atlas-ui-resources) module from the Mendix Marketplace.
+3.  When the Atlas UI Resources module is downloaded from the Mendix Marketplace, it will be found in **App Store modules**:
 
     ![](attachments/howto/migrate_dm_appstore.png)
 
@@ -54,7 +54,7 @@ But before your app can run in the Web Modeler, it is necessary to enable the Me
 
 ## 6 Reusing Parts of Your Old Theme (Optional)
 
-A lot of Mendix projects have a custom theme. If this is the case for your project, your old theme can be found in the Project Explorer folder named **theme_old**. The Atlas UI framework is similar to the Mendix UI Framework, so it is possible to reuse parts of your custom variables file.
+Several Mendix apps have a custom theme. If this is the case for your app, your old theme can be found in the app Explorer folder named **theme_old**. The Atlas UI framework is similar to the Mendix UI Framework, so it is possible to reuse parts of your custom variables file.
 
 ![Image of Mendix Atlas UI](attachments/howto/migrate_old_theme.png)
 

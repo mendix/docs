@@ -2,8 +2,9 @@
 title: "Private Cloud"
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
-menu_order: 45
+menu_order: 48
 tags: ["Deployment", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -14,11 +15,7 @@ Your organization may have a requirement to use a private cloud, perhaps as part
 
 You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Developer Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
 
-The following platforms are officially supported by Mendix for Private Cloud:
-
-* Red Hat OpenShift
-* Amazon Web Services Elastic Kubernetes Service (AWS-EKS)
-* Azure Kubernetes Service (AKS)
+Please see [Supported Providers](private-cloud-supported-environments) for a list of platforms supported by Mendix for Private Cloud.
 
 There are two steps required to achieve this, listed below.
 
@@ -81,7 +78,7 @@ The table below shows the differences between the capabilities for apps deployed
 
 Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent. You will need one license for each namespace you want to manage.
 
-You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
 The Operator license is independent of a Mendix Runtime license which removes trial restrictions from a Mendix App itself. You will need both licenses to manage and run an application through Mendix for Private Cloud.
 

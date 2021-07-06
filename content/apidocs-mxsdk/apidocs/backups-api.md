@@ -15,7 +15,7 @@ This article is only applicable to applications deployed in **Mendix Cloud V4**.
 
 ## 2 Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups. 
+The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
 
 
 ## 3 API Calls
@@ -46,7 +46,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 **Example Request**
 
 ```bash
-GET /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots?offset=0&limit=2 
+GET /api/v2/apps/543857rfds-dfsfsd12c5e24-3224d32eg/environments/cd5fc610-edb0-43c5-a374-0439a6411ace/snapshots?offset=0&limit=2
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -172,7 +172,7 @@ An object with the following key-value pairs:
 **Example Output**
 
 ```json
-{ 
+{
    "status_message":null,
    "finished_at":null,
    "updated_at":null,
@@ -190,7 +190,7 @@ An object with the following key-value pairs:
 
 #### 3.3.1 Description
 
-After a request for download backup is submitted, you can check the progress this job using the `archive_id`. This job will eventually reach one of the following end states: *completed* or *failed*. When it's completed, the `url` attribute is populated with direct link to your requested backup. This link is valid for 10 minutes since completion.
+After a request to download the backup is submitted, you can check the progress this job using the `archive_id`. This job will eventually reach one of the following end states: *completed* or *failed*. When it is completed, the `url` attribute is populated with direct link to your requested backup. This link is valid for eight hours after completion.
 
 ```bash
 HTTP Method: GET
@@ -629,7 +629,7 @@ An object with the following key-value pairs:
 
 #### 3.9.1 Description
 
-Check the status of a restore request. 
+Check the status of a restore request.
 ```bash
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/restores/<RestoreId>

@@ -1,10 +1,14 @@
 ---
 title: "URL Redirector"
 category: "Widgets"
-description: "Describes the configuration and usage of the URL Redirector widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "url redirector", "url", "static", "dynamic", "platform support"]
+description: "Describes the configuration and usage of the URL Redirector widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "url redirector", "url", "static", "dynamic", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
 
 ## 1 Introduction
 

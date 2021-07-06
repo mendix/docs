@@ -73,7 +73,7 @@ When calling a web service using a call web service activity, the location of th
 
 This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler.
 
-Default value: *Yes* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+Default value: *Yes*
 
 {{% alert type="warning" %}}
 It is recommended that you keep this set this to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
@@ -85,7 +85,7 @@ Default: *No*
 
 **Timeout** specifies the timeout value in seconds.
 
-Default value: *300* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was 30)
+Default value: *300*
 
 ### 4.6 Validate Against WSDL
 
@@ -103,15 +103,33 @@ Default: *No*
 
 ### 4.7 Proxy Configuration
 
-In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
+In almost all cases, you can ignore this setting. **Use app settings** is a good default value.
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 
-* **Use project settings** – use whatever settings are defined at the project level (default)
-* **Override** – override the project-level settings for this action
-* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
+* **Use app settings** – use whatever settings are defined at the app level (default)
+* **Override** – override the app-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the app level
 
 When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
+
+### 4.8 Client certificate{#client-certificate}
+
+In almost all cases, you can ignore this setting. **Use app settings** is a good default value.
+
+However, you can specify a client certificate to use for the request by selecting **Override**.
+
+The options are:
+
+* **Use app settings**(default) – use the settings that are defined at the app level 
+* **Override** – override the app-level settings for this action
+
+When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
+
+* When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates#outgoing-client-certificates).
+* When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates). For testing locally, this can be set as a custom server setting in a [Configuration](configuration#custom).
+
+When this identifier is not set for the environment where your app is deployed (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use app settings** were selected).
 
 ## 5 HTTP Headers Tab{#http-headers}
 

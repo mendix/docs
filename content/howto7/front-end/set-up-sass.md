@@ -8,11 +8,11 @@ tags: ["gulp", "sass", "ux", "front end"]
 
 ## 1  Introduction
 
-Styling in a Mendix app project is easy to do once you get the hang of it. But before you can start using Sass for your app project, you first need to install and download a few things.
+Styling in a Mendix app is easy to do once you get the hang of it. But before you can start using Sass for your app, you first need to install and download a few things.
 
 This how-to will teach you how to do the following:
 
-* Prepare your app project
+* Prepare your app
 * Set up your Sass files
 * Work with Sass
 
@@ -35,32 +35,32 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 5. Install version **1.7.15** of [TortoiseSVN](https://osdn.net/projects/tortoisesvn/storage/Archive/1.7.15/Application/).
 
-## 3 Preparing Your App Project
+## 3 Preparing Your App
 
-To prepare your app project, follow these steps:
+To prepare your app, follow these steps:
 
-1. Open the [app project directory](../general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
-2.  Unpack the *Gulp.zip* file into your main app project folder. You will then see a *Gulpfile* and *package* file that look like this:
+1. Open the [app directory](/howto7/general/show-project-directory) (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
+2.  Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
 	![](attachments/set-up-sass/unpack.png)
 
-	After you have unpacked the *Gulp.zip* into your app project folder, you can remove the *zip* file.
+	After you have unpacked the *Gulp.zip* into your app folder, you can remove the *zip* file.
 3.  Open **Windows PowerShell**:
 
 	![](attachments/set-up-sass/powershell.png)
 
-4.  Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
+4.  Copy the address as text from your main app folder and paste it into Powershell (your app folder cannot contain spaces and should not be too long):
 
 	![](attachments/set-up-sass/copy.png)
 
-5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+5.  Provide the directory for your app folder in PowerShell: `cd ‘directory for your app folder’`
 6.  Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)
 
 	If you use `npm install`, you may receive an error. PowerShell will tell you to use `npm run dev` instead. If that does not work, use `npm install run`.
 
-	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
+	{{% alert type="info" %}}You should do this for each new app! That way, you will not have to repeat the installation step whenever you reopen the app and Powershell.
 	{{% /alert %}}
 
 7.  Write `gulp dev`. Your screen should then look like this:
@@ -69,7 +69,7 @@ To prepare your app project, follow these steps:
 
 	At this point, you are ready to start working with Sass.
 
-8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
+8.  You also need to add the following selected items into the ignore list of TortoiseSVN for each new app. If you do not, your app will take too long to commit a change:
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -83,7 +83,7 @@ To prepare your app project, follow these steps:
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-9.  Open your app project in Studio Pro, then click **Run Locally** and **View**:
+9.  Open your app in Studio Pro, then click **Run Locally** and **View**:
 
 	![](attachments/set-up-sass/run-view.png)
 
@@ -91,7 +91,7 @@ To prepare your app project, follow these steps:
 
 Final steps! Read below to open and work with Sass:
 
-1. Open the main app project folder and go to **theme** \> **styles** \> **sass** \> **custom**.
+1. Open the main app folder and go to **theme** \> **styles** \> **sass** \> **custom**.
 2. Double-click either the *custom.scss* or *\_custom-variables.scss* file, which will open in VSC:
 
 	![](attachments/set-up-sass/custom-variables.png)
@@ -112,7 +112,7 @@ Final steps! Read below to open and work with Sass:
 
 it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *\_variables.scss* file to get the variables you need and copy them in your *\_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *\_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
 
-You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
+You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app.
 
 When you create a new Sass file, follow this naming guideline: *\_{namefilehere}.scss*. For example:
 
@@ -120,7 +120,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 ### 4.2 Importing New Sub-Folders & Files
 
-Before you can see any changes in your app project with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
+Before you can see any changes in your app with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
 
 `@import "custom-variables";`
 
@@ -148,11 +148,11 @@ color: green;
 }
 ```
 
-To implement this in your app project, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
+To implement this in your app, open the app in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro. 
 
 ![](attachments/set-up-sass/class-name.png)
 
-You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app project if you, for example, want to position your title somewhere else. 
+You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app if you, for example, want to position your title somewhere else. 
 
 {{% alert type="info" %}}
 The inline styling is not made use of in this example. That is because the inline styling will always overrule your code in VSC. 
@@ -160,7 +160,7 @@ The inline styling is not made use of in this example. That is because the inlin
 
 ### 5.1 Seeing Your Changes
 
-When you add, remove, or change something in Studio Pro, you need to save your changes and run the app project locally to see your styling changes in the browser.
+When you add, remove, or change something in Studio Pro, you need to save your changes and run the app  locally to see your styling changes in the browser.
 
 For example, when you set a color for your title and subtitle, click **Run Locally** then **View**. When browser automatically opens, you will see the following URL:
 
@@ -181,13 +181,13 @@ You can test this by changing the color of `.pageheader-subtitle` from green to 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 
 * Make sure Powershell is working properly, or else your code will not be registered Studio Pro
-* Use the following to install gulp for each new project:
+* Use the following to install gulp for each new app:
 	* `npm install`
 	* `npm install dev`
 	* `npm install gulp-cli -g`
 	* If the above do not work, you can also use `npm run dev`, though keep in mind you are not installing the gulp
-* Make sure the app project is running locally in Studio Pro (you will not be able to see yoru changes if the app is not running)
-* If you change or add something in Studio Pro, save it and run the app project again
+* Make sure the app is running locally in Studio Pro (you will not be able to see yoru changes if the app is not running)
+* If you change or add something in Studio Pro, save it and run the app again
 * Make sure you are working in the right folder (which in VSC is always **sass** > **custom**; you should not work in **lib**)
 * Do not make use of inline styling via Studio Pro
 * Be sure to change the portal of `localhost:8080` into `localhost:3000`

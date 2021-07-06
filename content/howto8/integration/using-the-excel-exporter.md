@@ -7,16 +7,16 @@ tags: ["excel", "excel export", "excel exporter", "integration"]
 
 ## 1 Introduction
 
-Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix App Store content to create custom Excel documents based on configurable templates. To achieve this, your app will require you to download and configure two Mendix App Store modules.
+Exporting items from a data grid in a Mendix application in Excel format via an **Export to Excel** button, is standard Mendix functionality. However, in instances where more customized Excel documents are required, your app can leverage Mendix Marketplace content to create custom Excel documents based on configurable templates. To achieve this, your app will require you to download and configure two Mendix Marketplace modules.
 
 This how-to explains how to do the following:
 
-* Download the App Store modules
+* Download the Marketplace modules
 * Configure your app to export the required data in the correct format
 
-## 2 Downloading the Required App Store Modules
+## 2 Downloading the Required Marketplace Modules
 
-In this section, you will learn how to download the necessary modules from the Mendix App Store. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
+In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
 
 {{% alert type="info" %}}
 The Mx Model Reflection module enables your app to obtain information about its domain model (entities and attributes) and microflow definitions at runtime.
@@ -24,13 +24,13 @@ The Mx Model Reflection module enables your app to obtain information about its 
 
 To download the modules, follow these steps:
 
-1. Open the **Mendix App Store** from within Studio Pro.
+1. Open the **Mendix Marketplace** from within Studio Pro.
 2.  Search for the keyword *reflection* and select **Mx Model reflection**:
 
 	![](attachments/using-the-excel-exporter/18581166.png)
 
-3. Click **Download** to include the module in your app project. It will be imported into **Project** > **App Store modules** in the **Project Explorer**.
-4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app project:
+3. Click **Download** to include the module in your app. It will be imported into **Project** > **App Store modules** in the **Project Explorer**.
+4.  Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app:
 
 	![](attachments/using-the-excel-exporter/exporter.png)
 	
@@ -41,7 +41,7 @@ Depending on the layout selected when the project was created, errors in Studio 
 
 ## 3 Adding Navigation Items to Allow Users to Configure Settings
 
-In this section, you will learn how to add the required pages in the app project's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
+In this section, you will learn how to add the required pages in the app's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 
 1.  In Studio Pro, open **Project** > **Navigation**.
 2.  Add a new item to the Navigation to open the page **MxModelReflection.MxObjects_Overview**:
@@ -60,7 +60,7 @@ In this section, you will learn how to add the required pages in the app project
 
 In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how to will use a **Policy** entity to hold the data.
 
-1.  Open the domain model for your app project and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
+1.  Open the domain model for your app and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
 2.  Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
 
 	![](attachments/using-the-excel-exporter/18581908.png)

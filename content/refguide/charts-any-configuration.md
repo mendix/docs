@@ -8,9 +8,9 @@ tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 
 ## 1 Introduction
 
-With **Any Chart**, you can build any chart type that is supported by Plotly.js up to the version mentioned in the widget description in the App Store. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
+With **Any Chart**, you can build any chart type that is supported by Plotly.js up to the version mentioned in the widget description in the Marketplace. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
 
-The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart) module from the Mendix App Store. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
+The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart](/appstore/modules/any-chart) module from the Mendix Marketplace. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
 
 Any Charts are configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** and **Sample data** properties.
 
@@ -145,7 +145,7 @@ The form to show when a user hovers over a chart plot point. It has the context 
 
 ## 8 Chart Theming
 
-Advanced JSON settings can also be added in a global context via the theme folder of your Mendix project root directory.
+Advanced JSON settings can also be added in a global context via the theme folder of your Mendix app root directory.
 
 To the theme folder, add a *.json* file named *com.mendix.charts*. The JSON should be in the following format:
 

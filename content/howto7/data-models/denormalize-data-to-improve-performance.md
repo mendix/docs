@@ -27,7 +27,7 @@ Let's assume that the domain model contains two related entities called Customer
 To show the total order amount, there are two options:
 
 * First option: create a calculated attribute in the Customer entity to compute the total order amount (the downside of this option is that the calculated attributes bring down the performance of overview pages)
-* Second option: create a persistent attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
+* Second option: create a stored attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
 
 To enable denormalization, follow these steps:
 
@@ -148,9 +148,9 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [How to Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath)
 * [Attributes](/refguide7/attributes)
 * [Event Handlers](/refguide7/event-handlers)
 

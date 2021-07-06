@@ -11,7 +11,11 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-The **Commit** activity can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
+The **Commit** activity works on one or more objects. For persistable entities, committing an object stores it in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
+
+{{% alert type="info" %}}
+A Mendix commit does not always behave like a database commit. See [How Commits Work](#how-commits-work), below, for more information.
+{{% /alert %}}
 
 ## 2 Properties
 
@@ -95,6 +99,16 @@ When inside a [nanoflow](nanoflows), the object is refreshed across the client a
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
 ## 5 How Commits Work{#how-commits-work}
+
+### 5.1 Committing Objects
+
+When you commit an object, the current value is saved. This means that you cannot rollback to the previous values of the object using the **Rollback** action of a microflow.
+
+However, a Mendix **Commit** is not the same as a database **Commit**. For an object of a persistable entity, the saved value is not committed to the database until the microflow and any microflows from which it is called, completes. This means that errors in a microflow *can* initiate a rollback. If a microflow action errors and has **Error handling** set to *Rollback* or *Custom with rollback*, the value of the object *will* be rolled back to the value it had at the start of the microflow. See [Error Event](error-event#errors-in-microflows) for more information.
+
+Mendix mimics this behavior for *non-persistable* entities. Committing a non persistable entity means you cannot use a **Rollback** action to go back to the previous values, although rollback error handling in a microflow *will* roll back to the original values.
+
+### 5.2 Autocommit and Associated Objects
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 

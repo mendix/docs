@@ -31,7 +31,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -155,7 +155,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### 3.11 Multiple Sessions per User
+### 3.11 Multiple Sessions per User{#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 

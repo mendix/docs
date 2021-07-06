@@ -18,13 +18,13 @@ Besides boasting native functionality, another major advantage of a hybrid mobil
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the hybrid Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix App Store (for details and download links, see [Getting the Mendix App](/refguide8/getting-the-mendix-app) in the *Studio Pro Guide*)
+* Install the hybrid Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix Marketplace (for details and download links, see [Getting the Mendix App](/refguide8/getting-the-mendix-app) in the *Studio Pro Guide*)
 
 ## 3 Opening a Hybrid Example App
 
 To open a hybrid example app, follow these steps:
 
-1.  Open the App Store in Studio Pro by clicking this icon in the upper-right toolbar:
+1.  Open the Marketplace in Studio Pro by clicking this icon in the upper-right toolbar:
 
     ![](attachments/18448692/icon.png)
 
@@ -63,4 +63,4 @@ If you want to install this application as a native mobile app on your device, y
 
 ## 5 Read More
 
-* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application)

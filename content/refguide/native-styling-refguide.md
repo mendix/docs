@@ -73,7 +73,7 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 });
 ```
 
-For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#6-creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
+For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
 ## 3  Data Widgets {#understanding-data-widgets}
 
@@ -619,7 +619,7 @@ The default class to style the navigation is named  `navigationStyle`. There is 
 
 ## 11 Add-On Widgets
 
-Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other projects. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other apps. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 
@@ -1309,7 +1309,47 @@ export myCarouselStyle = {
 
 The default class to style all popup menus is named `com_mendix_widget_native_carousel_Carousel`.
 
-### 11.26 Line Chart
+### 11.26 Signature {#signature}
+
+The signature widget allows you to draw and save a signature. The signature widget looks like this: 
+
+{{% image_container width="350" %}}![signature](attachments/native-styling-refguide/signature.png){{% /image_container %}}
+
+The widget’s style properties are structured as follows:
+
+```xml
+<container>
+    <signature/>
+    <buttonWrapper>
+        <Button>
+            <Caption>Clear</Caption>
+        </Button>
+        <Button>
+            <Caption>Save</Caption>
+        </Button>
+    </buttonWrapper>
+</container>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `container` | `penColor` | This will change the color of the stroke. |
+| `buttonWrapper` | This has all ViewStyle properties. |
+| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonClearCaption` | This has all TextStyle properties. |
+| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
+| `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
+| `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
+| `buttonSaveCaption` | This has all TextStyle properties. |
+
+The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
+
+### 11.27 Line Chart
 
 The [line chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/line-chart-native) widget renders a scalable line graph based on static and dynamic data sets.
 
@@ -1390,7 +1430,7 @@ The widget consists of the following elements:
 
 The default class to style all line chart widgets is named `com_mendix_widget_native_linechart_LineChart`.
 
-### 11.27 Bar Chart
+### 11.28 Bar Chart
 
 The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
 

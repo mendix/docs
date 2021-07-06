@@ -126,9 +126,9 @@ ATS now supports testing the recently released Mendix 7.
 
 **Release date: November 6th, 2016**
 
-### Supporting AppStore Widgets
+### Supporting Mendix Marketplace Widgets
 
-Everybody uses widgets from the Mendix App Store in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
+Everybody uses widgets from the Mendix Marketplace in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
 
 We've selected the top widgets from the App Store and added support for testing with ATS.
 

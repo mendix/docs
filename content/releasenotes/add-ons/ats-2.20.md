@@ -30,16 +30,16 @@ The main goal of ATS is to test your Mendix application. Therefore, with this re
 
 #### Fetch Environment Information from the Developer Portal
 
-ATS now fetches information such as the name and URL of existing app environments for an app from the [Developer Portal](/developerportal/index).
+ATS now fetches information such as the name and URL of existing app environments for an app from the [Developer Portal](/developerportal/).
 
 To distinguish these environments from ones that are manually managed, the name is suffixed with `(Sprintr)` and an additional flag is added.
 
 These environments are not editable and will be updated daily.
 
-We hope this makes it easier to start using ATS on new app projects.
+We hope this makes it easier to start using ATS on new apps.
 
 {{% alert type="info" %}}
-This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@mansystems.nl** is invited to the app project.
+This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@clevr.nl** is invited to the app.
 {{% /alert %}}
 
 #### Configure a Default Selenium Hub & Environment

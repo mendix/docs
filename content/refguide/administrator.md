@@ -2,16 +2,16 @@
 title: "Administrator"
 parent: "project-security"
 menu_order: 20
-tags: ["studio pro", "administrator", "project security", "security"]
+tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
 
-In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:
+In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
 ![](attachments/administrator/project-security-administrator.png)
 
-## 2 Administrator Properties
+## 2 Administrator Properties {#administrator-properties}
 
 In the **Administrator** tab the following properties are available:
 
@@ -36,12 +36,21 @@ The password is used to sign into the application as the Administrator. Click **
 Default: *1*
 
 {{% alert type="info" %}}
-This password is only used when Mendix is running locally. You can change the password for your other [environments](/developerportal/deploy/environments-details) in the Developer Portal.
+Since the value of the password is general knowledge, it is safer to change this to a custom password.
+
+This password is only used when Mendix is running locally. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details) in the Developer Portal.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-Since this is general knowledge, it is safer to change this to a custom password.
-{{% /alert %}}
+#### 2.2.1 Free Apps
+
+You cannot set a password for MxAdmin for Free Apps published to the cloud. To log in for the first time to a Free App deployed to the cloud, do the following:
+
+1. In Studio Pro, go to **App > Security**.
+2. With **Security level** set to **Production**, open the **Demo users** tab.
+3. Set **Enable demo users** to **Yes**.
+4. Add a demo_administrator having **User role** *Administrator*.
+5. Deploy your Free App to the cloud environment by clicking **Publish**.
+6. Log in using the demo-administrator and you can then create some user accounts.
 
 ### 2.3 User Role {#user-role}
 
@@ -63,7 +72,7 @@ When your app is not deployed locally, for example to the Mendix Cloud, changes 
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Demo Users](demo-users)
 * [Anonymous Users](anonymous-users)

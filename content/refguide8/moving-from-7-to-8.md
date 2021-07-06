@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-When converting your Mendix app project from Desktop Modeler version 7 to Studio Pro version 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App Project](#converting), below.
+When converting your Mendix app from Desktop Modeler version 7 to Studio Pro version 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App](#converting), below.
 
 For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
@@ -22,12 +22,12 @@ This means the following:
 
 * Existing apps built in Studio will remain in their current Mendix version and can be upgraded in Studio to the latest release of Mendix version 7.23
 
-    {{% alert type="info" %}}If your app was created in Studio Pro, using a Mendix 8 beta version, it will be upgraded to the release version of Mendix 8 automatically.
+    {{% alert type="info" %}}If your app was created in Studio Pro, using a Mendix 8 Beta version, it will be upgraded to the release version of Mendix 8 automatically.
     {{% /alert %}}
 
 *  Any apps you create in Studio from now on will have Mendix version 8 from the start
 
-Developers wanting to upgrade their existing Mendix version 7 Studio apps to Mendix version 8 can only do so in Studio Pro by following the instructions in [Converting Your App Project](#converting), below.
+Developers wanting to upgrade their existing Mendix version 7 Studio apps to Mendix version 8 can only do so in Studio Pro by following the instructions in [Converting Your App](#converting), below.
 
 ### 2.1 Collaborative Development with Studio
 
@@ -41,7 +41,7 @@ There may be changes which you should make to your app *before* you upgrade it t
 
 Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
 
-Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
+Deprecated Java actions should be fixed in Mendix 7, before you migrate the app to Mendix 8.
 
 Fix the deprecations in your Java actions by importing your project into your Java IDE (Eclipse, for example) and reviewing and solving all the deprecations.
 
@@ -55,14 +55,14 @@ How to update to Atlas 1.2.4:
 
 1. Check if you customized anything in your Studio Pro Atlas UI Resource module, as updating Atlas will override all of that module's content. Move your customized content out of the Atlas UI Module before updating.
 2. Check if you customized anything in the **theme** folder inside your Mendix project. If so, rename the **theme** folder to something else, like *theme_oldest*.
-3. Update Atlas by opening the App Store inside Studio Pro, search for *Atlas UI Resources*, click the **All Versions** pane, and download **Atlas UI Resources v1.2.4**.
+3. Update Atlas by opening the Marketplace inside Studio Pro, search for *Atlas UI Resources*, click the **All Versions** pane, and download **Atlas UI Resources v1.2.4**.
 4. When prompted, choose to replace your existing Atlas module.
 
 {{% alert type="info" %}} You do not have to move any customized files from **theme_oldest** to **theme** yet, as after migrating to Mx8, you will update Atlas again which will create a new **theme folder**.{{% /alert %}}
 
-## 4 Converting Your App Project{#converting}
+## 4 Converting Your App {#converting}
 
-The following sub-sections explain the steps to take in converting your app project from Mendix 7 to Mendix 8.
+The following sub-sections explain the steps to take in converting your app from Mendix 7 to Mendix 8.
 
 ### 4.1 Backup Your Project
 
@@ -71,7 +71,7 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 4.2 Upgrade to the Latest Release of Version 7 {#upgrade}
 
 {{% alert type="warning" %}}
-It is technically required for you to upgrade your app project to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23). You can only convert your app project to Mendix 8 from 7.23.x.
+It is technically required for you to upgrade your app to the latest version of Mendix 7, which is [7.23](/releasenotes/studio-pro/7.23). You can only convert your app to Mendix 8 from 7.23.x.
 {{% /alert %}}
 
 To upgrade to Mendix 7, follow these steps:
@@ -82,21 +82,21 @@ To upgrade to Mendix 7, follow these steps:
 
 ### 4.3 Review Your Mendix 7 Project
 
-Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
+Review your app in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
 In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
 ### 4.4 Save Version 7 Project
 
-Your app project is now ready to be upgraded to Mendix Version 8.
+Your app is now ready to be upgraded to Mendix Version 8.
 
 It is recommended that you backup/commit your project at this point so that you can return to it if necessary.
 
 You can now close the project in Desktop Modeler version 7.
 
-### 4.5 Upgrade Your App Project to Version 8
+### 4.5 Upgrade Your App to Version 8
 
-Mendix will upgrade your app project for you.
+Mendix will upgrade your app for you.
 
 Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
 
@@ -108,9 +108,9 @@ If you are using one, or both, of the deprecated data types Currency and Float y
 
 ### 4.7 Upgrade All Widgets
 
-To minimize the chance of problems, you should update all widgets and other App Store models used by your project to the latest version.
+To minimize the chance of problems, you should update all widgets and other Marketplace models used by your project to the latest version.
 
-Check if there is a newer version of your App Store modules available in the App Store. Read the version release notes in the App Store to see whether you need to perform specific actions when upgrading.
+Check if there is a newer version of your Marketplace modules available in the Marketplace. Read the version release notes in the Marketplace to see whether you need to perform specific actions when upgrading.
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
@@ -170,19 +170,19 @@ Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit vers
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud v3 node, then we recommend that you upgrade to Mendix Cloud v4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
-## 8 Java Code Generation
+## 8 Java Code Generation {#java-code-generation}
 
 In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
 
 Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
 
-We also noticed that by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary and introduces quite a few problems on bigger app projects, we decided to remove it completely.
+We also noticed that by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary and introduces quite a few problems on bigger app, we decided to remove it completely.
 
-What does that mean in practice? For most app projects, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
+What does that mean in practice? For most app, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
 
 In these few cases you need to make a simple fix before your code will compile again:
 
-* If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
+* If it is a Java action in a module downloaded from the Marketplace that is causing errors, just download it again, or update it to the latest version
 * If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
 
 ### 8.1 Example of Differences
@@ -243,7 +243,7 @@ To resolve this issue, use the previous version of Mendix to change the invalid 
 
 ### 9.2 DOM and Atlas UI Issues
 
-Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app projects. Because of these updates, Mendix 8 app projects are designed to be completed using [Atlas UI Resources](/appstore/modules/atlas-ui-resources) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
+Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app. Because of these updates, Mendix 8 app are designed to be completed using [Atlas UI Resources](/appstore/modules/atlas-ui-resources) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
 
 * [Troubleshooting DOM Changes](migration-dom-issues)
 * [Troubleshooting Atlas UI Changes](migration-atlas)

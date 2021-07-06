@@ -30,7 +30,7 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 
 ## 2 Performing Basic Functions
 
-{{% snippet file="refguide/performing-basic-functions-widgets.md" %}}
+{{% snippet file="refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 3 Read More
 

@@ -3,7 +3,7 @@ title: "Set Up Error Handling"
 category: "Logic & Business Rules"
 menu_order: 8
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
-#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---
 
 ## 1 Introduction

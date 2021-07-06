@@ -18,8 +18,8 @@ This document outlines performance issues and Mendix best practices for optimizi
 In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
 - Retrieve and change object activities in microflows
-- In UI widgets (e.g. data views, custom widgets)
-- When an object is passed from the UI as a parameter to a microflow (e.g. a button triggering a microflow).
+- In UI widgets (for example, data views, custom widgets)
+- When an object is passed from the UI as a parameter to a microflow (for example, a button triggering a microflow).
 
 There are two different performance issues with calculated attributes that you can easily fix:
 
@@ -57,7 +57,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ## 3 Add an Index to Attributes in Sort Bars {#mxp003}
 
-[Sort bars](https://docs.mendix.com/refguide/sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
+[Sort bars](sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
 
 - Data grid
 - Template grid
@@ -148,7 +148,7 @@ This optimization may not be very beneficial for data types like Boolean and enu
 
 ## 7 Avoid Caching Non-Persistable Entities {#mxp008}
 
-A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](persistability). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistent entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects & Caching](objects-and-caching).
+A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](persistability). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistable entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects & Caching](objects-and-caching).
 
 You can use the following guidelines to decide whether caching is needed:
 

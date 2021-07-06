@@ -1,5 +1,5 @@
 ---
-title: "Mendix Forum"
+title: "Forum"
 category: "Community Tools"
 menu_order: 30
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
@@ -10,7 +10,7 @@ description: "Describes the Mendix Forum, where the Mendix community can ask and
 
 The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](/developerportal/mendix-profile/#public) so everyone can see your details and progress!
 
 There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. On each tab, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 
@@ -241,7 +241,7 @@ To submit your own idea to the idea forum, follow these steps:
 
 	* The **Title** of your idea (which is how Mendix Forum users will first see your idea, so make the title descriptive and interesting)
 	* The text of your idea (add all the details about your idea to make it searchable and so other users can vote and comment on it)
-	* The **Category** that reflects your idea (for example, **App Store**, **Connectors**, **Microflows**)
+	* The **Category** that reflects your idea (for example, **Connectors** or **Microflows**)
 	* The **Tag(s)** that reflect your idea (which other users can use to filter their searches)
 
 3. Click **Submit your idea**.

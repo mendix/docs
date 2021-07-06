@@ -6,7 +6,7 @@ menu_order: 10
 
 ## 1 Introduction
 
-The APM tools have been used extensively by Mansystems Developers and Support Engineers in developing and supporting ExpertDesk and other Mendix applications. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without the proper information and have grown to an application monitoring and analysis suite.
+The APM tools have been used extensively by CLEVR Developers and Support Engineers in developing and supporting ExpertDesk and other Mendix applications. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without the proper information and have grown to an application monitoring and analysis suite.
 
 ## 2 Generic
 

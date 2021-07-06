@@ -7,7 +7,7 @@ tags: ["studio", "web modeler"]
 
 {{% alert type="warning" %}}
 
-The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix 9 version. It describes the latest Studio functionality and features.
+The **Studio 9 Guide** describes Mendix Studio functionality that corresponds to Mendix version 9. It describes the latest Studio functionality and features.
 
 {{% /alert %}}
 
@@ -28,12 +28,12 @@ The *Studio 9 Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Pages](page-editor)
-* [Domain Model](domain-models)
+* [Working with Data](work-with-data)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
+* [Workflows](workflows)
 * [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Theme Customizer](theme-customizer)
 * [Settings](settings)
-* [Working with Data](work-with-data)
 * [Collaboration](collaboration)

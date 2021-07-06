@@ -1,8 +1,8 @@
 ---
 title: "Excel Importer"
 category: "Modules"
-description: "Describes the configuration and usage of the Excel Importer module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "excel importer", "excel", "mapping", "platform support"]
+description: "Describes the configuration and usage of the Excel Importer module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "excel importer", "excel", "mapping", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -273,5 +273,5 @@ The Excel Importer module uses the following log nodes:
 
 ## 6 Read More
 
-* [How to Import Excel Documents](https://docs.mendix.com/howto/integration/importing-excel-documents)
-* [How to Import a Large Excel File](https://docs.mendix.com/howto/integration/import-a-large-excel-file)
+* [How to Import Excel Documents](/howto/integration/importing-excel-documents)
+* [How to Import a Large Excel File](/howto/integration/import-a-large-excel-file)

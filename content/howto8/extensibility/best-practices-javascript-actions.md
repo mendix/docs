@@ -255,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app#upgrades-20) section of the *Hybrid App Base & Template* release notes.
 
-It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 The actual list of plugins use can be found in *config.xml* inside your deployment package.
 
@@ -419,11 +419,11 @@ Use **Category** to group actions, and **Icon** to give the exposed nanoflow act
 
 ### 3.3 Publishing JavaScript Actions
 
-You can export a single action by right-clicking a JavaScript action in the Project Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix App Store. Instead, publish it as a module. 
+You can export a single action by right-clicking a JavaScript action in the Project Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix Marketplace. Instead, publish it as a module. 
 
 You can import a single action by right-clicking your module in the Project Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix App Store. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix App Store. For further instructions, see [How to Share App Store Content](/appstore/general/share-app-store-content).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 
@@ -445,7 +445,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 ## 4 Testing JavaScript Actions
 
-An extensive test project can help make a JavaScript action more robust. Within a test project, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
+An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
 When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide8/system-requirements#browsers) section of *System Requirements*. 
 
@@ -475,7 +475,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide8/javascript-actions)
 * [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
 * JavaScript basics:

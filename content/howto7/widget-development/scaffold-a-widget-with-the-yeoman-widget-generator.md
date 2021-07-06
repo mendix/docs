@@ -58,13 +58,13 @@ After you have entered the options, the system will install all the dependencies
 
 Grunt is a powerfull task-runner that will speed up your widget development. In the previous steps you installed the Grunt client (`grunt-cli`), and now you are going to use it.
 
-### 4.1 Start the Modeler (Test Project)
+### 4.1 Start the Modeler (Test App)
 
 You can start the Modeler from Grunt with `grunt start-mendix` or `grunt start-modeler`:
 
 ![](attachments/19202547/19398841.png)
 
-This will open your test project with the Mendix version selector. Your test project is created in version 5.19.
+This will open your test app with the Mendix version selector. Your test app is created in version 5.19.
 
 ### 4.2 Watch
 
@@ -76,10 +76,10 @@ Now, everytime you make changes in your *src* folder, it will automatically buil
 
 #### 4.2.1 Why and How to Use Grunt Watch
 
-The watch task has the advantage that you do not have to restart your test project everytime you make changes to any JavaScript file. There are two exceptions:
+The watch task has the advantage that you do not have to restart your test app everytime you make changes to any JavaScript file. There are two exceptions:
 
 * Changes to CSS are not automatically picked up
-    * These are built when you run the project
+    * These are built when you run the app
 * Changes to XML are not automatically picked up
     * Everytime you make changes to your *Widget.xml* inside your *src/Widget/* folder, you need to update the widget in the Modeler
 
@@ -99,7 +99,7 @@ This will likely be a problem with Node.JS and NPM. Make sure you have the lates
 
 ### 5.2 Cannot Start Modeler
 
-The Grunt task will try to find the Mendix version selector and run the test project. Obviously, this can only be done in Windows.
+The Grunt task will try to find the Mendix version selector and run the test app. Obviously, this can only be done in Windows.
 
 If it has trouble finding the version selector, you can provide a path to the program in *Gruntfile.js*. Change the **MODELER_PATH**:
 

@@ -4,7 +4,12 @@ parent: "metrics"
 menu_order: 25
 description: "Describes calculating disk space on a Mendix Cloud Version 3 environment."
 tags: ["Mendix Cloud", "cloud", "v3", "Disk Space"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -73,5 +78,5 @@ The total amount of disk space for this app is: ``(28.43 * 100) / 37.74 = 75.3 
 
 ## 5 Read More
 
-* [Mendix Cloud](../deploy/mendix-cloud-deploy)
-* [Environments](../deploy/environments)
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
+* [Environments](/developerportal/deploy/environments)

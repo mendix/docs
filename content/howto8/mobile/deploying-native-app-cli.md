@@ -20,7 +20,7 @@ Every Native Builder project has configurations. These configurations are useful
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
+* Read [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * Learn how to use Windows' command line interface (CLI) program `cmd`
 * Install [Java JDK 11](https://adoptopenjdk.net/) (if you have Studio Pro installed, you should already have JDK 11 in *C:\Program Files\AdoptOpenJDK*)
@@ -161,7 +161,7 @@ If your `build` command fails citing version conflicts on Java classes, try the 
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to App Center. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Reference Guide](/refguide8/managing-app-signing-keys). 
 
-For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the App Store.
+For Android, if you do not intend to publish your app to the Google Play Store, you can skip this section. For iOS, this step prepares an already installable iOS App Store Package (*.ipa*). Without this section's instructions, an unsigned version of an iOS app (*.xcarchive*) would need to be signed manually using Xcode in order to deploy on a device or in the Apple App Store.
 
 {{% alert type="info" %}}
 Currently, the Native Builder is not able to copy signing keys from one branch to another. Therefore you must set up signing for each branch you want to release. When you build with the Native Builder, the build number provided is used to create a new branch with the format **{build/#number}**. When ready to release, set up signing for the build number branch you decided according to this documentation and rebuild with the Native Builder using the branch's build number.
@@ -303,7 +303,7 @@ Once you have satisfied those requirements, you can follow Google's [Upload your
 
 You can skip this section if you completed [Signing a Build](#signing-a-build). Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and a development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and a development team is required. If one is available, do the following:
 
 1. Using an Xcode version below 11, double-click the *nativeTemplate.xcarchive* file and it should open with the built-in *Application Loader* software.
 
@@ -439,4 +439,4 @@ To upload your app to the iOS App Store, follow these instructions (to continue,
 ## 7 Read More
 
 * [Native Builder Reference Guide](/refguide8/native-builder)
-* [How To Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [How To Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)

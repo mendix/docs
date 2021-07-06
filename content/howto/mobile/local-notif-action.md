@@ -10,6 +10,10 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
 
+{{% alert type="warning" %}}
+The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [How to Deploy a Native App](/howto/mobile/deploying-native-app) and use that app to test local notification actions.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -63,7 +67,7 @@ In **ACT_CreateAndSendNotification** you will set up the logic for tapping a not
 
 Great job setting up your notification. Now you can test it:
 
-1. Click **Run Locally** to update your app.
+1. Click the play button (**Run Locally**) to update your app.
 2. Start the app on your mobile device.
 3. Tap your **Send notification** button.
 4. Tap the notification to navigate to the page you selected.
@@ -73,5 +77,4 @@ Now you can show pages after notifications are tapped. Next, in [How to Use Loca
 
 ## 4 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

@@ -1,22 +1,23 @@
 ---
 title: "Stories"
-category: "Collaboration Tools"
-menu_order: 30
-description: "Describes how to manage the Sprints and stories for your app project."
+category: "Collaboration"
+menu_order: 2
+description: "Describes how to manage the Sprints and stories for your apps."
 tags: ["Stories", "Sprint", "Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage Sprints, stories, and labels for your app project. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
+In **Stories**, you are able to manage Sprints, stories, and labels for your app. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
-By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app project. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
 {{% alert type="info" %}}
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
 {{% /alert %}}
 
-![](attachments/stories/stories.jpg)
+![](attachments/stories/stories.png)
 
 ## 2 Main Actions
 
@@ -52,9 +53,10 @@ Fill in the following details:
 * **Title** – the title of the story
 * **Description** – a description of the story
 * **Story type** – select whether the story describes a **Feature** or **Bug**
-* **Story points** – the size of the story
 * **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
 * **Story status** – select **To-do** (default), **Running**, or **Done**
+* **Assignee** – select a team member you wish to assign to this story
+* **Story points** – the size of the story
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
@@ -64,16 +66,28 @@ You can also create a story via the [New Story](#new-story) button for Sprint or
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 
-### 2.3 More Actions
+### 2.3 Creating a New Label {#new-label}
+
+Click **New Label** to create a new label for your app:
+
+{{% image_container width="400" %}}
+![](attachments/stories/new-label.png)
+{{% /image_container %}}
+
+* **Label caption** – the caption of the label
+* **Label color** – pick a color for easy visibility
+
+### 2.4 More Actions {#more}
 
 Click **More** to access the following options::
 
 * **Import / Export to Excel** – opens the **Import / Export to Excel** page; for details, see the [Importing & Exporting to Excel](#import-export) section below
-* **Manage Labels** – opens a page where you can manage labels at the app project level; for details, see the [Managing Labels](#managing-labels) section below
+* **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
+* **Switch to Old UI** – opens the [old Stories UI](#old)
 
-#### 2.3.1 Importing & Exporting to Excel {#import-export}
+#### 2.4.1 Importing & Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 
@@ -81,11 +95,11 @@ After you click **Import / Export**, you will be asked what you want to do:
 ![](attachments/stories/import-export.png)
 {{% /image_container %}}
 
-In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
+In Mendix, you can export stories from your app at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
 You can also **Export all stories to Excel** and even **Export all stories to Excel (including completed sprints)**.
 
-If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app.
 
 When editing stories in Excel, follow these guidelines:
 
@@ -93,7 +107,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or one level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-#### 2.3.2 Managing Labels {#managing-labels}
+#### 2.4.2 Managing Labels {#managing-labels}
 
 The **Manage labels** page is where you can add or remove your labels:
 
@@ -108,7 +122,7 @@ The following buttons are available:
 * **Merge Label** – enables merging the selected label into another label; all stories which have the selected label are labeled with the other label and the selected label is deleted
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied; the label is then deleted
 
-#### 2.3.3 Completed Sprints {#completed-sprints}
+#### 2.4.3 Completed Sprints {#completed-sprints}
 
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
@@ -119,14 +133,14 @@ The **Completed Sprints** page presents an overview of Sprints that have been co
 The following buttons are available:
 
 * **Search** – enables searching Sprints based on their ID or title
-* **Edit** – enables editing the selected Sprint
+* **View** – view the full details of the archived Sprint
 * **View Stories** – enables viewing the stories of the selected Sprint
 * **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
-#### 2.3.4 History {#history}
+#### 2.4.4 History {#history}
 
-The **Project History** page presents the collaboration actions for the app project. On this page, you can see what change was made, who performed it, and when it occurred:
+The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
 {{% image_container width="550" %}}
 ![](attachments/stories/history.jpg)
@@ -173,14 +187,16 @@ When you click a story title, the **Story Details** page opens:
 On this page, you can perform a number of actions:
 
 * Change the **Title** or **Description** by clicking it
+* Add or remove **Labels**
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
+* Assign a team member to work on the story
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
-* Leave a **Comment** on the story to collaborate with your App Team
+* Leave a **Comment** on the story to collaborate with your team
 
 You can also do this following on this page:
 
-* **Move** a story to a different app project or Sprint (for details, see the [Moving Stories](#move-stories) section below)
+* **Move** a story to a different app or Sprint (for details, see the [Moving Stories](#move-stories) section below)
 * **Duplicate** a story and its tasks, story points, status, and labels into a new user story
 * See the **Feedback** on which this story is based (if applicable; for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * See the committed **Revisions** linked to the story (which are configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
@@ -210,24 +226,7 @@ Moving a story will move the tasks as well.
 
 ### 4.3 Adding a Task to a Story {#adding-task}
 
-To add a task to a story, access the [story details](#story-details) page and on the **Tasks** tab, click **Add**. This will open the **Edit Task** dialog box:
-
-{{% image_container width="400" %}}
-![](attachments/stories/edit-task.jpg)
-{{% /image_container %}}
-
-Fill in the following details:
-
-* **Title** – the title of the task
-* **Description** – the description of the task
-
-Once saved, the number of tasks appears under the story on the main **Stories** page:
-
-{{% image_container width="550" %}}
-![](attachments/stories/story-task.jpg)
-{{% /image_container %}}
-
-Clicking the number will bring you back to the **Tasks** tab of the story details.
+To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task...** box.
 
 ## 5 Managing Stories in Mendix Studio Pro 
 
@@ -235,15 +234,8 @@ In addition to managing your sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app project in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page:
-
-	{{% image_container width="300" %}}![](attachments/edit-app.jpg)
-	{{% /image_container %}}
-
-2. Open the **Stories** pane:
-
-	![](attachments/stories/view-stories.png)
-
+1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
+2. Open **View** > **Stories**.
 3. You will see your active sprints in the **Stories** pane:
 
 	![](attachments/stories/stories-pane.png)
@@ -252,7 +244,7 @@ To change the status of a story in Studio Pro, click the current status. For exa
 
 ![](attachments/stories/stories-to-do.png)
 
-When you return to your app project in the Developer Portal, you will see the new story status:
+When you return to your app in the Developer Portal, you will see the new story status:
 
 ![](attachments/stories/status-update.png)
 
@@ -276,11 +268,11 @@ To add a new story, click **New story** and fill in some details, including what
 
 To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
-#### 6.1.3 Moving a Story{#moving-a-story}
+#### 6.1.3 Moving a Story {#moving-a-story}
 
 To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved.
 
-#### 6.1.4 Using Labels{#label}
+#### 6.1.4 Using Labels {#label}
 
 To add a label to a story or create a new label, use the options under **Label**. You can also perform various actions to [manage labels](#manage-labels).
 
@@ -296,7 +288,7 @@ Click **Complete current sprint** to complete a Sprint. Note that all stories ha
 
 For details, see the [Importing & Exporting to Excel](#import-export) section above.
 
-#### 6.2.3 Manage Labels{#manage-labels}
+#### 6.2.3 Manage Labels {#manage-labels}
 
 For details, see the [Managing Labels](#managing-labels) section above.
 
@@ -315,22 +307,17 @@ There are various actions you can perform when managing stories. These are descr
 
 Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#story-details) section above.
 
-#### 6.3.2 Adding Tasks to a Story{#adding}
+#### 6.3.2 Adding Tasks to a Story {#adding}
 
 Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story. To add a task to the story, follow these steps:
 
-1. Select the story you created and click **Add task**:
-
-	![](attachments/stories/add-task.png)
-
+1. Select the story you created and click **Add task**.
 2.  Add a title and description for your task.
 3. Click **Post task** to save the new task for the story.
 
-After you have completed the task, check the box:
+After you have completed the task, check the box.
 
-![](attachments/stories/complete-task.png)
-
-#### 6.3.3 Deleting a Story or Task{#deleting}
+#### 6.3.3 Deleting a Story or Task {#deleting}
 
 To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
 
@@ -343,9 +330,6 @@ If you delete a story that is linked to a feedback item, you will be asked to ch
 If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
 *  Select the story and drag it to the desired Sprint location:
-
-	![](attachments/stories/move-story-drag.png)
-
 *  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu
 * Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving-a-story) section)
 
@@ -356,5 +340,5 @@ Moving a story will move the tasks as well.
 ## 7 Read More
 
 * [Buzz](buzz)
-* [App Team](team)
+* [Team](team)
 * [Feedback](feedback)

@@ -23,7 +23,7 @@ For **mobile applications** Mendix Client acts as a React Native application. Th
 The three supported types of wrappers for mobile applications are as follows:
 
 * [Make It Native app](getting-the-make-it-native-app)
-* [Custom Developer apps](/howto8/mobile/how-to-devapps#1-introduction)
+* [Custom Developer apps](/howto8/mobile/how-to-devapps)
 * [Native apps](/howto8/mobile/deploying-native-app)
 
 The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto8/mobile/how-to-ota) later.
@@ -126,8 +126,8 @@ For a description of the Runtime Server, see [Runtime Server](runtime-server).
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
 * Core widget – part of the Mendix Client
-* Pluggable widget – based on React or React Native, written by the user or downloaded from the App Store
-* Custom widget – based on Dojo, written by the user or downloaded from the App Store
+* Pluggable widget – based on React or React Native, written by the user or downloaded from the Marketplace
+* Custom widget – based on Dojo, written by the user or downloaded from the Marketplace
 
 These are described in the sections below.
 
@@ -135,11 +135,11 @@ These are described in the sections below.
 
 Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
-In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#widgets). These Dojo implementations are gradually being replaced.
+In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#widgets). These Dojo implementations are gradually being replaced.
 
 ### 3.1 Pluggable Widgets
 
-You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the App Store. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
+You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 

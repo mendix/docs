@@ -7,7 +7,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 ## 1 Introduction
 
-This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean project.
+This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
 **This how-to will teach you how to do the following:**
 
@@ -34,7 +34,7 @@ To get more information, double-click or right-click the warning.
 
 {{% /alert %}}
 
-* This will not affect the project in this version of Studio Pro, but it may cause problems when upgrading
+* This will not affect the app in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert type="warning" %}}
@@ -170,12 +170,12 @@ Variable ‘Variable’ is never used.
 ## 4 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Configure Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Studio Pro Guide*.
+Several warnings relate to improper security. For more information on this, see [App Security](/refguide/project-security) in the *Studio Pro Guide*.

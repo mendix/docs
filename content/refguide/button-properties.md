@@ -65,9 +65,9 @@ The **Role type** property determines the `aria-role` attribute value that will 
 
 #### 2.5.1 Caption {#caption}
 
-The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, e.g. {1}.  
+The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, for example, {1}.  
 
-For more information on using parameters, see the [Parameters]() section below. 
+For more information on using parameters, see the [Parameters](#parameters) section below. 
 
 #### 2.5.2 Parameters {#parameters}
 
@@ -176,7 +176,7 @@ When an end-user clicks a drop-down button, a pop-up window with a list of items
 
 * Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](security). 
 
-* Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [Project Security](project-security) and [Anonymous Users](anonymous-users). 
+* Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [App Security](project-security) and [Anonymous Users](anonymous-users). 
 
 
 {{% /alert %}}
@@ -206,7 +206,7 @@ To add items to a drop-down buttons, do the following:
    3. Select an on-click event to be performed when the end-user clicks this item.
    4. Click **OK**.
 4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
-  
+
 
 
 ### 2.7 Visibility Section {#visibility}

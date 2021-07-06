@@ -10,9 +10,156 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
-* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
-* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
-* Native Template v4.2.x applies to apps built using Studio Pro up to [8.12.0](../studio-pro/8.12#8120).
+* Native Template v6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above.
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
+
+## 6.1.7
+
+**Release date: June 30th, 2021**
+
+### Fixes
+
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
+
+## 5.1.13
+
+**Release date: June 30th, 2021**
+
+### Improvements
+
+* When installing pods (`pod install`) the Native Template is now able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
+
+### Fixes
+
+* We fixed an issue on iOS custom developer apps related to deep links.
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
+
+## 6.1.6 and 5.1.12
+
+**Release date: June 11th, 2021**
+
+### Improvements
+
+* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link).
+
+### Breaking Change
+
+On iOS there are now two implementations of `AppDelegate.m.`: one for release apps, and one for developer apps. The more features we added, the more boilerplate we had to add to support the more complex requirements of custom developer apps. By splitting the implementation, release apps now receive a clean and simple implementation with the more complex implementation abstracted away. 
+
+This should make it easier to add custom code by simply following a dependency's documentation. 
+
+{{% alert type="warning" %}}
+Please note that if your app requires custom initialization, for example due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).
+{{% /alert %}}
+
+## 5.1.11
+
+**Release date: May 14th, 2021**
+
+### Fixes 
+
+* We fixed an issue with the Firebase module dependencies being automatically linked on the iOS application even when the Firebase capability is disabled.
+
+## 6.1.5
+
+**Release date: May 12th, 2021**
+
+### Fixes 
+
+* A new version of Google Firebase has been released. This breaks compatibility with the version used in the Firebase-related pluggable widgets. Without this release's fix, Android builds would fail when Firebase push notifications are enabled in your app.
+
+## 5.1.10
+
+**Release date: April 6th, 2021**
+
+### Improvements
+
+* Android custom developer apps now support deep links. 
+
+### Fixes 
+
+* We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.
+
+## 6.1.3
+
+**Release date: March 31st, 2021**
+
+### Improvements
+
+* iOS apps now use a single window, and handle scene switching with view controllers. This results in better compatibility in some cases.
+
+### Fixes 
+
+* We fixed the App Center scripts so they fail early when something is wrong.
+
+## 5.1.9
+
+**Release date: March 31st, 2021**
+
+### Mobile Toolkit for 5.1.x
+
+Mobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing offline users a path to auto-configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The CLI supports this command:
+
+`native-mobile-toolkit configure --config-path='./config.json'`
+
+or
+
+`npm run configure`
+
+The Native Mobile Builder writes to the *config.json* and commits assets to relative locations. The CLI then reads the *config* and handles, configuring the projects and moving any assets to the right locations for the projects.
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.0.12
+
+**Release date: March 31st, 2021**
+
+### Fixes
+
+* We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode.
+
+## 5.1.8 and 5.0.12 {#518and5012}
+
+**Release date: March 17th, 2021**
+
+### Fixes
+
+* We fixed an issue that could crash apps due to the fix released with Native Template v5.1.7.
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.7 and 5.0.11
+
+**Release date: March 12th, 2021**
+
+{{% alert type="warning" %}}
+We have decided to retract versions 5.1.7 and 5.0.11 after we received reports that apps would crash when using Firebase after the patch. Please update to [5.1.8 or 5.0.12](#518and5012) respectively. 
+{{% /alert %}}
+
+### Fixes
+
+* We fixed an issue that could crash a custom developer app when JavaScript debugging was enabled.
+
+## 5.1.6 and 5.0.10
+
+**Release date: February 15th, 2021**
+
+### Fixes
+
+* We updated the **react-native-image-picker** dependency.
+* The **react-native-image-picker** patch now applies correctly on Windows.
+* On iOS, the **PRODUCT_NAME** variable is now settable via the XCConfig file of each target.
+
+## 5.1.5 and 5.0.9
+
+**Release date: February 4th, 2021**
+
+### Fixes
+
+* We fixed the keyboard behavior on Android for inputs in scrollable views.
+* We updated the React Native Device Info library to fix security issues.
 
 ## 5.1.4, 5.0.8, and 4.2.6
 
@@ -44,7 +191,7 @@ We fixed the Native Template for a dependency affecting Mendix Studio Pro 8.8.x.
 
 * We fixed an issue with the npm installation on the Mendix Native Template targeting Mendix Studio Pro 8.8 due to an outdated dependency.
 
-## 5.1.1,  5.0.6, and 4.2.4
+## 5.1.1, 5.0.6, and 4.2.4
 
 **Release date: November 2nd, 2020**
 
@@ -206,7 +353,6 @@ This version of the Native Template is required to be able to release your Mendi
 ### Fix
 
 * We fixed an issue in iOS apps where OTA updates did not trigger correctly, and therefore did not update apps.
-  
 ## 3.1.1
 
 **Release date: February 6th, 2020**
@@ -292,7 +438,7 @@ iOS
 ### Improvements
 
 * We added support for Android 10's Dark theme and iOS 13's Dark Mode.
-* We added over the air (OTA) update support (for details, see [How to Use Over the Air Updates](/howto/mobile/how-to-ota)).
+* We added over the air (OTA) update support (for details, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota)).
 * We migrated iOS project to Xcode 11.
 * We switched the App Center build platform to standard ReactNative.
 

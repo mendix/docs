@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for Native Mobile App UI"
-parent: "native-mobile"
-menu_order: 35
+parent: "get-started"
+menu_order: 50
 description: "This document will teach you how to build a native mobile app's UI."
 tags: ["ux", "native", "mobile", "ui"]
 ---
@@ -12,7 +12,7 @@ This document discusses how Mendix Platform users can build a native mobile app'
 
 ## 2 Roles
 
-When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your project there should be a difference in the level of expertise among certain roles.
+When building a native application, different roles are needed for app development. This does not necessarily mean there must be a different person for every role, as developers can serve multiple roles. Also, depending on your app, there should be a difference in the level of expertise among certain roles.
 
 ### 2.1 Different Types of Roles
 
@@ -22,9 +22,9 @@ For most apps, development teams should include the following roles in their ove
 * **Front-end development** – Implementing the styling or the theme of the app as created in the designs.
 * **UI design** – Designing the user interface, for example how the screens and components look, and determining the theme colors, typography, spacing, and borders.
 * **UX design** – Designing the user experience (such as the flow of the app), determining which use cases to support, and deciding how certain functions should work.
-* **Widget development (optional)** – Building new widgets to provide new interaction patterns or UI components that are not offered out of the box by Mendix or available though the Mendix App Store.
+* **Widget development (optional)** – Building new widgets to provide new interaction patterns or UI components that are not offered out of the box by Mendix or available though the Mendix Marketplace.
 
-As mentioned above, not all projects require five different persons each handling one of these roles. Different team configurations are common.
+As mentioned above, not all apps require five different persons each handling one of these roles. Different team configurations are common.
 
 ### 2.2 Roles, Staff, and Types of Apps
 
@@ -56,7 +56,7 @@ The front-end developer can translate the UI kit to a Mendix theme and standard 
 
 #### 3.2.1 Set Up Main Theme Settings
 
-The goal of configuring the theme setting is to quickly implement the look and feel of your app or company branding. Mendix comes ready with a highly-configurable theme which gives you a head start in creating your app's overall look and feel. Configuring the theme settings inside your app's *theme/styles/native/app/custom-variables.js* file.
+The goal of configuring the theme setting is to quickly implement the look and feel of your app or company branding. Mendix comes ready with a highly-configurable theme which gives you a head start in creating your app's overall look and feel. Configuring the theme settings inside your app's *theme/native/custom-variables.js* file.
 
 #### 3.2.2 Configure Design Properties {#configure-design-props}
 
@@ -70,7 +70,7 @@ The design properties are located in *theme/settings-native.json*, and more info
 
 #### 3.2.3 Create the App Layouts
 
-The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or create your own [UI resources module](/howto/front-end/create-company-atlas-ui-resources#4-moving-from-local-to-atlas-ui-resources).
+The default Atlas theme comes pre-bundled with a set of layouts. If these do not fit your app’s design, you can create or customize the layouts and name them accordingly. Do not change the supplied layouts. Either create a separate module with the custom layouts, page templates, and building blocks or [create your own](/howto/front-end/create-a-company-design-system).
 
 #### 3.2.4 Create Building Blocks for Common UI Structures
 
@@ -108,7 +108,7 @@ Try to avoid very specific class names. Very specific class names are often only
 
 By changing styling in the **core** folder you risk incurring errors the next time you update Atlas. Updating Atlas might also be more difficult. 
 
-A large part of your app's overall styling can be changed in `theme/styles/native/app/custom-variables.js`. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize).
+A large part of your app's overall styling can be changed in *theme/native/custom-variables.js*. However, if more changes are needed you could extend a widget’s default styling or define the default styling yourself. For more information, see [How to Extend Design Properties](/howto/front-end/extend-design-properties).
 
 ### 4.4 Favor Design Properties Over Including Properties
 
@@ -125,9 +125,9 @@ It is a common pitfall to keep adding classes to a single file. However, this wi
 * Apply clear, descriptive, and consistent names in styling—add comments when needed
 * Use variables as much as possible for consistency and easy updating
 * Combine and reuse parts of classes by using the spread operator `…`
-* Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large—if you have multiple custom styling files, use *theme/styles/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
+* Split the styling in logical parts, group related styles together, and split them into separate files if those groups become too large—if you have multiple custom styling files, use *theme/native/app/custom.js* to import all those files (this will make updating easier, as customizations are only in the *app* folder)
 * *Custom.js* should not contain classes—only `export * from …*` statements to include classes from other files
-* Put the styling for building blocks and page templates in *theme/styles/native/ui_resources/{YOUR_PROJECT_OR_MODULE_NAME}* and include it in *theme/styles/native/main.js*
+* Put the styling for building blocks and page templates in *theme/native/ui_resources/{YOUR_APP_OR_MODULE_NAME}* and include it in *theme/native/main.js*
 * Create separate folders in the app folder for the generic company styling and app specific styling (this enables re-use and consistency between apps)
 * Always think about reuse; that common class you just created may be useful in other apps as well. Consider adding them to your company theme
 

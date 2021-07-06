@@ -3,7 +3,7 @@ title: "Optimize Microflow Aggregates"
 category: "Logic & Business Rules"
 menu_order: 7
 tags: ["microflow", "aggregate"]
-#To update screenshots of these microflows in , use the Microflow Screenshots app project.
+#To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 
 ## 1 Optimization
@@ -15,6 +15,8 @@ When a database retrieve activity is only used in list aggregate activities and 
 The Mendix Platform only creates an optimized SQL query if the list is not used in the microflow afterwards and a custom range is not configured. If you use the list later (for example, to iterate over) or a custom range is configured, the query will not be optimized.
 
 If you do want to use the list but you also want the optimized query, do two separate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
+
+When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings will not be respected. The result that is returned will be rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 
 ![](attachments/18448676/18580944.png)
 

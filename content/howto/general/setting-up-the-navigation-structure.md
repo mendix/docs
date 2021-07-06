@@ -12,8 +12,8 @@ Once you created some pages, it is important that your users can access them. Fo
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Create a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Create your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer)
+* [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Setting a Default Home Page {#home}
 
@@ -27,9 +27,9 @@ Note that the **Default home page** setting is overridden by a **Role-based home
 
 Do the following:
 
-1.  Open **Project** > **Navigation**.
+1.  Open **App** > **Navigation**.
 
-    ![](attachments/setting-up-the-navigation-structure/open-navigation.jpg)
+    ![](attachments/setting-up-the-navigation-structure/open-navigation.png)
 
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
@@ -118,17 +118,17 @@ Now that you have created a menu structure it is time to start using it on pages
 
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.jpg)
+    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.png)
 
 6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your project,  you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+To avoid adding the menu widget on every page in your app,  you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets).
 
 ## 7 Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui)
-* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [Use Layouts and Snippets](../front-end/layouts-and-snippets)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)
+* [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

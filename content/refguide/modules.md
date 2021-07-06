@@ -8,7 +8,7 @@ tags: ["studio pro", "module", "modules"]
 
 ## 1 Introduction
 
-A Mendix project consists of modules: a **System** module, a [UI resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
+A Mendix app consists of modules: a **System** module, a [UI resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 
@@ -43,6 +43,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Java Actions](java-actions) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](regular-expressions) | A regular expression is used by [validation rules](validation-rules) on an entity to describe a set of criteria that a string can match. |
 | [Rules](rules) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once the decision is reached. |
+| [Task Queue](task-queue) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
 | [Scheduled Events](scheduled-events) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
 
 ## 5 Consumed Services

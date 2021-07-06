@@ -17,9 +17,9 @@ This how-to will walk you through the steps needed to implement push notificatio
 * Obtain FCM/APNs access/credentials and configure them with your application
 * Build the hybrid mobile package
 
-## 2 Importing the PushNotifications Module from the App Store
+## 2 Importing the PushNotifications Module from the Marketplace
 
-The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix App Store. To import it into your project, click **App Store** in the top right of Mendix Studio Pro, which will open the App Store in a new tab. Search for "Push Notifications Connector" and click the title of the result:
+The [Push Notifications Connector](/appstore/modules/push-notifications) module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
 
 ![](attachments/19955732/20218020.png)
 
@@ -28,7 +28,7 @@ On the resulting page, click the green **Download** button. Make sure that **Add
 ![](attachments/19955732/20217885.jpg)
 
 {{% alert type="warning" %}}
-The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same app project.
+The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same app.
 {{% /alert %}}
 
 ## 3 Installing Module Dependencies
@@ -40,7 +40,7 @@ The PushNotifications module has the following dependencies:
  * [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/)
  * [Native Mobile Resources](/appstore/modules/native-mobile-resources)
 
-To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
+To include these dependencies, download them from the Marketplace in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
 
 {{% alert type="info" %}}
 

@@ -13,30 +13,35 @@ This document describes the requirements for an OData service that is going to b
 
 ## 2 Requirements for a Consumed OData Service
 
-The requirements for a consumed OData service used in a Mendix app project are the following: 
+The requirements for a consumed OData service used in a Mendix app are the following:
 
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
 * It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, and `$count` (or `$inlinecount`)
 
 ## 3 Requirements on the Service Entities and Attributes
 
-This section describes the features of a consumed OData service that are supported in Mendix app projects. These features are checked before an external entity is used in the domain model.
+This section describes the features of a consumed OData service that are supported in Mendix apps. These features are checked before an external entity is used in the domain model.
 
 ### 3.1 Entities
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
-* **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the project
-* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable; marking properties as non-filterable in the `NonFilterableProperties` annotation prevents the user from adding these as attributes in the project
-* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable; marking properties as non-sortable in the `NonSortableProperties` annotation prevents the user from adding these as attributes in the project
+* **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the app
+* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable
+* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable
+* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
 
 An entity can only be used when it is accessible through an entity set.
 
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
 
-* The properties cannot be nullable (so they must have `isNullable="false"` specified)
-* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
-* If the type is `String`, a `MaxLength` must be specified
+* The properties cannot be nullable (so they must have `isNullable="false"` specified).
+* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
+* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
+
+{{% alert type="info" %}}
+This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
+{{% /alert %}}
 
 ### 3.2 Attributes
 
@@ -67,7 +72,7 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 ### 3.3 Generalizations
 
-The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity. 
+The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity.
 
 This means that when you are consuming a Mendix OData endpoint, it is not necessary to consume both a generalization and its specialization. The specialization will now be an entity with all the attributes and associations of the generalization.
 
@@ -83,26 +88,20 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
+### 3.5 Associations
+
+An OData v3 association can only be used if it has two ends.
+
+An OData v4 navigation property can only be used as an association if it has a partner.
+
 ## 4 Data Hub License Limitations {#license-limitations}
 
-Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
+Mendix Data Hub is a separately licensed product.
 
-There are two types of licenses currently available:
+Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
-* **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed
+With a Data Hub license, apps are not limited.
 
-* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance
+{{% alert type="info" %}}Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.{{% /alert %}}
 
-  {{% alert type="warning" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-
- After that limit is exceeded, an error will occur when users try to retrieve more data.
-
-The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
-
-{{% alert type="warning" %}}
-Contact your Mendix Company Admin, or Data Hub Admin to find out what type of license your organization has.
-{{% /alert %}}
-
-### 4.1 Local development
-
-Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.
+Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.

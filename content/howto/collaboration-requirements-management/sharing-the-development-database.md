@@ -20,18 +20,18 @@ To get the most out of the built-in database, make sure you have completed the f
 
 ## 3 Type of the Database
 
-The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
+The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast, multithreaded, and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 
-HSQLDB has been constantly developed over 12 years and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, its flexibility and speed.
+HSQLDB has been constantly developed over 12 years and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, flexibility, and speed.
 
-Therefore this type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
+Therefore, this type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to this built-in functionality, the developer does not have to run a local database engine and management tools.
 
 ## 4 Selecting the Preferred Database
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured):
 
-1.  Double-click **Settings** in the **Project Explorer**.
-2.  Select the preferred database configuration and click **Make active**.
+1.  Double-click **Settings** in the **App Explorer** to open the **App Settings** dialog box.
+2.  On the **Configurations** tab, select the preferred database configuration in the grid, and click **Make active**.
   
     ![](attachments/18448637/18580427.png)
 
@@ -39,30 +39,31 @@ One application can make use of many different databases. Take the following ste
 
 ## 5 Starting the Database Viewer
 
-To start the built-in database viewer, follow the steps below:
+To start the built-in database viewer, follow these steps:
 
-1.  Run the application locally. Select **Run locally** in the top bar:
+1.  Run the application locally (if this is the first time, Studio Pro will ask you to create the new database, click **Yes** when this occurs):
 
     ![](attachments/18448637/18580426.png)
 
-2. When the application is running, open the **Console** pane, click **Advanced** > **Start built-in database viewer**.
+2.  When the application is running, in the **Console** pane, select **Advanced** > **Start built-in database viewer** to open the built-in database viewer:
 
    ![](attachments/18448637/18580425.png) 
 
-   The **Database Manager** opens. The way it is displayed depends on the data model of the application:
+    The **Database Manager** dialog box will be displayed (depending on the data model of the application):
 
    ![](attachments/18448637/18580424.png)
 
-In the left pane, all tables from all modules in the running application are showed. In the top-right pane, you can enter SQL queries, and in the bottom-right pane, the results from the entered SQL query are shown.
+On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
 ## 6 Executing the Queries
 
-Queries can be executed in the **Database Manager** in two ways:
+You can execute queries in two ways:
 
-1. Directly from the command line (the top-right pane) in the SQL script, or 
-2. Via the explorer in the left pane. 
+* Directly from the command line on the upper-right pane using SQL script
 
-For more information about SQL, see [SQL Tutorial](http://www.w3schools.com/sql/). 
+* Via the database explorer on the left pane
+
+To execute queries from the database explorer, follow these steps:
 
 To execute queries from the explorer (the left pane) in the **Database Manager**, follow the steps below:
 
@@ -78,9 +79,7 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
     ![](attachments/18448637/18580421.png)
 
-In the bottom-right pane, the results are shown and a total of 50 rows is retrieved from the database. 
-
-From the standard actions it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
+On the bottom-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
 ## 7 Committing the Data Snapshot
 
@@ -98,17 +97,17 @@ The data is now committed to the Team Server and can be used by other team membe
 
 ## 8 Updating the Data Snapshot
 
-To import a data snapshot into the model, the app project has to be updated since the last database snapshot has been committed by another team member. To retrieve data from the committed database snapshot, follow the steps below:
+To import a data snapshot into the model, the app has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot, follow these steps:
 
-1.  Update the app project. Open the **Changes** tab and click **Update**:
+1.  To update the application, click **Update** on the **Changes** tab.
 
     ![](attachments/18448637/18580419.png)
 
-2.  To implement the data snapshot, the database has to be extracted from a ZIP file to the deployment directory:
+2.  To implement the data snapshot, extract the database from a ZIP file to the **deployment** directory.
 
     ![](attachments/18448637/18580417.png)
 
-3.  Copy the data directory to the data directory in the deployment directory.
+3.  Copy the **data** directory to the **data** directory in the **deployment** directory.
 
 {{% alert type="warning" %}}
 Make sure the names of the databases are not the same or make a copy of your own database first so it will not be overwritten.

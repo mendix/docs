@@ -67,7 +67,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
-3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other AppStore modules will remain unchanged. 
+3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other Mendix Marketplace modules will remain unchanged. 
 
     Every other user role created in Studio will be linked to the MendixSSO.User and the Administration.User in the MendixSSO and Administration modules correspondingly.
 
@@ -77,7 +77,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 
 If Administrator and User roles already exist and are [compatible with Studio](#studio-compatible), they will get access to all microflows, nanoflows, pages, and entities (including entities' attributes and associations).
 
-All newly created roles get access to all pages, microflows, nanoflows, and entities (including their attributes and associations) that are in Studio, except for App Store pages, microflows, and entities (with their attributes and associations).
+All newly created roles get access to all pages, microflows, nanoflows, and entities (including their attributes and associations) that are in Studio, except for Marketplace pages, microflows, and entities (with their attributes and associations).
 
 Also, all new pages, microflows, and entities (with their attributes and associations) that are created in Studio will be accessible for all existing app roles by default.
 
@@ -142,7 +142,7 @@ Studio Pro security settings are compatible with Studio (that means that roles a
 * Demo users must have the correct name: identical to the project role name, but with the *demo_* prefix (for example, demo_user)
 * Demo users must have exactly one user role connected to them
 * User roles must have a demo user connected to them
-* User roles must have exactly one module role per module connected to them (Studio does not check System or App Store modules)
+* User roles must have exactly one module role per module connected to them (Studio does not check System or Marketplace modules)
 * Module roles do not have more than one user role connected to them
 
 ## 9 Read More

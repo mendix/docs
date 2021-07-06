@@ -42,6 +42,7 @@ Attribute properties consist of the following sections:
 * [Common](#common)
 * [Type](#type)
 * [Value](#value)
+* [Limitations](#limitations)
 
 ### 2.1 Common Section {#common}
 
@@ -110,7 +111,7 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
-This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (e.g. a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
 In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
 
@@ -189,3 +190,16 @@ The **Default value** property defines the value of this attribute when an objec
 | Integer | 0 |   |
 | Long | 0 |   |
 | String | (empty) |   |
+
+### 2.4 Limitations {#limitations}
+
+The **Limitations** property specifies whether the attribute can be used for filtering and sorting:
+
+* **Non-sortable** – the attribute cannot be used for sorting (for example, you cannot use this attribute in the sort bar of a data grid or for sorting in a Retrieve action)
+* **Non-filterable** – the attribute cannot be used for filtering (for example, you cannot use this attribute in XPath constraints or for filtering in a list operation)
+
+Some attribute types in Mendix always have limitations:
+
+* Hashed string attributes are non-filterable
+* Binary attributes are non-sortable and non-filterable
+* Calculated attributes are non-sortable and non-filterable

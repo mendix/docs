@@ -2,7 +2,7 @@
 title: "Debug Native Mobile Apps (Advanced)"
 parent: "build-native-apps"
 menu_order: 40
-description: A how-to for debugging native mobile app projects using the Make It Native app.
+description: A how-to for debugging native mobile apps using the Make It Native app.
 tags: ["native", "mobile", "debug", "Make It Native"]
 ---
 
@@ -14,20 +14,20 @@ When changing your native mobile app or designing a custom widget, you may need 
 
 To start a debugging session, do the following:
 
-1. Run your Mendix app project locally on your desktop.
+1. Run your Mendix app locally on your desktop.
 2. Start the Make It Native app.
 3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View** > **View in the Mendix App**.
+4. Start your app on your mobile device in Mendix Studio Pro by clicking the **View App** drop-down list> **View on your device**.
 5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
 
-When the Make It Native app finishes loading your app project, do the following:
+When the Make It Native app finishes loading your app, do the following:
 
 1. Open the developer menu by using a three-finger long press.
 2.  Tap **Enable Remote js Debugging**.
 
-Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
+Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If Chrome launches but does not load your app, check that your app project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
+If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click the **Stop** button, then click the play button (**Run Locally**) again to restart your app. 
 
 You should see this page:
 
@@ -37,7 +37,7 @@ If the status remains at **Waiting**, use the reload command (pictured above) to
 
 ![debug active](attachments/native-debug/debug-active.png)
 
-Your browser's debugging tools should be pointing to your app project. Now, you can debug your app like you would any other web app. 
+Your browser's debugging tools should be pointing to your app. Now, you can debug your app like you would any other web app. 
 
 Other tools can help you debug Mendix apps, such as the [Using React Developer Tools](#rn-dev) section below. Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
 
@@ -126,5 +126,4 @@ For more detailed steps how to set up ADB, see [Install ADB](https://www.xda-dev
 ## 5 Read More
 
 * [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Debug a Hybrid Mobile App](debug-a-mobile-app)
-* [Build Native Mobile Apps with Parallels](using-mendix-studio-pro-on-a-mac)
+* [Configure Parallels](using-mendix-studio-pro-on-a-mac)

@@ -20,7 +20,7 @@ Use this setting to select the location where you want to store your app. There 
 
 ### 2.1 New Mendix Team Server
 
-You can create a new app on [Mendix Team Server](/developerportal/develop/team-server).
+You can create a new app on [Mendix Team Server](/developerportal/collaborate/team-server).
 
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field
@@ -44,7 +44,7 @@ This option is only available when support for other servers is enabled in **Edi
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/enable-private-version-control.png)
 
-If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
+<a name="private-server"></a>If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
 ![Enable private version control in advanced preferences](attachments/upload-to-version-control/private-server-app.png)
 

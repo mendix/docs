@@ -2,16 +2,17 @@
 title: "Design Properties API"
 category: "API Documentation"
 description: "This guide outlines how design properties work and can help you create custom design properties."
+menu_order: 30
 tags: ["styling", "design", "classes", "design properties"]
 ---
 
 ## 1 Introduction
 
-The Mendix Design Properties API allows you to make custom design properties for your Mendix projects.
+The Mendix Design Properties API allows you to make custom design properties for your Mendix apps.
 
 To use the API, you need to alter the *JSON* files in your application's **theme** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
-This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
+This guide outlines how design properties work and can help you create custom design properties. Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
@@ -152,7 +153,7 @@ The examples above show that the fields `name` and `description` define the UI, 
 Field `type` defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
 
 {{% alert type="warning" %}}
-Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#old-names) section below.
+Name your design property and its options carefully. Those names cannot be changed easily when there are apps already using them. If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
 #### 4.1.2 Toggle-Specific Fields
@@ -175,11 +176,11 @@ Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com
 
 ### 5.1 Widget Types for Pluggable Widgets
 
-When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
+When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
 ## 6 Renaming Design Properties{#old-names}
 
-Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for projects that are already using those design properties. 
+Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for apps that are already using those design properties. 
 
 To prevent errors and offer users simple upgrade paths, use an `oldNames` field. This field must be of type array and contain old names, a particular property, or an option that was known and used before. The order of old names in an `oldNames` list does not matter. For instance, if a property was renamed twice, the `oldNames` field should contain both previous names.
 
@@ -207,8 +208,30 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
+### 6.1 Renaming a Dropdown Option to a Toggle Property
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.
+{{% /alert %}}
+
+It is also possible to rename an option of a **Dropdown** property to a separate **Toggle** property. In this case, the old name of the **Toggle** property consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the  **Dropdown** property to still exist — it may have been removed entirely.
+
+Here is an example of a **Toggle** property that was renamed from a **Dropdown** option:
+
+```js
+{
+	"name": "Styling 3",
+	"oldNames": ["My Dropdown Property::Styling option 3"],
+	"type: "Toggle",
+	"description": "Description of Styling 3 toggle property",
+	"class": "stylingClassThree"
+}
+```
+
+The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
+
 ## 7 Read More
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
-* [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize)
+* [How to Extend Design Properties](/howto/front-end/extend-design-properties)

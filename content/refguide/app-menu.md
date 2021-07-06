@@ -10,13 +10,11 @@ tags: ["Studio Pro", "app menu", "top bar"]
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-![App Menu](attachments/project-menu/project-menu.png)
+![App Menu](attachments/app-menu/app-menu.png)
 
 ## 2 Tools
 
 Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
-
-![Tools](attachments/project-menu/tools.png)
 
 ### 2.1 Batch Update Button Icons
 

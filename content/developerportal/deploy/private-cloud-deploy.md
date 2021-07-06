@@ -296,7 +296,7 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 The word **Trial** indicates that the Operator managing that environment is unlicensed.
 
-When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
@@ -555,7 +555,7 @@ If you attempt to deploy an app with security not set to production into a produ
 This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
 {{% /alert %}}
 
-In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
 For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 

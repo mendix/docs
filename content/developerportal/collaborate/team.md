@@ -16,13 +16,6 @@ To view and manage your team members, follow these steps:
 1. Click **Apps** in the top navigation panel of the [Developer Portal](http://sprintr.home.mendix.com) and select the app you want to manage.
 2. Click **Team** under the **Collaborate** category.
 
-On the **Team** page, you will see an overview with the following information about the team members:
-
-* **Name** – the developer's name
-* **Role** – the developer's team role (for details on available roles, see the [App Roles](/developerportal/collaborate/app-roles))
-
-![](attachments/team/team.png)
-
 ## 2 Managing the Team {#managing}
 
 When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Collaborate** > **Security** page. Note that only the following roles can see the **Manage Team** button: [Scrum Master](/developerportal/collaborate/app-roles#team-roles), [Mendix Admin](/developerportal/control-center), or a [custom role](/developerportal/collaborate/app-roles#team-roles) with  the **App Settings** permission.
@@ -31,7 +24,7 @@ When you click **Manage Team** in the top-right corner of the screen, you will b
 
 On the  **App Team** tab of the **Security** page, you can do the following:
 
-* Select a new **Role** for a team member
+* Select a new **Role** for a team member (for details on available roles, see [App Roles](/developerportal/collaborate/app-roles))
 * Click **Remove Member** to remove that person from the team
 * Click **Invite member** to invite a new person to the team (see the [Inviting Team Members](#inviting) section below for more details)
 *  Click **Role settings** to view and edit the permissions for the team roles (clicking **Security Guide** on this dialog box will present useful information for configuring roles)

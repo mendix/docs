@@ -178,7 +178,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected it will appear in each column header a dropzone where you can place your desired filter widget.
 
 {{% alert type="warning" %}}
-The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute.
+The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).
 {{% /alert %}}
 
 ![Settings for data grid 2](attachments/data-grid-2/settings-show-column-filters.png)
@@ -220,7 +220,7 @@ You can also define the default value of the widget which will be predefined as 
 
 ![Example of default drop-down filter](attachments/data-grid-2/dropdown-filter.png)
 
-**Drop-down filter** allows users to match enumeration values or a predefined string attribute. To configure the available options when you press the drop-down filter, you need to manually add them in the options list:
+**Drop-down filter** allows users to match enumeration values or a Boolean attribute. To configure the available options when you press the drop-down filter, you can manually add them in the options list or select **Automatic options** to automatically load the values:
 
 ![Example of settings for drop-down filter](attachments/data-grid-2/dropdown-filter-settings.png)
 

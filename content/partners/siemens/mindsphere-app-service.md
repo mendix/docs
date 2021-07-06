@@ -65,7 +65,7 @@ Unless you are adding features to an existing app, it is recommended that you st
 
 To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+For instructions on downloading the **MindSphere IIot Authenticator Module**, see the [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) section in *How To Use Marketplace Content in Studio Pro*.
 
 ### 3.2 Creating Binding Keys{#binding-keys}
 

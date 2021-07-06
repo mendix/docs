@@ -85,6 +85,23 @@ spec:
   runtimeDeploymentPodAnnotations: # Optional, can be omitted : set custom annotations for Mendix Runtime Pods
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
+  serviceAnnotations: # Optional, can be omitted : specify the Service annotations
+    # example: custom AWS CLB configuration
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
+  endpointAnnotations: # Optional, can be omitted : set custom annotations for Ingress or OpenShift Route objects
+    # example: allow uploads of files up 100 MB in the NGINX Ingress Controller
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    # example: deny access to /rest-doc
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      location /rest-doc {
+        deny all;
+        return 403;
+      }
+  ingressClassName: alb # Optional, can be omitted : specify the Ingress class
+  ingressPath: "/" # Optional, can be omitted : specify the Ingress path
+  ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
@@ -136,15 +153,18 @@ You need to make the following changes:
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
 * **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
-* **enableTLS** - allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Route
-* **secretName** - optional name of a `kubernetes.io/tls` secret, which must exist, containing the TLS certificate — if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used — cannot be used together with **certificate** and **key**
+* **enableTLS** – allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Route
+* **secretName** – optional name of a `kubernetes.io/tls` secret, which must exist, containing the TLS certificate — if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used — cannot be used together with **certificate** and **key**
 * **certificate** and **key** – provide the `tls.crt` and `tls.key` values directly (not recommended for production environments) — cannot be used together with **secretName**
 * **replicas** – by default one replica will be started when you deploy your app
 * **resources** – change the minimum and maximum container resources your app requires
-* **runtimeDeploymentPodAnnotations** - set custom annotations for Mendix Runtime Pods; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-deployment-settings) from `OperatorConfiguration` 
+* **serviceAnnotations** – set custom annotations for network Services; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **endpointAnnotations** – set custom annotations for Ingress (or OpenShift Route) objects; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **ingressPath** – specify a custom Ingress path; this overrides the [default ingress path](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
+* **ingressPathType** – specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster#advanced-network-settings) from `OperatorConfiguration`
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
-* **debuggerPassword** - here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
+* **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
     If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps
@@ -175,11 +195,11 @@ You need to make the following changes:
 
 * **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **microflowConstants**: – set values for microflow constants
-* **scheduledEventExecution**: – choose which scheduled events should be enabled - valid values are: `ALL`, `NONE` and `SPECIFIED`
-* **myScheduledEvents**: – list scheduled events which should be enabled - can only be used when **scheduledEventExecution** is set to `SPECIFIED`
+* **scheduledEventExecution**: – choose which scheduled events should be enabled – valid values are: `ALL`, `NONE` and `SPECIFIED`
+* **myScheduledEvents**: – list scheduled events which should be enabled – can only be used when **scheduledEventExecution** is set to `SPECIFIED`
 * **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
-* **environmentVariables**: - set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
-* **clientCertificates**: - specify client certificates to be used for TLS calls to Web Services and REST services
+* **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 
@@ -316,7 +336,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 ### 4.2 ApplicationRootUrl Needs to be Set Manually
 
-In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
 For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings#general) in `customConfiguration` to the app's URL. For example: 
 ```yaml

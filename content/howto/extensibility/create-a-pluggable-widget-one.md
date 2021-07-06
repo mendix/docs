@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix Project path: *../../*
+* Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
@@ -100,7 +100,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
-Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.3 Adding the Attribute
 
@@ -219,7 +219,7 @@ Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice 
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
-	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App ](#creating-a-test-project) above.
+	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
 
 	The end result will be similar to the screenshot below:
 

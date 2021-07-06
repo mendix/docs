@@ -32,7 +32,7 @@ Follow these steps:
 2. Go to the **Advanced** tab. 
 3.  In the **Proxy server** section, change the **Proxy server** settings. Fill in the correct **User name** and **Password**.
 
-![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
+    ![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
@@ -40,7 +40,7 @@ When this error occurs, sign out of Studio Pro and then log back in to resolve i
 
 ### 2.3 Getting an Error with the Message `Connection timed out`
 
-Follow these steps:
+To solve this issue, follow these steps:
 
 1. Open the *\Users\<username>\AppData\Roaming\Subversion\servers* file with any text editor.
 2. Add the text `http-timeout = 5000` under the section `[global]`.
@@ -48,7 +48,7 @@ Follow these steps:
 
 ### 2.4 Getting an Error with the Message `<app folder> is already locked`
 
-Follow these steps:
+To solve this issue, follow these steps:
 
 1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
 
@@ -59,14 +59,14 @@ Follow these steps:
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
 
-Follow these steps to remove your user settings and restart Studio Pro.
+Follow these steps to remove your user settings and restart Studio Pro:
 
 1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old*.
 2. Restart Studio Pro.
 
 ### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
 
-Follow these steps:
+To solve this issue, follow the steps below:
 
 1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
 

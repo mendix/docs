@@ -164,7 +164,11 @@ Current support:
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}
-Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
+Each app must have its own database. Mendix apps cannot share data by sharing the same database.
+
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [integration](integration) section of the *Studio Pro Guide*. This is referred to as a *microservices* architecture.
+
+For more information on why data cannot be shared between apps see [Data Storage](data-storage#databases). Use the [Database Replication](/appstore/modules/database-replication) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
 ## 9 File Storage {#file-storage}

@@ -9,6 +9,10 @@ tags: ["studio pro"]
 
 All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
+{{% alert type="warning" %}}
+This document is about sharing a database between developers working on **the same app**. It is not possible to share one database between different apps. If you need to copy data to another app, use the [Database Replication](/appstore/modules/database-replication) module.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 To get the most out of the built-in database, make sure you have completed the following prerequisites:
@@ -18,7 +22,7 @@ To get the most out of the built-in database, make sure you have completed the f
 * Have a running application
 * Have some data in the database to commit SQL queries to
 
-## 3 Type of Database
+## 3 Type of the Database
 
 The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast, multithreaded, and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 
@@ -35,21 +39,23 @@ One application can make use of many different databases. Take the following ste
   
     ![](attachments/18448637/18580427.png)
 
+3. Click **OK** to confirm your choice. 
+
 ## 5 Starting the Database Viewer
 
 To start the built-in database viewer, follow these steps:
 
 1.  Run the application locally (if this is the first time, Studio Pro will ask you to create the new database, click **Yes** when this occurs):
 
-    ![](attachments/18448637/18580426.png)
+    {{% image_container width="150" %}}![](attachments/18448637/18580426.png){{% /image_container %}}
 
 2.  When the application is running, in the **Console** pane, select **Advanced** > **Start built-in database viewer** to open the built-in database viewer:
 
-    ![](attachments/18448637/18580425.png) 
+   ![](attachments/18448637/18580425.png) 
 
     The **Database Manager** dialog box will be displayed (depending on the data model of the application):
 
-    ![](attachments/18448637/18580424.png)
+   ![](attachments/18448637/18580424.png)
 
 On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
@@ -63,11 +69,13 @@ You can execute queries in two ways:
 
 To execute queries from the database explorer, follow these steps:
 
-1.  Right-click any table and select the preferred action:
+To execute queries from the explorer (the left pane) in the **Database Manager**, follow the steps below:
+
+1.  Right-click a table and select the preferred action:
 
     ![](attachments/18448637/18580423.png)
 
-2.  To select all customers from the table CUSTOMER, click the first option. It will automatically fill the SQL command in the upper-right pane.
+2.  To select all customers from the table CUSTOMER, choose the first option. It will automatically fill the SQL command in the top-right pane:
 
     ![](attachments/18448637/18580422.png)
 
@@ -75,19 +83,21 @@ To execute queries from the database explorer, follow these steps:
 
     ![](attachments/18448637/18580421.png)
 
-On the lower-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
+On the bottom-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
 ## 7 Committing the Data Snapshot
 
-The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
+The built-in database can easily be shared with other members of the team. It is possible to commit a snapshot of the database to the Team Server. To do this, take the following steps:
 
 1.  Select **Version Control** > **Add Snapshot of Data**:
 
     ![](attachments/18448637/18580420.png)
 
-2.  Click **Yes** to commit if one already exists, then add the informational message and click **OK**.
+2. Click **Yes** to commit.
 
-The data is now committed to the team server and can be used by other team members.
+3. In the **Commit** dialog box, add an informational message and click **OK**.
+
+The data is now committed to the Team Server and can be used by other team members.
 
 ## 8 Updating the Data Snapshot
 
@@ -111,5 +121,5 @@ Make sure the names of the databases are not the same or make a copy of your own
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
-*   [Starting your own repository](starting-your-own-repository)
+*   [Set Up a GitHub Repo to Publish an App Store Item](set-up-repo)
 *   [Version Control](/refguide/version-control)

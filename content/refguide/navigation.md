@@ -93,7 +93,7 @@ This specifies the application title. This title is shown in the title bar of th
 
 #### 4.1.2 Application Icon
 
-This specifies the application icon. This icon is shown in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
+This specifies the application icon. This icon is shown as favicon in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
 
 ### 4.2 Home Pages
 
@@ -121,17 +121,17 @@ Each device type contains a default menu. You can use these menus in [menu widge
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 
-### 4.3 Profile Buttons
+### 4.5 Profile Buttons
 
-#### 4.3.1 Change Profile Type
+#### 4.5.1 Change Profile Type
 
 Allows for changing the [profile type](navigation).
 
-#### 4.3.2 Delete
+#### 4.5.2 Delete
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Synchronization Configuration {#customize}
+#### 4.5.2 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

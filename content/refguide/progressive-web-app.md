@@ -51,7 +51,7 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-menu.png){{% /image_container %}}
+![View menu](attachments/progressive-web-app/view-menu.png)
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
@@ -119,7 +119,7 @@ For more information on the available properties in the web app manifest, read t
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
-For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings#2-session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
+For more information on sessions and how to customize the timeout, see the [Session Duration](tricky-custom-runtime-settings#session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
 
 ## 6 Accessing Device Features
 
@@ -132,7 +132,9 @@ For more information on browser support for certain device features, see the thi
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert type="info" %}}
-Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.
+Important limitation: Apple does not support push notifications for PWAs on iOS.
+
+Currently, it is not possible to create a fully offline-first PWA for iOS — adding that support is part of our 2022 roadmap.
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:

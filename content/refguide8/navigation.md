@@ -125,17 +125,17 @@ Each device type contains a default menu. You can use these menus in [menu widge
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 
-### 4.3 Profile Buttons
+### 4.5 Profile Buttons
 
-#### 4.3.1 Change Profile Type
+#### 4.5.1 Change Profile Type
 
 Allows for changing the [profile type](navigation).
 
-#### 4.3.2 Delete
+#### 4.5.2 Delete
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Synchronization Configuration {#customize}
+#### 4.5.3 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

@@ -18,7 +18,7 @@ You can start searching from the [Data Hub Home](#data-hub-home) page or click t
 
 Registered assets can be [curated](#curate-bar) to add and edit further information (Catalog metadata) such as **Tags**, **owners**, and **Descriptions** and also set properties to the asset such as **Discoverable** and **Validated** to ensure that they are found for the appropriate uses.
 
-This document describes the functionality of the Data Hub Catalog.
+ This document describes the functionality of the Data Hub Catalog.
 
 ## 2 Details of Registered Assets
 
@@ -41,10 +41,11 @@ The environment also provides an indication of the quality of the dataset that i
 Search results show the data source endpoints. Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits of the two endpoints.
 
 {{% alert type="info" %}}
-By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see [Filters](#filter).
+By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the[Filters](#filter) section below.
 {{% /alert %}}
 
 ### 2.3 Asset Descriptions
+
 The description that is included as part of the published service metadata. This description can be further curated at the data source, dataset, and attribute level by owners and curators to provide further details of the exposed datasets and the associated data.
 
 {{% alert type="info" %}}
@@ -63,11 +64,11 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 ### 3.1 Searching for Assets
 
-From the **Data Hub Home** page, you can you can search the Catalog in the following ways:
+From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
 ![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
 
-* Type a search term in the search box and click **Search** (search strings can comprise a minimum of three characters and include the alphanumeric characters)
+* Type a search term in the search box and click **Search** (search strings can be a minimum of three characters and consist of alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
 * Click one of the services under **Most Popular Services**
 * Click the **Catalog** tab
@@ -78,7 +79,7 @@ Any of the above actions will take you to the **Search** screen.
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the centre panel, and the [asset metadata](#metadata) panel on the right.
 
-![searc details](attachments/search/search-details-page.png)
+![search details](attachments/search/search-details-page.png)
 
 ## 4 Search Pane {#search-pane}
 
@@ -99,6 +100,14 @@ Punctuation cannot be used as part of the search term.
 {{% alert type="info" %}}
 Search is case-insensitive.
 {{% /alert %}}
+
+The search is carried out asset metadata that includes the following:
+
+* all application names
+* data sources, datasets (or entity sets)
+* attribute
+* tags
+* descriptions
 
 ### 4.2 Filters {#filter}
 
@@ -122,17 +131,17 @@ Click **Clear Filters** to clear all the checked environments and click **Apply 
 
 ### 4.3 Search Results {#search-results}
 
-The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. Items in the asset metadata that are searched include all application names, data sources, datasets (or entity sets), attributes, tags, and descriptions. The order of the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown above the search results list. Search results include assets that match the search string and satisfy the active filters. The order of the items presented in the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (the number of connections)
 * **Validated** assets before non-validated items
 
- {{% alert type="info" %}}The weigting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
+ {{% alert type="info" %}}The weighting in the search results is cumulative depending on the validate property being set for datasets in a data source. For example, if there is a dataset named **Customer** that is **Validated** in a **Validated** data source, this is listed higher in the search results list than a dataset of the same name that is not **Validated** in a **Validated** data source.{{% /alert %}}
 
 {{% alert type="info" %}}Assets that are set to [Non-discoverable](#discoverability-metadata) are not included in the search results unless you are a curator or owner of the asset.{{% /alert %}}
 
-When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab will show the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
+When an item in the search results is selected, the **Catalog** tab displays the **Details** of the asset and the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 5 Selected Asset Details {#search-details}
 
@@ -175,9 +184,13 @@ You can perform the following actions from this screen:
 
 ### 5.2 Details for a Selected Dataset {#entity-details}
 
-When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel:
+When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel.
 
 ![search details entity](attachments/search/search-details-entity.png)
+
+#### 5.2.1 General Information
+
+The source and endpoint details of the dataset are displayed:
 
 * Dataset name
 
@@ -189,22 +202,22 @@ When a **Dataset** is selected in the search results, the following details are 
 
 * A description of the dataset
 
-* **Dataset Information**
- The **Attributes** that are exposed for the dataset in the OData service are listed showing the attribute types and description.
+You can perform the following actions from this screen:
+
+* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
+* **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
+
+#### 5.2.2 Dataset Information
+
+ The **Attributes** tab lists the attributes that are exposed for the dataset in the OData service.
 
  Under the **Associations** tab for each dataset, the associations are displayed:
 
  ![associations info](attachments/search/attributes-associations.png)
 
-* **Name** – the name of the association that is exposed in the OData service contract
+* **Name** – the name of the association that is exposed in the OData service contract.
 
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
-  * **Multiplicity** – the number of object at the other end of the association (0..1, 1 or *)
-
-You can perform the following actions from this screen:
-
-* **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications
-* **Share Dataset** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
 
 ## 6 Metadata Panel {#metadata}
 
@@ -219,11 +232,15 @@ The tags that have been assigned to the data source during [curation.](curate#ta
 
 ### 6.2 Business Owner
 
-A link to the business owner of the data exposed in the data source. Business owners can be added as a curation task. For more information, see [Changing owners of an application](curate#changing-owners).
+A link to the business owner of the data exposed in the data source. Business owners can be [added as a curation task](curate#changing-owners).
 
 ### 6.3 Technical Owner
 
-The technical contact of the app; by default this is the owner who registered the OData service. For apps hosted in the Mendix Cloud, by default, the **Technical Owner** is the app developer that deployed the app. For more information, see [Changing owners of an application](curate#changing-owners).
+The technical contact of the app; by default this is the owner who registered the OData service.
+
+For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
+
+Technical owners can be [changed as a curation task](curate#changing-owners).
 
 ### 6.4 Discoverability {#discoverability-metadata}
 
@@ -267,7 +284,7 @@ The **Curate Bar** is displayed in the asset detail screen if you are the owner 
 
 ![called out curate bar](attachments/search/curate-bar.png)
 
-Curators can carry out the following actions:
+The following actions can be carried out:
 
 * **Edit Metadata** – edit information that is displayed in the Catalog for the asset:
   * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
@@ -279,7 +296,7 @@ Curators can carry out the following actions:
 
 {{% alert type="info" %}}By default, newly registered services are set to **Discoverable** and visible to all users.{{% /alert %}}
 
-For further details on see [Curation](./curate).
+For further details, see [Curate Registered Assets](./curate).
 
 ## 8 Data Source and Dataset URIs
 

@@ -49,7 +49,7 @@ For more information, see [Google Maps](/appstore/widgets/google-maps).
 
 ![](attachments/18448690/imap.png)
 
-This module enables your project to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
+This module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
 
 For more information, see [IMAP/POP3 Incoming Email](/appstore/modules/imap).
 

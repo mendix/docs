@@ -9,6 +9,61 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### July 1st, 2021
+
+#### Fixes
+
+* We updated the example in the [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) for `PUT` published endpoints to match the behavior.
+
+### June 24th, 2021
+
+#### New Features
+
+* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
+  * `GET` all published endpoints
+  * `GET`, `POST`, and `PUT` one individual published endpoint
+
+### June 10th, 2021
+
+#### Improvements
+
+* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the filters have been restyled.
+* All cancel and discard buttons now have matching styles for improved usability.
+
+### June 3rd, 2021
+
+#### New Features
+
+* All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
+  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) – includes GET calls for getting details of data sources
+  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
+
+### May 27th, 2021
+
+#### New Features
+
+* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register#registration-form) Siemens Opcenter data sources.
+
+#### Improvements
+
+* **Mindsphere** applications are now indicated with the display of the Mindsphere logo for all associated assets in the Catalog.
+* In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the service version number is no longer next to the data source name, it is now displayed below it.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Datasets in the [search results list](/data-hub/data-hub-catalog/search#search-results) that are validated are now clearly indicated as such.
+* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register#registration-form) using the business application connectors from the **Data Hub Home**.
+* Further styling changes have been made to improve usability.
+
+### May 6th, 2021
+
+#### New Features
+
+The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the the app’s `dependencies.json` file to generate the request bodies that are required when using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/data-hub-apis#transform).
+
 ### April 29th, 2021
 
 #### Improvements
@@ -84,9 +139,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 ### January 7th, 2021
 
 #### New Features
+
 * The [asset details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now have added functionality to copy the URI of the data source or dataset to the clipboard. This functionality means that the Data Hub Catalog can be used to discover registered assets—data sources and datasets—and access the data in other enterprise applications through the metadata URI.
 
 #### Improvements
+
 * There have been several improvements in the Data Hub user interface.
 
 ## 2020
@@ -94,14 +151,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 ### December 24th, 2020
 
 #### New Features
-* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 
+* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
+
 * Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/data-hub-catalog/register#registration-form) or when using the `PUT` services API call for OData v4 services.
-
-
 
 ### December 17th, 2020
 
@@ -109,49 +165,44 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 * The [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis) is available to enable searching of data sources in the Data Hub Catalog. The API can be used to register data sources from your application to your organization's Data Hub.
 
-
-
 ### December 10th, 2020
 
 #### Improvements
 
 * This release contains several security improvements.
 
-
-
 ### November 26th, 2020
 
 #### Improvements
+
 * The Service [Metadata](/data-hub/data-hub-catalog/search#metadata) panel on the right side of the the Data Hub Catalog search details page has been reorganized to improve the grouping of the information.
 
 #### Fixes
 
 * You can now sign-out from the Mendix Platform from the Mendix top bar when you click on the account avatar.
 
-
-
 ### November 19th, 2020
 
 #### New Features
-* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#customowner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
+
+* We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#custom-owner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
 * We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners) which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
+
 * We improved the screen layout of the **Data Hub** screen for different screens.
 * We made several styling improvements and removed the empty last tab on the asset details page.
 
 #### Fixes
+
 * The [Validated](/data-hub/data-hub-catalog/curate#validated) label will now be correctly updated in the search results pane for the selected asset when it is changed by curators and the owners of the asset.
 * We fixed an issue on the [Curation List](/data-hub/data-hub-catalog/curate#curatelist) where clicking on the **Added** column title (to change the sort order) resulted in an error.
-
-
 
 ### November 5th, 2020
 
 #### Improvements
+
 * In the Data Hub **Catalog** search pane, we now show the number of  [filters](/data-hub/data-hub-catalog/search#filter) that are active for the current search at the filter icon.
-
-
 
 ### October 29th, 2020
 
@@ -161,17 +212,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 * In Data Hub **Catalog** by default, the [search filter](/data-hub/data-hub-catalog/search#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/data-hub/data-hub-catalog/search#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 
-
-
 ### October 8th, 2020
 
 #### Improvements
 
-The Data Hub home tab is now called  **Data Hub**.
-
-From the **Data Hub** screen, you can now navigate to the [Mendix Academy learning path for Data Hub](https://academy.mendix.com/link/path/111/Share-Data-Between-Apps-Using-the-Data-Hub-Catalog) where you can learn how to easily share data to build apps in Studio Pro.
-
-
+* The Data Hub home tab is now called  **Data Hub**.
+* From the **Data Hub** screen, you can now navigate to the [Mendix Academy learning path for Data Hub](https://academy.mendix.com/link/path/111/Share-Data-Between-Apps-Using-the-Data-Hub-Catalog) where you can learn how to easily share data to build apps in Studio Pro.
 
 ### October 1st, 2020
 

@@ -5,6 +5,10 @@ menu_order: 70
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.

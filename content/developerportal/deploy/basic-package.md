@@ -24,7 +24,11 @@ The basic package has the following features.
 * Runs in the Mendix Cloud
 * Supports between five and a hundred (5-100) users
 * Can be paid for via invoice only
-* Has a limited amount of resources and a single cloud environment, the *standard XS* described in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of *Mendix Cloud*, together with the ability to preview and test in Studio Pro and Studio.
+* Has a limited amount of resources and a single cloud environment on Mendix Cloud V4, together with the ability to preview and test in Studio Pro and Studio. The cloud environment has the following features:
+    * 1GB App RAM
+    * 0.25 vCPU
+    * 1GB database schema as a part of a shared database — your schema is private to your app and some database monitoring graphs are not available (see [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4) for more information)
+    * 1GB file storage for `FileDocument` and `Image` entities
 * The regular Mendix [Service Level Agreement](https://www.mendix.com/wp-content/uploads/Mx_ServiceLevelAgreement_v2018-01.pdf) applies, but please note the following:
     * You cannot get telephone support: access to support is via the [Mendix support website](https://support.mendix.com) only.
     * Support is only available for general platform issues – Mendix support cannot give help on problems with individual apps.

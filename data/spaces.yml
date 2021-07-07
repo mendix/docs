@@ -134,11 +134,12 @@ studio:
   priority: false
   menu_categories:
     - "General Info"
+    - "Workflows"
     - "Pages"
     - "Working with Data"
     - "Navigation Document"
     - "Microflows"
-    - "Workflows"
+    - "Expressions"
     - "Previewing & Publishing Your App"
     - "Checks"
     - "Theme Customizer"

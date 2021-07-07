@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#customowner) owners.
+Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#custom-owner) owners.
 
 Users who can curate assets in Data Hub Catalog are as follows:
 
@@ -51,8 +51,8 @@ On the **Curation bar**, the following details are displayed:
 * When a data source is selected in the **Search Results**:
   * **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
   * [Discoverable/Validated](#discoverability) – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu.
-      * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source.
-        * **Validate** indicates that the data source and datasets have been validated.
+    * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source.
+    * **Validate** indicates that the data source and datasets have been validated.
 * When a dataset is selected in the **Search Results**
   * **Edit Dataset Details** – to edit the dataset and attribute descriptions
 
@@ -85,7 +85,7 @@ App owners can be changed by users with curation rights (owners and curators) fr
 If you as a **Technical Owner** curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and the Data Hub Admin can manage the lists of custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners](../general/data-hub-admin-functions#customowners) section of *Data Hub Administration*.
+Curators and the Data Hub Admin can manage the lists of custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners](/data-hub/general/data-hub-admin-functions#customowners) section of *Data Hub Administration*.
  {{% /alert %}}
 
 #### 4.1.1 Changing the Technical and Business Owners of an App
@@ -94,11 +94,11 @@ To change the **Business Owner** or **Technical Owner**, from the **Application 
 
 ![adding custom icons](attachments/curate/custom-avatar.png)
 
-#### 4.1.2 Adding a Custom Owner {#customowner}
+#### 4.1.2 Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. This is described in Data Hub Administration – [Managing Custom Owners](../general/data-hub-admin-functions#customowners).
+Curators can manage the lists of custom owners as an **Administration** task. This is described in Data Hub Administration – [Managing Custom Owners](/data-hub/general/data-hub-admin-functions#customowners).
 
 To add a custom owner follow these steps:
 

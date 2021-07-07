@@ -108,7 +108,7 @@ To configure a Charts widget with a dynamic series, follow these steps:
 
 To view the chart, follow these steps:
 
-1. Run the project (locally).
+1. Run the app (locally).
 
 1. Open the page containing the dynamic series chart.
 

@@ -13,6 +13,57 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### July 5th, 2021
+
+#### Fix
+
+* We fixed an issue where long-running restore jobs appear to fail when using [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1).  (Tickets 122197 and 125707)
+
+#### Announcement
+
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api) which handles long-running backup and restore jobs more robustly.
+
+### June 14th, 2021
+
+#### Improvements
+
+* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
+
+### June 11th, 2021
+
+#### Mendix Cloud V3 Archived Logs
+
+* We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+
+### June 8th, 2021
+
+#### Improvements
+
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
+  used to run your Mendix application will be automatically updated to the
+  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+
+### May 27th, 2021
+
+#### Improvements
+
+* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+
+### May 18th, 2021
+
+#### Improvements
+
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
+  authenticate DNS lookups. There is nothing that you need to do for this
+  change to take effect. Going forward, all DNS requests to these domains
+  will automatically use DNSSEC.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
+
 ### April 29th, 2021
 
 #### Improvement
@@ -114,7 +165,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 * We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
-	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
+	For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
 
@@ -128,7 +179,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 3rd, 2020{#20201203}
 
-* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
+* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
 
 ### November 26th, 2020
@@ -152,7 +203,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Fixes
 
-* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+* We resolved an issue where [HTTP headers](/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
 
     See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
 
@@ -258,8 +309,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 #### Fixes
 
-* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro:
-	* We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro.
+* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro:
+	* We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro.
 	* We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set or you do not have sufficient privileges to deploy to the Studios target.
 	* We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
@@ -269,7 +320,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api). (Ticket 103241)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 #### Fixes
 
@@ -755,7 +806,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+* We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 *  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
 	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)

@@ -74,13 +74,13 @@ Set **Use timeout on request** to **Yes** to be able specify how long the Call R
 It is recommended that you keep this set to **Yes**. Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this, and your activity will not receive a response. Under these circumstances, if **Use timeout on request** is set to **No**, your activity will get stuck waiting indefinitely for data to arrive.
 {{% /alert %}}
 
-Default value: *Yes* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value was No)
+Default value: *Yes*
 
 ### 4.4 Timeout (s)
 
 If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
 
-Default value: *300 seconds* (as of Studio Pro [8.5.0](/releasenotes/studio-pro/8.5#850); in earlier versions, the default value for **Use timeone on request** was No)
+Default value: *300 seconds*
 
 ### 4.5 Proxy Configuration
 
@@ -107,7 +107,7 @@ The options are:
 
 When you select **Override**, you can configure which client certificate will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
-* When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates#client-certificates).
+* When you deploy the app in the Mendix cloud, set the **Client certificate identifier** to the desired **WEB SERVICE CALL NAME** when [pinning a client certificate](/developerportal/deploy/certificates#outgoing-client-certificates).
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates). For testing locally, this can be set as a custom server setting in a [Configuration](configuration#custom).
 
 When this identifier is not set for the environment where your app is deployed (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use app settings** were selected).
@@ -175,6 +175,8 @@ This option allows you to send binary data (for example, the contents of a FileD
 This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
 
 FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
+
+For each part, you can specify the HTTP headers. For each part, by default, the **Content-Disposition**  (for file documents and images) and **Content-Type** (for all parts) headers are added. You can specify different values for these headers, or add other headers.
 
 #### 6.3.1 Content Type
 

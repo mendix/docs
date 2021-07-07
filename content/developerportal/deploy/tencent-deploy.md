@@ -1,10 +1,14 @@
 ---
-title: "腾讯 – Tencent"
+title: "Tencent Cloud (腾讯云)"
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app to the Tencent Cloud"
 menu_order: 45
 tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
+
+{{% alert type="info" %}}
+The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -24,9 +28,8 @@ To deploy an app to Tencent, you need the following:
 
 * Mendix Studio Pro China Edition
 
-    You will be able to download Mendix Studio Pro, as part of your initial sign up:
-    ![](attachments/tencent-deploy/download-studio-pro.png)
-    
+    * You will be able to download Mendix Studio Pro, as part of your initial sign up:
+       ![](attachments/tencent-deploy/download-studio-pro.png)
     You can also get a copy from the **Get Studio Pro** option in the **Switch to** menu at the top left of **App & Team Management**.
 
 * A Mendix app created with Studio Pro
@@ -39,7 +42,7 @@ Go to the Cluster Manager page by clicking the **Switch to** menu and selecting 
 
 ![](attachments/tencent-deploy/cluster-manager-navigation.png)
 
-If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **Go To Tencent Cloud Portal** to go to Tencent and purchase some resources.
+If you have not got any Tencent clusters, you will first have to purchase one. You will see this page: click **[Go To Tencent Cloud Portal](https://cloud.tencent.com/solution/slp) "Siemens Low-Code Platform on Tencent Cloud"** to go to Tencent and purchase the necessary resources.
 
 ![](attachments/tencent-deploy/purchase-resources.png)
 
@@ -153,7 +156,7 @@ By default, the cluster manager, who created the cluster in Mendix, and anyone a
 
 The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
 
-* Set up operating URLs for the namespace *? DOES THIS MAKE SENSE FOR TENCENT?**
+* Set up operating URLs for the namespace
 * View all environments in the namespace
 * Manage own environments – user can create and manage an environment in any namespace in the cluster
 
@@ -181,19 +184,19 @@ You can invite additional members to the namespace, and configure their role dep
 1. The **Members** tab displays a list of current members (if any).
 
 2. Click **Invite Member**.
-    
+   
     ![](attachments/tencent-deploy/namespace-members.png)
 
 3. Enter the **Tencent ID** of the person you want to invite.
 
 4. Give them the rights they need. This can be:
-    
+   
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
 5. Click **Invite** to send an invite to this person.
-    
+   
     ![](attachments/tencent-deploy/namespace-member-invite.png)
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
@@ -247,7 +250,7 @@ First you need to create an environment:
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
 5. Select the **Purpose**.
-    
+   
     1. For development of the app, for example acceptance testing, choose **Development**.
 
     2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
@@ -255,7 +258,7 @@ First you need to create an environment:
         {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
-    
+   
     ![](attachments/tencent-deploy/create-environment.png)
 
 7. Select **Core Resources**.
@@ -276,7 +279,7 @@ First you need to create an environment:
 8. Select a **Database plan** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
 9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
-    
+   
     ![](attachments/tencent-deploy/image7.png)
 
 10. Click **Create Environment**.
@@ -291,16 +294,20 @@ You will not be able to deploy to this environment until it has been fully prepa
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
+{{% alert type="warning" %}}
+There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+{{% /alert %}}
+
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-    
+   
     ![](attachments/tencent-deploy/image9.png)
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/tencent-deploy/image10.png)
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/tencent-deploy/image11.png)
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
@@ -308,7 +315,7 @@ Before you can deploy your app, you will need to create a deployment package. En
 5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
-    
+   
     ![](attachments/tencent-deploy/image12.png)
 
 7. Confirm the information message and you will be returned to the **Environments** page.
@@ -338,7 +345,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 3. Confirm that the **Status** is *Ready*.
 
 4. Click **Transport**.
-    
+   
     ![](attachments/tencent-deploy/image15.png)
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
@@ -346,7 +353,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
 
 7. Click **Continue** to continue to the Start Application confirmation page.
-    
+   
     ![](attachments/tencent-deploy/image16.png)
 
 8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
@@ -568,7 +575,7 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
+For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
@@ -662,7 +669,7 @@ If you attempt to deploy an app with security not set to production into a produ
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 

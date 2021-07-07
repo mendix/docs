@@ -301,7 +301,7 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 	![](attachments/datadog-metrics/datadog_metricsagentconfig.png)
 
 4. Click **Save**.
-5. Restart your app to apply the new settings.
+5. Restart your app to apply the new settings if you have already [connected your node to Datadog](#connect-node). If you are in the process of connecting your node to Datadog, you must *redeploy* your application to apply the changes.
 
 ## 4 Setting Up Datadog For Your Mendix App
 
@@ -393,7 +393,7 @@ You can decide whether a metric for the disk storage size available to the datab
 
 ### 5.4 Email Address Redaction{#redact-emails}
 
-Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_READACTION** to *false*.
+Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, set **DATADOG_LOGS_REDACTION** to *false*.
 
 *Default value: true*
 

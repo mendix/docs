@@ -249,7 +249,7 @@ To reach the root certificate, you have to link your certificate via the interme
 
 ### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
 
-For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings#2-general-settings). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](environments-details#custom-runtime-settings) section of *Environment Details*.
+For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](environments-details#custom-runtime-settings) section of *Environment Details*.
 
 ## 9 Read More
 

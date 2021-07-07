@@ -17,10 +17,10 @@ These are some examples of OQL queries:
 * `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`  –  retrieves the average of the total prices of all paid orders (`Order` needs to be encapsulated in quotes because it is a reserved word, meaning it can be used for `ORDER BY`)
 
 {{% alert type="info" %}}
-OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL (instead of using the out-of-the-box security of XPath) may result in faster queries.
+OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL—instead of using the out-of-the-box security of XPath—may result in faster queries.
 {{% /alert %}}
 
-Try your OQL example online with the [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL) demo app. 
+Try your OQL example online with the [OQL Playground](https://service.mendixcloud.com/p/OQL) demo app. 
 
 ## 2 Query Components
 
@@ -31,7 +31,7 @@ An OQL query can use these components:
 | [Select clause](oql-select-clause) (required)  | `SELECT AVG(TotalPrice)` | Determines which attributes of the object being queried are retrieved. Any functions that need to be performed on the retrieved data should also be defined here.  |
 | [From clause](oql-from-clause) (required)  | `FROM Sales.Order`  | Designates the source entity from which the data will be retrieved.  |
 | [Where clause](oql-where-clause) (optional) | `WHERE IsPaid = 1` | Constrains the data being retrieved.  |
-| [Group by clause](oql-group-by-clause) (optional) | `GROUP BY Department` | Group rows on the values of the specified attributes.  |
+| [Group by clause](oql-group-by-clause) (optional) | `GROUP BY Department` | Groups rows on the values of the specified attributes.  |
 | [Order by clause](oql-order-by-clause) (optional) | `ORDER BY Date` | Sorts rows on the specified attributes.  |
 | [Limit clause](oql-limit-clause) (optional) | `LIMIT 50 OFFSET 30` | Limits rows to a subset of the total amount.  |
 

@@ -1,12 +1,16 @@
 ---
 title: "MindSphere Development Considerations"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
 
 When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
 
@@ -118,7 +122,7 @@ Contact your local IT department for the `proxyHost` and `proxyPort` values you 
 {{% alert type="info" %}}
 Proxy settings for version control used in Mendix Studio Pro:
 
-For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](https://docs.mendix.com/refguide/using-version-control-in-studio-pro#9-working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
+For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
 ### 5.2 Credentials

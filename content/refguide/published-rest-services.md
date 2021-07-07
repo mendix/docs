@@ -1,7 +1,7 @@
 ---
 title: "Published REST Services"
 parent: "integration"
-#menu_order:
+menu_order: 20
 description: "An overview of published REST services from Mendix apps"
 tags: ["publish", "REST service", "overview", "configuration"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

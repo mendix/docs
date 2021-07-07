@@ -99,16 +99,12 @@ You have configured new app roles for Facilities, Manager, and HR.
 You need to create demo users for the newly created app roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab and click **New**.
-
-2.   In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-
-3.   Assign the corresponding user role in the **User roles** section: select the **Facilities** role. 
-
-4.   Click **OK**.
-
-5.   Repeat steps 2-4 to add the **demo_manager** demo user.
-
-6.   Repeat steps 2-4 to add the **demo_hr** demo user.
+2. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
+3. Set **Entity** to **MendixSSO.MendixSSOUser**.
+4. Assign the corresponding user role in the **User roles** section: select the **Facilities** role. 
+5. Click **OK**.
+6. Repeat steps 2-4 to add the **demo_manager** demo user.
+7. Repeat steps 2-4 to add the **demo_hr** demo user.
 
 You have configured demo users for your app. 
 

@@ -147,10 +147,10 @@ For more complex help pages you can link to a markdown page. For security reason
 #### 4.2.2 Toolbox Category {#toolbox-category}
 
 {{% alert type="info" %}}
-This feature was introduced in Mendix 9.4.
+This feature was introduced in Mendix Studio Pro v9.4.
 {{% /alert %}}
 
-To provide better user experience for Studio and Studio Pro users you can specify a toolbox category for your widgets. When provided this category would determine toolbox category for a widget in Studio and Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. When an existing category is specified then your widget placed in it, next to existing built-in widgets. When a new category is specified then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only Studio Pro category is specified then that category also used in Studio.
+To provide more clarity for Studio and Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio and Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. When an existing category is chosen, a widget is placed in it next to any widgets already placed there. When a new category is chosen, a widget is placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only the Studio Pro category is specified, then that category is also used in Studio.
 
 A category can by provided through `studioCategory` and `studioProCategory` tags:
 
@@ -159,7 +159,7 @@ A category can by provided through `studioCategory` and `studioProCategory` tags
    <studioCategory>Maps</studioCategory>
 ```
 
-In the example above a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that *widgets* is added automatiacally in Studio Pro UI. In Studio a widget will end up in **Maps** category.
+In the example above a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that *widgets* is added automatiacally in Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
 {{% alert type="info" %}}
 When your widget is published in Marketplace and a special toolbox category is assigned to your widget by the Marketplace team, then that special toolbox category would be used in Studio instead.

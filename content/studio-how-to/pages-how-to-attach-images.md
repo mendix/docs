@@ -98,7 +98,7 @@ Follow the steps below:
 
 9. In the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**: 
 
-    ![](attachments/pages-how-to-upload-images/image-report-association.png)
+    {{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 
 10. In the button properties, click **Page**.
 
@@ -140,9 +140,9 @@ After users attach the images, it would be nice to display their attachments and
 3. Open list view properties and do the following:
 
     1. Click the **Entity** property.
-    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association (*Receipt_Report/Receipt*) and click **Select**:
+    2. In the **Select Entity** dialog box, choose the **Select Entity** dialog box, choose the **Receipt** entity over **Receipt_Report** association and click **Select**:
 
-    	![](attachments/pages-how-to-upload-images/image-report-association.png)
+    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/image-report-association.png){{% /image_container %}}
 
 4. Click the image in the list view, open its properties, and do the following.
 
@@ -160,7 +160,7 @@ After users attach the images, it would be nice to display their attachments and
     1. In the **Content** property, delete the *List item title* text and click **Add**  > **Attribute**.
     2. In the **Select Attribute** dialog box, choose the **Name** attribute and click **Select** to display the name of the attached image.
 
-    	![](attachments/pages-how-to-upload-images/select-attribute.png)
+    	{{% image_container width="400" %}}![](attachments/pages-how-to-upload-images/select-attribute.png){{% /image_container %}}
 
 7. Select the button in the list view, open its properties, and do the following:
 

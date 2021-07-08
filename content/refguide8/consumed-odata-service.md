@@ -5,6 +5,10 @@ menu_order: 10
 tags: ["studio pro", "data hub", "odata service", "consumed odata service"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 When an external entity is used in a project module through the [Data Hub pane](data-hub-pane), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.

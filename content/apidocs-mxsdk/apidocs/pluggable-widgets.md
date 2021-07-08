@@ -162,7 +162,7 @@ A category can by provided through `studioCategory` and `studioProCategory` tags
 In the example above a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that *widgets* is added automatiacally in Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
 {{% alert type="info" %}}
-When your widget is published in Marketplace and a special toolbox category is assigned to your widget by the Marketplace team, then that special toolbox category would be used in Studio instead.
+When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
 {{% /alert %}}
 
 ### 4.3 Widget Properties Definition {#properties-definition}

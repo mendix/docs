@@ -7,7 +7,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/navigation-tree.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/navigation-tree.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}The navigation tree widget is not supported on native mobile pages.{{% /alert %}}

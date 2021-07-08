@@ -7,7 +7,7 @@ tags: ["studio pro", "data grid", "grid", "data widget"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/data-grid.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-grid.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}

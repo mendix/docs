@@ -7,7 +7,7 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/simple-menu-bar.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/simple-menu-bar.pdf).
 {{% /alert %}}
 
 {{% alert type="warning" %}}The simple menu bar widget is not supported on native mobile pages.{{% /alert %}}

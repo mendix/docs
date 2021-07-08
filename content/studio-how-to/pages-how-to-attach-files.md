@@ -101,7 +101,7 @@ Follow the steps below:
 
     6. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association and click **Select**:
 
-        ![Select File Entity](attachments/pages-how-to-attach-files/select-file-entity.png)
+        {{% image_container width="400" %}}![Select File Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
     7. Click the **Page** property.
 
@@ -146,7 +146,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
     2. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association and click **Select**:
 
-        ![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png)
+        {{% image_container width="400" %}}![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
 4. Delete the image and a column it is placed in from the list:
 
@@ -159,7 +159,7 @@ After your end-users attach the files, it would be nice to display files in a li
     1. In the **Content** property, delete the *Name* text and click **Add attribute**.
     2. In the **Select Attribute** dialog box, choose the **Name** attribute and click **Select** to display the name of the attached file.
 
-    	![Select Attribute](attachments/pages-how-to-attach-files/select-attribute.png)
+    	{{% image_container width="400" %}}![Select Attribute](attachments/pages-how-to-attach-files/select-attribute.png){{% /image_container %}}
 
 7. Delete the **Details** button in the list view.
 

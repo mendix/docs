@@ -79,13 +79,10 @@ The **Details** button in the inspection report list should open a page with the
 
 3. Click **Create**.
 	
-3. The page with a form (a data view) is created. However, the data view's data source was automatically set to **List widget**, you need to change that. Select the data view and go to its properties.
-
-1. Change the data source from **List widget** to **Context**.
-
-2. Click the **Entity** property and set the **InspectionReport** entity for it:
+7. The page with a form (a data view) is created. Open data view properties and make sure that the data source was automatically set to **Context** and **Entity** was set to **InspectionReport**:
 
       {{% image_container width="250" %}}![](attachments/pages-how-to-configure-form/data-view-source.png){{% /image_container %}} 
+
 
 The form on the page is configured: 
 {{% image_container width="600" %}}![](attachments/pages-how-to-configure-form/data-view-configured.png){{% /image_container %}}
@@ -114,7 +111,7 @@ Follow the steps below:
 
 4. To show only checklist items associated with the current inspection report, choose the **Checklist** entity over association (*Checklist_InspectionReport/Checklist*) in the **Select Entity** dialog box and click **Select**:
 
-    {{% image_container width="450" %}}![](attachments/pages-how-to-configure-form/data-grid-over-association.png){{% /image_container %}}
+    ![](attachments/pages-how-to-configure-form/data-grid-over-association.png)
 
 5. As the main purpose of the page is to display information, you do not need the **Search** section in the data grid. Open data grid properties > **Search** section and disable the **Enable Search** toggle:
 

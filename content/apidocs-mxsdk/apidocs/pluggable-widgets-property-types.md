@@ -287,7 +287,7 @@ Then the Studio Pro UI for the component appears like this:
 
 ### 3.3 Widgets {#widgets}
 
-The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified or if an attribute is specified, but the data source is not configured by the user. Otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
+The widgets property allows a user to place multiple widgets inside a pluggable widget, similar to the content of a [container](/refguide/container) widget. It is passed as a `ReactNode` prop to a client component if a `dataSource` attribute is not specified, otherwise it is passed as a [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listwidgetvalue). For more information, see the [Datasource](#datasource) section below.
 
 {{% alert type="warning" %}}
 Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
@@ -338,7 +338,7 @@ then the Studio Pro UI for the component appears like this:
 
 The expression property allows a user to configure an [expression](/refguide/expressions).
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
+If a `dataSource` attribute is not specified, the client will receive a `DynamicValue<T>` where `T` depends on the expression's return type.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listexpressionvalue) where `T` depends on the expression's return type. For more information, see the [Datasource](#datasource) section below.
 
@@ -384,7 +384,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide/text#caption) of a text widget.
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
+If a `dataSource` attribute is not specified, the interpolated string will be passed to the client component as `DynamicValue<string>`.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listexpressionvalue). For more information, see the [Datasource](#datasource) section below.
 
@@ -427,7 +427,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
+If a `dataSource` attribute is not specified, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listactionvalue). For more information, see the [Datasource](#datasource) section below.
 
@@ -458,7 +458,7 @@ Then the Studio Pro UI for the property appears like this:
 
 The attribute property type allows a widget to work directly with entities' attributes, both reading and writing attributes. Depending on the widget's purposes, a widget should define attribute types it supports. 
 
-If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#editable-value) section of *Client APIs Available to Pluggable Widgets*.
+If a `dataSource` attribute is not specified, the client will receive an `EditableValue<T>` where `T` depends on a configured `<attributeType>`. For more information, see the [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#editable-value) section of *Client APIs Available to Pluggable Widgets*.
 
 When a `dataSource` attribute is specified and configured by the user, it is passed as a [`ListAttributeValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listattributevalue). For more information, see the [Datasource](#datasource) section below.
 
@@ -589,6 +589,8 @@ Then the Studio Pro UI for the property appears like this:
 ### 4.7 Datasource {#datasource}
 
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`expression`](#expression), [`text template`](#texttemplate) and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources#list-widgets) for available data source types.
+
+If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
 
 {{% alert type="warning" %}}
 Only list datasources are supported, therefore specifying `isList="true"` is required.

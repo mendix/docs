@@ -15,22 +15,23 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Improvements
 
-Proxy support and network stability improvements
-We reworked the Mendix Native Builder network stack.
-We expect greater stability with flaky connection.
-In addition Mendix Native Builder should be able to use the OS specific proxy settings to do requests.
+* We added proxy support and network stability improvements.
+* We reworked the Mendix Native Builder network stack.
+* We expect greater stability even over mediocre internet connections.
+* The Mendix Native Builder can now use OS-specific proxy settings to do requests.
 
-App Center's CodePush OTA page improvements
-We improved the UX of the App Center's CodePush OTA page.
-The platform selector will now correctly represent the available platforms. Platforms that do not yet have an App Center build setup will be by default disabled.
-We also added visible links for the App Center apps targeted by each platform. That should make it easier to identify cases where for some reason the Mendix Native Mobile bulder does not target the expected Apps.
-Finally the OTA button is now a callout button that visually summarise the reasons for why a OTA might not be possible at the current moment.
+App Center's CodePush OTA page improvements:
+
+* We improved the UX of the App Center's CodePush OTA page.
+* The platform selector will now correctly represent available platforms. Platforms that do not yet have an App Center build setup will be disabled by default. 
+* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile bulder does not target the expected apps.
+* The OTA button is now a callout button that visually summarizes the reasons why a OTA update might not currently be possible.
 
 #### Fixes
 
-We identified and fixed a bug with AppCenter's CodePush OTA not respecting the platform choice of the user. If one of the platforms was missing an App Center build configuration, the OTA build button would remain, falsely, disabled.
-We fixed an issue with missing asset files for newly-created Github projects when building in Advanced mode.
-We identified and fixed a bug with Firebase configuration's validation when changes are made to the App Identifier.
+* We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
+* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
 
 ### Release 1.0.90
 

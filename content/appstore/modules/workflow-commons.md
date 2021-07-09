@@ -15,7 +15,7 @@ This module allows Mendix developers with little or no experience in building wo
 
 ### 1.2 Features
 
-* Dashboards for monitoring workflows, for administrators, initiators, and executors of workflows
+* Dashboards for monitoring workflows for administrators, initiators, and executors (users who can chose an outcome/complete a user task) of workflows
 * Page templates to generate task pages, task admin, an inbox, and different dashboards
 * Attachments layer on top of workflows
 * Comments section to use with workflows
@@ -76,7 +76,7 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
 ### 4.1 Page Templates
 
 #### 4.1.1 My Initiated Workflows
-Allows users who initiate workflows to keep track of their progress. A user is also able to `Withdraw` a workflow if it is still `In progress`.
+Allows users who initiate workflows to keep track of their progress. A user is also able to withdraw a workflow if it is still in progress.
 
 #### 4.1.2 Workflow Task Dashboard
 Shows users who execute tasks, for example, a task-based dashboard.

@@ -26,7 +26,7 @@ This module allows Mendix developers with little or no experience in building wo
 
 ### 1.4 Prerequisites
 
-As workflows is only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
+As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
 
 ### 1.5  Dependencies
 
@@ -50,11 +50,11 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
 1. Open the Workflow Commons module in the App Explorer.
 2. Browse to **UseMe** > **Pages**.
 3. Open the **MendixSSOUserVariant** folder.
-   4. Select all pages and the microflow in this folder (multi select by selecting the first item and then keep <kbd>Ctrl</kbd> pressed to select other items).
-   2. Right click and choose **Exclude from project**.
+   4. Select all pages and the microflow in this folder (select multiple items by selecting the first item and then keep <kbd>Ctrl</kbd> pressed to select other items).
+   2. Right-click and choose **Exclude from project**.
 4. Open the **SystemUserVariant** folder.
    7. Select all pages and the microflow in this folder.
-   2. Right click and choose **Include in project**.
+   2. Right-click and choose **Include in project**.
 
 ## 3 Configuration
 
@@ -64,10 +64,10 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
     3. WorkflowAdminCenter
     4. MyInitiatedWorkflows
 2. Add Administrator and User module roles to the required App roles:
-    1. Administrator role:
+    1. Administrator role does the following:
         1. Administers workflows.
         2. Views workflow performance in the Admin Workflow Dashboard
-    2. User role:
+    2. User role does the following:
         1. Executes workflows by completing user tasks.
         2. Views personal performance in MyTaskDashboard.
 
@@ -76,14 +76,14 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
 ### 4.1 Page Templates
 
 #### 4.1.1 My Initiated Workflows
-Used by users that initiate workflows and want to keep track of their progress. A user is also able to `Withdraw` a workflow if it is still `In progress` from this area.
+Allows users who initiate workflows to keep track of their progress. A user is also able to `Withdraw` a workflow if it is still `In progress`.
 
 #### 4.1.2 Workflow Task Dashboard
-Shows users that execute tasks, for example, a task based dashboard.
+Shows users who execute tasks, for example, a task-based dashboard.
 
 #### 4.1.3 Workflow Task Inbox
-For users that have to execute tasks, this inbox provides a pre-filtered set of data grids with the option to go to the details of a task and/or assign a task to the user.
+For users who execute tasks, this inbox provides a pre-filtered set of data grids with the option to go to the details of a task and/or assign a task to the user.
 
 #### 4.1.4 User Task Basic/Extended
-May be used to generate a task template that contains a timeline, attachments, comments, header, and context data section prefilled for a workflow task.
+May be used to generate a task template that contains a timeline, attachments, comments, header, and context data section preconfigured for a workflow task.
 

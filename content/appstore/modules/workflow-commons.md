@@ -30,9 +30,9 @@ As workflows are only available from Mendix 9 version, Workflow Commons requires
 
 ### 1.5  Dependencies
 
-* [Datagrid 2](/appstore/modules/data-grid-2)
-* [Mendix SSO](appstore/modules/mendix-sso) (Atlas UI 3 supported version) (maybe skipped when following the steps in the [Installation to Run the Module Without Mendix SSO](#installation-without-mendix-sso) section)
-* [Atlas Core & Atlas Web Content](/appstore/modules/atlas-ui-resources)
+* [Datagrid 2](data-grid-2)
+* [Mendix SSO](mendix-sso) (Atlas UI 3 supported version) (maybe skipped when following the steps in the [Installation to Run the Module Without Mendix SSO](#installation-without-mendix-sso) section)
+* [Atlas Core & Atlas Web Content](atlas-ui-resources)
 
 ## 2 Installation 
 

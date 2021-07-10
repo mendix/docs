@@ -166,7 +166,7 @@ Drag the [entities](/refguide/external-entities) you need into your domain model
 
 To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
 In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the following constants:
 
@@ -184,7 +184,7 @@ In the Consumed OData Service document associated with your MindSphere service, 
 
 To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
 
-Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading2) in the document *How To Use Marketplace Content in Studio Pro*.
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
 ### 5.3 Authenticating MindSphere REST Calls {#authenticating}
 

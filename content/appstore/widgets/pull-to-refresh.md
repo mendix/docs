@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "pull to refresh", "pla
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.

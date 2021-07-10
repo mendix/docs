@@ -4,6 +4,11 @@ parent: "published-web-services"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/operations.pdf).
+{{% /alert %}}
+
+## 1 Introduction
 
 Provides the actual methods of which the webservice is composed.
 
@@ -11,47 +16,47 @@ Looking at an operation in more detail, you can see that a microflow can be sele
 
 An operation has the following properties:
 
-## General
+## 2 General
 
 ![](attachments/16713701/16843884.png)
 
-### Name
+### 2.1 Name
 
 This is what the operation is called in the WSDL.
 
-### Microflow
+### 2.2 Microflow
 
 Defines which microflow will be executed when this webservice is called.
 
-### Documentation
+### 2.3 Documentation
 
 Describes the operation and is included in the WSDL.
 
-## Parameters
+## 3 Parameters
 
 ![](attachments/16713701/16843879.png)
 
-### Microflow parameter
+### 3.1 Microflow Parameter
 
 Defines the name of the parameter in the microflow
 
-### Type
+### 3.2 Type
 
 Defines which type the parameter is, for example a List of Vehicle entities.
 
-### Optional
+### 3.3 Optional
 
 Defines whether this parameter is optional in the webservice call.
 
-### Nillable
+### 3.4 Nillable
 
 Defines whether this parameter can have a nil value in the webservice call.
 
-### Operation parameter
+### 3.5 Operation Parameter
 
 Defines the name of the parameter in the webservice call. This is initially copied from the microflow parameter name but can be modified.
 
-### Operation object name
+### 3.6 Operation Object Name
 
 Is available when the parameter is a list, and can be used to name the object in the list.
 
@@ -67,7 +72,7 @@ The microflow attached to the CountCarsAndHp operation. It takes a list of objec
 
 {{% /alert %}}
 
-### Exposed attributes and associations
+### 3.7 Exposed Attributes and Associations
 
 If you click 'Select...' in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
 
@@ -98,23 +103,23 @@ If you expose the Password (hashed string) attribute of a System.User entity (or
 
 {{% /alert %}}
 
-## Return Type
+## 4 Return Type
 
 This section pertains to the return type of the microflow and how it is transformed back to XML.
 
-### Type
+### 4.1 Type
 
 Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
 
-### Name
+### 4.2 Name
 
 The name of the return type. This determines the output element name in the XML that results from a webservice call.
 
-### Optional
+### 4.3 Optional
 
 This determines if the element in the XML can be left out if the return value is empty.
 
-### Nillable
+### 4.4 Nillable
 
 This determines if the element in the XML is sent as nil if the return value is empty.
 

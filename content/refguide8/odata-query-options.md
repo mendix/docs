@@ -4,6 +4,10 @@ parent: "published-odata-services"
 tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/odata-query-options.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This is a list of query options for OData.

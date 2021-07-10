@@ -6,6 +6,10 @@ tags: ["marketplace", "marketplace component", "widget", "mobile device", "cordo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
@@ -53,7 +57,7 @@ For a demo app that has been deployed with this widget, see [here](http://device
 
 ## 2 Configuration
 
-Once you have set the widget in the context of an object and configured the necessary parameters, the widget will save device information to the context object. Note that the version and build information are only available when the cordova-plugin-app-version is used in the project configuration.
+Once you have set the widget in the context of an object and configured the necessary parameters, the widget will save device information to the context object. Note that the version and build information are only available when the cordova-plugin-app-version is used in the app configuration.
 
 For the **Data source** option on the **Data source** tab, select and set the respective attributes as strings.
 
@@ -75,8 +79,8 @@ To contribute to the development of this widget, follow these steps:
 	* [karma-cli](https://www.npmjs.com/package/karma-cli)
 2. Fork and clone the [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device/releases/). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
+4. Create a folder named *dist* in the app root.
+5. Create a Mendix test app in the *dist* folder and rename its root folder to *dist/MxTestApp*, or get the test app from [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device/releases/). Changes to the widget code will be automatically pushed to this test app.
+6. To automatically compile, bundle, and push code changes to the running test app, run `grunt`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device/issues).

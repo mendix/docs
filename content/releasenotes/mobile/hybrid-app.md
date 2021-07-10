@@ -213,7 +213,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 {{% alert type="warning" %}}
 
-This is a major version upgrade of the hybrid app project.
+This is a major version upgrade of the hybrid app.
 
 {{% /alert %}}
 

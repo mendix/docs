@@ -35,7 +35,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.8",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "markdown-pdf": "^9.0.0",
     "moment": "^2.24.0",
     "promise-limit": "^2.7.0",

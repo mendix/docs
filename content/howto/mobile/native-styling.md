@@ -1,7 +1,7 @@
 ---
 title: "Implement Native Mobile Styling"
-parent: "native-mobile"
-menu_order: 30
+parent: "implementation"
+menu_order: 25
 description: General information for native styling in Mendix.
 tags: ["styling", "design", "native"]
 ---
@@ -12,7 +12,7 @@ You can build native mobile apps with custom styling in Mendix Studio Pro. Styli
 
 ## 2 Theme Folder Structure
 
-For each app project, styling is stored in the **theme** and **themesource** folders. From there styling is split into **native** and **web** folders. Both have the same structure. 
+For each app, styling is stored in the **theme** and **themesource** folders. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
 These folders have strict protocols:
 

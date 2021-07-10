@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Debugging Overview
 
-There are three debugging panes to be aware of: **Breakpoints**, **Debugger**, and **Variables**:
+There are three debugging panes: **Breakpoints**, **Debugger**, and **Variables**:
 
 ![](attachments/18448571/18580004.png)
 
@@ -52,7 +52,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
     
-    ![](attachments/18448571/18580004.png)
+    ![](attachments/18448571/breakpoints.png)
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow/nanoflow that contains that breakpoint:
     

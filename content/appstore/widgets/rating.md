@@ -43,7 +43,7 @@ This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/
 
 ### 3.2 Customizing the Rating Icon
 
-In order to overwrite the default star icon, add these classes to your project theme and replace the content with your preferred glyphicon:
+In order to overwrite the default star icon, add these classes to your app theme and replace the content with your preferred glyphicon:
 
 ```
  .rating-flag [class*="widget-star-rating-full"]:before {
@@ -67,10 +67,10 @@ To contribute to the development of this widget, follow these steps:
 	* [karma-cli](https://www.npmjs.com/package/karma-cli)
 2. Fork and clone the [mendixlabs/star-rating]( https://github.com/mendixlabs/star-rating) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/star-rating](https://github.com/mendixlabs/star-rating/releases/latest). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
+4. Create a folder named *dist* in the app root.
+5. Create a Mendix test app in the *dist* folder and rename its root folder to *dist/MxTestApp*, or get the test app from [mendixlabs/star-rating](https://github.com/mendixlabs/star-rating/releases/latest). Changes to the widget code will be automatically pushed to this test app.
+6. To automatically compile, bundle, and push code changes to the running test app, run `grunt`.
+7. To run the app unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
 8. Run the unit test continuously during development via `karma start`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/star-rating](https://github.com/mendixlabs/star-rating/issues).

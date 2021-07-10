@@ -5,9 +5,15 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-Please refer to [Mapping Documents](mapping-documents) for an introduction.
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-mappings.pdf).
+{{% /alert %}}
 
-## 1 Obtaining Objects in Import Mappings
+## 1 Introduction
+
+For an introduction to import mappings, refer to [Mapping Documents](mapping-documents).
+
+## 2 Obtaining Objects in Import Mappings
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
@@ -15,7 +21,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 **Figure 1**
 
-### 1.1 Obtaining an Object
+### 2.1 Obtaining an Object
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
@@ -23,9 +29,9 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 **Figure 2**
 
-### 1.2 Attribute Mapping Properties
+### 2.2 Attribute Mapping Properties
 
-#### 1.2.1 Obtain Mendix Object Methods
+#### 2.2.1 Obtain Mendix Object Methods
 
 | Property | Description |
 | --- | --- |
@@ -33,7 +39,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 | **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query. If more than one object is returned by the XPath query, an error will be thrown. |
 | **Call a microflow** | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and of course any attributes in the current XML element. |
 
-#### 1.2.2 If No Object Was Found
+#### 2.2.2 If No Object Was Found
 
 This is the action that the runtime will perform when an error occurred in the specified **Obtain Mendix Object** action.
 
@@ -47,7 +53,7 @@ This is the action that the runtime will perform when an error occurred in the s
 
 If this is the top level of the mapping, you can check **Decide this at the place where the mapping gets used**. If this is checked the option **if no object was found** can be set whenever you use the mapping, for instance in an [import mapping action](import-mapping-action) or a [call REST service action](call-rest-action).
 
-### 1.3 Setting Associations
+### 2.3 Setting Associations
 
 Optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
@@ -57,7 +63,7 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 {{% /alert %}}
 
-## 2 Mapping Attributes in Import Mappings
+## 3 Mapping Attributes in Import Mappings
 
 Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
@@ -71,7 +77,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 **Figure 4**
 
-### 2.1 Mapping Attribute Properties
+### 3.1 Mapping Attribute Properties
 
 | Property | Description |
 | --- | --- |
@@ -82,7 +88,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 | Key | This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object. Attribute with 'binary' type is not supported to be set as key.
 | Map attributes by name | If this button is clicked, an attempt is made to match attributes by name. A dialog appears reporting what has been changed. |
 
-## 3 Mapping Parameter
+## 4 Mapping Parameter
 
 Import mappings have the additional option to receive an incoming parameter. The parameter can be passed in by the calling microflow when microflow uses the [import from mapping](import-mapping-action) action.
 

@@ -202,7 +202,7 @@ The enumeration property type allows a user to select one out of multiple option
 <enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
 ```
 
-The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
+The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in an app.
 
 #### 2.5.3 Studio Pro UI
 

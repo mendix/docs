@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "barcode scanner", "pla
 
 ## 1 Introduction
 
-The [Barcode Scanner](https://appstore.home.mendix.com/link/app/1469/) widget enables a barcode scanning functionality within your Mendix web application.
+The [Barcode Scanner](https://marketplace.mendix.com/link/component/117627) widget enables a barcode scanning functionality within your Mendix web application.
 
 The widget does the following:
 

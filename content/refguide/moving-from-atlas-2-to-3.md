@@ -25,7 +25,7 @@ The sections after the upgrade instructions reference known issues and some trou
 
 ## 2 Upgrading from Atlas 2 to Atlas 3 {#upgrade}
 
-Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your project requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
+Before upgrading, please note that in Atlas 3 all hybrid content is removed because hybrid profiles are deprecated in Mendix 9. If your app requires hybrid content, we recommend not upgrading to Atlas 3 unless you have created all your own hybrid content separate from Atlas’.
 
 Before you start the upgrade process, it may help if you consult the folder structure changes introduced in Atlas 3 by reading the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*. 
 
@@ -37,7 +37,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 	![Atlas2 folder](attachments/atlas-mig/atlas2-themefolder.png)
 
-1.  Download the Atlas 3 [**theme.zip**](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix project folder. The folder structure should look similar to the example below. **Mendix project root**, then **theme**, then **web** and **native**:
+1.  Download the Atlas 3 [**theme.zip**](https://www.dropbox.com/s/guffms4u5idx3us/theme.zip?dl=1) and extract it into the root of your Mendix app folder. The folder structure should look similar to the example below. **Mendix app root**, then **theme**, then **web** and **native**:
 
 	![Atlas 3 folder](attachments/atlas-mig/atlas3-themefolder.png)
 
@@ -372,7 +372,7 @@ In the example above we have two design properties: **align content** and **bord
 
 #### 2.5.2 Adding Design Properties for Community-Supported Widgets
 
-If you have defined your own design property for a community-supported widget in your project, similar to the following example, follow these steps.
+If you have defined your own design property for a community-supported widget in your app, similar to the following example, follow these steps.
 
 You have added a design property `“Opacity”` for MyCustomWidget, in **Atlas 2**. As shown below in the **settings.json** file. 
 
@@ -487,7 +487,7 @@ To fix this, right-click the error then select **Go to Navigation profile ‘Hyb
 To troubleshoot common Atlas problems, do the following:
 
 * If you have **Layout X no longer exists** errors, right-click the error then go to the page on which the error occurs. In the page’s properties, select a new, appropriate layout.
-* If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your project you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
+* If you have **The selected image X no longer exists** errors, right-click the error and go to the page on which it occurs and choose a new image. Depending on your app you may want to download the **Atlas_NativeMobile_Content** module and use an image from the module.
 * If you have **The selected placeholder X no longer exists** errors, right-click the error and go to the page on which it occurs, thereafter you have alternative options to correct the error:
 	* Adjust the layout the page uses to include a placeholder with matching name.
 	* On the page, move the content out of the placeholder.

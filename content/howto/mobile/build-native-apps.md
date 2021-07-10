@@ -1,7 +1,7 @@
 ---
 title: "Build Native Apps"
-parent: "native-mobile"
-menu_order: 8
+parent: "distribution"
+menu_order: 10
 description: Tutorials for building native mobile apps.
 tags: ["mobile", "native", "react", "ios", "android"]
 ---

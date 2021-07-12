@@ -49,4 +49,4 @@ This query retrieves all customers and returns the first and last name sorted on
 
 {{% /alert %}}
 
-**Note:** For default ordering behavior of NULL values refer to [this documentation](null-ordering-behavior).
+**Note:** For default ordering behavior of NULL values refer to [this documentation](ordering-behavior#null-ordering-behavior).

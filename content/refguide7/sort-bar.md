@@ -11,4 +11,4 @@ The sort bar contains sort items. Each sort item specifies what attribute to sor
 
 If you don't specify any sort items, the objects will appear in the order in which they were created.
 
-**Note:** For default ordering behavior of NULL values, refer to [Null Ordering Behavior](null-ordering-behavior).
+**Note:** There are special cases for ordering behavior. Please refer to [Order By Behavior](ordering-behavior) for more details.

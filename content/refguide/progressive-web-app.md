@@ -125,7 +125,38 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
+Below the table containing most used features/APIs and its compatibility with the most common browsers:
+
+| Feature | Chrome/Edge | Firefox | Safari | 
+|---------|:-----------:|:-------:|:------:|
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ✅ | ✅ | ⚠️ |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | ⚠️ | ❌ | ⚠️ |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | ⚠️ | ⚠️ | ❌ |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | ⚠️ | ⚠️ | ❌ |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ✅ | ✅ | ❌ |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ✅ | ✅ | ✅ |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | ⚠️ | ❌ | ❌ |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ✅ | ✅ | ✅ |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | ⚠️ | ⚠️ | ⚠️ |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ✅ | ❌ | ❌ |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | ⚠️ | ⚠️ | ⚠️ |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ✅ | ✅ | ❌ |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ✅ | ❌ | ❌ |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ✅ | ✅ | ❌ |
+
+**Legend**
+
+✅ Full compatibility
+
+⚠️ Compatibility only when using HTTPS protocol
+
+❌ Not compatible
+
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
+
+{{% alert type="info" %}}
+In order to test the features requiring HTTPS protocol you can try [ngrok](https://ngrok.com/) to enable it in your localhost.
+{{% /alert %}}
 
 ## 7 Deciding Between a PWA or Native Mobile App
 

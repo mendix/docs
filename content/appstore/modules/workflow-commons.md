@@ -30,9 +30,10 @@ As workflows are only available from Mendix 9 version, Workflow Commons requires
 
 ### 1.5  Dependencies
 
-* [Datagrid 2](data-grid-2)
-* [Mendix SSO](mendix-sso) (make sure you download Mendix SSO Atlas Core) (maybe skipped when following the steps in the [Installation to Run the Module Without Mendix SSO](#installation-without-mendix-sso) section)
-* [Atlas Core & Atlas Web Content](atlas-ui-resources)
+* [Datagrid 2](https://marketplace.mendix.com/link/component/116540)
+* [Mendix SSO](https://marketplace.mendix.com/link/component/117212) (make sure you download Mendix SSO Atlas Core) (maybe skipped when following the steps in the [Installation to Run the Module Without Mendix SSO](#installation-without-mendix-sso) section)
+* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+* [Atlas Web Content](https://marketplace.mendix.com/link/component/117183)
 
 ## 2 Installation 
 
@@ -42,7 +43,7 @@ Download and install the following modules:
 * Datagrid 2
 * Atlas Core
 * Atlas Web Content 
-* Mendix SSO Atlas Core (which supports Atlas UI 3.0, regular Mendix SSO version is not compatible with Atlas UI 3.0)
+* Mendix SSO Atlas Core (which supports [Atlas 3](/refguide/atlas3-change-summary), regular Mendix SSO version is not compatible with Atlas 3)
 
 ### 2.1 Installation to Run the Module Without Mendix SSO {#installation-without-mendix-sso}
 
@@ -87,3 +88,7 @@ For users who execute tasks, this inbox provides a pre-filtered set of data grid
 #### 4.1.4 User Task Basic/Extended
 May be used to generate a task template that contains a timeline, attachments, comments, header, and context data section preconfigured for a workflow task.
 
+## 5 Read More
+
+* [Mendix SSO](mendix-sso)
+* [Datagrid 2](data-grid-2)

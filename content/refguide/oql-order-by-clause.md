@@ -36,7 +36,7 @@ ORDER BY
 
 {{% alert type="info" %}}
 
-For default ordering behavior of NULL values, see [Null Order Behavior](null-ordering-behavior).
+For default ordering behavior of NULL values, see [Null Order Behavior](ordering-behavior#null-ordering-behavior).
 
 {{% /alert %}}
 

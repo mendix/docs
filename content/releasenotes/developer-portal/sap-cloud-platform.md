@@ -12,6 +12,14 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### July ????, 2021
+
+#### Improvements
+
+* We released version 2.0.0 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
+    {{% alert type="info" %}}This version uses a new user administration module, `SapAuthentication` and customers using versions of *XSUAA Connector for SAP Business Technology Platform* below 2.0.0 will need to migrate their existing users from `Administration.Account` to `SapAuthentication.SapUser` using the [user Migration](/modules/user-migration-module) module.{{% /alert %}}
+
 ### June 16th, 2021
 
 #### Improvements

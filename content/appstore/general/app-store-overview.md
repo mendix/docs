@@ -34,7 +34,7 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
-| **Solutions** | Fully-formed solutions for your apps. |
+| **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
 
 The following filter options are also available:
 

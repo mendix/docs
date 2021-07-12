@@ -7,9 +7,13 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
+{{% image_container width="100" %}}
+[![](attachments/install/download.png)](https://marketplace.mendix.com/link/studiopro/)
+{{% /image_container %}}
+
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the latest version of Mendix Studio Pro.
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/).
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -32,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
-1. Go to the Studio Pro download page in the [Mendix Marketplace](https://appstore.home.mendix.com/link/modeler/).
+1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2.  Click the **Download** button in the top-right corner to download the latest Mendix Studio Pro.
 
 

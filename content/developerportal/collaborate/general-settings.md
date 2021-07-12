@@ -17,7 +17,7 @@ The **General** settings page presents an overview of your app with the followin
 
 * A **Description** of the app
 * The [App Contact](/developerportal/collaborate/app-roles#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app
-* Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
+* Whether the app is enabled for **Mendix Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
 {{% image_container width="450" %}}
@@ -106,7 +106,11 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 Editing App Info {#editing}
+## 5 API Keys
+
+Here you can manage your app's API keys. For more information, see [API Keys](api-key).
+
+## 6 Editing App Info {#editing}
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -123,7 +127,7 @@ Click **Edit App Info** to edit the following details:
 
 For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app).
 
-## 6 Managing Webhooks {#webhooks}
+## 7 Managing Webhooks {#webhooks}
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
@@ -154,11 +158,12 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
 {{% /alert %}}
 
-## 7 Leaving the App
+## 8 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 8 Read More
+## 9 Read More
 
 * [Leave & Delete an App](leave-delete-app)
 * [Manage Deep Links](manage-deeplinks)
+* [API Keys](api-key)

@@ -10,9 +10,30 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
-* Native Template v6+ applies to apps built using Studio Pro [9.x](../studio-pro/9.0) and above.
-* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](../studio-pro/8.15) and above.
-* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](../studio-pro/8.12#8121)–[8.14.x](../studio-pro/8.14).
+* Native Template v6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above.
+* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15) and above.
+* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
+
+## 6.1.7
+
+**Release date: June 30th, 2021**
+
+### Fixes
+
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
+
+## 5.1.13
+
+**Release date: June 30th, 2021**
+
+### Improvements
+
+* When installing pods (`pod install`) the Native Template is now able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
+
+### Fixes
+
+* We fixed an issue on iOS custom developer apps related to deep links.
+* We fixed an issue affecting Android custom developer apps where deep links crashed applications.
 
 ## 6.1.6 and 5.1.12
 

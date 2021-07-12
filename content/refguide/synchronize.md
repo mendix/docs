@@ -7,7 +7,7 @@ tags: ["studio pro", "synchronize", "offline", "client activity"]
 ---
 
 {{% alert type="warning" %}}
-This activity can only be used in **Nanoflows**.
+This activity can only be used in **Nanoflows** that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
 ## 1 Introduction

@@ -6,6 +6,10 @@ tags: ["studio pro", "container", "container widgets", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/container.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A container is a layout element that can be used to simultaneously style, hide, drag, or delete a group of widgets placed in it:

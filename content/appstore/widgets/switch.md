@@ -12,7 +12,7 @@ The [Switch](https://appstore.home.mendix.com/link/app/50324/) widget enables to
 
 ## 2 Usage
 
-To use this widget, place it in a [data container](https://docs.mendix.com/refguide/data-sources) that has a Boolean attribute.
+To use this widget, place it in a [data container](/refguide/data-sources) that has a Boolean attribute.
 
 The widget offers the following for configuration:
 
@@ -20,7 +20,7 @@ The widget offers the following for configuration:
 * An action (such as Microflow or Nanoflow) to trigger when the Switch is toggled
 * A **Device style** design property with two options (`iOS` and `Android`) influencing the Switch's appearance
 * A **Style** design property for brand styling, influencing the Switch's colors
-* [Common properties](https://docs.mendix.com/refguide/common-widget-properties)
+* [Common properties](/refguide/common-widget-properties)
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 
@@ -61,14 +61,14 @@ To contribute to the development of this widget, follow these steps:
 	* [karma cli](https://www.npmjs.com/package/karma-cli)
 2. Fork and clone the [mendixlabs/boolean-slider](https://github.com/mendixlabs/boolean-slider.git) repository. The code is in Typescript.
 3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/boolean-slider](https://github.com/MendixLabs/boolean-slider/releases/latest). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
+4. Create a folder named *dist* in the app root.
+5. Create a Mendix test app in the *dist* folder and rename its root folder to *dist/MxTestApp*, or get the test app from [mendixlabs/boolean-slider](https://github.com/MendixLabs/boolean-slider/releases/latest). Changes to the widget code will be automatically pushed to this test app.
+6. To automatically compile, bundle, and push code changes to the running test app, run `grunt`.
+7. To run the app unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
 8. Run the unit test continuously during development via `karma start`.
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/boolean-slider](https://github.com/mendixlabs/boolean-slider/issues).
 
 #### 4 Read More
 
-* [CAB.02 - Switch](https://docs.mendix.com/addons/ats-addon/ht-two-cab-02-switch)
+* [CAB.02 - Switch](/addons/ats-addon/ht-two-cab-02-switch)

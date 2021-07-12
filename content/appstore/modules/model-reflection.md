@@ -53,5 +53,5 @@ All the patterns use the locale from the context. Based on the user's language, 
 
 ## 3 Read More
 
-* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
-* [How to Import Excel Documents](https://docs.mendix.com/howto/integration/importing-excel-documents)
+* [How to Export to Excel](/howto/integration/using-the-excel-exporter)
+* [How to Import Excel Documents](/howto/integration/importing-excel-documents)

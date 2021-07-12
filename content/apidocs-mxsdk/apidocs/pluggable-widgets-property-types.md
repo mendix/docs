@@ -205,7 +205,7 @@ The enumeration property type allows a user to select one out of multiple option
 <enumerationValue key="myEnumOption">My enum option caption</enumerationValue>
 ```
 
-The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in a project.
+The `key` of a selected element will be passed to the client component. `key` should not be changed since it is used to identify options used in an app.
 
 #### 2.5.3 Studio Pro UI
 
@@ -401,7 +401,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### 4.2.2 XML Elements
 
-`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#4-languages-tab) in Studio Pro.
+`<translations>` — Allows a user to set a default value for text templates for different languages using `<translation>` elements with a `lang` attribute representing [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code of the language. Available languages are listed in the [Languages Tab](/refguide/project-settings#languages-tab) in Studio Pro.
 
 #### 4.2.3 Studio Pro UI
 

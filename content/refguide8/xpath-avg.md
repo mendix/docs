@@ -4,6 +4,10 @@ parent: "xpath-query-functions"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-avg.pdf).
+{{% /alert %}}
+
 ## 1 Overview
 
 The `avg()` function returns the average of its argument.

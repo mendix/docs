@@ -32,7 +32,7 @@ This is how the original chart looks:
 
 To create the required custom configuration easily, follow these steps:
 
-1. Open the project with the chart(s).
+1. Open the app with the chart(s).
 
 1. Open a page with a chart.
 
@@ -44,7 +44,7 @@ To create the required custom configuration easily, follow these steps:
 
     ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
 
-1. Run the project.
+1. Run the app.
 
 1. Open the page with the chart in the browser.
 

@@ -10,8 +10,8 @@ To add custom logic to your Mendix application you can use microflows. Microflow
 
 Before starting this how-to make sure you complete the following prerequisites:
 
-*   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+*   [Creating a basic data layer](/howto7/data-models/create-a-basic-data-layer)
+*   [Creating your first two Overview and Detail pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Triggering Logic Using a Page Button
 

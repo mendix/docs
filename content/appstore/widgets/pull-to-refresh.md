@@ -28,10 +28,6 @@ The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget e
 * When refreshing a page, the list view does not keep **Load more** items
 * Only works when app is scrolled to top
 
-### 1.3 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://pulltorefresh.mxapps.io).
-
 ## 2 Usage
 
 To use this widget, follow these steps:

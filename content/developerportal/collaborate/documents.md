@@ -19,7 +19,7 @@ You can perform the actions described below via the buttons on your app's **Docu
 
 ### 2.1 Uploading a File
 
-Click **Upload a file** to upload a new document:
+Click **Upload document** to upload a new document:
 
 {{% image_container width="400" %}}![](attachments/documents/upload-file.png)
 {{% /image_container %}}
@@ -30,11 +30,11 @@ All file types are allowed, and they are scanned for viruses by Mendix.
 
 ### 2.2 Downloading a Document
 
-To download a document, select the document and click **Download**.
+To download a document, click **Download** on the appropriate line in the overview.
 
-### 2.3 File Details
+### 2.3 Document Details
 
-Click **Details** to see the description of the document, comments, and all the versions of the document:
+Click on the name of the file in the overview to see the description of the document, comments, and all the versions of the document:
 
 ![](attachments/documents/document-details.png)
 
@@ -46,7 +46,7 @@ On the **Document** details page, you can perform the following actions:
 
 ### 2.4 New Version
 
-To upload a new version of a document directly from the document list, select the document and click **New version**.
+To upload a new version of a document, go to the **Document details** page and click **New version**.
 
 ## 3 Read More
 

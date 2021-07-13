@@ -125,7 +125,7 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
-This table lists the most used device features and APIs and documents their compatibility with common browsers:
+This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
 | Feature | Chrome/Edge | Firefox | Safari | 
 |---------|:-----------:|:-------:|:------:|
@@ -146,8 +146,8 @@ This table lists the most used device features and APIs and documents their comp
 
 **Legend** — The symbols above correspond to the following definitions:
 
-* ✓ Full compatibility
-* 🔒 Compatibility only when using HTTPS protoco
+* ✓ Fully compatible
+* 🔒 Compatible only when using HTTPS protocol
 * ✗ Not compatible
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).

@@ -155,7 +155,3 @@ To add a basic map to your application, follow these steps:
 6. Fill in the **Access token** field according to the following scenarios;
 	* For **Mapbox** and **Google Maps**, add an access token
 	* For **HERE maps**, add an app ID and app code
-
-## 5 Developing This Marketplace Component
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/maps](https://github.com/mendix/maps/issues).

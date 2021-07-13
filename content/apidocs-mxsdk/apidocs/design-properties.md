@@ -40,7 +40,7 @@ A design property of type **Dropdown** defines a set of options with separate cl
 
 ## 4 Design Properties Definitions {#design-properties-definitions}
 
-Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (see also the [File and Folder Structure](customize-styling-new#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
+Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (see also the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
 
 Here is a simplified example of a design properties file:
 

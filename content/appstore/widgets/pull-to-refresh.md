@@ -44,7 +44,3 @@ To use this widget, follow these steps:
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
 
 ![](attachments/pull-to-refresh/demo.gif)
-
-## 3 Developing This Marketplace Component
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/pull-to-referesh](https://github.com/mendixlabs/pull-to-refresh/issues).

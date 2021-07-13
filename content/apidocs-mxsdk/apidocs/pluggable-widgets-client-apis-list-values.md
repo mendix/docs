@@ -141,7 +141,7 @@ It is possible to set a specific sort order for items in the list using `setSort
 type SortInstruction = [id: ListAttributeId, dir: SortDirection];
 ```
 
-The first element of `SortInstruction` type is `id` of an attribute property liked to the datasource. This lets widget so specify which attribute should be used for sorting. Though not every attribute could be used for sorting, for some attributes sorting may be disallowed. To determine if an attribute could be used for sorting `sortable` flag of its attribute property has to be checked. This flag specifies if it is possible to use particular attribute for sorting. See [Attribute ID, Sortable and Filterable Flags](#listattributevalue-id-sortable-filterable) section for more information about attribute `id` and `sortable` flag.
+The first element of `SortInstruction` type is `id` of an attribute property linked to the datasource. This lets the widget specify which attribute should be used for sorting. Though not every attribute could be used for sorting, for some attributes sorting may be disallowed. To determine if an attribute could be used for sorting `sortable` flag of its attribute property has to be checked. This flag specifies if it is possible to use particular attribute for sorting. See [Attribute ID, Sortable and Filterable Flags](#listattributevalue-id-sortable-filterable) section for more information about attribute `id` and `sortable` flag.
 
 The second attribute of `SortInstruction` type is a literal string representing the sort direction, either `"asc"` or `"desc"`.
 

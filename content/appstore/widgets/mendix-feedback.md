@@ -55,7 +55,7 @@ For details on how to see all the feedback you have submitted, see the [Feedback
 
 Clicking the **Edit** icon opens the app page in [Mendix Studio](/studio/). If you have permissions to edit the app, you can start editing and collaborating right away.
 
-### 2. Viewing the App
+### 2.3 Viewing the App
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
 
@@ -144,7 +144,7 @@ You can also configure the widget for certain actions in your app, for example:
 
 ## 4 Troubleshooting
 
-### 4.1 Upgrading the Widget from Studio Pro Version 7 to 8
+### 4.1 Upgrading the Widget from Desktop Modeler 7 to Studio Pro 8
 
 If you are trying to upgrade your Mendix Feedback widget from version 7 to version 8, [Studio Pro](/refguide/) will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then delete the old one.
 
@@ -155,4 +155,3 @@ If you are trying to upgrade your Mendix Feedback widget from version 7 to versi
 If you encounter the following issue, you need to delete the old *.mpk* file in the **/widgets/FeedbackWidget.mpk**  folder of your app:
 
 ![](attachments/feedback/remove-feedbackwidget-mpk.png)
-

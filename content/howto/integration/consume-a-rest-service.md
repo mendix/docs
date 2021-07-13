@@ -60,26 +60,18 @@ In this section, you will create an entity that represents this input and associ
 To add an input entity to the domain model, follow these steps:
 
 1. In the **App Explorer**, double-click the **Domain Model**.
-
 2. Rename **Root** to **Summary**.
-
-3. From the **Toolbox**, drag an **Entity** into the Domain Model. 
-
-4. Double the click the entity and in the **Properties** pane change the name to  **Input**.
-
+3. From the **Toolbox**, drag an **Entity** into the domain model. 
+4. Double-click the entity and enter *Input* for the **Name**.
 5. For **Persistable**, select **No**.
-
-6. Add an **Attribute** of type **String** and name it **Input**.
-
+6. On the **Attributes** tab, click **New** to add a string attribute,  name it *Title*, then click **OK**.
 7. Drag an association from **Input** to **Summary**.
 
     ![](attachments/consume-a-rest-service/domain-model.png)
 
-8. Double-click the **Import_mapping** in the **App Explorer** and from the **Connector** pane drag **Input** as the input parameter for the input mapping.
-
+8. Double-click **Import_mapping** in the **App Explorer** and from the **Connector** pane, drag **Input** as the input parameter for the input mapping.
 9. Double-click **Summary**.
-
-10. In the **Map entity 'Summary' from the object element 'Root** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to enable the import mapping to set the association:
+10. In the **Map entity 'Summary' from schema object element 'Root** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to enable the import mapping to set the association:
 
     ![map entity from input mapping](attachments/consume-a-rest-service/map-entity-from-input-mapping.png)
 

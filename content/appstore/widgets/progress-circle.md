@@ -40,14 +40,12 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 
 ## 3 Widgets Below Version 2.0.0
 
-### 3.1 Features
+Features:
 
 * Show percentage based on the progress value and maximum progress value
 * Animate on load and on update
 * Open a page or run a microflow on click
 * Show the progress circle with different colors
-
-### 3.2 Usage
 
 Place the widget in the context of an object that has attributes for **Value attribute** and **Maximum value attribute**:
 

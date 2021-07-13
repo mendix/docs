@@ -9,11 +9,11 @@ menu_order: 20
 
 An `ORDER BY` clause allows you to specify the order in which rows appear in the result set. For instance, sorting on a column in a data grid sorts the data of the column in either ascending (smallest value first) or descending (largest value first) order. The default order is ascending.
 
-However, in certain cases, the behavior is slightly different, either due to the nature of the use case or to the database engine itself.
+However, in certain cases, the behavior is slightly different, either due to the nature of the use case or due to the database engine itself.
 
 ## 2 Reference Sets Order Behavior
 
-When a column is used to display an attribute from an entity associated by a Many-to-Many association, the sorting will be done based on the `MIN(attribute)` value and not the displayed text.
+When a column is used to display an attribute from an entity associated by a Many-to-Many association, the sorting will rely on the SQL `MIN()` function to determine the `MIN(attribute)` values and use those instead of the displayed text.
 
 Below is an example that uses two entities `Order` and `Product` that have a Many-to-Many association. The _Product Names_ column in the Data Grid displays for each order the names of the products that are associated to it.
 
@@ -31,11 +31,11 @@ In SQL, `NULL` is a special marker used to indicate that a data value does not e
 
 If you specify the `ORDER BY` clause, a `NULL` value always comes first before any non-`NULL` value, irrespective of the sort order.
 
-### 3.1.2 MARIADB, MYSQL, SAP HANA & SQLSERVER
+#### 3.1.2 MARIADB, MYSQL, SAP HANA & SQLSERVER
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as less than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes before any non-`NULL` value. Using the `DESC` order, the `NULL` comes last.
 
-### 3.1.3 DB2, ORACLE, & POSTGRESQL
+#### 3.1.3 DB2, ORACLE, & POSTGRESQL
 
 If you specify the `ORDER BY` clause, `NULL` values by default are ordered as more than values that are not `NULL`. Using the `ASC` order, a `NULL` value comes after any non-`NULL` value. Using the `DESC` order, the `NULL` comes first.
 

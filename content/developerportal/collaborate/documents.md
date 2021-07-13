@@ -38,7 +38,7 @@ Click on the name of the file in the overview to see the description of the docu
 
 ![](attachments/documents/document-details.png)
 
-On the **Document** details page, you can perform the following actions:
+On the **Document details** page, you can perform the following actions:
 
 * **Download** the document
 * **Upload new version** of the document

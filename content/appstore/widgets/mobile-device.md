@@ -51,10 +51,6 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 * Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your locally built app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
-### 1.4 Demo App
-
-For a demo app that has been deployed with this widget, see [here](http://deviceidwidget.mxapps.io).
-
 ## 2 Configuration
 
 Once you have set the widget in the context of an object and configured the necessary parameters, the widget will save device information to the context object. Note that the version and build information are only available when the cordova-plugin-app-version is used in the app configuration.

@@ -43,13 +43,11 @@ Under the **Appearance** tab, the following styling properties can be adjusted f
 
 ## 3 Widgets Below Version 2.0.0
 
-### 3.1 Features
+Features:
 
 * Show percentage of progress based on value
 * Render bar types: plain, striped, or animated stripes
 * Use bar Bootstrap colors: success, info, warning, or danger
-
-### 3.2 Usage
 
 Place the widget in the context of an object that has attributes for **Progress attribute** and **Maximum value attribute**:
 

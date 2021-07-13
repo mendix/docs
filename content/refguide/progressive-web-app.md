@@ -129,28 +129,28 @@ Below the table containing most used features/APIs and its compatibility with th
 
 | Feature | Chrome/Edge | Firefox | Safari | 
 |---------|:-----------:|:-------:|:------:|
-| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ✅ | ✅ | ⚠️ |
-| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | ⚠️ | ❌ | ⚠️ |
-| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | ⚠️ | ⚠️ | ❌ |
-| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | ⚠️ | ⚠️ | ❌ |
-| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ✅ | ✅ | ❌ |
-| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ✅ | ✅ | ✅ |
-| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | ⚠️ | ❌ | ❌ |
-| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ✅ | ✅ | ✅ |
-| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | ⚠️ | ⚠️ | ⚠️ |
-| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ✅ | ❌ | ❌ |
-| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | ⚠️ | ⚠️ | ⚠️ |
-| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ✅ | ✅ | ❌ |
-| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ✅ | ❌ | ❌ |
-| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ✅ | ✅ | ❌ |
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ✓ | ✓ | 🔒 |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | 🔒 | ✗ | 🔒 |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | 🔒 | 🔒 | ✗ |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | 🔒 | 🔒 | ✗ |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ✓ | ✓ | ✗ |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ✓ | ✓ | ✓ |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | 🔒 | ✗ | ✗ |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ✓ | ✓ | ✓ |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | 🔒 | 🔒 | 🔒 |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ✓ | ✗ | ✗ |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | 🔒 | 🔒 | 🔒 |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ✓ | ✓ | ✗ |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ✓ | ✗ | ✗ |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ✓ | ✓ | ✗ |
 
 **Legend**
 
-✅ Full compatibility
+✓ Full compatibility
 
-⚠️ Compatibility only when using HTTPS protocol
+🔒 Compatibility only when using HTTPS protocol
 
-❌ Not compatible
+✗ Not compatible
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 

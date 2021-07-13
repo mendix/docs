@@ -127,8 +127,8 @@ Browsers offer access to device features through APIs that can be leveraged in P
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
-| Feature | Chrome/Edge | Firefox | Safari | 
-|---------|:-----------:|:-------:|:------:|
+| Feature | Chrome/Edge | Firefox | Safari |
+|---------|-----------|-------|------|
 | [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ✓ | ✓ | 🔒 |
 | [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | 🔒 | ✗ | 🔒 |
 | [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | 🔒 | 🔒 | ✗ |

@@ -125,7 +125,7 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
-Below the table containing most used features/APIs and its compatibility with the most common browsers:
+This table lists the most used device features and APIs and documents their compatibility with common browsers:
 
 | Feature | Chrome/Edge | Firefox | Safari | 
 |---------|:-----------:|:-------:|:------:|
@@ -144,18 +144,16 @@ Below the table containing most used features/APIs and its compatibility with th
 | [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ✓ | ✗ | ✗ |
 | [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ✓ | ✓ | ✗ |
 
-**Legend**
+**Legend** — The symbols above correspond to the following definitions:
 
-✓ Full compatibility
-
-🔒 Compatibility only when using HTTPS protocol
-
-✗ Not compatible
+* ✓ Full compatibility
+* 🔒 Compatibility only when using HTTPS protoco
+* ✗ Not compatible
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
 {{% alert type="info" %}}
-In order to test the features requiring HTTPS protocol you can try [ngrok](https://ngrok.com/) to enable it in your localhost.
+In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
 
 ## 7 Deciding Between a PWA or Native Mobile App

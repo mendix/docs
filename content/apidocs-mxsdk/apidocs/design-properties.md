@@ -158,7 +158,7 @@ When a type of design property is **Toggle** it should contain a `class` field o
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
-### 4.2 Extending / overriding design properties of other modules
+### 4.2 Extending / overriding design properties of other modules {#extend-existing-design-properties}
 
 Design properties can not only be added, but also extended or overridden in other modules. For example, you can add a custom dropdown option to an Atlas design property, or override the applied CSS class of a toggle property. This can be very useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/yourthememodule/[web|native]/design-properties.json* file, using the same name and property type. 
 The precedence of design properties is determined by the compilation order of modules:

@@ -45,7 +45,7 @@ This password is only used when Mendix is running locally. Changing the password
 
 The MxAdmin user is not created automatically when you deploy your app. For licensed environments the MxAdmin user is created when you change the password for the first time.
 
-When your Free App has never been deployed, and the database still needs to be created, the data snapshot in your project will be restored to the database of your Free App, if a data snapshot is present. You can use this process to add the MxAdmin to your Free App by doing the following:
+When your Free App *has never been deployed, and the database still needs to be created*, any data snapshot you have added to your project will be restored to the database of your Free App. You can use this process to add the MxAdmin user to your Free App by doing the following:
 1. In Studio Pro, go to **App > Security**.
 2. With **Security level** set to **Production**, open the **Administrator** tab.
 3. Change the default password of the administrator user.

@@ -144,7 +144,7 @@ You can also configure the widget for certain actions in your app, for example:
 
 ## 4 Troubleshooting
 
-### 4.1 Upgrading the Widget from Studio Pro Version 7 to 8
+### 4.1 Upgrading the Widget from Desktop Modeler 7 to Studio Pro 8
 
 If you are trying to upgrade your Mendix Feedback widget from version 7 to version 8, [Studio Pro](/refguide/) will not recognize the current configuration of this widget. Add the Mendix Feedback widget into your page again and configure it accordingly. Then delete the old one.
 

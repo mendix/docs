@@ -28,17 +28,11 @@ Click **Upload a file** to upload a new document:
 All file types are allowed, and they are scanned for viruses by Mendix.
 {{% /alert %}}
 
-### 2.2 Using Labels
-
-To add a label to a document or create a new label, use the options under **Label**:
-
-![](attachments/documents/document-label.png)
-
-### 2.3 Downloading a Document
+### 2.2 Downloading a Document
 
 To download a document, select the document and click **Download**.
 
-### 2.4 File Details
+### 2.3 File Details
 
 Click **Details** to see the description of the document, comments, and all the versions of the document:
 
@@ -50,7 +44,7 @@ On the **Document** details page, you can perform the following actions:
 * **Upload new version** of the document
 * **Delete document**
 
-### 2.5 New Version
+### 2.4 New Version
 
 To upload a new version of a document directly from the document list, select the document and click **New version**.
 

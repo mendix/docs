@@ -92,7 +92,7 @@ You can download a backup archive containing one of the following:
 See [Download a Backup](download-backup) for more information.
 
 {{% alert type="info" %}}
-As the download archive is generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
+As the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
 ### 3.4 Restore Backup

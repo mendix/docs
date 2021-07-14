@@ -44,5 +44,4 @@ ORDER BY LastName DESC
 This query retrieves all customers and returns the first and last name sorted on the last name, descending.
 
 {{% /alert %}}
-
-**Note:** For default ordering behavior of NULL values refer to [this documentation](ordering-behavior#null-ordering-behavior).
+For detials on the default ordering behavior of NULL values, see [NULL Values Order Behavior](ordering-behavior#null-ordering-behavior) section of *Order by Behavior*.

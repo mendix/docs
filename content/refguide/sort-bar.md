@@ -17,7 +17,7 @@ The sort bar contains sort items. Each sort item specifies what attribute to sor
 If you do not specify any sort items, the objects will appear in the order in which they were created.
 
 {{% alert type="warning" %}}
-There are special cases for ordering behavior. For more details, refer to [Order by Behavior](ordering-behavior).
+There are special cases for ordering behavior. For more details, refer to [Order By Behavior](ordering-behavior).
 {{% /alert %}}
 
 ## 2 Read More

@@ -22,7 +22,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 * When [adding new Marketplace content](/appstore/general/share-app-store-content#adding), you can now only set the **Category** in the initial version of your content. You cannot change this setting by updating the content later.
 * When you create a new component in the **Solutions** category, you will not be able to upload a source file, as solutions will no longer have downloadable content.
 * We have started supporting rich characters in the message describing what needs to be changed in your content for approval via the steps on the [Publish](/appstore/general/share-app-store-content#publish) page.
-  
+
 #### Fixes
 
 * We fixed some bugs in the flow for adding new Marketplace content.
@@ -98,7 +98,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Fixes
 
-* As of Studio Pro version [8.10.0](../studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
+* As of Studio Pro version [8.10.0](/releasenotes/studio-pro/8.10#1400), you are able to download private content in the App Store again. This is not possible for Studio Pro versions 8.7–8.9.
 
 ### May 6th, 2020
 
@@ -108,13 +108,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Fixes
 
-* As of Studio Pro version [8.6.4](../studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
+* As of Studio Pro version [8.6.4](/releasenotes/studio-pro/8.6#private-content), you are able to download private content in the App Store again. This is possible for Studio Pro version 8.6.4 and all further 8.6.x versions. It is not possible for Studio Pro versions below 8.6.4.
 
 ### May 4th, 2020
 
 #### Fixes
 
-* As of Desktop Modeler version [7.23.14](../studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
+* As of Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#private), you are able to download private content in the App Store again. This is possible for Desktop Modeler version 7.23.14 and all further 7.23.x versions. It is not possible for Desktop Modeler versions below 7.23.14.
 
 ### April 7th, 2020
 
@@ -122,7 +122,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 Downloading [private content](/appstore/general/share-app-store-content#private-app-store) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
 
-You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](../studio-pro/8), [8.6.x](../studio-pro/8.6), and [7.23.x](../studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
+You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8), [8.6.x](/releasenotes/studio-pro/8.6), and [7.23.x](/releasenotes/studio-pro/7.23) release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
 
 You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/general/app-store-overview#company-content) page in the [Mendix App Store](https://appstore.home.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 

@@ -6,9 +6,13 @@ tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/domain-model.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
-The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules within a app can use data from all the domain models within the app.
+The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](modules) has its own domain model which describes the data used in that module. All modules within an app can use data from all the domain models within the app.
 
 A domain model consists of [entities](entities) with their relationships to other entities represented by [associations](associations). You can also add [annotations](annotations) to your domain model to explain how it is to be used.
 

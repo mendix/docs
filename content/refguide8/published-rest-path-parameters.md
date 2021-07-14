@@ -6,6 +6,10 @@ tags: ["published REST", "path parameters", "Data and Time", "studio pro"]
 # combine this with published rest service
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-path-parameters.pdf).
+{{% /alert %}}
+
 The operation path in the [published REST operation](published-rest-operation) specifies the last part of the location (URL) of the operation. 
 
 You can use one or more path parameters to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. 

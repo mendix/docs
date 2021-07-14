@@ -26,7 +26,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 3.  Select the **Raw Data** tab and copy the whole whole JSON snippet.
-4. Create a module and name it *RESTconsume*. Add the new [JSON structure](../../refguide/json-structures) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
+4. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide/json-structures) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
 
@@ -36,7 +36,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide/import-mappings) specifies how the JSON relates to [entities](../../refguide/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide/import-mappings) specifies how the JSON relates to [entities](/refguide/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -60,26 +60,18 @@ In this section, you will create an entity that represents this input and associ
 To add an input entity to the domain model, follow these steps:
 
 1. In the **App Explorer**, double-click the **Domain Model**.
-
 2. Rename **Root** to **Summary**.
-
-3. From the **Toolbox**, drag an **Entity** into the Domain Model. 
-
-4. Double the click the entity and in the **Properties** pane change the name to  **Input**.
-
+3. From the **Toolbox**, drag an **Entity** into the domain model. 
+4. Double-click the entity and enter *Input* for the **Name**.
 5. For **Persistable**, select **No**.
-
-6. Add an **Attribute** of type **String** and name it **Input**.
-
+6. On the **Attributes** tab, click **New** to add a string attribute,  name it *Title*, then click **OK**.
 7. Drag an association from **Input** to **Summary**.
 
     ![](attachments/consume-a-rest-service/domain-model.png)
 
-8. Double-click the **Import_mapping** in the **App Explorer** and from the **Connector** pane drag **Input** as the input parameter for the input mapping.
-
+8. Double-click **Import_mapping** in the **App Explorer** and from the **Connector** pane, drag **Input** as the input parameter for the input mapping.
 9. Double-click **Summary**.
-
-10. In the **Map entity 'Summary' from the object element 'Root** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to enable the import mapping to set the association:
+10. In the **Map entity 'Summary' from schema object element 'Root** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to enable the import mapping to set the association:
 
     ![map entity from input mapping](attachments/consume-a-rest-service/map-entity-from-input-mapping.png)
 
@@ -87,7 +79,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide/microflows) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
+You will now call the REST service in a [microflow](/refguide/microflows) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 

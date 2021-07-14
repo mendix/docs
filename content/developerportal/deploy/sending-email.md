@@ -29,7 +29,7 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 
 For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider to send emails from your app.
 
-In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See {Mendix Mail Servers](#mendix-mail-servers), below, for more information.
+In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See [Mendix Mail Servers](#mendix-mail-servers), below, for more information.
 
 However, for new applications or applications that send large amounts of e-mail running on Mendix Cloud v3, we strongly recommend using an external e-mail service.
 

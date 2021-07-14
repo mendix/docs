@@ -99,7 +99,7 @@ Follow the steps below:
 
     5. Click the **Entity** property.
 
-    6. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association (*Document_Employee/Document*) and click **Select**:
+    6. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association and click **Select**:
 
         {{% image_container width="400" %}}![Select File Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
@@ -144,9 +144,9 @@ After your end-users attach the files, it would be nice to display files in a li
 
     1. Click the **Entity** property.
 
-    2. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association (*Document_Employee/Document*) and click **Select**:
+    2. In the **Select Entity** dialog box, choose the **Document** entity over **Document_Employee** association and click **Select**:
 
-        ![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png)
+        {{% image_container width="400" %}}![Select Entity](attachments/pages-how-to-attach-files/select-file-entity.png){{% /image_container %}}
 
 4. Delete the image and a column it is placed in from the list:
 

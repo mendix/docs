@@ -1,7 +1,7 @@
 ---
 title: "Set Up Deep Links in Native Mobile Apps"
-parent: "native-mobile"
-menu_order: 75
+parent: "implementation"
+menu_order: 30
 description: "Connect URLs to your native mobile app by adding a deep link."
 tags: ["deep link", "url", "native", "mobile", "developer app", "make it native"]
 ---
@@ -144,7 +144,7 @@ Next you will implement the deep link handler nanoflow **DL_ShowUrlDetails** so 
 
 ### 4.3 Testing Deep Linking
 
-Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your project. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
+Add a few test link buttons, for example {app://myapp/task/123} or {makeitnative://task/123}, to your web page, then re-run your app. Open the your app in your device's browser by typing *{your local IP address}:8080* into the browser. With the app loaded, tap the links to test. You should be brought out of your browser and into your app's page!
 
 ## 5. Read more
 

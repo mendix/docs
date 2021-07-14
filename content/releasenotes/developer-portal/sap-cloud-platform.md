@@ -12,6 +12,16 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### June 16th, 2021
+
+#### Improvements
+
+* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator) and [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+
+#### Fix
+
+* We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
+
 ### June 2nd, 2021
 
 #### Improvements

@@ -7,9 +7,13 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
+{{% image_container width="100" %}}
+[![](attachments/install/download.png)](https://marketplace.mendix.com/link/studiopro/)
+{{% /image_container %}}
+
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the latest version of Mendix Studio Pro.
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/).
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -32,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
-1. Go to the Studio Pro download page in the [Mendix Marketplace](https://appstore.home.mendix.com/link/modeler/).
+1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2.  Click the **Download** button in the top-right corner to download the latest Mendix Studio Pro.
 
 
@@ -78,7 +82,7 @@ The prerequisites are the following:
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe)
-* [Mendix Native Mobile Builder](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
+* [Mendix Native Mobile Builder one-click Installer](https://artifacts.rnd.mendix.com/native-builders/latest.exe)
 
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.

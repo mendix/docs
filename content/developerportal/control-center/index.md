@@ -47,7 +47,7 @@ On the **Active App Projects** tab of this page, you can see a list of the activ
 When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
 
 * **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](../collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
+* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
 * **Project Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
 When you select one or more apps via the check boxes on the **Active App Projects** or **Deactivated App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.

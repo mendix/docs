@@ -25,7 +25,7 @@ When enabled, **App Explorer** automatically highlights the document that is cur
 
 The **Logic Bot** tab contains the following settings:
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](mx-assist-logic-bot) is activated and can give you suggestions for microflow activities.
+* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](mx-assist-logic-bot) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
 * **Show Suggestions for System Variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like currentUser or currentSession).
 
 #### 2.2.2 Performance Bot

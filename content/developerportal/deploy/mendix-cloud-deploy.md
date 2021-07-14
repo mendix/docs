@@ -129,7 +129,7 @@ An app can also be deployed without using Studio Pro. To do this, follow these s
 
 The package will now be deployed to the cloud.
 
-## 4 Deploy the App to an Environment
+## 4 Deploy the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 
@@ -196,17 +196,17 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 |Standard|||||||
-| XS | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XS21 | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 |Premium|||||||
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
-| XXL | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
 
  The cloud resource packs below are still being used but are not available to new customers.
 

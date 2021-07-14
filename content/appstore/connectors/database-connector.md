@@ -89,4 +89,4 @@ If you intend to connect to SQL Server using integrated security, please be awar
 
 ## 7 Read More
 
-* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)
+* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)

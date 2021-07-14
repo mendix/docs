@@ -51,7 +51,7 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-menu.png){{% /image_container %}}
+![View menu](attachments/progressive-web-app/view-menu.png)
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
@@ -119,20 +119,51 @@ For more information on the available properties in the web app manifest, read t
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
-For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings#2-session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
+For more information on sessions and how to customize the timeout, see the [Session Duration](tricky-custom-runtime-settings#session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
 
 ## 6 Accessing Device Features
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
+This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
+
+| Feature | Chrome/Edge | Firefox | Safari |
+|---------|-----------|-------|------|
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ✓ | ✓ | 🔒 |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | 🔒 | ✗ | 🔒 |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | 🔒 | 🔒 | ✗ |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | 🔒 | 🔒 | ✗ |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ✓ | ✓ | ✗ |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ✓ | ✓ | ✓ |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | 🔒 | ✗ | ✗ |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ✓ | ✓ | ✓ |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | 🔒 | 🔒 | 🔒 |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ✓ | ✗ | ✗ |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | 🔒 | 🔒 | 🔒 |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ✓ | ✓ | ✗ |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ✓ | ✗ | ✗ |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ✓ | ✓ | ✗ |
+
+**Legend** — The symbols above correspond to the following definitions:
+
+* ✓ Fully compatible
+* 🔒 Compatible only when using HTTPS protocol
+* ✗ Not compatible
+
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
+
+{{% alert type="info" %}}
+In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
+{{% /alert %}}
 
 ## 7 Deciding Between a PWA or Native Mobile App
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert type="info" %}}
-Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.
+Important limitation: Apple does not support push notifications for PWAs on iOS.
+
+Currently, it is not possible to create a fully offline-first PWA for iOS — adding that support is part of our 2022 roadmap.
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:

@@ -27,6 +27,18 @@ To create a cluster in your OpenShift context, you need the following:
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
+### 2.1 Connected Environments{#prerequisites-connected}
+
+Should you consider using a connected environment, the following URLs should be *whitelisted* in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
+
+| URL | Description |
+|-----|-------------|
+| https://interactor-bridge.private-cloud.api.mendix.com | Websocket based main communication API |
+| https://privatecloud.mendixcloud.com | Registry for downloading MDA artifacts |
+| https://private-cloud.registry.mendix.com | Docker registry for downloading Runtime base images |
+| https://cdn.mendix.com | Registry for downloading placeholder MDA artifacts |
+| https://subscription-api.mendix.com | Service to verify call-home licence |
+
 ## 3 Creating a Cluster & Namespace
 
 ### 3.1 Creating a Cluster
@@ -88,6 +100,8 @@ To add a namespace, do the following:
 4. Click **Done** to create the namespace.
 
 ![](attachments/private-cloud-cluster/add-namespace.png)
+
+{{% alert type="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
 ## 4. Installing and Configuring the Mendix Operator
 
@@ -195,6 +209,14 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 6. Click **Exit Installer** to finish.
 
 The Mendix operator and Mendix Gateway Agent are now installed on your platform.
+
+{{% alert type="info" %}}
+If you have selected the **Connected Mode** which installs the **Mendix Gateway Agent** component, please take note of the following:
+
+* All the Websocket connections (to communicate with the Mendix Platform) are initiated by the Mendix Gateway Agent from the cluster, and said connections do not require any listening ports to be opened in the cluster's firewall.
+
+* All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
+{{% /alert %}}
 
 #### 4.3.2 Configure Namespace{#configure-namespace}
 
@@ -693,7 +715,7 @@ You can host the default Mendix components in your own registry, for example if 
 
 For **OpenShift 3** and **OpenShift 4** registries, the default image pull credentials from the `default` ServiceAccount will be used. No additional configuration steps are required to enable image pulls in OpenShift.
 
-For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount - no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
+For **Generic registry…** options, the configuration script will ask if the credentials should be added to `imagePullSecrets` in the `default` ServiceAccount. If you answer **Yes**, the configuration script will add image pull credentials to the `default` ServiceAccount – no additional image pull configuration is required. If you want to configure the image pull separately, choose **No**.
 
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
@@ -810,7 +832,7 @@ When the namespace is configured correctly, its status will become **Connected**
 
 ![](attachments/private-cloud-cluster/image22.png)
 
-## 5 Advanced Operator configuration
+## 5 Advanced Operator Configuration
 
 Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
@@ -835,7 +857,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. We recommend that you make a backup before applying any changes.
 {{% /alert %}}
 
-### 5.1 Endpoint (network) configuration
+### 5.1 Endpoint (network) Configuration{#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:
 
@@ -847,8 +869,14 @@ kind: OperatorConfiguration
 spec:
   # Endpoint (Network) configuration
   endpoint:
-    # Endpoint type: ingress or openshiftRoute
+    # Endpoint type: ingress, openshiftRoute or service
     type: ingress
+    # Optional, can be omitted: Service annotations
+    serviceAnnotations:
+      # example: custom AWS CLB configuration
+      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:account:certificate/id
+      service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
     # Ingress configuration: used only when type is set to ingress
     ingress:
       # Optional, can be omitted: annotations which should be applied to all Ingress Resources
@@ -870,6 +898,12 @@ spec:
       # Optional: name of a kubernetes.io/tls secret containing the TLS certificate
       # This example is a template which lets cert-manager to generate a unique certificate for each app
       tlsSecretName: '{{.Name}}-tls'
+      # Optional: specify the Ingress class name
+      ingressClassName: alb
+      # Optional, can be omitted : specify the Ingress path
+      path: "/"
+      # Optional, can be omitted : specify the Ingress pathType
+      pathType: ImplementationSpecific
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -880,7 +914,7 @@ kind: OperatorConfiguration
 spec:
   # Endpoint (Network) configuration
   endpoint:
-    # Endpoint type: ingress or openshiftRoute
+    # Endpoint type: ingress, openshiftRoute, or service
     type: openshiftRoute
     # OpenShift Route configuration: used only when type is set to openshiftRoute
     openshiftRoute:
@@ -897,22 +931,52 @@ spec:
       tlsSecretName: 'mendixapps-tls'
 ```
 
+When using **Services** for network endpoints (without an Ingress or OpenShift route):
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Endpoint (Network) configuration
+  endpoint:
+    # Endpoint type: ingress, openshiftRoute, or service
+    type: service
+    # Optional, can be omitted: the Service type
+    serviceType: LoadBalancer
+    # Optional, can be omitted: Service annotations
+    serviceAnnotations:
+      # example: annotations required for AWS NLB
+      service.beta.kubernetes.io/aws-load-balancer-type: external
+      service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+      service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+    # Optional, can be omitted: Service ports
+    servicePorts:
+      - 80
+      - 443
+```
+
 You can change the following options:
 
-* **type**: – select the Endpoint type, possible options are `ingress` and `openshiftRoute`; this parameter is also configured through the **Reconfiguration Script**
+* **type**: – select the Endpoint type, possible options are `ingress`, `openshiftRoute` and `service`; this parameter is also configured through the **Configuration Tool**
 * **ingress**: - specify the Ingress configuration, required when **type** is set to `ingress`
 * **openshiftRoute**: - specify the OpenShift Route configuration, required when **type** is set to `openshiftRoute`
-* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations
+* **annotations**: - optional, can be used to specify the Ingress or OpenShift Route annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
+* **serviceAnnotations**: - optional, can be used to specify the Service annotations, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app, and {{.Domain}} will be replaced with the application's domain name
+* **ingressClassName**: - optional, can be used to specify the Ingress Class name
+* **path**: - optional, can be used to specify the Ingress path; default value is `/`
+* **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
 * **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
 * **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
-* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the `MendixApp` CR; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+* **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
+* **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
+* **servicePorts**: - can be used to specify a list of custom ports for the Service; if not specified, Services will use be created with port `8080`
 
 
 {{% alert type="info" %}}
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### 5.2 Mendix app Deployment settings{#advanced-deployment-settings}
+### 5.2 Mendix App Deployment settings{#advanced-deployment-settings}
 
 The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
 
@@ -931,7 +995,225 @@ spec:
 You can change the following options:
 
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
-* **runtimeDeploymentPodAnnotations**: - specify default annotations for Mendix app Pods
+* **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
+
+### 5.3 Mendix app resource customization{#advanced-resource-customization}
+
+The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
+
+The Deployment object as a name in the following format:
+```
+<internal environment name>-master
+```
+
+Below is an example of the Deployment definition of an app. In this example, the Deployment definition is called `b8nn6lq5-master`:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 0
+  # ...
+  # omitted lines for brevity
+  # ...
+  template:
+    metadata:
+      # ...
+      # omitted lines for brevity
+      # ...
+      creationTimestamp: null
+      labels:
+        app: b8nn6lq5
+        component: mendix-app
+        node-type: master
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - env:
+        - name: M2EE_ADMIN_LISTEN_ADDRESSES
+          value: 127.0.0.1
+        - name: M2EE_ADMIN_PORT
+          value: "9000"
+        - name: M2EE_ADMIN_PASS
+          valueFrom:
+            secretKeyRef:
+              key: adminpassword
+              name: b8nn6lq5-m2ee
+        image: image-registry.openshift-image-registry.svc:5000/test-app/b8nn6lq5
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+          name: mendix-app
+          protocol: TCP
+        name: mendix
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+          path: /
+          port: mendix-app
+          scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: mendix-app
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 1
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+# ...
+# omitted lines for brevity
+# ...
+```
+
+#### 5.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+
+The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
+
+The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
+
+{{% alert type="warning" %}}
+The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
+{{% /alert %}}
+
+Let us now analyze the `liveness probe` section from the application deployment example, above:
+
+```yaml
+livenessProbe:
+  failureThreshold: 3
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  initialDelaySeconds: 60
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 1
+```
+
+The following fields can be configured:
+
+* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
+* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
+* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
+
+{{% alert type="info" %}}
+If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
+{{% /alert %}}
+
+#### 5.3.2 Customize Container Resources: Memory and CPU
+
+Let us now analyze the `resources` section from the example application deployment, above:
+
+```yaml
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 512Mi
+```
+
+This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
+
+The settings in the example above mean that
+
+* the container will always receive at least the resources set in `requests`
+* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
+* a container will never be granted more than its resource `limits`
+
+##### 5.3.2.1 Meaning of CPU
+
+Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
+
+Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
+
+A precision finer than 1m is not allowed.
+
+##### 5.3.2.2 Meaning of Memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
+
+For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
+
+{{% alert type="warning" %}}
+Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
+{{% /alert %}}
+
+#### 5.3.3 Resource Definition via Operator Configuration Manifest
+
+For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  sidecarResources:
+    limits:
+      cpu: 250m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  metricsSidecarResources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  buildResources:
+    limits:
+      cpu: '1'
+      memory: 256Mi
+    requests:
+      cpu: 250m
+      memory: 64Mi
+  runtimeResources:
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+  runtimeLivenessProbe:
+    initialDelaySeconds: 60
+    periodSeconds: 15
+  runtimeReadinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 1
+```
+
+The following fields can be configured:
+
+* `Liveness` and `readiness` probes  – these are used for all Mendix app deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource
+* `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
+* `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
+* `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
+* `buildResources`  – this is used for the main container in `*-build` pods
 
 ## 6 Cluster and Namespace Management
 
@@ -988,6 +1270,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Operate
 * Plans
 * Installation
+* Additional information
 
 See the sections below for more information.
 
@@ -1026,7 +1309,7 @@ You can also see an activity log containing the following information for all na
 
 #### 6.2.1 Apps
 
-The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
+The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
 ![](attachments/private-cloud-cluster/image27.png)
 
@@ -1034,6 +1317,29 @@ If you are a team member of the app, click **Details** to go to the *Environment
 
 {{% alert type="info" %}}
 You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
+{{% /alert %}}
+
+If you are a cluster administrator, you can also click **Configure** to configure the environment by adding annotations for pods, ingress, and service.
+
+##### 6.2.1.1 Configure Environment
+
+You can add, edit, and delete annotations for your environment.
+
+{{% alert type="info" %}}
+You need to have the Mendix Operator version 1.12.0 or above installed in your namespace to configure all the available annotations. You need version 1.11.0 to use pod annotations.
+{{% /alert %}}
+
+To add a new annotation, do the following.
+
+1. Click **Add**.
+2. Choose the **Annotation type** from the dropdown.
+3. Enter the **Key** and the **Value** for the annotation.
+4. Click **Save**.
+
+You can also **Edit** or **Delete** an existing annotation by selecting it and clicking the appropriate button.
+
+{{% alert type="warning" %}}
+The new value for the annotation will only be applied when the application is restarted.
 {{% /alert %}}
 
 #### 6.2.2 Members
@@ -1142,6 +1448,10 @@ The **Installation** tab shows you the Configuration Tool which you used to crea
 You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
 
 You can also download the Configuration Tool again, if you wish.
+
+#### 6.2.6 Additional Information
+
+This tab shows information on the versions of the various components installed in your namespace.
 
 ## 7 Current Limitations
 

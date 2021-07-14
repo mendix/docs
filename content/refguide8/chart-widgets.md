@@ -5,6 +5,10 @@ menu_order: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/chart-widgets.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Chart widgets allow you to display data series visually on your app pages in a wide range of charts.

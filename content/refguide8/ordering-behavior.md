@@ -9,17 +9,17 @@ menu_order: 20
 
 An `ORDER BY` clause allows you to specify the order in which rows appear in the result set. For instance, sorting on a column in a data grid sorts the data of the column in either ascending (smallest value first) or descending (largest value first) order. The default order is ascending.
 
-However, in certain cases, the behavior is slightly different, either due to the nature of the use case or due to the database engine itself.
+However, in certain cases, the behavior is slightly different, either due to the use case or the database engine itself.
 
 ## 2 Reference Sets Order Behavior
 
-When a column is used to display an attribute from an entity associated by a Many-to-Many association, the sorting will rely on the SQL `MIN()` function to determine the `MIN(attribute)` values and use those instead of the displayed text.
+When a column is used to display an attribute from an entity associated by a many-to-many association, the sorting will rely on the SQL `MIN()` function to determine the `MIN(attribute)` values and use those instead of the displayed text.
 
-Below is an example that uses two entities `Order` and `Product` that have a Many-to-Many association. The _Product Names_ column in the Data Grid displays for each order the names of the products that are associated to it.
+Below is an example that uses the `Order` and `Product` entities, which have a many-to-many association. The **Product Names** column in the data grid displays for each order the names of the products that are associated to it:
 
 ![](attachments/runtime/sorting-reference-sets.png)
 
-Sorting the _Product Names_ column will use the underlined values and not the displayed text! These values are the result of `MIN(productName)` for each Order.
+Sorting the **Product Names** column will use the underlined values and not the displayed text. These values are the result of `MIN(productName)` for each Order.
 
 ## 3 NULL Values Order Behavior {#null-ordering-behavior}
 

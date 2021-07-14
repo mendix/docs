@@ -38,7 +38,7 @@ Click on the name of the file in the overview to see the description of the docu
 
 ![](attachments/documents/document-details.png)
 
-On the **Document details** page, you can perform the following actions:
+On the **Document Details** page, you can perform the following actions:
 
 * **Download** the document
 * **Upload new version** of the document
@@ -46,7 +46,7 @@ On the **Document details** page, you can perform the following actions:
 
 ### 2.4 New Version
 
-To upload a new version of a document, go to the **Document details** page and click **New version**.
+To upload a new version of a document, go to the **Document Details** page and click **Upload new version**.
 
 ## 3 Read More
 

@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We updated the look and feel of the [Documents page](/developerportal/collaborate/documents).
+* We updated the look and feel of the [Documents](/developerportal/collaborate/documents) page.
 
 ### June 30th, 2021
 

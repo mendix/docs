@@ -98,12 +98,12 @@ Using your freshly updated login credentials, you are ready to start managing yo
 
 ### 3.1 Introduction
 
-The Administration module is shipped with all Mendix Project Themes that can be used for new App creation. The module contains administration functionalities to manage App Users and to see App statistics like runtime information, sessions and schedules events.
+The Administration module, which is included in every new blank app, contains administration functionality to manage App Users and to see App statistics like runtime information, sessions and schedules events.
 
 The administration module allows the following functions:
 
 * Management of User Accounts
-* Read-only overview of
+* Read-only overview of:
     * all active sessions
     * all schedules events
     * all runtime instances
@@ -153,7 +153,9 @@ Change the user properties where necessary and click **Save**.
 
 #### 3.3.3 Creating or Editing Web Service Users
 
-The User Management Overview also allows you to create *Web Service Users*. These connect your Mendix App with other (Mendix) apps [when publishing Web Services](/refguide/published-web-services). In some cases, to access services, other apps may need to authenticate themselves with your Mendix App. You can use this option to create dedicated accounts for each user of your Mendix App’s *Web Services*.
+To access web services published by your app, other apps may need to authenticate themselves with your Mendix App. 
+
+The User Management Overview allows you to create *Web Service Users*. These are users which do not log into your app, but allow other (Mendix) apps to connect to your Mendix App [when publishing Web Services](/refguide/published-web-services). You can create dedicated a web service user account for each consumer of your Mendix App’s *Web Services*.
 
 ![](attachments/managing-local-users-after-deployment/new-web-service-user.png)
 

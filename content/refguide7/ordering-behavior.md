@@ -1,5 +1,5 @@
 ---
-title: "Order by Behavior"
+title: "Order By Behavior"
 parent: "data-storage"
 menu_order: 20
 ---

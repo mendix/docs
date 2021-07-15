@@ -18,11 +18,12 @@ This is a one-time admin activity required to be run just after deployment of th
 
 To perform a user migration, you need the following prerequisites:
 
-* a copy of the [User Migration]() module imported into your – see the instructions in [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) for more details
-* an existing user management module using an entity with the generalization `System.User`
-* a new user management module which also uses an entity with the generalization `System.User`
-* add all attributes and associations that you want to migrate to the Domain Model of the new user management module
-* add the microflow `StartMigrationWizard` in the **USE_ME** section of the **UserMigration** module to the navigation or pages which can be accessed by administrators of the app
+* A copy of the User Migration module imported into your app – see the instructions in [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) for more details
+* An existing user management module using an entity with the generalization `System.User`
+* A new user management module which also uses an entity with the generalization `System.User`
+* Add all attributes and associations that you want to migrate to the Domain Model of the new user management module
+* Add the microflow `StartMigrationWizard` in the **USE_ME** section of the **UserMigration** module to the navigation or pages which can be accessed by administrators of the app
+
     ![Graphical user interface, text, application Description automatically generated](attachments/user-migration-module/image1.png)
 
 ## 3 Migrating Users

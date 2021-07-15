@@ -146,9 +146,9 @@ This table lists the most used device features and APIs, and also documents thei
 
 **Legend** — The symbols above correspond to the following definitions:
 
-* ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) Fully compatible
-* ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) Compatible only when using HTTPS protocol
-* ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) Not compatible
+* Fully compatible: ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg)
+* Compatible only when using HTTPS protocol: ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg)
+* Not compatible: ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg)
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 

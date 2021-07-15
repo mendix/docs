@@ -24,8 +24,12 @@ Button widgets perform an action when clicked. They can be rendered as a button 
   * Link button
   * Close page button
   * Delete button
+  * Call workflow button
+	* Complete user task button
+  * Show user task page button
+  * Show workflow admin page button
   * Synchronize button
-	![Preconfigured Buttons](attachments/button-widgets/preconfigured-action-button.png)
+  ![Preconfigured Buttons](attachments/button-widgets/preconfigured-action-button.png)
   
 * **Drop-Down Button** – shows a list of items, an action is performed when one of the items is clicked. A pop-up window with a list of possible actions appears when an end-user clicks a drop-down button:
 

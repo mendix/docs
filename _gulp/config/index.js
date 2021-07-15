@@ -34,11 +34,6 @@ const PATHS = {
             'content/**/*.png',
             'content/**/*.jpg'
         ]
-    },
-    redirect_mappings: {
-        src: path.join(CURRENTFOLDER, ASSETSFOLDER, 'mappings/redirect.js'),
-        dest: path.join(CURRENTFOLDER, DIST_FOLDER, 'mappings/redirect.map'),
-        contentFolder: 'content'
     }
 }
 

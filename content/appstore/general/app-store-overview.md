@@ -25,16 +25,16 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-<a name="catalog"></a>It also presents various content catalogs:
+<a name="catalog"></a>It also presents various content categories:
 
 | Catalog | Description |
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
-| [Widgets](/appstore/widgets/) | Single user-interface elements that can be configured, such as containers, drop-down menus, and buttons. |
-| [Connectors](/appstore/connectors/) | Connectors can be used to connect your Mendix app with other systems.  |
-| [Modules](/appstore/modules/) | These elements enable new functionality with accompanying domain models and security options. |
+| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
+| [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
-| **Solutions** | Fully-formed solutions for your apps. |
+| **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
 
 The following filter options are also available:
 
@@ -59,7 +59,6 @@ The header for each component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-	
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -255,7 +254,51 @@ On this tab, you can enter a **Name** and **Description** for the user group.
 
 To delete a group, a Mendix Admin can click **Delete Group**.
 
-## 6 Read More
+## 6 Service Management Dashboard {#service-management}
+
+To use an app service in your app, you need binding keys. You can create and manage these keys on the **Service Management** dashboard.
+
+### 6.1 Creating Binding Keys
+
+To create binding keys, go to the **Service Management** dashboard via the link provided in your subscription confirmation email, select a **Product**, and click **Generate Keys** at the bottom of the page:
+
+![](attachments/app-store-overview/binding-keys-1.png)
+
+In the **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name for the connection:
+
+![](attachments/app-store-overview/binding-keys-2.png)
+
+After you click **Create Keys**, a page will appear with your keys – **clientID**, **TokenURL**, and **clientSecret**:
+
+![](attachments/app-store-overview/binding-keys-3.png)
+
+Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
+
+{{% alert type="warning" %}}
+Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
+{{% /alert %}}
+
+To use the binding keys, see the [Using the Binding Keys](#using) section below.
+
+Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
+
+![](attachments/app-store-overview/binding-keys-4.png)
+
+You can also highlight a product and click **Manage** to go to the app service provider's configuration page, where you can do further app service-specific configuration:
+
+![](attachments/app-store-overview/binding-keys-5.png)
+
+{{% alert type="info" %}}
+This additional management option is only available for specific app services where necessary.
+{{% /alert %}}
+
+### 6.2 Using the Binding Keys {#using}
+
+When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+
+## 7 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
 * [How to Share Marketplace Content](share-app-store-content)

@@ -10,7 +10,7 @@ tags: ["studio", "domain model"]
 
 ## 1 Introduction
 
-The Mendix project consists of *modules*. A module is a unit that divides functionality of your project into separate parts. By default, you have one module in Studio called MyFirstModule. 
+The Mendix app consists of *modules*. A module is a unit that divides functionality of your app into separate parts. By default, you have one module in Studio called MyFirstModule. 
 
 Each module has its own *domain model*. The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. 
 

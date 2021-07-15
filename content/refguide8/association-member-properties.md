@@ -5,6 +5,10 @@ menu_order: 15
 tags: ["domain model", "association", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-member-properties.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 There are two ways to edit the properties of an [association](associations). This document describes the properties you can edit from the **Associations** tab in the entity properties. If you want to edit the association as described in [Association Properties](association-properties), you can click **Edit** to open the association properties dialog.

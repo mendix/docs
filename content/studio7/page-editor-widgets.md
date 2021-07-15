@@ -69,8 +69,8 @@ Widgets in Studio can be divided by origin as shown in the table below:
 
 | Type              | Description                                                  | Origin                                                       |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Default widgets   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/). |
-| Marketplace widgets | Widgets that are you can download to your project directly from Studio. Some Marketplace widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/)                     |
+| Default widgets   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](/developerportal/index). |
+| Marketplace widgets | Widgets that are you can download to your app directly from Studio. Some Marketplace widgets are already in your app as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/)                     |
 | Local widgets     | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto7/widget-development/) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see section [3 Widgets by Category](#widget-categories). | Apps created in the  Developer Portal/Studio Pro        |
 
 ## 6 Adding the Marketplace Widgets
@@ -92,11 +92,11 @@ To add a Marketplace widget, do the following:
 
     ![](attachments/page-editor-widgets/slider.png)
 
-3.  Click the cloud icon to download the widget and add it to your project.
+3.  Click the cloud icon to download the widget and add it to your app.
 
     ![](attachments/page-editor-widgets/app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](settings).
+The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](settings).
 
 {{% alert type="info" %}}
 

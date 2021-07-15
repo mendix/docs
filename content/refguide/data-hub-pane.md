@@ -102,11 +102,11 @@ The search results and **Project** pane will show the following at a service lev
   * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
 
-*  **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
+* **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
-	{{% image_container width="250" %}}![Data Hub Pane update](attachments/data-hub-pane/project-pane-update-available.png){{% /image_container %}}
+    {{% image_container width="250" %}}![Data Hub Pane update](attachments/data-hub-pane/project-pane-update-available.png){{% /image_container %}}
 
-	{{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** arrow. {{% /alert %}}
+    {{% alert type="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** arrow. {{% /alert %}}
 
   {{% alert type="info" %}}The version number that is shown for the OData service is the latest one that is available in the Data Hub Catalog at the service endpoint—in the example above version 1.0.0 of **BikeVehicleService** is currently consumed in the app, but the contract that is available in the Catalog is different to the one currently consumed.{{% /alert %}}
 
@@ -125,6 +125,7 @@ For any service in the list, you can click **:Show details** to see the full lis
 {{% image_container width="250" %}}![Data Hub Pane Information](attachments/data-hub-pane/expand-service-list.png){{% /image_container %}}
 
 ### 4.2.1 Entity
+
 If you right-click an entity and select **View in Data Hub Catalog**, it will take you to the entity details page in the [Data Hub Catalog](/data-hub/data-hub-catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
@@ -133,7 +134,7 @@ If you right-click a consumed entity and **Go to entity**, it will take you to t
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
-**Mulitple association**s between the same entities are shown before single associations.
+**Mulitiple association**s between the same entities are shown before single associations.
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your model"
 
@@ -147,7 +148,7 @@ In the above example, there are two attributes, **Addresses** and **FavoriteColo
 
 {{% image_container width="300" %}}![multiple associations](attachments/data-hub-pane/unsupported-attributes.png){{% /image_container %}}
 
-##  5 Read More
+## 5 Read More
 
 * [Data Hub Catalog](/data-hub/data-hub-catalog)
 * [External Entities](external-entities)

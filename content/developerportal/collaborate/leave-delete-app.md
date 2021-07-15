@@ -63,4 +63,4 @@ If you are the only team member of an app, you can also delete it directly from 
 ## 5 Read More
 
 * [How to Manage General Settings](general-settings)
-* [App Roles](../collaborate/app-roles)
+* [App Roles](/developerportal/collaborate/app-roles)

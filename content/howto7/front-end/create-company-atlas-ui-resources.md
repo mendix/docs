@@ -19,7 +19,7 @@ Creating Atlas UI resources for your company is a great way to keep your company
 
 The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in the Mendix Desktop Modeler.
 
-In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local project and in the **UI Resources** module.
+In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local app and in the **UI Resources** module.
 
 ### 2.1 Example Scenario
 
@@ -101,5 +101,5 @@ The module can now be imported in other apps or uploaded to the [Mendix Marketpl
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)

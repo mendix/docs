@@ -49,29 +49,31 @@ Widgets of Studio are divided into categories that you can see when you open the
 
 Widget categories are described in the table below:
 
-| Widget Category                                          | Description                                                  |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| Data Containers                                          | Contains a [data view](page-editor-data-view-list-view) (the starting point for showing the contents of one object),  [list view](page-editor-data-view-list-view) (the starting point for showing the contents of list of objects), and a [data grid](page-editor-data-grid) (shows a list of objects in a table format). |
-| [Structure](page-editor-widgets-structure)               | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
-| [Input Elements](page-editor-widgets-input-elements)     | Contains elements that can be used for inputting data.       |
-| [Text](page-editor-widgets-text)                         | Contains text display widgets.                               |
+| Widget Category                                        | Description                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| Data Containers                                        | Contains a [data view](page-editor-data-view-list-view) (the starting point for showing the contents of one object),  [list view](page-editor-data-view-list-view) (the starting point for showing the contents of list of objects), and a [data grid](page-editor-data-grid) (shows a list of objects in a table format). |
+| [Structure](page-editor-widgets-structure)             | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
+| [Input Elements](page-editor-widgets-input-elements)   | Contains elements that can be used for inputting data.       |
+| [Text](page-editor-widgets-text)                       | Contains text display widgets.                               |
 | [Images & Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. |
-| [Buttons](page-editor-widgets-buttons)                   | Contains a variety of buttons for placing on a page.         |
-| [Menus](/refguide/menu-widgets)                          | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
-| Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
-| Charts                                                   | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
-| Display                                                  | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |
-| List view Controls                                       | Contains controls for the list view. This category consist of the [Marketplace widgets](#app-store-widgets). |
+| [Buttons](page-editor-widgets-buttons)                 | Contains buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link. |
+| [Data Buttons](page-editor-widgets-buttons)            | Contains buttons that manipulate data and are used to create or delete an object, save or cancel changes. |
+| [Workflow Buttons](page-editor-widgets-buttons)        | Contains buttons that are related to [workflows](workflows) and are used to call  a workflow, complete or show a [user task](workflows-user-task), show a workflow page. |
+| [Menus](/refguide/menu-widgets)                        | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
+| Add-ons                                                | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
+| Charts                                                 | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
+| Display                                                | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |
+| List view Controls                                     | Contains controls for the list view. This category consist of the [Marketplace widgets](#app-store-widgets). |
 
 ## 5 Widgets by Origin {#widgets-by-origin}
 
 Widgets in Studio can be divided by origin as shown in the table below:
 
-| Type                                              | Description                                                  | Origin                                                       |
-| ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Default widgets                                   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/)) |
-| Marketplace widgets<a name="app-store-widgets"></a> | Widgets that are you can download to your project directly from Studio. Some Marketplace widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/index)                     |
-| Local widgets                                     | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Build pluggable web widgets](/howto/extensibility/pluggable-widgets) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
+| Type                                                | Description                                                  | Origin                                                       |
+| --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Default widgets                                     | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](/developerportal/index)) |
+| Marketplace widgets<a name="app-store-widgets"></a> | Widgets that you can download to your app directly from Studio. Some Marketplace widgets are already in your app as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/index)                               |
+| Local widgets                                       | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Build pluggable web widgets](/howto/extensibility/pluggable-widgets) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
 
 ## 6 Adding the Marketplace Widgets
 
@@ -92,11 +94,11 @@ To add an Marketplace widget, do the following:
 
     ![](attachments/page-editor-widgets/slider.png)
 
-3.  Click the cloud icon to download the widget and add it to your project.
+3.  Click the cloud icon to download the widget and add it to your app.
 
     ![](attachments/page-editor-widgets/app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](settings).
+The widget is now added to your app, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](settings).
 
 {{% alert type="info" %}}
 

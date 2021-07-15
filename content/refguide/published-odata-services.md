@@ -1,6 +1,7 @@
 ---
 title: "Published OData Services"
 parent: "integration"
+menu_order: 10
 tags: ["studio pro"]
 aliases:
     - /refguide/consumed-odata-services.html
@@ -50,14 +51,6 @@ You can select how you want to represent associations. For more information, see
 You can configure security for the OData service when [App Security](project-security) is enabled.
 
 #### 3.2.1 Requires Authentication {#authentication}
-
-{{% alert type="info" %}}
-
-The **No Authentication** feature was introduced in version 8.0.0. In earlier versions, it was always **Username and password**.
-
-The **Active Session** and **Custom** authentications were also introduced in version 8.0.0.
-
-{{% /alert %}}
 
 Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
 

@@ -6,6 +6,10 @@ menu_order: 10
 tags: ["Studio Pro", "view menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/edit-menu.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](preferences-dialog) dialog that contains user-specific settings. 

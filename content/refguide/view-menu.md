@@ -126,18 +126,19 @@ The **Breakpoints** pane shows all the breakpoints in your app. You can enable a
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables
+#### 3.11.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
 ### 3.12 Full Screen {#full-screen}
 
-The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
+The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
+
 Shortcut key: <kbd>F11</kbd>
 
 ### 3.13 Distraction Free Mode {#distraction-free}
 
-The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830).
+The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 

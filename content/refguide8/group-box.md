@@ -6,6 +6,10 @@ tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/group-box.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}The group box widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction

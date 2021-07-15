@@ -19,7 +19,7 @@ With the Charts widgets, you can use data from a REST Service to plot graphs.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the latest Mendix desktop modeler
-* Create a project
+* Create an app
 * Import the latest [Charts Widgets](/appstore/widgets/charts) from the Mendix Marketplace
 
 ## 3 Setting up Data to be Exposed by a REST Endpoint
@@ -34,7 +34,7 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 
 {{% /alert %}}
 
-1. Create a new Module in your project.
+1. Create a new Module in your app.
 1. Rename the module to *ChartsREST*.
 1. Open the Domain model.
 1. Create **Value** and **Series** entities with the attributes and association shown in the picture below.
@@ -42,7 +42,7 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 1. Right-click **Value** and select **Generate overview pages...**.
     ![Chart Rest Enter Data](attachments/charts/charts-rest-generate-overview-pages.png)
 1. Add the **Value_NewEdit** page generated to your navigation.
-1. Run the project.
+1. Run the app.
 1. In your browser, open the NewEdit page.
 1. Add values and series by entering data in the appropriate fields.
 
@@ -72,7 +72,7 @@ To configure the REST service, follow these steps:
 
 To use the REST Data source end point in your chart, follow these steps:
 
-1. Create a page in your project containing an **Area chart** widget.
+1. Create a page in your app containing an **Area chart** widget.
 
 1. Double click the **Area chart** widget.
 

@@ -57,7 +57,7 @@ Before proceeding to the next step, you need to wait for the build of the deploy
 
 ![](attachments/implement-cicd-pipeline/04RetrievePackageStatus.png)
 
-### <a name="DeployToNextEnvironment"></a>3.3 Deploying to the Next Environment
+### 3.3 Deploying to the Next Environment {#deploying-to-the-next-environment}
 
 After building the deployment package, you can now deploy the new package to the next (Test, Acceptance, etc.) environment. To do this, use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 
@@ -116,11 +116,11 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd#four).
+ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd#ats-and-ci-cd).
 
 ### 3.5 Next Steps
 
-If you need to promote to another environment, repeat the steps in section [3.3 Deploying to the Next Environment](#DeployToNextEnvironment).
+If you need to promote to another environment, repeat the steps in [Deploying to the Next Environment](#deploying-to-the-next-environment) section.
 
 ## 4 Jenkins/VSTS Examples
 

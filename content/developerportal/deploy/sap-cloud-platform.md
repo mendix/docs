@@ -306,7 +306,7 @@ If you want to remove a service instance from your environment, you can do it is
 {{% alert type="info" %}}
 Unbinding the service through the Developer Portal will also delete the service instance from your environment.
 
-If you want to unbind the instance without deleting it, you will need to unbind it in the SAP BTP cockpit.
+If you want to unbind the instance without deleting it, you will need to unbind it in the SAP BTP cockpit. You will then need to contact Mendix Support and ask them to remove the service from the Developer Portal — the Developer Portal cannot automatically see that the service has been unbound in the SAP BTP cockpit.
 {{% /alert %}}
 
 ## 6 Transport App Between Environments{#TransportApp}

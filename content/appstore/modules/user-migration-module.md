@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "User Migration", "System.User", 
 
 {{% todo %}}[Add link to User Migration App in app store]{{% /todo %}}
 
-Use the [user Migration](https://appstore.home.mendix.com/link/app/) module to migrate users between any two User entities that have a generalization System.User. This allows you to implement a different user management module and migrate all the existing users of your app to it.
+Use the [User Migration](https://appstore.home.mendix.com/link/app/) module to migrate users between any two User entities that have a generalization System.User. This allows you to implement a different user management module and migrate all the existing users of your app to it.
 
 This is a one-time admin activity required to be run just after deployment of the application.
 

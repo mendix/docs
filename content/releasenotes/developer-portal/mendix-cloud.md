@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### July 15th, 2021
+
+#### Improvements
+
+* Mendix Cloud v4 now supports incoming connections over Internet Protocol
+  Version 6 (IPv6).
+
 ### July 5th, 2021
 
 #### Fix

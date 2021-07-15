@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "User Migration", "System.User", 
 
 {{% todo %}}[Add link to User Migration App in app store]{{% /todo %}}
 
-Use the [user Migration](https://appstore.home.mendix.com/link/app/) module to migrate users between any two User entities that have a generalization System.User. This allows you to implement a different user administration module and migrate all the existing users of your app to it.
+Use the [user Migration](https://appstore.home.mendix.com/link/app/) module to migrate users between any two User entities that have a generalization System.User. This allows you to implement a different user management module and migrate all the existing users of your app to it.
 
 This is a one-time admin activity required to be run just after deployment of the application.
 
@@ -19,31 +19,31 @@ This is a one-time admin activity required to be run just after deployment of th
 To perform a user migration, you need the following prerequisites:
 
 * a copy of the [User Migration]() module imported into your – see the instructions in [How To Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) for more details
-* an existing administration module using an entity with the generalization `System.User`
-* a new administration module which also uses an entity with the generalization `System.User`
-* add all attributes and associations that you want to migrate to the Domain Model of the new administration module
+* an existing user management module using an entity with the generalization `System.User`
+* a new user management module which also uses an entity with the generalization `System.User`
+* add all attributes and associations that you want to migrate to the Domain Model of the new user management module
 * add the microflow `StartMigrationWizard` in the **USE_ME** section of the **UserMigration** module to the navigation or pages which can be accessed by administrators of the app
     ![Graphical user interface, text, application Description automatically generated](attachments/user-migration-module/image1.png)
 
 ## 3 Migrating Users
 
 {{% alert type="info" %}}
-You should migrate your users immediately after first deploying the app containing the new administration functionality. Until you do this, your existing users will not be able to sign in to the app.
+You should migrate your users immediately after first deploying the app containing the new user management functionality. Until you do this, your existing users will not be able to sign in to the app.
 
 If you have specializations of the user entities you are migrating, you must migrated the specializations first followed by the main account entity. For example, if you have specialized your `Account` entity into `CompanyA_Account` and `CompanyB_Account`, you must migrate `CompanyA_Account` and `CompanyB_Account` into their related specializations of your new account entity (for example `CompanyA_NewAccount`) before migrating `Account`.
 {{% /alert %}}
 
-To migrate your users, you need to do the following. For the examples, assume that you are migrating users from the default Mendix user administration module, `Administration` to an SAP-specific module, `SapAuthentication`:
+To migrate your users, you need to do the following. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to an SAP-specific module, `SapAuthentication`:
 
 1. Sign in to your app with the default administrator account.
 
 2. Run the microflow *StartMigrationWizard* from wherever it has been placed in the administration functions of the app.
 
-3. Select the user entity being used by the old administration module. The dropdown list will show only entities which have a generalization of `System.User`. In our example, this is `Authentication.Account`.
+3. Select the user entity being used by the old user management module. The dropdown list will show only entities which have a generalization of `System.User`. In our example, this is `Authentication.Account`.
 
     ![](attachments/user-migration-module/image2.png)
 
-4. Select the user entity being used by the new administration module. In our example, this is `SapAuthentication.SapUser`.
+4. Select the user entity being used by the new user management module. In our example, this is `SapAuthentication.SapUser`.
 
 5. Click **Map according to names** to map attributes with the same names. This means, for example, that data in the `Email` attribute in `Authentication.Account` will be migrated to the `Email` attribute in `SapAuthentication.SapUser`.
 
@@ -57,7 +57,7 @@ To migrate your users, you need to do the following. For the examples, assume th
 
 8. Click **Edit** next to set up any associations from the old entity that you want to migrate to the new entity.
 
-    {{% alert type="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new administration module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
+    {{% alert type="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new user management module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
 
     ![](attachments/user-migration-module/image4.png)
 
@@ -71,4 +71,4 @@ To migrate your users, you need to do the following. For the examples, assume th
 
 11. Click **Migrate**.
 
-Your users have now been migrated to the new administration module and can sign in using their existing credentials.
+Your users have now been migrated to the new user management module and can sign in using their existing credentials.

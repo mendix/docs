@@ -35,9 +35,13 @@ An entity can only be used when it is accessible through an entity set.
 
 Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
 
-* The properties cannot be nullable (so they must have `isNullable="false"` specified)
-* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
-* If the type is `String`, a `MaxLength` must be specified
+* The properties cannot be nullable (so they must have `isNullable="false"` specified).
+* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`.
+* If the type of a key property is `String`, it must have a limited  (maximum) length specified. This is because not all databases support indexes on strings of unlimited length. It is sufficient if  a `MaxLength` is specified in the contract. However, if a `MaxLength` is not specified in the contract, and you know that the string is limited in length, you can still use the entity by specifying the maximum length of the attribute in the the domain model.
+
+{{% alert type="info" %}}
+This feature of using entities with keys that do not have a maximum length specified in the contract applies to version 9.3.0 and above. In previous versions of Studio Pro, you must change the contract to ensure that `MaxLength` is specified.
+{{% /alert %}}
 
 ### 3.2 Attributes
 
@@ -92,20 +96,12 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 ## 4 Data Hub License Limitations {#license-limitations}
 
-Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
+Mendix Data Hub is a separately licensed product.
 
-There are two types of Data Hub licenses currently available:
+Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
-* **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed.
+With a Data Hub license, apps are not limited.
 
-
-* **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
-The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
-
-  {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
-  {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a Mendix license (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}
+{{% alert type="info" %}}Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.{{% /alert %}}
 
 Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
-### 4.1 Local development
-
-Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

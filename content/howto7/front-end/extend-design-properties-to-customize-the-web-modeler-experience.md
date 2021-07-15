@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "customize", "custom", "studio"]
 
 ## 1 Introduction
 
-There is a customizable **settings.json** file for the Atlas UI that can be found in the **theme** folder of your Mendix project. 
+There is a customizable **settings.json** file for the Atlas UI that can be found in the **theme** folder of your Mendix app. 
 
 **This how-to will teach you how to do the following:**
 
@@ -18,7 +18,7 @@ There is a customizable **settings.json** file for the Atlas UI that can be foun
 
 Properties in the **Design** section of the Web Modeler allow users to change the position and styling of widgets on a page. Atlas UI contains a design properties file that can be extended with your own custom design properties.
 
-You can find the design properties in the **theme** folder > **settings.json** file of the Mendix project.
+You can find the design properties in the **theme** folder > **settings.json** file of the Mendix app.
 
 The example below shows the design properties of a `"Button"`. 
 
@@ -41,7 +41,7 @@ When you apply a new class in **settings.json** file, make sure that this class 
 
 ## 3 Changing Atlas UI to Old Mendix UI Framework 
 
-If your project's version is 7.8.0 or lower, you can change Atlas UI framework to the old Mendix UI Framework.
+If your app's version is 7.8.0 or lower, you can change Atlas UI framework to the old Mendix UI Framework.
 
 The first line in the **settings.json** file enables the resources, page templates, and building blocks that are integrated with Atlas UI, the Web Modeler, and the Desktop Modeler:
 
@@ -51,7 +51,7 @@ If this line is deleted, the old Mendix UI Framework resources will be loaded in
 
 {{% alert type="warning" %}}
 
-You can only switch to the old Mendix UI Framework following the instructions above if your project's  version is 7.8.0 or lower.
+You can only switch to the old Mendix UI Framework following the instructions above if your app's  version is 7.8.0 or lower.
 
 {{% /alert %}}
 
@@ -60,5 +60,5 @@ You can only switch to the old Mendix UI Framework following the instructions ab
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)

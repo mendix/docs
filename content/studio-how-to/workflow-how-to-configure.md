@@ -102,7 +102,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
     2. Drag and drop the button inside the list view:
 
-       ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
+        ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
 
     3. Open the button properties and set the **Workflow** property to **Employee_Onboarding**. 
 
@@ -282,7 +282,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
 1. Open the [Navigation Document](/studio/navigation), where some menu items are already preconfigured for you.
 
-2. The HR roles needs to be able to access the **EmployeesToOnboard** page. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+2. The HR roles needs to be able to access the **EmployeesToOnboard** page. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation)):
 
     1. Set its **On-Click Action** to **Page**.
 
@@ -296,7 +296,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
         ![Navigation Item for HRs](attachments/workflow-how-to-configure/navigation-hr.png)
 
-3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation):
 
     1. Set its **On-Click Action** to **Page**.
 

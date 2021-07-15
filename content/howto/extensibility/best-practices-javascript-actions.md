@@ -244,7 +244,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 	// - the import list
 	// - the code between BEGIN USER CODE and END USER CODE
 	// - the code between BEGIN EXTRA CODE and END EXTRA CODE
-	// Other code you write will be lost the next time you deploy the project.
+	// Other code you write will be lost the next time you deploy the app.
 	import { Big } from "big.js";
 	import { PDFDocument } from "pdf-lib"
 

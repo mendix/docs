@@ -5,6 +5,10 @@ tags: ["studio pro", "xpath", "xpath source", "data source"]
 menu_order: 20
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-source.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 If **XPath** is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. You can filter data with an [XPath constraint](#xpath-constraints).  

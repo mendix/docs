@@ -133,12 +133,13 @@ Everybody uses widgets from the Mendix Marketplace in their applications. And of
 We've selected the top widgets from the App Store and added support for testing with ATS.
 
 These are the new widgets now supported by ATS:
+
 * [Dropdown Div Converter](https://appstore.home.mendix.com/link/app/2089/Mendix/DropdownDivConverter)
 * [OnChange Inputbox/Textarea](https://appstore.home.mendix.com/link/app/89/Mendix/OnChange-Inputbox)
 * [Boolean Slider](https://appstore.home.mendix.com/link/app/1798/Mendix/Boolean-Slider)
 * [Simple Checkbox Set Selector](https://appstore.home.mendix.com/link/app/2349/Mendix/Simple-Checkbox-Set-Selector)
 * [Checkbox Set Selector](/appstore/widgets/check-box-set-selector)
-* [Grid Selector](/appstore/widgets/grid-selector)
+* [Grid Selector](https://marketplace.mendix.com/link/component/266)
 * [Input Reference Selector](https://appstore.home.mendix.com/link/app/99/Mendix/Input-Reference-Selector) (not supported in recording yet)
 * [CKEditor](https://appstore.home.mendix.com/link/app/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
 * [Bootstrap Wysiwyg Editor](https://appstore.home.mendix.com/link/app/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)

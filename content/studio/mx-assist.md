@@ -92,8 +92,7 @@ The activity is added to the flow.
 
 Adding a check means that you will add a **Decision** with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Decision](microflows-decision).   
 
-{{% image_container width="300" %}}![](attachments/mx-assist/check-added.png)
-{{% /image_container %}}
+![](attachments/mx-assist/check-added.png)
 
 {{% alert type="info" %}}
 

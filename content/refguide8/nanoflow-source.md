@@ -5,6 +5,10 @@ tags: ["studio pro", "nanoflow source", "data source"]
 menu_order: 50
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/nanoflow-source.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Nanoflow** data source is available for [data views](data-view) and [list views](list-view). 

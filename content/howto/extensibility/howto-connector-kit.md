@@ -77,7 +77,7 @@ As you can see, type parameters enable creating typesafe generic actions.
 
 ## 3 Executing Microflows
 
-The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
+The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every app object to initialize it:
 
 ![Init loop](attachments/how-to-connector-kit/init-loop.png)
 
@@ -159,7 +159,7 @@ while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-![Mendix Connector kit module project with tests](attachments/how-to-connector-kit/project_test.png)
+![Mendix Connector kit module app with tests](attachments/how-to-connector-kit/project_test.png)
 
 ### 5.2 Managing Libraries
 

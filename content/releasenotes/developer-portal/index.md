@@ -15,6 +15,42 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### July 14th, 2021
+
+#### Improvements
+
+* We updated the look and feel of the [Documents](/developerportal/collaborate/documents) page.
+
+### June 30th, 2021
+
+#### Improvements
+
+* You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
+* We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
+* We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
+* We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
+* We implemented a new responsive search panel.
+* We will remove the [Burndown Chart](/developerportal/collaborate/development#burndown) and [Release Plan](/developerportal/collaborate/development#release-plan) tabs from the Developer Portal on August 31st, 2021.
+
+### June 15th, 2021
+
+#### Improvements
+
+* Git is coming: we have prepared the Developer Portal for the handling of Git-supported apps.
+* We added a button to the [Stories](/developerportal/collaborate/stories) overview that allows you to [create a new label](/developerportal/collaborate/stories#new-label).
+* We made some minor changes to the look and feel across the Developer Portal.
+
+#### Fixes
+
+* We fixed a broken link to the documentation on the [Team Server](/developerportal/collaborate/team-server) page.
+
+### June 1st, 2021
+
+#### Improvements
+
+* We added a tab on the [Cloud](/developerportal/control-center#cloud) page in Control Center that displays details on **Free Environments**.
+* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/index#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+
 ### May 17th, 2021
 
 #### Improvements
@@ -50,7 +86,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We have released our new [platform navigation](/developerportal/index) solution with these main features:
-	* The **Switcher** on the left side of the top bar provides access to different parts of the Mendix Platform.
+	* The **Switch to** menu on the left side of the top bar provides access to different parts of the Mendix Platform.
 	* The top bar contains sub-navigation items (for example, **Company Buzz**).
 	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
 	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.

@@ -11,7 +11,7 @@ There are many custom settings in Mendix, most of which are described in [Runtim
 
 However, a few of the more commonly used custom settings can be misunderstood or have effects that one might not expect. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
-## 2 Session Duration
+## 2 Session Duration {#session-duration}
 
 ### 2.1 Web Client Settings
 
@@ -73,6 +73,10 @@ The settings below are used to define the database connection pooling behavior. 
 
 {{% alert type="info" %}}
 If you change these settings, you will need to restart your app to apply the changes.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 {{% /alert %}}
 
 When changing the `ConnectionPoolingMaxIdle` and `ConnectionPoolingMinIdle` settings, consider the following points:

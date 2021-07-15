@@ -84,7 +84,7 @@ You will need one license for each namespace you want to manage.
 
 You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it. You will need to provide Mendix Support with the namespace where the operator is running, they will provide you with an operator license which needs to be installed in the cluster namespace. 
 
-Without a license, you can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment.
+You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
 ### 4.2 Runtime License
 

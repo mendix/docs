@@ -17,7 +17,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
 {{% /alert %}}
 
-![](attachments/stories/stories.jpg)
+![](attachments/stories/stories.png)
 
 ## 2 Main Actions
 
@@ -53,9 +53,10 @@ Fill in the following details:
 * **Title** – the title of the story
 * **Description** – a description of the story
 * **Story type** – select whether the story describes a **Feature** or **Bug**
-* **Story points** – the size of the story
 * **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
 * **Story status** – select **To-do** (default), **Running**, or **Done**
+* **Assignee** – select a team member you wish to assign to this story
+* **Story points** – the size of the story
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
@@ -65,7 +66,18 @@ You can also create a story via the [New Story](#new-story) button for Sprint or
 
 For more information on stories, see the [Story Actions](#story-actions) section below.
 
-### 2.3 More Actions
+### 2.3 Creating a New Label {#new-label}
+
+Click **New Label** to create a new label for your app:
+
+{{% image_container width="400" %}}
+![](attachments/stories/new-label.png)
+{{% /image_container %}}
+
+* **Label caption** – the caption of the label
+* **Label color** – pick a color for easy visibility
+
+### 2.4 More Actions {#more}
 
 Click **More** to access the following options::
 
@@ -73,8 +85,9 @@ Click **More** to access the following options::
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
+* **Switch to Old UI** – opens the [old Stories UI](#old)
 
-#### 2.3.1 Importing & Exporting to Excel {#import-export}
+#### 2.4.1 Importing & Exporting to Excel {#import-export}
 
 After you click **Import / Export**, you will be asked what you want to do:
 
@@ -94,7 +107,7 @@ When editing stories in Excel, follow these guidelines:
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or one level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
-#### 2.3.2 Managing Labels {#managing-labels}
+#### 2.4.2 Managing Labels {#managing-labels}
 
 The **Manage labels** page is where you can add or remove your labels:
 
@@ -109,7 +122,7 @@ The following buttons are available:
 * **Merge Label** – enables merging the selected label into another label; all stories which have the selected label are labeled with the other label and the selected label is deleted
 * **Remove Label** – enables removing the selected label from any stories to which it has been applied; the label is then deleted
 
-#### 2.3.3 Completed Sprints {#completed-sprints}
+#### 2.4.3 Completed Sprints {#completed-sprints}
 
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
@@ -120,12 +133,12 @@ The **Completed Sprints** page presents an overview of Sprints that have been co
 The following buttons are available:
 
 * **Search** – enables searching Sprints based on their ID or title
-* **Edit** – enables editing the selected Sprint
+* **View** – view the full details of the archived Sprint
 * **View Stories** – enables viewing the stories of the selected Sprint
 * **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
-#### 2.3.4 History {#history}
+#### 2.4.4 History {#history}
 
 The **Project History** page presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
@@ -168,7 +181,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 When you click a story title, the **Story Details** page opens:
 
 {{% image_container width="500" %}}
-![](attachments/stories/story-details.jpg)
+![](attachments/stories/story-details.png)
 {{% /image_container %}}
 
 On this page, you can perform a number of actions:
@@ -176,6 +189,7 @@ On this page, you can perform a number of actions:
 * Change the **Title** or **Description** by clicking it
 * Add or remove **Labels**
 * See the story's **Status** and click to update it (available statuses are **To-do**, **Running**, and **Done**)
+* Assign a team member to work on the story
 * Change the **Story points**
 * See, add, and manage the **Tasks** of the story (you can mark them as **Done** by checking the box in front of the task)
 * Leave a **Comment** on the story to collaborate with your team
@@ -254,11 +268,11 @@ To add a new story, click **New story** and fill in some details, including what
 
 To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
-#### 6.1.3 Moving a Story{#moving-a-story}
+#### 6.1.3 Moving a Story {#moving-a-story}
 
 To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved.
 
-#### 6.1.4 Using Labels{#label}
+#### 6.1.4 Using Labels {#label}
 
 To add a label to a story or create a new label, use the options under **Label**. You can also perform various actions to [manage labels](#manage-labels).
 
@@ -274,7 +288,7 @@ Click **Complete current sprint** to complete a Sprint. Note that all stories ha
 
 For details, see the [Importing & Exporting to Excel](#import-export) section above.
 
-#### 6.2.3 Manage Labels{#manage-labels}
+#### 6.2.3 Manage Labels {#manage-labels}
 
 For details, see the [Managing Labels](#managing-labels) section above.
 
@@ -293,7 +307,7 @@ There are various actions you can perform when managing stories. These are descr
 
 Select a story and click **Details** (below the story title) to open the **Story Details** page. For more information, see the [Accessing Story Details](#story-details) section above.
 
-#### 6.3.2 Adding Tasks to a Story{#adding}
+#### 6.3.2 Adding Tasks to a Story {#adding}
 
 Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story. To add a task to the story, follow these steps:
 
@@ -303,7 +317,7 @@ Stories of the *Feature* type can be translated into tasks that need to be compl
 
 After you have completed the task, check the box.
 
-#### 6.3.3 Deleting a Story or Task{#deleting}
+#### 6.3.3 Deleting a Story or Task {#deleting}
 
 To delete a story or a task, click the trash can icon below the title of the story/task. After you confirm the deletion, the story/task will be removed from the system permanently.
 

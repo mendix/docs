@@ -18,7 +18,7 @@ The roles defined in Developer Portal for an [app](/developerportal/apps-list/) 
 
 ## 2 Team Member
 
-If you want to join an a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [App Contact](../settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
+If you want to join an a team, you have to ask a current team member (with the **Invite** permission) to send an invitation. Because team members are not visible to users outside that team, you can ask the [App Contact](/developerportal/settings/general-settings) to send the invite. This means it is important the App Contact has the correct permissions to manage the app (for example, the **Scrum Master** role).
 
 ## 3 Team Roles {#team-roles}
 
@@ -53,7 +53,7 @@ You should provide the new App Contact with the Scrum Master role. Because the A
 
 ## 5 Technical Contact {#technical-contact}
 
-The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) or various [deployment](/developerportal/deploy) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact needs an MxID before Mendix can activate a license for an application.
+The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) or various [deployment](/developerportal/deploy) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact for a Free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in the Mendix Cloud or on premises.
 

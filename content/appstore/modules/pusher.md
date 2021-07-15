@@ -51,7 +51,7 @@ To set up the necessary Pusher app, follow these steps:
 	* `cluster` – `Pusher_Cluster`
 
 {{% alert type="info" %}}
-Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](https://docs.mendix.com/refguide/configuration#constants).
+Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](/refguide/configuration#constants).
 {{% /alert %}}
 
 ## 3 Configuration

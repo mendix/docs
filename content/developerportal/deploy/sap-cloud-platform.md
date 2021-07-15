@@ -173,7 +173,14 @@ An environment is created; with more than one environment it is possible to tran
 
 ![](attachments/sap-cloud-platform/10-sap-env-tap.png)
 
-## 4 Create Package from Team Server
+## 4 Preparing Packages for Deployment
+
+There are two ways of getting a package ready to deploy to SAP.
+
+* Creating a package directly from a version of the app model held in Team Server
+* Uploading a package which has already been created
+
+### 4.1 Creating Package from Team Server
 
 At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
 
@@ -214,6 +221,24 @@ You will still have to deploy your app in the Developer Portal the very first ti
     ![](attachments/sap-cloud-platform/06-sap-build-revision.png)
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
+
+### 4.2 Uploading MDA
+
+Alternatively, you can upload an MDA which has already been created from the app model, for example using [Create Deployment Package](/refguide/create-deployment-package-dialog) from the App menu in Studio Pro.
+
+1. Click **Upload** in the **Deployment Package Repository**.
+
+2. Select the package accessible to your local machine.
+
+3. Click **Upload** to upload the MDA.
+
+    ![Upload button and dialog for uploading MDAs](attachments/sap-cloud-platform/upload-mda.png)
+
+The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
+
+{{% alert type="info" %}}
+There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+{{% /alert %}}
 
 ## 5 Deploy Package{#DeployPackage}
 
@@ -269,6 +294,20 @@ SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     ![](attachments/sap-cloud-platform/application-started.png)
+
+### 5.3 Unbinding and Deleting Service Instances
+
+If you want to remove a service instance from your environment, you can do it is follows:
+
+1. Click the three-dot menu for the service and select **Unbind Service**. This will unbind the service instance from the application *and delete the instance*.
+
+    ![](attachments/sap-cloud-platform/unbind-service.png)
+
+{{% alert type="info" %}}
+Unbinding the service through the Developer Portal will also delete the service instance from your environment.
+
+If you want to unbind the instance without deleting it, you will need to unbind it in the SAP BTP cockpit. You will then need to contact Mendix Support and ask them to remove the service from the Developer Portal — the Developer Portal cannot automatically see that the service has been unbound in the SAP BTP cockpit.
+{{% /alert %}}
 
 ## 6 Transport App Between Environments{#TransportApp}
 

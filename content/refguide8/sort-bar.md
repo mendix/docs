@@ -20,7 +20,9 @@ The sort bar contains sort items. Each sort item specifies what attribute to sor
 
 If you do not specify any sort items, the objects will appear in the order in which they were created.
 
-For default ordering behavior of NULL values, refer to [NULL Order Behavior](null-ordering-behavior).
+{{% alert type="info" %}}
+There are special cases for ordering behavior. For more details, see [Order By Behavior](ordering-behavior).
+{{% /alert %}}
 
 ## 2 Read More
 

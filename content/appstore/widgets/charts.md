@@ -21,10 +21,6 @@ These are the available charts:
 * Heat chart
 * Bubble chart
 
-### 1.1 Demo App
-
-For a demo app that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
-
 ## 2 Basic Configuration
 
 ### 2.1 Line Chart {#line-chart}

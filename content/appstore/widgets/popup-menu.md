@@ -24,7 +24,3 @@ The [Pop-Up Menu](https://appstore.home.mendix.com/link/app/115826/) widget show
 Place the widget anywhere you want on a page in your app.
 
 If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view) and configure the widget as **Render = Custom**.
-
-## 3 Developing This Marketplace Component
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/widgets-resources](https://github.com/mendix/widgets-resources/issues).

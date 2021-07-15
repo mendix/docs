@@ -19,7 +19,7 @@ You can perform the actions described below via the buttons on your app's **Docu
 
 ### 2.1 Uploading a File
 
-Click **Upload a file** to upload a new document:
+Click **Upload document** to upload a new document:
 
 {{% image_container width="400" %}}![](attachments/documents/upload-file.png)
 {{% /image_container %}}
@@ -28,31 +28,25 @@ Click **Upload a file** to upload a new document:
 All file types are allowed, and they are scanned for viruses by Mendix.
 {{% /alert %}}
 
-### 2.2 Using Labels
+### 2.2 Downloading a Document
 
-To add a label to a document or create a new label, use the options under **Label**:
+To download a document, click **Download** on the appropriate line in the overview.
 
-![](attachments/documents/document-label.png)
+### 2.3 Document Details
 
-### 2.3 Downloading a Document
-
-To download a document, select the document and click **Download**.
-
-### 2.4 File Details
-
-Click **Details** to see the description of the document, comments, and all the versions of the document:
+Click on the name of the file in the overview to see the description of the document, comments, and all the versions of the document:
 
 ![](attachments/documents/document-details.png)
 
-On the **Document** details page, you can perform the following actions:
+On the **Document Details** page, you can perform the following actions:
 
 * **Download** the document
 * **Upload new version** of the document
 * **Delete document**
 
-### 2.5 New Version
+### 2.4 New Version
 
-To upload a new version of a document directly from the document list, select the document and click **New version**.
+To upload a new version of a document, go to the **Document Details** page and click **Upload new version**.
 
 ## 3 Read More
 

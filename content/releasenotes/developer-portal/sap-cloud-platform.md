@@ -19,6 +19,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 * We released version 2.0.0 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
 
     {{% alert type="info" %}}This version uses a new user administration module, `SapAuthentication` and customers using versions of *XSUAA Connector for SAP Business Technology Platform* below 2.0.0 will need to migrate their existing users from `Administration.Account` to `SapAuthentication.SapUser` using the [user Migration](/modules/user-migration-module) module.{{% /alert %}}
+    
+### July 14th, 2021
+
+#### Fix
+
+* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
 
 ### June 16th, 2021
 

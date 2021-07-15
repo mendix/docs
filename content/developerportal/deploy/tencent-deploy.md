@@ -557,7 +557,7 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
 
-##### 6.1.3.5 Change Admin Password
+##### 6.1.3.5 Change Admin Password{#change-admin-password}
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 

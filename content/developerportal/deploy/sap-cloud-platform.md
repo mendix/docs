@@ -295,6 +295,20 @@ SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107
 
     ![](attachments/sap-cloud-platform/application-started.png)
 
+### 5.3 Unbinding and Deleting Service Instances
+
+If you want to remove a service instance from your environment, you can do it is follows:
+
+1. Click the three-dot menu for the service and select **Unbind Service**. This will unbind the service instance from the application *and delete the instance*.
+
+    ![](attachments/sap-cloud-platform/unbind-service.png)
+
+{{% alert type="info" %}}
+Unbinding the service through the Developer Portal will also delete the service instance from your environment.
+
+If you want to unbind the instance without deleting it, you will need to unbind it in the SAP BTP cockpit. You will then need to contact Mendix Support and ask them to remove the service from the Developer Portal — the Developer Portal cannot automatically see that the service has been unbound in the SAP BTP cockpit.
+{{% /alert %}}
+
 ## 6 Transport App Between Environments{#TransportApp}
 
 1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.

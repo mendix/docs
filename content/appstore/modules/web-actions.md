@@ -6,6 +6,8 @@ tags: ["marketplace", "marketplace component", "platform support", "web actions"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
+
 The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module contains the following actions:
 
 | Category | Action |
@@ -16,9 +18,9 @@ The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module cont
 | Set focus | Sets the focus to the element found with the selector. The element should be able to hold focus like a link, button, or input. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`). |
 | Take picture | Allows users to take a picture from the back and front camera in a web or PWA app. |
 
-## 1 Usage
+## 2 Usage
 
-### 1.1 Take Picture
+### 2.1 Take Picture
 
 1.  To use the **Take picture** action, create an entity that extends the **System.Image** entity:
 

@@ -63,7 +63,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 3.1 Configuring User Roles
 
-Administrator, User, and Workflow Administrator roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly.
+Administrator and User roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly. You also need to assign the Workflow Administrator module role to one of the existing user roles, allowing it to monitor workflows, see their progress, and change their settings.
 
 Do the following:
 
@@ -71,7 +71,7 @@ Do the following:
 
 2. Open the **User roles** tab and click **New**. 
 
-3. In the **Add User Role** dialog box, set the **Name** to **Facilities** and untick all modules except MyFirstModule, as you do not need to create a specific Facilities role for all modules. 
+3. In the **Add User Role** dialog box, set the **Name** to **Facilities** and make sure that only MyFirstModule is selected, as you do not need to create a specific Facilities role for all modules. 
 
 4. Click **OK**.
 
@@ -90,6 +90,15 @@ Do the following:
 9. Repeat steps 2-8 to create and configure the Manager role.
 
 10. Repeat steps 2-8 to create and configure the HR role.
+
+11. You have a Workflow Administrator role in the System module. You can assign one of existing roles to be the Workflow Administrator. Do the following:
+
+     1. In the **User roles** tab, click Administrator.
+     2.  In the **User Role** dialog box, click **Edit** in the **Module roles** section. 
+     3. In the **Select Module Roles**, find the System module and select Workflow Administrator. 
+     4. Confirm your choice by clicking **OK**.
+
+12. Click **OK** to save changes to security.
 
 You have configured new app roles for Facilities, Manager, and HR. 
 
@@ -154,7 +163,7 @@ You need to create a workflow that you will add activities to and create pages f
 
 4. Click the **Allowed roles** property to set security for the workflow.
 
-5. In the **Select Module Roles** dialog box, select the **WorkflowAdministrator** and the **HR** roles and click **OK**. These roles are now able to start the workflow. 
+5. In the **Select Module Roles** dialog box, select the **HR** role and click **OK**. This role is now able to start the workflow. 
 
 6. Click the **Workflow entity** property:
 
@@ -184,15 +193,11 @@ The page access is restricted to the HR user role:
 
 To add a button that will initiate the workflow, do the following:
 
-1. Open the **Toolbox** and search for a **Button** widget.
+1. Open the **Toolbox** and search for a **Call workflow** button.
 
 2. Drag and drop the button inside the list view.
 
-3. Open the button properties and set the **On-click** property to **Call workflow**: 
-
-    ![Call Workflow](attachments/workflow-how-to-configure/call-workflow-on-click.png)
-
-4. Click the ellipsis icon in the **Workflow** property.
+3. Click the ellipsis icon in the **Workflow** property.
 
 5. In the **Select Workflow** dialog box, select Employee_Onboarding workflow and click **OK**.
 
@@ -224,7 +229,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     1. Set the **Page name** to **SpecifyDevice**.
 
-    2. Set **Navigation layout** to **Atlas_Default (Atlas_UI_Resources)**.
+    2. Set **Navigation layout** to **Atlas_Default (Atlas_Core)**.
 
     3.  Select the **User Task Extended** template.
 

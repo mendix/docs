@@ -14,7 +14,7 @@ This document covers which providers and services are officially supported by th
 
 ## 2 Kubernetes Cluster Types
 
-### 2.1 Supported Cluster Types
+### 2.1 Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:
 
@@ -26,6 +26,8 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
+If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
+
 Only Kubernetes versions 1.13 through 1.20 are officially supported.
 
 Mendix for Private Cloud has not been evaluated against Kubernetes 1.21 and later versions.
@@ -100,6 +102,15 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 ## 4 Databases
 
+The following databases are supported, and provide the features listed.
+
+| Database | Data Persists | Provisioned by Operator |
+| === | === | === |
+| Ephemeral | No | Yes |
+| Standard PostgreSQL | Yes | Yes |
+| Microsoft SQL Server | Yes | Yes |
+| Dedicated JDBC | Yes | No |
+
 ### 4.1 Ephemeral Database
 
 The ephemeral database plan uses an in-memory database running directly in a Mendix Runtime container.
@@ -112,6 +123,8 @@ An app with an ephemeral database cannot have more than one replica. Only the fi
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
+
+This refers to a PostgreSQL database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
 The following standard PostgreSQL databases are supported:
 
@@ -139,10 +152,10 @@ For every Mendix app environment, a new database schema and user (role) will be 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-By default, Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will reconnect without TLS.
+By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
+If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
 
 * the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown Certificate Authority
@@ -154,6 +167,8 @@ Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later
 {{% /alert %}}
 
 ### 4.3 Microsoft SQL Server
+
+This refers to a SQL Server database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
 The following Microsoft SQL Server editions are supported:
 
@@ -178,7 +193,7 @@ For every Mendix app environment, a new database, user and login will be created
 {{% alert type="info" %}}
 By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
+If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
 
 * SQL Server doesn't support encryption
 * the SQL Server server has an invalid certificate
@@ -189,7 +204,7 @@ The Mendix Operator allows you to specify custom Certificate Authorities to trus
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-### 4.4 Dedicated JDBC database
+### 4.4 Dedicated JDBC database{#jdbc}
 
 This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings) directly as supported by the Mendix Runtime.
 
@@ -258,7 +273,7 @@ These features will likely be required once your application is ready for produc
 OpenShift routes are supported only in OpenShift.
 
 The only configuration option currently supported is turning TLS on or off.
-When TLS is turned on, `Edge` termination will be used, with automatic redirection from HTTP to HTTPS.
+When TLS is turned on, `Edge` termination (where TLS termination occurs at the router, before the traffic gets routed to the pods) will be used, with automatic redirection from HTTP to HTTPS.
 
 The following configuration options are available in OpenShift:
 

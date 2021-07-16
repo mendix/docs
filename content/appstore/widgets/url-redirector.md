@@ -6,8 +6,8 @@ tags: ["marketplace", "marketplace component", "widget", "url redirector", "url"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
-This widget is deprecated.
+{{% alert type="error" %}}
+This widget has been retired. Please use the OpenURL JS action available in the NanoflowCommons module instead.
 {{% /alert %}}
 
 ## 1 Introduction

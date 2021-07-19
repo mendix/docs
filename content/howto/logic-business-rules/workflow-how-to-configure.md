@@ -195,15 +195,17 @@ To add a button that will initiate the workflow, do the following:
 
 1. Open the **Toolbox** and search for a **Call workflow** button.
 
-2. Drag and drop the button inside the list view.
+2. Drag and drop the button inside the list view in an empty column.
 
-3. Click the ellipsis icon in the **Workflow** property.
+3. Open properties and click the ellipsis icon in the **Workflow** property.
 
-5. In the **Select Workflow** dialog box, select Employee_Onboarding workflow and click **OK**.
+5. In the **Select Workflow** dialog box, select **Employee_Onboarding** workflow and click **OK**.
 
 6. Set **Caption** of the button to **Start Onboarding**.
 
-Good job! Now when the HR specialist clicks the button, the workflow will start. 
+Good job! Now when the HR specialist clicks the button, the workflow will start:
+
+![](attachments/workflow-how-to-configure/employees-page-configured.png) 
 
 ## 6 Selecting a Device for the New Hire {#select-device}
 
@@ -235,9 +237,9 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     4. Click **OK**.
 
-9. As only the Manager should specify devices for the new employee, you need to restrict the user task to the Manager role. Click the ellipsis icon in the **Assigned to** property.
+9. As only the Manager should specify devices for the new employee, you need to restrict the user task to the Manager role. Make sure **Assign task using** is set to **Xpath** and click the ellipsis icon in the **XPath constraint** property.
 
-10. In the **Edit assigned to** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
+10. In the **Edit XPath constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
 11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the App Explorer, double-click the **SpecifyDevice** page to open it.
 
@@ -276,7 +278,7 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 2. Open the **Toolbox**, drag and drop a **User task** activity to the path, and do the following:
 
     1. Set **Name** to **Specify_Location** and set **Caption** to **Manager: Specify Location** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set the **Allowed roles** property to **Manager** for managers to be able to interact with the user task. 
+    2. Set the **Allowed roles** property to **Manager** for managers to be able to interact with the user task.
     3. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
     4. Restrict the **Specify Location** user task to the Manager role referring to steps 7-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
@@ -328,9 +330,13 @@ Do the following:
 
     2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
 
-    3. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+    3.  As only the Facilities should prepare the desk for the new employee, you need to restrict the user task to the Facilities role. Make sure **Assign task using** is set to **Xpath** and click the ellipsis icon in the **XPath constraint** property. 
 
-    4. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
+    4. In the **Edit XPath constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Facilities%]']` and click **OK**.
+
+    5. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+
+    6. Restrict the **Prepare Desk** user task to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
@@ -338,14 +344,12 @@ Do the following:
 
 6. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
    
-    1. Delete the **Workflow** reference selector widget from the form.
+    1. Select the data view with the employee details and go to its properties.
       
-    2. Select the data view with the employee details and go to its properties.
-    
     3. Set the **Editable** property to *No* to make the remaining fields in the form read-only.
       
        ![Read-Only Form](attachments/workflow-how-to-configure/read-only-form.png)
-   
+    
 7. To restrict access to the page to the Facilities role only, follow the step 13 of the [Selecting a Device for the New Hire](#select-device) section.
 
 8. Now you need to create a user task for Facilities when the employee is working from home. Open the workflow editor.
@@ -354,8 +358,9 @@ Do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
     2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
-    3. Set a new page called **ShipDevices** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
-    4. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
+    3. As only the Facilities should ship devices for the new employee, you need to restrict the user task to the Facilities role. Repeat steps 4c and 4d above.  
+    4. Set a new page called **ShipDevices** for the **Page** property it referring to steps 6-8 of the [Selecting a Device for the New Hire](#select-device) section.
+    5. Restrict the **Ship Devices** user task and **ShipDevices** page to the Facilities role referring to steps 9-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
 10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices** page to open it.
 

@@ -121,5 +121,5 @@ Make sure the names of the databases are not the same or make a copy of your own
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
-*   [Set Up a GitHub Repo to Publish an App Store Item](set-up-repo)
+*   [Set Up a GitHub Repo to Publish a Marketplace Item](set-up-repo)
 *   [Version Control](/refguide/version-control)

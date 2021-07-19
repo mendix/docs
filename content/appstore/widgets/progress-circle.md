@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "progress circle", "pla
 
 ## 1 Introduction
 
-The [Progress Circle](https://appstore.home.mendix.com/link/app/47783/) widget displays a progress in a circle.
+The [Progress Circle](https://marketplace.mendix.com/link/component/47783/) widget displays a progress in a circle.
 
 The widget does the following:
 

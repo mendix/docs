@@ -27,7 +27,7 @@ To use the Mendix Data Hub a license is required, which includes the integration
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Install Studio Pro version [8.14.0 or above](https://appstore.home.mendix.com/link/modelers/)
+* Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
 * Be familiar with app development using Mendix Studio Pro
 
 ## 3 Creating an App {#createapp}

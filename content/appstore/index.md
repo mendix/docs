@@ -6,7 +6,7 @@ tags: ["marketplace",  "component", "platform support"]
 
 ## 1 Introduction
 
-Mendix Studio Pro and Studio contain a lot of core out-of-the-box widgets such as data grids and snippets. If you want to extend your application with more widgets and modules (for example, the [Forgot Password module](https://appstore.home.mendix.com/link/app/1296/)), simple charts, an [Excel importer](https://appstore.home.mendix.com/link/app/1296/), and other features, you need to add content from the [Mendix Marketplace](https://appstore.home.mendix.com/). The Marketplace contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community.
+Mendix Studio Pro and Studio contain a lot of core out-of-the-box widgets such as data grids and snippets. If you want to extend your application with more widgets and modules (for example, the [Forgot Password module](https://marketplace.mendix.com/link/component/1296/)), simple charts, an [Excel importer](https://marketplace.mendix.com/link/component/1296/), and other features, you need to add content from the [Mendix Marketplace](https://marketplace.mendix.com/). The Marketplace contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community.
 
 This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/general/app-store-content-support#category) Marketplace components.
 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "range slider", "platfo
 
 ## 1 Introduction
 
-The [Range Slider](https://appstore.home.mendix.com/link/app/52704/) widget can be used to change the range of values using a slider.
+The [Range Slider](https://marketplace.mendix.com/link/component/52704/) widget can be used to change the range of values using a slider.
 
 ### 1.1 Features
 
@@ -30,7 +30,7 @@ On the **Data source** tab, configure these properties:
 
 ### 3.1 Two Values vs. One Value
 
-The Range Slider widget allows you to set two values between two bounds (the minimum value and maximum value). However, if only one value needs to be set between two bounds, you should use the [Slider](https://appstore.home.mendix.com/link/app/48786/) widget instead.
+The Range Slider widget allows you to set two values between two bounds (the minimum value and maximum value). However, if only one value needs to be set between two bounds, you should use the [Slider](https://marketplace.mendix.com/link/component/48786/) widget instead.
 
 ### 3.2 Sample Slider
 

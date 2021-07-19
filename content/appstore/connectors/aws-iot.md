@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "iot"]
 
 ## 1 Introduction
 
-The [AWS IoT](https://appstore.home.mendix.com/link/app/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
+The [AWS IoT](https://marketplace.mendix.com/link/component/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
 
 ### 1.1 Typical Use Cases
 

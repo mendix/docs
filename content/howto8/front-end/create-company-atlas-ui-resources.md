@@ -94,7 +94,7 @@ When the resources are ready to be shared with multiple developers or apps, the 
 
 ![](attachments/app-building/export_ui_module.png)
 
-The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
+The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://marketplace.mendix.com/). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
 
 ## 6 Read More
 

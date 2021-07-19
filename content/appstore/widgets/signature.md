@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "signature", "platform 
 
 ## 1 Introduction
 
-The [Signature](https://appstore.home.mendix.com/link/app/107984/) widget is a signature pad for capturing signatures in your app. The widget implements bezier curves and velocity for the smooth drawing of the signature.
+The [Signature](https://marketplace.mendix.com/link/component/107984/) widget is a signature pad for capturing signatures in your app. The widget implements bezier curves and velocity for the smooth drawing of the signature.
 
 ### 1.1 Features
 

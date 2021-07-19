@@ -34,7 +34,7 @@ When you have completed the prerequisites, your work should look like this:
 
 ## 3 Creating an AR Business Card Demo
 
-For this app you will need to start a new app based on the Native Mobile Quickstart App, or use another app with the Native Mobile Resources module imported from the Mendix App Store. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
+For this app you will need to start a new app based on the Native Mobile Quickstart App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
 
 Ideally you should have several recognizable features on your image, specifically an image with a lot of edges and contrast. The business card you are using in this document possesses these traits:
 

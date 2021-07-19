@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "audit trail", "log", "platform s
 
 ## 1 Introduction
 
-The [Audit Trail](https://appstore.home.mendix.com/link/app/138/) module creates a log history for the changes made to objects in your Mendix application.
+The [Audit Trail](https://marketplace.mendix.com/link/component/138/) module creates a log history for the changes made to objects in your Mendix application.
 
 ### 1.1 Typical Use Cases
 

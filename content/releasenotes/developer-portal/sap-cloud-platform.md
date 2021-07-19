@@ -135,7 +135,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry App Store services from within the Mendix Developer Portal.
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 #### Limitation
 

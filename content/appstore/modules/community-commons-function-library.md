@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "community commons function libra
 
 ## 1 Introduction
 
-The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
+The [Community Commons Function Library](https://marketplace.mendix.com/link/component/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
 
 ## 2 Usage
 

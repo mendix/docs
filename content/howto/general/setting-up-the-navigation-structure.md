@@ -49,7 +49,11 @@ Do the following:
 
 {{% alert type="info" %}}
 
-You can also select a microflow as a default home page. Make sure that the microflow contains a *Show Form* activity, otherwise the user will not see anything.
+For online profiles you can set a microflow as a default home page.
+Make sure that the microflow contains a *Show Form* activity, otherwise the user will not see anything.
+
+For native mobile profiles you can set a nanoflow as a home page, either as a default or as a role-based. 
+For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) chapter.
 
 {{% /alert %}}
 
@@ -82,7 +86,20 @@ Follow the steps below:
 
 Now every time a user with the **Administrator** user signs in to the application, the **Account_Overview** page is shown. Users with other roles will be redirected to the default home page.
 
-## 5 Creating Menu Items
+## 5 Setting a Nanoflow as a Home Page {#nanoflow-home-page}
+
+Similar to selecting a page, you can specify a nanoflow as a home page for native profiles.
+That means that the nanoflow you selected will be executed during the startup to show a starting page of your app.
+This is a normal nanoflow call, which means that you can implement any custom logic there to determine what page to show, including creating objects, calling subnanoflows, using javascript actions etc.
+
+Make sure that the nanoflow contains a *Show Page* activity, or shows a page via a JavaScript action, otherwise the user will not see anything.
+
+If a nanoflow contains multiple *Show Page* activities, they will be executed in order, and each page will be shown respectively.
+The last page shown will stay open after the nanoflow finishes.
+
+Home page nanoflows are not triggered on hot reload in order to keep the same page open upon reloading.
+
+## 6 Creating Menu Items
 
 You can create menu items for your navigation. Do the following:
 
@@ -100,7 +117,7 @@ In the overview of menu items you can see the name of the menu item, the target 
 
 You can restructure the menu by dragging and dropping menu items.
 
-## 6 Adding Navigation Menu to Pages
+## 7 Adding Navigation Menu to Pages
 
 Now that you have created a menu structure it is time to start using it on pages. Do the following:
 
@@ -126,7 +143,7 @@ The menu widget is now showing the navigation items created in the navigation ed
 
 To avoid adding the menu widget on every page in your app,  you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets).
 
-## 7 Read More
+## 8 Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui)
 * [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)

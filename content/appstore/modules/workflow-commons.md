@@ -1,7 +1,7 @@
 ---
 title: "Workflow Commons"
 category: "Modules"
-description: "Describes usage and implementation the Workflow Commons module that is used with workflows."
+description: "Describes usage and implementation of the Workflow Commons module that is used with workflows."
 tags: ["Workflow","Workflow Commons","Module","Workflow Commons Implementation"]
 ---
 
@@ -20,15 +20,11 @@ This module allows Mendix developers with little or no experience in building wo
 * Attachments layer on top of workflows
 * Comments section to use with workflows
 
-### 1.3 Limitations
-
-* Requires [Mendix SSO](https://marketplace.mendix.com/link/component/117212) to fully function directly after the installation. If you do not want to use Mendix SSO, you will have to copy contents to your own module and use templates to build pages.
-
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
 As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
 
-### 1.5  Dependencies
+### 1.4  Dependencies
 
 * [Datagrid 2](https://marketplace.mendix.com/link/component/116540)
 * [Mendix SSO](https://marketplace.mendix.com/link/component/117212) (make sure you download Mendix SSO Atlas Core) (maybe skipped when following the steps in the [Installation to Run the Module Without Mendix SSO](#installation-without-mendix-sso) section)

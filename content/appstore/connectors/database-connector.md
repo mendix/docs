@@ -35,24 +35,57 @@ These are the prerequisites for using this connector:
 
 ## 3 Getting Started
 
-### 3.1 Usage
+Once you have imported the Database Connector into your app, you will have the **Database Connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement** and **Execute callable statement**.
 
-Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+![](attachments/database/database-connector-in-toolbox.png)
 
-The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+### 3.1 Executing Queries And Statements
+#### 3.1.1 Usage
 
-For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
+ To use any of **Execute query**, **Execute statement**, **Execute parameterized query** or **Execute parameterized statement** in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+ 
+ The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+ 
+ For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
+ 
+ {{% alert type="info" %}}
+ The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
+ {{% /alert %}}
 
-{{% alert type="info" %}}
-The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
-{{% /alert %}}
-
-### 3.2 Results
+#### 3.1.2 Results
 
 These are the results of the actions:
 
 * **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
+
+### 3.2 Executing Callable Statements
+
+The **Execute callable statement** microflow action is used to execute stored procedures. This action has no output and uses an input object of type **DatabaseConnector.Statement**.
+
+![](attachments/database/callable-statement-action.png)
+
+The selected **DatabaseConnector.Statement** object should contain the statement body (SQL content) in the **contents** attribute. It should also define, if applicable, a list of **DatabaseConnector.Parameter** objects to represent the input and output parameters of the stored procedure. 
+
+![](attachments/database/statement-parameter-diagram.png)
+
+A **DatabaseConnector.Parameter** object will refer to its name or position in the stored procedure using the **Name** or **Position** attributes respectively. It will also indicate its type using the **ParameterMode** attribute:
+
+- **DatabaseConnector.ParameterMode.INPUT**: if it's an *IN* parameter.
+- **DatabaseConnector.ParameterMode.OUTPUT**: if it's an *OUT* parameter.
+- **DatabaseConnector.ParameterMode.INOUT**: if it's an *INOUT* parameter.
+
+**DatabaseConnector.Parameter** Specializations:
+
+#### Examples
+##### primitive types
+
+##### object type
+
+##### lists
+
+##### ref-cursor
+
 
 ## 4 Best Practices
 

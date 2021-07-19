@@ -24,7 +24,16 @@ This mode synchronizes the entire local database. The server database is updated
 
 The behavior of this mode can be configured through [**Synchronization configuration**](offline-first#customizable-synchronization).
 
-### 1.2 Synchronize Selected Object(s)
+### 1.2 Synchronize Unsynchronized Objects
+
+{{% image_container width="200" %}}
+![Synchronize](attachments/client-activities/synchronize-unsynchronized-objects.png)
+{{% /image_container %}}
+
+With this mode, all objects with committed changes are synchronized. The synchronization is bi-directional,
+meaning both the server database and the local database is updated for these objects. Check [Synchronization Behavior](#synchronization-behavior) section for more details.
+
+### 1.3 Synchronize Selected Object(s)
 
 {{% image_container width="200" %}}
 ![Synchronize](attachments/client-activities/synchronize-objects.png)
@@ -37,7 +46,9 @@ This mode synchronizes objects partially, based on a selection:
 {{% /image_container %}}
 
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
-meaning both the server database and the local database is updated for the selected objects.
+meaning both the server database and the local database is updated for the selected objects. Check [Synchronization Behavior](#synchronization-behavior) section for more details.
+
+## 3 Synchronization Behavior
 
 If the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
 
@@ -50,7 +61,7 @@ If the selected object originated from the server (not created on the device), a
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
-## 2 Properties
+## 3 Properties
 
 The **Synchronize** activity properties consists of the following sections:
 
@@ -58,17 +69,17 @@ The **Synchronize** activity properties consists of the following sections:
 
 * [Common](#common)
 
-	{{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
+  {{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
 
-## 3 Action Section {#action}
+## 4 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
-## 4 Common Section {#common}
+## 5 Common Section {#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
-## 5 Limitations {#limitations}
+## 6 Limitations {#limitations}
 
 Running multiple synchronization processes at the same time is not supported, regardless the of type (**full** or **selective**).
 
@@ -78,7 +89,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-event#errorhandlers).
 
-## 6 Read More
+## 7 Read More
 
 * [Activities](activities)
 * [Offline-first](offline-first)

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 
 ## 1 Introduction
 
-The [Encryption](https://appstore.home.mendix.com/link/app/1011/) module takes care of the encryption of strings (for example, passwords) using AES.
+The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption of strings (for example, passwords) using AES.
 
 ### 1.1 Typical Use Cases
 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "tab swipe", "platform 
 
 ## 1 Introduction
 
-The [Tab Swipe](https://appstore.home.mendix.com/link/app/78620/) widget can be used for navigating between tabs.
+The [Tab Swipe](https://marketplace.mendix.com/link/component/78620/) widget can be used for navigating between tabs.
 
 ## 2 Usage
 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "atlas ui", "atlas ui resources",
 
 ## 1 Introduction
 
-The [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) help you to speed up your app design process by using custom templates, building blocks, and widget, and making them your own.
+The [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730/) help you to speed up your app design process by using custom templates, building blocks, and widget, and making them your own.
 
 ### 1.1 Typical Usage Scenario
 

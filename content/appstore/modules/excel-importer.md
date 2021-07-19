@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "excel importer", "excel", "mappi
 
 ## 1 Introduction
 
-The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module enables you to import Excel data sheets into your Mendix application. You can configure a mapping between your sheet and domain model and automatically create or update your objects.
+The [Excel Importer](https://marketplace.mendix.com/link/component/72/) module enables you to import Excel data sheets into your Mendix application. You can configure a mapping between your sheet and domain model and automatically create or update your objects.
 
 ### 1.1 Typical Use Cases
 

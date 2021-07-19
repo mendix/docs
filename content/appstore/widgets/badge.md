@@ -8,7 +8,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 ## 1 Introduction
 
-The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value inside a colored badge or label.
+The [Badge](https://marketplace.mendix.com/link/component/50325/) widget shows a value inside a colored badge or label.
 
 The widget does the following:
 

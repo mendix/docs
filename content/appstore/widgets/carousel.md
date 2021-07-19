@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "carousel", "image", "p
 
 ## 1 Introduction
 
-The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays images in a carousel.
+The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
 ### 1.1 Features
 

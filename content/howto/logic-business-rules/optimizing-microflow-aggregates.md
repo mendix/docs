@@ -1,7 +1,7 @@
 ---
 title: "Optimize Microflow Aggregates"
 category: "Logic & Business Rules"
-menu_order: 7
+menu_order: 70
 tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---

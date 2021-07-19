@@ -195,7 +195,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We added support to generate 1024x1024 App Store icons for iOS.
+* We added support to generate 1024x1024 icons for iOS.
 
 #### Fixes
 

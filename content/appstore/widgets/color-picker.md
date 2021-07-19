@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "color picker", "react"
 
 ## 1 Introduction
 
-The [Color Picker](https://appstore.home.mendix.com/link/app/107044/) enables selecting and adjusting a color value.
+The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
 
 ### 1.1 Features 
 

@@ -21,7 +21,7 @@ This page explains how to build a Docker image from your Mendix Project. Each re
 
 Before starting these instructions, make sure you have completed the following prerequisites:
 
-* Download the latest version of [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) from the *Mendix Marketplace*
+* Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) from the *Mendix Marketplace*
 * Install Docker from the [Docker site](https://docs.docker.com/engine/installation/)
 * Download the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "pla
 
 ## 1 Introduction
 
-The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be used to change a number value using a slider.
+The [Slider](https://marketplace.mendix.com/link/component/48786/) widget can be used to change a number value using a slider.
 
 ### 1.1 Features
 

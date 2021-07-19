@@ -8,7 +8,7 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 ## 1 Introduction 
 
-You can expose a microflow as a workflow action and add it to the workflow toolbox. This is particularly useful if you plan to reuse the microflow logic several times and turning it into a custom workflow action is a good alternative to using the [Call microflow](/refguide/call-microflow) action. There are the following advantages to having the custom workflow action: 
+You can expose a microflow as a workflow action and add it to the workflow toolbox. This is particularly useful if you plan to reuse the microflow logic several times, turning it into a custom workflow action is a good alternative to using the [Call microflow](/refguide/call-microflow) action. There are the following advantages to having the custom workflow action: 
 
 * It makes logic more reusable.
 * The workflow process is more visualized and understandable.
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
-* Your project has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your project has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 ## 3 Exposing the Microflow as the Workflow Action
 
@@ -34,7 +34,7 @@ For example, you have the Employee Onboarding process set up in your app. For mo
 
 However, as the best practice we recommend using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
 
-* To make it easier to update parameters in **ACT_SAP_INVENTORY_LAPTOP_CHECK**. If you make changes in the parameters of the microflow that would mean that every task using this microflow becomes invalid. Having the second microflow (the calling microflow) you make it possible to make changes to the parameters of the called microflow (**ACT_SAP_INVENTORY_LAPTOP_CHECK**) in the future, you will have to modify only the calling microflow. 
+* To make it easier to update parameters in **ACT_SAP_INVENTORY_LAPTOP_CHECK**. If you make changes in the parameters of the microflow that would mean that every task using this microflow will result in consistency errors. The calling microflow makes it possible to make changes to the parameters of the called microflow (**ACT_SAP_INVENTORY_LAPTOP_CHECK**) in the future, as you will have to modify only the calling microflow. 
 * The calling microflow allows for data and parameter changes that the called microflow requires, but the workflow is not able to provide. For example, **ACT_SAP_INVENTORY_LAPTOP_CHECK** requires Employee ID, but the workflow has only Employee Name. You can get the Employee ID through the Employee's record and pass this to the **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
 * To have proper error handling, for example, you can validate what error has occurred and continue the workflow or abort it.
 

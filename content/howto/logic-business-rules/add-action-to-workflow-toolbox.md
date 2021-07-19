@@ -2,7 +2,7 @@
 title: "Add a Custom Action to the Workflow Toolbox"
 category: "Logic & Business Rules"
 description: "Describes how to expose a microflow as a workflow action in Mendix Studio Pro."
-menu_order: 5
+menu_order: 20
 tags: ["studio pro", "workflow", "task", "onboarding"]
 ---
 

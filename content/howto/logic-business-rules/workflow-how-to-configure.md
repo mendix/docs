@@ -2,7 +2,7 @@
 title: "Configure a Workflow in Studio Pro for the Employee Onboarding Process"
 category: "Logic & Business Rules"
 description: "Describes how to configure a workflow in Mendix Studio Pro."
-menu_order: 1
+menu_order: 10
 tags: ["studio pro", "workflow", "task", "onboarding"]
 ---
 

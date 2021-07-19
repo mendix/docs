@@ -97,7 +97,7 @@ Make sure that the nanoflow contains a *Show Page* activity, or shows a page via
 If a nanoflow contains multiple *Show Page* activities, they will be executed in order, and each page will be shown respectively.
 The last page shown will stay open after the nanoflow finishes.
 
-Home page nanoflows are not triggered on hot reload in order to keep the same page open upon reloading.
+Home page nanoflows should have no parameters.
 
 ## 6 Creating Menu Items
 

@@ -58,6 +58,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![Employees Page](attachments/workflow-how-to-configure/employees-page.png)
 
+* Add the following pages to your navigation (pages are part of the Workflow Commons module):
+  * TaskInbox
+  * TaskDashboard
+  * WorkflowAdminCenter
+  * MyInitiatedWorkflows
 
 ## 3 Setting Up Security 
 

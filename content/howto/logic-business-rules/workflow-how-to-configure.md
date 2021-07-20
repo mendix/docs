@@ -63,7 +63,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 3.1 Configuring User Roles
 
-Administrator and User roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly. You also need to assign the Workflow Administrator module role to one of the existing user roles, allowing it to monitor workflows, see their progress, and change their settings.
+Administrator and User roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly. 
 
 Do the following:
 
@@ -81,7 +81,7 @@ Do the following:
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 
-7. In the **Select Module Roles** dialog box, tick the User role for all modules where no role is selected and click **OK**:
+7. In the **Select Module Roles** dialog box, tick the User role for Administration, MendixSSO, WorkflowCommons modules where no role is selected and click **OK**:
 
     ![Module Roles](attachments/workflow-how-to-configure/modules-roles.png)
 
@@ -91,16 +91,21 @@ Do the following:
 
 10. Repeat steps 2-8 to create and configure the HR role.
 
-11. You have a Workflow Administrator role in the System module. You can assign one of existing roles to be the Workflow Administrator. Do the following:
+11. You have the Administrator role as the default role and you need to enable this role to monitor workflows, view their progress, and manage their settings in your app. Do the following:
 
-     1. In the **User roles** tab, click Administrator.
-     2.  In the **User Role** dialog box, click **Edit** in the **Module roles** section. 
-     3. In the **Select Module Roles**, find the System module and select Workflow Administrator. 
-     4. Confirm your choice by clicking **OK**.
+      1. In the **User roles** tab, click Administrator.
+
+      2. In the **User Role** dialog box, click **Edit** in the **Module roles** section. 
+
+      3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
+
+         ![Selecting Workflow Commons Administrator](attachments/workflow-how-to-configure/workflow-commons-admin.png)
+
+      4. Confirm your choice by clicking **OK**.
 
 12. Click **OK** to save changes to security.
 
-You have configured new app roles for Facilities, Manager, and HR. 
+You have configured new app roles for Facilities, Manager, and HR, and enabled the Administrator role to monitor workflows, view their progress, and change their settings. 
 
 
 ### 3.2 Configuring Demo Users
@@ -403,11 +408,11 @@ For example, users who have tasks assigned to them (Manager, Facilities roles) w
 
 ![Task Inbox](attachments/workflow-how-to-configure/task-inbox.png)
 
-The Workflow Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings:
+The Admin role has access to the Workflow Admin Center and can monitor all workflows, can view the progress of workflows, and change the workflow settings:
 
 ![Workflow Admin Center](attachments/workflow-how-to-configure/workflow-admin-center.png)
 
-The Admin role is able to manage users:
+This role is also able to manage users:
 
 ![Admin Role](attachments/workflow-how-to-configure/admin-role.png)
 

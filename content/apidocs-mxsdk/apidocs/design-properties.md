@@ -40,7 +40,7 @@ A design property of type **Dropdown** defines a set of options with separate cl
 
 ## 4 Design Properties Definitions {#design-properties-definitions}
 
-Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (see also the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
+Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (for more information, see the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
 
 Here is a simplified example of a design properties file:
 
@@ -77,7 +77,7 @@ Here is a simplified example of a design properties file:
 
 ### 4.1 Design Property Structure
 
-To further simplify the above example:
+Use this code to further simplify the above example:
 
 ```js
 {
@@ -158,18 +158,22 @@ When a type of design property is **Toggle** it should contain a `class` field o
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
-### 4.2 Extending / overriding design properties of other modules {#extend-existing-design-properties}
+### 4.2 Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
 
-Design properties can not only be added, but also extended or overridden in other modules. For example, you can add a custom dropdown option to an Atlas design property, or override the applied CSS class of a toggle property. This can be very useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/yourthememodule/[web|native]/design-properties.json* file, using the same name and property type. 
-The precedence of design properties is determined by the compilation order of modules:
+Design properties can be extended or overridden in other modules. For example, you can add a custom drop-down option to an Atlas design property or override the applied CSS class of a toggle property. 
+
+Overriding a design property can be useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/{YOURTHEMEMODULE}/{WEB|NATIVE}/design-properties.json* using the same name and property type. 
+
+The precedence of design properties is determined by this compilation order of modules:
+
 1. Non-UI Marketplace modules, in alphabetical order.
-1. UI resources modules, ordered as in App Settings > Theme.
-1. Non-UI user modules, ordered as in the Studio Pro App explorer.
+1. UI resources modules, ordered as in **App Settings** > **Theme**.
+1. Non-UI user modules, ordered as in the Studio Pro App Explorer.
 
 If multiple modules have a definition of a **Dropdown** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
 
 {{% alert type="warning" %}}
-Note, that having multiple definitions with different types (**Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
+Note that having multiple definitions with different types (for example **Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
 {{% /alert %}}
 
 ## 5 Widget Types{#widget-types}

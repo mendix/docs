@@ -174,9 +174,9 @@ This page presents the Marketplace content you have [favorited](#saved):
 
 When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
-## 5 Your Company's Marketplace
+## 5 Your Company's Marketplace {#company-content}
 
-### 5.1 Company Content {#company-content}
+### 5.1 Company Content 
 
 On this page, you can see all the content your company has published:
 

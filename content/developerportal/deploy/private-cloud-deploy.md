@@ -477,9 +477,23 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 
 ### 5.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the Log Levels tab, you can change the log levels which are used for the log nodes in your app.
 
-![](attachments/private-cloud-deploy/log-levels-tab.png)
+![](attachments/private-cloud-deploy/log-levels-tab-1.png)
+
+The Node is a log node name that you specified in your mendix application. In the example below, a constant is used as a log node name. In this case you need put the constant value as a Node on the Log Levels tab.
+
+![](attachments/private-cloud-deploy/log-levels-tab-2.png)
+
+You can find your logs in your mendix application pod inside the mendix container.
+
+```
+kubectl logs <pod-name> -c mendix
+```
+
+![](attachments/private-cloud-deploy/log-levels-tab-3.png)
+
+For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ### 5.6 TLS
 

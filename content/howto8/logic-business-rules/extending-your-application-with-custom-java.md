@@ -78,7 +78,7 @@ To edit the Java action in Eclipse, follow these steps:
 		}
 	```
 
-	Studio Pro generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it.
+	Studio Pro generates a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it.
 
 5. Replace the existing line:
 

@@ -49,13 +49,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 1.  Open Eclipse, right-click in the **Package Explorer** window, and select **Import**.
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/import.png)
-	{{% /image_container %}}
-
 2.  In the **Import** window, select **Existing Projects into Workspace** and click **Next**.
-
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/import2.png)
-	{{% /image_container %}}
 
 3.  Set the app directory as the root directory for this app and click **Finish**.
 
@@ -153,9 +147,6 @@ To edit the Java action in Eclipse, follow these steps:
 16. In the **Parameters** section, click **New** to open the expression editor.
 
 17. Select **$ReversedName (String)**, which is the output variable of the Java action.
-
-	{{% image_container width="500" %}}![](attachments/extend-custom-java/parameter.png)
-	{{% /image_container %}}
 
 18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 

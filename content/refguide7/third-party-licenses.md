@@ -5,7 +5,7 @@ menu_order: 70
 ---
 
 
-Mendix uses various third-party libraries that have their own licenses. All the licenses are available when you download the freely available [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) installation. They can be found in various sub-folders of your **Mendix** installation folder:
+Mendix uses various third-party libraries that have their own licenses. All the licenses are available when you download the freely available [Mendix Desktop Modeler](https://marketplace.mendix.com/link/studiopro/) installation. They can be found in various sub-folders of your **Mendix** installation folder:
 
 *   Runtime Server libraries can be found in the folder **runtime\lib**
 *   Modeler libraries can be found in the folder **modeler\Licenses**

@@ -16,7 +16,7 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
-* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Download the [Mendix Desktop Modeler](https://marketplace.mendix.com/link/studiopro/)
 * Review the software used in this how-to:
 
     | Software | Version Used in This How-to |

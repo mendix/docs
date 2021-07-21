@@ -18,7 +18,7 @@ Mendix allows you to publish REST web services natively from . This how-to will 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Setting Up the Example Project
 

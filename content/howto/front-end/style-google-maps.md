@@ -76,7 +76,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 1.  Go-to Snazzymaps and click **Create.**
     **![](attachments/19202780/19398964.png)** 
-2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
+2.  Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
     ![](attachments/19202780/19398965.png) 
 
     Happy modeling!

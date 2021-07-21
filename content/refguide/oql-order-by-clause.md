@@ -35,9 +35,7 @@ ORDER BY
 `DESC` specifies that the results must be ordered descending, from the highest to the lowest value.
 
 {{% alert type="info" %}}
-
-For default ordering behavior of NULL values, see [Null Order Behavior](null-ordering-behavior).
-
+For details on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](ordering-behavior#null-ordering-behavior) section of *Order By Behavior*.
 {{% /alert %}}
 
 ## 3 Examples

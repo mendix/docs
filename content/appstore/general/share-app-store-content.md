@@ -122,10 +122,10 @@ To add content to the Marketplace, follow these steps:
 	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
 	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Sample Apps
 
 	![](attachments/share-app-store-content/general.jpg)
 

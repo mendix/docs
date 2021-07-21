@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "list view control", "c
 
 ## 1 Introduction
 
-The [List View Controls](https://appstore.home.mendix.com/link/app/105694/) enable filtering and searching a list view with the database and XPath data sources.
+The [List View Controls](https://marketplace.mendix.com/link/component/105694/) enable filtering and searching a list view with the database and XPath data sources.
 
 These are the available list view widgets:
 

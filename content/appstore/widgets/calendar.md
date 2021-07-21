@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "calendar", "platform s
 
 ## 1 Introduction
 
-The [Calendar](https://appstore.home.mendix.com/link/app/107954/) widget can be used to display and manage calendar events.
+The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can be used to display and manage calendar events.
 
 ### 1.1 Features
 
@@ -16,10 +16,6 @@ The [Calendar](https://appstore.home.mendix.com/link/app/107954/) widget can be 
 * Drag and drop calendar events
 * Change calendar event colors
 * Retrieve events based on selected date ranges
-
-### 1.2 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://reactcalendar.mxapps.io).
 
 ## 2 Basic Configuration
 
@@ -30,7 +26,7 @@ For a demo app that has been deployed with this widget, see [here](https://react
 5. If you configured the **Microflow** data source, consider setting up **Refresh data source on view** by selecting **Yes** and adding a constraint based on the **View start attribute** and **View end attribute** (for example, `End > $CalenderView/StartAttribute` and `Start < $CalenderView/EndAttribute]`). if configured, when navigating the calendar, only events between the **View start attribute** and **View end attribute** dates will be retrieved.
 6. On the **View** tab, select **Standard** for a view with a day, week, and month only. To set a custom toolbar, select **Custom**. The **Month** is the default initial selected view.
 7. Configure the optional **Start date attribute** if necessary.
-8. On the **Events** tab, there are three types of events:
+8.  On the **Events** tab, there are three types of events:
 	* On-click events for clicking a calendar event/day slot
 	* On-create events (for which **Enable create** must be selected on the **View** tab)
 	* On-change events for dragging-and-dropping and event resizing

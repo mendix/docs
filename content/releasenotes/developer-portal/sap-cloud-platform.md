@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### July 14th, 2021
+
+#### Fix
+
+* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+
 ### June 16th, 2021
 
 #### Improvements
@@ -129,7 +135,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry App Store services from within the Mendix Developer Portal.
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 #### Limitation
 

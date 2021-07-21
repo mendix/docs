@@ -46,10 +46,10 @@ For more details, see the [ATS 2 Reference Guide](/addons/ats-addon/rg-two-cicd-
 
 We are constantly on the lookout for popular widgets that we can support with ATS. With this release, we are happy to announce support for recording and testing the following widgets:
 
-* [AutoComplete Widget](https://appstore.home.mendix.com/link/app/2695/)
+* [AutoComplete Widget](https://marketplace.mendix.com/link/component/2695/)
 * [Switch](/appstore/widgets/switch)
 * [Format String](/appstore/widgets/format-string)
-* [CustomString](https://appstore.home.mendix.com/link/app/1426/)
+* [CustomString](https://marketplace.mendix.com/link/component/1426/)
 
 ### Improvements
 

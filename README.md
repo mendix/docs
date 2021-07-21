@@ -53,7 +53,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
 ##### Windows
 
-The steps in this section assume you have installed Hugo and Node in the root directory of your local repository. For example, Hugo is installed in `C:\Projects\Mendix\docs\hugo`. If this is not the case, you will have to edit the commands in step 3 to reflect their install paths.
+The steps in this section assume you have installed Hugo and Node in the root directory of your local repository. For example, Hugo is installed in *C:\Projects\Mendix\docs\hugo*. If this is not the case, you will have to edit the commands in step 3 to reflect their install paths.
 
 Running the server is done by performing the following steps:
 

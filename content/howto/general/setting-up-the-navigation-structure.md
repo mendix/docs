@@ -50,9 +50,9 @@ Do the following:
 {{% alert type="info" %}}
 
 For online profiles you can set a microflow as a default home page.
-Make sure that the microflow contains a *Show Form* activity, otherwise the user will not see anything.
+Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, otherwise the user will not see anything for execution paths where the activity is missing.
 
-For native mobile profiles you can set a nanoflow as a home page, either as a default or as a role-based. 
+For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. 
 For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) chapter.
 
 {{% /alert %}}
@@ -88,16 +88,25 @@ Now every time a user with the **Administrator** user signs in to the applicatio
 
 ## 5 Setting a Nanoflow as a Home Page {#nanoflow-home-page}
 
-Similar to selecting a page, you can specify a nanoflow as a home page for native profiles.
-That means that the nanoflow you selected will be executed during the startup to show a starting page of your app.
+Similar to selecting a page, you can specify a nanoflow as a home page for the native profile of you app.
+That means that the nanoflow you selected will be executed during the startup to show a starting page of the app.
 This is a normal nanoflow call, which means that you can implement any custom logic there to determine what page to show, including creating objects, calling subnanoflows, using javascript actions etc.
 
-Make sure that the nanoflow contains a *Show Page* activity, or shows a page via a JavaScript action, otherwise the user will not see anything.
+The home page nanoflow is executed after the initial synchronization.
+
+During the execution of the nanoflow, the app splash screen stays visible until the nanoflow reaches the first *Show Page* activity.
 
 If a nanoflow contains multiple *Show Page* activities, they will be executed in order, and each page will be shown respectively.
 The last page shown will stay open after the nanoflow finishes.
 
+Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path,
+otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity.
+
 Home page nanoflows should have no parameters.
+
+An error in the home page nanoflow can lead the app to an unusable state. Therefore we recommend using error handling for activities that can fail, such as microflow calls etc.
+
+To improve user experience for long-running nanoflows we recommend showing a page as early as possible and then continue executing the rest showing the progress on that page.
 
 ## 6 Creating Menu Items
 

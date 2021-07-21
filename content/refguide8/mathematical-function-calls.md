@@ -5,11 +5,15 @@ menu_order: 70
 tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/mathematical-function-calls.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
-If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://appstore.home.mendix.com/link/app/112522/) module available in the Mendix Marketplace.
+If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
 
 ## 2 max
 

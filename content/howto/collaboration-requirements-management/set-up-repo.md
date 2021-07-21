@@ -1,24 +1,24 @@
 ---
-title: "Start Your Own GitHub Repository"
+title: "Set Up a GitHub Repo to Publish a Marketplace Item"
 category: "Collaboration"
 menu_order: 30
-tags: ["studio pro"]
+tags: ["studio pro", "GitHub", "repository", "repo"]
 ---
 
 ## 1 Introduction
 
-In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content).
+In this document, you will learn best practices in how to set up a GitHub repository to publish an Marketplace item. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content).
 
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a [GitHub account](https://github.com/join)
-* Read the [Create a Repo](https://help.github.com/articles/create-a-repo) GitHub guide
+* Familiarize yourself with the [Create a Repo](https://help.github.com/articles/create-a-repo) in the GitHub Docs
 
 ## 3 Creating Your Repo
 
-First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
+First of all, your repo needs a name. You should use the same name that will be used for the item published in the [Mendix Marketplace](https://marketplace.mendix.com/). Use UpperCamelCase to replace the spaces (for example, *My first app* becomes *Mendix/MyFirstApp* on GitHub).
 
 The description should say what the item does. This description can also be used in the Mendix Marketplace.
 
@@ -26,7 +26,7 @@ Add a *.gitignore* file to make sure you keep your repo clean.
 
 ## 4 Marketplace Widget Boilerplate
 
-When making a new widget, use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to get started developing a Mendix widget.
+When making a new widget, use the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to start developing a Mendix widget.
 
 ## 5 Releases
 

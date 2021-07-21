@@ -9,7 +9,7 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
@@ -21,8 +21,8 @@ Once you have created your namespace, you can invite additional team members who
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform or OpenShift version 3.11 or above
-* An administration account for your platform
+* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
+* An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
@@ -71,7 +71,7 @@ Should you consider using a connected environment, the following URLs should be 
     
   1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Type** – choose the correct type for your cluster.
+  2. **Type** – choose the correct type for your cluster. See [Supported Providers](private-cloud-supported-environments) for more information.
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
@@ -142,7 +142,7 @@ Now you can download the Configuration Tool by doing the following:
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
-### 4.2 Signing in to OpenShift{#openshift-signin}
+### 4.2 Signing in to the Platform{#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -224,6 +224,8 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+![](attachments/private-cloud-cluster/configure-namespace.png)
+
 The options do the following:
 
 * **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
@@ -241,7 +243,7 @@ The options do the following:
 
 	![](attachments/private-cloud-cluster/installation-wizard.png)
 
-3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
+3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
 
 4. Each page will lead you through the information you need to supply.
 
@@ -256,6 +258,8 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
+A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -265,7 +269,14 @@ Once you have entered the details you can apply two validation checks by clickin
 
 ![Database Plan Configuration](attachments/private-cloud-cluster/database-plan-config.png)
 
-The supported **Database Types** are described below:
+The following **Database Types** are supported:
+
+* PostgreSQL
+* Ephemeral
+* SQL Server
+* Dedicated JDBC
+
+They are described in more detail below:
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -780,7 +791,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -828,7 +839,7 @@ When you have configured all the resources, do the following:
 
 ### 4.4 Confirming Namespace Configuration
 
-When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
+When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
@@ -997,6 +1008,224 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/) 
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
+### 5.3 Mendix app resource customization{#advanced-resource-customization}
+
+The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
+
+The Deployment object as a name in the following format:
+```
+<internal environment name>-master
+```
+
+Below is an example of the Deployment definition of an app. In this example, the Deployment definition is called `b8nn6lq5-master`:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 0
+  # ...
+  # omitted lines for brevity
+  # ...
+  template:
+    metadata:
+      # ...
+      # omitted lines for brevity
+      # ...
+      creationTimestamp: null
+      labels:
+        app: b8nn6lq5
+        component: mendix-app
+        node-type: master
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - env:
+        - name: M2EE_ADMIN_LISTEN_ADDRESSES
+          value: 127.0.0.1
+        - name: M2EE_ADMIN_PORT
+          value: "9000"
+        - name: M2EE_ADMIN_PASS
+          valueFrom:
+            secretKeyRef:
+              key: adminpassword
+              name: b8nn6lq5-m2ee
+        image: image-registry.openshift-image-registry.svc:5000/test-app/b8nn6lq5
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+          name: mendix-app
+          protocol: TCP
+        name: mendix
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+          path: /
+          port: mendix-app
+          scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: mendix-app
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 1
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+# ...
+# omitted lines for brevity
+# ...
+```
+
+#### 5.3.1 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+
+The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
+
+The `readiness probe`, on the other hand, is designed to check if the cluster is allowed to send network traffic to the pod. If the pod fails this probe, requests will no longer be sent to the pod.
+
+{{% alert type="warning" %}}
+The configuration of the **Readiness probe** does not help to resolve *crash loopback* scenarios. In fact increasing its parameters might degrade the performance of your app, since any malfunction or error recovery will take longer to be acknowledged by the cluster.
+{{% /alert %}}
+
+Let us now analyze the `liveness probe` section from the application deployment example, above:
+
+```yaml
+livenessProbe:
+  failureThreshold: 3
+  httpGet:
+    path: /
+    port: mendix-app
+    scheme: HTTP
+  initialDelaySeconds: 60
+  periodSeconds: 15
+  successThreshold: 1
+  timeoutSeconds: 1
+```
+
+The following fields can be configured:
+
+* `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
+* `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
+* `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
+
+{{% alert type="info" %}}
+If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
+{{% /alert %}}
+
+#### 5.3.2 Customize Container Resources: Memory and CPU
+
+Let us now analyze the `resources` section from the example application deployment, above:
+
+```yaml
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 512Mi
+```
+
+This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
+
+The settings in the example above mean that
+
+* the container will always receive at least the resources set in `requests`
+* if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
+* a container will never be granted more than its resource `limits`
+
+##### 5.3.2.1 Meaning of CPU
+
+Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
+
+Fractional requests are allowed. For instance, in this example, we are requesting `100m`, which can be read as *one hundred millicpu*, and limiting to a maximum of `1` CPU (1000m).
+
+A precision finer than 1m is not allowed.
+
+##### 5.3.2.2 Meaning of Memory
+
+Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
+
+For instance, in the example above, we are requesting and limiting memory usage to roughly **512MiB**.
+
+{{% alert type="warning" %}}
+Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
+{{% /alert %}}
+
+#### 5.3.3 Resource Definition via Operator Configuration Manifest
+
+For a given namespace all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. An example of the operator configuration manifest is given below.
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  sidecarResources:
+    limits:
+      cpu: 250m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  metricsSidecarResources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 16Mi
+  buildResources:
+    limits:
+      cpu: '1'
+      memory: 256Mi
+    requests:
+      cpu: 250m
+      memory: 64Mi
+  runtimeResources:
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+  runtimeLivenessProbe:
+    initialDelaySeconds: 60
+    periodSeconds: 15
+  runtimeReadinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 1
+```
+
+The following fields can be configured:
+
+* `Liveness` and `readiness` probes  – these are used for all Mendix app deployments in the namespace. Therefore, any changes made in the Deployments will be discarded and overwritten with values from `OperatorConfiguration` resource
+* `sidecarResources` –  this is used for all m2ee-sidecar containers in the namespace
+* `metricsSidecarResources`: this is used for all m2ee-metrics containers in the namespace
+* `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
+* `buildResources`  – this is used for the main container in `*-build` pods
+
 ## 6 Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
@@ -1052,6 +1281,7 @@ On the namespace management page, there are a number of tabs which allow you to 
 * Operate
 * Plans
 * Installation
+* Additional information
 
 See the sections below for more information.
 
@@ -1090,7 +1320,7 @@ You can also see an activity log containing the following information for all na
 
 #### 6.2.1 Apps
 
-The **Apps** tab of namespace details in the cluster manager page lists all the apps which are deployed to this namespace.
+The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
 ![](attachments/private-cloud-cluster/image27.png)
 
@@ -1100,9 +1330,32 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the team with the appropriate authorization.
 {{% /alert %}}
 
+If you are a cluster administrator, you can also click **Configure** to configure the environment by adding annotations for pods, ingress, and service.
+
+##### 6.2.1.1 Configure Environment
+
+You can add, edit, and delete annotations for your environment.
+
+{{% alert type="info" %}}
+You need to have the Mendix Operator version 1.12.0 or above installed in your namespace to configure all the available annotations. You need version 1.11.0 to use pod annotations.
+{{% /alert %}}
+
+To add a new annotation, do the following.
+
+1. Click **Add**.
+2. Choose the **Annotation type** from the dropdown.
+3. Enter the **Key** and the **Value** for the annotation.
+4. Click **Save**.
+
+You can also **Edit** or **Delete** an existing annotation by selecting it and clicking the appropriate button.
+
+{{% alert type="warning" %}}
+The new value for the annotation will only be applied when the application is restarted.
+{{% /alert %}}
+
 #### 6.2.2 Members
 
-By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
 * Add and delete namespaces
 * Add, activate, or deactivate plans
@@ -1206,6 +1459,10 @@ The **Installation** tab shows you the Configuration Tool which you used to crea
 You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](#running-the-tool), above.
 
 You can also download the Configuration Tool again, if you wish.
+
+#### 6.2.6 Additional Information
+
+This tab shows information on the versions of the various components installed in your namespace.
 
 ## 7 Current Limitations
 

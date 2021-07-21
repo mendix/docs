@@ -38,7 +38,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 
 1.	Navigate to the **Help** menu > **Open Log File Directory**:
 
-    {{% image_container width="350" %}}![Download from Version Control Server dialog](attachments/on-premises-git-howto/open-log-file-directory-menu.png){{% /image_container %}}
+    ![Download from Version Control Server dialog](attachments/on-premises-git-howto/open-log-file-directory-menu.png)
 
 2.	Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
@@ -55,5 +55,4 @@ There are properties of the Git repository that provide you with the information
 `git remote -v` — lists the remotes specified for the repository
 
 `git config --list --show-origin --show-scope` — provides information on user's Git config
-
 

@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### July 14th, 2021
+
+#### Improvements
+
+* We updated the look and feel of the [Documents](/developerportal/collaborate/documents) page.
+
 ### June 30th, 2021
 
 #### Improvements
@@ -198,7 +204,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the Marketplace.
 
 ## 2020
 

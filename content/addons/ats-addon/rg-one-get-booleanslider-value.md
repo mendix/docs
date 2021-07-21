@@ -5,7 +5,7 @@ parent: "rg-one-booleanslider"
 
 ## 1 Description
 
-Returns the current active text value from the BooleanSlider Appstore Widget.
+Returns the current active text value from the BooleanSlider Widget.
 
 ## 2 Supported Widgets
 

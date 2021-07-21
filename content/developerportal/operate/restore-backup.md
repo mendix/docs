@@ -17,6 +17,12 @@ The backup can be stored in the cloud, associated with the environment from whic
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions) for more information.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+You cannot transfer data from one app to another by restoring a backup from one app to a different app. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide/data-storage) for more information.
+
+If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication) module.
+{{% /alert %}}
+
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.

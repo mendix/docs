@@ -58,7 +58,7 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 * **Collapse icon** (configurable when not animating the icon) – The icon displayed in the header to indicate that the content can be collapsed.
 * **Animate icon** (enabled by default) – Determines whether the icon is animated when the content is collapsing and expanding.
 
-## 4 Styling
+## 3 Styling
 
 The accordion widget is shipped with default styles and works out of the box without Atlas UI. However, including Atlas UI in the app brings improved styling and customizations such as design properties, helper classes, and custom variables.
 

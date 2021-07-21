@@ -6,7 +6,7 @@ tags: ["marketplace", "marketplace component", "platform support", "web actions"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The [Web Actions](https://appstore.home.mendix.com/link/app/114337/) module contains the following actions:
+The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module contains the following actions:
 
 | Category | Action |
 | --- | --- |

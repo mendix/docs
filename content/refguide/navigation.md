@@ -93,7 +93,7 @@ This specifies the application title. This title is shown in the title bar of th
 
 #### 4.1.2 Application Icon
 
-This specifies the application icon. This icon is shown in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
+This specifies the application icon. This icon is shown as favicon in the title bar and bookmarks of the browser. It can only be set in the Responsive profile, but will also be used by the other browser profiles.
 
 ### 4.2 Home Pages
 

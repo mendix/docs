@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "image viewer", "platfo
 
 ## 1 Introduction
 
-The [Image Viewer](https://appstore.home.mendix.com/link/app/65122/) widget displays an image and optionally performs an on-click action (enlarging to mobile-friendly, opening a page, or calling a mircoflow).
+The [Image Viewer](https://marketplace.mendix.com/link/component/65122/) widget displays an image and optionally performs an on-click action (enlarging to mobile-friendly, opening a page, or calling a mircoflow).
 
 ### 1.1 Features
 

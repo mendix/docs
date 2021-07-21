@@ -12,7 +12,7 @@ This connector is deprecated.
 
 ## 1 Introduction
 
-The [IBM App Launch](https://appstore.home.mendix.com/link/app/106382/) connector enables connecting your Mendix application to [IBM App Launch](https://www.ibm.com/blogs/cloud-archive/tag/app-launch/). This service allows you to perform A/B testing, release new features, and monitor metrics for your site.
+The [IBM App Launch](https://marketplace.mendix.com/link/component/106382/) connector enables connecting your Mendix application to [IBM App Launch](https://www.ibm.com/blogs/cloud-archive/tag/app-launch/). This service allows you to perform A/B testing, release new features, and monitor metrics for your site.
 
 ### 1.1 Typical Usage Scenario
 

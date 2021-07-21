@@ -1,13 +1,13 @@
 ---
 title: "Configure String Concatenation"
 category: "Logic & Business Rules"
-menu_order: 11
+menu_order: 110
 tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
 ## 1 Introduction
 
-In every project, you will need to concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.
+In every app, you will need to concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.
 
 Whenever you want to paste multiple strings attributes together you want to make sure that the text looks good in all cases. For example you do not want a firstname + middlename + lastname to be printed as "John null Doe" because the middle name is empty.
 

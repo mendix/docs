@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", 
 
 ## 1 Introduction
 
-The [Charts](https://appstore.home.mendix.com/link/app/105695/) widget enables plotting and comparing your data across different charts.
+The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
 These are the available charts:
 
@@ -20,10 +20,6 @@ These are the available charts:
 * Time series chart
 * Heat chart
 * Bubble chart
-
-### 1.1 Demo App
-
-For a demo app that has been deployed with these widgets, see [here](https://charts102-sandbox.mxapps.io/p/home).
 
 ## 2 Basic Configuration
 

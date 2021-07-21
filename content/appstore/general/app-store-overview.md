@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
+The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
 This document describes the different sections of the Mendix Marketplace.
 
@@ -31,10 +31,10 @@ The home page of the Mendix Marketplace has three main tabs at the top:
 | --- | --- |
 | **Get Studio Pro** | All the versions of [Studio Pro](/releasenotes/studio-pro/) available for download. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
-| [Connectors](/appstore/connectors/) | Connectors are for connecting data. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
+| [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
-| **Solutions** | Fully-formed solutions for your apps. |
+| **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
 
 The following filter options are also available:
 
@@ -174,9 +174,9 @@ This page presents the Marketplace content you have [favorited](#saved):
 
 When the **Subscribe** box is checked next to a favorite component, you will receive email notifications when new versions of that component are published. Clear the check box if you do not want to receive these notifications.
 
-## 5 Your Company's Marketplace
+## 5 Your Company's Marketplace {#company-content}
 
-### 5.1 Company Content {#company-content}
+### 5.1 Company Content 
 
 On this page, you can see all the content your company has published:
 

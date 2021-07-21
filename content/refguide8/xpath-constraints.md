@@ -4,6 +4,10 @@ parent: "xpath"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-constraints.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A constraint can be added to any Xpath query to filter the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](xpath-operators), [functions](xpath-constraint-functions), [keywords or system variables](xpath-keywords-and-system-variables).

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "pla
 
 ## 1 Introduction
 
-The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be used to change a number value using a slider.
+The [Slider](https://marketplace.mendix.com/link/component/48786/) widget can be used to change a number value using a slider.
 
 ### 1.1 Features
 
@@ -41,26 +41,6 @@ In Studio Pro, place the widget in the context of an object that has attributes 
 
 When choosing the step value, the difference between the maximum value and the minimum value should be divisible by 2 (meaning, `(maximumValue - minimumValue) % 2 = 0`).
 
-## 4 Developing This Marketplace Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-	* [karma-cli](https://www.npmjs.com/package/karma-cli)
-2. Fork and clone the [mendixlabs/slider](https://github.com/mendixlabs/slider) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the app root.
-5. Create a Mendix test app in the *dist* folder and rename its root folder to *dist/MxTestApp*, or get the test app from [mendixlabs/slider](https://github.com/mendixlabs/slider/releases/latest). Changes to the widget code will be automatically pushed to this test app.
-6. To automatically compile, bundle, and push code changes to the running test app, run `grunt`.
-7. To run the app unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
-8. Run the unit test continuously during development via `karma start`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/slider](https://github.com/mendixlabs/slider/issues).
-
-## 5 Read More
+## 4 Read More
 
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)

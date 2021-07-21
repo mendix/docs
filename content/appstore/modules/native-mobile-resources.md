@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "native mobile resources", "nativ
 
 ## 1 Introduction
 
-The [Native Mobile Resources](https://appstore.home.mendix.com/link/app/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
+The [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide).
 
 For excellent deep-dive demonstrations of how to use these native mobile widgets, check out the videos below on the [Carousel](#carousel) and [Popup Menu](#popup-menu) widgets:
 
@@ -59,6 +59,7 @@ These are the native widgets included in these resources along with links to the
 | [QR Code](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/qr-code-native) | Displays a QR code based on a value. |
 | [Range slider](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/range-slider-native) | Changes a range of values using a slider. |
 | [Rating](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/rating-native) | Gives a rating by selecting stars. |
+| [Repeater](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |
 | [Safe Area View](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/safe-area-view-native) | Prevents content from being rendered in unsafe areas (iOS only). |
 | [Slider](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/slider-native) | Changes a numeric value using a slider. |
 | [Toggle Buttons](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |

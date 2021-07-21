@@ -49,11 +49,9 @@ Do the following:
 
 {{% alert type="info" %}}
 
-For online profiles you can set a microflow as a default home page.
-Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, otherwise the user will not see anything for execution paths where the activity is missing.
+For online profiles you can set a microflow as a default home page. Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, or else the user will see nothing during execution paths where the activity is missing.
 
-For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. 
-For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) chapter.
+For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) section below.
 
 {{% /alert %}}
 
@@ -88,25 +86,17 @@ Now every time a user with the **Administrator** user signs in to the applicatio
 
 ## 5 Setting a Nanoflow as a Home Page {#nanoflow-home-page}
 
-Similar to selecting a page, you can specify a nanoflow as a home page for the native profile of you app.
-That means that the nanoflow you selected will be executed during the startup to show a starting page of the app.
-This is a normal nanoflow call, which means that you can implement any custom logic there to determine what page to show, including creating objects, calling subnanoflows, using javascript actions etc.
+Instead of using a page, you can set a nanoflow as your app's home page as long as you are using a native profile. The nanoflow you selected will be executed during startup and will show your app's starting page. This is a normal nanoflow call, which means that you can implement custom logic that determines which page to show, creates objects, calls subnanoflows, uses JavaScript actions, and more.
 
-The home page nanoflow is executed after the initial synchronization.
+To make the best nanoflow home pages, keep the following information in mind:
 
-During the execution of the nanoflow, the app splash screen stays visible until the nanoflow reaches the first *Show Page* activity.
-
-If a nanoflow contains multiple *Show Page* activities, they will be executed in order, and each page will be shown respectively.
-The last page shown will stay open after the nanoflow finishes.
-
-Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path,
-otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity.
-
-Home page nanoflows should have no parameters.
-
-An error in the home page nanoflow can lead the app to an unusable state. Therefore we recommend using error handling for activities that can fail, such as microflow calls etc.
-
-To improve user experience for long-running nanoflows we recommend showing a page as early as possible and then continue executing the rest showing the progress on that page.
+* The home page nanoflow is executed after the initial synchronization
+* While the nanoflow executes the app splash screen stays visible until the nanoflow reaches the first *Show Page* activity
+* If a nanoflow contains multiple *Show Page* activities they will be executed in order and each page will be shown respectively (the last page shown will stay open after the nanoflow finishes)
+* Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path, otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity
+* Home page nanoflows should have no parameters
+* An error in the home page nanoflow can lead to an unusable app state — to avoid this, use error handling for activities that can fail, such as microflow calls
+* To improve user experience for long-running nanoflows, show a page as early as possible and then continue executing the rest while showing the progress on that page
 
 ## 6 Creating Menu Items
 

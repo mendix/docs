@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### July 22nd, 2021
+
+#### Fixes
+
+* Administration pages no longer time out for Data Hub company admins.
+
 ### July 1st, 2021
 
 #### Fixes

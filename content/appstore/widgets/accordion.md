@@ -14,6 +14,7 @@ The [Accordion](https://marketplace.mendix.com/link/component/117895) widget ena
 
 * Displays groups consisting of a header and content
 * Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard
+* Allows you to control the collapsed state of a group through expressions and an entity attribute.
 * Allows for additional styling customizations through Atlas UI
 
 ## 2 Usage
@@ -22,16 +23,28 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 
 ### 2.1 General Tab
 
-* **Groups** (required) – The groups that are part of the accordion.
-  * **Header** (Text by default) – Determines whether the content of the header consists of text or widgets.
-  * **Text** (configurable when the header content consists of text) – The text value to be displayed in the header.
-  * **Custom header content** (configurable when the header content consists of widgets) – The widgets to be displayed in the header.
-  * **Visible** (true by default) – A Boolean expression indicating whether the group should be visible.
-  * **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
+* **Groups** (required) – The groups that are part of the accordion. See the following subparagraphs for the configurable properties.
 * **Collapsible** (enabled by default) – Determines whether the content of groups is collapsible.
-* **Expanded groups** (Single by default) – Determines whether one or more groups can be expanded at once.
+* **Expanded groups** ('Single' by default) – Determines whether one or more groups can be expanded at once.
 * **Animate** (enabled by default) – Determines whether the collapsing and expanding of content is animated.
 
+#### 2.1.1 Groups - General Tab
+
+* **Header** ('Text' by default) – Determines whether the content of the header consists of text or widgets.
+* **Text** (configurable when the header content consists of text) – The text value to be displayed in the header.
+* **Render mode** (configurable when the header content consists of text, 'Heading 3' by default) – The text's heading level.
+* **Custom header content** (configurable when the header content consists of widgets) – The widgets to be displayed in the header.
+* **Visible** ('true' by default) – A Boolean expression indicating whether the group should be visible.
+* **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
+
+#### 2.1.2 Groups - State Tab
+
+* **Start as** ('Expanded' by default) – Determines whether the content of the header starts expanded or collapsed. Optionally through the help of an expression with the 'Dynamic' option. 
+* **Start as collapsed** (configurable when **Starts as** is set to 'Dynamic', 'false' by default) – A Boolean expression indicating whether the group should be expanded or collapsed.
+* **Collapsed** (not required) – A Boolean attribute indicating whether the group should be expanded or collapsed. The 'Start as' properties override the attribute value for the initial state.
+* **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Note: the 'Start as' properties can prevent execution of this action when the initial state changes.
+
+Note: when **Expanded groups** is set to 'Single', multiple expanded groups will be suppressed.
 
 ### 2.2 Advanced Tab
 
@@ -48,7 +61,14 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 * **Visualization**:
 	* Collapse icon 
 * **Visualization**:
-	* Animate icon 
+	* Animate icon
+* **Groups - General**:
+	* Render mode
+* **Groups - State**:
+	* Start as
+	* Start as collapsed
+	* Collapsed
+	* On change
 
 ### 2.3 Visualization Tab
 

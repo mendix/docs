@@ -86,5 +86,6 @@ May be used to generate a task template that contains a timeline, attachments, c
 
 ## 5 Read More
 
+* [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)
 * [Mendix SSO](mendix-sso)
 * [Datagrid 2](data-grid-2)

@@ -42,9 +42,9 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 * **Start as** ('Expanded' by default) – Determines whether the content of the header starts expanded or collapsed. Optionally through the help of an expression with the 'Dynamic' option. 
 * **Start as collapsed** (configurable when **Starts as** is set to 'Dynamic', 'false' by default) – A Boolean expression indicating whether the group should be expanded or collapsed.
 * **Collapsed** (not required) – A Boolean attribute indicating whether the group should be expanded or collapsed. The 'Start as' properties override the attribute value for the initial state.
-* **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Note: the 'Start as' properties can prevent execution of this action when the initial state changes.
+* **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Note that the 'Start as' properties can prevent execution of this action when the initial state changes.
 
-Note: when **Expanded groups** is set to 'Single', multiple expanded groups will be suppressed.
+Note that when **Expanded groups** is set to 'Single', multiple expanded groups will be suppressed.
 
 ### 2.2 Advanced Tab
 
@@ -62,9 +62,9 @@ Note: when **Expanded groups** is set to 'Single', multiple expanded groups will
 	* Collapse icon 
 * **Visualization**:
 	* Animate icon
-* **Groups - General**:
+* **Groups > General**:
 	* Render mode
-* **Groups - State**:
+* **Groups > State**:
 	* Start as
 	* Start as collapsed
 	* Collapsed

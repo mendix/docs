@@ -8,7 +8,6 @@ tags: ["marketplace", "marketplace component", "widget", "image viewer", "platfo
 
 ## 1 Introduction
 
-<!-- TODO: It's still under consideration whether it will be a new module or overwrite the existing one -->
 The [Image Viewer]() widget allows you to display an image within your Mendix web application.
 
 The widget can do the following things:

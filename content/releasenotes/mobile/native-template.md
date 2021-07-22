@@ -31,7 +31,7 @@ These are the current versions in active development:
 
 ## 5.2.0
 
-**Release date: July 20th, 2021**
+**Release date: July 23rd, 2021**
 
 ### Breaking Change
 

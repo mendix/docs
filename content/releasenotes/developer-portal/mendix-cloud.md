@@ -12,6 +12,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### July 23rd, 2021
+
+#### Improvements
+
+* We have improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker.
+
+#### Fixes
+
+* We fixed an issue where the free application environment page was showing deployed in cloud while it was not.
+
 ### July 15th, 2021
 
 #### Improvements

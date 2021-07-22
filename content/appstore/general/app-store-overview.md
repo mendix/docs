@@ -19,9 +19,12 @@ This document describes the different sections of the Mendix Marketplace.
 
 ## 2 Marketplace Home Page {#home}
 
-The home page is your entry point to the various parts of the Mendix Marketplace. Here you can click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/), click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed, click **My Marketplace** to go to pages describing your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content), and explore various [content categories](#catalog).
+The home page is your entry point to the various parts of the Mendix Marketplace. Here you can perform actions such as the following:
 
-{{% todo %}}[**FINALIZE ABOVE AND SCREENSHOT**]{{% /todo %}}
+* Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
+* Click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
+* Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed
+* Explore various [content categories](#catalog).
 
 ![](attachments/app-store-overview/home-page.jpg)
 
@@ -93,7 +96,7 @@ The details page for a component presents the following item information tabs:
 
 ## 4 My Marketplace {#my-marketplace}
 
-At the top of your personalized Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets**, **App Services**, or **Solutions**.
+At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets**, **App Services**, or **Solutions**.
 
 The rest of this page presents previews of your Marketplace activity:
 
@@ -125,11 +128,9 @@ In this page, you can see the Marketplace content for which you have created at 
 
 You may see the **Company only** label on a component, which means it is your company's private Marketplace content (for details on how this is configured, see the [Adding New Marketplace Content](share-app-store-content#private-app-store) section of *How to Share Marketplace Content*). This content can be shared with [guests](#guests).
 
-{{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
+In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as group [group content](#group-content).
 
-In addition, you may see a label on a component name for the [user group](#user-groups) to which the component is assigned as user group [content](#content).
-
-At the top of the page, you can click **Drafts** to go to a page containing drafts of all the Marketplace content you have started:
+At the top of the page, you can click **Open Drafts** to see drafts of all the Marketplace content you have started:
 
 ![](attachments/app-store-overview/drafts.png)
 
@@ -152,7 +153,7 @@ Click the context menu to access various options for managing this content:
 ![](attachments/app-store-overview/saved.png)
 
 * **View item** – click this to go to the [component details page](#details) 
-* **Stop email notifications** – click this to stop email notifications if you have them enabled
+* **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
 ### 4.4 Reviews {#my-reviews}
@@ -169,11 +170,11 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available to you if one of the following conditions is true:
 
+{{% todo %}}[**VERIFY BELOW CONDITIONS**]{{% /todo %}}
+
 * The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
 * The component is assigned to a user group, and you are a [member](#members) of that group
 * You are a [Mendix Admin](/developerportal/control-center/#company) of the company that published the component
-
-{{% todo %}}[**VERIFY ABOVE**]{{% /todo %}}
 
 ### 4.6 Company Reviews
 
@@ -183,7 +184,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
-{{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
+{{% todo %}}[**VERIFY BELOW CONDITIONS**]{{% /todo %}}
 
 {{% alert type="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
@@ -193,7 +194,7 @@ The **User Groups** menu item and page are visible to all users. However, only [
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#content) assigned to the group.
 
-Once a member is added, you can select their permission level: **Member** or **Group Admin**. A Group Admin can manage the user group.
+Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
 
 ![](attachments/app-store-overview/members.png)
 
@@ -213,7 +214,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-#### 4.7.3 Content Tab {#content}
+#### 4.7.3 Content Tab {#group-content}
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 

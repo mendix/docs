@@ -20,10 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fixes
 
-* We fixed the well-known issue of not being able to return custom JSON error descriptions for REST endpoints. 
-
-   If you have defined custom HTML error pages for your application, they will be disabled for request handlers that typically do not serve HTML content. These include includes SOAP, OData and REST endpoints defined in your application.
-
+* We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
 * We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
 
 ### July 15th, 2021

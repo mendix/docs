@@ -41,6 +41,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Metrics, Alerts, and Log Levels** | Not available. | Available. |
 | **Historic Archived Logs** | Not available, only live logs are available. | Available. |
 | **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| **Support** | No Support. | Depending on license option. |
 
 ¹The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
@@ -129,7 +130,7 @@ An app can also be deployed without using Studio Pro. To do this, follow these s
 
 The package will now be deployed to the cloud.
 
-## 4 Deploy the App to an Environment
+## 4 Deploy the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 

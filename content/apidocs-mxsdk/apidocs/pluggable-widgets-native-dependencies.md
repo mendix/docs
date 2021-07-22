@@ -56,7 +56,7 @@ As you can see above, the key of the entry is a name of the dependency and the v
 
 ## 4 Conflict Checking
 
-It is not possible to include different versions of the same native dependency in one project. Therefore, when different components in a project use the same native dependency Studio Pro begins a conflict check. It makes sure there is no mismatch between versions required by different components. If version conflicts are detected, they are reported.
+It is not possible to include different versions of the same native dependency in one app. Therefore, when different components in an app use the same native dependency Studio Pro begins a conflict check. It makes sure there is no mismatch between versions required by different components. If version conflicts are detected, they are reported.
 
 ## 5 Read More
 

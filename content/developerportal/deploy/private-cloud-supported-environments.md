@@ -14,7 +14,7 @@ This document covers which providers and services are officially supported by th
 
 ## 2 Kubernetes Cluster Types
 
-### 2.1 Supported Cluster Types
+### 2.1 Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:
 
@@ -26,6 +26,8 @@ We currently support deploying to the following Kubernetes cluster types:
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
+If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
+
 Only Kubernetes versions 1.13 through 1.20 are officially supported.
 
 Mendix for Private Cloud has not been evaluated against Kubernetes 1.21 and later versions.
@@ -100,6 +102,15 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 ## 4 Databases
 
+The following databases are supported, and provide the features listed.
+
+| Database | Data Persists | Provisioned by Operator |
+| === | === | === |
+| Ephemeral | No | Yes |
+| Standard PostgreSQL | Yes | Yes |
+| Microsoft SQL Server | Yes | Yes |
+| Dedicated JDBC | Yes | No |
+
 ### 4.1 Ephemeral Database
 
 The ephemeral database plan uses an in-memory database running directly in a Mendix Runtime container.
@@ -112,6 +123,8 @@ An app with an ephemeral database cannot have more than one replica. Only the fi
 {{% /alert %}}
 
 ### 4.2 Standard PostgreSQL Database
+
+This refers to a PostgreSQL database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
 The following standard PostgreSQL databases are supported:
 
@@ -139,10 +152,10 @@ For every Mendix app environment, a new database schema and user (role) will be 
 {{% /alert %}}
 
 {{% alert type="info" %}}
-By default, Mendix for Private Cloud will first try to connect with TLS enabled; if the server doesn't support TLS, the Mendix Operator will reconnect without TLS.
+By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
+If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if: 
 
 * the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown Certificate Authority
@@ -154,6 +167,8 @@ Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later
 {{% /alert %}}
 
 ### 4.3 Microsoft SQL Server
+
+This refers to a SQL Server database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
 The following Microsoft SQL Server editions are supported:
 
@@ -178,7 +193,7 @@ For every Mendix app environment, a new database, user and login will be created
 {{% alert type="info" %}}
 By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
+If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if 
 
 * SQL Server doesn't support encryption
 * the SQL Server server has an invalid certificate
@@ -189,7 +204,7 @@ The Mendix Operator allows you to specify custom Certificate Authorities to trus
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-### 4.4 Dedicated JDBC database
+### 4.4 Dedicated JDBC database{#jdbc}
 
 This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings) directly as supported by the Mendix Runtime.
 
@@ -199,7 +214,7 @@ A dedicated JDBC database cannot be used by more than one Mendix app.
 
 ## 5 File storage
 
-### 5.1 Ephemeral file storage
+### 5.1 Ephemeral File Storage
 
 The ephemeral file storage plan will store files directly in the Mendix Runtime container.
 It doesn't require any external file storage provider and is great for quick tests or stateless apps that don't require any file storage.
@@ -221,7 +236,7 @@ For every Mendix app environment, a new bucket and user will be created so that 
 {{% alert type="warning" %}}
 If MinIO is installed in [Gateway](https://github.com/minio/minio/tree/master/docs/gateway) mode, it needs to be configured to use etcd.
 MinIO uses etcd to store its configuration.
-Without etcd, MinIO will disable its admin API - which is required by the Mendix Operator to create new users for each environment.
+Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}
 
 ### 5.3 Amazon S3
@@ -231,7 +246,7 @@ Without etcd, MinIO will disable its admin API - which is required by the Mendix
 A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/private-cloud-cluster#storage-plan)
 configuration details.
 
-### 5.4 Azure Blob storage
+### 5.4 Azure Blob Storage
 
 An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) container can be attached to Mendix app environments.
 
@@ -253,12 +268,12 @@ NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/),
 These features will likely be required once your application is ready for production.
 {{% /alert %}}
 
-### 6.1 OpenShift route
+### 6.1 OpenShift Route
 
 OpenShift routes are supported only in OpenShift.
 
 The only configuration option currently supported is turning TLS on or off.
-When TLS is turned on, `Edge` termination will be used, with automatic redirection from HTTP to HTTPS.
+When TLS is turned on, `Edge` termination (where TLS termination occurs at the router, before the traffic gets routed to the pods) will be used, with automatic redirection from HTTP to HTTPS.
 
 The following configuration options are available in OpenShift:
 
@@ -279,11 +294,14 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
+* [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 
 For ingress, it is possible to do the following:
 
 * Turn TLS on and off
 * Add ingress annotations
+* Add service annotations
+* Specify the ingress class, path and path type
 * Provide the name of an existing TLS secret to use
 * Provide a domain name (for example, mendix.example.com)
 
@@ -305,3 +323,13 @@ There are multiple ways of managing TLS certificates:
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 
 Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP(S) traffic between the Ingress Controller and the Pod running a Mendix app.
+
+### 6.3 Service Only
+
+Mendix for Private Cloud can create Services without an Ingress.
+In this way, the Ingress objects can be managed separately from Mendix for Private Cloud.
+
+Mendix for Private Cloud can create Services that are compatible with:
+
+* [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
+* AWS Classic Load Balancer

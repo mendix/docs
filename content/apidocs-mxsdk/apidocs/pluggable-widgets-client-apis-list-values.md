@@ -127,7 +127,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 }
 ```
 
-The `setOffset` and `setLimit` are supported on all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
+The `setOffset` and `setLimit` are supported on all [data sources](/refguide/data-sources#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
 
 ### 2.3 Sorting {#listvalue-sorting}
 
@@ -141,7 +141,7 @@ It is possible to set a specific sort order for items in the list using `setSort
 type SortInstruction = [id: ListAttributeId, dir: SortDirection];
 ```
 
-The first element of `SortInstruction` type is `id` of an attribute property liked to the datasource. This lets widget so specify which attribute should be used for sorting. Though not every attribute could be used for sorting, for some attributes sorting may be disallowed. To determine if an attribute could be used for sorting `sortable` flag of its attribute property has to be checked. This flag specifies if it is possible to use particular attribute for sorting. See [Attribute ID, Sortable and Filterable Flags](#listattributevalue-id-sortable-filterable) section for more information about attribute `id` and `sortable` flag.
+The first element of `SortInstruction` type is `id` of an attribute property linked to the datasource. This lets the widget specify which attribute should be used for sorting. Though not every attribute could be used for sorting, for some attributes sorting may be disallowed. To determine if an attribute could be used for sorting `sortable` flag of its attribute property has to be checked. This flag specifies if it is possible to use particular attribute for sorting. See [Attribute ID, Sortable and Filterable Flags](#listattributevalue-id-sortable-filterable) section for more information about attribute `id` and `sortable` flag.
 
 The second attribute of `SortInstruction` type is a literal string representing the sort direction, either `"asc"` or `"desc"`.
 
@@ -190,7 +190,7 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
-The `setSort` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
+The `setSort` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.
@@ -215,7 +215,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-The `setFilter` method is supported for all [data sources](https://docs.mendix.com/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
+The `setFilter` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.

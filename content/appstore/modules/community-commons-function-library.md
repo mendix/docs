@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "community commons function libra
 
 ## 1 Introduction
 
-The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
+The [Community Commons Function Library](https://marketplace.mendix.com/link/component/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
 
 ## 2 Usage
 
@@ -170,5 +170,5 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 7 Read More
 
-* [How to Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance)
-* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)
+* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance)
+* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)

@@ -102,7 +102,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
     2. Drag and drop the button inside the list view:
 
-       ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
+        ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
 
     3. Open the button properties and set the **Workflow** property to **Employee_Onboarding**. 
 

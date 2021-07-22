@@ -15,6 +15,23 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### July 14th, 2021
+
+#### Improvements
+
+* We updated the look and feel of the [Documents](/developerportal/collaborate/documents) page.
+
+### June 30th, 2021
+
+#### Improvements
+
+* You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
+* We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
+* We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
+* We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
+* We implemented a new responsive search panel.
+* We will remove the [Burndown Chart](/developerportal/collaborate/development#burndown) and [Release Plan](/developerportal/collaborate/development#release-plan) tabs from the Developer Portal on August 31st, 2021.
+
 ### June 15th, 2021
 
 #### Improvements
@@ -187,7 +204,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the Marketplace.
 
 ## 2020
 

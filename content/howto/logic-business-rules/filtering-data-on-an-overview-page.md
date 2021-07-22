@@ -1,6 +1,7 @@
 ---
 title: "Filter Data on an Overview Page Using XPath"
 category: "Logic & Business Rules"
+menu_order: 150
 tags: ["filter", "xpath"]
 ---
 
@@ -22,13 +23,13 @@ This how-to serves as a comparison for filtering data and emphasizes how to use 
 
 ## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
 
-To see the results of this how-to, it is necessary that you set up a test project with test data.
+To see the results of this how-to, it is necessary that you set up a test app with test data.
 
 Before you continue, make sure that you know how to create the following:
 
-* Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Domain models (for more information, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (for more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
 
 1.  Create the following domain model:
 

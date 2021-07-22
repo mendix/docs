@@ -77,7 +77,7 @@ As you can see, type parameters enable creating typesafe generic actions.
 
 ## 3 Executing Microflows
 
-The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
+The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every app object to initialize it:
 
 ![Init loop](attachments/how-to-connector-kit/init-loop.png)
 
@@ -119,7 +119,7 @@ The `executeAction` method is where all the magic happens:
 
 ![Initialize list java implementation 2](attachments/how-to-connector-kit/initilialize_list_java_2.png)
 
-Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
+Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
 ## 4 Using Import & Export Mappings
 
@@ -159,7 +159,7 @@ while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-![Mendix Connector kit module project with tests](attachments/how-to-connector-kit/project_test.png)
+![Mendix Connector kit module app with tests](attachments/how-to-connector-kit/project_test.png)
 
 ### 5.2 Managing Libraries
 

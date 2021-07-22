@@ -8,7 +8,7 @@ tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "h
 
 ## 1 Introduction
 
-Use the [Database](https://appstore.home.mendix.com/link/app/2888/) connector to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
+Use the [Database](https://marketplace.mendix.com/link/component/2888/) connector to incorporate your external data directly in your Mendix application. This connector enables seamlessly connecting to external databases without being limited in your choice of database or SQL dialect.
 
 This document focuses on executing an SQL `SELECT` query and SQL statements on external relational databases.
 
@@ -89,4 +89,4 @@ If you intend to connect to SQL Server using integrated security, please be awar
 
 ## 7 Read More
 
-* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)
+* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)

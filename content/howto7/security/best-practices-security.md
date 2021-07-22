@@ -36,7 +36,7 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that variables—whose value originates from user input or other systems—should be escaped to avoid injection (and for the proper display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that variables—whose value originates from user input or other systems—should be escaped to avoid injection (and for the proper display).
 
 These are the common cases and best practices:
 

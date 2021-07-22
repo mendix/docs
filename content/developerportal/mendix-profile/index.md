@@ -102,14 +102,14 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 
 ### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
 | Publish an app | 50 | N/A |
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
-| Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
+| Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) | 5 | 5 |
 | Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
@@ -196,7 +196,7 @@ You can also view details in the following sections.
 
 ### 9.1 Latest Messages
 
-In this section, you can see all the notifications from [Buzz](../collaborate/buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+In this section, you can see all the notifications from [Buzz](/developerportal/collaborate/buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
 
 ### 9.2 Documents
 
@@ -279,7 +279,7 @@ For more information, see the following:
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Manage App API Keys](../settings/api-key)
+* [How to Manage App API Keys](/developerportal/settings/api-key)
 
 ### 10.6 Advanced
 

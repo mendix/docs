@@ -5,6 +5,10 @@ menu_order: 40
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/activities.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Activities define the actions that are executed in a microflow or a nanoflow.

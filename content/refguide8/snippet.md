@@ -6,6 +6,10 @@ tags: ["studio pro", "snippet", "page resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/snippet.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Snippets define reusable interface parts. They can be used on both [pages](page) and [layouts](layout). By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.

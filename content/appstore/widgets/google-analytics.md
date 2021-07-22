@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "google analytics", "ev
 
 ## 1 Introduction
 
-The [Google Analytics](https://appstore.home.mendix.com/link/app/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
+The [Google Analytics](https://marketplace.mendix.com/link/component/105/) widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
 ### 1.1 Typical Usage Scenario
 
@@ -52,7 +52,7 @@ This widget must be inside a data view.
 {{% /alert %}}
 
 * **URL** – the URL that should be shown in the Google Analytics overview
-* **Title ** – the title that should be shown in the Google Analytics overview
+* **Title** – the title that should be shown in the Google Analytics overview
 
 For example, if the **Url** is */test/${name}*, then if the URL is parsed, *${name}* will be replaced by the value of the current object's attribute, which is defined in the **Data Source** tab. 
 
@@ -65,3 +65,7 @@ This is exactly the same as [AdvancedPageTracker](#advancedpagetracker), but wit
 These tools allow you to focus on the quality of your web application. For more information on what this means for your Mendix application, see [Google Search Console](https://search.google.com/search-console/about).
 
 This widget will place a `META` verification tag inside the `html` tag so that the webmaster tools can be activated and help with SEO on Mendix applications.
+
+## 4 Limitations
+
+If you are using an advertisement blocker (such as the AdBlocker browser extension) or have configured your browser to not allow tracking, it might result in your page being broken. This is because certain advertisement blockers and tracking restrictions can block this widget's files. 

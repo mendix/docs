@@ -19,7 +19,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 
 ### 3 Customizing the Quickstart App
 
-The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI resources package. This package consists of:
+The [Native Mobile Quickstart](https://marketplace.mendix.com/link/component/109511/) app is styled using an Atlas UI resources package. This package consists of:
 
 * Widgets
 * Building blocks
@@ -87,7 +87,7 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 	Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
-## 6 Creating Your Own Classes {#6-creating-your-own-classes}
+## 6 Creating Your Own Classes {#creating-your-own-classes}
 
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 
@@ -180,5 +180,5 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 * [How to Implement Native Mobile Styling](native-styling)
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto8/front-end/atlas-ui)
 * [How to Get Started with Native Mobile](getting-started-with-native-mobile)

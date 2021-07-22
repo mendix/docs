@@ -46,16 +46,15 @@ You can add information the end-user should know to the component [Documentation
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
-* The widget (and test app) must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
+* The widget should be [pluggable](/howto/extensibility/create-a-pluggable-widget-one)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
 * Add code comments
 * Use descriptive variable and function names in both XML and JavaScript
-* Always add `"use strict";` functions
-* A function may not be larger than 200 lines of code
-* A function may only do one thing, and it should do it properly
-* Internal variables should start with an underscore (`_`)
-* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
-* Create test pages for mobile when content is mobile-supported
+* A function should not be more than 200 lines of code
+* A function should only do one thing, and it should do it properly
+* Use hooks and functional components over class components
+* Use TypeScript over JavaScript
+* Create test pages for mobile when content is made for mobile platforms
 
 ### 3.3 Module Guidelines
 
@@ -123,10 +122,10 @@ To add content to the Marketplace, follow these steps:
 	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
 	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Sample Apps
 
 	![](attachments/share-app-store-content/general.jpg)
 
@@ -144,7 +143,7 @@ To add content to the Marketplace, follow these steps:
 	* If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
 		* When you are finished, click **Save**
 
-9.  If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
+9.  <a name="version"></a>If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
 	![](attachments/share-app-store-content/package.jpg)
 
@@ -168,7 +167,7 @@ To add content to the Marketplace, follow these steps:
 	* Drag the image from file explorer to the editor (this will upload your image)
 	* Click the Image button in the editor tools and enter a URL which points to an image
 
-11. Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+11. <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 	![](attachments/share-app-store-content/enable.png)
 	

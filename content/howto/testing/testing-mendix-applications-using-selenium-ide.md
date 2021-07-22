@@ -69,7 +69,7 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 3. Enter a name for your new Selenium project (for example, *CompanyExpenses*).
 4. Enter the URL for your Company Expenses app's login screen (`http://localhost:8080/login.html`), then click **START RECORDING**. This will open up your app in a new browser window. The Selenium IDE is now recording.
-5.  Sign in with default [administrator credentials](/refguide/administrator#2-administrator-properties): 
+5.  Sign in with default [administrator credentials](/refguide/administrator#administrator-properties): 
 	* **User name**: MxAdmin
 	* **Password**: 1
 	
@@ -129,10 +129,10 @@ In this example scenario, you need to do the following:
 
 * [Automated Tests with TestNG](create-automated-tests-with-testng)
 * [Test Microflows Using the Unit Testing Module](testing-microflows-using-the-unittesting-module)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
 * [Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+* [Monitor Mendix Using JMX](/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx)
 
 Learn more about this topic using the following helpful link:
 

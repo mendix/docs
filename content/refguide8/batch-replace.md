@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/batch-replace.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Batch replace** works on the currently selected language and allows you to replace any existing texts with a new one.

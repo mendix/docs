@@ -7,7 +7,7 @@ tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configura
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace here: https://appstore.home.mendix.com/link/app/105695/.
+This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace here: https://marketplace.mendix.com/link/component/105695/.
 
 This guide covers the following widgets:
 
@@ -61,7 +61,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto7/extensibility/charts-basic-rest)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](/howto7/extensibility/charts-basic-rest)
 
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 

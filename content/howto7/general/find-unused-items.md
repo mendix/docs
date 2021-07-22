@@ -27,9 +27,9 @@ You can filter the results by clicking on the 'Show all' button on the top-right
 
 Keep in mind that by deleting any unused items the actual list of unused items might grow. For example, if you delete an unused page any microflow which is only used on that page will become an unused item itself. If you are cleaning up your application regularly refresh the unused items list.
 
-Modules downloaded from the Appstore might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model. It is advised that you don't remove any unused items from an Appstore module.
+Modules downloaded from the Marketplace might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model. It is advised that you don't remove any unused items from an Marketplace module.
 
-Any objects which are excluded from the project won't show up in the unused items list.
+Any objects which are excluded from the app won't show up in the unused items list.
 
 ## 3 Setting Unused Objects to "Used" 
 

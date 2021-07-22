@@ -45,7 +45,7 @@ information dialog with brief description of this activity/event is displayed ab
 The following options are available in the information dialog box:
 
 * **Don't show again** – disables the information dialog box (it will not be shown again when you insert other activities) 
-* **Lean More** – opens documentation on microflow activities
+* **Learn More** – opens documentation on microflow activities
 * **Thanks, I understand** – dismisses the current information dialog box 
 
 ## 3 Settings
@@ -92,8 +92,7 @@ The activity is added to the flow.
 
 Adding a check means that you will add a **Decision** with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Decision](microflows-decision).   
 
-{{% image_container width="300" %}}![](attachments/mx-assist/check-added.png)
-{{% /image_container %}}
+![](attachments/mx-assist/check-added.png)
 
 {{% alert type="info" %}}
 

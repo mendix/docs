@@ -12,7 +12,7 @@ Every customer situation is different. We want to make sure there's a convenient
 
 All in all, there are four different supported deployment scenarios. This document describes and compares them.
 
-Please be aware that not every option supports the full set of features. Take a look at [4 Comparing the Options](#4-comparing-the-options) to understand the differences.
+Please be aware that not every option supports the full set of features. Take a look at [Comparing the Options](#comparing-the-options) to understand the differences.
 
 ## 2 Components
 
@@ -76,7 +76,7 @@ Since the Selenium Runner offers fewer features compared to Selenium SaaS Provid
 The feature set in this option is limited.
 {{% /alert %}}
 
-## 4 Comparing the Options
+## 4 Comparing the Options {#comparing-the-options}
 
 Before you pick your option, you need to be aware of the differences. The following two sections will help you to make your choice.
 

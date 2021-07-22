@@ -27,13 +27,13 @@ To use push notifications with apps created with the Native Mobile Builder, make
 {{% /alert %}}
 
 
-## 3 Creating a Project and Configuring Notifications
+## 3 Creating an App and Configuring Notifications
 
 Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
 2. Select **File** > **New App**.
-3.  Select the **Native Mobile Quickstart** app (also available online [here](https://appstore.home.mendix.com/link/app/109511/)):
+3.  Select the **Native Mobile Quickstart** app (also available online [here](https://marketplace.mendix.com/link/component/109511/)):
 
 	![native mobile quickstart app](attachments/native-push/quickstart.png)
 

@@ -6,9 +6,13 @@ tags: ["marketplace", "marketplace component", "widget", "contacats for hybrid",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Contacts for Hybrid](https://appstore.home.mendix.com/link/app/1473/) widget enables the native contacts functionality within your Mendix mobile application. 
+The [Contacts for Hybrid](https://marketplace.mendix.com/link/component/1473/) widget enables the native contacts functionality within your Mendix mobile application. 
 
 ## 2 Configuration
 

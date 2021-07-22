@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-To use Mendix Studio Pro's native mobile app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
+To use Mendix Studio Pro's native mobile app capabilities, you can use the [Native Mobile Quickstart](https://marketplace.mendix.com/link/component/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
 
@@ -100,6 +100,6 @@ For more detailed instructions on debugging a native mobile app, see [Debug Nati
 
 ## 4 Read More
 
-* [How to Build Pluggable Widgets](../extensibility/pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets)
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)

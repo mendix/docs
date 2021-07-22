@@ -23,7 +23,7 @@ For **mobile applications** Mendix Client acts as a React Native application. Th
 The three supported types of wrappers for mobile applications are as follows:
 
 * [Make It Native app](getting-the-make-it-native-app)
-* [Custom Developer apps](/howto/mobile/how-to-devapps#1-introduction)
+* [Custom Developer apps](/howto/mobile/how-to-devapps)
 * [Native apps](/howto/mobile/deploying-native-app)
 
 The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
@@ -201,6 +201,20 @@ When the app is deployed, the static resources are placed in a structure referre
 * app styling/Atlas – the app-specific css styling and static visual elements which define how a page is displayed
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
+
+#### 4.1.3 Cookies
+
+When the Mendix client is running, it creates a number of technical cookies to record information about the session. These expire at the end of the session, and can include:
+
+* Device Type
+* JSESSIONID
+* Profile
+* SessionTimeZoneOffset
+* \_\_VCAP\_ID\_\_
+* XASID
+* XASSESSIONID
+* originURI
+* xasid
 
 ### 4.2 Launching Native Mendix Client
 

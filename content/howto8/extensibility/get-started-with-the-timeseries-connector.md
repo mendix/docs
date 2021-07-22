@@ -24,7 +24,7 @@ When looking at the IoT trend recently, one hundred sensors that send data each 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have Mendix Studio Pro installed (download [here](https://appstore.home.mendix.com/link/modeler/))
+* Have Mendix Studio Pro installed (download [here](https://marketplace.mendix.com/link/studiopro/))
 * Have the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in your app
 
 ## 3 Sign Up for the TimeSeries Connector
@@ -37,7 +37,7 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {{% /alert %}}
 
-2. After you receive the key, import the [TimeSeries](https://appstore.home.mendix.com/link/app/31951/) connector into your app from the Mendix Marketplace.
+2. After you receive the key, import the [TimeSeries](https://marketplace.mendix.com/link/component/31951/) connector into your app from the Mendix Marketplace.
 
 ## 4 Configure the Module Settings
 
@@ -47,7 +47,7 @@ After importing the module, there are a couple of settings you need to configure
 
 There are three constants that you can configure. Follow these steps to configure them:
 
-1. Expand your project and go to **App Store modules** > **TimeSeriesConnector** > **Settings**.
+1. Expand your app and go to **App Store modules** > **TimeSeriesConnector** > **Settings**.
 2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 

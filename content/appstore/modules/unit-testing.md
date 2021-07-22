@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "unit testing", "unit test", "tes
 
 ## 1 Introduction
 
-Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app.
+Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) module to run Mendix and JUnit unit tests inside your app.
 
 ### 1.1 Dependencies
 
@@ -103,4 +103,4 @@ The completed flag will be `false` as long as the test run is not finished. The 
 
 ## 6 Read More
 
-* [How to Test Microflows Using the UnitTesting Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)
+* [How to Test Microflows Using the UnitTesting Module](/howto/testing/testing-microflows-using-the-unittesting-module)

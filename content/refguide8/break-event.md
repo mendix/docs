@@ -5,6 +5,10 @@ menu_order: 5
 tags: ["studio pro", "break event", "event", "loop"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/break-event.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 {{% alert type="warning" %}}

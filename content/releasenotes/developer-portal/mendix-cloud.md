@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker.
+* We improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker. The version will be updated after a restart of the environment.
 
 #### Fixes
 

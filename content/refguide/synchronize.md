@@ -12,7 +12,7 @@ This activity can only be used in **Nanoflows** that run in an offline-first app
 
 ## 1 Introduction
 
-The **Synchronize** activity can be used to synchronize your data between your device and the server.  The **Synchronize** action has two modes:
+The **Synchronize** activity can be used to synchronize your data between your device and the server.  The **Synchronize** action has 3 modes:
 
 ### 1.1 Synchronize All Objects
 
@@ -48,9 +48,15 @@ This mode synchronizes objects partially, based on a selection:
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
 meaning both the server database and the local database is updated for the selected objects. Check [Synchronization Behavior](#synchronization-behavior) section for more details.
 
-## 3 Synchronization Behavior
+## 2 Synchronization Behavior
 
-If the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
+This section describes the behavior for [Synchronize Unsynchronized Objects](#synchronize-unsynchronized-objects) and [Synchronize Selected Object(s)](#synchronize-selected-object-s) modes.
+
+{{% alert type="warning" %}}
+The settings in [**Synchronization configuration**](offline-first#customizable-synchronization) are not applied for **synchronize unsynchronized objects** and **synchronization selected object(s)** modes.
+{{% /alert %}}
+
+In synchronize selected object(s) mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
 
 If the selected object has local changes, the following steps are performed:
 
@@ -81,7 +87,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## 6 Limitations {#limitations}
 
-Running multiple synchronization processes at the same time is not supported, regardless the of type (**full** or **selective**).
+Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown:
 

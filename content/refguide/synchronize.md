@@ -30,10 +30,9 @@ The behavior of this mode can be configured through [**Synchronization configura
 ![Synchronize](attachments/client-activities/synchronize-unsynchronized-objects.png)
 {{% /image_container %}}
 
-With this mode, all objects with committed changes are synchronized. The synchronization is bi-directional,
-meaning both the server database and the local database is updated for these objects. Check [Synchronization Behavior](#synchronization-behavior) section for more details.
+With this mode, all objects with committed changes are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
-### 1.3 Synchronize Selected Object(s)
+### 1.3 Synchronize Selected Objects
 
 {{% image_container width="200" %}}
 ![Synchronize](attachments/client-activities/synchronize-objects.png)
@@ -45,8 +44,7 @@ This mode synchronizes objects partially, based on a selection:
 ![Synchronize](attachments/client-activities/synchronize-objects-selection.png)
 {{% /image_container %}}
 
-With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
-meaning both the server database and the local database is updated for the selected objects. Check [Synchronization Behavior](#synchronization-behavior) section for more details.
+With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for the selected objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
 ## 2 Synchronization Behavior
 

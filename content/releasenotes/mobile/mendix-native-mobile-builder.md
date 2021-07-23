@@ -15,7 +15,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Fixes
 
-* We identified and fixed a bug with deleted files not being removed correctly during a native template upgrade operation.
+* We fixed an issue with deleted files not being removed correctly during a native template upgrade operation.
 
 ### Release 1.0.105
 

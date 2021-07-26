@@ -23,34 +23,40 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 
 ### 2.1 General Tab {#general}
 
-* **Groups** (required) – The groups that are part of the accordion. See the sections below for information on configurable properties.
-* **Collapsible** (enabled by default) – Determines whether the content of groups is collapsible.
-* **Expanded groups** (default: **Single**) – Determines whether one or more groups can be expanded at once. When set to **Single**, multiple expanded groups are suppressed.
-
 #### 2.1.1 Groups Section
 
-Click **New** to create a new group. On the **Edit Groups Item** dialog box, configure the following tabs:
+The **Groups** section (required) is used to configure the groups that are part of the accordion. Click **New** to create a new group. On the **Edit Groups Item** dialog box, configure the tabs described below.
 
-* **General** tab
-	* **Header** (default: **Text** ) – Determines if the header content consists of text or widgets.
-	* **Text** (configurable when the header content consists of **Text**) – The text value to be displayed in the header.
-	* **Render mode** (configurable when the header content consists of **Text**; default: **Heading 3**) – The text's heading level.
-	* **Custom header content** (configurable when the header content consists of widgets) – The widgets to be displayed in the header.
-	* **Visible** (default: **true**) – A Boolean expression indicating whether the group should be visible.
-	* **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
-* **State** tab – his tab is only visible when [Advanced options](#advanced) is set to **Yes**.
-	* **Start as** (default: **Collapsed**) – Determines whether the header content starts expanded or collapsed (optionally, through the help of an expression with the **Dynamic** option). 
-	* **Start as collapsed** (configurable when **Starts as** is set to **Dynamic**; default: **true**) – A Boolean expression indicating whether the group should be expanded or collapsed.
-	* **Collapsed** (not required) – A Boolean attribute indicating whether the group should be expanded or collapsed. Please note the **Start as** properties override the attribute value for the initial state.
-	* **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Please note the **Start as** properties can prevent execution of this action when the initial state changes.
+The **General** tab in the **Edit Groups Item** dialog box has the following properties:
+
+* **Header** (default: **Text** ) – Determines if the header content consists of text or widgets.
+* **Text** (configurable when the header content consists of **Text**) – The text value to be displayed in the header.
+* **Render mode** (configurable when the header content consists of **Text**; default: **Heading 3**) – The text's heading level.
+* **Custom header content** (configurable when the header content consists of widgets) – The widgets to be displayed in the header.
+* **Visible** (default: **true**) – A Boolean expression indicating whether the group should be visible.
+* **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
+
+The **State** tab in the **Edit Groups Item** dialog box is only visible when [Advanced options](#advanced) is set to **Yes** and has the following properties:
+
+* **Start as** (default: **Collapsed**) – Determines whether the header content starts expanded or collapsed (optionally, through the help of an expression with the **Dynamic** option). 
+* **Start as collapsed** (configurable when **Starts as** is set to **Dynamic**; default: **true**) – A Boolean expression indicating whether the group should be expanded or collapsed.
+* **Collapsed** (not required) – A Boolean attribute indicating whether the group should be expanded or collapsed. Please note the **Start as** properties override the attribute value for the initial state.
+* **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Please note the **Start as** properties can prevent execution of this action when the initial state changes.
+
+#### 2.1.2 Behavior Section
+
+Configure the following properties in this section:
+
+* **Collapsible** (enabled by default) – Determines whether the content of groups is collapsible.
+* **Expanded groups** (default: **Single**) – Determines whether one or more groups can be expanded at once. When set to **Single**, multiple expanded groups are suppressed.
+* **Animate** (only visible when [Advanced options](#advanced) is set to **Yes**; default: **Yes**) – Determines whether the collapsing and expanding of content is animated.
 
 ### 2.2 Advanced Tab {#advanced}
 
 The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible. When set to **Yes**, the following tabs and properties become visible:
 
-* **General** tab
-	* **Animate** (enabled by default) – Determines whether the collapsing and expanding of content is animated.
-	* **Groups**
+* [General](#general) tab 
+	* **Groups** section:
 		* **General** tab
 			* **Render mode**
 		* **State** tab 
@@ -58,18 +64,24 @@ The **Advanced options** button (default: **No**) determines whether advanced co
 			* **Start as collapsed**
 			* **Collapsed**
 			* **On change**
-* **Visualization** tab
+	* **Behavior** section
+		* **Animate**
+* [Visualization](#visualization) tab
 	* **Show icon**
-	* **Icon** (visible when **Animate icon** is set to **Yes**)
-	* **Animate icon** (default: **Yes**) – When set to **No**, the **Expand icon** and **Collapse icon** properties become visible
+	* **Icon** 
+	* **Animate icon**
+	* * **Expand icon**
+	* **Collapse icon**
 
 ### 2.3 Visualization Tab {#visualization}
 
+The **Visualization** tab is only visible when [Advanced options](#advanced) is set to **Yes** and has the following properties:
+
 * **Show icon** (right by default) – Determines whether to show the icon on the left or right side of the header content or not at all.
-* **Icon** (configurable when animating the icon) – The icon displayed and animated in the header.
+* **Icon** (configurable when **Animate icon** is set to **Yes**) – The icon displayed and animated in the header.
+* **Animate icon** (default: **Yes**) – Determines whether the icon is animated when the content is collapsing and expanding. When set to **No**, the **Expand icon** and **Collapse icon** properties become visible
 * **Expand icon** (configurable when not animating the icon) – The icon displayed in the header to indicate that the content can be expanded.
 * **Collapse icon** (configurable when not animating the icon) – The icon displayed in the header to indicate that the content can be collapsed.
-* **Animate icon** (enabled by default) – Determines whether the icon is animated when the content is collapsing and expanding.
 
 ## 3 Styling
 

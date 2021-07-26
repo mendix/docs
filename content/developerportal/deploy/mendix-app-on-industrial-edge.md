@@ -148,7 +148,7 @@ You can skip this step if you just want to create a standalone app which does no
 
 Create the app version by entering the respective commands into the CLI.
 
-* Initialize a workspace, create an empty folder, and run the following command inside that folder:
+* Create an empty folder, and run the following command inside that folder to initialize a workspace:
 ```shell
  ie-app-publisher-linux ws i
  ```
@@ -164,6 +164,7 @@ Create the app version by entering the respective commands into the CLI.
 * Create a version of your Mendix app:
 ```shell
  ie-app-publisher-linux em app cuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' -y './docker-compose.yml' -c 'change logs' -n -n {"mendixapp":[{"name":"mendix","protocol":"HTTPS","port":"8080","headers":"","rewriteTarget":"/"}]}  -s 'mendix' -t 'FromBoxReverseProxy' -u '8080' -r '' 
+ ie-app-publisher-linux em app uuv -a '39853716a55048c9935e451a63eecc89' -v '0.0.1' 
  ```
 
 

@@ -50,7 +50,7 @@ When you click an app name, a pop-up window opens with the app profile. You have
 * **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
 * **App Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
-When you select one or more apps via the check boxes on the **Active App** or **Deactivated App** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
+When you select one or more apps via the check boxes on the **Active Apps** or **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
 
 The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 

@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
-  ![Domain Model](attachments/workflow-how-to-configure/domain-model.png)
+    ![Domain Model](attachments/workflow-how-to-configure/domain-model.png)
 
 * Make sure you have the following enumerations configured:
 
@@ -159,9 +159,9 @@ In some cases you may want to restrict access to the entity or to some of its at
 
 ## 4 Creating a Workflow
 
-You need to create a workflow that you will add activities to and create pages for. Do the following:
+To create a workflow that you will add activities to and create pages for, do the following:
 
-1. In the App Explorer, right-click the **MyFirstModule** module and select Add workflow in the drop-down menu.
+1. In the App Explorer, right-click the **MyFirstModule** module and select **Add workflow** in the drop-down menu.
 
     ![Add Workflow](attachments/workflow-how-to-configure/add-workflow.png)
 

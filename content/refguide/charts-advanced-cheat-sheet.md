@@ -15,7 +15,7 @@ This cheat sheet with JSON snippets will provide some samples of advance configu
 
 The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/). The chart widgets support plotly.js version 1.47.4.
 
-When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the Marketplace.
+When the advanced configuration does not suffice have a look at the [Any Chart](https://marketplace.mendix.com/link/component/106437/Mendix/Any-Chart) widget in the Marketplace.
 
 ## 2 Layout (All Charts) {#layout-all}
 

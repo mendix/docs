@@ -21,7 +21,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Desktop Modeler from the [Marketplace](https://appstore.home.mendix.com/link/modeler)
+* Install Mendix Desktop Modeler from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Importing the PushNotifications Module from the Marketplace
 

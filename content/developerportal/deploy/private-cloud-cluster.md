@@ -9,7 +9,7 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
@@ -21,8 +21,8 @@ Once you have created your namespace, you can invite additional team members who
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform or OpenShift version 3.11 or above
-* An administration account for your platform
+* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
+* An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
@@ -71,7 +71,7 @@ Should you consider using a connected environment, the following URLs should be 
     
   1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Type** – choose the correct type for your cluster.
+  2. **Type** – choose the correct type for your cluster. See [Supported Providers](private-cloud-supported-environments) for more information.
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
@@ -142,7 +142,7 @@ Now you can download the Configuration Tool by doing the following:
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
-### 4.2 Signing in to OpenShift{#openshift-signin}
+### 4.2 Signing in to the Platform{#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -224,6 +224,8 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+![](attachments/private-cloud-cluster/configure-namespace.png)
+
 The options do the following:
 
 * **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
@@ -241,7 +243,7 @@ The options do the following:
 
 	![](attachments/private-cloud-cluster/installation-wizard.png)
 
-3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
+3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
 
 4. Each page will lead you through the information you need to supply.
 
@@ -256,6 +258,8 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
+A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -265,7 +269,14 @@ Once you have entered the details you can apply two validation checks by clickin
 
 ![Database Plan Configuration](attachments/private-cloud-cluster/database-plan-config.png)
 
-The supported **Database Types** are described below:
+The following **Database Types** are supported:
+
+* PostgreSQL
+* Ephemeral
+* SQL Server
+* Dedicated JDBC
+
+They are described in more detail below:
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -780,7 +791,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -828,7 +839,7 @@ When you have configured all the resources, do the following:
 
 ### 4.4 Confirming Namespace Configuration
 
-When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
+When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
@@ -1344,7 +1355,7 @@ The new value for the annotation will only be applied when the application is re
 
 #### 6.2.2 Members
 
-By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
 * Add and delete namespaces
 * Add, activate, or deactivate plans

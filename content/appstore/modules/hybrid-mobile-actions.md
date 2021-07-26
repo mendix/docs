@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "platform support", "hybrid mobil
 
 ## 1 Introduction
 
-The [Hybrid Mobile Actions](https://appstore.home.mendix.com/link/app/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
+The [Hybrid Mobile Actions](https://marketplace.mendix.com/link/component/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
 
 | Category            | Action                                |
 | :------------------ | :------------------------------------ |

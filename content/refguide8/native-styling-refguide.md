@@ -235,7 +235,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 
 The default class to style all page titles is named `Container`.
 
-### 5.2 Tab Container
+### 5.2 Tab Container {#tab-container}
 
 Tab containers are used to show information categorized into multiple tab pages. Tab containers can help display information which exceeds a device’s screen space. This is how a default tab container widget could look in an app:
 

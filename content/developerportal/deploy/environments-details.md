@@ -208,7 +208,7 @@ You have to restart your application before the changes will be made.
 
 For more information, see [Constants](/refguide/constants).
 
-## 4 Network Tab
+## 4 Network Tab{#network-tab}
 
 {{% image_container width="50%" %}}
 ![](attachments/environments-details/network1.png)

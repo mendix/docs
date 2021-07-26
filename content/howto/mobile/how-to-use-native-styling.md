@@ -19,7 +19,7 @@ You have the capacity to alter design properties with Mendix Studio Pro. Further
 
 ### 3 Customizing the Quickstart App
 
-The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI resources package. This package consists of:
+The [Native Mobile Quickstart](https://marketplace.mendix.com/link/component/109511/) app is styled using an Atlas UI resources package. This package consists of:
 
 * Widgets
 * Building blocks

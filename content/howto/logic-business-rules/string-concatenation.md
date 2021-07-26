@@ -1,7 +1,7 @@
 ---
 title: "Configure String Concatenation"
 category: "Logic & Business Rules"
-menu_order: 11
+menu_order: 110
 tags: ["microflow", "logic", "string", "concatenation"]
 ---
 

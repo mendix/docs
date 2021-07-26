@@ -10,23 +10,38 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
-* Native Template v6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above.
-* Native Template v5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15)-[8.18.8](/releasenotes/studio-pro/8.18).
-* Native Template v5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
+* Native Template version 6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above.
+* Native Template version 5.2.0 applies to apps built using Studio Pro [8.18.9](/releasenotes/studio-pro/8.18#8189) and above.
+* Native Template version 5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15)-[8.18.8](/releasenotes/studio-pro/8.18#8188).
+* Native Template version 5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
 
 ## 6.2.0
 
 **Release date: July 20th, 2021**
-
-### Breaking Change
-
-* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers must update their [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) module to the latest version to avoid unexpected behaviors. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.
 
 ### Improvements
 
 * We improved the capability configurations by adding an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
 * We implemented support for Android 11 devices.
 * We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
+
+### Breaking Change
+
+* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers must update their [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) module to the latest version to avoid unexpected behaviors. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.
+
+## 5.2.0
+
+**Release date: July 26th, 2021**
+
+### Improvements
+
+* We made an improvement to the the capability configurations. We added an implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when over-the-air support is not enabled via the Native Mobile App Builder.
+* We implemented support for Android 11 devices.
+* We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.
+
+### Breaking Change
+
+* We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviours. Due to this change, developers previously relying on over-the-air updates for their apps would have to release new applications to the app store.
 
 ## 5.1.14
 

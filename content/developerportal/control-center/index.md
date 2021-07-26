@@ -120,7 +120,7 @@ You can set a **Cover image** to be the background header of your company page. 
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
-On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App  History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
+On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 ![](attachments/security.jpg)
 

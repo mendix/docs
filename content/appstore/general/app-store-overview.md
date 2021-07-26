@@ -38,9 +38,8 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **App Services** |  App services are packages of preconfigured capabilities, such as modules containing UI, logic, workflows, connectors, and APIs. They are designed to solve discrete business problems within the context of larger solutions.|
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
-| **APIs** |  |
 
-{{% todo %}}[**VERIFY APP SERVICES CATEGORY WILL BE THERE; VERIFY APIs CATEGORY WILL BE THERE AND ADD DESCRIPTION**]{{% /todo %}}
+{{% todo %}}[**VERIFY APP SERVICES CATEGORY WILL BE THERE**]{{% /todo %}}
 
 The following filter options are also available:
 

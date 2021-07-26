@@ -25,7 +25,7 @@ Configuring the accordion widget is simple. Drag and drop the widget onto a page
 
 #### 2.1.1 Groups Section
 
-The **Groups** section (required) is used to configure the groups that are part of the accordion. Click **New** to create a new group. On the **Edit Groups Item** dialog box, configure the tabs described below.
+The **Groups** section (required) is used to configure the groups that are part of the accordion. Click **New** to create a new group. On the **Edit Groups Item** dialog box, configure the tabs and properties described below.
 
 The **General** tab in the **Edit Groups Item** dialog box has the following properties:
 
@@ -36,7 +36,7 @@ The **General** tab in the **Edit Groups Item** dialog box has the following pro
 * **Visible** (default: **true**) – A Boolean expression indicating whether the group should be visible.
 * **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
 
-The **State** tab in the **Edit Groups Item** dialog box is only visible when [Advanced options](#advanced) is set to **Yes** and has the following properties:
+The **State** tab in the **Edit Groups Item** dialog box is only visible when [Advanced options](#advanced) is set to **Yes**, and it has the following properties:
 
 * **Start as** (default: **Collapsed**) – Determines whether the header content starts expanded or collapsed (optionally, through the help of an expression with the **Dynamic** option). 
 * **Start as collapsed** (configurable when **Starts as** is set to **Dynamic**; default: **true**) – A Boolean expression indicating whether the group should be expanded or collapsed.
@@ -53,7 +53,9 @@ Configure the following properties in this section:
 
 ### 2.2 Advanced Tab {#advanced}
 
-The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible. When set to **Yes**, the following tabs and properties become visible:
+The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible. 
+
+When set to **Yes**, the following tabs and properties become visible:
 
 * [General](#general) tab 
 	* **Groups** section:
@@ -70,40 +72,35 @@ The **Advanced options** button (default: **No**) determines whether advanced co
 	* **Show icon**
 	* **Icon** 
 	* **Animate icon**
-	* * **Expand icon**
+	* **Expand icon**
 	* **Collapse icon**
 
 ### 2.3 Visualization Tab {#visualization}
 
-The **Visualization** tab is only visible when [Advanced options](#advanced) is set to **Yes** and has the following properties:
+The **Visualization** tab is only visible when [Advanced options](#advanced) is set to **Yes**, and it and has the following properties:
 
 * **Show icon** (right by default) – Determines whether to show the icon on the left or right side of the header content or not at all.
 * **Icon** (configurable when **Animate icon** is set to **Yes**) – The icon displayed and animated in the header.
 * **Animate icon** (default: **Yes**) – Determines whether the icon is animated when the content is collapsing and expanding. When set to **No**, the **Expand icon** and **Collapse icon** properties become visible
-* **Expand icon** (configurable when not animating the icon) – The icon displayed in the header to indicate that the content can be expanded.
-* **Collapse icon** (configurable when not animating the icon) – The icon displayed in the header to indicate that the content can be collapsed.
+* **Expand icon** (configurable when **Animate icon** is set to **No**) – The icon displayed in the header to indicate that the content can be expanded.
+* **Collapse icon** (configurable when **Animate icon** is set to **No**) – The icon displayed in the header to indicate that the content can be collapsed.
 
 ## 3 Styling
 
 The accordion widget is shipped with default styles and works out of the box without Atlas UI. However, including Atlas UI in the app brings improved styling and customizations such as design properties, helper classes, and custom variables.
 
-The design properties shipped with Atlas UI for accordion are as follows:
+These are the design properties shipped with Atlas UI for this widget:
 
-* **Borders** (All, Horizontal, None) – Change the border appearance. By default, only horizontal borders between groups are applied.
-* **Compact** (Yes, No (default)) – Make groups in the accordion more compact.
-* **Striped** (Yes, No (default)) – Add alternating background colors to groups in the accordion.
+* **Borders** (**All**, **Horizontal**, **None**) – Change the border appearance. By default, only horizontal borders between groups are applied.
+* **Compact** (**Yes**, **No** (default)) – Make groups in the accordion more compact.
+* **Striped** (**Yes**, **No** (default)) – Add alternating background colors to groups in the accordion.
 
 The following brand styles (and their associated class names) are shipped with Atlas UI as helper classes:
 
-* Primary:
-	* `widget-accordion-brand-primary`
-* Secondary:
-	* `widget-accordion-brand-secondary`
-* Success:
-	* `widget-accordion-brand-success`
-* Warning:
-	* `widget-accordion-brand-warning`
-* Danger:
-	* `widget-accordion-brand-danger`
+* Primary –`widget-accordion-brand-primary`
+* Secondary – `widget-accordion-brand-secondary`
+* Success – `widget-accordion-brand-success`
+* Warning – `widget-accordion-brand-warning`
+* Danger –`widget-accordion-brand-danger`
 
-These helper classes should be applied to individual groups using the widget's **Dynamic class** property.
+These helper classes should be applied to individual groups using the widget's [Dynamic class](#general) property.

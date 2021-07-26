@@ -12,33 +12,35 @@ This activity can only be used in **Nanoflows** that run in an offline-first app
 
 ## 1 Introduction
 
-The **Synchronize** activity can be used to synchronize your data between your device and the server.  The **Synchronize** action has 3 modes:
+The **Synchronize** activity can be used to synchronize your data between your device and the server.  The action has three modes, which are described below.
 
-### 1.1 Synchronize All Objects
+## 2 Synchronization Modes
+
+### 2.1 All Objects
 
 {{% image_container width="200" %}}
 ![Synchronize](attachments/client-activities/synchronize.png)
 {{% /image_container %}}
 
-This mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
+The **All objects** mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
-The behavior of this mode can be configured through [**Synchronization configuration**](offline-first#customizable-synchronization).
+The behavior of this mode can be configured through [synchronization configuration](offline-first#customizable-synchronization).
 
-### 1.2 Synchronize Unsynchronized Objects
+### 2.2 Unsynchronized Objects {#unsynchronized-objects}
 
 {{% image_container width="200" %}}
 ![Synchronize](attachments/client-activities/synchronize-unsynchronized-objects.png)
 {{% /image_container %}}
 
-With this mode, all objects with committed changes are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
+With the **Unsychronized objects** mode, all objects with committed changes are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
-### 1.3 Synchronize Selected Objects
+### 2.3 Selected Objects {#selected-objects}
 
 {{% image_container width="200" %}}
 ![Synchronize](attachments/client-activities/synchronize-objects.png)
 {{% /image_container %}}
 
-This mode synchronizes objects partially, based on a selection:
+The **Selected object(s)** mode synchronizes objects partially, based on a selection:
 
 {{% image_container width="600" %}}
 ![Synchronize](attachments/client-activities/synchronize-objects-selection.png)
@@ -46,20 +48,20 @@ This mode synchronizes objects partially, based on a selection:
 
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for the selected objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
-## 2 Synchronization Behavior
+## 2 Synchronization Behavior {#synchronization-behavior}
 
-This section describes the behavior for [Synchronize Unsynchronized Objects](#synchronize-unsynchronized-objects) and [Synchronize Selected Object(s)](#synchronize-selected-object-s) modes.
+This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
 {{% alert type="warning" %}}
-The settings in [**Synchronization configuration**](offline-first#customizable-synchronization) are not applied for **synchronize unsynchronized objects** and **synchronization selected object(s)** modes.
+The settings in [synchronization configuration](offline-first#customizable-synchronization) are not applied for the **Unsychronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 
-In synchronize selected object(s) mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
+In the **Selected object(s)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
 
 If the selected object has local changes, the following steps are performed:
 
 1. The server database is updated with the changes from local database.
-1. The local database is updated from the server database. This is useful in case the selected object has calculated attributes or has been modified in a before/after event handler microflow.
+2. The local database is updated from the server database. This is useful in case the selected object has calculated attributes or has been modified in a before/after event handler microflow.
 
 If the selected object originated from the server (not created on the device), and no longer exists on the server (or is inaccessible due to the access rules), the local changes are not applied and the object is removed from the local database. In this case the value of the variable in the nanoflow for that object becomes `empty`. The server stores the discarded changes in the `System.SynchronizationFailure` entity to prevent data loss.
 
@@ -70,10 +72,9 @@ If the set of objects selected for synchronization contains objects without loca
 The **Synchronize** activity properties consists of the following sections:
 
 * [Action](#action)
-
 * [Common](#common)
 
-  {{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
+{{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
 
 ## 4 Action Section {#action}
 
@@ -87,9 +88,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
-If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown:
-
-**Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed.**
+If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown: "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-event#errorhandlers).
 

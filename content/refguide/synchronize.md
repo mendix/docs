@@ -48,7 +48,7 @@ The **Selected object(s)** mode synchronizes objects partially, based on a selec
 
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for the selected objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
-## 2 Synchronization Behavior {#synchronization-behavior}
+## 3 Synchronization Behavior {#synchronization-behavior}
 
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
@@ -67,7 +67,7 @@ If the selected object originated from the server (not created on the device), a
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
-## 3 Properties
+## 4 Properties
 
 The **Synchronize** activity properties consists of the following sections:
 
@@ -76,15 +76,15 @@ The **Synchronize** activity properties consists of the following sections:
 
 {{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
 
-## 4 Action Section {#action}
+## 5 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
-## 5 Common Section {#common}
+## 6 Common Section {#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}
 
-## 6 Limitations {#limitations}
+## 7 Limitations {#limitations}
 
 Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
@@ -92,7 +92,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-event#errorhandlers).
 
-## 7 Read More
+## 8 Read More
 
 * [Activities](activities)
 * [Offline-first](offline-first)

@@ -56,11 +56,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}
-
-    {{% alert type="info" %}} The maximum value for **Memory per instance** is the lower of the total memory provided by your plan and 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen, in such a way that 
-    
-    Max instances x Memory per instance = Total allocated memory{{% /alert %}}
+    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 

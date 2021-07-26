@@ -141,7 +141,7 @@ The next step in setting up security is to configure the entity access otherwise
 
     1. In the **Rule applies to the following modules** section, select all roles.
 
-    2. In the **Member read and write rights** section, click the Access right drop-down menu and select **Read, Write**.
+    2. In the **Member read and write rights** section, click **Set all to Read, Write**.
 
         ![New Access Rule](attachments/workflow-how-to-configure/new-access-rule.png)
 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "calendar", "platform s
 
 ## 1 Introduction
 
-The [Calendar](https://appstore.home.mendix.com/link/app/107954/) widget can be used to display and manage calendar events.
+The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can be used to display and manage calendar events.
 
 ### 1.1 Features
 

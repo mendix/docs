@@ -8,13 +8,13 @@ tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client connector](https://appstore.home.mendix.com/link/app/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
+The [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
 
 This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-There is a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used.
+There is a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 
@@ -50,7 +50,7 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/117391/) module into your app. Instructions for doing this are in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+Import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. Instructions for doing this are in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
 You will see the new module in the **Marketplace modules** section of the **App Explorer**.
 
@@ -76,7 +76,7 @@ When you edit a microflow, you will also see five additional actions in the **To
 
 4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
 
-This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
+This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
 
 ## 3 OPC UA Client connector
 

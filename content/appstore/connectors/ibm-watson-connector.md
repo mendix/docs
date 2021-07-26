@@ -23,7 +23,7 @@ IBM Watson™ is a suite of services which gives you access to a range of AI and
 
 You can find out more about IBM Watson on the [IBM Watson website](https://www.ibm.com/watson/products-services/).
 
-The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix Marketplace provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the [IBM Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
+The [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/) in the Mendix Marketplace provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the [IBM Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
 
 ### 1.1 Prerequisites
 
@@ -51,7 +51,7 @@ If you are running your app on IBM Cloud and the Watson resources have been adde
 
 #### 1.1.2 IBM Watson Connector Suite
 
-Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the Marketplace. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
+Import the [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/) into your project from the Marketplace. This will give you access to the connector actions within your microflows. IBM app templates for Watson have the suite already included.
 
 ![The list of IBM Watson connector actions available in Mendix microflows](attachments/ibm-watson-connector/connectorlist.png)
 
@@ -236,7 +236,7 @@ Note that the voice chosen should match the language of the **Text**. There is n
 This is an object of type AudioFormats_TextToSpeech which specifies the format of the audio data which is returned as the spoken text.
 
 {{% alert type="info" %}}
-All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://appstore.home.mendix.com/link/app/932/) widget available in the Marketplace.
+All formats except BASIC and RAW can be played back in a Mendix app using the community-supported [Audio Video Playback](https://marketplace.mendix.com/link/component/932/) widget available in the Marketplace.
 {{% /alert %}}
 
 ### 4.6 Variable (Speech)
@@ -719,6 +719,6 @@ In addition, the following IBM AI services are not yet supported at all by the I
 * [Getting started with Watson and IBM Cloud](https://cloud.ibm.com/docs/services/watson/index.html)
 * [How to Consume a REST Service](/howto/integration/consume-a-rest-service)
 * [IBM Cloud](https://www.ibm.com/cloud/)
-* [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/)
+* [IBM Watson Connector Suite](https://marketplace.mendix.com/link/component/2860/)
 * [IBM Watson website](https://www.ibm.com/watson/products-services/)
 * [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html)

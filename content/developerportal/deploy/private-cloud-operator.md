@@ -9,7 +9,7 @@ tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 
 ## 1 Introduction
 
-Once you have the Mendix Operator installed in a namespace of your Kubernetes Red Hat OpenShift, AWS-EKS, or AKS cluster (see [Creating a Private Cloud Cluster](private-cloud-cluster)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
+Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Private Cloud Cluster](private-cloud-cluster)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
 This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Developer Portal.
 
@@ -17,7 +17,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 
 ## 2 Prerequisites for Deploying a Mendix App
 
-* A Kubernetes, AWS-EKS, AKS, or OpenShift (version 3.11 or above) platform
+* An OpenShift (version 3.11 or above), or Kubernetes platform – see [Supported Cluster Types](private-cloud-supported-environments#supported-clusters) in *Supported Providers* for a full list
 * Platform administration account
 * **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
 * **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
@@ -36,8 +36,9 @@ Create a deployment package (.mda) file from your app. It is this which is picke
 
 You can obtain the deployment package in a number of ways:
 
-* within Studio, by choosing the menu option **Project > Create Deployment Package…**
+* within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog) for more information
 * from the **Environments** page of your app in the Developer Portal
+    ![](attachments/private-cloud-operator/environments-create-mda.png)
 * through a CI/CD process, such as Jenkins.
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
@@ -148,7 +149,7 @@ spec:
 You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
-* **database/storage** – ensure that these have the correct **servicePlan** — they have to have the same names that you registered in the namespace
+* **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](private-cloud-cluster#configure-namespace)
 * **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
 * **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform

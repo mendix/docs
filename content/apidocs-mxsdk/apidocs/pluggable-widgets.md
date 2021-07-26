@@ -135,7 +135,7 @@ You can provide additional help information to widget users by using a help page
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
 ```xml
-    <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
+    <helpUrl>https://marketplace.mendix.com/link/component/105695/</helpUrl>
 ```
 
 For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:

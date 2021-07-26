@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 
 ## 1 Introduction
 
-The [Forgot Password](https://appstore.home.mendix.com/link/app/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
+The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module works in conjunction with other modules and widgets to implement forgot-my-password functions. 
 
 With this module, the end-user can enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password. 
 

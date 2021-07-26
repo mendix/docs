@@ -12,7 +12,7 @@ This connector is deprecated.
 
 ## 1 Introduction
 
-The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
+The [Box](https://marketplace.mendix.com/link/component/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
 
 ## 2 Installation
 

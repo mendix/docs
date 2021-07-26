@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "accessibility helper",
 
 ## 1 Introduction
 
-The [Accessibility Helper](https://appstore.home.mendix.com/link/app/114803/) widget allows a user to add a list of HTML properties to elements in the HTML `page.carousel`.
+The [Accessibility Helper](https://marketplace.mendix.com/link/component/114803/) widget allows a user to add a list of HTML properties to elements in the HTML `page.carousel`.
 
 ### 1.1 Features
 

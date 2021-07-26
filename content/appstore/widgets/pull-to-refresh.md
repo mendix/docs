@@ -12,7 +12,7 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.
+The [Pull to Refresh](https://marketplace.mendix.com/link/component/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.
 
 ### 1.1 Features
 

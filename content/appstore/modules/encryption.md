@@ -18,15 +18,17 @@ The typical usage scenario is when a project/module consumes a service where a u
 
 * Encryption using AES only
 
-## 2 EncryptionKey Configuration
+## 2 Configuration
+
+### 2.1 EncryptionKey Constant
 
 Set the `EncryptionKey` constant located in the **Private - String en/de-cryption** folder. Make sure the key consists of 16 characters.
 
 In version 2.2.0, the key length was increased from 128 to 256 bits. The `EncryptionKey` constant must now have a key with 32 characters. The `LegacyEncryptionKey` constant can be used for the 128 bits, in order to decrypt strings that were encrypted using an older version of the Encryption module.
 
-## 3 EncryptionPrefix Configuration
+### 2.2 EncryptionPrefix Constant
 
-Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. This depends on the module version you are using:
+Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
 
 * For version 2.2.0 or above, set the constant to `{AES3}`
 * For versions 1.4.1–2.1.3 , set the constant to `{AES2}`

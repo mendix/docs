@@ -12,34 +12,34 @@ The [Accordion](https://marketplace.mendix.com/link/component/117895) widget ena
 
 ### 1.1 Features
 
-* Displays groups consisting of a header and content
-* Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard
+* Displays groups consisting of a header and content.
+* Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard.
 * Allows you to control the collapsed state of a group through expressions or an entity attribute.
-* Allows for additional styling customizations through Atlas UI
+* Allows for additional styling customizations through Atlas UI.
 
-## 2 Usage
+## 2 Configuration
 
 Configuring the accordion widget is simple. Drag and drop the widget onto a page and use the configuration properties described in the following sections.
 
 ### 2.1 General Tab
 
-* **Groups** (required) – The groups that are part of the accordion. See the following sections for information on configurable properties.
+* **Groups** (required) – The groups that are part of the accordion. See the sections below for information on configurable properties.
 * **Collapsible** (enabled by default) – Determines whether the content of groups is collapsible.
-* **Expanded groups** ('Single' by default) – Determines whether one or more groups can be expanded at once.
+* **Expanded groups** (default: **Single**) – Determines whether one or more groups can be expanded at once.
 * **Animate** (enabled by default) – Determines whether the collapsing and expanding of content is animated.
 
 #### 2.1.1 Groups > General Tab
 
-* **Header** ('Text' by default) – Determines if the header content consists of text or widgets.
-* **Text** (configurable when the header content consists of text) – The text value to be displayed in the header.
-* **Render mode** (configurable when the header content consists of text, 'Heading 3' by default) – The text's heading level.
+* **Header** (default: **Text** ) – Determines if the header content consists of text or widgets.
+* **Text** (configurable when the header content consists of **Text**) – The text value to be displayed in the header.
+* **Render mode** (configurable when the header content consists of **Text**; default: **Heading 3**) – The text's heading level.
 * **Custom header content** (configurable when the header content consists of widgets) – The widgets to be displayed in the header.
-* **Visible** ('true' by default) – A Boolean expression indicating whether the group should be visible.
+* **Visible** (default: **True**) – A Boolean expression indicating whether the group should be visible.
 * **Dynamic class** (required) – A string expression to apply dynamic classes (separated by a space) to the group.
 
 #### 2.1.2 Groups > State Tab
 
-* **Start as** ('Collapsed' by default) – Determines whether the content of the header starts expanded or collapsed. Optionally through the help of an expression with the 'Dynamic' option. 
+* **Start as** (default: **Collapsed**) – Determines whether the content of the header starts expanded or collapsed. Optionally through the help of an expression with the 'Dynamic' option. 
 * **Start as collapsed** (configurable when **Starts as** is set to 'Dynamic', 'true' by default) – A Boolean expression indicating whether the group should be expanded or collapsed.
 * **Collapsed** (not required) – A Boolean attribute indicating whether the group should be expanded or collapsed. The 'Start as' properties override the attribute value for the initial state.
 * **On change** (not required) – Executes an action when the **Collapsed** attribute value changes. Note that the 'Start as' properties can prevent execution of this action when the initial state changes.
@@ -48,7 +48,7 @@ Note that when **Expanded groups** is set to 'Single', multiple expanded groups 
 
 ### 2.2 Advanced Tab
 
-**Advanced options**, disabled by default, determines whether the advanced configuration properties become visible. The advanced tabs and their properties are as follows:
+The **Advanced options** (disabled by default) determine whether the advanced configuration properties become visible. These are the advanced tabs and their properties:
 
 * **General**:
 	* Animate

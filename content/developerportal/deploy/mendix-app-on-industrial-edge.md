@@ -61,7 +61,7 @@ For all the steps described below, refer to the [Industrial Edge App Publisher -
     * Click **Create Image** and select **Mendix**.
     * Enter the name of the Docker image you want to create.
     * Click **Browse** and select the **deployment package(.mda)** of your Mendix app.
-    * Click **Create** .
+    * Click **Create**.
 ![Create docker image of Mendix app](attachments/mendix-app-on-industrial-edge/select_mda_file.png)
 
 #### 3.2.2 Industrial Edge App Publisher CLI

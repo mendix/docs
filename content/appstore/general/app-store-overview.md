@@ -167,13 +167,7 @@ On this page, you can see all the content your company has published. Click the 
 
 ![](attachments/app-store-overview/company-content.png)
 
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available to you if one of the following conditions is true:
-
-{{% todo %}}[**VERIFY BELOW CONDITIONS**]{{% /todo %}}
-
-* The component is not assigned to any [user groups](#user-groups) (in which case it can be managed by anyone in the company)
-* The component is assigned to a user group, and you are a [member](#members) of that group
-* You are a [Mendix Admin](/developerportal/control-center/#company) of the company that published the component
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
 ### 4.6 Company Reviews
 

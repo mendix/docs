@@ -1,60 +1,39 @@
-# Metamodel Release Notes for version 9.4.0
+---
+title: "9.4"
+parent: "metamodel-9"
+---
 
-## Rest
+## 9.4.0
 
-### PublishedRestResource (Element)
+### Rest
 
+#### PublishedRestResource (Element)
 
-#### Property 'updatable'
-* Introduced; 
+* We introduced the `updatable` property.
 
-## CustomWidgets
+### CustomWidgets
 
-### CustomWidgetType (Element)
+#### CustomWidgetType (Element)
 
+* We introduced the `studioProCategory` and `studioCategory` properties.
 
-#### Property 'studioProCategory'
-* Introduced; 
+### Navigation
 
-#### Property 'studioCategory'
-* Introduced; 
+#### NativeNavigationProfile (Element)
 
-## Navigation
+* We introduced the `nativeHomePage` and `otaEnabled` properties.
+* We deleted the `homePage` property.
 
-### NativeNavigationProfile (Element)
+#### NativeHomePageBase, NativeHomePage & PageParameter (Elements)
 
+* We introduced these elements.
 
-#### Property 'nativeHomePage'
-* Introduced; 
+#### RoleBasedNativeHomePage (Element)
 
-#### Property 'homePage'
-* Deleted; 
+* We deleted the `page` property.
 
-#### Property 'otaEnabled'
-* Introduced; 
+### Pages
 
-### NativeHomePageBase (Element)
-* Introduced; 
+#### Page (ModelUnit)
 
-
-### NativeHomePage (Element)
-* Introduced; 
-
-
-### RoleBasedNativeHomePage (Element)
-
-
-#### Property 'page'
-* Deleted; 
-
-## Pages
-
-### Page (ModelUnit)
-
-
-#### Property 'parameters'
-* Introduced; 
-
-### PageParameter (Element)
-* Introduced; 
-
+* We introduced the `parameters` property.

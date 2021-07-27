@@ -229,8 +229,6 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. Click **Unassign from group** to remove the content from this user group.
 
-{{% todo %}}[**WHICH BUTTONS DOES A GROUP MEMBER SEE, AND WHICH BUTTONS DOES A GROUP ADMIN SEE?**]{{% /todo %}}
-
 #### 4.7.4 Settings Tab
 
 {{% alert type="info" %}}

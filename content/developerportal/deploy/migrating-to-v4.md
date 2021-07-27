@@ -112,7 +112,7 @@ Now that you have your new Mendix Cloud V4 environment, you can start replicatin
 
 3. The target v4 app node will be filled with the name `<current-app-name>-v4`.
 
-4. Select the source and target environments. In most cases, these will have the same name. For example, you want to replicate data from the V3 `production` environment to the V4 `production` environment.
+4. Select the source and target environments. In most cases, these will have the same name. For example, you want to replicate data from the V3 `production` environment to the V4 `production` environment. Please note you should not check the **Force database dump restore** check box.
 
     ![Select V3 node and environment](attachments/migrating-to-v4/select-v3-node-to-migrate.png)
 

@@ -9,8 +9,6 @@ aliases:
     - /developerportal/app-store/app-store-overview.html
 ---
 
-{{% todo %}}[**UPDATE ALL SCREENSHOTS**]{{% /todo %}}
-
 ## 1 Introduction
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, widgets, and modules) that can be used to build custom apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
@@ -38,8 +36,6 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **App Services** |  App services are packages of preconfigured capabilities, such as modules containing UI, logic, workflows, connectors, and APIs. They are designed to solve discrete business problems within the context of larger solutions.|
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
-
-{{% todo %}}[**VERIFY APP SERVICES CATEGORY WILL BE THERE**]{{% /todo %}}
 
 The following filter options are also available:
 
@@ -176,8 +172,6 @@ This page contains reviews of **Your company's content** as well as **Your compa
 ### 4.7 User Groups {#user-groups}
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
-
-{{% todo %}}[**VERIFY BELOW CONDITIONS**]{{% /todo %}}
 
 {{% alert type="info" %}}
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.

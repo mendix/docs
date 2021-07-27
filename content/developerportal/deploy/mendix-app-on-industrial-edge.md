@@ -131,13 +131,13 @@ You can skip this step if you just want to create a standalone app which does no
                     - db
             db:
                 image: mysql:5.7
-            environment:
-                - MYSQL_USER=mendix
-    - MYSQL_PASSWORD=mendix
-    - MYSQL_DATABASE=mendix
-    - MYSQL_ROOT_PASSWORD=root
-    ports:
-    - 3306:3306
+                environment:
+                  - MYSQL_USER=mendix
+                  - MYSQL_PASSWORD=mendix
+                  - MYSQL_DATABASE=mendix
+                  - MYSQL_ROOT_PASSWORD=root
+                ports:
+                  - 3306:3306
 ```
 
 * Click **Validate & Create**.

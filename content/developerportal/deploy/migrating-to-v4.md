@@ -141,20 +141,6 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means s
     
 8. Once initial data transfer is complete, progress will be at 100%, but data will be kept synchronized from v3 to v4.
 
-The migration page lists all the ongoing migrations, including the following information:
-
-* The source and target environments
-* The UUID of the source production environment
-* Whether the tool is current **Replicating** data to the V4 environment or is **Stopped**
-* What proportion of the source data has been replicated, listed for both files and database – this will sometimes show zero
-    * If replication isn't running
-    * During the replication process when the process checks whether files are synchronized
-* The UUID of the target production environment
-* A button to **Stop replication** with an **Interrupt** option if the tool is currently replicating or a **Start replication** option if the tool is currently stopped
-*  The **Migrate button** which triggers the [final migration](#final-migration)
-
-    ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
-
 #### 4.3.3 Process with PostgreSQL Dump and Restore {#dump-restore}
 
 1. Follow steps 1-5 above in the [Process with AWS DMS](#aws-dms) section.
@@ -169,7 +155,21 @@ The migration page lists all the ongoing migrations, including the following inf
     * Database replication with AWS DMS fails with validation errors
 
 3. Once data transfer is complete, progress will be at 100%.
-   
+
+The migration page lists all the ongoing migrations, including the following information:
+
+* The source and target environments
+* The UUID of the source production environment
+* Whether the tool is current **Replicating** data to the V4 environment or is **Stopped**
+* What proportion of the source data has been replicated, listed for both files and database – this will sometimes show zero
+    * If replication isn't running
+    * During the replication process when the process checks whether files are synchronized
+* The UUID of the target production environment
+* A button to **Stop replication** with an **Interrupt** option if the tool is currently replicating or a **Start replication** option if the tool is currently stopped
+*  The **Migrate button** which triggers the [final migration](#final-migration)
+
+    ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
+ 
 ### 4.4 Testing the Replicated Data
 
 Once you have replicated your data, you should test it, to ensure that everything is working as expected.

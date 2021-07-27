@@ -111,7 +111,7 @@ Now that you have your new Mendix Cloud V4 environment, you can start replicatin
 The system is capable of transferring database data from v3 to v4 in the following ways:
 
 * Live replication using [AWS Database Migration Service (DMS)](#aws-dms)
-* PostgreSQL dump and restore
+* PostgreSQL [dump and restore](#dump-restore)
 
 AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means smaller downtime during final migration. However, it is important to note that sometimes AWS DMS replication fails to transfer the data correctly. When this happens, Mendix automatically detects the failure and switches to the database dump-and-restore mode. In this case, you will see the **Force database dump restore** check box selected automatically on the UI. The dump-and-restore mode can also be forced from the UI by selecting the **Force database dump restore** check box.
 
@@ -138,8 +138,10 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means s
 7. Click the **Migration** icon to see the status of your replications.
 
     ![Icon for migration page](attachments/migrating-to-v4/migration-page.png)
+    
+8. Once initial data transfer is complete, progress will be at 100%, but data will be kept synchronized from v3 to v4.
 
-The migration page lists all the ongoing migrations including the following information:
+The migration page lists all the ongoing migrations, including the following information:
 
 * The source and target environments
 * The UUID of the source production environment
@@ -152,6 +154,21 @@ The migration page lists all the ongoing migrations including the following info
 *  The **Migrate button** which triggers the [final migration](#final-migration)
 
     ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
+
+#### 4.3.3 Process with PostgreSQL Dump and Restore {#dump-restore}
+
+1. Follow steps 1-5 above in the [Process with AWS DMS](#aws-dms) section.
+
+2.  Select the **Force database dump restore** check box, then click **Replicate data and files**.
+
+    The replication process will copy all the data in the database, including files based on `FileDocument` entities, such as images, which are stored in the storage of the v3 app node.
+
+    This is a one-time database copy from the v3 to v4 node, unlike live replication. This is recommended in the following cases:
+
+    * Database replication with AWS DMS fails to replicate the data correctly
+    * Database replication with AWS DMS fails with validation errors
+
+3. Once data transfer is complete, progress will be at 100%.
    
 ### 4.4 Testing the Replicated Data
 

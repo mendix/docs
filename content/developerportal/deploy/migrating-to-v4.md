@@ -106,6 +106,17 @@ To deploy your app to your new Mendix Cloud V4 environment, you need to do the f
 
 Now that you have your new Mendix Cloud V4 environment, you can start replicating the data.
 
+#### 4.3.1 Two Ways to Transfer Database Data
+
+The system is capable of transferring database data from v3 to v4 in the following ways:
+
+* Live replication using [AWS Database Migration Service (DMS)](#aws-dms)
+* PostgreSQL dump and restore
+
+AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means smaller downtime during final migration. However, it is important to note that sometimes AWS DMS replication fails to transfer the data correctly. When this happens, Mendix automatically detects the failure and switches to the database dump-and-restore mode. In this case, you will see the **Force database dump restore** check box selected automatically on the UI. The dump-and-restore mode can also be forced from the UI by selecting the **Force database dump restore** check box.
+
+#### 4.3.2 Process with AWS DMS {#aws-dms}
+
 1. Open the [Migration Tool](https://v3-v4-migration.mendixcloud.com/), `https://v3-v4-migration.mendixcloud.com/`.
 
 2. Choose the Mendix Cloud V3 app from the list of apps for which you are the technical contact.
@@ -141,7 +152,7 @@ The migration page lists all the ongoing migrations including the following info
 *  The **Migrate button** which triggers the [final migration](#final-migration)
 
     ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
-
+   
 ### 4.4 Testing the Replicated Data
 
 Once you have replicated your data, you should test it, to ensure that everything is working as expected.

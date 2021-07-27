@@ -24,7 +24,7 @@ parent: "metamodel-9"
 * We introduced the `nativeHomePage` and `otaEnabled` properties.
 * We deleted the `homePage` property.
 
-#### NativeHomePageBase, NativeHomePage & PageParameter (Elements)
+#### NativeHomePageBase & NativeHomePage (Elements)
 
 * We introduced these elements.
 
@@ -37,3 +37,8 @@ parent: "metamodel-9"
 #### Page (ModelUnit)
 
 * We introduced the `parameters` property.
+
+#### PageParameter (Elements)
+
+* We introduced this element.
+

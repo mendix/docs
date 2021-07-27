@@ -150,7 +150,7 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 1. Go to the migration page of the Migration Tool.
 
-2. Click **Stop** next to the migration you want to test.
+2. Click **Stop replication** next to the migration you want to test. Please note that if replication is interrupted (meaning, the **Interrupt** check box is checked), the data on v4 could be incomplete, especially if this is done before progress has reached 100%.
 
 3. Wait until the status of the migration changes to **Stopped**.
 

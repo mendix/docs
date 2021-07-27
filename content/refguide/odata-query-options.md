@@ -141,3 +141,11 @@ You can compare values against the `null` literal. For example: `?$filter=Name e
 In this example, `Name` is a string attribute that can have no assigned value in the database. Note that `null` means *no value* as opposed to `''` (which is an empty string).
 
 When you filter against associations, null literals can be quite useful. For example: `?$filter=Association_A_B ne null`. In this example, you query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
+
+## 9 Passing Query Options in the Request Body
+
+If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. 
+
+{{% alert type="info" %}}
+The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+{{% /alert %}}

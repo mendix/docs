@@ -216,7 +216,7 @@ Click the context menu to access various options for managing this content:
 
 ![](attachments/app-store-overview/group-content-context.png)
 
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. Click **Unassign from group** to remove the content from this user group.
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
 
 #### 4.7.4 Settings Tab
 

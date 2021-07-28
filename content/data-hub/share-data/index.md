@@ -189,47 +189,30 @@ To view the consumed data in your new app, follow these steps:
 1. When the app has successfully been deployed, click **View App** to open the app in the browser.
 2. Click **Customer Overview**.
 
-	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. 
-	
-	{{% alert type="info" %}}As this page displays data shared from another app, there are no buttons for adding or changing this data.{{% /alert %}}
+	The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. The data is shared from another app, so there are no options for adding or changing the data.
 
 ## 8 Seeing Changes in Data in the Consuming App
 
 To see an example of consumed data being updated when data is changed in the originating app, follow these steps:
 
-1. Open both apps that have been created in this how-to in separate browser windows and display them side by side. 
-1. Make some changes to the customer list in **{yourname}CustomerServiceApp** by adding a few more customers to the list and editing some existing entries.
+1. Make sure both apps are published in Mendix Studio Pro, then open both apps separate browser windows. 
+1. Make a change to the customer list in **{yourname}CustomerServiceApp**, such as adding a few more customers or editing some existing entries.
 1. Refresh the **{yourname}CustomerActionsApp** window by doing a **Search** to see the changes in the data displayed. 
 
-	In the example below, the consuming app is on the right:
-
-	![](attachments/share-data/shared-data-in-new-app.png)
-
-Congratulations, you have successfully used the Data Hub Catalog functionality to share data between Mendix apps! 
-
-You can now see your new apps in your organization's Data Hub Landscape. 
+Congratulations, you have successfully used the Data Hub to share data between Mendix apps! You can now see your new apps in your Data Hub Landscape. 
 
 ## 9 Viewing Your Apps in the Data Hub Landscape
 
-You will now learn how to do the following:
-
-* Use and understand the [Data Hub Landscape](/data-hub/data-hub-landscape/) for locating sources of data
-* View the dependencies between deployed apps and the direction of the dependencies in your Data Hub Landscape 
-
-You can view the two apps that you have created in the Data Hub Landscape and see the associations by following these steps:
+You can view the two apps that you have created in the Data Hub Landscape and see how they're connected:
 
 1. Open the [Data Hub](https://hub.mendix.com/#/home) home page.
-1.  Click the **Landscape** tab to see a graphical representation of your company's data landscape
-1. Find your app using the search pane. Remember to use the filter to ensure you can see sandbox apps: 
+1. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
+1. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
+
 
 	![](attachments/share-data/landscape-full-screen.png)
-	
-	In the Data Hub Landscape registered services are shown as circles with the number of entity sets or datasets that have been exposed in the service.
-	
-	The service **{yourname}CustomerODataAPI** is linked by a solid line to the runtime instance of **{yourname}CustomerCustomerServiceApp** (shown as a square icon), which is deployed as a Free App.
-	
-	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp** with an arrow that indicates that it is making a call to the service for data (or consuming data from it). If you click the entity icon on this consume line, the datasets that are being consumed will be listed in the metadata panel.
 
-1. Click a node to see details of the selected item in the Data Hub Catalog metadata panel on the right. You can also click the **Search** tab to see full details in the **Search Details** screen.
-
-1. Go ahead and search for another item. For large networks, you can use your mouse to zoom in out and pan to explore the network. 
+	
+	The service **{yourname}CustomerODataAPI** is linked by a solid line to the running instance of **{yourname}CustomerCustomerServiceApp**, which is deployed as a Free App.
+	
+	The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp**. The arrow indicates that **{yourname}CustomerActionsApp** is making a call to **{yourname}CustomerODataAPI** for data. If you click on **1 Dataset** on this dotted line, the datasets that are being consumed will be listed in the metadata panel on the right.

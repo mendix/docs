@@ -104,6 +104,7 @@ Click an item in the sidebar to go to the page for that content:
 * [Saved Content](#saved-components)
 * [Reviews](#my-reviews)
 * [Company Content](#company-content)
+* [User Groups](#user-groups)
 
 ### 4.1 My Content {#my-content}
 

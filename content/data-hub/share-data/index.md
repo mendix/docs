@@ -124,7 +124,7 @@ The **{yourname}CustomerODataService** from your app is now registered in the Da
 
 	![Data Hub screen](attachments/share-data/dh-filter-box.png)
 
-1. Your app was deployed to the **Mendix Free App** or **Sandbox** environment Check **Sandbox** to include it in the search results, then click **Apply Filters**. 
+1. Your app was deployed to the **Mendix Free App** or **Sandbox** environment Check **Sandbox** to include it in the search results, then click **Apply**. 
 
 1. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
 

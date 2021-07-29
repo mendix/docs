@@ -153,6 +153,10 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means s
      
 3. Once data transfer is complete, progress will be at 100%.
 
+{{% alert type="info" %}}
+Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app. 
+{{% /alert %}}
+
 #### 4.3.4 Checking the Migration Status
 
 The migration page lists all the ongoing migrations, including the following information:

@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### July 27th, 2021
+
+#### Improvements
+
+* We improved the **External Members** overview on the Control Center [Dashboard](/developerportal/control-center/#dashboard) so that a list of external members from a specific company appears when you click a part of the pie chart.
+
 ### July 14th, 2021
 
 #### Improvements
@@ -204,7 +210,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the App Store.
+* We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/general/app-store-overview#user-groups) in the Marketplace.
 
 ## 2020
 

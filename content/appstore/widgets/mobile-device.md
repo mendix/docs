@@ -12,7 +12,7 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
+The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
 
 * Device ID – the unique ID of the device
 * Device platform – the platform on which the app runs (for example, Android, iOS, or web)

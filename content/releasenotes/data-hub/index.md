@@ -9,6 +9,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### July 29th, 2021
+
+#### New Feature
+
+* The Mendix connector on the Data Hub **Home** page now also supports OData v4. 
+
+### July 22nd, 2021
+
+#### Fixes
+
+* Administration pages no longer time out for Data Hub Admins.
+
 ### July 1st, 2021
 
 #### Fixes

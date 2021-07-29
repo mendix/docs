@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "popup", "pop-up", "pop
 
 ## 1 Introduction
 
-The [Pop-Up Menu](https://appstore.home.mendix.com/link/app/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
+The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
 
 ### 1.1 Features
 

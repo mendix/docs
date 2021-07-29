@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### July 29th, 2021
+
+#### New Features
+
+* We have implemented a UX refresh of [My Marketplace](/appstore/general/app-store-overview#my-marketplace) to be in-line with other Marketplace pages.
+
 ### June 3rd, 2021
 
 #### Fixes

@@ -153,6 +153,8 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means s
      
 3. Once data transfer is complete, progress will be at 100%.
 
+#### 4.3.4 Checking the Migration Status
+
 The migration page lists all the ongoing migrations, including the following information:
 
 * The source and target environments

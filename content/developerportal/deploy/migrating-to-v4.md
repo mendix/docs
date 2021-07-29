@@ -102,7 +102,7 @@ To deploy your app to your new Mendix Cloud V4 environment, you need to do the f
 
     {{% alert type="info" %}}You do not need to set up your **Custom Domains**. When the app is migrated to V4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the V4 app.{{% /alert %}}
 
-### 4.3 Replicating the Data
+### 4.3 Replicating the Data {#replicating-data}
 
 Now that you have your new Mendix Cloud V4 environment, you can start replicating the data.
 
@@ -200,18 +200,24 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 7. Stop your V4 app at the end of the test and restart the replication so you can continue to copy data from your V3 app.
 
-### 4.5 Final Migration{#final-migration}
+### 4.5 Final Migration {#final-migration}
 
-Once you have tested the data migration you are ready to migrate your app to Mendix Cloud V4.
+Once you have tested the data migration you are ready to migrate your app to Mendix Cloud v4.
 
 {{% alert type="warning" %}}
-The final migration will only check that *production* data has been completely transferred to the new V4 app.
-
-If you want to keep all your test and acceptance data, you need to review the migration status yourself. We recommend that you do this before initiating the final migration, but you can migrate non-production data after the final migration if necessary.
+The final migration will only check that *production* data has been completely transferred to the new v4 app. If you want to keep all your test and acceptance data, you need to review the migration status yourself. We recommend that you do this before initiating the final migration, but you can migrate non-production data after the final migration if necessary.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-We recommend that you allow at least an hour between starting to replicate the data (section 4.3, above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between your V3 and V4 app.
+We recommend that you allow at least an hour between starting to replicate the data (see the [Replicating the Data](#replicating-data) section above) and starting the final migration. This is because we reduce the TTL for the DNS records at the beginning of the process, but this will take some time to propagate and allow us to switch quickly between your v3 and v4 app.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+If you have forced a database dump-restore during the initial replication or it was automatically turned on due to a detected failure with AWS DMS replication, the final migration will have considerable downtime. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+It is also recommended to stop replication at least once, because upon a stop, there are more operations that take additional time. If the replication is stopped, the last operation timing will include these additional operations, thus becoming more accurate.
 {{% /alert %}}
 
 There are two more requirements before you can start the final migration:
@@ -219,12 +225,12 @@ There are two more requirements before you can start the final migration:
 * The replication process for the production environments must have transferred all the data at some point in time, even if more data has been added since — in other words, the replication process for production must have reached 100% at least once
 * The replication process must be in a *Replicating* state
 
-To do the final migration of your app from Mendix Cloud V3 to Mendix Cloud V4, do the following:
+To do the final migration of your app from Mendix Cloud v3 to Mendix Cloud v4, do the following:
 
 * Click **Migrate** on the migration page. This does the following:
 
-    1. Stops the app running on Mendix Cloud V4
-    2. Stops the app running on Mendix Cloud V3
+    1. Stops the app running on Mendix Cloud v4
+    2. Stops the app running on Mendix Cloud v3
     3. Runs the replication process for the *Production* environments until it reaches 100%
     4. Renames the subdomain of the original app and **all** environments to be `<current-app-name>-v3`
     5. Removes the `-v4` suffix from the subdomain name of the new V4 app and **all** environments

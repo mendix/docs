@@ -149,11 +149,8 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means s
 
     The replication process will copy all the data in the database, including files based on `FileDocument` entities, such as images, which are stored in the storage of the v3 app node.
 
-    This is a one-time database copy from the v3 to v4 node, unlike live replication. This is recommended in the following cases:
-
-    * Database replication with AWS DMS fails to replicate the data correctly
-    * Database replication with AWS DMS fails with validation errors
-
+     This is a one-time database copy from the v3 to v4 node, unlike live replication. Database dump and restore will be forced automatically if the AWS DMS data integrity check fails after multiple attempts. DMS may fail for other reasons, but it does not trigger fallback to the dump-restore mode, because it is usually recoverable if replication is restarted. If DMS keeps failing, then it is advised to force the dump-restore mode manually by selecting the relevant check box.
+     
 3. Once data transfer is complete, progress will be at 100%.
 
 The migration page lists all the ongoing migrations, including the following information:

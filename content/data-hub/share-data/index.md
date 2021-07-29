@@ -34,49 +34,49 @@ Before starting this how-to, make sure you have completed the following prerequi
 Follow these steps to create a simple app in Mendix Studio Pro. 
 
 1. In Studio Pro, click **New App** to create a new app using the **Blank** app template. Fill in the **App Name** as *{yourname}CustomerServiceApp* and select **Create app**. 
-1. In the App Explorer, double click the **Domain Model** for **MyFirstModule**. 
-1. In the toolbar at the top of the main window, click **Entity**. Move your cursor to the main window and click to add your entity to the domain model.
-1. Double-click the entity to open its properties and change its **Name** to *Customer*.
-1.  In the **Attributes** tab, click **New** to create the following attributes for the entity:
-
-	| Name         | Type       | Default value |
-	| :------------| :----------|	:-------------|
-	| CustomerID   | Autonumber | 1             |
-	| FirstName    | String     |               |
-	| LastName     | String     |               |
-	| CompanyName  | String     |               |
-	| Address      | String     |               |
+2. In the App Explorer, double-click the **Domain Model** in **MyFirstModule**. 
+3. In the **Toolbox**, select **Entity** and drag and drop it to the domain model.
+4. Double-click the entity to open its properties and set its **Name** to *Customer*.
+5. In the **Attributes** tab, click **New** and do the following:
+    1. In the **Add Attribute** dialog box, Set **Name** to *CustomerID* and set to **Type** to *Autonumber*.
+    2. Click **OK** to save create the attribute.
+ 6. Repeat steps 5a and 5b to create attributes *FirstName*, *LastName*, *CompanyName*, *Address* and set type to *String* for all of them. 
 
 	![](attachments/share-data/entity-properties-pane.png)
 	
-1. Click **OK** save your changes and see them in the domain model.
-1. Right-click the entity. From the menu, select **Generate overview pages**.
-1. In the **Generate pages** dialog box, select **Atlas_Default (Atlas_Core)** as the **Content layout** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
+7. Click **OK** to save your changes.
+8. Right-click the entity and select **Generate overview pages** from the drop-down list.
+9. In the **Generate pages** dialog box, select **Atlas_Default (Atlas_Core)** as the **Content layout** and click **OK**. 
+10. In the **Information** pop-up dialog, click **OK**. 
+    Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
 	![](attachments/share-data/overview-pages-for-customer-entity.png)
 
-1.  In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
-1. From the **App Explorer** drag **Customer_Overview** into the empty **Auto-fill** container under the "Home" banner.
+10. In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
+11. From the **App Explorer** drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.
 
-	We've created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. Go ahead and customize the homepage further by changing the banner text.
+	You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. Go ahead and customize the homepage further by changing the banner text.
 	
 	![](attachments/share-data/customer-overview-home-page.png)
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-Let's register the **Customer** entity in the Data Hub Catalog so we can use this entity in other apps. To do this, we'll expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 is a REST-based protocol and a standard format for registering services in the Data Hub Catalog. 
+You need to register the **Customer** entity in the Data Hub Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 is a REST-based protocol and a standard format for registering services in the Data Hub Catalog. 
 
-1.  In the App Explorer, right click on **MyFirstModule**. From the menu, select **Add a folder**. Name it  *APIs*.
+1.  In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add a folder**. Name it  *APIs*.
 
 	{{% alert type="info" %}}The published OData service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
 
-1.  In the **Domain Model**, right-click the **Customer** entity and select **Expose as OData resource…**.
+2.  In the **Domain Model**, right-click the **Customer** entity and select **Expose as OData resource…**.
 
 	 {{% image_container width="300" %}}![](attachments/share-data/expose-as-odata-resource.png){{% /image_container %}}
 
-1.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder. Click **New** to add a new OData service to this folder. Name the published OData service *{yourname}CustomerODataService* and select **OK**. 
+3.  In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder.  
 
 	 {{% image_container width="300" %}}![](attachments/share-data/select-published-odata-service.png){{% /image_container %}}
+	 
+4. Click **New** to add a new OData service to this folder. 
+5. Name the published OData service *{yourname}CustomerODataService* and click **OK**.
 
 	The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
 
@@ -84,21 +84,21 @@ Let's register the **Customer** entity in the Data Hub Catalog so we can use thi
 
 	{{% alert type="info" %}}  Make a note of the the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Data Hub Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-1. Click **OK** twice to display the **OData Service** document that will be registered in the Data Hub Catalog. In the **General** tab, notice the **Version** number. 
+5. Click **OK** twice to display the **OData Service** document that will be registered in the Data Hub Catalog. In the **General** tab, notice the **Version** number. 
 
 	![](attachments/share-data/customer-odata-service-page.png)
 
 	Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them on this page.
 
-1. Click **Publish** in the toolbar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
+6. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app. The app will be deployed, and the OData service will be automatically registered in the Data Hub Catalog.
 
 	{{% image_container width="150" %}}![](attachments/share-data/publish.png){{% /image_container %}}
 
-1. Once the app is deployed, click **View App** to open the app in a browser. 
+7. Once the app is deployed, click **View App** to open the app in a browser. 
 
-1. On the app's home page, click **Customers Overview**.
+8. On the app's home page, click **Customers Overview**.
 
-1. Add data to the app. Click **New** to add data for a customer entry.
+9. Add data to the app. Click **New** to add data for a customer entry.
 
 	![external entities](attachments/share-data/add-data-in-app.png)
 

@@ -164,8 +164,9 @@ The migration page lists all the ongoing migrations, including the following inf
     * If replication isn't running
     * During the replication process when the process checks whether files are synchronized
 * The UUID of the target production environment
-* A button to **Stop replication** with an **Interrupt** option if the tool is currently replicating or a **Start replication** option if the tool is currently stopped
-*  The **Migrate button** which triggers the [final migration](#final-migration)
+* The **Stop replication** button with an **Interrupt** option if the tool is currently replicating 
+* The **Activate Replication** button when the replication status is in a **Stopped** state
+*  The **Migrate** button that triggers the [final migration](#final-migration)
 
     ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
  

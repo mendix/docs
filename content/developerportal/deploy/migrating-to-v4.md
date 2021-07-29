@@ -169,6 +169,10 @@ The migration page lists all the ongoing migrations, including the following inf
 *  The **Migrate** button that triggers the [final migration](#final-migration)
 
     ![Status of the Migration](attachments/migrating-to-v4/migration-status.png)
+
+{{% alert type="info" %}}
+File and row counts may be slightly off if the v3 app is running during the replication. File sync is refreshed on every sync run (there is a 5 minute pause between the stop of the previous one and start of the new one). By comparison, the database dump-restore is refreshed only twice when the actual process is run on start and on stop, as mentioned above.
+{{% /alert %}} 
  
 ### 4.4 Testing the Replicated Data
 

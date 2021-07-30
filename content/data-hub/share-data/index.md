@@ -72,7 +72,7 @@ Go ahead and customize the homepage further by changing the banner text.
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
 
-You need to register the **Customer** entity in the Data Hub Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 is a REST-based protocol and a standard format for registering services in the Data Hub Catalog. 
+You need to register the **Customer** entity in the Data Hub Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a *Published OData service* in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Data Hub Catalog. 
 
 Do the following:
 

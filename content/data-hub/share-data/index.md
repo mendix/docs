@@ -124,7 +124,7 @@ Do the following:
 
 	![Data Hub screen](attachments/share-data/data-hub-home.png)
 
-2. In the search field, enter the search term *customer*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen. However, the service does not appear in the **Search Results** yet, as by default, a filter is set to show results in **Production** environments.
+2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen. However, the service does not appear in the **Search Results** yet, as by default, a filter is set to show results in **Production** environments.
 
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
 
@@ -157,14 +157,12 @@ To do this, follow the steps below:
 	If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
 	![](attachments/share-data/view-data-hub.png)
 	
-3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *customer*.
+3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *{yourname}*.
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     ![Filter Icon](attachments/share-data/filter-icon.png)
 
-    The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment:
-
-    {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane.png){{% /image_container %}}
+    The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
 5.  From **{yourname}CustomerODataService**, drag and drop the **Customer** entity into the domain model. The consumed service and entity have green checkmarks in the **Data Hub** pane now.
 

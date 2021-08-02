@@ -45,17 +45,17 @@ This password is only used when Mendix is running locally. Changing the password
 
 The MxAdmin user is not created automatically when you deploy your app as a Free App. For licensed environments the MxAdmin user is created when you change the password for the first time, for example through the [Environment Details](/developerportal/deploy/environments-details) for the Mendix Cloud.
 
-When your Free App *has never been deployed, and the database still needs to be created*, any data snapshot you have added to your project will be restored to the database of your Free App. You can use this process to add the MxAdmin user to your Free App by doing the following:
+When your Free App *has never been deployed and the database still needs to be created*, any data snapshot you have added to your app will be restored to the database of your Free App. You can use this process to add the MxAdmin user to your Free App by doing the following:
 
 1. In Studio Pro, go to **App > Security**.
 2. With **Security level** set to **Production**, open the **Administrator** tab.
 3. Change the default password of the administrator user.
 4. Run you project locally. This will create a local database that includes the MxAdmin user.
-5. Once your project is running locally, stop it again.
+5. Once your app is running locally, stop it again.
 6. Open **Version Control > Add Snapshot of Data**.
 7. Click **Yes** to confirm committing the new data snapshot.
 
-Your project now contains a data snapshot. If you deploy this project for a Free App for the first time, the snapshot will be restored to the database of the Free App. If there is already a database for your Free App, the snapshot will not be restored.
+Your app now contains a data snapshot. If you deploy this project for a Free App for the first time, the snapshot will be restored to the database of the Free App. If there is already a database for your Free App, the snapshot will not be restored.
 
 Alternatively you can log in as an administrator to a Free App deployed to the cloud, by doing the following:
 

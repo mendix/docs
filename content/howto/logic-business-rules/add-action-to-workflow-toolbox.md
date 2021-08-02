@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
-* Your project has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 ## 3 Exposing the Microflow as the Workflow Action
 

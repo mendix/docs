@@ -73,7 +73,7 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your project to *login.html* — this removes the single sign-on button from your sign in screen:
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
 
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
@@ -166,7 +166,7 @@ To enable Mendix SSO in your app, follow these steps:
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
-5. Rename the file *login-with-sso.html* in the **theme** folder of your project to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
+5. Rename the file *login-with-sso.html* in the **theme** folder of your app to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
         ![Show project directory](attachments/mendix-sso/show-project-directory.png)
     2. Go to the **theme** folder.
@@ -207,7 +207,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 ### 5.2 Modifying Mendix SSO
 
 {{% alert type="warning" %}}
-We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
+We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
 The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.

@@ -51,7 +51,7 @@ When no search string has been specified in the **Data Hub** pane, the **App** s
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 
-To add entities to your project model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
+To add entities to your app model, see [Adding an External Entity to a Project](external-entities#adding-external-entities).
 
 ## 3 Searching the Data Hub Catalog {#search}
 

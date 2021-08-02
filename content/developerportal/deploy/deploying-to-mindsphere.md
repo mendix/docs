@@ -81,7 +81,7 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
 
-5. To start the new app, confirm where to store the app, the app name, and the project directory, then click **OK**.
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -230,7 +230,7 @@ To create a Mendix deployment package from your app, do the following:
 Your deployment package will be created, and its location displayed in an information message.
 
 {{% alert type="info" %}}
-By default, the deployment package will be created in the *releases* folder of your project.
+By default, the deployment package will be created in the *releases* folder of your app.
 {{% /alert %}}
 
 ##### 5.2.1.2 Deploying the Application to Cloud Foundry using CF CLI

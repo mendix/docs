@@ -142,7 +142,7 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
 3. In the **Import Module** dialog box, click **Import**.
 
-4. Wait until a pop-up window shows **The module was successfully imported into your project.** Click **OK**.
+4. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
 5. Open the **App Explorer** and find the **EmailTemplate** module.
 

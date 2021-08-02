@@ -20,7 +20,7 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 
 ## 2 Usage
 
-### 2.1 Take Picture
+To take a picture, follow these steps:
 
 1.  To use the **Take picture** action, create an entity that extends the **System.Image** entity:
 
@@ -30,14 +30,14 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 
     ![Example nanoflow](attachments/web-actions/nanoflow.png)
 
-3.  Double-click the **Take picture** action and select which object you are passing to the action to fill with the image properties:
+3.  Double-click the **Take picture** action and select which object you pass to the action to fill with the image properties:
 
     ![Properties](attachments/web-actions/properties.png)
 
-4.  You can also configure an option which shows a confirmation screen allowing users to accept or retake the picture:
+4.  If needed, configure an option which shows a confirmation screen allowing users to accept or retake the picture:
 
     ![Confirmation Screen](attachments/web-actions/confirmation.png)
 
-5.  The value returned from the action is a Boolean, so after the execution you can check if the picture was taken or not:
+5.  After the execution, check if the picture was taken or not. The value returned from the action is a Boolean:
 
     ![Check](attachments/web-actions/check.png)

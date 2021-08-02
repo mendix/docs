@@ -16,10 +16,19 @@ tags: ["studio pro"]
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java action call](java-action-call).
 
 {{% alert type="info" %}}
-Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource/{module name}/actions* of the project directory.
-
-The skeletons of these *.java* files are generated automatically when you deploy for Eclipse (in the **Project** menu). For more information about creating the Java code in these files, see [Java Programming](java-programming).
+Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource/{module name}/actions* of the project directory. The skeletons of these *.java* files are generated automatically when you deploy for Eclipse (in the **Project** menu). For more information about creating the Java code in these files, see [Java Programming](java-programming).
 {{% /alert %}}
+
+For a deep-dive look into this Java actions, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://videoshare.mendix.com/watch/rof7aUB6Hom4et6qQU7FuT?.jpg"
+  data-uuid="rof7aUB6Hom4et6qQU7FuT?"
+  data-v="4"
+  data-type="inline"
+/>
 
 ## 2 General
 

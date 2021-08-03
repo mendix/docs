@@ -52,7 +52,7 @@ This mode performs both the upload and the download phases for all entities used
 
 #### 2.1.2 Selective Synchronization {#selective-sync}
 
-Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, a specific set of objects will be synchronized. These objects can be either all unsynchronized objects when the [synchronize unsynchronized objects](synchronize#synchronize-unsynchronized-objects) mode is selected, or a manually selected set of objects when the [synchronize selected object(s)](synchronize#synchronize-selected-object-s) mode is selected.
+Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, a specific set of objects will be synchronized. These objects can be either all unsynchronized objects when the [synchronize unsynchronized objects](synchronize#unsynchronized-objects) mode is selected, or a manually selected set of objects when the [synchronize selected object(s)](synchronize#selected-objects) mode is selected.
 
 Synchronization performed using a UI element (for example, a button or an on-change action) performs the full synchronization.
 

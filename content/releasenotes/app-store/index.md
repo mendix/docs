@@ -162,7 +162,7 @@ You can now create [user groups](/appstore/general/app-store-overview#user-group
 
 The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview#guests).
 
-Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
 ### October 1st, 2019
 

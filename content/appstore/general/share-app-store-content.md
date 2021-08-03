@@ -132,7 +132,7 @@ To add content to the Marketplace, follow these steps:
 6. Click **Upload an Image** to upload an icon for the component.
 7.  <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
+	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
 8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
@@ -190,7 +190,7 @@ To update content that has already been published, follow these steps:
 1.  Find the component by clicking **My Marketplace** and selecting one of the following:
 	* **My Content**
 	* **Company Content**
-	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
+	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#group-content), you can only update the component if you are a member of that group)
 	
 2.  Click **Manage** next to the component you want to update.
 

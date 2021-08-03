@@ -117,7 +117,7 @@ In this page, you can see the Marketplace content for which you have created at 
 	* For more information on creating a draft version, see the [Updating Existing Marketplace Content](share-app-store-content#updating) section of *How to Share Marketplace Content*
 * **Edit a version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*)
 * **Unpublish a version** – click this to remove one version or all versions of the component
-	* If the component is [protected content](#content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
+	* If the component is [protected content](#group-content) from a [user group](#user-groups), a [group member](#members) can unpublish any version
 	* If the component is not the protected content of a user group, you can only unpublish a version that you have published yourself
 	* Select **Unpublish all my versions** to remove all your versions of the component
 
@@ -179,7 +179,7 @@ The **User Groups** menu item and page are visible to all users. However, only [
 
 #### 4.7.1 Members Tab {#members}
 
-On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#content) assigned to the group.
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
 
 Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
 
@@ -189,7 +189,7 @@ To remove a member, click **Remove** next to their name.
 
 #### 4.7.2 Guests Tab {#guests}
 
-A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
+A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
 ![](attachments/app-store-overview/guests.png)
 

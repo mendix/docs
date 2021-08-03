@@ -35,28 +35,96 @@ These are the prerequisites for using this connector:
 
 ## 3 Getting Started
 
-### 3.1 Usage
+Once you have imported the Database Connector into your app, you will have the **Database Connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
 
-Once you have imported the Database Connector into your app, you will have the **Database Connector** available in the **Toolbox**. The connector supports four actions: **Execute query**, **Execute statement**, **Execute parameterized query**, and **Execute parameterized statement**. To use any of these in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+![](attachments/database/database-connector-in-toolbox.png)
 
-The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for all other commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+### 3.1 Executing Queries & Statements
 
+#### 3.1.1 Usage
+
+To use any of **Execute parameterized query**, **Execute parameterized statement**, **Execute query** or **Execute statement**, in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+ 
+The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for the other DML commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
+ 
 For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
-
+ 
 {{% alert type="info" %}}
 The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
 {{% /alert %}}
 
-### 3.2 Results
+#### 3.1.2 Results
 
 These are the results of the actions:
 
 * **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the amount of affected rows
 
+### 3.2 Executing Callable Statements
+
+The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type `DatabaseConnector.Statement`, which should define the contract to perform the execution and retrieve the results:
+
+![](attachments/database/callable-statement-action.png)
+
+The `DatabaseConnector.Statement` type is a non-persistable entity defined as follows:
+
+![](attachments/database/statement-parameter-diagram.png)
+
+The **Content** attribute of the `DatabaseConnector.Statement` type should contain the statement body (meaning, the SQL content). An association with a `DatabaseConnector.Parameter` type is also available to define, if applicable, the input and output parameters that the stored procedure expects. 
+
+The `DatabaseConnector.Parameter` type uses the **Name** and **Position** attributes to refer to either the parameter name or position in the stored procedure. All parameters within a statement should use one of the two options uniformly.
+
+The `DatabaseConnector.Parameter` type also has a **ParameterMode** attribute to indicate which parameter mode to use:
+
+* `DatabaseConnector.ParameterMode.INPUT` – for **IN** parameters
+* `DatabaseConnector.ParameterMode.OUTPUT` – for **OUT** parameters
+* `DatabaseConnector.ParameterMode.INOUT` – for **INOUT** parameters
+
+This type should also not be used directly but through one of its type specific specializations instead.
+
+#### 3.2.1 Supported Parameter Types
+
+For a type-safe representation of a stored procedure's **IN**, **OUT**, or **INOUT** parameters, the `DatabaseConnector.Parameter` type has pre-defined specializations that should be used.
+
+##### 3.2.1.1 Primitive Types
+
+The `DatabaseConnector.ParameterDecimal`, `DatabaseConnector.ParameterLong`, `DatabaseConnector.ParameterDateTime`, and `DatabaseConnector.ParameterString` specializations can be used to refer to the SQL primitive types for decimals, natural numbers, dates, and character types, respectively.
+
+![](attachments/database/primitive-types-parameters.png)
+
+The **Value** attribute defined in these specializations will be handled differently depending on the parameter mode used. For input parameters, the attribute must hold the value to pass to the stored procedure. For output parameters, it will be set to the output from the stored procedure.
+
+##### 3.2.1.2 ParameterObject Type
+
+Some database vendors support creating complex SQL object types, which can be referred to using the `DatabaseConnector.ParameterObject`. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
+
+![](attachments/database/parameter-object-parameter.png)
+
+Attributes of the object can be represented by associated `DatabaseConnector.Parameter` objects using the `ParameterObject_Parameter` association. You can use any specialization of `DatabaseConnector.Parameter` for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
+
+{{% alert type="info" %}}
+Attributes within an object are identified by their position in the object and not by their name. Therefore, it is necessary to set the **Position** attribute correctly for all object attributes.
+{{% /alert %}}
+
+##### 3.2.1.3 ParameterList Type {#parameterlist}
+
+List parameters are also supported and usable via the `DatabaseConnector.ParameterList` type. The **SQLTypeName** attribute should refer to the SQL list type:
+
+![](attachments/database/parameter-list-parameter.png)
+
+List items can be represented by associated `DatabaseConnector.Parameter` objects using the `ParameterObject_Parameter` association. You can use any specialization of `DatabaseConnector.Parameter` for the list items.
+
+##### 3.2.1.4 ParameterRefCursor Type
+
+To deal with **REF CURSOR** outputs, use the `DatabaseConnector.ParameterRefCursor` type:
+
+![](attachments/database/parameter-ref-cursor-parameter.png)
+
+The many-to-many-association with `DatabaseConnector.Parameter` is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above about list parameters.
+
 ## 4 Best Practices
 
-* Avoid having a user input as part of your dynamic SQL queries and statements (in the future, using parameters with queries or statements will be supported)
+* Avoid having a user input as part of your dynamic SQL queries and statements, and use parameters instead
 * Avoid fetching large amounts of data, which can lead to memory issues (as all the **ResultSet** data is loaded into memory at once)
 
 ## 5 Common JDBC Drivers {#links}

@@ -220,6 +220,11 @@ data-hub:
     - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
+solutions:
+  space: "Solutions Guide"
+  priority: false
+  menu_categories:
+    - "General"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

@@ -69,7 +69,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * Implement [user roles](/refguide/user-roles) and [security](/refguide/security)
-* Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
+* Creating a new release or module export should be done while the security level of the app containing the module is set to **Production**
 * The [status](/refguide/project-security#app-status) must be **Complete** for the following:
 	* Page access
 	* Microflow access

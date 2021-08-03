@@ -27,7 +27,7 @@ In addition, the Mendix SSO module has a default implementation for user adminis
 
 We are in the process of adding the Mendix SSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
+You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
@@ -216,7 +216,7 @@ The Mendix SSO module is written so that you can create a user entity in another
 
 To make a copy of the module, do the following:
 
-1. Add a new module to your app project. In these examples it is called **CustomMendixSSO**.
+1. Add a new module to your app. In these examples it is called **CustomMendixSSO**.
 
 2. Create the **Module roles** *User* and *Administrator* for the new module.
 

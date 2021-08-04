@@ -183,7 +183,7 @@ For more information on setting up access restriction profiles, see [Restrict Ac
 
 ## 5 Permissions
 
-Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member.
+Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member. Team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 
 For more information on managing node permissions, see [Node Permissions](node-permissions).
 

@@ -39,7 +39,7 @@ Only users with the *Technical Contact* role or team members specifically allowe
 
 The permissions are set independently for each environment. You can choose the environment at the top of the *Permissions* tab. Changing the permissions for a *production* environment will require two-factor authentication (see [Two-Factor Authentication](two-factor-authentication)).
 
-Only team members who have permission to *Deploy, Publish, and Monitor* can view the node permissions.
+Only team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 
 {{% alert type="info" %}}
 
@@ -118,13 +118,9 @@ For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/d
 
 ## 4 Downloading Node Permissions
 
-You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button.
+You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button. This button is only shown to Technical Contacts.
 
-![](attachments/node-permissions/download-to-csv.png)
-
-The CSV will contain a list of environments, users, and their respective permissions.
-
-![](attachments/node-permissions/permissions-csv.png)
+The CSV file will contain a list of environments, users, and their respective permissions.
 
 ## 5 Technical Contact
 

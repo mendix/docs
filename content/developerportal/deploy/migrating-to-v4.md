@@ -131,7 +131,7 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means l
 
 6. Click **Replicate data and files**.
 
-    The replication process will copy all the data in the database, and files based on `FileDocument` entities, such as images, which are stored in the storage of the v3 appnode.
+    The replication process will copy all the data in the database as well as all the files which are stored on the v3 appnode.
 
     The replication will continue to run, so any changes to the data while your v3 app is still running are reflected in the replicated data.
 
@@ -168,7 +168,9 @@ The migration page lists all the ongoing migrations, including the following inf
     * If replication isn't running
     * During the replication process when the process checks whether files are synchronized
 * The UUID of the target production environment
-* The **Stop replication** button with an **Interrupt** option if the tool is currently replicating 
+* The **Stop replication** button with an **Interrupt** option if the tool is currently replicating
+    * if you click **Stop replication** without checking the **Interrupt** option, the replication will stop when all the data is replicated
+    * if you check the **Interrupt** option, replication will stop as soon as possible when you click **Stop replication** leaving the v4 database in an incomplete and probably inconsistent state
 * The **Activate Replication** button when the replication status is in a **Stopped** state
 *  The **Migrate** button that triggers the [final migration](#final-migration)
 
@@ -260,7 +262,7 @@ The following issues might occur, or you might decide to "Rollback" a successful
 
 #### 4.7.1 Data Replication Fails or Times Out
 
-If the replication process fails during the final migration, or it times out (the timeout is fixed at 20 minutes), then the apps and environments will not be renamed and the apps in the original v3 environments will be restarted.
+If the replication process fails during the final migration, or it times out (the timeout is fixed at 20 minutes for AWS DMS — for dump restore it is 20 minutes longer than the measured operation time, displayed on the Migration Status page), then the apps and environments will not be renamed and the apps in the original v3 environments will be restarted.
 
 It is safe to restart replicating the data to bring the data replicated back up to 100%. This should ensure that the final migration does not time out.
 

@@ -577,11 +577,21 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 **Query Parameters**
 
 *   _source\_snapshot\_id_ (String): Identifier of the snapshot which will be restored. This value is required and must belong to a snapshot within the same application, although it could be a different environment.
+*   _db\_only_ (Boolean): Boolean flag. It might have `true` or `false` value. It determines if it is a database only restore operation. It defaults to false if not present.
 
 **Example Request**
 
 ```bash
 POST /api/v2/apps/b5f19af7-7453-465e-b9a1-d7556f524c1e/environments/d436e0cd-6200-4ac5-b858-849a6ddbb56a/restores?source_snapshot_id=5f8ace23-19df-4134-bd67-c338142a6097
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+```bash
+POST /api/v2/apps/b5f19af7-7453-465e-b9a1-d7556f524c1e/environments/d436e0cd-6200-4ac5-b858-849a6ddbb56a/restores?source_snapshot_id=5f8ace23-19df-4134-bd67-c338142a6097&db_only=true
 Host: deploy.mendix.com
 
 Content-Type: application/json

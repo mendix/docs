@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* Miscellaneous security and UI fixes.
+* We made various security and UI fixes.
  
 ### July 29th, 2021
 

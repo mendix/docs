@@ -170,7 +170,7 @@ The migration page lists all the ongoing migrations, including the following inf
 * The UUID of the target production environment
 * The **Stop replication** button with an **Interrupt** option if the tool is currently replicating
     * if you click **Stop replication** without checking the **Interrupt** option, the replication will stop when all the data is replicated
-    * if you check the **Interrupt** option, replication will stop as soon as possible when you click **Stop replication** leaving the v4 database in an incomplete and probably inconsistent state
+    * if you check the **Interrupt** option, replication will stop as soon as possible when you click **Stop replication** leaving the v4 database in an incomplete and probably inconsistent state. On the Migration Status page you will see the state as *failed* when you select this option.
 * The **Activate Replication** button when the replication status is in a **Stopped** state
 *  The **Migrate** button that triggers the [final migration](#final-migration)
 

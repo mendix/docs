@@ -83,7 +83,7 @@ From this screen, the following functions can be carried out:
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).
 
 ## 4 Managing External Participants {#externalaccess}
-External Access allows Datahub Admin to invite members from outside the organization,  to support in projects. **External participant** has certain access such as searching published data sources or use them in projects. However the external participant cannot register or curate content of this company, unless he is the owner of the data source.
+External Access allows Datahub Admin to invite members **(External participant)** from outside the organization,  to support in projects. **External participant** has certain access such as searching published data sources or use them in projects. However the external participant cannot register or curate content of this company unless he is the owner of the data source.
 
 Data Hub Admin can manage the external participants list under the **External Access** option. 
 
@@ -98,7 +98,7 @@ Data Hub Admin can manage the external participants list under the **External Ac
 
 * The Data Hub Admin will see the list of **External Participants** in the organization.
 
-* **Invite External Participants:** To invite a new member, click **Invite Users**, which will open a new popup, type the email addresses of the users you want to invite as external participants, then press enter.Finally click **Send Invitation**.
+* **Invite External Participants:** To invite a new member, click **Invite Users**, which will open a new popup, type the email addresses of the members whom you want to invite as external participants, then press enter. Finally click **Send Invitation**.
 	
 	
 	![External Access](attachments/InviteExternalUser.PNG)

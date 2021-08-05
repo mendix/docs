@@ -165,6 +165,17 @@ A new attribute is added to the entity.
 
 ## 5 Adding New Associations
 
+### 5.1 Adding a New Association from a Page
+
+You can create an association from a page when adding widgets to it. You can do it in the **Select** dialog box when selecting the context for the widget. 
+
+For example, you have a data view with the **Customers** entity.  *Inside* the data view, you add a list view to show *reports* associated only with the customer who is currently shown in the data view. This means that you will show reports through an association. You can create the association from the page without having to open the domain model. Do the following:
+
+1. .
+2. 
+
+### 5.2 Adding a New Association in the Domain Model Editor
+
 There are several ways to add an association in the domain model. You can do one of the following:
 
 1. Click the dot icon that appears and do one the following:

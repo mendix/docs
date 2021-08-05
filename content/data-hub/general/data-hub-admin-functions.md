@@ -89,7 +89,7 @@ Data Hub Admin can manage the external participants list under the **External Ac
 
 
 
- ![External Access](attachments/ExternalAccessOverview.PNG)
+ ![External Access](attachments/data-hub-admin/ExternalAccessOverview.PNG)
  
  
  The Data Hub Admin can manage external participants by following these steps:
@@ -101,7 +101,7 @@ Data Hub Admin can manage the external participants list under the **External Ac
 * **Invite External Participants:** To invite a new member, click **Invite Users**, which will open a new popup, type the email addresses of the members whom you want to invite as external participants, then press enter. Finally click **Send Invitation**.
 	
 	
-	![External Access](attachments/InviteExternalUser.PNG)
+	![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
 
 	{{% alert type="info" %}}The members you want to invite must have a mendix Account prior. {{% /alert %}}
 	

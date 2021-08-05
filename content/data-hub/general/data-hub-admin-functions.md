@@ -79,3 +79,11 @@ From this screen, the following functions can be carried out:
 	{{% alert type="info" %}}If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.{{% /alert %}}
 
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).
+
+## 4 Managing External Participants {#externalaccess}
+External Access allows Datahub Admin to invite members outside the company, who are invited to the company's datahub to support in projects. These external members has certain access such a s searching published data sources or use them in teh projects. However the external participant can not register or curate content in this company, unless they are the owner of the data source.
+
+Data Hub Admin can manage the external members list under the **External Access** option. 
+
+
+ 

@@ -577,7 +577,7 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 **Query Parameters**
 
 *   _source\_snapshot\_id_ (String): Identifier of the snapshot which will be restored. This value is required and must belong to a snapshot within the same application, although it could be a different environment.
-*   _db\_only_ (Boolean): Boolean flag. It might have `true` or `false` value. It determines if it is a database only restore operation. It defaults to false if not present.
+*   _db\_only_ (Boolean): Boolean flag. Set this to *true* if you are doing a database only restore operation. It defaults to *false* if not present.
 
 **Example Request**
 

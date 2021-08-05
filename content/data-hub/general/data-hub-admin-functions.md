@@ -83,25 +83,25 @@ From this screen, the following functions can be carried out:
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).
 
 ## 4 Managing External Participants {#externalaccess}
-External Access allows Datahub Admin to invite members outside the organization, who are invited to the organization's datahub to support in projects. These **External participants** has certain access such a s searching published data sources or use them in teh projects. However the external participant can not register or curate content in this company, unless they are the owner of the data source.
+External Access allows Datahub Admin to invite members from outside the organization,  to support in projects. These **External participants** has certain access such as searching published data sources or use them in the projects. However the external participant can not register or curate content in this company, unless they are the owner of the data source.
 
 Data Hub Admin can manage the external participants list under the **External Access** option. 
 
 
 
- ![External Access](attachments/data-hub-admin/External_Access.PNG)
+ ![External Access](attachments/data-hub-admin/ExternalAccessOverview.PNG)
  
  
  The Data Hub Admin can manage external participants by following these steps:
 
 * From **Data Hub** screen, go to the **Administration** tab, select **External Access** option:
 
-	![Administration](attachments/data-hub-admin/administration.png)
-
 * The Data Hub Admin will see the list of **External Participants** in the organization.
 
 * **Invite External Participants:** To invite a new member, click **Invite Users**, which will open a new popup, type the email addresses of the users you want to invite as external participants, then press enter.Finally click **Send Invitation**.
-
+	
+	
+	![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
 
 	{{% alert type="info" %}}The members you want to invite must have a mendix Account prior. {{% /alert %}}
 	

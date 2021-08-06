@@ -41,25 +41,23 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 	![Administration](attachments/data-hub-admin/administration.png)
 
-2. The Data Hub Admin will see the **Curator Management** tab displaying  the list of Data Hub curators for the organization.
+2. The Data Hub Admin will see the **Curator Management** tab displaying  the list of Data Hub curators for the organization. To assign a curator role to a Mendix user, click **Add Curator**.
 
-3. To assign a curator role to a Mendix user, click **Add Curator**.
+   {{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
+   
+3. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
+   
+    {{% alert type="info" %}}This will only remove the curator rights of the user, it will not remove the user as a Mendix platform user.{{% /alert %}}
 
-	{{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
+To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
-4. To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
+{{% alert type="info" %}}This list shows all Mendix users for your organizations. It does not include non-Mendix users that are  added as *Custom Owners* as described in [Managing Custom Owners](#customowners).{{% /alert %}}
 
-	{{% alert type="info" %}}This list will show all Mendix users for your organizations. It will not include non-Mendix users that are  added as *Custom Owners* as described in [Managing Custom Owners](#customowners).{{% /alert %}}
-
-5. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
-
-	{{% alert type="info" %}}This will only remove the curator rights of the user, it will not remove the user as a Mendix platform user.{{% /alert %}}
-
-## 3 Managing Custom Owners {#customowners}
+## 3 Managing Custom Owners {#custom-owners}
 
 Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](/data-hub/data-hub-catalog/curate#custom-owner) or have been specified during app registration.
 
-They are  the contacts for registered assets. Adding a custom owner does not give them access rights to the Catalog. Custom owners are displayed in the drop-down lists by an avatar that only displays their intitial (Mendix users have their peronalized avatar displayed).
+They are  the contacts for registered assets. Adding a custom owner does not give them access rights to the Catalog. Custom owners are displayed in the drop-down lists by an avatar that only displays their initials (Mendix users have their personalized avatar displayed).
 
 Curators and the Data Hub Admin can manage the custom owner list under the **Owner Management** tab.
 
@@ -67,47 +65,41 @@ Curators and the Data Hub Admin can manage the custom owner list under the **Own
 Curators will only see  **Owner Management** under the **Administration** tab.
 {{% /alert %}}
 
-![owner admin](attachments/data-hub-admin/owner-management.png)
+From the **Owner Management** tab, you can do the following:
 
-From this screen, the following functions can be carried out:
+* Add owners – the **Add Owners** button allows you to add new owners by filling in their name and email. New owner will be listed when **Business** or **Technical Owners** are curated for registered assets.
 
-* **Add Owners**—click and enter the name and email of the contact and click **OK**. This will be listed when **Business** or **Technical Owners** are curated for registered assets.
-
-	{{% alert type="info" %}}Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They will not be able to login to the Mendix Platform or curate registered assets in the Catalog. {{% /alert %}}
+	{{% alert type="info" %}}Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They are not able to login to the Mendix Platform or curate registered assets in the Catalog. {{% /alert %}}
 
 * Edit the details of the listed owners by clicking the edit pencil icon.
-* Delete names from the list, click the **x** and confirm the removal of the name from the list.
+* Delete names from the list by clicking the **x** icon and confirming your choice.
 
 	{{% alert type="info" %}}If a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner. This means that the asset will not have a contact.{{% /alert %}}
 
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).
 
-## 4 Managing External Participants {#externalaccess}
-External Access allows Datahub Admin to invite members **(External participant)** from outside the organization,  to support in projects. **External participant** has certain access such as searching published data sources or use them in projects. However the external participant cannot register or curate content of this company unless he is the owner of the data source.
+## 4 Managing External Participants {#external-access}
 
-Data Hub Admin can manage the external participants list under the **External Access** option. 
+**External Access** allows Data Hub Admin to invite members **(External participant)** from outside the organization. **External participant** has certain access such as searching published data sources or use them in projects. However external participants cannot register or curate content of the company unless they are the owner of the data source.
 
+![External Access](attachments/data-hub-admin/ExternalAccessOverview.PNG)
 
+Data Hub Admin can manage the external participants list in the **External Access** screen. 
 
- ![External Access](attachments/data-hub-admin/ExternalAccessOverview.PNG)
- 
- 
- The Data Hub Admin can manage external participants by following these steps:
+To invite new users, do the following:
 
-* From **Data Hub** screen, go to the **Administration** tab, select **External Access** option:
+1. From the **Data Hub** screen, go to the **Administration** tab > **External Access** screen.
 
-* The Data Hub Admin will see the list of **External Participants** in the organization.
+2. Click the **Invite Users** button.
 
-* **Invite External Participants:** To invite a new member, click **Invite Users**, which will open a new popup, type the email addresses of the members whom you want to invite as external participants, then press enter. Finally click **Send Invitation**.
-	
-	
-	![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
+3. In The **Invite External Users** dialog box, fill in the email addresses of the users you would like to invite as external participants and click **Send Invitation**.     ![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
 
-	{{% alert type="info" %}}The members you want to invite must have a mendix Account prior. {{% /alert %}}
-	
-	The member will receive an invitation email, he needs to login to datahub to Accept or Reject the invitation
-	
-	{{% alert type="info" %}}A member can only work in one organization at a time. To work actively on a organisation as an external participant he needs to select the 		active copany option from Catalog homepage{{% /alert %}}
+    {{% alert type="info" %}}The users you are inviting should have a Mendix account. {{% /alert %}}
 
-* To search a member from the list of External Participants in your organization, start typing in the search box .
- 
+    After users receive the invitation, they need to log into Data Hub and accept the invitation
+
+    {{% alert type="info" %}}A user can only work in one organization at a time. To work actively in an organization as an external participant, they need to select an **Active company** option from the Catalog homepage.{{% /alert %}}
+
+   
+
+   

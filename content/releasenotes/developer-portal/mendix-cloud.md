@@ -12,6 +12,17 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### August 6th, 2021
+
+#### Improvements
+
+* We moved the [Node Permissions](/developerportal/deploy/node-permissions) from the Security page to the [Environments](/developerportal/deploy/environments) page.
+* We added the ability to delegate node permission management to team members who are not the Technical Contact.
+
+#### Fixes
+
+* We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
+
 ### July 23rd, 2021
 
 #### Improvements

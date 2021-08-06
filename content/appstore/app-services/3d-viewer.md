@@ -34,7 +34,7 @@ You can use this app service when you want to upload, store, and visualize 3D JT
 
 This app service enables you to do the following:
 
-* Display a 3D model (the JT format is currently supported)
+* Display a 3D model (Both monolithic JT and shattered JT format are currently supported)
 * Use quick intuitive controls to navigate product structure
 * Zoom, rotate, fit all, and pan
 * Turn parts on and off
@@ -56,8 +56,9 @@ The 3D Viewer app service includes a few 3D widgets. These are the limitations o
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in [Design mode](/refguide/page#design-mode).
 * **Viewer** widget is used to display a 3D model, all other 3D widgets (except **Uploader** widget and **Container3D** widget) needs a **Viewer** widget present on the page to interact with.
 
-Currently, only JT models with version 9 and above are supported.
-
+* Currently, only JT models with version 9 and above are supported.
+* Before uploading shattered JT (.zip),  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, please make sure you input "cu" in the parameter.
+![shatteredjt-utf9](attachments/3d-viewer/shatteredjt-utf9.jpg)  
 ## 2 Installation
 
 Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service module into your app.

@@ -14,10 +14,10 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
 
 * **Data Hub Admin**:
   * [Assign curators](#curator)
-  * [Manage the list of custom owners](#custom-owners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
+  * [Manage the list of custom owners](#customowners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
   * [Invite external participants](#external-participants)
 * **Curators**:
-  [Manage the list of custom owners](#custom-owners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
+  [Manage the list of custom owners](#customowners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
 
 {{% alert type="info" %}}
 In the current release of Data Hub, the Data Hub Admin for the organization is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
@@ -45,9 +45,9 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 To search from the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the curator role to.
 
-{{% alert type="info" %}}This list shows all Mendix users for your organizations. It does not include non-Mendix users that are added as *Custom Owners*. For more information, see [Managing Custom Owners](#custom-owners).{{% /alert %}}
+{{% alert type="info" %}}This list shows all Mendix users for your organizations. It does not include non-Mendix users that are added as *Custom Owners*. For more information, see [Managing Custom Owners](#customowners).{{% /alert %}}
 
-## 3 Managing Custom Owners {#custom-owners}
+## 3 Managing Custom Owners {#customowners}
 
 Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](/data-hub/data-hub-catalog/curate#custom-owner) or have been specified during app registration.
 

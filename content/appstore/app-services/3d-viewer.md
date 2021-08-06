@@ -58,7 +58,7 @@ The 3D Viewer app service includes a few 3D widgets. These are the limitations o
 
 * Currently, only JT models with version 9 and above are supported.
 * Before uploading shattered JT (.zip),  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, please make sure you input "cu" in the parameter.
-![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.jpg)  
+![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)  
 ## 2 Installation
 
 Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service module into your app.

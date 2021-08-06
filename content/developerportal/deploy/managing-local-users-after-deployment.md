@@ -47,7 +47,7 @@ Since this is general knowledge, it is safer to change this to a custom user nam
 The password is used to sign into the application as the Administrator. You can change the password from the Developer Portal after publishing your app.
 
 #### 2.1.3 User Role
-The user role assigned to the Administrator. For more information, see [User Roles](/refguide8/user-roles).
+The user role assigned to the Administrator. For more information, see [Security, Roles & Permissions](/studio8/settings-security).
 Default: *Administrator*
 
 {{% alert type="info" %}}

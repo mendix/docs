@@ -75,6 +75,10 @@ The Technical Contact and team members specifically allowed to *Manage Permissio
 
 With Manage Permissions, team members other than the Technical Contact can change the permissions granted to team members.
 
+{{% alert type="info" %}}
+Only the Technical Contact can grant this permission to other team members.
+{{% /alert %}}
+
 #### 3.4.2 Transport Rights
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.

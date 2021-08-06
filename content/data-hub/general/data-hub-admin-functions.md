@@ -23,12 +23,6 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
 In the current release of Data Hub, the Data Hub Admin for the organization is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.
 {{% /alert %}}
 
-This how-to describes the following:
-
-- How the Mendix Data Hub Admin can assign the curator role to users
-- How curators and the Data Hub Admin can manage the list of custom owners and their contact details
-- How the Mendix Data Hub Admin can invites External Participants in the company
-
 ## 2 Managing Curators {#curator}
 
 The Data Hub Curator can perform day-to-day management functions on all registered assets in the Data Hub Catalog and also enrich the Catalog information on registered assets that is displayed.
@@ -43,7 +37,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 2. The Data Hub Admin will see the **Curator Management** tab displaying  the list of Data Hub curators for the organization. To assign a curator role to a Mendix user, click **Add Curator**.
 
-   {{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
+    {{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable**. Curators can also change the information that is registered for assets that are owned by other users. {{% /alert %}}
    
 3. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
    
@@ -96,7 +90,7 @@ To invite new users, do the following:
 
     {{% alert type="info" %}}The users you are inviting should have a Mendix account. {{% /alert %}}
 
-    After users receive the invitation, they need to log into Data Hub and accept the invitation
+    After users receive the invitation, they need to log into Data Hub and accept the invitation.
 
     {{% alert type="info" %}}A user can only work in one organization at a time. To work actively in an organization as an external participant, they need to select an **Active company** option from the Catalog homepage.{{% /alert %}}
 

@@ -154,7 +154,7 @@ To delete an element from a page, do one of the following:
 
 ### 2.9 Creating an Entity from a Page {#create-entity}
 
-You can create an entity from a page when configuring a data source for a widget that requires it. For example, you have a [data view](page-editor-data-view-list-view) and you would like to set the *Customer* entity as its data source. However, you do not have this entity yet. You can create it from the **Select Entity** dialog box without having to switch to the [domain model](domain-models). Do the following:
+You can create an entity from a page when configuring a data source for a widget that requires it. For example, you have a [data view](page-editor-data-view-list-view) and you would like to set the *Customer* entity as its data source, but you do not have the **Customer** entity in you app yet. You can create it from the **Select Entity** dialog box without having to switch to the [domain model](domain-models). Do the following:
 
 1. Select data view properties > **Entity** property.
 2. In the **Select Entity** dialog box, click the plus icon:
@@ -167,7 +167,7 @@ The new entity has been created in your app.
 
 ### 2.10 Creating an Association from a Page {#create-association}
 
-You can create an [association](domain-models-association-properties) from a page when adding widgets to it. You can do it in the **Select Entity** dialog box when selecting the context for the widget. 
+You can create an [association](domain-models-association-properties) from a page when configuring a data source for a widget that requires it. 
 
 For example, you have a [data view](page-editor-data-view-list-view) with the **Customers** entity. *Inside* the data view, you add a [list view](page-editor-data-view-list-view) to show *reports* associated only with the customer who is currently shown in the data view. This means that you will show reports through an association. You can create the association from the page without having to open the domain model. Do the following:
 

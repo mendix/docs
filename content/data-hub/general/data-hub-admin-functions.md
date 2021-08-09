@@ -17,7 +17,7 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
   * [Manage the list of custom owners](#customowners) who have been added as **Business** or **Technical Owners**
   * [Invite external participants](#external-participants)
 * **Curators**:
-  [Manage the list of custom owners](#customowners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
+  [Manage the list of custom owners](#customowners) who have been added as **Business** or **Technical Owners**
 
 {{% alert type="info" %}}
 In the current release of Data Hub, the Data Hub Admin for the organization is assigned by [Mendix Support](https://support.mendix.com/hc/en-us): please contact your support representative.

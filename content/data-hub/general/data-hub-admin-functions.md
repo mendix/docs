@@ -14,7 +14,7 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
 
 * **Data Hub Admin**:
   * [Assign curators](#curator)
-  * [Manage the list of custom owners](#customowners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)
+  * [Manage the list of custom owners](#customowners) who have been added as **Business** or **Technical Owners**
   * [Invite external participants](#external-participants)
 * **Curators**:
   [Manage the list of custom owners](#customowners) that have been added as **Business** or **Technical Owners** when a service has been [Curated](/data-hub/data-hub-catalog/curate#custom-owner)

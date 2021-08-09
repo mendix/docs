@@ -15,6 +15,42 @@ These are the current versions in active development:
 * Native Template version 5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15)-[8.18.8](/releasenotes/studio-pro/8.18#8188).
 * Native Template version 5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14).
 
+## 5.2.2
+
+**Release date: August 9th, 2021**
+
+### Improvements
+
+* This release introduces support for Firebase Crashlytics and removes previous references to the deprecated Fabric.io dependencies.
+
+## 5.1.15
+
+**Release date: August 9th, 2021**
+
+### Improvements
+
+* This release introduces support for Firebase Crashlytics and removes previous references to the deprecated Fabric.io dependencies.
+
+## 6.2.2
+
+**Release date: July 29th, 2021**
+
+### Fixes
+
+* We fixed a bug with the auto linking mechanism introduced with v6.2.1 which can lead to iOS builds failing.
+
+## 5.2.1
+
+**Release date: July 28th, 2021**
+
+This is a re-release of v5.2.0
+
+## 6.2.1
+
+**Release date: July 28th, 2021**
+
+This is a re-release of v6.2.0
+
 ## 6.2.0
 
 **Release date: July 20th, 2021**

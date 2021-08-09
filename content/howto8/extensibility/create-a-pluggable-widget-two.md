@@ -188,7 +188,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 				className={this.props.class}
 				tabIndex={this.props.tabIndex}
 				onUpdate={this.onUpdateHandle}
-				disabled={this.isReadOnly()}
+				disabled={this.props.textAttribute.readOnly}
 			/>
 			<Alert>{validationFeedback}</Alert>
 		</Fragment>;
@@ -353,7 +353,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 	```tsx
 	import { CSSProperties, Component, ReactNode, createElement, ChangeEvent } from "react";
 	import classNames from "classnames";
-
+	
 	export interface InputProps {
 		value: string;
 		className?: string;

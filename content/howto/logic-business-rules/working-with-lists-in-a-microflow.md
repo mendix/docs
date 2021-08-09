@@ -1,7 +1,7 @@
 ---
 title: "Work with Lists in a Microflow"
 category: "Logic & Business Rules"
-menu_order: 6
+menu_order: 60
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: ["microflow", "logic", "list"]
 ---
@@ -12,7 +12,7 @@ In this how-to, you will learn how to work with a list of objects in a microflow
 
 ## 2 Preparing the Data Structure, GUI and Example Data
 
-To see the results of this how-to it is necessary that you setup a test project with test data.
+To see the results of this how-to it is necessary that you setup a test app with test data.
 
 Before you continue, make sure that you know how to create the following:
 

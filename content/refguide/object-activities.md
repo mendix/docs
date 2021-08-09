@@ -3,7 +3,7 @@ title: "Object Activities"
 parent: "activities"
 menu_order: 10
 tags: ["studio pro", "microflow", "object"]
-#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
 ## 1 Introduction
@@ -21,17 +21,11 @@ The activities described in this document are in the **Object Activities** secti
 The following are the object activities you can use in your microflow or nanoflow:
 
 * [Cast object](cast-object) *(only in microflows)* – changes the type of object from a generalized object type to the specialized object type
-
 * [Change object](change-object) – changes the members of an object
-
 * [Commit objects(s)](committing-objects) – either stores objects of persistable entities in the database or stores objects of non-persistable entities in memory to allow them to be rolled back
-
 * [Create object](create-object) – creates an object
-
 * [Delete object(s)](deleting-objects) *(only in microflows)* – activity deletes one or more objects
-
 * [Retrieve](retrieve) – gets one or more objects of an entity
-
 * [Rollback object](rollback-object) – undoes uncommitted changes made to an object
 
 ## 2 Read More

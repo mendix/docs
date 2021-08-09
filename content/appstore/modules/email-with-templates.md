@@ -2,13 +2,24 @@
 title: "Email with Templates"
 category: "Modules"
 description: "Describes the configuration and usage of the Email with Templates module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "email with templates", "token", "platform support"]
+tags: ["marketplace", "marketplace component", "email with templates", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Email with Templates](https://appstore.home.mendix.com/link/app/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
+The [Email with Templates](https://marketplace.mendix.com/link/component/259/) module lets you send emails with templates. Email templates can be managed with the possibility of using tokens. With the tokens available in the email template, the attributes and references of an object are filled in automatically and correctly.
+
+For a deep-dive look into using this module, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/GwE17mzGma5NAvDnXrVdFA.jpg"
+  data-uuid="GwE17mzGma5NAvDnXrVdFA"
+  data-v="4"
+  data-type="inline"
+/>
 
 ### 1.1 Typical Use Cases
 
@@ -43,4 +54,5 @@ To configure this module, follow these steps:
 
 ## 3 Read More
 
-* [Sending Email](https://docs.mendix.com/developerportal/deploy/sending-email)
+* [Sending Email](/developerportal/deploy/sending-email)
+

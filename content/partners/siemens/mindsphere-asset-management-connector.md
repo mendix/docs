@@ -1,6 +1,6 @@
 ---
 title: "MindSphere Asset Management Connector"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 30
 description: "Documentation of the MindSphere Asset Management Connector"
 tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
@@ -8,7 +8,11 @@ tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
 
 ## 1 Introduction
 
-The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It is also available as a stand-alone module in the Marketplace: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/). It is also used in the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/). 
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. The MindSphere Asset Management Connector cannot be used with MindSphere IIoT for Makers.
+{{% /alert %}}
+
+The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It is also available as a stand-alone module in the Marketplace: [MindSphere Asset Management Connector](https://marketplace.mendix.com/link/component/108806/). It is also used in the [Siemens MindSphere Pump Asset Example](https://marketplace.mendix.com/link/component/108810/). 
 
 This module contains a Mendix domain model which maps the data structure of MindSphere assets. It also provides two microflow actions which can be used to retrieve assets and asset types from MindSphere:
 
@@ -35,7 +39,7 @@ This domain model mirrors the asset manager data model, which is described in de
 
 A **GetQueryParams** object is used to control which objects which are returned. This object needs to be populated and passed to the microflow action. If no GetQueryParams object is passed, then the defaults are used.
 
-GetQueryParams has the following attributes, which match the parameters of the APIs described on the MindSphere developer site here: [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api-swagger-3-9-0.html).
+GetQueryParams has the following attributes, which match the parameters of the APIs described on the MindSphere developer site here: [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api.html).
 
 | **Attribute** | **Description**                                                                                                    | **Default** | **Example**          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------- |
@@ -92,7 +96,7 @@ This populates the following entities in the domain model:
 * AspectType
 * Variable
 
-For more information about these entities, and what is returned by the *GET /assets* API call, see the *Models* and *GET /assets* sections of the [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api-swagger-3-9-0.html).
+For more information about these entities, and what is returned by the *GET /assets* API call, see the *Models* and *GET /assets* sections of the [Asset Management Service – API Specification Europe 1](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-api.html).
 
 {{% alert type="warning" %}}
 By default, MindSphere limits the data returned to the first ten assets. This behavior can be modified through a GetQueryParams object.

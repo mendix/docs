@@ -7,6 +7,7 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 aliases:
     - /mendixcloud/custom-domains.html
     - /howtogeneral/mendixcloud/custom-domains.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Linked from Developer Portal > Environments > Custom Domains
 ---
@@ -73,7 +74,7 @@ You can choose which certificate to use when you configure a custom domain for a
 
 To manage custom domains, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Open the **Environments** page for your app.
 
@@ -248,7 +249,7 @@ To reach the root certificate, you have to link your certificate via the interme
 
 ### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
 
-For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings#2-general-settings). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](environments-details#custom-runtime-settings) section of *Environment Details*.
+For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](environments-details#custom-runtime-settings) section of *Environment Details*.
 
 ## 9 Read More
 
@@ -257,4 +258,4 @@ For certain use cases, it is important for the Mendix runtime to know the public
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Licensing Mendix Cloud Apps](licensing-apps)
 * [App Roles](/developerportal/collaborate/app-roles)
-* [Control Center](/developerportal/control-center/index)
+* [Control Center](/developerportal/control-center/)

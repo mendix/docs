@@ -12,6 +12,10 @@ XSUAA is a service provided by the SAP Business Technology Platform (SAP BTP) th
 
 Out of the box, SAP BTP has the SAP external identify provider (IDP) configured as the default IDP. It is possible to use your own (corporate) IDP as an alternative so that you can automatically give access to all the employees of your organization.
 
+{{% alert type="info" %}}
+Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module) Marketplace module.
+{{% /alert %}}
+
 ## 2 Setup
 
 In this diagram, the relationship is shown between groups, roles, and users in relation to the Mendix application and the IDP:

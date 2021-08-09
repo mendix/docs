@@ -82,9 +82,9 @@ The page is created, now you need to configure it. First of all, you need to con
 
     	{{% image_container width="300" %}}![](attachments/pages-how-to-configure-list/text.png){{% /image_container %}}
 
-    2. In the **Content** property, delete *Name* and click **Add attribute**:
+    2. In the **Content** property, delete *Name* and click **Add** > **Attribute**:
 
-    	{{% image_container width="250" %}}![](attachments/pages-how-to-configure-list/text-content.png){{% /image_container %}}
+    	![](attachments/pages-how-to-configure-list/text-content.png)
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 

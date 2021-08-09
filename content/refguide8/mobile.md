@@ -22,9 +22,9 @@ There are some differences, however, between building native mobile apps and bui
 
 Mendix's hybrid mobile apps are versatile apps viewed through mobile web browsers. Some mobile device features, however, cannot be accessed through the HTML and JavaScript on which these apps are built.
 
-Mendix uses [Cordova](https://cordova.apache.org/) in combination with [local builds](/howto/mobile/build-hybrid-locally) to build mobile apps which can leverage certain device features and be published to the Apple App Store or Google Play store. Cordova creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are called "hybrid" because they are hybrids of both web and native apps.
+Mendix uses [Cordova](https://cordova.apache.org/) in combination with [local builds](/howto8/mobile/build-hybrid-locally) to build mobile apps which can leverage certain device features and be published to the Apple App Store or Google Play store. Cordova creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are called "hybrid" because they are hybrids of both web and native apps.
 
-For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets) and [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions), respectively.
+For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix Marketplace](https://marketplace.mendix.com/). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets) and [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions), respectively.
 
 ## 4 Offline-First Apps
 

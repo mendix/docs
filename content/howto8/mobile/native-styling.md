@@ -12,7 +12,7 @@ With Mendix 8, you can build native mobile apps with custom styling in Mendix St
 
 ## 2 Theme Folder Structure
 
-For each app project, styling is stored in the **theme/styles** folder. From there styling is split into **native** and **web** folders. Both have the same structure. 
+For each app, styling is stored in the **theme/styles** folder. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
 These folders have strict protocols:
 
@@ -42,5 +42,5 @@ Available in Mendix Studio and Mendix Studio Pro, design properties are an easie
 
 ## 5 Read More
 
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto8/front-end/atlas-ui)
 * [Get Started with Native Mobile](getting-started-with-native-mobile)

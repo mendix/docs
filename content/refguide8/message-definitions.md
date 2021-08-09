@@ -5,6 +5,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/message-definitions.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Message definitions define the structure of the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
@@ -13,7 +17,7 @@ A message definition can be used for both JSON and XML, and it can be used for b
 
 ## 2 Adding a Message Definitions Document
 
-Message Definitions is a type of document you can add to modules in your app project.
+Message Definitions is a type of document you can add to modules in your app.
 
 To add a message definitions document do the following:
 
@@ -69,7 +73,7 @@ The name of the message definition.
 
 #### 4.1.2 Entity
 
-An entity in your app project domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
+An entity in your app domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
 #### 4.1.3 Structure
 

@@ -4,6 +4,10 @@ parent: "published-app-services"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/actions.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 {{% alert type="info" %}}
@@ -26,7 +30,7 @@ This is the name of the action the consumer will see in their toolbox.
 
 ### 2.2 Icon
 
-This is the icon that belongs to the action. An icon can be selected from any image documents in the app project. A new icon can be added to an image document if it is not available yet.
+This is the icon that belongs to the action. An icon can be selected from any image documents in the app. A new icon can be added to an image document if it is not available yet.
 
 ### 2.3 Microflow
 

@@ -9,6 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/new-project.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 You can create a new project in Mendix Studio Pro. 
@@ -34,7 +38,7 @@ When creating a new app, the **App Settings** dialog box is opened where you can
 
 ### 2.1 Name
 
-The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app project in **My Apps**.
+The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app in **My Apps**.
 
 ### 2.2 Enable Online Services
 

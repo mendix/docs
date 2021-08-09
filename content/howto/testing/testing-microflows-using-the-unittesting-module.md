@@ -18,7 +18,7 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
-* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Review the Marketplace components used in this how-to:
 
     | Component | Version Used in This How-to |
@@ -34,14 +34,11 @@ Before you can start with this how-to, make sure you have completed the followin
 
 In this chapter you will set up the unit testing module and run the example tests.
 
-1. Create a new project.
+1. Create a new app.
 2. Download the [Unit Testing](/appstore/modules/unit-testing) module.
 3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module.
 4. Download the [Object Handling](/appstore/modules/object-handling) module.
-5.  Open the **Settings** of the project:
-
-	![](attachments/18448633/18580371.png)
-
+5.  Open the **Settings** of the app.
 6. Click the **Runtime** tab.
 7. Click the **Select** button to select an **After startup** microflow:
 
@@ -52,7 +49,7 @@ In this chapter you will set up the unit testing module and run the example test
 	![](attachments/18448633/18580369.png)
 
 9. Click **OK**.
-10. Open the **Navigation** of the project.
+10. Open the **Navigation** of the app.
 11. Click **New item** to add a new item to the menu.
 12. Enter _UnitTestOverview_ in the **Caption** field.
 13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
@@ -63,7 +60,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 	![](attachments/18448633/18580362.png)
 
-15. Run the project locally.
+15. Run the app locally.
 16. Go to `http://localhost:8080/index.html`.
 17. Click **UnitTestOverview** in the navigation.
 

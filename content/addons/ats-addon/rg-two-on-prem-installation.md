@@ -7,7 +7,7 @@ tags: ["ats", "installation", "requirements"]
 
 ## 1 Introduction
 
-ATS runs on top of Mendix 6. For details on system requirements, see [System Requirements](/refguide6/system-requirements). On-premises is a deployment option for ATS. 
+ATS runs on top of Mendix 6. On-premises is a deployment option for ATS. 
 
 ## 2 Hardware Requirements & Hardware Sizing
 
@@ -34,11 +34,11 @@ This section describes the software requirements for running ATS.
 
 ### 3.1 Operating System
 
-For details on the operating system, see the [Operating System](/refguide6/system-requirements#operatingsystem) section in *System Requirements*. ATS itself has no requirements regarding the operating system.
+ATS itself has no requirements regarding the operating system.
 
 ### 3.2 Java
 
-For details on Java, see the [Java](/refguide6/system-requirements#java) section in *System Requirements*. ATS itself has no requirements regarding the Java.
+ATS itself has no requirements regarding the Java.
 
 ### 3.3 Mendix Business Server
 
@@ -46,7 +46,7 @@ ATS requires Mendix Business Server, version 6.10.10.
 
 ### 3.4 Database
 
-For details on the database, see the [Database Server](/refguide6/system-requirements#database-server) section in *System Requirements*. ATS itself has no requirements regarding the database.
+ATS itself has no requirements regarding the database.
 
 ### 3.5 Selenium
 
@@ -91,10 +91,10 @@ The following browsers are supported to operate ATS (on their supported OS):
 
 A web server can be used to serve static content and proxy the dynamic content. A web server can be used to encrypt the communication using https.
 
-Mansystems does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
+CLEVR does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
 
 When using Nginx, we recommend to change the following settings in the server section:
 
 * keepalive_timeout 65000
 * client_max_body_size 64M
-* proxy_read_timeout 180s
+* proxy_read_timeout 180s 

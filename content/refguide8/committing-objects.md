@@ -5,6 +5,10 @@ menu_order: 30
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/committing-objects.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -103,7 +107,7 @@ An autocommit is an automatic commit from the platform, which is done to keep th
 {{% alert type="warning" %}}
 An autocommit is not the same as an explicit commit!
 
-If a rollback is triggered for any reason (for example, if the user session is terminated by the user closing the browser), then autocommitted objects will be deleted from the database. See [Persistability](/refguide/persistability) for more information about how Mendix handles persistable objects.
+If a rollback is triggered for any reason (for example, if the user session is terminated by the user closing the browser), then autocommitted objects will be deleted from the database. See [Persistability](/refguide8/persistability) for more information about how Mendix handles persistable objects.
 {{% /alert %}}
 
 If you end up with autocommitted objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.

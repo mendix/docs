@@ -7,6 +7,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/select--elements.pdf).
+{{% /alert %}}
+
+## 1 Introduction
 
 For both [import](import-mappings)and [export mappings](export-mappings) you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below.
 
@@ -26,7 +31,7 @@ Schema contents can change by importing a changed XML schema, WSDL or by changin
 
 {{% /alert %}}
 
-## Rules and Restrictions
+## 2 Rules and Restrictions
 
 Keep in mind the following rules and restrictions for element selection:
 
@@ -50,7 +55,7 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 
 {{% /alert %}}
 
-## Convenience functions
+## 3 Convenience functions
 
 {{% alert type="info" %}}
 

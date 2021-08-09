@@ -5,6 +5,11 @@ menu_order: 40
 description: "Describes the Import Project Package process and Import Project Package dialog box."
 tags: ["studio pro", "import project package"]
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-project-package-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 To create a new app from a Mendix project package (*.mpk*) file, you need to import a project package. The new app can either be stored in a version control server or locally on disk.
@@ -37,7 +42,7 @@ If you select to store your app in a new Mendix Team Server, a new Team Server p
 
 If you want to use an existing repository, select the app in the **Team Server App** option. Note that this works only when the existing repository is empty.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 ### 2.2 Private Server {#private-server}
 
@@ -59,5 +64,5 @@ Use this field to choose the directory where the project files of the app will b
 
 ## 4 Read More
 
-* [Team Server Overview](/developerportal/develop/team-server)
+* [Team Server](/developerportal/collaborate/team-server)
 * [Export Project Package](export-project-package-dialog)

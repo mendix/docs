@@ -3,8 +3,12 @@ title: "Object Activities"
 parent: "activities"
 menu_order: 10
 tags: ["studio pro", "microflow", "object"]
-#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/object-activities.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 

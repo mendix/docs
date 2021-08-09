@@ -12,8 +12,8 @@ Once you created some pages, it is important that your users can access them. Fo
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Create a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Create your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer)
+* [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Setting a Default Home Page {#home}
 
@@ -27,9 +27,9 @@ Note that the **Default home page** setting is overridden by a **Role-based home
 
 Do the following:
 
-1.  Open **Project** > **Navigation**.
+1.  Open **App** > **Navigation**.
 
-    ![](attachments/setting-up-the-navigation-structure/open-navigation.jpg)
+    ![](attachments/setting-up-the-navigation-structure/open-navigation.png)
 
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
@@ -49,7 +49,9 @@ Do the following:
 
 {{% alert type="info" %}}
 
-You can also select a microflow as a default home page. Make sure that the microflow contains a *Show Form* activity, otherwise the user will not see anything.
+For online profiles you can set a microflow as a default home page. Make sure a *Show Page* activity is called from the startup microflow for each possible execution flow, or else the user will see nothing during execution paths where the activity is missing.
+
+For the native mobile profile you can set a nanoflow as a home page, either as a default or as a role-based. For more information, see the [Setting a Nanoflow as a Home Page](#nanoflow-home-page) section below.
 
 {{% /alert %}}
 
@@ -82,7 +84,21 @@ Follow the steps below:
 
 Now every time a user with the **Administrator** user signs in to the application, the **Account_Overview** page is shown. Users with other roles will be redirected to the default home page.
 
-## 5 Creating Menu Items
+## 5 Setting a Nanoflow as a Home Page {#nanoflow-home-page}
+
+Instead of using a page, you can set a nanoflow as your app's home page as long as you are using a native profile. The nanoflow you selected will be executed during startup and will show your app's starting page. This is a normal nanoflow call, which means that you can implement custom logic that determines which page to show, creates objects, calls subnanoflows, uses JavaScript actions, and more.
+
+To make the best nanoflow home pages, keep the following information in mind:
+
+* The home page nanoflow is executed after the initial synchronization
+* While the nanoflow executes the app splash screen stays visible until the nanoflow reaches the first *Show Page* activity
+* If a nanoflow contains multiple *Show Page* activities they will be executed in order and each page will be shown respectively (the last page shown will stay open after the nanoflow finishes)
+* Make sure a *Show Page* activity is called from the startup nanoflow for each possible execution path, otherwise the app will keep showing the splash screen if the nanoflow finishes without executing a *Show Page* activity
+* Home page nanoflows should have no parameters
+* An error in the home page nanoflow can lead to an unusable app state — to avoid this, use error handling for activities that can fail, such as microflow calls
+* To improve user experience for long-running nanoflows, show a page as early as possible and then continue executing the rest while showing the progress on that page
+
+## 6 Creating Menu Items
 
 You can create menu items for your navigation. Do the following:
 
@@ -100,7 +116,7 @@ In the overview of menu items you can see the name of the menu item, the target 
 
 You can restructure the menu by dragging and dropping menu items.
 
-## 6 Adding Navigation Menu to Pages
+## 7 Adding Navigation Menu to Pages
 
 Now that you have created a menu structure it is time to start using it on pages. Do the following:
 
@@ -118,17 +134,17 @@ Now that you have created a menu structure it is time to start using it on pages
 
 5. In **General** > **Menu source**, select **Project navigation**. This is the navigation structure defined in the navigation editor. (You can also add additional menu structures using menu documents.)
 
-    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.jpg)
+    ![](attachments/setting-up-the-navigation-structure/menu-bar-properties.png)
 
 6. In **Profile**, select the profile type depending on the device type. **Responsive** is selected by default.  
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your project,  you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+To avoid adding the menu widget on every page in your app,  you can use a layout. With layouts you can define a structure for pages in your app. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto/front-end/layouts-and-snippets).
 
-## 7 Read More
+## 8 Read More
 
 * [Atlas UI](/howto/front-end/atlas-ui)
-* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [Use Layouts and Snippets](../front-end/layouts-and-snippets)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)
+* [Use Layouts and Snippets](/howto/front-end/layouts-and-snippets)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

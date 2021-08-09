@@ -16,7 +16,7 @@ To troubleshoot issues related to the [Make it Native](/refguide8/getting-the-ma
 
 ### 2.1 Port Issues
 
-We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+We recommend keeping the **Runtime port** in your [configuration](/refguide8/configuration#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 ### 2.2 Wifi Network Settings
 

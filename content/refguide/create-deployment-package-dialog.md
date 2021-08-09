@@ -1,14 +1,28 @@
 ---
 title: "Create Deployment Package"
-parent: "project-menu"
+parent: "app-menu"
 tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction
 
-A deployment package can be deployed to the Mendix Cloud, another cloud provider (for example SAP BTP), or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your project elsewhere you will need to create a deployment package. For some platforms, this is done automatically as part of the deploy process but, for others, you will need to explicitly create the deployment package.
+A deployment package can be deployed to the Mendix Cloud, another cloud provider (for example SAP BTP), or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your app elsewhere you will need to create a deployment package. For some platforms, this is done automatically as part of the deploy process but, for others, you will need to explicitly create the deployment package.
 
-![Create Deployment Package dialog](attachments/project-menu/create-deployment-package.png)
+![Create Deployment Package dialog](attachments/app-menu/create-deployment-package.png)
+
+{{% alert type="warning" %}}
+Most deployment targets have a limit on the uncompressed size of deployment package you can deploy. For example:
+
+| Target | Maximum Deployment Package Size |
+| --- | --- |
+| Mendix Cloud | 1GB |
+| SAP BTP | 1.5GB |
+| Mendix for Private Cloud | 200MB |
+
+This is the uncompressed size of the deployment package (.mpk file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
+
+Unfortunately, from the error shown on the log during deployment is not always clear that the package size is a problem. But if you have issues deploying your app you should check the package size as one possible cause.
+{{% /alert %}}
 
 ## 2 Versioned
 
@@ -16,7 +30,7 @@ Here you can decide whether you will create a versioned deployment package or no
 
 A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. We recommend that you create versioned deployment packages unless you have very good reasons.
 
-A non-versioned deployment package is based on your local project on disk and cannot be traced back to a specific revision.
+A non-versioned deployment package is based on your local app on disk and cannot be traced back to a specific revision.
 
 ## 3 Options for Versioned Deployment Packages
 
@@ -46,4 +60,4 @@ You can enter a custom **Description** for this deployment package. It is purely
 
 For both versioned and non-versioned deployment packages, you will need to know where the deployment package will be saved. This is shown in the **File name** field. This not editable.
 
-All packages are placed in a directory **releases** inside your project directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (using the  the Studio Pro version you originally used) so there is no need to put them on the Team Server.
+All packages are placed in a directory **releases** inside your app directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (using the  the Studio Pro version you originally used) so there is no need to put them on the Team Server.

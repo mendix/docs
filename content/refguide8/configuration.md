@@ -5,9 +5,13 @@ tags: ["studio pro", "configurations", "configuration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/configuration.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
-A configuration is a group of settings that are applied when running your app project locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
+A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
 
 You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 

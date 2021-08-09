@@ -6,6 +6,10 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/translatable-texts.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix is designed so that it is easy to present the same information to users who have different language requirements. To support this, all texts that are presented to the end-user can be translated to different languages.
@@ -83,7 +87,7 @@ There are two options to ensure that the language is changed:
     * sign out and sign in again
     * use their browser's refresh command
 2. Force Mendix to reload the page – for example by doing the following:
-    1. Add the platform supported widget [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
+    1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
@@ -92,7 +96,7 @@ There are two options to ensure that the language is changed:
     ![System Domain Model for User and Language](attachments/language/reload-with-state.png)
 
 {{% alert type="info" %}}
-The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app project) are generated when you create a deployment package using the default language of your project. The labels on those pages will not change for different users, they will always be the same.
+The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your project. The labels on those pages will not change for different users, they will always be the same.
 {{% /alert %}}
 
 ## 5 Read More

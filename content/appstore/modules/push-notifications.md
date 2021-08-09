@@ -2,19 +2,19 @@
 title: "Push Notifications Connector"
 category: "Modules"
 description: "Describes the configuration and usage of the Push Notifications module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "push notifications",  "platform support"]
+tags: ["marketplace", "marketplace component", "push notifications", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
+The [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
 
 This module makes it easy for Mendix developers who want to include push notifications capability in their Mendix hybrid mobile apps.
 
 ## 2 Development
 
-When using the module in your app project, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
+When using the module in your app, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
 
 These are the development prerequisites:
 
@@ -27,7 +27,7 @@ Install the dependency *.jar* files:
 $ gradle prepareDeps
 ```
 
-Note that all project `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
+Note that all app `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
 
 * [Community Commons Function Library](community-commons-function-library)
 * [Encryption](encryption)
@@ -56,13 +56,4 @@ Export the module for the Marketplace, including the dependent *userlib* content
 ```bash
 $ gradle extractModule
 ```
-
-## 3 Read More
-
-* [How to Include Push Notifications](/howto/mobile/push-notifications)
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)
-* [How to Send Push Notifications](/howto/mobile/sending-push-notifications)
-* [How to Set Up the Apple Push Notifcation Server](/howto/mobile/setting-up-apple-push-notification-server)
-* [How to Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server)
-* [How to Test the Push Notifications Implementation](/howto/mobile/testing-the-implementation)
 

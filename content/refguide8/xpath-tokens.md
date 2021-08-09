@@ -4,6 +4,9 @@ parent: "xpath"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-tokens.pdf).
+{{% /alert %}}
 
 The following tokens are used in XPath queries:
 
@@ -15,4 +18,4 @@ The following tokens are used in XPath queries:
 | `[ ]` | A constraint is always written between brackets. For example, `//Sales.Customer[TotalAmount > 1000]`. The [attribute](attributes) being constrained is `TotalAmount`, and the constraint is `> 1000`. Therefore, only customers who have spent more than € 1000 will be retrieved. |
 | `( )` | Constraints can be grouped by parentheses. For more information, see [XPath Constraints](xpath-constraints). |
 
-System variables are tokens whose values can be used in XPath expressions. For a complete overview of these tokens, see [XPath Keywords & System Variables](/refguide/xpath-keywords-and-system-variables).
+System variables are tokens whose values can be used in XPath expressions. For a complete overview of these tokens, see [XPath Keywords & System Variables](/refguide8/xpath-keywords-and-system-variables).

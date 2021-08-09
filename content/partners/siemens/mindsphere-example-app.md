@@ -1,13 +1,17 @@
 ---
 title: "Use the Siemens MindSphere Pump Asset Example App"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 110
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
+{{% alert type="warning" %}}
+This information is for the MindSphere Pump Asset Example App. This app cannot be used with MindSphere IIoT for Makers.
+{{% /alert %}}
+
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://marketplace.mendix.com/link/component/108810/) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -25,7 +29,7 @@ You need a MindSphere user account on a developer tenant. This account needs the
 * mdsp:core:StandardUser
 * mdsp:core:TenantUser
 
-### 2.2 Assets
+### 2.2 Assets{#create-assets}
 
 This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
 
@@ -101,11 +105,11 @@ Open Studio Pro without opening an app and follow these steps:
 
 	![](attachments/mindsphere-example-app/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app:
+4. Click **Download** to create a new app app using this app:
 
 	![](attachments/mindsphere-example-app/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**:
 
 	![](attachments/mindsphere-example-app/app-store-download-project.png)
 
@@ -216,7 +220,7 @@ To use the app:
 
 ### 6.1 Single Sign-On
 
-The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
+The app uses Single Sign-on (SSO) to identify the user. This is initiated in the **Runtime** tab of the **App Settings**, where the microflow **MindSphereSingleSignOn.RegisterSingleSignOn** is called on startup. This microflow sets up two configurations for the user.
 
 #### 6.1.1 User Role
 

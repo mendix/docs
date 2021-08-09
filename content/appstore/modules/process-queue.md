@@ -2,7 +2,7 @@
 title: "Process Queue"
 category: "Modules"
 description: "Describes the configuration and usage of the Process Queue module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "process queue", "queue overview", "platform support"]
+tags: ["marketplace", "marketplace component", "process queue", "queue overview", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +12,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 The Process Queue module is deprecated from Mendix version 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue) which is part of Studio Pro and also supports horizontally-scaled environments.
 {{% /alert %}}
 
-The [Process Queue](https://appstore.home.mendix.com/link/app/393/) module enables controlling the amount of microflows that are executed at once by assigning them to queues. Each queue can be configured to handle a sub-set of microflows, and you can also set a limit to the number of microflows each queue can execute at once. This allows you to control the maximum load put on your application during peak usage by these microflows while still ensuring all microflows are eventually executed. The queues use a FIFO approach (first-in, first-out) and automatically restart themselves (and any microflows still left to execute) after a server restart.
+The [Process Queue](https://marketplace.mendix.com/link/component/393/) module enables controlling the amount of microflows that are executed at once by assigning them to queues. Each queue can be configured to handle a sub-set of microflows, and you can also set a limit to the number of microflows each queue can execute at once. This allows you to control the maximum load put on your application during peak usage by these microflows while still ensuring all microflows are eventually executed. The queues use a FIFO approach (first-in, first-out) and automatically restart themselves (and any microflows still left to execute) after a server restart.
 
 With the amount of parallel processes and the number of queues that can be controlled from the runtime, you can see the real-time progress of your application.
 

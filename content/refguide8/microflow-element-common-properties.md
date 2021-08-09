@@ -5,6 +5,10 @@ menu_order: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow-element-common-properties.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes common properties that are shared by many elements in the microflow editor.
@@ -42,7 +46,7 @@ The **Auto-generate caption** property specifies whether the caption is automati
 
 The **Background color** property allows you to choose a background color for each activity individually. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](error-event#errorhandlers) red so you can easily identify them.
 
-You can also select a default color for all the activities of a certain type in **Project Settings** > [Miscellaneous](project-settings#miscellaneous). The default color for all activities of a certain type can also be changed by right-clicking a microflow activity and selecting **Set as default color** from the context menu. This will make the current activity's color the default color for all activities of the same type. If you change the default color for an activity type and there are other activities of that type present in the app project that have a different individual background color specified, you will be asked whether you want to overwrite these individual colors with the new default color.
+You can also select a default color for all the activities of a certain type in **Project Settings** > [Miscellaneous](project-settings#miscellaneous). The default color for all activities of a certain type can also be changed by right-clicking a microflow activity and selecting **Set as default color** from the context menu. This will make the current activity's color the default color for all activities of the same type. If you change the default color for an activity type and there are other activities of that type present in the app that have a different individual background color specified, you will be asked whether you want to overwrite these individual colors with the new default color.
 
 ## 4 Error Handling Type {#error-handling}
 

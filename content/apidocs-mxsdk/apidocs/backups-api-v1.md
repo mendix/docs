@@ -5,17 +5,19 @@ description: "An API to allow the triggering of backups creation, restore, downl
 menu_order: 20
 ---
 
+{{% alert type="warning" %}}
+This documents version 1 of the backups API **which is now deprecated**.
+
+You are advised to use the [Backups API V2](backups-api) which uses asynchronous calls to support  long-running tasks.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The Backups API allows you to manage data snapshots of applications hosted in the Mendix Cloud. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots, and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups).
-
-{{% alert type="info" %}}
-This documents version 1 of the backups API. A new [V2 API](backups-api) is available which uses asynchronuous operations of long-running tasks.
-{{% /alert %}}
+The Backups API allows you to manage data snapshots of applications hosted in the Mendix Cloud. Data snapshots consist of a PostgreSQL database dump and file objects referenced from the database. You can create new snapshots, and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups).
 
 ## 2 Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups. 
+The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](deploy-api#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
 
 ## 3 API Calls
 
@@ -40,7 +42,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots 
+GET /api/1/apps/calc/environments/acceptance/snapshots
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -105,7 +107,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 
+GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -163,7 +165,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/snapshots/ 
+POST /api/1/apps/calc/environments/acceptance/snapshots
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -220,7 +222,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a 
+POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a
 Host: deploy.mendix.com
 
 Content-Type: application/json

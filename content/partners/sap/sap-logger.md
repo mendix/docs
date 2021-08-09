@@ -22,7 +22,7 @@ In addition, the Connector supports multiline log messages.
 
 ## 2 Getting the SAP Logging Connector
 
-To use the [SAP Logging](https://appstore.home.mendix.com/link/app/110219/) connector, you need to import it into your app from the Marketplace. For more information on importing modules from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+To use the [SAP Logging](https://marketplace.mendix.com/link/component/110219/) connector, you need to import it into your app from the Marketplace. For more information on importing modules from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
 ## 3 Using the Connector
 
@@ -30,12 +30,8 @@ To format all the log messages, the SAP Logging Connector needs to be initialize
 
 To initialize the connector, do the following:
 
-1. Open **Project … > Settings** in the **Project Explorer**:
-
-    ![Open project settings](attachments/sap-logger/logger_open_project_settings.png)
-
+1. Open **App** > **Settings** in the **App Explorer**.
 2. Switch to the **Runtime** tab.
-
 3. Go to the **After startup** microflow by clicking **Show** next to the **After startup** microflow:
 
     ![Runtime show After startup microflow](attachments/sap-logger/logger_project_runtime_show_startup.png)

@@ -72,7 +72,3 @@ You can indicate whether the import mapping should commit the objects that it cr
 Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](gfm-syntax) for rich text.
 
 This is used in the service's [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation).
-
-{{% alert type="info" %}}
-The public documentation feature was introduced in version 8.3.0.
-{{% /alert %}}

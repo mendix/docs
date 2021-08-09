@@ -8,9 +8,9 @@ tags: ["studio pro", "performance bot", mendix assist", "AI", "assist", "mx assi
 
 ## 1 Introduction 
 
-MxAssist Performance Bot is an intelligent virtual co-developer bot that helps you improve the performance of your project by inspecting your project model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in many cases can automatically fix these issues. 
+MxAssist Performance Bot is an intelligent virtual co-developer bot that helps you improve the performance of your app by inspecting your app model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in many cases can automatically fix these issues. 
 
-MxAssist Performance Bot is built using statistical analysis of thousands of anonymized Mendix projects to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, etc.
+MxAssist Performance Bot is built using statistical analysis of thousands of anonymized Mendix app to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, etc.
 
 It consists of a three-level assistance:
 
@@ -32,13 +32,13 @@ The pane gives you information on each anti-pattern and contains MxAssist Perfor
 
 At the top of the **MxAssist Performance Bot** pane you can see the following options: 
 
-* **Inspect now** – inspects your project model on performance issues. 
+* **Inspect now** – inspects your app model on performance issues. 
 
 * **Limit to current  tab** – limits the messages displayed in the pane to the current document.
 
 * **Configuration** – defines the modules and documents that the MxAssist  Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **Project Model** and **Best Practice** tabs.
 
-    * The **Project Model** tab lists all relevant documents in your project. You can choose which specific modules or documents to inspect or leave out. 
+    * The **Project Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
         ![Project Model](attachments/mx-assist-performance-bot/project-model.jpg)
 
@@ -46,7 +46,7 @@ At the top of the **MxAssist Performance Bot** pane you can see the following op
 
         ![Best Practice](attachments/mx-assist-performance-bot/best-practice.jpg)
 
-You can use both project model and best practice configuration together. 
+You can use both app model and best practice configuration together. 
 
 ### 2.2 Anti-Pattern Overview
 
@@ -84,13 +84,13 @@ The following actions are available in the drop-down menu:
 
 ### 3.1 Detecting an Anti-Pattern {#detecting}
 
-The first level of assistance is **detection** that includes inspecting the project model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
+The first level of assistance is **detection** that includes inspecting the app model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
 
-To inspect your project model, click **Inspect now** in the **MxAssist Performance Bot** pane. 
+To inspect your app model, click **Inspect now** in the **MxAssist Performance Bot** pane. 
 
 {{% alert type="info" %}}
 
-The **Inspect now** option will be disabled if there are consistency errors in the project. In this case, you need to resolve the consistency errors first. 
+The **Inspect now** option will be disabled if there are consistency errors in the app. In this case, you need to resolve the consistency errors first. 
 
 {{% /alert %}}
 

@@ -15,5 +15,5 @@ This category of how-to's presents information on using version control via the 
 * [Start Your Own GitHub Repository](starting-your-own-repository) – presents how to set up a GitHub repository containing your development content
 * [Share the Development Database](sharing-the-development-database) – teaches you how to open and manage the data stored inside the built-in database
 * [Translate Your App Content](translate-your-app-content) – explains how to deliver your Mendix app in multiple languages 
-* [Work with an On-Premises Version Control Server](on-premises-svn-howto) – details how to configure your Mendix app projects to work with your own (on-premises) version control system
+* [Work with an On-Premises Version Control Server](on-premises-svn-howto) – details how to configure your Mendix apps to work with your own (on-premises) version control system
 

@@ -2,13 +2,13 @@
 title: "Deep Link"
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "deep link", "platform support"]
+tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Use the [Deep Link](https://appstore.home.mendix.com/link/app/43/) to add request handlers to your app that will trigger microflows.
+Use the [Deep Link](https://marketplace.mendix.com/link/component/43/) to add request handlers to your app that will trigger microflows.
 
 ### 1.1 Typical Use Cases
 
@@ -26,7 +26,7 @@ After importing the module into your application you need to configure it.
 
 ### 2.1 Initializing the Deep Link Module on App Startup
 
-To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **Project** > **Settings** > **Server** > **After startup**). 
+To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **App** > **Settings** > **Server** > **After startup**). 
 
 If you already have a startup microflow configured in your app, you need to extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
 
@@ -34,7 +34,7 @@ The `/link/` path needs to be added as a request handler in your application. Th
 
 ### 2.2 Security
 
-All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **Project** > **Security** > **User roles**).
+All roles that need to be able to change the configuration of the deeplink module (at runtime) require the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
 All other roles—including your guest roles—should have the **DeepLink.User** user role. Otherwise they will not be able to use any link.
 
@@ -71,7 +71,7 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 
 ### 2.6 Handling Deep Link Requests
 
-After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app project's [Navigation](/refguide/navigation).
+After handling a request, this module will redirect to the homepage of your application. The homepage is configured in the app's [Navigation](/refguide/navigation).
 
 To open another page, the module needs to figure out what microflow is associated with the requested deep link. For this, you need to change the default homepage in your navigation to a custom microflow. If the default homepage is already a microflow, you need to modify it.
 
@@ -89,3 +89,4 @@ Follow these steps to update this homepage microflow:
 * **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `/mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
 	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `/mylogin.html&f=true&cont=`)
 	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` — *note that this construction does not work for other SSO modules, such as XSUAA*
+    * When using XSUAA, this constant should be set to `/xsauaalogin/`

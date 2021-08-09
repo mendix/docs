@@ -2,13 +2,13 @@
 title: "Community Commons Function Library"
 category: "Modules"
 description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "community commons function library", "community commons", "java action call", "platform support"]
+tags: ["marketplace", "marketplace component", "community commons function library", "community commons", "java action call", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app project, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
+The [Community Commons Function Library](https://marketplace.mendix.com/link/component/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
 
 ## 2 Usage
 
@@ -18,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app project if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
 
 ## 4 Function List
 
@@ -144,7 +144,7 @@ In order to mitigate some security vulnerabilities in dependent libraries, in ve
 
 ### 5.5 Gradle
 
-In version 7.2.0 of this module, we introduced a new way of dependency management using a Gradle build file. Unfortunately, this does not mean that obsolete JARs are automatically deleted from your app projects' **userlib** folders when you import this module into your app model.
+In version 7.2.0 of this module, we introduced a new way of dependency management using a Gradle build file. Unfortunately, this does not mean that obsolete JARs are automatically deleted from your apps' **userlib** folders when you import this module into your app model.
 
 To download the dependencies and copy them to the **userlib** folder of the Community Commons container project, execute `gradle prepareDeps` from the command line. Afterwards, you will be able to export a *CommunityCommons.mpk* module from the Community Commons main project. Select only the dependencies listed below in the [Dependencies](#dependencies) section as dependencies in **userlib** for the exported module.
 
@@ -170,5 +170,5 @@ For security reasons, Guava was upgraded to version 27 in version 7.4.0 of this 
 
 ## 7 Read More
 
-* [How to Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance)
-* [How to Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security)
+* [How to Implement Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance)
+* [How to Implement Best Practices for App Security](/howto/security/best-practices-security)

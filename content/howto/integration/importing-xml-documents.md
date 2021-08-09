@@ -19,10 +19,10 @@ Mendix is the app platform for the enterprise organization, and in enterprise so
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* A custom file document (see [How to Work with Images & Files](../data-models/working-with-images-and-files))
-* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
+* A custom file document (see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files))
+* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure & GUI
 
@@ -41,7 +41,7 @@ To prepare the data structure and the GUI, follow these steps:
     ![](attachments/18448727/18581650.png)
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure).
 
 ## 4 Adding an XML Schema (XSD)
 
@@ -49,7 +49,7 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
+1.  Right-click a module in the **App Explorer** and select **Add Other** > **XML schema** from the menu.
 2.  Enter **CustomersXSD** as the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
@@ -66,7 +66,7 @@ The XML schema describes what the possible contents of an XML file are, but we n
 
 To create the XML-to-domain mapping, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Add Other** > **Import mapping**.
+1. Right-click a module in the **App Explorer** and select **Add Other** > **Import mapping**.
 2.  Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
 	![](attachments/18448727/18581689.png)

@@ -5,6 +5,10 @@ menu_order: 10
 tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/language-settings.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **Project Settings** allows you to select which languages your app will support.
@@ -18,7 +22,7 @@ You can reach this tab in two ways:
 
 ## 2 Setting Default Language
 
-There must be a default app project language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
+There must be a default app language. Select the **Default language** from the drop-down list. This will contain all languages which have been added to your app. It is recommended that you do this when you start developing your app.
 
 Setting the default language has two functions:
 
@@ -27,7 +31,7 @@ Setting the default language has two functions:
 
 The initial default language is *English, United States*.
 
-## 3 Adding App Project Languages
+## 3 Adding App Languages
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 

@@ -5,6 +5,10 @@ description: "Describes checks and changes in the project when security is enabl
 tags: ["studio pro", "security", "studio"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/studio-security-enabled.pdf).
+{{% /alert %}}
+
 ## 1 Introduction 
 
 This document describes the process of model changes that are applied automatically when security is enabled in Mendix Studio. For more information on security settings in Studio, see [Security, Roles & Permissions](/studio8/settings-security) in the *Studio Guide*. 
@@ -67,7 +71,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
     {{% alert type="info" %}}Studio links the Administrator role from the System module to the Administrator role on the project level. *Every other project role* created from Studio, including the original User project role, will be linked to the User module role for the System module.
     {{% /alert %}}
 
-3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other AppStore modules will remain unchanged. 
+3. Studio links the Administrator role at the project level to MendixSSO.Administrator and Administration.Administrator (if they exist, if not, Studio will not do any linking). The User role at the project level is linked to MendixSSO.User, and Administration.User (if they exist, if not, Studio will not do any linking). All other Mendix Marketplace modules will remain unchanged. 
 
     Every other user role created in Studio will be linked to the MendixSSO.User and the Administration.User in the MendixSSO and Administration modules correspondingly.
 

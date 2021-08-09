@@ -6,8 +6,6 @@ description: "These are the release notes for the Mendix Mobile app."
 toc-level: 1
 ---
 
-For more information on the Mendix mobile app, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
-
 ## Android 4.7.1 / iOS 4.7.1
 
 **Release date: March 26th, 2018**
@@ -67,7 +65,7 @@ For more information on the Mendix mobile app, see [Getting the Mendix Mobile Ap
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](../studio-pro/7.4)).
+* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4).
 
 ### Limitation
 

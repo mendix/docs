@@ -2,13 +2,13 @@
 title: "Image Crop"
 category: "Modules"
 description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "app store", "marketplace component", "app store component", "image crop", "cropper", "image", "platform support"]
+tags: ["marketplace", "marketplace component", "image crop", "cropper", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Image Crop](https://appstore.home.mendix.com/link/app/254/) module transforms images based on a selection made in the browser.
+The [Image Crop](https://marketplace.mendix.com/link/component/254/) module transforms images based on a selection made in the browser.
 
 ### 1.1 Typical Use Cases
 

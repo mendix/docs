@@ -6,13 +6,16 @@ menu_order: 40
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/version-control-menu.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In the **Version Control** menu you can view and/or manipulate settings that are connected to the version control. For example, you can view the history of the current development line.
 
 {{% image_container width="300" %}}![Version Control Menu](attachments/version-control-menu/version-control-menu.png)
 {{% /image_container %}}
-
 
 ## 2 Update
 
@@ -50,7 +53,7 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 The **Reverse Merge Changes** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
-## 11 Revert All Changes
+## 11 Revert All Changes {#revert-all}
 
 The **Revert All Changes** option allows rolling back all local changes, both in the project and in files on disk, that have been introduced since the last commit.
 

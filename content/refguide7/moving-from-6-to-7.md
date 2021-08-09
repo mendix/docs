@@ -5,6 +5,7 @@ menu_order: 20
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
 aliases:
     - /refguide/moving-from-6-to-7.html
+    - /releasenotes/studio-pro/6.10.html
 ---
 
 ## 1 Introduction
@@ -32,7 +33,7 @@ Seriously, make a backup!
 
 ### 2.2 Converting to the Latest Mendix 6 Version
 
-Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version. For details on the latest Mendix 6 version, see the [Desktop Modeler version 6.10 release notes](/releasenotes/studio-pro/6.10).
+Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version.
 
 ### 2.3 Fixing Errors, Warnings & Deprecations
 
@@ -104,7 +105,7 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 
 The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#get).
 
-Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
+Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
 
 Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. Use these at your own risk, or better yet, don't use them at all!
 

@@ -6,6 +6,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/list-operation.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -60,7 +64,7 @@ A list operation action can execute any of the following operations. The operati
 
 #### 3.1.1 Binary
 
-These binary operations have as an input a list and either another list or an object. THey return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
+These binary operations have as an input a list and either another list or an object. They return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |

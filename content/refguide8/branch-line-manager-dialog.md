@@ -5,6 +5,10 @@ menu_order: 80
 tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/branch-line-manager-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Branch Line Manager** is used to manage [branch lines](version-control#branches) of an app that is stored on a version control server:
@@ -31,7 +35,7 @@ This option is only available when support for other SVN servers is enabled in t
 
 Select the Team Server app of which you want to manage the branch lines. If you have an app open in Studio Pro it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 ### 2.2 Other SVN Server App {#other-svn-server-app}
 

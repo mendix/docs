@@ -14,23 +14,23 @@ Security in Mendix does not include scanning files that end-users upload or down
 
 ## 2 Security Levels
 
-If you want full security, you need to explicitly give access to forms, entities and microflows before someone can access them. By default, no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security settings than are needed for a production system.
+If you want full security, you need to explicitly give access to forms, entities, microflows, and workflows before someone can access them. By default, no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security settings than are needed for a production system.
 
-See [Project Security](project-security) for a description of the security levels.
+See [App Security](project-security) for a description of the security levels.
 
 ## 3 Project vs. Module Security
 
 At the level of a project some global settings can be specified: the security level, the administrator account and whether or not to allow anonymous access.
 
-See [Project Security](project-security).
+See [App Security](project-security).
 
-Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows and datasets can be configured.
+Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows, workflows, and datasets can be configured.
 
 See [Module Security](module-security).
 
 ## 4 User Roles vs. Module Roles {#user-role}
 
-An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [Project Security](project-security).
+An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of a project and can be edited in [App Security](project-security).
 
 See [User Roles](user-roles).
 

@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Best Practices for Private Cloud Environments"
 menu_order: 40
 tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -16,9 +17,13 @@ This document discusses the recommended ways of configuring environments for Pri
 
 ## 2 Licensing Overview
 
-You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps.
+You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps. You can evaluate these without a license, but there are strict limitations on this.
 
-You will require a license to use the Mendix Operator within your company for anything other than limited evaluation purposes. This is in addition to any licenses you have for your Mendix app.
+To run your Mendix apps using Mendix for Private Cloud, you need a license for the Mendix Operator. You will need to get one license for each namespace you want to manage and this license will be bound to the namespace. This license applies to the Mendix Operator only. You can get this license from [Mendix Support](https://support.mendix.com).
+
+In addition, you need a runtime license for your app, in the same way as you would if you were deploying it to any other platform.
+
+See [Licensing Mendix for Private Cloud](private-cloud#licensing) for more information on this subject.
 
 ## 3 Production Environments
 

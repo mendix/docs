@@ -10,10 +10,9 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
+Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{% image_container width="300" %}}![View Menu](attachments/view-menu/view-menu.png)
-{{% /image_container %}}
+![View Menu](attachments/view-menu/view-menu.png)
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -58,6 +57,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
 The video below shows examples of how to position a pane:
 
 <video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
+
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items
@@ -66,11 +66,11 @@ Menu items of the **View** menu are described in sections below.
 
 ### 3.1 Changes
 
-For version control enabled projects (projects with [Team Server](/developerportal/develop/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app project since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (meaning, those with [Team Server](/developerportal/collaborate/team-server) or other SVN servers), the [Changes pane](changes-pane) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-![](attachments/view-menu/changes.gif)
+<video width="640" height="360" controls src="attachments/view-menu/changes.mp4">VIDEO</video>
 
 ### 3.2 Connector {#connector}
 
@@ -78,7 +78,7 @@ The **Connector** pane displays elements that can be connected to the currently 
 
 ### 3.3 Data Hub {#data-hub}
 
-The [Data Hub pane](data-hub-pane) allows you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog) and integrate registered data sources that are available for your organization. You can add [external entities](external-entities) to your app project via this pane and view entities and services already consumed in your project. 
+The [Data Hub pane](data-hub-pane) enables you to browse the [Data Hub Catalog](/data-hub/data-hub-catalog) and use registered data sources that are available for your organization in your app development. You can add [external entities](external-entities) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.3 Console {#console}
 
@@ -90,7 +90,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### 3.5 Error List
 
-The [Errors pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app project.
+The [Errors pane](errors-pane) displays the [errors](consistency-errors), warnings, and deprecations that exist in your app.
 
 ### 3.6 Find Results
 
@@ -98,9 +98,9 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.7 Project Explorer
+### 3.7 App Explorer
 
-The [Project Explorer](project-explorer) pane displays the complete structure of your app project, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
+The [App Explorer](project-explorer) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](preferences-dialog).
 
 ### 3.8 Properties
 
@@ -108,7 +108,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.9 Stories
 
-For [Team Server](/developerportal/develop/team-server) app projects, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/develop/planning-development). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
+For [Team Server](/developerportal/collaborate/team-server) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/collaborate/planning-development). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
 
 ### 3.10 Toolbox {#toolbox}
 
@@ -116,28 +116,29 @@ The **Toolbox** pane displays the tools that can be used in the current editor. 
 
 ### 3.11 Debug Windows
 
-For more information on debugging, see [How to Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows).
+For more information on debugging, see [How to Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows).
 
 #### 3.11.1 Breakpoints
 
-The **Breakpoints** pane shows all the breakpoints in your app project. You can enable and disable breakpoints from here.
+The **Breakpoints** pane shows all the breakpoints in your app. You can enable and disable breakpoints from here.
 
 #### 3.11.2 Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables
+#### 3.11.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
 ### 3.12 Full Screen {#full-screen}
 
-The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
+The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
+
 Shortcut key: <kbd>F11</kbd>
 
 ### 3.13 Distraction Free Mode {#distraction-free}
 
-The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830).
+The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
@@ -149,5 +150,5 @@ Resets the layout of dockable window panes to factory defaults.
 
 * [Changes Pane](changes-pane)
 * [Errors Pane](errors-pane)
-* [Project Explorer](project-explorer)
+* [App Explorer](project-explorer)
 * [Studio Pro Overview](studio-pro-overview)

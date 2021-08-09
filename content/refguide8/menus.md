@@ -6,6 +6,10 @@ menu_order: 12
 tags: ["Studio Pro", "menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menus.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:
@@ -56,7 +60,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the start page of the documentation in the default web browser. |   |
 | **Ask a Question** | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
-| **Open Log File Directory** | Opens the log files for your app project locally. |   |
+| **Open Log File Directory** | Opens the log files for your app locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 
 ## 10 Read More

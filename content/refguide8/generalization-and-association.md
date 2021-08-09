@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/generalization-and-association.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Sometimes, you want to add information to an entity which is used in a different module, perhaps a module which is imported from the Mendix Marketplace. You do not want to customize the entity as this will prevent you from getting updated versions of the module. At other times, you may want to add additional information to some objects of an entity but not to others. For these cases there are two methods you can use: **generalization** (or *inheritance* as it is often called) or **associated entities**.
@@ -19,7 +23,7 @@ The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/
 
 ![example of generalization notation](attachments/domain-model/generalization-indication.png)
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers) or [delete behavior/prevention](/refguide/association-properties#delete-behavior).
+UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide8/event-handlers) or [delete behavior/prevention](/refguide8/association-properties#delete-behavior).
 
 ### 2.1 Performance
 

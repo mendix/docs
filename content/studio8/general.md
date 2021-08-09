@@ -28,13 +28,13 @@ You can edit an app in Mendix Studio by opening your app in [Developer Portal](h
 ![Edit in Studio](attachments/general/edit-app.jpg)
 {{% /image_container %}}
 
-If you do not see **Edit in Studio**, go to [General Settings](/developerportal/settings/general-settings) in the Developer Portal and [enable Studio](/developerportal/settings/general-settings#web).
+If you do not see **Edit in Studio**, go to [General Settings](/developerportal/collaborate/general-settings) in the Developer Portal and [enable Studio](/developerportal/collaborate/general-settings#web).
 
 ### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
-1. In Studio Pro, open the project in that you want to view in Studio.
+1. In Studio Pro, open the app in that you want to view in Studio.
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
 	![Globe Icon](attachments/general/globe-icon.png)

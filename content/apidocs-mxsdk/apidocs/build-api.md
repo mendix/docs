@@ -2,16 +2,17 @@
 title: "Build API"
 category: "API Documentation"
 description: "An API to allow the triggering of deployment package builds, and to get information about existing deployment packages."
+menu_order: 10
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
+
+{{% alert type="warning" %}}
+The Build API only works for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
 
 ## 1 Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
-
-{{% alert type="info" %}}
-This API is designed for apps which are deployed to the Mendix Cloud.
-{{% /alert %}}
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
@@ -27,7 +28,7 @@ Retrieves all deployment packages that are available for a specific app that the
 
 ```http
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/ 
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
 #### 2.1.2 Request
@@ -39,7 +40,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
 ##### 2.1.2.2 Example
 
 ```http
-GET /api/1/apps/calc/packages/ HTTP/1.1
+GET /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
@@ -130,7 +131,7 @@ An object with the following key-value pairs:
 *   _Creator_ (String) : Uploader or creator of this package
 *   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
     upload date or the date that a build was created in the portal
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values: 
+*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values:
      * Succeeded
      * Queued
      * Building
@@ -235,7 +236,7 @@ Start the process to build a deployment package, based on the team server projec
 
 ```http
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
 #### 2.5.1 Request
@@ -256,7 +257,7 @@ An object with the following key-value pairs:
 ##### 2.5.1.3 Example
 
 ```http
-POST /api/1/apps/calc/packages/ HTTP/1.1
+POST /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com

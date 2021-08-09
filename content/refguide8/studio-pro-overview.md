@@ -10,6 +10,10 @@ aliases:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/studio-pro-overview.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  
@@ -48,7 +52,7 @@ For more information on deploying your app and versioning it, see  the [Versioni
 
 ### 2.3 Links to Developer Portal & Marketplace {#links}
 
-You can find links to the [Developer Portal](/developerportal/index) and [Marketplace](/appstore/index) in the top-right corner of Studio Pro.
+You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the top-right corner of Studio Pro.
 
 Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
 

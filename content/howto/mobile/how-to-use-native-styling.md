@@ -14,12 +14,12 @@ You have the capacity to alter design properties with Mendix Studio Pro. Further
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
+* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
 ### 3 Customizing the Quickstart App
 
-The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI resources package. This package consists of:
+The [Native Mobile Quickstart](https://marketplace.mendix.com/link/component/109511/) app is styled using an Atlas UI resources package. This package consists of:
 
 * Widgets
 * Building blocks
@@ -33,8 +33,8 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![button](attachments/how-to-use-native-styling/button-one.png)
 
-2.  Click **Run Locally** and then click **View** to see your app. The button will be blue with white text, which is its default styling.
-3. Open *theme/styles/native/app/custom-variables.js* using your IDE of choice.
+2.  Click the play button (**Run Locally**) and then click **View App** to see your app. The button will be blue with white text, which is its default styling.
+3. Open *theme/native/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
 	```javascript
@@ -48,7 +48,7 @@ These resources let you style your app with a wide variety of interface parts. H
 	```
 
 5. Save your file.
-6.  Click **Run Locally** to apply your changes:
+6.  Click the play button (**Run Locally**) to apply your changes:
 
 	![rosybrown button](attachments/how-to-use-native-styling/brand-primary-rosybrown.png)
 
@@ -65,7 +65,7 @@ Classes are groups of styling properties which define how certain elements of yo
 
 	![class field](attachments/how-to-use-native-styling/btn-success.png)
 
-5.  Click **Run Locally** to save and refresh your app. Notice the button turned green:
+5.  Click the play button (**Run Locally**) to save and refresh your app. Notice the button turned green:
 
 	![green button](attachments/how-to-use-native-styling/green-button.png)
 	
@@ -87,15 +87,15 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 	Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
-## 6 Creating Your Own Classes {#6-creating-your-own-classes}
+## 6 Creating Your Own Classes {#creating-your-own-classes}
 
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 
 1. Place a fourth button widget on your app's home page.
 2. Navigate to your Mendix app's folder using your IDE.
 3. Open the **theme** folder of your app.
-4. Open *styles/native/app/custom.js*.
-5. Copy this code snippet into *styles/native/app/custom.js*:
+4. Open *native/main.js*.
+5. Copy this code snippet into *native/main.js*:
 
 	```javascript
 	export const className = {
@@ -138,7 +138,7 @@ When you have specific design requirements, you will need to build custom classe
 
 8. Save your work.
 9. In Mendix Studio Pro, select your fourth button. In the **Properties** panel, type *btnBordered* into the **Class** field.
-10.  Click **Run Locally** to see that your button's background color is transparent:
+10.  Click the play button (**Run Locally**) to see that your button's background color is transparent:
 
 	![bordered button](attachments/how-to-use-native-styling/bordered-button.png)
 	
@@ -149,7 +149,7 @@ When you have specific design requirements, you will need to build custom classe
 In this section you will learn to turn the class you made into a design property, so that it can be easily used by other people.
 
 1. Place a fifth button widget on your app's home page.
-2. Open *theme/settings-native.json* in your IDE.
+2. Open *themesource/your-module/native/design-properties.json* in your IDE.
 3. Find the `ActionButton` class. There are already design properties in `ActionButton`. Next, you will add some of your own.
 4. Place this object under the first one in `ActionButton`:
 
@@ -161,14 +161,14 @@ In this section you will learn to turn the class you made into a design property
 		"class": "btnBordered"
 	},
 	```
-4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.
+4. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
 5.  Select the fifth button. In **Properties** > **Design Properties**, your **Bordered** design property should now be visible:
 
 	![bordered design property](attachments/how-to-use-native-styling/bordered-design-property.png)
 
 6.  Enable the **Bordered** design property by clicking its drop-down menu and selecting **Yes**.
 
-7.  Click **Run Locally** again and view your app:
+7.  Click the play button (**Run Locally**) again and view your app:
 
 	![design properties border](attachments/how-to-use-native-styling/design-property-border-button.png)
 
@@ -180,5 +180,5 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 * [How to Implement Native Mobile Styling](native-styling)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto/front-end/atlas-ui)
 * [How to Get Started with Native Mobile](getting-started-with-native-mobile)

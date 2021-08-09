@@ -13,14 +13,16 @@ For on-premises and local deployments of Mendix, the Mendix Runtime monitoring a
 {{% alert type="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to the Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from the **Operate** section of the Developer Portal. For more information see:
+For deployments to other platforms (for example Mendix for Private Cloud) you do not have access to the m2ee admin handler to make these requests.
+
+For deployments to the Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information see:
 
 * [Metrics](/developerportal/operate/metrics)
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow)
 {{% /alert %}}
 
-You can change the admin port from Studio Pro by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
+You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
 
 The request needs to be of the **POST** type with **No Authorization** and the following headers:
 

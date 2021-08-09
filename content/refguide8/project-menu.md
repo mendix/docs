@@ -6,6 +6,10 @@ menu_order: 30
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-menu.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
@@ -29,11 +33,11 @@ The **Batch Update Layouts** option allows you to update the layouts of many pag
 
 ### 2.3 Update Widgets {#update-widgets}
 
-The **Update Widgets** option presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option.
+The **Update Widgets** option presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option.
 
 ### 2.4 Check Widgets
 
-The **Check Widgets** option checks that the widgets you have implemented in the app project have been built correctly.
+The **Check Widgets** option checks that the widgets you have implemented in the app have been built correctly.
 
 ### 2.5 Convert Classes to Design Properties
 

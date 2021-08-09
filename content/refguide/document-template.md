@@ -56,7 +56,7 @@ For details, see [Style](style).
 
 ### 4.1 Name
 
-The name of the document template. You can change the name via the project explorer.
+The name of the document template. You can change the name via the App Explorer.
 
 ### 4.2 Documentation
 

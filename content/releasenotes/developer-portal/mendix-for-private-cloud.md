@@ -13,6 +13,99 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### July 6th, 2021
+
+#### Portal Improvements
+
+* We added the ability to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
+
+#### Portal Fixes
+
+* We resolved an issue where environment variables were limited to 200 characters.
+* We resolved an issue where changing the cluster name or description could remove other cluster managers from the cluster.
+
+### June 29th, 2021
+
+#### Mendix Operator v1.12.0 and Mendix Gateway Agent v1.11.0
+
+* We have added more networking configuration options, allowing to use new Ingress and Service types. You can now:
+  * use templates in Ingress and Service annotations.
+  * use a Service without creating an Ingress – for example to use a load balancer service, or to manually create your own Ingress object.
+  * customize the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
+  * customize the Ingress class.
+  * customize the Service type.
+  * customize the Service port(s).
+* We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
+  * Ingress annotations
+  * Service annotations
+  * Ingress class
+  * Ingress path and path type
+* When a custom `ApplicationRootUrl` is specified in Custom Runtime Settings, it will be used instead of the automatically generated application URL.
+* We have fixed a incorrect *Runtime has an empty (trial) license* log message which appeared when using a Subscription Secret license.
+* We extended the Mendix Operator trial period from 30 days to 90 days. (Tickets 118172, 121775, 124921)
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
+### May 4th, 2021
+
+#### Mendix Operator v1.11.0 and Mendix Gateway Agent v1.10.0
+
+* We have added features required to support Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/). [Linkerd](https://linkerd.io/) is a Service Mesh which offers multiple features, such as encrypting HTTP requests between the Ingress Controller and Mendix app Pods.
+  * You can now set the `automountServiceAccountToken` option for Mendix App containers.
+  * You can now set Pod annotations for all Mendix app Pods in a namespace.
+* We have fixed an issue with using additional Azure SQL Server arguments.
+* We have fixed an issue when creating S3 buckets in the `us-east-1` region. (Ticket 119956)
+* We have fixed an *unable to patch Agent with type proxy_agent_patch: resource may not be empty* error when trying to apply proxy settings. (Tickets 119955,120258)
+* We have fixed an issue when updating a Storage Plan would fail with a *cloud portal returned invalid status code: 409* error message. (Ticket 119294)
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
+### April 19th, 2021
+
+#### Portal Improvements
+
+* We have fixed an issue with downloading a custom Mendix Operator version if the Mendix Gateway Agent is disconnected.
+* We have fixed an issue where a cluster admin would see activity logs from other clusters.
+* We have fixed the autodeploy feature.
+* We have resolved an issue where the *Run in cloud* button was sometimes disabled in Studio Pro.
+
+#### Mendix Operator v1.10.0 and Mendix Gateway Agent v1.9.0
+
+* We have updated all containers to set `allowPrivilegeEscalation=false`, so that containers will no longer be able to modify their user id.
+* We have updated all base images to no longer modify `/etc/passwd` on startup.
+* We have updated Mendix app containers to set `automountServiceAccountToken=false`, so that Mendix apps will no longer be able to call the Kubernetes API.
+* We have added default resource requests and limits to the Mendix Operator and Gateway Agent. This will limit resource usage and improve support for cluster autoscaling.
+* The Mendix Operator will now automatically set the `ApplicationRootUrl` runtime option based on the app URL.
+* We have improved the reliability of detecting the correct container image versions when migrating to an air-gapped or private registry.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
+### March 31st, 2021
+
+#### Mendix Operator v1.9.1
+
+* We have fixed a Pod crash when the Mendix Operator tries to create or delete a SQL Server or Azure SQL database.
+* We have updated the default list of items to configure in the Configuration Tool; the **Proxy** and **Custom TLS** options are now unchecked by default.
+* We have added support for additional authentication methods into the Configuration Tool, including the Azure auth provider. (Ticket 118790)
+* We have fixed the output format of patches generated by the Configuration Tool's **Write YAML** button.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
+### March 18th, 2021
+
+#### Mendix Operator v1.9.0 and Mendix Gateway Agent v1.8.0
+
+* We have significantly improved the Configuration Tool:
+  * Bash (or Git Bash) is no longer required to install and configure a cluster. This allows you to use the tool in most Windows terminals such as PowerShell and Windows Command prompt with no workarounds.
+  * The installation process no longer needs to communicate with an external service to download installation resources, and only needs access to the Kubernetes cluster API.
+  * Migration of Mendix components to a Private Cloud registry no longer requires downloading and patching the installation script.
+  * The process for upgrading to the next version of Mendix for Private Cloud has been complely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
+  * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.
+* We have added reporting of the **Storage Provisioner Version** to the Private Cloud Portal.
+* We have added dedicated sections to configure scheduled events and app constants when using the Operator in standalone mode.
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
 ### February 18th, 2021
 
 #### Portal Improvements
@@ -33,7 +126,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated the Configuration Tool to run in fullscreen, so that it adapts better to smaller and larger screens.
 * We have fixed an issue with misleading error messages in the container logs if Mendix Runtime is failing to start. If the MxAdmin user has an insecure password, a correct error message will be displayed.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 After upgrading the Mendix Operator, we recommend downloading the latest version of the Configuration Tool.
 
 ### January 6th, 2021
@@ -71,7 +164,7 @@ After upgrading the Mendix Operator, we recommend downloading the latest version
 * We have added a Strict TLS mode to PostgreSQL, SQL Server, and Minio, which will only allow connections to the database and file storage if there is a valid and trusted TLS certificate. Together with the custom Certificate Authorities option, this will ensure that Mendix apps are connecting to the database and file storage over a secured connection. Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 * We have added an option to specify TLS client certificates in Mendix apps. A Mendix app can use a TLS client certificate when communicating with external web services.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### November 16th, 2020
 
@@ -88,7 +181,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have fixed a bug where building and pushing an image into some registries (such as coding.net) would fail with an authentication error.
 * If creating a database or file storage for a new environment fails, the Mendix Operator will now attempt to clean up (roll back) temporary resources. In this case, a manual cleanup is not required. In addition, log messages for such failed attempts will provide details on what what was created and rolled back.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### October 21st, 2020
 
@@ -113,7 +206,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Developer Portal.
 * We fixed an issue where the Operator pod was crashlooping until the Operator was fully configured.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### September 14th, 2020
 
@@ -136,7 +229,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have improved logging and status messages when the Mendix Operator is provisioning Minio storage or building images.
 * We are introducing a new `private-cloud.registry.mendix.com` container registry which is intended to become the official Mendix for Private Cloud registry and eventually replace the `quay.io/digital_ecosystems` and the `mendix/runtime-base` Docker Hub repositories.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### September 7th, 2020
 
@@ -172,7 +265,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have improved compatibility with annotations and other attributes modified by ingress controllers. Mendix Operator will no longer delete annotations and attributes it doesn't recognize.
 * We have added an option to specify log levels for every log node.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### July 15th, 2020
 
@@ -180,11 +273,11 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We introduced support for configuring environment variables and Java options for a Mendix application running in Private Cloud.
 * We added support for using registry credentials from an existing .dockerconfigjson secret.
-* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually - this will be done by the (re)configuration script.
+* We now provide an option to configure image pull secrets when using a Generic registry with authentication. When using an external generic registry, such as Azure Container Registry, Docker Hub or quay.io, you no longer need to configure image pull secrets manually – this will be done by the (re)configuration script.
 * We have updated all images to be based on the latest ubi8 image so that they include the latest security patches.
 * We have fixed an issue where changing the App URL in OpenShift resulted in an exception.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 #### Portal Improvements
 
@@ -206,7 +299,7 @@ We released a new version of the Mendix for Private Cloud Operator.
 
 * We have added support for offline licenses.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### June 19th, 2020
 
@@ -220,7 +313,7 @@ We released a new version of the Mendix for Private Cloud Operator.
 * We have added support for using an existing JDBC database schema. This database can only be used by one environment and cannot be shared between environments.
 * We have added support for using an existing Azure Blob Storage Container or S3 bucket. Such a storage plan can be dedicated to one environment, or can be shared between multiple environments, with all environments using the same credentials.
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 ### June 18th, 2020
 
@@ -235,7 +328,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 #### Mendix Gateway Agent v1.1.1
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 * We have fixed a regression which caused unusually high CPU usage.
 
@@ -243,7 +336,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 #### Mendix Operator v1.1.0
 
-To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#operator-latest).
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 * Mendix apps now run as Kubernetes Deployments instead of StatefulSets. This will allow you to use rolling updates, reducing downtime. In addition, this helps avoid situations where a StatefulSet might become stuck and stop processing any changes.
 * We now allow you to set Kubernetes resource requirements in addition to resource limits. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
@@ -255,7 +348,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 #### Mendix Gateway Agent v1.1.0
 
-To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide#agent-latest).
+To upgrade an existing installation of Private Cloud to the latest version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
 * We have improved the reliability of event processing and cluster authentication.
 
@@ -289,4 +382,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/collaborate/buzz#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed Beta test that allows you to connect your private cluster to Mendix. You can ask to join the Beta program, but places are currently limited.

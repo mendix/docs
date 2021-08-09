@@ -9,6 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/open-app-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 To open a project in Mendix Studio Pro, do one of the following:
@@ -32,7 +36,7 @@ Use this setting to select the location where your app is stored. This can be th
 
 Select the Team Server app you would like to open, then choose the development line.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 For more information about development lines, see [Version Control](version-control).
 

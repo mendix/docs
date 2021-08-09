@@ -5,6 +5,10 @@ menu_order: 40
 tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/variable-actiities.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A *variable* is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name.

@@ -10,9 +10,9 @@ aliases:
 
 ## 1 Introduction
 
-This how-to will help you to solve problems that may occur when opening a project in Mendix Studio Pro.
+This how-to will help you to solve problems that may occur when opening an app in Mendix Studio Pro.
 
-One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the project. With the Mendix Model SDK it's possible to edit your project in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
+One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the app. With the Mendix Model SDK it's possible to edit your app in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
 
 ![](attachments/18448577/18580055.png)
 
@@ -20,7 +20,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 ## 2 Determining the Actual Problems
 
-Click the **Details >>** button to show the actual errors that occurred while loading your project:
+Click the **Details >>** button to show the actual errors that occurred while loading your app:
 
 ![](attachments/18448577/18580052.png)
 
@@ -30,31 +30,31 @@ These detailed messages tell you the following:
 * The model element that caused the error (for example, the entity 'Vehicle').
 * What the actual problem is (for example, there's an index that doesn't contain any attributes, which is not permitted).
 
-## 3 Determining the Origin of Your Project
+## 3 Determining the Origin of Your App
 
-Before trying to solve the problems, it's useful to discover the origin of the project, because the errors may be introduced by someone else. Go through the following possibilities:
+Before trying to solve the problems, it is useful to discover the origin of the app, because the errors may be introduced by someone else. Go through the following possibilities:
 
-### 3.1 Is This a Team Server Project?
+### 3.1 Is This a Team Server App?
 
-If your project is a [Team Server](/developerportal/develop/team-server) project, and you just did a [download or update](/refguide/using-version-control-in-studio-pro) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/develop/team-server) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/collaborate/team-server) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [project package](../integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [app package](/howto/integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
-### 3.3 Did You Create the Project Yourself?
+### 3.3 Did You Create the App Yourself?
 
-If you created or edited the project yourself, you will want to read the next section of this how-to to find out what you can do to solve the problem.
+If you created or edited the app yourself, you will want to read the next section of this how-to to find out what you can do to solve the problem.
 
 ## 4 Solving the Problems
 
-The problems described in this how-to can't be solved by editing the project in Mendix Studio Pro, because the project's file format is invalid in a way that prevents Studio Pro from reading it. This also means the problems are probably not caused by working on the project with Studio Pro.
+The problems described in this how-to can't be solved by editing the app in Mendix Studio Pro, because the app's file format is invalid in a way that prevents Studio Pro from reading it. This also means the problems are probably not caused by working on the app with Studio Pro.
 
-The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK and, if this is the case, means you will also need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, you will probably know what to do to solve the problems by carefully reading the messages in the error dialog, and locating the relevant part of you SDK code, after which you can change your SDK script to make the project valid again. Be sure to check the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/) if you need information about constructing or altering models with SDK scripts.
+The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK and, if this is the case, means you will also need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, you will probably know what to do to solve the problems by carefully reading the messages in the error dialog, and locating the relevant part of you SDK code, after which you can change your SDK script to make the app valid again. Be sure to check the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/) if you need information about constructing or altering models with SDK scripts.
 
-Finally, in the unlikely event that you encounter this error while working on your project with Mendix Studio Pro, it's best to contact Mendix support and open a ticket to get help with the problem.
+Finally, in the unlikely event that you encounter this error while working on your app with Mendix Studio Pro, it's best to contact Mendix support and open a ticket to get help with the problem.
 
 ## 5 Read More
 
@@ -62,7 +62,7 @@ Finally, in the unlikely event that you encounter this error while working on yo
 *   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 *   [Debugging Java Actions](debug-java-actions)
 *   [Debugging Java actions remotely](debug-java-actions-remotely)
-*   [Debugging Microflows](debug-microflows)
+*   [Debugging Microflows and Nanoflows](debug-microflows-and-nanoflows)
 *   [Debugging Microflows Remotely](debug-microflows-remotely)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Log Levels](log-levels)

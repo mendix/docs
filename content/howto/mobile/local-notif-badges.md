@@ -57,7 +57,7 @@ Start and load the app on your mobile device and tap the button which calls your
 
 To make your badge disappear after your user opens your app, follow the instructions below.
 
-1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the [Native Mobile Quickstart app](https://appstore.home.mendix.com/link/app/109511/)):
+1. Drop an **App events** widget onto **Home_Native** (you have this widget because it is included in the [Native Mobile Quickstart app](https://marketplace.mendix.com/link/component/109511/)):
 
 	![app event widget](attachments/native-push/app-events.png)
 
@@ -107,5 +107,4 @@ Congratulations! You successfully implemented basic badge clearing. Next, in [Ho
 
 ## 5 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

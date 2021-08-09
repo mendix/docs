@@ -37,7 +37,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 2. The Data Hub Admin will see the **Curator Management** tab displaying  the list of Data Hub curators for the organization. To assign a curator role to a Mendix user, click **Add Curator**.
 
-    {{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/data-hub-catalog/search#discoverability-metadata) section in *Search in the Data Hub Catalog*). Curators can also change the metadata for the assets that are owned by other users. {{% /alert %}}
+    {{% alert type="info" %}}A user with curator rights can access all assets registered in the Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/data-hub/data-hub-catalog/search#discoverability-metadata) section in *Search in the Data Hub Catalog*). Curators can also change the metadata for the assets that are owned by other users. {{% /alert %}}
    
 3. If you want to remove the curator rights for a user, check the box against the name and confirm this by clicking **Remove Curator**.
    
@@ -84,7 +84,7 @@ To invite new users, do the following:
 
 2. Click the **Invite Users** button.
 
-3. In the **Invite External Users** dialog box, fill in the email addresses of the users you would like to invite as external users and click **Send Invitation**.     ![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
+3. In the **Invite External Users** dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.     ![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
 
     {{% alert type="info" %}}The users you are inviting should have a Mendix account. {{% /alert %}}
 

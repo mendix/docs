@@ -15,7 +15,7 @@ In the **Administration** tab of **Data Hub**, the operations that can be perfor
 * **Data Hub Admin**:
   * [Assign curators](#curator)
   * [Manage the list of custom owners](#customowners) who have been added as **Business** or **Technical Owners**
-  * [Invite external participants](#external-participants)
+  * [Invite external users](#external-access)
 * **Curators**:
   [Manage the list of custom owners](#customowners) who have been added as **Business** or **Technical Owners**
 
@@ -70,7 +70,7 @@ From the **Owner Management** tab, you can do the following:
 
 New custom owners can also be added when assets are being curated as described in [Changing the Technical and Business Owners of an App](/data-hub/data-hub-catalog/curate#custom-owner).
 
-## 4 Managing External Participants {#external-participants}
+## 4 Managing External Access {#external-access}
 
 **External Access** allows Data Hub Admins to invite members (external users) from outside the organization. External users can search for published data sources or use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 

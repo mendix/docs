@@ -51,7 +51,7 @@ To search from the list of Mendix users in your organization, start typing in th
 
 Custom owners are owners that have been added as the contact for a registered application. They may be added during the application [curation](/data-hub/data-hub-catalog/curate#custom-owner) or have been specified during app registration.
 
-They are  the contacts for registered assets. Adding a custom owner does not give them access rights to the Catalog. Custom owners are displayed in the drop-down lists by an avatar that only displays their initials (Mendix users have their personalized avatar displayed).
+Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Catalog. They'll appear in the Catalog with their name and their initials, or with their personalized avatar if they're a Mendix user.
 
 Curators and the Data Hub Admin can manage the custom owner list under the **Owner Management** tab.
 
@@ -61,7 +61,7 @@ Curators will only see  **Owner Management** under the **Administration** tab.
 
 From the **Owner Management** tab, you can do the following:
 
-* Add owners – the **Add Owners** button allows you to add new owners by filling in their name and email. New owner will be listed when **Business** or **Technical Owners** are curated for registered assets.
+* Add owners – the **Add Owners** button allows you to add new owners by filling in their name and email. New owners will be listed as the **Business** or **Technical Owners** for registered assets.
 
 	{{% alert type="info" %}}Custom owners in this list are not Mendix platform users but serve as contact for the registered assets.  They are not able to login to the Mendix Platform or curate registered assets in the Catalog. {{% /alert %}}
 
@@ -90,7 +90,7 @@ To invite new users, do the following:
 
     {{% alert type="info" %}}The users you are inviting should have a Mendix account. {{% /alert %}}
 
-4. Users receive the invitation, log into Data Hub, and accept the invitation.
+4. Users receive the invitation, log into Data Hub Catalog, and accept the invitation.
 
     {{% alert type="info" %}}A user can only work in one organization at a time. To work actively in an organization as an external participant, they need to select an **Active company** option from the Catalog homepage.{{% /alert %}}
 

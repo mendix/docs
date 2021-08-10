@@ -18,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace. This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
 
 ## 4 Function List
 
@@ -110,7 +110,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `StringLeftPad` – This pads a string on the left to a certain length.
 * `StringRightPad` – This pads a string on the right to a certain length.
 * `StringSimplify` – This removes all the diacritics from a string.
-* `StringTrim` – This trims a string to the left and right (meaning, it removes all the surrounding whitespace characters such as tabs, spaces and returns).
+* `StringTrim` – This trims a string to the left and right (meaning, it removes all the surrounding whitespace characters such as tabs, spaces, and returns).
 * `SubstituteTemplate` – Given an object and a template, this substitutes all the fields in the template. This supports attributes, references, reference sets, and constants. Enums are displayed using their caption instead of the key.
 * `Base64Encode` – This converts a plain string to a base-64 encoded string.
 * `Base64Decode` – This converts a base-64 encoded string to the plain original string.

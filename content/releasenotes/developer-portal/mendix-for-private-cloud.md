@@ -13,6 +13,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### August ???th, 2021
+
+#### Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0
+
+* We have switched all components to use the modern Kubernetes APIs: `networking.k8s.io/v1` and `apiextensions.k8s.io/v1`.
+  This change allows us to continue supporting future versions of Kubernetes.
+* This version of Mendix Operator and Gateway Agent only supports Kubernetes 1.19 and later versions.
+* Mendix Operator v1.12.\* and Mendix Gateway Agent v1.11.\* will continue to be supported as an LTS branch for clusters running older versions of Kubernetes.
+
+{{% alert type="warning" %}}Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+Mendix for Private Cloud has not been fully validated to support this Kubernetes version.{{% /alert %}}
+
+To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
 ### July 6th, 2021
 
 #### Portal Improvements

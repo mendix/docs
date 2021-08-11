@@ -26,7 +26,7 @@ Follow the instructions in [How to Use App Store Content in Studio Pro](../gener
 ### 3.1 Intelligent Document Service Activity
 Once the module is imported, _Intelligent Document Service Activity_ will appear in your toolbox.
 
-{{% image_container width="300" %}}![](attachments/intelligent-document/ids-activity-in-toolbox.png){{% /image_container %}}
+![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity-in-toolbox.png)
 
 Drag and drop _Intelligent Document Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
 

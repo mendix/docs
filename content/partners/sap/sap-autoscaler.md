@@ -68,9 +68,10 @@ For **Scaling** select one of:
 
 You will then be asked to set up the requested type of scaling. A summary of the information required is shown in the sections below and more information is available in [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) documentation on the *SAP Help Portal*.
 
-When you have added all the rules, click **Generate Configuration File** to create a file containing the correct JSON for your autoscaler configuration.
+When you have added all the rules, you can do one of the following:
 
-You can then upload this file as the configuration of your autoscaler service.
+* Click **Upload Configuration To Service** to upload your autoscaler configuration directly to the autoscaler service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your autoscaler configuration. You can then upload this file as the configuration of your autoscaler service.
 
 ### 3.1 Scheduled Scaling{#schedule}
 

@@ -68,6 +68,7 @@ You can also specify the **Database Instance Type**. The list of possible databa
 * Development – `db.t2.micro`
 * Production – `db.m4.large`
 
-When you have entered all the information, click **Generate Configuration File** to create a file containing the correct JSON for your database configuration.
+When you have entered all the information, you can do one of the following:
 
-You can then upload this file as the configuration of your PostgreSQL on Amazon (AWS) service.
+* Click **Upload Configuration To Service** to upload your database configuration directly to the PostgreSQL on Amazon (AWS) service.
+* Click **Download Configuration File** to create a file containing the correct JSON for your database configuration. You can then upload this file as the configuration of your PostgreSQL on Amazon (AWS) service.

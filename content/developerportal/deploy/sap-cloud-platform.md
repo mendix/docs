@@ -299,15 +299,14 @@ SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107
 
 If you want to remove a service instance from your environment, you can do it is follows:
 
-1. Click the three-dot menu for the service and select **Unbind Service**. This will unbind the service instance from the application *and delete the instance*.
+1. Click the three-dot menu for the service and select **Unbind Service** or **Delete Service**.
 
     ![](attachments/sap-cloud-platform/unbind-service.png)
 
-{{% alert type="info" %}}
-Unbinding the service through the Developer Portal will also delete the service instance from your environment.
+    The options will do the following:
 
-If you want to unbind the instance without deleting it, you will need to unbind it in the SAP BTP cockpit. You will then need to contact Mendix Support and ask them to remove the service from the Developer Portal — the Developer Portal cannot automatically see that the service has been unbound in the SAP BTP cockpit.
-{{% /alert %}}
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
 ## 6 Transport App Between Environments{#TransportApp}
 
@@ -473,6 +472,10 @@ To connect a service in the section **Available Services**
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
 {{% alert type="info" %}}
+If you use the **PostgreSQL on SAP BTP** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL](#sap-hyperscaler) in this document for more information.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler) for more information.
 {{% /alert %}}
 
@@ -503,15 +506,22 @@ If you no longer require a service you can unbind it or remove it from your app.
 **Unbinding a Service**
 
 1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
-2. Select **Unbind Service**.
+2. Select one of the following:
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
 
-3. Confirm by clicking **Unbind & Restart App** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Unbind*. However, this may leave the app in an unstable state.
+3. Confirm by clicking the appropriate button
+
+    * **Unbind**
+    * **Delete & Restart App**
+    * **Delete** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Delete*. However, this may leave the app in an unstable state as the service will be deleted from the environment
+    * **Cancel** – do not delete or unbind this service
 
     ![](attachments/sap-cloud-platform/service-unbind-warning.png)
 
-    Once the service is unbound, it is deleted from the app environment and returned to the list of **Available Services**.
+    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
 **Removing an Unbound Service**
 
@@ -523,7 +533,21 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
-#### 7.3.3 Service Names
+#### 7.3.3 Add Binding Configuration
+
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration.
+
+1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
+
+2. Select **Add Binding Configuration.
+
+3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
+
+    ![](attachments/sap-cloud-platform/add-binding-configuration.png)
+
+    See the documentation for the service you are configuring for more information.
+
+#### 7.3.4 Service Names
 
 The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
@@ -591,7 +615,8 @@ On the new page which is displayed you can set the required values for your **SA
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
 {{% /alert %}}
 
-Click **Generate Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
+Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL database service.
+Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
 
 #### 8.1.2 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
 
@@ -601,22 +626,7 @@ To use this database for your Mendix app, you will need to choose **AWS RDS Post
 
 ![](attachments/sap-cloud-platform/aws-rds.png)
 
-You will also have to provide **Configuration JSON** to enable your app to find the database. The configuration file will be similar to the example shown below:
-
-```json
-{
-   "adminPassword": "AdminPassword",
-   "adminUsername": "AdminUsername",
-   "backupRetentionPeriod": 14,
-   "dbEngineMajorVersion": "9.6",
-   "dbInstanceType": "db.t2.micro",
-   "dbName": "mynewdb",
-   "multiAz": true,
-   "resourceTechnicalName": "aws_account_name",
-   "storageEncrypted": false,
-   "storageGb": 20
-}
-```
+You will also need to set up the configuration of your AWS RDS PostgreSQL file. See [PostgreSQL on Amazon (AWS) for SAP Business Technology Platform](/partners/sap/sap-postgresql-on-aws) for more information.
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 

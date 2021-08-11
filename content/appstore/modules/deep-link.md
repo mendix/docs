@@ -12,7 +12,14 @@ Use the [Deep Link](https://marketplace.mendix.com/link/component/43/) to add re
 
 ### 1.1 Typical Use Cases
 
-The typical usage scenario is configuring a link to trigger a microflow like this: `https://myapp.com/link/resetpassword/DF6345SDF`. The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
+The typical usage scenario is configuring a link to trigger a microflow, for example: 
+
+* `http://myapp.com/link/user/Michel`
+* `http://myapp.com/link/product/22`
+* `https://myapp.com/link/resetpassword/DF6345SDF`
+* `https://myapp.com/link/allusers`
+
+The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 ### 1.2 Features
 
@@ -64,7 +71,7 @@ The **Deeplink.CreateDeeplinkConfig** microflow requires the following parameter
 * **Include GET parameters** – If you are using a string argument, the `GET` parameters following the URL will also be included in the string passed to the microflow. For example, with the `http://appname/link/mfname/stringtext?param=value` URL, previously only the string `stringtext` was passed to the microflow. When this option is enabled, the `GET` parameters will be added. The string passed to the microflow will now be `stringtext?param=value`. Of course, multiple `GET` parameters (using`&`) also work. This property cannot be used in combination with the object type and object attribute properties.
 * **Separate GET parameters** – If `GET` parameters are included, they are separated into multiple string parameters for the microflow that will be called. For example, with the `http://appname/link/mfname/stringtext?param=value&other=test` URL, the microflow that is called can receive two string parameters named `param` and `other`, which are filled with the values `value` and `test`, respectively. When creating a deep link in the GUI, an example URL will be shown for the selected microflow. This property cannot be used in combination with the object type and object attribute properties.
 * **Object Type** – This parameter is the fully qualified type of the object that needs to be passed to the microflow. If empty, no arguments are passed to the microflow. An example is `MyFirstModule.Product`.
-* **Object Attribute** – This parameter specifies the attribute used by the deep link to uniquely identify the object that needs to be passed. In the case of this value being configured as empty, GUIDs will be used. For example, when the object type is set to the entity `User` and the object attribute to 'Name', you can use links such as `http://yourhost/link/showuser/[randomUserName]`, where `randomUsername` is the value of the `Name` attribute of the `User` entity.
+* **Object Attribute** – This parameter specifies the attribute used by the deep link to uniquely identify the object that needs to be passed. In the case of this value being configured as empty, GUIDs will be used. For example, when the object type is set to the entity `User` and the object attribute to `Name`, you can use links such as `http://yourhost/link/showuser/[randomUserName]`, where `randomUsername` is the value of the `Name` attribute of the `User` entity.
 * **Allow guests** – This parameter allow anonymous users to use this deep link.
 * **Use as Home** – This parameter allows a deep link to reused when the user reloads the application after requesting the deep link. This way, an alternative dashboard can be presented when the user enters the application by requesting a deep link. Defaults to `false`.
 * **Alternative index page** – This causes a deep link to not use the default index page. With this property, alternative themes can be applied when requesting certain deep links (for example, `index-dark.html`).

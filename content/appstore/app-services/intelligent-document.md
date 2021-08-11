@@ -1,51 +1,52 @@
+---
 title: "Intelligent Document Service"
 category: "App Services"
-menu_order: 1
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---
 
 ## 1 Introduction
-Intelligent Document Service provides text, key value pairs and tables extraction from documents. The app service utilizes multiple cutting-edge AI technologies along with OCR to extract the specific text from documents.
+Intelligent Document Service provides text, key value pairs and tables extraction from documents. The app service utilizes many cutting-edge AI technologies along with OCR to extract the specific text from documents.
 
 ### 1.1 Typical Use Case
-Including this service in an app is very easy. Maker has to download and include the module in an app. The IDS activity appears in the microflow toolbox, include it in the microflow then configure parameters and that’s it. An activity expects a trained model input, training app needs to be used for creating document models. Please refer _Training App section_ for getting training app weblink. For authentication, service uses Mendix SSO.
+Using this service in an app is very easy. Maker has to download and include the module in an app. The IDS activity appears in the microflow toolbox. Drag it in the microflow and configure couple of parameters and that’s it. An activity expects a trained model input, use Document Model Training App to create one. Please refer _Usage_ for more information. For authentication, service uses Mendix SSO.
 
 ### 1.2 Features
-* Extract data from bulk images and map directly to entity
+* Extract data from bulk images and map to entity
 * Train a model using sample images by marking and labeling specific are in the image
 
 ### 1.3 Limitation
 Supports only jpg / jpeg image formats.
 
-## 2 Usage & Configuration
+## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service module into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _Intelligent Document_ module into your app.
 
-### 2.1 Intelligent Document Service Activity
+## 3 Configuration
 
-#### 2.1.1 Intelligent Document Service Activity
+### 3.1 Intelligent Document Service Activity
 Once the module is imported, _Intelligent Document Service Activity_ will appear in your toolbox.
 
-![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity-in-toolbox.png)
+{{% image_container width="300" %}}![](attachments/intelligent-document/ids-activity-in-toolbox.png){{% /image_container %}}
 
-#### 2.1.2. Drag drop activity
 Drag and drop _Intelligent Document Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
 
 ![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity.png)
 
-#### 2.1.3. Model ID: 
-Model ID can be used after Training Model trained and published successfully, refer _2.2 Document Model Training_ section.
+### 3.2 Model ID: 
+Model ID can be used after Training Model trained and published successfully, refer _Usage_ section.
 
-#### 2.1.4. Image List: 
+### 3.3 Image List: 
 List of Image objects (Inherited from System.Image)
 
-#### 2.1.5. Mapping: 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 11_ in _2.2 Document Model Training_ section to get JSON to create _Import Mapping_.
+### 3.4 Mapping: 
+Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 11_ in _Usage_ section to get JSON to create _Import Mapping_.
 
-#### 2.1.6. Task Queue: 
+### 3.5 Task Queue: 
 Provide Task Queue to execute Extraction action
 
-### 2.2 Document Model Training
+## 4 Usage
+
+### Document Model Training: Create and Train Model
 
 1. Visit [Document Model Training](http://ddcs.mendixcloud.com) App
 

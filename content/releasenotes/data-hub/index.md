@@ -9,6 +9,20 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+###  August 12th, 2021
+
+#### New Features
+
+* Write capabilities: 
+  * Added parsing of Updatable, Insertable and Deletable capabilities from Annotations in OData V4 contracts
+  * Write capabilities are returned on the Search API 
+  * Write capabilities are displayed on the UI
+
+
+#### Fixes
+
+* Improvements to security
+
 ### August 5th, 2021
 
 #### Fixes

@@ -28,7 +28,7 @@ Once the module is imported, _Invoice Processing Service Activity_ will appear i
 
 Drag and drop _Invoice Processing Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
 
-![ids-activity-in-toolbox](attachments/invoice-processing/ip-activity.png)
+![ip-activity](attachments/invoice-processing/ip-activity.png)
 
 ### 3.2 Model ID: 
 Model ID can be used after model created successfully, refer _Usage_ section.
@@ -50,7 +50,7 @@ Provide Task Queue to execute Extraction action
 
 2. Login with _Mendix Account_.
 
-![ids-login](attachments/invoice-processing/ip-login.png)
+![ip-login](attachments/invoice-processing/ip-login.png)
 
 3. Select _Environment_. Existing Models list will show up. 
 
@@ -58,15 +58,15 @@ You can use Model Id in _Invoice Processing Service Activity_ if status is _COMP
 
 Follow _step 7_ to get JSON to create _Import Mapping_.
 
-![ids-list-models](attachments/invoice-processing/ip-list-models.png)
+![ip-list-models](attachments/invoice-processing/ip-list-models.png)
 
 4. To create and train a new model, select _Create New Model_. Provide unique _Model Name_, _Region_ and Select _Create Model_.
 
-![ids-create-model](attachments/invoice-processing/ip-create-model-us.png)
+![ip-create-model-us](attachments/invoice-processing/ip-create-model-us.png)
 
 5. Fill in the Vendor and Business Unit information and Select _Create Model_
 
-![ids-upload-samples](attachments/invoice-processing/ip-create-model-inputs.png)
+![ip-create-model-inputs](attachments/invoice-processing/ip-create-model-inputs.png)
 
 6. Model will appear in list with status _IN PROGRESS_. Once _Status_ of Model is _COMPLETED_, Model is ready to use
 
@@ -77,4 +77,4 @@ Follow _step 7_ to get JSON to create _Import Mapping_.
     3. Upload sample image used while training
     4. Select _Download_ to get JSON file
     
-![ids-json-mapping](attachments/invoice-processing/ip-json-mapping.png)
+![ip-json-mapping](attachments/invoice-processing/ip-json-mapping.png)

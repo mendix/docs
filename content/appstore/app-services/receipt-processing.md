@@ -27,7 +27,7 @@ Once the module is imported, _Receipt Processing Service Activity_ will appear i
 
 Drag and drop _Receipt Processing Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
 
-![ids-activity-in-toolbox](attachments/receipt-processing/rp-activity.png)
+![rp-activity](attachments/receipt-processing/rp-activity.png)
 
 ### 3.2 Model ID: 
 Model ID can be used fetched from _Document Model Training_, refer _Usage_ section.
@@ -49,11 +49,11 @@ Provide Task Queue to execute Extraction action
 
 2. Login with _Mendix Account_.
 
-![ids-login](attachments/receipt-processing/rp-login.png)
+![rp-login](attachments/receipt-processing/rp-login.png)
 
 3. Select _Environment_. Existing Models list will show up.
 
-![ids-list-models](attachments/receipt-processing/rp-list-models.png)
+![rp-list-models](attachments/receipt-processing/rp-list-models.png)
 
 4. Get JSON Mapping file to use with _Receipt Processing Service Activity_ (Section 3.4),
 
@@ -63,4 +63,4 @@ Provide Task Queue to execute Extraction action
     4. Select _Download_ to get JSON file
     5. Copy Model ID of same to feed into Activity
     
-![ids-json-mapping](attachments/receipt-processing/rp-json-mapping.png)
+![rp-json-mapping](attachments/receipt-processing/rp-json-mapping.png)

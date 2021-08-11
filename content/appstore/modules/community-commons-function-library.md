@@ -40,7 +40,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `Base64DecodeToFile` – This stores a base 64-encoded string plain in the provided target file document.
 * `Base64EncodeFile` – This converts an un-encoded file to a base 64-encoded string.
 * `StringToFile` – This stores a string in the provided file document. Multiple encodings are supported since version 7.4.1 of the module.
-* `StringFromFile` – This reads the contents form the provided file document and returns it as string. Multiple encodings are supported since version 7.4.1 of the module.
+* `StringFromFile` – This reads the contents from the provided file document and returns it as string. Multiple encodings are supported since version 7.4.1 of the module.
 * `StoreURLToFileDocument` – This retrieves a document from an URL using an `HTTP GET` request.
 * `DuplicateFileDocument` – This clones the contents of one file document into another.
 * `GetFileSize` – This returns the file size of a file document in bytes.
@@ -70,8 +70,8 @@ The Community Commons container project contains a variety of predesigned unit t
 * `executeMicroflowAsUser` – This executes the given microflow as if the `$currentuser` is the provided user (delegation).
 * `RunMicroflowAsyncInQueue` – This runs a microflow asynchronously (meaning, this function immediately returns and schedules the microflow to be run in the near future). The queue guarantees a first-come-first-serve order of the microflows, and only one action is served at a time. The microflow is run with system rights in its own transaction. This is very useful for running heavy microflows in the background.
 * `executeMicroflowInBackground` – This is similar to `RunMicroflowAsyncInQueue`, but it accepts one argument as parameter.
-* `executeMicroflowInBatches` (recommended) – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
-* `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenerios.
+* `executeMicroflowInBatches`  – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
+* `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenarios.
 
 ### 4.7 ORM
 

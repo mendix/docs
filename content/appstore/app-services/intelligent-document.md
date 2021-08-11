@@ -33,7 +33,7 @@ Drag and drop _Intelligent Document Service Activity_ (_Document Data Capture Se
 ![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity.png)
 
 ### 3.2 Model ID: 
-Model ID can be used after Training Model trained and published successfully, refer _Usage_ section.
+Model ID can be used after Model trained and published successfully, refer _Usage_ section.
 
 ### 3.3 Image List: 
 List of Image objects (Inherited from System.Image)

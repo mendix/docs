@@ -1,8 +1,8 @@
 ---
-title: "Sell Your Component in the Marketplace"
+title: "Sell Your Component on the Marketplace"
 category: "General Info"
 menu_order: 30
-tags: ["marketplace", "component", app service"]
+tags: ["marketplace", "component", "app service"]
 description: "Describes how to make your component Marketplace-ready."
 ---
 
@@ -10,7 +10,7 @@ description: "Describes how to make your component Marketplace-ready."
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace Partner](#partner), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
 {{% todo %}}[**Verify slide to be included; need higher quality image**]{{% /todo %}}
 
@@ -22,9 +22,9 @@ Whether you are an established ISV, an ambitious startup, or a pioneering indepe
 * Make your component ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your component to the Mendix Marketplace
 
-## 2 Becoming a Marketplace Partner {#partner}
+## 2 Becoming a Marketplace Vendor {#vendor}
 
-The [Mendix Partner Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
+The [Mendix Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
 Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Partner Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
@@ -272,7 +272,7 @@ As a helping hand, the sections below present items to consider in the final ste
 
 {{% todo %}}[**Verify there will indeed be an App Service category to select when submitting a component**{{% /todo %}}
 
-**Versioning **
+**Versioning**
 
 - [ ] Verify the component works well for the specified Studio Pro version it is marked as being compatible with.
 - [ ] Keep the versioning pattern consistent in terms of naming and version numbers for your component [releases](share-app-store-content#updating).

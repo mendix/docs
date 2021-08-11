@@ -13,4 +13,4 @@ When you download an app service, it will go into the **App** > **Marketplace mo
 
 ## 2 Main Documents in This Category
 
-* 
+* [Intelligent Document](intelligent-document) - provides text, key value pairs and tables extraction from documents 

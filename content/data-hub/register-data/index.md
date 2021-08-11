@@ -114,9 +114,10 @@ A successful `POST` call will result in a `201` status code and a JSON response 
 
 ```json
 {
-  "Name": "My-Application",
-  "UUID": "1681ca4d-c119-4da9-97d0-f37221d50294",
-  "Icon": "https://cdn.mendix.com/image.png"
+	"Name":"My-Application",
+	"Type":"Other",
+	"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
+	"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
 }
 ```
 
@@ -147,14 +148,16 @@ A successful `POST` call will result in a `201` status code and a JSON response 
 
 ```json
 {
-​    "Name": "My-Environment",
-​    "Location": "https://my-deployed-application-url.com",
-​    "Type": "Production",
-​    "UUID": "c82b21d7-465e-479a-86e1-e49830451809",
-​    "Application": {
-​        "Name": "My-Application",
-​        "UUID": "1681ca4d-c119-4da9-97d0-f37221d50294"
-​    }
+	"Name":"My-Environment",
+	"UUID":"c3acf1e6-8ed3-472c-8c9f-d93cf3a53b9b",
+	"Location":"https://my-deployed-application-url.com",
+	"Type":"Production",
+	"Application": {
+		"Name":"My-Application",
+		"UUID":"0301800d-b104-417f-8a64-a8f3ba3450c3",
+		"Type":"Other",
+		"Icon":"https://hub.mendix.com/resources/logos/other_icon.png"
+	}
 }
 ```
 
@@ -180,27 +183,7 @@ Here's an example of a request that registers one service:
 curl --location --request PUT 'https://hub.mendix.com/rest/registration/v3/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
---data-raw '{
-    "Endpoints": [
-        {
-            "Path": "/path/to/my/service/endpoint",
-            "ServiceVersion": {
-                "Version": "1.0",
-                "Service": { 
-                		"Name": "My-Service-Name", 
-                		"ContractType": "OData_3_0"
-                },
-                "SecurityScheme": {},
-                "Contracts": [
-                    {
-                        "Type": "Metadata",
-                        "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"
-                    }
-                ]
-            }
-        }
-    ]
-}'
+--data-raw '{"Endpoints":[{"Path": "/path/to/my/service/endpoint","ServiceVersion":{"Version": "1.0","Service":{"Name": "My-Service-Name","ContractType": "OData_3_0"},"SecurityScheme": { "SecurityTypes": [{"Name": "Basic"}] },"Contracts":[{"Type": "Metadata",  "Value": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"}]}}]}'
 ```
 
 If you're receiving a `400` response because your contract metadata is getting rejected, use the [Transform API](#tranform-api) to get it in the right format. If you want to register more than one service for the same application and environment at once, add another object to the `Endpoints` list in the request body.
@@ -208,48 +191,44 @@ If you're receiving a `400` response because your contract metadata is getting r
 A successful `PUT` call will result in a `200` status code and a JSON response body that includes the details you provided about the service(s), along with a unique ID and some other details:
 
 ```json
-    Schema
-
 {
-  "Endpoints": [
-    {
-      "UUID": "0a25b1d5-5b17-494b-99c6-81ecec7ccab2",
-      "Path": "/path/to/my/service/endpoint",
-      "SecurityClassification": "Internal",
-      "Discoverable": true,
-      "Validated": true,
-      "Connections": 0,
-      "LastUpdated": "2021-01-01T15:22:58.981Z",
-      "Links": [
-        {
-          "Rel": "Self",
-          "Href": "https://hub.mendix.com/rest/datahubservice/v3/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments/57e214d1-d8b2-48fb-8ff3-d67932ae392b/services/test.acme.salaryservice/3.0"
-        },
-        {
-          "Rel": "Catalog",
-          "Href": "https://hub.mendix.com/link/endpoints?EndpointUUID=0a25b1d5-5b17-494b-99c6-81ecec7ccab2"
-        }
-      ],
-      "ServiceVersion": {
-        "Version": "3.0",
-        "UUID": "fef91870-0306-42a7-810f-13d3dbb14331",
-        "Service": [
-          {
-            "Name": "test.acme.salaryservice",
-            "UUID": "8afabb90-fb74-4647-b33a-39b81cc33abb",
-            "ContractType": "OData_3_0",
-            "Links": [
-              {
-                "Rel": "Self",
-                "Href": "https://hub.mendix.com/rest/datahubservice/v2/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments/57e214d1-d8b2-48fb-8ff3-d67932ae392b/services/test.acme.salaryservice"
-              }
-            ]
-          }
-        ],
-        "SecurityScheme": {}
-      }
-    }
-  ]
+	"Endpoints": [{
+		"Path": "path/to/my/service/endpoint",
+		"SecurityClassification": "Internal",
+		"UUID": "f6cde195-a45e-4077-b055-bca10e83c202",
+		"Links": [{
+				"Href": "https://hub.mendix.com/rest/registration/v3/endpoints/f6cde195-a45e-4077-b055-bca10e83c202",
+				"Rel": "Self"
+			},
+			{
+				"Href": "https://hub.mendix.com/link/endpoint?EndpointUUID=f6cde195-a45e-4077-b055-bca10e83c202",
+				"Rel": "Catalog"
+			}
+		],
+		"Connections": 0,
+		"LastUpdated": "2021-08-11T12:28:18.716Z",
+		"ServiceVersion": {
+			"Version": "1.0",
+			"PublishDate": "2021-08-11T12:28:18.698Z",
+			"UUID": "9fe460ac-5e09-49a3-81be-677f2f88a549",
+			"Service": {
+				"Name": "My-Service-Name",
+				"ContractType": "OData_3_0",
+				"UUID": "0fe4ce93-a421-4ffe-8022-3715a5a60d15",
+				"Links": [{
+					"Href": "https://hub.mendix.com/rest/registration/v3/applications/0301800d-b104-417f-8a64-a8f3ba3450c3/services/My-Service-Name",
+					"Rel": "Self"
+				}]
+			},
+			"SecurityScheme": {
+				"SecurityTypes": [{
+					"Name": "Basic"
+				}]
+			}
+		},
+		"Validated": false,
+		"Discoverable": true
+	}]
 }
 ```
 
@@ -293,63 +272,44 @@ A successful `POST` call will result in a `200` status code and a JSON response 
 
 ```json
 {
-  "PUTPublishedEndpoints": {
-    "Endpoints": [
-      {
-        "Path": "/employeeservice/v3",
-        "ServiceVersion": {
-          "Version": "2.1",
-          "Description": "Information about the employees of AcmeCorp",
-          "SecurityScheme": {
-            "SecurityTypes": [
-              {
-                "Name": "Basic"
-              },
-              {
-                "Name": "MxID",
-                "AppStoreModuleId": "93457"
-              }
-            ],
-            "MxAllowedRoles": [
-              {
-                "Name": "HrExpert",
-                "UUID": "04989324-8a86-495b-b2d0-baf491ce6ff5"
-              }
-            ]
-          },
-          "Service": {
-            "Name": "test.acme.employeeinformation",
-            "ContractType": "OData_3_0"
-          },
-          "Contracts": [
-            {
-              "Type": "ServiceFeed",
-              "Value": "<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><edmx:Edmx Version=\\\"1.0\\\" xmlns:edmx=\\\"http://schemas.microsoft.com/ado/2007/06/edmx\\\">  <edmx:DataServices m:DataServiceVersion=\\\"3.0\\\" m:MaxDataServiceVersion=\\\"3.0\\\" xmlns:m=\\\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\\\"><Schema Namespace=\\\"DefaultNamespace\\\" xmlns=\\\"http://schemas.microsoft.com/ado/2009/11/edm\\\"><EntityType Name=\\\"Entity\\\"><Key><PropertyRef Name=\\\"ID\\\" /></Key><Property Name=\\\"ID\\\" Type=\\\"Edm.Int64\\\" Nullable=\\\"false\\\" /><Property Name=\\\"Attribute\\\" Type=\\\"Edm.String\\\" /></EntityType><EntityContainer Name=\\\"ODataServiceEntities\\\" m:IsDefaultEntityContainer=\\\"true\\\"><EntitySet Name=\\\"Entities\\\" EntityType=\\\"DefaultNamespace.Entity\\\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>",
-              "Includes": [
-                {
-                  "Value": "<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?><edmx:Edmx Version=\\\"4.0\\\" xmlns:edmx=\\\"http://docs.oasis-open.org/odata/ns/edmx\\\"><edmx:Reference Uri=\\\"http://localhost/CORE/v1/CsdlSchema.xml\\\"><edmx:Include Alias=\\\"CORE\\\" Namespace=\\\"CORE_SCHEMA_V_1_0\\\"/><edmx:Include Alias=\\\"FOUNDATION\\\" Namespace=\\\"FOUNDATION_SCHEMA_V_1_0\\\"/></edmx:Reference><edmx:DataServices><Schema xmlns=\\\"http://docs.oasis-open.org/odata/ns/edm\\\" Namespace=\\\"SUB_SCHEMA_V_1_0\\\"><EntityType Name=\\\"VendorPart\\\" BaseType=\\\"CORE_SCHEMA_V_1_0.Part\\\"><NavigationProperty Name=\\\"VendorReference\\\" Type=\\\"SUB_SCHEMA_V_1_0.Vendor\\\"></NavigationProperty></EntityType><EntityType Name=\\\"Vendor\\\"><Key><PropertyRef Name=\\\"ContactName\\\"/></Key><Property Name=\\\"Name\\\" Type=\\\"Edm.String\\\"></Property><Property Name=\\\"Description\\\" Type=\\\"Edm.String\\\"></Property><Property Name=\\\"Address\\\" Type=\\\"Edm.String\\\"></Property><Property Name=\\\"Phone\\\" Type=\\\"Edm.String\\\"></Property><Property Name=\\\"Email\\\" Type=\\\"Edm.String\\\"></Property><Property Name=\\\"ContactName\\\" Type=\\\"Edm.String\\\"></Property></EntityType><EntityContainer Name=\\\"SupplierCollaborationContainer\\\" Extends=\\\"CORE_SCHEMA_V_1_0.CORE_APA242_CONTAINER_1\\\"><EntitySet Name=\\\"VendorParts\\\" EntityType=\\\"SUB_SCHEMA_V_1_0.VendorPart\\\"><NavigationPropertyBinding Path=\\\"VendorReference\\\" Target=\\\"Vendors\\\"/></EntitySet><EntitySet Name=\\\"Vendors\\\" EntityType=\\\"SUB_SCHEMA_V_1_0.Vendor\\\"></EntitySet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "PUTConsumedEndpoints": {
-    "Endpoints": [
-      {
-        "EndpointLocation": "https://hr.acmecorp.test/employeeservice/v2",
-        "ConsumedItems": [
-          {
-            "Type": "EntitySet",
-            "Name": "ManagingEmployees",
-            "Namespace": "DefaultNamespace"
-          }
-        ]
-      }
-    ]
-  }
+	"PUTPublishedEndpoints": {
+		"Endpoints": [{
+			"Path": "/employeeservice/v2",
+			"ServiceVersion": {
+				"Version": "2.0",
+				"Service": {
+					"Name": "test.acme.employeeinformation",
+					"ContractType": "OData_3_0"
+				},
+				"SecurityScheme": {
+					"SecurityTypes": [{
+						"Name": "MxID",
+						"AppStoreModuleId": "a4f7847b-9562-4b5a-adc2-4a0bf41cc534"
+					}],
+					"MxAllowedRoles": [{
+						"Name": "User",
+						"UUID": "91ca220e-9498-4d23-9d2e-90b9c19aca37"
+					}]
+				},
+				"Contracts": [{
+					"Type": "ServiceFeed",
+					"Value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<service xmlns=\"http://www.w3.org/2007/app\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xml:base=\"https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/\">\r\n <workspace>\r\n <atom:title>Default</atom:title>\r\n <collection href=\"Employees\">\r\n <atom:title>Employees</atom:title>\r\n </collection>\r\n </workspace>\r\n</service>"
+				}, {
+					"Type": "Metadata",
+					"Value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<edmx:Edmx xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\" Version=\"1.0\">\r\n <edmx:DataServices xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\" m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\">\r\n <Schema xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\" Namespace=\"DefaultNamespace\">\r\n <EntityType Name=\"Employee\">\r\n <Key>\r\n <PropertyRef Name=\"ID\" />\r\n </Key>\r\n <Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" />\r\n <Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" />\r\n <Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" />\r\n <Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" />\r\n <Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" />\r\n <Property Name=\"Salary\" Type=\"Edm.Decimal\" />\r\n </EntityType>\r\n <EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\">\r\n <EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" />\r\n </EntityContainer>\r\n </Schema>\r\n </edmx:DataServices>\r\n</edmx:Edmx>"
+				}]
+			}
+		}]
+	},
+	"PUTConsumedEndpoints": {
+		"Endpoints": [{
+			"EndpointLocation": "Please fill in the endpointlocation here",
+			"ConsumedItems": [{
+				"Type": "EntitySet",
+				"Name": "ManagingEmployees"
+			}]
+		}]
+	}
 }
 ```
 

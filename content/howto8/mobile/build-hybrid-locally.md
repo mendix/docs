@@ -39,7 +39,7 @@ To target a specific DTAP endpoint with your app, you can specify it as a parame
 $ npm run package -- --env.target=test  # target the test endpoint for ARM architecture
 ```
 
-Possible targets are `development`, `test`, `acceptance`, `production` (default) and `sandbox`. For convenience you can shorten these to their first letters.
+Possible targets are `development`, `test`, `acceptance`, `production` (default) and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
 
 ### 2.2 Building Your Prepared Project
 
@@ -152,9 +152,9 @@ The command to build your app locally for release is `npm run build -- android -
 
 	```
 	set PATH=%PATH%;C:\path-to-gradle-distribution
-   
+      
 	set JAVA_HOME=C:\path-to-jdk-1.8-directory
-   
+      
 	npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
 	```
 

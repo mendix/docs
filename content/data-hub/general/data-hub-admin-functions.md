@@ -33,7 +33,7 @@ The Data Hub Admin can add or remove the curator role by following these steps:
 
 1. In the Data Hub Catalog, click the **Administration** tab:
 
-	![Administration](attachments/data-hub-admin/administration.PNG)
+	![Administration](attachments/data-hub-admin/administration-tab.PNG)
 
 2. The Data Hub Admin will see the **Curator Management** option displaying  the list of Data Hub curators for the organization. To assign a curator role to a Mendix user, click **Add Curator**.
 

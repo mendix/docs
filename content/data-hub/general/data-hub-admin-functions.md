@@ -8,7 +8,7 @@ tags: ["data hub", "Data Hub Admin", "curator", "custom owner", "administration"
 
 ## 1 Introduction
 
-Every organization has one Mendix Data Hub Administrator. The Data Hub Admin can assign any number of curators who can manage the day to day administration and perform curate functions on the the registered assets in the Data Hub Catalog.
+Every organization can have one or several Mendix Data Hub Administrator. The Data Hub Admin can assign any number of curators who can manage the day to day administration and perform curate functions on the the registered assets in the Data Hub Catalog.
 
 In the **Administration** tab of **Data Hub**, the operations that can be performed by these two types of users are as follows:
 
@@ -60,7 +60,7 @@ Curators and the Data Hub Admin can manage the custom owner list under the **Own
 ![Remove Curator](attachments/data-hub-admin/OwnerManagement.PNG)
 
 {{% alert type="info" %}}
-Curators will only see  **Owner Management** under the **Administration** tab.
+Curators will only see **Owner Management** under the **Administration** tab.
 {{% /alert %}}
 
 From the **Owner Management** option, you can do the following:
@@ -91,8 +91,6 @@ To invite new users, do the following:
 3. In the **Invite External Users** dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.     ![External Access](attachments/data-hub-admin/InviteExternalUser.PNG)
 
     {{% alert type="info" %}} You can invite only users with a Mendix account. Invitation email will not be sent to the emails which are not associated with any Mendix account. {{% /alert %}}
-
-	![Invitation not sent](attachments/data-hub-admin/nonMx_Invitee.PNG)
 
 4. Users receive the invitation, log into the Data Hub Catalog, and accept the invitation.
 

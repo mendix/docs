@@ -8,7 +8,7 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-**MindSphere IIoT for Makers** provides you with a MindSphere tenant to connect Industrial equipment and consume the IoT data in Mendix applications.
+**MindSphere IIoT for Makers** provides you with an account to connect Industrial equipment and consume the IoT data in Mendix applications.
 With MindSphere IIoT for Makers you can:
 
 * Easily connect and manage Industrial machinery

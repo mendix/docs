@@ -24,9 +24,9 @@ Whether you are an established ISV, an ambitious startup, or a pioneering indepe
 
 ## 2 Becoming a Marketplace Vendor {#vendor}
 
-The [Mendix Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners, and Marketplace Partners). ISVs and Marketplace Partners are not mutually exclusive, because an ISV may also be a Marketplace Partner, and a Marketplace Partner may or may not be an ISV. If you have an app (or collection of apps) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
+The [Mendix Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners). ISVs and Marketplace Vendors are not mutually exclusive, because an ISV may also be a Marketplace Vendor, and a Marketplace Vendor may or may not be an ISV. If you have a component (or collection of components) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
-Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Partner Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
+Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
 ### 2.1 Prerequisites
 

@@ -18,6 +18,7 @@ This document explains how to export the components from the Mendix registry and
 ## 2 Prerequisites for Migrating to Your Registry
 
 To export components from the Mendix registry, you will need the following:
+
 * Access to the internet
 * A local or managed image registry
 * All the other prerequisites for creating a Mendix for Private Cloud cluster, as documented in the [Prerequisites for Creating a Cluster](private-cloud-cluster#prerequisites) section of *Creating a Private Cloud Cluster*.

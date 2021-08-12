@@ -143,7 +143,7 @@ To create a page for this app, follow these steps:
 
 1. Open the **Homepage** and add a **Data view**.
 2. Right-click the **[Unknown]** bar and click, **Select entity**. Select the **Input** entity.
-3. For the **Data source – Type** select **Microflow** and click **Create new microflow**.
+3. For the **Data source – Type**, select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
@@ -170,12 +170,9 @@ To fill in the CreateInput microflow, follow these steps:
 1. In the **Project Explorer**, double-click **CreateInput**. 
 2. From the **Toolbox**, drag a **Create object** activity to the microflow.
 3. Double-click the activity.
-4. For **Entity**, click** **Select** and double-click **Input**.
-5. Click **OK**.
-6. If there is an undefined parameter object in the microflow, delete this.
-7. Double-click the red **End event**.
-8. Under **Return value**, enter `$NewInput`.
-9. Click **OK**
+4. For **Entity**, click **Select** and double-click **Input**, then click **OK**.
+5. Double-click the red **End event**.
+6. Under **Return value**, enter `$NewInput`, then click **OK**
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 

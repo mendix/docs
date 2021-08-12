@@ -25,31 +25,33 @@ We currently support deploying to the following Kubernetes cluster types:
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
-Mendix for Private Cloud Operator v2.\*.\* is the latest version which officially supports:
-
-* Kubernetes versions 1.19 through 1.21
-* OpenShift 4.6 through 4.7
-
-Mendix for Private Cloud Operator v1.12.\* is an LTS release which officially supports older Kubernetes versions:
-
-* Kubernetes versions 1.13 through 1.21
-* OpenShift 3.11 through 4.7
-
 {{% alert type="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}
+
+#### 2.1.1 Supported Versions
+
+Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which officially supports:
+
+* Kubernetes versions 1.19 through 1.21
+* OpenShift 4.6 through 4.7
 
 {{% alert type="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
 This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
 
-Mendix for Private Cloud Operator v2.\*.\* is expected to be compatible with Kubernetes 1.22 - but until we've fully validated this, running Mendix for Private Cloud in Kubernetes 1.22 is not officially supported.
+Mendix for Private Cloud Operator v2.\*.\* is expected to be compatible with Kubernetes 1.22 - but until we have fully validated this, running Mendix for Private Cloud in Kubernetes 1.22 is not officially supported.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 Existing clusters running Mendix for Private Cloud Operator v1.\*.\* should be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 {{% /alert %}}
+
+Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:
+
+* Kubernetes versions 1.13 through 1.21
+* OpenShift 3.11 through 4.7
 
 ### 2.2 Cluster Requirements
 

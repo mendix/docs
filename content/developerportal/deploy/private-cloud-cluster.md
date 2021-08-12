@@ -707,9 +707,6 @@ This option enables you to use a Load Balancer without an Ingress, or to manuall
 
 {{% alert type="info" %}}
 When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
-
-Only objects that are supported by the current option are managed by the Mendix Operator.
-For example, switching from OpenShift Routes to Ingress will not delete already existing OpenShift Routes - the Mendix Operator will be managing only Service and Ingress objects.
 {{% /alert %}}
 
 {{% alert type="info" %}}

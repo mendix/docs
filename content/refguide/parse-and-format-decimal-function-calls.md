@@ -40,6 +40,11 @@ The following examples demonstrate which output you get depending on input param
 * `parseDecimal('noDecimal', empty)` returns `empty`
 * `parseDecimal('3,241.98', '#,###.##')` returns `3241.98`
 
+Given a variable that is empty:
+
+* `parseDecimal($StingVariable)` will throw an error
+* `parseDecimal($StingVariable, 5.05)` returns `5.05`
+
 ## 3 formatDecimal
 
 Converts a decimal value to a string value according to a specified format.

@@ -37,11 +37,10 @@ Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which offic
 * OpenShift 4.6 through 4.7
 
 {{% alert type="warning" %}}
-Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
 This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
 
-Mendix for Private Cloud has not been fully validated to support Kubernetes 1.22.
 Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
 {{% /alert %}}
 

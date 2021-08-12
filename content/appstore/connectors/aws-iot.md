@@ -29,19 +29,19 @@ This connector uses source code from the following projects:
 The microflow actions need AWS credentials. Most use an AWS access key ID and an AWS secret access key.
 
 For the MQTT actions you need to provide the certificates as provided by AWS IoT. These should be stored
-in the resources folder of your Mendix app:
+in the **resources** folder of your Mendix app:
 
 {{% image_container width="400" %}}
-![](attachments/aws-iot/certificates.jpg)
+![](attachments/aws-iot/certificates.png)
 {{% /image_container %}}
 
 ### 2.1 Things
 
 To get a list of all the things registered at AWS IoT, you can use **Things - get list** action:
 
-![](attachments/aws-iot/thing-get-list.jpg)
+![](attachments/aws-iot/thing-get-list.png)
 
-This will return a JSON document as provided by AWS IoT. Then you can use a JSON import mapping to create entities from the JSON that is returned.
+This returns a JSON document as provided by AWS IoT. Then you can use a JSON import mapping to create entities from the JSON that is returned.
 
 ![](attachments/aws-iot/thing-get-list-properties.png)
 

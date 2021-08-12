@@ -9,6 +9,10 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### August 12th, 2021
+
+* We have replaced the 'Download' button with the 'Start with Template' button for the 'Create New App' Category 
+
 ### July 29th, 2021
 
 #### New Features

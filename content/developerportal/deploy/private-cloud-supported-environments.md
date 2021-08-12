@@ -42,10 +42,8 @@ Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kuberne
 This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
 
 Mendix for Private Cloud Operator v2.\*.\* is expected to be compatible with Kubernetes 1.22 - but until we have fully validated this, running Mendix for Private Cloud in Kubernetes 1.22 is not officially supported.
-{{% /alert %}}
 
-{{% alert type="warning" %}}
-Existing clusters running Mendix for Private Cloud Operator v1.\*.\* should be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
+Existing clusters running Mendix for Private Cloud Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 {{% /alert %}}
 
 Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:

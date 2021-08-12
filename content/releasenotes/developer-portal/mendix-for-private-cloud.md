@@ -24,7 +24,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 To upgrade an existing installation of Mendix for Private Cloud to Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
 
-{{% alert type="warning" %}}Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+{{% alert type="warning" %}}Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 Mendix for Private Cloud has not been fully validated to support this Kubernetes version.{{% /alert %}}
 
 ### July 6th, 2021

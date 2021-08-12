@@ -14,6 +14,13 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ### July 26th, 2021
 
+#### Improvements – OData Connector for SAP Solutions
+
+* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service). Users will now be signed out so that they can retrieve a new access token.
+* We added a setting to override XSUAA authentication and allow you to use basic or no authentication for your destination instead.
+
+### July 26th, 2021
+
 #### Improvements
 
 * We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).

@@ -35,11 +35,8 @@ List of Image objects (Inherited from System.Image)
 ### 3.3 Output Format: 
 JSON or XML
 
-### 3.4 Accuracy:
-Minimum accuracy of extraction, documents below it will be discarded.
-
-### 3.5 Task Queue: 
+### 3.4 Task Queue: 
 Provide Task Queue to execute Extraction action
 
-### 3.6 List of Files:
+### 3.5 List of Files:
 List of files of selected format (Inherited from System.File)

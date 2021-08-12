@@ -132,7 +132,7 @@ Now you can download the Configuration Tool by doing the following:
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
-	{{% alert type="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that's supported by your Kubernetes cluster.{{% /alert %}}
+	{{% alert type="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
 
 	{{% alert type="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
@@ -698,15 +698,15 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ##### 4.3.2.3 Ingress{#ingress}
 
-**openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows to enable or disable TLS.
+**openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows you to enable or disable TLS.
 
-**kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows to configure the ingress path and custom ingress class (depends on the Ingress controller) and enable or disable TLS.
+**kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows you to configure the ingress path and custom ingress class (dependent on the Ingress controller) and enable or disable TLS.
 
 **service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
-This option can be used to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that's not managed by Mendix for Private Cloud).
+This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
 
 {{% alert type="info" %}}
-When switching between Ingress, OpenShift Routes and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 
 Only objects that are supported by the current option are managed by the Mendix Operator.
 For example, switching from OpenShift Routes to Ingress will not delete already existing OpenShift Routes - the Mendix Operator will be managing only Service and Ingress objects.

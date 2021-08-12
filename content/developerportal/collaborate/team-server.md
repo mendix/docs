@@ -63,7 +63,7 @@ Storage space is unlimited for apps connected to a commercial license. 1 GB of f
 
 ### 5.2 What Happens with My Valuable & Confidential Data?
 
-Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your project was deleted, by filing a [Mendix Support](https://support.mendix.com/hc/en-us) ticket.
+Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/hc/en-us) ticket.
 
 ## 6 Read More
 

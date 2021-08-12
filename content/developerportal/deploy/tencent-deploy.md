@@ -370,7 +370,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 5.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project.
+This lists the deployment packages which have been created for this app.
 
 ![](attachments/tencent-deploy/image17.png)
 
@@ -420,7 +420,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 ### 5.2 Environments {#environments}
 
-This section shows all the environments created for this app project.
+This section shows all the environments created for this app.
 
 ![](attachments/tencent-deploy/image19.png)
 
@@ -483,7 +483,7 @@ This opens the **Environment Details** page which is described in more detail in
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
+* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
@@ -543,7 +543,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 6.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 6.1.3.3 Scale Application
 
@@ -557,7 +557,7 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
 
-##### 6.1.3.5 Change Admin Password
+##### 6.1.3.5 Change Admin Password{#change-admin-password}
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 

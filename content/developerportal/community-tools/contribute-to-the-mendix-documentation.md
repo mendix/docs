@@ -89,7 +89,7 @@ Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](documentation-writing-guidelines)
 * Make sure the document files comply with these naming conventions:
-	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your Project," the filename should be `create-your-project.md`)
+	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
 	* Document file names should always be lower-case with a hyphen (`-`) between each word
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:

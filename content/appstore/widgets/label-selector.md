@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "label selector", "plat
 
 ## 1 Introduction
 
-The [Label Selector](https://appstore.home.mendix.com/link/app/292/) widget enables easily creating objects, assigning objects to other objects, and removing objects (for example, labels) from other objects.
+The [Label Selector](https://marketplace.mendix.com/link/component/292/) widget enables easily creating objects, assigning objects to other objects, and removing objects (for example, labels) from other objects.
 
 It features both an input box for searching and creating objects and a drop-down menu for selecting objects that already exist . The implementation is based on the [Tag-it library](https://aehlke.github.io/tag-it/).
 

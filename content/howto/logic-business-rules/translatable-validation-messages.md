@@ -1,7 +1,7 @@
 ---
 title: "Use Translatable Validation Messages"
 category: "Logic & Business Rules"
-menu_order: 14
+menu_order: 140
 tags: ["validation", "microflow", "translate"]
 ---
 

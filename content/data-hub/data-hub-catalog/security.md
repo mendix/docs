@@ -24,7 +24,7 @@ Access to data is determined by the identification protocols of the organization
 
 For Mendix apps that publish entities and those that consume the shared entities in their apps as [external entities](/refguide/external-entities), the following details apply:
 
-* The security for the OData-based service is defined in the publishing app – at the project, module, and entity level
+* The security for the OData-based service is defined in the publishing app – at the app, module, and entity level
 * The security that is defined at the module level will apply to the OData services that are published from the module and enforced when the entities from the service are used in a consuming app when end-users try to access the data
 	{{% alert type="info" %}}The security for an OData service can only be set if the [project security](/refguide/project-security) is enabled.{{% /alert %}}
 

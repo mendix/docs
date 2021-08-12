@@ -35,7 +35,7 @@ Perform the following steps to replace AppCloudServices with Mendix SSO:
 
 4. Delete the **AppCloudServices** module. You will also need to delete or exclude the **OnFirstLoginAppCloudUser** microflow which will have been added to your app.
 
-    Note that there may still be JAR libraries in your project which were used by AppCloudServices but which are no longer needed by your app.
+    Note that there may still be JAR libraries in your app which were used by AppCloudServices but which are no longer needed by your app.
 
 5. Add user administration functions, if required.
 

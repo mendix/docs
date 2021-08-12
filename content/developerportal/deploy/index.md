@@ -72,7 +72,7 @@ From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 
-Instructions for using the buildpack are described in [How to Build a Docker Image from a Mendix App Project](/developerportal/deploy/docker-deploy). 
+Instructions for using the buildpack are described in [How to Build a Docker Image from a Mendix app](/developerportal/deploy/docker-deploy). 
 
 The Docker buildpack is available at [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack).
 

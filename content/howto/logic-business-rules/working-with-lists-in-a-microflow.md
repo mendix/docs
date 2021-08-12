@@ -1,7 +1,7 @@
 ---
 title: "Work with Lists in a Microflow"
 category: "Logic & Business Rules"
-menu_order: 6
+menu_order: 60
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: ["microflow", "logic", "list"]
 ---

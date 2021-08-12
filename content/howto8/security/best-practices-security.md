@@ -37,7 +37,7 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
 
 These are the common cases and best practices:
 
@@ -176,4 +176,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).

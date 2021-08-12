@@ -221,7 +221,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 ### 4.2 Importing the QianfanSSO Module
 
-1. Open an existing app project in Studio Pro. If you don't have one, create a new app project first. Right-click the project to select **Import module package…**.
+1. Open an existing app in Studio Pro. If you do not have one, create a new app first. Right-click the app to select **Import module package…**.
 
     ![](attachments/qianfan-sso/image37.png)
 

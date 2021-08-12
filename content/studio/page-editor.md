@@ -47,6 +47,8 @@ You can perform the following basic functions when working on pages:
 * [Add elements on a page](#adding-elements)
 * [View element properties](#viewing-elements) 
 * [Delete elements](#deleting-elements)
+* [Create an Entity](#create-entity)
+* [Create an Association](#create-association)
 
 ### 2.1 Opening Pages {#opening-page}
 
@@ -149,6 +151,37 @@ To delete an element from a page, do one of the following:
 
 * Select this element and press <kbd>Delete</kbd>
 * Open the **Properties** tab of this element and this click **Delete** at the bottom of the tab
+
+### 2.9 Creating an Entity from a Page {#create-entity}
+
+You can create an entity from a page when configuring a data source for a widget that requires it. For example, you have a [data view](page-editor-data-view-list-view) and you would like to set the *Customer* entity as its data source, but you do not have the **Customer** entity in you app yet. You can create it from the **Select Entity** dialog box without having to switch to the [domain model](domain-models). Do the following:
+
+1. Select data view properties > **Entity** property.
+2. In the **Select Entity** dialog box, click the plus icon:
+    {{% image_container width="400" %}}![Select Entity dialog box](attachments/page-editor/creating-entity.png){{% /image_container %}}
+3. In the **Create New Entity** dialog box, set **Name** to **Customer**.
+4. Click **Create**.
+
+The new entity has been created in your app.
+
+
+### 2.10 Creating an Association from a Page {#create-association}
+
+You can create an [association](domain-models-association-properties) from a page when configuring a data source for a widget that requires it. 
+
+For example, you have a [data view](page-editor-data-view-list-view) with the **Customers** entity. *Inside* the data view, you add a [list view](page-editor-data-view-list-view) to show *reports* associated only with the customer who is currently shown in the data view. This means that you will show reports through an association. You can create the association from the page without having to open the domain model. Do the following:
+
+1. Open the list view properties and click the **Entity** property.
+
+2. In the **Select Entity** dialog box > **Entities Connected to Customer** section, click the plus icon:
+
+    {{% image_container width="400" %}}![Select Entity dialog box](attachments/page-editor/creating-association.png){{% /image_container %}}
+
+3. Select **Report** as the entity to connect the **Customer** entity with.
+
+4. Click **Select**.
+
+The association with the correct [multiplicity](domain-models-association-properties#multiplicity) has been added to your app. 
 
 ## 3 The Show Option
 

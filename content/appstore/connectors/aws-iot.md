@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "aws", "iot"]
 
 ## 1 Introduction
 
-The [AWS IoT](https://appstore.home.mendix.com/link/app/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
+The [AWS IoT](https://marketplace.mendix.com/link/component/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
 
 ### 1.1 Typical Use Cases
 
@@ -89,10 +89,3 @@ To publish a message on an MQTT topic, you can use the **Data - publish MQTT mes
 When configuring this action, you also need the certificates provided by AWS IoT:
 
 ![](attachments/aws-iot/data-publish-mqtt-message-properties.png)
-
-## 3 Developing This Marketplace Component
-
-To contribute to the development of this connector, follow these steps:
-
-1. All Java *.jar* dependencies are managed using an Ivy file. Download all the dependencies by first running `runivy.cmd`, which downloads all the *.jar* files required for running and testing the project into the **userlib** folder.
-2. After validating everything works, run `runivy-export.cmd`, which will delete all the *.jar* files in the **userlib** folder and only download those *.jar* files required for creating the connector *.mpk*.

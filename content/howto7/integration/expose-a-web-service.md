@@ -19,7 +19,7 @@ Mendix supports many ways to expose the functionality and data of your applicati
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of the [Mendix Modeler](https://appstore.home.mendix.com/index3.html)
+* Download the latest version of the [Mendix Modeler](https://marketplace.mendix.com/)
 
 {{% alert type="warning" %}}
 

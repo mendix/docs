@@ -10,10 +10,10 @@ For more information on native mobile app development, see the [native-template]
 
 These are the current versions in active development:
 
-* Native Template version 6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above. Click [here]() to see their release notes.
-* Native Template version 5.2.0 applies to apps built using Studio Pro [8.18.9](/releasenotes/studio-pro/8.18#8189) and above. Click [here]() to see their release notes.
-* Native Template version 5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15)-[8.18.8](/releasenotes/studio-pro/8.18#8188). Click [here]() to see their release notes.
-* Native Template version 5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14). Click [here]() to see their release notes.
+* Native Template version 6+ applies to apps built using Studio Pro [9.x](/releasenotes/studio-pro/9.0) and above. Click [here](nt-6-rn) to see their release notes.
+* Native Template version 5.2.0 applies to apps built using Studio Pro [8.18.9](/releasenotes/studio-pro/8.18#8189) and above. Click [here](nt-5.2.0-rn) to see their release notes.
+* Native Template version 5.1.x applies to apps built using Studio Pro [8.15.x](/releasenotes/studio-pro/8.15)-[8.18.8](/releasenotes/studio-pro/8.18#8188). Click [here](nt-5.1.x-rn) to see their release notes.
+* Native Template version 5.0.x applies to apps built using Studio Pro [8.12.1](/releasenotes/studio-pro/8.12#8121)–[8.14.x](/releasenotes/studio-pro/8.14). Click [here](nt-5.0.x-rn) to see their release notes.
 
 ## 6.2.0
 

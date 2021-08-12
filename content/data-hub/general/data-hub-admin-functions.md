@@ -92,7 +92,7 @@ To invite new users, do the following:
 
     {{% alert type="info" %}} You can invite only users with a Mendix account. Invitation email will not be sent to the emails which are not associated with any Mendix account. {{% /alert %}}
 
-4. Users receive the invitation, log into the Data Hub Catalog, and accept the invitation.
+4. Users receive the invitation, log into the Data Hub Catalog with their Mendix credentials, and accept the invitation.
 
     A user can access resources from one organization at a time, and, therefore, needs to select the company that sent the invitation in the **Company** drop-down list in the Catalog home page.
 

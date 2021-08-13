@@ -36,13 +36,13 @@ In addition to defining the business case for your component (including how it w
 
 {{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
 
-### 2.2 Creating a Marketplace Vendor Account {#creating-account}
+### 2.2 Applying to the Marketplace Vendor Program
 
-Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to create a Marketplace Vendor account.
+Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to [apply to the Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/#contactForm).
 
-Since your Marketplace Vendor account is associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
+Since your Marketplace Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
 
-When creating your Marketplace Vendor account, you will be asked for basic information, including your legal name and address. This information is used to check whether you want to sell your component or offer it for free.
+When applying to the program, you will be asked for basic information, including your legal name and address. This information is used to check whether you want to sell your component or offer it for free.
 
 | Account Detail | Description |
 | --- | --- |
@@ -56,6 +56,8 @@ When creating your Marketplace Vendor account, you will be asked for basic infor
 As the creator of the Marketplace Vendor account, you must have permission to legally bind your company to Mendix. If you are not the right person to do this, you can forward a request to one of your colleagues:
 
 ![](attachments/sell/representative.png)
+
+{{% todo %}}[**Is this section for applying via https://www.mendix.com/marketplace-vendor-program/#contactForm, or is there another place to apply or create an account?"**]{{% /todo %}}
 
 {{% todo %}}[**New image needed with "Vendors"**]{{% /todo %}}
 

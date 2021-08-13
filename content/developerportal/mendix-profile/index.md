@@ -72,7 +72,7 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/referral.png)
 {{% /image_container %}}
 

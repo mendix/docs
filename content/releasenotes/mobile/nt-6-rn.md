@@ -1,5 +1,5 @@
 ---
-title: "Native Template Version 6"
+title: "Native Template 6"
 parent: "nt-studio-pro-9-parent"
 menu_order: 10
 description: "Native Template 6 release notes."

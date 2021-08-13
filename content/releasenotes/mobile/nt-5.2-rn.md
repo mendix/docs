@@ -1,8 +1,8 @@
 ---
-title: "Native Template Version 5.2.0"
+title: "Native Template 5.2"
 parent: "nt-studio-pro-8-parent"
 menu_order: 10
-description: "Native Template 5.2.0 release notes."
+description: "Native Template 5.2 release notes."
 ---
 
 ## 5.2.0

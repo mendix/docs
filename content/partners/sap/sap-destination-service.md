@@ -40,16 +40,20 @@ The **Get Destination** action properties look like this:
 
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
 
-### 4.1 Overriding XSUAA Destination
+### 4.1 Authenticating SAP Destination Service
 
 By default, your destination will be found and authenticated using XSUAA. This is controlled using a constant `XSUAAEnabled` which defaults to `true`.
 
 ![](attachments/sap-destination-service/xsuaaenabled.png)
 
-If your destination uses `NoAuthentication` or `BasicAuthentication`, you can override the XSUAA destination by setting `XSUAAEnabled` to `false`. In this case, the destination will use the `VCAP` settings of the environment for authentication.
-This enables you to use XSUAA for single sign on, but use different authentication for your destination.
+Set `XSUAAEnabled` to `true` if your application is using XSUAA for user authentication, and you want to use the generated access token to authenticate with destination service.
 
-You should also set `XSUAAEnabled` to `false` even if you are not using XSUAA to provide SSO in your app.
+If your destination uses `NoAuthentication` or `BasicAuthentication`, set `XSUAAEnabled` to `false` if one of the following conditions applies:
+
+* you use XSUAA for single sign on, but do not need or want to use the user access token for your destination service authentication
+* if you are not using XSUAA for user authentication in your app.
+
+With `XSUAAEnabled` set to `false`, the destination will use the `VCAP` settings of the environment for authentication.
 
 ## 5 Destination Entity
 

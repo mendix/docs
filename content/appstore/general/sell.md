@@ -1,5 +1,5 @@
 ---
-title: "Sell Your Component on the Marketplace"
+title: "Sell Your Component in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "component", "app service"]

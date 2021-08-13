@@ -1,6 +1,8 @@
 ---
-title: "How to Register OData resources in the Data Hub Catalog"
+title: "Register OData Resources in the Data Hub Catalog"
 description: "How to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form"
+category: "Data Hub Catalog"
+menu_order: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
 ---
 
@@ -64,7 +66,7 @@ You can create a Personal Access Token in the Mendix **Warden** application. Fol
 
 1. To access the **Warden** app, go to [https://warden.mendix.com/](https://warden.mendix.com/) and log in to land on the Warden homepage.
 
-    ![Warden Home Screen](attachments/warden-home-screen.png)
+    ![Warden Home Screen](attachments/register-data/warden-home-screen.png)
 
 2. To create a new personal access token, click **Add**. The **Create a Personal Access Token** screen is displayed.
 
@@ -72,19 +74,19 @@ You can create a Personal Access Token in the Mendix **Warden** application. Fol
 
 4. In the **Select scopes that can be used with this token**, find the **Data Hub** section and check both the **mx:datahub:services:read** and **mx:datahub:services:write** boxes.
 	
-	![create token home](attachments/create-token.png)
+	![create token home](attachments/register-data/create-token.png)
    
 5. Click **Create**. 
 
     The token is generated and displayed in a pop-up window:
 
-    ![generated token](attachments/generated-token.png)
+    ![generated token](attachments/register-data/generated-token.png)
 
 6. Copy the **Token secret** and keep this token in a secure place. You will not get another chance to view this token once you close this dialog box.
 
 7. Click **Close** to return to the **Warden** homepage where all your Personal Access Tokens are listed. If needed, you can delete your token from this list using the red trash bin button.
 
-![generated token](attachments/warden-home-with-token.png)
+    ![generated token](attachments/register-data/warden-home-with-token.png)
 
 #### 4.1.2 Registering an Application Through the Data Hub Catalog Registration API {#register-application}
 
@@ -235,12 +237,12 @@ The Transform API converts the `dependencies.json` file your Mendix app generate
 
 To call the Transform API, you need:
 
-1. your app's `dependencies.json` file converted to an escaped JSON string
+* your app's `dependencies.json` file converted to an escaped JSON string
 
     {{% alert type="info" %}}You can find your `dependencies.json` in the `deployment` > `model` folder of your Mendix application.{{% /alert %}}
 
-2. endpoint location `Name`
-3. endpoint location `Value`
+* endpoint location `Name`
+* endpoint location `Value`
 
     {{% alert type="info" %}}These two values can be found in the `metadata.json` file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
@@ -317,19 +319,21 @@ The Data Hub Catalog has a UI form where you can register a single exposed OData
 - Application `Name`
 - Environment details: `Name`, `Location` (URL), `Type`
 
+Follow the steps below:
+
 1. Start at the [Data Hub Catalog homepage](https://hub.mendix.com). If the connector for your business application is not shown, use the generic **OData** v4 service:
 
-	![upload contract](attachments/register-data-source-odata-connector.png)
+	![upload contract](attachments/register-data/register-data-source-odata-connector.png)
 
 2. On the **Contract** screen, upload your XML or ZIP file.
 
-	{{% image_container width="400" %}}![upload contract](attachments/register-data-source-contract.png) {{% /image_container %}}
+	{{% image_container width="400" %}}![upload contract](attachments/register-data/register-data-source-contract.png) {{% /image_container %}}
 
 	If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
 3. On the **Data Source** screen specify the following Data Source details: `Name`, `Version`, `Path`.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service#semantic). The other fields on the form are optional.
 
-	{{% image_container width="400" %}}![upload contract](attachments/register-data-source-details.png) {{% /image_container %}}
+	{{% image_container width="400" %}}![upload contract](attachments/register-data/register-data-source-details.png) {{% /image_container %}}
 
 4. Select the **Go to next step** option that appears once you have filled out all the required fields.
 

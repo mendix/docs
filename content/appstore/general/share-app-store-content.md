@@ -82,7 +82,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 ### 3.4 Guidelines for Selling Components
 
-For details on how to prepare your component to sell it in the Marketplace, see [How to Sell Your Component in the Marketplace](sell).
+For details on preparing and selling your component, see [How to Sell Your Component in the Marketplace](sell).
 
 ## 4 Adding New Marketplace Content {#adding}
 

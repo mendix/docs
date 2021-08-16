@@ -16,7 +16,7 @@ You can access your Mendix profile by clicking the picture in the right top corn
 
 ## 2 Header {#header}
 
-Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, the amount of [credits](#challenges) you have or the amount of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the platform. If you have a certificate from our [Academy](https://academy.mendix.com) then we will also display it. Besides the header other information about yourself is on the **Personal Info** card. You can change these details in the [Settings](#settings)
+Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, the amount of [credits](#challenges) you have or the amount of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the platform. If you have a certificate from our [Academy](https://academy.mendix.com) then we will also display it. Besides, the header other information about yourself is on the **Personal Info** card. You can change these details in the [Settings](#settings)
 
 ## 3 Overview
 Your profile will open to the **Overview** tab. This tabs shows you at a quick glance how you are doing on our platform. You can see your:
@@ -37,11 +37,11 @@ The first profile card below the header presents your **Stats**. It shows you yo
 Don't get bummed out with a low amount because we all started like that, even our Expert developers! There are plenty of opportunities to gain more points to climb the [Leaderboard](#leaderboard).
 
 ## 4 Badges {#badges}
-Besides to the **Stats** chart, on the **Overview** tab you gain an overview of your **Badges**. These badges represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based from green (least rare), to blue, purple, and orange (most rare).
+Besides the **Stats** chart, on the **Overview** tab you gain an overview of your **Badges**. These badges represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based from green (least rare), to blue, purple, and orange (most rare).
 
 To see all your badges as well as the badges you can work towards, click **View all** to go to the **Badges** tab of your profile.
 
-From the you can select up to four **Featured badges** from the **Earned badges** section. These featured badges are then visible in the [Header] section of your profile. For that click on **Select as featured** to add them to the header.
+From there you can select up to four **Featured badges** from the **Earned badges** section. These featured badges are then visible in the [Header] section of your profile. For that click on **Select as featured** to add them to the header.
 
 {{% alert type="info" %}}
 In the **Earned badges** you find the badges you have completed. We wil only show you the highest completed badge if the badges is a multi-level badge. 
@@ -72,7 +72,7 @@ When you complete a challenge, click **Claim Credits** to claim the Mendix credi
 
 One of the greatest strengths of Mendix is our awesome developers community. The **Connections** card is a perfect place to start to connect to other developer in our community. When you get an invitation to connect, you can check out their profile and decide to accept or ignore it. 
 
-You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon, and an invitation is send.
+You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon, and an invitation is sent.
 
 {{% image_container width="350" %}}
 ![](attachments/connections.png)
@@ -193,7 +193,7 @@ The **Portfolio** card presents a selection of Mendix apps you have worked on. C
 
 ![](attachments/portfolio.png)
 
-To add a project to your portfolio, click **Add Project**, which will open the project editor. There are tips in the editor for what you should enter in each field. All the fields in the project editor are required before submitting the project.
+To add a project to your portfolio, click **Add Project**, which will open the project editor. There are tips in the editor for what you should put in each field. All the fields in the project editor are required before submitting the project.
 
 ![](attachments/add-project.png)
 
@@ -270,7 +270,7 @@ This section presents all the documents you have shared within different apps.
 
 In this section, you can view feedback submitted on the following:
 * Apps of which you are a team member
-* Your company’s apps of which you are not an team member
+* Your company’s apps of which you are not a team member
 
 When you click **Details** for feedback on an app of which you are a team member, you can manage the feedback. For details on how to do this, see Feedback Management.
 
@@ -296,7 +296,7 @@ In this section, you can merge your accounts and select your profile visibility.
 
 With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. It combines all your  points, certifications, and achievements. This way we support you on your way to the expert certification, or you climb on the leaderboard
 
-Before merging make sure your profile is public and that you logged in with the right email address. Enter the email address you want to merged into the logged in account and send the merge request.
+Before merging make sure your profile is public and that you logged in with the right email address. Enter the email address you want to have merged into the logged in account and send the merge request.
 
 We’ll take things from there!
 
@@ -328,7 +328,7 @@ To make your public profile private again, click **Make this profile private**.
 The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**
 
 {{% alert type="info" %}}
-Mendix has been tracking these data changes since November, 2018.
+Mendix has been tracking these data changes since November 2018.
 {{% /alert %}}
 
 #### 10.7.4 Removing your account
@@ -341,4 +341,4 @@ Abusing the Mendix Forum, point system, or other community tools is not allowed.
 
 ## 12 Main Document in This Category
 
-* [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work. As well as details on scopes generated in the Developer Portal
+* [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work, as well as details on scopes generated in the Developer Portal

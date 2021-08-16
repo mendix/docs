@@ -115,21 +115,44 @@ To view properties of an element, do one of the following:
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### Triggering a Workflow from a Page {#trigger-page}
+#### 3.6.1 Triggering a Workflow from a Page {#trigger-page}
 
-To start the workflow, you can add a widget with a specific on-click event on a page, for example, a button. 
+To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event & Events Section](on-click-event).
 
 Do the following:
 
-1. Open a page.
-2. Drag and drop a widget that has on-click event in its properties on the page, for example, a button.
-3. Open button's properties > **Events** section. 
-4. Set **On-click** property to **Call workflow**. 
-5. Set **Workflow** to the workflow you would like to trigger.
+1. Open a page from where you would like to trigger a workflow.
+2. Make sure you have a data container with the workflow context on your page. 
+3. Drag and drop a widget that has on-click event in its properties (for example, a button) inside the data container with the workflow context. 
+4. Open button's properties > **Events** section. 
+5. Set **On-click** property to **Call workflow**. 
+6. Set **Workflow** to the workflow you would like to trigger.
 
-#### Triggering a Workflow via a Microflow {#trigger-microflow}
+You have configured the button to trigger the workflow.
 
-To trigger a workflow via a microflow, you can add a **Call workflow** action to the microflow. 
+#### 3.6.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+
+To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](workflow-call).  
+
+Do the following:
+
+1. Open a microflow that will trigger a workflow.
+
+2. Make sure the microflow has a necessary parameter with the workflow context.
+
+3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+
+4. Double-click the activity to open its properties.
+
+5. Set **Workflow** to to the workflow you would like to trigger.
+
+6. Set **Context object** to the workflow context:
+
+    ![Call Workflow Example](attachments/workflows/call-workflow-example.png)
+
+7. Click **OK**.
+
+Now when you run this microflow, it will trigger the selected workflow. 
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 

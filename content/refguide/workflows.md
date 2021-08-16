@@ -111,6 +111,26 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
+### 3.6 Triggering Workflow
+
+You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
+
+#### Triggering a Workflow from a Page {#trigger-page}
+
+To start the workflow, you can add a widget with a specific on-click event on a page, for example, a button. 
+
+Do the following:
+
+1. Open a page.
+2. Drag and drop a widget that has on-click event in its properties on the page, for example, a button.
+3. Open button's properties > **Events** section. 
+4. Set **On-click** property to **Call workflow**. 
+5. Set **Workflow** to the workflow you would like to trigger.
+
+#### Triggering a Workflow via a Microflow {#trigger-microflow}
+
+To trigger a workflow via a microflow, you can add a **Call workflow** action to the microflow. 
+
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
 There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 

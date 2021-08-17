@@ -21,7 +21,7 @@ For Mendix apps deploying to the Mendix cloud, there is a deployment pipeline th
 
 Datasets from other enterprise applications can also be registered in the Catalog in any of the following ways:
 
-* Datasets from specific business applications can be manually registered from the Data Hub **Home**. They must be exposed in an OData v4 service. Click the business application and follow the steps to [register data sources from enterprise applications](#register-data).
+* Datasets from specific business applications can be manually registered from the Data Hub **Home**. They must be exposed in an OData v4 service. Click the business application and follow the steps to [register data sources from enterprise applications](register-data).
 * A registration pipeline can be set-up to register data sources that are exposed as OData v3 and OData v4 services to the Catalog using the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis).
 
 This section starts with guidelines and best practice for registering data sources and datasets in the Data Hub Catalog. The steps for registering an OData Service from Studio Pro are described in [Publishing an OData Service in Studio Pro to Register Entities](#odata-service-reg) section below.

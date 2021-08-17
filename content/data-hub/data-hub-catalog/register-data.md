@@ -12,17 +12,17 @@ There are three ways to register exposed OData services in the Data Hub Catalog.
 
 **This how-to will teach you how to register a service:**
 
-* Through the [Mendix Cloud](#mendix-cloud)
-* Through the [Data Hub Catalog Registration API](#registration-api)
-* Through the [Data Hub Catalog UI form](#registration-form)
+* [Through the Mendix Cloud](#mendix-cloud)
+* [Through the Data Hub Catalog Registration API](#registration-api)
+* [Through the Data Hub Catalog UI form](#registration-form)
 
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
-* You have a Mendix account
+* Install Studio Pro version [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/).
+* You have a Mendix account.
 * You have an exposed OData service that you are ready to register, or follow sections 3 and 4 in [this how-to](https://docs.mendix.com/data-hub/share-data/) to create one.
 
 
@@ -58,13 +58,13 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 
    If your service contract is not in the right format, use the [Transform API](#transform-api) to get your service contract in the right format before registering them.
 
-The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill in the required fields and one operation per path in this how-to. 
+The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
 #### 4.1.1 Creating a Data Hub Catalog Registration API token {#create-token}
 
 You can create a Personal Access Token in the Mendix **Warden** application. Follow the steps below:
 
-1. To access the **Warden** app, go to [https://warden.mendix.com/](https://warden.mendix.com/) and log in to land on the Warden homepage.
+1. To access the **Warden** app, go to [https://warden.mendix.com/](https://warden.mendix.com/) and log in. You land on the Warden homepage:
 
     ![Warden Home Screen](attachments/register-data/warden-home-screen.png)
 
@@ -82,7 +82,7 @@ You can create a Personal Access Token in the Mendix **Warden** application. Fol
 
     ![generated token](attachments/register-data/generated-token.png)
 
-6. Copy the **Token secret** and keep this token in a secure place. You will not get another chance to view this token once you close this dialog box.
+6. Copy the **Token secret** and keep this token in a secure place. You will not get another chance to view this token once you close this pop-up window.
 
 7. Click **Close** to return to the **Warden** homepage where all your Personal Access Tokens are listed. If needed, you can delete your token from this list using the red trash bin button.
 
@@ -92,8 +92,8 @@ You can create a Personal Access Token in the Mendix **Warden** application. Fol
 
 To register an application, you need:
 
-- a Personal Access Token
-- an application `Name`
+- Personal Access Token
+- Application `Name`
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications).
 
@@ -121,13 +121,13 @@ Use the application UUID to register your environment.
 
 #### 4.1.3 Registering an Environment Through the Data Hub Catalog Registration API {#register-environment}
 
-To register an environment, you need:
+To register an environment, you need the following:
 
-- a Personal Access Token
-- an `application_UUID`
-- an environment `Name`
-- an environment `Location`
-- an environment `Type`
+- Personal Access Token
+- `application_UUID`
+- Environment `Name`
+- Environment `Location`
+- Environment `Type`
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/post_applications__AppUUID__environments). 
 
@@ -162,14 +162,14 @@ Use the application UUID and the environment UUID to register one or more servic
 
 #### 4.1.4 Registering Services Through the Data Hub Catalog Registration API {#register-services}
 
-To register services, you need:
+To register services, you need the following:
 
-- a Personal Access Token
-- an `application_UUID`
-- an `environment_UUID`
-- a service `Path`, `Name`, and `ContractType`
-- a service version `Version` and `Security Scheme`
-- a service `Contract` with `Type` and `Value`
+- Personal Access Token
+- `application_UUID`
+- `environment_UUID`
+- Service `Path`, `Name`, and `ContractType`
+- Service version `Version` and `Security Scheme`
+- Service `Contract` with `Type` and `Value`
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints). 
 
@@ -229,20 +229,20 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 ```
 
 
-#### 4.1.5 Preparing Your Service Details Using the Transform API {#tranform-api}
+#### 4.1.5 Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 
 {{% alert type="info" %}}These optional fields are not currently converted by the Transform API: `SecurityClassification`, `Discoverable`, `Validated`, `ServiceVersion`, `Tags`.{{% /alert %}}
 
-To call the Transform API, you need:
+To call the Transform API, you need the following:
 
-* your app's `dependencies.json` file converted to an escaped JSON string
+* Your app's `dependencies.json` file converted to an escaped JSON string
 
     {{% alert type="info" %}}You can find your `dependencies.json` in the `deployment` > `model` folder of your Mendix application.{{% /alert %}}
 
-* endpoint location `Name`
-* endpoint location `Value`
+* Endpoint location `Name`
+* Endpoint location `Value`
 
     {{% alert type="info" %}}These two values can be found in the `metadata.json` file for your exposed OData service. They are in an array called `Constants`, and named `Name` and `DefaultValue`.{{% /alert %}}
 
@@ -310,7 +310,7 @@ A successful `POST` call results in a `200` status code and a JSON response body
 ```
 
 
-### 4.2 Registering a Service Through the Data Hub Catalog UI form {#registration-form}
+### 4.2 Registering a Service Through the Data Hub Catalog UI Form {#registration-form}
 
 The Data Hub Catalog has a UI form where you can register a single exposed OData service. Make sure you have collected the following details before you begin:
 
@@ -331,7 +331,7 @@ Follow the steps below:
 
 	If you selected the wrong file, click the **x** to remove it and upload a different one. 
 
-3. On the **Data Source** screen specify the following Data Source details: `Name`, `Version`, `Path`.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service#semantic). The other fields on the form are optional.
+3. On the **Data Source** screen, specify the following Data Source details: **Data Source Name**, **Data Source Version**, **Data Source Relative Path**.  The **Data Source Relative Path** is the path of the OData service contract relative to the *environment URL of the application*. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service#semantic). The other fields on the form are optional.
 
 	{{% image_container width="400" %}}![upload contract](attachments/register-data/register-data-source-details.png) {{% /image_container %}}
 
@@ -343,10 +343,10 @@ Follow the steps below:
 
 7. On the **Environment** screen, select an existing environment by name, or provide the `Name`, `Location` (URL), and `Type` to register a new one. The types options give users an indication of what type of data they might find there:
 
-  * **Production**: data is of production quality
-  * **Sandbox**: the Mendix Free App environment, data is not of production quality
-  * **Non-production**: hosting is paid for, but data is not of production quality
+    1. **Production**: data is of production quality.
+    2. **Sandbox**: the Mendix Free App environment, data is not of production quality.
+    3. **Non-production**: hosting is paid for, but data is not of production quality.
 
 8. Select the **Done!** option that appears once you have filled out all the required fields.
 
-9. Your OData service is registered in the Data Hub Catalog. 
+Congratulations! Your OData service is registered in the Data Hub Catalog. 

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1 Introduction</title>
+        <style>
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Script;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size1;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size2;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size3;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size4;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Typewriter;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype");font-weight:400;font-style:normal}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0;text-rendering:auto;border-color:currentColor}.katex *{-ms-high-contrast-adjust:none!important}.katex .katex-version:after{content:"0.13.0"}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-weight:700;font-style:italic}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{display:inline-table;table-layout:fixed;border-collapse:collapse}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;vertical-align:bottom;position:relative}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;vertical-align:bottom;font-size:1px;width:2px;min-width:2px}.katex .vbox{display:inline-flex;flex-direction:column;align-items:baseline}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{width:0;max-width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{width:0;position:relative}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{display:inline-block;border:0 solid;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline{display:inline-block;width:100%;border-bottom-style:dashed}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{display:block;position:absolute;width:100%;height:inherit;fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex svg path{stroke:none}.katex img{border-style:none;min-width:0;min-height:0;max-width:none;max-height:none}.katex .stretchy{width:100%;display:block;position:relative;overflow:hidden}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{width:100%;position:relative;overflow:hidden}.katex .halfarrow-left{position:absolute;left:0;width:50.2%;overflow:hidden}.katex .halfarrow-right{position:absolute;right:0;width:50.2%;overflow:hidden}.katex .brace-left{position:absolute;left:0;width:25.1%;overflow:hidden}.katex .brace-center{position:absolute;left:25%;width:50%;overflow:hidden}.katex .brace-right{position:absolute;right:0;width:25.1%;overflow:hidden}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{box-sizing:border-box;border:.04em solid}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{box-sizing:border-content;border-top:.049em solid;border-right:.049em solid;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{counter-increment:katexEqnNo;content:"(" counter(katexEqnNo) ")"}.katex .mml-eqn-num:before{counter-increment:mmlEqnNo;content:"(" counter(mmlEqnNo) ")"}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;position:absolute;left:calc(50% + .3em);text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{text-align:left;padding-left:2em}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <hr>
+<h2 id="title-3d-viewercategory-app-servicesmenu_order-1tags-3d-visualization-cad-app-store-marketplace-component-platform-support">title: &quot;3D Viewer&quot;
+category: &quot;App Services&quot;
+menu_order: 1
+tags: [&quot;3d visualization&quot;, &quot;cad&quot;, &quot;app store&quot;, &quot;marketplace&quot;, &quot;component&quot;, &quot;platform support&quot;]</h2>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.</p>
+<p>This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.</p>
+<p>Here is an overview of what the 3DViewer contains:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#41-predefined-entity">Predefined Entity</a></td>
+<td>ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument</td>
+</tr>
+<tr>
+<td><a href="#42-constants">Constants</a></td>
+<td>HttpEndpoint, LicenseToken, ModelSourceType</td>
+</tr>
+<tr>
+<td><a href="#43-microflow">Microflow</a></td>
+<td>DeleteModelFromMendix, DownloadMarkup</td>
+</tr>
+<tr>
+<td><a href="#44-nanoflow">Nanoflow</a></td>
+<td>CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix</td>
+</tr>
+<tr>
+<td><a href="#45-java-action">Java Action</a></td>
+<td>VisServerAction</td>
+</tr>
+<tr>
+<td><a href="#46-widgets">Widgets</a></td>
+<td>Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer</td>
+</tr>
+</tbody>
+</table>
+<p>In most cases, you will only need what are contained in <strong>Viewer3D/USE_ME</strong> folder. The content in the <strong>Internal</strong> folder is for internal use only and you will not need them.</p>
+<h3 id="11-typical-use-cases">1.1 Typical Use Cases</h3>
+<p>You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.</p>
+<h3 id="12-features">1.2 Features</h3>
+<p>This app service enables you to do the following:</p>
+<ul>
+<li>Upload to and load models from Mendix file storage or your own file storage (Both monolithic JT and shattered JT format are  supported)</li>
+<li>Display a 3D model</li>
+<li>Zoom, rotate, fit all, pan</li>
+<li>Use quick intuitive controls to navigate product structure</li>
+<li>Turn parts on and off</li>
+<li>Select and clear selection of parts</li>
+<li>Examine your model from preset viewing angles</li>
+<li>Display PMI</li>
+<li>Display model views</li>
+<li>Display part/assembly properties</li>
+<li>Display exploded view</li>
+<li>Create 3D cross-sections</li>
+<li>Create 2D markup on model</li>
+<li>Take snapshot of a model</li>
+<li>Perform 3D measurement on distance, angle, area, radius and length</li>
+</ul>
+<h3 id="13-limitations">1.3 Limitations</h3>
+<p>The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:</p>
+<ul>
+<li>
+<p>The <strong>Container3D</strong> widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widgets (except <strong>Uploader</strong> widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets won't work as expected, you will get nofitied and see errors when you switch to Design mode.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg" alt="widgetoutsidecontainer3d-structuremode"><br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/widgetoutsidecontainer3d-designmodeerror.jpg" alt="widgetoutsidecontainer3d-designmodeerror"></p>
+</li>
+<li>
+<p>One <strong>Container3D</strong> widget can only contain one <strong>Viewer</strong> widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/2viewerincontainer3d-structuremode.jpg" alt="2viewerincontainer3d-structuremode"><br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/2viewerincontainer3d-designmode.png" alt="2viewerincontainer3d-designmode"></p>
+</li>
+<li>
+<p><strong>Viewer</strong> widget is used to display a 3D model, all other 3D widgets (except <strong>Uploader</strong> widget and <strong>Container3D</strong> widget) needs a <strong>Viewer</strong> widget present on the page to interact with.</p>
+</li>
+<li>
+<p>Currently, only JT models with version 9 and above are supported.</p>
+</li>
+<li>
+<p>Before uploading shattered JT (.zip),  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, please make sure you input &quot;cu&quot; in the parameter.<br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8"></p>
+</li>
+</ul>
+<h2 id="2-installation">2 Installation</h2>
+<p>Follow the instructions in <a href="https://docs.mendix.com/appstore/general/app-store-content#4-2-using-a-module">How to Use App Store Content in Studio Pro</a> to import the 3D Viewer module into your app.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/import-3dviewer.jpg" alt="import-3dviewer">
+After importing, you need to map the <strong>Administrator</strong> and <strong>User</strong> <a href="https://docs.mendix.com/refguide8/module-security#module-role">module roles</a> of the installed modules to the applicable user roles in your app.</p>
+<h2 id="3-initializing-the-3d-viewer-app-service-on-app-startup">3 Initializing the 3D Viewer App Service on App Startup</h2>
+<p>To automatically start 3DViewer when app starts, create a <strong>Startup</strong> microflow, add the <strong>Viewer3D/USE_ME/VisServerAction</strong> Java action to the microflow, make sure the java action parameter <strong>Http endpoint</strong> is set to <code>Expression:@Viewer3D.HttpEndpoint</code>,  then set the return type of this microflow as <strong>Boolean</strong> with a <strong>Value</strong> of <strong>true</strong>. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/startupmicroflow.jpg" alt="startupmicroflow"></p>
+<p>You need to set this microflow as the after-startup step via <strong>Project Settings</strong> &gt; <strong>Runtime</strong> &gt; <a href="https://docs.mendix.com/refguide8/project-settings#after-startup">After startup</a>:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/afterstartup.jpg" alt="afterStartup"></p>
+<h2 id="4-3dviewer-content">4 3DViewer content</h2>
+<h3 id="41-predefined-entity">4.1 Predefined Entity</h3>
+<p><strong>ModelDocument</strong> entity is an entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/modeldocument.jpg" alt="modeldocument"></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ModelId</td>
+<td>A unique string to identify a model.</td>
+</tr>
+<tr>
+<td>ModelName</td>
+<td>Name of a model.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Indicates where the model is from. Currently it has two values:<strong>Mendix</strong> and <strong>Teamcenter</strong>. When the source is <strong>Mendix</strong>, it indicates the model is from Mendix file storage, when the source is <strong>Teamcenter</strong>, it indicates the model is from a Teamcenter instance.</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Indicates the author of the model.</td>
+</tr>
+<tr>
+<td>CreationDate</td>
+<td>For models stored in Mendix file storage, the <strong>CreationDate</strong> corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the <strong>CreationDate</strong> indicates the creation date of this model revision.</td>
+</tr>
+<tr>
+<td>FileSize</td>
+<td>The size of the model in Byte.</td>
+</tr>
+<tr>
+<td>FileType</td>
+<td>The 3D model format. Currently only the JT format is supported.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Used specifically for models uploaded and stored in Mendix file storage. The <strong>Status</strong> has 3 values: Complete, InProgress,Error, indicating if uploading of a model to Mendix file storage is Complete, or the uploading is still in progress, or the upload fails.</td>
+</tr>
+<tr>
+<td>ErrorReason</td>
+<td>Indicates the reason that causes a model upload error.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Pagination</strong> entity serves as an input parameter of the <strong>GetModelListFromMendix</strong> nanoflow. It allows you to paginate the model list returned by the nanoflow. If the values of the <strong>Pagination</strong> attributes are not specifically set, <strong>GetModelListFromMendix</strong> will return a full list of the models.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/pagination.jpg" alt="pagination"></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Intended use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>Indicates which page number to fetch.</td>
+</tr>
+<tr>
+<td>PageSize</td>
+<td>Indicates the item size of one page.</td>
+</tr>
+<tr>
+<td>OffSet</td>
+<td>Indicates the offset from the first item of the page.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Markup</strong> entity is a <strong>System.Image</strong> type of entity, it denotes a Markup image.</p>
+<p>Other two entities, <strong>MxModelDocument</strong> and <strong>MxChildDocument</strong> are internal entities, in most cases, you may not need them.</p>
+<h3 id="42-constants">4.2 Constants</h3>
+<p>The <strong>HttpEndpoint</strong> constant with the default value <strong>visualization</strong> is used to restrict value of parameter <strong>HttpEndpoint</strong> of the <strong>Viewer3D/USE_ME/VisServerAction</strong> Java action.</p>
+<p>The <strong>ModelSourceType</strong> constant with the value <strong>Mendix</strong> is used to signify the model source, you can use this constant to restrict the value of parameter <strong>Data source</strong> in Uploader widget, the parameter <strong>Model source type</strong> in Viewer widget, or the value of Attribute <strong>Source</strong> in <strong>ModelDocument</strong> entity.</p>
+<p>The <strong>LicenseToken</strong> constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a license token and set the value of constant <strong>LicenseToken</strong> to the license token in the deployment environment setting.</p>
+<p>If you build and run an app that uses 3DViewer locally in studio pro, you do not need to provide a value for <strong>LicenseToken</strong> constant, just leave it empty. Making is always free!</p>
+<p>For how to request and use a license token, please see <a href="#8-obtain-3dviewer-licensetoken-to-deploy-your-app">Obtain 3DViewer LicenseToken to deploy your app</a> for more details.</p>
+<h3 id="43-microflow">4.3 Microflow</h3>
+<p>The <strong>DeleteModelFromMendix</strong> microflow takes a <strong>ModelDocument</strong> object as an input parameter and deletes the corresponding model stored in the Mendix file storage.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/deletemodelfrommendix.jpg" alt="deletemodelfrommendix">
+The <strong>DownloadMarkup</strong> microflow takes a <strong>Markup</strong> object as input parameter and download the image to local.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/downloadmarkup.jpg" alt="downloadmarkup"></p>
+<h3 id="44-nanoflow">4.4 Nanoflow</h3>
+<p>The <strong>CreateModelDocumentFromFileDocument</strong> nanoflow takes a <strong>FileDocument</strong> type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. This allows you to get model from your existing file storages.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/CreateModelDocumentFromFileDocument.jpg" alt="CreateModelDocumentFromFileDocument"></p>
+<p>The <strong>GetModelListFromMendix</strong> nanoflow takes a <strong>Pagination</strong> object as an input parameter to fetch the model list from Mendix file storage and returns a list of <strong>ModelDocuments</strong> as a result. Each ModelDocument represents a model that is stored in the Mendix file storage.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/getmodellistfrommendix.jpg" alt="getmodellistfrommendix"></p>
+<p>The <strong>GetMarkupsFromMendix</strong> nanoflow takes a <strong>ModelDocument</strong> object as an input parameter to fetch the markup images associated with this model and returns a list of <strong>Markup</strong> object as a result. Each Markup represents an image that is stored in the Mendix file storage.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/getmarkupsfrommendix.jpg" alt="getmarkupsfrommendix"></p>
+<h3 id="45-java-action">4.5 Java Action</h3>
+<p>The <strong>VisServerAction</strong> Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. For 3DViewer to work, it is important to set the app's after-startup microflow to call the <strong>VisServerAction</strong> java action. Make sure parameter <strong>Http endpoint</strong> of this java action is set to <code>Expression:@Viewer3D.HttpEndpoint</code>.</p>
+<h3 id="46-widgets">4.6 Widgets</h3>
+<h4 id="461-core-widgets">4.6.1 Core Widgets</h4>
+<p>These are the  core widgets that are required to enable visualizing a 3D JT model:</p>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container3D</td>
+<td>A special container widget designed to put other 3D widgets in. This provides a shared context for 3D widgets to communicate with each other.</td>
+</tr>
+<tr>
+<td>Uploader</td>
+<td>Enables you to select a JT model from your local machine and upload it to the Mendix file storage.</td>
+</tr>
+<tr>
+<td>Viewer</td>
+<td>Provides a viewing window of your 3D model.</td>
+</tr>
+</tbody>
+</table>
+<p>The core widgets can be used in the following ways:</p>
+<ul>
+<li>
+<p><strong>Container3D</strong> – place this widget in any location of a page</p>
+</li>
+<li>
+<p><strong>Uploader</strong> – place this widget in any location of a page</p>
+<ul>
+<li>On the <strong>General</strong> tab, <strong>Model ID</strong>, and <strong>Data source</strong> attributes can be used to retrieve the uploading model's <strong>Model ID</strong>, and <strong>Model source type</strong> values:</li>
+</ul>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/uploadergeneral.jpg" alt="uploadergeneral"></p>
+</li>
+<li>
+<p><strong>Viewer</strong> – place this widget inside a <strong>Container3D</strong> widget; for this widget to visualize a model correctly, following properties need to be set correctly:</p>
+<ul>
+<li>On the <strong>Data Source</strong> tab, you must configure correct <strong>Model ID</strong> and <strong>Model source type</strong>. Example valid <strong>Model ID</strong> values are:  value of attribute <strong>ModelId</strong>  of a ModelDocument object, value of attribute <strong>Model ID</strong>  set by Uploader widget property. Valid <strong>Model Source Type</strong> values are: <code>Mendix</code> or <code>Teamcenter</code>, you can also use the constant <strong>Viewer3D/USER_ME/ModelSourceType</strong>.<br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-datasource.jpg" alt="viewer-datasource"></li>
+<li>On the <strong>Transport</strong> tab,  make sure the <strong>HttpEndpoint</strong> is set to <code>@Viewer3D.HttpEndpoint</code> or <code>visualization</code>.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-transport.jpg" alt="viewer-transport"></li>
+<li>On the <strong>Appearance</strong> tab, make sure the widget has a fixed height (for example, set Style to <code>height:600px</code>, or make sure height of its parent is fixed), otherwise this viewer will expand indefinitely.</li>
+</ul>
+<p>In addition, the Viewer widget provides customization options for changing its behavior (configuring these properties is optional)</p>
+<ul>
+<li>On the <strong>General</strong> tab:<br>
+<strong>Show coordinate system</strong> determines if a coordinate system will appear at the bottom-left of the viewer<br>
+<strong>Show navigation cube</strong> determines if a navigation cube will appear at the top-tight corner of the viewer<br>
+<strong>Show tooltip</strong> determines if a tooltip will pop up when you click on the model part; this accepts a Boolean value of <strong>false</strong> or  <strong>true</strong><br>
+<strong>Automatically load parts</strong> determines if the model part will be loaded into Viewer automatically; if set to <strong>Yes</strong>, the model will be automatically loaded as long as the Viewer receives the <strong>Model ID</strong> and <strong>Model source type</strong> values; if set to <strong>No</strong>, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling, in this use case, you will need to add PS tree widget so you can trigger part loading by clicking on the PS tree.<br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-general.jpg" alt="viewer-general"></li>
+<li>On the <strong>Events</strong> tab:<br>
+<strong>On selection change</strong> - by binding a String type attribute to the <strong>Selection</strong> property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer.<br>
+<strong>On error</strong>- by binding a String type attribute to the <strong>Error</strong> property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.<br>
+<strong>On progress change</strong> - by binding a String type  attribute to <strong>Progress status</strong> property, you can obtain the current model loading status.  By binding a Decimal type attribute to <strong>Progress percentage</strong> property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.<br>
+<strong>On load</strong> - by binding a Boolean type attribute to the <strong>Loaded</strong> property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.<br>
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-events.jpg" alt="viewer-events"></li>
+</ul>
+<p>3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact <a href="https://support.mendix.com/hc/en-us">Mendix Support</a> and raise a ticket against 3DViewer development team.</p>
+</li>
+</ul>
+<h4 id="462-panel-widgets">4.6.2 Panel Widgets</h4>
+<p>These are the widgets that have an operation panel that contains an interactive item for the end-user to operate on:</p>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PS tree</td>
+<td>Provides a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts will be loaded into Viewer.</td>
+</tr>
+<tr>
+<td>PS tree Table</td>
+<td>A configurable tree table to display product structure of a model and other model attributes of your choice.</td>
+</tr>
+<tr>
+<td>PMI tree</td>
+<td>Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups.</td>
+</tr>
+<tr>
+<td>Section view</td>
+<td>Enables creating a section cut on the model and provides a section view from various angles.</td>
+</tr>
+<tr>
+<td>Markup builder</td>
+<td>Enables creating 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>Enables performing measurements on 3D models including measuring Distance, Angle, Line length, Radius, Area</td>
+</tr>
+</tbody>
+</table>
+<p>Each panel widget should be placed in a <strong>Container3D</strong> widget. A <strong>Viewer</strong> widget with the right data source should also be in the same <strong>Container3D</strong> widget.</p>
+<p>The panel widgets can be used in the following ways:</p>
+<ul>
+<li>
+<p><strong>PS Tree</strong> – On the <strong>General</strong> tab, the following options are available:</p>
+<ul>
+<li><strong>Expand all</strong> determines if the model's product structure tree should be fully expanded at the initial load</li>
+<li>Use <strong>Show search</strong> to toggle a search bar that enables the end-user to enter a part name and search for the part in the PS Tree</li>
+<li><strong>Show lead structure</strong> determines if the sub-part data should be displayed in the PS Tree
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/pstree-general.jpg" alt="pstree-general"></li>
+</ul>
+</li>
+<li>
+<p><strong>PS Tree Table</strong> – compared to the <strong>PS Tree</strong> widget, this widget adds an additional configurable property <strong>Column</strong>, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/pstreetable-general.jpg" alt="pstreetable-general"></p>
+</li>
+<li>
+<p><strong>PMI tree</strong> - On the <strong>General</strong> tab, the property <strong>Expand all tree nodes</strong> determines if all tree nodes are expanded by default. When set to <code>yes</code>, you will see a PMI tree fully expanded by default on this widget load; When set to <code>no</code>, PMI tree will not fully expand by default. The property <strong>Auto load</strong> determines if all PMI should be automatically loaded into viewer when PMI structure tree is loaded.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/pmitree-general.jpg" alt="pmitree-general"></p>
+</li>
+<li>
+<p><strong>Section view</strong> - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear section planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see <a href="#71-create-3d-section">Create 3D Section</a>.</p>
+</li>
+<li>
+<p><strong>Markup builder</strong> -</p>
+<ul>
+<li>On <strong>General</strong> tab, by setting property <strong>Enable</strong> to true or false, you can switch on and off the markup mode, when set to <code>true</code>, model will be locked to a 2D dimension and won't react to mouse rotate, when set to <code>false</code>, model will be unlocked and return to rotatable state; another property is <strong>Markup color</strong>, it allows you to set color of markup annotation. Valid values are <a href="https://www.w3schools.com/CSSref/css_colors_legal.asp">CSS Legal color value</a>, for example, RGB value, predefined color names, hexadecimal color values.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/markup-general.jpg" alt="markup-general"></li>
+<li>On <strong>Event</strong> tab, by binding a boolean type attribute to <strong>Save</strong> property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to <code>true</code>, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is <code>false</code>, it means the save is not successful. By setting <strong>Action</strong>, you can choose to trigger an action based on the value of <strong>Save</strong> status.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/markup-events.jpg" alt="markup-events"></li>
+</ul>
+</li>
+<li>
+<p><strong>Measurement</strong> - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how to perform measurement on a 3D model. Please see <a href="#72-perform-3d-measurement">Perform 3D Measurement</a></p>
+</li>
+</ul>
+<h4 id="463-toolbar-widgets">4.6.3 Toolbar widgets</h4>
+<p>These widgets do not require additional configuration. Simply place them in a <strong>Container3D</strong> widget with the accompanying <strong>Viewer</strong> widget.</p>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool bar item camera mode</td>
+<td>Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry.</td>
+</tr>
+<tr>
+<td>Tool bar item camera orientation</td>
+<td>Enables viewing the model from different camera orientations.</td>
+</tr>
+<tr>
+<td>Tool bar item explode slider</td>
+<td>Enables creating an exploded view of your assembly.</td>
+</tr>
+<tr>
+<td>Tool bar item fit all</td>
+<td>Enables fitting all the model parts in the viewer.</td>
+</tr>
+<tr>
+<td>Tool bar item render mode</td>
+<td>Enables toggling between different model render modes.</td>
+</tr>
+<tr>
+<td>Tool bar item selection mode</td>
+<td>Provides the ability to select a model part, edge, face, and body.</td>
+</tr>
+<tr>
+<td>Tool bar item snapshot</td>
+<td>Provides the ability to take a snapshot of the current Viewer and save the snapshot to the local machine.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-using-3d-viewer">6 Using 3D Viewer</h2>
+<p>3D Viewer mainly provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.</p>
+<p>Given that you start from a blank app template in Mendix Studio Pro, you can follow the instructions below to visualize your local JT model quickly.</p>
+<h3 id="61-uploading--viewing-a-3d-jt-model-in-your-browser">6.1 Uploading &amp; Viewing a 3D JT Model in Your Browser</h3>
+<p>For the <strong>Viewer</strong> widget to visualize a JT model, two data source attributes should be set: <strong>Model ID</strong> and <strong>Model source type</strong>. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the <strong>Uploader</strong> widget and set to that of the <strong>Viewer</strong> widget.</p>
+<p>Follow these steps to configure this visualization:</p>
+<ol>
+<li>
+<p>Place a <strong>Container3D</strong> widget on a page.</p>
+</li>
+<li>
+<p>Put the <strong>Uploader</strong> widget and <strong>Viewer</strong> widget into the <strong>Container3D</strong> widget and give them a layout.</p>
+</li>
+<li>
+<p>Set a fixed height of the <strong>Viewer</strong> widget (toggle to <strong>Design mode</strong> to see the preview).</p>
+</li>
+<li>
+<p>Create an entity called <strong>UploadedModel</strong> in your app module's domain model.</p>
+</li>
+<li>
+<p>Wrap the <strong>Uploader</strong> and <strong>Viewer</strong> widgets inside a new Data view widget.</p>
+</li>
+<li>
+<p>Create a nanoflow, call it <em>CreatedUploadedModel</em>, and set this as data source of the data view.</p>
+</li>
+<li>
+<p>Create two attributes for the <strong>UploadedModel</strong> entity. Set them to receive the value returned from the <strong>Uploader</strong>'s <strong>Data source</strong> and <strong>UploadModelId</strong>:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/uploader-uploadedmodelinfo.jpg" alt="uploader-uploadedmodelinfo"></p>
+</li>
+<li>
+<p>Set the data source attributes of the <strong>Viewer</strong> widget by setting <strong>Model ID</strong> to <strong>UploadedModelID</strong> and <strong>Model Source Type</strong> to <strong>Mendix</strong>:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-datasourceuploaded.jpg" alt="viewer-datasourceuploaded"></p>
+</li>
+<li>
+<p>Set <strong>Automatically load parts</strong> to <strong>Yes</strong>, which enables loading the model automatically upon successful upload:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-autoloadparts.jpg" alt="viewer-autoloadparts"></p>
+</li>
+<li>
+<p>Run your app project locally. You can now upload a JT file and view it directly in the browser:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/runlocally-uploadandview.jpg" alt="runlocally-uploadandview"></p>
+</li>
+</ol>
+<h3 id="62-displaying-model-loading-progress-with-progress-bar-widget">6.2 Displaying Model Loading Progress with Progress Bar Widget</h3>
+<p>When the end-user is uploading or loading a model, they may want to know the uploading and loading progress.</p>
+<p>Uploading progress in the <strong>Uploader</strong> widget can seen in the uploader panel :</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/uploader-uploadedstatus.jpg" alt="uploader-uploadedstatus"></p>
+<p>Loading progress in the <strong>Viewer</strong> widget can be obtained via the <strong>Progress status</strong> and <strong>Progress percentage</strong> attributes in Event tab.</p>
+<p>Follow these steps to display the model loading progress:</p>
+<ol>
+<li>
+<p>Create an entity called <em>PageObject</em>, add decimal type attribute called <em>LoadingProgress</em> with a default value of <code>= 0</code> (as the <strong>Progress bar</strong> widget expects a decimal value).</p>
+</li>
+<li>
+<p>Create a nanoflow called <em>createPageObject</em> that returns a <strong>PageObject</strong> object.</p>
+</li>
+<li>
+<p>Wrap <strong>Container3D</strong> with a data view and set the <strong>Data source</strong> of the data view to the <strong>createPageObject</strong> nanoflow.</p>
+</li>
+<li>
+<p>Set the value of the <strong>LoadingProgress</strong> attribute by setting the <strong>Progress percentage</strong> property:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage"></p>
+</li>
+<li>
+<p>Add the <strong>Progress Bar</strong> to the page and set <strong>PageObjectLoadingProgress</strong> as the <strong>Progress Attribute</strong>:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/progressbar-progressattribute.jpg" alt="progressbar-progressattribute"></p>
+</li>
+<li>
+<p>Run your app locally. You can see the real-time model loading progress:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/runlocally-loadingprogress.jpg" alt="runlocally-loadingprogress"></p>
+</li>
+</ol>
+<h3 id="63-utilizing-more-3d-functionality">6.3 Utilizing More 3D Functionality</h3>
+<p>You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as to your need. For example:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/structuremode-more3dwidgets.jpg" alt="structuremode-more3dwidgets"></p>
+<h3 id="64-managing-uploaded-models">6.4 Managing Uploaded Models</h3>
+<p>In the previous use case, you can only visualize the model you upload.</p>
+<p>Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the <strong>GetModelListFromMendix</strong> nanoflow and <strong>DeleteModelFromMendix</strong> microflow to help you build model data management functionality into your app.</p>
+<h4 id="641-building-a-model-list">6.4.1 Building a Model List</h4>
+<p>The Mendix native <a href="/refguide/list-view">list view</a> can be used to display the model list by following these steps:</p>
+<ol>
+<li>
+<p>Use the <strong>View3D/USER_ME/GetModelListFromMendix</strong> nanoflow or copy it to your app module. A list of <strong>ModelDocument</strong> objects will be returned after calling the nanoflow.</p>
+</li>
+<li>
+<p>Add a <a href="/refguide/page-properties#pop-up">pop-up page</a> to display the model list via a button click or another event of your choice.</p>
+</li>
+<li>
+<p>Place a list view in the page and set the <strong>GetModelListFromMendix</strong> nanoflow as the <strong>Data source</strong>.</p>
+</li>
+<li>
+<p>As <strong>GetModelListFromMendix</strong> requires a <strong>Pagination</strong> parameter input, wrap the list view with a data view. Then, create a nanoflow called <em>CreatePaginationObject</em> nanoflow and set that nanoflow as the list view's <strong>Data source</strong>.</p>
+</li>
+<li>
+<p>Fill in the list item with the information you are interested in:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/openmodelpopup-listview.jpg" alt="openmodelpopUp-listview"></p>
+</li>
+</ol>
+<h4 id="642-opening-a-model-from-the-model-list">6.4.2 Opening a Model from the Model List</h4>
+<p>Once you have the model list, you may want to click to select a model from the list and view the model. As the <strong>Viewer</strong> widget expects <strong>ModelId</strong> and <strong>Model Source Type</strong> to visualize a model, such information of the selected model needs to be passed to the <strong>Viewer</strong> widget. Since each list item is a <strong>ModelDocument</strong> object and this object contains various pieces of information about the selected model (including <strong>ModelId</strong> and <strong>Model Source Type</strong>), you need to pass this object to the <strong>Viewer</strong> widget.</p>
+<p>Follow these steps for configuration:</p>
+<ol>
+<li>
+<p>Define the <strong>On click</strong> action for the list view so as to pass the selected model to the <strong>Viewer</strong> widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the <strong>ModelDocument</strong> entity defined in the <strong>Viewer3D</strong> module's domain model. Make the object a shared object between the page the <strong>Viewer</strong> is in and the model list page. In this example, you are creating a <strong>PageObject</strong> with this home page:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/homepage-pageobject.jpg" alt="homepage-pageobject"></p>
+<p>This is the model pop-up page:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/openmodelpopup-pageobject.jpg" alt="openmodelpopUp-pageobject"></p>
+</li>
+<li>
+<p>Set the <strong>On click</strong> action of the model list item, then change the <strong>ModelDocument</strong> object with which the <strong>PageObject</strong> is associated to return the value so that home page can be refreshed on a <strong>PageObject</strong> change:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/openselectedmodel-nanoflow.jpg" alt="openselectedmodel-nanoflow"></p>
+</li>
+<li>
+<p>Run your app locally. You will get a simple model list where you can select which model to open and visualize it with the home-page viewer:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/openmodellistpopup-demo.jpg" alt="openmodellistpopup-demo"></p>
+</li>
+</ol>
+<h4 id="643-deleting-a-model">6.4.3 Deleting a Model</h4>
+<p>There might be some models that you do not want in the database, so you can delete these too. The 3D Viewer app service provides the <strong>DeleteModelFromMendix</strong> microflow to achieve this.</p>
+<p>Follow these steps to delete a model from the database:</p>
+<ol>
+<li>
+<p>Use the <strong>Viewer3D/USE_M3/DeleteModelFromMendix</strong> microflow directly or copy it to one of your app modules.</p>
+</li>
+<li>
+<p><strong>DeleteModelFromMendix</strong> expects a ModelDocument (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps a model list was built, each list item of which is a ModelDocument. For a model list item, add a <strong>Delete</strong> button:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/deletemodel-deletebutton.jpg" alt="deletemodel-deletebutton"></p>
+</li>
+<li>
+<p>Create a nanoflow called <em>DeleteModel</em> and set <strong>ModelDocument</strong> as the input parameter. Then, call the <strong>Viewer3D/USE_M3/DeleteModelFromMendix</strong> microflow and commit the <strong>ModelDocument</strong>:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/deletemodel-nanoflow.jpg" alt="deletemodel-nanoflow"></p>
+</li>
+<li>
+<p>Set the <strong>On click</strong> event of the <strong>Delete</strong> button to the <strong>DeleteModel</strong> nanoflow.</p>
+</li>
+<li>
+<p>Run your app locally. You should be able to delete a model by clicking <strong>Delete</strong>.</p>
+</li>
+</ol>
+<p>Now you are able to get a list of models, select a list item to open a model, and delete the model.</p>
+<h3 id="65-handling-viewer-events">6.5 Handling Viewer Events</h3>
+<p>Multiple events can be picked up by the <strong>Viewer</strong> widget and can be used to build your customized event handling logic.</p>
+<p>There are four main types of events that can be picked up on the <strong>Viewer</strong> widget, here is an example setting:</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/viewer-viewerevents.jpg" alt="viewer-viewerevents"></p>
+<ul>
+<li><strong>On Selection Change</strong> – by selecting one attribute to set <strong>SelectionSet</strong>, you can get information on the selected part. For this you might need to work with Viewer APIs, if you have further inquiries on how to use Viewer APIs, please contact <a href="https://support.mendix.com/hc/en-us">Mendix Support</a> and raise a ticket against 3DViewer development team.</li>
+<li><strong>OnError</strong> – by selecting one attribute to set the <strong>On error</strong> event, you can pick up an error exposed by the <strong>Viewer</strong></li>
+<li><strong>On Progress Change</strong> – by selecting one attribute for the <strong>setProgress</strong> value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree</li>
+<li><strong>On load Change</strong> – by selecting one attribute for the <strong>loaded</strong> value, you can get the current loading status of product structure tree.</li>
+</ul>
+<h2 id="7-others">7 Others</h2>
+<h3 id="71-create-3d-section">7.1 Create 3D Section</h3>
+<p>When a model is loaded in the viewer, the Section View widget enables you to inspect the interior structure of a model by adding standard section planes, delete a section plane, clear all section planes, position plane, clip away parts.</p>
+<p>Here is a list of UI operations within the Section View widget.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/sectionview-designmode.jpg" alt="sectionview-designmode"><br>
+<strong>Action</strong>:</p>
+<p>Add - Add a section plane. First select an axis along which you would like to section the model, then click Add, you will see a section plane of the desired axis is added to the scene, the default position of the newly added section plane is in the middle of the bounding box of the direction selected.</p>
+<p>Delete - Delete a selected section plane. Click on the edge of the section plane to select it, when selected, the section plane edges are highlighted in yellow color, then click Delete, this section plane will be deleted.</p>
+<p>Clear -  Clear all the section planes added to the scene.</p>
+<p><strong>Direction</strong>:</p>
+<p>X Direction - Sets X axis of the default coordinate system as the reference.<br>
+Y Direction - Sets Y axis of the default coordinate system as the reference.<br>
+Z Direction - Sets Z axis of the default coordinate system as the reference.<br>
+For example, if you have select Y Direction, then the cross section is created on the ZX plane.</p>
+<p><strong>Clipping</strong>:</p>
+<p>When a section plane is selected (highlighted in yellow color), you can choose which part of the model you would like to clip away by clicking on 4 clipping options:<br>
+Off - Don't clip.<br>
+Both - Clip both sides, shows the 2D intersecting curve on the section plane.<br>
+Near - Clip away the positive side (toward direction).<br>
+Far - Clip away the negative side (away from direction).</p>
+<p><strong>Position</strong>:</p>
+<p>You can slide the position sliders to move the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.</p>
+<p>You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.</p>
+<h3 id="72-perform-3d-measurement">7.2 Perform 3D Measurement</h3>
+<p>When a model is loaded into the viewer, Measurement widget provides a set of tools to measure different geometrical entities.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/measurement-panel.jpg" alt="measurement-panel"></p>
+<p><strong>Measurement Mode</strong><br>
+Distance : Measure the distance between two part features.
+Length: Measure length of a line.<br>
+Radius: Measure the radius of a circular edge or surface.<br>
+Angle: Measure the angle between two edges or surfaces.<br>
+Area: Measure the area of a surface.</p>
+<h2 id="8-obtain-3dviewer-licensetoken-to-deploy-your-app">8 Obtain 3DViewer LicenseToken to deploy your app</h2>
+<p>3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid <code>LicenseToken</code> as environment variable in deployment setting, otherwise 3DViewer widget features may not work in your app.</p>
+<h3 id="81-decide-if-you-need-to-request-a-licensetoken">8.1 Decide if you need to request a LicenseToken</h3>
+<p>If you use 3DViewer in your app, and you just need to run your app locally, for testing and trial purpose, no plan for deploy the app, you will not need to request a <code>LicenseToken</code>.</p>
+<p>If you plan to use 3DViewer in your app, and decide to deploy your app to the cloud, then you will need to request a <code>LicenseToken</code>.</p>
+<h3 id="82-do-i-have-to-pay-to-get-a-licensetoken">8.2 Do I have to pay to get a LicenseToken</h3>
+<p>Yes, you are subject to pay for subscription fee.</p>
+<h3 id="83-how-to-request-a-licensetoken">8.3 How to request a LicenseToken</h3>
+<p>For the time being, to request free-trial and offical subscription <code>LicenseToken</code>, please provide <strong>your company legal name</strong>, <strong>your email address</strong>, <strong>your full name</strong>, and send these information to <a href="mailto:DIS_MXAWS_3DViewer_Support@mendix.com">DIS_MXAWS_3DViewer_Support@mendix.com</a>. You may be asked to provide more information. In the end you will receive a <code>LicenseToken</code> with an agreed expiration date.</p>
+<h3 id="84-how-to-configure-lisensetoken-for-your-app-deployment">8.4 How to configure LisenseToken for your app deployment</h3>
+<h4 id="841-configure-licensetoken-in-mendix-studio-pro">8.4.1 Configure LicenseToken in Mendix Studio Pro</h4>
+<p>In Mendix Studio Pro, go to Pojrect Settings, in Configurations Tab, click to Edit, under Constants tab, create a new Constant with the predefined constant <code>Viewer3D.LicenseToken</code>, fill the Value with your obtained LicenseToken. Click OK to confirm the settings.
+<img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/licensetoken-inmendix.jpg" alt="licensetoken-inmendix"></p>
+<p>Click Run to deploy your app to the cloud.</p>
+<h4 id="842-configure-licensetoken-in-mendix-developer-portal">8.4.2 Configure LicenseToken in Mendix Developer Portal</h4>
+<p>You can also add or update LicenseToken via Mendix Developer Portal.</p>
+<p><img src="file:////Users/Yaping.Lang/Documents/RickGitRepo/docs/content/appstore/app-services/attachments/3d-viewer/licensetoken-developerportal.jpg" alt="licensetoken-developerportal"></p>
+<h2 id="9-loading--visualizing-a-model-from-teamcenter">9 Loading &amp; Visualizing a Model from Teamcenter</h2>
+<p>JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the <a href="3d-viewer-for-teamcenter">3D Viewer for Teamcenter</a> module to achieve this.</p>
+<h2 id="10-read-more">10 Read More</h2>
+<ul>
+<li><a href="3d-viewer-for-teamcenter">3D Viewer for Teamcenter</a></li>
+</ul>
+
+    </body>
+    </html>

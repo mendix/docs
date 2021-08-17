@@ -12,7 +12,7 @@ This step will help you add the module dependencies based on your use case. If y
 
 ## 2 Implement the Encryption Module
 
-This part may be skipped if the `Encryption` module is already implemented in your application.
+This part may be skipped if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your application.
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Encryption*.
@@ -22,7 +22,7 @@ This part may be skipped if the `Encryption` module is already implemented in yo
 
 ## 3 Implement the Community Commons Module
 
-This part may be skipped if the `Community Commons` module is already implemented in your application.
+This part may be skipped if the [Community Commons](https://marketplace.mendix.com/link/component/170) module is already implemented in your application.
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Community Commons*.

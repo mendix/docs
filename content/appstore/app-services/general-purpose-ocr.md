@@ -15,7 +15,7 @@ You can simply use _General Purpose OCR Activity_ to process images in bulk.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _Receipt Processing_ module into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _General Purpose OCR_ module into your app.
 
 ## 3 Configuration
 

@@ -16,17 +16,17 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 
 ### Improvements
 
-* The Make It Native is now using React Native 0.64.2 to support Studio Pro 9.5.0.
+* The Make It Native 9 app now uses React Native 0.64.2 to support Studio Pro 9.5.0.
 
 ### Fixes 
 
-* The take picture action should once again work as expected.
+* The Take picture action should now work as expected.
 
 ## Android 1.1.0 / iOS 1.1.0
 
 **Release date: 30th March 2021**
 
-This is the official release of the Android and iOS versions of the Make It Native 9 app, with support for Mendix Studio Pro 9.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform.
+This is the official release of the Android and iOS versions of the Make It Native 9 app with support for Mendix Studio Pro 9.0. Both the Android and iOS versions allow you to preview and debug your locally-running native app on any [supported mobile platforms](/refguide/system-requirements#mobileos).
 
 ## Android 1.0.5
 

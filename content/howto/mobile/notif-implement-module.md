@@ -25,9 +25,9 @@ In order for your app to use to use the Push Connections Module, configure the f
 
 1. Open **Project** > **Security** in the App Explorer.
 1. Go to **User roles**.
-1. Adjust the user roles that should have access to the push notifications.
-	a. `Administrator` module role should be assigned to at least one user executing configuration and administrative tasks.
-	b. `Anonymous` module role may be assigned to your anonymous project user role.
+1.  Adjust the user roles that should have access to the push notifications:
+	a. `Administrator` module role should be assigned to at least one user executing configuration and administrative tasks. <br />
+	b. `Anonymous` module role may be assigned to your anonymous project user role. <br />
 	c. `User` is for any user role that needs to interact with notifications without being an `Administrator` or `Anonymous` user role.
 1. Save the Security settings.
 1. Open up **Project** > **Navigation** in the App Explorer.

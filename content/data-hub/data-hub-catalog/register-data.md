@@ -229,7 +229,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
 ```
 
 
-#### 4.1.5 Preparing Your Service Details Using the Transformation API {#tranformation-api}
+#### 4.1.5 Preparing Your Service Details Using the Transform API {#tranform-api}
 
 The Transform API converts the `dependencies.json` file your Mendix app generates into the fields the Registration API requires to registers services. 
 

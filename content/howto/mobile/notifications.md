@@ -10,9 +10,14 @@ These guides will teach you to configure both push notifications (also known as 
 
 Push Notifications:
 
-* [Set Up Push Notifications](setting-up-native-push-notifications)
-* [Use Push Notifications](native-remote-notifications)
+* [Implement Push Notifications](LINKHERE)
+* [Add Module Dependencies](LINKHERE)
+* [Implement the Push Notifications Module](LINKHERE)
+* [Configure Push Notifications](LINKHERE)
+* [Native Push Notification Implementation](LINKHERE)
+* [Build a Native Mobile App with Push Notifications](LINKHERE)
+* [Send Your First Test Push Notification](LINKHERE)
 
-Local Notifications:
+For information on local notifications specifically, pay special attention to [DOC NAME HERE](LINKHERE).
 
-* [Use Local Notifications](local-notif-parent)
+For information on push notifications in hybrid apps, see [How to Include Push Notifications](LINKHERE).

@@ -14,27 +14,27 @@ Now that all the prerequisites have been implemented in your application it is t
 
 If you haven’t done so make sure to download the module from the Marketplace
 
-1. Open up the marketplace from Studio pro.
+1. Open up the Marketplace from Studio Pro.
 1. Search for `Push Notification Connector`.
 1. Open the Push Notification Connector module.
-1. Click `Download`.
+1. Click **Download**.
 
 ## 3 Configure Your App
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 
-1. Open `Project` > `Security` in the Project/App Explorer.
-1. Go to `User roles`.
+1. Open **Project** > **Security** in the App Explorer.
+1. Go to **User roles**.
 1. Adjust the user roles that should have access to the push notifications.
 	a. `Administrator` module role should be assigned to at least one user executing configuration and administrative tasks.
 	b. `Anonymous` module role may be assigned to your anonymous project user role.
 	c. `User` is for any user role that needs to interact with notifications without being an `Administrator` or `Anonymous` user role.
 1. Save the Security settings.
-1. Open up `Project` > `Navigation` in the Project/App Explorer.
+1. Open up **Project** > **Navigation** in the App Explorer.
 1. Add a new open page navigation item to the `Responsive` navigation profile.
-1. Select the page `Administration` from the `PushNotifications` module.
-	a. This page is located in the `_Use Me/Web` folder of the `PusNotifications` module.
-1. Add a microflow sub-call to your `Afterstartup` microflow for the microflow `AfterStartup_PushNotifications`.
+1. Select the page **Administration** from the **PushNotifications** module.
+	a. This page is located in the `_Use Me/Web` folder of the **PusNotifications** module.
+1. Add a microflow sub-call to your **Afterstartup** microflow for the microflow **AfterStartup_PushNotifications**.
 	a. If you do not have any afterstartup microflow configured yet read here how to set one up.
 
 Now you are able to start your application and move on to the next step configuring your runtime.

@@ -13,9 +13,6 @@ You can simply use _General Purpose OCR Activity_ to process images in bulk.
 ### 1.2 Features
 * Extract data from bulk images and get output in JSON or XML formats
 
-### 1.3 Limitation
-* Supports only jpg / jpeg image formats.
-
 ## 2 Installation
 
 Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _Receipt Processing_ module into your app.

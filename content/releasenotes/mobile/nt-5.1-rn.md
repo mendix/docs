@@ -5,6 +5,14 @@ menu_order: 20
 description: "Native Template 5.1 release notes."
 ---
 
+## 5.1.15
+
+**Release date: August 9th, 2021**
+
+### Improvements
+
+* This release introduces support for Firebase Crashlytics and removes previous references to the deprecated Fabric.io dependencies.
+
 ## 5.1.14
 
 **Release date: July 20th, 2021**

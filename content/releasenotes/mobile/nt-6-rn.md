@@ -5,7 +5,21 @@ menu_order: 10
 description: "Native Template 6 release notes."
 ---
 
-## 6.2.0
+## 6.2.2
+
+**Release date: July 29th, 2021**
+
+### Fixes
+
+* We fixed a bug with the auto-linking mechanism introduced in v[6.2.1](#621) which caused some iOS build to fail.
+
+## 6.2.1 {#621}
+
+**Release date: July 28th, 2021**
+
+This is a re-release of Native Template [6.2.0](#620).
+
+## 6.2.0 {#620}
 
 **Release date: July 20th, 2021**
 

@@ -151,7 +151,7 @@ The **Free Environments** tab presents details on your company's free environmen
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. The Data Hub Admin can oversee these functions and also assign curators that can perform governance tasks for their apps, as described in this page. Further administration tasks are also described.
 
-For more details please see [Data Hub Administration](data-hub-admin-functions/).
+For more details please see [Data Hub Administration](data-hub-admin-functions).
 
 ## 10 Read More
 

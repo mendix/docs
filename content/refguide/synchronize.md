@@ -32,7 +32,7 @@ The behavior of this mode can be configured through [synchronization configurati
 ![Synchronize](attachments/client-activities/synchronize-unsynchronized-objects.png)
 {{% /image_container %}}
 
-With the **Unsychronized objects** mode, all objects with committed changes are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
+With the **Unsychronized objects** mode, all objects with changes committed to the offline database are synchronized. The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
 ### 2.3 Selected Objects {#selected-objects}
 

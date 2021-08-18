@@ -24,12 +24,20 @@ Once you have installed a particular version of the Mendix Operator into any nam
 If you are using your own private registry, follow the [Migrating to Your Own Registry](private-cloud-migrating) guide first
 to migrate new component versions of Mendix for Private Cloud into your private registry.
 
+{{% alert type="warning" %}}
+Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+
+This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+
+Mendix for Private Cloud has not been fully validated to support Kubernetes 1.22.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 ### 2.1 Download the Configuration Tool{#download-configuration-tool}
 
 Follow the instructions to [Download the Configuration Tool](private-cloud-cluster#download-configuration-tool).
-Before downloading the Configuration Tool, choose the version you would like to upgrade to (1.9.0 or a later version) in the **Mendix Operator Version** dropdown.
+When downloading the Configuration Tool, choose the version you would like to upgrade to (1.9.0 or a later version) - not the version that is currently installed.
 
 If you're using an OpenShift cluster, follow the [Signing in to OpenShift](private-cloud-cluster#openshift-signin) instructions.
 

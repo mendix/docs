@@ -125,6 +125,8 @@ In **Scaling**, there are two sliders that you can control:
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
+{{% alert type="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+
 If you have 1GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory.
 
 To scale your memory over multiple instances, you need more memory.

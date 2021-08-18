@@ -36,7 +36,7 @@ In addition, Mendix Admins can edit and create new team roles within the company
 
 ## 4 App Contact {#app-contact}
 
-When you view the [General settings](/developerportal/settings/general-settings) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
+When you view the [General Settings](/developerportal/settings/general-settings) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
 
 ![](attachments/app-roles/app-roles.png)
 

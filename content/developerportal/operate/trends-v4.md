@@ -307,7 +307,9 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 ![](attachments/trends-v4/no-db-connections.png)
 
-This should go up and down with the usage of the application. The number of connections is limited to 50.
+The number of connections will go up and down with the usage of the application.
+
+The standard configuration sets a maximum of 50 connections per instance. The graph displays the total number of connections for all instances in a multi-instance scaled runtime.
 
 ### <a name="Trends-dbmemory"></a>5.5 Database Node Operating System Memory
 

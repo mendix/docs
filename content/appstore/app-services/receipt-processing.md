@@ -30,20 +30,18 @@ Drag and drop _Receipt Processing Service Activity_ (_Document Data Capture Serv
 ![rp-activity](attachments/receipt-processing/rp-activity.png)
 
 ### 3.2 Model ID: 
-Model ID can be used fetched from _Document Model Training_, refer _Usage_ section.
+Model ID can be used fetched from _Document Model Training_, refer section _4 Document Model Training_.
 
 ### 3.3 Image List: 
 List of Image objects (Inherited from System.Image)
 
 ### 3.4 Mapping: 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 4_ in _Usage_ section to get JSON to create _Import Mapping_.
+Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 4_ in section _4 Document Model Training_ to get JSON to create _Import Mapping_.
 
 ### 3.5 Task Queue: 
 Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue) , [For Mendix v9.0.3-](../modules/process-queue)
 
-## 4 Usage
-
-### Document Model Training: Create Model
+## 4 Document Model Training
 
 1. Visit _Document Model Training_ App
 

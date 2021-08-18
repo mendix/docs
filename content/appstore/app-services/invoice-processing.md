@@ -8,7 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 Automates invoice processing almost immediately without any document training. Supports major world economy invoices.
 
 ### 1.1 Typical Use Case
-Using _Document Model Training_ (refer _Usage_ section ), Select your choice of region (Europe, US). Then you can simply use _Invoice processing Activity_ to process Invoices in bulk. 
+Using _Document Model Training_ (refer section _4 Document Model Training_), Select your choice of region (Europe, US). Then you can simply use _Invoice processing Activity_ to process Invoices in bulk. 
 
 ### 1.2 Features
 * Extract data from bulk images and map to entity
@@ -31,20 +31,18 @@ Drag and drop _Invoice Processing Service Activity_ (_Document Data Capture Serv
 ![ip-activity](attachments/invoice-processing/ip-activity.png)
 
 ### 3.2 Model ID: 
-Model ID can be used after model created successfully, refer _Usage_ section.
+Model ID can be used after model created successfully, refer section _4 Document Model Training_.
 
 ### 3.3 Image List: 
 List of Image objects (Inherited from System.Image)
 
 ### 3.4 Mapping: 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 7_ in _Usage_ section to get JSON to create _Import Mapping_.
+Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 7_ in section _4 Document Model Training_ to get JSON to create _Import Mapping_.
 
 ### 3.5 Task Queue: 
 Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue) , [For Mendix v9.0.3-](../modules/process-queue)
 
-## 4 Usage
-
-### Document Model Training: Create Model
+## 4 Document Model Training
 
 1. Visit _Document Model Training_ App
 

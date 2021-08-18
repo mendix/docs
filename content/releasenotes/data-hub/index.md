@@ -9,6 +9,20 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### August 19th, 2021
+
+#### New Feature
+
+* Company admin page is migrated to the Control Center
+
+
+#### Fixes
+
+* Fixed inconsistencies in contract and security scheme between endpoint API spec and implementation
+* Company admin now sees external users after adding them
+* Fixed styling issues in Administration Page
+
+
 ### August 5th, 2021
 
 #### Fixes

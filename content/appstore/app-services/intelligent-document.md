@@ -91,7 +91,7 @@ Follow _step 11_ to get JSON to create _Import Mapping_.
 
 ![ids-publish-completed](attachments/intelligent-document/ids-publish-completed.png)
 
-11. Get JSON Mapping file to use with _Intelligent Document Service Activity_ (Section 3.4),
+11. Get JSON Mapping file to use with [Intelligent Document Service Activity](#34-mapping),
 
     1. Select record in Existing Model list status _COMPLETED_ 
     2. Select _JSON Mapping File_

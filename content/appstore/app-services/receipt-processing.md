@@ -53,7 +53,7 @@ Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../..
 
 ![rp-list-models](attachments/receipt-processing/rp-list-models.png)
 
-4. Get JSON Mapping file to use with _Receipt Processing Service Activity_ (Section 3.4),
+4. Get JSON Mapping file to use with [Receipt Processing Service Activity](#34-mapping),
 
     1. Select record in Existing Model list status _COMPLETED_ 
     2. Select _JSON Mapping File_

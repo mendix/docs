@@ -68,7 +68,7 @@ Follow _step 7_ to get JSON to create _Import Mapping_.
 
 6. Model will appear in list with status _IN PROGRESS_. Once _Status_ of Model is _COMPLETED_, Model is ready to use
 
-7. Get JSON Mapping file to use with _Invoice Processing Service Activity_ (Section 3.4),
+7. Get JSON Mapping file to use with [Invoice Processing Service Activity](#34-mapping),
 
     1. Select record in Existing Model list status _COMPLETED_ 
     2. Select _JSON Mapping File_

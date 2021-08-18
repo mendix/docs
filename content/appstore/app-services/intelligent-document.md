@@ -48,7 +48,7 @@ Provide Task Queue to execute Extraction action
 
 ### Document Model Training: Create and Train Model
 
-1. Visit [Document Model Training](http://ddcs.mendixcloud.com) App
+1. Visit _Document Model Training_ App
 
 2. Login with _Mendix Account_.
 

@@ -8,9 +8,7 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 ## 1 Introduction
 
 The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.
-
 {{% todo %}}[Add link to component]{{% /todo %}}
-
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
 Here is an overview of what the 3DViewer contains:
@@ -18,42 +16,48 @@ Here is an overview of what the 3DViewer contains:
 | Category                                   | Name                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                                    |
-| [Constants](#42-constants)                 | HttpEndpoint, ModelSourceType                                                                                                                                                                                                                                                                          |
+| [Constants](#42-constants)                 | HttpEndpoint, LicenseToken, ModelSourceType                                                                                                                                                                                                                                                               |
 | [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                                  |
-| [Nanoflow](#44-nanoflow)                   | GetModelListFromMendix, GetMarkupsFromMendix                                                                                                                                                                                                                                                           |
+| [Nanoflow](#44-nanoflow)                   | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix                                                                                                                                                                                                                                             |
 | [Java Action](#45-java-action)             | VisServerAction                                                                                                                                                                                                                                                                                        |
-| [Widgets](#46-widgets)                     | Container3D, Markup builder, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Measurement |
+| [Widgets](#46-widgets)                     | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
-In most cases, you will only need what are contained in **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need them.
+In most cases, you will only need what are contained in **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need them.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the **Product Manufacturing Information** (PMI) tree, and creating section views and 2D markups.
+You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
 
 ### 1.2 Features
 
 This app service enables you to do the following:
 
-* Display a 3D model (Both monolithic JT and shattered JT format are currently supported)
+* Upload to and load models from Mendix file storage or your own file storage (Both monolithic JT and shattered JT format are  supported)
+* Display a 3D model
+* Zoom, rotate, fit all, pan
 * Use quick intuitive controls to navigate product structure
-* Zoom, rotate, fit all, and pan
 * Turn parts on and off
-* Display PMI
 * Select and clear selection of parts
-* Display model views
-* Upload and load models from Mendix file storage
-* Display part/assembly properties
-* Create 3D cross-sections
 * Examine your model from preset viewing angles
-* Create 2D markup on model and save snapshot
-* Perform 3D measurement on distance, angle, area, radius and and length
+* Display PMI
+* Display model views
+* Display part/assembly properties
+* Display exploded view
+* Create 3D cross-sections
+* Create 2D markup on model 
+* Take snapshot of a model 
+* Perform 3D measurement on distance, angle, area, radius and length
   
-### 1.3 Limitations {#limitations}
+### 1.3 Limitations
 
-The 3D Viewer app service includes a few 3D widgets. These are the limitations on how these widgets should be placed:
+The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
-* The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widget (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, you will see error in [Design mode](/refguide/page#design-mode).
-* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in [Design mode](/refguide/page#design-mode).
+* The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widgets (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets won't work as expected, you will get nofitied and see errors when you switch to Design mode. 
+![widgetoutsidecontainer3d-structuremode](attachments/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg)  
+![widgetoutsidecontainer3d-designmodeerror](attachments/3d-viewer/widgetoutsidecontainer3d-designmodeerror.jpg)  
+* One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
+![2viewerincontainer3d-structuremode](attachments/3d-viewer/2viewerincontainer3d-structuremode.jpg)  
+![2viewerincontainer3d-designmode](attachments/3d-viewer/2viewerincontainer3d-designmode.png) 
 * **Viewer** widget is used to display a 3D model, all other 3D widgets (except **Uploader** widget and **Container3D** widget) needs a **Viewer** widget present on the page to interact with.
 
 * Currently, only JT models with version 9 and above are supported.
@@ -61,10 +65,10 @@ The 3D Viewer app service includes a few 3D widgets. These are the limitations o
 ![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)  
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the app service module into your app.
+Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content#4-2-using-a-module) to import the 3D Viewer module into your app.
 
 ![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
-After importing, you need to map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed modules to the applicable [user roles](/refguide/user-roles) in your app.
+After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Initializing the 3D Viewer App Service on App Startup
 
@@ -114,7 +118,7 @@ Other two entities, **MxModelDocument** and **MxChildDocument** are internal ent
 
 The **HttpEndpoint** constant with the default value **visualization** is used to restrict value of parameter **HttpEndpoint** of the **Viewer3D/USE_ME/VisServerAction** Java action.
 
-The **ModelSourceType** constant with the value **Mendix** is used to signify the model source, you can use this constant to restrict the value of parameter **Data source** in Uploader widget, the parameter **Model source type** in Viewer widget, or the value of Attribute **Source** in ModelDocument entity.
+The **ModelSourceType** constant with the value **Mendix** is used to signify the model source, you can use this constant to restrict the value of parameter **Data source** in Uploader widget, the parameter **Model source type** in Viewer widget, or the value of Attribute **Source** in **ModelDocument** entity.
 
 The **LicenseToken** constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a license token and set the value of constant **LicenseToken** to the license token in the deployment environment setting.
 
@@ -132,6 +136,10 @@ The **DownloadMarkup** microflow takes a **Markup** object as input parameter an
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
 ### 4.4 Nanoflow
+
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. This allows you to get model from your existing file storages.
+
+![CreateModelDocumentFromFileDocument](attachments/3d-viewer/CreateModelDocumentFromFileDocument.jpg)
 
 The **GetModelListFromMendix** nanoflow takes a **Pagination** object as an input parameter to fetch the model list from Mendix file storage and returns a list of **ModelDocuments** as a result. Each ModelDocument represents a model that is stored in the Mendix file storage.
 
@@ -213,9 +221,9 @@ The panel widgets can be used in the following ways:
 ![pstree-general](attachments/3d-viewer/pstree-general.jpg)  
 * **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable property **Column**, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
 ![pstreetable-general](attachments/3d-viewer/pstreetable-general.jpg)  
-* **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. 
+* **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. The property **Auto load** determines if all PMI should be automatically loaded into viewer when PMI structure tree is loaded.
 ![pmitree-general](attachments/3d-viewer/pmitree-general.jpg)
-* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear section planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section)
+* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear section planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section).
 * **Markup builder** - 
 	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate, when set to `false`, model will be unlocked and return to rotatable state; another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
     ![markup-general](attachments/3d-viewer/markup-general.jpg)
@@ -254,7 +262,7 @@ Follow these steps to configure this visualization:
 2. Put the **Uploader** widget and **Viewer** widget into the **Container3D** widget and give them a layout.
 3. Set a fixed height of the **Viewer** widget (toggle to **Design mode** to see the preview).
 4. Create an entity called **UploadedModel** in your app module's domain model.
-5. Wrap the **Uploader** and **Viewer** widgets inside a new [data view](/refguide/data-view).
+5. Wrap the **Uploader** and **Viewer** widgets inside a new Data view widget.
 6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as data source of the data view.
 7.  Create two attributes for the **UploadedModel** entity. Set them to receive the value returned from the **Uploader**'s **Data source** and **UploadModelId**:
 
@@ -280,7 +288,7 @@ Uploading progress in the **Uploader** widget can seen in the uploader panel :
 
 ![uploader-uploadedstatus](attachments/3d-viewer/uploader-uploadedstatus.jpg)
 
-Loading progress in the **Viewer** widget can be obtained via the **Progress status** and **Progress percentage** attributes. 
+Loading progress in the **Viewer** widget can be obtained via the **Progress status** and **Progress percentage** attributes in Event tab.
 
 Follow these steps to display the model loading progress:
 
@@ -305,10 +313,6 @@ Follow these steps to display the model loading progress:
 You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as to your need. For example:
 
 ![structuremode-more3dwidgets](attachments/3d-viewer/structuremode-more3dwidgets.jpg)
-
-This is the example in design mode:
-
-![designMode-more3dwidgets](attachments/3d-viewer/designmode-more3dwidgets.jpg)
 
 ### 6.4 Managing Uploaded Models
 
@@ -433,14 +437,13 @@ Length: Measure length of a line.
 Radius: Measure the radius of a circular edge or surface.  
 Angle: Measure the angle between two edges or surfaces.  
 Area: Measure the area of a surface.  
-
 **Dimension Controls**  
 Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
 Clear: Clear all measurement results in the scene.
 
 ## 8 Obtain 3DViewer LicenseToken to deploy your app
 
-3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid `LicenseToken` as environment variable, otherwise 3DViewer widget features may not work in your app.
+3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid `LicenseToken` as environment variable in deployment setting, otherwise 3DViewer widget features may not work in your app.
 
 ### 8.1 Decide if you need to request a LicenseToken
 
@@ -450,7 +453,7 @@ If you plan to use 3DViewer in your app, and decide to deploy your app to the cl
 
 ### 8.2 Do I have to pay to get a LicenseToken
 
-We provide one-month free trial. After the trial period ends, you are subject to pay for subscription fee.
+Yes, you are subject to pay for subscription fee.
 
 ### 8.3 How to request a LicenseToken
 
@@ -470,6 +473,7 @@ Click Run to deploy your app to the cloud.
 You can also add or update LicenseToken via Mendix Developer Portal.
 
 ![licensetoken-developerportal](attachments/3d-viewer/licensetoken-developerportal.jpg)
+
 ## 9 Loading & Visualizing a Model from Teamcenter
 
 JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
@@ -477,3 +481,6 @@ JT models from other data sources can also be visualized. Specifically, if you w
 ## 10 Read More
 
 * [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)
+
+
+

@@ -13,18 +13,18 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* Fixed inconsistencies in contract and security scheme between endpoint API spec and implementation
-* Company admin now sees external users after adding them
-* Fixed styling issues in Administration Page
+* We fixed inconsistencies in contract and security scheme between an endpoint API spec and implementation.
+* We fixed an issue where the Company Admin did not see external users after adding them.
+* We fixed styling issues on the **Administration** page.
 
 ###  August 12th, 2021
 
 #### New Features
 
 * We added the following write capabilities: 
- * Parsing updatable, insertable, and deletable capabilities from annotations is now available in OData v4 contracts
- * Write capabilities are returned on the [Data Hub Search API ](/apidocs-mxsdk/apidocs/data-hub-apis)
- * Write capabilities are displayed on the Data Hub UI
+    * Parsing updatable, insertable, and deletable capabilities from annotations is now available in OData v4 contracts
+    * Write capabilities are returned on the [Data Hub Search API ](/apidocs-mxsdk/apidocs/data-hub-apis)
+    * Write capabilities are displayed on the Data Hub UI
 
 #### Fixes
 
@@ -35,7 +35,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Fixes
 
 * We made various security and UI fixes.
- 
+
 ### July 29th, 2021
 
 #### New Feature

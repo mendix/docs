@@ -128,6 +128,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Application ID** – the unique identifier of the application that the service was published from in the Data Hub Catalog
 * **Metadata** – the contents of the metadata file defining the service
 *  **OData version** – the OData version: can be OData 3 or OData 4
+*  **Use QuerySegment** – instructs application to use OData's QuerySegment notation ([OData specification](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody)). Feature is not available if consumed service explicitly indicates that is it not supported. 
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

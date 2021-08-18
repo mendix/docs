@@ -8,7 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 Intelligent Document Service provides text, key value pairs from documents. The app service utilizes many cutting-edge AI technologies along with OCR to extract the specific text from documents.
 
 ### 1.1 Typical Use Case
-Using this service in an app is very easy. Maker has to download and include the module in an app. The IDS activity appears in the microflow toolbox. Drag it in the microflow and configure couple of parameters and that’s it. An activity expects a trained model input, use Document Model Training App to create one. Please refer _Usage_ for more information. For authentication, service uses Mendix SSO.
+Using _Intelligent Document Service_ in your app is very easy. Maker has to download and include the module in an app. The IDS activity appears in the microflow toolbox. Drag it in the microflow and configure couple of parameters and that’s it. An activity expects a trained model input, use Document Model Training App to create one. Please refer _Usage_ for more information. For authentication, service uses Mendix SSO.
 
 ### 1.2 Features
 * Extract data from bulk images and map to entity

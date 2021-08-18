@@ -26,10 +26,6 @@ You can navigate to the following tabs:
 
 * **Curate** – carry out [curate](curate) functions on registered assets to enrich the registered metdata and increase discoverability by relevant users
 
-* **Administration** – Data Hub Admin can assign curator roles and curators can manage the list of owners
-
-	{{% alert type="info" %}}  The **Administration** tab will only be shown for those with curate roles (owners of a data source, curators or the Data Hub Admin.	{{% /alert %}}
-
 From the **Home** screen, you can do the following:
 
 - **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
@@ -89,7 +85,7 @@ For details on security and accessibility in the Data Hub Catalog and for regist
 
 ## 4 Information Available in the Data Hub Catalog
 
-In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Data Hub Admin](/data-hub/#admin).
+In the Data Hub Catalog, all the information for registered assets is displayed in the [Catalog search details](search#search-details) screen. This information comes from the metadata in the OData service contract and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners and [Data Hub curators](/data-hub/#curator) and the [Mendix Admin](/data-hub/#admin).
 
 The information that is registered for data sources and exposed datasets are as follows:
 

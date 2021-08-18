@@ -8,12 +8,12 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Owners of data assets, curators and the Data Hub Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#custom-owner) owners.
+Owners of data assets, curators and the Mendix Admin can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the data sources, datasets and exposed attributes. This includes adding custom icons and specifying Catalog descriptions and tags to supplement the registered metadata, and further categorize the assets and the data they connect to. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating that the datasource is [Validated](#validated) and specifying the [Business and Technical](#custom-owner) owners.
 
 Users who can curate assets in Data Hub Catalog are as follows:
 
 * Owners of a registered service – can curate their own services which includes those that have been set to non-**Discoverable**
-* [Data Hub Curators](/data-hub/#curator) and [Data Hub Admins](/data-hub/#admin) – can curate and find all registered assets in the Catalog, discoverable and non-discoverable
+* [Data Hub Curators](/data-hub/#curator) and [Mendix Admins](/data-hub/#admin) – can curate and find all registered assets in the Catalog, discoverable and non-discoverable
 
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) tab of Data Hub.
 
@@ -85,7 +85,7 @@ App owners can be changed by users with curation rights (owners and curators) fr
 If you as a **Technical Owner** curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and the Data Hub Admin can manage the lists of custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners](/data-hub/general/data-hub-admin-functions#customowners) section of *Data Hub Administration*.
+Curators and the Mendix Admin can manage the lists of custom owners as part of **Administration** functions. For further details see the [Managing Custom Owners](/developerportal/contol-center/data-hub-admin-functions#customowners) section of the *Data Hub* application in the *Control Center*.
  {{% /alert %}}
 
 #### 4.1.1 Changing the Technical and Business Owners of an App
@@ -96,7 +96,7 @@ To change the **Business Owner** or **Technical Owner**, from the **Application 
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. This is described in Data Hub Administration – [Managing Custom Owners](/data-hub/general/data-hub-admin-functions#customowners).
+Curators can manage the lists of custom owners as an **Administration** task. This is described in Data Hub Administration – [Managing Custom Owners](/developerportal/contol-center/data-hub-admin-functions#customowners).
 
 To add a custom owner follow these steps:
 
@@ -230,7 +230,7 @@ The discoverabile and validate properties of registered assets can be set from t
 
 The discoverability is set at a data source level. By default, when a data source is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
-When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Data Hub Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
+When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 
 When a data source is set to non-**Discoverable**, the data source, and the datasets that are exposed cannot be found by other users (except by owners and curators). However, there may be instances of the same datasets in the Catalog, from the same apps, that are available through other discoverable services.
 

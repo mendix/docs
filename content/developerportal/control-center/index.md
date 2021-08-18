@@ -147,6 +147,12 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
+## Data Hub Administration
+
+An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. The Data Hub Admin can oversee these functions and also assign curators that can perform governance tasks for their apps, as described in this page. Further administration tasks are also described.
+
+For more details please see [Data Hub Administration](data-hub-admin-functions/).
+
 ## 10 Read More
 
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)

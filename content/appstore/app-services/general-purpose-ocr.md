@@ -35,5 +35,5 @@ JSON or XML
 ### 3.4 Task Queue: 
 Provide Task Queue to execute Extraction action
 
-### 3.5 List of Files:
-List of files of selected format (Inherited from System.File)
+### 3.5 Output:
+Extracted output in selected format (String).

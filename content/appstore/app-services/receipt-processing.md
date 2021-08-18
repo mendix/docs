@@ -39,7 +39,7 @@ List of Image objects (Inherited from System.Image)
 Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 4_ in _Usage_ section to get JSON to create _Import Mapping_.
 
 ### 3.5 Task Queue: 
-Provide Task Queue to execute Extraction action
+Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue) , [For Mendix v9.0.3-](../modules/process-queue)
 
 ## 4 Usage
 

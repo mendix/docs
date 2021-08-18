@@ -33,7 +33,7 @@ List of Image objects (Inherited from System.Image)
 JSON or XML
 
 ### 3.4 Task Queue: 
-Provide Task Queue to execute Extraction action
+Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue) , [For Mendix v9.0.3-](../modules/process-queue)
 
 ### 3.5 Output:
 Extracted output in selected format (String).

@@ -132,7 +132,9 @@ Now you can download the Configuration Tool by doing the following:
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
-	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+	{{% alert type="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
+
+	{{% alert type="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
     {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
@@ -696,14 +698,19 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ##### 4.3.2.3 Ingress{#ingress}
 
-**OpenShift Route** will configure an OpenShift Route. This can only be used for OpenShift clusters.
+**openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows you to enable or disable TLS.
 
-**Ingress** will configure ingress according to the additional domain name you supply.
+**kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows you to configure the ingress path and custom ingress class (dependent on the Ingress controller) and enable or disable TLS.
 
-Both forms of ingress can have TLS enabled or disabled.
+**service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
+This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
 
 {{% alert type="info" %}}
-When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](#advanced-network-settings).
 {{% /alert %}}
 
 ##### 4.3.2.4 Registry{#registry}
@@ -845,7 +852,7 @@ When using a connected cluster, its status will be shown as **Connected** in the
 
 ## 5 Advanced Operator Configuration
 
-Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
+Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
 
 Look at [Supported Providers](private-cloud-supported-environments) to ensure that your planned configuration is supported by Mendix for Private Cloud.
@@ -976,7 +983,7 @@ You can change the following options:
 * **ingressClassName**: - optional, can be used to specify the Ingress Class name
 * **path**: - optional, can be used to specify the Ingress path; default value is `/`
 * **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
-* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
+* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Configuration Tool**
 * **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
 * **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
 * **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type

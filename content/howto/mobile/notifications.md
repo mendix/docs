@@ -6,38 +6,30 @@ description: Tutorials for configuring push and local notifications.
 tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 These guides will teach you to configure both push notifications (also known as remote notifications) and local notifications for your Mendix apps:
 
-Push Notifications:
+* [Add Module Dependencies](add-module-depends) — 1 sentence doc description.
+* [Implement the Push Notifications Module](notif-implement-module) — 1 sentence doc description.
+* [Configure Push Notifications](notif-config-push) — 1 sentence doc description.
+* [Native Push Notification Implementation](notif-implement-native) — 1 sentence doc description.
+* [Build a Native Mobile App with Push Notifications](notif-build-native) — 1 sentence doc description.
+* [Send Your First Test Push Notification](notif-send-test) — 1 sentence doc description.
 
-* [Add Module Dependencies](LINKHERE)
-* [Implement the Push Notifications Module](LINKHERE)
-* [Configure Push Notifications](LINKHERE)
-* [Native Push Notification Implementation](LINKHERE)
-* [Build a Native Mobile App with Push Notifications](LINKHERE)
-* [Send Your First Test Push Notification](LINKHERE)
+For information on local notifications specifically, see [DOC NAME HERE](DOCNOTMADEYET).
 
-For information on local notifications specifically, pay special attention to [DOC NAME HERE](LINKHERE).
+Notifications are currently supported for native mobile apps. For information on push notifications in hybrid apps, see [Include Push Notifications](DOCNOTMADEYET).
 
-For information on push notifications in hybrid apps, see [How to Include Push Notifications](LINKHERE).
+## 2 Push Notification Options
 
-To implement push notifications in your application there are a few steps depending on the types of push notifications you would like to use.
+To implement push notifications in your app there are a few steps depending on the types of push notifications you would like to use. The following notification types are available:
 
-The following notification types are available:
+* **Push notifications** — When you want to notify your users from the back-end (server) of your app, use push notifications. These may be targeted at single, specific, grouped, or all users. They will always be triggered from the back-end.
+* **Local notifications** — When you want to show notifications directly on the device without the need for any server interaction, use local notifications. Local notifications only target an app running on a single user's specific device.
 
-* Push notifications: 
-	* When you want to notify your users from the backend (server) part of your application you use push notifications, these may be targeted at single, specific grouped or all users. But they will always be triggered from the backend.
-* Local notification:
-	* When you want to show notifications directly on the device without the need for any server interaction you may use local notifications, they are always only targeted at that specific device running the app for a single user.
+The how-to's in the [introduction](#intro) are meant to be completed in order, and assume you are starting without an existing app. If you already have an app, you can still use these how-to's. 
 
-Notifications are currently supported for Native mobile apps. For Hybrid mobile apps please refer to Mendix 8 documentation.
+Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 
-This documentation will refer to other pages to explain adding required module dependencies, building your native mobile app, configuring the Push notification module and implementing notifications in your app.
-
-Depending on your starting template you might already have a number of prerequisites taken care of for you.
-
-Each documentation step will tell you at the beginning what your prerequisites are and what the goal of that step is. Based on this introduction you may determine if your use case requires this step or you could skip it. At the end of each step there will be a link to the next step.
-
-Start by adding the [module dependencies](LINK HERE).
+To get started, begin with the series' first entry: [Add Module Dependencies](add-module-depends).

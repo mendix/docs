@@ -8,20 +8,28 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction 
 
-This step is here to configure the runtime for using push notifications towards native or hybrid apps. If you do not plan on using this you may skip this step and move forward to configuring local notifications. If that is also not what you are looking for but you want to configure web notifications click here.
+This how-to will teach you to configure the runtime for using push notifications in native or hybrid apps. For other use cases, you can skip this how-to and choose one of the following:
+* To configure local notifications, see [title](nodocyet)
+* To configure web notifications, see [title](nodocyet)
 
-After setting up the dependencies and the `Push notifications` module you just started your application. Login as the administrator user (the user you assigned the `Administrator` role). And navigate to the `Administration` page you added to the navigation.
+## 2 Configure Your Notifications
 
-The first time you open this page it will present you with a wizard to setup the Firebase configurations which are required to use push notifications. If you haven’t setup Firebase yet, click here.
+If you have completed [Add Module Dependencies](add-module-depends) and [Implement the Push Notifications Module](notif-implement-module) per your use case, do the following to configure your push notifications:
+
+1. Open your app in Mendix Studio Pro.
+1. Log in as the Administrator user you [previously designated](notif-implement-module#config).
+1. Navigate to the **Administration** page.
+
+The first time you open this page it will present you with a wizard to set up Firebase configurations. These are required to use push notifications. If you have not set up Firebase configurations, see [doc title](nodoc). The wizard will mention the following files:
 
 | **File**    | **Source**   | **Usage**      |
 | -------- | -------- | ------- |
 | GoogleServices-Info.plist | Google Firebase | Used to push notifications to your iOS native applications.     |
 | google-services.json      | Google Firebase | Used to push notifications to your Android native applications. |
 
-Both these files are also known as the private key files. They need to be configured as part of building your native applications for the Android and iOS platforms. But also on runtime when configuring your server. This last part is done from the administration page and setup wizard.
+These files are also known as private key files. They must be configured as you build your native apps for Android and iOS, and also on the runtime when configuring your server. This last part is done from the administration page and setup wizard.
 
-If you did follow the instructions on the page to setup your apps for iOS and/or Android in for the server sided part.
+If you did follow the instructions on the page to set up your apps for iOS or Android in for the server sided part.
 
 After doing that you will be redirected to the configuration page. For more information on the configuration page click here.
 

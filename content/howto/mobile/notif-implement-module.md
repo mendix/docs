@@ -19,7 +19,7 @@ If you haven’t done so make sure to download the module from the Marketplace
 1. Open the Push Notification Connector module.
 1. Click **Download**.
 
-## 3 Configure Your App
+## 3 Configure Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 

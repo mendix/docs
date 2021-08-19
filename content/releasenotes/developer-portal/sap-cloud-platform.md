@@ -12,7 +12,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
-### August ??th, 2021
+### August 19th, 2021
 
 #### Improvements – OData Connector for SAP Solutions
 

@@ -12,6 +12,8 @@ The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
 Here is an overview of what the 3DViewer contains:
+![3dviewercontentoverview](attachments/3d-viewer/3dviewercontentoverview.jpg)  
+
 
 | Category                                   | Name                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -52,7 +54,7 @@ This app service enables you to do the following:
 
 The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
-* The **Container3D** widget acts as a context-sharing container for other 3D widgets. Therefore, every other 3D widgets (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets won't work as expected, you will get nofitied and see errors when you switch to Design mode. 
+* The **Container3D** widget acts as a context-sharing container for other 3D widgets, 3D widgets talk to each other and perform corresponding actions via this context. Therefore, every other 3D widgets (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets won't work as expected, you will get nofitied and see these errors "This widget must be put inside Container3D" when you switch to Design mode. 
 ![widgetoutsidecontainer3d-structuremode](attachments/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg)  
 ![widgetoutsidecontainer3d-designmodeerror](attachments/3d-viewer/widgetoutsidecontainer3d-designmodeerror.jpg)  
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
@@ -65,26 +67,37 @@ The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are
 ![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)  
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content#4-2-using-a-module) to import the 3D Viewer module into your app.
+Suppose you already have a **3DViewer.mpk**, and you would like to add to your app in Mendix Studio Pro, do the following:
+1. Open your app in Mendix Studio Pro(any version between 8.15.1 and latest Mendix 8 versions).
+2.  Right-click the project in the **Project Explorer** and select **Import module package…**.
 
-![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
-After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+    ![3dviewerimportmpk](attachments/3d-viewer/3dviewerimportmpk.jpg) 
+
+3.  Find and select the 3DViewer.mpk that you have and import it. 
+4.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
+![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
+    {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
+	{{% /alert %}}
+5. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
+6. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
+7. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 ## 3 Initializing the 3D Viewer App Service on App Startup
 
-To automatically start 3DViewer when app starts, create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.
+To use 3DViewer features, you app needs to be bound to 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a java action called `VisServerAction` which can start the 3DViewer service for you. Call this java action from your app's After Startup microflow, this will automatically start 3DViewer when app starts (running after startup usually means you want to run a specific tool all the time.). 
 
-![startupmicroflow](attachments/3d-viewer/startupmicroflow.jpg)
-
-You need to set this microflow as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup):
-
+If you project does not have set an After startup microflow,  follow these steps:
+1.  create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.
+2.  Set this **Startup** microflow as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup):  
 ![afterStartup](attachments/3d-viewer/afterstartup.jpg)
+
+If your project already has a microflow set to execute after startup, you need to extend it with adding the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, and configure the same as stated in step 1. 
 
 ## 4 3DViewer content
 
 ### 4.1 Predefined Entity
 
-**ModelDocument** entity is an entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.
+**ModelDocument** entity is a conceptual entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.
 
 ![modeldocument](attachments/3d-viewer/modeldocument.jpg)
 
@@ -116,15 +129,15 @@ Other two entities, **MxModelDocument** and **MxChildDocument** are internal ent
 
 ### 4.2 Constants
 
-The **HttpEndpoint** constant with the default value **visualization** is used to restrict value of parameter **HttpEndpoint** of the **Viewer3D/USE_ME/VisServerAction** Java action.
+The **HttpEndpoint** constant with the default value **visualization** is used to restrict the value of parameter **HttpEndpoint** used in **Viewer3D/USE_ME/VisServerAction** Java action.
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source, you can use this constant to restrict the value of parameter **Data source** in Uploader widget, the parameter **Model source type** in Viewer widget, or the value of Attribute **Source** in **ModelDocument** entity.
 
-The **LicenseToken** constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a license token and set the value of constant **LicenseToken** to the license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a valid license token and set the value of constant **LicenseToken** to that license token in the deployment environment setting.
 
-If you build and run an app that uses 3DViewer locally in studio pro, you do not need to provide a value for **LicenseToken** constant, just leave it empty. Making is always free!
+However, if you only plan to have a try first on how 3DViewer works , that is, build and run an app that uses 3DViewer locally in studio pro or deploy to Mendix sandbox environment, you don't need to subscribe to get a license token, you do not need to set a value to **LicenseToken** constant, just leave it empty. Making is always free!
 
-For how to request and use a license token, please see [Obtain 3DViewer LicenseToken to deploy your app](#8-obtain-3dviewer-licensetoken-to-deploy-your-app) for more details.
+For how to get a license token, please see [Obtain 3DViewer LicenseToken to deploy your app](#8-obtain-3dviewer-licensetoken-to-deploy-your-app) for more details.
 
 ### 4.3 Microflow
 
@@ -217,7 +230,7 @@ The panel widgets can be used in the following ways:
 * **PS Tree** – On the **General** tab, the following options are available:
 	* **Expand all** determines if the model's product structure tree should be fully expanded at the initial load
 	* Use **Show search** to toggle a search bar that enables the end-user to enter a part name and search for the part in the PS Tree
-	* **Show lead structure** determines if the sub-part data should be displayed in the PS Tree
+	* **Show leaf structure** determines if the sub-part data should be displayed in the PS Tree
 ![pstree-general](attachments/3d-viewer/pstree-general.jpg)  
 * **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable property **Column**, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
 ![pstreetable-general](attachments/3d-viewer/pstreetable-general.jpg)  
@@ -230,11 +243,11 @@ The panel widgets can be used in the following ways:
 	* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful. By setting **Action**, you can choose to trigger an action based on the value of **Save** status. 
     ![markup-events](attachments/3d-viewer/markup-events.jpg)
     
-* **Measurement** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can add, delete and clear sections planes to the model on your desired direction axis and clipping mode. For details on how to perform measurement on a 3D model. Please see [Perform 3D Measurement](#72-perform-3d-measurement)
+* **Measurement** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can measure distance, length, radius, area, angle of a part or between parts . For details on how to perform measurement on a 3D model. Please see [Perform 3D Measurement](#72-perform-3d-measurement)
 
 #### 4.6.3 Toolbar widgets
 
-These widgets do not require additional configuration. Simply place them in a **Container3D** widget with the accompanying **Viewer** widget.
+These widgets do not require additional configuration. Simply place them within a **Container3D** widget with the accompanying **Viewer** widget.
 
 | Widget                           | Description                                                                                                                                                                                               |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

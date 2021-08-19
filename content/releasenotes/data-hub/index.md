@@ -14,7 +14,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Fixes
 
 * We fixed inconsistencies in contract and security scheme between an endpoint API spec and implementation.
-* We fixed an issue where the Company Admin did not see external users after adding them.
+* We fixed an issue where the Mendix Admin did not see external users after adding them.
 * We fixed styling issues on the **Administration** page.
 
 ###  August 12th, 2021

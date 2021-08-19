@@ -18,9 +18,9 @@ Here is an overview of what the 3DViewer contains:
 | Category                                   | Name                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument                                                                                                                                                                                                                                    |
-| [Constants](#42-constants)                 | HttpEndpoint, LicenseToken, ModelSourceType                                                                                                                                                                                                                                                               |
+| [Constants](#42-constants)                 | HttpEndpoint, LicenseToken, ModelSourceType                                                                                                                                                                                                                                                            |
 | [Microflow](#43-microflow)                 | DeleteModelFromMendix, DownloadMarkup                                                                                                                                                                                                                                                                  |
-| [Nanoflow](#44-nanoflow)                   | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix                                                                                                                                                                                                                                             |
+| [Nanoflow](#44-nanoflow)                   | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix                                                                                                                                                                                                                      |
 | [Java Action](#45-java-action)             | VisServerAction                                                                                                                                                                                                                                                                                        |
 | [Widgets](#46-widgets)                     | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
@@ -110,7 +110,7 @@ If your project already has a microflow set to execute after startup, you need t
 | CreationDate | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision.                      |
 | FileSize     | The size of the model in Byte.                                                                                                                                                                                                                                            |
 | FileType     | The 3D model format. Currently only the JT format is supported.                                                                                                                                                                                                           |
-| Status       | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has 3 values: Complete, InProgress,Error, indicating if uploading of a model to Mendix file storage is Complete, or the uploading is still in progress, or the upload fails.   |  |
+| Status       | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has 3 values: Complete, InProgress,Error, indicating if uploading of a model to Mendix file storage is Complete, or the uploading is still in progress, or the upload fails.      |
 | ErrorReason  | Indicates the reason that causes a model upload error.                                                                                                                                                                                                                    |
 
 The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. It allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
@@ -202,12 +202,14 @@ The core widgets can be used in the following ways:
 	 **Automatically load parts** determines if the model part will be loaded into Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling, in this use case, you will need to add PS tree widget so you can trigger part loading by clicking on the PS tree.  
     ![viewer-general](attachments/3d-viewer/viewer-general.jpg)  
     * On the **Events** tab:  
-     **On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer.  
+     **On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer. Please see [Set Viewer event](#73-set-viewer-event) for details.  
 	 **On error**- by binding a String type attribute to the **Error** property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.  
 	 **On progress change** - by binding a String type  attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.  
 	 **On load** - by binding a Boolean type attribute to the **Loaded** property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.  
     ![viewer-events](attachments/3d-viewer/viewer-events.jpg)  
 	 
+	 For details about Viewer events, please see [Set Viewer event](#73-set-viewer-event) for details.  
+	  
 	 3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 
 #### 4.6.2 Panel Widgets
@@ -395,7 +397,7 @@ There are four main types of events that can be picked up on the **Viewer** widg
 
 ![viewer-viewerevents](attachments/3d-viewer/viewer-viewerevents.jpg)
 
-* **On Selection Change** – by selecting one attribute to set **SelectionSet**, you can get information on the selected part. For this you might need to work with Viewer APIs, if you have further inquiries on how to use Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
+* **On Selection Change** – by selecting one attribute to set **Selection**, you can get information on the selected part. For this you might need to work with Viewer APIs, if you have further inquiries on how to use Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 * **OnError** – by selecting one attribute to set the **On error** event, you can pick up an error exposed by the **Viewer**
 * **On Progress Change** – by selecting one attribute for the **setProgress** value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
 * **On load Change** – by selecting one attribute for the **loaded** value, you can get the current loading status of product structure tree.
@@ -453,6 +455,35 @@ Area: Measure the area of a surface.
 **Dimension Controls**  
 Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
 Clear: Clear all measurement results in the scene.
+
+### 7.3 Set Viewer event
+
+As previouly introduced in Viewer widget introduction, viewer catches model part selection event, error event, model loading progress event and isloaded event for you to handle these event tailored to your need. 
+
+### 7.3.1 On selection change
+
+**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
+![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
+**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+
+![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)
+
+### 7.3.2 On error
+
+**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
+![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
+**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+3dviewer-onerror-sample
+### 7.3.3 On progress change
+
+![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg)
+3dviewer-onprogress-sample
+
+### 7.3.4 On load
+
+![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+
+viewer-onload-sample
 
 ## 8 Obtain 3DViewer LicenseToken to deploy your app
 

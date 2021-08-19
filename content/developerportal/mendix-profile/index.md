@@ -76,17 +76,18 @@ When you complete a challenge, click **Claim Credits** to claim the Mendix credi
 
 ## 6 Connections {#connections}
 
-One of the greatest strengths of Mendix is our awesome developers community. The **Connections** card is a perfect place to start to connect to other developer in our community. When you get an invitation to connect, you can check out their profile and decide to accept or ignore it. 
+One of the greatest strengths of Mendix is our awesome developers community, and the **Connections** card is the perfect place to start connecting to other Mendix developers. When you get an invitation to connect, you can check out their profile and decide whether to accept or ignore it. 
 
-You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon, and an invitation is sent.
+You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon to send an invitation.
 
 {{% image_container width="350" %}}
 ![](attachments/connections.png)
 {{% /image_container %}}
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
-* **Share URL** – you can copy a personalized invite link and copy it or share it directly. 
-* **Send invite** – send someone a Mendix invite by entering their email address and send it. 
+
+* **Share URL** – copy the personalized invite link and share it directly
+* **Send invite** – send someone a Mendix invite by entering their email address
 
 {{% image_container width="500" %}}
 ![](attachments/referral.png)
@@ -98,9 +99,9 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page. Here you can view per category leaders for the whole platform or for your company only.
+Clicking **View all** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
-You can climb the leaderboard by earning points through various activities on the Mendix platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
+You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
 Check out the tables below for all the ways to earn points.
 
@@ -172,7 +173,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Attend the [Advanced Developer Course](https://academy.mendix.com/link/classroom/5/Advanced/Course) | 10 | N/A |
 | Attend the [Rapid Developer Course](https://academy.mendix.com/link/classroom/1/Rapid/Course) | 10 | N/A |
 | Give a presentation on Mendix | 25 | N/A |
-| Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
+| Write a blog post that is featured on the [Mendix Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
 | Complete a lecture in the Mendix Academy | 1 | N/A |
 | Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
 

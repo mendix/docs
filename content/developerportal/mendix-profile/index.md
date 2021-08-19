@@ -244,22 +244,22 @@ You can change your password in this section. By default, you are requested to c
 
 ### 10.5 API Keys {#api-key}
 
-In this section, you can create and view the API keys that external applications can use to connect. They do that to the Mendix Platform APIs on behalf of your user account. These keys allow you to execute operations that need authentication without a password. 
+In this section, you can create and view the API keys that external applications can use to connect via the [Mendix Platform APIs](/apidocs-mxsdk/apidocs/) on behalf of your user account. An API key created here allow apps using it to act on behalf of the user who created the key, which means the apps will have the same privileges as the user who created the key. An API key allows you to execute operations that need authentication without a password. 
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
-To get Mendix API key, follow these steps, click **Create new API key** and follow the instructions.
+To get a Mendix API key, click **Create new API key** and follow the instructions.
 
 {{% alert type="warning" %}}
-Make a note of the API key, as it will only be being shown once. 
+Make a note of the API key, as it will only be shown once. 
 {{% /alert %}}
+
 ![](attachments/api-key.png)
-The obtained API key will allow apps that use it to act on behalf of the user. So the app will have the same privileges as the user who created the API key.
 
 For more information, see the following:
 
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
-* [API Documentation](/apidocs-mxsdk/apidocs/)
+* [APIs](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
 * [How to Manage App API Keys](/developerportal/settings/api-key)
 
@@ -267,7 +267,7 @@ For more information, see the following:
 
 ### 10.6.1 Latest Messages
 
-In this section you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz) of which you are part. For example, when a colleague has created an app or added a new story.
+In this section, you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz) instances you participate in (for example, when a colleague has created an app or added a new story).
 
 ### 10.6.2 Documents
 
@@ -279,14 +279,15 @@ This section presents all the documents you have shared within different apps.
 {{% /image_container %}}
 
 In this section, you can view feedback submitted on the following:
-* Apps of which you are a team member
+
+* Apps of which you are a [team](/developerportal/collaborate/team) member
 * Your company’s apps of which you are not a team member
 
-When you click **Details** for feedback on an app of which you are a team member, you can manage the feedback. For details on how to do this, see Feedback Management.
+When you click **Details** for a feedback item on an app of which you are a team member, you can manage that feedback. For more information, see [Feedback](/developerportal/collaborate/feedback).
 
 ### 10.6.4 Team Server
 
-Changes made through Studio Pro are being stored in the Mendix Team Server. This section provides an overview of the revisions you have committed for all your apps.
+Changes made through Studio Pro are stored in the Mendix [Team Server](/developerportal/collaborate/team-server). This section provides an overview of the revisions you have committed for all your apps.
 
 {{% image_container width="500" %}}![](attachments/team-server.png)
 {{% /image_container %}}
@@ -295,8 +296,8 @@ Changes made through Studio Pro are being stored in the Mendix Team Server. This
 
 In this section, you can view the invitations you have sent and received. There are two types of invitations:
 
-* Project invitation – an invitation to join a team to work on an app
-* App invitation – an invitation to join an app as a user
+* Project invitation – an invitation to join a [team](/developerportal/collaborate/team) to work on an app
+* App invitation – an invitation to join an app as an an [App User](/developerportal/collaborate/general-settings#managing-app-users)
 
 ### 10.7 Advanced
 
@@ -304,24 +305,25 @@ In this section, you can merge your accounts and select your profile visibility.
 
 #### 10.7.1 Merging Your Accounts {#merging}
 
-With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. It combines all your  points, certifications, and achievements. This way we support you on your way to the expert certification, or you climb on the leaderboard
+With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your points, certifications, and achievements to support you as you clim the leaderboards or on your way to the Expert certification.
 
-Before merging make sure your profile is public and that you logged in with the right email address. Enter the email address you want to have merged into the logged in account and send the merge request.
+Before merging, make sure your profile is public and that you logged in with the right email address. Enter the email address you want to have merged into the logged-in account, then send the merge request.
 
 We’ll take things from there!
 
 {{% alert type="info" %}}
-Once the old account has merged in the new account you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps again to gain access. Adding your new account to the relevant apps before the merge is recommended.{{% /alert %}}
+Once the old account has been merged into the new account, you no longer have access to the apps of your old account. With your new account, you will need a new invitation to those apps to gain access. Adding your new account to the relevant apps before the merge is recommended.{{% /alert %}}
 
 {{% alert type="info" %}}
-With the merge, the accounts are only combined. The old account is not deactivated from the platform. That should be done by the [Mendix Admins](/developerportal/control-center/#members).
+With the merge, the accounts are only combined. The old account is not deactivated from the Mendix Platform. That should be done by a [Mendix Admin](/developerportal/control-center/#members).
 {{% /alert %}}
 
 #### 10.7.2 Selecting Your Profile Visibility {#public}
 
-A banner will be present if you haven't made your profile public to the Mendix community. You can make it public by clicking **Make this profile public**.
+A banner will be present if you have not made your profile public to the Mendix community. You can make it public by clicking **Make this profile public**.
 
 Be sure to do the following to make your profile public:
+
 * Add an avatar
 * Enter a **Function**
 * Confirm if you are looking for a **job**, a **project**, both, or neither
@@ -335,19 +337,19 @@ To make your public profile private again, click **Make this profile private**.
 
 #### 10.7.3 Viewing Your Audit Trail
 
-The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**
+The Mendix Platform stores certain personal information about you. You can view this information by clicking  **View Audit Trail** in the **Personal Information Stored by Mendix**.
 
 {{% alert type="info" %}}
 Mendix has been tracking these data changes since November 2018.
 {{% /alert %}}
 
-#### 10.7.4 Removing your account
+#### 10.7.4 Removing Your Account
 
-In a case that you don't want to use Mendix anymore you can remove your account from here.
+If you do not want to use Mendix anymore, you can remove your account from here.
 
 ## 11 Point Penalties
 
-Abusing the Mendix Forum, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix has the rights to penalize a user who bypasses or games the system without informing them.
+Abusing the Mendix Forum, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
 
 ## 12 Main Document in This Category
 

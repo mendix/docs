@@ -10,7 +10,7 @@ tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 In the **Data Hub** section of the **Control Center**, the following operations can be performed:
 
   * [Assign and manage Data Hub Curators](#curator)
-  * [Manage the list of custom owners](#customowners) who have been added as **Business Owner** or **Technical Owner**
+  * [Manage the list of custom owners](#custom-owners) who have been added as **Business Owner** or **Technical Owner**
   * [Invite external users](#external-users)
 
 ## 2 Managing Curators {#curator}

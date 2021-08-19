@@ -66,7 +66,7 @@ A Mendix Admin can do the following:
 * Curate the Data Hub according to the organization's data governance policy
 * Access all the registered assets in the Data Hub Catalog for the organization
 
-For more information, see the [Data Hub](/developerportal/control-center#data-hub) section of *Control Center*. For details on Mendix Admin tasks for Data Hub, see [Data Hub Administration](/developerportal/control-center/data-hub-admin-functions).
+For more information, see the [Data Hub](/developerportal/control-center#data-hub) section of *Control Center*. For details on Mendix Admin tasks for Data Hub, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### 3.3 Data Hub Curator {#curator}
 

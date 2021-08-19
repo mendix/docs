@@ -66,7 +66,7 @@ The **Challenge** card presents a featured challenge you can complete to gain cr
 ![](attachments/challenges.png)
 {{% /image_container %}}
 
-Click **View all** to go to the **Challenges** tab of your profile. This tab presents more details on the challenge steps, the time left, and how many credits you can earn with them. You can complete these activities in any order you like.
+Click **View All** to go to the **Challenges** tab of your profile. This tab presents more details on the challenge steps, the time left, and how many credits you can earn with them. You can complete these activities in any order you like.
 
 {{% image_container width="350" %}}
 ![](attachments/credits.png)
@@ -87,7 +87,7 @@ You can also see a list of people you may know so that you can add further conne
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
 
 * **Share URL** – copy the personalized invite link and share it directly
-* **Send invite** – send someone a Mendix invite by entering their email address
+* **Send Invite** – send someone a Mendix invite by entering their email address
 
 {{% image_container width="500" %}}
 ![](attachments/referral.png)
@@ -99,7 +99,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/leaderboard.png)
 
-Clicking **View all** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
+Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
 You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
@@ -196,7 +196,7 @@ When you earn enough points, you gain a level:
 
 ## 8 Portfolio
 
-The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View all projects** to go to the **Portfolio** tab, which presents all of your apps.
+The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View All Projects** to go to the **Portfolio** tab, which presents all of your apps.
 
 ![](attachments/portfolio.png)
 
@@ -229,7 +229,7 @@ There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if
 
 ### 10.2 Work Experience
 
-Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Skills** and **Industry Experience**. You can also let the community know if you are looking for a job or an app to contribute to. 
+Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
 
 {{% image_container width="500" %}}![](attachments/work-experience.png)
 {{% /image_container %}}
@@ -248,7 +248,7 @@ In this section, you can create and view the API keys that external applications
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
-To get a Mendix API key, click **Create new API key** and follow the instructions.
+To get a Mendix API key, click **Create New API Key** and follow the instructions.
 
 {{% alert type="warning" %}}
 Make a note of the API key, as it will only be shown once. 

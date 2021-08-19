@@ -120,15 +120,15 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 {{% image_container width="300" %}}![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png){{% /image_container %}}
 
-* **Entities** – the URL of the metadata defining the entities and associated datasets
-* **Documentation** – an additional description about this service for the current app
-* **Service name** – the name of the published OData service that is consumed
-* **Service version** – the version of the service that is consumed
-* **Service ID** – the unique identifier of the service in the Data Hub Catalog
-* **Application ID** – the unique identifier of the application that the service was published from in the Data Hub Catalog
-* **Metadata** – the contents of the metadata file defining the service
-*  **OData version** – the OData version: can be OData 3 or OData 4
-*  **Use QuerySegment** – when set to `No` then application will retrieve data using GET HTTP method and places data query arguments in URL's query string. When `Use QuerySegment` is set to `Yes` then POST HTTP method is being used, `/$query` is appended to the resource path of the URL and query string is provided as a request body. This allows to limit length of URL and avoid potential problems with systems involved. Feature is not available for OData v3 or if consumed service explicitly indicates that is it not supported. See [OData specification](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) for mode details.
+* **Entities** – The URL of the metadata defining the entities and associated datasets.
+* **Documentation** – An additional description about this service for the current app.
+* **Service name** – The name of the published OData service that is consumed.
+* **Service version** – The version of the service that is consumed.
+* **Service ID** – The unique identifier of the service in the Data Hub Catalog.
+* **Application ID** – The unique identifier of the application that the service was published from in the Data Hub Catalog.
+* **Metadata** – The contents of the metadata file defining the service.
+*  **OData version** – The OData version: can be OData 3 or OData 4.
+*  **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification.
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

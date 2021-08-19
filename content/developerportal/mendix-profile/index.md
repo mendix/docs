@@ -196,21 +196,21 @@ When you earn enough points, you gain a level:
 
 ## 8 Portfolio
 
-The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking them gets you to the project and shows details about the customer, business need, solution and results. You can also view other developers their projects to get inspired. Clicking **View all projects** leads you to the **Portfolio** tab which presents all your projects 
+The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View all projects** to go to the **Portfolio** tab, which presents all of your apps.
 
 ![](attachments/portfolio.png)
 
-To add a project to your portfolio, click **Add Project**, which will open the project editor. There are tips in the editor for what you should put in each field. All the fields in the project editor are required before submitting the project.
+To add an app to your portfolio, click **Add Project**, which will open the editor. There are tips in the editor for what you should put in each field. All the fields in the editor are required before submission.
 
 ![](attachments/add-project.png)
 
-If you cannot finish your project or do not want to publish yet, click **Save as Draft** to finish it later. The draft will be visible only to you in your **Portfolio** tab and available for further editing.
+If you cannot finish your portfolio entry or do not want to publish yet, click **Save as Draft** to finish it later. The draft will be visible only to you in the **Portfolio** tab for further editing.
 
 ## 9 Activity
 
-On the **Activity** tab you can see a list of the last 20 public events for your badges, Marketplace and Forum activity.
+On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
 
-The left side menu will get you to the [My Activity Overview](#my-activity-overview) in your setting. Here you can find more details about your other activity on the platform
+The sidebar menu will take you to [My Activity Overview](#my-activity-overview) in your profile settings, where you can find more details about your other platform activity.
 
 ## 10 Settings {#settings}
 
@@ -218,17 +218,18 @@ You can edit the information on your Mendix Profile by clicking the **Settings**
 
 ### 10.1 General Information
 
-In this section you can upload your profile image and fill in your personal details
+In this section, you can upload your profile image and fill in your personal details
 
-Under **Contact**, you can select how much information you want to receive from Mendix
+Under **Contact**, you can select how much information you want to receive from Mendix:
+
 * **Receive daily digest** – disabled by default
 * **Receive updates for threads in which I am active** – enabled by default
 
-Click the [Mendix Support](https://support.mendix.com/hc/en-us) link if you need specific actions that need help from their end. 
+There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if you need to perform certain account actions that require their assistance.
 
 ### 10.2 Work Experience
 
-Here you can tell the Mendix community about yourself and your work experience. Let them know your area of expertise by filling in your **Skills** and **Industry Experience**. You can also let them know if you are actually looking for a job or project. 
+Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Skills** and **Industry Experience**. You can also let the community know if you are looking for a job or an app to contribute to. 
 
 {{% image_container width="500" %}}![](attachments/work-experience.png)
 {{% /image_container %}}
@@ -239,10 +240,11 @@ Here you can connect your social accounts for **Meetup**, **Twitter**, and **Lin
 
 ### 10.4 Security {#security}
 
-You can change your password in this section. By default, you are being requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center) can change this.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Mendix Admin](/developerportal/control-center#security) can change this.
 
 ### 10.5 API Keys {#api-key}
-In this section you can create and view API keys that external applications can use to connect. They do that to the Mendix Platform APIs on behalf of your user account. These keys allow you to execute operations that need authentication without a password. 
+
+In this section, you can create and view the API keys that external applications can use to connect. They do that to the Mendix Platform APIs on behalf of your user account. These keys allow you to execute operations that need authentication without a password. 
 
 For example, you can use an API key to perform scripted operations on your application model with the SDK. 
 
@@ -262,6 +264,7 @@ For more information, see the following:
 * [How to Manage App API Keys](/developerportal/settings/api-key)
 
 ### 10.6 My Activity Overview {#my-activity-overview}
+
 ### 10.6.1 Latest Messages
 
 In this section you can see all the notifications of the [Buzz](/developerportal/collaborate/buzz) of which you are part. For example, when a colleague has created an app or added a new story.

@@ -150,7 +150,18 @@ That’s it! You are now ready to resume the Customer IDP setup in the Developer
 
 For more information on setting up federation with a Microsoft Azure IdP, see [](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
 
-## 8 Limitations
+## 8 Considerations
 
-{{% todo %}}[Should we be adding limitations here?]{{% /todo %}}
+### 8.1 Onboarding
 
+Because BYOIDP federates the Mendix Cloud IdP, all end-users who do not currently have a Mendix account will be taken through onboarding onto the Mendix Developer Portal platform. They will not need to sign up explicitly.
+
+Existing users of the Developer Portal can continue to use their accounts, but will have to use the authentication provided by BYOIDP.
+
+### 8.2 Mendix Version
+
+Single sign-on was introduced in Mendix version 7.18. Your app will need to be this version or above to use BYOIDP. It is recommended that you use an [LTS versions](/releasenotes/studio-pro/lts-mts) of Mendix where possible.
+
+### 8.3 Automation
+
+Automation, such as CI/CD pipelines, and other functions which require access to the [Team Server](/developerportal/collaborate/team-server) (where versioned copies of your app are held online) cannot be performed if BYOIDP is enabled.

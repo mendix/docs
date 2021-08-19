@@ -85,7 +85,7 @@ App owners can be changed by users with curation rights (owners and curators) fr
 If you as a **Technical Owner** curate the application and change the technical owner to a different user, then you will no longer have curation rights to the asset once you save the changes. If the [Discoverability](#discoverability) is turned off for the asset, then you will also not be able to find the asset in the Catalog.{{% /alert %}}
 
 {{% alert type="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For more details, see the [Managing Custom Owners](/developerportal/control-center/data-hub-admin-functions#custom-owners) section of *Data Hub Administration*.
+Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For details, see the [Owners](/developerportal/control-center/data-hub-admin#custom-owners) section of *Data Hub Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business & Technical Owners of an App {#changing-owner}
@@ -96,7 +96,7 @@ To change the **Business Owner** or **Technical Owner**, from the **Application 
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application, or the owner of the data that is made available in the app – the **Business Owner**. The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Managing Custom Owners](/developerportal/control-center/data-hub-admin-functions#custom-owners) section of *Data Hub Administration*.
+Curators can manage the lists of custom owners as an **Administration** task. For more details, see the [Owners](/developerportal/control-center/data-hub-admin#custom-owners) section of *Data Hub Administration*.
 
 To add a custom owner follow these steps:
 

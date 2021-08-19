@@ -1,8 +1,13 @@
 ---
-title: "Database User Set Up on SQL Server"
+title: "Database User Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 30
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-the-database-user.pdf).
+{{% /alert %}}
 
 ## 1 General
 
@@ -30,7 +35,7 @@ With the User Mapping properties you can grant the user access to the different 
 
 The Mendix Runtime keeps the database consistent. This means that the runtime validates the database structure at the start-up and automatically generates the SQL scripts to update the table structure. The Mendix Service Console provides you with the option to execute these scripts directly on the database. The Mendix Runtime requires the usage of the schema ‘dbo’
 
-The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user, the following roles should be assigned. The roles `db_datareader` and `db_datawriter` are the minimum permission the user should get so he can read and write in the contents of all the tables. During the database upgrade, altering the tables and stored functions is required. During that action, it is usually sufficient to have the `db_ddladmin` role, but when the stored functions needs to be added, the `db_owner` role is required (for more information, see [SQL Server Troubleshooter](troubleshooting-sql-server)).
+The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user, the following roles should be assigned. The roles `db_datareader` and `db_datawriter` are the minimum permission the user should get so he can read and write in the contents of all the tables. Additionally, to start the application from a new `.mda` file the `view definition` permission is required, even if no database synchronization is necessary. During the database upgrade, altering the tables and stored functions is required. During that action, it is usually sufficient to have the `db_ddladmin` role, but when the stored functions needs to be added, the `db_owner` role is required (for more information, see [SQL Server Troubleshooter](troubleshooting-sql-server)).
 
 ## 4 Status
 

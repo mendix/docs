@@ -1,12 +1,16 @@
 ---
 title: "MindSphere Development Considerations"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
 
 When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
 
@@ -31,7 +35,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ### 2.1 Authorizing MindSphere REST Calls from within Scheduled Events
 
-The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context - e.g. called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
+The access token connector *cannot* be used for calling a MindSphere API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the MindSphereSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. You can find this microflow here:
 
 ![DS_GetAccessTokenForScheduledEvents](attachments/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png)
 
@@ -118,7 +122,7 @@ Contact your local IT department for the `proxyHost` and `proxyPort` values you 
 {{% alert type="info" %}}
 Proxy settings for version control used in Mendix Studio Pro:
 
-For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](https://docs.mendix.com/refguide/using-version-control-in-studio-pro#9-working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
+For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
 ### 5.2 Credentials
@@ -260,7 +264,7 @@ The MindSphere Theme Pack provides a font which contains icons. This means that 
 
 To do this:
 
-1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *Project Explorer* dock under **Project '…' > App Store modules > MindSphere_UI_Resources > Icons**.
+1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
 
     ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
 
@@ -398,6 +402,10 @@ In some circumstances, this could lead to another user *using the same app in th
 ### 9.5 Native Mobile
 
 With Mendix Studio Pro V8.0.0, Mendix has released support for developing native mobile apps. This is not currently supported for apps using MindSphere.
+
+### 9.6 Progressive Web Applications
+
+Mendix Studio Pro version 9 introduced support for developing [progressive web apps (PWAs)](/refguide/progressive-web-app). PWAs are not supported for *Mendix on MindSphere*.
 
 ## 10 Read More
 

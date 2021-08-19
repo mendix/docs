@@ -1,24 +1,28 @@
 ---
 title: "Box"
 category: "Connectors"
-description: "Describes the configuration and usage of the Box connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "box", "boxdev", "box platform"]
+description: "Describes the configuration and usage of the Box connector, which is available in the Mendix Marketplace."
+tags: ["marketplace",  "marketplace component", "box", "boxdev", "box platform"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
+{{% alert type="warning" %}}
+This connector is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
+The [Box](https://marketplace.mendix.com/link/component/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
 
 ## 2 Installation
 
-1. Download this connector as well as the [Community Commons Function Library](../modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app project.
+1. Download this connector as well as the [Community Commons Function Library](/appstore/modules/community-commons-function-library) and [Deep Link](../modules/deep-link) modules into your app.
 2. In order to use this connector, you must have an account on the Box developer site of box, so go to [BoxDEV](https://developer.box.com/) and click **Log in** > **Sign up** in the upper-right corner of the page.
 3. Fill in the form with your credentials and submit.
 4. Validate your account via an email, which will then give you access to the dashboard of your Box account.
 5. To allow the connector access to your account, you must enable the two-factor authentication via the **Security** tab.
 6. Create a new Box application that  your Mendix application will interact with by clicking **Get Started**.
-7. In the new Box app, you need to set the **redirect_URL** to the domain address of your Mendix application as `https://{mendix_application_address}/link/grantaccess`. This is so Box is able to return to your application once it is authenticated.
+7.  In the new Box app, you need to set the **redirect_URL** to the domain address of your Mendix application as `https://{mendix_application_address}/link/grantaccess`. This is so Box is able to return to your application once it is authenticated.
 
 	![](attachments/box/redirect-url.jpg)
 
@@ -32,7 +36,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 	For more information on generating an RSA keypair, see [JWT Auth](https://docs.box.com/docs/app-auth#section-1-generating-an-rsa-keypair).
 
 9. Click **Add Public key** and then copy the contents of *boxmendixappdes.pub*.
-10. Run your app project to access the Box connector.
+10. Run your app to access the Box connector.
 11. To connect your Box app to the connector, click **Box Applications** in the navigation bar on the left side of the connector: 
 
 	![](attachments/box/navigation.jpg)
@@ -51,7 +55,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 
 	![](attachments/box/box-account.jpg)
 
-17. In the **BoxConnector** module in your app project, use the **BoxApplication_Overview** page as an admin user to configure the Box connector for your application.
+17. In the **BoxConnector** module in your app, use the **BoxApplication_Overview** page as an admin user to configure the Box connector for your application.
 18. Use the **BoxAccounts_Overview** page to associate Box accounts to Mendix accounts via the  token provided by the corresponding type of Box account (user or service).
 19. Make sure the **BoxApplication** entity is set with the same **redirect_URL** as you set above for your Box app.
 20. Configure the Deep Link module as follows:
@@ -257,13 +261,3 @@ These actions are available in **Metadata**:
 		* **Key** – the key name of the metadata 
 		* **StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
 	* **FromBoxMetadata** – the key to the `Metadata` source; this value is required only in case of `move` or `copy` operations
-
-## 4 Developing This App Store Component
-
-This connector was built with the Eclipse IDE Neon, and [SemVer](http://semver.org/) is used for versioning.
-
-To contribute to the development of this connector, follow these steps:
-
-1. Open an issue about your topic in [mendix / BoxConnector](https://github.com/mendix/BoxConnector).
-2. Fork the repo, then make a branch that you name starting with the issue number you are resolving, then make a pull request to the master branch.
-3. Add some tests for feature changes.

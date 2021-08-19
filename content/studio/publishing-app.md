@@ -61,11 +61,11 @@ By default all apps created in Mendix Studio are Free Apps. A Free App is a comp
 | **Environments**    | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Sleep Mode**      | Goes into Sleep Mode after an hour of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
 
-The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. When you create an app, you can choose dedicated app templates that use other environments, such as SAP Cloud Platform. For more technical information, see [Deployment](/developerportal/deploy) in the *Developer Portal Guide*.
+The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. When you create an app, you can choose dedicated app templates that use other environments, such as SAP BTP. For more technical information, see [Deployment](/developerportal/deploy) in the *Developer Portal Guide*.
 
 ## 4 Viewing Your App {#viewing-your-app}
 
-After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
+After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app and manage app users. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
 
 ### 4.1 Viewing Your App in a Browser 
 
@@ -89,9 +89,8 @@ To view your app on a mobile device, follow these steps:
 
     ![View Current App](attachments/publishing-app/view-current-app.jpg)
 
-3. Scan the QR code to view your app on your mobile device: 
+3. Scan the QR code to view your app on your mobile device.
 
-    ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile.jpg)
 
 Your app is opened on your mobile device.
 

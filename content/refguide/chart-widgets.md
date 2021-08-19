@@ -9,9 +9,9 @@ tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 
 Chart widgets allow you to display data series visually on your app pages in a wide range of charts.
 
-[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store (for more information, see [Charts](/appstore/widgets/charts)). Basic charts are based on version 1.47.4 of plotly.js.
+[Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace (for more information, see [Charts](/appstore/widgets/charts)). Basic charts are based on version 1.47.4 of plotly.js.
 
-[Any Chart](#any-chart) gives much more control and allows more flexible use of the features of [plotly.js](https://plot.ly/). The [Any Chart](/appstore/modules/any-chart) widget can be included in your app. See the widget description in the App Store to see what version of plotly.js is supported.
+[Any Chart](#any-chart) gives much more control and allows more flexible use of the features of [plotly.js](https://plot.ly/). The [Any Chart](/appstore/modules/any-chart) widget can be included in your app. See the widget description in the Marketplace to see what version of plotly.js is supported.
 
 ## 2 Basic Charts {#basic-charts}
 
@@ -38,7 +38,7 @@ From version 1.4 of the basic charts you can create charts with a variable numbe
 
 ## 3 Any Chart {#any-chart}
 
-With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the App Store for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
+With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the Marketplace for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
 
 {{% image_container width="400" %}}![Sample Contour Chart made with Any Chart](attachments/charts/contour.png){{% /image_container %}}
 

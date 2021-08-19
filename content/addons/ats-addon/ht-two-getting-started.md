@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 {{% alert type="info" %}}
 
-You add users to ATS by inviting them to your Mendix app project. For more information on the user roles, see [Different User Roles](ov-introduction#roles).
+You add users to ATS by inviting them to your Mendix app. For more information on the user roles, see [Different User Roles](ov-introduction#roles).
 {{% /alert %}}
 
 ## 3 Configuring Your App
@@ -49,7 +49,7 @@ You are now on the **Settings** page. Here you add environments and selenium hub
 
 {{% alert type="info" %}}
 
-Only the App admin and SCRUM Master have the rights to edit the settings. You set the roles in the Developer Portal.
+Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Developer Portal.
 
 {{% /alert %}}
 

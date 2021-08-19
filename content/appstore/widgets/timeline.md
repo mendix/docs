@@ -1,14 +1,14 @@
 ---
 title: "Timeline"
 category: "Widgets"
-description: "Describes the Timeline widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "timeline", "platform support"]
+description: "Describes the Timeline widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "timeline", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-You can use the [Timeline](https://appstore.home.mendix.com/link/app/115852/) widget to create a vertical list of events with descriptions.
+You can use the [Timeline](https://marketplace.mendix.com/link/component/115852/) widget to create a vertical list of events with descriptions.
 
 ## 2 Configuration
 

@@ -3,6 +3,7 @@ title: "OAuth & Scopes"
 category: "Mendix Profile"  
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -67,11 +68,9 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
 * Mendix internal identifier of their company
 * Department (in their company)
 * Location (via their company)
-* Country (via their company)
 * URL of the user's personal website or blog
 * LinkedIn profile
 * Twitter account
-* Skype account
 
 ### 4.5 Create a Mendix Application Scope {#mx:app:create}
 

@@ -74,4 +74,4 @@ To change the color, do the following:
 
 ## 5 Read More
 
-* [Atlas UI](../../howto/front-end/atlas-ui)
+* [Atlas UI](/howto/front-end/atlas-ui)

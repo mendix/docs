@@ -8,7 +8,7 @@ tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", 
 
 ## 1 Introduction
 
-The SAP Destination Service is part of the OData Connector for SAP solutions and enables OData calls to be made using SAP destinations configured on SAP Cloud Platform. However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
+The SAP Destination Service is part of the OData Connector for SAP solutions and enables OData calls to be made using SAP destinations configured on SAP Business Technology Platform (SAP BTP). However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
 This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
 
@@ -16,13 +16,13 @@ This how-to will teach you how to configure a REST or SOAP call to use the confi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mendix app which can be deployed to SAP Cloud Platform
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/partners/sap/sap-destination-service) for more information
+* Have a Mendix app which can be deployed to SAP BTP
+* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP BTP account; see [SAP Destination Service](/partners/sap/sap-destination-service) for more information
 * Imported an **OData Connector for SAP solutions** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
 
-In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP Cloud Platform.
+In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP BTP.
 
 ![REST Microflow](attachments/sap-destination-with-rest/rest-microflow.png)
 

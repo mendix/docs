@@ -10,7 +10,11 @@ tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", 
 
 This how-to will teach you how to go from a blank slate to an app running on a device.
 
-The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all projects with a native mobile navigation profile.
+The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all apps with a native mobile navigation profile.
+
+{{% alert type="info" %}}
+The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
+{{% /alert %}}
 
 ## 2 Prerequisites {#prerequisites}
 
@@ -33,7 +37,7 @@ If you plan to deploy your app for testing on an iOS device, make sure you have 
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
-## 3 Getting Your Tokens
+## 3 Getting Your Tokens {#getting-your-tokens}
 
 To use the Mendix Native Mobile Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
 
@@ -43,7 +47,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the top-right corner of the page.
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
-5. In the **Note** field, write *Native Mobile Builder*.
+5. In the **Note** field, write *Mendix Native Mobile Builder*.
 6. Under **Select scopes**, select **repo** and **workflows**.
 7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
@@ -64,23 +68,23 @@ The Mendix Native Mobile Builder needs to communicate with GitHub and App Center
 
 From Studio Pro:
 
-1.  Click **Project** > **Build Native Mobile App**:
+1.  Click **App** > **Build Native Mobile App**:
 
-	{{% image_container width="350" %}}![Start Mendix Native Mobiler Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Start Mendix Native Mobile Builder](attachments/nbui/start-nbui.png){{% /image_container %}}
 
 1.  When Mendix Native Mobile Builder launches you will see the home screen:
 
-	{{% image_container width="350" %}}![Mendix Natve Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Mendix Native Mobile Builder Home Screen](attachments/nbui/home-screen.png){{% /image_container %}}
 
 1. Select **Build app for distribution**.
-1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name to something besides the project name:
+1.  Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name in some other way:
 
 	{{% image_container width="350" %}}![Wizard App Details](attachments/nbui/wizard-app-details.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
-1.  In the **Tokens** screen fill in your GitHub and App Center API tokens. The tool will verify the tokens grant sufficient access to valid accounts and will notify you if they do not:
+1.  In the **Build Type** screen fill in your GitHub and App Center API tokens. The tool will verify the tokens grant sufficient access to valid accounts and will notify you if they do not:
 
-	{{% image_container width="350" %}}![Wizard Tokens](attachments/nbui/wizard-tokens.png){{% /image_container %}}
+	{{% image_container width="350" %}}![Wizard Tokens](attachments/nbui/wizard-buildtype-cloud.png){{% /image_container %}}
 
 1. Click **Next Step** when ready.
 1.  Select **Choose your icon** if you already have an image you would like to use as an icon. If you continue without adding a custom image, your app will use the default images displayed below. You can change app icon later if you wish:
@@ -99,13 +103,13 @@ From Studio Pro:
 
 1. Click **Next Step** when ready.
 
-You have completed the mandatory basic app configuration required to build your project. Now you see the **Build app for distribution** screen: 
+You have completed the mandatory basic app configuration required to build your app. Now you see the **Build app for distribution** screen: 
 
 {{% image_container width="350" %}}![Build release app](attachments/nbui/build-release-app.png){{% /image_container %}}
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we reccomend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
 
 	* Versions lower than 0.5.0 for alpha releases
 	* Versions ranging from 0.5 to 0.9.x for beta releases
@@ -113,7 +117,7 @@ Next, do the following:
 
 1. Fill in your **Runtime URL**. It can be the IP of your local machine if you plan on testing against a locally-running Studio Pro installation. If you already deployed your app to Mendix Cloud, you can point it to the URL of the deployed runtime as found in Cloud Portal.
 1. Click the **Build** button to start the build.
-1.  The tool will set up your GitHub repository, commit your changes, configure App Center with two new projects (one for iOS and one for Android), and continue building your apps:
+1.  The tool will set up your GitHub repository, commit your changes, configure App Center with two new apps (one for iOS and one for Android), and continue building your apps:
 
 	{{% image_container width="350" %}}![Setting up build prerequisites](attachments/nbui/build-release-app-build-step1.png){{% /image_container %}}
 	{{% image_container width="350" %}}![Building release app](attachments/nbui/build-release-app-build-step2.png){{% /image_container %}}
@@ -184,14 +188,14 @@ Depending on whether you chose to sign your iOS app or not, the output of the bu
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"
 --username "YOUR_APPSTORE_USER_EMAIL" --password "YOUR_APPSTORE_PASSWORD"
 ```
 
-Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your App Store password.
+Replace `file "path/to/application.ipa"` with the absolute path to your IPA file, `username` with your developer app store email address, and `password` with your Apple App Store password.
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
@@ -199,7 +203,7 @@ The command will first verify your IPA is packaged correctly and ready to be shi
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
-In order to deploy the *nativeTemplate.xcarchive* on a device or on the App Store, an Apple developer account and development team is required. If one is available, do the following:
+In order to deploy the *nativeTemplate.xcarchive* on a device or on the Apple App Store, an Apple developer account and development team is required. If one is available, do the following:
 
 1. Using Xcode, double-click the *nativeTemplate.xcarchive* file. It should open with the built-in **Application Loader** software.
 1.  Click the *Distribute App* button to start the local signing flow:

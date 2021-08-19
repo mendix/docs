@@ -184,11 +184,11 @@ const parseHtmlFiles = files => {
 
 const getLinkPaths = link => {
   //TODO: GET THIS FROM CONFIG
-  if (link.indexOf('/howto8/') !== -1) {
-    link = link.replace(/\/howto8\//g, '/howto/');
+  if (link.indexOf('/howto9/') !== -1) {
+    link = link.replace(/\/howto9\//g, '/howto/');
   }
-  if (link.indexOf('/refguide8/') !== -1) {
-    link = link.replace(/\/refguide8\//g, '/refguide/');
+  if (link.indexOf('/refguide9/') !== -1) {
+    link = link.replace(/\/refguide9\//g, '/refguide/');
   }
 
   const paths = [

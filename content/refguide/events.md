@@ -1,6 +1,6 @@
 ---
 title: "Events"
-parent: "application-logic"
+parent: "microflows-and-nanoflows"
 menu_order: 90
 tags: ["studio pro", "event", "events"]
 ---

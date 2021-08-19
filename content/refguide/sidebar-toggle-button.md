@@ -56,9 +56,9 @@ The **Tooltip** property determines a text end-users will see in the tooltip tha
 
 The **Icon** property determines the icon that will be shown in front of the caption of the sidebar toggle. Possible options are: 
 
-* no icon
-* a glyphicon 
-* a (bitmap) image
+* No icon
+* Glyphicon 
+* (Bitmap) image
 
 Glyphicons come from the Bootstrap Halflings collection. The advantages of a glyphicon over a bitmap image are that they are scalable, look sharp on high-resolution screens, and their color can be changed by changing the font color. The advantage of an image icon is that it can have multiple colors.
 

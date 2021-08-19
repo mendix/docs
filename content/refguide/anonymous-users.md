@@ -11,7 +11,7 @@ You can use anonymous users to allow end-users access your application without h
 
 ## 2 Anonymous Users Properties
 
-Open **Project Security** > the **Anonymous users** tab to access the properties:
+Open **App Security** > the **Anonymous users** tab to access the properties:
 
 ![](attachments/anonymous-users/anonymous-users-tab.png)
 
@@ -24,7 +24,7 @@ The properties of anonymous users are described in the table below:
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Administrator](administrator)
 * [Demo Users](demo-users)

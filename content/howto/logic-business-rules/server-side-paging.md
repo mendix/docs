@@ -27,7 +27,7 @@ In this section you will create a JSON structure and import mapping for a REST s
 
 You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
-Once successful, your project should have the following elements:
+Once successful, your app should have the following elements:
 
 * A JSON structure based on the airport data:
 
@@ -192,7 +192,7 @@ Deploy your app again and navigate to the page with your data grid. The data wil
 
 ## 7 Add Server-Side Searching
 
-If you are using Mendix 8.3 or above, generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
+Generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
 
 You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 

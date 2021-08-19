@@ -13,7 +13,15 @@ A file manager is used to upload and/or download files.
 
 ![File Manager](attachments/file-widgets/file-manager.png)
 
-It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
+A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](external-entities) with a `Contents` binary attribute.
+
+{{% alert type="info" %}}
+For an external entity to be used as a file source, it must be defined as a media element in the corresponding OData service. Such an element can be recognized by setting the `HasStream` attribute to `true` in its metadata.  
+{{% /alert %}}
+
+{{% alert type="info" %}}
+When uploading a file through the file manager, the FileDocument object will be committed immediately.
+{{% /alert %}}
 
 ## 2 Properties
 
@@ -68,7 +76,7 @@ Default: *5*
 
 #### 2.4.3 Allowed Extensions
 
-You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, e.g. `txt;doc`
+You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
 If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
 

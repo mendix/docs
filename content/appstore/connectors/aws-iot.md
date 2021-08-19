@@ -1,14 +1,14 @@
 ---
 title: "AWS IoT"
 category: "Connectors"
-description: "Describes the configuration and usage of the AWS IoT connector, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "aws", "iot"]
+description: "Describes the configuration and usage of the AWS IoT connector, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "aws", "iot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-The [AWS IoT](https://appstore.home.mendix.com/link/app/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
+The [AWS IoT](https://marketplace.mendix.com/link/component/2868/) connector enables easily connecting to IoT devices and data on [AWS IoT](https://aws.amazon.com/iot/).
 
 ### 1.1 Typical Use Cases
 
@@ -29,7 +29,7 @@ This connector uses source code from the following projects:
 The microflow actions need AWS credentials. Most use an AWS access key ID and an AWS secret access key.
 
 For the MQTT actions you need to provide the certificates as provided by AWS IoT. These should be stored
-in the resources folder of your Mendix app project:
+in the resources folder of your Mendix app:
 
 {{% image_container width="400" %}}
 ![](attachments/aws-iot/certificates.jpg)
@@ -89,10 +89,3 @@ To publish a message on an MQTT topic, you can use the **Data - publish MQTT mes
 When configuring this action, you also need the certificates provided by AWS IoT:
 
 ![](attachments/aws-iot/data-publish-mqtt-message-properties.png)
-
-## 3 Developing This App Store Component
-
-To contribute to the development of this connector, follow these steps:
-
-1. All Java *.jar* dependencies are managed using an Ivy file. Download all the dependencies by first running `runivy.cmd`, which downloads all the *.jar* files required for running and testing the project into the **userlib** folder.
-2. After validating everything works, run `runivy-export.cmd`, which will delete all the *.jar* files in the **userlib** folder and only download those *.jar* files required for creating the connector *.mpk*.

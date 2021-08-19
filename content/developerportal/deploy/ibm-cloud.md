@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 65
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 tags: ["IBM", "IBM Cloud", "Deployment", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +17,7 @@ This document describes two ways of managing IBM Cloud:
 * Initial setup of the environment when creating a new app: see the section [Set Up IBM Cloud environment for the First Time](#FirstTime)
 * Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
-## 2 Set Up IBM Cloud Environment for the First Time{#FirstTime}
+## 2 Set Up IBM Cloud Environment for the First Time {#FirstTime}
 
 Before you can manage your IBM Cloud environment using the Developer Portal, you will need to set it up. There are two circumstances in which you will have to set up IBM Cloud for the first time.
 
@@ -24,12 +25,12 @@ Before you can manage your IBM Cloud environment using the Developer Portal, you
 
 2. You are creating a new app from an IBM app template. See [New IBM App](#NewIBMApp).
 
-### 2.1 Change Cloud Settings{#ChangeCloudSettings}
+### 2.1 Change Cloud Settings {#ChangeCloudSettings}
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
 {{% alert type="warning" %}}
-If you have an app running on SAP Cloud Platform, deploying it to IBM Cloud will not be successful because of the customization done within SAP Mendix apps.
+If you have an app running on SAP Business Technology Platform, deploying it to IBM Cloud will not be successful because of the customization done within SAP Mendix apps.
 {{% /alert %}}
 
 ![](attachments/ibm-cloud/cloud-setting.png)
@@ -40,13 +41,13 @@ Click **Set up IBM Cloud** and you will be taken to IBM Cloud welcome page.
 
 Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
-### 2.2 New IBM App{#NewIBMApp}
+### 2.2 New IBM App {#NewIBMApp}
 
 In this scenario, you choose a Mendix app template for IBM and give it a name.
 
 Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
-### 2.3 Set Up Region{#SetUpRegion}
+### 2.3 Set Up Region {#SetUpRegion}
 
 You are now prompted with an IBM Cloud login screen. Select the region where your IBM Cloud is located.
 
@@ -71,13 +72,9 @@ If you do not choose a Custom database, you will still be able to choose from a 
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
-After the environment has been created successfully, you will see the following page:
-
-![](attachments/ibm-cloud/02-ibm-configured-for-use.png)
-
 Your development environment is now configured and you can now develop your app.
 
-## 3 Create a New Environment{#NewEnvironment}
+## 3 Create a New Environment {#NewEnvironment}
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
@@ -95,17 +92,13 @@ This is done from the **Environments** page of the Developer Portal:
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your IBM credentials for that region.
 
-3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
+3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
 
-    ```
-    {appname}-{environment name}.{domain}
-    ```
-  
-    This is an example URL:
+	This is an example URL:
 
-    ```http
-    https://myApp-Development.eu-gb.mybluemix.net
-    ```
+	```http
+	https://myApp-Development.eu-gb.mybluemix.net
+	```
 
     ![](attachments/ibm-cloud/07-ibm-env-1.png)
 
@@ -144,7 +137,7 @@ At any time, you can create a new deployment package from a committed version of
 {{% alert type="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in Studio Pro, this will automatically do the following:
+If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
 
 1. Commit the project.
 2. Generate a deployment package.
@@ -179,7 +172,7 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
-## 5 Deploy Package{#DeployPackage}
+## 5 Deploy Package {#DeployPackage}
 
 ### 5.1 Deploy to an Environment
 
@@ -193,7 +186,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
-### 5.2 Configure the Application{#ConfigureTheApplication}
+### 5.2 Configure the Application {#ConfigureTheApplication}
 
 1. You will see confirmation of the package which has been transported.
 
@@ -220,12 +213,12 @@ When the package is ready to be deployed, a green tick will be shown next to the
     ![](attachments/ibm-cloud/start-application.png)
 
     {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
- 
+
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     ![](attachments/ibm-cloud/application-started.png)
 
-## 6 Transport App Between Environments{#TransportApp}
+## 6 Transport App Between Environments {#TransportApp}
 
 1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.
 
@@ -239,7 +232,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 
-## 7 Environment Details{#EnvironmentDetails}
+## 7 Environment Details {#EnvironmentDetails}
 
 The environment details page contains three tabs: General, Model Options and Services. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
@@ -442,7 +435,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on IBM Cloud. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on IBM Cloud. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
 
 ![](attachments/ibm-cloud/leave-app.png)
 
@@ -470,7 +463,7 @@ If you are trying to bind more than one new service, it is not possible to ident
 
 ### 9.4 An Error Occurs While Deploying App From Studio Pro
 
-If an app is deployed to IBM using the Studio Pro **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+If an app is deployed to IBM using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
 {{% image_container width="50%" %}}
 ![](attachments/ibm-cloud/error-desktop-modeler.png)

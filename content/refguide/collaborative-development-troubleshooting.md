@@ -54,7 +54,7 @@ You can choose one of the following:
 
 ## 5 The Repository Service Is Unavailable
 
-During the **Update** operation, changes are requested from Studio and integrated into the current project.  There is an additional step **Retrieve branch status** in the update process. During this step, Studio changes are retrieved. 
+During the **Update** operation, changes are requested from Studio and integrated into the current app.  There is an additional step **Retrieve branch status** in the update process. During this step, Studio changes are retrieved. 
 
 ![](attachments/collaborative-development-troubleshooting/retrieving-branch-status.png)
 

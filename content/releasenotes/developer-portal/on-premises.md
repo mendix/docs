@@ -25,7 +25,7 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 #### IBM Cloud Portal Deployment
 
 * We have updated the process for deploying to IBM Cloud Portal (for details on the new process, see [IBM Cloud](/developerportal/deploy/ibm-cloud)).
-* We have also added the ability to manage IBM Cloud Portal Cloud Foundry Marketplace services from within the Mendix Developer Portal.
+* We have also added the ability to manage IBM Cloud Portal Cloud Foundry  services from within the Mendix Developer Portal.
 
 ## 2018
 

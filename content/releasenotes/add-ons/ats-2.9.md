@@ -9,7 +9,7 @@ parent: "ats-2"
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22) can now be recorded and tested with ATS.
 
 ### Improvements
 
@@ -29,7 +29,7 @@ Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22
 
 ### Improvements
 
-* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 * We have continued optimize how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
 
 ### (Potentially) Breaking change

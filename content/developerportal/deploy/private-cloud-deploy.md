@@ -4,6 +4,7 @@ parent: "private-cloud"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 menu_order: 20
 tags: ["Deploy", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -12,9 +13,9 @@ To deploy apps to your private cloud cluster (for example to Red Hat OpenShift o
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Developer Portal to deploy the app.
+This document explains how to use the Mendix Developer Portal to deploy your **connected** app.
 
-Alternatively, you can provide the CRs through the console or command line for a namespace in a standalone cluster. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
+To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
 
 Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -27,7 +28,7 @@ Because you can run several Mendix apps in the same namespace, each environment 
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](private-cloud-cluster) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro version 7.23.3 (build 48173) or above
+* Mendix Studio Pro version 7.23.3 (build 48173) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 
 ## 3 Deploying an App for the First Time
@@ -36,18 +37,18 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **General** page for your app in the Developer Portal.
-    
+1. Open the **General Settings** page for your app in the Developer Portal.
+   
       ![](attachments/private-cloud-deploy/image2.png)
 
 2. Click **Cloud Settings**.
 
 3. Click **Mendix for Private Cloud**.
-    
+   
     ![](attachments/private-cloud-deploy/image3.png)
 
 4. Click **Set up Mendix for Private Cloud**.
-    
+   
     ![](attachments/private-cloud-deploy/image4.png)
 
 5. Your app is now configured for private cloud.
@@ -70,14 +71,14 @@ First you need to create an environment:
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
 5. Select the **Purpose**.
-    
+   
   1. For development of the app, for example acceptance testing, choose **Development**.
   2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
-    {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
+    {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/create-environment.png)
 
 7. Select **Core Resources**.
@@ -93,12 +94,12 @@ First you need to create an environment:
     | Large | 4 | 4 | 2 | 2 |
     | Custom | own choice | own choice | own choice | own choice |
 
-    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* enviroment, otherwise you may run into problems running your app.
+    Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
 8. Select a **Database plan** from the list of plans set up in the namespace.
 
 9. Select a **Storage plan** from the list of plans set up in the namespace.
-    
+   
     ![](attachments/private-cloud-deploy/image7.png)
 
 10. Click **Create Environment**.
@@ -114,15 +115,15 @@ You will not be able to deploy to this environment until it has been fully prepa
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-    
+   
     ![](attachments/private-cloud-deploy/image9.png)
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/image10.png)
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/private-cloud-deploy/image11.png)
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
@@ -130,7 +131,7 @@ Before you can deploy your app, you will need to create a deployment package. En
 5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
-    
+   
     ![](attachments/private-cloud-deploy/image12.png)
 
 7. Confirm the information message and you will be returned to the **Environments** page.
@@ -164,7 +165,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 3. Confirm that the **Status** is *Ready*.
 
 4. Click **Transport**.
-    
+   
     ![](attachments/private-cloud-deploy/image15.png)
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
@@ -172,7 +173,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
 
 7. Click **Continue** to continue to the Start Application confirmation page.
-    
+   
     ![](attachments/private-cloud-deploy/image16.png)
 
 8. Click Apply Changes to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
@@ -191,7 +192,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 4.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project.
+This lists the deployment packages which have been created for this app.
 
 ![](attachments/private-cloud-deploy/image17.png)
 
@@ -207,7 +208,7 @@ These are described in more detail below.
 
 #### 4.1.1 Refresh
 
-Sometimes the page will not be automatically refreshed with the latest information. Click this button to update the information on the page.
+Sometimes the page will not be automatically refreshed with the latest information. Click this button to see the latest information on the page.
 
 {{% alert type="info" %}}
 Using the browser refresh button will take you away from this environments page, so use this button instead.
@@ -219,7 +220,7 @@ This creates a new package as described in [Creating a Deployment Package](#crea
 
 #### 4.1.3 Upload Package
 
-This allows you to upload an MDA package you have already created. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
+This allows you to upload an MDA package you have already created, using Studio Pro for instance. The uploaded package is added to the list of packages for the app and can be deployed in the same way as a package created using **Create Package**.
 
 #### 4.1.4 Details
 
@@ -241,11 +242,11 @@ This deploys the package to an existing environment as described in [Deploying t
 
 ### 4.2 Environments {#environments}
 
-This section shows all the environments created for this app project.
+This section shows all the environments created for this app.
 
 ![](attachments/private-cloud-deploy/image19.png)
 
-For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment (if there is one).
+For each environment, you can see a summary of the status of the resources and details of the package which is running in the environment (which may be the placeholder app *PlaceholderMDA*).
 
 You can perform the following actions:
 
@@ -295,7 +296,7 @@ See [Creating an Environment](#create-environment), above, for more information.
 
 The word **Trial** indicates that the Operator managing that environment is unlicensed.
 
-When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. You can, however, create a new environment if you have not finished your evaluation of Mendix for Private Cloud.
 
 The word **Licensed** shows that the Operator managing that environment is licensed.
 
@@ -318,7 +319,7 @@ This opens the **Environment Details** page which is described in more detail in
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
+* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
@@ -378,7 +379,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 5.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 5.1.3.3 Scale Application
 
@@ -390,11 +391,15 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 ##### 5.1.3.4 Clear Admin Password
 
-This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
+This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
 
 ##### 5.1.3.5 Change Admin Password
 
-This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
+This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed.
+
+{{% alert type="info" %}}
+By default, there will be no admin password set for your environment. This means that the Mendix administration account will be inactive unless you set (change) a password.
+{{% /alert %}}
 
 ##### 5.1.3.6 Delete Environment
 
@@ -406,14 +411,36 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ![](attachments/private-cloud-deploy/delete-environment.png)
 
+For a *connected* cluster, the top level MendixApp​ CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
+
+* ​​The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
+
+    {{% alert type="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
+
+* ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
+
+    {{% alert type="info" %}}If you are using the S3 [create account with existing policy](private-cloud-cluster#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+
+* ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
+
+* ​​Network resources: ingress, service will be removed. This might also garbage collect other resources (for example Load Balancers and TLS certificates), depending on how your network is set up,
+
+{{% alert type="info" %}}
+​​Images are not deleted from the container registry. You should delete those images manually.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+If any of these garbage collection steps fail, you will no longer see the environment in the Developer Portal, and will have to [delete the storage instances](#delete-storage) manually.
+{{% /alert %}}
+
 ##### 5.1.3.7 Change Purpose
 
 This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
+For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
-Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
+Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
 ##### 5.1.3.8 Change Subscription Secret{#change-subscription-secret}
@@ -434,13 +461,13 @@ To change any constants, select the constant you want to edit and then click **E
 
 ### 5.3 Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](environments-details#network-tab) section of *Environment Details*.
 
 ![](attachments/private-cloud-deploy/network-tab.png)
 
 ### 5.4 Runtime Tab
 
-On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to the Mendix Cloud. For more details on these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/private-cloud-deploy/runtime-tab.png)
 
@@ -450,9 +477,25 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 
 ### 5.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app.
 
-![](attachments/private-cloud-deploy/log-levels-tab.png)
+![](attachments/private-cloud-deploy/log-levels-tab-1.png)
+
+The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModile.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
+
+![](attachments/private-cloud-deploy/log-levels-tab-2.png)
+
+You can find your logs in your Mendix application pod inside the Mendix container using the command below:
+
+```
+kubectl logs <pod-name> -c mendix
+```
+
+This might produce the log below for the example described above.
+
+![](attachments/private-cloud-deploy/log-levels-tab-3.png)
+
+For more information, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ### 5.6 TLS
 
@@ -502,27 +545,39 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Developer Portal.
 
-### 6.3 Deleting the Cluster
+### 6.3 Deployment Package Size
+
+Mendix for Private Cloud has a limit of 200MB on the size of a deployment package.
+
+## 7 Troubleshooting
+
+This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
+
+### 7.1 Status Reporting
+
+Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
+
+### 7.2 Deleting the Cluster
 
 If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
 
 To confirm that environments and their associated storage have been successfully deleted, run:
 
 For OpenShift:
-```bash
+```shell
 oc get mendixapp -n {namespace}
 oc get storageinstance -n {namespace}
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl get mendixapp -n {namespace}
 kubectl get storageinstance -n {namespace}
 ```
 
 Both commands should return an empty list.
 
-### 6.3.1 Deleting StorageInstance CRs
+#### 7.2.1 Deleting StorageInstance CRs{#delete-storage}
 
 If the Operator fails to deprovision an app's database or file storage, the `*-database` or `*-file` Pod will fail with an Error state:
 
@@ -531,12 +586,12 @@ If the Operator fails to deprovision an app's database or file storage, the `*-d
 To force removal of a StorageInstance `{name}`, run:
 
 For OpenShift:
-```bash
+```shell
 oc patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 
 For Kubernetes:
-```bash
+```shell
 kubectl patch -n {namespace} storageinstance {name} --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
 ```
 
@@ -544,15 +599,19 @@ This will also delete the failed Pod.
 
 After manually removing the StorageInstance, you'll need to manually clean up any resources associated with it, such as the database, S3 bucket or associated AWS IAM account.
 
-### 6.4 App Security and Production
+### 7.3 App Security and Production
 
 If you attempt to deploy an app with security not set to production into a production environment you will not get an error, however the deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-### 6.5 ApplicationRootUrl Needs to be Set Manually
+### 7.4 ApplicationRootUrl Needs to be Set Manually
 
-In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
+{{% alert type="info" %}}
+This workaround is only required for Mendix Operator versions below 1.10.0. Mendix Operator 1.10.0 and later versions will set `ApplicationRootUrl` automatically.
+{{% /alert %}}
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
+
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 
@@ -564,17 +623,9 @@ To add this setting:
 If you change **App URL** in the **General** tab, you should update the `ApplicationRootUrl` value as well.
 {{% /alert %}}
 
-## 7 Troubleshooting
-
-This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
-
-### 7.1 Status Reporting
-
-Under some circumstances changes in the status of the environment and its apps will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
-
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. The process looks like this:
+The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Developer Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
 
 ![](attachments/private-cloud-deploy/mx4pc-operator-deploy.png)
 
@@ -586,6 +637,6 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
 
-4. The OpenShift Route CR is created – this sets up a route to the app.
+4. The Ingress CR is created – this sets up a route to the app.
 
 The Runtime CR is now complete, and the Runtime Controller uses the CR to pull the Docker image from the Image Registry and deploy it to an App Container in the OpenShift namespace.

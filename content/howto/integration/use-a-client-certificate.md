@@ -24,7 +24,7 @@ This how-to will teach you how to do the following:
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
-1. Open your app in the Modele and go to **Project** > **Settings**.
+1. Open your app in the Modele and go to **App** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
 3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (ClientCertificateUsages) to specify which service should use which certificate if you use more than one certificate in your app.
 

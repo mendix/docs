@@ -5,7 +5,7 @@ parent: "rg-one-booleanslider"
 
 ## 1 Description
 
-Asserts the value of the BooleanSlider Appstore Widget (String).
+Asserts the value of the BooleanSlider Widget (String).
 
 ## 2 Supported widgets
  

@@ -2,7 +2,7 @@
 title: "Password Policy"
 parent: "project-security"
 menu_order: 50
-tags: ["studio pro", "password policy", "project security", "security"]
+tags: ["studio pro", "password policy", "app security", "security"]
 ---
 
 ## 1 Introduction
@@ -11,7 +11,7 @@ You can specify a number of requirements for passwords. These requirements will 
 
 ## 2 Password Policy Properties
 
-To set password policy properties, open **Project Security** > the **Password policy** tab:
+To set password policy properties, open **App Security** > the **Password policy** tab:
 
 ![](attachments/password-policy/password-policy-tab.png)
 
@@ -26,7 +26,7 @@ Password policy properties are described in the table below:
 
 ## 3 Read More
 
-* [Project Security](project-security)
+* [App Security](project-security)
 * [User Roles](user-roles)
 * [Administrator](administrator)
 * [Demo Users](demo-users)

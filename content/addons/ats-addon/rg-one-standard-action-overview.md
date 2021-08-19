@@ -56,7 +56,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Assert Current Page |   | Asserts that a certain page is open, by checking the current page title. Note that the page title may depend on the user’s language! For dialogs use the Find/Assert dialog action. |
 | Assert Validation Message | All widgets | Asserts a validation message with a certain text |
 | Click/Doubleclick | All web elements | Perform a click or doubleclick and wait for Mendix activities |
-| Click Widgets | All widgets | Click on a Mendix Widget (e.g. Button, Link, Image) by its name |
+| Click Widgets | All widgets | Click on a Mendix Widget (for example, Button, Link, Image) by its name |
 | Click Widget Button | ListView, ReferenceSelector | Refresh Button / Loadmore / ClearSearchField (ListView) Goto, / Add (ReferenceSelector) |
 | Find/Assert Widget | All widgets | Find/Assert a Mendix Widget by its given name. It is possible to use a sequence of names as a path. |
 | Get Validation Message | All widgets | Returns the validation message of a widget |
@@ -80,11 +80,11 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Assert Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Assert the text value from a Textbox, Textarea, Dateinput |
 | Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if value is available in drop-down |
 | Get Checkbox Value | CheckBox | Returns true if the Checkbox is checked |
-| Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Get index of selected value in a drop-down, e.g. an EnumSelect or ReferenceSelector |
+| Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Get index of selected value in a drop-down, for example, an EnumSelect or ReferenceSelector |
 | Get Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Get the text value from a Textbox, Textarea, Dateinput, RadioButton, Dropdowns |
 | Set Checkbox Value | CheckBox | Sets the value of a Checkbox |
 | Set Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, OnChange Inputbox | Set the text value of a Textbox, Textarea, Dateinput, Reference Selector, Enum Selector |
-| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Set the value of a drop-down by index, e.g. EnumSelect or ReferenceSelector |
+| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Set the value of a drop-down by index, for example, EnumSelect or ReferenceSelector |
 | Toggle Checkbox Value | CheckBox | Click on a Checkbox to toggle its value |
 
 ## 8 Navigation, Menu

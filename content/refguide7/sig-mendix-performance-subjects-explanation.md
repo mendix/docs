@@ -22,7 +22,7 @@ The Mendix Platform consists of the following components:
 
 *   Developer Portal – web-based collaborative environment for design, development, and deployment of apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 
-*   App Store – a portal with hundreds of publicly available building blocks to speed up app development
+*   Marketplace – a portal with hundreds of publicly available building blocks to speed up app development
 
 *   Mendix Modeler – multi-user modeling studio of the Mendix Platform
 *   Team Server – a central repository for managing application model versions

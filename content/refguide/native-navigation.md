@@ -101,11 +101,15 @@ You can navigate back through multiple pages in history at once by setting the a
 
 You can configure this behavior either on Close page actions that you have modeled on your pages, or on the Close page activity in your nanoflows. This number can be set using an expression so that you can set either a static number, or a snapshot-calculated one for more complex cases.
 
+The **All** option can be used to close all pages in the current stack.
+
 #### 4.2.2 Combining Closing and Opening Pages
 
 For more complex scenarios, it is possible to transparently remove one or more pages from the history from the current stack when navigating to a new page. Doing so ensures that users cannot inadvertently navigate back to pages that are no longer relevant. For example, when a user reaches the end of a three-step wizard flow, you can configure the Open page activity to open the third page and close the previous two pages at the same time. As a result, the user will see a single transition, and navigating back will not lead them to the first two pages.
 
-In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, and the user will not be able to navigate back from the target page.
+The **All** option can be used to close all pages in the current stack.
+
+In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, not just the current stack, and the user will not be able to navigate back from the target page.
 
 ### 4.3 Updating Data
 

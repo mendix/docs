@@ -64,7 +64,7 @@ The **[Theme Customizer](/studio/theme-customizer)** allows you to customize you
 
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [General Info](/studio/general) 
 * [Page Editor](/studio/page-editor)

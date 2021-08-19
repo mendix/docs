@@ -61,7 +61,8 @@ The **Columns** section properties are described in the table below:
 
 In the **Grid Column** properties, you can select the attribute, change the name, width, and editability of the data grid column. 
 
-![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% /image_container %}}
 
 The properties are described in the table below:
 
@@ -147,9 +148,9 @@ A range search field has the following specific properties:
 
 * **Maximum Value** – determines which attribute of the entity the search term must fall below 
 
-  *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
+    *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-      ![](attachments/page-editor-data-grid/range-search-field-properties.png)
+        ![](attachments/page-editor-data-grid/range-search-field-properties.png)
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -162,7 +163,7 @@ The **Control Bar** section properties are described below:
     * **Yes (with total count)** – paging buttons are shown, including the **Go to last page** button and the total count of objects
     * **Yes (without total count)** – paging buttons are shown except for the **Go to last page** button. Also, the total count of objects is not shown, as page numbers are shown instead
     * **No** – The paging buttons are not shown. Hide the buttons if you are sure that the data grid will contain only one page
-  
+    
         ![Show Paging Controls](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
     
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
@@ -208,7 +209,7 @@ Data grid specific actions are the following ones:
 
 	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-      ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
+        ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 

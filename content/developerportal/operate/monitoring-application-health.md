@@ -4,12 +4,15 @@ category: "Operations"
 menu_order: 20
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
+aliases:
+    - /mendixcloud/monitoring-application-health.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Operate** category of the **Developer Portal**, you can inspect your application's health in the Mendix Cloud. 
+When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Developer Portal**, you can inspect your application's health in the Mendix Cloud. 
 
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
 If you [Receive Environment Status Alerts](receive-alerts), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
@@ -22,17 +25,17 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 1.  Go to the [Developer Portal](https://home.mendix.com).
 2.  Open the app that you want to monitor.
-3.  Click **Alerts** under the **Operate** category. This will display the status of your app node in various categories.
+3.  Click **Alerts**. This will display the status of your app node in various categories.
 
 	![](attachments/18580000.png)
 
-	{{% alert type="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
+	{{% alert type="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.{{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
 	![](attachments/18579999.png)
 
-This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
+This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page.
 
 Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
@@ -156,6 +159,10 @@ First actions to take | Check the log files and application metrics for a possib
 
 ## 4 Cloud v3 Alerting Categories and Thresholds
 
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
+
 Mendix Cloud v3 also has a number of alerting categories and thresholds. These differ from those in Mendix Cloud v4 and so are documented in this separate section.Again, any category that does not display as *OK* needs to be investigated.
 
 ### 4.1 Application Status
@@ -254,7 +261,7 @@ To access the history of the alerts from your app, follow these steps:
 
     The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
-    The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.
+    The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
@@ -264,4 +271,4 @@ To access the history of the alerts from your app, follow these steps:
 * [Application Trends in Mendix Cloud v4](trends-v4)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Cloud Status: Mendix Cloud](/developerportal/deploy/mendix-cloud-status)
-* [How to Submit Support Requests](../support/submit-support-request)
+* [How to Submit Support Requests](/developerportal/support/submit-support-request)

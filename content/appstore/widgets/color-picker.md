@@ -1,14 +1,14 @@
 ---
 title: "Color Picker"
 category: "Widgets"
-description: "Describes the configuration and usage of the Color Picker widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "color picker", "react", "platform support"]
+description: "Describes the configuration and usage of the Color Picker widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "color picker", "react", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Color Picker](https://appstore.home.mendix.com/link/app/107044/) enables selecting and adjusting a color value.
+The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value.
 
 ### 1.1 Features 
 
@@ -33,7 +33,7 @@ Supported color pickers are based on the [React Color](http://casesandberg.githu
 
 ### 1.2 Demo
 
-For a demo app project that has been deployed with this widget, see [here](https://colorpicker.mxapps.io).
+For a demo app that has been deployed with this widget, see [here](https://colorpicker.mxapps.io).
 
 ## 2 Configuration
 

@@ -64,7 +64,7 @@ You can only set custom [log node levels](/developerportal/deploy/environments-d
 
 ### 3.3 Template
 
-A **Template** defines the message text. The template can contain parameters that are written as a number between braces, e.g. `{1}`. The first parameter has number `1`, the second `2`, and so on.
+A **Template** defines the message text. The template can contain parameters that are written as a number between braces, for example, `{1}`. The first parameter has number `1`, the second `2`, and so on.
 
 ### 3.4 Parameters
 

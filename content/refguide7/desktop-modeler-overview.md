@@ -4,6 +4,9 @@ category: "Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["desktop modeler"]
+aliases:
+    - /refguide7/modeler.html
+    - /refguide7/Modeler.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -126,8 +129,8 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tools > Batch update button icons | Opens the **Batch Update Button Icons** dialog box so that you can configure the batch update of many button icons at once.  |   |
 | Tools > Batch update layouts | Opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.  |  |
 | Tools > Batch convert Split panes | Opens the **Batch Convert Split Panes** dialog box so that you can convert split panes in Mendix 6 apps into layout grids. See [Split Panes](/releasenotes/studio-pro/7.0#split-panes) in the Mendix 7 release notes for more information. |  |
-| Tools > Update Widgets (available in version 7.23) | Presents the current versions of the widgets you are using in your app project, what the latest versions of the widgets are, and an update option. |  |
-| Tools > Check Widgets | Checks that the widgets you have implemented in the app project have been built correctly. | |
+| Tools > Update Widgets (available in version 7.23) | Presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option. |  |
+| Tools > Check Widgets | Checks that the widgets you have implemented in the app have been built correctly. | |
 | Synchronize Project Directory | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the form toolbox. | <kbd>F4</kbd> |
 | Show Project Directory in Explorer | Shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. |   |
 | Deploy for Eclipse | Deploys the project to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse. | <kbd>F6</kbd> |
@@ -157,10 +160,10 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| Current Language | Displays the current language of your app project and allows you to make another language the current language. | |
-| Select Previous Language | Makes the previous language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
-| Select Next Language | Makes the next language of your app project the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
-| Language Settings | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app project. | |
+| Current Language | Displays the current language of your app and allows you to make another language the current language. | |
+| Select Previous Language | Makes the previous language of your app the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
+| Select Next Language | Makes the next language of your app the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
+| Language Settings | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app. | |
 | Batch Replace | Opens a form in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
 | Batch Translate | Opens a form in which you can quickly translate many texts from one language to another. |   |
 | Language Operations | Opens a form in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
@@ -172,7 +175,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Help | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | Help Contents | Opens the start page of the documentaton in the default web browser. |   |
 | Ask a Question | Opens the [Mendix Forum](https://forum.mendixcloud.com/index4.html) in the default web browser. |   |
-| Open Log File Directory | Opens the log files for your app project locally. |   |
+| Open Log File Directory | Opens the log files for your app locally. |   |
 | About Mendix Modeler | Shows information about the current version of the Mendix Modeler. |   |
 
 ## 5 General Shortcut Keys

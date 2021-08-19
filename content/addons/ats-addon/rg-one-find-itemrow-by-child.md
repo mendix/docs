@@ -15,7 +15,7 @@ Finds Item or Row of a TemplateGrid, DataGrid or ListView containing a specified
 
 ## 3 Usage
 
-Provide the child WebElement which resides in the item or row you want to find, e.g. a specific button or DataView.  
+Provide the child WebElement which resides in the item or row you want to find, for example, a specific button or DataView.  
 
 ## 4 Input Parameters
 

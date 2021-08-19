@@ -56,15 +56,15 @@ Use this code for validating input string text:
 /**
  * @param {string} text
  */
-function TextToSpeech(text) {
+async function TextToSpeech(text) {
     // BEGIN USER CODE    
     if (text === undefined) {
-        // Reject when the parameter is set to 'empty' the value will be undefined 
-        return Promise.reject("The Text parameter is required");
+        // Throw an error when the parameter is set to 'empty', the value will be undefined 
+        throw new Error("The Text parameter is required");
     }
     if (text.trim() === "") {
-        // Reject when the text is an empty string ""
-        return Promise.reject("The Text parameter can not be empty");
+        // Throw an error when the text is an empty string ""
+        throw new Error("The Text parameter can not be empty");
     }
     /* implementation */
     // END USER CODE
@@ -77,23 +77,23 @@ Use this code for validating a Mendix input object:
 /**
  * @param {MxObject} audioFile
  */
-function PlayAudio(audioFile) {
+async function PlayAudio(audioFile) {
     // BEGIN USER CODE
     if (!audioFile) {
-        return Promise.reject("The 'Audio file' parameter can not be empty");
+        throw new Error("The 'Audio file' parameter can not be empty");
     }
     if (!audioFile.isA("System.FileDocument") && !audioFile.inheritsFrom("System.FileDocument")) {
-        return Promise.reject("The 'Audio file' parameter should inherit from System.FileDocument");
+        throw new Error("The 'Audio file' parameter should inherit from System.FileDocument");
     }
     if (!audioFile.get("HasContents")) {
-        return Promise.reject("The 'Audio file' parameter does not have any content");
+        throw new Error("The 'Audio file' parameter does not have any content");
     }
-    var allowedExtensions = ["mp3", "wav", "ogg"]
-    var fileName = audioFile.get("Name");
-    var dotIndex = fileName.lastIndexOf(".");
-    var extension = fileName.substring(dotIndex + 1).toLowerCase();
+    const allowedExtensions = ["mp3", "wav", "ogg"]
+    const fileName = audioFile.get("Name");
+    const dotIndex = fileName.lastIndexOf(".");
+    const extension = fileName.substring(dotIndex + 1).toLowerCase();
     if (dotIndex === -1 || allowedExtensions.indexOf(extension) === -1) {
-        return Promise.reject("The 'Audio file' parameter only supports files with extension .mp3, .wav or .ogg");
+        throw new Error("The 'Audio file' parameter only supports files with extension .mp3, .wav or .ogg");
     }
     /* implementation */
     // END USER CODE
@@ -106,22 +106,22 @@ Use this code for validating an input list of objects and `attributesNames`:
 /**
  * @param {MxObject[]} objectList
  * @param {string} attributeName
- * @returns {Big}
+ * @returns {Promise.<Big>}
  */
-function SumListAttributeValues(objectList, attributeName) {
+async function SumListAttributeValues(objectList, attributeName) {
     // BEGIN USER CODE
     if (!attributeName || attributeName.trim() === "") {
-        return Promise.reject("The 'Attribute name' parameter can not be empty");
+        throw new Error("The 'Attribute name' parameter can not be empty");
     }
     if (!objectList || objectList.length === 0) {
-        // Resolve early, sum of empty is 0
-        return Promise.resolve(new Big(0));
+        // Return early, sum of empty is 0
+        return new Big(0);
     }
     if (!objectList[0].has(attributeName)) {
-        return Promise.reject("List of type " + objectList[0].getEntity() + " does not have an attribute named " + attributeName);
+        throw new Error("List of type " + objectList[0].getEntity() + " does not have an attribute named " + attributeName);
     }
     if (!objectList[0].isNumeric(attributeName)) {
-        return Promise.reject("List of type " + objectList[0].getEntity() + " an attribute named " + attributeName + " is not numeric");
+        throw new Error("List of type " + objectList[0].getEntity() + " an attribute named " + attributeName + " is not numeric");
     }
     /* implementation */
     // END USER CODE
@@ -173,7 +173,7 @@ y = x.plus(0.2)            // '0.3'
 If you know your JavaScript action does not require this extended precision (for example, if you expect a simple integer between 1 and 100), you can easily convert a `Big` object to a JavaScript number:
 
 ```javascript
-var numberValue = Number(bigJsValue); // number
+const numberValue = Number(bigJsValue); // number
 ```
 
 For information on how to use *Big.js*, consult [big.js API](https://mikemcl.github.io/big.js/).
@@ -233,7 +233,7 @@ Loading and bundling external libraries are not currently supported. Embedding l
 
 Below is an example of using an external dependency based on [pdf-lib](https://github.com/Hopding/pdf-lib):
 
-1. Open Command Prompt and navigate to the right folder using `cd --your-project-folder--/javascriptsource/--ModuleName--/actions`.
+1. Open Command Prompt and navigate to the right folder using `cd --your-app-folder--/javascriptsource/--ModuleName--/actions`.
 2. Run `npm install pdf-lib`.
 3.  In the JavaScript action, use the following code to import the library:
 	
@@ -244,7 +244,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 	// - the import list
 	// - the code between BEGIN USER CODE and END USER CODE
 	// - the code between BEGIN EXTRA CODE and END EXTRA CODE
-	// Other code you write will be lost the next time you deploy the project.
+	// Other code you write will be lost the next time you deploy the app.
 	import { Big } from "big.js";
 	import { PDFDocument } from "pdf-lib"
 
@@ -255,7 +255,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 
 The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app#upgrades-20) section of the *Hybrid App Base & Template* release notes.
 
-It is also possible to add new plugins during a mobile build. For more information on adding new plugins, see [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+It is also possible to add new plugins during a mobile build.
 
 The actual list of plugins use can be found in *config.xml* inside your deployment package.
 
@@ -330,31 +330,30 @@ Explaining the callback code:
 
 #### 2.3.2 Understanding Promise API
 
-This function uses the browser promise API:
+This function uses the Fetch API:
 
 ```javascript
-function GetUserNameSampleRest(userID) {
+async function GetUserNameSampleRest(userID) {
     // BEGIN USER CODE
     if (!userID) {
-        return Promise.reject("The UserID parameter is required")
+        throw new Error("The UserID parameter is required")
     }
-    var url = "https://jsonplaceholder.typicode.com/users/" + userID;
-    return fetch(url) // Fetch returns a promise, gets the url and wait for result
-        .then(function(response) { return response.json() }) // Transform to json
-        .then(function(jsonData) {
-            return jsonData.name; // Get the data
-        })
-        .catch(function(error) { Promise.reject("Failed to get user information") });
-    });
+    const url = "https://jsonplaceholder.typicode.com/users/" + userID;
+    try {
+        const response = await fetch(url); // Fetch returns a promise, gets the url and wait for result
+        const jsonData = await response.json(); // Transform to json
+        return jsonData.name; // Get the data
+    } catch (error) {
+        throw new Error("Failed to get user information");
+    }
     // END USER CODE
 }
 ```
-
-Explaining the Promise API code:
+Explaining the Fetch API code:
 
 * The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`, and `fetch` is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) — the response is a promise that is converted into data with the `.json()` function (the name is accessed and returned)
 
-* As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself — this makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data (for a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise))
+* As this is an async function, error handling at all three steps: fetch, parse JSON, and accessing the data can be done inside a single `try...catch` block (for a more detailed explanation, see the [MDN documentation for error handling with async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await#adding_error_handling)).
 
 * For more information on building a JavaScript action rest consume function, see [Build JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
@@ -369,6 +368,15 @@ These are the most commonly used promise functions:
 * `Promise.reject(errorMessage)`: returns a `Promise` object that is rejected, and will explain that the rejection will induce an error in the nanoflow
 * `.then()`: enables chaining promises, which will make the code easier to read than nested callback functions
 
+More recent additions to the JavaScript language are `async functions` and the `await` keyword. These features make asynchronous code easier to write and to read afterwards by making async code looking more like synchronous code. There are two parts to using `async/await` in your code:
+
+* `async` keyword, which you put in front of function declarations to turn them into async functions (telling them to return a promise rather than directly returning the value)
+* `await` can be put in front of any async promise-based function to pause your code on that line until the promise fulfills, then return the resulting value
+
+For error handling, there are couple of options:
+* Using a synchronous `try...catch` structure with `async/await` and wrapping async function call into it. The `catch(`*`error`*`) {}` block will have receive the error object of rejected `Promise`
+* Chaining a `.catch(`*`error`*`)` block onto the end of the `.then()` call
+
 #### 2.3.3.1 Using Promise Function Best Practices
 
 When using promise functions, be aware of the following:
@@ -377,7 +385,6 @@ When using promise functions, be aware of the following:
 * When using a JavaScript action in a nanoflow, set the output  `Use return variable` to `No` 
 * Return type Boolean should never be returned with an `undefined` value (this will cause an error if the returned variable is accidentally used in the nanoflow)
 * It is recommended to return early so no code is executed if it can or should be skipped – for example, when validating input
-* The Promises API is implemented in modern browsers, but not in IE11 (the Mendix Client will polyfill the promise functionally in all supported browsers) 
 * Uncaught errors in JavaScript will throw an error in microflows – currently, there is no way to add an error handler in nanoflows like you can in microflows
 
 ## 3 Making Reusable JavaScript Actions
@@ -419,11 +426,11 @@ Use **Category** to group actions, and **Icon** to give the exposed nanoflow act
 
 ### 3.3 Publishing JavaScript Actions
 
-You can export a single action by right-clicking a JavaScript action in the Project Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix App Store. Instead, publish it as a module. 
+You can export a single action by right-clicking a JavaScript action in the App Explorer then selecting **Export document to file**. Then, the exported file can be shared with other developers. A single nanoflow cannot be published in the Mendix Marketplace. Instead, publish it as a module. 
 
-You can import a single action by right-clicking your module in the Project Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
+You can import a single action by right-clicking your module in the App Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix App Store. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix App Store. For further instructions, see [How to Share App Store Content](/appstore/general/share-app-store-content).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 
@@ -445,15 +452,13 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 ## 4 Testing JavaScript Actions
 
-An extensive test project can help make a JavaScript action more robust. Within a test project, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
+An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
 When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
 ## 5 Debugging JavaScript Actions
-
-Mendix Studio Pro does not support nanoflow debugging in the same way it supports microflow debugging. For validating intermediate results between actions, use the **Log message** activity.
 
 Debugging a JavaScript action's code can be done within a browser development tool. For details on how to do this, see your browser's developer tools documentation at either [Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/), [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools), [Microsoft Edge Developer Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium), or Safari's [Web Development Tools](https://developer.apple.com/safari/tools/). 
 
@@ -468,7 +473,7 @@ After the file is loaded, breakpoints can be set in the code by clicking the inl
 Not all capabilities are recommended for use. Consider the side effects that an action could have on the Mendix Client, DOM, or other widgets:
 
 * Do not assume your user's browser – remember not all browsers have the same capabilities
-* Permanent rendering should be done using pluggable or custom widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
+* Permanent rendering should be done using pluggable widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
 * Changes to the DOM might be lost due to the Mendix Client which can render the DOM at will (for example, when you add a CSS class to another component the Mendix Client will render the page at will and remove your changes) – you can create and change DOM elements that are placed outside `<div id="content"></div>`
 * Avoid using deprecated libraries – do not use Dojo or Dijit as they will be deprecated (jQuery should also no longer be used)
 * Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is  `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)
@@ -481,3 +486,4 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 * JavaScript basics:
 	* [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+	* [Async functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)

@@ -1,5 +1,5 @@
 ---
-title: "Application Autoscaler for SAP Cloud Platform"
+title: "Application Autoscaler for SAP Business Technology Platform"
 category: "SAP"
 menu_order: 47
 description: "How to set up the SAP Autoscaler"
@@ -8,7 +8,7 @@ tags: ["SAP", "Autoscaler"]
 
 ## 1 Introduction
 
-The **Application Autoscaler** service for SAP Cloud Platform enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
+The **Application Autoscaler** service for SAP Business Technology Platform (SAP BTP) enables applications to automatically increase or decrease the number of instances of your app. This can be based on a schedule, or based on the value of a metric.
 
 For more information on the Application AutoScaler see [Application Autoscaler Service](https://help.sap.com/viewer/7472b7d13d5d4862b2b06a730a2df086/Cloud/en-US/4ad999a0be664160a08514ba4ce6430c.html) on the *SAP Help Portal*.
 
@@ -36,7 +36,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 The **autoscaler configurator** provide a user friendly interface to create the JSON required to configure the application autoscaler.
 
 {{% alert type="info" %}}
-The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP Cloud Platform, and you cannot import any existing JSON files.
+The configurator will only create a JSON file from scratch. It does not have access to your existing autoscaler settings on SAP BTP, and you cannot import any existing JSON files.
 {{% /alert %}}
 
 There three options available:
@@ -72,7 +72,7 @@ When you have added all the rules, click **Generate Configuration File** to crea
 
 You can then upload this file as the configuration of your autoscaler service.
 
-## 3.1 Scheduled Scaling{#schedule}
+### 3.1 Scheduled Scaling{#schedule}
 
 {{% alert type="warning" %}}
 Do not attempt to enter overlapping schedules as this will cause the scaling to fail.
@@ -92,7 +92,7 @@ For custom schedules you will see these values on the screen more than once, but
 
 Other information will depend on the type of schedule you are making. You can add multiple rules and all the rules you have already set up in the configurator will be displayed. See the sections below for more information.
 
-### 3.1.1 Specific Date{#specific}
+#### 3.1.1 Specific Date{#specific}
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
@@ -109,7 +109,7 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
 
-### 3.1.2 Recurring Schedule{#recurring}
+#### 3.1.2 Recurring Schedule{#recurring}
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
@@ -130,7 +130,7 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
 
-## 3.2 Dynamic Scaling{#dynamic}
+### 3.2 Dynamic Scaling{#dynamic}
 
 First you will need to set the following:
 

@@ -95,7 +95,7 @@ You can generate a new page to show by right-clicking the widget and selecting *
 
 ### 2.8 Selectable Objects Section {#selectable-objects}
 
-The properties in the Selectable objects section determine the objects from which the end user can make a selection. You can add an **XPath constraint**, or use a **Constrained by** path.
+The properties in the Selectable objects section determine the objects from which the end user can make a selection. As source, you can use **Database** or **XPath**. When using **XPath**, you can add an **XPath constraint**, or use a **Constrained by** path.
 
 For more information, see the [XPath](reference-selector#xpath-constraints) section of *Reference Selector*.
 

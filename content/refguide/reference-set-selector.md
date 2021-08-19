@@ -135,21 +135,7 @@ Even if the control bar is invisible there can still be a default button that is
 
 Default: *True*
 
-#### 2.5.7 Show Paging Buttons {#show-paging-buttons}
-
-{{% alert type="warning" %}}
-This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
-{{% /alert %}}
-
-This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
-
-Default: *True*
-
-#### 2.5.8 Show Paging Bar {#show-paging-bar}
-
-{{% alert type="info" %}}
-This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
-{{% /alert %}}
+#### 2.5.7 Show Paging Bar {#show-paging-bar}
 
 With this property, you can change the way the paging bar is shown.
 
@@ -165,7 +151,7 @@ Default: *Yes (with total count)*
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
 {{% /alert %}}
 
-#### 2.5.9 Selection Mode {#selection-mode}
+#### 2.5.8 Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the reference set selector.
 
@@ -177,7 +163,7 @@ The selection mode determines whether and how the user can select items in the r
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
 
-#### 2.5.10 Select First {#select-first}
+#### 2.5.9 Select First {#select-first}
 
 Specifies whether the first item should be selected by default when the reference set selector is first shown.
 
@@ -186,7 +172,7 @@ Possible values:
 * No *(default)* 
 * Yes
 
-#### 2.5.11 Default Button Trigger {#default-button-trigger}
+#### 2.5.10 Default Button Trigger {#default-button-trigger}
 
 The default button can be triggered by a single or a double click a row.
 

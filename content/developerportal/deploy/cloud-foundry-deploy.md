@@ -3,7 +3,13 @@ title: "Cloud Foundry"
 category: "Deployment"
 menu_order: 50
 description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
-tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
+tags: ["Cloud Foundry", "Deploy", "Bind"]
+aliases:
+    - /deployment/cloud-foundry/index.html
+    - /howto/deploying-a-mendix-app-to-cloud-foundry.html
+    - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
+    - /refguide/deploying-a-mendix-app-to-cloud-foundry.html    
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -37,7 +43,7 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 
 Cloud Foundry providers like SAP and IBM are made available within the Mendix Developer Portal. It is recommended that you use the Developer Portal for deploying your application to these clouds. See the detailed documentation for the following targets:  
 
-* [SAP Cloud Platform](sap-cloud-platform)
+* [SAP Business Technology Platform](sap-cloud-platform)
 * [IBM Cloud](ibm-cloud)
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
@@ -46,21 +52,20 @@ Only use the instructions in this document if you have specific requirements whi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of Studio Pro from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
-* Have access to a service account with the rights to create new applications and services. One service which you can use is [Pivotal Web Services](https://run.pivotal.io/) which is free to try for a limited period.
+* Download the latest version of Studio Pro from the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/)
+* Have access to a service account with the rights to create new applications and services.
 
-## 3 Configuring Cloud Foundry in Studio Pro {#3}
+## 3 Configuring Cloud Foundry in Studio Pro {#configuring-cloud-foundry-in-studio-pro}
 
 To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 
-1.  Open Studio Pro, click **Run**, and select **Edit Cloud Foundry Settings**:
+1.  Open Studio Pro, choose the menu option **Run > Edit Cloud Foundry Settings**:
 
 	![](attachments/cloud-foundry-deploy/edit-cf-settings.png)
 
 2.  Enter the following in the credentials of the **Edit Cloud Foundry Settings** window:
 
 	* **API endpoint** is the endpoint of the platform which you will be able to get from the platform documentation. Examples are:
-		* `https://api.run.pivotal.io` for Pivotal
 		* `https://api.ng.bluemix.net` for IBM region US South
 		* `https://api.cf.eu10.hana.ondemand.com` for SAP Frankfurt
 	* **User name** is the name of your account on the platform
@@ -97,8 +102,8 @@ Apps make use of services (for example, databases, load balancers, and memory to
 In addition to these required services, the following services are optional:
 
 * File Store
-* XSUAA Service (*SAP Cloud Platform only*)
-* Connectivity Service (*SAP Cloud Platform only*)
+* XSUAA Service (*SAP Business Technology Platform (SAP BTP) only*)
+* Connectivity Service (*SAP BTP only*)
 
 This how-to will describe adding the database and file store only. Additional services can be added in the same way. There is usually a limit to how many resources you can add to a trial account so you may only be able to deploy a single app into a trial account without running out of resources.
 
@@ -108,12 +113,11 @@ To configure the Cloud Foundry environment, you will need to go to the console f
 
 All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. Some example consoles are:
 
-* [Pivotal](http://console.run.pivotal.io/)
 * [IBM](https://console.bluemix.net/dashboard/apps/)
 * [SAP](https://account.hanatrial.ondemand.com/cockpit#/home/trialhome)
 
 {{% alert type="info" %}}
-The images in this document are mainly taken from the Pivotal console.
+The images in this document are mainly taken from a previous hosting option, the Pivotal Web Services console, which is no longer available.
 {{% /alert %}}
 
 To add a database service to your app, follow these steps:
@@ -156,7 +160,7 @@ You may need to configure your file store by using environment variables. See th
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
-3.  Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
+3. Choose the menu option **Run > Run on Cloud Foundry**:
 
 	![](attachments/cloud-foundry-deploy/run-on-cf.png) 
 

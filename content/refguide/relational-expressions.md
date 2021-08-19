@@ -243,7 +243,7 @@ Determines whether the two values are not equal.
 
 ### 7.1 Input Parameters
 
-The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
+The values be any of the following types, but the two values should be in the same category (for example, both numbers):
 
 Possible values are described in the table below: 
 

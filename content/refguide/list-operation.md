@@ -23,7 +23,9 @@ The actions which can be performed are:
 * Equals 
 * Sort 
 * Filter 
+* Filter by expression
 * Find 
+* Find by expression 
 * Head 
 * Tail 
 
@@ -60,7 +62,7 @@ A list operation action can execute any of the following operations. The operati
 
 #### 3.1.1 Binary
 
-These binary operations have as an input a list and either another list or an object. THey return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
+These binary operations have as an input a list and either another list or an object. They return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
@@ -77,8 +79,8 @@ These operations takes a list and one or more members (attributes or association
 | Operation | Description | Result Type |
 | --- | --- | --- |
 | Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
-| Find | Find the first object of which the member has the given value. | Object |
-| Filter | Find all objects of which the member has the given value. | List |
+| Find | Finds the first object of which the member has the given value. | Object |
+| Filter | Finds all objects of which the member has the given value. | List |
 
 #### 3.1.3 Unary
 
@@ -88,6 +90,16 @@ These unary operations have a list as the single operand and return either an ob
 | --- | --- | --- |
 | Head | The result is the first element of the list, or empty if the parameter contains zero elements or was initialized as empty. | Object |
 | Tail | The result is a list containing all elements of the parameter except the first, or an empty list if the parameter contains zero elements or was initialized as empty. | List |
+
+#### 3.1.4 Expression
+
+These operations take a list and filter it based on an expression. Inside the expression, `$currentObject` can be used to perform the filtering.
+
+| Operation | Description | Result Type |
+| --- | --- | --- |
+| Find by expression | Finds the first object that matches the given expression. | Object |
+| Filter by expression | Finds all the objects that match the given expression. | List |
+
 
 ### 3.2 List Name, Object Name, or Variable Name
 

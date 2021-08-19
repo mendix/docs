@@ -15,6 +15,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### August 19th, 2021
+
+#### Improvements
+
+* We implemented the first batch of endpoints for mobile, in preparation for something cool coming your way.
+* We improved the way the Developer Portal shares data across its several components.
+* We made small improvements to the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed an issue with the project's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+
 ### July 27th, 2021
 
 #### Improvements

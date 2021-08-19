@@ -72,7 +72,7 @@ The **Developers** section presents the names of the developers who most recentl
 
 The **Support** section presents the category of support Mendix offers for the component (for more details, see [Marketplace Content Support](app-store-content-support)).
 
-* A **GitHub** link, which will take you to the GitHub source files of the component
+A **GitHub** link will take you to the GitHub source files of the component.
 
 ### 3.2 Tabs
 

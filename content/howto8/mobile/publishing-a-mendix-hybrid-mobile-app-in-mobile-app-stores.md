@@ -30,7 +30,6 @@ Once you have finished developing a Mendix hybrid mobile application, you will w
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
-	* If you require an app to test with, set up the [Event App](https://marketplace.mendix.com/link/component/36793/) from the Mendix Marketplace as a Free App to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 
 To publish your app in the Apple App Store, do the following:

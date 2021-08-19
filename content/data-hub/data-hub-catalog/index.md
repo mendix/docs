@@ -26,7 +26,7 @@ You can navigate to the following tabs:
 From the **Home** screen, you can do the following:
 
 * **Search** – search in the Data Hub Catalog using the **Search** box or clicking the suggested **Tags**
-* **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub (for more details, see the [Manually Registering OData V4 Services](register#registration-form) section of *How to Register Data Assets*)
+* **Register a new data source** – manually register an OData service from your enterprise business application to the Data Hub (for more details, see [How to Register OData Resources in the Data Hub Catalog](register-data))
 
 * **Popular Data Sources** – click on the most popular data sources
 

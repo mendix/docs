@@ -20,18 +20,34 @@ We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
-* [Red Hat OpenShift Container Platform](https://www.openshift.com/) (versions 4 and 3.11)
+* [Red Hat OpenShift Container Platform](https://www.openshift.com/)
 * [MicroK8s](https://microk8s.io/)
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 
 {{% alert type="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
-
-Only Kubernetes versions 1.13 through 1.20 are officially supported.
-
-Mendix for Private Cloud has not been evaluated against Kubernetes 1.21 and later versions.
 {{% /alert %}}
+
+#### 2.1.1 Supported Versions
+
+Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which officially supports:
+
+* Kubernetes versions 1.19 through 1.21
+* OpenShift 4.6 through 4.7
+
+{{% alert type="warning" %}}
+Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+
+This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+
+Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
+{{% /alert %}}
+
+Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:
+
+* Kubernetes versions 1.13 through 1.21
+* OpenShift 3.11 through 4.7
 
 ### 2.2 Cluster Requirements
 
@@ -41,13 +57,15 @@ To install the Mendix Operator, the cluster administrator will need permissions 
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPUs and 2 GB memory available. This is enough to run one simple app.
+The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components .
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or *OpenShift Online Pro* because they don't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
+
+Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported. 
 
 ## 3 Container Registries
 
@@ -105,7 +123,7 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 The following databases are supported, and provide the features listed.
 
 | Database | Data Persists | Provisioned by Operator |
-| === | === | === |
+| --- | --- | --- |
 | Ephemeral | No | Yes |
 | Standard PostgreSQL | Yes | Yes |
 | Microsoft SQL Server | Yes | Yes |

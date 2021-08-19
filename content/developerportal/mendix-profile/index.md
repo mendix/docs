@@ -9,64 +9,70 @@ tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection"
 
 ## 1 Introduction
 
-Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Platform and details about your background. 
-To get more involved in the Mendix community your profile is the best way to start. 
+Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
+To get more involved in the Mendix community, your profile is the best way to start. 
 
-You can access your Mendix profile by clicking the picture in the right top corner and then **See your profile**.
+You can access your Mendix profile by clicking your picture in the top-right corner of the Developer Portal and then selecting **See Your Profile**.
 
 ## 2 Header {#header}
 
-Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, the amount of [credits](#challenges) you have or the amount of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the platform. If you have a certificate from our [Academy](https://academy.mendix.com) then we will also display it. Besides, the header other information about yourself is on the **Personal Info** card. You can change these details in the [Settings](#settings)
+Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, your number of [credits](#challenges), and your number of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the Mendix Platform. If you have a certificate from the Mendix [Academy](https://academy.mendix.com), this will also be displayed. The **Personal Info** card presents other information.
 
-## 3 Overview
-Your profile will open to the **Overview** tab. This tabs shows you at a quick glance how you are doing on our platform. You can see your:
+You can change these details in the [Settings](#settings).
+
+## 3 Overview & Stats
+
+Your profile opens to the **Overview** tab, which shows you at a quick glance how you are doing on the platform. You can see the following:
+
 * Stats 
-* In progress and next badges,
-* Assigned challenge,
-* Personal information,
-* Invitations,
-* Position on the leaderboard, and 
-* Portfolio.
+* Badges in progress and the next badges to work towards
+* Assigned challenge
+* Personal information
+* Invitations
+* Position on the leaderboard
+* Portfolio
 
-The first profile card below the header presents your **Stats**. It shows you your points per Mendix products and activities. 
+The first profile card below the header presents your **Stats**, which are your points divided between Mendix products and activities:
 
 {{% image_container width="350" %}}
 ![](attachments/stats.png)
 {{% /image_container %}}
 
-Don't get bummed out with a low amount because we all started like that, even our Expert developers! There are plenty of opportunities to gain more points to climb the [Leaderboard](#leaderboard).
-
-## 4 Badges {#badges}
-Besides the **Stats** chart, on the **Overview** tab you gain an overview of your **Badges**. These badges represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based from green (least rare), to blue, purple, and orange (most rare).
-
-To see all your badges as well as the badges you can work towards, click **View all** to go to the **Badges** tab of your profile.
-
-From there you can select up to four **Featured badges** from the **Earned badges** section. These featured badges are then visible in the [Header] section of your profile. For that click on **Select as featured** to add them to the header.
-
-{{% alert type="info" %}}
-In the **Earned badges** you find the badges you have completed. We wil only show you the highest completed badge if the badges is a multi-level badge. 
+{{% alert type="warning" %}}
+Don't get bummed out about a low number of points, because everyone in the Mendix community started like that, even our Expert developers! There are plenty of opportunities to gain more points and climb the [Leaderboard](#leaderboard).
 {{% /alert %}}
 
-The percentage on the card of the **Badges in progress** shows you how far you have come to earn that particular badge. We only show you the current level of the badges that are multi-level, so you don't get distracted earning it. 
+## 4 Badges {#badges}
+
+In addition to the **Stats** chart, on the **Overview** tab you gain an overview of your **Badges**. These badges represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based from green (least rare), to blue, purple, and orange (most rare).
+
+To see all your badges as well as the badges you can work towards, click **View all** to go to the **Badges** tab of your profile. On that tab, you can select up to four badges from the **Earned badges** section to make visible in your profile [header](#header) by clicking **Select as featured**.
+
+{{% alert type="info" %}}
+In the **Earned badges** section, you find the badges you have completed. If the badge is a multi-level badge, only the highest completed badge is shown.
+{{% /alert %}}
+
+The percentage on the card of the **Badges in progress** shows how far you have come to earn that particular badge. If the badge is a multi-level badge, only the highest completed badge is shown, so don't get distracted while earning it!
+
 {{% image_container width="350" %}}
 ![](attachments/badges.png)
 {{% /image_container %}}
 
 ## 5 Challenges {#challenges}
 
-The **Challenge** card presents a featured challenge you can complete  to gain credits. You can use the credits in the [Mendix Shop](https://shop.mendix.com) to order low-code t-shirts or other Mendix swag. Some challenges are going to be easy for you whilst others might be harder to complete!
+The **Challenge** card presents a featured challenge you can complete to gain credits. You can use the credits in the [Mendix Shop](https://shop.mendix.com) to order low-code t-shirts or other Mendix swag. Some challenges are going to be easy for you, whilst others might be harder to complete!
 
 {{% image_container width="350" %}}
 ![](attachments/challenges.png)
 {{% /image_container %}}
 
-Clicking **View all** will bring you to the **Challenges** tab of your profile. Which gives you more details on the challenge steps, the time left and how many credits you can earn with them. You can complete these activities in any order you like.
+Click **View all** to go to the **Challenges** tab of your profile. This tab presents more details on the challenge steps, the time left, and how many credits you can earn with them. You can complete these activities in any order you like.
 
 {{% image_container width="350" %}}
 ![](attachments/credits.png)
 {{% /image_container %}}
 
-When you complete a challenge, click **Claim Credits** to claim the Mendix credits. You can now spend you your credits on cool items in the Mendix Shop.
+When you complete a challenge, click **Claim Credits** to claim the Mendix credits. You can then spend your credits on cool items in the Mendix Shop.
 
 ## 6 Connections {#connections}
 

@@ -88,7 +88,7 @@ If you as a **Technical Owner** curate the application and change the technical 
 Curators and Mendix Admins can manage the lists of custom owners as part of **Administration** functions. For more details, see the [Managing Custom Owners](/developerportal/control-center/data-hub-admin-functions#custom-owners) section of *Data Hub Administration*.
 {{% /alert %}}
 
-#### 4.1.1 Changing the Business & Technical Owners of an App
+#### 4.1.1 Changing the Business & Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner**, from the **Application Metadata** screen, click in the name field of the **Business** or **Technical** owner. You can start typing or select from the drop-down list of names. Mendix platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 

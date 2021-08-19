@@ -148,10 +148,10 @@ The *ClientID* is built from the combination of:
 
 ```*Host tenant*-*Cockpit application name*-*Cockpit application version*```
 
-Ensure you have filled these constants accordingly.
+Ensure you have filled these constants correctly.
 If everything is setup correctly the form is auto filled and submitted.
 
-Don't forget to restart Studio Pro after you change / add the environment variable.
+Don't forget to restart your app after you change / add the environment variable.
 {{% /alert %}}
 
 

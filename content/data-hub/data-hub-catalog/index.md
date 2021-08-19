@@ -111,7 +111,7 @@ The information that is registered for data sources and exposed datasets are as 
 
 * [How to Search for Registered Assets](search) – describes search and asset details
 * [How to Consume Registered Assets](consume) – gives general information on consuming registered datasets
-* [How to Register Data Assets](register) – describes how to register OData services in the Data Hub Catalog through Studio Pro and manually register non-Mendix services
+* [How to Register Data Assets](register) – describes how to register OData services in the Data Hub Catalog through Studio Pro 
 * [How to Register OData Resources in the Data Hub Catalog](register-data) – describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form
 * [How to Curate Registered Assets](curate) – describes the curate functions for managing assets
 * [Data Accessibility and Security](security) – describes access to datasets and security

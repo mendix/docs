@@ -599,19 +599,19 @@ To change any constants, select the constant you want to edit and then click **E
 
 ### 6.3 Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
 ![](attachments/tencent-deploy/network-tab.png)
 
 ### 6.4 Runtime Tab
 
-On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/runtime-tab.png)
 
 ### 6.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/log-levels-tab.png)
 
@@ -649,7 +649,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 6.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
+On the **Debugger** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 

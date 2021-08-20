@@ -26,7 +26,7 @@ Mendix Data Hub has components to enable the flexible sharing of datasets. The f
 ![](attachments/overview-schematic-datahub.png)
 
 1. Published apps and other software expose datasets in OData services that can be used to provide a consistent and reliable network of shared data. The data is maintained in the respective source apps.
-2. In Studio Pro, published OData services exposing datasets (or entity sets as they are named in Studio Pro) connecting to the available data are automatically registered in the [Data Hub Catalog](data-hub-catalog/). OData services from other applications can also be manually registered. For each service, structural and descriptive metadata and the location of the datasets is registered in the Data Hub Catalog. Curation of registered services and datasets is done by Owners of the service, [Mendix Admins](#admin), and [Data Hub Curators](#curator).
+2. In Studio Pro, exposed OData services (or entity sets as they are named in Studio Pro) are automatically registered in the [Data Hub Catalog](data-hub-catalog/) when your app is deployed. OData services from other applications can also be manually registered. For each service, metadata is registered in the Data Hub Catalog. Owners of the service, [Mendix Admins](#admin), and [Data Hub Curators](#curator) can curate this metadata.
 3. Search in the Data Hub Catalog or use the integrated Data Hub in Studio Pro to find suitable shared data assets to use in your app development.
 4. Consume registered datasets in Studio Pro to create new apps. 
 5. Upon deployment of an app in Studio Pro, registered services are updated in the Data Hub Catalog to show published dependencies and consumed dependencies, and a connection is established to the shared data sources.

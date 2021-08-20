@@ -70,7 +70,7 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
 
 ## 4 Usage
 
-For more information on module's components and how to use them, see the [Workflow Commons Components](workflow-setting-up-app#components) section in *Adding a Workflow to an Existing App: Setting Up the Basics*.
+For more information on module's components and how to use them, see the [Workflow Commons Components](/refguide/workflow-setting-up-app#components) section in *Adding a Workflow to an Existing App: Setting Up the Basics*.
 
 ## 5 Read More
 

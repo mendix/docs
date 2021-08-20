@@ -84,8 +84,10 @@ It is currently not possible to select more than one Technical Contact in the Me
 
 If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:
 
-1. Navigate to **Collaborate** > **Security**.
-2. Select the [Node Permissions](/developerportal/collaborate/security#node-permissions) tab.
-3.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
+1. Navigate to **Deploy** > **Environments**.
+2. Select the [Permissions](/developerportal/collaborate/security#node-permissions) tab.
+3.  Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
-	![](attachments/app-roles/change-technicalcontact.png)
+{{% alert type="info" %}}
+The Technical Contact will be changed for all environments..
+{{% /alert %}}

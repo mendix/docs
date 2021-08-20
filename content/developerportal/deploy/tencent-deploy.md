@@ -7,6 +7,10 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/tencent-deploy.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 

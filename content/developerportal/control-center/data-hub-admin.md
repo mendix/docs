@@ -23,8 +23,6 @@ The Data Hub Curator role can see and edit metadata for all registered assets in
 
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 
-{{% alert type="info" %}}This list shows all Mendix users for your organizations. It does not include non-Mendix users that are added as [custom owners](#custom-owners).{{% /alert %}}
-
 {{% alert type="info" %}}
 A user with Curator rights can access all assets registered in the Data Hub Catalog. This also includes those that are set to **Non-discoverable** (for more information on discoverability, see the [Discoverability](/data-hub/data-hub-catalog/search#discoverability-metadata) section in *How to Search in the Data Hub Catalog*). Curators can also change the metadata for assets that are owned by other users.
 {{% /alert %}}

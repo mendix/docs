@@ -15,7 +15,7 @@ In the [Data Hub](/developerportal/control-center#data-hub) page of the **Contro
 
 ## 2 Curators {#curator}
 
-A Data Hub Curator can perform day-to-day management functions on all registered assets in the Data Hub Catalog and also enrich the Catalog information on registered assets that is displayed. Curators can see and curate all registered assets in the Data Hub Catalog. Mendix users who own registered assets can curate their own items, but not those that they do not own.
+Curators can see and edit metadata for all registered assets in the Data Hub Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
 
 A Mendix Admin sees the **Curators** tab displaying the list of Data Hub Curators for the organization:
 

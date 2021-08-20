@@ -83,7 +83,7 @@ You will now call the REST service in a [microflow](/refguide/microflows) to bui
 
 To call the REST service in a microflow, follow these steps:
 
-1. Right-click the module and select **Add** > **Microflow** and accept the default name **Microflow** for the and click **OK**.
+1. Right-click the module and select **Add Microflow**. Then, accept the default name **Microflow** and click **OK**.
 2. From the tool bar, drag a **Parameter** object to the microflow document.
 3. For the **Data type**, click **Select** and select the **Input** entity as the input parameter. Click **OK**. 
 4. Right-click and select **Add** > **Activity** and insert this to the microflow. Double-click the activity and select  **Call REST service** to change the type of action.
@@ -128,16 +128,15 @@ To create a page for this app, follow these steps:
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
-8. From the **App Explorer**, drag **Microflow** into the right column.
-9. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for the caption of the button.
-10. Add a **Data view** below the table (inside the other data view).
-11. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar.
-12. Click **OK**.
+8. Delete the **Summary** field.
+9. From the **App Explorer**, drag **Microflow** into the right column.
+10. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for the caption of the button.
+11. Add a **Data view** below the table (inside the other data view).
+12. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar and click **OK**.
 13. From this data view, delete all the fields except **Extract**.
 14. Double-click **Extract**.
-15. For **Show label**, select **No**.
-16. Click **OK**.
-17. Delete the **Save** and **Cancel** buttons.
+15. For **Show label**, select **No**, then click **OK**.
+16. Delete the **Save** and **Cancel** buttons.
 
 	![](attachments/consume-a-rest-service/page.png)
 
@@ -150,12 +149,9 @@ To fill in the CreateInput microflow, follow these steps:
 1. In the **App Explorer**, double-click **CreateInput**. 
 2. From the **Toolbox**, drag a **Create object** activity to the microflow.
 3. Double-click the activity.
-4. For **Entity**, click **Select** and double-click **Input**.
-5. Click **OK**.
-6. If there is an undefined parameter object in the microflow, delete this.
-7. Double-click the red **End event**.
-8. Under **Return value**, enter `$NewInput`.
-9. Click **OK**
+4. For **Entity**, click **Select** and double-click **Input**, then click **OK**.
+5 Double-click the red **End event**.
+6. Under **Return value**, enter `$NewInput`, then click **OK**
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 

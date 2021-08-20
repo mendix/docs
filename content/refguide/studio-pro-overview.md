@@ -28,18 +28,13 @@ This document describes the user interface of Mendix Studio Pro:
 
 The Studio Pro top bar contains the following items:
 
-* [Switch-to menu](#switch-to)
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
 * [Links to the Developer Portal and Marketplace](#links) 
 
-### 2.1 Switch-to Menu {#switch-to}
+### 2.1 Menus {#menus}
 
-The **Switch-to** menu is located at the top-left of Studio Pro and contains links to various parts of the platform. For more information on the **Switch-to** menu, see the [Navigation]() section in the *Developer Portal Guide*.
-
-### 2.2 Menus {#menus}
-
-In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
 
 For more information on menus, see [Menus](menus). 
 

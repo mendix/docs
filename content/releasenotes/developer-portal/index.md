@@ -15,6 +15,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### August 19th, 2021
+
+#### Improvements
+
+* We implemented the first batch of endpoints for mobile, in preparation for something cool coming your way.
+* We improved the way the Developer Portal shares data across its several components.
+* We made small improvements to the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed an issue with the project's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+
 ### July 27th, 2021
 
 #### Improvements
@@ -34,7 +46,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
 * We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
-* We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
+* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings#api-key) page.
 * We implemented a new responsive search panel.
 * We will remove the [Burndown Chart](/developerportal/collaborate/development#burndown) and [Release Plan](/developerportal/collaborate/development#release-plan) tabs from the Developer Portal on August 31st, 2021.
 

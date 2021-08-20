@@ -1,6 +1,7 @@
 ---
 title: "Leave & Delete an App"
 parent: "general-settings"
+menu_order: 1
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
 aliases:

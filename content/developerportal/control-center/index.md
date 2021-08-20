@@ -117,7 +117,7 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security
+## 8 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 

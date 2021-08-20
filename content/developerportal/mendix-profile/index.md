@@ -72,7 +72,7 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/referral.png)
 {{% /image_container %}}
 
@@ -279,7 +279,7 @@ For more information, see the following:
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Manage App API Keys](/developerportal/settings/api-key)
+* [How to Manage App API Keys](/developerportal/collaborate/general-settings#api-keys)
 
 ### 10.6 Advanced
 

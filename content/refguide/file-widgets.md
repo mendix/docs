@@ -17,9 +17,9 @@ File widgets allow end-users to upload, download, and display files and images.
 
     ![Image Uploader Example](attachments/file-widgets/image-uploader-example.png)
 
-* [Image viewer](image-viewer) – displays an image or its thumbnail:
+* [Dynamic Image](image-viewer) – displays an image or its thumbnail:
 
-    ![Image Viewer Example](attachments/file-widgets/image-viewer-example.png)
+    ![Dynamic Image Example](attachments/file-widgets/image-viewer-example.png)
 
 ## 2 Performing Basic Functions
 

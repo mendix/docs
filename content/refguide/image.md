@@ -107,9 +107,9 @@ Default: *Yes*
 
 You can convert a static image to a dynamic image viewer that allows you to display dynamic data. For more information on the dynamic image viewer widget and its properties, see [Dynamic Image](image-viewer). 
 
-To convert a Static Image widget into a Dynamic Image widget, do the following:
+To convert a Static image widget into a Dynamic image widget, do the following:
 
-1. Select the Static Image widget on a page and right-click it.
+1. Select the Static image widget on a page and right-click it.
 2. From the list of actions, select **Convert to dynamic image viewer**. 
 
 The image widget is converted to the image viewer and you can configure it. 

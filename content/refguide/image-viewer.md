@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A Dynamic Image widget can be used to display an image or its thumbnail. For example, you can show a profile picture:
+A Dynamic image widget can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
 ![](attachments/pages/image-viewer.png)
 
@@ -15,7 +15,7 @@ An Dynamic Image widget must be placed in a data view or a template grid.
 
 ## 2 Properties
 
-An example of Dynamic Image properties is represented in the image below:
+An example of Dynamic image properties is represented in the image below:
 
 {{% image_container width="250" %}}![ Dynamic Image Properties](attachments/file-widgets/image-viewer-properties.png)
 {{% /image_container %}}
@@ -41,7 +41,7 @@ Dynamic Image properties consist of the following sections:
 
 #### 2.3.1 Entity (Path)
 
-The **Entity (path)** property specifies which object will be shown in the Dynamic Image widget. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the Dynamic Image widget as well.
+The **Entity (path)** property specifies which object will be shown in the Dynamic image widget. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the Dynamic image widget as well.
 
 ### 2.4  Events Section {#events}
 

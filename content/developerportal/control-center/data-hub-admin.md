@@ -41,12 +41,12 @@ Custom owners are owners that have been added as contacts for a registered app. 
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Data Hub Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 
-Data Hub Curators and Mendix Admins can manage the custom owner list on the **Owners** tab:
+Mendix Admins and Data Hub Curators can manage the custom owner list on the **Owners** tab:
 
 ![Owners](attachments/data-hub-admin/owners.png)
 
 {{% alert type="info" %}}
-Only Data Hub Curators see the **Owners** tab.
+Data Hub Curators will see *only* the **Owners** tab available in the **Data Hub** page.
 {{% /alert %}}
 
 On this tab, you can do the following:

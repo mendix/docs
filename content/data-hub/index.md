@@ -57,8 +57,6 @@ A user who publishes an OData service is the technical owner of the service and 
 
 ### 3.2 Mendix Admin {#admin}
 
-The Mendix Admin role can carry out Data Hub operations and governance in collaboration with the organization's data stewards, security officers, and security architects. 
-
 A Mendix Admin can do the following:
 
 * Act as a technical administrator of the organization’s Data Hub

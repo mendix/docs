@@ -74,7 +74,7 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 When you have the *3DViewer.mpk* file and you want to add the app service to your app in Mendix Studio Pro, follow these steps:
 
 1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *3DViewer.mpk*. 
-2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means new entities will be created in your project (with the **Viewer3D** name).
+2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means new entities will be created in your project (with the **Viewer3D** name). For more information on adding a module, see the [Using a Module](/appstore/general/app-store-content#module) section in *How to Use Marketplace Content in Studio Pro*.
 3. Click **Import** on the **Import Module** dialog box.
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready-to-use items in the **Viewer3D** folder. In addition, if you go to **Toolbox** pane, you will also notice a collection of 3D widgets are added to the **Toolbox** widget list under the **Add-on widget** category. 
 5. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.

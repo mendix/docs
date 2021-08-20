@@ -279,7 +279,7 @@ For more information, see the following:
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Manage App API Keys](/developerportal/settings/api-key)
+* [How to Manage App API Keys](/developerportal/general-settings#api-keys)
 
 ### 10.6 Advanced
 

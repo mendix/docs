@@ -30,7 +30,7 @@ Within a team, there are predefined roles that can be provisioned to team member
 	* Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
 * Who can change the app's [general settings](/developerportal/settings/general-settings)
 
-Scrum Masters can edit and create new team roles on the [Teams](teams) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
+Scrum Masters can edit and create new team roles on the [Team](team) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
 
 ## 4 App Contact {#app-contact}
 

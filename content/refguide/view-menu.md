@@ -108,7 +108,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.9 Stories
 
-For [Team Server](/developerportal/collaborate/team-server) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/collaborate/planning-development). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
+For [Team Server](/developerportal/collaborate/team-server) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/collaborate/stories). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
 
 ### 3.10 Toolbox {#toolbox}
 

@@ -28,7 +28,7 @@ In most cases, you will only need what are contained in **Viewer3D/USE_ME** fold
 
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
+You can use 3DViewer when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
 
 ### 1.2 Features
 
@@ -67,14 +67,15 @@ The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are
 ![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)  
 ## 2 Installation
 
-Suppose you already have a **3DViewer.mpk**, and you would like to add to your app in Mendix Studio Pro, do the following:
-1. Open your app in Mendix Studio Pro(any version between 8.15.1 and latest Mendix 8 versions).
-2.  Right-click the project in the **Project Explorer** and select **Import module package…**.
+1. Search and download 3DViewer from Mendix public marketplace 
+2. Now you have a **3DViewer.mpk**, and you would like to add to your app in Mendix Studio Pro
+3. Open your app in Mendix Studio Pro(any version between 8.15.1 and latest Mendix 8 versions).
+4.  Right-click the project in the **Project Explorer** and select **Import module package…**.
 
     ![3dviewerimportmpk](attachments/3d-viewer/3dviewerimportmpk.jpg) 
 
-3.  Find and select the 3DViewer.mpk that you have and import it. 
-4.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
+5.  Find and select the 3DViewer.mpk that you have and import it. 
+6.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
 ![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
 	{{% /alert %}}
@@ -82,9 +83,11 @@ Suppose you already have a **3DViewer.mpk**, and you would like to add to your a
 6. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
 7. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
+Up till now, you have succesfully add 3DViewer resources to your app.
+
 ## 3 Initializing the 3D Viewer App Service on App Startup
 
-To use 3DViewer features, you app needs to be bound to 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a java action called `VisServerAction` which can start the 3DViewer service for you. Call this java action from your app's After Startup microflow, this will automatically start 3DViewer when app starts (running after startup usually means you want to run a specific tool all the time.). 
+To use 3DViewer features, you app needs to be bound to 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a java action called `VisServerAction` which can start the 3DViewer service for you. Call this java action from your app's A**fter Startup** microflow, this will automatically start 3DViewer when app starts (running after startup usually means you want to run a specific tool all the time.). 
 
 If you project does not have set an After startup microflow,  follow these steps:
 1.  create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.
@@ -150,7 +153,7 @@ The **DownloadMarkup** microflow takes a **Markup** object as input parameter an
 
 ### 4.4 Nanoflow
 
-The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. This allows you to get model from your existing file storages.
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. Since **ModelDocument** type object is only valid input for viewer to visualize a model. This allows you to construct **ModelDocument** from your existing file storages and visualize those models.
 
 ![CreateModelDocumentFromFileDocument](attachments/3d-viewer/CreateModelDocumentFromFileDocument.jpg)
 
@@ -202,19 +205,19 @@ The core widgets can be used in the following ways:
 	 **Automatically load parts** determines if the model part will be loaded into Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling, in this use case, you will need to add PS tree widget so you can trigger part loading by clicking on the PS tree.  
     ![viewer-general](attachments/3d-viewer/viewer-general.jpg)  
     * On the **Events** tab:  
-     **On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer. Please see [Set Viewer event](#73-set-viewer-event) for details.  
+     **On selection change** - by binding a String type attribute to the **Selection** property, you can get a unique string representing currently selected model part in the viewer, you use this value as an input parameter to add action to trigger when selection changes on the viewer.  
 	 **On error**- by binding a String type attribute to the **Error** property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.  
-	 **On progress change** - by binding a String type  attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.  
+	 **On progress change** - by binding a String type attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by above changes.  
 	 **On load** - by binding a Boolean type attribute to the **Loaded** property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.  
     ![viewer-events](attachments/3d-viewer/viewer-events.jpg)  
 	 
-	 For details about Viewer events, please see [Set Viewer event](#73-set-viewer-event) for details.  
+	 For details about Viewer events, please see [Handling Viewer events](#65-handling-viewer-events) for details.  
 	  
-	 3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
+	 3DViewer also exposes some Viewer APIs on viewer for codeful developers to invoke and implement custom logic that suits your need, for example, set material get bounding box. To request a full list of APIs and know how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 
 #### 4.6.2 Panel Widgets
 
-These are the widgets that have an operation panel that contains an interactive item for the end-user to operate on:
+These are the widgets that have an operation panel that contains interactive items for the end-user to operate on:
 
 | Widget         | Description                                                                                                                                                            |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -223,7 +226,7 @@ These are the widgets that have an operation panel that contains an interactive 
 | PMI tree       | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups.                                                   |
 | Section view   | Enables creating a section cut on the model and provides a section view from various angles.                                                                           |
 | Markup builder | Enables creating 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage. |
-| Measurement    | Enables performing measurements on 3D models including measuring Distance, Angle, Line length, Radius, Area                                                            |
+| Measurement    | Enables performing measurements on 3D models including measuring Distance, Angle, Line length, Radius, Area.                                                            |
 
 Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same **Container3D** widget.
 
@@ -242,7 +245,7 @@ The panel widgets can be used in the following ways:
 * **Markup builder** - 
 	* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate, when set to `false`, model will be unlocked and return to rotatable state; another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
     ![markup-general](attachments/3d-viewer/markup-general.jpg)
-	* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful. By setting **Action**, you can choose to trigger an action based on the value of **Save** status. 
+	* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain saving status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message. When the attribute values obtained is `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful. By setting **Action**, you can choose to trigger an action based on the value of **Save** status. 
     ![markup-events](attachments/3d-viewer/markup-events.jpg)
     
 * **Measurement** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can measure distance, length, radius, area, angle of a part or between parts . For details on how to perform measurement on a 3D model. Please see [Perform 3D Measurement](#72-perform-3d-measurement)
@@ -261,9 +264,9 @@ These widgets do not require additional configuration. Simply place them within 
 | Tool bar item selection mode     | Provides the ability to select a model part, edge, face, and body.                                                                                                                                        |
 | Tool bar item snapshot           | Provides the ability to take a snapshot of the current Viewer and save the snapshot to the local machine.                                                                                                 |
 
-## 6 Using 3D Viewer
+## 6 3DViewer sample use case quick start 
 
-3D Viewer mainly provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
+3D Viewer mainly provides a set of widgets to visualize JT models, and a set of nanoflows and Java Actions to bring in the data associated with the model.
 
 Given that you start from a blank app template in Mendix Studio Pro, you can follow the instructions below to visualize your local JT model quickly.
 
@@ -307,14 +310,14 @@ Loading progress in the **Viewer** widget can be obtained via the **Progress sta
 
 Follow these steps to display the model loading progress:
 
-1. Create an entity called *PageObject*, add decimal type attribute called *LoadingProgress* with a default value of `= 0` (as the **Progress bar** widget expects a decimal value).
+1. Create an application context entity, for example, called *PageObject*, add decimal type attribute called *LoadingProgress* with a default value of `= 0` (as the **Progress bar** widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
 3. Wrap **Container3D** with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
 	![viewer-progresspercentage](attachments/3d-viewer/viewer-progresspercentage.jpg)
 
-5.  Add the **Progress Bar** to the page and set **PageObjectLoadingProgress** as the **Progress Attribute**:
+5.  Find **Progress Bar** widget in Toolbox and add to the page, set **PageObjectLoadingProgress** as the **Progress Attribute**:
 
 	![progressbar-progressattribute](attachments/3d-viewer/progressbar-progressattribute.jpg)  
 
@@ -331,7 +334,7 @@ You can add more 3D widgets to the page to enable more 3D functionalities and ar
 
 ### 6.4 Managing Uploaded Models
 
-In the previous use case, you can only visualize the model you upload.
+In previous use case, you can only visualize the model you upload.
 
 Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelListFromMendix** nanoflow and **DeleteModelFromMendix** microflow to help you build model data management functionality into your app.
 
@@ -391,16 +394,49 @@ Now you are able to get a list of models, select a list item to open a model, an
 
 ### 6.5 Handling Viewer Events
 
-Multiple events can be picked up by the **Viewer** widget and can be used to build your customized event handling logic.
+Multiple events can be picked up by the **Viewer** widget, including model part selection event, error event, model loading progress event and product structure tree isloaded event, they can be used to build your event handling logic tailor to your app's need.
 
-There are four main types of events that can be picked up on the **Viewer** widget, here is an example setting:
+Here is an example setting:
 
 ![viewer-viewerevents](attachments/3d-viewer/viewer-viewerevents.jpg)
 
-* **On Selection Change** – by selecting one attribute to set **Selection**, you can get information on the selected part. For this you might need to work with Viewer APIs, if you have further inquiries on how to use Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
-* **OnError** – by selecting one attribute to set the **On error** event, you can pick up an error exposed by the **Viewer**
-* **On Progress Change** – by selecting one attribute for the **setProgress** value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
-* **On load Change** – by selecting one attribute for the **loaded** value, you can get the current loading status of product structure tree.
+#### 6.5.1 On selection change
+
+**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
+![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
+**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+
+![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
+
+#### 6.5.2 On error
+
+**Error**: Takes a String type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises. 
+![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
+**Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is show a error pop up page to let user know the error details.  
+![3dviewer-onerror-sample](attachments/3d-viewer/3dviewer-onerror-sample.jpg) 
+
+#### 6.5.3 On progress change
+get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
+
+**Progress status**: Takes a String type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.  
+**Progress percentage**: Takes a Decimal type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.  
+![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
+**Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
+![3dviewer-onprogress-sample](attachments/3d-viewer/3dviewer-onprogress-sample.jpg)  
+
+For details, please see
+[Displaying Model Loading Progress with Progress Bar Widget](#62-displaying-model-loading-progress-with-progress-bar-widget). 
+
+#### 6.5.4 On load
+
+**OnLoad**: Takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.  
+
+![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+
+**Action**: Like other Mendix event, you can select from a list of actions upon product structure tree isloaded status. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+
+![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
+
 
 ## 7 Others
 
@@ -456,34 +492,6 @@ Area: Measure the area of a surface.
 Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
 Clear: Clear all measurement results in the scene.
 
-### 7.3 Set Viewer event
-
-As previouly introduced in Viewer widget introduction, viewer catches model part selection event, error event, model loading progress event and isloaded event for you to handle these event tailored to your need. 
-
-### 7.3.1 On selection change
-
-**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
-![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
-**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
-
-![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)
-
-### 7.3.2 On error
-
-**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
-![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
-**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
-3dviewer-onerror-sample
-### 7.3.3 On progress change
-
-![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg)
-3dviewer-onprogress-sample
-
-### 7.3.4 On load
-
-![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
-
-viewer-onload-sample
 
 ## 8 Obtain 3DViewer LicenseToken to deploy your app
 
@@ -520,11 +528,8 @@ You can also add or update LicenseToken via Mendix Developer Portal.
 
 ## 9 Loading & Visualizing a Model from Teamcenter
 
-JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
+JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this. To request further details and how to do the integration, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
 
-## 10 Read More
-
-* [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)
 
 
 

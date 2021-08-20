@@ -15,11 +15,11 @@ In the [Data Hub](/developerportal/control-center#data-hub) page of the **Contro
 
 ## 2 Curators {#curator}
 
-Curators can see and edit metadata for all registered assets in the Data Hub Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
-
 A Mendix Admin sees the **Curators** tab displaying the list of Data Hub Curators for the organization:
 
 ![Data Hub Curators](attachments/data-hub-admin/curators.png)
+
+The Data Hub Curator role can see and edit metadata for all registered assets in the Data Hub Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
 
 To assign a Curator role to a Mendix user, click **Add Curator**. To search the list of Mendix users in your organization, start typing in the search box and check the user(s) you want to assign the Curator role to.
 

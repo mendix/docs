@@ -17,12 +17,12 @@ Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
 | ---  | --- |
-| [Predefined entities](#predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
+| [Predefined entities](#predefined-entity) | ModelDocument, Pagination, markup, MxChildDocument, MxModelDocument |
 | [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
-| [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
-| [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
+| [Microflow](#microflow) | DeleteModelFromMendix, Downloadmarkup |
+| [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetmarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
-| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Widgets](#widgets) | Container3D, markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
@@ -122,7 +122,7 @@ The **Pagination** entity serves as an input parameter of the **GetModelListFrom
 | PageSize | The item size of one page. |
 | OffSet | The offset from the first item of the page. |
 
-The **Markup** entity is a **System.Image** type of entity and denotes a Markup image.
+The **markup** entity is a **System.Image** type of entity and denotes a markup image.
 
 The **MxModelDocument** and **MxChildDocument** entities are internal entities, and in most cases, you will not need them. 
 
@@ -144,7 +144,7 @@ The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an i
 
 ![deletemodelfrommendix](attachments/3d-viewer/deletemodelfrommendix.jpg)
 
-The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory..
+The **Downloadmarkup** microflow takes a **markup** object as input parameter and downloads the image to a local directory..
 
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
@@ -158,7 +158,7 @@ The **GetModelListFromMendix** nanoflow takes a **Pagination** object as an inpu
 
 ![getmodellistfrommendix](attachments/3d-viewer/getmodellistfrommendix.jpg)
 
-The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an input parameter to fetch the markup images associated with this model and returns a list of **Markup** object as a result. Each Markup represents an image that is stored in the Mendix file storage.
+The **GetmarkupsFromMendix** nanoflow takes a **ModelDocument** object as an input parameter to fetch the markup images associated with this model and returns a list of **markup** object as a result. Each markup represents an image that is stored in the Mendix file storage.
 
 ![getmarkupsfrommendix](attachments/3d-viewer/getmarkupsfrommendix.jpg)
 
@@ -172,92 +172,119 @@ For 3DViewer to work, you must set the app's after-startup microflow to call the
 
 #### 4.6.1 Core Widgets
 
-These are the  core widgets required to enable visualizing a 3D JT model:
+The core widgets required to enable visualizing a 3D JT model are described below.
 
-| Widget | Description |
-| --- | --- |
-| Container3D | A special container widget designed to put other 3D widgets in. This provides a shared context for 3D widgets to communicate with each other. |
-| Uploader | Enables selecting a JT model from your local machine and uploading it to the Mendix file storage. |
-| Viewer | Provides a viewing window of your 3D model. |
+#### 4.6.1.1 Container3D {#container3d}
 
-The core widgets can be used in the following ways:
+This is a container widget designed to put other 3D widgets in. It provides a shared context for 3D widgets to communicate with each other.
 
-* **Container3D** – place this widget in any location of a page
-* **Uploader** – place this widget in any location of a page; on the **General** tab of the properties, the **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID**, and **Model source type** values
-* **Viewer** – place this widget inside a **Container3D** widget; for this widget to visualize a model correctly, set the following properties:
-	* On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties
-		* Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
-		* Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
-	* On the **Transport** tab,  make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
-	* On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
-	* In addition, the Viewer widget provides customization options for changing its behavior (configuring these properties is optional):
-	* **General** tab:
-		* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
-		* **Show navigation cube**  – determines if a navigation cube will appear at the top-tight corner of the viewer
-		* **Show tooltip** determines if a tooltip will appear when when the end-user clicks a model part; this accepts a Boolean value
-		* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#panel-widgets) widget so you can trigger the part loading by clicking the PS Tree)
-	* **Events** tab:
-		* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
-		* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
-		* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
-		* **On load** – by binding a Boolean attribute to the **Loaded** property, it is possible to see if the product structure is loaded; you can also add custom actions triggered by this change
+You can place this widget in any location of a page.
 
-For details about Viewer events, see the [Set Viewer Event](#set-viewer-event) section below.
-	
+#### 4.6.1.2 Uploader
+
+This widget enables selecting a JT model from your local machine and uploading it to the Mendix file storage.
+
+You can place this widget in any location of a page. 
+
+On the **General** tab of the properties, the **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID** and **Model source type** values.
+
+#### 4.6.1.3 Viewer {#viewer}
+
+This widget provides a viewing window of your 3D model.
+
+Place this widget inside a **Container3D** widget.
+
+For this widget to visualize a model correctly, set the following properties:
+
+* On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties
+	* Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
+	* Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
+* On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
+* On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
+* On the **General** tab, there are some optional customization options for changing the widget's behavior:
+	* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
+	* **Show navigation cube**  – determines if a navigation cube will appear at the top-tight corner of the viewer
+	* **Show tooltip** determines if a tooltip will appear when when the end-user clicks a model part; this accepts a Boolean value
+	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#panel-widgets) widget so you can trigger the part loading by clicking the PS Tree)
+* On the **Events** tab, there are some optional customization options for changing the widget's behavior (for more details on Viewer events, see the [Set Viewer Event](#set-viewer-event) section below):
+	* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
+	* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
+	* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
+	* **On load** – by binding a Boolean attribute to the **Loaded** property, it is possible to see if the product structure is loaded; you can also add custom actions triggered by this change
+
 3DViewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
 
 #### 4.6.2 Panel Widgets {#panel-widgets}
 
-These are the widgets that have an operation panel that contains an interactive item for the end-user to operate on:
+These widgets have an operation panel that contains an interactive item for the end-user to operate on.
 
-| Widget | Description |
-| --- | --- |
-| PS tree | Provides a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts will be loaded into Viewer. |
-| PS tree Table  | A configurable tree table to display product structure of a model and other model attributes of your choice. |
-| PMI tree | Provides a hierarchical tree display of a model's product manufacturing information, model views, and design groups. |
-| Section view | Enables creating a section cut on the model and provides a section view from various angles. |
-| Markup builder | Enables creating 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage. |
-| Measurement | Enables performing measurements on 3D models including measuring Distance, Angle, Line length, Radius, Area |
+Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same Container3D widget.
 
-Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same **Container3D** widget.
+##### 4.6.2.1 PS Tree {#ps-tree}
 
-The panel widgets can be used in the following ways:
+This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer.
 
-* **PS Tree** – On the **General** tab, the following options are available:
-	* **Expand all** determines if the model's product structure tree should be fully expanded at the initial load
-	* Use **Show search** to toggle a search bar that enables the end-user to enter a part name and search for the part in the PS Tree
-	* **Show leaf structure** determines if the sub-part data should be displayed in the PS Tree
-	![pstree-general](attachments/3d-viewer/pstree-general.jpg)  
-* **PS Tree Table** – compared to the **PS Tree** widget, this widget adds an additional configurable property **Column**, you can expand the table by adding columns and specifying the property to be displayed in this column. Example predefined properties are: Volume, Mass, Units, HasPMI, Density. If you want to display other properties other than the predefined properties in the list, you can also add other property by specifying valid property defined in the model.
-![pstreetable-general](attachments/3d-viewer/pstreetable-general.jpg)  
-* **PMI tree** - On the **General** tab, the property **Expand all tree nodes** determines if all tree nodes are expanded by default. When set to `yes`, you will see a PMI tree fully expanded by default on this widget load; When set to `no`, PMI tree will not fully expand by default. The property **Auto load** determines if all PMI should be automatically loaded into viewer when PMI structure tree is loaded.
-![pmitree-general](attachments/3d-viewer/pmitree-general.jpg)
-* **Section view** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can add section plane on the model. No specific configuration is needed. With this widget, you can add, delete and clear section planes to the model on your desired direction axis and clipping mode. For details on how Section View behaves in an app. Please see [Create 3D Section](#71-create-3d-section).
+On the **General** tab, the following options are available:
 
-**Markup builder**
-	
-* On **General** tab, by setting property **Enable** to true or false, you can switch on and off the markup mode, when set to `true`, model will be locked to a 2D dimension and won't react to mouse rotate, when set to `false`, model will be unlocked and return to rotatable state; another property is **Markup color**, it allows you to set color of markup annotation. Valid values are [CSS Legal color value](https://www.w3schools.com/CSSref/css_colors_legal.asp), for example, RGB value, predefined color names, hexadecimal color values.
+* **Expand all** – determines if the model's product structure tree should be fully expanded at the initial load
+* **Show search** – use to toggle a search bar that enables the end-user to enter a part name and search for the part in the widget
+* **Show leaf structure** – determines if the sub-part data should be displayed in the widget
 
-	![markup-general](attachments/3d-viewer/markup-general.jpg)
+##### 4.6.2.2 PS Tree Table
 
-* On **Event** tab, by binding a boolean type attribute to **Save** property, you will be able to obtain save status of the markup image after user click the Save button on the markup builder's panel, and add custom actions, such as show pop up message, to it. When the attribute values changes to `true`, it means the markup image associated with model is successfully saved in Mendix file storage; when the attribute value is `false`, it means the save is not successful. By setting **Action**, you can choose to trigger an action based on the value of **Save** status. 
-    ![markup-events](attachments/3d-viewer/markup-events.jpg)
-  
-* **Measurement** - Place it inside of a Container3D widget, a Viewer widget should be present in the same Container3D widget so you can use measurement options provided in Measurement widget to perform measurement on the model. No specific configuration is needed. With this widget, you can measure distance, length, radius, area, angle of a part or between parts . For details on how to perform measurement on a 3D model. Please see [Perform 3D Measurement](#72-perform-3d-measurement)
+This widget presents a configurable tree table to display the product structure of a model and other model attributes of your choice.
+
+Compared to the [PS Tree](#ps-tree) widget, this widget adds an additional configurable property called **Column**. You can expand the table by adding columns and specifying the property to be displayed in this column. Examples of predefined properties are **Volume**, **Mass**, **Units**, **HasPMI**, and **Density**. If you want to display other properties other than the predefined properties in the list, you can also add them by specifying valid properties defined in the model.
+
+![pstreetable-general](attachments/3d-viewer/pstreetable-general.jpg)
+
+##### 4.6.2.3 PMI Tree
+
+This widget presents a hierarchical tree display of a model's product manufacturing information, model views, and design groups.
+
+On the **General** tab, the **Expand all tree nodes** property determines if all tree nodes are expanded by default. When set to **Yes**, the end-user sees a PMI tree fully expanded by default on the widget load. When set to **No**, the PMI tree will not fully expand by default. 
+
+Also on the **General** tab,  the **Auto load** property determines if all PMI trees should be automatically loaded into viewer when the PMI structure tree is loaded.
+
+##### 4.6.2.4 Section View
+
+This widget enables creating a section cut on the model and provides a section view from various angles.
+
+Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can add a section plane on the model. 
+
+No specific configuration is needed. With this widget, you can add, delete, and clear section planes to the model on your desired direction axis and clipping mode. For details on how this widget behaves in an app, see the [Create 3D Section](#create-3d-section) section below.
+
+##### 4.6.2.5 Markup Builder
+
+This widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
+
+On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotatation. When set to **False**, the model will be unlocked and return to rotatable state.
+
+Also on the **General** tab is the **markup color** property, which allows you to set the color of markup annotations. The valid values are [CSS legal color values](https://www.w3schools.com/CSSref/css_colors_legal.asp) (for example, RGB values, predefined color names, and exadecimal color values).
+
+On **Event** tab, by binding a Boolean attribute to the **Save** property, the save status of the markup image can be obtained after the end-user clicks **Save** on the markup builder's panel. You can also add custom actions, such as showing a pop-up message, to this. When the attribute value changes to **True**, it means the markup image associated with the model is successfully saved in Mendix file storage. When the attribute value is **False**, this means the save is not successful. By setting the **Action** property, you can trigger an action based on the value of the **Save** status. 
+
+##### 4.6.2.6 Measurement
+
+This widget enables performing measurements on 3D models, including measuring distance, angle, line length, radius, and area.
+
+Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to perform measurements on the model. 
+
+No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts . For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
 #### 4.6.3 Toolbar widgets
 
-These widgets do not require additional configuration. Simply place them within a **Container3D** widget with the accompanying **Viewer** widget.
+These widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
 
 | Widget | Description |
 | --- | --- |
-| Tool bar item camera mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
-| Tool bar item camera orientation | Enables viewing the model from different camera orientations. |
-| Tool bar item explode slider | Enables creating an exploded view of your assembly. |
-| Tool bar item fit all | Enables fitting all the model parts in the viewer. |
-| Tool bar item render mode | Enables toggling between different model render modes. |
-| Tool bar item selection mode | Provides the ability to select a model part, edge, face, and body. |
-| Tool bar item snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to the local machine. |
+| Tool Bar Item Camera Mode | Provides the ability to control the appearance of surface objects displayed in the view. The option determines whether surface objects are represented on the display by facet geometry or edge geometry. |
+| Tool Bar Item Camera Orientation | Enables viewing the model from different camera orientations. |
+| Tool Bar Item Explode Slider | Enables creating an exploded view of your assembly. |
+| Tool Bar Item Fit All | Enables fitting all the model parts in the Viewer. |
+| Tool Bar Item Render Mode | Enables toggling between different model render modes. |
+| Tool Bar Item Selection Mode | Provides the ability to select a model part, edge, face, and body. |
+| Tool Bar Item Snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to a local machine. |
 
 ## 6 Using 3D Viewer
 
@@ -401,13 +428,14 @@ There are four main types of events that can be picked up on the **Viewer** widg
 
 ## 7 Others
 
-### 7.1 Create 3D Section
+### 7.1 Create 3D Section {#create-3d-section}
 
 When a model is loaded in the viewer, the Section View widget enables you to inspect the interior structure of a model by adding standard section planes, delete a section plane, clear all section planes, position plane, clip away parts.
 
 Here is a list of UI operations within the Section View widget.
 
-![sectionview-designmode](attachments/3d-viewer/sectionview-designmode.jpg)  
+![sectionview-designmode](attachments/3d-viewer/sectionview-designmode.jpg)
+
 **Action**:
 
 Add - Add a section plane. First select an axis along which you would like to section the model, then click Add, you will see a section plane of the desired axis is added to the scene, the default position of the newly added section plane is in the middle of the bounding box of the direction selected.
@@ -437,19 +465,22 @@ You can slide the position sliders to move the position of the section plane alo
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
-### 7.2 Perform 3D Measurement
+### 7.2 Perform 3D Measurements {#perform-measurements}
 
-When a model is loaded into the viewer, Measurement widget provides a set of tools to measure different geometrical entities.  
+When a model is loaded into the viewer, Measurement widget provides a set of tools to measure different geometrical entities.
 
 ![measurement-panel](attachments/3d-viewer/measurement-panel.jpg)
 
-**Measurement Mode**  
+**Measurement Mode**
+
 Distance : Measure the distance between two part features.
-Length: Measure length of a line.  
-Radius: Measure the radius of a circular edge or surface.  
-Angle: Measure the angle between two edges or surfaces.  
-Area: Measure the area of a surface.  
-**Dimension Controls**  
+Length: Measure length of a line.
+Radius: Measure the radius of a circular edge or surface.
+Angle: Measure the angle between two edges or surfaces.
+Area: Measure the area of a surface.
+
+**Dimension Controls**
+
 Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
 Clear: Clear all measurement results in the scene.
 
@@ -479,6 +510,7 @@ As previouly introduced in Viewer widget introduction, viewer catches model part
 ### 7.3.3 On progress change
 
 ![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg)
+
 3dviewer-onprogress-sample
 
 ### 7.3.4 On load

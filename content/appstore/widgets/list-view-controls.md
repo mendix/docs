@@ -20,7 +20,9 @@ These are the available list view widgets:
 * [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
 
 {{% alert type="warning" %}}
-Make sure an entity in a list view does not have any attribute populated by a microflow, otherwise it will cause an error.
+
+If an entity in a list view has an attribute populated by a microflow, it will cause an error.
+
 {{% /alert %}}
 
 ### 1.1 Demo App

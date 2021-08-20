@@ -7,36 +7,34 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 
 ## 1 Introduction
 
-The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix File Storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. The app service includes whole functionalities and integrations that can be very helpful when you are building your own 3D applications. All you need to do is drag and drop items and configure them.
+The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
-{{% todo %}}[Add link to component]{{% /todo %}}
+{{% todo %}}[**Add link to component**]{{% /todo %}}
 
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
 Here is an overview of what the 3DViewer contains:
 
-![3dviewercontentoverview](attachments/3d-viewer/3dviewercontentoverview.jpg)  
-
-| Category | Name |
+| Item | Name |
 | ---  | --- |
-| [Predefined Entity](#41-predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
-| [Constants](#42-constants) | HttpEndpoint, LicenseToken, ModelSourceType |
-| [Microflow](#43-microflow) | DeleteModelFromMendix, DownloadMarkup |
-| [Nanoflow](#44-nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
-| [Java Action](#45-java-action) | VisServerAction |
-| [Widgets](#46-widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Predefined Entity](#predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
+| [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
+| [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
+| [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
+| [Java Action](#java-action) | VisServerAction |
+| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
-In most cases, you will only need what are contained in **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need them.
+In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
+You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix app. You can perform some basic operations, such us navigating the model product structure tree and the product manufacturing information (PMI) tree, creating section views, 2D markups, and much more.
 
 ### 1.2 Features
 
-This app service enables you to do the following:
+This app service enables doing the following:
 
-* Upload to and load models from Mendix file storage or your own file storage (Both monolithic JT and shattered JT format are  supported)
+* Upload to and load models from Mendix file storage or your own file storage (both monolithic JT and shattered JT formats are  supported)
 * Display a 3D model
 * Zoom, rotate, fit all, pan
 * Use quick intuitive controls to navigate product structure
@@ -50,30 +48,26 @@ This app service enables you to do the following:
 * Create 3D cross-sections
 * Create 2D markup on model 
 * Take snapshot of a model 
-* Perform 3D measurement on distance, angle, area, radius and length
-  
+* Perform 3D measurement on distance, angle, area, radius, and length
+
 ### 1.3 Limitations
 
-The 3D Viewer app service includes a few 3D widgets mentioned earlier. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
+The 3D Viewer app service includes a few 3D widgets. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
-*  The **Container3D** widget acts as a context-sharing container for other 3D widgets, 3D widgets talk to each other and perform corresponding actions via this context. Therefore, every other 3D widgets (except **Uploader** widget)needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets won't work as expected, you will get nofitied and see these errors "This widget must be put inside Container3D" when you switch to Design mode. 
+*  The **Container3D** widget acts as a context-sharing container for other 3D widgets, so 3D widgets can talk to each other and perform corresponding actions via this context. Therefore, every other 3D widget (except the **Uploader** widget) needs to be put inside the Container3D widget. If 3D widgets are placed outside of the Container3D widget, these widgets will not work as expected. In that case, you will be nofitied and see errors when you switch to Design mode. 
 
 	![widgetoutsidecontainer3d-structuremode](attachments/3d-viewer/widgetoutsidecontainer3d-structuremode.jpg)
 	
-	![widgetoutsidecontainer3d-designmodeerror](attachments/3d-viewer/widgetoutsidecontainer3d-designmodeerror.jpg)
-
 *  One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
-
-	![2viewerincontainer3d-structuremode](attachments/3d-viewer/2viewerincontainer3d-structuremode.jpg)  
-
-	![2viewerincontainer3d-designmode](attachments/3d-viewer/2viewerincontainer3d-designmode.png) 
-
-* **Viewer** widget is used to display a 3D model, all other 3D widgets (except **Uploader** widget and **Container3D** widget) needs a **Viewer** widget present on the page to interact with.
-
+* The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, only JT models with version 9 and above are supported.
-* Before uploading shattered JT (.zip),  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, please make sure you input "cu" in the parameter.
+* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
 ![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)
+
+### 1.4 Prerequisites
+
+This app service can only be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15#8151).
 
 ## 2 Installation
 
@@ -110,7 +104,7 @@ If your project already has a microflow set to execute after startup, you need t
 
 ## 4 3DViewer Content
 
-### 4.1 Predefined Entity
+### 4.1 Predefined Entity {#predefined-entity}
 
 **ModelDocument** entity is a conceptual entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.
 
@@ -142,7 +136,7 @@ The **Markup** entity is a **System.Image** type of entity, it denotes a Markup 
 
 Other two entities, **MxModelDocument** and **MxChildDocument** are internal entities, in most cases, you may not need them. 
 
-### 4.2 Constants
+### 4.2 Constants {#constants}
 
 The **HttpEndpoint** constant with the default value **visualization** is used to restrict the value of parameter **HttpEndpoint** used in **Viewer3D/USE_ME/VisServerAction** Java action.
 
@@ -154,7 +148,7 @@ However, if you only plan to have a try first on how 3DViewer works , that is, b
 
 For how to get a license token, please see [Obtain 3DViewer LicenseToken to deploy your app](#8-obtain-3dviewer-licensetoken-to-deploy-your-app) for more details.
 
-### 4.3 Microflow
+### 4.3 Microflow {#microflow}
 
 The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an input parameter and deletes the corresponding model stored in the Mendix file storage.
 
@@ -164,7 +158,7 @@ The **DownloadMarkup** microflow takes a **Markup** object as input parameter an
 
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
-### 4.4 Nanoflow
+### 4.4 Nanoflow {#nanoflow}
 
 The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. This allows you to get model from your existing file storages.
 
@@ -178,11 +172,11 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 ![getmarkupsfrommendix](attachments/3d-viewer/getmarkupsfrommendix.jpg)
 
-### 4.5 Java Action
+### 4.5 Java Action {#java-action}
 
 The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. For 3DViewer to work, it is important to set the app's after-startup microflow to call the **VisServerAction** java action. Make sure parameter **Http endpoint** of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
 
-### 4.6 Widgets
+### 4.6 Widgets {#widgets}
 
 #### 4.6.1 Core Widgets
 
@@ -223,13 +217,14 @@ In addition, the Viewer widget provides customization options for changing its b
     ![viewer-general](attachments/3d-viewer/viewer-general.jpg)  
 
 * On the **Events** tab:  
-     
+  
 	**On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer. Please see [Set Viewer event](#73-set-viewer-event) for details.  
 	    **On error**- by binding a String type attribute to the **Error** property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.  
 	    **On progress change** - by binding a String type  attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.  
 	    **On load** - by binding a Boolean type attribute to the **Loaded** property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.  
      ![viewer-events](attachments/3d-viewer/viewer-events.jpg)  
 	
+
 For details about Viewer events, please see [Set Viewer event](#73-set-viewer-event) for details.  
 	
 3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.

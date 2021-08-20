@@ -17,11 +17,11 @@ Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
 | ---  | --- |
-| [Predefined Entity](#predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
+| [Predefined entities](#predefined-entity) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
 | [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
 | [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
-| [Java Action](#java-action) | VisServerAction |
+| [Java action](#java-action) | VisServerAction |
 | [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
@@ -71,82 +71,72 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-Suppose you already have a **3DViewer.mpk**, and you would like to add to your app in Mendix Studio Pro, do the following:
+When you have the *3DViewer.mpk* file and you want to add the app service to your app in Mendix Studio Pro, follow these steps:
 
-1. Open your app in Mendix Studio Pro(any version between 8.15.1 and latest Mendix 8 versions).
-2.  Right-click the project in the **Project Explorer** and select **Import module package…**.
+1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *3DViewer.mpk*. 
+2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means new entities will be created in your project (with the **Viewer3D** name).
+3. Click **Import** on the **Import Module** dialog box.
+4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready-to-use items in the **Viewer3D** folder. In addition, if you go to **Toolbox** pane, you will also notice a collection of 3D widgets are added to the **Toolbox** widget list under the **Add-on widget** category. 
+5. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-	![3dviewerimportmpk](attachments/3d-viewer/3dviewerimportmpk.jpg) 
+## 3 Initializing the App Service on App Startup
 
-3.  Find and select the 3DViewer.mpk that you have and import it. 
-4.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
-	
-	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
-    
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+To use the 3DViewer features, your app needs to be bound to the 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a Java action called **VisServerAction**, which can start the 3DViewer service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3DViewer when the app starts.
 
-5. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-6. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
-7. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+If you app does not have an after-startup microflow set,  follow these steps:
 
-## 3 Initializing the 3D Viewer App Service on App Startup
+1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
+2. Make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`.
+3. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
+4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup).
 
-To use 3DViewer features, you app needs to be bound to 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a java action called `VisServerAction` which can start the 3DViewer service for you. Call this java action from your app's After Startup microflow, this will automatically start 3DViewer when app starts (running after startup usually means you want to run a specific tool all the time.). 
-
-If you project does not have set an After startup microflow,  follow these steps:
-
-1.  create a **Startup** microflow, add the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`,  then set the return type of this microflow as **Boolean** with a **Value** of **true**. As the microflow which is set as the Afterstartup microflow needs a Boolean return value.
-2.  Set this **Startup** microflow as the after-startup step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup): 
-
-	![afterStartup](attachments/3d-viewer/afterstartup.jpg)
-
-If your project already has a microflow set to execute after startup, you need to extend it with adding the **Viewer3D/USE_ME/VisServerAction** Java action to the microflow, and configure the same as stated in step 1. 
+If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
 ## 4 3DViewer Content
 
-### 4.1 Predefined Entity {#predefined-entity}
+### 4.1 Predefined Entities {#predefined-entity}
 
-**ModelDocument** entity is a conceptual entity that incorporates all information of a model. You can choose to inherit from this entity, set an association to the entity or copy this entity to your module.
+The **ModelDocument** entity is a conceptual entity that incorporates all the information of a model. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![modeldocument](attachments/3d-viewer/modeldocument.jpg)
 
 | Attribute | Description |
 | --- | --- |
-| ModelId | A unique string to identify a model. |
-| ModelName | Name of a model. |
-| Source | Indicates where the model is from. Currently it has two values:**Mendix** and **Teamcenter**. When the source is **Mendix**, it indicates the model is from Mendix file storage, when the source is **Teamcenter**, it indicates the model is from a Teamcenter instance. |
-| Author | Indicates the author of the model. |
-| CreationDate | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision. |
-| FileSize | The size of the model in Byte. |
-| FileType | The 3D model format. Currently only the JT format is supported. |
-| Status | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has 3 values: Complete, InProgress,Error, indicating if uploading of a model to Mendix file storage is Complete, or the uploading is still in progress, or the upload fails. |
-| ErrorReason  | Indicates the reason that causes a model upload error.|
+| **ModelId** | A unique string to identify the model. |
+| **ModelName** | The name of the model. |
+| **Source** | Indicates where the model is from. Currently it has two values: **Mendix** and **Teamcenter**. When the source is **Mendix**, it indicates the model is from Mendix file storage. When the source is **Teamcenter**, it indicates the model is from a Teamcenter instance. |
+| **Author** | The author of the model. |
+| **CreationDate** | For models stored in Mendix file storage, the **CreationDate** corresponds to the time the JT model is first uploaded to the file storage. For models stored in Teamcenter, the **CreationDate** indicates the creation date of this model revision. |
+| **FileSize** | The size of the model in bytes. |
+| **FileType** | The 3D model format. Currently only the JT format is supported. |
+| **Status** | Used specifically for models uploaded and stored in Mendix file storage. The **Status** has three values: **Complete** (indicates the uploading of a model to Mendix file storage is complete), **InProgress** (indicates the uploading is in progress), and **Error** (indicates the uploading failed). |
+| **ErrorReason**  | The reason for the model upload error.|
 
-The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. It allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
+The **Pagination** entity serves as an input parameter of the **GetModelListFromMendix** nanoflow. This allows you to paginate the model list returned by the nanoflow. If the values of the **Pagination** attributes are not specifically set, **GetModelListFromMendix** will return a full list of the models.
 
 ![pagination](attachments/3d-viewer/pagination.jpg)
 
 | Attribute | Intended Use |
 | --- | --- |
 | Count | Indicates which page number to fetch. |
-| PageSize | Indicates the item size of one page. |
-| OffSet | Indicates the offset from the first item of the page. |
+| PageSize | The item size of one page. |
+| OffSet | The offset from the first item of the page. |
 
-The **Markup** entity is a **System.Image** type of entity, it denotes a Markup image.
+The **Markup** entity is a **System.Image** type of entity and denotes a Markup image.
 
-Other two entities, **MxModelDocument** and **MxChildDocument** are internal entities, in most cases, you may not need them. 
+The **MxModelDocument** and **MxChildDocument** entities are internal entities, and in most cases, you will not need them. 
 
 ### 4.2 Constants {#constants}
 
-The **HttpEndpoint** constant with the default value **visualization** is used to restrict the value of parameter **HttpEndpoint** used in **Viewer3D/USE_ME/VisServerAction** Java action.
+The **HttpEndpoint** constant with the default value **visualization** is used to restrict the value of the **HttpEndpoint** parameter used in the **Viewer3D/USE_ME/VisServerAction** Java action.
 
-The **ModelSourceType** constant with the value **Mendix** is used to signify the model source, you can use this constant to restrict the value of parameter **Data source** in Uploader widget, the parameter **Model source type** in Viewer widget, or the value of Attribute **Source** in **ModelDocument** entity.
+The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant is used to provide valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to Mendix Cloud. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use 3DViewer functionalities in a deployed app, you will need a valid license token and set the value of constant **LicenseToken** to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to have a try first on how 3DViewer works , that is, build and run an app that uses 3DViewer locally in studio pro or deploy to Mendix sandbox environment, you don't need to subscribe to get a license token, you do not need to set a value to **LicenseToken** constant, just leave it empty. Making is always free!
+However, if you only plan to try how 3DViewer works  (meaning, build and run an app that uses 3DViewer locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
-For how to get a license token, please see [Obtain 3DViewer LicenseToken to deploy your app](#8-obtain-3dviewer-licensetoken-to-deploy-your-app) for more details.
+For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
 
 ### 4.3 Microflow {#microflow}
 
@@ -154,13 +144,13 @@ The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an i
 
 ![deletemodelfrommendix](attachments/3d-viewer/deletemodelfrommendix.jpg)
 
-The **DownloadMarkup** microflow takes a **Markup** object as input parameter and download the image to local.
+The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory..
 
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
 ### 4.4 Nanoflow {#nanoflow}
 
-The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a ModelDocument object to represent a user JT model file stored as the entity of System.FileDocument or its specialization. This allows you to get model from your existing file storages.
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. This allows you to get a model from your existing file storage.
 
 ![CreateModelDocumentFromFileDocument](attachments/3d-viewer/CreateModelDocumentFromFileDocument.jpg)
 
@@ -174,62 +164,49 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 ### 4.5 Java Action {#java-action}
 
-The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. For 3DViewer to work, it is important to set the app's after-startup microflow to call the **VisServerAction** java action. Make sure parameter **Http endpoint** of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
+The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. 
+
+For 3DViewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. Make sure the **Http endpoint** parameter of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
 
 ### 4.6 Widgets {#widgets}
 
 #### 4.6.1 Core Widgets
 
-These are the  core widgets that are required to enable visualizing a 3D JT model:
+These are the  core widgets required to enable visualizing a 3D JT model:
 
 | Widget | Description |
 | --- | --- |
 | Container3D | A special container widget designed to put other 3D widgets in. This provides a shared context for 3D widgets to communicate with each other. |
-| Uploader | Enables you to select a JT model from your local machine and upload it to the Mendix file storage. |
+| Uploader | Enables selecting a JT model from your local machine and uploading it to the Mendix file storage. |
 | Viewer | Provides a viewing window of your 3D model. |
 
 The core widgets can be used in the following ways:
 
 * **Container3D** – place this widget in any location of a page
-* **Uploader** – place this widget in any location of a page  
-	* On the **General** tab, **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID**, and **Model source type** values:
+* **Uploader** – place this widget in any location of a page; on the **General** tab of the properties, the **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID**, and **Model source type** values
+* **Viewer** – place this widget inside a **Container3D** widget; for this widget to visualize a model correctly, set the following properties:
+	* On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties
+		* Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
+		* Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
+	* On the **Transport** tab,  make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
+	* On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
+	* In addition, the Viewer widget provides customization options for changing its behavior (configuring these properties is optional):
+	* **General** tab:
+		* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
+		* **Show navigation cube**  – determines if a navigation cube will appear at the top-tight corner of the viewer
+		* **Show tooltip** determines if a tooltip will appear when when the end-user clicks a model part; this accepts a Boolean value
+		* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#panel-widgets) widget so you can trigger the part loading by clicking the PS Tree)
+	* **Events** tab:
+		* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
+		* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
+		* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
+		* **On load** – by binding a Boolean attribute to the **Loaded** property, it is possible to see if the product structure is loaded; you can also add custom actions triggered by this change
 
-	![uploadergeneral](attachments/3d-viewer/uploadergeneral.jpg)  
-
-* **Viewer** – place this widget inside a **Container3D** widget; for this widget to visualize a model correctly, following properties need to be set correctly:
-	*  On the **Data Source** tab, you must configure correct **Model ID** and **Model source type**. Example valid **Model ID** values are:  value of attribute **ModelId**  of a ModelDocument object, value of attribute **Model ID**  set by Uploader widget property. Valid **Model Source Type** values are: `Mendix` or `Teamcenter`, you can also use the constant **Viewer3D/USER_ME/ModelSourceType**.  
-
-	![viewer-datasource](attachments/3d-viewer/viewer-datasource.jpg)  
+For details about Viewer events, see the [Set Viewer Event](#set-viewer-event) section below.
 	
-	* On the **Transport** tab,  make sure the **HttpEndpoint** is set to `@Viewer3D.HttpEndpoint` or `visualization`. 
+3DViewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
 
-	![viewer-transport](attachments/3d-viewer/viewer-transport.jpg)  
-	
-	* On the **Appearance** tab, make sure the widget has a fixed height (for example, set Style to `height:600px`, or make sure height of its parent is fixed), otherwise this viewer will expand indefinitely.
-
-In addition, the Viewer widget provides customization options for changing its behavior (configuring these properties is optional)
-
-* On the **General** tab:  
-	 **Show coordinate system** determines if a coordinate system will appear at the bottom-left of the viewer  
-	   **Show navigation cube** determines if a navigation cube will appear at the top-tight corner of the viewer  
-	   **Show tooltip** determines if a tooltip will pop up when you click on the model part; this accepts a Boolean value of **false** or  **true**  
-	   **Automatically load parts** determines if the model part will be loaded into Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling, in this use case, you will need to add PS tree widget so you can trigger part loading by clicking on the PS tree.  
-    ![viewer-general](attachments/3d-viewer/viewer-general.jpg)  
-
-* On the **Events** tab:  
-  
-	**On selection change** - by binding a String type attribute to the **Selection** property, you can use this attribute as an input parameter to add action to trigger when selection changes on the viewer. Please see [Set Viewer event](#73-set-viewer-event) for details.  
-	    **On error**- by binding a String type attribute to the **Error** property, you can obtain the error message raised by viewer and add custom actions to trigger when error arises.  
-	    **On progress change** - by binding a String type  attribute to **Progress status** property, you can obtain the current model loading status.  By binding a Decimal type attribute to **Progress percentage** property, you can obtain the current model loading percentage. You can also add custom actions triggered by this change.  
-	    **On load** - by binding a Boolean type attribute to the **Loaded** property, you will be able to know if the product structure is loaded. You can also add custom actions triggered by this change.  
-     ![viewer-events](attachments/3d-viewer/viewer-events.jpg)  
-	
-
-For details about Viewer events, please see [Set Viewer event](#73-set-viewer-event) for details.  
-	
-3DViewer also exposes some APIs on viewer for you to invoke and implement custom logic that suits your need. For how to use Viewer APIs and other details, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
-
-#### 4.6.2 Panel Widgets
+#### 4.6.2 Panel Widgets {#panel-widgets}
 
 These are the widgets that have an operation panel that contains an interactive item for the end-user to operate on:
 
@@ -476,7 +453,7 @@ Area: Measure the area of a surface.
 Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
 Clear: Clear all measurement results in the scene.
 
-### 7.3 Set Viewer event
+### 7.3 Set Viewer Event {#set-viewer-event}
 
 As previouly introduced in Viewer widget introduction, viewer catches model part selection event, error event, model loading progress event and isloaded event for you to handle these event tailored to your need. 
 
@@ -510,7 +487,7 @@ As previouly introduced in Viewer widget introduction, viewer catches model part
 
 viewer-onload-sample
 
-## 8 Obtain 3DViewer LicenseToken to deploy your app
+## 8 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
 3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid `LicenseToken` as environment variable in deployment setting, otherwise 3DViewer widget features may not work in your app.
 

@@ -43,7 +43,16 @@ To get a list of all the things registered at AWS IoT, you can use **Things - ge
 
 This returns a JSON document as provided by AWS IoT. Then you can use a JSON import mapping to create entities from the JSON that is returned.
 
-![](attachments/aws-iot/thing-get-list-properties.png)
+| Input/Output| Item | Value |
+| ----------- | ---- | ----- |
+| Input | AwsAccessKeyID     | $AwsAccounts/AwsAcessKeyId      |
+| Input | AwsSecretAccessKey | $AwsAccounts/AwsSecretAccessKey |
+| Input | Region             | $AwsAccounts/DefaultRegion      |
+| Input | AttributeName      | 'IsPlanePart'                   |
+| Input | AttributeValue     | 'True'                          |
+| Output | Return type | String |
+| Output | Use return value | Yes |
+| Output | Variable name | ThingsJson |
 
 To get the details of a device, you can use the **Thing - describe** action:
 
@@ -75,7 +84,20 @@ Typically, you should do this when your Mendix app is started.
 
 To subscribe, you need to provide the certificate information as provided by AWS IoT:
 
-![](attachments/aws-iot/data-subscribe-mqtt-topic-properties.png)
+| Input/Output |Name|Argument|
+| ------------ | -- | ------ |
+| Input | BrokerHost | 'A25N18ZOH23GJB.iot.us-west-2.amazonaws.com' |
+| Input | BrokerPort | 8883|
+| Input | Timeout | 60 |
+| Input | TopicName | 'mx/things/alerts'|
+| Input | OnMessageMicroflow| 'TestMxAwsIoT.OnMessageMicroflow' |
+| Input | CA | 'certs/VeriSign-Class 3-Public-Primary-Certification-Authority-G5.pem' |
+| Input | ClientCerticate | 'certs/2d3ea874d8-certificate.pem.crt' |
+| Input | ClientKey |  'certs/2d3ea874d8-private.pem.crt' |
+| Input | CertificatePassword | 'password' |
+| Output | Return type | Boolean |
+| Output | Use return value | Yes |
+| Output | Variable name | SubscribeResult |
 
 When a message is received, the microflow you specify is called using the `topic` and `payload` string parameters. The
 `payload` contains a JSON document that you can import using JSON import mappings. The format of this message depends on the data sent by the device.
@@ -88,4 +110,16 @@ To publish a message on an MQTT topic, you can use the **Data - publish MQTT mes
 
 When configuring this action, you also need the certificates provided by AWS IoT:
 
-![](attachments/aws-iot/data-publish-mqtt-message-properties.png)
+| Input/Output |Name|Argument|
+| ------------ | -- | ------ |
+| Input | BrokerHost | 'A25N18ZOH23GJB.iot.us-west-2.amazonaws.com' |
+| Input | BrokerPort | 8883|
+| Input | TopicName | 'mx/things/alerts'|
+| Input | Payload | '{"something":True}' |
+| Input | CA | 'certs/VeriSign-Class 3-Public-Primary-Certification-Authority-G5.pem' |
+| Input | ClientCerticate | 'certs/2d3ea874d8-certificate.pem.crt' |
+| Input | ClientKey | 'certs/2d3ea874d8-private.pem.crt' |
+| Input | CertificatePassword | 'password' |
+| Output | Return type | Boolean |
+| Output | Use return value | Yes |
+| Output | Variable name | PublishResult |

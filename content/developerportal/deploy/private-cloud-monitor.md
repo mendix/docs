@@ -17,14 +17,27 @@ This API can also be used by other monitoring solutions such as [Datadog](https:
 The metrics API can only be accessed inside the Kubernetes cluster, and metrics are never sent to the Mendix Private Cloud Portal.
 To collect, store and display metrics, you will need to install a local monitoring solution.
 
+Mendix for Private Cloud writes all logs into the standard output (`stdout` and `stderr`).
+Any Kubernetes log processing solution should be able to read and collect those logs.
+This document shows an example how to use [Loki](https://grafana.com/docs/loki/next/) and [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/) to collect those logs.
+
 This document will help you quickly set up a solution for monitoring Mendix for Private Cloud environments.
 You can customize this solution to match the requirements of your team or organization.
 
 ## 2 Installing monitoring tools
 
-If you already have installed Prometheus and Grafana in your cluster, you can skip this section and to directly to [enable metrics scraping](#enable-metrics-scraping).
+If you already have installed Prometheus, Loki and Grafana in your cluster, you can skip this section and to directly to [enable metrics scraping](#enable-metrics-scraping).
 
 This section contains a quick start guide how to install Grafana and its dependencies in a cluster by using the [Loki Helm chart](https://grafana.com/docs/loki/latest/installation/helm/).
+In addition, this section explains how to install and configure a logging solution based on [Loki](https://grafana.com/docs/loki/next/).
+
+{{% alert type="warning" %}}These instructions have been simplified to make the installation process as easy as possible.
+
+Before installing Prometheus, Loki and Grafana in a production environment, consult with your cluster administrator and IT security teams
+to ensure that the logging/monitoring solution is compliant with your organization's security policies.{{% /alert %}}
+
+### 2.1 Prerequisites
+
 
 Before installing Grafana, make sure you have [installed Helm](https://grafana.com/docs/loki/latest/installation/helm/) and can access your Kubernetes cluster.
 
@@ -34,19 +47,20 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
-### 2.1 Installation in Kubernetes{#install-in-k8s}
+### 2.2 Installation in Kubernetes{#install-in-k8s}
 
 <!-- TODO -->
 
-### 2.2 Installation in OpenShift
+### 2.3 Installation in OpenShift
 
-This section documents how to install Grafana and Prometheus into an OpenShift cluster. For all other cluster types, use [Installation in Kubernetes](#install-in-k8s) instructions.
+This section documents how to install Grafana and Prometheus into an OpenShift 4 cluster. These instructions have not been validated with OpenShift 3.
+For all other cluster types, use [Installation in Kubernetes](#install-in-k8s) instructions.
 
 Prometheus and Grafana which are included with OpenShift can only be used to [monitor the OpenShift cluster itself](https://docs.openshift.com/container-platform/4.7/monitoring/accessing-third-party-uis.html) and cannot be used to display Mendix app metrics.
 
 To monitor Mendix app environments, you will need to install a separate copy of Grafana and Prometheus.
 
-#### 2.2.1 Preparations
+#### 2.3.1 Preparations
 
 Create a new project (replace `{project}` with the project name, for example `grafana`):
 
@@ -75,16 +89,18 @@ This annotation specifies the starting UID and range of UIDs allowed to be used 
 
 Choose a UID from the allowed range, for example 1001280000.
 
-#### 2.2.2 Install Grafana
+#### 2.3.2 Install the Grafana Loki stack
 
 Run the following commands in a Bash console, (replace `{uid}` with the UID chosen in the previous step, for example 1001280000; and `{project}` with the project name, for example `grafana`):
 
 ```shell
-NAMESPACE={project}
+PROJECT={project}
 GRAFANA_UID={uid}
-helm upgrade --install loki grafana/loki-stack --namespace=${NAMESPACE} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false \
+helm upgrade --install loki grafana/loki-stack --version='^2.4.1' --namespace=${PROJECT} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
 --set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
---set promtail.enabled=false,prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false \
+--set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
+--set promtail.enabled=true,promtail.securityContext.privileged=true \
+--set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false \
 --set grafana.securityContext.runAsUser=${GRAFANA_UID},grafana.securityContext.runAsGroup=0,grafana.securityContext.fsGroup=${GRAFANA_UID} \
 --set prometheus.server.securityContext.runAsUser=${GRAFANA_UID},prometheus.server.securityContext.runAsGroup=0,prometheus.server.securityContext.fsGroup=${GRAFANA_UID} \
 --set prometheus.kube-state-metrics.securityContext.runAsUser=${GRAFANA_UID},prometheus.kube-state-metrics.securityContext.runAsGroup=0,prometheus.kube-state-metrics.securityContext.fsGroup=${GRAFANA_UID} \
@@ -95,11 +111,68 @@ This Helm chart will install and configure Grafana, Prometheus and their depende
 
 You might need to adjust some parameters to match the scale and requirements of your environment:
 
-* **grafana.persistence.size** specifies the volume size used by Grafana to store its configuration, 
-* **prometheus.server.persistentVolume.size** specifies the volume size used by Prometheus to store 
-* **prometheus.server.retention** specifies how long metrics are kept by Prometheus before they will be discarded.
+* **grafana.persistence.size** specifies the volume size used by Grafana to store its configuration;
+* **prometheus.server.persistentVolume.size** specifies the volume size used by Prometheus to store metrics;
+* **prometheus.server.retention** specifies how long metrics are kept by Prometheus before they will be discarded;
+* **loki.persistence.size** specifies the volume size used by Loki to store logs;
+* **loki.config.chunk_store_config.max_look_back_period** specifies the maximum retention period for storing chunks (compressed log entries);
+* **loki.config.table_manager.retention_period** specifies the maximum retention period for storing logs in indexed tables;
+* **promtail.enabled** specifies if the Promtail component should be installed (required for collecting Mendix app environment logs).
 
-#### 2.2.3 Expose the Grafana web UI
+See more details in the [Loki installation guide](https://grafana.com/docs/loki/next/installation/helm/).
+
+#### 2.3.3 Add permissions to collect container logs
+
+To read logs from Pods (including logs from Mendix app environments), the Loki stack uses [Promtail](https://grafana.com/docs/loki/next/clients/promtail/).
+
+Promtail runs a Pod on every Kubernetes node, and this pod reads local container logs from the host system.
+Promtail Pods requires elevated permissions to read those logs.
+
+{{% alert type="info" %}}Promtail can be replaced with other similar components - such as Fluentd, Fluent Bit, Filebeat or Azure Container Insights.
+
+All of them use the same mechanism for reading logs, and replacing Promtail with an alternative will still require logs to be collected with a privileged container.{{% /alert %}}
+
+To allow the Promtail to read the container logs in OpenShift, run the following command (replace `{project}` with the project name, for example `grafana`):
+
+```shell
+PROJECT={project}
+cat <<EOF | oc apply -f -
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: loki-promtail
+allowHostDirVolumePlugin: true
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegeEscalation: true
+allowPrivilegedContainer: true
+allowedCapabilities: null
+defaultAddCapabilities: null
+fsGroup:
+  type: RunAsAny
+groups: []
+priority: null
+readOnlyRootFilesystem: true
+requiredDropCapabilities: 
+- ALL
+runAsUser:
+  type: RunAsAny
+seLinuxContext:
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
+users:
+- system:serviceaccount:${PROJECT}:loki-promtail
+volumes:
+- 'configMap'
+- 'secret'
+- 'hostPath'
+EOF
+```
+
+#### 2.3.4 Expose the Grafana web UI
 
 To access the Grafana web UI, create an OpenShift Route (replace `{project}` with the project name, for example `grafana`):
 

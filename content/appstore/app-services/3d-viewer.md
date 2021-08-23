@@ -540,6 +540,10 @@ You can also add or update `LicenseToken` via the [Developer Portal](/developerp
 
 JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of the 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
 
+{{% todo %}}[**Verify: remove?**]{{% /todo %}}
+
 ## 9 Read More
 
 * [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)
+
+{{% todo %}}[**Verify: remove?**]{{% /todo %}}

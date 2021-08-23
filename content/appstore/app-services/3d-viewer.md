@@ -88,7 +88,7 @@ If you app does not have an after-startup microflow set,  follow these steps:
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`.
 3. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup).
+4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
@@ -180,7 +180,7 @@ This is a container widget designed to put other 3D widgets in. It provides a sh
 
 You can place this widget in any location of a page.
 
-#### 4.6.1.2 Uploader
+#### 4.6.1.2 Uploader {#uploader}
 
 This widget enables selecting a JT model from your local machine and uploading it to the Mendix file storage.
 
@@ -192,7 +192,7 @@ On the **General** tab of the properties, the **Model ID**, and **Data source** 
 
 This widget provides a viewing window of your 3D model.
 
-Place this widget inside a **Container3D** widget.
+Place this widget inside a [Container3D](#container3d) widget.
 
 For this widget to visualize a model correctly, set the following properties:
 
@@ -218,7 +218,7 @@ For this widget to visualize a model correctly, set the following properties:
 
 These widgets have an operation panel that contains an interactive item for the end-user to operate on.
 
-Each panel widget should be placed in a **Container3D** widget. A **Viewer** widget with the right data source should also be in the same Container3D widget.
+Each panel widget should be placed in a [Container3D](#container3d) widget. A Viewer widget with the right data source should also be in the same Container3D widget.
 
 ##### 4.6.2.1 PS Tree {#ps-tree}
 
@@ -238,7 +238,7 @@ Compared to the [PS Tree](#ps-tree) widget, this widget adds an additional confi
 
 ![pstreetable-general](attachments/3d-viewer/pstreetable-general.jpg)
 
-##### 4.6.2.3 PMI Tree
+##### 4.6.2.3 PMI Tree {#pmi-tree}
 
 This widget presents a hierarchical tree display of a model's product manufacturing information, model views, and design groups.
 
@@ -246,7 +246,7 @@ On the **General** tab, the **Expand all tree nodes** property determines if all
 
 Also on the **General** tab,  the **Auto load** property determines if all PMI trees should be automatically loaded into viewer when the PMI structure tree is loaded.
 
-##### 4.6.2.4 Section View
+##### 4.6.2.4 Section View {#section-view}
 
 This widget enables creating a section cut on the model and provides a section view from various angles.
 
@@ -264,7 +264,7 @@ Also on the **General** tab is the **markup color** property, which allows you t
 
 On **Event** tab, by binding a Boolean attribute to the **Save** property, the save status of the markup image can be obtained after the end-user clicks **Save** on the markup builder's panel. You can also add custom actions, such as showing a pop-up message, to this. When the attribute value changes to **True**, it means the markup image associated with the model is successfully saved in Mendix file storage. When the attribute value is **False**, this means the save is not successful. By setting the **Action** property, you can trigger an action based on the value of the **Save** status. 
 
-##### 4.6.2.6 Measurement
+##### 4.6.2.6 Measurement {#measurement}
 
 This widget enables performing measurements on 3D models, including measuring distance, angle, line length, radius, and area.
 
@@ -286,98 +286,90 @@ These widgets do not require additional configuration. Simply place them within 
 | Tool Bar Item Selection Mode | Provides the ability to select a model part, edge, face, and body. |
 | Tool Bar Item Snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to a local machine. |
 
-## 6 Using 3D Viewer
+## 5 Using 3D Viewer
 
-3D Viewer mainly provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
+3D Viewer provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
 
-Given that you start from a blank app template in Mendix Studio Pro, you can follow the instructions below to visualize your local JT model quickly.
+When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to visualize your local JT model quickly.
 
-### 6.1 Uploading & Viewing a 3D JT Model in Your Browser
+### 5.1 Uploading & Viewing a 3D JT Model in Your Browser
 
-For the **Viewer** widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the **Uploader** widget and set to that of the **Viewer** widget.
+For the [Viewer](#viewer) widget to visualize a JT model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D JT models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](#uploader) widget and set to that of the Viewer widget.
 
 Follow these steps to configure this visualization:
 
-1. Place a **Container3D** widget on a page.
-2. Put the **Uploader** widget and **Viewer** widget into the **Container3D** widget and give them a layout.
-3. Set a fixed height of the **Viewer** widget (toggle to **Design mode** to see the preview).
-4. Create an entity called **UploadedModel** in your app module's domain model.
-5. Wrap the **Uploader** and **Viewer** widgets inside a new Data view widget.
-6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as data source of the data view.
-7.  Create two attributes for the **UploadedModel** entity. Set them to receive the value returned from the **Uploader**'s **Data source** and **UploadModelId**:
+1. Place a [Container3D](#container3d) widget on the page.
+2. Put the Uploader and Viewer widgets into the Container3D widget and give them a layout.
+3. Set a fixed height of the Viewer widget (toggle to **Design mode** to see the preview).
+4. Create an entity and call it *UploadedModel* in your app module's domain model.
+5. Wrap the Uploader and Viewer widgets inside a new data view widget.
+6. Create a nanoflow, call it *CreatedUploadedModel*, and set this as the data source of the data view.
+7.  Create two attributes for the UploadedModel entity. Set them to receive the value returned from the Uploader's **Data source** and **UploadModelId**:
 
 	![uploader-uploadedmodelinfo](attachments/3d-viewer/uploader-uploadedmodelinfo.jpg)
 
-8.  Set the data source attributes of the **Viewer** widget by setting **Model ID** to **UploadedModelID** and **Model Source Type** to **Mendix**:
+8.  On the **Data Source** tab, set the data source attributes of the Viewer widget by setting **Model ID** to **UploadedModelID** and **Model source type** to **Mendix**:
 
 	![viewer-datasourceuploaded](attachments/3d-viewer/viewer-datasourceuploaded.jpg)
 
-9.  Set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload:
-
-	![viewer-autoloadparts](attachments/3d-viewer/viewer-autoloadparts.jpg)
-
-10. Run your app project locally. You can now upload a JT file and view it directly in the browser:
+9.  On the **General** tab, set **Automatically load parts** to **Yes**, which enables loading the model automatically upon successful upload.
+10. Run your app locally. You can now upload a JT file and view it directly in the browser:
 
 	![runlocally-uploadandview](attachments/3d-viewer/runlocally-uploadandview.jpg)
 
-### 6.2 Displaying Model Loading Progress with Progress Bar Widget
+### 5.2 Displaying Model Loading Progress with Progress Bar Widget
 
-When the end-user is uploading or loading a model, they may want to know the uploading and loading progress.
-
-Uploading progress in the **Uploader** widget can seen in the uploader panel :
+When the end-user is uploading or loading a model, they may want to know the uploading and loading progress. The uploading progress in the Uploader widget can seen in the uploader panel :
 
 ![uploader-uploadedstatus](attachments/3d-viewer/uploader-uploadedstatus.jpg)
 
-Loading progress in the **Viewer** widget can be obtained via the **Progress status** and **Progress percentage** attributes in Event tab.
+Loading progress in the Viewer widget can be obtained via the **Progress status** and **Progress percentage** attributes in the **Events** tab.
 
 Follow these steps to display the model loading progress:
 
-1. Create an entity called *PageObject*, add decimal type attribute called *LoadingProgress* with a default value of `= 0` (as the **Progress bar** widget expects a decimal value).
+1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](/appstore/widgets/progress-bar) widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
-3. Wrap **Container3D** with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
+3. Wrap the [Container3D](#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
 	![viewer-progresspercentage](attachments/3d-viewer/viewer-progresspercentage.jpg)
 
-5.  Add the **Progress Bar** to the page and set **PageObjectLoadingProgress** as the **Progress Attribute**:
-
-	![progressbar-progressattribute](attachments/3d-viewer/progressbar-progressattribute.jpg)  
-
+5.  Add the Progress Bar widget to the page and set **PageObject.LoadingProgress** as the **Progress Attribute** on the **Values** tab.
 6. Run your app locally. You can see the real-time model loading progress:
 
 	![runlocally-loadingprogress](attachments/3d-viewer/runlocally-loadingprogress.jpg)
 
-### 6.3 Utilizing More 3D Functionality
+### 5.3 Utilizing More 3D Functionality
 
-You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as to your need. For example:
+You can add more 3D widgets to the page to enable more 3D functionalities and arrange the layout of them as needed. For example:
 
 ![structuremode-more3dwidgets](attachments/3d-viewer/structuremode-more3dwidgets.jpg)
 
-### 6.4 Managing Uploaded Models
+### 5.4 Managing Uploaded Models
 
 In the previous use case, you can only visualize the model you upload.
 
-Usually you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelListFromMendix** nanoflow and **DeleteModelFromMendix** microflow to help you build model data management functionality into your app.
+Usually, you will also need to manage the models that are uploaded and stored in the data storage. 3D Viewer provides the **GetModelListFromMendix** nanoflow and **DeleteModelFromMendix** microflow to help you build model data management functionality into your app.
 
-#### 6.4.1 Building a Model List
+#### 5.4.1 Building a Model List
 
-The Mendix native [list view](/refguide/list-view) can be used to display the model list by following these steps:
+The Mendix native [list view](/refguide8/list-view) can be used to display the model list by following these steps:
 
-1. Use the **View3D/USER_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
-2. Add a [pop-up page](/refguide/page-properties#pop-up) to display the model list via a button click or another event of your choice.
+1. Use the **View3D/USE_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
+2. Add a [pop-up page](/refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
 3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5.  Fill in the list item with the information you are interested in:
 
 	![openmodelpopUp-listview](attachments/3d-viewer/openmodelpopup-listview.jpg)
 
-#### 6.4.2 Opening a Model from the Model List
+#### 5.4.2 Opening a Model from the Model List
 
-Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the **Viewer** widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including **ModelId** and **Model Source Type**), you need to pass this object to the **Viewer** widget.
+Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the [Viewer](#viewer) widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including ModelId and Model Source Type), you need to pass this object to the Viewer widget.
 
 Follow these steps for configuration:
 
-1.  Define the **On click** action for the list view so as to pass the selected model to the **Viewer** widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the **Viewer** is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
+1.  Define the **On click** action for the list view to pass the selected model to the Viewer widget that is present in another page (so the selected model can be loaded into the viewer). An example approach is to create an entity that is associated with the **ModelDocument** entity defined in the **Viewer3D** module's domain model. Make the object a shared object between the page the Viewer is in and the model list page. In this example, you are creating a **PageObject** with this home page: 
 
 	![homepage-pageobject](attachments/3d-viewer/homepage-pageobject.jpg)
 
@@ -385,7 +377,7 @@ Follow these steps for configuration:
 
 	![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopup-pageobject.jpg)
 
-2.  Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a **PageObject** change:
+2.  Set the **On click** action of the model list item, then change the **ModelDocument** object with which the **PageObject** is associated to return the value so that home page can be refreshed on a PageObject change:
 
 	![openselectedmodel-nanoflow](attachments/3d-viewer/openselectedmodel-nanoflow.jpg)
 
@@ -393,18 +385,15 @@ Follow these steps for configuration:
 
 	![openmodellistpopup-demo](attachments/3d-viewer/openmodellistpopup-demo.jpg)
 
-#### 6.4.3 Deleting a Model
+#### 5.4.3 Deleting a Model
 
-There might be some models that you do not want in the database, so you can delete these too. The 3D Viewer app service provides the **DeleteModelFromMendix** microflow to achieve this.
+There might be some models that you do not want in the database, so you can delete these, too. The 3D Viewer app service provides the **DeleteModelFromMendix** microflow to achieve this.
 
 Follow these steps to delete a model from the database:
 
-1. Use the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  **DeleteModelFromMendix** expects a ModelDocument (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps a model list was built, each list item of which is a ModelDocument. For a model list item, add a **Delete** button:
-
-	![deletemodel-deletebutton](attachments/3d-viewer/deletemodel-deletebutton.jpg)
-
-3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **Viewer3D/USE_M3/DeleteModelFromMendix** microflow and commit the **ModelDocument**:
+1. Use the **Viewer3D/USE_ME/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
+2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide8/button-widgets).
+3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
 
 	![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
 
@@ -413,84 +402,90 @@ Follow these steps to delete a model from the database:
 
 Now you are able to get a list of models, select a list item to open a model, and delete the model.
 
-### 6.5 Handling Viewer Events
+### 5.5 Handling Viewer Events
 
-Multiple events can be picked up by the **Viewer** widget and can be used to build your customized event handling logic.
+Multiple events can be picked up by the [Viewer](#viewer) widget and can be used to build your customized event handling logic.
 
-There are four main types of events that can be picked up on the **Viewer** widget, here is an example setting:
+There are four main types of events that can be picked up on the Viewer widget:
 
-![viewer-viewerevents](attachments/3d-viewer/viewer-viewerevents.jpg)
+* **On selection change** – by selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have further inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us))
+* **On error** – by selecting one attribute to set the **Error** event, you can pick up an error exposed by the Viewer
+* **On progress change** – by selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree)
+* **On load** – by selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree
 
-* **On Selection Change** – by selecting one attribute to set **Selection**, you can get information on the selected part. For this you might need to work with Viewer APIs, if you have further inquiries on how to use Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket against 3DViewer development team.
-* **OnError** – by selecting one attribute to set the **On error** event, you can pick up an error exposed by the **Viewer**
-* **On Progress Change** – by selecting one attribute for the **setProgress** value, you can get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
-* **On load Change** – by selecting one attribute for the **loaded** value, you can get the current loading status of product structure tree.
+## 6 Others
 
-## 7 Others
+### 6.1 Create 3D Section {#create-3d-section}
 
-### 7.1 Create 3D Section {#create-3d-section}
+When a model is loaded in the viewer, the [Section View](#section-view) widget enables the following:
 
-When a model is loaded in the viewer, the Section View widget enables you to inspect the interior structure of a model by adding standard section planes, delete a section plane, clear all section planes, position plane, clip away parts.
-
-Here is a list of UI operations within the Section View widget.
+* Inspecting the interior structure of a model by adding standard section planes
+* Deleting a section plane
+* Clearing all section planes
+* Clipping away parts
+* Positioning a plane
 
 ![sectionview-designmode](attachments/3d-viewer/sectionview-designmode.jpg)
 
-**Action**:
+The sections below present operations within the Section View widget.
 
-Add - Add a section plane. First select an axis along which you would like to section the model, then click Add, you will see a section plane of the desired axis is added to the scene, the default position of the newly added section plane is in the middle of the bounding box of the direction selected.
+#### 6.1.1 Action
 
-Delete - Delete a selected section plane. Click on the edge of the section plane to select it, when selected, the section plane edges are highlighted in yellow color, then click Delete, this section plane will be deleted.
+* **Add** – Use this to add a section plane. First, select the axis along which you would like to section the model, then click **Add**. You will see a section plane of the desired axis added to the scene. The default position of the newly added section plane is in the middle of the bounding box of the direction selected.
+* **Delete** – Use this to delete a selected section plane. Click the edge of the section plane to select it (when selected, the section plane edges are highlighted in yellow color). Then, click **Delete**.
+* **Clear** –  Use this to clear all the section planes added to the scene.
 
-Clear -  Clear all the section planes added to the scene.
+#### 6.1.2 Direction
 
-**Direction**:
+* **X Direction** –  sets the X axis of the default coordinate system as the reference.
+* **Y Direction** –  sets the Y axis of the default coordinate system as the reference
+* **Z Directio** – sets the Z axis of the default coordinate system as the reference
 
-X Direction - Sets X axis of the default coordinate system as the reference.  
-Y Direction - Sets Y axis of the default coordinate system as the reference.  
-Z Direction - Sets Z axis of the default coordinate system as the reference.  
-For example, if you have select Y Direction, then the cross section is created on the ZX plane.
+For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
 
-**Clipping**:
+#### 6.1.3 Clipping
 
-When a section plane is selected (highlighted in yellow color), you can choose which part of the model you would like to clip away by clicking on 4 clipping options:  
-Off - Don't clip.  
-Both - Clip both sides, shows the 2D intersecting curve on the section plane.  
-Near - Clip away the positive side (toward direction).  
-Far - Clip away the negative side (away from direction).  
+When a section plane is selected (and highlighted in yellow), you can choose which part of the model you would like to clip away by selecting a clipping option:
 
-**Position**:
+* **Off** –  do not clip
+* **Both** – clip both sides, showing the 2D intersecting curve on the section plane
+* **Near** – clip away the positive side (toward the **Direction**)
+* **Far** –  clip away the negative side (away from the **Direction**)
 
-You can slide the position sliders to move the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
+#### 6.1.4 Position
+
+You can move the position sliders to adjust the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
-### 7.2 Perform 3D Measurements {#perform-measurements}
+### 6.2 Perform 3D Measurements {#perform-measurements}
 
-When a model is loaded into the viewer, Measurement widget provides a set of tools to measure different geometrical entities.
+When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
 
 ![measurement-panel](attachments/3d-viewer/measurement-panel.jpg)
 
-**Measurement Mode**
+The sections below describe these tools.
 
-Distance : Measure the distance between two part features.
-Length: Measure length of a line.
-Radius: Measure the radius of a circular edge or surface.
-Angle: Measure the angle between two edges or surfaces.
-Area: Measure the area of a surface.
+#### 6.2.1 Measurement Mode
 
-**Dimension Controls**
+* **Distance** – measure the distance between two part features
+* **Length** – measure the length of a line
+* **Radius** – measure the radius of a circular edge or surface
+* **Angle** – measure the angle between two edges or surfaces
+* **Area** – measure the area of a surface
 
-Remove: Select one measurement result, click Remove, the selected measurement result will be removed from the scene.  
-Clear: Clear all measurement results in the scene.
+#### 6.2.2 Dimension Controls
 
-### 7.3 Set Viewer Event {#set-viewer-event}
+* **Remove** – select one measurement result, then click **Remove** and the selected measurement result will be removed from the scene
+* **Clear** – clear all the measurement results in the scene
 
-As previouly introduced in Viewer widget introduction, viewer catches model part selection event, error event, model loading progress event and isloaded event for you to handle these event tailored to your need. 
+### 6.3 Set Viewer Event {#set-viewer-event}
 
-### 7.3.1 On selection change
+The [Viewer](#viewer) catches the events described below so you can handle them according to your needs. 
 
-**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
+### 6.3.1 On Selection Change
+
+**Selection** takes a string attribute. You can define an attribute and bind that attribute to Selection. In a running app, when the end-user selects a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (PSID and Viewer) and use it in the actions.
 
 ![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
 
@@ -498,7 +493,7 @@ As previouly introduced in Viewer widget introduction, viewer catches model part
 
 ![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)
 
-### 7.3.2 On error
+### 6.3.2 On Error
 
 **Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
 
@@ -507,55 +502,55 @@ As previouly introduced in Viewer widget introduction, viewer catches model part
 **Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
 3dviewer-onerror-sample
 
-### 7.3.3 On progress change
+### 6.3.3 On Progress Change
 
 ![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg)
 
 3dviewer-onprogress-sample
 
-### 7.3.4 On load
+### 6.3.4 On Load
 
 ![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
 
 viewer-onload-sample
 
-## 8 Obtaining a LicenseToken to Deploy Your App {#obtain}
+## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
 3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid `LicenseToken` as environment variable in deployment setting, otherwise 3DViewer widget features may not work in your app.
 
-### 8.1 Decide if you need to request a LicenseToken
+### 7.1 Decide if you need to request a LicenseToken
 
 If you use 3DViewer in your app, and you just need to run your app locally, for testing and trial purpose, no plan for deploy the app, you will not need to request a `LicenseToken`.
 
 If you plan to use 3DViewer in your app, and decide to deploy your app to the cloud, then you will need to request a `LicenseToken`. 
 
-### 8.2 Do I have to pay to get a LicenseToken
+### 7.2 Do I have to pay to get a LicenseToken
 
 Yes, you are subject to pay for subscription fee.
 
-### 8.3 How to request a LicenseToken
+### 7.3 How to request a LicenseToken
 
 For the time being, to request free-trial and offical subscription `LicenseToken`, please provide **your company legal name**, **your email address**, **your full name**, and send these information to DIS_MXAWS_3DViewer_Support@mendix.com. You may be asked to provide more information. In the end you will receive a `LicenseToken` with an agreed expiration date.
 
-### 8.4 How to configure LisenseToken for your app deployment
+### 7.4 How to configure LisenseToken for your app deployment
 
-#### 8.4.1 Configure LicenseToken in Mendix Studio Pro
+#### 7.4.1 Configure LicenseToken in Mendix Studio Pro
 
 In Mendix Studio Pro, go to Pojrect Settings, in Configurations Tab, click to Edit, under Constants tab, create a new Constant with the predefined constant `Viewer3D.LicenseToken`, fill the Value with your obtained LicenseToken. Click OK to confirm the settings.
 ![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
 
 Click Run to deploy your app to the cloud.
 
-#### 8.4.2 Configure LicenseToken in Mendix Developer Portal
+#### 7.4.2 Configure LicenseToken in Mendix Developer Portal
 
 You can also add or update LicenseToken via Mendix Developer Portal.
 
 ![licensetoken-developerportal](attachments/3d-viewer/licensetoken-developerportal.jpg)
 
-## 9 Loading & Visualizing a Model from Teamcenter
+## 8 Loading & Visualizing a Model from Teamcenter
 
 JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
 
-## 10 Read More
+## 9 Read More
 
 * [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)

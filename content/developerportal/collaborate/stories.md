@@ -87,7 +87,7 @@ Click **More** to access the following options:
 * **Manage Labels** – opens a page where you can manage labels at the app level; for details, see the [Managing Labels](#managing-labels) section below
 * **Completed Sprints** – opens a page where completed sprints are archived; for details, see the [Completed Sprints](#completed-sprints) section below
 * **History** – opens the **Project History** page; for details, see the [History](#history) section below
-* **Switch To Old UI** – opens the [old Stories UI](#old)
+* **Switch To Old UI** – opens the old Stories UI
 
 #### 2.4.1 Importing & Exporting to Excel {#import-export}
 

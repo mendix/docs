@@ -483,36 +483,17 @@ The sections below describe these tools.
 
 The [Viewer](#viewer) catches the events described below so you can handle them according to your needs. 
 
-### 6.3.1 On Selection Change
+For **On selection change** and **On error**, note that **Selection** takes a string attribute. You can define an attribute and bind that attribute to Selection. In a running app, when the end-user selects a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (PSID and Viewer) and use it in the actions.
 
-**Selection** takes a string attribute. You can define an attribute and bind that attribute to Selection. In a running app, when the end-user selects a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (PSID and Viewer) and use it in the actions.
+Like other Mendix events, with **Action**, you can select from a list of actions upon model part selection. One possible use case is to utilize the GET APIs exposed by the Viewer (for example, get `Boundingbox` by PSID and set `material` by PSID in a JavaScript action, include it in a nanoflow, and set the Action to call this nanoflow).
 
-![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
+For **On progress change**
 
-**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+{{% todo %}}[**Need details?**]{{% /todo %}}
 
-![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)
+For **On Load**
 
-### 6.3.2 On Error
-
-**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
-
-![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
-
-**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
-3dviewer-onerror-sample
-
-### 6.3.3 On Progress Change
-
-![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg)
-
-3dviewer-onprogress-sample
-
-### 6.3.4 On Load
-
-![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
-
-viewer-onload-sample
+{{% todo %}}[**Need details?**]{{% /todo %}}
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

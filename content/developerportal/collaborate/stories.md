@@ -228,7 +228,7 @@ Moving a story will move the tasks as well.
 
 #### 2.6.3 Adding a Task to a Story {#adding-task}
 
-To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task...** box.
+To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task** box.
 
 ### 2.7 Managing Stories in Mendix Studio Pro 
 

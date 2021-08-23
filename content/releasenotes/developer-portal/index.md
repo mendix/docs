@@ -44,9 +44,9 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
-* We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
+* We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
-* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings#api-key) page.
+* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings#api-keys) page.
 * We implemented a new responsive search panel.
 * We will remove the [Burndown Chart](/developerportal/collaborate/stories#burndown) and [Release Plan](/developerportal/collaborate/stories#release-plan) tabs from the Developer Portal on August 31st, 2021.
 
@@ -261,7 +261,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#managing-labels) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
@@ -323,7 +323,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
+* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
 * We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles#team-roles) to better distinguish team roles from app user roles.
 * We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
@@ -337,7 +337,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* When you [delete a story or task](/developerportal/collaborate/stories#deleting) on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
+* When you delete a story or task on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
 * We removed the ability to revert story-related changes in an app's history.
 * We removed the ability to delete several stories at once on the **Stories** page.
 * We simplified story maintenance by preventing nested tasks.

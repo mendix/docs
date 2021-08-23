@@ -497,40 +497,48 @@ For **On Load**
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-3DViewer is a commercial Mendix product that's subject to purchase and subscription fee. To deploy your app that uses 3DViewer successfully to the cloud, you will need provide a valid `LicenseToken` as environment variable in deployment setting, otherwise 3DViewer widget features may not work in your app.
+3DViewer is a commercial Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3DViewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3DViewer widget features may not work in your app.
 
-### 7.1 Decide if you need to request a LicenseToken
+### 7.1 Deciding If You Need to Request a LicenseToken
 
-If you use 3DViewer in your app, and you just need to run your app locally, for testing and trial purpose, no plan for deploy the app, you will not need to request a `LicenseToken`.
+If you use 3DViewer in your app and you just need to run your app locally for testing and trial purposes and do not plan to deploy the app, you will not need to request a `LicenseToken`.
 
-If you plan to use 3DViewer in your app, and decide to deploy your app to the cloud, then you will need to request a `LicenseToken`. 
+If you plan to use 3DViewer in your app and decide to deploy your app to the cloud, then you will need to request a `LicenseToken`. 
 
-### 7.2 Do I have to pay to get a LicenseToken
+### 7.2 Requesting a LicenseToken
 
-Yes, you are subject to pay for subscription fee.
+To request a free trial and an offical subscription `LicenseToken`, prepare the following details:
 
-### 7.3 How to request a LicenseToken
+* Your company's legal name
+* Your email address
+* Your full name
 
-For the time being, to request free-trial and offical subscription `LicenseToken`, please provide **your company legal name**, **your email address**, **your full name**, and send these information to DIS_MXAWS_3DViewer_Support@mendix.com. You may be asked to provide more information. In the end you will receive a `LicenseToken` with an agreed expiration date.
+Send these details to `DIS_MXAWS_3DViewer_Support@mendix.com`. You may be asked to provide more information. You will receive a `LicenseToken` with an agreed expiration date.
 
-### 7.4 How to configure LisenseToken for your app deployment
+{{% todo %}}[**Verify: email address to be included?**]{{% /todo %}}
 
-#### 7.4.1 Configure LicenseToken in Mendix Studio Pro
+### 7.4 Configuring a LicenseToken for App Deployment
 
-In Mendix Studio Pro, go to Pojrect Settings, in Configurations Tab, click to Edit, under Constants tab, create a new Constant with the predefined constant `Viewer3D.LicenseToken`, fill the Value with your obtained LicenseToken. Click OK to confirm the settings.
+#### 7.4.1 Configuring the LicenseToken in Studio Pro
+
+In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
+
+1. In the **Configurations** tab, click **Edit**. 
+2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant `Viewer3D.LicenseToken`.
+3. ill in the **Value** with your obtained `LicenseToken`.
+4. Click **OK** to confirm the settings.
+
 ![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
 
-Click Run to deploy your app to the cloud.
+5. Click **Run** to deploy your app to the cloud.
 
-#### 7.4.2 Configure LicenseToken in Mendix Developer Portal
+#### 7.4.2 Configuring the LicenseToken in the Developer Portal
 
-You can also add or update LicenseToken via Mendix Developer Portal.
-
-![licensetoken-developerportal](attachments/3d-viewer/licensetoken-developerportal.jpg)
+You can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
 
 ## 8 Loading & Visualizing a Model from Teamcenter
 
-JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of this 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
+JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of the 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
 
 ## 9 Read More
 

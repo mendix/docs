@@ -239,7 +239,7 @@ To manage stories in Studio Pro, follow these steps:
 1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
-   ![](attachments/stories/stories-pane.png)
+     ![](attachments/stories/stories-pane.png)
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
@@ -275,7 +275,7 @@ All the changes made on this page are directly passed on to the **Stories** page
 The **Burndown Chart** tab will be removed on the August 31st, 2021.
 {{% /alert %}}
 
-The **Burndown Chart** tab graphically presents the progress of the current Sprint:
+This tab graphically presents the progress of the current Sprint:
 
 * **Ideal Burndown** – the expected progress if the Sprint is completed at a consistent rate
 * **Remaining Effort** – the amount of story points that still have to be completed
@@ -291,7 +291,7 @@ Under **Sprint History**, you can view burndown charts for completed Sprints.
 The **Release Plan** tab will be removed on the August 31st, 2021. Make sure that you save your data before it is removed by using the **Export to Excel** button.
 {{% /alert %}}
 
-On the **Release Plan** tab, you will get an overview of all the springs.
+On this tab, you will get an overview of all the springs.
 
 Click **Edit** to make changes in a specific Sprint or release (for example, to change the name, date, or duration of the Sprint).
 

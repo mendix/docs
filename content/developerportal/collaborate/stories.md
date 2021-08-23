@@ -239,7 +239,7 @@ To manage stories in Studio Pro, follow these steps:
 1. Open your app in Studio Pro by clicking **Edit in Studio Pro** in the top-right corner of the page.
 2. Open **View** > **Stories**. You can see your active Sprints in the **Stories** pane.
 
-       ![](attachments/stories/stories-pane.png)
+	![](attachments/stories/stories-pane.png)
 
 3. To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 

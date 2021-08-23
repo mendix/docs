@@ -15,7 +15,7 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 
 There are the following image and file widgets in Mendix Studio:
 
-* **Image** – allows you to show a static (non-changing) image in your app
+* **Static Image** – allows you to show a static (non-changing) image in your app
 
 *  **Dynamic Image** – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
@@ -26,9 +26,9 @@ There are the following image and file widgets in Mendix Studio:
 	{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-and-files/images-and-files.png)
     {{% /image_container %}}
 
-## 2 Image and Dynamic Image Properties
+## 2 Static Image and Dynamic Image Properties
 
-An image and a dynamic image widgets allow you to display an image either from a file (statically) or from the database (dynamically).  
+Static image and dynamic image widgets allow you to display an image either from a file (statically) or from the database (dynamically).  
 
 You can switch from one widget to another in properties:
 

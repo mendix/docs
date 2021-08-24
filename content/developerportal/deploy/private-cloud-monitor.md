@@ -3,7 +3,7 @@ title: "Monitoring environments in Mendix for Private Cloud"
 parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 menu_order: 20
-tags: ["Monitor", "Private Cloud", "Environment"]
+tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -38,6 +38,7 @@ to ensure that the logging/monitoring solution is compliant with your organizati
 
 ### 2.1 Prerequisites
 
+{{% alert type="warning" %}}The Grafana Helm chart doesn't yet support Kubernetes 1.22 and later versions.{{% /alert %}}
 
 Before installing Grafana, make sure you have [installed Helm](https://grafana.com/docs/loki/latest/installation/helm/) and can access your Kubernetes cluster.
 
@@ -49,9 +50,79 @@ helm repo update
 
 ### 2.2 Installation in Kubernetes{#install-in-k8s}
 
-<!-- TODO -->
+This section documents how to install Grafana and Prometheus into a a Kubernetes cluster.
+For installation in OpenShift, use [Installation in OpenShift](#install-in-openshift) instructions.
 
-### 2.3 Installation in OpenShift
+#### 2.2.1 Preparations
+
+Create a new namespace (replace `{namespace}` with the namespace name, for example `grafana`):
+
+```shell
+kubectl create namespace {namespace}
+```
+
+Create a Secret containing the Grafana admin password (replace `{namespace}` with the namespace name, for example `grafana`; `{username}` with the admin username, for example `admin`; `{password}` with the admin password):
+
+```shell
+kubectl --namespace {namespace} create secret generic grafana-admin --from-literal=admin-user={username} --from-literal=admin-password={password}
+```
+
+This username and password can be used later to log into Grafana.
+
+#### 2.2.2 Install the Grafana Loki stack
+
+Run the following commands in a Bash console, (replace `{namespace}` with the namespace name, for example `grafana`):
+
+```shell
+NAMESPACE={namespace}
+helm upgrade --install loki grafana/loki-stack --version='^2.4.1' --namespace=${NAMESPACE} --set grafana.enabled=true,grafana.persistence.enabled=true,grafana.persistence.size=1Gi,grafana.initChownData.enabled=false,grafana.admin.existingSecret=grafana-admin \
+--set prometheus.enabled=true,prometheus.server.persistentVolume.enabled=true,prometheus.server.persistentVolume.size=50Gi,prometheus.server.retention=7d \
+--set loki.persistence.enabled=true,loki.persistence.size=10Gi,loki.config.chunk_store_config.max_look_back_period=168h,loki.config.table_manager.retention_deletes_enabled=true,loki.config.table_manager.retention_period=168h \
+--set promtail.enabled=true,promtail.securityContext.privileged=true \
+--set prometheus.nodeExporter.enabled=false,prometheus.alertmanager.enabled=false,prometheus.pushgateway.enabled=false
+```
+
+This Helm chart will install and configure Grafana, Prometheus, Loki and their dependencies.
+
+You might need to adjust some parameters to match the scale and requirements of your environment:
+
+* **grafana.persistence.size** specifies the volume size used by Grafana to store its configuration;
+* **prometheus.server.persistentVolume.size** specifies the volume size used by Prometheus to store metrics;
+* **prometheus.server.retention** specifies how long metrics are kept by Prometheus before they will be discarded;
+* **loki.persistence.size** specifies the volume size used by Loki to store logs;
+* **loki.config.chunk_store_config.max_look_back_period** specifies the maximum retention period for storing chunks (compressed log entries);
+* **loki.config.table_manager.retention_period** specifies the maximum retention period for storing logs in indexed tables;
+* **promtail.enabled** specifies if the Promtail component should be installed (required for collecting Mendix app environment logs).
+
+See more details in the [Loki installation guide](https://grafana.com/docs/loki/next/installation/helm/).
+
+If your Kubernetes cluster requires a StorageClass to be specified, add the following arguments to the `helm upgrade` command (replace `{class}` with a storage class name, e.g. `gp2`):
+
+```shell
+--set grafana.persistence.storageClassName={class},loki.persistence.storageClassName={class},prometheus.server.persistentVolume.storageClass={class}
+```
+
+#### 2.2.3 Expose the Grafana web UI
+
+Create an Ingress object to access Grafana from your web browser (replace `{namespace}` with the namespace name, for example `grafana`; `{domain}` with the domain name, for example `grafana.mendix.example.com`):
+
+```shell
+kubectl --namespace={namespace} create ingress loki-grafana \
+--rule="{domain}/*=loki-grafana:80,tls" \
+--default-backend="loki-grafana:80"
+```
+
+{{% alert type="info" %}}The Ingress object configuration depends on how the Ingress Controller is set up in your cluster.
+
+You might need to adjust additional Ingress parameters, for example specify the ingress class, annotations or TLS configuration.{{% /alert %}}
+
+
+{{% alert type="info" %}}The domain name needs to be configured so that it resolves to the Ingress Controller's IP address.
+
+You can use the same wildcard domain name as other Mendix apps - for example, if you're using _mendix.example.com_ as the Mendix for Private Cloud domain name,
+you can use `grafana.mendix.example.com` as the domain name for Grafana.{{% /alert %}}
+
+### 2.3 Installation in OpenShift{#install-in-openshift}
 
 This section documents how to install Grafana and Prometheus into an OpenShift 4 cluster. These instructions have not been validated with OpenShift 3.
 For all other cluster types, use [Installation in Kubernetes](#install-in-k8s) instructions.
@@ -68,7 +139,7 @@ Create a new project (replace `{project}` with the project name, for example `gr
 oc create project {project}
 ```
 
-Create a Secret containing the Grafana admin password (replace `{project}` project name, for example `grafana`; `{username}` with the admin username, for example `admin`; `{password}` with the admin password):
+Create a Secret containing the Grafana admin password (replace `{project}` with the project name, for example `grafana`; `{username}` with the admin username, for example `admin`; `{password}` with the admin password):
 
 ```shell
 oc --namespace {project} create secret generic grafana-admin --from-literal=admin-user={username} --from-literal=admin-password={password}
@@ -107,7 +178,7 @@ helm upgrade --install loki grafana/loki-stack --version='^2.4.1' --namespace=${
 --set loki.securityContext.runAsUser=${GRAFANA_UID},loki.securityContext.runAsGroup=0,loki.securityContext.fsGroup=${GRAFANA_UID}
 ```
 
-This Helm chart will install and configure Grafana, Prometheus and their dependencies.
+This Helm chart will install and configure Grafana, Prometheus, Loki and their dependencies.
 
 You might need to adjust some parameters to match the scale and requirements of your environment:
 
@@ -174,7 +245,7 @@ EOF
 
 #### 2.3.4 Expose the Grafana web UI
 
-To access the Grafana web UI, create an OpenShift Route (replace `{project}` with the project name, for example `grafana`):
+Create an OpenShift Route object to access Grafana from your web browser (replace `{project}` with the project name, for example `grafana`):
 
 ```shell
 oc --namespace {project} create route edge loki-grafana --service=loki-grafana --insecure-policy=Redirect
@@ -194,6 +265,6 @@ oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*]
 
 ## 4 Setting up a Grafana dashboard
 
-<!-- TODO: how to install and use the default dashboard -->
+<!-- TODO: how to install and use the default dashboard https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/grafana-dashboard/mendix_app_dashboard.json -->
 <!-- TODO: how to set metrics links in Portunus -->
 

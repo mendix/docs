@@ -357,7 +357,7 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 There are multiple ways of managing TLS certificates:
 
-* The Ingress controller can have a default certificate with a wildcard domain (for example, *.mendix.example.com*). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
+* The Ingress controller can have a default certificate with a wildcard domain (for example, _\*.mendix.example.com_). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 

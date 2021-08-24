@@ -259,9 +259,91 @@ oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*]
 
 ## 3 Enable metrics scraping{#enable-metrics-scraping}
 
-<!-- TODO: formal spec how to find and scrape app pods -->
-<!-- TODO: annotations in OperatorConfiguration -->
-<!-- TODO: annotations in Portunus -->
+To collect Mendix app environment metrics for a specific environment, Prometheus needs to discover and scrape Pods with the following annotations:
+
+* `privatecloud.mendix.com/component`: `mendix-app`
+* `privatecloud.mendix.com/app`: _Environment internal name_
+
+Each Mendix app pod listens on port `8900` and provides a `/metrics` path that can be called by Prometheus to get metrics from a specific app Pod.
+
+Prometheus supports [multiple ways](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config) to set up metrics scraping,
+but the easiest is to use Pod annotations.
+It's possible to specify annotations for all Mendix app environments in the namespace, or set annotations only for specific environments.
+
+### 3.1 Enable scraping for entire namespace
+
+To enable scraping annotations for all environments in a namespace, add the following `runtimeDeploymentPodAnnotations` in [Mendix App Deployment settings](private-cloud-cluster#advanced-deployment-settings):
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+spec:
+  # Existing configuration
+  # ...
+  runtimeDeploymentPodAnnotations:
+    # Existing annotations
+    # ...
+    # Add these new annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8900'
+    prometheus.io/scrape: 'true'
+```
+
+and restart the Mendix Operator.
+
+### 3.2 Enable scraping for a specific environment
+
+If you'd like to enable Prometheus scraping only for a specific environment, you can add the Prometheus scraping annotations just for that environment.
+
+#### 3.2.1 Enable scraping in Connected mode
+
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+2. Click **Details** next to the namespace where your environment is deployed.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+    
+3. Click **Configure** next to the environment name where Prometheus scraping should be enabled.
+
+    ![](attachments/private-cloud-cluster/image27.png)
+
+4. Add the following _Pod_ annotations and press **Apply Changes**:
+
+    * `prometheus.io/path`: `/metrics`
+    * `prometheus.io/port`: `8900`
+    * `prometheus.io/scrape`: `true`
+
+    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+
+<!-- TODO: Replace/update screenshots and instructions if Portunus UI changes -->
+<!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
+
+#### 3.2.2 Enable scraping in Standalone mode
+
+{{% alert type="info" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud Portal.{{% /alert %}}
+
+Open the `MendixApp` CR for an environment [for editing](private-cloud-operator#edit-cr)and add the following Pod annotations:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  # Existing configuration
+  # ...
+  runtimeDeploymentPodAnnotations:
+    # Existing annotations
+    # ...
+    # Add these new annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8900'
+    prometheus.io/scrape: 'true'
+```
+
+Save and apply the changes.
 
 ## 4 Setting up a Grafana dashboard
 

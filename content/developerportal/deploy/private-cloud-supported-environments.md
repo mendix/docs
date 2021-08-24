@@ -165,7 +165,7 @@ The following managed PostgreSQL databases are supported:
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
 * [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
-* [Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
+* [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
@@ -282,9 +282,12 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 ### 5.5 Google Cloud Storage
 
-[Google Cloud Storage](https://cloud.google.com/storage) is supported.
+[Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
 
-Mendix Operator will need the endpoint, access key and secret key to use the storage.
+Mendix Operator will need endpoint, access key and secret key to access the storage that can be configured in the interoperability setting. 
+
+
+
 
 ## 6 Networking
 

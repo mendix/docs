@@ -202,6 +202,7 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
 | XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
 |Premium|||||||
 | S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |

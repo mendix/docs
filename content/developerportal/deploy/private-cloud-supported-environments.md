@@ -24,6 +24,7 @@ We currently support deploying to the following Kubernetes cluster types:
 * [MicroK8s](https://microk8s.io/)
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
+* [Google Cloud Platform](https://cloud.google.com/)
 
 {{% alert type="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
@@ -118,6 +119,14 @@ To use an ECR registry, the Mendix Operator will need an AWS Identity and Access
 
 The EKS cluster should be configured so that it can [pull images from ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
+### 3.5 Google Artifact Registry and Container Registry
+
+[Google Cloud Platform](https://cloud.google.com/) provides [artifact registry](https://cloud.google.com/artifact-registry) and [container-registry](https://cloud.google.com/container-registry).
+
+Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
+
+
+
 ## 4 Databases
 
 The following databases are supported, and provide the features listed.
@@ -156,6 +165,7 @@ The following managed PostgreSQL databases are supported:
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
 * [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
+* [Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
@@ -270,6 +280,12 @@ An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/stor
 
 Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage containers or accounts.
 
+### 5.5 Google Cloud Storage
+
+[Google Cloud Storage](https://cloud.google.com/storage) is supported.
+
+Mendix Operator will need the endpoint, access key and secret key to use the storage.
+
 ## 6 Networking
 
 {{% alert type="info" %}}
@@ -313,6 +329,7 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
 
 For ingress, it is possible to do the following:
 

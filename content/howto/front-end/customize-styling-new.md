@@ -293,10 +293,10 @@ The bullets below describe the file structure for the theme folder and for modul
 	* **{MODULE_NAME}** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
 		* **web** — This folder contains re-useable web resources
 			* *main.scss* — This file is the starting point for the module web based styling.
-			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
+			* *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
 		* **native** — This folder contains re-useable native mobile resources.
 			* *main.js* — This file is the starting point for the module native mobile based styling.
-			* *design-properties.json* — This file contains additional design properties that are based on the classes defined in this module.
+			* *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
 		* **public** — This folder can contain other re-useable resources like a custom *login.html* page or images and fonts used from your web styling.
 
 ## 7 Styling output {#styling-output}

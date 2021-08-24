@@ -5,7 +5,7 @@ parent: "rg-one-apm"
 
 ## 1 Download
 
-APM can be downloaded from the [Mendix Marketplace](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor).
+APM can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/6127/Mendix/Mendix-Application-Performance-Monitor).
 
 ## 2 License
 

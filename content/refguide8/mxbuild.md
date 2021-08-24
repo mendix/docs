@@ -18,7 +18,7 @@ A build number is included in the version, and this has to be included in the li
 
 You can find the build number in path of your Mendix installation (for example if your installation looks like this `C:\Program Files\Mendix\8.12.1.3458`, use this URL to get your files: https://cdn.mendix.com/runtime/mxbuild-8.12.1.3458.tar.gz).
 
-Any public version of Studio Pro in this  [Studio Pro Releases List](https://appstore.mendix.com/link/modelers/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
+Any public version in this [list of Studio Pro releases](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
 {{% /alert %}}
 

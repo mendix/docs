@@ -125,6 +125,8 @@ In **Scaling**, there are two sliders that you can control:
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
+{{% alert type="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+
 If you have 1GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory.
 
 To scale your memory over multiple instances, you need more memory.
@@ -188,7 +190,7 @@ With scheduled events, you can let the Runtime execute a microflow at a specific
 
 For more information, see [Scheduled Events](/refguide/scheduled-events).
 
-### 3.2 Constants
+### 3.2 Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
@@ -208,7 +210,7 @@ You have to restart your application before the changes will be made.
 
 For more information, see [Constants](/refguide/constants).
 
-## 4 Network Tab
+## 4 Network Tab{#network-tab}
 
 {{% image_container width="50%" %}}
 ![](attachments/environments-details/network1.png)

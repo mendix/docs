@@ -11,15 +11,11 @@ aliases:
 
 ## 1 Introduction
 
-In the [Mendix Support Portal](https://support.mendix.com/hc/en-us), users can select an affected app for a submitted request. The apps that can be selected are based on the project authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for the app connected to that project.
+In the [Mendix Support Portal](https://support.mendix.com/hc/en-us), users can select an affected app for a submitted request. The apps that can be selected are based on the app authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for that app.
 
-Mendix Support needs to know the app identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their projects. Please invite all the [Team](/developerportal/collaborate/team) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the project information.
+Mendix Support needs to know the app identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their apps. Please invite all the [Team](/developerportal/collaborate/team) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the app information.
 
 The steps in this how-to should be done for every new app that is created if you want to be able to submit ticket requests in the Mendix Support Portal. Setting this up as a standard process when creating a new Mendix application is recommended.
-
-**This how-to will teach you how to do the following:**
-
-* Configure project authorization to select affected application(s) in the Mendix Support Portal
 
 ## 2 Giving Team Members Access to Submit Tickets
 
@@ -42,7 +38,7 @@ To add users to an app's team and give them access to submit tickets for a speci
 
 ### 2.2 Giving Existing Team Members Access
 
-To give existing project members access to submit tickets, follow these steps:
+To give existing app members access to submit tickets, follow these steps:
 
 1. Go to the **Security** page of your app in the Mendix Developer Portal.
 2.  Change the **ROLE** for the user who needs access to one of the following:

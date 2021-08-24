@@ -156,15 +156,19 @@ Current support:
 
 * [IBM DB2](db2) 11.1 and 11.5 for Linux, Unix, and Windows
 * [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](mysql) 8.0
 * [Oracle Database](oracle) 19
 * PostgreSQL 9.6, 10, 11, 12, 13
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}
-Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
+Each app must have its own database. Mendix apps cannot share data by sharing the same database.
+
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [integration](integration) section of the *Studio Pro Guide*. This is referred to as a *microservices* architecture.
+
+For more information on why data cannot be shared between apps see [Data Storage](data-storage#databases). Use the [Database Replication](/appstore/modules/database-replication) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
 ## 9 File Storage {#file-storage}

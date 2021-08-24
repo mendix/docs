@@ -202,6 +202,20 @@ When the app is deployed, the static resources are placed in a structure referre
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 
+#### 4.1.3 Cookies
+
+When the Mendix client is running, it creates a number of technical cookies to record information about the session. These expire at the end of the session, and can include:
+
+* Device Type
+* JSESSIONID
+* Profile
+* SessionTimeZoneOffset
+* \_\_VCAP\_ID\_\_
+* XASID
+* XASSESSIONID
+* originURI
+* xasid
+
 ### 4.2 Launching Native Mendix Client
 
 The flow when launching a native mobile app is different from launching in a browser. More information is stored locally as part of the app, and a native mobile app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.

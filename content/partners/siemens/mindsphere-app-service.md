@@ -25,10 +25,13 @@ MindSphere IIoT for Makers packages come in various sizes. Please see the [Produ
 
 MindSphere IIoT for Makers is easy to add to your app but has the following limitations:
 
-* Currently, you can only communicate with [MindSphere Services](https://developer.mindsphere.io/apis/index.html) using *REST APIs* — support for OData using Mendix Data Hub will be provided in a matter of weeks.
 * You cannot make your app multi-tenant – see [Multi-tenancy](mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the MindSphere platform and cannot be added to the MindSphere Developer Cockpit
 * End users cannot use MindSphere credentials to sign in to your app, so MindSphere does not know anything about individual app end users — you must design your app to handle any required security for each end user
+
+MindSphere IIoT for Makers can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to MindSphere, such as the **Siemens MindSphere Starter Application**, the **Siemens MindSphere Pump Asset Example**, or an app which is using the **Siemens MindSphere SSO** module.
+
+Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
 
 ## 2 Setting Up MindSphere IIoT for Makers
 
@@ -49,25 +52,81 @@ Once all the resources have been provisioned, the Mendix Administrator for your 
 
 ### 2.3 Linking to Asset Manager
 
-Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (userid and password).
+Once you have the name of your MindSphere account, you can use this to link your account to the required assets. You will be able to sign in to this account using your Mendix account credentials (user ID and password).
 
-To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation. There is also an example of how to do this in [How To Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app#create-assets).
+#### 2.3.1 Creating New Assets
+
+To set up new assets, follow the [Workflow for creating assets](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/113658277515.html) instructions in the MindSphere Asset Manager documentation.
 
 Full information can be found in the [MindSphere Asset Manager](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html) documentation on the MindSphere site.
 
-## 3 Using MindSphere IIoT for Makers
+#### 2.3.2 Availability of Assets
 
-MindSphere IIoT for Makers can be used in any Mendix app, for example an app which is based on the Mendix **Blank App**. However, it is not suitable for apps which are designed to be deployed to MindSphere, such as the **Siemens MindSphere Starter Application**, the **Siemens MindSphere Pump Asset Example**, or an app which is using the **Siemens MindSphere SSO** module.
+There are two ways to use the Mendix App Service.
 
-Unless you are adding features to an existing app, it is recommended that you start with the Mendix **Blank App**.
+* You can make REST calls to the standard MindSphere end points for your tenant. Instructions for doing this are in [Using MindSphere IIoT for Makers Through REST Calls](#using-rest).
 
-### 3.1 Downloading the IIoT Authenticator Module
+    In this case your assets are now set up and you can continue by [Creating Binding Keys](#binding-keys).
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
+* You can publish your assets through Mendix Data Hub and add the asset data as an [External Entity](/refguide/external-entities) in your domain model. In this case, you first have to publish a contract of your assets to Data Hub so that they can be found in the [Data Hub Pane](/refguide/data-hub-pane) in Studio Pro.
 
-For instructions on downloading the **MindSphere IIot Authenticator Module**, see the [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) section in *How To Use Marketplace Content in Studio Pro*.
+    The instructions for doing this are below, and instructions for using the external entities are in [Using MindSphere IIoT for Makers Through Mendix Data Hub](#using-data-hub).
 
-### 3.2 Creating Binding Keys{#binding-keys}
+#### 2.3.3 Publishing Assets to Data Hub
+
+To access your IoT data using the OData technology provided by the Mendix Data Hub, you first have to publish your asset information to Mendix Data Hub. To do this, you create a **contract** within the MindSphere **Asset Manager**. Do the following to manage your contracts:
+
+1. Go to the **Asset Manager** in the MindSphere Launchpad.
+
+1. On the home page you find a card showing the numbers of already existing contracts.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_card.png)
+
+1. Click **View contracts**.
+
+1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_first.png)
+
+    If no contracts are available, click **Create contract** to start your first one. If you have already some contracts, click **Add contracts** to add another one.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_add.png)
+
+1. On the left-hand side, you can select the asset types you want to share within this contract. On the right side you will see a preview of all selected types.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step1.png)
+
+1. Confirm your selection by clicking **Next**.
+
+1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step2.png)
+
+1. Confirm your meta information by clicking **Next**.
+
+1. In the last step you can specify the following:
+    * Save your contract (always enabled).
+    * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
+    * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix project; it is therefore preselected
+
+    ![asset-manager](attachments/mindsphere-app-service/asset_manager_contract_wizard_step3.png)
+
+1. Click the **Submit** button to finalize the creation of your contract.
+
+{{% alert type="info" %}}
+   In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api#company-account).
+
+   Published contracts are only visible in Mendix DataHub for users that belong to the same company.
+
+   In MindSphere you can invite users with different email domains to your MindSphere tenant. In this case, only the users with the same email domain as the person who published the first contract to Mendix DataHub will see the contracts there.
+
+   Ensure that only users who have an email account within your company domain create contracts on Mendix DataHub.
+
+   {{% /alert %}}
+
+Now your assets will appear in the Data Hub Pane of Studio Pro, and you can continue with [Creating Binding Keys](#binding-keys).
+
+## 3 Creating Binding Keys{#binding-keys}
 
 To authenticate your calls you will need to provide the MindSphere IIoT Authenticator Module with the binding keys: an clientID and a clientSecret. You need to create these in the Mendix Marketplace once the MindSphere tenant has been provisioned. This can be done as follows:
 
@@ -81,49 +140,89 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 5. Click **Create Keys**.
 
-    ![](attachments/mindsphere-app-service/create-keys.png)
+    ![Binding](attachments/mindsphere-app-service/create-keys.png)
 
     You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
 6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
-    ![](attachments/mindsphere-app-service/binding-keys.png)
+    ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
 You can find more information about managing binding keys in the [Service Management Dashboard](/appstore/general/app-store-overview#service-management) section of *Marketplace Overview*.
 
-### 3.3 Authenticating MindSphere REST Calls {#authenticating}
+## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
-Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
+The easiest way to get your data from MindSphere is to use Mendix Data Hub. To do this you will need a [Data Hub license](/refguide/consumed-odata-service-requirements#license-limitations).
 
-This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
+See [Data Hub Limitations](#dh-limitations) for information on restrictions and workarounds when using Mendix Data Hub.
 
-![](attachments/mindsphere-app-service/access-token.png)
+### 4.1 Adding External Entities to the Domain Model
 
-In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
+To add the external entities representing your MindSphere data to the domain model, search in the [Data Hub pane](/refguide/data-hub-pane) for your MindSphere service.
 
-![](attachments/mindsphere-app-service/call-rest.png)
+Drag the [entities](/refguide/external-entities) you need into your domain model. This will also create a **Consumed OData Service** document which you will need to edit to authenticate your calls to the MindSphere API.
 
-However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIotAuthenticator* module:
+### 4.2 Authenticating Calls to External Entities
+
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
+
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+
+In the **_Use me** folder of the *MindSphereIIotAuthenticator* module set the following constants:
 
 * **TokenURL** – this is the *TokenURL* from the binding keys you generated
 * **ClientID** – this is the *clientID* from the binding keys you generated
 * **ClientSecret** – this is the *clientSecret* from the binding keys you generated
 
-![](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
+In the Consumed OData Service document associated with your MindSphere service, set the **Headers from microflow** to be *MindSphereIIoTAuthenticator.AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are passed as HTTP headers with every call to authenticate your app to MindSphere.
 
-#### 3.3.1 Authenticating During Development
+![Binding](attachments/mindsphere-app-service/data-hub-authentication.png)
+
+## 5 Using MindSphere IIoT for Makers Through REST Calls{#using-rest}
+
+### 5.1 Downloading the IIoT Authenticator Module
+
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
+
+Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
+
+### 5.3 Authenticating MindSphere REST Calls {#authenticating}
+
+Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
+
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
+
+This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
+
+![Authentication](attachments/mindsphere-app-service/access-token.png)
+
+In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
+
+![Authentication](attachments/mindsphere-app-service/call-rest.png)
+
+However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *MindSphereIIotAuthenticator* module:
+
+* **TokenURL** – this is the *TokenURL* from the binding keys you generated
+* **ClientID** – this is the *clientID* from the binding keys you generated
+* **ClientSecret** – this is the *clientSecret* from the binding keys you generated
+
+![Authentication](attachments/mindsphere-app-service/mindsphereiotauthenticator.png)
+
+## 6 Authentication Considerations
+
+### 6.1 Authenticating During Development
 
 When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration) within your project settings.
 
 For security, the values of these constants should not be included when you deploy the app.
 
-#### 3.3.2 Authenticating for Deployment
+### 6.2 Authenticating for Deployment
 
 When you deploy your app, you should remove the values of **ClientID** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry environment variable) during the deployment.
 
 For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants) for information on how to set these values on other deployment platforms.
 
-## 4 MindSphere Widgets
+## 7 MindSphere Widgets
 
 If you want to use the [Siemens MindSphere Web Components Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *MindSphere API Reverse Proxy*.
 
@@ -131,3 +230,75 @@ To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
 2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/project-settings#after-startup) microflow(s) which are run when the app is started.
+
+## 8 Data Hub Limitations{#dh-limitations}
+
+### 8.1 Read-only Access
+
+Data Hub only supports reading of data from MindSphere. This means that you cannot create, update, or delete data on MindSphere. If you need to do this, you should [Use MindSphere IIoT for Makers Through REST Calls](#using-rest).
+
+### 8.2 Associations Between Contracts
+
+You cannot create associations between external entities. To work around this, always publish related asset types in a single contract so that your app can identify the association between them.
+
+For example, imagine that you have an Asset Type `CNGTurbine` which has a derived Asset Type `LPGTurbine`. If you publish an OData contract for `CNGTurbine` and a separate contract for `LPGTurbine`, you cannot create a association directly between `LPGTurbine` and `CNGTurbine` in the Mendix Domain Model as these are two different contracts. If you publish them in a single contract, you can also publish the association and use the fact that `LPGTurbine` is derived from `CNGTurbine`.
+
+### 8.3 Date and Time Attributes
+
+Mendix Data Hub treats OData time fields as strings. This means that, when you want to specify date (for example, a date range for a Time Series entity), you will have to provide the data and time in the form `YYYY-MM-DDTHH:mm:ss`.
+
+### 8.4 Enumeration Values
+
+Mendix Data Hub does not limit the selections on a query to valid values. When you are creating your Mendix app, you should validate your values before using them in a query.
+
+For example, the interval unit on a Time Series can only be `days`, `minutes`, or `seconds`. If you allow the user to specify `day`, then MindSphere will return an error.
+
+### 8.5 MindSphere Query Limitations
+
+Mendix will allow you to query all types of Data Hub external entities using all the attributes of those entities and a wide range of operators. There are some limitations on which attributes you can query with which operators in MindSphere, but Mendix does not know about these. You should therefore stay within the guidelines listed below.
+
+| Entity Type | Search with Attributes | Use operators |
+| --- | --- | --- |
+| Asset | `assetId`, `name`, `parentId`, `timezone`, and `typeId` | `eq` (equal), `contains`, `startsWith`, and `endsWith` |
+| Time Series | `assetId` | `eq` |
+| Time Series | `timestamp` | `after` (greater than), and `before` (less than or equal to) |
+| Time Series Aggregate | `assetId`, `aggregationType`, `variableName`, `intervalUnit`, `intervalValue`, and `intervalCount` | `eq` |
+| Time Series Aggregate | `timestamp` | `after` (greater than), and `before` (less than or equal to) |
+
+These limits also apply to REST queries.
+
+### 8.6 Number and Count of Time Series Objects Returned
+
+MindSphere will not return more than 2000 MindSphere Time Series and Aggregates objects in a data grid using pagination. Mendix does not enforce this limitation, as this does not apply to entities in the Mendix database.
+
+If you need to retrieve more than 2000 objects, use multiple time intervals for your query modify your query criteria using the `timestamp` attribute to return fewer than 2000 objects for each time interval.
+
+In addition, the total number of objects returned by a Time Series or Aggregate query will not be correctly calculated.
+
+This limitation also applies to REST queries.
+
+### 8.7 Unsupported OData Queries
+
+It is possible to construct a query in Mendix which is not supported by the MindSphere OData contract. If you attempt an unsupported query you will receive an error message.
+
+For example, Time Series can only be sorted using the timestamp attribute. If you are displaying a Time Series for the current through a pump using an attribute `current`, you will get an error if you try to sort Time Series data on the value of the `current` attribute.
+
+## 9 Troubleshooting
+
+### 9.1 "An error occurred…" Error Message
+
+If your app returns the message "An error occurred, please contact your system administrator", this could be due to a MindSphere error that Mendix is unable to handle. Always check the log to see if there is more information to help you resolve this issue.
+
+To ensure that you get full information about MindSphere responses that cause Mendix to return these generic errors, set the **Log Level** for `ODataConsume` to **Trace**, using the instructions in [How To Set Log Levels](/howto/monitoring-troubleshooting/log-levels#standard-log-levels).
+
+![Example of setting the Log Level for ODataConsume](attachments/mindsphere-app-service/odata-log-levels.png)
+
+{{% alert type="info" %}}
+Setting log levels to trace can have in impact on performance and should only be done during testing.
+{{% /alert %}}
+
+### 9.2 Internal Server Error and Long Names
+
+Publishing contracts to Data Hub can fail with a *HTTP 500 INTERNAL SERVER ERROR* when the combination of Asset Type,  Aspect Type, and Aspect Name is very long. The publish operation will fail if the string `AGGR_{AspectType}_{AspectName}_{AssetType}` is more than 200 characters long.
+
+For example, consider an **Asset Type** *CNGTurbine*, with **Aspect Type** *PowerConsumption* and **Aspect** *PrimaryMotor*. This would produce the string `AGGR_PowerConsumption_PrimaryMotor_CNGTurbine` (45 characters) which is less than 200 characters long and can be published successfully. If it were longer than 200 characters, publication would fail.

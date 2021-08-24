@@ -72,7 +72,7 @@ When you have added all the rules, click **Generate Configuration File** to crea
 
 You can then upload this file as the configuration of your autoscaler service.
 
-## 3.1 Scheduled Scaling{#schedule}
+### 3.1 Scheduled Scaling{#schedule}
 
 {{% alert type="warning" %}}
 Do not attempt to enter overlapping schedules as this will cause the scaling to fail.
@@ -92,7 +92,7 @@ For custom schedules you will see these values on the screen more than once, but
 
 Other information will depend on the type of schedule you are making. You can add multiple rules and all the rules you have already set up in the configurator will be displayed. See the sections below for more information.
 
-### 3.1.1 Specific Date{#specific}
+#### 3.1.1 Specific Date{#specific}
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
@@ -109,7 +109,7 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
 
-### 3.1.2 Recurring Schedule{#recurring}
+#### 3.1.2 Recurring Schedule{#recurring}
 
 Click **Add rule** or **Add another rule** (if rules already exist) to add a new rule.
 
@@ -130,7 +130,7 @@ The new rule, and any existing rules will be shown in the configurator as shown 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
 
-## 3.2 Dynamic Scaling{#dynamic}
+### 3.2 Dynamic Scaling{#dynamic}
 
 First you will need to set the following:
 

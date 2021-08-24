@@ -1,6 +1,7 @@
 ---
 title: "Consumed OData Services"
 parent: "integration"
+menu_order: 5
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
 ---

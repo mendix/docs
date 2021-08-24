@@ -69,7 +69,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * Implement [user roles](/refguide/user-roles) and [security](/refguide/security)
-* Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
+* Creating a new release or module export should be done while the security level of the app containing the module is set to **Production**
 * The [status](/refguide/project-security#app-status) must be **Complete** for the following:
 	* Page access
 	* Microflow access
@@ -122,17 +122,17 @@ To add content to the Marketplace, follow these steps:
 	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
 	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
 	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets<br />
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL<br />
+	* SDISW End-User License Agreement for Mendix Sample Apps
 
 	![](attachments/share-app-store-content/general.jpg)
 
 6. Click **Upload an Image** to upload an icon for the component.
 7.  <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
+	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
 8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
@@ -190,7 +190,7 @@ To update content that has already been published, follow these steps:
 1.  Find the component by clicking **My Marketplace** and selecting one of the following:
 	* **My Content**
 	* **Company Content**
-	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
+	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#group-content), you can only update the component if you are a member of that group)
 	
 2.  Click **Manage** next to the component you want to update.
 

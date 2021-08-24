@@ -29,9 +29,9 @@ The widget offers the following for configuration:
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 
-## 3 For Widgets Version 2.0.0 and Below
+## 3 Widgets Below Version 2.0.0
 
-### 3.1 Features
+Features:
 
 * Rate an object with stars
 * Display average rating
@@ -40,8 +40,6 @@ This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/
 * Configurable star colors
 * Flexible number of stars
 * Support for mobile touch events
-
-### 3.2 Customizing the Rating Icon
 
 In order to overwrite the default star icon, add these classes to your app theme and replace the content with your preferred glyphicon:
 
@@ -54,23 +52,3 @@ In order to overwrite the default star icon, add these classes to your app theme
  }
 ```
 The `rating-flag` class should be added to the widget configuration on the **Common** tab.
-
-## 4 Developing This Marketplace Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-	* [karma-cli](https://www.npmjs.com/package/karma-cli)
-2. Fork and clone the [mendixlabs/star-rating]( https://github.com/mendixlabs/star-rating) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the app root.
-5. Create a Mendix test app in the *dist* folder and rename its root folder to *dist/MxTestApp*, or get the test app from [mendixlabs/star-rating](https://github.com/mendixlabs/star-rating/releases/latest). Changes to the widget code will be automatically pushed to this test app.
-6. To automatically compile, bundle, and push code changes to the running test app, run `grunt`.
-7. To run the app unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
-8. Run the unit test continuously during development via `karma start`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/star-rating](https://github.com/mendixlabs/star-rating/issues).

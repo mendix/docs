@@ -385,7 +385,7 @@ The base URL for all calls to the API is: <https://hub.mendix.com/rest/transform
 
 ### 9.1 Location of the dependencies.json file of an App
 
-For a Mendix app, the **dependencies.json** file is usually located in the project folder of the app under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
+For a Mendix app, the **dependencies.json** file is usually located in the app folder under the following directory: **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
 
 This file has to be inserted in the call to the API in *escaped json format*.
 
@@ -402,11 +402,11 @@ When making the call to the API the following two object have to be specified.
 
 #### 9.3.1 Location Constants Values {#location-constants}
 
- You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the project, also located in the **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
+ You can find the values in the **location constants** document in the **App Explorer** of Studio Pro or in the **metadata.json** file for the app, also located in the **Mendix\<YourApplicationName>\deployment\model**, where <*YourApplicationName*> is the name of your application.
 
 #### 9.3.2 Extracting Location Constants Values from the metadata.json file {#metadata-file}
 
-In the **metadata.json** file for the app there is an object called `Constants` which is an array of all the constants used in the app project including the those for the published OData service(s). (In the attached screenshot of a **metadata.json** file the constant for the published OData service for the project is highlighted.)
+In the **metadata.json** file for the app there is an object called `Constants` which is an array of all the constants used in the app including the those for the published OData service(s). (In the attached screenshot of a **metadata.json** file the constant for the published OData service for the app is highlighted.)
 
 ![metadata.json file for app](attachments/data-hub-api-how-to/metadata.json-file.png)
 

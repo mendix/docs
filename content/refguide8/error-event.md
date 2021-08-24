@@ -6,6 +6,10 @@ tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/error-event.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 This event can only be used in **Microflows**.
 {{% /alert %}}
 

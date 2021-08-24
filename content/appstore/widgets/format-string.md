@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 
 ## 1 Introduction
 
-The [Format String](https://appstore.home.mendix.com/link/app/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
+The [Format String](https://marketplace.mendix.com/link/component/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
 ### 1.1 Typical Use Cases
 

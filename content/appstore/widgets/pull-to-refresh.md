@@ -12,7 +12,7 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.
+The [Pull to Refresh](https://marketplace.mendix.com/link/component/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.
 
 ### 1.1 Features
 
@@ -28,10 +28,6 @@ The [Pull to Refresh](https://appstore.home.mendix.com/link/app/47782/) widget e
 * When refreshing a page, the list view does not keep **Load more** items
 * Only works when app is scrolled to top
 
-### 1.3 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://pulltorefresh.mxapps.io).
-
 ## 2 Usage
 
 To use this widget, follow these steps:
@@ -44,7 +40,3 @@ To use this widget, follow these steps:
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
 
 ![](attachments/pull-to-refresh/demo.gif)
-
-## 3 Developing This Marketplace Component
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/pull-to-referesh](https://github.com/mendixlabs/pull-to-refresh/issues).

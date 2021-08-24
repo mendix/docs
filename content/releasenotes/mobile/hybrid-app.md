@@ -284,7 +284,7 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | `@mendix/phonegap-plugin-push`                              | 1.5.3                | 1.11.1-mx.1.0.0      | Renamed from `phonegap-plugin-push`                          |
 | `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11               | 4.2.2-mx.1.0.0       | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
 
-We have tested extensively against real-life projects and commonly used widgets from the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html).
+We have tested extensively against real-life projects and commonly used widgets from the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 ### Hybrid App Base 2.3.2
 

@@ -12,7 +12,7 @@ This connector is deprecated.
 
 ## 1 Introduction
 
-The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
+The [Box](https://marketplace.mendix.com/link/component/40977/) connector provides an easy to way to use [Box](https://www.box.com) inside your Mendix application.
 
 ## 2 Installation
 
@@ -22,7 +22,7 @@ The [Box](https://appstore.home.mendix.com/link/app/40977/) connector provides a
 4. Validate your account via an email, which will then give you access to the dashboard of your Box account.
 5. To allow the connector access to your account, you must enable the two-factor authentication via the **Security** tab.
 6. Create a new Box application that  your Mendix application will interact with by clicking **Get Started**.
-7. In the new Box app, you need to set the **redirect_URL** to the domain address of your Mendix application as `https://{mendix_application_address}/link/grantaccess`. This is so Box is able to return to your application once it is authenticated.
+7.  In the new Box app, you need to set the **redirect_URL** to the domain address of your Mendix application as `https://{mendix_application_address}/link/grantaccess`. This is so Box is able to return to your application once it is authenticated.
 
 	![](attachments/box/redirect-url.jpg)
 
@@ -261,13 +261,3 @@ These actions are available in **Metadata**:
 		* **Key** – the key name of the metadata 
 		* **StrValue/FloatValue/DateValue** – the corresponding value to be set or tested; required for `add`, `replace`, and `test` operations; for `add`, if the value already exists, then the previous value will be overwritten by the new value; for `replace`, the metadata value must exist before replacing; for `test`, the value of the existing metadata instance must match the specified value
 	* **FromBoxMetadata** – the key to the `Metadata` source; this value is required only in case of `move` or `copy` operations
-
-## 4 Developing This Marketplace Component
-
-This connector was built with the Eclipse IDE Neon, and [SemVer](http://semver.org/) is used for versioning.
-
-To contribute to the development of this connector, follow these steps:
-
-1. Open an issue about your topic in [mendix / BoxConnector](https://github.com/mendix/BoxConnector).
-2. Fork the repo, then make a branch that you name starting with the issue number you are resolving, then make a pull request to the master branch.
-3. Add some tests for feature changes.

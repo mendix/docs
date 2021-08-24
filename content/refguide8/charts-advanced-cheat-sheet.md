@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-advanced-cheat-sheet.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This reference describes advanced configuration settings for the chart widget.
@@ -15,7 +19,7 @@ This cheat sheet with JSON snippets will provide some samples of advance configu
 
 The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/). The chart widgets support plotly.js version 1.47.4.
 
-When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the Marketplace.
+When the advanced configuration does not suffice have a look at the [Any Chart](https://marketplace.mendix.com/link/component/106437/Mendix/Any-Chart) widget in the Marketplace.
 
 ## 2 Layout (All Charts) {#layout-all}
 

@@ -12,7 +12,7 @@ This widget is partly deprecated – the [Attribute Radio Button list](#attribut
 
 ## 1 Introduction
 
-The [Radio Button List](https://appstore.home.mendix.com/link/app/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
+The [Radio Button List](https://marketplace.mendix.com/link/component/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
 
 ### 1.1 Typical Use Cases
 

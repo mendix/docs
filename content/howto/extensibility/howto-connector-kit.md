@@ -119,7 +119,7 @@ The `executeAction` method is where all the magic happens:
 
 ![Initialize list java implementation 2](attachments/how-to-connector-kit/initilialize_list_java_2.png)
 
-Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
+Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
 ## 4 Using Import & Export Mappings
 

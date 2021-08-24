@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "mx smtp", "platform support"]
 
 ## 1 Introduction
 
-The [Mx SMTP](https://appstore.home.mendix.com/link/app/256/) module enables your application to run a mail server. It will process any messages it receives and stores these in your application.
+The [Mx SMTP](https://marketplace.mendix.com/link/component/256/) module enables your application to run a mail server. It will process any messages it receives and stores these in your application.
 
 {{% alert type="info" %}}
 This is an advanced module and will require specific server and DNS adjustments in order to work.
@@ -51,5 +51,5 @@ These are the main module settings:
 
 After configuring these settings, you need to make sure the emails reach your new server. There are two important situations:
 
-* **Deploying on a local host** – You can easily test the module by downloading the newest [SMTP Email](https://appstore.home.mendix.com/link/app/2461/) module. Set it up according to the email module's documentation, and for the SMTP settings, use the same ones that your Mx SMTP server is running (default: local host on port 25000). Any emails you send using the email module will then end up in the same application's Mx SMTP module. This way, you can test to/from addresses (which you can set in the email module) and possible content (plain or HTML) and attachments.
+* **Deploying on a local host** – You can easily test the module by downloading the newest [SMTP Email](https://marketplace.mendix.com/link/component/2461/) module. Set it up according to the email module's documentation, and for the SMTP settings, use the same ones that your Mx SMTP server is running (default: local host on port 25000). Any emails you send using the email module will then end up in the same application's Mx SMTP module. This way, you can test to/from addresses (which you can set in the email module) and possible content (plain or HTML) and attachments.
 * **Deploying on a server** – Deploying on a real server is more difficult, as you will need to edit your DNS settings. For example, if your application wants to receive all the emails that are sent to `@myapplication.com`, you will need to edit the DNS that handles all the incoming traffic on `myapplication.com` to forward any emails it gets to your application at the location you have set (for example, `email.myapplication.com:25000`). This will make sure your app receives them, and from there, you can either process them or send them somewhere else. If you already have a mail server listening to `@myapplication.com`, you will need to configure it so it sends all the emails you want in your app to it. Setting these DNS forwarding options require advanced access and knowledge of the server in question. Make sure you check and test this with the server administrators.

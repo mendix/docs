@@ -20,7 +20,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* Mendix Desktop Modeler from the [Marketplace](https://appstore.home.mendix.com/link/modeler)
+* Mendix Desktop Modeler from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 

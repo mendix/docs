@@ -6,6 +6,10 @@ menu_order: 10
 tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/find-and-find-advanced.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 

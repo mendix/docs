@@ -1,7 +1,7 @@
 ---
 title: "Extend Your Application with Custom Java"
 category: "Logic & Business Rules"
-menu_order: 12
+menu_order: 120
 tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
 ---
 
@@ -19,26 +19,27 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *  Have Eclipse installed (download it [here](https://eclipse.org/))
 	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the app into your Eclipse working environment.
-{{% /alert %}}
-* Have an app ready using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/) template
+	{{% /alert %}}
+* Have an app ready using the [Asset Management](https://marketplace.mendix.com/link/component/107652) template.
 
 ## 3 Adding a Java Action in Studio Pro
 
-1. Right-click the **MyFirstModule** module and select **Add other** > **Resources** > **Java action**.
+1. Right-click the **AssetManager** module and select **Add other** > **Java action**.
 2. Enter *ReverseAssetName* for the **Name** of the new Java action and click **OK**.
 3.  In the **Java Action** wizard, click **Add** to add a parameter and do the following:</br>
 
-	1. Enter *inputAssets* for the **Name** of the new parameter</br>
+	1. Enter *inputAssets* for the **Name** of the new parameter.</br>
 	2. Select **Object** for the **Type**.</br>
-	3. Click **Select** for **Entity** and select **MyFirstModule.Assets** as the object type.</br>
+	3. Click **Select** for **Entity** and select **AssetManager.Asset** as the object type.</br>
 	4. Click **OK**.</br>
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/add.png)
 	{{% /image_container %}}
 
-4. Back on the **Java Action** wizard, change the **Return type** of the Java action to **String** and click **OK** to save the Java action:
+4. Back on the **Java Action** wizard, change the **Return type** of the Java action to **String** and click **OK** to save the Java action.
 
-	![](attachments/extend-custom-java/return.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/return.png)
+	{{% /image_container %}}
 
 5. Select **App** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
@@ -46,17 +47,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To edit the Java action in Eclipse, follow these steps:
 
-1.  Open Eclipse, right-click in the **Package Explorer** window, and select **Import...** from the menu:
+1.  Open Eclipse, right-click in the **Package Explorer** window, and select **Import**.
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/import.png)
-	{{% /image_container %}}
+2.  In the **Import** window, select **Existing Projects into Workspace** and click **Next**.
 
-3.  In the **Import** window, select **Existing Projects into Workspace** and click **Next**:
-
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/import2.png)
-	{{% /image_container %}}
-
-4.  Set the app directory as the root directory for this app and click **Finish**:
+3.  Set the app directory as the root directory for this app and click **Finish**.
 
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import3.png)
 	{{% /image_container %}}
@@ -64,61 +59,78 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% alert type="info" %}}If you don't know what the app directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.
 	{{% /alert %}}
 
-5.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse:
+4.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse.
 
-	![](attachments/extend-custom-java/package-explorer.png)
+	{{% image_container width="300" %}}![](attachments/extend-custom-java/package-explorer.png)
+	{{% /image_container %}}
 
 	In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. Studio Pro will never overwrite the code between those two statements.
 
-	![](attachments/extend-custom-java/java1.png)
+	```java
+		@java.lang.Override
+		public java.lang.String executeAction() throws Exception
+		{
+			this.inputAssets = __inputAssets == null ? null : assetmanager.proxies.Asset.initialize(getContext(), __inputAssets);
 
-	As you can see, Studio Pro generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
+			// BEGIN USER CODE
+			throw new com.mendix.systemideinterfaces.MendixRuntimeException("Java action was not implemented");
+			// END USER CODE
+		}
+	```
+
+	Studio Pro generates a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it.
+
+5. Replace the existing line:
+
+	```java
+		throw new com.mendix.systemideinterfaces.MendixRuntimeException("Java action was not implemented");
+	```
+	between `//BEGIN USER CODE` and `//END USER CODE`, with the code:
 
 	```java
 	String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
 	return new StringBuilder(assetsAssetName).reverse().toString();
 	```
 
-6.  Insert the above code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. It should look like this:
-
-	![](attachments/extend-custom-java/java2.png)
-
-7. Select **File** > **Save** to Save the Java action in Eclipse.
+6. Select **File** > **Save** to save the Java action in Eclipse.
 
 ## 5 Calling the Java Action from a Microflow
 
-1. Back in Studio Pro, locate the **Assets** page via **App Explorer**.
-2.  Under **{AssetName}**, right-click and select **Add widget**:
+1. Back in Studio Pro, locate the **Home** page via **App Explorer**.
+
+2.  Under **{AssetName}**, right-click and select **Add widget**.
 
 	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
 	{{% /image_container %}}
 
 3. In the **Select widget** dialog box that appears, select **Button widgets** > **Call microflow button**.
+
 4. In the **Select Microflow** dialog box, click **New** to create a new microflow.
-5. Enter *Asset_ReverseName* for the **Name** of the new microflow and click **OK**.
-6.  Right-click the **Asset reverse name** button you just created and select **Go to on clock microflow** to open the new microflow, which should look like this:
 
-	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow1.png)
-	{{% /image_container %}}
+5. Enter *ReverseName* for the **Name** of the new microflow and click **OK**.
 
-7.  Drag the **ReverseAssetName** Java action from the **App Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+6.  Right-click the **Reverse name** button you just created and select **Go to on click microflow** to open the new microflow.
+
+7.  Drag the **ReverseAssetName** Java action from the **App Explorer** onto the line between the green start event and red end event. This generates a Java action activity.
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow2.png)
 	{{% /image_container %}}
 
-8.  Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor:
+8.  Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor.
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/call1.png)
 	{{% /image_container %}}
 
-9. Press and hold the <kbd>Ctrl</kbd> key and then press the spacebar to open the code completion editor.
-10. Select **$Assets (MyFirstModule.Assets)**:
+9. Press and hold the <kbd>Ctrl</kbd> key and then press the <kbd>spacebar</kbd> to open the code completion editor.
+
+10. Select **$Asset (AssetManager.Asset)**.
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/argument.png)
 	{{% /image_container %}}
 
 11. Click **OK** to save the expression.
-12. In the **Call Java Action** properties editor, change the output **Variable** to *ReversedName*:
+
+12. In the **Call Java Action** properties editor, change the output **Variable** to *ReversedName*.
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/call2.png)
 	{{% /image_container %}}
@@ -129,12 +141,12 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% /image_container %}}
 
 14. From the **Toolbox** (select **View** > **Toolbox** to open it, if necessary), drag a **Show message** activity into the microflow.
-15. Double-click the activity to open the **Show Message** properties editor and enter *Reversed name: {1}* for **Template**.
-16. In the **Parameters** section, click **New** to open the expression editor.
-17. Select **$ReversedName (String)**, which is the output variable of the Java action:
 
-	{{% image_container width="500" %}}![](attachments/extend-custom-java/parameter.png)
-	{{% /image_container %}}
+15. Double-click the activity to open the **Show Message** properties editor and enter *Reversed name: {1}* for **Template**.
+
+16. In the **Parameters** section, click **New** to open the expression editor.
+
+17. Select **$ReversedName (String)**, which is the output variable of the Java action.
 
 18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
@@ -149,15 +161,23 @@ To edit the Java action in Eclipse, follow these steps:
 ## 6 Deploying & Seeing the Results
 
 1. Click the play button (**Run Locally**) to deploy the application locally and click **View App** to open the application in your browser.
-2. To test the new feature, select **Asset** from the app's **Dashboard**.
-3.  On the **Assets** page, click **Asset reverse name** for the asset that has been loaded:
 
-	{{% image_container width="600" %}}![](attachments/extend-custom-java/app1.png)
+2. Select **Add asset** from the top right.
+
+3. In the new window input *Asset to Reverse* in the **Name** field.
+
+4. Select **Save**.
+
+5. Select the new asset from the app's **Dashboard**.
+
+3. On the **Home** page, click **Reverse name** for the newly created asset:
+
+	{{% image_container width="200" %}}![](attachments/extend-custom-java/app1.png)
 	{{% /image_container %}}
 
-4.  The reversed name of the asset will be presented: 
+4.  The reversed name of the asset appears in a dialog box.
 
-	{{% image_container width="600" %}}![](attachments/extend-custom-java/app2.png)
+	{{% image_container width="400" %}}![](attachments/extend-custom-java/app2.png)
 	{{% /image_container %}}
 
 ## 7 Troubleshooting {#troubleshooting}
@@ -165,6 +185,7 @@ To edit the Java action in Eclipse, follow these steps:
 If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
 1. Clean your app's **deployment** folder by selecting **App** > **Clean Deployment Directory**.
+
 2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide/system-requirements#sp) section of *System Requirements*.
 
 ## 8 Read More

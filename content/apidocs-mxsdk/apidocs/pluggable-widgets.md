@@ -135,7 +135,7 @@ You can provide additional help information to widget users by using a help page
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
 ```xml
-    <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
+    <helpUrl>https://marketplace.mendix.com/link/component/105695/</helpUrl>
 ```
 
 For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:
@@ -143,6 +143,29 @@ For more complex help pages you can link to a markdown page. For security reason
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
+
+#### 4.2.2 Toolbox Category {#toolbox-category}
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix Studio Pro v9.4.
+{{% /alert %}}
+
+To provide more clarity for Studio and Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio and Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
+
+When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only the Studio Pro category is specified, then that category is also used in Studio.
+
+A category can by provided through `studioCategory` and `studioProCategory` tags:
+
+```xml
+   <studioProCategory>Open Street Maps</studioProCategory>
+   <studioCategory>Maps</studioCategory>
+```
+
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
+
+{{% alert type="info" %}}
+When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+{{% /alert %}}
 
 ### 4.3 Widget Properties Definition {#properties-definition}
 

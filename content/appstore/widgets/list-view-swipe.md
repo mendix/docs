@@ -12,7 +12,7 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
+The [List View Swipe](https://marketplace.mendix.com/link/component/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
 
 ### 1.1 Features
 
@@ -31,10 +31,6 @@ The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget m
 * This widget cannot handle a list view in a list view
 * The opened page should contain a data view of the **Item entity** type, but this is not checked for the widget in runtime.
 * Swiping should be horizontal – when the swiping involves too much movement, the swipe is canceled
-
-### 1.3 Demo App
-
-For a demo app that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
 
 ## 2 Configuration
 
@@ -84,4 +80,4 @@ To design the background of the view, follow these steps:
 
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 
-You can use other custom widgets (for example, [EnumClass](https://appstore.home.mendix.com/link/app/2641/)) to change the classes dynamically at runtime. 
+You can use other custom widgets (for example, [EnumClass](https://marketplace.mendix.com/link/component/2641/)) to change the classes dynamically at runtime. 

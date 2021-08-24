@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "unit testing", "unit test", "tes
 
 ## 1 Introduction
 
-Use the [Unit Testing](https://appstore.home.mendix.com/link/app/390/) module to run Mendix and JUnit unit tests inside your app.
+Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) module to run Mendix and JUnit unit tests inside your app.
 
 ### 1.1 Dependencies
 

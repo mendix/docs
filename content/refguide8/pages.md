@@ -7,6 +7,10 @@ tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #This document also has a redirect from opening-pages (which has been deleted)
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/pages.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A page is the basic end-user interface of a Mendix application. It is used to display information to the end-user, allow end-users to create and edit information, and enable end-users to trigger additional automated processing.
@@ -52,7 +56,7 @@ Widgets are grouped into the following categories:
 * [Menu widgets](menu-widgets) allow the user to navigate through the application
 * [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
 * [Authentication widgets](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
-* Add-on widgets can be downloaded from the [Mendix Marketplace](https://appstore.mendix.com/) or created by yourself using JavaScript
+* Add-on widgets can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
   * [Chart widgets](chart-widgets) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More

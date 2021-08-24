@@ -72,7 +72,7 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/referral.png)
 {{% /image_container %}}
 
@@ -102,14 +102,14 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 
 ### 7.2 Marketplace Points {#app-store-points}
 
-These are points you can gain through activity in the [Mendix Marketplace](https://appstore.home.mendix.com/).
+These are points you can gain through activity in the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
 | Publish an app | 50 | N/A |
 | Publish a new app version | 25 | N/A |
 | Add an app review | 5 | N/A |
-| Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
+| Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) | 5 | 5 |
 | Download an app from the Marketplace | 1 | 5 |
 
 ### 7.3 Platform Points
@@ -279,7 +279,7 @@ For more information, see the following:
 * [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Manage App API Keys](/developerportal/settings/api-key)
+* [How to Manage App API Keys](/developerportal/collaborate/general-settings#api-keys)
 
 ### 10.6 Advanced
 

@@ -109,9 +109,9 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
     ![](attachments/restore-backup-locally/project-directory.png)
 
-3. Navigate to the **deployment/data/files** folder within your project.
+3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
-5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your project.
+5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
 6. Run the app by clicking the play button (▶) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More

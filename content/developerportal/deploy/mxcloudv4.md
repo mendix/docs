@@ -70,9 +70,9 @@ We add regions based on customer demand. If you would like a different region, c
 
 You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
-## 7 What Other Considerations Are There When Running My App in Mendix Cloud v4?{#other-considerations}
+## 7 Behavior of My App in Mendix Cloud v4?{#other-considerations}
 
-There are a few other considerations to bear in mind when you are running in Mendix Cloud v4:
+There are certain limits and behaviors which apply to your app when running in Mendix Cloud v4. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
 * It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
@@ -80,6 +80,7 @@ There are a few other considerations to bear in mind when you are running in Men
 * You can't download files bigger than 1GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
+* HTTP headers sent to the Mendix cloud do not always preserve their case (for example `X-SharedSecret` can be transformed to `X-Sharedsecret`) due to the behavior of one of the Cloud Foundry routing components – this has no practical effect as HTTP headers are defined as case insensitive
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:
     * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 7, upgrade to version 7.16 or above

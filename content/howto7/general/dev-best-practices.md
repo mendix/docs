@@ -330,6 +330,6 @@ Apps should keep up with new Mendix releases as much as possible.
 
 ### 4.7 Marketplace Content
 
-When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
 Marketplace modules should **not** be modified. This is because, if a Marketplace module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing a Marketplace module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual Marketplace module, it is advisable to combine them in a separate extension module wherever possible.

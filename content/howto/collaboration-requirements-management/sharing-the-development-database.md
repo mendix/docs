@@ -9,6 +9,10 @@ tags: ["studio pro"]
 
 All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
+{{% alert type="warning" %}}
+This document is about sharing a database between developers working on **the same app**. It is not possible to share one database between different apps. If you need to copy data to another app, use the [Database Replication](/appstore/modules/database-replication) module.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 To get the most out of the built-in database, make sure you have completed the following prerequisites:
@@ -43,7 +47,7 @@ To start the built-in database viewer, follow these steps:
 
 1.  Run the application locally (if this is the first time, Studio Pro will ask you to create the new database, click **Yes** when this occurs):
 
-    ![](attachments/18448637/18580426.png)
+    {{% image_container width="150" %}}![](attachments/18448637/18580426.png){{% /image_container %}}
 
 2.  When the application is running, in the **Console** pane, select **Advanced** > **Start built-in database viewer** to open the built-in database viewer:
 
@@ -117,5 +121,5 @@ Make sure the names of the databases are not the same or make a copy of your own
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
-*   [Set Up a GitHub Repo to Publish an App Store Item](set-up-repo)
+*   [Set Up a GitHub Repo to Publish a Marketplace Item](set-up-repo)
 *   [Version Control](/refguide/version-control)

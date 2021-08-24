@@ -1,17 +1,25 @@
 ---
 title: "Published OData Services"
 parent: "integration"
+menu_order: 10
 tags: ["studio pro"]
-aliases:
-    - /refguide/consumed-odata-services.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-In Studio Pro, entities can be exposed as [OData resources](published-odata-resource) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
+In Studio Pro, entities can be exposed as [OData resources](published-odata-resource) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
-The standard used for OData in Mendix is [OData version 3](http://www.odata.org/documentation/odata-version-3-0) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+The standards used for OData in Mendix are:
+
+* [OData version 3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
+* [OData version 4](http://www.odata.org/documentation), which returns data in JSON format.
+
+{{% alert type="info" %}}
+The OData version 4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4).
+{{% /alert %}}
+
+Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
 This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
 
@@ -41,21 +49,29 @@ A [resource](published-odata-resource) is a network-accessible data object repre
 
 ## 3 Settings
 
-### 3.1 Associations
+### 3.1 OData version
+
+You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
+
+{{% alert type="info" %}}
+This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4). In earlier versions, all published OData services were OData 3.
+{{% /alert %}}
+
+### 3.2 Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
 
-### 3.2 Security {#security}
+### 3.3 Security {#security}
 
 You can configure security for the OData service when [App Security](project-security) is enabled.
 
-#### 3.2.1 Requires Authentication {#authentication}
+#### 3.3.1 Requires Authentication {#authentication}
 
 Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
 
 Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](anonymous-users).
 
-#### 3.2.2 Authentication Methods
+#### 3.3.2 Authentication Methods
 
 If authentication is required, you can select which authentication methods you would like to support.
 
@@ -65,7 +81,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
-##### 3.2.2.1 Username & Password {#username-password}
+##### 3.3.2.1 Username & Password {#username-password}
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
@@ -75,7 +91,7 @@ Authentication can be done by including basic authentication in the HTTP header 
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
-##### 3.2.2.2 Active Session {#authentication-active-session}
+##### 3.3.2.2 Active Session {#authentication-active-session}
 
 When you check this authentication method, the JavaScript in your app can access the REST service using the current user's session.
 
@@ -88,7 +104,7 @@ xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
 xmlHttp.send(null);
 ```
 
-##### 3.2.2.3 Custom {#authentication-microflow}
+##### 3.3.2.3 Custom {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -104,7 +120,7 @@ There are three possible outcomes of the authentication microflow:
   * When the resulting User is not empty, the operation is executed in the context of that user
   * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
-#### 3.2.3 Allowed Roles
+#### 3.3.3 Allowed Roles
 
 The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
@@ -114,7 +130,7 @@ Web service users cannot access OData services.
 
 ## 4 Properties
 
-In the properties pane when an OData service document is displayed,  you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
+In the properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
@@ -129,6 +145,9 @@ characters, the client will get an error. If you set this setting to *Yes*,
 those illegal characters are replaced by the DEL character, and the client will
 not get an error. However, the data that the client receives will not be exactly
 what is stored in your database, because these characters have been replaced.
+
+This *Replace Illegal XML Characters* option is not available when the OData
+version is OData 4, because OData 4 returns data in JSON format.
 
 Default value: *No*
 

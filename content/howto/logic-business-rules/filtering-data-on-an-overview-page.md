@@ -1,6 +1,7 @@
 ---
 title: "Filter Data on an Overview Page Using XPath"
 category: "Logic & Business Rules"
+menu_order: 150
 tags: ["filter", "xpath"]
 ---
 
@@ -22,7 +23,7 @@ This how-to serves as a comparison for filtering data and emphasizes how to use 
 
 ## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
 
-To see the results of this how-to, it is necessary that you set up a test project with test data.
+To see the results of this how-to, it is necessary that you set up a test app with test data.
 
 Before you continue, make sure that you know how to create the following:
 

@@ -125,7 +125,44 @@ For more information on sessions and how to customize the timeout, see the [Sess
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
+This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
+
+| Feature | Chrome/Edge | Firefox | Safari |
+|---------|-----------|-------|------|
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+
+**Legend** — The symbols above correspond to the following definitions:
+
+*  Fully compatible:
+
+	![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg)
+	
+*  Compatible only when using HTTPS protocol:
+
+	![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg)
+	
+*  Not compatible:
+
+	![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg)
+
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
+
+{{% alert type="info" %}}
+In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
+{{% /alert %}}
 
 ## 7 Deciding Between a PWA or Native Mobile App
 

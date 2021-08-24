@@ -9,7 +9,7 @@ tags: ["Node","Permission","Developer Portal"]
 
 ## 1 Introduction
 
-Fine-grained access management for your Mendix Cloud environments is handled in the **Node Permissions** tab of the **Security** page for your app. See [App Settings](/developerportal/settings).
+Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of the [Environments](environments) page for your app.
 
 Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) can manage various permissions to the environments for each team member.
 
@@ -27,19 +27,19 @@ You will see a list of all your nodes:
 
 ![Licensed Mendix Cloud nodes](attachments/node-permissions/nodes-list.png)
 
-Clicking **Environments** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
+Clicking **Environments** will take you to the [Environments](environments) page for the app that is deployed to this node.
 
-## 3 Node Permissions
+## 3 Permissions
 
-Node permissions allow you to give specific access to your nodes to individual members of a team.
+Permissions allow you to give specific access to your environments to individual members of a team.
 
 ### 3.1 User Roles for Managing Permissions
 
-Only users with the *Technical Contact* role can manage the permission settings for the cloud node.
+Only users with the *Technical Contact* role or team members specifically allowed to *Manage Permissions* can manage the permission settings for the cloud node.
 
-The permissions are set independently for each environment. You can choose the environment at the top of the *Node Permissions* tab. Changing the permissions for a *production* environment will require two-factor authentication (see [Two-Factor Authentication](two-factor-authentication)).
+The permissions are set independently for each environment. You can choose the environment at the top of the *Permissions* tab. Changing the permissions for a *production* environment will require two-factor authentication (see [Two-Factor Authentication](two-factor-authentication)).
 
-Only team members who have permission to *Deploy, Publish, and Monitor* can view the node permissions.
+Only team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 
 {{% alert type="info" %}}
 
@@ -53,9 +53,9 @@ You can change permissions for team members in [Team](/developerportal/collabora
 
 To access the node permissions, do the following:
 
-1. Click **Security** for your app.
+1. Click **Environments** for your app.
 
-2. Open the **Node Permissions** tab.
+2. Open the **Permissions** tab.
 
 ![](attachments/node-permissions/node-permissions.png)
 
@@ -65,25 +65,33 @@ To access the node permissions, do the following:
 
 4. Complete two-factor authentication, if required for the selected environment.
 
-### 3.3 Node Permissions
+### 3.4 Permissions
 
-The Technical Contact can set the following node permissions.
+The Technical Contact and team members specifically allowed to *Manage Permissions* can set the following node permissions.
 
 ![](attachments/node-permissions/nodepermission.png)
 
-#### 3.3.1 Transport Rights
+#### 3.4.1 Manage Permissions
+
+With Manage Permissions, team members other than the Technical Contact can change the permissions granted to team members.
+
+{{% alert type="info" %}}
+Only the Technical Contact can grant this permission to other team members.
+{{% /alert %}}
+
+#### 3.4.2 Transport Rights
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
 For more information about deployment, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy).
 
-#### 3.3.2 Access to Backups
+#### 3.4.3 Access to Backups
 
 The Access to Backups permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/create-backup), [download](/developerportal/operate/download-backup), and [restore](/developerportal/operate/restore-backup) backups.
 
 For more information, see [Backups](/developerportal/operate/backups).
 
-#### 3.3.3 Receive Alerts
+#### 3.4.4 Receive Alerts
 
 When Receives Alerts is checked, this user will receive an email when an alert is triggered.
 
@@ -94,7 +102,7 @@ Alerts are triggered by any of the following circumstances:
 * the health check fails
 * one of a number of infrastructure problems occurs
 
-#### 3.3.4 API Rights
+#### 3.4.5 API Rights
 
 With API rights, you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) to get programmatic access to the environment.
 
@@ -106,7 +114,7 @@ Other permissions are needed in addition to *API Rights*.
 For example, to access backups via the API you need *Access to Backups* in addition to *API Rights*.
 {{% /alert %}}
 
-#### 3.3.5 Access to Monitoring
+#### 3.4.6 Access to Monitoring
 
 With the Access to Monitoring permission, you can view the application metrics, logs, and alerts in the [Developer Portal](http://sprintr.home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
@@ -114,13 +122,9 @@ For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/d
 
 ## 4 Downloading Node Permissions
 
-You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button.
+You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking the **Download to CSV** button. This button is only shown to Technical Contacts.
 
-![](attachments/node-permissions/download-to-csv.png)
-
-The CSV will contain a list of environments, users, and their respective permissions.
-
-![](attachments/node-permissions/permissions-csv.png)
+The CSV file will contain a list of environments, users, and their respective permissions.
 
 ## 5 Technical Contact
 
@@ -128,4 +132,4 @@ A cloud node has a single Technical Contact. They manage the cloud node and can 
 
 The Technical Contact can give the technical contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
-For full details of the role of the Technical Contact, see [Technical Contact](/developerportal/collaborate/app-roles#technical-contact).
+For full details on this role, see the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) section of *App Roles*.

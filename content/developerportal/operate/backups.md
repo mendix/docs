@@ -9,9 +9,9 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backups are created every night or on-demand, as described in the [Backups](#backups) section, below.
+Backup snapshots are created every night or on-demand, as described in the [Backups](#backups) section, below.
 
-Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally.
+Backup snapshots contain both the database and file documents referred to in the database.
 
 ## 2 Creation and Retention Schedules
 
@@ -42,7 +42,7 @@ The **Backups** page presents options for managing your backups. These are descr
 
 ### 3.1 Create Backup
 
-This will automatically generate a backup from your application data. See [Create a Backup](create-backup).
+This will automatically generate a backup snapshot from your application data. See [Create a Backup](create-backup).
 
 ### 3.2 Upload Backup
 
@@ -52,7 +52,7 @@ The sections below present details on uploading data in recent Mendix Cloud vers
 
 In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application. 
 
-Anything you can download you can also upload again, which means you can upload the following:
+Anything you can download you can also upload again, which means you can upload archives containing the following:
 
 * **Full Snapshot**
 * **Database Only**
@@ -83,7 +83,7 @@ You can upload two types of data:
 
 ### 3.3 Download Backup
 
-You can download one of the following: 
+You can download a backup archive containing one of the following: 
 
 * **Full Snapshot**
 * **Database Only**
@@ -92,14 +92,14 @@ You can download one of the following:
 See [Download a Backup](download-backup) for more information.
 
 {{% alert type="info" %}}
-As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
+As the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
 ### 3.4 Restore Backup
 
-You can choose the **destination** environment to which you want to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
+You can choose the **destination** environment to which you want to restore the backup snapshot. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
-If you restore a backup that was originally deployed with an older Mendix version, you will get a warning. You can still restore the backup, but you will have to deploy the older model later on. 
+If you restore a backup snapshot that was originally deployed with an older Mendix version, you will get a warning. You can still restore the data, but you will have to deploy the older model later on. 
 
 {{% alert type="info" %}}
 In Mendix Cloud v4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.

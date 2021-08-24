@@ -460,8 +460,6 @@ When an action is not compatible with the platform, make sure it can be checked 
 
 ## 5 Debugging JavaScript Actions
 
-Mendix Studio Pro does not support nanoflow debugging in the same way it supports microflow debugging. For validating intermediate results between actions, use the **Log message** activity.
-
 Debugging a JavaScript action's code can be done within a browser development tool. For details on how to do this, see your browser's developer tools documentation at either [Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/), [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools), [Microsoft Edge Developer Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium), or Safari's [Web Development Tools](https://developer.apple.com/safari/tools/). 
 
 Initially, JavaScript actions' source code is not loaded. Their source code will be loaded right before the first execution of a module's action. From that moment on, you can find the source code in the **Sources** tab of **Developer Tools** in the folder **javascript-actions** if you are using Chrome.

@@ -26,7 +26,7 @@ The entity TimeZone has been added to the System module along with an associatio
 
 In the Administration module the Account_NewEdit page adds a time zone selector to set the time zone of the user. By default, the MyAccount page does not have this selector. It is the administrator's task to correctly set the time zone. You can add it yourself if you want your end-users to be able to set their time zone.
 
-Studio Pro adds a setting to the **App Settings** dialog box. On the 'Model' tab you can specify a default time zone. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
+Studio Pro adds a setting to the **App Settings** dialog box. On the **Runtime** tab you can specify a **Default time zone**. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
 
 ## 4 Existing App
 

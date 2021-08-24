@@ -32,27 +32,28 @@ The Control Center dashboard gives you an overview of various activities for you
 
 These are some examples of what the dashboard presents:
 
-* **App Projects Created** – you can filter these [apps](#apps) by date
+* **Apps Created** – you can filter these [apps](#apps) by date
 * **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
 * **Certification Level** – presents the number of members per [Mendix certification](https://academy.mendix.com/link/certification)
+* **External Members** – click a part of this pie chart to see a list of external members from a specific company
 * **Company Feed** – presents events in your company, such as members joining the company and the created app
 
-## 3 App Projects {#apps}
+## 3 Apps {#apps}
 
-On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated Apps** tab lists your company's deactivated apps. The following details apply to deactivated apps:
 
 * A deactivated app still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
 
-When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
+When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate App** and **Delete App** in this window. The window has the following tabs:
 
-* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
+* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
 * **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
-* **Project Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
+* **App Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
 
-When you select one or more apps via the check boxes on the **Active App Projects** or **Deactivated App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
+When you select one or more apps via the check boxes on the **Active Apps** or **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
 
-The **Default App Project Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 
@@ -62,7 +63,7 @@ Members are users who can view and/or edit an app. On the **Active Members** tab
 
 ![](attachments/members.jpg)
 
-When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **App Projects** of which they are a member as well as their **Project role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
+When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **Apps** of which they are a member as well as their **App role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
 
 On the **Deactivated Members** tab, you can see former members of your company who have been deactivated.
 
@@ -116,11 +117,11 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security
+## 8 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
-On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **Project History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
+On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 ![](attachments/security.jpg)
 

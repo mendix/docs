@@ -7,6 +7,10 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/tencent-deploy.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 
@@ -74,7 +78,7 @@ In the first tab you can see the **Namespaces** in the cluster and their current
 There are two other tabs:
 
 * **Cluster Managers** – where you can see other people who have access to the cluster and can manage them
-* **Activity** – where you can see perform the following actions on the entire cluster
+* **Activity** – where you can see the following actions on the entire cluster
 
 #### 3.2.1 Cluster Managers
 
@@ -154,7 +158,7 @@ You can only see the environment details of an app if you are a member of the ap
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
-The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
+The following rights are available to the person who purchased the cluster resources, and members of a namespace with appropriate authorization:
 
 * Set up operating URLs for the namespace
 * View all environments in the namespace
@@ -370,7 +374,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 5.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project.
+This lists the deployment packages which have been created for this app.
 
 ![](attachments/tencent-deploy/image17.png)
 
@@ -420,7 +424,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 ### 5.2 Environments {#environments}
 
-This section shows all the environments created for this app project.
+This section shows all the environments created for this app.
 
 ![](attachments/tencent-deploy/image19.png)
 
@@ -483,11 +487,11 @@ This opens the **Environment Details** page which is described in more detail in
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
+* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
-**Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
+* **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
 ### 5.3 Activity
 
@@ -543,7 +547,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 6.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 6.1.3.3 Scale Application
 
@@ -557,7 +561,7 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
 
-##### 6.1.3.5 Change Admin Password
+##### 6.1.3.5 Change Admin Password{#change-admin-password}
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 
@@ -599,19 +603,19 @@ To change any constants, select the constant you want to edit and then click **E
 
 ### 6.3 Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
 ![](attachments/tencent-deploy/network-tab.png)
 
 ### 6.4 Runtime Tab
 
-On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/runtime-tab.png)
 
 ### 6.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/log-levels-tab.png)
 
@@ -649,7 +653,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 6.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
+On the **Debugger** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 

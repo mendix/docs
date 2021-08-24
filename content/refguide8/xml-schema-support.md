@@ -4,6 +4,10 @@ parent: "xml-schemas"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xml-schema-support.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix derives the input/output formats for XML import/export and for calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (.xsd file) or web service definition (.wsdl file) using Mendix Studio Pro, you might get a dialog that contains warning messages about unsupported constructs. This is because currently Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are supported in Mendix.

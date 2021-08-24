@@ -6,6 +6,10 @@ description: "Landing page for technical details about aspects of Published REST
 tags: ["HTTP Request", "Published REST", "Request Routing", "JSON Schema", "Swagger", "OpenApi", "Documentation", "custom authentication"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-technical-details.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This section of the Published REST documentation describes more technical aspects of the published REST capabilities of Mendix.

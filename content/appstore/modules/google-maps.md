@@ -12,7 +12,7 @@ This module is deprecated. You can use the [Google Maps](/appstore/widgets/googl
 
 ## 1 Introduction
 
-The [Google Maps](https://appstore.home.mendix.com/link/app/174/) module lets you work on latitude/longitude, among other features. The module contains a Java action that geocodes addressess with the Google geocoding service. All you need to do is connect the module to your user information entity with a reference.
+The [Google Maps](https://marketplace.mendix.com/link/component/174/) module lets you work on latitude/longitude, among other features. The module contains a Java action that geocodes addressess with the Google geocoding service. All you need to do is connect the module to your user information entity with a reference.
 
 {{% alert type="warning" %}}
 Disclaimer: Before using this module, be sure to read the [Google Maps Platform Terms of Service](https://cloud.google.com/maps-platform/terms), which states that the latitude/longitude coordinates retrieved with their service can only be used in combination with Google Maps, as well as the [Google Maps APIs Terms of Service](https://developers.google.com/maps/terms-20180207).

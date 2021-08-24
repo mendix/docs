@@ -22,8 +22,8 @@ For a deep-dive look into this action, check out this video:
 <img
   style="width: 100%; margin: auto; display: block;"
   class="vidyard-player-embed"
-  src="https://play.vidyard.com/WZu7QtHZPjtYUTdcV58PKr.jpg"
-  data-uuid="WZu7QtHZPjtYUTdcV58PKr"
+  src="https://videoshare.mendix.com/watch/WZu7QtHZPjtYUTdcV58PKr?.jpg"
+  data-uuid="WZu7QtHZPjtYUTdcV58PKr?"
   data-v="4"
   data-type="inline"
 />

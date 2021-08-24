@@ -180,7 +180,7 @@ These actions support multi-selection of stories, except for the **Clone** actio
 
 #### 2.6.1 Accessing Story Details  {#story-details}
 
-When you click a story title, the **Story Details** page opens:
+When you click a story title, the story details page opens:
 
 {{% image_container width="500" %}}
 ![](attachments/stories/story-details.png)
@@ -218,7 +218,7 @@ If you need to reorder stories or move a story to a different Sprint, there are 
 
 	![](attachments/stories/move-story-drag-new.jpg)
 
-* Click the story title to open the **Story Details** page, then click **Move Story**:
+* Click the story title to open the story details page, then click **Move Story**:
 
 	![](attachments/stories/move-story-details.png)
 
@@ -228,7 +228,7 @@ Moving a story will move the tasks as well.
 
 #### 2.6.3 Adding a Task to a Story {#adding-task}
 
-To add a task to a story, access the [Story Details](#story-details) page and under **Tasks**, start typing in the **Add a new task** box.
+To add a task to a story, access the [story details](#story-details) page and under **Tasks**, start typing in the **Add a new task** box.
 
 ### 2.7 Managing Stories in Mendix Studio Pro 
 
@@ -263,7 +263,7 @@ There is also a percentage bar of the stories that are done and the deadline dat
 
 You can click **Mark current sprint as completed** only when all stories have the **Done** status.
 
-When you click **Details** for a story, you will be taken to the [Story Details](/developerportal/collaborate/stories#story-details) page.
+When you click **Details** for a story, you will be taken to the [story details](/developerportal/collaborate/stories#story-details) page.
 
 {{% alert type="info" %}}
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.

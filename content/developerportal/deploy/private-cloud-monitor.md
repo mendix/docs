@@ -24,7 +24,7 @@ This document shows an example how to use [Loki](https://grafana.com/docs/loki/n
 This document will help you quickly set up a solution for monitoring Mendix for Private Cloud environments.
 You can customize this solution to match the requirements of your team or organization.
 
-## 2 Installing monitoring tools
+## 2 Installing monitoring tools{#install-grafana-loki}
 
 If you already have installed Prometheus, Loki and Grafana in your cluster, you can skip this section and to directly to [enable metrics scraping](#enable-metrics-scraping).
 
@@ -347,6 +347,83 @@ Save and apply the changes.
 
 ## 4 Setting up a Grafana dashboard
 
-<!-- TODO: how to install and use the default dashboard https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/grafana-dashboard/mendix_app_dashboard.json -->
-<!-- TODO: how to set metrics links in Portunus -->
+Mendix for Private Cloud offers a reference dashboard that looks similar to [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4).
 
+In addition, this dashboard will display Mendix app and Runtime logs.
+
+### 4.1 Import the dashboard
+
+To install the reference dashboard, download the [dashboard JSON](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/grafana-dashboard/mendix_app_dashboard.json) to a local file.
+
+[Import](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) the downloaded JSON into Grafana:
+
+1. Open Grafana in a web browser using the domain name, admin username and password from [Section 2](#install-grafana-loki).
+2. Press the **Create** button, then **Import**:
+
+    ![](attachments/private-cloud-monitor/grafana-import-button.png)
+3. Then press the **Upload JSON file** button and select the dashboard JSON you've downloaded earlier.
+
+    ![](attachments/private-cloud-monitor/grafana-import.png)
+4. Select **Prometheus** from the _Prometheus data source_ dropdown, and **Loki** from the _Loki data source_ dropdown.
+   If necessary, rename the dashboard and change its uid.
+   Press **Import** to import the dashboard into Grafana.
+
+    ![](attachments/private-cloud-monitor/grafana-import-settings.png)
+
+### 4.2 Using the dashboard
+
+Press the **Dashboards** button, then **Manage** and click _Mendix app dashboard_ to open the dashboard:
+
+![](attachments/private-cloud-monitor/grafana-open-dashboard.png)
+
+Select the **Namespace**, **Environment internal name** and **Pod name** from the dropdowns to see the metrics and logs for a specific Pod:
+
+![](attachments/private-cloud-monitor/grafana-select-pod.png)
+
+{{% alert type="info" %}}If the dropdowns are empty, this means that no metrics are available for that date range.
+Select another date range in the top right corner, or check if Prometheus is set up correctly.{{% /alert %}}
+
+Metrics are displayed per-Pod and not aggregated on a namespace or environment level.
+Every time an app is restarted or scaled up, this will add new Pods or replace existing Pods with new ones.
+You will need to select the currently running Pod from the dropdown to monitor its metrics and logs.
+
+{{% alert type="info" %}}This dashboard is provided for reference and can be used as an example.
+You can use it to build a custom dashboard with details that are relevant for your organization - such as aggregating metrics per namespace/project or displaying additional metrics from another source.{{% /alert %}}
+
+### 4.3 Configuring metrics links
+
+To provide Mendix app developers quick access to the dashboard, you can set the **Metrics** and **Logs** links in the namespace configuration.
+
+The Private Cloud Portal supports placeholder (template) variables in **Metrics** and **Logs** links:
+
+* `{namespace}` will be replaced with the environment namespace;
+* `{environment_name}` will be replaced with the environment internal name.
+
+<!-- TODO: update these instructions if necessary -->
+
+For example, if you've imported the reference dashboard JSON with default parameters, set **Metrics** and **Logs** links to 
+
+```
+https://grafana.mendix.example.com/d/4csBnmWnk/mendix-app-dashboard?var-namespace={namespace}&var-environment_id={environment_name}
+```
+
+(replace `grafana.mendix.example.com` with the Grafana domain name used in your cluster).
+
+When a Mendix app developer clicks a **Metrics** or **Logs** link in the Private Cloud Portal, the `{namespace}` and `{environment_name}` placeholders
+will be replaced with that environment's namespace and name, and the Mendix app developer will just need to select a **Pod name** in the Grafana dashboard dropdown.
+
+To set the **Metrics** and **Logs** links:
+
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+2. Click **Details** next to the namespace where your environment is deployed.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+
+3. Open the **Operate** tab, enter dashboard URL for the **Metrics** and **Logs** links, and click **Save** for each one.
+
+    ![](attachments/private-cloud-cluster/image32.png)
+
+<!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->

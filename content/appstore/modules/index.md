@@ -9,9 +9,11 @@ tags: ["marketplace", "marketplace component", "module"]
 The modules available in the Mendix Marketplace can be added to your app to provide new functionality with accompanying domain models and security options. These Marketplace modules function similarly to the [modules](/refguide/modules) you create for your app. 
 
 {{% alert type="info" %}}
-Mendix Modules are distinct from React Native modules: 
-* Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model
-* React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities) 
+Mendix Modules are distinct from React Native modules.
+
+Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model
+
+React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities) 
 {{% /alert %}}
 
 When you download these modules, they will go into the **App** > **Marketplace modules** folder.

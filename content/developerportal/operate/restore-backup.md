@@ -51,7 +51,7 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 {{% alert type="warning" %}}
 
-Doing a database only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
+You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
 
 {{% /alert %}}
 

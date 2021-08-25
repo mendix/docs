@@ -22,7 +22,7 @@ Before you start this how-to, please make sure you have completed the following 
 *   Have the latest version of the Google Maps widget in your application: [Google Maps](/appstore/widgets/google-maps)
 
 {{% alert type="warning" %}}
-These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
+These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 
 ## 3. Adding the style
@@ -76,7 +76,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 1.  Go-to Snazzymaps and click **Create.**
     **![](attachments/19202780/19398964.png)** 
-2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
+2.  Now you will see a handy quick style method for altering your map appearance:
     ![](attachments/19202780/19398965.png) 
 
     Happy modeling!
@@ -85,5 +85,5 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 * [Atlas UI](atlas-ui)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Setting Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+*   [Setting Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

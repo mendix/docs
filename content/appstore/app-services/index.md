@@ -1,7 +1,8 @@
 ---
 title: "App Services"
 description: " "
-tags: ["app store", "app store component", "app service"]
+draft: true 
+tags: ["marketplace", "marketplace component", "app service"]
 ---
 
 ## 1 Introduction
@@ -11,7 +12,7 @@ App services are domain-focused and packaged business capabilities delivered in 
 When you download an app service, it will go into the **App** > **Marketplace modules** folder.
 
 {{% alert type="warning" %}}
-App services like [3D Viewer](3d-viewer) start with a free trial for development and testing. After the trial ends, a [subscription](app-store-overview#subscriptions) will be required to continue using the app service.
+App services like [3D Viewer](3d-viewer) start with a free trial for development and testing. After the trial ends, a subscription is required to continue using the app service.
 {{% /alert %}}
 
 ## 2 Main Documents in This Category

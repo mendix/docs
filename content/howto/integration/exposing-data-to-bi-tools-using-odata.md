@@ -27,7 +27,7 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create an app using the [Asset Manager](https://appstore.home.mendix.com/link/app/69674/0) template
+* Create an app using the [Asset Manager](https://marketplace.mendix.com/link/component/69674/0) template
 * Install Excel (we will use Excel for Office 365)
 * Download and install [Tableau](https://public.tableau.com) (The public version of Tableau is free)
 
@@ -52,7 +52,7 @@ A published OData service can be used by third-party applications to read data f
 
 	![](attachments/18448736/18582024.png)
 
-	Security in OData is managed by the **Project Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.
+	Security in OData is managed by the **App Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.
 
 6.  Repeat steps 4 and 5 for the **Engineer** entity:
 

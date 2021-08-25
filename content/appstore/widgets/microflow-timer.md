@@ -1,14 +1,18 @@
 ---
 title: "Microflow Timer"
 category: "Widgets"
-description: "Describes the configuration and usage of the Microflow Timer widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "microflow timer", "platform support"]
+description: "Describes the configuration and usage of the Microflow Timer widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "microflow timer", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Microflow Timer](https://appstore.home.mendix.com/link/app/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed.
+The [Microflow Timer](https://marketplace.mendix.com/link/component/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed. 
+
+{{% alert type="warning" %}}
+In offline apps, you cannot use microflows, but you can use nanoflows.
+{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 

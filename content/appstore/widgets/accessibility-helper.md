@@ -1,14 +1,14 @@
 ---
 title: "Accessibility Helper"
 category: "Widgets"
-description: "Describes the Accessibility Helper widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "accessibility helper", "a11y helper", "token", "platform support"]
+description: "Describes the Accessibility Helper widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "accessibility helper", "a11y helper", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Accessibility Helper](https://appstore.home.mendix.com/link/app/47784/) widget allows a user to add a list of HTML properties to elements in the HTML `page.carousel`.
+The [Accessibility Helper](https://marketplace.mendix.com/link/component/114803/) widget allows a user to add a list of HTML properties to elements in the HTML `page.carousel`.
 
 ### 1.1 Features
 

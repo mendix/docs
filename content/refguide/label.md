@@ -14,7 +14,7 @@ tags: ["studio pro", "label", "common widgets"]
 
 For input widgets, it is recommended to use the [label property](text-box) to describe the purpose of widgets to end-users.
 
-You can also use the [text widget](text) as it provides more features, e.g. you can add parameters, and it generates semantically correct HTML.
+You can also use the [text widget](text) as it provides more features, for example, you can add parameters, and it generates semantically correct HTML.
 
 {{% /alert %}}
 

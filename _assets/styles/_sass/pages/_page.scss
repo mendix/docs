@@ -124,7 +124,7 @@ $block: 'mx';
       blockquote {
         border-left: 4px solid #e8e8e8;
         padding-left: 20px;
-        font-size: 18px;
+        font-size: 14px;  /* Too big - set font size as defaul */
         opacity: .6;
         letter-spacing: -1px;
         font-style: italic;
@@ -158,12 +158,18 @@ $block: 'mx';
       }
 
       /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
+      /* Since Mx-dock (20210330) scrolling to anchors leaves anchor under the mx-dock. Changing h2/h3/h4 links */
+      /* to resolve this using one of the solutions here: https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
       h2, h3, h4{
-        margin-top: 1em;
+        margin-top: -30px;
+        padding-top: 48px;
       }
 
+      /* apply heading anchor trick on h5 as well with smaller top margin*/
       h5 {
         font-size: 16px;
+        margin-top: -38px;
+        padding-top: 48px;
       }
       h6 {
         font-size: 14px;

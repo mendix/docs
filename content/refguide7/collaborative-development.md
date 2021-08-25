@@ -3,6 +3,11 @@ title: "Collaborative Development"
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "collaborative development", "sync"]
+aliases:
+    - /howto/web-modeler/syncing-webmodeler-desktop.html
+    - /refguide7/desktop-webmodeler.html
+    - /refguide7/sync-webmodeler-desktopmodeler.html
+    - /web-modeler/general-sync-webmodeler-desktopmodeler-wm.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

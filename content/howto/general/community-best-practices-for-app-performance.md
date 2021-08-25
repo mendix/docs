@@ -3,6 +3,8 @@ title: "Implement Community Best Practices for App Performance"
 category: "General Info"
 menu_order: 8
 tags: ["best practice", "performance", "community"]
+aliases:
+    - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
 ---
 
 ## 1 Introduction
@@ -36,6 +38,7 @@ If you made a simple and sound design of the app's domain models, consider the f
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
 * Do not use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
+* Avoid using more than one [association](/refguide/associations) between entities, especially if such associations give different access levels. Instead, use [enumerations](/refguide/enumerations) within one of the entities, or add an intermediary entity between the entities that contains an enumeration with the association type. For example, if different user types are accessing a document, do not create the associations **Document_Owner**, **Document_Editor**, **Document_Viewer**, etc. Instead, add an intermediary entity named **DocumentAccess** between the entities that contains an enumeration named **AccessType**, with the possible values of **Owner**, **Editor**, and **Viewer**.
 
 ##  3 Index Best Practices
 
@@ -70,7 +73,8 @@ Indexes is a topic with a long history of best practices from the database world
 * Try to prevent multiple identical data sources, since they load the object multiple times.
 * Minimize conditional visibility.
 * Give the user feedback. If this takes more than a few seconds, provide a progress indication.
-* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
+* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix Marketplace to run microflows in the background or have a [task queue](/refguide/task-queue) to control the load and prevent peaks in background work.
+* When using a filter via an attribute from an associated entity in a data grid, restricting possible options is suggested in the drop-down search field so that only objects that have an association to the entity in the grid are fetched. For example scenario, you have a grid for the **Order** entity where you want to add a drop-down search field to filter by **Order_Customer/Customer/Name**. It would be beneficial to add the following [XPath](/refguide/xpath) constraint to the drop-down search field: `[Order_Customer/Order]`. That way only **Customer**s with **Order**s will be available in the drop-down search. This is necessary because in some databases, filtering by non-existing criteria is slow, even if all indices are in place.
 
 ## 6 Infrastructure Best Practices
 

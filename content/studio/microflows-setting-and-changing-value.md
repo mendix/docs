@@ -28,7 +28,7 @@ For more information on the functions of these activities, see [Microflows](micr
 
  To set the initial value or change the value of an object, do the following:
 
-1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see the [Adding New Event or Activity](microflows#adding-activity-to-microflow) section in *Microflows*.
+1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see the [Adding New Event or Activity](microflows#add-elements) section in *Microflows*.
 2. Click the activity to view its properties.
 3.  Select the data source for the activity, then click **Add New Value**
 
@@ -43,7 +43,7 @@ For more information on the functions of these activities, see [Microflows](micr
 
 To set the initial value or change the value of a variable, do the following:
 
-1. Add the **Create Variable**/**Change Variable** activity to a microflow. For more information on how to add an element to a microflow, see the [Adding New Event or Activity](microflows#adding-activity-to-microflow) section in *Microflows*.
+1. Add the **Create Variable**/**Change Variable** activity to a microflow. For more information on how to add an element to a microflow, see the [Adding New Event or Activity](microflows#add-elements) section in *Microflows*.
 2. Click the activity to view its properties.
 3.  Select the data type for the activity, then click **Set initial value** / **Change value**
 
@@ -57,7 +57,7 @@ To set the initial value or change the value of a variable, do the following:
 
 The return value is the value that is returned to the flow or a widget that called the current flow. To configure the return value, do the following:
 
-1. Add the **End Event** to a microflow or select the existing end event. For more information, see the [Adding New Event or Activity](microflows#adding-activity-to-microflow) section in *Microflows*.
+1. Add the **End Event** to a microflow or select the existing end event. For more information, see the [Adding New Event or Activity](microflows#add-elements) section in *Microflows*.
 2. Click the event to view its properties.
 3.  Set the **Returns** option to **Value**.
 

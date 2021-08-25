@@ -2,13 +2,15 @@
 title: "APM 2 Reference Guide"
 parent: "rg-apd"
 menu_order: 1
+aliases:
+    - /apm/reference-guide/rg-2/reference-guide-2.html
 ---
 
 ## 1 Introduction
 
 The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behavior.
 
-This is the reference guide for Mansystems APM 2 for Mendix. It has the following chapters:
+This is the reference guide for CLEVR APM 2 for Mendix. It has the following chapters:
 
 * [Apps](rg-two-apps)
 * [Environments](rg-two-environments)
@@ -24,7 +26,7 @@ The sections below provide a short explanation of APM along with its features an
 
 ## 2 Definition of APM
 
-Mansystems APM is based on Wikipedia's definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management), with emphasis on these points:
+CLEVR APM is based on Wikipedia's definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management), with emphasis on these points:
 
 * APM is the "monitoring and management of performance and availability of software applications"
 * APM strives "to detect and diagnose complex application performance problems to maintain an expected level of service"

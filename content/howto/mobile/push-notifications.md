@@ -20,7 +20,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modeler)
+* Mendix Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 
@@ -48,12 +48,4 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 
 ## 6 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
-
-## 7 Documents in This Section
-
-* [Implement Push Notifications](implementation-guide)
-* [Send Push Notifications](sending-push-notifications)
-* [Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
-* [Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
-* [Test the Push Notifications Implementation](testing-the-implementation)
+For more information on contributing to this repository, see [How to Contribute to a Mendix GitHub Repository](/howto/collaboration-requirements-management/contribute-to-a-github-repository).

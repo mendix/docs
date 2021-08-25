@@ -1,18 +1,20 @@
 ---
-title: "Open Project"
+title: "Open App"
 parent: "file-menu"
 menu_order: 20
-description: "Describes the Open Project (app) flow and the Open App dialog box"
-tags: ["studio pro", "open app", "open project"]
+description: "Describes the Open App flow and the Open App dialog box"
+tags: ["studio pro", "open app"]
+aliases:
+    - /refguide/open-project-dialog.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-To open a project in Mendix Studio Pro, do one of the following:
+To open an app in Mendix Studio Pro, do one of the following:
 
-* Open the **File** menu in the top bar > **Open Project**
-*  Click **Open App** on the Studio Pro landing page
+* Select **File** > **Open App**
+* Click **Open App** on the Studio Pro landing page
 
 The **Open App** dialog box will open, where you can select the app location:
 
@@ -30,7 +32,7 @@ Use this setting to select the location where your app is stored. This can be th
 
 Select the Team Server app you would like to open, then choose the development line.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 For more information about development lines, see [Version Control](version-control).
 
@@ -38,7 +40,7 @@ For more information about development lines, see [Version Control](version-cont
 
 {{% alert type="info" %}}
 
-The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Advanced** > **Enable private version control**. 
+The **Private server** option is only available when support for other SVN servers is enabled: **Edit** >**Preferences** > **Version Control** > **Enable private version control**. 
 
 {{% /alert %}}
 
@@ -46,8 +48,8 @@ In the **App repository address** field, enter the address of the app you want t
 
 ### 2.3 Locally on Disk {#local}
 
-For opening an app you already have on disk, simply point to the project file. 
+For opening an app you already have on disk, simply point to the app file. 
 
 ## 3 Read More
 
-* [Import Project Package](import-project-package-dialog)
+* [Import App Package](import-project-package-dialog)

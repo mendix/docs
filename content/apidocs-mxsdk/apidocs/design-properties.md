@@ -1,18 +1,18 @@
 ---
 title: "Design Properties API"
 category: "API Documentation"
-menu_order: 5
 description: "This guide outlines how design properties work and can help you create custom design properties."
+menu_order: 30
 tags: ["styling", "design", "classes", "design properties"]
 ---
 
 ## 1 Introduction
 
-The Mendix Design Properties API allows you to make custom design properties for your Mendix projects.
+The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
 
-To use the API, you need to alter the *JSON* files in your application's **theme** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
+To use the API, you need to alter the *design-properties.json* file of a specific module in your application's **themesource** folder. This process is described in the [Design Properties Definitions](#design-properties-definitions) section below.
 
-This guide outlines how design properties work and can help you create custom design properties. Many projects can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
+This guide outlines how design properties work and can help you create custom design properties. Many apps can simply use the Atlas UI theme and its included set of design properties to satisfy their styling needs. Atlas UI provides design properties that are built on top of the functionality described in this guide. So while design properties from Atlas UI are used as examples below, design properties themselves are not only for the Atlas UI theme. In fact, if you want to customize your styling more deeply, you will have to create your own custom design properties.
 
 Design properties are a special set of settings shipped together with a Mendix theme module. Design properties are shared among all the Mendix apps which use a specific theme module. 
 
@@ -40,50 +40,44 @@ A design property of type **Dropdown** defines a set of options with separate cl
 
 ## 4 Design Properties Definitions {#design-properties-definitions}
 
-Design properties are defined as a part of the theme settings inside your app's **theme** folder. Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate files. Web styling is defined in the *settings.json* file. Native styling is defined in the *settings-native.json* file.
+Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (for more information, see the [File and Folder Structure](/howto/front-end/customize-styling-new#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
 
-Since both *settings.json* and *settings-native.json* are *JSON* files, their design properties are defined in the *JSON* format as a part of those files.
-
-Here is a simplified example of a theme settings file with design properties:
+Here is a simplified example of a design properties file:
 
 ```js
 {
-    "pageTemplates": "WebModeler",
-    "cssFiles": [ ... ],
-    "designProperties": {
-        "DivContainer": [
-            {
-                "name": "My Toggle Property",
-                "type": "Toggle",
-                "description": "Description of My Toggle Design Property",
-                "class": "hereMyClass"
-            },
-            {
-                "name": "My Dropdown Property",
-                "type": "Dropdown",
-                "description": "Description of My Dropdown Design Property",
-                "options": [
-                    {
-                        "name": "Styling option 1",
-                        "class": "stylingClassOne"
-                    },
-                    {
-                        "name": "Styling option 2",
-                        "class": "stylingClassTwo"
-                    }
-                ]
-            }
-        ],
-        "Button": [
-            ...
-        ]
-    }
+    "DivContainer": [
+        {
+            "name": "My Toggle Property",
+            "type": "Toggle",
+            "description": "Description of My Toggle Design Property",
+            "class": "hereMyClass"
+        },
+        {
+            "name": "My Dropdown Property",
+            "type": "Dropdown",
+            "description": "Description of My Dropdown Design Property",
+            "options": [
+                {
+                    "name": "Styling option 1",
+                    "class": "stylingClassOne"
+                },
+                {
+                    "name": "Styling option 2",
+                    "class": "stylingClassTwo"
+                }
+            ]
+        }
+    ],
+    "Button": [
+        ...
+    ]
 }
 ```
 
 ### 4.1 Design Property Structure
 
-In the previous section's example, design properties are defined as a *JSON* object under key `designProperties` inside of a theme settings file. That object's structure is as follows:
+Use this code to further simplify the above example:
 
 ```js
 {
@@ -153,7 +147,7 @@ The examples above show that the fields `name` and `description` define the UI, 
 Field `type` defines the type of a property and can only take one of the two string values: `Toggle` or `Dropdown`.
 
 {{% alert type="warning" %}}
-Name your design property and its options carefully. Those names cannot be changed easily when there are projects already using them. If you want to rename a design property which is already being used in a project, see the [Renaming Design Properties](#old-names) section below.
+Name your design property and its options carefully. Those names cannot be changed easily when there are apps already using them. If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
 #### 4.1.2 Toggle-Specific Fields
@@ -164,9 +158,27 @@ When a type of design property is **Toggle** it should contain a `class` field o
 
 When a type of design property is **Dropdown** it should contain an `options` field which is an array of possible options for the design property. Every option must be an object with `name` and `class` fields. In the example above there are two options named **Styling option 1** and **Styling option 2**. They have the `stylingClassOne` and `stylingClassTwo` classes respectively.
 
+### 4.2 Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
+
+Design properties can be extended or overridden in other modules. For example, you can add a custom drop-down option to an Atlas design property or override the applied CSS class of a toggle property. 
+
+Overriding a design property can be useful when creating a theme module that builds on top of Atlas styling. To do this, simply add a design property for the same widget type in *themesource/{YOURTHEMEMODULE}/{WEB|NATIVE}/design-properties.json* using the same name and property type. 
+
+The precedence of design properties is determined by this compilation order of modules:
+
+1. Non-UI Marketplace modules, in alphabetical order.
+1. UI resources modules, ordered as in **App Settings** > **Theme**.
+1. Non-UI user modules, ordered as in the Studio Pro App Explorer.
+
+If multiple modules have a definition of a **Dropdown** property with the same name, the options will be ordered from high to low precedence (highest on top). If multiple modules have definitions of a **Toggle** property with the same name, the CSS class name from the module with the highest precedence will be applied when using the property.
+
+{{% alert type="warning" %}}
+Note that having multiple definitions with different types (for example **Toggle** and **Dropdown**) is an invalid configuration and will result in a failure to load any design properties.
+{{% /alert %}}
+
 ## 5 Widget Types{#widget-types}
 
-When defining design properties in your theme settings you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
+When defining design properties in your *JSON* file, you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
 {{% alert type="info" %}}
 Having a property that applies a table appearance style like **Stripped**, **Bordered**, or **Lined** only makes sense for widgets that contain tables, for example a data grid widget.
@@ -176,11 +188,11 @@ Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com
 
 ### 5.1 Widget Types for Pluggable Widgets
 
-When creating design properties for [Pluggable Widgets](pluggable-widgets), their widget type is determined by [widget id](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
+When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-id).
 
 ## 6 Renaming Design Properties{#old-names}
 
-Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for projects that are already using those design properties. 
+Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for apps that are already using those design properties. 
 
 To prevent errors and offer users simple upgrade paths, use an `oldNames` field. This field must be of type array and contain old names, a particular property, or an option that was known and used before. The order of old names in an `oldNames` list does not matter. For instance, if a property was renamed twice, the `oldNames` field should contain both previous names.
 
@@ -208,8 +220,30 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
+### 6.1 Renaming a Dropdown Option to a Toggle Property
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix 9.
+{{% /alert %}}
+
+It is also possible to rename an option of a **Dropdown** property to a separate **Toggle** property. In this case, the old name of the **Toggle** property consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the  **Dropdown** property to still exist — it may have been removed entirely.
+
+Here is an example of a **Toggle** property that was renamed from a **Dropdown** option:
+
+```js
+{
+	"name": "Styling 3",
+	"oldNames": ["My Dropdown Property::Styling option 3"],
+	"type: "Toggle",
+	"description": "Description of Styling 3 toggle property",
+	"class": "stylingClassThree"
+}
+```
+
+The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
+
 ## 7 Read More
 
 * [How to Style Your Mendix App](/howto/mobile/how-to-use-native-styling)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide)
-* [How to Extend Design Properties to Customize Your Studio Experience](/howto/front-end/extend-design-properties-to-customize)
+* [How to Extend Design Properties](/howto/front-end/extend-design-properties)

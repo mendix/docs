@@ -51,7 +51,7 @@ You would like to open a page with opportunity contact list and its details from
 
     	{{% image_container width="250" %}}![Button Properties](attachments/pages-how-to-configure-list/button-properties.png){{% /image_container %}}
 
-    2.  In the **Select Page** dialog box, click **New Page**.
+    2.  In the **Select Page** dialog box, click the plus icon in the top right corner.
 
     3.  In the **Create new page** dialog box, fill in the page title. 
 
@@ -82,9 +82,9 @@ The page is created, now you need to configure it. First of all, you need to con
 
     	{{% image_container width="300" %}}![](attachments/pages-how-to-configure-list/text.png){{% /image_container %}}
 
-    2. In the **Content** property, delete *Name* and click **Add attribute**:
+    2. In the **Content** property, delete *Name* and click **Add** > **Attribute**:
 
-    	{{% image_container width="250" %}}![](attachments/pages-how-to-configure-list/text-content.png){{% /image_container %}}
+    	![](attachments/pages-how-to-configure-list/text-content.png)
 
     3. In the **Select Attribute** dialog box, choose **Name** and click **Select**. 
 
@@ -123,7 +123,7 @@ To displayed all the details that a contact has, do the following:
 
 5. In the **Select Attribute** dialog box, choose **Title** and click **Select**:
 
-    {{% image_container width="350" %}}![](attachments/pages-how-to-configure-list/title.png){{% /image_container %}}
+    {{% image_container width="400" %}}![](attachments/pages-how-to-configure-list/title.png){{% /image_container %}}
 
 6. Select the **Name** text box and click **Data Source** > **Attribute** in its properties. 
 

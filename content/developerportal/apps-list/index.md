@@ -1,32 +1,19 @@
 ---
 title: "Apps List"
 description: "How to manage your apps from the Apps menu item in the Developer Portal"
-tags: ["My Apps", "My Company's Apps", "Nodes"]
+tags: ["My Apps", "My Company's Apps"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-The **Apps** menu item shows you a summary of your apps and, additionally, allows you to see all the apps for your company and all the licensed nodes to which you have access.
+The **My Apps** page shows you a summary of your apps:
 
-You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal:
+![Apps tiles](attachments/apps-tiles.jpg)
 
-![Apps Menu Item in the top bar](attachments/apps-menu-item.png)
+**All** displays all the apps for which you are an [Team](/developerportal/collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
-You can choose between the following options:
-
-![Page menu with My Apps, My Company's Apps, Nodes](attachments/apps-page-menu.png)
-
-The sections describe these options:
-
-* [My Apps](#my-apps)
-* [My Company's Apps](#my-company-apps)
-* [Nodes](#nodes)
-
-## 2 My Apps {#my-apps}
-
-You will see all the apps of which you are an [App Team](../collaborate/team) member:
-
-![Apps tiles](attachments/apps-tiles.png)
+## 2 Viewing Apps
 
 Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
@@ -34,65 +21,41 @@ Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
 Using the drop-down menu, you can choose to sort the apps in the following ways:
 
-* Most **Recent** first
+* **Most Recent** first
 * Alphabetical order of **App Name**
-* Alphabetical order of **Company**
 
-![Drop-down menu for order of apps](attachments/sort-drop-down.png)
+### 2.2 Selecting Actions
 
-### 2.2 Searching for an App
+By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-You can find a specific app by typing the search term by the magnifying glass icon and pressing <kbd>Enter</kbd>:
-
-![Example of a search for the word "First"](attachments/search-apps.png)
-
-### 2.3 Selecting Actions
-
-By clicking the ellipsis (…) in the app tile, you can quickly perform a number of actions:
-
-![Quick actions menu for an app](attachments/quick-action-menu.png)
+![Quick actions menu for an app](attachments/quick-action-menu.jpg)
 
 The actions available depend on the app selected:
 
 * **Edit in Mendix Studio**
-* **Edit in Mendix Studio Pro** – for apps where Mendix Studio is not enabled
-* **Project Management** – opens the app [Buzz](/developerportal/collaborate/buzz)
-* **App Info** – opens the [general settings](/developerportal/settings/general-settings) of the app
+* **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-### 2.4 Favoriting an App {#favoriting}
+### 2.3 Go to Environments {#environments}
 
-To favorite an app, click the star so that it turns yellow in the top-left corner of the app's tile:
+To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
-![](attachments/favoriting.png)
+## 3 My Company's Apps & Buzz {#my-company-apps}
 
-To see all your favorite apps, click the star toggle to the right of the [view drop-down menu](#view):
+In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
-![](attachments/favorites-toggle.png)
+![](attachments/company-links.png)
 
-## 3 My Company's Apps {#my-company-apps}
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
 
-On the **My Company's Apps** page, you will see all the apps created by people in your [company](/developerportal/company-app-roles/index):
-
-{{% image_container width="400" %}}
-![Apps for my company](attachments/company-apps-list.png)
-{{% /image_container %}}
-
-You cannot change the sort order of your apps.
+You can also sort the order of the apps here.
 
 If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 
-If you click an app for which you are not an App Team member, you will see the app details:
+If you click an app for which you are not an team member, you will see the app details:
 
 {{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
 {{% /image_container %}}
 
-
-## 4 Nodes {#nodes}
-
-This shows a list of all the licensed Mendix Cloud nodes to which you have access:
-
-![Licensed Mendix Cloud nodes](attachments/nodes-list.png)
-
-Clicking the **Details button** will take you to the [Environments](/developerportal/deploy/environments) page for the app that is deployed to this node.
+For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz#company-buzz) section of *Buzz*.

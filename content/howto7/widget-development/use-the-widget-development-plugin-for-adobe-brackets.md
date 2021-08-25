@@ -6,7 +6,7 @@ tags: ["widget", "develop widget", "plugin", "adobe", "brackets"]
 
 ## 1 Introduction
 
-This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget project. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated development environment (IDE) for creating custom widgets for the Mendix Platform.
+This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget app. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated development environment (IDE) for creating custom widgets for the Mendix Platform.
 
 **This how-to will teach you how to do the following:**
 
@@ -113,7 +113,7 @@ The `src` directory contains the source files for your widget:
 
 ### 5.3 The Test Directory
 
-The `test` directory contains a fully prepared Mendix test project for testing your widget:
+The `test` directory contains a fully prepared Mendix test app for testing your widget:
 
 ![](attachments/18448565/18579921.png)
 

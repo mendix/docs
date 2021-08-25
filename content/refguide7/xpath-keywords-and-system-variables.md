@@ -37,7 +37,7 @@ System variables can be used to obtain system or date related values. The availa
 
 ### 3.2 User Roles
 
-These will be created for each user role in your app project. Here is an example:
+These will be created for each user role in your app. Here is an example:
 
 | Token | Description |
 | --- | --- |

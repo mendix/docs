@@ -4,8 +4,15 @@ parent: "mendix-cloud-deploy"
 menu_order: 40
 description: "How to use external email providers in Mendix, and how to configure Mendix mail on Cloud v3"
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
+aliases:
+    - /deployment/mendixcloud/sending-email.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -22,7 +29,7 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 
 For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider to send emails from your app.
 
-In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See {Mendix Mail Servers](#mendix-mail-servers), below, for more information.
+In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See [Mendix Mail Servers](#mendix-mail-servers), below, for more information.
 
 However, for new applications or applications that send large amounts of e-mail running on Mendix Cloud v3, we strongly recommend using an external e-mail service.
 
@@ -30,7 +37,7 @@ However, for new applications or applications that send large amounts of e-mail 
 
 In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools.
 
-The [Email with Templates](/appstore/modules/email-with-templates) module from the App Store is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
+The [Email with Templates](/appstore/modules/email-with-templates) module from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending e-mail using an external service, such as REST APIs or creating your own Java actions to send e-mail.
 
 To use an external provider, you will need to sign up for an account with them and use their SMTP settings which include:
 
@@ -44,9 +51,9 @@ Frequently used providers (A-Z) are:
 
 *   [Amazon Simple Email Service](https://aws.amazon.com/ses/) [[settings](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)]
 *   [Gmail](https://mail.google.com/) [[settings](https://support.google.com/a/answer/176600?hl=en) - [common configuration problem](http://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)]
-*   [MailGun](https://mailgun.com/) [[settings](https://documentation.mailgun.com/quickstart-sending.html#send-via-smtp)]
+*   [MailGun](https://mailgun.com/) [[settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)]
 *   [Mandrill](https://www.mandrill.com/) [[settings](http://help.mandrill.com/categories/20090941-SMTP-Integration)]
-*   [SendGrid](https://sendgrid.com/) [[settings](https://support.sendgrid.com/hc/en-us/articles/200328026-Recommended-SMTP-settings)]
+*   [SendGrid](https://sendgrid.com/) [[settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)]
 
 
 Many users of *Free Apps* use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
@@ -77,7 +84,7 @@ The settings for the Mendix mail servers are as follows:
 * Servername: localhost
 * Port: 25
 
-No authentication information is needed. You can use this same SMTP server from the [Email with Templates](/appstore/modules/email-with-templates) module from the App Store or custom Java actions.
+No authentication information is needed. You can use this same SMTP server from the [Email with Templates](/appstore/modules/email-with-templates) module from the Marketplace or custom Java actions.
 
 ### 3.2 Using Sender Policy Framework (SPF) While Sending Outgoing Mail from Mendix
 
@@ -105,4 +112,3 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
-*   [Azure: Deploy](azure-deploy)

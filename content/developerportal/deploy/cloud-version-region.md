@@ -4,11 +4,12 @@ parent: "mendix-cloud-deploy"
 menu_order: 24
 description: "How to view the Mendix Cloud Version and Region for your app."
 tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Sometimes you need to know which Mendix Cloud version your environment is running in, as there are differences in the feature sets of Mendix Cloud v3 and v4. This document shows you how to find the Mendix Cloud version and region of your app.
+Sometimes you need to know which Mendix Cloud version your environment is running in, as there are differences in the feature sets of the deprecated Mendix Cloud v3 and v4. This document shows you how to find the Mendix Cloud version and region of your app.
 
 {{% alert type="info" %}}
 This information is only available if you have a licensed app running in the Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](licensing-apps).
@@ -18,7 +19,7 @@ This information is only available if you have a licensed app running in the Men
 
 To view the Mendix Cloud region and version in which your app is hosted, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
+1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
 
 2. Open the **Environments** page for your app.
 

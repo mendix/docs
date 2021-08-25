@@ -56,8 +56,8 @@ Note that the fourth row in a grid has an index of `3`.
 
 ## 5 Read More
 
-* [How to Create Automated Tests with TestNG](../testing/create-automated-tests-with-testng)
-* [How to Test Mendix Applications Using Selenium IDE](../testing/testing-mendix-applications-using-selenium-ide)
+* [How to Create Automated Tests with TestNG](/howto7/testing/create-automated-tests-with-testng)
+* [How to Test Mendix Applications Using Selenium IDE](/howto7/testing/testing-mendix-applications-using-selenium-ide)
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)
 * [How to Import Excel Documents](importing-excel-documents)

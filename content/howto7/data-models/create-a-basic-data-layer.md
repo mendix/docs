@@ -22,8 +22,8 @@ The domain model consists of entities and associations. An entity is the bluepri
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Create a new app or have an existing app project available
+* Download and install the [Mendix Desktop Modeler](https://marketplace.mendix.com/link/studiopro/)
+* Create a new app or have an existing app available
 
 ## 3 Creating Entities and Attributes
 
@@ -41,7 +41,7 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582190.png) 
 
-    By default, the Modeler creates a persistent entity, which means that the app's database will be able to store objects of this type of entity.
+    By default, the Modeler creates a persistable entity, which means that the app's database will be able to store objects of this type of entity.
 4. Start typing directly to change the name of the entity into **Customer**:
 
     ![](attachments/18448745/18582189.png)
@@ -141,8 +141,8 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [Set Up Data Validation](setting-up-data-validation)
 * [Work with Object Events](working-with-object-events)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* [Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath)
+* [Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
 

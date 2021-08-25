@@ -24,6 +24,6 @@ The following operators can be used in OQL expressions:
 | `IN` | Matches any value in a subquery or a list of expression values. | `City IN (SELECT Name FROM City WHERE Country = 'Gelre')` `City IN ('Losdun', 'Die Haghe', 'Haagambacht')` |
 | `EXISTS` | Test for the existance of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists |
 | `NOT` | Reverses the value of the expression following this keyword. | `NOT City = 'Rotterdam'` returns all objects not in Rotterdam. |
-| `CASE` | Evaluates one or more conditions and returns a possible expression. | See [this page](oql-case-expression). |
+| `CASE` | Evaluates one or more conditions and returns a possible expression. | See [OQL Case Expressions](oql-case-expression). |
 | `OR` | Returns true if one or both expressions around this operator return true.  | `price = 9.80 OR price = 9.70` returns true if price is 9.80, false if price is 9.60. |
 | `AND` | Returns true if expressions on both sides return true.  | `price = 9.80 AND amount = 1` returns true if price is 9.80 and amount is 1, false if price is 9.70 and amount is 1, false if price is 9.80 and amount is 2. |

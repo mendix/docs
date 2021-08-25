@@ -14,7 +14,7 @@ The activities described in this document are in the **Variable Activities** sec
 
 ![Variable Activities](attachments/variable-activities/variable-activities.png)
 
-The following are the client activities you can use in your microflow or nanoflow:
+The following are the variable activities you can use in your microflow or nanoflow:
 
 * [Create Variable](create-variable) – allows you to create a new variable and assign a value to it
 * [Change Variable](change-variable) – allows you to change the value of an existing variable 

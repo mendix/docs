@@ -1,20 +1,20 @@
 ---
 title: "Object Handling"
 category: "Modules"
-description: "Describes the configuration and usage of the Object Handling module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "object handling", "community commons", "platform support"]
+description: "Describes the configuration and usage of the Object Handling module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "object handling", "community commons", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Object Handling](https://appstore.home.mendix.com/link/app/37114/) module is a collection of reusable actions concerning object handling.
+The [Object Handling](https://marketplace.mendix.com/link/component/37114/) module is a collection of reusable actions concerning object handling.
 
 This is a module from the Mendix Community Commons, which is a series of modules for and by the Mendix community that extend the low-code capabilities of the Mendix Platform.
 
 ### 1.1 Dependencies
 
-* *org.apache.commons.lang3.jar*
+* *commons-lang3-3.7.jar*
 
 ## 2 Configuration
 
@@ -46,8 +46,4 @@ These are Java actions exposed as object activities available to use in your mic
 
 This helper Java class can be used in Java actions:
 
-* `Xpath.jar`
-
-## 3 Read More
-
-* [How to Test Microflows Using the Unit Testing Module](https://docs.mendix.com/howto/testing/testing-microflows-using-the-unittesting-module)
+* `Xpath.java`

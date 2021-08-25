@@ -5,7 +5,7 @@ parent: "integration"
 ---
 
 {{% alert type="info" %}} 
-App services have been deprecated in version 7.23.4 and are marked for removal in version 8.0.0. Use a [consumed web service](consumed-web-services) to consume existing app services.
+App services have been deprecated in version 7.23.4 and are marked for removal. Use a [consumed web service](consumed-web-services) to consume existing app services.
 {{% /alert %}} 
 
 App services are a way of connecting Mendix applications to each other. An app service can be imported and its content can be used. As for now, app services provide the following content: 

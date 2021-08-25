@@ -50,11 +50,11 @@ Default: *0*
 
 ### 3.3 Class{#class}
 
-The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
+The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the app. It overrules the default styling of the widget.
 
 Styling is applied in the following order:
 
-1. The default styling defined by the theme the project uses.
+1. The default styling defined by the theme the app uses.
 2. The `Class` combined with `Dynamic classes` properties of the widget.
 3. The `Style` property of the widget.
 
@@ -106,22 +106,12 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 The attribute can be one of the following:
 
 1. An attribute of the entity of the data container that contains the widget.
-2. An attribute of the entity of any enclosing data container that contains the widget. Available since Mendix 8.8.
+2. An attribute of the entity of any enclosing data container that contains the widget. 
 3. An attribute of an entity associated with the data container entity by following one or more associations of type reference through the domain model.
 
 In the first two cases we say the widget is connected to an **attribute** and in the third case to an **attribute path**.
 
-{{% alert type="info" %}}
-In Mendix 8.0, an input widget connected to an **attribute path** must be read-only. Studio Pro will check this for you.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-In Mendix 8.1 and above, you can edit attributes presented in input widgets over a path.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-In Mendix 8.8 and above, you can edit attributes of any enclosing data container including grandparent data containers.
-{{% /alert %}}
+You can edit attributes of any enclosing data container including grandparent data containers.
 
 #### 4.1.2 Association Input Widgets
 
@@ -246,7 +236,7 @@ There are three options, described below:
 This mode only applies to attributes of type Decimal.
 {{% /alert %}}
 
-If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+If set to _Fixed_, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](project-settings#rounding) section of **App Settings**.
 
 If set to _Auto_, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
 
@@ -272,7 +262,7 @@ This only applies to attributes of type Decimal and is available only when the [
 
 The precision of a value describes the number of decimal places that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-The way that the number is rounded when displayed is defined in the [rounding](project-settings#rounding) section of *Project Settings*.
+The way that the number is rounded when displayed is defined in the [Rounding](project-settings#rounding) section of **App Settings**.
 
 Default: *2*
 
@@ -328,7 +318,7 @@ There are a number of variables you can use in your expression:
 * `$value` – the current member (attribute or association) value
 
 {{% alert type="info" %}}
-In **Mendix 8.1 and above**, the expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
+The expression can access objects of **all** the data containers enclosing the input widget. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
 When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
@@ -367,7 +357,7 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
-When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. In Mendix 8.1 and above, the expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
+When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

@@ -5,7 +5,7 @@ parent: "rg-one-get"
 
 ## 1 Description
 
-Returns the value of the currently selected item of a WebElement, e.g. select
+Returns the value of the currently selected item of a WebElement, for example, select
 
 ## 2 Usage
 
@@ -15,7 +15,7 @@ Pass the parent WebElement of which you want to get the currently selected optio
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
-Select Element | WebElement | yes | The parent WebElement, e.g. select
+Select Element | WebElement | yes | The parent WebElement, for example, select
 
 ## 4 Return Value
 

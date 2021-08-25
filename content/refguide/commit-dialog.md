@@ -44,4 +44,4 @@ If there are changes in the model this tab shows a summary of those changes. See
 
 If there are changes on disk this page shows a summary of those changes. Click **Open containing folder** to open the folder containing the selected file in Windows Explorer.
 
-The tab page will be hidden if there are no disk changes. Often, there are model changes but the only change on disk is the project file (.mpr) reflecting these model changes. In this case, it will also be hidden, because it does not add useful information.
+The tab page will be hidden if there are no disk changes. Often, there are model changes but the only change on disk is the app file (*.mpr*) reflecting these model changes. In this case, it will also be hidden, because it does not add useful information.

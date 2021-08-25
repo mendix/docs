@@ -3,11 +3,16 @@ title: "Run Mendix on Kubernetes"
 parent: "docker-deploy"
 menu_order: 20
 tags: ["Kubernetes", "cloud", "deployment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes is the standard Docker orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements). 
+This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/). Kubernetes is the standard Docker orchestration platform supported by Mendix. If possible, we suggest you use [Mendix for Private Cloud](private-cloud) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements).
+
+{{% alert type="warning" %}}
+Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](private-cloud) documentation.
+{{% /alert %}}
 
 A Mendix application needs, as a minimum, a database to run. In this example you provision a PostgreSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements). 
 
@@ -37,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Minikube
     * With Minikube, a local cluster can be created that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
     * Install Minikube based on the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-    
+
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
 
 ## 3 Architecture Overview{#architecture}
@@ -72,7 +77,7 @@ Once Minikube is running you'll need to configure your local environment to use 
 minikube docker-env
 ```
 
-You'll need to build your image in Minikube if you haven't done so yet. See [Docker](https://docs.mendix.com/developerportal/deploy/docker-deploy) for the steps to do this.
+You'll need to build your image in Minikube if you haven't done so yet. See [Docker](docker-deploy) for the steps to do this.
 
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
@@ -207,7 +212,7 @@ YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255
 kubectl get ep postgres-service
 ```
 
-See [Run a Mendix Docker Image](https://docs.mendix.com/developerportal/deploy/run-mendix-docker-image) for expected value formats.
+See [Run a Mendix Docker Image](run-mendix-docker-image) for expected value formats.
 
 To create the secrets in Kubernetes we execute the following command:
 
@@ -273,7 +278,7 @@ spec:
           name: mendix-data
 ```
 
-Replace `<hub-user>/<repo-name>:<tag>` with the Docker image of your app, for example, `mendix/sample-app-kubernetes:v2`.
+Replace `<hub-user>/<repo-name>:<tag>` with the Docker image of your app, for example, `mendix/sample-app-kubernetes:v3`.
 
 Create a Docker image of your Mendix app using the instructions in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) on GitHub.
 
@@ -283,7 +288,7 @@ Once you have created the Docker image, push it to the Docker hub using the foll
 docker push <hub-user>/<repo-name>:<tag>
 ```
 
-Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v2`.
+Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
 
 {{% alert type="info" %}}
 In this example, we use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.

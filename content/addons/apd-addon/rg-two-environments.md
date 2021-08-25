@@ -25,7 +25,7 @@ In order to add a new environment, click **New environment** in the **Environmen
 
 All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APM.
 
-For project administrators (with SCRUM Master role), an extra **Modeler environment** switch (for Mendix Studio Pro) is available to alter the type. After setting the switch to **No**, it is possible to change it to production, acceptance, or test.
+For project administrators (with Scrum Master role), an extra **Modeler environment** switch (for Mendix Studio Pro) is available to alter the type. After setting the switch to **No**, it is possible to change it to production, acceptance, or test.
 
 Each environment must have a name. The name of an environment is only for display purposes in APM, and it does not have to match your hostname/servername.
 For a description of the other settings, see the [APM settings](rg-two-settings).

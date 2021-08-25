@@ -1,12 +1,16 @@
 ---
 title: "Projects API"
 category: "API Documentation"
-menu_order: 9
+menu_order: 50
 ---
 
 ## 1 Introduction
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
+
+{{% alert type="warning" %}}
+As of June 20th, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+{{% /alert %}}
 
 ## 2 Error Handling
 
@@ -36,7 +40,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](authentication) associated to the user account of _User_. |
-| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview#additional-info) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
+| TemplateUUID (can be `empty`) | String | The [UUID](/appstore/general/app-store-overview#usage) that identifies the template with which the project will be created. If left empty, a default blank template will be used. |
 
 #### 3.1.2 Output
 
@@ -44,7 +48,7 @@ The CreateNewApp action returns a String which is the ID of the background job t
 
 #### 3.1.3 Usage from Studio Pro
 
-After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. For more information, see [Consumed App Services](/refguide/consumed-app-services). 
+After you have imported the Projects API app service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog.
 
 Reference the microflow below:
 
@@ -86,7 +90,7 @@ The DeleteApp operation will remove an application, including all resources that
 
 | Name | Type |	Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
+| ProjectID |	String | ID of the project/app, as can be found under the app settings. |
 | User | String | The email address you use to log into your Mendix account.|
 | ApiKey | String | An API Key associated to the user account of the User.|
 
@@ -144,8 +148,8 @@ Reference this microflow:
 
 ## 4 Download
 
-Download the Projects API App Service below, so you can import it in your model:
+Download the Projects API app service below, so you can import it in your model:
 
 [ProjectsAPI_11.msd](attachments/14778446/ProjectsAPI_11.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.
+In the consumed Projects API app service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.

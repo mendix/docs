@@ -8,7 +8,7 @@ tags: ["SAP", "integration", "OData", "Troubleshoot", "destination", "401", "404
 
 ## 1 Introduction
 
-There are some common issues which occur when using the OData Connector for SAP Solutions module from the App Store. This document lists some of these issues and the possible causes.
+There are some common issues which occur when using the OData Connector for SAP Solutions module from the Marketplace. This document lists some of these issues and the possible causes.
 
 ## 2 Getting Destination Failed
 
@@ -20,7 +20,7 @@ The JWT token for the currently signed-in user is not valid. You can resolve thi
 
 Firstly, refresh the token to fetch a valid token for the user.
 
-If refreshing the token does not work, check that the user is a valid SAP Cloud Platform user.
+If refreshing the token does not work, check that the user is a valid SAP Business Technology Platform (SAP BTP) user.
 
 ### 2.2 Destination name not found
 
@@ -40,7 +40,7 @@ Check that the correct username and password are set on the ‘Add basic authent
 
 ### 3.2 Destination service is not setup correctly
 
-Destination services are defined in SAP Cloud Platform. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
+Destination services are defined in SAP BTP. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
 
 ### 3.3 Invalid bearer token sent
 
@@ -48,7 +48,7 @@ In case of OAuth authentication, the bearer token received with the destination 
 
 ### 3.4 User permissions not provided
 
-The role given to the user on SAP Cloud Platform might not allow them to access the destination service or the database.
+The role given to the user on SAP BTP might not allow them to access the destination service or the database.
 
 ## 4 HTTP 500 Error While Running OData Function 
 
@@ -84,9 +84,9 @@ The following techniques can help in identifying issues which are causing your O
 
 ### 7.1 Setting Application Log level
 
-You can get more information from your app by setting the log level. For this you will need to have the App Store module [SAP Logging Connector](https://appstore.home.mendix.com/link/app/110219/) set up in your app. For more information see the [SAP Logging Connector](sap-logger) documentation.
+You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](sap-logger) documentation.
 
-To set log level for an application deployed to SAP Cloud Platform, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
+To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
 
 ### 7.2 Remote Debugging
 
@@ -98,9 +98,9 @@ To perform Java debugging, you must do the following:
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
     ```
 
-    This can be done through directly in SAP Cloud Platform or manifest.yml.
+    This can be done through directly in SAP BTP or manifest.yml.
 
-    1. In SAP Cloud Platform, the options can be set as shown below:
+    1. In SAP BTP, the options can be set as shown below:
 
         ![](attachments/sap-troubleshoot-odata-connector/image1.png)
 

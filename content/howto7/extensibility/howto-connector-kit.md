@@ -7,12 +7,12 @@ tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "am
 output:
   word_document: default
   html_document: default
-#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
+#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
 ## 1 Introduction
 
-In version 6.6, Mendix introduced the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
+The [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) enables Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
@@ -77,7 +77,7 @@ As you can see, type parameters enable creating typesafe generic actions.
 
 ## 3 Executing Microflows
 
-The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
+The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every app object to initialize it:
 
 ![Init loop](attachments/how-to-connector-kit/init-loop.png)
 
@@ -119,7 +119,7 @@ The `executeAction` method is where all the magic happens:
 
 ![Initialize list java implementation 2](attachments/how-to-connector-kit/initilialize_list_java_2.png)
 
-Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
+Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
 ## 4 Using Import & Export Mappings
 
@@ -154,27 +154,27 @@ Implement the action in Java as follows:
 
 When developing connector modules, you can use the unit test module to test the actions you are implementing.
 
-If you want to publish your module with custom microflow actions to the Mendix App Store for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your project with all the test microflows and anything else you need
+If you want to publish your module with custom microflow actions to the Mendix Marketplace for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your app with all the test microflows and anything else you need
 while developing your application.
 
-In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the App Store. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
+In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
 ![Mendix Connector kit module project with tests](attachments/how-to-connector-kit/project_test.png)
 
 ### 5.2 Managing Libraries
 
-When you export the module package for publishing in the App Store, you only want to include the relevant Java libraries. The easiest way to manage this is to use a build tool to specify and download the relevant dependencies.
+When you export the module package for publishing in the Marketplace, you only want to include the relevant Java libraries. The easiest way to manage this is to use a build tool to specify and download the relevant dependencies.
 
 The [ConnectorKitDemo](https://github.com/ako/ConnectorKitDemo) project on GitHub contains two examples of how to do this, which are described below.
 
-The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix project. You can create two configurations in an *ivy.xml* configuration file: one
-to specify all the jars needed to run the project and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the App Store. The demo project contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
+The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix app. You can create two configurations in an *ivy.xml* configuration file: one
+to specify all the jars needed to run the app and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the Marketplace. The demo app contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
 
-The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your project. The example in the demo project uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).
+The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your app. The example in the demo app uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).
 
 Before developing custom Java actions, follow these steps:
 
 1. Run the build tool to download all the dependencies.
 2. Run the build tool to delete all the libraries in your *userlibs* folder.
 3. Download only the jars to be included in the published module.
-4. Export the module and upload it to the Mendix App Store.
+4. Export the module and upload it to the Mendix Marketplace.

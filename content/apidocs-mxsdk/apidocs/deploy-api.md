@@ -1,11 +1,15 @@
 ---
 title: "Deploy API"
 category: "API Documentation"
-menu_order: 4
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
+menu_order: 25
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+The Deploy API only works for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -19,7 +23,7 @@ This image provides a domain model representation of the concepts discussed belo
 
 The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication)).
 
-As APIs are designed for automated systems, the Deploy API does not require the two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
+As APIs are designed for automated systems, the Deploy API does not require the two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **App Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 ## 3 API Calls
 
@@ -34,13 +38,13 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
 
 {{% alert type="info" %}}
-The [Nodes](/developerportal/apps-list/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/#my-apps) screen shows both licensed apps and Free Apps.
+The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/) screen shows both licensed apps and Free Apps.
 {{% /alert %}}
 
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/
+URL: https://deploy.mendix.com/api/1/apps
 ```
 
 #### 3.1.2 Request
@@ -48,7 +52,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 **Example Request**
 
 ```bash
-GET /api/1/apps/ 
+GET /api/1/apps
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -88,7 +92,7 @@ Creates a Free App for a requested project id.
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/
+URL: https://deploy.mendix.com/api/1/apps
 ```
 
 #### 3.2.2 Request
@@ -102,7 +106,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/ 
+POST /api/1/apps
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -160,7 +164,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/ 
+GET /api/1/apps/calc
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -202,7 +206,7 @@ Retrieves all environments that are connected to a specific app to which the aut
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments
 ```
 
 #### 3.4.2 Request
@@ -214,7 +218,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/ 
+GET /api/1/apps/calc/environments
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -245,7 +249,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc-accp.mendixcloud.com",
         "ModelVersion" :  "1.1.0.253",
         "MendixVersion" :  "6.10.10",
-        "Production" :  "false"
+        "Production" :  false
 
     },
     {
@@ -255,7 +259,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc.mendixcloud.com",
         "ModelVersion" :  "175.0.0.3702",
         "MendixVersion" :  "6.10.12",
-        "Production" :  "false"
+        "Production" :  false
     }
 ]
 ```
@@ -281,7 +285,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance 
+GET /api/1/apps/calc/environments/Acceptance
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -319,14 +323,9 @@ An object with the following key-value pairs:
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",
      "MendixVersion" :  "6.10.10",
-     "Production" :  "false",
-     "RuntimeLayer": "v4.13.2"
+     "Production" :  false
 }
 ```
-
-{{% alert type="info" %}}
-`RunTimeLayer` is available when the app is deployed using buildpack v4.13 and above.
-{{% /alert %}}
 
 ### 3.6 Start Environment {#start-environment}
 
@@ -350,7 +349,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/Acceptance/start 
+POST /api/1/apps/calc/environments/Acceptance/start
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -402,7 +401,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66 
+GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -458,7 +457,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/Acceptance/stop 
+POST /api/1/apps/calc/environments/Acceptance/stop
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -498,7 +497,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance/package 
+GET /api/1/apps/calc/environments/Acceptance/package
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -545,7 +544,11 @@ An object with the following key-value pairs:
 }
 ```
 
-### 3.10 Upload Package
+### 3.10 Upload Package{#upload-package}
+
+{{% alert type="info" %}}
+When uploading large (>300MB) packages, this API can time out. In this case, you should switch to the [V2 version of this API](deploy-api-2#upload-package).
+{{% /alert %}}
 
 #### 3.10.1 Description
 
@@ -553,15 +556,15 @@ Uploads a deployment package from the local system to a specific app. This packa
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload?name=<PackageName>
 ```
 
 #### 3.10.2 Request
 
 **Request Parameters**
 
-*   _AppId_ (String): Subdomain name of an app.
-*   _Name_ (String): Name of the deployment package as query parameter
+*   _AppId_ (String): Subdomain name of an app
+*   _PackageName_ (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
 *   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**
@@ -569,7 +572,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 <!--Check this is correct -->
 
 ```bash
-POST /api/1/apps/calc/packages/upload 
+POST /api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
@@ -577,7 +580,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 Content-Type: multipart/form-data; boundary=MultipartBoundary
 
 --MultipartBoundary
-Content-Disposition: form-data; name="calc_1.0.0.45.mda"
+Content-Disposition: form-data;
 
 @%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda
 --MultipartBoundary--
@@ -585,7 +588,7 @@ Content-Disposition: form-data; name="calc_1.0.0.45.mda"
 
 Curl example:
 ```bash
-curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload"
+curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
 
 #### 3.10.3 Output
@@ -623,7 +626,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/transport 
+POST /api/1/apps/calc/environments/acceptance/transport
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -631,7 +634,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
-     'PackageId' :  'b3d14e53-2654-4534-b374-9179a69ef3cf'
+     "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }
 ```
 
@@ -672,7 +675,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/clean 
+POST /api/1/apps/calc/environments/acceptance/clean
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -725,7 +728,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/settings/ 
+GET /api/1/apps/calc/environments/acceptance/settings
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -775,7 +778,7 @@ Changes the values of existing environment settings like custom settings, consta
 
 ```bash
 HTTP Method: POST
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 ```
 
 #### 3.14.2 Request
@@ -789,7 +792,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 **Example Request**
 
 ```json
-POST /api/1/apps/calc/environments/acceptance/settings/ 
+POST /api/1/apps/calc/environments/acceptance/settings
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -861,8 +864,6 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or above will make it possible to spread the total memory over multiple instances.
 
-Environments with a deployed runtime package below version 7 can only be scaled horizontally: that is, with one fixed instance but an adjustable amount of memory.
-
 ```bash
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
@@ -878,7 +879,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a 
+POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1077,7 +1078,7 @@ Downloads archived logs for a specific date.
 
 ```bash
 HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>(YYYY-MM-DD)
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>
 ```
 
 #### 3.19.2 Request
@@ -1086,19 +1087,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
-- _Date_ (String): Date of the desired log (YYYY-MM-DD).
-
-* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
-
-{{% alert type="info" %}}
-* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
-{{% /alert %}}
+- _Date_ (String): Date of the desired log in the format `YYYY-MM-DD`.
 
 **Example Request**
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/logs/2018-08-10
-Host: deploy.mendix.com 
+Host: deploy.mendix.com
 
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -1120,6 +1115,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 {
     "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
     "Date": 1536451200000,
-    "DownloadUrl": "https://boobafina.test.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2018-09-09&expire=20180810153345&startDate=2018-08-10&signature=893DC8D3EAB0372FF49DB0E2D6973C701D32B567B67E97A41FD9E53E4D957991F80E3AC83B29452AF205FC306C51EAE8D81BA19F82147E5147B72EE15A8AC11FD3BE0306C3SDADAF478CCC9B98B9CBE70F99C99EDFB4DC77020F44FE540847FBABED34ACE856878F908EB38AC35D03125E7EFC9AE5CC2A67B871FA36C9F48A022BC7905838DE67046B5E57E82C0FBDCDFF67456DD66A2C2B4642B7B34C2829730257818B53113B620057777496EBA6D823EAA58378357A7F6ADA4956B6D86C100D61C8AD3483961A2C5EBEFF35A27BDE230478186F9F4ABC6207684781F"
+    "DownloadUrl": "https://logsapi-prod-2-eu-central-1.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2021-06-12&expire=20210616105139&startDate=2021-06-12&signature=0D5D1D81153BD12634AB03DD388259A416AE55479E8A8983CB9E3BD524183A041767262B9A9355BB48407ABFC98FD42094DDAB61005E558F0DA0441F4C0DFA3DAB38D03A9CF8F713C2187040669709848795BD5B32715F6917523BF08CA1DFD79479D5B2ADD8EDC116BAFB7AE952BB6FF0F68276AF349B9FA9B7D2CE9AE7BB6BA220BF50FD6ED93BFC1073BCF641FF0FCE48B75DFD74E2FC6C856495B1285348C1EA38EF9BB04E0BFEF60DFA32C1C856446B8ED2E9BF87C4EC1C7950CC97FDB38659603431E90FCCF6F1F977C3E668784AC03395E02088FFF15ABA056C03F0262D84D1ECC9D287B3B7020F7DA68AEC74D1360BF906101F2D727C19AD0D9C77EC"
 }
 ```
+
+## 4 Read More
+
+* [How To Implement a Simple CICD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline)

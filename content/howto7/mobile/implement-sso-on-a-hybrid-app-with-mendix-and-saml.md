@@ -8,10 +8,10 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 
 ## 1 Introduction
 
-This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app projects.
+This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app.
 
 {{% alert type="warning" %}}
-The implementation described in this how-to will not work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
+The implementation described in this how-to will not work when you have enabled anonymous users in your app. Disable anonymous users in your app to use this implementation.
 {{% /alert %}}
 
 
@@ -20,13 +20,11 @@ The implementation described in this how-to will not work when you have enabled 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible. 
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-To build a hybrid app and publish it, see the [Doing It Yourself](/developerportal/deploy/mobileapp#doing-it-yourself) section of the *Mobile App Developer Portal Guide*. Under that section are instructions for building [iOS](/developerportal/deploy/mobileapp#building-ios-locally) and [Android](/developerportal/deploy/mobileapp#building-ios-locally) apps locally.
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
-
-The PhoneGap build portions of this document will be updated with new instructions soon.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -79,7 +77,7 @@ The second problem is that Cordova does not store cookies permanently. And since
 
 ## 5 The Solution
 
-Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific projects.
+Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific apps.
 
 ### 5.1 The JavaScript<a name="javascript"></a>
 

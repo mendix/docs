@@ -17,7 +17,7 @@ The charts widget provides a basic implementation of dynamic series. This allows
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix App Store
+* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix Marketplace
 
 ## 3 Setting up Chart Data
 
@@ -44,7 +44,7 @@ Now you need to enter data for the chart.
 
 4. Connect the **Series_Overview** page to the navigation.
 
-5. **Run** the app (locally).
+5. Click the play button (**Run Locally**) to run the app locally.
 
 6. Enter some sample data.
 
@@ -107,7 +107,7 @@ To configure a Charts widget with a dynamic series, follow these steps:
 
 To view the chart, follow these steps:
 
-1. Run the project (locally).
+1. Run the app (locally).
 
 1. Open the page containing the dynamic series chart.
 

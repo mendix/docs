@@ -1,14 +1,14 @@
 ---
 title: "Carousel"
 category: "Widgets"
-description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "carousel", "image", "platform support"]
+description: "Describes the configuration and usage of the Carousel widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "carousel", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays images in a carousel.
+The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
 ### 1.1 Features
 
@@ -21,9 +21,9 @@ The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays
 * Execute a microflow or nanoflow or open a page when an image is clicked
 * Swipe through images on mobile devices
 
-### 1.2 Demo App Project
+### 1.2 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
 
 ## 2 Usage
 
@@ -53,23 +53,3 @@ When this option is selected, do the following:
 * On the **Behavior** tab, configure the **On click** behavior
 	* For the **Call microflow**, **Call nanoflow**, and **Show page** options, specify the respective microflow, nanoflow, or page
 * Specifying a **URL attribute** will make the value of the URL attribute the priority
-
-## 3 Developing This App Store Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-	* [karma-cli](https://www.npmjs.com/package/karma-cli)
-2. Fork and clone the [mendixlabs/carousel](https://github.com/mendixlabs/carousel) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/carousel](https://github.com/MendixLabs/carousel/releases/latest). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-7. To run the project unit tests with code coverage (results can be found at `dist/testresults/coverage/index.html`), run: `npm test`.
-8. Run the unit test continuously during development via `karma start`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/carousel](https://github.com/mendixlabs/carousel/issues).

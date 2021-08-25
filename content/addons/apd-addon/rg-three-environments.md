@@ -25,7 +25,7 @@ In order to add a new environment, click **New environment** in the **Environmen
 
 All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APD.
 
-For app project administrators (with the [Scrum Master](/developerportal/company-app-roles/manage-roles) role), an extra **Modeler environment** switch (for Mendix Studio Pro) is available to alter the type. After setting the switch to **No**, it is possible to change it to production, acceptance, or test.
+For app administrators (with the [Scrum Master](/developerportal/collaborate/app-roles) role), an extra **Modeler environment** switch (for Mendix Studio Pro) is available to alter the type. After setting the switch to **No**, it is possible to change it to production, acceptance, or test.
 
 Each environment must have a name. The name of an environment is only for display purposes in APD, and it does not have to match your host name or server name.
 For descriptions of other settings, see [APD Settings](rg-three-settings).

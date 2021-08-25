@@ -10,7 +10,7 @@ Looking to create great user experiences and a user-friendly graphical user inte
 ## 2 Main Documents in This Category
 
 * [Atlas UI](atlas-ui) – introduces you to the Mendix Atlas UI design framework
-* [Customize Your Styling](customize-styling) – explains Calypso, a GUI styling tool which helps you customize your Mendix app's styling quickly and easily, as well as a Gulp styling approach for a subset of users
+* [Customize Your Styling](customize-styling-new) – explains how you can customize your styling quickly and easily
 * [Implement Best Practices for UX Design](ux-best-practices) – presents best practices written by a UX Designer for contributing to the app development process
 * [Use Navigation Layouts](use-navigation-layouts) – explains how to choose, design, and configure your navigation layouts.
 * [Configure Your Theme](configuring-your-theme) – explains how to configure the styling of your page in Studio Pro and Studio

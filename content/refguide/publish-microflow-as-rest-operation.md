@@ -1,5 +1,5 @@
 ---
-title: "Publish a Microflow as a REST Operation"
+title: "Publishing a Microflow as a REST Operation"
 parent: "published-rest-services"
 menu_order: 30
 description: "How to publish a Microflow as a REST Operation"

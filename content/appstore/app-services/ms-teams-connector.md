@@ -1,31 +1,33 @@
 ---
-title: "MS Teams Connector"
+title: "Microsoft Teams Connector"
 category: "App Services"
 description: " "
 tags: ["marketplace", "marketplace component", "app service", "microsoft", "microsoft teams", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-Microsoft Teams Connector is importable module, which will allow user to send messages to Microsoft Teams channel.
+## 1 Introduction
 
-The connector activity can be used in a microflow for Mendix versions 9.X.
+The Microsoft Teams Connector is an importable module that enables sending messages to a Microsoft Teams channel.
+
+## 2 Configuration
+
+The connector activity can be used in a microflow for Mendix versions [9.0](/releasenotes/studio-pro/9.0) and above.
 
 ![](attachments/ms-teams-connector/microflow.png)
 
-It can can used in a workflow from Mendix versions 9 and above.
+It can also be used in a [workflow](/refguide/workflows):
 
 ![](attachments/ms-teams-connector/workflow.png)
 
-Just provide the channel webhook and text message to post on Microsoft teams, are it is ready to 
+Just provide the Teams channel webhook (`channelEndpoint` is the webhook URL) and the text message (only text messages are currently supported) to post on the channel: 
 
 ![](attachments/ms-teams-connector/action.png)
 
-Only text messages are supported as of now.
+{{% alert type="info" %}}
+For more information on Teams webhooks, see [Create a Webhook URL for a channel in Microsoft Teams](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html).
+{{% /alert %}}
 
-channelEndpoint is the webhookUrl that user can get from the Microsoft Teams channel.
-
-[cross-reference?: https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html]
-
-Message can be posted using microflow as well as workflow.
+You can post the message using a microflow or a workflow:
 
 ![](attachments/ms-teams-connector/message.png)

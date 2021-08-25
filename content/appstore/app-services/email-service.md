@@ -6,35 +6,40 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-**LOOK AT JIRA ISSUE FOR OTHER SCREENSHOTS, SEE IF COPIES AND BETTER RESOLUTION**
+## 1 Introduction
 
-The package (mpk) available in the marketplace can be imported into Studio/StudioPro and can be used into a microflow.
+This app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
 
-![](attachments/email-service/import.png)
+The app service works with [Mendix SSO](/appstore/modules/mendix-sso), so no additional authentication changes are required.
 
-![](attachments/email-service/import2.png)
+## 2 Installation
 
-Once the module is imported, it is visible in the app explorer and in the toolbox window of a microflow.
+The *.mpk* package available in the Marketplace can be imported into Mendix Studio Pro or Studio. Once imported, the app service is visible in **App Explorer** and in the **Toolbox** pane of a microflow.
 
-![](attachments/email-service/app-exp.png)
+## 3 Configuration
 
-A representative microflow below shows an Entity model with required attributes, send mail step which will internally call the Java action and a placeholder to capture the return code of the send mail action.
+The app service can be used into a microflow. This example microflow shows an entity model with the required attributes, a step for sending mail that will internally call the Java action, and a placeholder to capture the return code of the send mail action:
+
+{{% todo %}}[**NEED BETTER SCREENSHOT**]{{% /todo %}}
 
 ![](attachments/email-service/microflow.png)
 
-Below snapshot indicates the Java action from Studio-pro. You can specify the required attributes (To and From Name) using the “Expression” syntax. Similarly, other attributes from model entity can be populated using Expression syntax.
+When configuring the Java action in the microflow, specify the **Required Fields** (**From name** and **To**) as well as desired **Optional Fields** using expression syntax.
 
-![](attachments/email-service/snapshot.png)
+{{% todo %}}[**IS THIS EMAIL API AVAILABLE AS PART OF THE APP SERVICE PACKAGE? NEED CROSS-REFERENCE?**]{{% /todo %}}
 
-The email API supports plain-text and HTML formats. Attachments are NOT supported as of now. The maker can choose to create a form where end-user can specify “To”, “CC”, “BCC” and the email body contents. Pressing the “Send Email” button will asynchronously send out the message to intended recipients.
+The email API supports plain text and HTML formats. Attachments are not supported as of now. 
 
-Maker can also choose to populate the “To”, “CC”, “BCC”, “subject” and email body contents non-interactively as part of some upstream action before this microflow is invoked.
+## 4 Usage
 
-“To” and “From Name” are required attributes.
+You can choose to create a form where the end-user specifies **To**, **CC**, **BCC**, and the email body content. Clicking **Send Email** will asynchronously send out the message to intended recipients.
+
+{{% todo %}}[**WHAT DOES THIS MEAN: "upstream action"? WHERE DOES THE USER DO THIS? IS THIS A KIND OF EMAIL TEMPLATE? NEEDS CLARIFICATION.**]{{% /todo %}}
+
+You can also populate the  **To**, **CC**, **BCC**, **Subject**, and tHe email body content non-interactively as part of an upstream action before this microflow is invoked.
+
+When sending an email, **To** and **From Name** are required attributes:
 
 ![](attachments/email-service/attributes.png)
 
-The email will be sent out to intended participants. Each individual email ID to whom this message is sent is counted as utilization towards the allocated quota. Incorrect email address will result into email message bouncing. A snapshot below shows a test email in the recipient’s Inbox.
-
-![](attachments/email-service/email.png)
-
+The email is sent out to intended participants. Each individual email ID to whom this message is sent is counted as utilization towards the allocated app service quota. Incorrect email addresses will result in the email bouncing.

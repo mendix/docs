@@ -1,38 +1,25 @@
-# Metamodel Release Notes for version 9.5.0
+---
+title: "9.5"
+parent: "metamodel-9"
+---
 
-## Rest
+### Rest
 
-### ODataRemoteEntitySource (Element)
+#### ODataRemoteEntitySource (Element)
 
+* We introduced the `entityTypeName` property. This replaces the `remoteName` property, which has been removed.
+* We introduced the `entitySetName` property. This replaces the `entitySet` property, which has been removed.
 
-#### Property 'remoteName'
-* Deleted; "The remote name is replaced by entity type name"
+### Pages
 
-#### Property 'entityTypeName'
-* Introduced; "The entity type name"
+#### PageVariable (Element)
 
-#### Property 'entitySet'
-* Deleted; "The entity set is replaced by entity set name"
+* We introduced the `pageParameter` property.
 
-#### Property 'entitySetName'
-* Introduced; "The entity set name"
+#### DataViewSource (Element)
 
-## Pages
+* We introduced the `pageParameter` property.
 
-### PageVariable (Element)
+#### DynamicImageViewer (Element)
 
-
-#### Property 'pageParameter'
-* Introduced; 
-
-### DataViewSource (Element)
-
-
-#### Property 'pageParameter'
-* Introduced; 
-
-### DynamicImageViewer (Element)
-
-
-#### Property 'showAsThumbnail'
-* Default value changed
+* We changed the default value of the `showAsThumbnail` property.

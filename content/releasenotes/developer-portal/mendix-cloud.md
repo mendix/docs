@@ -12,6 +12,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### August 26th, 2021
+
+#### Improvements
+
+* We added the ability to restore only a database, without restoring the other files in a backup.
+    You can do this in one of two ways:
+    * Through the [Developer Portal](/developerportal/operate/restore-backup#restore-cloud-backup)
+    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api)
+
 ### August 6th, 2021
 
 #### Improvements

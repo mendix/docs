@@ -86,6 +86,11 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
+### 2.7 Error handling
+
+You can now define an error handler microflow for consumed OData service. When the service returns unsuccessful status code (not in [200, 300) range), or does not return a response at all, then this microflow can decide which message to show to the user. Error handling microflow can have either no arguments or exactly one argument of type `System.HttpResponse`. Return type of microflow must be `String`. If there is a response from underlying service then it will be provided to microflow as and argument. If response from service was never received then empty value will be provided. String (other than `empty`) returned from error handling microflow will be shown as error message to user.
+This feature was introduced in Studio Pro 9.6.0.
+
 ## 3 Metadata Tab {#metadata}
 
 In the **Metadata** tab, you can select a metadata file or use metadata obtained through a URL:

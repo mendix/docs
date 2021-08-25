@@ -3,6 +3,10 @@ title: "9.5"
 parent: "metamodel-9"
 ---
 
+## 9.5.0
+
+**Release date: August 23rd, 2021**
+
 ### Rest
 
 #### ODataRemoteEntitySource (Element)

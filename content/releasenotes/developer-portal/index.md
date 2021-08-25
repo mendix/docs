@@ -25,7 +25,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue with the project's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
 
 ### July 27th, 2021
 

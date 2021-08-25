@@ -19,7 +19,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Catalog integration with [Control Center](/developerportal/control-center/). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
  
 ### August 19th, 2021
 

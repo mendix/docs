@@ -11,7 +11,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### August 26th, 2021
 
-#### Fixes
+#### Improvements
 
 * The following API `GET` capabilities were added:
     * `GET` a specific consumed endpoint

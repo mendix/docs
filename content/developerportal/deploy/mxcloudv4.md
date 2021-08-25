@@ -35,7 +35,9 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](migrating-to-v4)
 The primary hosting locations are as follows:
 
 *   Mendix Cloud Asia Pacific: AWS Singapore
+*   Mendix Cloud Asia Pacific: AWS Sydney
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud Canada: AWS Canada
 *   Mendix Cloud EU: AWS Dublin
 *   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud UK: AWS London
@@ -85,6 +87,12 @@ There are certain limits and behaviors which apply to your app when running in M
     * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 7, upgrade to version 7.16 or above
     * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+* **Call REST** connections will be closed by the cloud infrastructure after a time if they are idle.
+    * Mendix Cloud uses AWS NAT gateways for outgoing traffic. These gateways will drop connections that are idle for more than 350 seconds. This can result in your outgoing REST or web service connection getting dropped if there is no traffic for 350 seconds.
+    
+        It is therefore recommend to [set the timeout for calls to consumed REST or web services](/refguide/call-rest-action#timeout) to less than 350. You should only set it to a higher value if you are sure that traffic will go back and forth at least every 350 seconds.
+        
+        If you have a REST or web service call that will be idle (waiting) for 350 seconds or more, you should try to minimize the wait time, for example by making multiple requests for smaller amounts of data instead of a single request for a large amount of data, or to make the call asynchronously.
 * The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!
 
     In the majority of cases, the platform will start a new instance of your application, before gracefully stopping the old one. This ensures that there is no downtime. You can verify this in the logs of your application.

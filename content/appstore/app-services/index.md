@@ -1,7 +1,6 @@
 ---
 title: "App Services"
 description: " "
-draft: true 
 tags: ["marketplace", "marketplace component", "app service"]
 ---
 
@@ -13,4 +12,5 @@ When you download an app service, it will go into the **App** > **Marketplace mo
 
 ## 2 Main Documents in This Category
 
-* 
+
+* [Microsoft Teams Connector](ms-teams-connector)

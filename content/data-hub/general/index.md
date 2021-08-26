@@ -10,5 +10,4 @@ Mendix Data Hub is comprised of many components that deal with different aspects
 
 ## 2 Documents in This Category
 
-* [Data Hub Administration](data-hub-admin-functions) – an organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. The Data Hub Admin can oversee these functions and also assign curators that can perform governance tasks for their apps, as described in this page. Further administration tasks are also described.
 * [Using the Data Hub API](data-hub-api-how-to) – guides you in how to use the [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) which can be used in conjunction with [Examples of the Data Hub API Calls](data-hub-api-how-to-examples) to try out the calls. 

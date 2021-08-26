@@ -1,6 +1,7 @@
 ---
 title: "Modules"
-description: " "
+menu_order: 4
+description: "Presents details on the modules available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "module"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "App Services"
-description: " "
+menu_order: 6
+description: "Presents details on the app services available in the Mendix Marketplace."
 draft: true 
 tags: ["marketplace", "marketplace component", "app service"]
 ---

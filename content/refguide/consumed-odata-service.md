@@ -86,10 +86,23 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
-### 2.7 Error handling
+### 2.7 Error handling microflow
 
-You can now define an error handler microflow for consumed OData service. When the service returns unsuccessful status code (not in [200, 300) range), or does not return a response at all, then this microflow can decide which message to show to the user. Error handling microflow can have either no arguments or exactly one argument of type `System.HttpResponse`. Return type of microflow must be `String`. If there is a response from underlying service then it will be provided to microflow as and argument. If response from service was never received then empty value will be provided. String (other than `empty`) returned from error handling microflow will be shown as error message to user.
-This feature was introduced in Studio Pro 9.6.0.
+When a call to the OData service fails, users will see a generic error message. Choose an error handling microflow to change this message.
+
+When the service response with an unsuccesful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
+
+The microflow may have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value, otherwise it is `empty`.
+
+The microflow must return a `String`: the error message. When it returns `empty`, the original generic message is used.
+
+Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
+
+{{% alert type="info" %}}
+
+The *error handling microflow* feature was introduced in Studio Pro 9.6.0.
+
+{{% /alert %}}
 
 ## 3 Metadata Tab {#metadata}
 

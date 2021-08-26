@@ -174,6 +174,8 @@ You can do this as follows:
 
 Once you are signed in to your cluster you can run the Configuration Tool.
 
+To install with non-interactive mode please see: [Install and Configure Mendix for Private Cloud Non-interactive Mode](private-cloud-cli-non-interactive)
+
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
     ![](attachments/private-cloud-cluster/installation-command.png)

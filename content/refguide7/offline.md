@@ -108,4 +108,4 @@ Please note that this does not apply to changing existing objects.
 
 ### 4.16 Hashed String Attributes {#hashed-strings}
 
-Attributes with hashed string [attribute type](attributes#type) will not be synchronized.
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

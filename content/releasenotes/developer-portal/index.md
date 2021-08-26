@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/index#data-hub) tasks in Control Center. For more details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/index#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### August 19th, 2021
 

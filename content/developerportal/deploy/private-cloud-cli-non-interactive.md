@@ -17,12 +17,23 @@ Please see [Download the Configuration Tool](private-cloud-cluster#download-conf
 
 {{% alert type="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
+The following parameters may be used in the commands:
+* `Namespace` - a cluster namespace.
+* `ClusterType`– a cluster type 'openshift' or 'generic'.
+* `ClusterMode` - a cluster mode 'standalone' or 'connected'.
+* `ClusterID` - a cluster id that you can find in the Installation tab of a namespace in the Private Cloud Portal.
+* `ClusterSecret` - a cluster secret that you can find in the Installation tab of a namespace in the Private Cloud Portal.
+
+In connected mode, you need to put cluster id and cluster secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Private Cloud Portal. You can get these values from installation command, the -i and -s parameters.
+
+![](attachments/private-cloud-cluster/installation-command.png)
+
 ## 2 Base Installation
 
 To run [base installation](private-cloud-cluster#base-installation) :
 
 ```shell
-./mxpc-cli base-install --namespace <namespace> --clusterID <cluster-id> --clusterSecret <cluster-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
+./mxpc-cli base-install --namespace <namespace> -i <cluster-id> -s <cluster-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
 The cluster-id and cluster-secret are only required in connected mode.
 
@@ -31,7 +42,7 @@ The cluster-id and cluster-secret are only required in connected mode.
 To [configure namespace](private-cloud-cluster#configure-namespace) with a configuration file:
 
 ```shell
-./mxpc-cli apply-config --namespace <namespace> --clusterID <cluster-id> --clusterSecret <cluster-secret> --file <config-file>
+./mxpc-cli apply-config --namespace <namespace> -i <cluster-id> -s <cluster-secret> --file <config-file>
 ```
 The cluster-id and cluster-secret are only required in connected mode.
 

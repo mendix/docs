@@ -748,6 +748,15 @@ For **Google Cloud Container Registry**, the supported authentication is [worklo
 * GCP Service Account: [google service account](https://cloud.google.com/iam/docs/service-accounts), e.g. `service-account-name@project-id.iam.gserviceaccount.com`.
 * Kubernetes Service Account: your kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
 
+Example how to bind a google cloud service account to a kubernetes service account:
+```shell
+gcloud iam service-accounts add-iam-policy-binding \
+    --role roles/iam.workloadIdentityUser \
+    --member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+    GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+```
+
+
 #### 4.3.3 Proxy{#proxy}
 
 Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.

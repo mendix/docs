@@ -1,6 +1,5 @@
 ---
 title: "Connectors"
-menu_order: 3
 description: "Presents details on the connectors available in the Mendix Marketplace."
 tags: ["marketplace",  "marketplace component", "connector"]
 ---

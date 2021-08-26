@@ -209,9 +209,9 @@ appstore:
   menu_categories:
     - "General Info"
     - "Widgets"
-    - "Themes"
     - "Connectors"
     - "Modules"
+    - "Themes"
 data-hub:
   space: "Data Hub Guide"
   priority: false

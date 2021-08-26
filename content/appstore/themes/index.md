@@ -1,6 +1,5 @@
 ---
 title: "Themes"
-menu_order: 5
 description: "Presents details on the themes available in the Mendix Marketplace."
 tags: [ "marketplace", "marketplace component", "theme"]
 ---

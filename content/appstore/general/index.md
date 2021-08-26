@@ -1,6 +1,5 @@
 ---
 title: "General Info"
-menu_order: 1
 description: "Presents details on using, sharing, and getting support on Mendix Marketplace content."
 aliases:
     - /community/app-store/index.html

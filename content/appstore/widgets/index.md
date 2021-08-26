@@ -1,6 +1,5 @@
 ---
 title: "Widgets"
-menu_order: 2
 description: "Presents details on the widgets available in the Mendix Marketplace."
 tags: ["platform support"]
 ---

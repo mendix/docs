@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### August 26th, 2021
+
+#### Improvements
+
+* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/index#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+
 ### August 19th, 2021
 
 #### Improvements
@@ -25,7 +31,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue with the project's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+* We fixed an issue with the app's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
 
 ### July 27th, 2021
 

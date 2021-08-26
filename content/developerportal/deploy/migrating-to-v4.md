@@ -45,6 +45,7 @@ There are a few other differences between the way you develop and deploy apps in
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
     * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
+* In Mendix Cloud v4, the disk space for runtime containers is limited. This has an impact on the possibilities for custom Java code, as that is run on the runtime containers. Especially with creating or editing large files with custom Java code you can run into this file size limitation. This means you might have to change your application logic to create multiple smaller files with Java code, instead of one large file.
 
 ## 3 Prerequisites
 
@@ -64,7 +65,8 @@ We strongly advise you to use this method to migrate your app to Mendix Cloud v4
 
 The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original, Mendix Cloud v3, environment and the new Mendix Cloud v4 environment at each stage.
 
-{{% image_container width="66%" %}}
+{{% image_
+width="66%" %}}
 ![Overview of Migration Process](attachments/migrating-to-v4/migration-process-overview.png)
 {{% /image_container %}}
 

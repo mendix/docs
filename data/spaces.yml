@@ -212,6 +212,7 @@ appstore:
     - "Connectors"
     - "Modules"
     - "Themes"
+    - "App Services"
 data-hub:
   space: "Data Hub Guide"
   priority: false

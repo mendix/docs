@@ -261,4 +261,4 @@ Excel and CSV export are not available in offline applications.
 
 ### 4.9 Hashed String Attributes {#hashed-strings}
 
-Attributes with hashed string [attribute type](attributes#type) will not be synchronized.
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

@@ -65,8 +65,7 @@ We strongly advise you to use this method to migrate your app to Mendix Cloud v4
 
 The flow below shows the stages of using the migration tool, and an indication of the status of the app in both the original, Mendix Cloud v3, environment and the new Mendix Cloud v4 environment at each stage.
 
-{{% image_
-width="66%" %}}
+{{% image_width="66%" %}}
 ![Overview of Migration Process](attachments/migrating-to-v4/migration-process-overview.png)
 {{% /image_container %}}
 

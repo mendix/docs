@@ -13,7 +13,7 @@ When you download an app service, it will go into the **App** > **Marketplace mo
 
 ## 2 Main Documents in This Category
 
-* [Intelligent Document](intelligent-document) - provides text, key value pairs from documents
-* [Receipt Processing](receipt-processing) - The app service has prebuilt ready-to-implement trained document model for receipt processing
-* [Invoice Processing](invoice-processing) - Automates invoice processing almost immediately without any document training
-* [General Purpose OCR](general-purpose-ocr) - The app service provides a capability to extract the entire text from the images or pdf documents
+* [Intelligent Document](intelligent-document) – extracts text and key value pairs from documents
+* [Receipt Processing](receipt-processing) – automates the processing of receipts in bulk, without additional document training
+* [Invoice Processing](invoice-processing) – automates the processing of invoices almost immediately in bulk, without any document training
+* [General Purpose OCR](general-purpose-ocr) – extracts text from images or PDF documents and get output in JSON and XML formats in bulk

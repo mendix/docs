@@ -6,84 +6,89 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The app service has prebuilt ready-to-implement trained document model for receipt processing. It extracts
-main/important fields, without need for any additional training.
-
-### 1.1 Typical Use Case
-
-You can simply use _Receipt Processing Activity_ to process Receipt in bulk.
+This app service has a pre-built ready-to-implement trained document model. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
 
 ### 1.2 Features
 
-* Extract data from bulk receipt images and map to entity
+* Extract data from images of receipts in bulk and map data to entities
 
 ### 1.3 Limitation
 
-* Supports only jpg / jpeg image formats.
+* Only supports images in JPG and JPEG formats
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _
-Receipt Processing_ module into your app.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Receipt Processing module into your app.
+
+2. In the **Toolbox**, drag the **Receipt Processing Service** activity from the **Document Data Capture Services** category into your microflow.
 
 ## 3 Configuration
 
-### 3.1 Receipt Processing Service Activity
+1. Double-click the **Receipt Processing Servic**e activity to open the **Invoice Processing** dialog window.
 
-Once the module is imported, _Receipt Processing Service Activity_ will appear in your toolbox.
+	![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
 
-Drag and drop _Receipt Processing Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
+2. Select the **Model Id** of your model. You can also click **Edit** it.
 
-![rp-activity](attachments/receipt-processing/rp-activity.png)
+   {{% alert type="info" %}}
+   After the training of a model is **COMPLETED **in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). 
+   {{% /alert %}}
 
-### 3.2 Model ID:
+3. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
 
-Model ID can be used fetched from _Document Model Training_, refer
-section [4 Document Model Training](#4-document-model-training).
+4. In the **Mapping** field, **Select** a **Mapping** file to define how extracted data is mapped.
 
-### 3.3 Image List:
+   {{% alert type="info" %}}
+   For details on how to get a JSON mapping file, see [Getting a JSON Mapping File](#mapping-file).
+   {{% /alert %}}
 
-List of Image objects (Inherited from System.Image)
+5. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
 
-### 3.4 Mapping:
+   {{% alert type="info" %}}
+   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
+   {{% /alert %}}
 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 4_ in
-section [4 Document Model Training](#4-document-model-training) to get JSON to create _Import Mapping_.
+6. Click **OK** to save the changes and close the dialog window.
 
-### 3.5 Task Queue:
+7. To configure credential for the **Receipt Processing Service** activity, add the following constants with values in your Mendix app:
+   * Access_Key
+   * Encryption_Key
+   * Secret_Key
 
-Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue)
-, [For Mendix v9.0.3-](../modules/process-queue)
+     ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
-### 3.6 Credential Configuration
+   {{% alert type="info" %}}
+   Credentials are generated when you create binding keys on Marketplace.
+   {{% /alert %}}
 
-Add below listed constants with values in your Mendix App to configure credential for activity. Credentials are
-generated at the time of Create Binding Keys on Marketplace.
+## 4 Training a Document Model {#document-model-training}
 
-* Access_Key
-* Secret_Key
-* Encryption_Key
+1. Open the **Document Model Training** app.
 
-![config-constants](attachments/general-purpose-ocr/config-constants.png)
+2. Login in to the app using your **Mendix Account**.
 
-## 4 Document Model Training
+3. Click **Environment**. The **Existing Models** list appears.
 
-1. Visit _Document Model Training_ App
+    ![Existing Models list](attachments/receipt-processing/existing-models-list.png)
 
-2. Login with _Mendix Account_.
+    If the **Status** of a model is **COMPLETED**, then you can use its **Model Id** in the **Intelligent Document Service** activity.
 
-![rp-login](attachments/receipt-processing/rp-login.png)
+## 5 Getting a JSON Mapping File {#mapping-file} 
 
-3. Select _Environment_. Existing Models list will show up.
+1. Open the **Document Model Training** app.
 
-![rp-list-models](attachments/receipt-processing/rp-list-models.png)
+2. Login in to the app using your **Mendix Account**.
 
-4. Get JSON Mapping file to use with [Receipt Processing Service Activity](#34-mapping),
+3. Click **Environment** to show the **Existing Models** list.
 
-    1. Select record in Existing Model list status _COMPLETED_
-    2. Select _JSON Mapping File_
-    3. Upload sample receipt
-    4. Select _Download_ to get JSON file
-    5. Copy Model ID of same to feed into Activity
+4. Select a model that has the status **COMPLETED**.
 
-![rp-json-mapping](attachments/receipt-processing/rp-json-mapping.png)
+5. Click **JSON Mapping File**. The **Sample Extraction** dialog window opens.
+
+    ![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
+
+6. Drag sample images into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.
+  
+7. Click **Download** to get the JSON file. 
+
+8. Copy the **Model Id** and use it in the **Receipt Processing Service** activity.

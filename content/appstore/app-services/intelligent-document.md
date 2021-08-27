@@ -6,126 +6,134 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-Intelligent Document Service provides text, key value pairs from documents. The app service utilizes many cutting-edge
-AI technologies along with OCR to extract the specific text from documents.
+Intelligent Document Service uses AI and OCR technologies to extract text and key value pairs from documents. 
 
-### 1.1 Typical Use Case
+To use it, you need to include the **Intelligent Document Service** activity in your microflow. This activity expects a trained model input, which you create using the Document Model Training app. For more information, see the section [Training a Model](#document-model-training). 
 
-Using _Intelligent Document Service_ in your app is very easy. Maker has to download and include the module in an app.
-The IDS activity appears in the microflow toolbox. Drag it in the microflow and configure couple of parameters and
-that’s it. An activity expects a trained model input, use _Document Model Training_ App to create one. Please refer
-section [4 Document Model Training](#4-document-model-training) for more information. For authentication, service uses
-Mendix SSO.
+### 1.1 Features
 
-### 1.2 Features
+* Use Mendix SSO for authentication
+* Extract data from images in bulk and map data to entities
+* Train a model using sample images by marking specific areas in images
 
-* Extract data from bulk images and map to entity
-* Train a model using sample images by marking and labeling specific are in the image
+### 1.2 Limitation
 
-### 1.3 Limitation
-
-Supports only jpg / jpeg image formats.
+* Only supports images in JPG and JPEG formats
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _
-Intelligent Document_ module into your app.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Intelligent Document module into your app.
+
+2.  In the **Toolbox**, drag the **Intelligent Document Service** activity from the **Document Data Capture Services** category into your microflow.
+
 
 ## 3 Configuration
 
-### 3.1 Intelligent Document Service Activity
+1. Double-click the **Intelligent Document Service** activity to open the **Intelligent Document Service** dialog window.
 
-Once the module is imported, _Intelligent Document Service Activity_ will appear in your toolbox.
+    ![Intelligent Document Service dialog window](attachments/intelligent-document/intelligent-document-service-dialog-window.png)
 
-![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity-in-toolbox.png)
+2. Select the **Model Id** of your model. You can also click **Edit** it.
 
-Drag and drop _Intelligent Document Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
+   {{% alert type="info" %}}
+   After the training of a model is **COMPLETED **in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). 
+   {{% /alert %}}
 
-![ids-activity-in-toolbox](attachments/intelligent-document/ids-activity.png)
+3. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
 
-### 3.2 Model ID:
+4. In the **Mapping** field, **Select** a **Mapping** file to define how extracted data is mapped.
 
-Model ID can be used after Model trained and published successfully, refer
-section [4 Document Model Training](#4-document-model-training).
+   {{% alert type="info" %}}
+   For details on how to get the JSON mapping file, see [Getting a JSON Mapping File](#mapping-file).
+   {{% /alert %}}
+   
+5. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
 
-### 3.3 Image List:
+   {{% alert type="info" %}}
+   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
+   {{% /alert %}}
+   
+6. Click **OK** to save the changes and close the dialog window.
 
-List of Image objects (Inherited from System.Image)
+7. To configure credential for the **Receipt Processing Service** activity, add the following constants with values in your Mendix app:
 
-### 3.4 Mapping:
+   * Access_Key
+   * Encryption_Key
+   * Secret_Key
 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 11_ in
-section [4 Document Model Training](#4-document-model-training) to get JSON to create _Import Mapping_.
+     ![Keys under Configurations in a tree view](attachments/intelligent-document/configurations-keys.png)
 
-### 3.5 Task Queue:
+   {{% alert type="info" %}}
+   Credentials are generated when you create binding keys on Marketplace.
+   {{% /alert %}}
 
-Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue)
-, [For Mendix v9.0.3-](../modules/process-queue)
+## 4 Training a Document Model {#document-model-training}
 
-### 3.6 Credential Configuration
+1. Open the **Document Model Training** app.
 
-Add below listed constants with values in your Mendix App to configure credential for activity. Credentials are
-generated at the time of Create Binding Keys on Marketplace.
+2. Login in to the app using your **Mendix Account**.
 
-* Access_Key
-* Secret_Key
-* Encryption_Key
+3. Click **Environment** to show the **Existing Models** list.
 
-![config-constants](attachments/general-purpose-ocr/config-constants.png)
+   ![Existing models list](attachments/intelligent-document/existing-models-list.png)
+   
+   If the **Status** of a model is **COMPLETED**, then you can use its **Model Id** in the **Intelligent Document Service** activity.
 
-## 4 Document Model Training
+4. To create and train a new model, click **Create New Model** above the **Existing Models** list on the right side. The **Create New Model** dialog window opens.
 
-1. Visit _Document Model Training_ App
+5. Enter a unique **Model Name**, select a **Language**, select **Custom for Document types**, and then click **Create Model**.
 
-2. Login with _Mendix Account_.
+    ![Create New Model dialog window](attachments/intelligent-document/create-new-model-dialog-window.png)
 
-![ids-login](attachments/intelligent-document/ids-login.png)
+    The **Import File** page opens.
 
-3. Select _Environment_. Existing Models list will show up.
+6. Drag sample images in JPG or JPEG format into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.
 
-You can use Model Id in _Intelligent Document Service Activity_ if status is _COMPLETED_.
+   ![Import File page](attachments/intelligent-document/import-file-page.png)
 
-Follow _step 11_ to get JSON to create _Import Mapping_.
+7. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
 
-![ids-list-models](attachments/intelligent-document/ids-list-models.png)
+    ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
 
-4. To create and train a new model, select _Create New Model_. Provide unique _Model Name_, _Language_ and Select _
-   Create Model_.
+8. To mark an image, perform the following steps:
 
-![ids-create-model](attachments/intelligent-document/ids-create-model.png)
+   1. Click **Add Markers**. The **Mark Document** dialog window opens.
 
-5. Upload sample image to train new model (jpg / jpeg only) and select _Next_.
+   ![Mark Document page](attachments/intelligent-document/mark-document-dialog-window.png)
 
-![ids-upload-samples](attachments/intelligent-document/ids-upload-samples.png)
+   2. On the left side, select an area in the image where text is expected.
+   3. On the right side, enter a **Marker ID** that is used for the area that you select.
+   4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+   5. Click **Add Marker** to add the marker to the list of **Markers**.
+   6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
+   7. When you make all the markers for this image, close the **Mark Document** dialog window. The status of the image becomes **Marked**.
 
-6. Select _Add markers_ to Mark Document. Below screen will show up. Here,
+   ![](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
 
-    1. _Image_: you can select area from where text is expected
-    2. _Marker ID_: label for that text
-    3. _Marker Type_: type Text / Checkmark
-    4. _Add Marker_: to add Marker to list
-    5. _Markers_ : Select and Delete of marker added
-    6. Close popup once marking is done.
+9. Repeat the step above until you mark all the images.
 
-![ids-add-marker](attachments/intelligent-document/ids-add-marker.png)
+10. Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
-8. Image list will show status of Marking. Please add markers to all image and proceed to _Publish_
+![](attachments/intelligent-document/new-model-status-in-porgress.png)
 
-![ids-marking-status-list](attachments/intelligent-document/ids-marking-status-list.png)
+   Once the **Status** of the model becomes **COMPLETED**, the model is ready to use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
-9. After _Publish_, Model will appear in list with status _IN PROGRESS_
+## 5 Getting a JSON Mapping File {#mapping-file} 
 
-![ids-publish-inprogress](attachments/intelligent-document/ids-publish-inprogress.png)
+1. Open the **Document Model Training** app.
 
-10. Once _Status_ of Model is _COMPLETED_, Model is ready to use
+2. Login in to the app using your **Mendix Account**.
 
-![ids-publish-completed](attachments/intelligent-document/ids-publish-completed.png)
+3. Click **Environment** to show the **Existing Models** list.
 
-11. Get JSON Mapping file to use with [Intelligent Document Service Activity](#34-mapping),
+4. Select a model that has the status **COMPLETED**.
 
-    1. Select record in Existing Model list status _COMPLETED_
-    2. Select _JSON Mapping File_
-    3. Upload sample image used while training
-    4. Select _Download_ to get JSON file
+5. Click **JSON Mapping File**. The **Sample Extraction** dialog window opens.
 
-![ids-json-mapping](attachments/intelligent-document/ids-json-mapping.png)
+    ![Sample Extraction dialog window](attachments/intelligent-document/sample-extraction-dialog-window.png)
+
+6. Drag sample images into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.6. Drag sample images into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.
+
+7. Click **Download** to get the JSON file. 
+
+8. Copy the **Model Id** and use it in the **Intelligent Document Service** activity.

@@ -6,99 +6,105 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-Automates invoice processing almost immediately without any document training. Supports major world economy invoices.
-
-### 1.1 Typical Use Case
-
-Using [Document Model Training](#4-document-model-training), Select your choice of region (Europe, US). Then you can
-simply use _Invoice processing Activity_ to process Invoices in bulk.
+With this app service, you can automate the processing of invoices in bulk almost immediately, without training any documents. This app service supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 
-* Extract data from bulk images and map to entity
-* Select Region of your choice
+* Extract data from images of invoices in bulk and map data to entities
+* Support a region that you select
 
 ### 1.3 Limitation
 
-* Supports only jpg / jpeg image formats.
+* Only supports images in JPG and JPEG formats
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _
-Invoice Processing_ module into your app.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Invoice Processing Service module into your app.
+2. 
+2. In the **Toolbox**, drag the **Invoice Processing Service** activity from the **Document Data Capture Services** category into your microflow.
 
 ## 3 Configuration
 
-### 3.1 Invoice Processing Service Activity
+1. Double-click the **Invoice Processing Service** activity to open the **Invoice Processing** dialog window. 
 
-Once the module is imported, _Invoice Processing Service Activity_ will appear in your toolbox.
+    ![Invoice Processing dialog window](attachments/invoice-processing/invoice-processing-dialog-window.png)
+    
+2. Select the **Model Id** of your model. You can also click **Edit** it.
 
-Drag and drop _Invoice Processing Service Activity_ (_Document Data Capture Services_ Catagory) into your microflow
+    {{% alert type="info" %}}
+    After the training of a model is **COMPLETED **in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). 
+    {{% /alert %}}
 
-![ip-activity](attachments/invoice-processing/ip-activity.png)
+3. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
 
-### 3.2 Model ID:
+4. In the **Mapping** field, **Select** a **Mapping** file to define how extracted data is mapped.
 
-Model ID can be used after model created successfully, refer
-section [4 Document Model Training](#4-document-model-training).
+   {{% alert type="info" %}}
+   For details on how to get the JSON mapping file, see [Getting a JSON Mapping File](#mapping-file).
+   {{% /alert %}}
 
-### 3.3 Image List:
+5. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
 
-List of Image objects (Inherited from System.Image)
+   {{% alert type="info" %}}
+   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
+   {{% /alert %}}
 
-### 3.4 Mapping:
+6. Click **OK** to save the changes and close the dialog window.
 
-Provide _Import Mapping_ to which extracted data will be mapped. Refer _step 7_ in
-section [4 Document Model Training](#4-document-model-training) to get JSON to create _Import Mapping_.
+7. To configure credential for the **Intelligent Document Service** activity, add the following constants with values in your Mendix app:
+   * Access_Key
+   * Encryption_Key
+   * Secret_Key
 
-### 3.5 Task Queue:
+     ![Keys under Configurations in a tree view](attachments/invoice-processing/configurations-keys.png)
 
-Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue)
-, [For Mendix v9.0.3-](../modules/process-queue)
+   {{% alert type="info" %}}
+   Credentials are generated when you create binding keys on Marketplace.
+   {{% /alert %}}
 
-### 3.6 Credential Configuration
+## 4 Training a Document Model {#document-model-training}
 
-Add below listed constants with values in your Mendix App to configure credential for activity. Credentials are
-generated at the time of Create Binding Keys on Marketplace.
+1. Open the **Document Model Training** app.
 
-* Access_Key
-* Secret_Key
-* Encryption_Key
+2. Login in to the app using your **Mendix Account**.
 
-![config-constants](attachments/general-purpose-ocr/config-constants.png)
+3. Click **Environment** to show the **Existing Models** list.
 
-## 4 Document Model Training
+    ![Existing Models list](attachments/invoice-processing/existing-models-list.png)
+    
+    If the **Status** of a model is **COMPLETED**, then you can use its **Model Id** in the **Intelligent Document Service** activity.
 
-1. Visit _Document Model Training_ App
+4. To create and train a new model, click **Create New Model** above the **Existing Models** list on the right side. The **Create New Model** dialog window opens.
 
-2. Login with _Mendix Account_.
+5. Enter a unique **Model Name**, select a **Region**, select the **Invoice** for **Document types**, and then click **Create Model**.
 
-![ip-login](attachments/invoice-processing/ip-login.png)
+    ![Create New Model dialog window](attachments/invoice-processing/create-new-model-dialog-window.png)
 
-3. Select _Environment_. Existing Models list will show up.
+    The **Invoice Model** page opens.
 
-You can use Model Id in _Invoice Processing Service Activity_ if status is _COMPLETED_.
+6. Fill in the **Vendor Information** and the **Business Unit Information** and click **Create Model**.
 
-Follow _step 7_ to get JSON to create _Import Mapping_.
+     The new model appears on the **Invoice Models** tab in the **Existing Models** list with the status **IN PROGRESS**.
 
-![ip-list-models](attachments/invoice-processing/ip-list-models.png)
+     Once the **Status** of the model becomes **COMPLETED**, the model is ready to use. 
 
-4. To create and train a new model, select _Create New Model_. Provide unique _Model Name_, _Region_ and Select _Create
-   Model_.
+## 5 Getting a JSON Mapping File {#mapping-file} 
 
-![ip-create-model-us](attachments/invoice-processing/ip-create-model-us.png)
+1. Open the **Document Model Training** app.
 
-5. Fill in the Vendor and Business Unit information and Select _Create Model_
+2. Login in to the app using your **Mendix Account**.
 
-![ip-create-model-inputs](attachments/invoice-processing/ip-create-model-inputs.png)
+3. Click **Environment** to show the **Existing Models** list.
 
-6. Model will appear in list with status _IN PROGRESS_. Once _Status_ of Model is _COMPLETED_, Model is ready to use
+4. Select a model that has the status **COMPLETED**.
 
-7. Get JSON Mapping file to use with [Invoice Processing Service Activity](#34-mapping),
+5. Click **JSON Mapping File**. The **Sample Extraction** dialog window opens.
 
-    1. Select record in Existing Model list status _COMPLETED_
-    2. Select _JSON Mapping File_
-    3. Upload sample image used while training
-    4. Select _Download_ to get JSON file
+    ![Sample Extraction dialog window](attachments/invoice-processing/sample-extraction-dialog-window.png)
 
-![ip-json-mapping](attachments/invoice-processing/ip-json-mapping.png)
+6. Drag sample images into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.
+
+7. Click **Download** to get the JSON file. 
+
+8. Copy the **Model Id** and use it in the **Inovice Processing Service** activity.
+

@@ -6,55 +6,41 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The app service provides a capability to extract the entire text from the images or pdf documents.
-
-### 1.1 Typical Use Case
-
-You can simply use _General Purpose OCR Activity_ to process images in bulk.
-
-### 1.2 Features
-
-* Extract data from bulk images and get output in JSON or XML formats
+With this app service, you can extract text from images or PDF documents and get output in JSON and XML formats in bulk.
 
 ## 2 Installation
 
-Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import the _
-General Purpose OCR_ module into your app.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the General Purpose OCR component into your application.
+
+2. In the **Toolbox**, drag the **General Purpose OCR** activity from the **Document Data Capture Services** category into your microflow.
+
 
 ## 3 Configuration
 
-### 3.1 General Purpose OCR Activity
+1. Double-click the **General Purpose OCR** activity to open the **General Purpose OCR** dialog window.
 
-Once the module is imported, _General Purpose OCR Activity_ will appear in your toolbox.
+![General Purpose OCR dialog winidow](attachments/general-purpose-ocr/general-purpose-ocr-dialog-window.png)
 
-Drag and drop _General Purpose OCR Activity_ (_Document Data Capture Services_ Catagory) into your microflow
+2. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
 
-![gpo-activity](attachments/general-purpose-ocr/gpo-activity.png)
+3. From the **Output format** drop-down list, select the format of output: **JSON** or **XML**.
 
-### 3.2 Image List:
+4. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
 
-List of Image objects (Inherited from System.Image)
+   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
 
-### 3.3 Output Format:
+5. To use the **Return Value**, select **Yes** and enter a **Variable name**.
 
-JSON or XML
+6. Click **OK** to save the changes and close the dialog window.
 
-### 3.4 Task Queue:
+7. To configure credential for the **General Purpose OCR** activity, add the following constants with values in your Mendix app:
 
-Provide Task Queue to execute Extraction action. Ref: [For Mendix v9.0.3+](../../refguide/task-queue)
-, [For Mendix v9.0.3-](../modules/process-queue)
+   * Access_Key
+   * Encryption_Key
+   * Secret_Key
 
-### 3.5 Output:
+     ![Keys under configurations in a tree view](attachments/general-purpose-ocr/configurations-keys.png)
 
-Extracted output in selected format (String).
-
-### 3.6 Credential Configuration
-
-Add below listed constants with values in your Mendix App to configure credential for activity. Credentials are
-generated at the time of Create Binding Keys on Marketplace.
-
-* Access_Key
-* Secret_Key
-* Encryption_Key
-
-![config-constants](attachments/general-purpose-ocr/config-constants.png)
+   {{% alert type="info" %}}
+   Credentials are generated when you create binding keys on Marketplace.
+   {{% /alert %}}

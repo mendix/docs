@@ -125,9 +125,6 @@ Below are the steps to start with the migration.
 6. Now click **Replicate data and files**.
 
     The replication process will copy all the data in the database, including files based on `FileDocument` entities, such as images, which are stored in the storage of the v3 app node.
-    This is a one-time database copy from the v3 to v4 node, unlike live replication.
-
-    This will also start the file sync process from v3 to v4.
 
 7. Once data transfer is complete, progress will be at 100%.
 
@@ -135,13 +132,13 @@ Below are the steps to start with the migration.
 Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app.
 {{% /alert %}}
 
-#### 4.4 Checking the Migration Status
+### 4.4 Checking the Migration Status
 
 1. Click the **Migration** icon to see the status of your replications.
 
     ![Icon for migration page](attachments/migrating-to-v4/migration-page.png)
 
-2. Once initial data transfer is complete, progress will be at 100%, but data will be kept synchronized from v3 to v4.
+2. Once initial data transfer is complete, progress will be at 100%.
 
 The migration page lists all the ongoing migrations, including the following information:
 

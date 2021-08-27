@@ -29,8 +29,10 @@ The purpose of this document is to describe the steps to set up a ‘Single Sign
 
 To set up an IDP configuration for the Mendix platform and your Mendix app, you will need the following:
 
-* A subscription to an OpenID compliant identity provider, such as Microsoft Azure AD, OKta or Auth0
-* The endpoint URL to your identity provider
+* A subscription to an OpenID Connect compliant identity provider. Validate that your Identity Provider supports OpenID Connect
+    * If you are using Azure AD, Okta, Auth0, or ADFS you will be okay
+    * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
+* The URL for the so-called *well-known endpoint* of your identity provider, where configuration details can be retrieved
 * The Mendix Developer Portal needs to be registered as a client in your IDP, and you need to know the corresponding client ID and secret
 
 ## 3 Configuring your BYOIDP setup
@@ -54,10 +56,11 @@ When adding a configuration, you will need to provide the information described 
 ![Customer IDP setup - step 1](attachments/set-up-sso-byoidp/customer-idp-wizard-page-1.png)
 
 * **Redirect URL** – the callback URL to the Developer Portal that your IDP needs to send the authenticated user to.
-* **OpenID Connect endpoint URL** – the endpoint of the Developer Portal registration in your IDP. The default protocol is HTTPS. If your IDP supports multiple protocols, make sure you enter the OpenID endpoint.
+* **OpenID Connect well-known endpoint URL** – the endpoint at your IDP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
+    The default protocol is HTTPS. If your IDP supports multiple protocols, make sure you enter the OpenID Connect endpoint.
 * **Client ID** – the ID of the Developer Portal registration in your IDP.
 * **Client secret** – the password or secret of the Developer Portal registration in your IDP. Enter this once. After saving your configuration it will no longer be shown to you.
-* **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IDP. Mendix uses this data to map the user’s identity in your IDP environment with a corresponding identity in the Developer Portal. The OpenID scope is required. In some cases, depending on your IDP, other scopes are necessary to fully map the user’s identity.
+* **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IDP. Mendix uses this data to map the user’s identity in your IDP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IDP, other scopes are necessary to fully map the user’s identity.
 
 ![Customer IDP setup - step 2](attachments/set-up-sso-byoidp/customer-idp-wizard-page-2.png)
 
@@ -154,9 +157,9 @@ For more information on setting up federation with a Microsoft Azure IdP, see []
 
 ### 8.1 Onboarding
 
-Because BYOIDP federates the Mendix Cloud IdP, all end-users who do not currently have a Mendix account will be taken through onboarding onto the Mendix Developer Portal platform. They will not need to sign up explicitly.
+Users who do not currently have a Mendix account can login to the Mendix platform via your own IDP and will then be taken through onboarding onto the Mendix Developer Portal platform. They will not need to sign up explicitly.
 
-Existing users of the Developer Portal can continue to use their accounts, but will have to use the authentication provided by BYOIDP.
+Existing users of the Developer Portal can continue to use their accounts, but will have to use the authentication provided by BYOIDP; they can no longer use the password they created on the Mendix platform.
 
 ### 8.2 Mendix Version
 

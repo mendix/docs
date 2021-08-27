@@ -28,7 +28,7 @@ In most cases, you will only need what is contained in the **Viewer3D/USE_ME** f
 
 ### 1.1 Typical Use Cases
 
-You can use 3DViewer when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
+You can use this app service when you want to upload, store, and visualize 3D JT models in your Mendix application. You can perform some basic operations, such us navigating the model product structure tree and the Product Manufacturing Information(PMI) tree, creating section views, 2D markups and much more.
 
 ### 1.2 Features
 
@@ -71,34 +71,28 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-First step, download *3DViewer.mpk*: 
-1. Search and download 3DViewer from Mendix public marketplace 
-2. Now you have a *3DViewer.mpk*, and you would like to add to your app in Mendix Studio Pro
-3. Open your app in Mendix Studio Pro(any version between 8.15.1 and latest Mendix 8 versions).
-4.  Right-click the project in the **Project Explorer** and select **Import module package…**.
-   
-When you have the *3DViewer.mpk* file and you want to add the app service to your app in Mendix Studio Pro, follow these steps:
+{{% todo %}}[**Add link to component**]{{% /todo %}}
+
+First, download the *3DViewer.mpk* from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
 
 1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *3DViewer.mpk*. 
 2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means new entities will be created in your project (with the **Viewer3D** name). For more information on adding a module, see the [Using a Module](/appstore/general/app-store-content#module) section in *How to Use Marketplace Content in Studio Pro*.
 3. Click **Import** on the **Import Module** dialog box.
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready-to-use items in the **Viewer3D** folder. In addition, if you go to **Toolbox** pane, you will also notice a collection of 3D widgets are added to the **Toolbox** widget list under the **Add-on widget** category. 
 5. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
-
-5.  Find and select the 3DViewer.mpk that you have and import it. 
-6.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
+6.  Find and select the 3DViewer.mpk that you have and import it. 
+7.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
 ![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
-    {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
-	{{% /alert %}}
-5. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-6. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
-7. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+8. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
+9. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
+10. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-Up till now, you have succesfully add 3DViewer resources to your app.
+Now you have succesfully added the 3D Viewer resources to your app.
 
 ## 3 Initializing 3D Viewer on App Startup
 
-To use the 3DViewer features, your app needs to be bound to the 3DViewer service. This is achieved by executing a microflow when the app starts. The 3DViewer contains a Java action called **VisServerAction**, which can start the 3DViewer service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3DViewer when the app starts (running after startup usually means you want to run a specific tool all the time.).
+To use the 3DViewer features, your app needs to be bound to the 3D Viewer service. This is achieved by executing a microflow when the app starts. The 3D Viewer contains a Java action called **VisServerAction**, which can start the 3D Viewer service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3D Viewer when the app starts (running after startup usually means you want to run a specific tool all the time.).
 
 If you app does not have an after-startup microflow set,  follow these steps:
 
@@ -167,7 +161,7 @@ The **Downloadmarkup** microflow takes a **markup** object as input parameter an
 
 ### 4.4 Nanoflow {#nanoflow}
 
-The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** type of object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. As Viewer widget is prebuilt to take **ModelDocument** type of object as data source, this nanoflow allows you to get and visualize a JT model from your existing file storage.
+The **CreateModelDocumentFromFileDocument** nanoflow takes a **FileDocument** object as an input parameter to create a **ModelDocument** object to represent a user JT model file stored as the entity of **System.FileDocument** or its specialization. As the Viewer widget is prebuilt to take a **ModelDocument** object as the data source, this nanoflow allows you to get and visualize a JT model from your existing file storage.
 
 ![CreateModelDocumentFromFileDocument](attachments/3d-viewer/CreateModelDocumentFromFileDocument.jpg)
 
@@ -213,7 +207,7 @@ Place this widget inside a [Container3D](#container3d) widget.
 
 For this widget to visualize a model correctly, set the following properties:
 
-* On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties
+* On the **Data Source** tab, configure the correct **Model ID** and **Model source type** properties:
 	* Example valid **Model ID** values – the value of the ModelId attribute of a ModelDocument object, or the value of a Model ID attribute set by the Uploader widget property
 	* Valid **Model Source Type** values – **Mendix** or **Teamcenter**; you can also use the **Viewer3D/USER_ME/ModelSourceType** constant
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
@@ -229,7 +223,7 @@ For this widget to visualize a model correctly, set the following properties:
 	* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
 	* **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain inforamtion about if the product structure is loaded; you can also add custom actions triggered by this change
 
-3DViewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
+3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
 
 #### 4.6.2 Panel Widgets {#panel-widgets}
 

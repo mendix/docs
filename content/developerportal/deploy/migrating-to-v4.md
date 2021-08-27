@@ -23,7 +23,7 @@ You will need to take the following into account when migrating to Mendix Cloud 
 
 * If you are using Mendix 7, you might want to split long-running scheduled events into smaller chunks, using a queueing system like the Amazon SQS connector to spread the work out over multiple instances
 * If you use a mail server from your app, you will need to use a third-party email provider – for more information, see [Sending Email](sending-email)
-* If you use an FTP server in your app, you will need to use a third-party FTP provider 
+* If you use an FTP server in your app, you will need to use a third-party FTP provider
 * If you are currently using a VPN to secure your app, you will have to use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application) instead
 
 To make the most of the features of Mendix Cloud v4, we recommend that your apps are built as [12-factor apps](https://12factor.net/).
@@ -106,16 +106,9 @@ To deploy your app to your new Mendix Cloud v4 environment, you need to do the f
 
 Now that you have your new Mendix Cloud v4 environment, you can start replicating the data.
 
-#### 4.3.1 Two Ways to Transfer Database Data
+The system transfers database data from v3 to v4 using PostgreSQL [dump and restore](#dump-restore). Files are replicated to the v4 environment continuously while replication is active.
 
-The system can transfer database data from v3 to v4 in the following ways:
-
-* Live replication using [AWS Database Migration Service (DMS)](#aws-dms)
-* PostgreSQL [dump and restore](#dump-restore)
-
-AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means less downtime during final migration. However, it is important to note that sometimes AWS DMS replication fails to transfer the data correctly. When this happens, Mendix automatically detects the failure and switches to the database dump-and-restore mode. In this case, you will see the **Force database dump restore** check box selected automatically on the UI. The dump-and-restore mode can also be forced from the UI by selecting the **Force database dump restore** check box.
-
-##### 4.3.1.1 Process with AWS DMS {#aws-dms}
+Below are the steps to start with the migration.
 
 1. Open the [Migration Tool](https://v3-v4-migration.mendixcloud.com/), `https://v3-v4-migration.mendixcloud.com/`.
 
@@ -123,48 +116,36 @@ AWS DMS allows changes on v3 to be replicated to v4 as they happen. This means l
 
 3. The target v4 app node will be filled with the name `<current-app-name>-v4`.
 
-4. Select the source and target environments. In most cases, these will have the same name. For example, you want to replicate data from the v3 `production` environment to the v4 `production` environment. Please note you should not check the **Force database dump restore** check box.
+4. Select the source and target environments. In most cases, these will have the same name. For example, you want to replicate data from the v3 `production` environment to the v4 `production` environment.
 
     ![Select v3 node and environment](attachments/migrating-to-v4/select-v3-node-to-migrate.png)
 
 5. Ensure that the app in the target v4 environment is stopped. You cannot replicate data into an app that is running.
 
-6. Click **Replicate data and files**.
-
-    The replication process will copy all the data in the database as well as all the files which are stored on the v3 appnode.
-
-    The replication will continue to run, so any changes to the data while your v3 app is still running are reflected in the replicated data.
-
-##### 4.3.1.2 Process with PostgreSQL Dump and Restore {#dump-restore}
-
-1. Follow steps 1-5 above in the [Process with AWS DMS](#aws-dms) section.
-
-2.  Select the **Force database dump restore** check box, then click **Replicate data and files**.
+6. Now click **Replicate data and files**.
 
     The replication process will copy all the data in the database, including files based on `FileDocument` entities, such as images, which are stored in the storage of the v3 app node.
 
-     This is a one-time database copy from the v3 to v4 node, unlike live replication. Database dump and restore will be forced automatically if the AWS DMS data integrity check fails after multiple attempts. DMS may fail for other reasons, but it does not trigger fallback to the dump-restore mode, because it is usually recoverable if replication is restarted. If DMS keeps failing, then it is advised to force the dump-restore mode manually by selecting the relevant check box.
-     
-3. Once data transfer is complete, progress will be at 100%.
+7. Once data transfer is complete, progress will be at 100%.
 
 {{% alert type="info" %}}
-Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app. 
+Database dump-restore will run twice – once on replication activation, and again on the stop of replication (if the **Interrupt** option has not been set – for details, see the section below). This is to ensure that the latest data on the source database for your application is copied to the Cloud v4 app.
 {{% /alert %}}
 
-#### 4.3.2 Checking the Migration Status
+### 4.4 Checking the Migration Status
 
 1. Click the **Migration** icon to see the status of your replications.
 
     ![Icon for migration page](attachments/migrating-to-v4/migration-page.png)
-    
-2. Once initial data transfer is complete, progress will be at 100%, but data will be kept synchronized from v3 to v4.
+
+2. Once initial data transfer is complete, progress will be at 100%.
 
 The migration page lists all the ongoing migrations, including the following information:
 
 * The source and target environments
 * The UUID of the source production environment
-* Whether the tool is current **Replicating** data to the v4 environment or is **Stopped**
-* What proportion of the source data has been replicated, listed for both files and database – this will sometimes show zero
+* Whether the tool is current **Replicating** files to the v4 environment or is **Stopped**
+* What proportion of the source files have been replicated – this will sometimes show zero
     * If replication isn't running
     * During the replication process when the process checks whether files are synchronized
 * The UUID of the target production environment
@@ -180,9 +161,9 @@ The migration page lists all the ongoing migrations, including the following inf
 File and row counts may not be completely accurate if the v3 app is running during the replication. File sync is refreshed on every sync run (there is a 5 minute pause between the stop of the previous one and start of the new one).
 
 For the database dump-restore process, the counts are refreshed only twice – when the actual process is run on start and on stop, as mentioned above.
-{{% /alert %}} 
- 
-### 4.4 Testing the Replicated Data
+{{% /alert %}}
+
+### 4.5 Testing the Replicated Data
 
 Once you have replicated your data, you should test it, to ensure that everything is working as expected.
 
@@ -204,7 +185,7 @@ Once you have replicated your data, you should test it, to ensure that everythin
 
 7. Stop your v4 app at the end of the test and restart the replication so you can continue to copy data from your v3 app.
 
-### 4.5 Final Migration {#final-migration}
+### 4.6 Final Migration {#final-migration}
 
 Once you have tested the data migration you are ready to migrate your app to Mendix Cloud v4.
 
@@ -217,7 +198,7 @@ We recommend that you allow at least an hour between starting to replicate the d
 {{% /alert %}}
 
 {{% alert type="info" %}}
-If you have forced a database dump-restore during the initial replication or it was automatically turned on due to a detected failure with AWS DMS replication, the final migration will have considerable downtime. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
+The final migration can have considerable downtime since the data replication process uses Postgres dump restore feature. This takes a full dump of the data from source Cloud v3 database and restores it on the destination Cloud v4 database. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -262,7 +243,7 @@ The following issues might occur, or you might decide to "Rollback" a successful
 
 #### 4.7.1 Data Replication Fails or Times Out
 
-If the replication process fails during the final migration, or it times out (the timeout is fixed at 20 minutes for AWS DMS — for dump restore it is 20 minutes longer than the measured operation time, displayed on the Migration Status page), then the apps and environments will not be renamed and the apps in the original v3 environments will be restarted.
+If the replication process fails during the final migration, or it times out (the timeout for dump restore is 20 minutes longer than the measured operation time, displayed on the Migration Status page), then the apps and environments will not be renamed and the apps in the original v3 environments will be restarted.
 
 It is safe to restart replicating the data to bring the data replicated back up to 100%. This should ensure that the final migration does not time out.
 
@@ -413,9 +394,10 @@ If you have a custom domain which you want to transfer to your v4 deployment, yo
 * If you own the private key for your existing custom domain name, you can reuse it for your v4 deployment
     * For a TLS certificate you uploaded yourself, you will have the private key
     * If you made a certificate request to Mendix, the private key will be stored in the Mendix Secure Keystore and you will need to ask Mendix Support to arrange for the certificate to be migrated to v4
-    
+
         The two certificate request options are shown below:
         ![](attachments/migrating-to-v4/tls-certificates.png)
+
 * When you start the app on the v4 cloud, it can take some time for the DNS servers on the web to register the new target URL and redirect your custom domain name to it — therefore you must set the TTL value to 300 seconds to speed up this process, if your TTL setting has a longer duration. This should be done some days in advance to ensure the setting is propagated to all DNS servers.
 
     For example, if you have a TTL of 24 hours, it will take 24 hours before the new domain will be active in the DNS. Customers who visit the custom domain through the browser will not end up at the Mendix Cloud v4 environment until 24 hours have passed. You should therefore check the TTL value a week or so before migration and change it to around 300 seconds (this is the default value we recommend).

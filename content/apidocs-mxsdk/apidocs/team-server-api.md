@@ -147,12 +147,21 @@ HTTP Method: GET
 ##### 3.3.1.1 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
-*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line.
+*   _Name_ (String) : Name of the branch to get. Use `trunk` to get the main line and `branches%2FyourBranchName` for any other development branch.
 
-##### 3.3.1.2 Example
+##### 3.3.1.2 Examples
 
 ```http
 GET /api/1/apps/calc/branches/trunk/revisions HTTP/1.1
+Host: deploy.mendix.com
+
+Accept: */*
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
+```
+
+```http
+GET /api/1/apps/calc/branches/branches%2Fdevelopment/revisions HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*

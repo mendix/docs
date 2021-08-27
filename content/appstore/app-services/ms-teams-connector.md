@@ -8,6 +8,10 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
+{{% todo %}}[**Add link to component**]{{% /todo %}}
+
+{{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
+
 The Microsoft Teams Connector is an importable module that enables sending messages to a Microsoft Teams channel.
 
 ## 2 Configuration

@@ -106,7 +106,7 @@ To deploy your app to your new Mendix Cloud v4 environment, you need to do the f
 
 Now that you have your new Mendix Cloud v4 environment, you can start replicating the data.
 
-The system transfers database data from v3 to v4 using PostgreSQL [dump and restore](#dump-restore).
+The system transfers database data from v3 to v4 using PostgreSQL [dump and restore](#dump-restore). Files are replicated to the v4 environment continuously while replication is active.
 
 Below are the steps to start with the migration.
 
@@ -144,8 +144,8 @@ The migration page lists all the ongoing migrations, including the following inf
 
 * The source and target environments
 * The UUID of the source production environment
-* Whether the tool is current **Replicating** data to the v4 environment or is **Stopped**
-* What proportion of the source data has been replicated, listed for both files and database – this will sometimes show zero
+* Whether the tool is current **Replicating** files to the v4 environment or is **Stopped**
+* What proportion of the source files have been replicated – this will sometimes show zero
     * If replication isn't running
     * During the replication process when the process checks whether files are synchronized
 * The UUID of the target production environment

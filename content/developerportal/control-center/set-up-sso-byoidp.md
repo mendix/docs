@@ -57,7 +57,7 @@ When adding a configuration, you will need to provide the information described 
 
 * **Redirect URL** – the callback URL to the Developer Portal that your IDP needs to send the authenticated user to.
 * **OpenID Connect well-known endpoint URL** – the endpoint at your IDP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
-    The default protocol is HTTPS. If your IDP supports multiple protocols, make sure you enter the OpenID Connect endpoint.
+    If your IDP supports multiple protocols, make sure you enter the OpenID Connect endpoint.
 * **Client ID** – the ID of the Developer Portal registration in your IDP.
 * **Client secret** – the password or secret of the Developer Portal registration in your IDP. Enter this once. After saving your configuration it will no longer be shown to you.
 * **Scopes** – selecting a scope to configure the data Mendix is allowed to read from your IDP. Mendix uses this data to map the user’s identity in your IDP environment with a corresponding identity in the Developer Portal. The scope `OpenID` is required. In some cases, depending on your IDP, other scopes are necessary to fully map the user’s identity.

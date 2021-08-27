@@ -5,6 +5,8 @@ parent: "metamodel-9"
 
 ## 9.4.0
 
+**Release date: July 20th, 2021**
+
 ### Rest
 
 #### PublishedRestResource (Element)

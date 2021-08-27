@@ -43,13 +43,13 @@ For Android Builds:
 1. Click **Next Step** when ready.
 1.  In the **Build type** choose the **Advanced** checkbox. 
 	{{% image_container width="350" %}}![Build type](attachments/nbui/wizard-buildtype-local.png){{% /image_container %}}
-1. Select the folder you want your app's Native Template to be created. Valid choises, is an empty directory or a directory with a Native Template.
+1. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
 1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
 1. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
 1. Select **Build type** from the side bar. 
 
 	{{% image_container width="350" %}}![Build type](attachments/nbui/advanced-buildtype-local.png){{% /image_container %}}
-
+	
 	As you already selected to use the Advanced flow with this app it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your app and commit your changes. But keep in mind that the Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
 
 1. Select **Configure app locally** and fill in the information as needed for your app.
@@ -61,7 +61,7 @@ For Android Builds:
 	* Run MxBuild to build your app bundles
 	* Checkout the correct version of Native Template for the Mendix Studio Pro version you are using
 	* Configure the app
-
+	
 	If GitHub is enabled, in addition to the previous steps, it will: 
 	* Commit the whole local copy to the app's repository
 
@@ -76,7 +76,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Run `npm install` in the app root to install the required dependencies.
 1. Open Android Studio.
 1. Select the `<Native Template root>/android` as the entry point for the app.
-1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version!**:
+1. After synchronizing the app your Android Studio should look something like this. **Do not accept any suggestions to update to latest Gradle or Kotlin version**:
 
 	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 
@@ -85,7 +85,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
 	{{% image_container width="350" %}}![Android Build Varients](attachments/native-build-locally/as-build-variants.png){{% /image_container %}}
-   
+
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
 	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
@@ -102,7 +102,7 @@ In the sections below you can see the basic steps to get an app up and running o
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
 
 	{{% image_container width="350" %}}![XCode Build Toolbar](attachments/native-build-locally/xc-setup-team.png){{% /image_container %}}
-
+	
 	As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
 1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:

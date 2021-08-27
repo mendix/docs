@@ -34,6 +34,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
+ | [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs.  |
 | **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
 
 The following filter options are also available:

@@ -198,7 +198,7 @@ We recommend that you allow at least an hour between starting to replicate the d
 {{% /alert %}}
 
 {{% alert type="info" %}}
-The final migration can have considerable downtime since the data replication process uses Postgres dump restore feature which means there is no incremental sync for database, instead we take a full dump of the data from source Cloud v3 database and restore it on the destination Cloud v4 database. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
+The final migration can have considerable downtime since the data replication process uses Postgres dump restore feature. This takes a full dump of the data from source Cloud v3 database and restores it on the destination Cloud v4 database. The displayed times on the **Migration Status** page depict how much time the last operation took (be it file sync or database dump-restore). These timings add to the downtime, but as file sync and dump-restore are run in parallel, only the bigger timing will contribute directly to the downtime.
 {{% /alert %}}
 
 {{% alert type="info" %}}

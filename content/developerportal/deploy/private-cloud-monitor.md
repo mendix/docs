@@ -324,7 +324,7 @@ If you'd like to enable Prometheus scraping only for a specific environment, you
 
 {{% alert type="info" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud Portal.{{% /alert %}}
 
-Open the `MendixApp` CR for an environment [for editing](private-cloud-operator#edit-cr)and add the following Pod annotations:
+Open the `MendixApp` CR for an environment [for editing](private-cloud-operator#edit-cr) and add the following Pod annotations:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

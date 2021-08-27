@@ -147,7 +147,7 @@ HTTP Method: GET
 ##### 3.3.1.1 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
-*   _Name_ (String) : Name of the branch to get. Use `trunk` to get the main line and `branches%2FyourBranchName` for any other development branch.
+*   _Name_ (String) : Name of the branch to get. Use `trunk` to get the main line or `branches%2FyourBranchName` for any other development branch.
 
 ##### 3.3.1.2 Examples
 

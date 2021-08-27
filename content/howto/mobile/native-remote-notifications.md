@@ -2,34 +2,38 @@
 title: "Use Push Notifications"
 parent: "notifications"
 menu_order: 20
-description: Learn to set up native push notifications with the Native builder.
+description: Learn to set up native push notifications with the Native Mobile Builder.
 tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
 
-This tutorial will teach you to configure and test push notifications (also known as remote notifications). Push notifications only work with apps created through the Native Builder. You cannot send notifications to an app inside the Make it Native app.
+This tutorial will teach you to configure and test push notifications (also known as remote notifications).
+
+{{% alert type="info" %}}
+Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.
+{{% /alert %}}
 
 ## 2 Prerequisites
 
-If you want to use push notifications with custom apps which created with native builder, make sure you have completed the following prerequisite:
+If you want to use push notifications with custom apps which were created with Mendix Native Mobile Builder, make sure you have completed the following prerequisite:
 
 * Complete [How to Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app) through the end of the *Making Your First Build* section
 
-## 3 Setting Up Your Mendix Project
+## 3 Setting Up Your Mendix App
 
-Create a Mendix project using the Native Mobile Quickstart starter app:
+Create a Mendix app using the Native Mobile Quickstart starter app:
 
-1. Open Mendix Studio Pro. **Select File** > **New Project**, and then select the **Native Mobile Quickstart** app.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Native Mobile Quickstart** app.
 1. Click **Use this starting point**.
 1. Click **Create app** to close the dialog box.
 
-### 3.1 Installing Your Module 
+### 3.1 Installing Your Module {#installing-your-module}
 
 To install your module, do the following:
 
-1. Add the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module to your app project.
-1. Add the [Encryption](/appstore/modules/encryption) module to your app project.
+1. Add the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module to your app.
+1. Add the [Encryption](/appstore/modules/encryption) module to your app.
 1. Set the encryption private key by doing the following:<br />
 	a. Double-click **Settings**.<br />
 	b. Click **Edit**.<br />
@@ -39,7 +43,7 @@ To install your module, do the following:
 
 	{{% image_container width="300" %}}![Capabilities](attachments/native-remote-push/modeler/setEncryption.png){{% /image_container %}}
 
-1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app project.
+1. Add the [Push Notifications Connector](/appstore/modules/push-notifications) module to your app.
 
 ### 3.2 Setting Up a Notification Widget
 
@@ -66,6 +70,8 @@ To set up a notification widget, do the following:
 1. Drag and drop a data view widget onto your home page and set its **Data source** > **Nanoflow** to **DS_Notification**:
 
     {{% image_container width="300" %}}![Dataview](attachments/native-remote-push/modeler/Dataview.png){{% /image_container %}}
+   
+	Make sure to leave the data view **editable**. Disabling the editability will break the notification functionality.
 
 1. Drag and drop a notifications widget inside of this data view.
 1. Set the notifications widget's GUID to **NativeNotification.objectGUID**:
@@ -104,7 +110,7 @@ To set up actions which will occur after tapping or receiving a notification, do
 
 ### 3.5 Adding Firebase Configurations
 
-Deploy your project and open your administration page in a web browser. Then, do the following:
+Deploy your app and open your administration page in a web browser. Then, do the following:
 
 1. Add a new FCM configuration.
 1. Select **Enabled**.
@@ -127,7 +133,7 @@ Next you will test the implementation of your configurations.
 
 ### 3.6 Sending a Push Notification to a Single Device {#sending-single}
 
-To see your changes from Studio Pro, rebuild your bundle using the Native Builder's `build` command. For more information on the `build` command, see the [Build](/refguide/native-builder#build) section of the *Native Builder* reference guide. Then, do the following:
+To see your changes from Studio Pro, rebuild your app using the Mendix Native Mobile Builder's `build` command:
 
 1. Reload the app on your phone.
 1. Put the app in the background by returning to your mobile device's home screen.
@@ -342,11 +348,11 @@ To send a push notification to all users, use the **SendMessageToUsers** Java ac
 
 | Issue | Cause | Solution |
 |-----|----|-----|
-| Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Implementing Push Changes With the Native Builder](setting-up-native-push-notifications#auto-changes) section in *How To Set Up Push Notifications* and make sure you add the *google-services.json* file. |
-| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
-| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | [Set the constant](native-remote-notifications#3-1-installing-your-module) **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
-| Building the Teamcenter app throws an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'**. | The *google-services.json* file contains a **package_name** which should match the Native Builder package identifier. Please note the native builder adds **.devleoperapp** at the end of the package name for dev apps. | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the *google-services.json* in your GitHub repository. |
-| Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')**. | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#6-setting-up-a-service-account) in Firebase and upload it. |
+| Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Implementing Push Changes With the Native Mobile Builder](setting-up-native-push-notifications#auto-changes) section in *How To Set Up Push Notifications* and make sure you add the *google-services.json* file. |
+| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#setting-up-a-service-account) in Firebase and upload it. |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | [Set the constant](#installing-your-module) **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
+| Building the Teamcenter app throws an error: **Execution failed for task ':app:processDevDebugGoogleServices'. > No matching client found for package name 'com.mendix.myapp.testlocal.developerapp'**. | The *google-services.json* file contains a **package_name** which should match the Native Mobile Builder package identifier. Please note the Native Mobile Builder adds **.devleoperapp** at the end of the package name for dev apps. | [Add an app](setting-up-google-firebase-cloud-messaging-server#native-apps) with the correct package identifier to Firebase and update the *google-services.json* in your GitHub repository. |
+| Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')**. | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#setting-up-a-service-account) in Firebase and upload it. |
 
 ## 8 Read More
 

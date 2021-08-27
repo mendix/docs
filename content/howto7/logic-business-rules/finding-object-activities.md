@@ -2,7 +2,7 @@
 title: "Find Object Activities"
 category: "Logic & Business Rules"
 menu_order: 14
-tags: ["object", "microflow"]
+tags: ["object", "microflow", "desktop modeller"]
 ---
 
 ## 1 Introduction

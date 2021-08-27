@@ -32,7 +32,7 @@ You can find the description of input elements available in Studio in the table 
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
+Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
 
 {{% /alert %}}
 
@@ -89,44 +89,37 @@ This property only appears if **Show Label** is enabled. Specify the name that w
 
 Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: 
 
-* **Editable** – the value displayed by the widget is editable.
+* **Editable** – The value displayed by the widget is editable.
 
-* **Read-only** – the value is in read-only mode.
+* **Read-Only** – The value is in read-only mode.
 
-* **Conditional** – the widget is editable only if specified conditions are met based on an attribute value (for more information, see  [Attribute-Based](#attribute-based) and [Attribute Values](#attribute-values) sections below) or based on an expression. You can create a condition based on an expression in Studio Pro only (for details, see the [Editability Section](/refguide/common-widget-properties#editability) in *Properties Common in the Page Editor*)
+* **Conditional** – The widget is editable only if specified conditions are met based on an attribute value or based on an expression. 
 
-	{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.
-	
-	{{%/alert %}}
-	
+	{{%alert type="info" %}} If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.{{%/alert %}}
 
-#### 3.3.4 Attribute-Based {#attribute-based}
 
-The **Attribute-Based** property is only shown when [Conditional Editability](#editability) is selected.
+##### 3.3.3.1 Condition Based on {#condition}
 
-**Attribute-Based** conditional editability allows you to show widgets only when they match a certain value of the selected attribute. 
+The **Condition Based on** property is only shown when [Conditional Editability](#editability) is selected. The following options are available:
 
-{{%alert type="info" %}}
+* **Attribute** – Defines whether the condition is based on the attribute value. In this case the widget will be editable only when it matches a certain value of the selected attribute. The attribute must be of the Boolean or enumeration type. 
+* **Expression** – Defines whether the condition is based on the expression. In this case the widget will be editable only when the expression returns the Boolean value `true`. For more information on expressions, see [Expressions](expressions).
 
-The attribute must be of the Boolean or enumeration type.
+##### 3.3.3.2 Attribute {#attribute}
 
-{{%/alert %}} 
+This property is shown only when the expression the [Condition Based on](#condition) is set to **Attribute**. Allows you to select the attribute the condition will be based on. The attribute must be of the Boolean or enumeration type.
 
-{{%alert type="info" %}}
+##### 3.3.3.3 Attribute Values {#attribute-values}
 
-You can only configure attribute-based conditional editability when a widget is placed in a data container: a data view or a list view. For more information on how to place widgets on a page, see [Adding Elements on a Page](page-editor#adding-elements) section in *Pages*. 
+This property is shown only when the attribute is selected for the [Attribute](#condition) property. The **Attribute Values** property allows you to select certain attribute values.
 
-{{%/alert %}}
+For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products to a limited number of countries. So, you need to select *Country* in the **Attribute** property and *Netherlands*, *Belgium*, *Germany*, *France* in the **Attribute Value** property.
 
-#### 3.3.5 Attribute Values {#attribute-values}
+##### 3.3.3.4 Expression
 
-This property is shown only when an attribute in the [Attribute-Based](#attribute-based) property is selected. The **Attribute Values** property allows you to select certain attribute values.
+This property allows you to create an expression and shown only when the expression the [Condition Based on](#condition) is set to **Expression**. The expression should be of the Boolean type. For more information on how to create expressions, see [Expressions](expressions).
 
-For example, you would like to make the **City** field editable only when users fill the **Country** field in, because you can deliver your products to a limited number of countries. So, you need to select *Country* in the **Attribute-Based** property and *Netherlands*, *Belgium*, *Germany*, *France* in the **Attribute Value** property:
-
-![](attachments/page-editor-widgets-input-elements/attribute-based-editability.png)
-
-#### 3.3.6 Specific Properties
+#### 3.3.4 Specific Properties
 
 Specific properties of the input elements are described in the table below:
 

@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 *  Read [How to Get Started](ht-two-getting-started)
 *  Read [How to Install the ATS Helper and ATS Recorder](ht-two-install-ats-helper-recorder)
 
-## 3 Creating a Test Case {#3}
+## 3 Creating a Test Case {#creating-a-test-case}
 
 To create a test case, follow these steps:
 
@@ -195,7 +195,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
 ## 5 Adding Test Steps Using the ATS Recorder
 
-The following steps describe how to add test steps to your test case using the [ATS Recorder](rg-one-recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
+The following steps describe how to add test steps to your test case using the [ATS Recorder](rg-one-recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [Creating a Test Case](#creating-a-test-case) before starting with this section.
 
 To add test steps using the ATS Recorder, follow these steps:
 

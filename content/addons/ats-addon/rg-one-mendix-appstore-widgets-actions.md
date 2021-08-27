@@ -1,9 +1,9 @@
 ---
-title: "Mendix App Store Widgets Actions"
+title: "Mendix Marketplace Widgets Actions"
 parent: "rg-one-standard-actions-reference"
 ---
 
-**Mendix App Store Widget Actions** contains the following sections:
+**Mendix Marketplace Widget Actions** contains the following sections:
 
 * [Boolean Slider](rg-one-booleanslider)
 * [BootstrapRTE](rg-one-bootstraprte)

@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
-tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP Cloud", "IBM", "on-premises", "free app"]
+tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP BTP", "IBM", "on-premises", "free app", "Business Technology Platform"]
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
 ---
 
@@ -11,9 +11,9 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](mendix-cloud) | December 8th, 2020 |
-| [Mendix for Private Cloud](mendix-for-private-cloud) | November 16th, 2020 |
-| [SAP Cloud Platform](sap-cloud-platform) | December 9th, 2020 |
+| [Mendix Cloud](mendix-cloud) | August 6th, 2021 |
+| [Mendix for Private Cloud](mendix-for-private-cloud) | August 12th, 2021 |
+| [SAP Business Technology Platform (SAP BTP)](sap-cloud-platform) | August 19th, 2021 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |
 
 The release notes for the buildpacks are held in their respective GitHub repos:

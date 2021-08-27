@@ -3,7 +3,7 @@ title: "Navigation Consistency Errors"
 parent: "consistency-errors"
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
@@ -39,16 +39,11 @@ For example, you have created a menu item called **Program** for a **Responsive*
 To fix the error, you can create an object and pass it to the page. Do the following:
 
 1. Open the navigation for the responsive profile.
+2.  Open properties of the **Program** menu item, and do the following: 
+    1. Change the **On click** property from **Show a page** to **Create object**.
+2. Set **ProgramItem** as **Entity (path)**. 
+    3. Set **Program** as **On click page**. 
 
-2.  Open properties of the **Program** menu item, and do the following: <br/>
-
-    a. Change the **On click** property from **Show a page** to **Create object**. <br/>
-
-    b. Set **ProgramItem** as **Entity (path)**. <br/>
-
-    c. Set **Program** as **On click page**. <br/>
-
-    ![Menu Item Properties](attachments/consistency-errors-navigation/menu-item-properties.png)<br/>
 
 Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 

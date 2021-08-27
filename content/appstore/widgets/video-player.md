@@ -1,14 +1,14 @@
 ---
 title: "Video Player"
 category: "Widgets"
-description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "platform support", "widget", "video player"]
+description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "platform support", "widget", "video player"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Video Player](https://appstore.home.mendix.com/link/app/110700/) widget enables playing videos from Youtube, Vimeo, Dailymotion, and external MP4 files.
+The [Video Player](https://marketplace.mendix.com/link/component/110700/) widget enables playing videos from Youtube, Vimeo, Dailymotion, and external MP4 files.
 
 ### 1.1 Features
 
@@ -24,9 +24,9 @@ The [Video Player](https://appstore.home.mendix.com/link/app/110700/) widget ena
 
 * File hosted in Mendix Server cannot be played in the Safari browser
 
-### 1.3 Demo App Project
+### 1.3 Demo App
 
-For a demo app project that has been deployed with this widget, see [here](https://videoplayer-sandbox.mxapps.io/).
+For a demo app that has been deployed with this widget, see [here](https://videoplayer-sandbox.mxapps.io/).
 
 ## 2 Configuration
 

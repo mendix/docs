@@ -1,18 +1,18 @@
 ---
 title: "Permissions API"
 category: "API Documentation"
-menu_order: 7
+menu_order: 40
 ---
 
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-The AppCloudServices module has now been removed from the Mendix App Store and this API is therefore deprecated.
+The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
 {{% /alert %}}
 
-The Permissions API is an [App Service](/refguide/consumed-app-services) that enables retrieving the [user roles](/refguide/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
+The Permissions API enables retrieving the [user roles](/refguide/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
-* A user may be granted roles through a group policy for a [security group](/developerportal/company-app-roles/users#security-groups) in which they are a member. Group policies define a specific set of user roles to be granted to members of the security group to which the policy applies for a specific environment. Security group membership can be changed by either the Company Admin or via the [User Management API](user-management-api) .
+* A user may be granted roles through a group policy for a [group](/developerportal/control-center/#groups) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](user-management-api) .
 
 {{% alert type="info" %}}
 

@@ -129,7 +129,7 @@ The autocomplete property specifies if a text area should have autocomplete enab
 {{% alert type="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert type="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
-### 2.8 Label Section{#label}
+### 2.7 Label Section{#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}
 

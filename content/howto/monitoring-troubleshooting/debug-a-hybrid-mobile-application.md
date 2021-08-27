@@ -20,14 +20,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)
 * Install the Mendix Developer App on your mobile device
 
-## 2 Start weinre
+## 3 Start weinre
 
 From your console, start weinre with the following parameters: `weinre --boundHost 1.2.3.4 --httpPort 9090`:
 
 * `1.2.3.4` is your local IP, which will most probably match the address that you see in the history of your Mendix Developer App
 * You can change `9090` to a different port as long as it doesn't clash with your application's port, which is usually 8080
 
-## 3 Connect Your Mendix Developer App
+## 4 Connect Your Mendix Developer App
 
 Click the settings icon in the top-right corner of the screen to configure your debugger:
 
@@ -37,14 +37,14 @@ On the configure screen, fill in the same settings that you used to start weinre
 
 You can now navigate to the same address on your local browser to start the debugging session.
 
-## 4 Read More
+## 5 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [Debug Microflows Remotely](debug-microflows-remotely)

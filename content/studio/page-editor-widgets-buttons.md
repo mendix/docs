@@ -13,21 +13,28 @@ Button [widgets](page-editor-widgets) allow end-users to perform various actions
 {{% image_container width="400" %}}![](attachments/page-editor-widgets-buttons/button-example.png)
 {{% /image_container %}}
 
-The following **Buttons** are available in Mendix Studio as default widgets:
+The following categories and buttons are available in Mendix Studio as default widgets:
 
-* Open Page
-* Call Microflow
-* Create Object
-* Save Changes
-* Delete Object
-* Cancel Changes
-* Close Page
-* Sign Out
-* Open Link
+* **Buttons** – buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link:
+  * Open Page
+  * Call Microflow
+  * Close Page
+  * Sign Out
+  * Open Link
+* **Data Buttons** – buttons that manipulate data and are used to create or delete an object, save or cancel changes:
+  * Create Object
+  * Save Changes
+  * Delete Object
+  * Cancel Changes
+* **Workflow Buttons** – buttons that are related to [workflows](workflows) and are used to call  a workflow, complete or show a [user task](workflows-user-task), show a workflow page:
+  * Call Workflow
+  * Complete Task
+  * Show User Task
+  * Show Workflow
 
 {{% alert type="info" %}}
 
-Apart from the default button widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
+Apart from the default button widgets, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
 
 {{% /alert %}}
 
@@ -55,19 +62,23 @@ For more information on the **Events** section and on click actions, see [Events
 {{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons/events-section.png)
 {{% /image_container %}}
 
-You can find the list of default actions and properties that need to be configured in the table below. 
+You can find the list of default actions and properties that need to be configured in the table below:
 
-| Button         | Default Action | Properties to be Configured                                  |
-| -------------- | -------------- | ------------------------------------------------------------ |
-| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section the [Create Object Option](page-editor-widgets-events-section#create-object-option) section in *Events Section*. <br /> **Close pages** <br />Control the number of pages to close after navigating to the target page. |
-| Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
-| Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity) <br /> **Close pages** <br />Control the number of pages to close after navigating to the new or edit page.       |
-| Save Changes   | Save Changes   | None                                                         |
-| Delete Object  | Delete Object  | None                                                         |
-| Cancel Changes | Cancel Changes | None                                                         |
-| Close Page     | Close Page     | **Close pages** Control the number of pages to close.        |
-| Sign Out       | Sign Out       | None                                                         |
-| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (Default: *Web*)</li><li>**Source** (Default: *Use literal value*)</li><li>**Url**</li></ul> For more information on these properties, see the [Open Link Action](page-editor-widgets-events-section#open-link-action) section in *Events Section*. |
+| Button         | Default Action     | Properties to be Configured                                  |
+| -------------- | ------------------ | ------------------------------------------------------------ |
+| Open Page      | Page               | For **Open Page** you can configure the following properties:<ul><li>**Page**</li><li>**Create Object** and **Entity** – if you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**.</li></ul> For more information on these properties, see section the [Create Object Option](page-editor-widgets-events-section#create-object-option) section in *Events Section*. |
+| Call Microflow | Microflow          | **Microflow**                                                |
+| Close Page     | Close Page         | None                                                         |
+| Sign Out       | Sign Out           | None                                                         |
+| Open Link      | Open Link          | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (Default: *Web*)</li><li>**Source** (Default: *Use literal value*)</li><li>**Url**</li></ul> For more information on these properties, see the [Open Link Action](page-editor-widgets-events-section#open-link-action) section in *Events Section*. |
+| Create Object  | Create Object      | **Page** and **Entity**                                      |
+| Save Changes   | Save Changes       | None                                                         |
+| Delete Object  | Delete Object      | None                                                         |
+| Cancel Changes | Cancel Changes     | None                                                         |
+| Call Workflow  | Call Workflow      | **Workflow**                                                 |
+| Complete Task  | Complete Task      | **Task**                                                     |
+| Show User Task | Show Task Page     | None                                                         |
+| Show Workflow  | Show Workflow Page | **Admin Page**                                               |
 
 ## 3 General Section
 

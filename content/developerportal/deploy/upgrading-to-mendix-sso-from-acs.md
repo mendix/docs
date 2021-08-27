@@ -5,6 +5,7 @@ menu_order: 20
 description: "How to upgrade existing apps using AppCloudServices to use Mendix SSO"
 tags: ["SSO", "Single Sign On", "Upgrade", "AppCloudServices", "Mendix SSO"]
 #Ownership claimed by Identity Services Team.
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -20,27 +21,27 @@ Dealing with these two situations is described in the two sections below.
 
 ## 2 Replacing a Standard Implementation of AppCloudServices with Mendix SSO
 
-If you have an app which uses AppCloudServices in its default implementation, you can just replace the existing AppCloudServices App Store module with the Mendix SSO App Store module.
+If you have an app which uses AppCloudServices in its default implementation, you can just replace the existing AppCloudServices Marketplace module with the Mendix SSO Marketplace module.
 
 Perform the following steps to replace AppCloudServices with Mendix SSO:
 
 1. Ensure that your app is using Mendix version 7.23.3 or above.
 
-    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro. Apps in version 6 of Mendix will need to be updated to version 7 first – see the instructions in [Moving from Modeler Version 6 to 7](/refguide7/moving-from-6-to-7).
+    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro.
 
-2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app. See the instructions in [How To Migrate Existing App Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui).
+2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app..
 
-3. Import the Mendix SSO module from the App Store, and implement it using the instructions in the [Setting Up Mendix Single Sign-On](mendix-sso#setting-up) section of *Mendix Single Sign-On*.
+3. Import the Mendix SSO module from the Marketplace, and implement it using the instructions in the [Setting Up Mendix Single Sign-On](mendix-sso#setting-up) section of *Mendix Single Sign-On*.
 
 4. Delete the **AppCloudServices** module. You will also need to delete or exclude the **OnFirstLoginAppCloudUser** microflow which will have been added to your app.
 
-    Note that there may still be JAR libraries in your project which were used by AppCloudServices but which are no longer needed by your app.
+    Note that there may still be JAR libraries in your app which were used by AppCloudServices but which are no longer needed by your app.
 
 5. Add user administration functions, if required.
 
     By default, you can use the Mendix SSO module to perform user administration of end-users signing on. You can include the default implementation supplied with the module by adding the relevant pages — which you can find in **MendixSSO** > **Default Implementation** > **Pages** — in the appropriate places within your app flow.
     
-    If you had local end-users who had access to the app, these will still be available through the **Account** entity in the **Administration** App Store Module. You can continue to administer these end-users through the Administration module
+    If you had local end-users who had access to the app, these will still be available through the **Account** entity in the **Administration** Marketplace module. You can continue to administer these end-users through the Administration module
 
     If you wish, you can copy the information about local end-users into the **MendixSSOUser** entity in the Mendix SSO module. If you do this, you will need to use the same techniques as described for customized implementations in the next section.
 
@@ -66,11 +67,11 @@ The first steps you need to take are the same as for a non-customized implementa
 
 1. Ensure that your app is using Mendix version 7.23.3 or above.
 
-    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro. Apps in version 6 of Mendix will need to be updated to version 7 first – see the instructions in [Moving from Modeler Version 6 to 7](/refguide7/moving-from-6-to-7).
+    Mendix SSO apps must be built using Mendix version 7.23.3 or above. If your app is built using Mendix version 7.23.2 or below, you need to upgrade it. Apps in a previous version 7 release of Mendix can be updated automatically by opening them in a new version of Studio Pro.
 
-2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app. See the instructions in [How To Migrate Existing App Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui).
+2. Upgrade your UI to AtlasUI, if you are not currently using Atlas UI. Mendix SSO pages are written using AtlasUI, so to make use of the default Mendix SSO implementation, you need to upgrade your app.
 
-3. Import the Mendix SSO module from the App Store, and implement it using the instructions in the [Setting Up Mendix Single Sign-On](mendix-sso#setting-up) section of *Mendix Single Sign-On*.
+3. Import the Mendix SSO module from the Marketplace and implement it using the instructions in the [Setting Up Mendix Single Sign-On](mendix-sso#setting-up) section of *Mendix Single Sign-On*.
 
 4. Delete the **AppCloudServices** module. You will also need to delete or exclude the **OnFirstLoginAppCloudUser** microflow which will have been added to your app.
 

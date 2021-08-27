@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 *  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
    ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in the Modeler and run it locally
+* Open the [Company Expenses app](https://marketplace.mendix.com/link/component/240/Mendix/Company-Expenses) in the Modeler and run it locally
 
 ## 3 Creating a Java Project
 

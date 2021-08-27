@@ -8,19 +8,19 @@ tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 
 ## 1 Introduction
 
-You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app project.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
+You can search for changes or usages of different elements, documents, Xpaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
 ![Find Options](attachments/find-and-find-advanced/find-options.jpg)
 
 ## 2 Find Option
 
-You can find various elements in your app project via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
+You can find various elements in your app via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
 
 1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>F</kbd>.
 
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 
-3. In the **Look in** section unselect items in your project where you do not want to search in:  
+3. In the **Look in** section unselect items in your app where you do not want to search in:  
 
    ![Look in Section](attachments/find-and-find-advanced/look-in.jpg)
 
@@ -30,7 +30,7 @@ You can see search results in the **Find Results** pane:
 
 ## 3 Find Advanced Option
 
-With the **Find Advanced** option you can set advanced criteria and find specific elements in your project, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
+With the **Find Advanced** option you can set advanced criteria and find specific elements in your app, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
 
 ### 3.1 Finding Object Activities {#find-object-activities}
 
@@ -47,7 +47,7 @@ You can see search results in the **Find Results** pane.
 
 ### 3.2 Finding Unused Elements {#find-unused-elements}
 
-While you develop your app, it might occur that specific functionality (for example, pages or microflows) is not applicable anymore in the final version of your application. To keep your app project clear and easy to maintain, it is advised to clean any unused items up. 
+While you develop your app, it might occur that specific functionality (for example, pages or microflows) is not applicable anymore in the final version of your application. To keep your app clear and easy to maintain, it is advised to clean any unused items up. 
 
 To find the unused items, do the following:
 
@@ -61,17 +61,17 @@ To find the unused items, do the following:
 
 The results will show up in the **Find Results** pane. To filter the results click the **Show all** button in the top-right corner of the pane. 
 
-Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app project regularly refresh the unused items list.
+Note that deleting any unused items might result in more unused items. For example, if you delete an unused page, a microflow which is only used on that page will become an unused item itself. If you are cleaning up your app regularly refresh the unused items list.
 
 {{% alert type="info" %}}
 
-Modules downloaded from the App Store might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an App Store module.'
+Modules downloaded from the Marketplace might contain a lot of unused items. If you remove those items and the module is updated later, those items will be back in your model, so it is advised that you do not remove any unused items from an Marketplace module.'
 
 {{% /alert %}}
 
 {{% alert type="info" %}}
 
-Any objects which are excluded from the project will not show up in the unused items list.
+Any objects which are excluded from the app will not show up in the unused items list.
 
 {{% /alert %}}
 
@@ -83,17 +83,19 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
 
-   ![](attachments/find-and-find-advanced/mark-as-used-property.png)
-
-## 4 Find Usages Option
+## 4 Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
+
+{{% alert type="info" %}}
+This option only finds places where the selected entity/attribute is selected itself. This means that it will not find instances where the entity/attribute is derived implicitly (for example, by following an association).
+{{% /alert %}}
 
 To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
-2. Select an element (for example, an entity) and click **Edit **> **Find usages** in the top-bar or right-click an element and select **Find usages**:
-   ![Find Usages](attachments/find-and-find-advanced/find-usages.png)
+2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
+    {{% image_container width="350" %}}![Find Usages](attachments/find-and-find-advanced/find-usages.png){{% /image_container %}}
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 
 ![Find Results Pane](attachments/find-and-find-advanced/found-usages.png)

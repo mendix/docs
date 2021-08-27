@@ -1,9 +1,10 @@
 ---
 title: "Page Editor Consistency Errors"
 parent: "consistency-errors"
+menu_order: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
@@ -75,8 +76,6 @@ However, the **Customer Details** page has a data view that expects an object *C
 ![Data View Expects the Customer Object](attachments/consistency-errors-pages/data-view-customer.png)
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
-
-![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/object-error.png)
 
 As the **Details** button to the **Customers** page is outside a data container, it does not know which object to pass. The way of fixing this error depends on the following:
 
@@ -157,9 +156,7 @@ Some of the most common errors of this type are described in the table below:
 
 When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [**On click** event](on-click-event) of the button is set to *Microflow*):
-
- ![](attachments/consistency-errors-pages/on-click-event-button.png)
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*).
 
 However, the microflow contains a parameter *Customer*:
 
@@ -183,9 +180,7 @@ Now the *Customer* object is available on the page and it matches the microflow 
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
-For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*):
-
- ![](attachments/consistency-errors-pages/on-click-event-button.png)
+For example, on a page named *Customers* you have a button that calls a microflow (that is an [On click event](on-click-event) of the button is set to *Microflow*).
 
 The microflow contains a parameter *Customer*:
 
@@ -290,13 +285,11 @@ A consistency error for an image widget is described in the table below:
 
 ## 9 On Click Event Consistency Errors 
 
-You can specify an **On Click Event** for different widgets, for example, for buttons or images. 
+You can specify an [On click event](on-click-event) for different widgets, for example, for buttons or images. 
 
 The most common consistency errors are connected with not configuring the on click event. 
 
-To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
-
-![On Click Event Example](attachments/consistency-errors-pages/on-click-event.png)
+To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click event. 
 
 ##  10 Read More
 

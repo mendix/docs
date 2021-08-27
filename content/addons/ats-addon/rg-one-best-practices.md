@@ -10,7 +10,7 @@ In ATS there are two ways for creating custom actions. First you can extract act
 
 ## 2 Write Reusable & Focused Actions
 
-Use input parameters and generic functions instead of hardcoding every variable or option. Also don't write actions that do everything at once. Let your actions do one specific task, e.g. the retrieval of a WebElement. This serves the readability of your actions/test cases and also makes maintenance much easier.     
+Use input parameters and generic functions instead of hardcoding every variable or option. Also don't write actions that do everything at once. Let your actions do one specific task, for example, the retrieval of a WebElement. This serves the readability of your actions/test cases and also makes maintenance much easier.     
 
 ## 3 Retrieve WebElements/Widgets Before Applying JavaScript Actions on Them
 
@@ -20,7 +20,7 @@ For more information about JQuery selectors read the [JQuery selectors section](
 
 ## 4 Naming Conventions
 
-Always use descriptive names for your actions and parameters, e.g. "Set TextBox value" for an action or "Column Name" for a parameter. This makes it easier to know what your action does, without looking into it.
+Always use descriptive names for your actions and parameters, for example, "Set TextBox value" for an action or "Column Name" for a parameter. This makes it easier to know what your action does, without looking into it.
 
 Some parameter names used by the ATS core library:
 

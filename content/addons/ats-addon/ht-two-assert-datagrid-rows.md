@@ -81,7 +81,7 @@ Filling the data in the **Find/Assert DataGrid Row** action, results in the foll
 
 When running this action ATS asserts the presence of the row with all three values.
 
-When asserting for the absence of that row after deleting it, you can add the same data as precondition:
+When asserting for the absence of that row after deleting it, you can use the same data in combination with the negate option:
 
 ![](attachments/ht-two-assert-datagrid-rows/assert-in-precondition.png)
 

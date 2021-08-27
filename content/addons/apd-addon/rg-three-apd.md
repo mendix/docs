@@ -12,7 +12,7 @@ The Application Performance Diagnostics (APD) tool is a solution that helps you 
 In earlier releases, this tool was called Application Performance Monitor (APM).
 {{% /alert %}}
 
-This is the reference guide for Mansystems' APD 3 for Mendix. It has the following chapters:
+This is the reference guide for CLEVR's APD 3 for Mendix. It has the following chapters:
 
 * [Apps](rg-three-apps)
 * [Environments](rg-three-environments)

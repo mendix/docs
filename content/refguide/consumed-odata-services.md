@@ -1,17 +1,18 @@
 ---
 title: "Consumed OData Services"
 parent: "integration"
+menu_order: 5
 description: "Overview of consumed OData services for Studios"
 tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/index). 
+Data can be published from an app for use by other apps through [published OData services](published-odata-services). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/).
 
-Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/index) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Data Hub Catalog](/data-hub/data-hub-catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](data-hub-pane) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and exposed entities.
 
-For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](consumed-odata-service).
+For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](consumed-odata-service).
 
 {{% alert type="info" %}}
 Mendix Data Hub is a licensed product. Using external entities to consume OData services requires a license, and the type of license you have will define how many data records can be consumed.  For further details, see the [Data Hub License Limitations](consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*. To find out more about your Data Hub license, contact [Mendix Support](https://support.mendix.com).
@@ -21,7 +22,7 @@ For details on the features that a published OData service must support and how 
 
 ## 2 OData Services and External Entities
 
-When an external entity is used in an app project, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned. 
+When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 ### 2.1 External Entities
 
@@ -41,13 +42,11 @@ You can create associations between local [persistable entities](persistability#
 
 When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
 
-In the **Data Hub** pane the service and the entity will be shown as consumed both in the search results pane and also in the **Project** panels. 
+In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **App** pane.
 
-If the metadata contract at the specified service endpoint is different to the contract in the current project model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow: 
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow:
 
-![Data Hub Pane update](attachments/data-hub-pane/data-hub-pane-update.png)
-
-![update service project-pane](attachments/consumed-odata-service/project-pane-update-available.png)
+{{% image_container width="300" %}}![Data Hub Pane update](attachments/consumed-odata-service/project-pane-update-available.png){{% /image_container %}}
 
 This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service#updating).
 

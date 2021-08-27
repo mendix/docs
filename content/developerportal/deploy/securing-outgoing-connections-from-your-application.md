@@ -1,11 +1,16 @@
 ---
-title: "Secure Outgoing Connections from your App"
+title: "Secure Outgoing Connections from Your App"
 parent: "general"
 menu_order: 10
 description: "Describes which methods are available for securing connections from your app to the outside world."
 tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/securing-outgoing-connections-from-your-application.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -88,4 +93,4 @@ Setting up an SSH enabled server and setting up a public/private keypair is a tr
 
 Client certificates can be added to your Mendix Cloud app from within the Developer Portal. See [Certificates](/developerportal/deploy/certificates) for more information.
 
-Scenarios 2 to 5 work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many AppStore modules and other content. However, by using Java actions, they can be applied to most TCP based connections which can be wrapped in TLS for added security.
+Scenarios 2 to 5 work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many Mendix Marketplace modules and other content. However, by using Java actions, they can be applied to most TCP based connections which can be wrapped in TLS for added security.

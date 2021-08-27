@@ -1,16 +1,86 @@
 ---
-title: "SAP Cloud Platform"
+title: "SAP BTP"
 category: "Deployment"
 menu_order: 30
-description: "Release notes for deployment to SAP Cloud Platform"
+description: "Release notes for deployment to SAP Business Technology Platform"
 tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
-These release notes cover changes to deployment to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
+These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform) (SAP BTP — formerly SAP Cloud Platform). There are separate release notes for other deployment targets, see [Deployment](deployment) release notes page for further information.
 
-For information on the current status of deployment to SAP Cloud Platform and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
+
+## 2021
+
+### August 19th, 2021
+
+#### Improvements – OData Connector for SAP Solutions
+
+* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service). Users will now be signed out so that they can retrieve a new access token.
+* We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
+
+### July 26th, 2021
+
+#### Improvements
+
+* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
+    {{% alert type="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module) Marketplace module.{{% /alert %}}
+    
+### July 14th, 2021
+
+#### Fix
+
+* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+
+### June 16th, 2021
+
+#### Improvements
+
+* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator) and [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+
+#### Fix
+
+* We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
+
+### June 2nd, 2021
+
+#### Improvements
+
+* We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
+
+### May 27th, 2021
+
+#### Improvements
+
+* We have added support for the [Deep Link](/appstore/modules/deep-link) module for apps using the SAP XSUAA Connector. When you set up the module, you need to set the **LoginLocation** constant to `/xsauaalogin/` to ensure your end users are logged in.
+
+### March 28th, 2021
+
+#### Fix
+
+* We resolved an issue where a change in SAP BTP meant that apps using XSUAA could not be deployed.
+
+    (Tickets 118831 118847 118861 118862 118874 118876 118908 118925 118935 118983 119020)
+
+### February 10th, 2021
+
+#### Improvements
+
+* We added the ability to extend the timeout period for the Cloud Foundry health check when transporting an app to a new environment on SAP BTP.
+* We added the ability to define custom environment variables for your app deployed on SAP BTP.
+* We added the ability to enable *Dynatrace* for your app deployed to SAP BTP by selecting variables from the supported custom environment variables list.
+* SAP Cloud Platform was renamed SAP Business Technology Platform (SAP BTP) and changes were made to the documentation to reflect this.
+
+For more information see [SAP Business Technology Platform - deploy](/developerportal/deploy/sap-cloud-platform).
 
 ## 2020
+
+### December 21st, 2020
+
+#### Improvements
+
+* We released the [SAP Fiori 3 UI Resource](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace. This allows you to create the SAP Fiori 3 user experience in your Mendix apps. SAP Fiori 3 is the new target design system for all SAP products in the *Intelligent Suite*. For more information, see [SAP Fiori 3.0 Styling](/partners/sap/sap-fiori-3-0).
 
 ### December 9th, 2020
 
@@ -32,7 +102,7 @@ For information on the current status of deployment to SAP Cloud Platform and an
 
 #### Improvements
 
-* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Cloud Platform](/partners/sap/sap-autoscaler) for more information.
+* We have added an easy-to-use autoscaler configurator to allow you to easily create JSON configuration files for the **Application Autoscaler** on SAP Cloud Platform. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler) for more information.
     * There is currently an issue with how the JSON is uploaded. We are working on a fix for this but, in the meantime, please check the workaround in the documentation to ensure that the JSON is uploaded.
 
 ### March 26th, 2020
@@ -42,7 +112,7 @@ For information on the current status of deployment to SAP Cloud Platform and an
 * We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
     * **Object storage is only supported in the Azure Netherlands region for  Mendix version 8.7.0 and above**
 * We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
-* We have added the ability to specify a custom URL (e.g. `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (e.g. `appname.cfapps.eu10.hana.ondemand.com`) of the app.
+* We have added the ability to specify a custom URL (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 
 ### January 3rd, 2020
 

@@ -5,7 +5,7 @@ parent: "rg-three-apd"
 
 ## 1 Apps Overview
 
-The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal/index) in alphabetical order.
+The homepage of APD displays the list of licensed applications from the Mendix [Developer Portal](/developerportal) in alphabetical order.
 
 ![](attachments/rg-three/ProjectsDashboard.png)
 

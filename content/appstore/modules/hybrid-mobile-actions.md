@@ -1,14 +1,14 @@
 ---
 title: "Hybrid Mobile Actions"
 category: "Modules"
-description: "Describes the configuration and usage of the Hybrid Mobile Actions module, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "platform support", "hybrid mobile", "hybrid mobile actions",  "mobile"]
+description: "Describes the configuration and usage of the Hybrid Mobile Actions module, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "platform support", "hybrid mobile", "hybrid mobile actions",  "mobile"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Hybrid Mobile Actions](https://appstore.home.mendix.com/link/app/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
+The [Hybrid Mobile Actions](https://marketplace.mendix.com/link/component/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
 
 | Category            | Action                                |
 | :------------------ | :------------------------------------ |
@@ -31,7 +31,7 @@ The [Hybrid Mobile Actions](https://appstore.home.mendix.com/link/app/112063/) m
 
 ## 2 Dependencies
 
-The actions above are dependent on Cordova plugins. Most dependencies are already provided in the standard template. When building your [hybrid mobile app](/refguide/getting-the-mendix-app), make sure you add and enable the dependencies by first enabling in **Permissions** by selecting the following:
+The actions above are dependent on Cordova plugins. Most dependencies are already provided in the standard template. When building your hybrid mobile app, make sure you add and enable the dependencies by first enabling in **Permissions** by selecting the following:
 
 * Calendar
 * Camera
@@ -51,8 +51,6 @@ Note that the standard *config.xml* template already includes `cordova-plugin-co
 ```
 
 {{% alert type="info" %}}
-Please note that the above plugins are not available in the in standard [Mendix](/refguide/getting-the-mendix-app) mobile app and can only be tested with a custom-built mobile app.
+Please note that the above plugins are not available in the in standard Mendix mobile app and can only be tested with a custom-built mobile app.
 {{% /alert %}}
-
-These configurations can also be set when building a [custom build package](/howto/mobile/customizing-phonegap-build-packages).
 

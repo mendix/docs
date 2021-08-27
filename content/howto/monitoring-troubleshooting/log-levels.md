@@ -92,13 +92,14 @@ C:\temp\LogDemoApp\python
 {"feedback":{},"result":0}
 ```
 
-### 3.2 Configuring the Log Levels for Standard Log Messages
+### 3.2 Configuring the Log Levels for Standard Log Messages{#standard-log-levels}
 
 To set the log levels for standard log messages, follow these steps:
 
-1. In the **Console** pane, click **Advanced** to open the menu of advanced options.
-2. Click **Set log levels**.
-3. For the relevant **Log node**, select the desired level from the drop-down in the **Log level** column.
+1. Ensure that your app is running locally – if not, the option to set log levels will not be clickable.
+2. In the **Console** pane, click **Advanced** to open the menu of advanced options.
+3. Click **Set log levels**.
+4. For the relevant **Log node**, select the desired level from the drop-down in the **Log level** column.
 
 ![](attachments/log-levels/18580029.png)
 
@@ -121,6 +122,6 @@ To set the level of custom log messages that you have created via a microflow, f
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [A Script to Set the Log Node Levels in Mendix](http://www.mxblog.eu/p/post/2533274790397906)

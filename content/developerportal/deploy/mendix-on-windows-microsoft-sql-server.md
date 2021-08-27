@@ -2,7 +2,6 @@
 title: "Microsoft SQL Server"
 parent: "deploy-mendix-on-microsoft-windows"
 menu_order: 30
-tags: []
 ---
 
 This section describes how to set up your Microsoft SQL Server user, notification, and maintenance plans for use with your Mendix installation.

@@ -4,15 +4,17 @@ category: "App Modeling"
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["Studio Pro"]
+aliases:
+    - /refguide/desktop-modeler-overview.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 ## 1 Introduction
 
-Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](project) in Studio Pro.  
+Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications.
 
-One Studio Pro instance can have only one project open at a time, but you can open two Studio Pro instances when necessary.
+One Studio Pro instance can have only one app open at a time, but you can open two Studio Pro instances when necessary.
 
 {{% alert type="info" %}}
 When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
@@ -28,31 +30,31 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and App Store](#links) 
+* [Links to the Developer Portal and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
 
 For more information on menus, see [Menus](menus). 
 
 ### 2.2 Run & View App {#run-and-view}
 
-You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
+You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy).
 
-For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Developer Portal & App Store {#links}
+### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Developer Portal](/developerportal/index) and [App Store](/appstore/index) in the top-right corner of Studio Pro.
+You can find links to the [Mendix Studio](/studio) (if enabled), [Developer Portal](/developerportal), and [Marketplace](/appstore) in the top-right corner of Studio Pro.
 
-Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option.  
 
-## 3 Project Structure
+## 3 App Structure
 
-A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your project can be viewed in the [Project Explorer](project-explorer). 
+An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](modules). The complete structure of your app can be viewed in the [App Explorer](project-explorer). 
 
 ## 4 Working Area
 
@@ -68,9 +70,7 @@ This section describes documents in the working area, not panes that you can ope
 
 {{% /alert %}}
 
-You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. The video below shows examples of how to interact with a tab:
-
-<video controls width="608" height="456" src="attachments/studio-pro-overview/document-tabs.mp4">VIDEO</video>
+You can have a number of tabs open, just like in a modern web browser. They can be closed, reordered, and shown side by side. 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
@@ -147,7 +147,7 @@ The following shortcut keys are available in the microflow editor:
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
-The following shortcut keys are available for the the microflow debugger:
+The following shortcut keys are available for the microflow debugger:
 
 | Key | Description |
 | --- | --- |
@@ -167,7 +167,7 @@ The following shortcut keys control the currently selected language:
 
 ## 8 Read More
 
-* [Project Explorer](project-explorer)
+* [App Explorer](project-explorer)
 * [Menus](menus)
 
   

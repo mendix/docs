@@ -15,9 +15,9 @@ A DateTime is nothing more than a number to a computer. This number represents t
 
 This also means there is NO timezone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or timezones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, timezones come into play.
 
-## 3 What Is the Purpose of the Default Time Zone Setting in Project Settings?
+## 3 What Is the Purpose of the Default Time Zone Setting in App Settings?
 
-The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for projects where people log in from multiple time zones because it will rarely be correct.
+The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for apps where people log in from multiple time zones because it will rarely be correct.
 
 ## 4 What Is the Purpose of Setting a Time Zone for a User?
 
@@ -41,7 +41,7 @@ Currently you can work around this issue by scheduling 2 events that are running
 
 ## 9 How Is a Non-Localized Date Supposed to Work?
 
-Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
 ## 10 If I Assign a Non-Localized Date the Value of Token `[%CurrentDateTime%]`, What Should I Be Seeing in the Client if I Am in EST?
 

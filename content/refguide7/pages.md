@@ -38,4 +38,4 @@ Widgets are grouped into the following categories:
     * Examples: basic report, report chart
 * [Chart widgets](chart-widgets) graphically represent data using various chart types
     * Examples: line chart, bar chart, heatmap
-* Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript
+* Add-on widgets can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript

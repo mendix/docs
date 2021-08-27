@@ -13,7 +13,7 @@ The **XPath** data source is very similar to the [**Database** data source](data
 
 The data retrieved can also be limited by the following factors:
 
-1. The access rules defined in the security section of the project.
+1. The access rules defined in the **Security** section of the app.
 2. An association, if the widget is nested in another data widget and the data path described runs over an association.
 
 If you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of XPath constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.

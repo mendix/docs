@@ -1,6 +1,6 @@
 ---
 title: "Decisions"
-parent: "application-logic"
+parent: "microflows-and-nanoflows"
 menu_order: 50
 tags: ["studio pro", "decision", "decisions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 

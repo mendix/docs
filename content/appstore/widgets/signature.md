@@ -1,14 +1,14 @@
 ---
 title: "Signature"
 category: "Widgets"
-description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix App Store."
-tags: ["app store", "app store component", "widget", "signature", "platform support"]
+description: "Describes the configuration and usage of the Signature widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "signature", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Signature](https://appstore.home.mendix.com/link/app/107984/) widget is a signature pad for capturing signatures in your app. The widget implements bezier curves and velocity for the smooth drawing of the signature.
+The [Signature](https://marketplace.mendix.com/link/component/107984/) widget is a signature pad for capturing signatures in your app. The widget implements bezier curves and velocity for the smooth drawing of the signature.
 
 ### 1.1 Features
 
@@ -23,10 +23,6 @@ To store the signature image in the object, the Mendix Platform forces a commit 
 Previous signatures can not be edited. When the signature is captured and stored as an image, the widget cannot be used on a new or other page for editing the existing widget. In this case, the widget will display an empty canvas, and when the signature is saved, it will overwrite the previous image.
 
 A resized signature is captured. If the canvas is resized, the strokes outside the visible canvas are not shown, but they are stored.
-
-### 1.3 Demo App Project
-
-For a demo app project that has been deployed with this widget, see [here](https://signature101.mxapps.io).
 
 ## 2 Configuration
 
@@ -49,5 +45,4 @@ To use this widget, follow these steps:
 	`max-height: 600px;`
 7. Upon running the application, after signing on the canvas, the **Has signature** attribute is toggled to show that the canvas has a signature. The end-user can toggle to **No** in order to clear the signature data source.
 8. When the form is submitted—which can be triggered by the start of a microflow or a save—the signature is captured and stored as an image. To view the result, the [Image Viewer](image-viewer) widget can be used.
-
 

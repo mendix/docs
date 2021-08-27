@@ -1,7 +1,7 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
 category: "Logic & Business Rules"
-menu_order: 1
+menu_order: 30
 tags: ["how-to", "microflow", "create microflow"]
 ---
 
@@ -80,7 +80,7 @@ To edit the new microflow, follow these steps:
 
     ![](attachments/trigger-microflow-from-menu-item/show-message-properties.png)
 
-6. Click **Run Locally** and then **View** to see the application in your default browser.
+6. Click the play button (**Run Locally**) and then **View App** to see the application in your default browser.
 
 7. Click the **Hello World** menu item in the menu bar to see the message:
 

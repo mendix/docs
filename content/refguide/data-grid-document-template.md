@@ -2,6 +2,9 @@
 title: "Data Grid (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Data+Grid+(document+template).html
+    - /refguide/data-grid-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

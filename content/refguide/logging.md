@@ -9,6 +9,8 @@ tags: ["studio pro"]
 Below we describe what the various log levels of the runtime will show as output.
 During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy) pages.
 
+You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto/monitoring-troubleshooting/log-levels#standard-log-levels) in *How To Set Log Levels* for more information.
+
 ## 2 Log Levels
 
 ### 2.1 Critical
@@ -49,7 +51,7 @@ This list is currently incomplete and is being worked on.
 
 | Log Node | Description
 | --- | --- |
-| ActionManager | Log messages related to action scheduling (e.g. scheduled events) and action execution (e.g. running microflows). |
+| ActionManager | Log messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
@@ -71,13 +73,14 @@ This list is currently incomplete and is being worked on.
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
 | M2EE | Log messages from the administration interface with the runtime |
-| MicroflowDebugger | Log messages related to the status of the microflow debugger, e.g. connection status, incoming and outgoing requests, etc. |
-| MicroflowEngine | Log messages related to microflow execution, e.g. which microflow / microflow action is being executed and errors that occur during the execution. |
+| MicroflowDebugger | Log messages related to the status of the microflow debugger, for example, connection status, incoming and outgoing requests, etc. |
+| MicroflowEngine | Log messages related to microflow execution, for example, which microflow / microflow action is being executed and errors that occur during the execution. |
 | ModelStore | |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
 | OData Publish | Log messages related to published OData services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
+| Queue | All actions related to Task Queues |
 | REST Publish | Log messages related to published REST services. |
 | RequestStatistics | |
 | Services | |
@@ -86,6 +89,7 @@ This list is currently incomplete and is being worked on.
 | StorageSwift | |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | |
+| Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |
 
 ### 3.2 JSON{#json}
 

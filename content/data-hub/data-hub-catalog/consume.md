@@ -38,9 +38,9 @@ It is good practice that publishers of a service serve a notice of deprecation o
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 
-External entities are read-only, so it is not possible to change te structural values of attributes or associations between two external entities.
+External entities may be read-only. In that case it is not possible to change te structural values of attributes or associations between two external entities.
 
-When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
 
 You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
 
@@ -57,10 +57,6 @@ Data for external entities is not in the consuming app's database but in the dat
 The data set that is associated with the consumed entity is maintained in the publishing app.
 
 Access  to the data is through the published REST OData service, with "reading" and "querying" of the data by the consuming app.
-
-{{% alert type="info" %}}
-This means that there are currently no "writes" or requests to the originating app to change data by the consuming app. 
-{{% /alert %}}
 
 ## 3 Operations on External Entities in Consuming Apps
 

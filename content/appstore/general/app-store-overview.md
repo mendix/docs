@@ -180,7 +180,7 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
-#### 4.6 Subscriptions {#subscriptions}
+### 4.6 Subscriptions {#subscriptions}
 
 You can see all the Marketplace components you have subscribed to on this page:
 
@@ -192,7 +192,7 @@ Clicking a **Product** name takes you to the service management dashboard, which
 
 {{% todo %}}[**VERIFY NAME OF PAGE - STILL SERVICE MANAGEMENT DASHBOARD, OR SUBSCRIPTION MANAGEMENT DASHBOARD? VERIFY PLACEMENT OF SECTION HERE**]{{% /todo %}}
 
-##### 4.6.1 Service Management Dashboard
+#### 4.6.1 Service Management Dashboard
 
 {{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
 
@@ -212,7 +212,7 @@ You can also select a group of binding keys and click **Manage Instance** to go 
 This additional management option is only available for specific components where necessary.
 {{% /alert %}}
 
-##### 4.6.2 Creating Binding Keys
+#### 4.6.2 Creating Binding Keys
 
 To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**.
 
@@ -234,7 +234,7 @@ To use the binding keys, see the [Using the Binding Keys](#using) section below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 
-##### 4.6.3 Using the Binding Keys {#using}
+#### 4.6.3 Using the Binding Keys {#using}
 
 {{% todo %}}[**WHICH NEW NAMES ARE SET AS CONSTANTS?**]{{% /todo %}}
 

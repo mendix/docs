@@ -22,24 +22,32 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
 * Click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed
-* Explore various [content categories](#catalog).
+* Explore various [industry solutions](#industry) and[content types](#types).
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-<a name="catalog"></a>The Marketplace offers the following content categories:
+{{% todo %}}[**GET DESCRIPTION FOR INDUSTRY: RW**]{{% /todo %}}
 
-| Catalog | Description |
+<a name="industry"></a>The Marketplace offers **Industry** solutions for consumer goods and retail, financial services, manufacturing, and the public sector.
+
+<a name="types"></a>The Marketplace offers the following **Content Types**:
+
+| Type | Description |
 | --- | --- |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
+| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
+| **Solution Template** | A solution template is a packaged example of how to solve a specific business problem when creating a new app. |
+| **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app.  |
 
 The following filter options are also available:
 
+* **Compatibility**
 * **Tags**
-* **Ratings**
+* **Rating**
 
 ## 3 Component Details Page {#details}
 
@@ -49,7 +57,7 @@ Clicking the tile of a Marketplace component will bring you to its details page 
 
 ### 3.1 Header & Usage
 
-The header for each component presents the following details:
+The header for a component presents the following details:
 
 * The name and category of the component
 * The review average (in stars) and the number of reviews
@@ -59,6 +67,11 @@ The header for each component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+* The **Premium** label is applied to components like [app services](#type) that require a subscription after a free trial of 30 days
+	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your 30-day free trial
+	* If you have an active trial or a subscription for a component, click **Check Status** to go to the [Subscriptions](#subscriptions) page
+	* These components also have a [Pricing](#tabs) tab
+* The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -74,7 +87,7 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
-### 3.2 Tabs
+### 3.2 Tabs {#tabs}
 
 The details page for a component presents the following item information tabs:
 
@@ -101,8 +114,10 @@ Click an item in the sidebar to go to the page for that content:
 * [My Content](#my-content)
 * [Shared with Me](#shared-with-me)
 * [Saved Content](#saved-components)
-* [Reviews](#my-reviews)
+* [My Reviews](#my-reviews)
 * [Company Content](#company-content)
+* [Subscriptions](#subscriptions)
+* [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
 
 ### 4.1 My Content {#my-content}
@@ -151,7 +166,7 @@ Click the context menu to access various options for managing this content:
 * **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
-### 4.4 Reviews {#my-reviews}
+### 4.4 My Reviews {#my-reviews}
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
 
@@ -165,11 +180,73 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
-### 4.6 Company Reviews
+#### 4.6 Subscriptions {#subscriptions}
+
+You can see all the Marketplace components you have subscribed to on this page:
+
+![](attachments/app-store-overview/subscriptions.jpg)
+
+The table details the **Product** you have subscribed to, the **Type** of plan status, the type of **Plan**, and the **Expiration** of the subscription.
+
+Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
+
+{{% todo %}}[**VERIFY NAME OF PAGE - STILL SERVICE MANAGEMENT DASHBOARD, OR SUBSCRIPTION MANAGEMENT DASHBOARD? VERIFY PLACEMENT OF SECTION HERE**]{{% /todo %}}
+
+##### 4.6.1 Service Management Dashboard
+
+{{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
+
+This page presents an overview of your service instances. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app. You can create and manage these keys here.
+
+The main page of the dashboard presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete a specific group of binding keys.
+
+![](attachments/app-store-overview/binding-keys.jpg)
+
+{{% todo %}}[**VERIFY BELOW AND UPDATE SCREENSHOT**]{{% /todo %}}
+
+You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration:
+
+![](attachments/app-store-overview/binding-keys-5.png)
+
+{{% alert type="info" %}}
+This additional management option is only available for specific components where necessary.
+{{% /alert %}}
+
+##### 4.6.2 Creating Binding Keys
+
+To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**.
+
+{{% todo %}}[**VERIFY BELOW AND ADD SCREENSHOT IF NECESSARY**]{{% /todo %}}
+
+In the dialog box, enter a name for the group of keys. Include the name of the app in which you intend to use the component so that it can be clear to other users where the keys are used.
+
+After you click **Create Keys**, a page will appear with your keys – **Access Key**, **Secrete Key**, and **Token**:
+
+![](attachments/app-store-overview/created-keys.jpg)
+
+Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
+
+{{% alert type="warning" %}}
+Once you close this page, you will not be able to retrieve the keys again.
+{{% /alert %}}
+
+To use the binding keys, see the [Using the Binding Keys](#using) section below.
+
+Click **Return to the overview** to go to the main page of the dashboard. 
+
+##### 4.6.3 Using the Binding Keys {#using}
+
+{{% todo %}}[**WHICH NEW NAMES ARE SET AS CONSTANTS?**]{{% /todo %}}
+
+When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+
+### 4.7 Company Reviews {#company-reviews}
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
-### 4.7 User Groups {#user-groups}
+### 4.8 User Groups {#user-groups}
 
 You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
 
@@ -177,7 +254,7 @@ You can configure user groups for various levels of access to your company conte
 The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
 {{% /alert %}}
 
-#### 4.7.1 Members Tab {#members}
+#### 4.8.1 Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
 
@@ -187,7 +264,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-#### 4.7.2 Guests Tab {#guests}
+#### 4.8.2 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -201,7 +278,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-#### 4.7.3 Content Tab {#group-content}
+#### 4.8.3 Content Tab {#group-content}
 
 On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -217,7 +294,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
 
-#### 4.7.4 Settings Tab
+#### 4.8.4 Settings Tab
 
 {{% alert type="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).
@@ -226,50 +303,6 @@ This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/dev
 On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
-
-## 5 Service Management Dashboard {#service-management}
-
-To use an app service in your app, you need binding keys. You can create and manage these keys on the **Service Management** dashboard.
-
-### 5.1 Creating Binding Keys
-
-To create binding keys, go to the **Service Management** dashboard via the link provided in your subscription confirmation email, select a **Product**, and click **Generate Keys** at the bottom of the page:
-
-![](attachments/app-store-overview/binding-keys-1.png)
-
-In the **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name for the connection:
-
-![](attachments/app-store-overview/binding-keys-2.png)
-
-After you click **Create Keys**, a page will appear with your keys – **clientID**, **TokenURL**, and **clientSecret**:
-
-![](attachments/app-store-overview/binding-keys-3.png)
-
-Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
-
-{{% alert type="warning" %}}
-Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
-{{% /alert %}}
-
-To use the binding keys, see the [Using the Binding Keys](#using) section below.
-
-Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
-
-![](attachments/app-store-overview/binding-keys-4.png)
-
-You can also highlight a product and click **Manage** to go to the app service provider's configuration page, where you can do further app service-specific configuration:
-
-![](attachments/app-store-overview/binding-keys-5.png)
-
-{{% alert type="info" %}}
-This additional management option is only available for specific app services where necessary.
-{{% /alert %}}
-
-### 5.2 Using the Binding Keys {#using}
-
-When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
-
-For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
 ## 6 Read More
 

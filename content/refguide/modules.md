@@ -16,6 +16,14 @@ Within a module you can define [module security](module-security) via module rol
 
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
+{{% alert type="info" %}}
+Mendix Modules are distinct from React Native modules. 
+
+Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. 
+
+React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
+{{% /alert %}}
+
 ## 2 Common
 
 | Document type | Typical elements | Description |

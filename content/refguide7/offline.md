@@ -105,3 +105,7 @@ In addition, Mendix recommends limiting the amount of data and syncing as much a
 There is a restriction with creating and syncing objects with read-only attributes from an offline app. The offline app does not know access rules, so it will allow a user that creates an object offline to edit all attributes, regardless of whether the user actually has write access to them. When syncing the object, this will result in errors, as access rules will be applied when committing the object.
 
 Please note that this does not apply to changing existing objects.
+
+### 4.16 Hashed String Attributes {#hashed-strings}
+
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

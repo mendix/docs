@@ -47,7 +47,7 @@ Since this is general knowledge, it is safer to change this to a custom user nam
 The password is used to sign into the application as the Administrator. You can change the password from the Developer Portal after publishing your app.
 
 #### 2.1.3 User Role
-The user role assigned to the Administrator. For more information, see [User Roles](/refguide8/user-roles).
+The user role assigned to the Administrator. For more information, see [Security, Roles & Permissions](/studio8/settings-security).
 Default: *Administrator*
 
 {{% alert type="info" %}}
@@ -124,7 +124,7 @@ This section describes how to access the user management screen(s) from the Admi
     ![](attachments/managing-local-users-after-deployment/account-overview.png)
 
 {{% alert type="info" %}}
-If you created your app using an older version of Mendix, the Administration module might not be available to you. Please [consult the How-to guide on importing modules](/howto8/integration/importing-and-exporting-objects) to import the Administration module into your project and redeploy.
+If you created your app using an older version of Mendix, the Administration module might not be available to you. Please consult [How to Import & Export Objects](/howto8/integration/importing-and-exporting-objects) to import the Administration module into your app and redeploy.
 {{% /alert %}}
 
 ### 3.3 Managing User Accounts

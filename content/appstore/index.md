@@ -21,5 +21,3 @@ The *Marketplace Guide* is divided into the following categories:
 * [Modules](modules/)
 * [Themes](themes/)
 * [Widgets](widgets/)
-
-

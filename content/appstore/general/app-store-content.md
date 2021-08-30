@@ -119,7 +119,7 @@ To configure the widget, follow these steps:
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
 
-### 4.2 Using a Module
+### 4.2 Using a Module {#module}
 
 You can also download an entire module from the Marketplace. A module includes the whole functionality and integration that can be very helpful when you are building your application.
 
@@ -142,7 +142,7 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
 3. In the **Import Module** dialog box, click **Import**.
 
-4. Wait until a pop-up window shows **The module was successfully imported into your project.** Click **OK**.
+4. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
 5. Open the **App Explorer** and find the **EmailTemplate** module.
 

@@ -70,19 +70,7 @@ Follow the next steps only if you want to run the module without Mendix SSO (onl
 
 ## 4 Usage
 
-### 4.1 Page Templates
-
-#### 4.1.1 My Initiated Workflows
-Allows users who initiate workflows to keep track of their progress. A user is also able to withdraw a workflow if it is still in progress.
-
-#### 4.1.2 Workflow Task Dashboard
-Shows users who execute tasks, for example, a task-based dashboard.
-
-#### 4.1.3 Workflow Task Inbox
-For users who execute tasks, this inbox provides a pre-filtered set of data grids with the option to go to the details of a task and/or assign a task to the user.
-
-#### 4.1.4 User Task Basic/Extended
-May be used to generate a task template that contains a timeline, attachments, comments, header, and context data section preconfigured for a workflow task.
+For more information on module's components and how to use them, see the [Workflow Commons Components](/refguide/workflow-setting-up-app#components) section in *Adding a Workflow to an Existing App: Setting Up the Basics*.
 
 ## 5 Read More
 

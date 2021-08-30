@@ -52,9 +52,9 @@ This mode performs both the upload and the download phases for all entities used
 
 #### 2.1.2 Selective Synchronization {#selective-sync}
 
-This mode allows you to select specific objects to synchronize.
+Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, a specific set of objects will be synchronized. These objects can be either all unsynchronized objects when the [synchronize unsynchronized objects](synchronize#unsynchronized-objects) mode is selected, or a manually selected set of objects when the [synchronize selected object(s)](synchronize#selected-objects) mode is selected.
 
-Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed using a UI element (for example a button or an onchange action) performs the full synchronization.
+Synchronization performed using a UI element (for example, a button or an on-change action) performs the full synchronization.
 
 ### 2.2 Synchronization Phases
 
@@ -196,6 +196,10 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
 * Passing a non-persistable entity that was created in another microflow is not supported
 
+{{% alert type="info" %}}
+If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
+{{% /alert %}}
+	
 #### 4.1.2 UI Actions
 
 UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
@@ -259,3 +263,7 @@ System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supp
 ### 4.8 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
+
+### 4.9 Hashed String Attributes {#hashed-strings}
+
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

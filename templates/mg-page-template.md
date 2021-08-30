@@ -43,10 +43,6 @@ title: "Enter the title of the document"
 
 {Optional: Provide basic troubleshooting info for configuration here if necessary. You should provide this info in a reference guide page or how-to for more specific use cases.}
 
-## 6 Developing This Marketplace Component
-
-{If the community is able to contribute to this Marketplace component via a GitHub repo, describe that process here.}
-
-## 7 Read More
+## 6 Read More
 
 {Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}

@@ -125,6 +125,8 @@ In **Scaling**, there are two sliders that you can control:
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
+{{% alert type="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
+
 If you have 1GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory.
 
 To scale your memory over multiple instances, you need more memory.
@@ -188,7 +190,7 @@ With scheduled events, you can let the Runtime execute a microflow at a specific
 
 For more information, see [Scheduled Events](/refguide/scheduled-events).
 
-### 3.2 Constants
+### 3.2 Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
@@ -445,7 +447,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 

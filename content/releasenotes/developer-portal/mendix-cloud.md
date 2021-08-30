@@ -12,6 +12,37 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### August 26th, 2021
+
+#### Improvements
+
+* We added the ability to restore only a database, without restoring the other files in a backup.
+    You can do this in one of two ways:
+    * Through the [Developer Portal](/developerportal/operate/restore-backup#restore-cloud-backup)
+    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api)
+
+### August 6th, 2021
+
+#### Improvements
+
+* We moved the [Node Permissions](/developerportal/deploy/node-permissions) from the Security page to the [Environments](/developerportal/deploy/environments) page.
+* We added the ability to delegate node permission management to team members who are not the Technical Contact.
+
+#### Fixes
+
+* We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
+
+### July 23rd, 2021
+
+#### Improvements
+
+* We improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker. The version will be updated after a restart of the environment.
+
+#### Fixes
+
+* We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
+* We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
+
 ### July 15th, 2021
 
 #### Improvements

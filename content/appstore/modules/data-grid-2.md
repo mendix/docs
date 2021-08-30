@@ -175,7 +175,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ## 7 Filters
 
-Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected it will appear in each column header a dropzone where you can place your desired filter widget.
+Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
 {{% alert type="warning" %}}
 The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).

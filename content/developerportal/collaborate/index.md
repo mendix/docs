@@ -14,7 +14,6 @@ The Developer Portal supports collaboration with your team and the tracking of S
 
 ## 2 Main Documents in This Category
 
-* [Buzz](buzz) – describes the part of the Mendix Developer Portal where you can see and share ideas as well as discuss and collaborate with your team
 * [Stories](stories) – presents the page that lets you add, edit, and delete stories and Sprints
 * [Team](team) – details the page that presents an overview of your team members where you can also invite new members to your apps
 * [Feedback](feedback) – describes where you can manage feedback on your app

@@ -19,10 +19,6 @@ MindSphere is the cloud-based, open IoT operating system from Siemens that lets 
 
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on MindSphere.
 
-{{% alert type="info" %}}
-You can create Mendix apps which make MindSphere API calls, but which are deployed to a cloud outside MindSphere. However, you will then need to handle user credentials yourself.
-{{% /alert %}}
-
 {{% alert type="warning" %}}
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/partners/siemens/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
 {{% /alert %}}
@@ -81,7 +77,7 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
 
-5. To start the new app, confirm where to store the app, the app name, and the project directory, then click **OK**.
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -230,7 +226,7 @@ To create a Mendix deployment package from your app, do the following:
 Your deployment package will be created, and its location displayed in an information message.
 
 {{% alert type="info" %}}
-By default, the deployment package will be created in the *releases* folder of your project.
+By default, the deployment package will be created in the *releases* folder of your app.
 {{% /alert %}}
 
 ##### 5.2.1.2 Deploying the Application to Cloud Foundry using CF CLI

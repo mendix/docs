@@ -9,7 +9,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-On the **Environments** page, there are three tabs:
+On the **Environments** page, there are four tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -21,6 +21,8 @@ On the **Environments** page, there are three tabs:
 * **Access Restriction Profiles**
     * IP Address Filtering
     * TLS Client Certificate Verification
+* **Permissions**
+    * [Node Permissions](/developerportal/deploy/node-permissions)
     
    ![](attachments/environments/environment-tab.png)       
 
@@ -179,7 +181,13 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 
 For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
 
-## 5 Read More 
+## 5 Permissions {#permissions}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member. Team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
+
+For more information on managing node permissions, see [Node Permissions](node-permissions).
+
+## 6 Read More 
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](environments-details)

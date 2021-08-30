@@ -1,7 +1,7 @@
 ---
-title: "Tricky Custom Settings in Mendix Runtime"
+title: "Advanced Custom Settings in Mendix Runtime"
 parent: "custom-settings"
-description: " Describes custom settings that are a little more difficult to configure than normal."
+description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
 tags: ["Support", "custom settings"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["Support", "custom settings"]
 
 There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide/custom-settings).
 
-However, a few of the more commonly used custom settings can be misunderstood or have effects that one might not expect. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
+However, a few of the more commonly used custom settings can be complicated and have far-reaching implications. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
 ## 2 Session Duration {#session-duration}
 

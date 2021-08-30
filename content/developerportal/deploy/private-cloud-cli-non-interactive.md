@@ -42,7 +42,7 @@ The cluster-id and cluster-secret are only required in connected mode.
 To [configure namespace](private-cloud-cluster#configure-namespace) with a configuration file:
 
 ```shell
-./mxpc-cli apply-config --namespace <namespace> -i <cluster-id> -s <cluster-secret> --file <config-file>
+./mxpc-cli apply-config -i <cluster-id> -s <cluster-secret> --file <config-file>
 ```
 The cluster-id and cluster-secret are only required in connected mode.
 

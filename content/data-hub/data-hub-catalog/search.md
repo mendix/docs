@@ -8,37 +8,27 @@ tags: ["data hub", "data hub catalog"]
 
 ## 1 Introduction
 
-Finding the right data to use in your app development is made easier using the search functionality in the [Data Hub Catalog](#data-hub-home). The details of registered data assets can be viewed in the [Asset details](#search-details) screen.
+Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed via the Data Hub Search API, or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro.  This document describes the functionality of the Data Hub Catalog.
 
-The [Copy Data Source URI](#service-details) or **Download** contract buttons enable you to access the data source endpoints which you can use to integrate registered data sources into your enterprise applications.
 
-You can start searching from the [Data Hub Home](#data-hub-home) page or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen.
-
-{{% alert type="info" %}}The [Data Hub pane](/refguide/data-hub-pane) in Studio Pro integrates the powerful search of the Data Hub Catalog to enable you to find and use registered datasets as external entities in your app development.{{% /alert %}}
-
-Registered assets can be [curated](#curate-bar) to add and edit further information (Catalog metadata) such as **Tags**, **owners**, and **Descriptions** and also set properties to the asset such as **Discoverable** and **Validated** to ensure that they are found for the appropriate uses.
-
- This document describes the functionality of the Data Hub Catalog.
 
 ## 2 Details of Registered Assets
 
-The Catalog displays the [details](#search-details) of data sources, datasets, and attributes as provided in the published OData service contract that is used to register assets in the Data Hub Catalog. This section describes important properties of registered assets.
+You can start searching from the [Data Hub Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
 
 {{% alert type="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 ### 2.1 Versions
 
-Every published OData service or data source (as they are known in the Catalog) has a version number, and apps that consume a datasource will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number if good practice is followed by the data source originators. This may result in several versions of a registered data source available in the Catalog that will all be listed as separate items in the search results for the same-named data source.
-
-The version of the selected data source is displayed in the [Asset Details](#search-details).
+Every published OData service (or data source) has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered data source may be available in the Catalog. The data source version is displayed in the [Asset Details](#search-details).
 
 ### 2.2 Environments
 
-The Data Hub Catalog is a register of apps that are deployed to a particular environment and the services or data sources published from the apps that are deployed to the same environment. This means that each registered data source is a unique **endpoint** which is the location of the OData service contract that includes the version of the service running in a specific environment.
+The Data Hub Catalog is a register of published OData services (or data sources) that are deployed to a particular environment. Each registered data source is a unique **endpoint** combination of service version and environment.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
-Search results show the data source endpoints. Therefore, if a version of a service is deployed on both a test and acceptance environment, a search on the service name in the Data Hub Catalog will have two hits of the two endpoints.
+Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, you'll see two endpoints in the search results.
 
 {{% alert type="info" %}}
 By default, search results in the Data Hub Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the[Filters](#filter) section below.

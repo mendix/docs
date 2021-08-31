@@ -81,9 +81,12 @@ First, download the *3DViewer.mpk* from the Marketplace. When you want to add th
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready-to-use items in the **Viewer3D** folder. In addition, if you go to **Toolbox** pane, you will also notice a collection of 3D widgets are added to the **Toolbox** widget list under the **Add-on widget** category. 
 5. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 6.  Find and select the 3DViewer.mpk that you have and import it. 
-7.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project(The name showing 'Viewer3D' instead of '3DViewer' is because the naming convention doesn't allow module name starts with digit, therefore in project explorer, Viewer3D represents 3DViewer):  
-![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
+7.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project. Note that the name will be displayed as "Viewer3D" instead of "3DViewer" in Project Explorer due to naming conventions:
+	
+	[import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
+	
 	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+
 8. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
 9. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
 10. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
@@ -265,7 +268,7 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 No specific configuration is needed. With this widget, you can add, delete, and clear section planes to the model on your desired direction axis and clipping mode. For details on how this widget behaves in an app, see the [Create 3D Section](#create-3d-section) section below.
 
-##### 4.6.2.5 Markup Builder{#markupbuilder}
+##### 4.6.2.5 Markup Builder {#markup-builder}
 
 This widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
 
@@ -283,7 +286,7 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts . For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
-#### 4.6.3 Toolbar widgets
+#### 4.6.3 Toolbar Widgets
 
 These widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
 
@@ -364,7 +367,7 @@ Usually, you will also need to manage the models that are uploaded and stored in
 
 #### 5.4.1 Building a Model List
 
-The Mendix native [list view](../../refguide8/list-view) can be used to display the model list by following these steps:
+The Mendix native [list view](/refguide8/list-view) can be used to display the model list by following these steps:
 
 1. Use the **View3D/USE_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
 2. Add a [pop-up page](../../refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
@@ -424,42 +427,50 @@ There are four main types of events that can be picked up on the Viewer widget:
 * **On progress change** – by selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree)
 * **On load** – by selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree
 
-#### 5.5.1 On selection change
+#### 5.5.1 On Selection Change
 
-**Selection**: Takes a String type attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions.  
-![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
-**Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+*  **Selection**: Takes a String attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
+	
+	![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
 
-![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
+* **Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
 
-#### 5.5.2 On error
+	![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
 
-**Error**: Takes a String type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises. 
-![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
-**Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is show a error pop up page to let user know the error details.  
-![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
+#### 5.5.2 On Error
 
-#### 5.5.3 On progress change
+*  **Error**: Takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
+
+	![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
+
+*  **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is show a error pop up page to let user know the error details.
+
+	![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
+
+#### 5.5.3 On Progress Change
+
 get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
 
-**Progress status**: Takes a String type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.  
-**Progress percentage**: Takes a Decimal type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.  
-![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
-**Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
-![viewer-onprogress-sample](attachments/3d-viewer/viewer-onprogress-sample.jpg)  
+* **Progress status**: Takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.  
+*  **Progress percentage**: Takes a Decimal attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
+ 
+	![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
 
-For details, please see
-[Displaying Model Loading Progress with Progress Bar Widget](#62-displaying-model-loading-progress-with-progress-bar-widget). 
+*  **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
 
-#### 5.5.4 On load
+	![viewer-onprogress-sample](attachments/3d-viewer/viewer-onprogress-sample.jpg)  
 
-**OnLoad**: Takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.  
+For details, see [Displaying Model Loading Progress with Progress Bar Widget](#62-displaying-model-loading-progress-with-progress-bar-widget). 
 
-![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+#### 5.5.4 On Load
 
-**Action**: Like other Mendix event, you can select from a list of actions upon product structure tree isloaded status. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+*  **OnLoad**: Takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.  
 
-![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
+	![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+
+*  **Action**: Like other Mendix event, you can select from a list of actions upon product structure tree isloaded status. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+
+	![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
 ## 6 Others
 

@@ -437,7 +437,7 @@ There are four main types of events that can be picked up on the Viewer widget:
 **Error**: Takes a String type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises. 
 ![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is show a error pop up page to let user know the error details.  
-![3dviewer-onerror-sample](attachments/3d-viewer/3dviewer-onerror-sample.jpg) 
+![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
 
 #### 5.5.3 On progress change
 get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
@@ -446,7 +446,7 @@ get the current loading status and the loading percentage of the model, product 
 **Progress percentage**: Takes a Decimal type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.  
 ![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
 **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
-![3dviewer-onprogress-sample](attachments/3d-viewer/3dviewer-onprogress-sample.jpg)  
+![viewer-onprogress-sample](attachments/3d-viewer/viewer-onprogress-sample.jpg)  
 
 For details, please see
 [Displaying Model Loading Progress with Progress Bar Widget](#62-displaying-model-loading-progress-with-progress-bar-widget). 

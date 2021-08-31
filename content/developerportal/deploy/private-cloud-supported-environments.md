@@ -284,10 +284,7 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 [Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
 
-Mendix Operator will need endpoint, access key and secret key to access the storage that can be configured in the interoperability setting. 
-
-
-
+Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
 
 ## 6 Networking
 

@@ -21,7 +21,7 @@ The widget does the following:
 
 ## 2 Features
 
-On its own, a single Tree node widget is not too powerful and doesn't bring more to the able compared to a [Accordion](https://docs.mendix.com/appstore/widgets/accordion) widget. However, this widget shines the most when used in composition with multiple instances of itself. By combining multiple Tree node widgets in a nested manner, you're able to map out your entire domain modal in the form of a tree view.
+On its own, a single Tree node widget is not too powerful and doesn't bring more to the able compared to an [Accordion](https://docs.mendix.com/appstore/widgets/accordion) widget. However, this widget shines the most when used in composition with multiple instances of itself. By combining multiple Tree node widgets in a nested manner, you're able to map out your entire domain modal in the form of a tree view.
 
 To help with this, the Tree node widget contains several built-in features.
 
@@ -67,13 +67,13 @@ The following widget properties are related to configuring the header section of
 
 The following widget properties are related to configuring the behaviour of the tree node content section.
 
-* **Animate** (configurable when [**Advanced options**](#advanced) is set to **Yes**; default: **Yes**) - Indicates whether the content will animate the transition the tree node toggles between the expanded and collapsed state.
+* **Animate** (configurable when [**Advanced options**](#advanced) is set to **Yes**; default: **Yes**) - Indicates whether the content will be animated when toggling between the expanded and collapsed state.
 
 ### 3.2 Advanced Tab {#advanced}
 
-The **Advanced options** property (default: **No**) determines whether advanced configuration properties for the Tree node widget become available. All of the properties can be found in the [Visualization](#visualization) and the [General](#general) tab, and include the following options:
+The **Advanced options** property (default: **No**) determines whether advanced configuration properties for the Tree node widget become available. All of the properties can be found in the [Visualization](#visualization) and the [General](#general) tab, and it includes the following options:
 
-- Custom icon visualisation in the header.
+- Custom icon visualization in the header.
 - Enabling animations for the tree node headers and content.
 
 ### 3.3 Visualization Tab {#visualization}
@@ -82,7 +82,7 @@ The **Visualization** tab is only visible when the [Advanced options](#advanced)
 
 * **Show icon** (default: **Left**) - The placement of the icon relative to the rest of the content in the header. This can either be **Left** or **Right**. When set to **No**, the header will have no icon.
 * **Expanded icon** and **Collapsed icon** (configurable when **Show icon** is set to to either **Left** or **Right**) - Allows custom configuration of the icons shown in respectively the expanded and collapsed state. It is required to configure both of them together for custom icons to show up.
-* **Animate icon** (default: **Yes**) - Indicates whether the icon will animate the transition the tree node toggles between the expanded and collapsed state.
+* **Animate icon** (default: **Yes**) - Indicates whether the icon will be animated when toggling between the expanded and collapsed state
 
 ### 4 Styling
 

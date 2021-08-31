@@ -554,11 +554,11 @@ Like other Mendix events, with **Action**, you can select from a list of actions
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-3DViewer is a commercial Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3DViewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3DViewer widget features may not work in your app.
+3D Viewer is a commercial Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
 
 ### 7.1 Deciding If You Need to Request a LicenseToken
 
-If you use 3DViewer in your app and you just need to run your app locally for testing and trial purposes and do not plan to deploy the app, you will not need to request a `LicenseToken`.
+If you use 3D Viewer in your app and you just need to run your app locally for testing and trial purposes and do not plan to deploy the app, you will not need to request a `LicenseToken`.
 
 If you plan to use 3DViewer in your app and decide to deploy your app to the cloud, then you will need to request a `LicenseToken`. 
 
@@ -570,19 +570,17 @@ To request a free trial and an offical subscription `LicenseToken`, prepare the 
 * Your email address
 * Your full name
 
-Send these details to `DIS_MXAWS_3DViewer_Support@mendix.com`. You may be asked to provide more information. You will receive a `LicenseToken` with an agreed expiration date.
-
-{{% todo %}}[**Verify: email address to be included?**]{{% /todo %}}
+Send these details to `DIS_MXAWS_3DViewer_Support@mendix.com`. You may be asked to provide more information. You will receive a `LicenseToken` with an agreed-on expiration date.
 
 ### 7.4 Configuring a LicenseToken for App Deployment
 
 #### 7.4.1 Configuring the LicenseToken in Studio Pro
 
-In Mendix Studio Pro, go to [Project Settings](../../refguide8/project-settings) and follow these steps:
+In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
 1. In the **Configurations** tab, click **Edit**. 
 2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant `Viewer3D.LicenseToken`.
-3. ill in the **Value** with your obtained `LicenseToken`.
+3. Fill in the **Value** with your obtained `LicenseToken`.
 4.  Click **OK** to confirm the settings.
 
 	![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
@@ -591,5 +589,4 @@ In Mendix Studio Pro, go to [Project Settings](../../refguide8/project-settings)
 
 #### 7.4.2 Configuring the LicenseToken in the Developer Portal
 
-You can also add or update `LicenseToken` via the [Developer Portal](../../developerportal/deploy/environments-details).
-
+You can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).

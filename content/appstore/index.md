@@ -17,7 +17,9 @@ For details on the Studio Pro version required for use and when the component wa
 The *Marketplace Guide* is divided into the following categories:
 
 * [General Info](general/)
+* [Widgets](widgets/)
 * [Connectors](connectors/)
 * [Modules](modules/)
+* {App Services](app-services/)
 * [Themes](themes/)
-* [Widgets](widgets/)
+

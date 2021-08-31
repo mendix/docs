@@ -211,6 +211,7 @@ appstore:
     - "Widgets"
     - "Connectors"
     - "Modules"
+    - "App Services"
     - "Themes"
 data-hub:
   space: "Data Hub Guide"

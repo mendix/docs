@@ -26,7 +26,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-{{% todo %}}[**GET DESCRIPTION FOR INDUSTRY: RW**]{{% /todo %}}
+{{% todo %}}[**GET DESCRIPTION FOR INDUSTRY**]{{% /todo %}}
 
 <a name="industry"></a>The Marketplace offers **Industry** solutions for consumer goods and retail, financial services, manufacturing, and the public sector.
 
@@ -186,7 +186,7 @@ You can see all the Marketplace components you have subscribed to on this page:
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
-The table details the **Product** you have subscribed to, the **Type** of plan status, the type of **Plan**, and the **Expiration** of the subscription.
+The table presents the **Products** you have subscribed to, the **Type** of plan status, the type of subscription **Plan**, and the **Expiration** date of the subscription.
 
 Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
 
@@ -196,17 +196,15 @@ Clicking a **Product** name takes you to the service management dashboard, which
 
 {{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
 
-This page presents an overview of your service instances. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app. You can create and manage these keys here.
+This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app.
 
-The main page of the dashboard presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete a specific group of binding keys.
+This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
 
 ![](attachments/app-store-overview/binding-keys.jpg)
 
-{{% todo %}}[**VERIFY BELOW AND UPDATE SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**VERIFY BELOW, GET ACCESS FOR SCREENSHOT OF EXAMPLE**]{{% /todo %}}
 
-You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration:
-
-![](attachments/app-store-overview/binding-keys-5.png)
+You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
 {{% alert type="info" %}}
 This additional management option is only available for specific components where necessary.
@@ -218,9 +216,9 @@ To create binding keys for a specific [subscription](#subscriptions), click **Cr
 
 {{% todo %}}[**VERIFY BELOW AND ADD SCREENSHOT IF NECESSARY**]{{% /todo %}}
 
-In the dialog box, enter a name for the group of keys. Include the name of the app in which you intend to use the component so that it can be clear to other users where the keys are used.
+In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 
-After you click **Create Keys**, a page will appear with your keys – **Access Key**, **Secrete Key**, and **Token**:
+After you click **Create Keys**, a page appears with your **Access Key**, **Secrete Key**, and **Token**:
 
 ![](attachments/app-store-overview/created-keys.jpg)
 
@@ -230,15 +228,15 @@ Click **Copy** for each key and manually save the keys somewhere safe, as you wi
 Once you close this page, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
-To use the binding keys, see the [Using the Binding Keys](#using) section below.
+To use the binding keys, see [Using the Binding Keys](#using) below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 
 #### 4.6.3 Using the Binding Keys {#using}
 
-{{% todo %}}[**WHICH NEW NAMES ARE SET AS CONSTANTS?**]{{% /todo %}}
+{{% todo %}}[**VERIFY NAMES OF CONSTANTS**]{{% /todo %}}
 
-When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+When you are developing your app, set the app service's **Access Key** and **Secrete Key** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
 For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 

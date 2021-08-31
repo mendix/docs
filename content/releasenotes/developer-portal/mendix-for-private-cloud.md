@@ -17,16 +17,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We have added a new UI in environment details to check individual pod status.
+* We have updated the environment details page to show the status of individual pods.
 * We have added some validation when you configure Pod/Service/Ingress annotations in the portal.
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
 
 * We have added support for Google Cloud Platform.
-* We have added some new features to run our installer and configuration tools in non-interactive way. [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive)
+* We have added some new features to run our installer and configuration tools in a non-interactive way. [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive)
 * We have added more metrics in our sidecars.
 * We have added additional details about the Runtime status for each replica, including the license status and errors that might be preventing the Runtime from starting.
-* We have fixed a M2EE: An error occurred while executing action 'get_license_information' error that was sometimes logged while the Runtime was starting.
+* We have fixed an error `M2EE: An error occurred while executing action 'get_license_information'` that was sometimes logged while the Runtime was starting.
 
 ### August 12th, 2021
 

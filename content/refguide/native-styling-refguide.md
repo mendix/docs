@@ -1515,6 +1515,53 @@ The widget consists of the following elements:
 
 The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
 
+### 11.29 Pie/Doughnut Chart
+
+The pie/doughnut chart widget renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<slices>
+    <customStyles>
+        <any_custom_key>
+            <slice/>
+            <label/>
+        </any_custom_key>
+    </customStyles>
+    <colorPalette/>
+    <innerRadius/>
+    <padding/>
+    <paddingBottom/>
+    <paddingHorizontal/>
+    <paddingLeft/>
+    <paddingRight/>
+    <paddingTop/>
+    <paddingVertical/>
+</slices>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `slices` > `customStyles` > `any_custom_key` > `slice` | `color` | Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice. |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
+| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by ';'). |
+| `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
+| `slices` | `padding` | Applies padding to all sides of the chart (number). |
+| `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
+| `slices` | `paddingHorizontal` | Applies padding to the horizontal sides of the chart (number). |
+| `slices` | `paddingLeft` | Applies padding to the left side of the chart (number). |
+| `slices` | `paddingRight` | Applies padding to the right side of the chart (number). |
+| `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
+| `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
+
+The default class to style all pie/doughnut chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+
 ## 12 Read More
 
 * [How to Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

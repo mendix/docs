@@ -102,7 +102,7 @@ If you app does not have an after-startup microflow set,  follow these steps:
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** Java action to it.
 2. Make sure the java action parameter **Http endpoint** is set to `Expression:@Viewer3D.HttpEndpoint`.
 3. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](../../refguide8/project-settings#after-startup).
+4.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
@@ -331,7 +331,7 @@ Follow these steps to configure this visualization:
 
 	![runlocally-uploadandview](attachments/3d-viewer/runlocally-uploadandview.jpg)
 
-### 5.2 Displaying Model Loading Progress with Progress Bar Widget
+### 5.2 Displaying Model Loading Progress with Progress Bar Widget {#displaying-model-loading}
 
 When the end-user is uploading or loading a model, they may want to know the uploading and loading progress. The uploading progress in the Uploader widget can seen in the uploader panel :
 
@@ -387,7 +387,7 @@ Follow these steps for configuration:
 
 	![homepage-pageobject](attachments/3d-viewer/homepage-pageobject.jpg)
 
-	This is the model pop-up page:  
+	This is the model pop-up page:
 
 	![openmodelpopUp-pageobject](attachments/3d-viewer/openmodelpopup-pageobject.jpg)
 
@@ -406,7 +406,7 @@ There might be some models that you do not want in the database, so you can dele
 Follow these steps to delete a model from the database:
 
 1. Use the **Viewer3D/USE_ME/DeleteModelFromMendix** microflow directly or copy it to one of your app modules.
-2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](../../refguide8/button-widgets).
+2.  DeleteModelFromMendix expects a **ModelDocument** (which represents a model stored in Mendix file storage) as an input parameter. After successful execution, the model will be deleted from Mendix file storage. In the previous steps, a model list was built, each list item of which is a ModelDocument. For a model list item, add a [Delete button](/refguide8/button-widgets).
 3.  Create a nanoflow called *DeleteModel* and set **ModelDocument** as the input parameter. Then, call the **DeleteModelFromMendix** microflow and commit the **ModelDocument**:
 
 	![deletemodel-nanoflow](attachments/3d-viewer/deletemodel-nanoflow.jpg)
@@ -420,57 +420,59 @@ Now you are able to get a list of models, select a list item to open a model, an
 
 Multiple events can be picked up by the [Viewer](#viewer) widget and can be used to build your customized event handling logic.
 
-There are four main types of events that can be picked up on the Viewer widget:
+There are four main types of events that can be picked up on the Viewer widget, which are described in the sections below.
 
-* **On selection change** – by selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have further inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us))
-* **On error** – by selecting one attribute to set the **Error** event, you can pick up an error exposed by the Viewer
-* **On progress change** – by selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree)
-* **On load** – by selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree
+#### 5.5.1 On Selection Change {#on-selection-change}
 
-#### 5.5.1 On Selection Change
+By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us)).
 
-*  **Selection**: Takes a String attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
+**Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
 	
-	![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
+![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
 
-* **Action**: Like other Mendix event, you can select from a list of actions upon model part selection. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.  
+Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.
 
-	![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
+![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
 
-#### 5.5.2 On Error
+#### 5.5.2 On Error {#on-error}
 
-*  **Error**: Takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
+By selecting one attribute to set the **Error** event, you can pick up an error exposed by the Viewer.
 
-	![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
+**Error** takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
 
-*  **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is show a error pop up page to let user know the error details.
+![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 
-	![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
+Like other Mendix events, you can select from a list of actions upon a Viewer error for **Action**. One possible use case is show a error pop up page to let user know the error details.
 
-#### 5.5.3 On Progress Change
+![viewer-onerror-sample](attachments/3d-viewer/viewer-onerror-sample.jpg) 
 
-get the current loading status and the loading percentage of the model, product structure tree, and PMI tree
+#### 5.5.3 On Progress Change {#on-progress-change}
 
-* **Progress status**: Takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.  
-*  **Progress percentage**: Takes a Decimal attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
- 
-	![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
+By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree).
 
-*  **Action**: Like other Mendix event, you can select from a list of actions upon viewer error. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
+**Progress status** takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
 
-	![viewer-onprogress-sample](attachments/3d-viewer/viewer-onprogress-sample.jpg)  
+**Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
 
-For details, see [Displaying Model Loading Progress with Progress Bar Widget](#62-displaying-model-loading-progress-with-progress-bar-widget). 
+![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
 
-#### 5.5.4 On Load
+Like other Mendix events, you can select from a list of actions upon progress change for **Action**. One possible use case is use a progress bar widget to display captured model loading percentage to user. 
 
-*  **OnLoad**: Takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.  
+![viewer-onprogress-sample](attachments/3d-viewer/viewer-onprogress-sample.jpg)
 
-	![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+For more information, see [Displaying Model Loading Progress with Progress Bar Widget](#displaying-model-loading). 
 
-*  **Action**: Like other Mendix event, you can select from a list of actions upon product structure tree isloaded status. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+#### 5.5.4 On Load {#on-load}
 
-	![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
+By selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree.
+
+**OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
+
+![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
+
+Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+
+![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
 ## 6 Others
 
@@ -546,13 +548,9 @@ For **On selection change** and **On error**, note that **Selection** takes a st
 
 Like other Mendix events, with **Action**, you can select from a list of actions upon model part selection. One possible use case is to utilize the GET APIs exposed by the Viewer (for example, get `Boundingbox` by PSID and set `material` by PSID in a JavaScript action, include it in a nanoflow, and set the Action to call this nanoflow).
 
-For **On progress change**
+{{% todo %}}[**For On progress change - needs details?**]{{% /todo %}}
 
-{{% todo %}}[**Need details?**]{{% /todo %}}
-
-For **On Load**
-
-{{% todo %}}[**Need details?**]{{% /todo %}}
+{{% todo %}}[**For On Load - needs details?**]{{% /todo %}}
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
@@ -585,14 +583,13 @@ In Mendix Studio Pro, go to [Project Settings](../../refguide8/project-settings)
 1. In the **Configurations** tab, click **Edit**. 
 2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant `Viewer3D.LicenseToken`.
 3. ill in the **Value** with your obtained `LicenseToken`.
-4. Click **OK** to confirm the settings.
+4.  Click **OK** to confirm the settings.
 
-![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
+	![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
 
 5. Click **Run** to deploy your app to the cloud.
 
 #### 7.4.2 Configuring the LicenseToken in the Developer Portal
 
 You can also add or update `LicenseToken` via the [Developer Portal](../../developerportal/deploy/environments-details).
-
 

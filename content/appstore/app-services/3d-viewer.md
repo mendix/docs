@@ -82,8 +82,8 @@ First, download the *3DViewer.mpk* from the Marketplace. When you want to add th
 5. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 6.  Find and select the 3DViewer.mpk that you have and import it. 
 7.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project. Note that the name will be displayed as "Viewer3D" instead of "3DViewer" in Project Explorer due to naming conventions:
-	
-	[import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)  
+
+	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
 	
 	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
@@ -500,7 +500,7 @@ The sections below present operations within the Section View widget.
 
 * **X Direction** –  sets the X axis of the default coordinate system as the reference.
 * **Y Direction** –  sets the Y axis of the default coordinate system as the reference
-* **Z Directio** – sets the Z axis of the default coordinate system as the reference
+* **Z Direction** – sets the Z axis of the default coordinate system as the reference
 
 For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
 

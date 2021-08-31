@@ -13,7 +13,7 @@ Follow the links in the table below to see the release notes you want:
 | --- | --- |
 | [Mendix Cloud](mendix-cloud) | August 26th, 2021 |
 | [Mendix for Private Cloud](mendix-for-private-cloud) | August 12th, 2021 |
-| [SAP Business Technology Platform (SAP BTP)](sap-cloud-platform) | August 19th, 2021 |
+| [SAP Business Technology Platform (SAP BTP)](sap-cloud-platform) | August 30th, 2021 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |
 
 The release notes for the buildpacks are held in their respective GitHub repos:

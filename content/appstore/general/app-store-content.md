@@ -119,7 +119,7 @@ To configure the widget, follow these steps:
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
 
-### 4.2 Using a Module
+### 4.2 Using a Module {#module}
 
 You can also download an entire module from the Marketplace. A module includes the whole functionality and integration that can be very helpful when you are building your application.
 

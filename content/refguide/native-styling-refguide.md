@@ -1432,7 +1432,7 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 ### 11.28 Bar Chart
 
-The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
+The [bar chart widget](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) renders a horizontal bar graph based on static and dynamic data sets.
 
 The widget consists of the following elements:
 
@@ -1517,7 +1517,7 @@ The default class to style all bar chart widgets is named `com_mendix_widget_nat
 
 ### 11.29 Pie/Doughnut Chart
 
-The pie/doughnut chart widget renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets.
+The [pie/doughnut chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets.
 
 The widget consists of the following elements:
 

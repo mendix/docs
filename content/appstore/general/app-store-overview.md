@@ -26,9 +26,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-{{% todo %}}[**GET DESCRIPTION FOR INDUSTRY**]{{% /todo %}}
-
-<a name="industry"></a>The Marketplace offers **Industry** solutions for consumer goods and retail, financial services, manufacturing, and the public sector.
+<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, consumer goods and retail, financial services, and the public sector.
 
 <a name="types"></a>The Marketplace offers the following **Content Types**:
 

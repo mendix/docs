@@ -67,7 +67,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 1.4 Prerequisites
 
-This app service can only be used with Studio Pro 8 versions starting with [8.15.1](../../releasenotes/studio-pro/8.15.md#8151).
+This app service can only be used with Studio Pro 8 versions starting with [8.15.1](../../releasenotes/studio-pro/8.15#8151).
 
 ## 2 Installation
 

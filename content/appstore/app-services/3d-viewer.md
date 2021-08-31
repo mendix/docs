@@ -584,14 +584,4 @@ In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and 
 
 You can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
 
-## 8 Loading & Visualizing a Model from Teamcenter
 
-JT models from other data sources can also be visualized. Specifically, if you would like to load and visualize models from Teamcenter, you can use a combination of the 3D Viewer app service with the [3D Viewer for Teamcenter](3d-viewer-for-teamcenter) module to achieve this.
-
-{{% todo %}}[**Verify: remove?**]{{% /todo %}}
-
-## 9 Read More
-
-* [3D Viewer for Teamcenter](3d-viewer-for-teamcenter)
-
-{{% todo %}}[**Verify: remove?**]{{% /todo %}}

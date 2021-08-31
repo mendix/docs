@@ -2,54 +2,54 @@
 title: "Install and Configure Mendix for Private Cloud Non-interactive Mode"
 parent: "private-cloud-cluster"
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"
-menu_order: 10
+menu_order: 5
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-To support automation namespace installation and configuration we provide non-interactive mode in our configuration tool.
+To support automation namespace installation and configuration we provide a non-interactive mode in our configuration tool.
 
-{{% alert type="info" %}} In order to use non-interactive mode, you need to use Mendix Operator version 2.1.0 or above.{{% /alert %}}
+{{% alert type="info" %}} To use non-interactive mode, you need Mendix Operator version 2.1.0 or above.{{% /alert %}}
 
-Please see [Download the Configuration Tool](private-cloud-cluster#download-configuration-tool) to get information how to download the configuration tool.
+Please see [Download the Configuration Tool](private-cloud-cluster#download-configuration-tool) for information on how to download the configuration tool.
 
 {{% alert type="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
 The following parameters may be used in the commands:
-* `Namespace` - a cluster namespace.
-* `ClusterType`– a cluster type 'openshift' or 'generic'.
-* `ClusterMode` - a cluster mode 'standalone' or 'connected'.
-* `ClusterID` - a cluster id that you can find in the Installation tab of a namespace in the Private Cloud Portal.
-* `ClusterSecret` - a cluster secret that you can find in the Installation tab of a namespace in the Private Cloud Portal.
+* `--namespace` – a cluster namespace.
+* `--clusterType` – a cluster type *openshift* or *generic*.
+* `--clusterMode` – a cluster mode *standalone* or *connected*.
+* `-i` – the *cluster id* that is shown in the **Installation** tab of a namespace in the Private Cloud Portal.
+* `-s` – the *cluster secret* that is shown in the **Installation** tab of a namespace in the Private Cloud Portal.
+* `--file` – a file which contains the configuration for the namespace.
 
-In connected mode, you need to put cluster id and cluster secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Private Cloud Portal. You can get these values from installation command, the -i and -s parameters.
+When using connected mode, you need to put cluster id and cluster secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Private Cloud Portal. You can see these values in the installation command, as the -i and -s parameters, respectively.
 
 ![](attachments/private-cloud-cluster/installation-command.png)
 
 ## 2 Base Installation
 
-To run [base installation](private-cloud-cluster#base-installation) :
+To perform the [base installation](private-cloud-cluster#base-installation), use the following command:
 
 ```shell
 ./mxpc-cli base-install --namespace <namespace> -i <cluster-id> -s <cluster-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
-The cluster-id and cluster-secret are only required in connected mode.
+The cluster-id and cluster-secret are only required when using Mendix for Private Cloud in connected mode.
 
 ## 3 Apply Configuration
 
-To [configure namespace](private-cloud-cluster#configure-namespace) with a configuration file:
+To [configure the namespace](private-cloud-cluster#configure-namespace) with a configuration file, use the following command:
 
 ```shell
 ./mxpc-cli apply-config -i <cluster-id> -s <cluster-secret> --file <config-file>
 ```
-The cluster-id and cluster-secret are only required in connected mode.
+The cluster-id and cluster-secret are only required when using Mendix for Private Cloud in connected mode.
 
-The config file is the **mx_config_cli.yaml** file that you generate from [configure namespace](private-cloud-cluster#configure-namespace) in interactive mode 
-when you click the Write YAML in [Review and Apply](private-cloud-cluster#review-apply) section.
+The config file is the **mx_config_cli.yaml** file that you generate when you click the **Write YAML** in the [Review and Apply](private-cloud-cluster#review-apply) phase of configuring your namespace interactively.
 
-Config file example:
+Below is an example of a config file:
 
 ```yaml
 namespace: my-namespace
@@ -76,9 +76,9 @@ registry:
   type: openshift4
 ```
 
-## 4 Upgrade Namespace
+## 4 Upgrade Mendix Operator and Mendix Gateway Agent
 
-To [upgrade namespace](private-cloud-upgrade-guide#upgrade-cluster):
+To [upgrade the versions of Mendix components in your namespace](private-cloud-upgrade-guide#upgrade-cluster), use the following command:
 
 ```shell
 ./mxpc-cli upgrade-namespace --clusterType <cluster-type>

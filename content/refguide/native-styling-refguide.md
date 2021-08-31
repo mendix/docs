@@ -1454,15 +1454,15 @@ The widget consists of the following elements:
 	<label/>
 </legend>
 <domain>
-    </padding>
+    <padding/>
 </domain>
 <bars>
-    </barsOffset>
-    </barColorPalette>
+    <barsOffset/>
+    <barColorPalette/>
 	<customBarStyles>
 		<any_custom_bar_style_name>
-			</bar>
-			</label>
+			<bar/>
+			<label/>
 		</any_custom_bar_style_name>
 	</customBarStyles>
 </bars>

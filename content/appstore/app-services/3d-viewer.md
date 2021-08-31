@@ -17,7 +17,7 @@ Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
 | ---  | --- |
-| [Predefined entities](#predefined-entity) | ModelDocument, Pagination, markup, MxChildDocument, MxModelDocument |
+| [Predefined entities](#predefined-entities) | ModelDocument, Pagination, markup, MxChildDocument, MxModelDocument |
 | [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
 | [Microflow](#microflow) | DeleteModelFromMendix, Downloadmarkup |
 | [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetmarkupsFromMendix, GetModelListFromMendix |

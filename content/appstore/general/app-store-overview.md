@@ -40,7 +40,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
 | **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
-| **Solution Template** | A solution template is a packaged example of how to solve a specific business problem when creating a new app. |
+| **Solution Templates** | Solution templates are aimed at industries and domain problems. They serve as accelerators for implementing solutions that help increase speed-to-value and time-to-market, and they can be adapted using the core Mendix Platform to fully meet your requirements.|
 | **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app.  |
 
 The following filter options are also available:

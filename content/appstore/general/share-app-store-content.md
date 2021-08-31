@@ -158,7 +158,8 @@ To add content to the Marketplace, follow these steps:
 		* The **Installation** steps and details
 		* The **Configuration** steps and details
 		* Any **Known bugs**
-		* Any **Frequently Asked Questions**
+		* Any **Frequently asked questions**
+		* Any **Compatability** steps and details
 
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 

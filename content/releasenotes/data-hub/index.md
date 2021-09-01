@@ -12,7 +12,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 ### September 2nd, 2021
 
 #### Fixes
-* We removed the `SecurityClassification` from the `Endpoints` JSON structure of the Register API. The creation of endpoints as `Public` via the API is no longer allowed due to security reasons.
+
+* We removed the `SecurityClassification` from the `Endpoints` JSON structure of the [Register API](/apidocs-mxsdk/apidocs/data-hub-apis). The creation of endpoints as `Public` via the API is no longer allowed due to security reasons.
 
 ### August 26th, 2021
 

@@ -25,7 +25,7 @@ Mendix applications which are based on Mendix version 7.13, 7.14 or 7.15, can no
 
 ### Cancelling
 
-We have completely redesigned the back-end for canceling jobs. You will see that cancelled jobs stop executing much faster than before. Steps which are interruptible for example, sleep will be interrupted immediately instead of waiting them to finish. We also update the status for test cases or suites which were not started at the time of cancelling.
+We have completely redesigned the back end for canceling jobs. You will see that cancelled jobs stop executing much faster than before. Steps which are interruptible for example, sleep will be interrupted immediately instead of waiting them to finish. We also update the status for test cases or suites which were not started at the time of cancelling.
 
 ### Recording integration
 

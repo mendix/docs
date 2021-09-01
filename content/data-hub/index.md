@@ -81,6 +81,5 @@ Curators are assigned by the a [Mendix Admin](#admin) and they perform the follo
 The *Data Hub Guide* is divided into the following categories:
 
 * [How to Share Data Between Apps Using Mendix Data Hub](share-data/)
-* [General Info](general/)
 * [Data Hub Catalog](data-hub-catalog/)
 * [Data Hub Landscape](data-hub-landscape/)

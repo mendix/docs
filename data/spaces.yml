@@ -217,7 +217,6 @@ data-hub:
   priority: false
   menu_categories:
     - "Share Data Between Apps"
-    - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:

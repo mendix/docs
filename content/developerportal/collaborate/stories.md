@@ -132,7 +132,7 @@ The following buttons are available:
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
 {{% image_container width="550" %}}
-![](attachments/stories/completed-sprints.jpg)
+![](attachments/stories/completed-sprints.png)
 {{% /image_container %}}
 
 The following buttons are available:
@@ -140,7 +140,6 @@ The following buttons are available:
 * **Search** – enables searching Sprints based on their ID or title
 * **View** – shows the full details of the archived Sprint
 * **View Stories** – enables viewing the stories of the selected Sprint
-* **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
 #### 2.4.4 History {#history}

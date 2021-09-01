@@ -44,10 +44,17 @@ If you want to provide links directly to a specific element in your app in the D
 The following deep links can be used:
 
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
-* Stories overview for app: `https://sprintr.home.mendix.com/link/capture/<appID>`
+* App settings: `https://sprintr.home.mendix.com/link/settings/<appID>`
+* App buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
+* App team: `https://sprintr.home.mendix.com/link/team/<appID>`
+* Stories overview for app: `https://sprintr.home.mendix.com/link/stories/<appID>`
 * Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
 * Feedback for app: `https://sprintr.home.mendix.com/link/feedback/<appID>`
 * Specific feedback item: `https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>`
+* Sprint planning for an app: `https://sprintr.home.mendix.com/link/planning/<appID>`
+* Sprint status of an app: `https://sprintr.home.mendix.com/link/sprint-status/<appID>`
+* App specific API keys: `https://sprintr.home.mendix.com/link/apikeys/<appID>`
+* App user management: `https://sprintr.home.mendix.com/link/appusermanagement/<appID>`
 * Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
 * Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`

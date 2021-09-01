@@ -254,12 +254,10 @@ As a helping hand, the checklist below presents the final items to consider when
 
 - [ ] Users should know what they are getting when they download or buy your component, so make sure all of your component's metadata (including privacy information, component description, and screenshots) is complete and accurately reflects the component's core experience. Remember to keep this up-to-date with new versions.
 - [ ] Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
-- [ ] Select the most appropriate [category](app-store-overview#catalog) for your component (for example, **App Service**, **Module**, or **Connector**).
+- [ ] Select the **App Service** [category](app-store-overview#catalog) for your component.
 - [ ] Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
 - [ ] By default, you will see a template for the component's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
 - [ ] Spell-check the content you are about to submit
-
-{{% todo %}}[**Verify there will indeed be an App Service category to select when submitting a component**{{% /todo %}}
 
 **Versioning**
 
@@ -286,13 +284,13 @@ As a helping hand, the checklist below presents the final items to consider when
 
 - [ ] Ensure that as the supplier, you determine the appropriate license for your component, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin under the **Documentation** section if you need your users to accept your own commercial terms and conditions.
 
-[**LINK TO NEW SECTION IN HOW TO SHARE?**]
+{{% todo %}}[**Link to new section in How to Share?**]{{% /todo %}}
 
 **Setting pricing plan**
 
 - [ ] The pricing model you choose for your component determines what information you need to supply when publishing it. This specifies how the component is provisioned so that the Marketplace can use that information to catalog, meter, and bill the users of your component. 
 
-[**LINK TO NEW SECTION IN HOW TO SHARE?**]
+{{% todo %}}[**Link to new section in How to Share?**]{{% /todo %}}
 
 ## 6 After You Submit Your Component
 
@@ -304,6 +302,4 @@ You can keep track of your submission by subscribing to receive status notificat
 
 {{% todo %}}[**Is this contact to the Marketplace Governance Team available? How?**]{{% /todo %}}
 
-Once your component is available in the public Marketplace, you can gain insights into its usage through the **Subscription Overview** in the [Mendix Control Center](/developerportal/control-center/). You can engage with your customers as they use your component via [Reviews](app-store-overview#my-reviews).
-
-{{% todo %}}[**Control Center update?**]{{% /todo %}}
+Once your component is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](app-store-overview#subscriptions). You can engage with your customers as they use your component via [Reviews](app-store-overview#my-reviews).

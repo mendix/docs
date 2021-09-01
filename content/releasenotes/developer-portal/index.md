@@ -15,6 +15,22 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### September 1st, 2021
+
+#### Improvements
+* we simplified the drag-n-drop behavior on the Story Overview page (old and new) to make it more stable
+* we added support for adding labels to stories on the Story Overview page
+* it is now possible to add labels and tasks when you [create a story](/developerportal/collaborate/stories#new-story)
+* we added the option to assign a team member when you [create a story](/developerportal/collaborate/stories#new-story)
+* we improved the look and feel of [story details page](/developerportal/collaborate/stories#story-details)
+* we removed support for the old story details page
+* we implemented [context deeplinks](/developerportal/collaborate/manage-deeplinks) to all main project pages on the Developer Portal so you can share references easily
+* we increased the performance of opening the [MyApps page](/developerportal/apps-list/)
+
+#### Fixes
+* we fixed a bug where, under certain circumstances, the popup with pending invitations would be shown twice
+* we also fixed a layout bug on the invitation popup that we accidentally introduced during last release
+
 ### August 26th, 2021
 
 #### Improvements

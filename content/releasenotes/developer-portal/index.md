@@ -15,7 +15,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
-### September 1st, 2021
+### September 2nd, 2021
 
 #### Improvements
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future

@@ -114,11 +114,11 @@ The output is described in the table below:
 
 ### 4.3 Examples
 
-| if you use the following                    | Result is |
-| ------------------------------------------- | --------- |
-| length('thisismystring')                    | 14        |
-| length('$MyString') and MyString = 'qwer'   | 4         |
-| length('$MyString') and MyString is empty   | 0         |
+| Input | Output |
+| --- | --- |
+| `length('thisismystring')` | 14 |
+| `length('$MyString')` and `MyString = 'qwer'` | 4 |
+| `length('$MyString')` and `MyString` is empty | 0 |
 
 ## 5 substring
 

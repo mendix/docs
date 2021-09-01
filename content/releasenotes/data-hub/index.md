@@ -203,7 +203,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements

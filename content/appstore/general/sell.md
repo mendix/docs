@@ -49,13 +49,7 @@ When applying to the program, you will be asked for basic information, including
 | Company Name | The legal name of the entity that will sell or offer your free service. |
 | Company Address | The legal address of the entity that will sell or offer your free service. |
 
-As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix. If you are not the right person to do this, you can forward a request to one of your colleagues:
-
-![](attachments/sell/representative.png)
-
-{{% todo %}}[**Is this section for applying via https://www.mendix.com/marketplace-vendor-program/#contactForm, or is there another place to apply or create an account?"**]{{% /todo %}}
-
-{{% todo %}}[**New image needed with "Vendors"**]{{% /todo %}}
+As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix.
 
 ### 2.3 Mendix Vendor License Agreement {#vendor-license}
 

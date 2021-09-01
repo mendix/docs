@@ -28,7 +28,7 @@ Whether you are supplying a component as an individual with your own business or
 
 ### 2.1 Prerequisites
 
-Before you become a Mendix Vendor, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Mendix Vendor account.
+Before you can create a Mendix Vendor account, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Mendix Vendor account.
 
 In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
 

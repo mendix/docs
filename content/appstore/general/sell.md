@@ -55,10 +55,6 @@ As the owner of the Mendix Vendor account, you must have permission to legally b
 
 Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 
-![](attachments/sell/vendor-license.png)
-
-{{% todo %}}[**New image needed with "Vendors"**]{{% /todo %}}
-
 For ease of reference, here are some of the main points of the license agreement you need to be aware of:
 
 * Components must be free from any known security vulnerabilities

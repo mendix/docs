@@ -10,7 +10,7 @@ tags: ["data hub", "data hub catalog"]
 
 Finding the right data to use in your app development is made easier using the search functionality in the Data Hub Catalog. The details of registered data assets can be accessed via the [Data Hub Search API](/apidocs-mxsdk/apidocs/data-hub-apis), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro.  This document describes the functionality of the Data Hub Catalog.
 
-## 2 Search via the API
+## 2 Search via the API {#search-api}
 
 To use the Data Hub Catalog Search API, you need:
 
@@ -218,7 +218,7 @@ A successful `GET` call results in a `200` status code and a JSON response body 
 }
 ```
 
-## 3 Search in the Catalog
+## 3 Search in the Catalog {#search-catalog}
 
 ### 3.1 Details of Registered Assets
 

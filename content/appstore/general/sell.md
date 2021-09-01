@@ -1,5 +1,5 @@
 ---
-title: "Sell Your Component in the Marketplace"
+title: "Sell Your App Service in the Marketplace"
 category: "General Info"
 menu_order: 30
 tags: ["marketplace", "component", "app service"]
@@ -22,7 +22,7 @@ Whether you are an established ISV, an ambitious startup, or a pioneering indepe
 
 ## 2 Becoming a Mendix Vendor {#vendor}
 
-The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners). ISVs and Mendix Vendors are not mutually exclusive, because an ISV may also be a Mendix Vendor, and a Mendix Vendor may or may not be an ISV. If you have a component (or collection of components) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
+The[Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, App Service Vendors, Mendix Solution Vendors, and Startups). This guide focuses on selling app services, but if you are a startup or you want to sell a full Mendix solution, read on to learn more.
 
 Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 

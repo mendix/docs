@@ -8,7 +8,7 @@ description: "Describes how to make your component Marketplace-ready."
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
 {{% todo %}}[**Verify slide to be included; need higher quality image**]{{% /todo %}}
 
@@ -16,27 +16,27 @@ Whether you are an established ISV, an ambitious startup, or a pioneering indepe
 
 **This how-to will teach you how to do the following:**
 
-* Join the Marketplace Vendor Program
+* Join the Mendix Vendor Program
 * Make your component ready to sell on the Marketplace
 * Complete specific tasks before you submit, as you submit, and after you submit your component to the Mendix Marketplace
 
-## 2 Becoming a Marketplace Vendor {#vendor}
+## 2 Becoming a Mendix Vendor {#vendor}
 
-The [Mendix Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners). ISVs and Marketplace Vendors are not mutually exclusive, because an ISV may also be a Marketplace Vendor, and a Marketplace Vendor may or may not be an ISV. If you have a component (or collection of components) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
+The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, ISVs, Strategic Alliance Partners). ISVs and Mendix Vendors are not mutually exclusive, because an ISV may also be a Mendix Vendor, and a Mendix Vendor may or may not be an ISV. If you have a component (or collection of components) that solves a customer business problem, you should explore the Mendix ISV program for details on how to qualify to become an ISV and what solutions are relevant for the program. 
 
 Whether you are supplying a component as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
 ### 2.1 Prerequisites
 
-Before you become a Marketplace Vendor, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Marketplace Vendor account.
+Before you become a Mendix Vendor, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Mendix Vendor account.
 
 In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
 
-### 2.2 Applying to the Marketplace Vendor Program
+### 2.2 Applying to the Mendix Vendor Program
 
-Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to [apply to the Marketplace Vendor Program](https://www.mendix.com/marketplace-vendor-program/#contactForm).
+Whether you are an individual component supplier with your own business or you are supplying a component on behalf of your company, you need to [apply to the Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/#contactForm).
 
-Since your Marketplace Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
+Since your Mendix Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
 
 When applying to the program, you will be asked for basic information, including your legal name and address. This information is used to check whether you want to sell your component or offer it for free.
 
@@ -49,7 +49,7 @@ When applying to the program, you will be asked for basic information, including
 | Company Name | The legal name of the entity that will sell or offer your free service. |
 | Company Address | The legal address of the entity that will sell or offer your free service. |
 
-As the creator of the Marketplace Vendor account, you must have permission to legally bind your company to Mendix. If you are not the right person to do this, you can forward a request to one of your colleagues:
+As the creator of the Mendix Vendor account, you must have permission to legally bind your company to Mendix. If you are not the right person to do this, you can forward a request to one of your colleagues:
 
 ![](attachments/sell/representative.png)
 
@@ -57,9 +57,9 @@ As the creator of the Marketplace Vendor account, you must have permission to le
 
 {{% todo %}}[**New image needed with "Vendors"**]{{% /todo %}}
 
-### 2.3 Marketplace Vendor License Agreement {#vendor-license}
+### 2.3 Mendix Vendor License Agreement {#vendor-license}
 
-Whether you are offering a free or paid component through the Marketplace, you need to accept our Marketplace Vendor License Agreement, which is an agreement between Mendix and you as a Marketplace Vendor within the Marketplace Vendor Program.
+Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 
 ![](attachments/sell/vendor-license.png)
 
@@ -96,7 +96,7 @@ The checks involved are:
 
 {{% todo %}}[**Other checks to be listed?**{{% /todo %}}
 
-For more information on what you need to do as a Marketplace Vendor to submit an component, see the sections below.
+For more information on what you need to do as a Mendix Vendor to submit an component, see the sections below.
 
 ## 3 Making Your Component Marketplace-Ready
 
@@ -112,7 +112,7 @@ Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://ww
 
 ![](attachments/sell/journey.png)
 
-To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your component. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your component and get support via best practices and success stories from like-minded Marketplace Vendors.
+To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your component. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your component and get support via best practices and success stories from like-minded Mendix Vendors.
 
 ## 4 Submission Prerequisites
 
@@ -175,7 +175,7 @@ If you are unclear what this means to you and your component, there are useful r
 
 ### 4.6 Pricing & Free Trials
 
-As a Marketplace Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your component. Once you have decided on your preferred pricing model and whether you want to offer your component as a free trial, you can apply these these options to your component via steps in the Add Content wizard.
+As a Mendix Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your component. Once you have decided on your preferred pricing model and whether you want to offer your component as a free trial, you can apply these these options to your component via steps in the Add Content wizard.
 
 #### 4.6.1 Pricing Models
 
@@ -237,7 +237,7 @@ Further conditions apply:
 
 ## 5 Submitting Your Component
 
-At this stage, you have signed up as a Marketplace Vendor and confirmed the commercial feasibility of your component, so you are technically ready to publish your component in the Marketplace.
+At this stage, you have signed up as a Mendix Vendor and confirmed the commercial feasibility of your component, so you are technically ready to publish your component in the Marketplace.
 
 ### 5.1 Preparing a Draft in the Marketplace
 

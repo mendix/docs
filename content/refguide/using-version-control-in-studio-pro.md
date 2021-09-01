@@ -280,9 +280,10 @@ The first method is to merge the entire branch line into the main line, essentia
 The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
 
 1. Check out both the main line and the branch line locally.
-2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.svn* directory).
-3. Commit your changes using Studio Pro. 
-4. Reopen the main line app in Studio Pro only after overwriting the files.
+2. Overwrite the .mpr in the main line app directory with the .mpr of the branch line.
+3. If branch line is of a lower Mendix version than Main line: right-click the Main line folder and click TortoiseSVN -> Commit, and add a commit message.
+4. Otherwise: Commit your changes using Studio Pro. 
+5. Reopen the main line app in Studio Pro only after overwriting the files.
 
 ## 8 Versioning an App Deployed to the Cloud {#versioning-project}
 

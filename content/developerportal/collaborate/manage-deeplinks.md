@@ -26,7 +26,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
 	![](attachments/general-settings/app-id.png)
 
-*  For the story ID, select **Collaborate** > **Stories** – the ID is next to the story title:
+*  For the story ID, select **Collaborate** > **Stories**. Then click on the story title to show the details – the ID is below the story title:
 
 	![](attachments/general-settings/story-id.png)
 

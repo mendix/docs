@@ -6,8 +6,6 @@ tags: ["marketplace", "component", "app service"]
 description: "Describes how to make your component Marketplace-ready."
 ---
 
-{{% todo %}}[**Verify title**{{% /todo %}}
-
 ## 1 Introduction
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your component in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Marketplace vendor](#vendor), design and build your component, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
@@ -32,9 +30,7 @@ Whether you are supplying a component as an individual with your own business or
 
 Before you become a Marketplace Vendor, there are a few prerequisites to take care of. For paid components, whether you are an individual supplier with your own business or you are supplying on behalf of your company, you need a [Mendix Platform account](https://signup.mendix.com/) before you can create a Marketplace Vendor account.
 
-In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product.  We know export control can be confusing, so if you are still unclear on what you need to do, you can contact Mendix at *compliance@mendix.com*.
-
-{{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
+In addition to defining the business case for your component (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
 
 ### 2.2 Applying to the Marketplace Vendor Program
 

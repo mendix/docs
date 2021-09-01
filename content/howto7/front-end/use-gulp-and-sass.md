@@ -1,6 +1,6 @@
 ---
 title: "Use Gulp & Sass"
-category: "Front-End"
+category: "Front End"
 menu_order: 45
 tags: ["gulp", "sass", "ux", "front end"]
 ---

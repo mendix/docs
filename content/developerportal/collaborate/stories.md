@@ -55,12 +55,13 @@ Each Sprint contains a number of stories that describe the specific functionalit
 Fill in the following details:
 
 * **Title** – the title of the story
+* **Labels** - enter one or more labels to organize your work
 * **Description** – a description of the story
-* **Story type** – select whether the story describes a **Feature** or **Bug**
-* **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
+* **Tasks** - breakdown your work into up to 20 tasks
 * **Story status** – select **To-do** (default), **Running**, or **Done**
 * **Assignee** – select a team member you wish to assign to this story
 * **Story points** – the size of the story
+* **Change to 'Bug'** – by default, the story is created as a  **Feature**. Click here to toggle the story type
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 

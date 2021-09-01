@@ -49,7 +49,7 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
 
 {{% image_container width="400" %}}
-![](attachments/stories/new-story.jpg)
+![](attachments/stories/new-story.png)
 {{% /image_container %}}
 
 Fill in the following details:

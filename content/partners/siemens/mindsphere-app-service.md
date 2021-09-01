@@ -134,7 +134,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 2. Choose the **Product** *MindSphere IoT*.
 
-3. Click **Generate Keys**.
+3. Click **Create Binding Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 

@@ -252,8 +252,6 @@ The table presents the **Products** you have subscribed to, the **Type** of plan
 
 Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
 
-{{% todo %}}[**VERIFY NAME OF PAGE - STILL SERVICE MANAGEMENT DASHBOARD, OR SUBSCRIPTION MANAGEMENT DASHBOARD? VERIFY PLACEMENT OF SECTION HERE**]{{% /todo %}}
-
 #### 4.8.1 Service Management Dashboard
 
 {{% todo %}}[**VERIFY BELOW**]{{% /todo %}}

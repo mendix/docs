@@ -26,20 +26,20 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, consumer goods and retail, financial services, and the public sector.
+<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, retail, financial services, the public sector, and other industries.
 
 <a name="types"></a>The Marketplace offers the following **Content Types**:
 
 | Type | Description |
 | --- | --- |
-| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
+| **Solution Templates** | Solution templates serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
+| **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app. |
+| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
+| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
-| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
-| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
-| **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
-| **Solution Templates** | Solution templates are aimed at industries and domain problems. They serve as accelerators for implementing solutions that help increase speed-to-value and time-to-market, and they can be adapted using the core Mendix Platform to fully meet your requirements.|
-| **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app.  |
+| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 
 The following filter options are also available:
 
@@ -105,6 +105,8 @@ At the top of your Marketplace page, you can choose a category to [share new Mar
 
 The rest of this page presents previews of your Marketplace activity:
 
+{{% todo %}}[**UPDATE SCREENSHOT FOR MY REVIEWS AND COMPANY REVIEWS MENU ITEMS**]{{% /todo %}}
+
 ![](attachments/app-store-overview/my_app_store.png)
 
 Click an item in the sidebar to go to the page for that content:
@@ -114,9 +116,9 @@ Click an item in the sidebar to go to the page for that content:
 * [Saved Content](#saved-components)
 * [My Reviews](#my-reviews)
 * [Company Content](#company-content)
-* [Subscriptions](#subscriptions)
 * [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
+* [Subscriptions](#subscriptions)
 
 ### 4.1 My Content {#my-content}
 
@@ -178,7 +180,69 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
-### 4.6 Subscriptions {#subscriptions}
+### 4.6 Company Reviews {#company-reviews}
+
+This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
+
+### 4.7 User Groups {#user-groups}
+
+You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
+
+{{% alert type="info" %}}
+The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
+{{% /alert %}}
+
+#### 4.7.1 Members Tab {#members}
+
+On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
+
+Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
+
+![](attachments/app-store-overview/members.png)
+
+To remove a member, click **Remove** next to their name.
+
+#### 4.7.2 Guests Tab {#guests}
+
+A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
+
+![](attachments/app-store-overview/guests.png)
+
+The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
+
+{{% alert type="info" %}}
+The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
+{{% /alert %}}
+
+To remove a guest, click **Remove**.
+
+#### 4.7.3 Content Tab {#group-content}
+
+On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
+
+![](attachments/app-store-overview/group-content.png)
+
+{{% alert type="info" %}}
+A component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
+{{% /alert %}}
+
+Click the context menu to access various options for managing this content:
+
+![](attachments/app-store-overview/group-content-context.png)
+
+The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
+
+#### 4.7.4 Settings Tab
+
+{{% alert type="info" %}}
+This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).
+{{% /alert %}}
+
+On this tab, you can enter a **Group Name** and a **Group Description**.
+
+To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
+
+### 4.8 Subscriptions {#subscriptions}
 
 You can see all the Marketplace components you have subscribed to on this page:
 
@@ -190,7 +254,7 @@ Clicking a **Product** name takes you to the service management dashboard, which
 
 {{% todo %}}[**VERIFY NAME OF PAGE - STILL SERVICE MANAGEMENT DASHBOARD, OR SUBSCRIPTION MANAGEMENT DASHBOARD? VERIFY PLACEMENT OF SECTION HERE**]{{% /todo %}}
 
-#### 4.6.1 Service Management Dashboard
+#### 4.8.1 Service Management Dashboard
 
 {{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
 
@@ -208,7 +272,7 @@ You can also select a group of binding keys and click **Manage Instance** to go 
 This additional management option is only available for specific components where necessary.
 {{% /alert %}}
 
-#### 4.6.2 Creating Binding Keys
+#### 4.8.2 Creating Binding Keys
 
 To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**.
 
@@ -230,7 +294,7 @@ To use the binding keys, see [Using the Binding Keys](#using) below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 
-#### 4.6.3 Using the Binding Keys {#using}
+#### 4.8.3 Using the Binding Keys {#using}
 
 {{% todo %}}[**VERIFY NAMES OF CONSTANTS**]{{% /todo %}}
 
@@ -238,69 +302,7 @@ When you are developing your app, set the app service's **Access Key** and **Sec
 
 For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
-### 4.7 Company Reviews {#company-reviews}
-
-This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
-
-### 4.8 User Groups {#user-groups}
-
-You can configure user groups for various levels of access to your company content. The available configuration tabs for each user group page are described in the sections below.
-
-{{% alert type="info" %}}
-The **User Groups** menu item and page are visible to all users. However, only [Mendix Admins](/developerportal/control-center/#company) can create and delete user groups. Both [Group Admins](#members) and Mendix Admins can manage user groups.
-{{% /alert %}}
-
-#### 4.8.1 Members Tab {#members}
-
-On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a user group member. User group members can manage the [content](#group-content) assigned to the group.
-
-Once a member is added, you can select their permission level: **Group Member** or **Group Admin**. A Group Admin can manage the user group.
-
-![](attachments/app-store-overview/members.png)
-
-To remove a member, click **Remove** next to their name.
-
-#### 4.8.2 Guests Tab {#guests}
-
-A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
-
-![](attachments/app-store-overview/guests.png)
-
-The guest will receive an email notifying them of access to the private content. They can then see all the private Marketplace content shared with them in their [Shared with Me](#shared-with-me) page.
-
-{{% alert type="info" %}}
-The guest must be a registered Mendix Platform user; otherwise, they will not be able to access the shared content.
-{{% /alert %}}
-
-To remove a guest, click **Remove**.
-
-#### 4.8.3 Content Tab {#group-content}
-
-On this tab, you can assign content to this user group that can only be managed by members of this group. To assign a component to a user group, click **Assign Content** and select a company Marketplace component from the dialog box:
-
-![](attachments/app-store-overview/group-content.png)
-
-{{% alert type="info" %}}
-A component can only be assigned to one user group at a time. If a component is already assigned to another user group, it will not appear in this dialog box.
-{{% /alert %}}
-
-Click the context menu to access various options for managing this content:
-
-![](attachments/app-store-overview/group-content-context.png)
-
-The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from group** button is only available for [Group Admins](#members) and can be used to remove content from the user group.
-
-#### 4.8.4 Settings Tab
-
-{{% alert type="info" %}}
-This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/developerportal/control-center/#company).
-{{% /alert %}}
-
-On this tab, you can enter a **Group Name** and a **Group Description**.
-
-To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
-
-## 6 Read More
+## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
 * [How to Share Marketplace Content](share-app-store-content)

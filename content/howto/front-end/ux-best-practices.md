@@ -2,7 +2,7 @@
 title: "Implement Best Practices for UX Design"
 category: "Front End"
 menu_order: 10
-tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "Front-End"]
+tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
 aliases:
     - /howtogeneral/bestpractices/ux-best-practices.html
 ---

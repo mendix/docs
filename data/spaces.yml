@@ -116,7 +116,7 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
-    - "Mendix Beta Features"
+    - "Mendix Beta"
 developerportal:
   space: "Developer Portal Guide"
   priority: false

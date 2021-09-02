@@ -34,4 +34,4 @@ The API includes `POST` methods for registering new assets where a UUID is gener
 
 ## 4 Transform API {#transform}
 
-Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the **dependencies.json** file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.

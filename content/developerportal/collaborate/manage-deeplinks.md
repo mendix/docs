@@ -26,7 +26,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
 	![](attachments/general-settings/app-id.png)
 
-*  For the story ID, select **Collaborate** > **Stories**. Then click on the story title to show the details – the ID is below the story title:
+*  For the story ID, select **Collaborate** > **Stories** – then click the story title to show the details, the ID is below the story title:
 
 	![](attachments/general-settings/story-id.png)
 
@@ -45,7 +45,7 @@ The following deep links can be used:
 
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
 * App settings: `https://sprintr.home.mendix.com/link/settings/<appID>`
-* App buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
+* App Buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
 * App team: `https://sprintr.home.mendix.com/link/team/<appID>`
 * Stories overview for app: `https://sprintr.home.mendix.com/link/stories/<appID>`
 * Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`

@@ -456,7 +456,7 @@ The data source URI is the location of the service contract of the data source â
 
 For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
 
-The resulting ZIP file is named *DataHub\_<service\_name>\_<service_version>\_<technology>.zip* where the string *<technology>* identifies the OData version (*v3* or *v4*) in the file name.
+The resulting ZIP file is named *DataHub\_<service\_name>\_<service\_version>\_<technology>.zip* where the string *<technology>* identifies the OData version (*v3* or *v4*) in the file name.
 
 Here is an example:
 

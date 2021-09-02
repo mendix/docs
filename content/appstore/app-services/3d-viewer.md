@@ -215,7 +215,7 @@ For this widget to visualize a model correctly, set the following properties:
 	* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
 	* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
 	* **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
-	* **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain inforamtion about if the product structure is loaded; you can also add custom actions triggered by this change
+	* **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
 3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. To receive information on how to use the Viewer APIs and other details, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for 3DViewer development team.
 
@@ -417,7 +417,7 @@ There are four main types of events that can be picked up on the Viewer widget, 
 
 By selecting one attribute to set **Selection**, you can get information on the selected part (for this you might need to work with Viewer APIs; if you have inquiries on how to use the Viewer APIs, please contact [Mendix Support](https://support.mendix.com/hc/en-us)).
 
-**Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection propoerty. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
+**Selection** takes a String attribute. You can define an attribute and bind that attribute to Selection property. In an running app, when user select on a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (psid and viewer)and use it in the actions. 
 	
 ![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
 
@@ -429,7 +429,7 @@ Like other Mendix events, you can select from a list of actions upon a model par
 
 By selecting one attribute to set the **Error** event, you can pick up an error exposed by the Viewer.
 
-**Error** takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
+**Error** takes a String attribute. You can define an attribute and bind that attribute to this property. In an running app, when there's problem visualizing a model, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by viewer and add custom actions to trigger when error arises.
 
 ![viewerevent-onerror](attachments/3d-viewer/viewerevent-onerror.jpg)
 
@@ -543,22 +543,21 @@ If you plan to use 3DViewer in your app and decide to deploy your app to the Men
 
 ### 7.2  Subcribing to Get LicenseToken
 
-On Marketplace 3D Viewer product page, you will be able to see **Subcribe** button 
-1. Click **Subcribe** button to create subcription order page
-2. During the order creation process, you will be asked to fill in technial contact information(first name, last name, email), subcription amount, billing account information. 
+On Marketplace 3D Viewer product page, you will see **Subcribe** button.
+1. Click **Subcribe** button to go to create subcription order page
+2. During the order creation process, you will be asked to fill in technial contact information(first name, last name, email), subcription amount, billing account information, and so on. 
 3. Upon successful order creation, technial contact's email will receive an order confirmation email. 
-4. Within the email, there is a link that will direct to Marketplace MySubcription page.Technical contact click the link and login to MySubscription with his/her email address. 
-5. Upon successful login, technical contact will be able to see a list subcriptions his organisation has made.
+4. Within the email, there is a link that will direct to Marketplace **MySubcription** page.Technical contact click the link and login to **MySubscription** page with his/her email address. 
+5. Upon successful login, technical contact will be able to see a list of subcriptions his/her organisation has made.
 6. From the list find 3D Viewer subcription 
-   ![mysubscriptionpage-3dviewer](attachments/3d-viewer/mysubscriptionpage-3dviewer.jpp)
-7. By clicking on the 3D Viewer subcription, you will 
+   ![mysubscriptionpage-3dviewer](attachments/3d-viewer/mysubscriptionpage-3dviewer.jpg)
+7. By clicking on the 3D Viewer subcription, you will see subcription details page
    ![3dviewer-createbindingkeys](attachments/3d-viewer/3dviewer-createbindingkeys.jpg)
-8. Click **Create Binding Keys** , give the key a meaningful name
+8. Click **Create Binding Keys** , give the key a meaningful name, click **Create Keys**
    ![3dviewer-createbindingkeys-popup](attachments/3d-viewer/3dviewer-createbindingkeys-popup.jpg)
-9.  ddd
+9. Key(LicenseToken) will be genreated, you can copy and save it for later use in your app
    ![3dviewer-createbindingkeys-copy](attachments/3d-viewer/3dviewer-createbindingkeys-copy.jpg)
-10. dd
-
+   
 ### 7.4 Configuring a LicenseToken for App Deployment
 
 #### 7.4.1 Configuring the LicenseToken in Studio Pro
@@ -572,8 +571,13 @@ In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and 
 
 	![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
 
-5. Click **Run** to deploy your app to the cloud.
+5. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 7.4.2 Configuring the LicenseToken in the Developer Portal
+#### 7.4.2 Configuring the LicenseToken in Developer Portal
 
 You can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
+
+1. After you create a deployment package, you can configure the application constants before deploy.
+![licensetoken-cloudportal](attachments/3d-viewer/licensetoken-cloudportal.jpg)
+2. For alredy deployed app, you can also change existing `LicenseToken` value change , and restart the app.
+![licensetoken-envdetails](attachments/3d-viewer/licensetoken-envdetails.jpg)

@@ -581,7 +581,7 @@ Only use unsupported environment variables if you know exactly what you are doin
 
 ## 8 Databases in SAP BTP{#databases}
 
-Mendix needs access to a relational database backend and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL or SAP HANA.
+Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL or SAP HANA.
 
 ### 8.1 Running Mendix on PostgreSQL
 

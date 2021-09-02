@@ -15,6 +15,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### September 2nd, 2021
+
+#### Improvements
+
+* We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
+* We implemented [context deep links](/developerportal/collaborate/manage-deeplinks) to all main app pages on the Developer Portal so you can easily share references.
+* We increased the performance of opening the [My Apps page](/developerportal/apps-list/)
+
+#### Fixes
+
+* We fixed a bug where the pop-up window with pending invitations was shown twice.
+* We also fixed a layout bug on the invitation pop-up window that we accidentally introduced during the last release.
+
 ### August 26th, 2021
 
 #### Improvements
@@ -54,7 +67,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
 * We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings#api-keys) page.
 * We implemented a new responsive search panel.
-* We will remove the [Burndown Chart](/developerportal/collaborate/stories#burndown) and [Release Plan](/developerportal/collaborate/stories#release-plan) tabs from the Developer Portal on August 31st, 2021.
+* We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31st, 2021.
 
 ### June 15th, 2021
 

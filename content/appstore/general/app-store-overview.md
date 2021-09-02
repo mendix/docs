@@ -22,25 +22,30 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 * Click **My Marketplace** to go to pages presenting your [Marketplace activity](#my-marketplace) as well as your company's [private content](#company-content)
 * Click  **Get Studio Pro** to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 * Click **Add Content** to [share new Marketplace content](/appstore/general/share-app-store-content) you have developed
-* Explore various [content categories](#catalog).
+* Explore various [industry solutions](#industry) and[content types](#types).
 
 ![](attachments/app-store-overview/home-page.jpg)
 
-<a name="catalog"></a>The Marketplace offers the following content categories:
+<a name="industry"></a>The Marketplace offers **Industry** solutions for manufacturing, retail, financial services, the public sector, and other industries.
 
-| Catalog | Description |
+<a name="types"></a>The Marketplace offers the following **Content Types**:
+
+| Type | Description |
 | --- | --- |
-| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
+| **Solution Templates** | Solution templates serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
+| **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app. |
+| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
+| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
-| **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
- | [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs.  |
-| **Solutions** | Solutions are aimed at industries and domain problems. An out-of-the-box solution delivers instant value, and can be adapted using the core Mendix Platform to fully meet your requirements. |
+| [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
 
 The following filter options are also available:
 
+* **Compatibility**
 * **Tags**
-* **Ratings**
+* **Rating**
 
 ## 3 Component Details Page {#details}
 
@@ -50,7 +55,7 @@ Clicking the tile of a Marketplace component will bring you to its details page 
 
 ### 3.1 Header & Usage
 
-The header for each component presents the following details:
+The header for a component presents the following details:
 
 * The name and category of the component
 * The review average (in stars) and the number of reviews
@@ -60,6 +65,7 @@ The header for each component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+* The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -75,7 +81,7 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
-### 3.2 Tabs
+### 3.2 Tabs {#tabs}
 
 The details page for a component presents the following item information tabs:
 
@@ -91,7 +97,7 @@ The details page for a component presents the following item information tabs:
 
 ## 4 My Marketplace {#my-marketplace}
 
-At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets**, **App Services**, or **Solutions**.
+At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets** or **Solutions**.
 
 The rest of this page presents previews of your Marketplace activity:
 
@@ -102,8 +108,9 @@ Click an item in the sidebar to go to the page for that content:
 * [My Content](#my-content)
 * [Shared with Me](#shared-with-me)
 * [Saved Content](#saved-components)
-* [Reviews](#my-reviews)
+* [My Reviews](#my-reviews)
 * [Company Content](#company-content)
+* [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
 
 ### 4.1 My Content {#my-content}
@@ -152,7 +159,7 @@ Click the context menu to access various options for managing this content:
 * **Receive/Stop email notifications** – click this to start receivin email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
-### 4.4 Reviews {#my-reviews}
+### 4.4 My Reviews {#my-reviews}
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content:
 
@@ -166,7 +173,7 @@ On this page, you can see all the content your company has published. Click the 
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a version** and **Unpublish a version** options are only available for your own versions of company content.
 
-### 4.6 Company Reviews
+### 4.6 Company Reviews {#company-reviews}
 
 This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
@@ -272,7 +279,7 @@ When you are developing your app, set the app service's **clientID** and **clien
 
 For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
 
-## 6 Read More
+## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
 * [How to Share Marketplace Content](share-app-store-content)

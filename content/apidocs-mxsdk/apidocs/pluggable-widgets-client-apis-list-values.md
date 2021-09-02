@@ -190,7 +190,7 @@ Reset to default sort order by passing `undefined` as the following code shows:
 this.props.myDataSource.setSortOrder(undefined);
 ```
 
-The `setSort` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the backend. For all the other data sources the sorting is done by the client.
+The `setSort` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the sorting is done by the back end. For all the other data sources the sorting is done by the client.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.
@@ -215,7 +215,7 @@ interface MyListWidgetsProps {
 }
 ```
 
-The `setFilter` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the backend. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
+The `setFilter` method is supported for all [data sources](/refguide/data-sources#list-widgets). For `Database` and `XPath` data sources the filtering is done by the back end. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
 {{% alert type="info" %}}
 This feature was introduced in Mendix Studio Pro v9.3.

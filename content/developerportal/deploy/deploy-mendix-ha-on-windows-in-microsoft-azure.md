@@ -83,7 +83,7 @@ Then select your application, click **Configuration** and then **Advanced...**. 
 By default, the container will be created in the blob storage if it does not yet exist. More information about the configuration options for Azure Blob Storage in the Mendix Runtime is available in the [Microsoft Azure Blob Storage Settings](/refguide/custom-settings#azure-blob) section of *Runtime Customization*.
 
 It is also strongly recommended to add the setting _com.mendix.storage.PerformDeleteFromStorage_ with value `false`. This prevents the runtime from deleting files from the underlying storage when they are deleted in the app, which can result in missing files when restoring a database back-up.
-If you do not want to enable this setting, make sure you have a restore strategy configured for your storage backend.
+If you do not want to enable this setting, make sure you have a restore strategy configured for your storage back end.
 
 {{% alert type="info" %}}
 These settings have to be configured on *all* servers in the cluster.

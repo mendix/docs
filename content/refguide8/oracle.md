@@ -11,7 +11,7 @@ There are some minor differences in how Mendix behaves when using an Oracle data
 
 ## 2 Setting Up a User for Mendix
 
-When setting up an integration with an Oracle backend we recommend that you create a user/schema with the appropriate privileges. In Mendix, we use a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
+When setting up an integration with an Oracle back end we recommend that you create a user/schema with the appropriate privileges. In Mendix, we use a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
 
 When setting-up perform the following steps:
 

@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### September 2nd, 2021
+
+#### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
+
+* We have added support for Google Cloud Platform.
+* We have added some new features to run our installer and configuration tools in a non-interactive way. [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive)
+* We have added more metrics in our sidecars.
+* We have added additional details about the Runtime status for each replica, including the license status and errors that might be preventing the Runtime from starting.
+* We have fixed an error `M2EE: An error occurred while executing action 'get_license_information'` that was sometimes logged while the Runtime was starting.
+
 ### August 12th, 2021
 
 #### Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0

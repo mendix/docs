@@ -19,7 +19,7 @@ You can also manage the progress of tasks and Sprints from within Mendix Studio 
 
 ![](attachments/stories/stories.png)
 
-This page has four tabs, which are described below.
+This page has two tabs, which are described below.
 
 ## 2 Overview
 
@@ -47,18 +47,19 @@ For more information on Sprints, see the [Sprint Actions](#sprint-actions) secti
 Each Sprint contains a number of stories that describe the specific functionality to be implemented, built, or fixed. Click **New Story** to open the **New Story** dialog box:
 
 {{% image_container width="400" %}}
-![](attachments/stories/new-story.jpg)
+![](attachments/stories/new-story.png)
 {{% /image_container %}}
 
 Fill in the following details:
 
 * **Title** – the title of the story
+* **Labels** – enter one or more labels to organize your work
 * **Description** – a description of the story
-* **Story type** – select whether the story describes a **Feature** or **Bug**
-* **Create story in** – the Sprint in which the story should be started; the default is **Backlog**
+* **Tasks** – break down your work into up to 20 tasks
 * **Story status** – select **To-do** (default), **Running**, or **Done**
 * **Assignee** – select a team member you wish to assign to this story
 * **Story points** – the size of the story
+* **Change to Bug** – by default, the story is created as a  **Feature**; click here to toggle the story type
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 
@@ -129,7 +130,7 @@ The following buttons are available:
 The **Completed Sprints** page presents an overview of Sprints that have been completed and archived:
 
 {{% image_container width="550" %}}
-![](attachments/stories/completed-sprints.jpg)
+![](attachments/stories/completed-sprints.png)
 {{% /image_container %}}
 
 The following buttons are available:
@@ -137,7 +138,6 @@ The following buttons are available:
 * **Search** – enables searching Sprints based on their ID or title
 * **View** – shows the full details of the archived Sprint
 * **View Stories** – enables viewing the stories of the selected Sprint
-* **Add Story** – enables adding a story to the selected Sprint
 * **Delete** – enables deleting the selected Sprint and its stories
 
 #### 2.4.4 History {#history}
@@ -269,39 +269,7 @@ When you click **Details** for a story, you will be taken to the [story details]
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 {{% /alert %}}
 
-## 4 Burndown Chart {#burndown}
-
-{{% alert type="info" %}}
-The **Burndown Chart** tab will be removed on the August 31st, 2021.
-{{% /alert %}}
-
-This tab graphically presents the progress of the current Sprint:
-
-* **Ideal Burndown** – the expected progress if the Sprint is completed at a consistent rate
-* **Remaining Effort** – the amount of story points that still have to be completed
-* **New Stories** – the amount of new story points added on a specific day
-
-![](attachments/planning/burndownchart.png)
-
-Under **Sprint History**, you can view burndown charts for completed Sprints.
-
-## 5 Release Plan {#release-plan}
-
-{{% alert type="info" %}}
-The **Release Plan** tab will be removed on the August 31st, 2021. Make sure that you save your data before it is removed by using the **Export to Excel** button.
-{{% /alert %}}
-
-On this tab, you will get an overview of all the springs.
-
-Click **Edit** to make changes in a specific Sprint or release (for example, to change the name, date, or duration of the Sprint).
-
-Click **Plan Something** to plan a **Sprint**, **Release**, or **Other**.
-
-{{% alert type="info" %}}
-All the changes made on this page are directly passed on to the **Stories** page and vice versa.
-{{% /alert %}}
-
-## 6 Read More
+## 4 Read More
 
 * [Buzz](buzz)
 * [Team](team)

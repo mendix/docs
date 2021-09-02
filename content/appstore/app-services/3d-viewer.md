@@ -575,7 +575,7 @@ In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and 
 
 #### 7.4.2 Configuring the LicenseToken in Developer Portal
 
-You can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
+Alternatively, you can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
 
 1. After you create a deployment package, you can configure the application constants before deploy.
 ![licensetoken-cloudportal](attachments/3d-viewer/licensetoken-cloudportal.jpg)

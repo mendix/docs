@@ -12,10 +12,10 @@ Finding the right data to use in your app development is made easier using the s
 
 ## 2 Search via the API {#search-api}
 
-To use the Data Hub Catalog Search API, you need:
+To use the Data Hub Catalog Search API, you need the following:
 
-- a [Personal Access Token](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#create-token)
-- a search term
+* A [Personal Access Token](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#create-token)
+* A search term
 
 For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html#/Search/get_data).
 
@@ -26,8 +26,8 @@ curl --location --request GET 'https://hub.mendix.com/rest/search/v3/data?query=
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'
 ```
-A successful `GET` call results in a `200` status code and a JSON response body that includes the details about the search results:
 
+A successful `GET` call results in a `200` status code and a JSON response body that includes the details about the search results:
 
 ```json
 {
@@ -299,7 +299,7 @@ In the **Filters** dialog box, check the **Environment Type** that you want to i
 
 #### 3.4.3 Search Results {#search-results}
 
-The number of items satisfying the search criteria (search string plus filters) are shown the search results list. The order of the items presented in the search results will be a combination of the following:
+The number of items satisfying the search criteria (search string plus filters) are shown in the search results list. The order of the items presented in the search results will be a combination of the following:
 
 * Closest match to the search string
 * Popularity of the service (the number of connections)
@@ -309,7 +309,7 @@ When an item in the search results is selected, the **Landscape** tab shows the 
 
 ### 3.5 Selected Asset Details {#search-details}
 
-When you click on a search result, the details are displayed in this panel.
+When you click a search result, the details are displayed in this panel.
 
 #### 3.5.1 Details of a Selected Data Source {#service-details}
 
@@ -380,8 +380,8 @@ You can perform the following actions from this screen:
  ![associations info](attachments/search/attributes-associations.png)
 
 * **Name** – the name of the association that is exposed in the OData service contract.
-
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
+
 
 ### 3.6 Metadata Panel {#metadata}
 
@@ -391,11 +391,13 @@ The metadata panel at the right of the asset details screen displays details fro
 
 #### 3.6.1 Tags
 
-The tags that have been assigned to the data source in the Catalog, see more about this in [Curation.](curate#tags) Tags assigned at a data source level propagate down to the datasets and attributes exposed in the service.
+These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](curate#tags) section of *How to 
+Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
 #### 3.6.2 Business Owner
 
-A link to the business owner of the data exposed in the data source, see more about this in [changing owners](curate#changing-owners).
+This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to 
+Curate Registered Assets*.
 
 #### 3.6.3 Technical Owner
 
@@ -418,7 +420,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-Indicates if the data source has been **Validated**. See [Curate Bar](#curate-bar) for changing **Validated** as an owner or curator.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curate Bar](#curate-bar) section below.
 
 #### 3.6.6 Application
 
@@ -452,21 +454,15 @@ The data source URI is the location of the service contract of the data source �
 
 ### 3.9 Download the Metadata Contract of a Data Source {#download-contract}
 
-For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A `.zip` file that includes the all the files that make up the full metadata contract is generated and downloaded.
+For a selected data source, you can click **Download** to download the OData service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full metadata contract is generated and downloaded.
 
-The resulting `.zip` file is named as follows:
+The resulting ZIP file is named *DataHub\_<service_name>\_<service_version>\_<technology>.zip* where the string *<technology>* identifies the OData version (*v3* or *v4*) in the file name.
 
-```DataHub_<service_name>_<service_version>_<technology>.zip```
-
-The string `<technology>` identifies the OData version (`v3` or `v4`) in the file name.
-
-For the following example:
+Here is an example:
 
 ![download example](attachments/search/download_example.png)
 
-When you click **Download** the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`
-
-This zip file has the folder: `DataHub_SAP_Intelligence_1.0_OData4` which contains the all the metadata files that define the service.
+When you click **Download**, the following file is downloaded: *DataHub\_SAP\_Intelligence\_1.0_OData4.zip*. This ZIP file has the folder *DataHub\_SAP\_Intelligence\_1.0\_OData4*, which contains the all the metadata files that define the service.
 
 ### 3.10 Viewing Search Results in the Data Hub Landscape
 

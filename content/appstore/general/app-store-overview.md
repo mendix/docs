@@ -100,8 +100,6 @@ At the top of your Marketplace page, you can choose a category to [share new Mar
 
 The rest of this page presents previews of your Marketplace activity:
 
-{{% todo %}}[**UPDATE SCREENSHOT FOR MY REVIEWS AND COMPANY REVIEWS MENU ITEMS**]{{% /todo %}}
-
 ![](attachments/app-store-overview/my_app_store.png)
 
 Click an item in the sidebar to go to the page for that content:

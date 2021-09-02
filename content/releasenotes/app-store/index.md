@@ -102,7 +102,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content) to the Marketplace.
 

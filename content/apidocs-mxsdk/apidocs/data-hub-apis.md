@@ -24,8 +24,7 @@ The interactive features of the OpenAPI interface are not operational, so the **
 
 ## 2 Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search#search-api) section of *How to 
-Search in the Data Hub Catalog*.
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search#search-api) section of *How to Search in the Data Hub Catalog*.
 
 ## 3 Registration API {#registration}
 

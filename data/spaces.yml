@@ -22,7 +22,7 @@ howto7:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Front-End"
+    - "Front End"
     - "Data Models"
     - "Logic & Business Rules"
     - "Mobile Development"
@@ -42,7 +42,7 @@ howto8:
   menu_categories:  
     - "General Info"
     - "Collaboration"
-    - "Front-End"
+    - "Front End"
     - "Mobile"
     - "Data Models"
     - "Logic & Business Rules"
@@ -58,7 +58,7 @@ howto:
   menu_categories:  
     - "General Info"
     - "Collaboration"
-    - "Front-End"
+    - "Front End"
     - "Mobile"
     - "Data Models"
     - "Logic & Business Rules"
@@ -116,7 +116,7 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
-    - "Mendix Beta Features"
+    - "Mendix Beta"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
@@ -218,7 +218,6 @@ data-hub:
   priority: false
   menu_categories:
     - "Share Data Between Apps"
-    - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:

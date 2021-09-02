@@ -100,7 +100,7 @@ In the top-left corner of the screen, click the cogwheel and select **Project se
 
 {{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
-On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back-end of your Mendix application.
+On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back end of your Mendix application.
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 

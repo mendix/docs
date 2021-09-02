@@ -208,10 +208,11 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
-    - "Widgets"
+    - "Themes"
+    - "App Services"
     - "Connectors"
     - "Modules"
-    - "Themes"
+    - "Widgets" 
 data-hub:
   space: "Data Hub Guide"
   priority: false

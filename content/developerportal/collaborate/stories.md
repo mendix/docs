@@ -17,9 +17,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 You can also manage the progress of tasks and Sprints from within Mendix Studio Pro via the [Stories pane](/refguide/stories-pane).
 {{% /alert %}}
 
-{{% image_container %}}
 ![](attachments/stories/stories.png)
-{{% /image_container %}}
 
 This page has two tabs, which are described below.
 
@@ -55,13 +53,13 @@ Each Sprint contains a number of stories that describe the specific functionalit
 Fill in the following details:
 
 * **Title** – the title of the story
-* **Labels** - enter one or more labels to organize your work
+* **Labels** – enter one or more labels to organize your work
 * **Description** – a description of the story
-* **Tasks** - breakdown your work into up to 20 tasks
+* **Tasks** – break down your work into up to 20 tasks
 * **Story status** – select **To-do** (default), **Running**, or **Done**
 * **Assignee** – select a team member you wish to assign to this story
 * **Story points** – the size of the story
-* **Change to 'Bug'** – by default, the story is created as a  **Feature**. Click here to toggle the story type
+* **Change to Bug** – by default, the story is created as a  **Feature**; click here to toggle the story type
 
 You can also create a story via the [New Story](#new-story) button for Sprint or from within a new Sprint by clicking **Add a new story**:
 

@@ -87,7 +87,7 @@ From this page the following APIs are currently available:
 * [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html)
 * [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html)
 
-For a step-by-step guide on using the APIs to register apps, environments, data sources, and searching in the Data Hub, see [Using the Data Hub API](/data-hub/general/data-hub-api-how-to). The [Data Hub Transform OpenAPI Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
+The [Data Hub Transform OpenAPI Spec](#transform) describes how to generate the request bodies for registering Mendix Apps.
 
 {{% alert type="info" %}}
 The Data Hub API v2 version  is now deprecated and will be removed. Users should update their calls to the latest APIs and use the latest Registration and Search API URLs.
@@ -146,9 +146,9 @@ Insert the `dependencies.json` file of the app *in escaped json format*.
 
 This object must specify the location constants for the published endpoints that are referred to in the `dependencies.json` file.
 
- You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file. For more information on how to do this see the section [Location Constants Values](/data-hub/general/data-hub-api-how-to#metadata-file) in  *Using the Data Hub APIs* document.
+You can find the values in the **location constants** document in the **App Explorer** or in the **metadata.json** file.
 
- For the example given in the OpenAPI  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
+For the example given in the OpenAPI  spec in the `dependencies.json` file, the object `"constant":"MyFirstModule.EmployeeManagement_location"` is defined with the value of the location:
 
      "EndpointLocationConstants": [
     {

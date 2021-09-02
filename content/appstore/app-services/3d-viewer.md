@@ -103,7 +103,7 @@ If your project already has a microflow set to execute after startup, you need t
 
 ## 4 3DViewer Content
 
-### 4.1 Predefined Entities {#predefined-entity}
+### 4.1 Predefined Entities {#predefined-entities}
 
 The **ModelDocument** entity is a conceptual entity that incorporates all the information of a model. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
@@ -131,7 +131,7 @@ The **Pagination** entity serves as an input parameter of the **GetModelListFrom
 | PageSize | The item size of one page. |
 | OffSet | The offset from the first item of the page. |
 
-The **markup** entity is a **System.Image** type of entity and denotes a markup image.
+The **Markup** entity is a **System.Image** type of entity and denotes a markup image.
 
 The **MxModelDocument** and **MxChildDocument** entities are internal entities, and in most cases, you will not need them. 
 
@@ -141,7 +141,7 @@ The **HttpEndpoint** constant with the default value **visualization** is used t
 
 The **ModelSourceType** constant with the value **Mendix** is used to signify the model source. You can use this constant to restrict the value of the **Data source** parameter in the **Uploader** widget, the **Model source type** parameter in the **Viewer** widget, or the value of the **Source** attribute in the **ModelDocument** entity.
 
-The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Cloud](../../developerportal/deploy/mendix-cloud-deploy). As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid 3DViewer license token for the app that uses 3DViewer to be successfully deployed to [Mendix Licensed Cloud Node](../../developerportal/deploy/mendix-cloud-deploy) or your ownrenvironment. As 3DViewer is a commercial product and subject to a subscription fee, to be able to use the 3DViewer functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how 3DViewer works  (meaning, build and run an app that uses 3DViewer locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
@@ -153,7 +153,7 @@ The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an i
 
 ![deletemodelfrommendix](attachments/3d-viewer/deletemodelfrommendix.jpg)
 
-The **Downloadmarkup** microflow takes a **markup** object as input parameter and downloads the image to a local directory..
+The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory..
 
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
@@ -167,7 +167,7 @@ The **GetModelListFromMendix** nanoflow takes a **Pagination** object as an inpu
 
 ![getmodellistfrommendix](attachments/3d-viewer/getmodellistfrommendix.jpg)
 
-The **GetmarkupsFromMendix** nanoflow takes a **ModelDocument** object as an input parameter to fetch the markup images associated with this model and returns a list of **markup** object as a result. Each markup represents an image that is stored in the Mendix file storage.
+The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an input parameter to fetch the markup images associated with this model and returns a list of **Markup** object as a result. Each markup represents an image that is stored in the Mendix file storage.
 
 ![getmarkupsfrommendix](attachments/3d-viewer/getmarkupsfrommendix.jpg)
 
@@ -271,7 +271,7 @@ On **General** tab, by setting the **Enable** property you can switch the markup
 
 Also on the **General** tab is the **markup color** property, which allows you to set the color of markup annotations. The valid values are [CSS legal color values](https://www.w3schools.com/CSSref/css_colors_legal.asp) (for example, RGB values, predefined color names, and exadecimal color values).
 
-On **Event** tab, by binding a Boolean attribute to the **Save** property, the save status of the markup image can be obtained after the end-user clicks **Save** on the markup builder's panel. You can also add custom actions, such as showing a pop-up message, to this. When the attribute value changes to **True**, it means the markup image associated with the model is successfully saved in Mendix file storage. When the attribute value is **False**, this means the save is not successful. By setting the **Action** property, you can trigger an action based on the value of the **Save** status. 
+On **Event** tab, by binding a Boolean attribute to the **Save** property, the save status of the markup image can be obtained after the end-user clicks **Save** on the Markup builder's panel. You can also add custom actions, such as showing a pop-up message, to this. When the attribute value changes to **True**, it means the markup image associated with the model is successfully saved in Mendix file storage. When the attribute value is **False**, this means the save is not successful. By setting the **Action** property, you can trigger an action based on the value of the **Save** status. 
 
 ##### 4.6.2.6 Measurement {#measurement}
 

@@ -36,7 +36,6 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **Solution Templates** | Solution templates serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
 | **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
-| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
@@ -65,10 +64,6 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-* The **Premium** label is applied to components like [app services](#type) that require a subscription after a free trial of 30 days
-	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your 30-day free trial
-	* If you have an active trial or a subscription for a component, click **Check Status** to go to the [Subscriptions](#subscriptions) page
-	* These components also have a [Pricing](#tabs) tab
 * The **Request Demo** and **Contact Sales** buttons are only available for [industry solutions](#types)
 
 <a name="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
@@ -101,7 +96,7 @@ The details page for a component presents the following item information tabs:
 
 ## 4 My Marketplace {#my-marketplace}
 
-At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets**, **App Services**, or **Solutions**.
+At the top of your Marketplace page, you can choose a category to [share new Marketplace content](share-app-store-content#adding), such as **Widgets** or **Solutions**.
 
 The rest of this page presents previews of your Marketplace activity:
 
@@ -118,7 +113,6 @@ Click an item in the sidebar to go to the page for that content:
 * [Company Content](#company-content)
 * [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
-* [Subscriptions](#subscriptions)
 
 ### 4.1 My Content {#my-content}
 
@@ -242,63 +236,7 @@ On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
 
-### 4.8 Subscriptions {#subscriptions}
-
-You can see all the Marketplace components you have subscribed to on this page:
-
-![](attachments/app-store-overview/subscriptions.jpg)
-
-The table presents the **Products** you have subscribed to, the **Type** of plan status, the type of subscription **Plan**, and the **Expiration** date of the subscription.
-
-Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
-
-#### 4.8.1 Service Management Dashboard
-
-{{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
-
-This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app.
-
-This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
-
-![](attachments/app-store-overview/binding-keys.jpg)
-
-{{% todo %}}[**VERIFY BELOW, GET ACCESS FOR SCREENSHOT OF EXAMPLE**]{{% /todo %}}
-
-You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
-
-{{% alert type="info" %}}
-This additional management option is only available for specific components where necessary.
-{{% /alert %}}
-
-#### 4.8.2 Creating Binding Keys
-
-To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**.
-
-{{% todo %}}[**VERIFY BELOW AND ADD SCREENSHOT IF NECESSARY**]{{% /todo %}}
-
-In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
-
-After you click **Create Keys**, a page appears with your **Access Key**, **Secrete Key**, and **Token**:
-
-![](attachments/app-store-overview/created-keys.jpg)
-
-Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
-
-{{% alert type="warning" %}}
-Once you close this page, you will not be able to retrieve the keys again.
-{{% /alert %}}
-
-To use the binding keys, see [Using the Binding Keys](#using) below.
-
-Click **Return to the overview** to go to the main page of the dashboard. 
-
-#### 4.8.3 Using the Binding Keys {#using}
-
-{{% todo %}}[**VERIFY NAMES OF CONSTANTS**]{{% /todo %}}
-
-When you are developing your app, set the app service's **Access Key** and **Secrete Key** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
-
-For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+>>>>>>
 
 ## 5 Read More
 

@@ -236,7 +236,50 @@ On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**.
 
->>>>>>
+## 5 Service Management Dashboard {#service-management}
+
+To use an app service in your app, you need binding keys. You can create and manage these keys on the **Service Management** dashboard.
+
+### 5.1 Creating Binding Keys
+
+To create binding keys, go to the **Service Management** dashboard via the link provided in your subscription confirmation email, select a **Product**, and click **Generate Keys** at the bottom of the page:
+
+![](attachments/app-store-overview/binding-keys-1.png)
+
+In the **Provide a Name for Your App Connection** field of the **Connect Your Service** dialog box, enter a name for the connection:
+
+![](attachments/app-store-overview/binding-keys-2.png)
+
+After you click **Create Keys**, a page will appear with your keys – **clientID**, **TokenURL**, and **clientSecret**:
+
+![](attachments/app-store-overview/binding-keys-3.png)
+
+Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
+
+{{% alert type="warning" %}}
+Once you close this page of the Service Management dashboard, you will not be able to retrieve the keys again.
+{{% /alert %}}
+
+To use the binding keys, see the [Using the Binding Keys](#using) section below.
+
+Click **Return to the overview** to go to the main page of the Service Management dashboard. On the main page, you can hover over the **Binding Keys** column to see the binding keys that have already been created as well as to delete a binding key:
+
+![](attachments/app-store-overview/binding-keys-4.png)
+
+You can also highlight a product and click **Manage** to go to the app service provider's configuration page, where you can do further app service-specific configuration:
+
+![](attachments/app-store-overview/binding-keys-5.png)
+
+{{% alert type="info" %}}
+This additional management option is only available for specific app services where necessary.
+{{% /alert %}}
+
+### 5.2 Using the Binding Keys {#using}
+
+When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+
+For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+
 
 ## 5 Read More
 

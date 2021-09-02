@@ -537,23 +537,31 @@ The sections below describe these tools.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-3D Viewer is a commercial Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
 
-### 7.1 Deciding If You Need to Request a LicenseToken
+### 7.1 Deciding If You Need to Subcribe to Get a LicenseToken
 
-If you use 3D Viewer in your app and you just need to run your app locally for testing and trial purposes and do not plan to deploy the app, you will not need to request a `LicenseToken`.
+If you use 3D Viewer in your app and you just need to run your app locally, or deploy in Mendix's free sandbox environment, for testing and trial purposes, you will not need a `LicenseToken`. You can leave the value of constant `Viewer3D.LicenseToken`  empty when running your app. 
 
-If you plan to use 3DViewer in your app and decide to deploy your app to the cloud, then you will need to request a `LicenseToken`. 
+If you plan to use 3DViewer in your app and decide to deploy your app to the Mendix Licensed Cloud Node or your on-premise environment, then you will need to subcribe 3D Viewer in order to get a `LicenseToken`. 
 
-### 7.2 Requesting a LicenseToken
+### 7.2  Subcribing to Get LicenseToken
 
-To request a free trial and an offical subscription `LicenseToken`, prepare the following details:
-
-* Your company's legal name
-* Your email address
-* Your full name
-
-Send these details to `DIS_MXAWS_3DViewer_Support@mendix.com`. You may be asked to provide more information. You will receive a `LicenseToken` with an agreed-on expiration date.
+On Marketplace 3D Viewer product page, you will be able to see **Subcribe** button 
+1. Click **Subcribe** button to create subcription order page
+2. During the order creation process, you will be asked to fill in technial contact information(first name, last name, email), subcription amount, billing account information. 
+3. Upon successful order creation, technial contact's email will receive an order confirmation email. 
+4. Within the email, there is a link that will direct to Marketplace MySubcription page.Technical contact click the link and login to MySubscription with his/her email address. 
+5. Upon successful login, technical contact will be able to see a list subcriptions his organisation has made.
+6. From the list find 3D Viewer subcription 
+   ![mysubscriptionpage-3dviewer](attachments/3d-viewer/mysubscriptionpage-3dviewer.jpp)
+7. By clicking on the 3D Viewer subcription, you will 
+   ![3dviewer-createbindingkeys](attachments/3d-viewer/3dviewer-createbindingkeys.jpg)
+8. Click **Create Binding Keys** , give the key a meaningful name
+   ![3dviewer-createbindingkeys-popup](attachments/3d-viewer/3dviewer-createbindingkeys-popup.jpg)
+9.  ddd
+   ![3dviewer-createbindingkeys-copy](attachments/3d-viewer/3dviewer-createbindingkeys-copy.jpg)
+10. dd
 
 ### 7.4 Configuring a LicenseToken for App Deployment
 

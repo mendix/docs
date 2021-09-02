@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### September 6th, 2021
+
+#### New Feature
+
+* Mendix Admin can now configure their own Single Sign-on configuration from the Security tab of Control Center. 
+
 ### September 2nd, 2021
 
 #### Improvements

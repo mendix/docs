@@ -238,7 +238,7 @@ Now you will set up a data view on your home page.
 	{{% image_container width="500" %}}![guid string](attachments/native-push/set-guid-string.png){{% /image_container %}}
 
 9. Click **Actions** > **New**.
-10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
+10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**. Note: local notifications do not support **On receive** events.
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 

@@ -33,7 +33,7 @@ In this section you will learn to show a page when a user taps a notification.
 2. Double-click the widget.
 3. Click **Actions** > **New**. 
 4. Name your action *show_page*.
-5. Select **On open to** > **Show a Page**.
+5. Select **On open to** > **Show a Page**. Note: local notifications do not support **On receive** events.
 6. Click **New** to make a new page.
 7. Type *NotifPage* into **Page Name**.
 8. Click **Blank** pane on the left and select the **Blank** page template. 

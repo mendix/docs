@@ -9,8 +9,6 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 
 The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
-{{% todo %}}[**Add link to component**]{{% /todo %}}
-
 This app service does the heavy-lifting for you so you do not have to build a 3D-rendering engine from scratch.
 
 Here is an overview of what the 3DViewer contains:
@@ -61,9 +59,9 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 *  One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in Design mode. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, only JT models with version 9 and above are supported.
-* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
+*  Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
 
-![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)
+	![shatteredjt-utf8](attachments/3d-viewer/shatteredjt-utf8.png)
 
 ### 1.4 Prerequisites
 
@@ -71,12 +69,10 @@ This app service can only be used with Studio Pro 8 versions starting with [8.15
 
 ## 2 Installation
 
-{{% todo %}}[**Add link to component**]{{% /todo %}}
-
-First, download the *3DViewer.mpk* from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
+First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.mendix.com/link/component/118345) from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
 
 1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *3DViewer.mpk*. 
-2. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project. Note that the name will be displayed as "Viewer3D" instead of "3DViewer" in Project Explorer due to naming conventions:
+2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project. Note that the name will be displayed as "Viewer3D" instead of "3DViewer" in Project Explorer due to naming conventions:
 
 	![import-3dviewer](attachments/3d-viewer/import-3dviewer.jpg)
 	
@@ -153,7 +149,7 @@ The **DeleteModelFromMendix** microflow takes a **ModelDocument** object as an i
 
 ![deletemodelfrommendix](attachments/3d-viewer/deletemodelfrommendix.jpg)
 
-The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory..
+The **DownloadMarkup** microflow takes a **Markup** object as input parameter and downloads the image to a local directory.
 
 ![downloadmarkup](attachments/3d-viewer/downloadmarkup.jpg)
 
@@ -175,7 +171,7 @@ The **GetMarkupsFromMendix** nanoflow takes a **ModelDocument** object as an inp
 
 The **VisServerAction** Java action is used to set up a visualization server infrastructure, which is critical for realizing all the functions that 3D Viewer provides. It is exposed as microflow actions. 
 
-For 3DViewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. Make sure the **Http endpoint** parameter of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
+For 3D Viewer to work, you must set the app's after-startup microflow to call the **VisServerAction** Java action. Make sure the **Http endpoint** parameter of this java action is set to `Expression:@Viewer3D.HttpEndpoint`. 
 
 ### 4.6 Widgets {#widgets}
 

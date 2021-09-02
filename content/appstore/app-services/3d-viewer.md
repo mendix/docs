@@ -214,7 +214,7 @@ For this widget to visualize a model correctly, set the following properties:
 	* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
 	* **Show navigation cube**  – determines if a navigation cube will appear at the top-right corner of the viewer
 	* **Show tooltip** determines if a tooltip will appear when when the end-user clicks a model part; this accepts a Boolean value
-	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#panel-widgets) widget so you can trigger the part loading by clicking the PS Tree)
+	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior (for more details on Viewer events, see the [Set Viewer Event](#set-viewer-event) section below):
 	* **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
 	* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
@@ -530,22 +530,10 @@ The sections below describe these tools.
 * **Angle** – measure the angle between two edges or surfaces
 * **Area** – measure the area of a surface
 
-#### 6.2.2 Dimension Controls
+#### 6.2.2 Action
 
-* **Remove** – select one measurement result, then click **Remove** and the selected measurement result will be removed from the scene
+* **Delete** – select one measurement result, then click **Delete** and the selected measurement result will be removed from the scene
 * **Clear** – clear all the measurement results in the scene
-
-### 6.3 Set Viewer Event {#set-viewer-event}
-
-The [Viewer](#viewer) catches the events described below so you can handle them according to your needs. 
-
-For **On selection change** and **On error**, note that **Selection** takes a string attribute. You can define an attribute and bind that attribute to Selection. In a running app, when the end-user selects a model part, the selection event will be triggered, and the selected part info will be populated to this Selection attribute. You can easily get this selected object information (PSID and Viewer) and use it in the actions.
-
-Like other Mendix events, with **Action**, you can select from a list of actions upon model part selection. One possible use case is to utilize the GET APIs exposed by the Viewer (for example, get `Boundingbox` by PSID and set `material` by PSID in a JavaScript action, include it in a nanoflow, and set the Action to call this nanoflow).
-
-{{% todo %}}[**For On progress change - needs details?**]{{% /todo %}}
-
-{{% todo %}}[**For On Load - needs details?**]{{% /todo %}}
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

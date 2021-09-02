@@ -18,13 +18,15 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 ### September 2nd, 2021
 
 #### Improvements
-* We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future
-* We implemented [context deeplinks](/developerportal/collaborate/manage-deeplinks) to all main project pages on the Developer Portal so you can share references easily
-* We increased the performance of opening the [MyApps page](/developerportal/apps-list/)
+
+* We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
+* We implemented [context deep links](/developerportal/collaborate/manage-deeplinks) to all main app pages on the Developer Portal so you can easily share references.
+* We increased the performance of opening the [My Apps page](/developerportal/apps-list/)
 
 #### Fixes
-* We fixed a bug where, under certain circumstances, the popup with pending invitations would be shown twice
-* We also fixed a layout bug on the invitation popup that we accidentally introduced during last release
+
+* We fixed a bug where the pop-up window with pending invitations was shown twice.
+* We also fixed a layout bug on the invitation pop-up window that we accidentally introduced during the last release.
 
 ### August 26th, 2021
 

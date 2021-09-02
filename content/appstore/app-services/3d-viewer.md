@@ -7,7 +7,7 @@ tags: ["3d visualization", "cad", "app store", "marketplace", "component", "plat
 
 ## 1 Introduction
 
-The 3D Viewer app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
+The [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service lets you upload, visualize, and operate on 3D JT files in your web applications, using Mendix file storage to store models. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of 3D widgets that enable you to build apps to work with 3D models via the JT format. Also included are whole functionalities and integrations that can be very helpful when building your own 3D applications. All you need to do is drag and drop items and configure them.
 
 {{% todo %}}[**Add link to component**]{{% /todo %}}
 
@@ -17,12 +17,12 @@ Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
 | ---  | --- |
-| [Predefined entities](#predefined-entities) | ModelDocument, Pagination, markup, MxChildDocument, MxModelDocument |
+| [Predefined entities](#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
 | [Constants](#constants) | HttpEndpoint, LicenseToken, ModelSourceType |
-| [Microflow](#microflow) | DeleteModelFromMendix, Downloadmarkup |
-| [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetmarkupsFromMendix, GetModelListFromMendix |
+| [Microflow](#microflow) | DeleteModelFromMendix, DownloadMarkup |
+| [Nanoflow](#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
 | [Java action](#java-action) | VisServerAction |
-| [Widgets](#widgets) | Container3D, markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
+| [Widgets](#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 

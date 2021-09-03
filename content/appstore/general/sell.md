@@ -10,8 +10,6 @@ tags: ["marketplace", "vendor", app service"]
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your app service in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
-{{% todo %}}[**Verify slide to be included; need higher quality image**]{{% /todo %}}
-
 ![](attachments/sell/benefits.png)
 
 **This how-to will teach you how to do the following:**
@@ -151,7 +149,7 @@ If your app service is a controlled item, Mendix needs to ensure it is prevented
 
 If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, contact *DIS_AppServices_Supplier_Team@mendix.com* for guidance.
 
-### 4.6 Pricing & Free Trials
+### 4.6 Pricing & Free Trials {#pricing}
 
 As a Mendix Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your app service. Once you have decided on your preferred pricing model and whether you want to offer your app service as a free trial, you can apply these these options to your app service via steps in the Add Content wizard.
 
@@ -240,15 +238,11 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Picking a license** 
 
-- [ ] Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin under the **Documentation** section if you need your users to accept your own commercial terms and conditions.
-
-{{% todo %}}[**Link to new section in How to Share?**]{{% /todo %}}
+- [ ] Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin on the [Documentation](share-app-store-content#doc) tab if you need your users to accept your own commercial terms and conditions.
 
 **Setting pricing plan**
 
-- [ ] The pricing model you choose for your app service determines what information you need to supply when publishing it. This specifies how the app service is provisioned so that the Marketplace can use that information to catalog, meter, and bill the users of your app service. 
-
-{{% todo %}}[**Link to new section in How to Share?**]{{% /todo %}}
+- [ ] The [pricing model](#pricing) you choose for your app service determines what information you need to supply when publishing it. This specifies how the app service is provisioned so that the Marketplace can use that information to catalog, meter, and bill the users of your app service. 
 
 ## 6 After You Submit Your App Service
 
@@ -256,8 +250,6 @@ When your app service is submitted to the Marketplace, [Mendix reviews it for ap
 
 Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible.  We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
-You can keep track of your submission by subscribing to receive status notifications. If you need more help, you can contact the Marketplace Governance Team.
-
-{{% todo %}}[**Is this contact to the Marketplace Governance Team available? How?**]{{% /todo %}}
+You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
 Once your app service is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](app-store-overview#subscriptions). You can engage with your customers as they use your app service via [Reviews](app-store-overview#my-reviews).

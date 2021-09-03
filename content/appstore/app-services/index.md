@@ -1,6 +1,5 @@
 ---
 title: "App Services"
-draft: true
 description: "Presents details on the app services available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service"]
 ---

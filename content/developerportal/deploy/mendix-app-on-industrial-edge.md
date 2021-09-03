@@ -119,10 +119,11 @@ As above, you can publish your app using the IEAP UI, or the IEAP CLI.
 Perform the following steps to create a version of your app on Industrial Edge using IEAP UI.
 
 1. Open the IEAP UI.
-2. Click the converted Mendix Edge App.
-3. Click **Add New Version**.
-4. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
-5. In the wizard, select the Docker image which you have created above.
+2. Login to the IEM and you will see the Applications which are created on IEM
+3. Click the Mendix Edge App which you have created in step 4.1.
+4. Click **Add New Version**.
+5. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
+6. In the wizard, select the Docker image which you have created above.
    ![Create docker image of Mendix app](attachments/mendix-app-on-industrial-edge/Select_Mendix_Image.png)
 6. Click **Save** and then **Review**.
 
@@ -151,17 +152,7 @@ Perform the following steps to create a version of your app on Industrial Edge u
                 restart: unless-stopped
                 ports:
                    - '60000:8080'
-                links:
-                    - db
-            db:
-                image: mysql:5.7
-                environment:
-                  - MYSQL_USER=mendix
-                  - MYSQL_PASSWORD=mendix
-                  - MYSQL_DATABASE=mendix
-                  - MYSQL_ROOT_PASSWORD=root
-                ports:
-                  - 3306:3306
+                
    ```
 
 7. Click **Validate & Create**.

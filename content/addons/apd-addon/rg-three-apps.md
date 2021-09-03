@@ -35,7 +35,7 @@ When starting a tour, a tooltip will appear throughout the APD application with 
 
 ## 3 Profile Menu & User Settings
 
-In the profile menu, you can see links to your [Mendix Profile](//developerportal/community-tools/mendix-profile/) and also the user settings for APD:
+In the profile menu, you can see links to your [Mendix Profile](/developerportal/community-tools/mendix-profile/) and also the user settings for APD:
 
 ![](attachments/rg-three/profile_menu.png)
 

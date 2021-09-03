@@ -77,4 +77,4 @@ Each submitted job listing is reviewed and proofread by Mendix. If there is any 
 
 ## 4 Read More
 
-* [Mendix Profile](/developerportal/community-tools/mendix-profile/)
+* [Mendix Profile](/developerportal/community-tools/mendix-profile)

@@ -533,29 +533,30 @@ The sections below describe these tools.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you will need provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you need to provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
 
 ### 7.1 Deciding If You Need to Subcribe to Get a LicenseToken
 
-If you use 3D Viewer in your app and you just need to run your app locally, or deploy in Mendix's free sandbox environment, for testing and trial purposes, you will not need a `LicenseToken`. You can leave the value of constant `Viewer3D.LicenseToken`  empty when running your app. 
+When you just need to run your app with 3D Viewer locally or deploy as a Mendix Free App for testing and trial purposes, you do not need a `LicenseToken`. You can leave the value of the `Viewer3D.LicenseToken` constant empty when running your app.
 
-If you plan to use 3DViewer in your app and decide to deploy your app to the Mendix Licensed Cloud Node or your on-premise environment, then you will need to subcribe 3D Viewer in order to get a `LicenseToken`. 
+When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subcribe to 3D Viewer in order to get a `LicenseToken`. 
 
-### 7.2  Subcribing to Get LicenseToken
+### 7.2  Subcribing to Get a LicenseToken
 
-On Marketplace 3D Viewer product page, you will see **Subcribe** button.
-1. Click **Subcribe** button to go to create subcription order page
-2. During the order creation process, you will be asked to fill in technial contact information(first name, last name, email), subcription amount, billing account information, and so on. 
-3. Upon successful order creation, technial contact's email will receive an order confirmation email. 
-4. Within the email, there is a link that will direct to Marketplace **MySubcription** page.Technical contact click the link and login to **MySubscription** page with his/her email address. 
-5. Upon successful login, technical contact will be able to see a list of subcriptions his/her organisation has made.
-6. From the list find 3D Viewer subcription 
+On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subcribe** to go to the subscription order page and follow these steps:
+
+1. Fill in technial contact information (first name, last name, email address), the subcription amount, billing account information, and other required information. 
+2. Upon successful order creation, technial contact's email will receive an order confirmation email. 
+3. Within the email, there is a link that will direct to Marketplace **MySubcription** page.Technical contact click the link and login to **MySubscription** page with his/her email address. 
+4. Upon successful login, technical contact will be able to see a list of subcriptions his/her organisation has made.
+5. From the list find 3D Viewer subcription 
+
    ![mysubscriptionpage-3dviewer](attachments/3d-viewer/mysubscriptionpage-3dviewer.jpg)
-7. By clicking on the 3D Viewer subcription, you will see subcription details page
+6. By clicking on the 3D Viewer subcription, you will see subcription details page
    ![3dviewer-createbindingkeys](attachments/3d-viewer/3dviewer-createbindingkeys.jpg)
-8. Click **Create Binding Keys** , give the key a meaningful name, click **Create Keys**
+7. Click **Create Binding Keys** , give the key a meaningful name, click **Create Keys**
    ![3dviewer-createbindingkeys-popup](attachments/3d-viewer/3dviewer-createbindingkeys-popup.jpg)
-9. Key(LicenseToken) will be genreated, you can copy and save it for later use in your app
+8. Key(LicenseToken) will be genreated, you can copy and save it for later use in your app
    ![3dviewer-createbindingkeys-copy](attachments/3d-viewer/3dviewer-createbindingkeys-copy.jpg)
    
 ### 7.4 Configuring a LicenseToken for App Deployment

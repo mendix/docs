@@ -51,6 +51,15 @@ When applying to the program, you will be asked for basic information, including
 
 As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix.
 
+You must also provide the following details:
+
+| Account Detail | Description |
+| --- | --- |
+| Bank Name | The name of the branch where the account is held. |
+| Bank Address | The address of the branch where the account is held. |
+| Account Number | The account number for the legal entity or individual. |
+| Account Holder Name | The name registered with the account. |
+
 ### 2.3 Mendix Vendor License Agreement {#vendor-license}
 
 Whether you are offering a free or paid app service through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
@@ -60,23 +69,11 @@ For ease of reference, here are some of the main points of the license agreement
 * App services must be free from any known security vulnerabilities
 * App services must not contain default passwords, authorization keys, or any other credentials
 * App services must not include software that collects and exports customer data without the customer's knowledge and express consent
+* You must define the applicable laws, treaties, regulations for your app service, including, without limitation, those related to export control, data privacy, international communications, and the transmission of technical or personal data
 * App services must be production-ready and must include a defined support policy
 * Mendix reserves the right to reject app services that do not comply with these guidelines or the requirements described in the license agreement
 
-### 2.4 Seller License Agreement {#seller-license}
-
-To receive payments from Mendix, you need to accept the [Seller License Agreement](#seller-license) and provide some key information:
-
-![](attachments/sell/payment.png)
-
-| Account Detail | Description |
-| --- | --- |
-| Bank Name | The name of the branch where the account is held. |
-| Bank Address | The address of the branch where the account is held. |
-| Account Number | The account number for the legal entity or individual who signed the Seller License Agreement. |
-| Account Holder Name | The name registered with the account. |
-
-### 2.5 Legal & Compliance Checks
+### 2.4 Legal & Compliance Checks
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 

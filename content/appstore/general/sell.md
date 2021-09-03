@@ -77,11 +77,7 @@ For ease of reference, here are some of the main points of the license agreement
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 
-The checks involved are:
-
-* SPS
-
-{{% todo %}}[**Other checks to be listed?**{{% /todo %}}
+In addition, before your app service can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For details, see the [Export Control](#export-control) section below.
 
 For more information on what you need to do as a Mendix Vendor to submit an app service, see the sections below.
 
@@ -93,9 +89,7 @@ Once you have submitted your app service, you can manage all the business relate
 
 {{% todo %}}[**Where is the Vendor Portal? Will this be added to My Marketplace UI?**{{% /todo %}}
 
-Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable us to automatically provision, de-provision, update, and connect users to your app service. The **Marketplace APIs** are also available for you to automate your workflow and access data about your app service. For details, see the next selection.
-
-{{% todo %}}[**Where are these APIs published, how to link to them?**{{% /todo %}}
+Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your app service.
 
 ![](attachments/sell/journey.png)
 
@@ -150,7 +144,7 @@ Document how your app service is used while the app service is being developed (
 
 We recommend you look at examples of widget, connector, and module documentation in the [Marketplace Guide](/appstore/) when writing your documentation.
 
-### 4.5 Export Control
+### 4.5 Export Control {#export-control}
 
 Export control is an area of legislation that regulates and restricts the export of goods, information, software, and technology that could be potentially useful for purposes that are contrary the interest of the exporting country. These items are considered to be *controlled*. 
 

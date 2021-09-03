@@ -1,7 +1,7 @@
 ---
 title: "MVP Program"
 category: "Community Tools"
-menu_order: 5
+menu_order: 6
 description: "Describes how the Mendix Community MVP program works."
 tags: ["community", "mvp"]
 aliases:

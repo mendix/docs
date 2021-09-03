@@ -1,7 +1,7 @@
 ---
 title: "Jobs Board"
 category: "Community Tools"
-menu_order: 4
+menu_order: 7
 description: "Describes the board where the Mendix community can post and find job opportunities."
 tags: ["job", "job board", "job dashboard"]
 aliases:

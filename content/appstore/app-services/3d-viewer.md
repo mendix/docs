@@ -541,24 +541,17 @@ When you just need to run your app with 3D Viewer locally or deploy as a Mendix 
 
 When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subcribe to 3D Viewer in order to get a `LicenseToken`. 
 
-### 7.2  Subcribing to Get a LicenseToken
+### 7.2  Subscribing to Get a LicenseToken
 
-On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subcribe** to go to the subscription order page and follow these steps:
+On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subscribe** to go to the subscription order page and follow these steps:
 
-1. Fill in technial contact information (first name, last name, email address), the subcription amount, billing account information, and other required information. 
-2. Upon successful order creation, technial contact's email will receive an order confirmation email. 
-3. Within the email, there is a link that will direct to Marketplace **MySubcription** page.Technical contact click the link and login to **MySubscription** page with his/her email address. 
-4. Upon successful login, technical contact will be able to see a list of subcriptions his/her organisation has made.
-5. From the list find 3D Viewer subcription 
+1. Fill in technical contact information (first name, last name, email address), the subcription amount, billing account information, and other required information. 
+2. Upon successful order creation, if you are the app's [Technical Contact](/developerportal/collaborate/app-roles#technical-contact), you will receive an order confirmation email. 
+3. Click the link in the email to the Marketplace [Subcriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
+4. In the list of your organization's subcriptions, click the **3D Viewer** subscription link to open the subcription details page.
+5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
+6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
 
-   ![mysubscriptionpage-3dviewer](attachments/3d-viewer/mysubscriptionpage-3dviewer.jpg)
-6. By clicking on the 3D Viewer subcription, you will see subcription details page
-   ![3dviewer-createbindingkeys](attachments/3d-viewer/3dviewer-createbindingkeys.jpg)
-7. Click **Create Binding Keys** , give the key a meaningful name, click **Create Keys**
-   ![3dviewer-createbindingkeys-popup](attachments/3d-viewer/3dviewer-createbindingkeys-popup.jpg)
-8. Key(LicenseToken) will be genreated, you can copy and save it for later use in your app
-   ![3dviewer-createbindingkeys-copy](attachments/3d-viewer/3dviewer-createbindingkeys-copy.jpg)
-   
 ### 7.4 Configuring a LicenseToken for App Deployment
 
 #### 7.4.1 Configuring the LicenseToken in Studio Pro

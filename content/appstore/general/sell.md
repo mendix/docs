@@ -83,10 +83,6 @@ For more information on what you need to do as a Mendix Vendor to submit an app 
 
 The Marketplace provides a trustworthy experience for sharing and consuming app services.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
 
-Once you have submitted your app service, you can manage all the business related to it, and you can access your commercial agreements and account information via the **Vendor Portal**.  [My Marketplace](app-store-overview#my-marketplace) enables keeping track of and communicating with the users of your app service. 
-
-{{% todo %}}[**Where is the Vendor Portal? Will this be added to My Marketplace UI?**{{% /todo %}}
-
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your app service.
 
 ![](attachments/sell/journey.png)

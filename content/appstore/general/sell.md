@@ -173,43 +173,15 @@ The Marketplace supports time-based trials, so you must clearly define the terms
 
 The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end.
 
-#### 4.6.3 Payments
+#### 4.6.3 Payments, Marketplace Operating Fees & Supported Regions
 
-One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments.  A user pays a fee to use your app service according to the pricing model you specify for it. The Marketplace meters usage of your app service and sends a bill to the user.  You can see monthly billing reports in your Vendor Portal, and you will also be emailed them for completeness.
+One of the biggest benefits provided by the Marketplace is that it removes the pain of managing billing and payments. A user pays a fee to use your app service according to the pricing model you specify for it. The Marketplace meters usage of your app service and sends a bill to the user.
 
-Under our standard [Mendix  Terms of Use](https://www.mendix.com/terms-of-use/), we support the following subscription/billing model:
+The Mendix Marketplace is free to use unless you want to sell a paid app service through it. When you sell your app service via the Marketplace, Mendix charges a percentage of your gross revenue due to that service for the value-added services of purchasing, metering, and billing provided by the Marketplace.
 
-{{% todo %}}[**Verify correct link to Terms of Use**]{{% /todo %}}
+The geographical regions supported by the Marketplace depend on the compliance requirements for your specific app service and the location of your company.
 
-| Subscription Duration | 12 Months |
-| --- | --- |
-| Subscription auto-renewal | Not Supported |
-| Billing period | Monthly |
-| Billing day | 15th day of each month |
-| Billing timing | In arrears |
-
-#### 4.6.4 Marketplace Operating Fees
-
-The Mendix Marketplace is free to use unless you want to sell paid app services through it. When you sell your app service via the Marketplace, Mendix charges 20% of your gross revenue due to that service for the value-added services of purchasing, metering, and billing as well as the payment provided by the Marketplace.
-
-For more information, see **Mendix Ecosystem - Composable Enterprise & PBC Monetization**.
-
-{{% todo %}}[**We do not publish links to internal Dropbox Papers like above - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
-
-### 4.7 Supported Regions
-
-Subject to the compliance requirements for your specific app service, the Marketplace supports global access to free and trials of paid app services.
-
-To sell a paid app service in the Mendix Marketplace, you must be a permanent resident or a legal business entity in one of the following countries:
-
-* Netherlands
-* Belgium
-
-Further conditions apply:
-
-* Licensing agreement – app services must comply with all legal requirements in any location where you make them available
-* Support agreement
-* FOSS
+Since the terms of payment, Marketplace operating fees, and supported regions are highly dependent on your app service, please contact *DIS_AppServices_Supplier_Team@mendix.com* to discuss your requirements in more detail.
 
 ## 5 Submitting Your App Service
 

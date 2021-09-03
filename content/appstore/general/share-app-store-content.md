@@ -88,11 +88,11 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the category of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+2.  Select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
 	![](attachments/share-app-store-content/category.JPG)
 
-3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
+3.  Depending on the type you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)
 	
@@ -111,7 +111,7 @@ To add content to the Marketplace, follow these steps:
 	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
 	c. The **Category** you selected earlier will be listed here. You can change this if necessary.<br />
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change Category after inital version is published.
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change the **Category** after the inital version is published.
 	{{% /alert %}}
 
 	d. Select the **Studio Pro Version** on which you built the content.<br />
@@ -135,7 +135,7 @@ To add content to the Marketplace, follow these steps:
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
+8.  On the **Package** page, select your content source (note that if you are using **Solutions**, you will not see the option to select your content source):
 	
 	* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
@@ -157,8 +157,9 @@ To add content to the Marketplace, follow these steps:
 		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
 		* The **Installation** steps and details
 		* The **Configuration** steps and details
+		* Any **Compatability** steps and details
 		* Any **Known bugs**
-		* Any **Frequently Asked Questions**
+		* Any **Frequently asked questions**
 
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 

@@ -4,6 +4,13 @@ parent: "model-sdk"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.54.0 {#454}
+
+**Release date: August 23rd, 2021**
+
+* We added support for Mendix [9.5.0](/releasenotes/studio-pro/9).
+* We added support for Mendix Metamodel [9.5.0](metamodel-9.5).
+
 ## 4.53.0 {#453}
 
 **Release date: July 20th, 2021**
@@ -378,8 +385,8 @@ layout.layoutCall.layout = this.masterLayout;
 | Story | Impact | Description |
 |---|---|---|
 | MS-287 | Low | From now on, we disallow deleting detached elements. Either delete the element directly, or re-attach it before deleting it. |
-| 1196423 | None | We added a `filterUnitsByCustomWidgetId` API to enable trusted backends to find units containing a specific custom widget type. |
-| 1197518 | None | It is now possible to specify the `workingCopyId` instead of getting a randomly generated one when creating a new working copy. This feature can only be used by trusted backends. |
+| 1196423 | None | We added a `filterUnitsByCustomWidgetId` API to enable trusted back ends to find units containing a specific custom widget type. |
+| 1197518 | None | It is now possible to specify the `workingCopyId` instead of getting a randomly generated one when creating a new working copy. This feature can only be used by trusted back ends. |
 | MS-216 | None | We removed the `getEditorData` internal API. |
 | MS-296 | None | We added support for Modeler versions 7.4.0 and 7.5.0. |
 

@@ -107,9 +107,7 @@ Although OSB API supports endpoints for many operations (as specified in the [Op
 * **Provisioning** (`PUT /v2/service_instances/{instance_id}`) – for provisioning your service
 * **Binding** (`PUT /v2/service_instances/{instance_id}/service_bindings/{binding_id}`)  – for creating the connection and connection details to connect your service to an application during provisioning
 
-For additional assistance and an example of how to provision and bind an app to a logging service, see **Logging as an App Service**.
-
-{{% todo %}}[**We do not publish links to internal Dropbox Papers like above - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
+For additional assistance and an example of how to provision and bind an app to a logging service, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
 ### 4.2 Identity & Access Management (IAM)
 

@@ -193,52 +193,52 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Dependencies**
 
-- [ ] Provide a list of resources and dependencies from the Marketplace that might be needed to use your app service.
-- [ ]  Verify the listed dependencies are compatible with your app service.
+* Provide a list of resources and dependencies from the Marketplace that might be needed to use your app service.
+* Verify the listed dependencies are compatible with your app service.
 
 **Technical Readiness**
 
-- [ ] Make sure you have prepared your app service according to the [Marketplace content development guidelines](share-app-store-content#submission).
-- [ ] Verify  your app service for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
-- [ ] While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
+* Make sure you have prepared your app service according to the [Marketplace content development guidelines](share-app-store-content#submission).
+* Verify  your app service for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
+* While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
 
 **Accurate Metadata**
 
-- [ ] Users should know what they are getting when they download or buy your app service, so make sure all of your app service's metadata (including privacy information, app service description, and screenshots) is complete and accurately reflects the app service's core experience. Remember to keep this up-to-date with new versions.
-- [ ] Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
-- [ ] Select the **App Service** [type](app-store-overview#types) for your app service.
-- [ ] Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
-- [ ] By default, you will see a template for the app service's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
-- [ ] Spell-check the content you are about to submit
+* Users should know what they are getting when they download or buy your app service, so make sure all of your app service's metadata (including privacy information, app service description, and screenshots) is complete and accurately reflects the app service's core experience. Remember to keep this up-to-date with new versions.
+* Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
+* Select the **App Service** [type](app-store-overview#types) for your app service.
+* Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
+* By default, you will see a template for the app service's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
+* Spell-check the content you are about to submit
 
 **Versioning**
 
-- [ ] Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
-- [ ] Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](share-app-store-content#updating).
-- [ ] Provide [release notes](share-app-store-content#version) for the app service release.
-- [ ] Keep your app service up to date with new versions.
+* Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
+* Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](share-app-store-content#updating).
+* Provide [release notes](share-app-store-content#version) for the app service release.
+* Keep your app service up to date with new versions.
 
 **Branding**
 
-- [ ] Make sure [screenshots](share-app-store-content#screenshot) show the app service in use (and not merely the name, login page, or splash screen). These can also include text and image overlays.
-- [ ] Screenshots should be of a similar size (if possible).
-- [ ] Do not upload any blurred or trimmed screenshots or other images.
-- [ ] Ensure the logo and images of your app service always relates to its functionality. Images uploaded that do not relate to your app service's functionality will lead to the rejection of your app service during the submission review.
+* Make sure [screenshots](share-app-store-content#screenshot) show the app service in use (and not merely the name, login page, or splash screen). These can also include text and image overlays.
+* Screenshots should be of a similar size (if possible).
+* Do not upload any blurred or trimmed screenshots or other images.
+* Ensure the logo and images of your app service always relates to its functionality. Images uploaded that do not relate to your app service's functionality will lead to the rejection of your app service during the submission review.
 
 **General**
 
-- [ ] Include a *README* snippet and *USEME* folders that will help with using the app service.
-- [ ] Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *fancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, remove these unnecessary dependencies.
-- [ ] If you try to manipulate the Mendix Marketplace system (for example, by stealing user data, copying another developer’s work, or manipulating ratings), your app services will be removed from the Marketplace.
-- [ ] Update your app service regularly and support it as defined in its SLA. To ensure the quality of Marketplace content, Mendix monitors the status of app services, and we will contact you if our data suggests your app service is due for an update.
+* Include a *README* snippet and *USEME* folders that will help with using the app service.
+* Make sure there are no unnecessary dependencies bundled when exporting the module from Studio Pro. For example, if the module only mentions needing a *.jar* file named *fancystuff.jar* but the *userlib* folder includes 10 other *.jar* files, remove these unnecessary dependencies.
+* If you try to manipulate the Mendix Marketplace system (for example, by stealing user data, copying another developer’s work, or manipulating ratings), your app services will be removed from the Marketplace.
+* Update your app service regularly and support it as defined in its SLA. To ensure the quality of Marketplace content, Mendix monitors the status of app services, and we will contact you if our data suggests your app service is due for an update.
 
 **Picking a license** 
 
-- [ ] Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin on the [Documentation](share-app-store-content#doc) tab if you need your users to accept your own commercial terms and conditions.
+* Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin on the [Documentation](share-app-store-content#doc) tab if you need your users to accept your own commercial terms and conditions.
 
 **Setting pricing plan**
 
-- [ ] The [pricing model](#pricing) you choose for your app service determines what information you need to supply when publishing it. This specifies how the app service is provisioned so that the Marketplace can use that information to catalog, meter, and bill the users of your app service. 
+* The [pricing model](#pricing) you choose for your app service determines what information you need to supply when publishing it. This specifies how the app service is provisioned so that the Marketplace can use that information to catalog, meter, and bill the users of your app service. 
 
 ## 6 After You Submit Your App Service
 

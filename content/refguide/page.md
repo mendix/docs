@@ -49,7 +49,6 @@ To create a new page, do the following:
 
     ![](attachments/page/add-page.png)
     
-
 2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     ![](attachments/page/create-page.png)
@@ -75,12 +74,9 @@ In **Structure mode**, there are several ways to add an element on a page:
 
 1.  Through the **Toolbox**:
 
-    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
-    
-        ![](attachments/page/toolbox.png)
-      
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
     2. Select an element you would like to add and drag and drop this element on your page.
-   
+    
 2. Through the menu at the top of the page:
 
     1. Do one of the following:

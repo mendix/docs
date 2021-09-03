@@ -12,11 +12,7 @@ When working with the Mendix Platform, objects of entities are always being mani
 
 The activities in this section of the microflow and nanoflow toolbox generally work on single objects, however **commit object(s)**, **delete object(s)**, and **retrieve** also work on lists of objects. For other activities which work with lists, see [List Activities](list-activities).
 
-The activities described in this document are in the **Object Activities** section of the **Toolbox**:
-
-{{% image_container width="40%" %}}
-![Object activities toolbox](attachments/object-activities/object-activities-toolbox.png)
-{{% /image_container %}}
+The activities described in this document are in the **Object Activities** section of the **Toolbox**.
 
 The following are the object activities you can use in your microflow or nanoflow:
 

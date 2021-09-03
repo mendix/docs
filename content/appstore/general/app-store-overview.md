@@ -279,5 +279,6 @@ For details on using binding keys in the MindSphere app service, see the [Authen
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
+* [How to Sell Your App Service in the Marketplace](sell) 
 * [How to Share Marketplace Content](share-app-store-content)
 * [Marketplace Content Support](app-store-content-support)

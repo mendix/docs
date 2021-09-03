@@ -19,6 +19,10 @@ This page explains how to build a Docker image from your Mendix Project. Each re
 
 ## 2 Prerequisites
 
+{{% todo %}}[Remove this To Do item]{{% /todo %}}
+
+#### 2.1.1 Missing ToC level
+
 Before starting these instructions, make sure you have completed the following prerequisites:
 
 * Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) from the *Mendix Marketplace*

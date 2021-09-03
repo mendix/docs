@@ -36,6 +36,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | **Solution Templates** | Solution templates serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
 | **Starter Apps** | Starter apps are templates with layouts, themes, and modules that you can use to start quickly building an app. |
 | **App Design** | Start building your app based on a [layout](/refguide/layout) that is ready to use with commons structures and widgets or a [theme](/appstore/themes/) that contains styling options you can apply for different elements and devices. |
+| [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
@@ -277,7 +278,6 @@ This additional management option is only available for specific app services wh
 When you are developing your app, set the app service's **clientID** and **clientSecret** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
 For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
-
 
 ## 5 Read More
 

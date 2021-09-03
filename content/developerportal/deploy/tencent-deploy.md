@@ -257,7 +257,7 @@ First you need to create an environment:
    
     1. For development of the app, for example acceptance testing, choose **Development**.
 
-    2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
+    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
         {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
@@ -577,9 +577,9 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a Free App.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
+For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.

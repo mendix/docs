@@ -68,7 +68,7 @@ Follow these instructions to set up your NFC app:
 	g. Open **ACT_ReadNFCTag**.<br />
 	h. Drag and drop the **HasNFCSupport** JavaScript action onto this nanoflow.<br />
 	i. Save your nanoflow.
-1. Click **Publish** to deploy to the sandbox. 
+1. Click **Publish** to deploy to the Free App environment. 
 
 Your Mendix app should looks something like this:
 

@@ -29,7 +29,7 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. We have int
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
+* Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated

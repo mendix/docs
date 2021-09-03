@@ -121,7 +121,6 @@ developerportal:
   space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "Apps List"
     - "Collaboration"
     - "Deployment"
     - "Operations"

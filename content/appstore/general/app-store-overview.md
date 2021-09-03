@@ -240,7 +240,7 @@ To delete a user group, a Group Admin or Mendix Admin can click **Delete Group**
 
 ### 4.8 Subscriptions {#subscriptions}
 
-You can see all the Marketplace components you have subscribed to on this page:
+You can see all the Marketplace app services you have subscribed to on this page:
 
 ![](attachments/app-store-overview/subscriptions.jpg)
 
@@ -260,12 +260,10 @@ This page presents the **Binding Key Names** that have been created as well as d
 
 ![](attachments/app-store-overview/binding-keys.jpg)
 
-{{% todo %}}[**VERIFY BELOW, GET ACCESS FOR SCREENSHOT OF EXAMPLE**]{{% /todo %}}
-
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
 {{% alert type="info" %}}
-This additional management option is only available for specific components where necessary.
+This additional management option is only available for specific app services where necessary.
 {{% /alert %}}
 
 #### 4.8.2 Creating Binding Keys
@@ -283,8 +281,6 @@ To use the binding keys, see [Using the Binding Keys](#using) below.
 Click **Return to the overview** to go to the main page of the dashboard. 
 
 #### 4.8.3 Using the Binding Keys {#using}
-
-{{% todo %}}[**VERIFY NAMES OF CONSTANTS**]{{% /todo %}}
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 

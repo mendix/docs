@@ -49,7 +49,7 @@ When applying to the program, you will be asked for basic information, including
 
 As the owner of the Mendix Vendor account, you must have permission to legally bind your company to Mendix.
 
-You must also provide the following details:
+If you want to offer a paid service, you must also provide the following details:
 
 | Account Detail | Description |
 | --- | --- |

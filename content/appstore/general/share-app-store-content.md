@@ -32,7 +32,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General Guidelines
+### 3.1 General
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -42,7 +42,7 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 Widget Guidelines
+### 3.2 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -56,7 +56,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * Use TypeScript over JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 Module Guidelines
+### 3.3 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -80,9 +80,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
-### 3.4 Guidelines for Selling Components
+### 3.4 For Selling App Services
 
-For details on preparing and selling your component, see [How to Sell Your Component in the Marketplace](sell).
+For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](sell).
 
 ## 4 Adding New Marketplace Content {#adding}
 
@@ -213,4 +213,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
+* [How to Sell Your App Service in the Marketplace](sell)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

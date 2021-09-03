@@ -533,13 +533,13 @@ The sections below describe these tools.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you need to provide a valid `LicenseToken` as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
+3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
 
 ### 7.1 Deciding If You Need to Subcribe to Get a LicenseToken
 
-When you just need to run your app with 3D Viewer locally or deploy as a Mendix Free App for testing and trial purposes, you do not need a `LicenseToken`. You can leave the value of the `Viewer3D.LicenseToken` constant empty when running your app.
+When you just need to run your app with 3D Viewer locally or deploy as a Mendix Free App for testing and trial purposes, you do not need a LicenseToken. You can leave the value of the **Viewer3D.LicenseToken** constant empty when running your app.
 
-When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subcribe to 3D Viewer in order to get a `LicenseToken`. 
+When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subcribe to 3D Viewer in order to get a LicenseToken. 
 
 ### 7.2  Subscribing to Get a LicenseToken
 
@@ -559,8 +559,8 @@ On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, c
 In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
 1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant `Viewer3D.LicenseToken`.
-3. Fill in the **Value** with your obtained `LicenseToken`.
+2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **Viewer3D.LicenseToken**.
+3. Fill in the **Value** with your obtained LicenseToken.
 4.  Click **OK** to confirm the settings.
 
 	![licensetoken-inmendix](attachments/3d-viewer/licensetoken-inmendix.jpg)
@@ -569,9 +569,12 @@ In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and 
 
 #### 7.4.2 Configuring the LicenseToken in Developer Portal
 
-Alternatively, you can also add or update `LicenseToken` via the [Developer Portal](/developerportal/deploy/environments-details).
+Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 
-1. After you create a deployment package, you can configure the application constants before deploy.
+Before you deploy your app, configure the app **Constants** in the deployment package
+
 ![licensetoken-cloudportal](attachments/3d-viewer/licensetoken-cloudportal.jpg)
-2. For alredy deployed app, you can also change existing `LicenseToken` value change , and restart the app.
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+
 ![licensetoken-envdetails](attachments/3d-viewer/licensetoken-envdetails.jpg)

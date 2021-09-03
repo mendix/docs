@@ -206,7 +206,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 - [ ] Users should know what they are getting when they download or buy your app service, so make sure all of your app service's metadata (including privacy information, app service description, and screenshots) is complete and accurately reflects the app service's core experience. Remember to keep this up-to-date with new versions.
 - [ ] Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
-- [ ] Select the **App Service** [category](app-store-overview#catalog) for your app service.
+- [ ] Select the **App Service** [type](app-store-overview#types) for your app service.
 - [ ] Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
 - [ ] By default, you will see a template for the app service's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
 - [ ] Spell-check the content you are about to submit

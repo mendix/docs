@@ -18,7 +18,6 @@ The *Marketplace Guide* is divided into the following categories:
 
 * [General Info](general/)
 * [Themes](themes/)
-* [App Services](app-services/)
 * [Connectors](connectors/)
 * [Modules](modules/)
 * [Widgets](widgets/)

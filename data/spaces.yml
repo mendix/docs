@@ -121,12 +121,11 @@ developerportal:
   space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "Mendix Profile"
     - "Apps List"
-    - "Control Center"
     - "Collaboration"
     - "Deployment"
     - "Operations"
+    - "Control Center"
     - "Community Tools"
     - "Mendix Support"
 studio:

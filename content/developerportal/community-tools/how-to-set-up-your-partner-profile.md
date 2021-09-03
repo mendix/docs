@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Community Tools"
-menu_order: 60
+menu_order: 6
 description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
@@ -20,7 +20,7 @@ The purpose of the Partner Profile is to provide the Mendix community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/))
+* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](//developerportal/community-tools/mendix-profile/))
 
 ## 3 Signing In to the Partner Profile
 
@@ -163,7 +163,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/mendix-profile/#public) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](//developerportal/community-tools/mendix-profile/#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 

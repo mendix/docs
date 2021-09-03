@@ -225,7 +225,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/mendix-profile/).
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](//developerportal/community-tools/mendix-profile/).
 * You can no longer create new polls on the company or app [Buzz](/developerportal/collaborate/buzz) page. Existing polls can still be answered.
 
 #### Fixes
@@ -547,7 +547,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Mendix Shop
 
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](//developerportal/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 	{{% image_container width="300" %}}![](attachments/shop.png)
 	{{% /image_container %}}
@@ -569,17 +569,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](//developerportal/community-tools/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/mendix-profile/).
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](//developerportal/community-tools/mendix-profile/).
 * Several UX updates were made to Developer Portal pages:
   * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
   * The **App** > **General** page has been redesigned.
-  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/mendix-profile/#connections) of your Mendix Profile.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](//developerportal/community-tools/mendix-profile/#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 

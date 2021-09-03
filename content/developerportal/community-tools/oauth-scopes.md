@@ -1,9 +1,12 @@
 ---
-title: "OAuth & Scopes"  
-category: "Mendix Profile"  
+title: "OAuth & Scopes"
+category: "Community Tools"
+menu_order: 7
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+aliases:
+    - /developerportal/mendix-profile/oauth-scopes
 ---
 
 ## 1 Introduction

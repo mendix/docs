@@ -48,7 +48,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 ![](attachments/feedback/exit.png)
 
 {{% alert type="info" %}}
-For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/mendix-profile/#feedback) section of *Mendix Profile*.
+For details on how to see all the feedback you have submitted, see the [Feedback](//developerportal/community-tools/mendix-profile/#feedback) section of *Mendix Profile*.
 {{% /alert %}}
 
 ### 2.2 Editing the App

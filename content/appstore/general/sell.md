@@ -111,17 +111,18 @@ For additional assistance and an example of how to provision and bind an app to 
 
 ### 4.2 Identity & Access Management (IAM)
 
-When you submit your app service to the Marketplace, you can choose how it integrates with the Mendix Platform’s foundational IAM service.  In this way, you can "consume" authentication, authorization decisions, and user profiles while focusing on your domain logic and while Mendix manages the identities and access policies. 
+When you submit your app service to the Marketplace, you can easily integrate its IAM system with the Mendix Platform.
+Firstly, you need to register your app service’s service broker to allow it to be automatically provisioned when it is subscribed to. In this way, the service broker of the app service creates a tenant within the app service before creating a set of client credentials that are used to interact with the tenant.
 
-There are  three models for integrating with Mendix IAM, the applicability of which depends on how your app service is architected. Models 1 and 2 apply at the app/app service level, whereas model 3 applies at an individual user level:
+Once a subscribing user has the credentials, their Mendix app can use them to request a token from the IAM system of your app service to enable it to interact with the tenant in the app service via APIs.
 
-* **Model 1: Enable an app to communicate with your app service via an API** – in this model, users can use the Mendix low-code artefacts you supply within their apps to invoke your API
-* **Model 2: Enable Mendix developers and app end-users to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform** – this model is applicable when your app service requires a user identity (for example, your app service may support SSO when accessed by an end-user from within an app or when it is being configured by a developer at design time through a configuration UI)
-* **Model 3: Enable end-user access control to your app service from within an app** – in this model, end-user access to your app service is managed centrally by the Mendix IAM service
+The Mendix Platform’s foundational IAM service is evolving quickly to support "consuming" authentication, authorization decisions, and user profiles. This allows you to focus on your domain logic while Mendix manages the identities and access policies. Additional IAM capabilities will include the following:
 
-For more information, see **Service Provider IAM Requirements**.
+• Enabling Mendix developers and app end-users to use the app service supplier’s IAM system to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform
+• Enabling Mendix developers and app end-users to use the Mendix IAM system to have an SSO experience between apps, app services, and the Mendix Platform
+• Enabling end-user for access control to your app service from within an app
 
-{{% todo %}}[**We do not publish links to internal Dropbox Papers like above - is this draft to be turned into a customer-facing doc?**{{% /todo %}}
+For more information about IAM integration, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
 ### 4.3 Metering
 

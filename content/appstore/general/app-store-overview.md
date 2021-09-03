@@ -250,9 +250,7 @@ Clicking a **Product** name takes you to the service management dashboard, which
 
 #### 4.8.1 Service Management Dashboard
 
-{{% todo %}}[**VERIFY BELOW**]{{% /todo %}}
-
-This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app.
+This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 
 {{% alert type="info" %}}
 Only [Technical Contacts](/developerportal/collaborate/app-roles#technical-contact) for apps can create binding keys, edit the instance name, and manage the instance’s settings on external platforms.
@@ -272,13 +270,9 @@ This additional management option is only available for specific components wher
 
 #### 4.8.2 Creating Binding Keys
 
-To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**.
+To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 
-{{% todo %}}[**VERIFY BELOW AND ADD SCREENSHOT IF NECESSARY**]{{% /todo %}}
-
-In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
-
-After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
+After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
 
 {{% alert type="warning" %}}
 Once you close this page, you will not be able to retrieve the keys again.
@@ -292,9 +286,9 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 {{% todo %}}[**VERIFY NAMES OF CONSTANTS**]{{% /todo %}}
 
-When you are developing your app, set the app service's **Access Key** and **Secrete Key** as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
+When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
-For details on using binding keys in the MindSphere app service, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*.
+Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*).
 
 ## 5 Read More
 

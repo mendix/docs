@@ -118,9 +118,9 @@ Once a subscribing user has the credentials, their Mendix app can use them to re
 
 The Mendix Platform’s foundational IAM service is evolving quickly to support "consuming" authentication, authorization decisions, and user profiles. This allows you to focus on your domain logic while Mendix manages the identities and access policies. Additional IAM capabilities will include the following:
 
-• Enabling Mendix developers and app end-users to use the app service supplier’s IAM system to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform
-• Enabling Mendix developers and app end-users to use the Mendix IAM system to have an SSO experience between apps, app services, and the Mendix Platform
-• Enabling end-user for access control to your app service from within an app
+* Enabling Mendix developers and app end-users to use the app service supplier’s IAM system to have a single sign-on (SSO) experience between apps, app services, and the Mendix Platform
+* Enabling Mendix developers and app end-users to use the Mendix IAM system to have an SSO experience between apps, app services, and the Mendix Platform
+* Enabling end-user for access control to your app service from within an app
 
 For more information about IAM integration, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
@@ -149,9 +149,7 @@ Export control is an area of legislation that regulates and restricts the export
 
 If your app service is a controlled item, Mendix needs to ensure it is prevented from being sent to destinations where it may be used in a harmful way. In these cases, you typically need to request an export control license from a local government department, and you need to confirm ownership of such a license before we can list your app service in the Marketplace.
 
-If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, you can contact Mendix at *compliance@mendix.com* for guidance.
-
-{{% todo %}}[**Is this a working email address that should be shared publicly?**]{{% /todo %}}
+If you are unclear what this means to you and your app service, there are useful resources online.  If you are stuck, contact *DIS_AppServices_Supplier_Team@mendix.com* for guidance.
 
 ### 4.6 Pricing & Free Trials
 
@@ -159,15 +157,13 @@ As a Mendix Vendor, it is important that you choose the pricing model that will 
 
 #### 4.6.1 Pricing Models
 
-The Marketplace supports three pricing models. Before you submit your app service, you specify the plan in your service broker implementation.
+The Marketplace supports three pricing models:
 
 * **Flat Fee** –  As you submit your app service, you specify the flat-fee price.
 * **Per User**  – As you submit your app service, you specify price per user per month. 
-* **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your app service to their usage. The more they use, the more they pay. You can determine the metrics on which the cost is based, along with the price per unit for each of the metrics (via `SUM` or `COUNT` functions).
+* **Usage-Based** – In this model, users pay for what they consume. In this way, it directly relates the price your users pay for your app service to their usage. The more they use, the more they pay. You can determine the metrics on which the cost is based, along with the price per unit for each of the metrics.
 
-When you submit your app service you can choose whether to have it metered by **Payload size** or **Count**. 
-
-{{% todo %}}[**Do we need separate definitions for Payload size and Count, or are those supposed to reflect the pricing models?**]{{% /todo %}}
+Since you need to specify the plan in your service broker implementation before you submit your app service, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
 #### 4.6.2 Free Trials
 
@@ -175,7 +171,7 @@ The benefits of a free trial are well know as a means to increase user adoption.
 
 The Marketplace supports time-based trials, so you must clearly define the terms and conditions of your trial offering so users are aware of what they are signing up for.  As a minimum, you must clearly state the trial duration and what happens to data created during the trial period once the trial has ended. 
 
-The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end. Once their trial ends, your service will no longer be available to them until they subscribe to it.
+The Marketplace tracks trial usage and notifies service users that their trial is drawing to an end.
 
 #### 4.6.3 Payments
 

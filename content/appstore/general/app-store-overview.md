@@ -254,6 +254,10 @@ Clicking a **Product** name takes you to the service management dashboard, which
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a component. After the service instance has been created, you need binding keys to use the component to which you have subscribed in your app.
 
+{{% alert type="info" %}}
+Only [Technical Contacts](/developerportal/collaborate/app-roles#technical-contact) for apps can create binding keys, edit the instance name, and manage the instance’s settings on external platforms.
+{{% /alert %}}
+
 This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
 
 ![](attachments/app-store-overview/binding-keys.jpg)
@@ -274,11 +278,7 @@ To create binding keys for a specific [subscription](#subscriptions), click **Cr
 
 In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 
-After you click **Create Keys**, a page appears with your **Access Key**, **Secrete Key**, and **Token**:
-
-![](attachments/app-store-overview/created-keys.jpg)
-
-Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
+After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe, as you will not be able to access them again.
 
 {{% alert type="warning" %}}
 Once you close this page, you will not be able to retrieve the keys again.

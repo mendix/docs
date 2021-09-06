@@ -125,7 +125,7 @@ Perform the following steps to create a version of your app on Industrial Edge u
 5. Enter all the required Docker Compose configurations and information for your Mendix app in the wizard. 
 6. In the wizard, select the Docker image which you have created above.
    ![Create docker image of Mendix app](attachments/mendix-app-on-industrial-edge/Select_Mendix_Image.png)
-6. Click **Save** and then **Review**.
+7. Click **Save** and then **Review**.
 
    The docker-compose.yml file for your Mendix app will resemble this example:
    ```yaml
@@ -155,11 +155,11 @@ Perform the following steps to create a version of your app on Industrial Edge u
                 
    ```
 
-7. Click **Validate & Create**.
+8. Click **Validate & Create**.
 
    This will create the version metadata in the workspace you selected earlier.
    
-8. Click **Start Upload** to upload the created app version. 
+9. Click **Start Upload** to upload the created app version. 
 
 #### 4.2.2 Industrial Edge App Publisher CLI
 

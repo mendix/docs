@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### September 9th, 2021
+
+#### Portal Improvements
+
+* We have updated the environment details page to show the status of individual pods.
+* We have added some validation when you configure Pod/Service/Ingress annotations in the portal.
+* We have added the ability to select the default target environment for Studio deployment.
+
 ### September 2nd, 2021
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0

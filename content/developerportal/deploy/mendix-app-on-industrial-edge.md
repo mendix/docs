@@ -8,7 +8,7 @@ tags: ["Mendix app", "Industrial Edge", "edge", "docker image", "Mendix Buildpac
 
 ## 1 Introduction
 
-[Industrial Edge](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/production-machines.html) is the SIEMENS platform for hosting applications from different vendors on a computing platform close to the shopfloor. Industrial Edge enables extensions to automation, deployments of demanding streamprocessing, and learning algorithms as well as hosting from integration code to site automation.
+[Industrial Edge](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/production-machines.html) is the SIEMENS platform for hosting applications from different vendors on a computing platform close to the shopfloor. Industrial Edge enables extensions to automation, deployments of demanding streamprocessing, and learning algorithms as well as hosting your apps from integration code to site automation.
 
 Industrial Edge empowers factory operators to create custom applications with the Mendix low-code platform that run locally as Edge Apps. Among its other tools, Industrial Edge provides the [Industrial Edge App Publisher (IEAP)](https://support.industry.siemens.com/cs/us/en/view/109799477), a tool installed on a development PC to convert Mendix apps to Industrial Edge Apps. The Industrial Edge App Publisher is available for both Windows and Linux operating systems.
 
@@ -91,6 +91,10 @@ After you have created the Docker image of your Mendix app, you must create the 
 
 ### 4.1 Create Mendix App on the IEM Side
 
+{{% alert type="info" %}}
+You can skip this step if you just want to create a standalone app which does not require an IEM connection in the Industrial Edge App Publisher.
+{{% /alert %}}
+
 1. Log into your IEM.
 2. Create a project and the related Mendix app inside the project.
 
@@ -99,10 +103,6 @@ After you have created the Docker image of your Mendix app, you must create the 
    ![Create docker image of Mendix app](attachments/mendix-app-on-industrial-edge/IEM_Created_app.png)
 
 Once you have created the Mendix app on IEM side, you must create a version of your Mendix app in the Industrial Edge App Publisher.
-
-{{% alert type="info" %}}
-You can skip this step if you just want to create a standalone app which does not require an IEM connection in the Industrial Edge App Publisher.
-{{% /alert %}}
 
 ### 4.2 Create App Version
 

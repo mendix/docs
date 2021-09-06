@@ -114,6 +114,7 @@ Click an item in the sidebar to go to the page for that content:
 * [Company Content](#company-content)
 * [Company Reviews](#company-reviews)
 * [User Groups](#user-groups)
+* [Subscriptions](#subscriptions)
 
 ### 4.1 My Content {#my-content}
 

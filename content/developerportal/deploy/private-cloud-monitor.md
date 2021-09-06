@@ -2,7 +2,7 @@
 title: "Monitoring environments in Mendix for Private Cloud"
 parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
-menu_order: 20
+menu_order: 31
 tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

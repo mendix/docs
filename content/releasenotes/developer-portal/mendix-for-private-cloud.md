@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated the environment details page to show the status of individual pods.
 * We have added some validation when you configure Pod/Service/Ingress annotations in the portal.
 * We have added the ability to select the default target environment for Studio deployment.
-
+* We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.*
 ### September 2nd, 2021
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0

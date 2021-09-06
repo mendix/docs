@@ -23,62 +23,56 @@ Drag and drop the widget inside a data view which provides a calendar entity (co
 
 ### 2.1 Data Source Tab
 
-* **Data source** (default: **Context**) – Determines to retrieve the calendar events via context, database, microflow, or nanoflow.
+* **Data source** (default: **Context**) – Determines retrieval of the calendar events via context, database, microflow, or nanoflow.
 * **Event entity** - The entity that represents the event to be displayed by the calendar.
 * **XPath** (configurable when the **Data source** is set to **Database**) - Filters the events retrieved from the database by the configured XPath.
 * **Microflow** (configurable when the **Data source** is set to **Microflow**) – The microflow executed to retrieve the calendar events.
 * **Nanoflow** (configurable when the **Data source** is set to **Nanoflow**) – The nanoflow executed to retrieve the calendar events.
 * **Title attribute** (configurable when the **Event entity** is configured) – The String attribute containing the calendar event's title.
-* **All day attribute** (configurable when the **Event entity** is configured) – The Boolean attribute indicating whether a calendar event takes a full day.
+* **All day attribute** (configurable when the **Event entity** is configured) – The Boolean attribute indicating if a calendar event takes a full day.
 * **Start attribute** (configurable when the **Event entity** is configured) – The DateTime attribute indicating the start of a calendar event.
 * **End attribute** (configurable when the **Event entity** is configured) – The DateTime attribute indicating the end of a calendar event.
-* **Color attribute** (configurable when the **Event entity** is configured) – The String attribute affecting the background of a calendar event. All HTML supported color formats are supported (e.g. "red", "#FF0000", "rgb(250,10,20)" or "rgba(10,10,10, 0.5)").
-* **Refresh data source on view** (configurable when the **Data source** is set to **Microflow**; default: **No**) – Enables to retrieve a sub set of a large data set by doing the following:
+* **Color attribute** (configurable when the **Event entity** is configured) – The String attribute affecting the background of a calendar event. All HTML supported color formats are supported (for example "red", "#FF0000", "rgb(250,10,20)" or "rgba(10,10,10, 0.5)").
+* **Refresh data source on view** (configurable when the **Data source** is set to **Microflow**; default: **No**) – Enables the retrieval of a subset of a larger data set by doing the following:
 	* Updating the **View start attribute** and **View end attribute** values when the viewable calendar dates change.
-	* Repopulating the calendar with events by executing the **Microflow** which should use the **View start attribute** and **View end attribute** values as data retrieval constraints (for example, `End > $CalenderView/StartAttribute` and `Start < $CalenderView/EndAttribute]`).
-	
-* **View start attribute** – The DateTime attribute that indicates the lower date & time boundary of events displayed on the calendar.
-* **View end attribute** – The DateTime attribute that indicates the upper date & time boundary of events displayed on the calendar.
+	* Repopulating the calendar with events by executing the **Microflow** which should use the **View start attribute** and **View end attribute** values as data retrieval constraints (for example `End > $CalenderView/StartAttribute` and `Start < $CalenderView/EndAttribute]`).
+* **View start attribute** – The DateTime attribute that indicates the lower date and time boundary of events displayed on the calendar.
+* **View end attribute** – The DateTime attribute that indicates the upper date and time boundary of events displayed on the calendar.
 
 ### 2.2 View Tab
 
 * **View** (default: **Standard**) – Determines the calendar's views:
 	* **Standard** – Day, week, and month view only.
  	* **Custom** – Custom views configured in **Custom top bar views**.
-
 * **Initial selected view** (default: **Month**) – Determines the view (**Day**, **Week**, **Month**, **(Work week)** (available as custom view), **(Agenda)** (available as custom view)) when the calendar becomes visible for the first time.
-* **Start date attribute** – The DateTime attribute indicating the start date of the current calendar view. Depending on the view, the actual view's start date may differ. For example when a Wednesday is configured as the start date in a week view. In that case the Monday just before that date is the actual start date.
-  
+* **Start date attribute** – The DateTime attribute indicating the start date of the current calendar view. Depending on the view, the actual view's start date may differ. For example, if a Wednesday is configured as the start date in a week view then the Monday just before that date is the actual start date.
 * **Custom top bar views** (configurable when **View** is set to **Custom**) – The custom calendar views:
 	* **Appearance** tab:
 		* **Item** (default: **Month button**) – The type of element and, thus supported calendar views, to be added to the top bar of the calendar. The following types are supported: 
-		* **Previous button**
-		* **Today button**
-		* **Next button**
-		* **Title date text**
- 		* **Month button**
-		* **Week button**
-		* **Work week button**
-		* **Day button**
-		* **Agenda button**
-	FIX LINE BREAKS SOMEHOW	
-	* **Position** (default: **Left**) – Determines the alignment (**Left**, **Center**, **Right**) of the buttons and text in the calendar's top bar.
-	* **Caption** – The text for the button or title depending in the selected **Item** type.
-	* **Render mode** (default: **Button**) – Determines whether the button is rendered as an actual button or a link.
-	* **Button tooltip** – Optional text shown in a tooltip when hovering the button.
-	* **Button style** (default: **Default**) – Sets the button's brand style.
-	
-		* **Custom formats** tab:
- **Header day format** (configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, **Month button** or **Agenda button**) – The day formatting in the view's header columns. Use Mendix date formats (for example 'EEEE dd/MM'). 
-		* **Cell date format** (configurable when **Item** is set to **Month button**) - The day formatting of a certain day cell in a month view. Use Mendix date formats (e.g. 'dd'). 
-		* **Time gutter format** (configurable when **Item** is set to **Day button**, **Week button**, **Work week button** or **Agenda button**) – The time formatting in the first column of the view. Use Mendix date formats (e.g. 'HH:mm'). 
-		* **Date gutter format** (configurable when **Item** is set to **Agenda button**) – The date formatting in the first column of the view. Use Mendix date formats (e.g. 'EEE MMM d'). 
+			* **Previous button**
+			* **Today button**
+			* **Next button**
+			* **Title date text**
+ 			* **Month button**
+			* **Week button**
+			* **Work week button**
+			* **Day button**
+			* **Agenda button**
+		* **Position** (default: **Left**) – Determines the alignment (**Left**, **Center**, **Right**) of the buttons and text in the calendar's top bar.
+		* **Caption** – The text for the button or title depending in the selected **Item** type.
+		* **Render mode** (default: **Button**) – Determines whether the button is rendered as an actual button or a link.
+		* **Button tooltip** – Optional text shown in a tooltip when hovering the button.
+		* **Button style** (default: **Default**) – Sets the button's brand style.
+	* **Custom formats** tab:
+ 		* **Header day format** (configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, **Month button** or **Agenda button**) – The day formatting in the view's header columns. Use Mendix date formats (for example 'EEEE dd/MM'). 
+		* **Cell date format** (configurable when **Item** is set to **Month button**) - The day formatting of a certain day cell in a month view. Use Mendix date formats (for example 'dd'). 
+		* **Time gutter format** (configurable when **Item** is set to **Day button**, **Week button**, **Work week button** or **Agenda button**) – The time formatting in the first column of the view. Use Mendix date formats (for example 'HH:mm'). 
+		* **Date gutter format** (configurable when **Item** is set to **Agenda button**) – The date formatting in the first column of the view. Use Mendix date formats (for example 'EEE MMM d'). 
 	* **Text** tab:
 		* **Default all day text** (configurable when **Item** is set to **Agenda button**) – The text indicating an event will take a full day in the agenda view.
 		* **Header date** (configurable when **Item** is set to **Agenda button**) – The text for the date column header in the agenda view.
 		* **Header time** (configurable when **Item** is set to **Agenda button**) – The text for the time column header in the agenda view.
 		* **Header event** (configurable when **Item** is set to **Agenda button**) – The text for the event column header in the agenda view.
-
 * **Editable** (default: **Default**) – Determines whether the calendar is editable. In the default mode, the surrounding data view's editability is decisive.
 * **Enable create** (default: **Yes**) – Determines whether the calendar allows creation of new events by clicking on and dragging over date and time slots.
 

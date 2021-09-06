@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Feature
 
-* Mendix Admins can now configure their own [single sign-on](/developerportal/deploy/mendix-sso) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
+* Mendix Admins can now configure their own [single sign-on](/developerportal/control-center/set-up-sso-byoidp) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
 
 ### September 2nd, 2021
 

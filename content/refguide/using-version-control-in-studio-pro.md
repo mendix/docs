@@ -281,8 +281,8 @@ The second method should be used if the first method is not possible for some re
 
 1. Check out both the main line and the branch line locally.
 2. Overwrite the .mpr in the main line app directory with the .mpr of the branch line.
-3. If branch line is of a lower Mendix version than Main line: right-click the Main line folder and click TortoiseSVN -> Commit, and add a commit message.
-4. Otherwise: Commit your changes using Studio Pro. 
+3. If branch line is of a lower Mendix version than main line: right-click the main line folder and click **TortoiseSVN** > **Commit**, and add a commit message.
+    Otherwise commit your changes using Studio Pro. 
 5. Reopen the main line app in Studio Pro only after overwriting the files.
 
 ## 8 Versioning an App Deployed to the Cloud {#versioning-project}

@@ -49,7 +49,7 @@ Click [Company Apps](/developerportal//developerportal#my-apps/#my-company-apps)
 
 If you want to turn on the old navigation/header, click your avatar and toggle **New Navigation** to **Off**.
 
-## 3 My Apps
+## 3 My Apps {#my-apps}
 
 The **My Apps** page shows you a summary of your apps:
 

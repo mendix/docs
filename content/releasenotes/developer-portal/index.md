@@ -134,7 +134,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
 	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
 * We improved the search experience and added a full page of search results that can be accessed by clicking **View Search Results Page** at the bottom of the search drop-down menu or by pressing <kbd>Enter</kbd> after typing a search query
-* We changed the [My Apps](/developerportal//developerportal#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
+* We changed the [My Apps](/developerportal#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
 * You asked and we listened: We added new label colors for labels in [Stories](/developerportal/collaborate/stories). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
 	* We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
@@ -211,7 +211,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * It is now possible to add or remove labels in the [Story Details](/developerportal/collaborate/stories#story-details) page.
-* We added a link to your app's [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal//developerportal#my-apps).
+* We added a link to your app's [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal#my-apps).
 
 #### Fixes
 
@@ -236,13 +236,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed several minor issues with the [My Apps](/developerportal//developerportal#my-apps) page.
+* We fixed several minor issues with the [My Apps](/developerportal#my-apps) page.
 
 ### January 15th, 2021
 
 #### Improvements
 
-* We redesigned the [My Apps](/developerportal//developerportal#my-apps) page.
+* We redesigned the [My Apps](/developerportal#my-apps) page.
 * You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
 
 #### Fixes
@@ -267,7 +267,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We changed the home page of the Developer Portal to [My Apps](/developerportal//developerportal#my-apps).
+* We changed the home page of the Developer Portal to [My Apps](/developerportal#my-apps).
 
 ### November 4th, 2020
 
@@ -372,7 +372,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Fixes
 
 * We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
-* We fixed a bug where the star icon on your [favorite apps](/developerportal//developerportal#my-apps) was not displayed properly.
+* We fixed a bug where the star icon on your [favorite apps](/developerportal#my-apps) was not displayed properly.
 
 ### May 22nd, 2020
 
@@ -390,7 +390,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We fixed an issue where [favorited apps](/developerportal//developerportal#my-apps) still showed up in the favorites view on the [My Apps](/developerportal#my-apps) page after being deleted.
+* We fixed an issue where [favorited apps](/developerportal#my-apps) still showed up in the favorites view on the [My Apps](/developerportal#my-apps) page after being deleted.
 * We made performance improvements to the **My Apps** page.
 * We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
 
@@ -442,7 +442,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We introduced the ability to [favorite](/developerportal//developerportal#my-apps) apps from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
+* We introduced the ability to [favorite](/developerportal#my-apps) apps from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
 
 ### September 24th, 2019
 

@@ -1,7 +1,7 @@
 ---
 title: "Share Marketplace Content"
 category: "General Info"
-menu_order: 30
+menu_order: 40
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
 aliases:
@@ -32,7 +32,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General Guidelines
+### 3.1 General
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -42,7 +42,7 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 Widget Guidelines
+### 3.2 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -56,7 +56,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * Use TypeScript over JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 Module Guidelines
+### 3.3 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -79,6 +79,10 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * For example pages and microflows to be copied to another module, select the **Exclude from project** option for the document in order to encourage duplication and reduce dependency errors 
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
+
+### 3.4 For Selling App Services
+
+For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](sell).
 
 ## 4 Adding New Marketplace Content {#adding}
 
@@ -210,4 +214,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
+* [How to Sell Your App Service in the Marketplace](sell)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

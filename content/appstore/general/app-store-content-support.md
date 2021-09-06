@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Content Support"
 category: "General Info"
-menu_order: 40
+menu_order: 50
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using Marketplace content in your Mendix apps."
 aliases:

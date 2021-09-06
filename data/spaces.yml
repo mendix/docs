@@ -206,7 +206,6 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
-    - "Themes"
     - "App Services"
     - "Connectors"
     - "Modules"

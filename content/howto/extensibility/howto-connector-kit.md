@@ -33,8 +33,6 @@ For the basics of building toolbox actions, see the [Introducing the Mendix Conn
 * Create the **Import string** action
 * Create the **Join objects in list** action
 
-![Connectorkit demo toolbox](attachments/how-to-connector-kit/toolkit-connector-kit-demo.png)
-
 ## 2 Creating Generic Actions Using Type Parameters
 
 Let's start with type parameters. In the **Type parameters** tab in the Java action definition dialog box, you can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.

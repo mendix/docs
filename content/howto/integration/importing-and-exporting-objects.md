@@ -113,11 +113,9 @@ The package can contain a single example of one of the following:
 
 To import module objects, follow these steps:
 
-1. Right-click a module in the **App Explorer** and select **Import document from file...**:
+1. Right-click a module in the **App Explorer** and select **Import document from file...**
 
-    ![](attachments/18448739/18582100.png)
-
-    The **Import Document from File** dialog box will appear.
+    The **Import Document from File** dialog box appears.
 
 2.  Select your Mendix package file containing the document you want to import, and click **Open**.
 
@@ -176,9 +174,7 @@ To export an app, follow these steps:
 
 To export a module, follow these steps:
 
-1. Right-click a module in the **App Explorer**, and select **Export module package...**:
-
-    ![](attachments/18448739/18582095.png)
+1. Right-click a module in the **App Explorer**, and select **Export module package...**
 
     If your module refers to other modules in the app (that is, it is not self-contained), you will see a pop-up window warning you of this.
 
@@ -191,7 +187,7 @@ To export a module, follow these steps:
     Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you don't want to include these files, you can uncheck the boxes.
 
     {{% alert type="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
-    {{% /alert %}}
+{{% /alert %}}
 
 ### 3.3 Exporting Widgets
 
@@ -201,12 +197,10 @@ Widgets are automatically available in the **widgets** folder in your app direct
 
 Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
-1. Right-click the document you want to export and select **Export document to file...**:
+1. Right-click the document you want to export and select **Export document to file...**.
 
-    ![](attachments/18448739/18582092.png)
+    The **Export Page to File** dialog box opens.
 
-    The **Export Page to File** dialog box will open.
-    
 2. Enter the **Name** for your package and click **Save**.
 
 ## 4 Read More

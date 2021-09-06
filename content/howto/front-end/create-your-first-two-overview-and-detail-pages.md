@@ -1,8 +1,8 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
-category: "Front-End"
+category: "Front End"
 menu_order: 25
-tags: ["Front-End"]
+tags: ["front end"]
 ---
 
 ## 1 Introduction

@@ -404,7 +404,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 ## 8 Databases in IBM Cloud{#databases}
 
-Mendix needs access to a relational database backend and can run using different types of database. For example: PostgreSQL database
+Mendix needs access to a relational database back end and can run using different types of database. For example: PostgreSQL database
 
 ### 8.1 Running Mendix on PostgreSQL
 

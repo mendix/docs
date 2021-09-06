@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### September 2nd, 2021
+
+#### Fixes
+
+* We removed the `SecurityClassification` from the `Endpoints` JSON structure of the [Register API](/apidocs-mxsdk/apidocs/data-hub-apis). The creation of endpoints as `Public` via the API is no longer allowed due to security reasons.
+
 ### August 26th, 2021
 
 #### Improvements
@@ -20,7 +26,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
 * We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/index#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
- 
+
 ### August 19th, 2021
 
 #### Fixes
@@ -70,7 +76,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### New Features
 
-* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
+* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis) endpoints now allow you to do the following:
   * `GET` all published endpoints
   * `GET`, `POST`, and `PUT` one individual published endpoint
 
@@ -87,8 +93,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Features
 
 * All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
-  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) – includes GET calls for getting details of data sources
-  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
+  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis) – includes GET calls for getting details of data sources
+  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
 ### May 27th, 2021
 
@@ -203,7 +209,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements

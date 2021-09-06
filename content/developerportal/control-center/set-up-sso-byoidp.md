@@ -37,7 +37,7 @@ To set up an IDP configuration for the Mendix platform and your Mendix app, you 
 
 ## 3 Configuring your BYOIDP setup
 
-As a Mendix Administrator, you will find the IDP setup in your Control Center:
+As a Mendix Administrator, you will find the IDP setup in your [Control Center](index):
 
 ![Customer IDP setup - navigation](attachments/set-up-sso-byoidp/configure-sso.png)
 

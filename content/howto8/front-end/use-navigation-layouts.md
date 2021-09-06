@@ -1,6 +1,6 @@
 ---
 title: "Use Navigation Layouts"
-category: "Front-End"
+category: "Front End"
 menu_order: 12
 description: "This guide will teach you to use navigation layouts."
 tags: ["Atlas UI", "User Experience", "Navigation", "Responsive Design", "Sidebar"]

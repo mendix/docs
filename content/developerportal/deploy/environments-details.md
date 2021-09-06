@@ -39,6 +39,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
+* **Secondary Backup Location** the region where the backup is stored
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.

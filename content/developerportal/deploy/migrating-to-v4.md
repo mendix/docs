@@ -51,6 +51,7 @@ There are a few other differences between the way you develop and deploy apps in
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
     * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
+* In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
 
 ## 3 Prerequisites
 

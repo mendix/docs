@@ -284,7 +284,7 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration#constants) in the [App Settings](/refguide/project-settings).
 
-Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere App Service*).
+Refer to the documentation on specific [app services](/appstore/app-services/) for how to use the binding keys (for example, see the [Authenticating MindSphere REST Calls](/partners/siemens/mindsphere-app-service#authenticating) section of *MindSphere IIoT for Makers*).
 
 ## 5 Read More
 

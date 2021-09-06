@@ -86,10 +86,8 @@ You have added one or more modules while the security was turned off, so there i
 
 To create module roles within a module, follow these steps:
 
-1.  Open the module **Security** of the **MyFirstModule** module:
+1.  Open the module **Security** of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  On the **Module Security Type 'Security'** properties editor, click **New**:
   
     ![](attachments/18448715/18581556.png)
@@ -127,10 +125,8 @@ The two module roles that have been created should be assigned to a user role. W
 
 To configure the page and microflow access of a module, follow these steps:
 
-1.  Open the module **Security** of the **MyFirstModule** module:
+1.  Open the module **Security** of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  Open the **Page access** tab:
   
     ![](attachments/18448715/18581547.png)

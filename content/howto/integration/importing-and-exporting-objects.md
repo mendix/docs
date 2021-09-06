@@ -57,8 +57,6 @@ To import module packages, follow these steps:
 
 1. Right-click your app in the **App Explorer** and select **Import Module Package**.
 
-    ![](attachments/18448739/import-package.png)
-
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
@@ -174,7 +172,7 @@ To export an app, follow these steps:
 
 To export a module, follow these steps:
 
-1. Right-click a module in the **App Explorer**, and select **Export module package...**
+1. Right-click a module in the **App Explorer**, and select **Export module package**.
 
     If your module refers to other modules in the app (that is, it is not self-contained), you will see a pop-up window warning you of this.
 

@@ -27,7 +27,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
 * We implemented [context deep links](/developerportal/collaborate/manage-deeplinks) to all main app pages on the Developer Portal so you can easily share references.
-* We increased the performance of opening the [My Apps page](/developerportal//developerportal#my-apps/)
+* We increased the performance of opening the [My Apps page](/developerportal#my-apps)
 
 #### Fixes
 
@@ -351,7 +351,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
 * We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles#team-roles) to better distinguish team roles from app user roles.
-* We removed the list appearance of the [My Company's Apps](/developerportal//developerportal#my-apps/#my-company-apps) page.
+* We removed the list appearance of the [My Company's Apps](/developerportal#my-apps#my-company-apps) page.
 
 #### Fixes 
 
@@ -390,7 +390,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We fixed an issue where [favorited apps](/developerportal//developerportal#my-apps) still showed up in the favorites view on the [My Apps](/developerportal//developerportal#my-apps/) page after being deleted.
+* We fixed an issue where [favorited apps](/developerportal//developerportal#my-apps) still showed up in the favorites view on the [My Apps](/developerportal#my-apps) page after being deleted.
 * We made performance improvements to the **My Apps** page.
 * We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
 
@@ -456,7 +456,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Launchpad Removal & App User Management Update
 
-* We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal//developerportal#my-apps/) page.
+* We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal#my-apps) page.
 * We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019

@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal//developerportal#my-apps/) and [team](team) are described below.
+The roles defined in Developer Portal for an [app](/developerportal#my-apps) and [team](team) are described below.
 
 ## 2 Team Member
 

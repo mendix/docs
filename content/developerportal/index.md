@@ -29,7 +29,7 @@ On the left side of the top bar, you open an access menu by clicking the **Switc
 
 You can then access the following parts of the Mendix Platform:
 
-* **Mendix Home** – the [My Apps](/developerportal//developerportal#my-apps/) page
+* **Mendix Home** – the [My Apps](/developerportal#my-apps) page
 * [Studio](/studio/)
 * **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
 * **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
@@ -45,7 +45,7 @@ You can then access the following parts of the Mendix Platform:
 
 Click [Company Buzz](collaborate/buzz) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
 
-Click [Company Apps](/developerportal//developerportal#my-apps/#my-company-apps) to see all the apps created by members of your company.
+Click [Company Apps](/developerportal#my-apps#my-company-apps) to see all the apps created by members of your company.
 
 If you want to turn on the old navigation/header, click your avatar and toggle **New Navigation** to **Off**.
 

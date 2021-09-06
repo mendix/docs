@@ -63,7 +63,7 @@ The header for a component presents the following details:
 * **Download** – click this to download the component
 	* This is only available for components that have a file attached (meaning, all shared Studio Pro components, but not promotions)
 	* The best practice is to download a component from the Marketplace that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details on importing downloaded Marketplace content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
-* The **Premium** label is applied to components like [app services](#type) that require a subscription after a free trial of 30 days
+* The **Premium** label is applied to components like [app services](#types) that require a subscription after a free trial of 30 days
 	* These components have a **Subscribe** button to start your subscription and a **Try for Free** button to start your 30-day free trial
 	* If you have an active trial or a subscription for a component, click **Check Status** to go to the [Subscriptions](#subscriptions) page
 	* These components also have a [Pricing](#tabs) tab

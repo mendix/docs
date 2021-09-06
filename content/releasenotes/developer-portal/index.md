@@ -351,7 +351,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
 * We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles#team-roles) to better distinguish team roles from app user roles.
-* We removed the list appearance of the [My Company's Apps](/developerportal#my-apps#my-company-apps) page.
+* We removed the list appearance of the [My Company's Apps](/developerportal#my-company-apps) page.
 
 #### Fixes 
 

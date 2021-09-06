@@ -45,7 +45,7 @@ You can then access the following parts of the Mendix Platform:
 
 Click [Company Buzz](collaborate/buzz) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
 
-Click [Company Apps](/developerportal#my-apps#my-company-apps) to see all the apps created by members of your company.
+Click [Company Apps](/developerportal#my-company-apps) to see all the apps created by members of your company.
 
 If you want to turn on the old navigation/header, click your avatar and toggle **New Navigation** to **Off**.
 

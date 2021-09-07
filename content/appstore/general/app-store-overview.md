@@ -276,7 +276,7 @@ After you click **Create Keys**, a page appears with your binding keys. Click **
 Once you close this page, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
-To use the binding keys, see [Using the Binding Keys](#using) below.
+For more information, see the [Using the Binding Keys](#using) section below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 

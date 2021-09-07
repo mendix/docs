@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 
 ## 1 Introduction
 
-The [Gallery](https://marketplace.mendix.com/link/component/xxx) widget, a replacement for both the template grid and listview, can be used to build beautiful lists and grids across all your device types (desktop, tablet and mobile). Featuring the same filtering and sorting as seen in the [Data Grid 2](https://marketplace.mendix.com/link/component/116540), combine with the options to vary the number of columns per device type, the Gallery widget gives you the power to create amazing grid and list experiences for every user.
+The [Gallery](https://marketplace.mendix.com/link/component/xxx) widget, a replacement for both the template grid and list view, can be used to build beautiful lists and grids across all your device types (desktop, tablet and mobile). Featuring the same filtering and sorting as seen in the [Data Grid 2](https://marketplace.mendix.com/link/component/116540), combine with the options to vary the number of columns per device type, the Gallery widget gives you the power to create amazing grid and list experiences for every user.
 
 Here is an example of Gallery using filters:
 

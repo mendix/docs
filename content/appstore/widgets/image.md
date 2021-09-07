@@ -70,6 +70,6 @@ The Image widget is shipped with default styles and works out of the box without
 
 These are the design properties shipped with Atlas UI for this widget:
 
-* **Image style** (**Rounded**, **Circle**, **Square**, **None** (default)) - Change the image style.
-* **Center image** (**Yes**, **No** (default)) - Centers the image.
-* **Image fit** (**Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)) - Change the fit of the image.
+* **Image style** (**Rounded**, **Circle**, **Square**, **None** (default)) - Changes the style of the image.
+* **Center image** (**Yes**, **No** (default)) - Changes whether the image is centered horizontally in its container or not.
+* **Image fit** (**Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)) - Change the fit of the image according to the object-fit CSS property.

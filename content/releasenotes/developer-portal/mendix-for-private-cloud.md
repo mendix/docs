@@ -26,10 +26,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 ##### Known Issue
 
 * Upgrading a namespace from operator v2.0.0 to v2.1.0 causes app deployments to have outdated labels or annotations that make your environments unreachable. To fix the issue, you must delete the app deployments using the following commands:
-  ```
-  kubectl delete deployment <app>-master -n <namespace>
-  kubectl delete deployment <app>-worker -n <namespace>
-  ```
+
+    ```
+    kubectl delete deployment <app>-master -n <namespace>
+    kubectl delete deployment <app>-worker -n <namespace>
+    ```
 
 
 ### August 12th, 2021

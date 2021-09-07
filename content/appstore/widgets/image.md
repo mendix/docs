@@ -41,7 +41,7 @@ The **Data source** section (required) is used to configure the data for the ima
 The **Events** sections allows you to configure what happens when the user interacts with the image. It includes the following properties:
 
 * **On click type** (default: **Action**) - Determines the type of on click for this Image widget. When set to **Action**, the **On click** property can be used to configure a Mendix action. When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image.
-* **On click** (configurable when **On click type** is set to **Action**) - An action attribute to configure a Mendix action for when a user clicks on the image.
+* **On click** (configurable when **On click type** is set to **Action**) - An action property to configure a Mendix action for when a user clicks on the image.
 
 #### 2.1.3 Accessibility Section
 

@@ -225,6 +225,8 @@ solutions:
   priority: false
   menu_categories:
     - "General"
+    - "Development"
+    - "Deployment"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

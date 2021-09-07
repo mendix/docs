@@ -280,7 +280,7 @@ if (/* check that all properties are filterable */) {
     console.log("Some attribute is not filterable");
 }
 ```
-### 2.4 Reloading {#listvalue-filtering}
+### 2.5 Reloading {#listvalue-reload}
 
 It is possible to reload items of a datasource. `reload()` method makes it happen by preserving existing `filter` , `offset` , `limit` , `requestTotalCount` properties.
 

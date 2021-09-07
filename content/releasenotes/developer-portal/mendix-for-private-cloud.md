@@ -23,6 +23,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have added additional details about the Runtime status for each replica, including the license status and errors that might be preventing the Runtime from starting.
 * We have fixed an error `M2EE: An error occurred while executing action 'get_license_information'` that was sometimes logged while the Runtime was starting.
 
+##### Known Issues
+
+* Upgrading namespace from operator v2.0.0 to v2.1.0 cause app deployments to have outdated labels or annotations that make your environments unreachable. To fix the issue delete the app deployments:
+  ```
+  kubectl delete deployment <app>-master -n <namespace>
+  kubectl delete deployment <app>-worker -n <namespace>
+  ```
+
+
 ### August 12th, 2021
 
 #### Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0

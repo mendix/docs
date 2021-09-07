@@ -1,7 +1,7 @@
 ---
 title: "Share Marketplace Content"
 category: "General Info"
-menu_order: 30
+menu_order: 40
 tags: ["marketplace", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
 aliases:
@@ -32,7 +32,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General Guidelines
+### 3.1 General
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -42,7 +42,7 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 Widget Guidelines
+### 3.2 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
@@ -56,7 +56,7 @@ To develop widgets and submit them to Marketplace, follow these guidelines:
 * Use TypeScript over JavaScript
 * Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 Module Guidelines
+### 3.3 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -80,6 +80,10 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
+### 3.4 For Selling App Services
+
+For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](sell).
+
 ## 4 Adding New Marketplace Content {#adding}
 
 To add content to the Marketplace, follow these steps:
@@ -88,11 +92,11 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/add-content-button.jpg)
 
-2.  Select the category of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
+2.  Select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
 
 	![](attachments/share-app-store-content/category.JPG)
 
-3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
+3.  Depending on the type you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)
 	
@@ -111,7 +115,7 @@ To add content to the Marketplace, follow these steps:
 	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
 	c. The **Category** you selected earlier will be listed here. You can change this if necessary.<br />
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change Category after inital version is published.
+	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change the **Category** after the inital version is published.
 	{{% /alert %}}
 
 	d. Select the **Studio Pro Version** on which you built the content.<br />
@@ -135,7 +139,7 @@ To add content to the Marketplace, follow these steps:
 	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-8.  On the **Package** page, select your content source (note that if you are using **Solutions** category, you will not see the option to select your content source):
+8.  On the **Package** page, select your content source (note that if you are using **Solutions**, you will not see the option to select your content source):
 	
 	* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
@@ -157,8 +161,9 @@ To add content to the Marketplace, follow these steps:
 		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
 		* The **Installation** steps and details
 		* The **Configuration** steps and details
+		* Any **Compatability** steps and details
 		* Any **Known bugs**
-		* Any **Frequently Asked Questions**
+		* Any **Frequently asked questions**
 
 	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
@@ -209,4 +214,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
+* [How to Sell Your App Service in the Marketplace](sell)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

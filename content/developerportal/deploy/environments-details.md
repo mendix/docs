@@ -39,6 +39,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
+* **Secondary Backup Location** the region where the backup is stored
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
@@ -447,7 +448,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 

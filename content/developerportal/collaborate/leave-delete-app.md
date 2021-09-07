@@ -59,7 +59,7 @@ If you want to leave and delete your app, follow these steps:
 
 ## 4 Alternative Method
 
-If you are the only team member of an app, you can also delete it directly from your list of apps. See [Apps List](/developerportal/apps-list/) for more information.
+If you are the only team member of an app, you can also delete it directly from your list of apps. For more information, see [My Apps](/developerportal#my-apps).
 
 ## 5 Read More
 

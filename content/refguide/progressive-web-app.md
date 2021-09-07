@@ -119,7 +119,7 @@ For more information on the available properties in the web app manifest, read t
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
-For more information on sessions and how to customize the timeout, see the [Session Duration](tricky-custom-runtime-settings#session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
+For more information on sessions and how to customize the timeout, see the [Session Duration](tricky-custom-runtime-settings#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
 ## 6 Accessing Device Features
 

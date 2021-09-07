@@ -164,6 +164,10 @@ A category can by provided through `studioCategory` and `studioProCategory` tags
 In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
 
 {{% alert type="info" %}}
+The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
 {{% /alert %}}
 
@@ -252,7 +256,7 @@ This is how the property group structure is represented in Studio Pro:
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
-Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties#name), [Class](/refguide/common-widget-properties#class), [Style](/refguide/common-widget-properties#style), and **Design Properties**.
+Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties#name), [Class](/refguide/common-widget-properties#class), [Style](/refguide/common-widget-properties#style), and [Design Properties](/apidocs-mxsdk/apidocs/design-properties).
 
 ## 6 Widget Property
 

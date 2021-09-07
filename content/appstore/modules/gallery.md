@@ -82,7 +82,7 @@ In order to enable filtering within the gallery items you need to select the des
 - Long
 - String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attribute the filters will auto-select the matching attributes and then combine in an `OR expression` the desired filter value. Make sure you just have 1 filter widget for each type, example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes the filters will auto-select the matching attributes and then combine in an `OR expression` the desired filter value. Make sure you just have 1 filter widget for each type, example `Text Filter` and `Number Filter`.
 
 {{% alert type="info" %}}
 If a filter is being used and its type doesn't match with any selected attribute it will throw an error requesting you to select the correct filter widget.

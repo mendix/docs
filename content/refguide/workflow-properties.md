@@ -121,5 +121,4 @@ For more information, see [Module Security](module-security).
 
 ## 3 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Workflows](workflows)

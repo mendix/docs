@@ -102,7 +102,7 @@ For more information about filters, please check [Data Grid 2 - Filters](data-gr
 
 ![Example of sorting](attachments/gallery/sorting.gif)
 
-In the new Gallery widget is possible to add sorting widgets to the composable region and use them based on the configurations available in the `Sorting tab`. In order to make the attributes available for the filter widgets you need to select an attribute and define its name to be shown in the filter.
+In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the `Sorting tab`. In order to make the attributes available for the sorting widgets you need to select an attribute and define its name to be shown in the sort button.
 
 {{% alert type="info" %}}
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 

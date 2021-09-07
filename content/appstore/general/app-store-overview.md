@@ -33,7 +33,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | Type | Description |
 | --- | --- |
 | **Solutions** | Out-of-the-box solutions are aimed at industries and domain problems, and they deliver instant value. These solutions can be adapted using the core Mendix Platform to fully meet your requirements. |
-| [Templates](/appstore/themes/) | Templates, themes, and starter apps serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
+| **Templates** | Templates and starter apps serve as accelerators for implementing solutions to help increase speed-to-value and time-to-market. |
 | [App Services](/appstore/app-services/) | App services are packages of preconfigured business capabilities provided as modules containing logic, UIs, workflows, connectors, and APIs. |
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
@@ -276,7 +276,7 @@ After you click **Create Keys**, a page appears with your binding keys. Click **
 Once you close this page, you will not be able to retrieve the keys again.
 {{% /alert %}}
 
-To use the binding keys, see [Using the Binding Keys](#using) below.
+For more information, see the [Using the Binding Keys](#using) section below.
 
 Click **Return to the overview** to go to the main page of the dashboard. 
 

@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### September 7th, 2021
+
+#### New Features
+
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
+* We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
+* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#subscriptions) experience using credit card for two app services in supported regions.
+
 ### August 12th, 2021
 
 #### Improvements

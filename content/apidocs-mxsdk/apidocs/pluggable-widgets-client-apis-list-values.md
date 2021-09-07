@@ -282,7 +282,7 @@ if (/* check that all properties are filterable */) {
 ```
 ### 2.5 Reloading {#listvalue-reload}
 
-It is possible to reload items of a datasource. `reload()` method makes it happen by preserving existing `filter` , `offset` , `limit` , `requestTotalCount` properties.
+It is possible to reload items of a datasource. `reload()` method makes it happen by preserving existing `filter`, `offset`,`limit`, `requestTotalCount` properties.
 
 ### 2.6 Working With Actual Data
 

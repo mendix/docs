@@ -17,3 +17,4 @@ App services like [3D Viewer](3d-viewer) start with a free trial for development
 ## 2 Main Documents in This Category
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
+* [Microsoft Teams Connector](ms-teams-connector) – allows you to send messages to a Microsoft Teams channel.

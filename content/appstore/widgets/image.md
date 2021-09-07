@@ -62,7 +62,7 @@ The **Dimensions** tab allows you to configure settings that are related to the 
 	* The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
 	* These two properties need to be used together to work
 * **Show** (default: **Full image**) - Determines how the image will be shown. When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present.
-* **Responsive** (default: **Yes**) - When set to **Yes**, the image will never get larger than its original size. It can become smaller.
+* **Responsive** (default: **Yes**) - When set to **Yes**, the image will scale with its parent container. It will never get larger than its original size, but it can become smaller.
 
 ### 3 Styling
 

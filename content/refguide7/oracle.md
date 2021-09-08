@@ -21,3 +21,7 @@ It is not possible to sort, group, or use aggregate functions such as `count()` 
 ### 2.3 Selecting DISTINCT Attribute
 
 Selecting DISTINCT attributes of the string type with a size greater than 2000 characters is not supported by Mendix due to a known Oracle limitation of selecting DISTINCT columns with a CLOB data type. If you run into this limitation, you may encounter an exception in the logs with a message like this: **Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small**.
+
+## 3 DDL commands
+
+DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. We recommended that you create a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.

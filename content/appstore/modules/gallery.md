@@ -18,8 +18,6 @@ Here is an example of Gallery using filters:
 
 We provide several options to be defined in the Gallery widget, here are the general options:
 
-![Example of configuration properties](attachments/gallery/settings.png)
-
 ### 2.1 Data source
 
 Data source is the source of the data being presented in the Gallery. You can select data from Database, Association, Microflow, Nanoflow or Xpath.

@@ -34,7 +34,7 @@ During the creation of the Mendix database, the number of structural modificatio
 
 ## 3 Unlimited and Very Long Strings
 
-The majority of differences between PostgreSQL and Oracle are in how they handle very long, or unlimited length, strings. Oracle has limitations on the functionality CLOB (character large object) data. Mendix stores long strings as CLOB objects and this means that Mendix restricts some of the things you can do with your Oracle database if you define string attributes which are unlimited or longer than 2000 characters. These restrictions are listed below.
+The majority of differences between PostgreSQL and Oracle are in how they handle very long, or unlimited length, strings. Oracle has limitations on the functionality of CLOB (character large object) data. Mendix stores long strings as CLOB objects and this means that Mendix restricts some of the things you can do with your Oracle database if you define string attributes which are unlimited or longer than 2000 characters. These restrictions are listed below.
 
 The workaround is to use string attributes which are less than 2000 characters if you want to use this functionality.
 
@@ -56,7 +56,7 @@ If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: 
 
 You cannot set a [uniqueness constraint](/refguide/validation-rules#uniqueness) on string attributes longer than 2000 characters.
 
-If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key`.
+If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key`will be logged.
 
 ## 4 DDL commands
 

@@ -58,7 +58,9 @@ You can add customized activities to this section if you use the **Expose as a w
 Workflows parameters are data used by the workflow. There are two parameters:
 
 * **Workflow context** – The business-related entity that travels through the workflow. 
-* **Workflow instance** – The entity representing an instance of a running workflow. This entity should be a specialization of **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](#workflow-entities) section below. 
+* **Workflow instance** – The entity representing an instance of a running workflow. This entity should be a specialization of the **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](#workflow-entities) section below. 
+
+**Workflow instance** should have an association to the **Workflow context**. 
 
 ## 3 Performing Basic Functions
 
@@ -171,7 +173,7 @@ You can find the following workflow-related entities in the System module:
 * **WorkflowDefinition** – Represents your workflow in the database. It contains two attributes, where **Name** and **Title** are **Name** and **Title** properties of the workflow and **Obsolete** is a Boolean that is marked as true when you delete your workflow. In this case, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](workflow-properties). 
 * **WorkflowTaskDefinition** – Represents your [user tasks](user-task) and [system activities](call-microflow) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **Obsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
 * **WorkflowInstance** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
-* **WorkflowUserTask** - a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
+* **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
 
 ## 5 Workflow Variables
 
@@ -179,7 +181,7 @@ Workflows have dedicated variables that can be used in an XPath and Expressions 
 
 The list of variables is described below: 
 
-* `$WorkflowContext` – 
+* `$WorkflowContext` – an instance of the business-related entity that travels through the workflow
 * `$WorkflowInstance` – an instance of a currently running workflow (**System.Workflow**)
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 

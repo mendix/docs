@@ -101,16 +101,6 @@ In addition to adding new parameters, you can perform the following actions on p
 
 **Caption** defines a title of the workflow. You cannot change the [Name](#name) of the workflow but you can change the **Caption**.
 
-### 2.6 Security Section {#security}
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
-
-{{% alert type="warning" %}}
-These roles are only checked when the workflow is executed from the client. 
-{{% /alert %}}
-
-For more information, see [Module Security](module-security).
-
 ## 3 Read More
 
 * [Workflows](workflows)

@@ -29,32 +29,32 @@ The following sections will describe the different available widget properties a
 
 #### 2.1.1 Data source Section
 
-The **Data source** section (required) is used to configure the data for the image widget. It has the following properties:
+The **Data source** section (required) is used to configure the data for the Image widget. It has the following properties:
 
 * **Data source** (default: **Image**) - Determines the data source for this Image widget. When set to **Image**, a static or dynamic image can be retrieved. When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object. When set to **Icon**, a static icon or image from **System.Images** can be retrieved.
 * **Image** and **Default image** (configurable when **Data source** is set to **Image**) - The **Image** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity. The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image.
-* **Image URL** (configurable when **Data source** is set to **Image URL**) - A text template to configure the image for this widget through an URL. This can be done either statically or dynamically through the attribute of a context object.
+* **Image URL** (configurable when **Data source** is set to **Image URL**) - A text template to configure the image for this widget through a URL. This can be done either statically or dynamically through the attribute of a context object.
 * **Icon** (configurable when **Data source** is set to **Icon**) - Used to retrieve a static icon or image for the widget.
 
 #### 2.1.2 Events Section
 
 The **Events** sections allows you to configure what happens when the user interacts with the image. It includes the following properties:
 
-* **On click type** (default: **Action**) - Determines the type of on click for this Image widget. When set to **Action**, the **On click** property can be used to configure a Mendix action. When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image.
+* **On click type** (default: **Action**) - Determines the type of On click for this Image widget. When set to **Action**, the **On click** property can be used to configure a Mendix action. When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image.
 * **On click** (configurable when **On click type** is set to **Action**) - An action property to configure a Mendix action for when a user clicks on the image.
 
 #### 2.1.3 Accessibility Section
 
-The **Accessibility** sections allows you to configure accessibility features for the image widget. It includes the following properties:
+The **Accessibility** sections allows you to configure accessibility features for the Image widget. It includes the following properties:
 
 * **Alternative text** - Alternative text of the image for accessibility purposes.
 
 ### 2.2 Dimensions Tab {#dimensions}
 
-The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the image widget. It includes the following properties:
+The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the Image widget. It includes the following properties:
 
 * **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
-	* The available **Width unit** options are **Auto**, **Percentage** and **Pixels**
+	* The available **Width unit** options are **Auto**, **Percentage**, and **Pixels**
 	* The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
 	* These two properties need to be used together to work
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
@@ -71,5 +71,5 @@ The Image widget is shipped with default styles and works out of the box without
 These are the design properties shipped with Atlas UI for this widget:
 
 * **Image style** (**Rounded**, **Circle**, **Square**, **None** (default)) - Changes the style of the image.
-* **Center image** (**Yes**, **No** (default)) - Changes whether the image is centered horizontally in its container or not.
-* **Image fit** (**Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)) - Change the fit of the image according to the object-fit CSS property.
+* **Center image** (**Yes**, **No** (default)) - Determines whether the image is centered horizontally in its container or not.
+* **Image fit** (**Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)) - Changes the fit of the image according to the object-fit CSS property.

@@ -13,12 +13,6 @@ description: "Native Template 6 release notes."
 
 * We fixed an issue with dependency resolution on Android.
 
-**Release date: July 29th, 2021**
-
-### Fixes
-
-* We fixed a bug with the auto-linking mechanism introduced in v[6.2.1](#621) which caused some iOS build to fail.
-
 ## 6.2.2
 
 **Release date: July 29th, 2021**

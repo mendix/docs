@@ -56,7 +56,7 @@ If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: 
 
 You cannot set a [uniqueness constraint](/refguide/validation-rules#uniqueness) on string attributes longer than 2000 characters.
 
-If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key`will be logged.
+If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key` will be logged.
 
 ## 4 DDL commands
 

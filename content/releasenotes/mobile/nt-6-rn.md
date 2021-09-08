@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issue with dependencies resolution on Android.
+* We fixed an issue with dependency resolution on Android.
 
 **Release date: July 29th, 2021**
 

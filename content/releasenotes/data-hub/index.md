@@ -9,6 +9,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### September 9th, 2021
+
+#### Fixes
+
+* We fixed an issue where updating a service version would create a new endpoint instead of updating the existing one.
+* We fixed an issue that would cause pagination URLs to be returned as http links, rather than https.
+* We fixed an issue where clicking on 'Control Center' in the top bar of Administration page was navigating to Data Hub Homepage. Now, it navigates to Control Center application.
+
 ### September 2nd, 2021
 
 #### Fixes

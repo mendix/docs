@@ -11,7 +11,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We fixed an issue with dependencies resolution on Android.
+* We fixed an issue with dependency resolution on Android.
 
 ## 5.2.2
 

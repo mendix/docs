@@ -1,12 +1,9 @@
 ---
 title: "Mendix Profile"
-category: "Community Tools"
-menu_order: 1
+menu_order: 10
 description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
-aliases:
-    - /developerportal/mendix-profile/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -38,7 +35,7 @@ Your profile opens to the **Overview** tab, which shows you at a quick glance ho
 The first profile card below the header presents your **Stats**, which are your points divided between Mendix products and activities:
 
 {{% image_container width="350" %}}
-![](attachments/mendix-profile/stats.png)
+![](attachments/stats.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
@@ -58,7 +55,7 @@ In the **Earned badges** section, you find the badges you have completed. If the
 The percentage on the card of the **Badges in progress** shows how far you have come to earn that particular badge. If the badge is a multi-level badge, only the highest completed badge is shown, so don't get distracted while earning it!
 
 {{% image_container width="350" %}}
-![](attachments/mendix-profile/badges.png)
+![](attachments/badges.png)
 {{% /image_container %}}
 
 ## 5 Challenges {#challenges}
@@ -66,13 +63,13 @@ The percentage on the card of the **Badges in progress** shows how far you have 
 The **Challenge** card presents a featured challenge you can complete to gain credits. You can use the credits in the [Mendix Shop](https://shop.mendix.com) to order low-code t-shirts or other Mendix swag. Some challenges are going to be easy for you, whilst others might be harder to complete!
 
 {{% image_container width="350" %}}
-![](attachments/mendix-profile/challenges.png)
+![](attachments/challenges.png)
 {{% /image_container %}}
 
 Click **View All** to go to the **Challenges** tab of your profile. This tab presents more details on the challenge steps, the time left, and how many credits you can earn with them. You can complete these activities in any order you like.
 
 {{% image_container width="350" %}}
-![](attachments/mendix-profile/credits.png)
+![](attachments/credits.png)
 {{% /image_container %}}
 
 When you complete a challenge, click **Claim Credits** to claim the Mendix credits. You can then spend your credits on cool items in the Mendix Shop.
@@ -84,7 +81,7 @@ One of the greatest strengths of Mendix is our awesome developers community, and
 You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon to send an invitation.
 
 {{% image_container width="350" %}}
-![](attachments/mendix-profile/connections.png)
+![](attachments/connections.png)
 {{% /image_container %}}
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
@@ -93,14 +90,14 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 * **Send Invite** – send someone a Mendix invite by entering their email address
 
 {{% image_container width="500" %}}
-![](attachments/mendix-profile/referral.png)
+![](attachments/referral.png)
 {{% /image_container %}}
 
 ## 7 Leaderboard {#leaderboard}
 
 This card on your profile presents your points and ranking for the last 30 days:
 
-![](attachments/mendix-profile/leaderboard.png)
+![](attachments/leaderboard.png)
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
@@ -201,11 +198,11 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix apps you have worked on. Clicking an app name presents details about the customer, business need, solution, and results. You can also view other developers and their apps to get inspired. You can also click **View All Projects** to go to the **Portfolio** tab, which presents all of your apps.
 
-![](attachments/mendix-profile/portfolio.png)
+![](attachments/portfolio.png)
 
 To add an app to your portfolio, click **Add Project**, which will open the editor. There are tips in the editor for what you should put in each field. All the fields in the editor are required before submission.
 
-![](attachments/mendix-profile/add-project.png)
+![](attachments/add-project.png)
 
 If you cannot finish your portfolio entry or do not want to publish yet, click **Save as Draft** to finish it later. The draft will be visible only to you in the **Portfolio** tab for further editing.
 
@@ -257,7 +254,7 @@ To get a Mendix API key, click **Create New API Key** and follow the instruction
 Make a note of the API key, as it will only be shown once. 
 {{% /alert %}}
 
-![](attachments/mendix-profile/api-key.png)
+![](attachments/api-key.png)
 
 For more information, see the following:
 
@@ -278,7 +275,7 @@ This section presents all the documents you have shared within different apps.
 
 ### 10.6.3 Feedback {#feedback}
 
-{{% image_container width="500" %}}![](attachments/mendix-profile/feedback.png)
+{{% image_container width="500" %}}![](attachments/feedback.png)
 {{% /image_container %}}
 
 In this section, you can view feedback submitted on the following:
@@ -292,7 +289,7 @@ When you click **Details** for a feedback item on an app of which you are a team
 
 Changes made through Studio Pro are stored in the Mendix [Team Server](/developerportal/collaborate/team-server). This section provides an overview of the revisions you have committed for all your apps.
 
-{{% image_container width="500" %}}![](attachments/mendix-profile/team-server.png)
+{{% image_container width="500" %}}![](attachments/team-server.png)
 {{% /image_container %}}
 
 ### 10.6.5 Pending Invites

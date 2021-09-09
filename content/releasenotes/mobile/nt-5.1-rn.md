@@ -5,6 +5,14 @@ menu_order: 20
 description: "Native Template 5.1 release notes."
 ---
 
+## 5.1.16
+
+**Release date: September 9th, 2021**
+
+### Fixes
+
+* We fixed an issue with dependency resolution on Android.
+
 ## 5.1.15
 
 **Release date: August 9th, 2021**

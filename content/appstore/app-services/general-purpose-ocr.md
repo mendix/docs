@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-With this app service, you can extract text from images or PDF documents and get output in JSON and XML formats in bulk.
+The [General Purpose Optical Character Recognition](https://marketplace.mendix.com/link/component/118392) app service can help you extract text from images or PDF documents and get output in JSON and XML formats in bulk.
 
 ## 2 Installation
 

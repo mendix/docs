@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-With this app service, you can automate the processing of invoices in bulk almost immediately, without training any documents. This app service supports invoices in the European Union and the United States.
+With the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service, you can automate the processing of invoices in bulk almost immediately, without training any documents. This app service supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 

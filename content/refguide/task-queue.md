@@ -38,12 +38,11 @@ You can control how many tasks can run in parallel on each node when you create 
 
 #### 2.1.3 Context in Task Queues
 
-For microflows and Java actions which are running in a task queue, the context in which the task runs changes slightly in the following ways:
+For microflows and Java actions which are running in a task queue, the circumstances in which the task runs changes slightly in the following ways:
 
- * They are always executed in a *sudo* context, even if a scheduling microflow has **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information).
- * Only committed persistable entities can be passed as parameters to the task. Passing a persistable *New* or *Changed* entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
- - The task is not executed immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
- - If the execution fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
+* Only committed persistable entities can be passed as parameters to the task. Passing a persistable *New* or *Changed* entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
+* The task is not executed immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
+* If the execution fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
 
  {{% alert type="info" %}}
 The context in which a background task runs is still under discussion and may change in the future.
@@ -88,7 +87,7 @@ Core.microflowCall("AModule.SomeMicroflow")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a system context. See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a new, but equivalent context. See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
 
 ### 2.4 Scheduling Java Action Executions
 
@@ -110,7 +109,7 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a system context. See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a new, but equivalent context. See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
 ### 2.5 Configuration options{#configuration}
 
@@ -138,7 +137,21 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 
 `System.ProcessedQueueTasks` objects are never deleted. The user is free to delete them when desired.
 
-### 2.7 Task status
+### 2.7 Execution Context
+
+Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if a scheduling microflow has **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context as the one in which they were scheduled:
+
+* When a user is logged in, the task will be executed in a new, named user context for the same user. This context will be the same as if the user logged in.
+* When no user is logged in, the task will be executed in a new, anonymous context. This context will be for a new anonymous user, but with the same language and timezone as the original user.
+* When a system session is used to the schedule the task (using the Java API), the task will be executed in a new system context.
+
+Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning on the system context. This warning can be remedied in the project settings for the runtime. By choosing *no* for *System context tasks* the deprecation warning goes away and the tasks will executed in and equivalent context as the one they were created in.
+
+{{% alert type="warning" %}}
+Choosing *no* is irreversible, because executing tasks in system contexts is deprecated.
+{{% /alert %}}
+
+### 2.8 Task status
 
 The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` reflects the state that a background task is in. The values are:
 
@@ -149,7 +162,7 @@ The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` 
 * `Aborted`: The task is no longer executing, because the cluster node that was executing it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
 * `Incompatible`: The task never executed, because the model changed in such a way that it cannot be executed anymore. This could be because the microflow was removed/renamed, the arguments were changed or the Task Queue was removed.
 
-### 2.8 Model changes
+### 2.9 Model changes
 
 During the startup of the Mendix runtime, there is a check to ensure that scheduled tasks in the database fit the current model. The following conditions are checked:
 
@@ -159,7 +172,7 @@ During the startup of the Mendix runtime, there is a check to ensure that schedu
 
 If any of these condition checks fail, tasks are moved to `System.ProcessedQueueTasks` with **Status** `Incompatible`. The Runtime will only start after all scheduled tasks have been checked. This should in general not take very long, even if there are thousands of tasks.
 
-### 2.9 Shutdown{#shutdown}
+### 2.10 Shutdown{#shutdown}
 
 During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
 
@@ -194,14 +207,13 @@ Task queues have the following limitations:
 
 * Microflows or Java actions that are executed in the background execute as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then executed in parallel in case of multiple threads. There is no way to execute only a single microflow or Java action at any point in time (meaning, ensure tasks are run sequentially), unless the number of threads is set to 1 and there's only a single runtime node.
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
-* Microflows or Java actions that are executed in the background use a sudo/system context with all permissions. It is not possible to use a user context with limited permissions.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 * The total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
 * Queued actions that have failed can't be rescheduled out-of-the-box currently. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
 ### 4.3 High level implementation overview
 
-Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`,  `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, and `Arguments` of the task. This happens as part of the transaction which calls the microflow  or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
+Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`,  `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, `Arguments`, `ContextType`, `ContextData` and `System.owner` of the task. This happens as part of the transaction which calls the microflow  or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
 
 The tasks are then consumed by executors that perform a `SELECT FOR UPDATE SKIP LOCKS` SQL statement, that will try to claim the next free task. The `SKIP LOCKS` clause will skip over any tasks that are already locked for update by other executors. The corresponding `UPDATE` changes the `Status` to `Running` and sets the owner of the task in the `XASId` and `ThreadId` attributes.
 

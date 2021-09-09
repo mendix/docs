@@ -8,19 +8,31 @@ menu_order: 60
 
 The behavior of Mendix using an Oracle database has some minor differences when compared with using a PostgreSQL database. These differences are documented below.
 
-## 2 Behavior of Unlimited & Very Long Strings
+## 2 Unlimited and Very Long Strings
+
+The majority of differences between PostgreSQL and Oracle are in how they handle very long, or unlimited length, strings. Oracle has limitations on the functionality of CLOB (character large object) data. Mendix stores long strings as CLOB objects and this means that Mendix restricts some of the things you can do with your Oracle database if you define string attributes which are unlimited or longer than 2000 characters. These restrictions are listed below.
+
+The workaround is to use string attributes which are less than 2000 characters if you want to use this functionality.
 
 ### 2.1 Comparison Functions
 
-Oracle does not support unlimited strings or strings with a specified size greater than 2000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it does support functions including `contains()`, `starts-with()`, and `ends-with()`.
+Oracle does not support strings longer than 2000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. It does, however, support functions including `contains()`, `starts-with()`, and `ends-with()`.
 
-### 2.2 Sorting, Grouping & Aggregating
+### 2.2 Sorting, Grouping, and Aggregating
 
-It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 2000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.
+You cannot sort, group, or use aggregate functions such as `count()` on strings longer than 2000 characters. If you cannot use shorter strings, consider removing the attribute from data grids.
 
 ### 2.3 Selecting DISTINCT Attribute
 
-Selecting DISTINCT attributes of the string type with a size greater than 2000 characters is not supported by Mendix due to a known Oracle limitation of selecting DISTINCT columns with a CLOB data type. If you run into this limitation, you may encounter an exception in the logs with a message like this: **Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small**.
+Using [SELECT DISTINCT](/refguide/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
+
+If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small` will be logged.
+
+### 2.4 Uniqueness Constraint
+
+You cannot set a [uniqueness constraint](/refguide/validation-rules#uniqueness) on string attributes longer than 2000 characters.
+
+If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key` will be logged.
 
 ## 3 DDL commands
 

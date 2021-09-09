@@ -24,7 +24,7 @@ To create an app with Mendix version 9.5, do the following:
 
 1. In the Developer Portal, click **Create App**.
 2. Choose any app template.
-3.  Click **Advanced settings** and select **Template version** Studio Pro 9.5.0 (Template v9.5.10). 
+3.  Click **Advanced settings** and select **Template version** Studio Pro 9.5.0. 
 4. Click **Select This Template**.
 5. Name your app, choose a background color and an icon, and click **Create App**.
 

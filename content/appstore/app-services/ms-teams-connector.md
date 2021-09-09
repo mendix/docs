@@ -8,11 +8,9 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 ## 1 Introduction
 
-{{% todo %}}[**Add link to component**]{{% /todo %}}
-
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
-The Microsoft Teams Connector is an importable module that enables sending messages to a Microsoft Teams channel.
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is an importable module that enables sending messages to a Microsoft Teams channel.
 
 ## 2 Configuration
 

@@ -8,23 +8,23 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 
 ## 1 Introduction
 
-The [Gallery](https://marketplace.mendix.com/link/component/xxx) widget, a replacement for both the template grid and list view, can be used to build beautiful lists and grids across all your device types (desktop, tablet and mobile). Featuring the same filtering and sorting as seen in the [Data Grid 2](https://marketplace.mendix.com/link/component/116540), combine with the options to vary the number of columns per device type, the Gallery widget gives you the power to create amazing grid and list experiences for every user.
+The [Gallery](https://marketplace.mendix.com/link/component/xxx) widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](https://marketplace.mendix.com/link/component/116540), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
 
-Here is an example of Gallery using filters:
+Here is an example of a Gallery widget using filters:
 
 ![Example of gallery using filter and sort](attachments/gallery/example.png)
 
 ## 2 Configuration
 
-We provide several options to be defined in the Gallery widget, here are the general options:
+Several options can be defined in the Gallery widget:
 
-### 2.1 Data source
+### 2.1 Data Source
 
-Data source is the source of the data being presented in the Gallery. You can select data from Database, Association, Microflow, Nanoflow or Xpath.
+Data source specifies the source of the data being presented in the Gallery. You can select data from **Database**, **Association**, **Microflow**, **Nanoflow**, or **Xpath**.
 
 ### 2.2 Columns
 
-We provide a mechanism that auto applies a different amount of columns based on the device being used. In the gallery widget you can select columns for Desktops, Tablets or Phone/Mobile.
+We provide a mechanism that automatically applies a different number of columns based on the device being used. In the gallery widget you can select columns for **Desktops**, **Tablets**, or **Phone/Mobile**.
 
 ### 2.3 Items
 
@@ -32,27 +32,27 @@ In the items group you can define the properties related to the items being pres
 
 #### 2.3.1 Page size
 
-Defines the amount of data being show for each page, or the limit to be presented when using virtual scrolling.
+Defines the amount of data shown for each page or the limit to be presented when using virtual scrolling.
 
 #### 2.3.2 Pagination
 
-You can choose between Paging buttons (button being presented below or above the grid) and virtual scrolling (mechanism that auto-loads the data when reaching the bottom of the scrollbar). 
+You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scrollbar). 
 
-#### 2.3.3 Position of paging buttons
+#### 2.3.3 Position of Paging Buttons
 
-This option is only available when `Pagination` is marked as `Paging buttons` and defines its position related to the grid items.
+This option is only available when `Pagination` is marked as `Paging buttons` and defines its position relative to the grid items.
 
-#### 2.3.4 Empty message
+#### 2.3.4 Empty Message
 
-When this option is defined as custom it will show a composable region that you can place widgets to be presented when no items are available to be shown as well as when the filter does not return any data.
+When this option is defined as custom it will show a composable region. Here you can place widgets that will be presented when no items are available to be shown, as well as when the filter does not return any data:
 
 ![Example of empty message](attachments/gallery/empty-message.png)
 
-#### 2.3.5 Dynamic item class
+#### 2.3.5 Dynamic Item Class
 
-In the new Gallery widget we offer an option to dynamically apply a CSS class in a specific item. You can achieve this by adding an expression based on the item values (attributes) like the example below.
+In the new Gallery widget we offer an option to dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes) like the example below.
 
-In this example we check the value of `CountryName` and then apply the class `.my-custom-class` if the attribute is equal to `Spain` to the items:
+In this example we check the value of `CountryName`, then if the attribute is equal to `Spain` apply the class `.my-custom-class` to the items:
 
 ![Example of dynamic item class](attachments/gallery/dynamic-item-class.png)
 
@@ -70,17 +70,17 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the `Filtering tab`. You can select attributes of the following types:
 
-- Auto number
-- Boolean
-- Date & time
-- Decimal
-- Enumeration
-- Hashed string
-- Integer
-- Long
-- String
+* Auto number
+* Boolean
+* Date & time
+* Decimal
+* Enumeration
+* Hashed string
+* Integer
+* Long
+* String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes the filters will auto-select the matching attributes and then combine in an `OR expression` the desired filter value. Make sure you just have 1 filter widget for each type, example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes the filters will auto-select the matching attributes and then combine in an `OR expression` the desired filter value. Make sure you just have one filter widget for each type, example `Text Filter` and `Number Filter`.
 
 {{% alert type="info" %}}
 If a filter is being used and its type doesn't match with any selected attribute it will throw an error requesting you to select the correct filter widget.
@@ -113,11 +113,11 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 We provide an out-of-the-box widget to use combined with Gallery, the dropdown-sort. The drop-down sort widget just needs to be placed inside a composable region of the Gallery after defining the sorting attributes in the `Sorting tab` of the Gallery in order to be able to work.
 
 The widget also provides 2 options to be set:
-- Empty option caption: Value to be used when no value is selected;
-- Screen reader caption: Value to be announced by screen readers when using assistive technology.
+* Empty option caption: Value to be used when no value is selected;
+* Screen reader caption: Value to be announced by screen readers when using assistive technology.
 
 ## 5. Troubleshooting
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve it using the following helper classes in the `Dynamic item class`:
-- `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: it merges column spaces pushing items to a new row when the selected amount is reached for each platform;
-- `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: it merges rows spaces pushing items into new columns or rows when needed.
+* `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: it merges column spaces pushing items to a new row when the selected amount is reached for each platform;
+* `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: it merges rows spaces pushing items into new columns or rows when needed.

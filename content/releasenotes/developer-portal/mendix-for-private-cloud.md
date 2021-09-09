@@ -15,6 +15,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### September 9th, 2021
 
+#### mxpc-cli v2.1.1 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0{#2.1.1}
+
+##### Fixes
+
+* We have fixed the [known issue with the outdated apps deployment label after upgrading a namespace to Mendix Operator v2.1.0](#2.1.0). The workaround of deleting app deployments manually in the previous version mxpc-cli v2.1.0 is no longer required. (Ticket 129150)
+
 #### Portal Improvements
 
 * We have updated the environment details page to show the status of individual pods.
@@ -33,9 +39,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have added additional details about the Runtime status for each replica, including the license status and errors that might be preventing the Runtime from starting.
 * We have fixed an error `M2EE: An error occurred while executing action 'get_license_information'` that was sometimes logged while the Runtime was starting.
 
-##### Known Issue
+##### Known Issue{#2.1.0}
 
-* Upgrading a namespace from operator v2.0.0 to v2.1.0 causes app deployments to have outdated labels or annotations that make your environments unreachable. To fix the issue, you must delete the app deployments using the following commands:
+This issue is fixed in [version 2.1.1](#2.1.1) of `mxpc-cli`.
+
+* Upgrading a namespace from operator v2.0.0 to v2.1.0 causes app deployments to have outdated labels or annotations that make your environments unreachable.  (Ticket 129150)
+
+    To fix the issue, you must delete the app deployments using the following commands:
 
     ```
     kubectl delete deployment <app>-master -n <namespace>

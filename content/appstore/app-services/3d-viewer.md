@@ -84,7 +84,7 @@ First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.
 
 Now you have successfully added the 3D Viewer resources to your app.
 
-## 3 Initializing 3D Viewer on App Startup
+## 3 Initializing on App Startup
 
 To use the 3DViewer features, your app needs to be bound to the 3D Viewer service. This is achieved by executing a microflow when the app starts. The 3D Viewer contains a Java action called **VisServerAction**, which can start the 3D Viewer service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3D Viewer when the app starts (running after startup usually means you want to run a specific tool all the time.).
 
@@ -97,7 +97,7 @@ If you app does not have an after-startup microflow set,  follow these steps:
 
 If your project already has a microflow set to execute after startup, you need to extend it with the **Viewer3D/USE_ME/VisServerAction** Java action and configure it as described in the above steps. 
 
-## 4 3DViewer Content
+## 4 Configuration
 
 ### 4.1 Predefined Entities {#predefined-entities}
 
@@ -291,7 +291,7 @@ These widgets do not require additional configuration. Simply place them within 
 | Tool Bar Item Selection Mode | Provides the ability to select a model part, edge, face, and body. |
 | Tool Bar Item Snapshot | Provides the ability to take a snapshot of the current Viewer and save the snapshot to a local machine. |
 
-## 5 Using 3D Viewer
+## 5 Usage
 
 3D Viewer provides a set of widgets to visualize JT models and a set of nanoflows and Java Actions to bring in the data.
 
@@ -421,9 +421,9 @@ By selecting one attribute to set **Selection**, you can get information on the 
 	
 ![viewer-onselectionchange-result](attachments/3d-viewer/viewer-onselectionchange-result.jpg)
 
-Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilize get APIs exposed by Viewer, for example, get Boundingbox by psid, set material by psid, in a javascriptaction, include it in a nanoflow, and set the Action to call this nanoflow.
+Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET`APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID`in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
 
-![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)  
+![viewer-onselect-sample](attachments/3d-viewer/viewer-onselect-sample.jpg)
 
 #### 5.5.2 On Error {#on-error}
 
@@ -465,9 +465,7 @@ Like other Mendix events, you can select from a list of actions upon the product
 
 ![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
-## 6 Others
-
-### 6.1 Create 3D Section {#create-3d-section}
+### 5.6 Creating a 3D Section {#create-3d-section}
 
 When a model is loaded in the viewer, the [Section View](#section-view) widget enables the following:
 
@@ -481,13 +479,13 @@ When a model is loaded in the viewer, the [Section View](#section-view) widget e
 
 The sections below present operations within the Section View widget.
 
-#### 6.1.1 Action
+#### 5.6.1 Action
 
 * **Add** – Use this to add a section plane. First, select the axis along which you would like to section the model, then click **Add**. You will see a section plane of the desired axis added to the scene. The default position of the newly added section plane is in the middle of the bounding box of the direction selected.
 * **Delete** – Use this to delete a selected section plane. Click the edge of the section plane to select it (when selected, the section plane edges are highlighted in yellow color). Then, click **Delete**.
 * **Clear** –  Use this to clear all the section planes added to the scene.
 
-#### 6.1.2 Direction
+#### 5.6.2 Direction
 
 * **X Direction** –  sets the X axis of the default coordinate system as the reference.
 * **Y Direction** –  sets the Y axis of the default coordinate system as the reference
@@ -495,7 +493,7 @@ The sections below present operations within the Section View widget.
 
 For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
 
-#### 6.1.3 Clipping
+#### 5.6.3 Clipping
 
 When a section plane is selected (and highlighted in yellow), you can choose which part of the model you would like to clip away by selecting a clipping option:
 
@@ -504,13 +502,13 @@ When a section plane is selected (and highlighted in yellow), you can choose whi
 * **Near** – clip away the positive side (toward the **Direction**)
 * **Far** –  clip away the negative side (away from the **Direction**)
 
-#### 6.1.4 Position
+#### 5.6.4 Position
 
 You can move the position sliders to adjust the position of the section plane along its axis. You can also type in an exact position to place the section plane at an exact position.
 
 You can add multiple section planes to cut the model in different directions. After the section, you can save a snapshot of a section view. You can also add markup annotations on the section view and save them for later review.
 
-### 6.2 Perform 3D Measurements {#perform-measurements}
+### 5.7 Perform 3D Measurements {#perform-measurements}
 
 When a model is loaded into the viewer, the [Measurement](#measurement) widget provides a set of tools to measure different geometrical entities:
 
@@ -518,7 +516,7 @@ When a model is loaded into the viewer, the [Measurement](#measurement) widget p
 
 The sections below describe these tools.
 
-#### 6.2.1 Measurement Mode
+#### 5.7.1 Measurement Mode
 
 * **Distance** – measure the distance between two part features
 * **Length** – measure the length of a line
@@ -526,22 +524,22 @@ The sections below describe these tools.
 * **Angle** – measure the angle between two edges or surfaces
 * **Area** – measure the area of a surface
 
-#### 6.2.2 Action
+#### 5.7.2 Action
 
 * **Delete** – select one measurement result, then click **Delete** and the selected measurement result will be removed from the scene
 * **Clear** – clear all the measurement results in the scene
 
-## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
+## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
 3D Viewer is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses 3D Viewer, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the 3D Viewer widget features may not work in your app.
 
-### 7.1 Deciding If You Need to Subscribe to Get a LicenseToken
+### 6.1 Do You Need to Subscribe & Get a LicenseToken?
 
 When you just need to run your app with 3D Viewer locally or deploy as a Mendix Free App for testing and trial purposes, you do not need a LicenseToken. You can leave the value of the **Viewer3D.LicenseToken** constant empty when running your app.
 
 When you want to deploy your app to a licensed Mendix Cloud node or an on-premises environment, you need to subscribe to 3D Viewer in order to get a LicenseToken. 
 
-### 7.2  Subscribing to Get a LicenseToken
+### 6.2  Subscribing to Get a LicenseToken
 
 On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, click **Subscribe** to go to the subscription order page and follow these steps:
 
@@ -552,9 +550,9 @@ On the [3D Viewer](https://marketplace.mendix.com/link/component/118345) page, c
 5. Click **Create Binding Keys** , give the key a meaningful name (which should include the name of the app where you are using 3D Viewer), then click **Create Keys**.
 6. When the **LicenseToken** key is generated, copy and save it for later use in your app.
 
-### 7.4 Configuring a LicenseToken for App Deployment
+### 6.3 Configuring a LicenseToken for App Deployment
 
-#### 7.4.1 Configuring the LicenseToken in Studio Pro
+#### 6.3.1 In Studio Pro
 
 In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
@@ -567,7 +565,7 @@ In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and 
 
 5. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 7.4.2 Configuring the LicenseToken in Developer Portal
+#### 6.3.2 In Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

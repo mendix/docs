@@ -70,7 +70,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the `Filtering tab`. You can select attributes of the following types:
 
-* Auto number
+* Autonumber
 * Boolean
 * Date & time
 * Decimal

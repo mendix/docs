@@ -234,7 +234,7 @@ There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if
 
 Here you can tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry Experience** and **Skills**. You can also let the community know if you are looking for a job or an app to contribute to. 
 
-{{% image_container width="500" %}}![](attachments/work-experience.png)
+{{% image_container width="500" %}}![](attachments/mendix-profile/work-experience.png)
 {{% /image_container %}}
 
 ### 10.3 Social {#social}

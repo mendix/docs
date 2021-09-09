@@ -100,7 +100,7 @@ For more information about filters, see the [Filters](data-grid-2#7-filters) sec
 
 ![Example of sorting](attachments/gallery/sorting.gif)
 
-In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the `Sorting tab`. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
+In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
 {{% alert type="info" %}}
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
@@ -110,14 +110,16 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 
 ### 4.1 Drop-Down Sort
 
-The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's `Sorting tab`.
+The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's **Sorting** tab.
 
 The Drop-Down Sort widget has two options you can set:
+
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
 ## 5 Troubleshooting
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
+
 * `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: these classes merge column spaces, pushing items to a new row when the selected amount is reached for each platform
 * `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: these classes merge row spaces, pushing items into new columns or rows when needed

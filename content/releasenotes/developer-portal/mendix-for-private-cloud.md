@@ -15,6 +15,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### September 9th, 2021
 
+#### mxpc-cli v2.1.1 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
+
+##### Fixes
+
+* We have fixed the issue with the outdated apps deployment label after upgrading a namespace to Mendix Operator v2.1.0. The workaround deleting apps deployment manually in the previous version mxpc-cli v2.1.0 is no longer required. (Ticket 129150)
+
 #### Portal Improvements
 
 * We have updated the environment details page to show the status of individual pods.

@@ -27,22 +27,32 @@ When setting-up perform the following steps:
 During the creation of the Mendix database, the number of structural modifications made will depend on the size of your domain model. If this number is quite large, or if there is a large structural change, it may be prudent to increase the value of `OPEN_CURSORS`.
 {{% /alert %}}
 
-## 2 Unlimited and Very Long Strings
+## 3 Unlimited and Very Long Strings
 
-The majority of differences between PostgreSQL and Oracle are in how they handle very long, or unlimited length, strings.
+The majority of differences between PostgreSQL and Oracle are in how they handle very long, or unlimited length, strings. Oracle has limitations on the functionality of CLOB (character large object) data. Mendix stores long strings as CLOB objects and this means that Mendix restricts some of the things you can do with your Oracle database if you define string attributes which are unlimited or longer than 2000 characters. These restrictions are listed below.
 
-### 2.1 Comparison Functions
+The workaround is to use string attributes which are less than 2000 characters if you want to use this functionality.
 
-Oracle does not support unlimited strings or strings with a specified size greater than 2000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it does support functions including `contains()`, `starts-with()`, and `ends-with()`.
+### 3.1 Comparison Functions
 
-### 2.2 Sorting, Grouping, and Aggregating
+Oracle does not support strings longer than 2000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. It does, however, support functions including `contains()`, `starts-with()`, and `ends-with()`.
 
-It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 2000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.
+### 3.2 Sorting, Grouping, and Aggregating
 
-### 2.3 Selecting DISTINCT Attribute
+You cannot sort, group, or use aggregate functions such as `count()` on strings longer than 2000 characters. If you cannot use shorter strings, consider removing the attribute from data grids.
 
-Selecting DISTINCT attributes of the string type with a size greater than 2000 characters is not supported by Mendix due to a known Oracle limitation of selecting DISTINCT columns with a CLOB data type. If you run into this limitation, you may encounter an exception in the logs with a message like this: **Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small**.
+### 3.3 Selecting DISTINCT Attribute
 
-## 3 DDL commands
+Using [SELECT DISTINCT](/refguide/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
+
+If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small` will be logged.
+
+### 3.4 Uniqueness Constraint
+
+You cannot set a [uniqueness constraint](/refguide/validation-rules#uniqueness) on string attributes longer than 2000 characters.
+
+If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key` will be logged.
+
+## 4 DDL commands
 
 DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. We recommended that you create a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.

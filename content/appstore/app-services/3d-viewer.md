@@ -179,13 +179,13 @@ For 3D Viewer to work, you must set the app's after-startup microflow to call th
 
 The core widgets required to enable visualizing a 3D JT model are described below.
 
-#### 4.6.1.1 Container3D {#container3d}
+##### 4.6.1.1 Container3D {#container3d}
 
 This is a container widget designed to put other 3D widgets in (except Uploader widget, Uploader widget doesn't need to be placed within Container3D widget). It provides a shared context for 3D widgets to communicate with each other.
 
 You can place this widget in any location of a page.
 
-#### 4.6.1.2 Uploader {#uploader}
+##### 4.6.1.2 Uploader {#uploader}
 
 This widget enables selecting a JT model from your local machine and uploading it to the Mendix file storage.
 
@@ -193,7 +193,7 @@ You can place this widget in any location of a page.
 
 On the **General** tab of the properties, the **Model ID**, and **Data source** attributes can be used to retrieve the uploading model's **Model ID** and **Model source type** values.
 
-#### 4.6.1.3 Viewer {#viewer}
+##### 4.6.1.3 Viewer {#viewer}
 
 This widget provides a viewing window of your 3D model.
 

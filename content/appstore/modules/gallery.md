@@ -64,7 +64,7 @@ The new Gallery widget can trigger some events while iterating with it.
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the items. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
 
-## 3. Filtering
+## 3 Filtering
 
 ![Example of filtering](attachments/gallery/filtering.gif)
 
@@ -86,21 +86,21 @@ The attributes selected here will be used for the matching filter placed inside 
 If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.
 {{% /alert %}}
 
-Example of filtering configuration:
+An example of filtering configuration:
 
 ![Example of filtering configuration](attachments/gallery/filtering.png)
 
-Here is an example of text filter being used in the composable region combined with a drop-down sort:
+An example of text filter being used in the composable region combined with a drop-down sort:
 
 ![Example of filtering composable region](attachments/gallery/filter-region.png)
 
-For more information about filters, please check the [Filters](data-grid-2#7-filters) section of the *Data View 2* module.
+For more information about filters, see the [Filters](data-grid-2#7-filters) section of *Data View 2*.
 
-## 4. Sorting
+## 4 Sorting
 
 ![Example of sorting](attachments/gallery/sorting.gif)
 
-In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the `Sorting tab`. In order to make the attributes available for the sorting widgets you need to select an attribute and define its name to be shown in the sort button.
+In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the `Sorting tab`. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
 {{% alert type="info" %}}
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
@@ -110,14 +110,14 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 
 ### 4.1 Drop-Down Sort
 
-We provide an out-of-the-box widget to use combined with Gallery, the dropdown-sort. The drop-down sort widget just needs to be placed inside a composable region of the Gallery after defining the sorting attributes in the `Sorting tab` of the Gallery in order to be able to work.
+The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's `Sorting tab`.
 
-The widget also provides 2 options to be set:
-* Empty option caption: Value to be used when no value is selected;
-* Screen reader caption: Value to be announced by screen readers when using assistive technology.
+The Drop-Down Sort widget has two options you can set:
+* Empty option caption: value to be used when no value is selected
+* Screen reader caption: value to be announced by screen readers when using assistive technology
 
-## 5. Troubleshooting
+## 5 Troubleshooting
 
-The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve it using the following helper classes in the `Dynamic item class`:
-* `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: it merges column spaces pushing items to a new row when the selected amount is reached for each platform;
-* `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: it merges rows spaces pushing items into new columns or rows when needed.
+The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
+* `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: these classes merge column spaces, pushing items to a new row when the selected amount is reached for each platform
+* `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: these classes merge row spaces, pushing items into new columns or rows when needed

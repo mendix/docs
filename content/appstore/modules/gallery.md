@@ -80,21 +80,21 @@ In order to enable filtering within the gallery items you need to select the des
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes the filters will auto-select the matching attributes and then combine in an `OR expression` the desired filter value. Make sure you just have one filter widget for each type, example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert type="info" %}}
-If a filter is being used and its type doesn't match with any selected attribute it will throw an error requesting you to select the correct filter widget.
+If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.
 {{% /alert %}}
 
 Example of filtering configuration:
 
 ![Example of filtering configuration](attachments/gallery/filtering.png)
 
-Here is an example of Text filter being used in the composable region combined with a Drop-down sort:
+Here is an example of text filter being used in the composable region combined with a drop-down sort:
 
 ![Example of filtering composable region](attachments/gallery/filter-region.png)
 
-For more information about filters, please check [Data Grid 2 - Filters](data-grid-2#7-filters)
+For more information about filters, please check the [Filters](data-grid-2#7-filters) section of the *Data View 2* module.
 
 ## 4. Sorting
 
@@ -108,7 +108,7 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 
 ![Example of sorting configuration](attachments/gallery/sorting.png)
 
-### 4.1 Dropdown-sort
+### 4.1 Drop-Down Sort
 
 We provide an out-of-the-box widget to use combined with Gallery, the dropdown-sort. The drop-down sort widget just needs to be placed inside a composable region of the Gallery after defining the sorting attributes in the `Sorting tab` of the Gallery in order to be able to work.
 

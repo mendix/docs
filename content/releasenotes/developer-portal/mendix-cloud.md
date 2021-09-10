@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### September 10th, 2021
+
+#### Fixes
+
+* In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
+
 ### August 26th, 2021
 
 #### Improvements

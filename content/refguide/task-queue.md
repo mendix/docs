@@ -109,7 +109,7 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a new, but equivalent context. See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
 ### 2.5 Configuration options{#configuration}
 

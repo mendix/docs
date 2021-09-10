@@ -139,16 +139,16 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 
 ### 2.7 Execution Context
 
-Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if a scheduling microflow has **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context as the one in which they were scheduled:
+Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 
-* When a user is logged in, the task will be executed in a new, named user context for the same user. This context will be the same as if the user logged in.
-* When no user is logged in, the task will be executed in a new, anonymous context. This context will be for a new anonymous user, but with the same language and timezone as the original user.
-* When a system session is used to the schedule the task (using the Java API), the task will be executed in a new system context.
+* When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in.
+* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
+* When a system session is used to schedule the task (using the Java API), the task will be executed in a new system context.
 
-Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning on the system context. This warning can be remedied in the project settings for the runtime. By choosing *no* for *System context tasks* the deprecation warning goes away and the tasks will executed in and equivalent context as the one they were created in.
+Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning on the system context. This warning can be remedied in the project settings for the runtime. By choosing *no* for *System context tasks* the deprecation warning goes away and the tasks will executed in an equivalent context to the one they were created in.
 
 {{% alert type="warning" %}}
-Choosing *no* is irreversible, because executing tasks in system contexts is deprecated.
+After choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
 {{% /alert %}}
 
 ### 2.8 Task status
@@ -213,7 +213,7 @@ Task queues have the following limitations:
 
 ### 4.3 High level implementation overview
 
-Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`, `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, `Arguments`, `ContextType`, `ContextData` and `System.owner` of the task. This happens as part of the transaction which calls the microflow or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
+Tasks are stored in the database in a `System.QueuedTask` table. For each background task a new object is inserted with a `Sequence` number, `Status = Idle`, `QueueName`, `QueueId`, `MicroflowName` or `UserActionName`, `Arguments`, `ContextType`, `ContextData`, and `System.owner` of the task. This happens as part of the transaction which calls the microflow or Java action and places it in the task queue, which means that the task will not be visible in the database until that transaction completes successfully.
 
 The tasks are then consumed by executors that perform a `SELECT FOR UPDATE SKIP LOCKS` SQL statement, that will try to claim the next free task. The `SKIP LOCKS` clause will skip over any tasks that are already locked for update by other executors. The corresponding `UPDATE` changes the `Status` to `Running` and sets the owner of the task in the `XASId` and `ThreadId` attributes.
 

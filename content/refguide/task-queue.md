@@ -149,7 +149,7 @@ Projects containing task queues that were created before Mendix 9.6 will get a d
 You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.
 
 {{% alert type="warning" %}}
-After choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
+You will be asked to confirm this change as, after choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.
 {{% /alert %}}
 
 ### 2.8 Task status

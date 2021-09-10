@@ -57,9 +57,9 @@ In most cases, this means the data transfer tool cannot run from a local machine
 
 Download and extract the tool for your operating system. If you're planning to run the data transfer tool in a Pod, download the Linux version.
 
-* [Linux](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/data-migration-tool/mxpc-backup-restore-cli-linux.tar.bz2)
-* [macOS](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/data-migration-tool/mxpc-backup-restore-cli-macos.tar.bz2)
-* [Windows](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/data-migration-tool/mxpc-backup-restore-cli-windows.zip)
+* [Linux](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/mxpc-data-migration/linux/0.0.1/mxpc-data-migration-0.0.1-linux-amd64.tar.gz)
+* [macOS](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/mxpc-data-migration/macos/0.0.1/mxpc-data-migration-0.0.1-macos-amd64.tar.gz)
+* [Windows](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/mxpc-data-migration/windows/0.0.1/mxpc-data-migration-0.0.1-windows-amd64.zip)
 
 ### 3.2 Running the data transfer tool locally
 
@@ -72,7 +72,7 @@ The tools will only work if you have access to the cluster, setting up the netwo
 The tool will use the current user’s kubeconfig and Kubernetes credentials (or the service account if it’s running in the Pod) to retrieve database and file storage credentials from the environment.
 
 ```shell
-./mxpc-backup-restore-cli backup -n <namespace> -e <environment> -f <file>
+./mxpc-data-migration backup -n <namespace> -e <environment> -f <file>
 ```
 
 - `-n <namespace>` - the namespace containing the environment
@@ -80,7 +80,7 @@ The tool will use the current user’s kubeconfig and Kubernetes credentials (or
 - `-f <file>` - destination file where the backup should be saved
 
 ```shell
-./mxpc-backup-restore-cli restore -n <namespace> -e <environment> -f <file>
+./mxpc-data-migration restore -n <namespace> -e <environment> -f <file>
 ```
 
 - `-n <namespace>` - the namespace containing the environment
@@ -162,13 +162,13 @@ NAMESPACE={namespace}
 ENVIRONMENT={environment}
 # Create the resources required for the restore operation
 kubectl -n $NAMESPACE apply -f /tmp/mendix-backup-restore.yaml
-# Copy the backup/restore tool into the Pod
-kubectl -n $NAMESPACE cp mxpc-backup-restore-cli-linux mendix-backup-restore:/tmp/mxpc-backup-restore-cli-linux
+# Copy the Linux version of the data migration tool into the Pod
+kubectl -n $NAMESPACE cp mxpc-data-migration mendix-backup-restore:/tmp/mxpc-data-migration
 # Copy the backup file to be restored into the Pod;
 # replace files_and_database.tar.gz with the path to the backup file
 kubectl -n $NAMESPACE cp files_and_database.tar.gz mendix-backup-restore:/tmp/restore.tar.gz
 # Run the restore process
-kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-backup-restore-cli-linux restore -e $ENVIRONMENT -f /tmp/restore.tar.gz -n $NAMESPACE
+kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-data-migration restore -e $ENVIRONMENT -f /tmp/restore.tar.gz -n $NAMESPACE
 ```
 
 To export data from an environment into a backup file, run the following commands (replace `{namespace}` with the environment's namespace, and `{environment}` with the environment's internal name):
@@ -178,10 +178,10 @@ NAMESPACE={namespace}
 ENVIRONMENT={environment}
 # Create the resources required for the backup operation
 kubectl -n $NAMESPACE apply -f /tmp/mendix-backup-restore.yaml
-# Copy the backup/restore tool into the Pod
-kubectl -n $NAMESPACE cp mxpc-backup-restore-cli-linux mendix-backup-restore:/tmp/mxpc-backup-restore-cli-linux
+# Copy the Linux version of the data migration tool into the Pod
+kubectl -n $NAMESPACE cp mxpc-data-migration mendix-backup-restore:/tmp/mxpc-data-migration
 # Run the backup process
-kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-backup-restore-cli-linux backup -e $ENVIRONMENT -f /tmp/backup.tar.gz -n $NAMESPACE
+kubectl -n $NAMESPACE exec -it mendix-backup-restore -- /tmp/mxpc-data-migration backup -e $ENVIRONMENT -f /tmp/backup.tar.gz -n $NAMESPACE
 # Copy the backup file from the Pod to a local file
 kubectl -n $NAMESPACE cp mendix-backup-restore:/tmp/backup.tar.gz backup.tar.gz
 ```

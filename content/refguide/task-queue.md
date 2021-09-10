@@ -38,15 +38,11 @@ You can control how many tasks can run in parallel on each node when you create 
 
 #### 2.1.3 Context in Task Queues
 
-For microflows and Java actions which are running in a task queue, the circumstances in which the task runs changes slightly in the following ways:
+For microflows and Java actions which are running in a task queue, the conditions in which the task runs changes slightly in the following ways:
 
 * Only committed persistable entities can be passed as parameters to the task. Passing a persistable *New* or *Changed* entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
 * The task is not executed immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
 * If the execution fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
-
- {{% alert type="info" %}}
-The context in which a background task runs is still under discussion and may change in the future.
-{{% /alert %}}
 
 ### 2.2 Creating Task Queues{#create-queue}
 

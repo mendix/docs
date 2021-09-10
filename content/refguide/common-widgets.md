@@ -18,7 +18,7 @@ Common widgets category contain widgets that are commonly used. This category co
 
     ![](attachments/common-widgets/image-design-mode-example.png)
 
-* [Label](label) – displays static text (the functionality of this widget is outdated, we recommend using the label property of [input widgets](input-widgets) or a text widget instead) 
+* [Label](label) – displays static text (the functionality of this widget is outdated, we recommend using the label property of [input elements](input-widgets) or a text widget instead) 
 
 *  [Snippet Call](snippet-call) – allows you to use a snippet on another snippet, a page, or a layout
 

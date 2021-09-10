@@ -1,5 +1,5 @@
 ---
-title: "Container Widgets"
+title: "Structure"
 parent: "pages"
 menu_order: 25
 tags: ["studio pro", "container widget", "widget"]
@@ -7,7 +7,7 @@ tags: ["studio pro", "container widget", "widget"]
 
 ## 1 Introduction
 
-Container widgets provide structure to your page's content.
+Structure  widgets provide structure to your page's content.
 
 * [Layout grid](layout-grid) – gives structure to your pages, has a built-in behavior to show how a page will look like on different devices:
 

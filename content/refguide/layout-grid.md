@@ -213,5 +213,5 @@ In adding to inserting a new column, you can perform the following actions when 
 ## 6 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](container-widgets)
 * [Properties Common for Widgets](common-widget-properties)

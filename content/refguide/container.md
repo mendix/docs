@@ -2,7 +2,7 @@
 title: "Container"
 parent: "container-widgets"
 menu_order: 20
-tags: ["studio pro", "container", "container widgets", "widget"]
+tags: ["studio pro", "container", "structure", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -36,7 +36,7 @@ Container properties consist of the following sections:
 
 This property specifies whether to hide the container from screen readers or not.
 
-{{% alert type="info" %}} The container should not have any focusable elements inside such as input widgets, links, or buttons. These elements will cause the container to be announced by screen readers.
+{{% alert type="info" %}} The container should not have any focusable elements inside such as input elements, links, or buttons. These elements will cause the container to be announced by screen readers.
 {{% /alert %}}
 
 ### 2.2 Common Section {#common}
@@ -83,5 +83,5 @@ The **On-click** property specifies the action that will be executed when the us
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](container-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

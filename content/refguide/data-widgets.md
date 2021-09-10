@@ -1,5 +1,5 @@
 ---
-title: "Data Widgets"
+title: "Data Containers"
 parent: "pages"
 menu_order: 15
 tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid"]

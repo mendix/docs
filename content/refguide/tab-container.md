@@ -65,5 +65,5 @@ This property is not supported on native mobile pages.
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](container-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

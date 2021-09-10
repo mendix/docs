@@ -147,7 +147,7 @@ For example, you can you can have three columns of which the first is 200 pixels
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](container-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 
 

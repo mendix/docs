@@ -67,7 +67,7 @@ Possible values of this property are the following:
 ## 3 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](container-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 
 

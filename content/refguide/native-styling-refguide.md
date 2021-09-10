@@ -47,7 +47,7 @@ That custom class can be easily accessed in Mendix Studio Pro:
 
 {{% image_container width="400" %}}![custom class](attachments/native-styling-refguide/custom-class.png){{% /image_container %}}
 
-When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Widgets](#understanding-data-widgets) section below. The example below shows how to extend a default class:
+When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Containers](#understanding-data-widgets) section below. The example below shows how to extend a default class:
 
 ```javascript
 export const ActionButton = {
@@ -75,9 +75,9 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 
 For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
-## 3  Data Widgets {#understanding-data-widgets}
+## 3  Data Containers {#understanding-data-widgets}
 
-Data widgets are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
+Data containers are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
 
 ### 3.1 Data View Widget
 
@@ -212,9 +212,9 @@ The resulting DOM looks like this:
 </container>
 ```
 
-## 5 Container Widgets
+## 5 Structure Widgets
 
-Container widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Container Widgets](container-widgets).
+Structure  widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](container-widgets).
 
 ### 5.1 Container 
 
@@ -295,9 +295,9 @@ A scroll container is used to make enable scrolling for a part of a page. This w
 
 The default class to style all scroll containers is named `ScrollContainer`.
 
-## 6 Input Widgets
+## 6 Input Elements
 
-Input widgets are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Widgets](input-widgets).
+Input elements are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Elements](input-widgets).
 
 ### 6.1 Text Box {#text-box}
 

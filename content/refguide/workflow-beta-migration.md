@@ -1,7 +1,7 @@
 ---
 title: "Migrate Workflow Apps to Mendix 9.6"
-parent: "moving-from-8-to-9"
-menu_order: 20
+category: "General Info"
+menu_order: 25
 description: "Describes how to migrate existing Workflow applications to the new feedback-improved Beta."
 tags: ["studio pro", "workflow", "migration", "beta"]
 ---

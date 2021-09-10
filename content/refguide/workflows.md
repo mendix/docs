@@ -21,7 +21,6 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 * [General](#general)
 * [User tasks](#user-tasks)
 * [System actions](#system)
-* [Parameters](#parameters)
 
 ### 2.1 General {#general}
 
@@ -52,15 +51,6 @@ You can add customized activities to this section if you use the **Expose as a w
 [Call microflow](call-microflow) activity calls a selected microflow. 
 
 ![Call Microflow](attachments/workflows/call-microflow.png)
-
-### 2.4 Workflow Parameters {#parameters}
-
-Workflows parameters are data used by the workflow. There are two parameters:
-
-* **Workflow context** – The business-related entity that travels through the workflow. 
-* **Workflow instance** – The entity representing an instance of a running workflow. This entity should be a specialization of the **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](#workflow-entities) section below. 
-
-**Workflow instance** should have an association to the **Workflow context**. 
 
 ## 3 Performing Basic Functions
 

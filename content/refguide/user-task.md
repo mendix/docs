@@ -28,7 +28,6 @@ User task properties consist of the following sections:
 * [Events](#events)
 * [General](#general)
 * [Outcomes](#outcomes)
-* [Security](#security)
 * [Task page](#task-page)
 * [User assignment](#user-assignment)
 
@@ -38,7 +37,7 @@ User task properties consist of the following sections:
 
 ### 2.2 Data {#data} 
 
-**Entity** is an entity representing a user task. You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
+**Entity** is an entity that stores data on the user task execution. You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
 
 ### 2.3 Display Information Section {#display-info}
 

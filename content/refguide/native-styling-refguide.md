@@ -511,9 +511,9 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 File Widgets
+## 7 Images, Videos & Files
 
-File widgets help your user app manage images and other files. For more information on these widgets, see [File Widgets](file-widgets).
+Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](file-widgets).
 
 ### 7.1 Image Viewer {#image-viewer}
 
@@ -521,9 +521,9 @@ An image viewer can be used to display an image. This widget supports the same s
 
 The default class to style all image viewers is named  `NativeDynamicImage`.
 
-## 8 Button Widgets
+## 8 Buttons
 
-Button widgets help your user perform actions. For more information about these widgets, see [Button Widgets](button-widgets).
+Buttons help your user perform actions. For more information about these widgets, see [Buttons](button-widgets).
 
 ### 8.1 Action Button
 

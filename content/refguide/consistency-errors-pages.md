@@ -265,9 +265,9 @@ You have changed the association multiplicity and fixed the error.
 
 {{% /alert %}}
 
-## 7 File Widget Consistency Errors
+## 7 Images, Videos & Files Consistency Errors
 
-File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget in a snippet and configure the snippet. For more information on file widgets, see [File Widgets](file-widgets). 
+Images, videos & files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos & Files](file-widgets). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

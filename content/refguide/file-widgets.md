@@ -1,5 +1,5 @@
 ---
-title: "File Widgets"
+title: "Images, Videos & Files"
 parent: "pages"
 menu_order: 35
 tags: ["studio pro", "file widgets", "widget"]
@@ -7,7 +7,7 @@ tags: ["studio pro", "file widgets", "widget"]
 
 ## 1 Introduction
 
-File widgets allow end-users to upload, download, and display files and images. 
+Images, videos & files allow end-users to upload, download, and display files, images, and videos. 
 
 * [File manager](file-manager) – allows end-users to upload and/or download files:
 

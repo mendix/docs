@@ -97,6 +97,6 @@ Default: *False*
 ## 3 Read More
 
 * [Page](page)
-* [File Widgets](file-widgets)
+* [Images, Videos & Files](file-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 * [System Texts](system-texts)

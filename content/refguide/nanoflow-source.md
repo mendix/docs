@@ -13,7 +13,7 @@ In most cases, you use the *database*, *association* or *XPath* data sources to 
 
 When a data widget with a nanoflow data source is displayed in the browser or refreshed, it runs the designated nanoflow and displays the return value. The manner in which the objects are acquired in the nanoflow is entirely up to you, which allows for unlimited control over what objects to return.
 
-A nanoflow data source ignores all context. It performs actions described in the nanoflow, nothing else. For example, nested data widgets with a nanoflow data source will not automatically create or invoke associations to the encasing data widget.
+A nanoflow data source ignores all context. It performs actions described in the nanoflow, nothing else. For example, nested data containers with a nanoflow data source will not automatically create or invoke associations to the encasing data widget.
 
 ## 2 Nanoflow Data Source Example
 

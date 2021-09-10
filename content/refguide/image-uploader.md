@@ -76,5 +76,5 @@ If a file with an extension that is not allowed is selected, a [system text](sys
 ## 3 Read More
 
 * [Page](page)
-* [File Widgets](file-widgets)
+* [Images, Videos & Files](file-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

@@ -7,9 +7,9 @@ tags: ["studio pro", "data source"]
 
 ## 1 Introduction
 
-Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data widgets](data-widgets) and [input elements](input-widgets). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets) can also use data sources.
+Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data containers](data-widgets) and [input elements](input-widgets). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets) can also use data sources.
 
-In this document, we describe data sources of data widgets. 
+In this document, we describe data sources of data containers. 
 
 ## 2 Data View
 

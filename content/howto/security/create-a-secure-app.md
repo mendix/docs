@@ -162,10 +162,8 @@ To set the security level to production, follow these steps:
 
 To configure the form entity access, follow these steps:
 
-1.  Open the **Security** module of the **MyFirstModule** module:
+1.  Open the **Security** module of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  On the **Module Security Type 'Security'** dialog box, open the **Entity Access** tab:
   
     ![](attachments/18448715/18581541.png)

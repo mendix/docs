@@ -32,7 +32,7 @@ The **Resources** category contain various document types that can be used in di
 | [JavaScript action](javascript-actions) | Nanoflow                               | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
 | [Rule](rules)      | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in decisions in microflows. |
 | [Enumeration](enumerations) | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
-| [Dataset](data-sets) | Pages                                  | Datasets define the data shown in reporting widgets.        |
+| [Dataset](data-sets) | Pages                                  | Datasets define the data shown in reports widgets.        |
 | [Constant](constants) | Microflow expressions and Consumed web services | Constants are used to define configuration values.           |
 | [Regular expression](regular-expressions) | Domain model                           | Regular expressions are used in validation rules to define criteria that a string should match to pass the validation. They cannot be used in other places which require regular expressions (for example, the *isMatch()* function). |
 | [Scheduled event](scheduled-events) | Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |

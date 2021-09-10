@@ -137,7 +137,7 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 
 `System.ProcessedQueueTasks` objects are never deleted. The user is free to delete them when desired.
 
-### 2.7 Execution Context
+### 2.7 Execution Context{#context}
 
 Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the scheduling microflow had **Apply entity access** set to *true* (see [Microflow Properties](microflow) for more information). As of Mendix 9.6 this behavior has been deprecated and tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 

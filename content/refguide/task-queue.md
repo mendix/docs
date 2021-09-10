@@ -145,7 +145,8 @@ Prior to Mendix 9.6 tasks were always executed in a *sudo* context, even if the 
 * When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and timezone as the original user.
 * When a system session is used to schedule the task (using the Java API), the task will be executed in a new system context.
 
-Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning on the system context. This warning can be remedied in the project settings for the runtime. By choosing *no* for *System context tasks* the deprecation warning goes away and the tasks will executed in an equivalent context to the one they were created in.
+Projects containing task queues that were created before Mendix 9.6 will get a deprecation warning in the log: `The project setting 'System context tasks' is deprecated`.
+You can remove this warning in the **Runtime** tab of the app **Settings** in Studio Pro. Set **System context tasks** to *no* to execute tasks in an equivalent context to the one they were created in and remove the warning.
 
 {{% alert type="warning" %}}
 After choosing *no*, you cannot switch back to *yes* because executing tasks in system contexts (unless scheduled from a system session) is deprecated.

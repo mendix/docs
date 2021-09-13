@@ -5,6 +5,10 @@ description: "Protect intellectual property in Solutions, App Services & Connect
 tags: ["adaptive solutions", "ip protection"]
 ---
 
+{{% alert type="info" %}}
+The Mendix Solutions Guide is under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest content!
+{{% /alert %}}
+
 ## 1 Introduction
 
 As a publisher of Solutions, App Services, Connectors and Modules for which subscriptions are sold on the Mendix Marketplace, you will have Intellectual Property (IP) Protection concerns. You will want to protect the intellectual property or IP contained within the model that makes up your Solution, App Service, Connector or Module. This includes any custom usage metering: by hiding the implementation, consumers cannot accidentally or intentionally disable usage metering. Therefore, it is a good idea to consider applying at least some IP Protection in your Solutions, App Services, Connectors and other Modules.

@@ -33,10 +33,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 
 ## 3 Exposing OData contracts in Mendix Studio Pro
-Joost explains that all entities, attributes, and associations exposed in OData contracts are readable. And that additionally:
 
-1. Entities can be updatable, insertable, deletable
-2. Attributes and associations can be updatable and insertable
+When you plublish an entity in a published OData service, clients can read the data by default. In this step, we will allow clients to update the data as well.
+
+1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**
+2. Select the **Customer** entity and click **Edit**
+3. Check the box **Updatable (write)**
 
 ## 4 Viewing OData capabilities in Data Hub Catalog
 

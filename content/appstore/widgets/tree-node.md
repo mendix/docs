@@ -56,10 +56,8 @@ Drag and drop the Tree Node widget onto the page, and then configure the widget 
   * When set to **Custom**, you can use other widgets to configure the header
 
     {{% alert type="info" %}}
-
     The **Data source** of the widget can also be used as a data source for the header, regardless of the **Header type**.
-
-    {{% /alert type}}
+    {{% /alert %}}
 
 * **Header caption** (configurable when **Header type** is set to **Text**) – you can enter the header of the current level in the field or click **Edit** to configure it in the **Edit Caption** dialog box
 

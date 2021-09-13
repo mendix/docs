@@ -89,10 +89,8 @@ The **Visualization** tab is only visible when the [Advanced options](#advanced)
 * **Expanded icon** and **Collapsed icon** (configurable when **Show icon** is set to to either **Left** or **Right**) – Allows the custom configuration of the icons for the expanded and collapsed state
 
   {{% alert type="info" %}}
-
   To use custom icons, it is required to configure both **Expanded icon** and **Collapsed icon**.
-
-  {{% /alert type}}
+  {{% /alert %}}
 
 * **Animate icon** (default: **Yes**) – Determines whether the icon is animated when toggling between the expanded and collapsed state
 

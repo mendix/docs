@@ -8,7 +8,7 @@ tags: ["studio pro", "workflow", "migration", "beta"]
 
 ## 1 Introduction
 
-[Workflows](workflows) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows. 
+[Workflows](workflows) were introduced as a Beta feature in Mendix 9. Since then we have received a great feedback from our community with valuable ideas on how to further improve the functionality, these ideas are implemented in Mendix 9.6. However, due to [changes in the domain model of the System Module](#system-module), you need to manually migrate your apps that have workflows.
 
 This document explains how to migrate your existing workflow apps to the improved workflow experience. It is meant for advanced Mendix developers, so proceed with caution.
 
@@ -18,13 +18,13 @@ The following is changed in the domain model of the System Module:
 
 1. The `WorkflowSystemTask`, and `WorkflowVersion` entities have been removed and are now handled in the background by the runtime.
 2. The `WorkflowTaskInstance` entity has been merged into the `WorkflowUserTask` entity.
-3. The `WorkflowContext` entity has been removed, and the entities in your domain model will no longer need to specialize from it. For more information, see the [Set Up Your Domain Model](#domain-model) section below. 
+3. The `WorkflowContext` entity has been removed, and the entities in your domain model will no longer need to specialize from it. For more information, see the [Set Up Your Domain Model](#domain-model) section below.
 4. The `WorkflowInstance` entity has been renamed to `Workflow` to be more in line with how entity naming is done in Mendix.
 5. Some attributes have received small naming updates.
 
-## 3 Migrating Your App That Has Workflow Functionality 
+## 3 Migrating Your App That Has Workflow Functionality
 
-The following sub-sections explain the steps to take in migrating your app with the workflow functionality to Mendix 9.6. 
+The following sub-sections explain the steps to take in migrating your app with the workflow functionality to Mendix 9.6.
 
 ### 3.1 Back Up Your App
 
@@ -50,17 +50,17 @@ Update the [Workflow Commons](https://marketplace.mendix.com/link/component/1170
 
 ### 3.5 Set Up Your Domain Model {#domain-model}
 
-After upgrading to the Mendix version 9.6, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply revert this by making your entity persistable again and removing the generalization. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below. 
+After upgrading to the Mendix version 9.6, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
 
-For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **Workflow Instance** entity. 
+For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **Workflow Instance** entity.
 
 Lastly, you need to create an entity for every user task, which will need to specialize from the **WorkflowUserTask** entity in the System module.
 
 ### 3.6 Reconfigure Your Workflow {#reconfigure-workflow}
 
-Now that your domain model has been set up, you can open your workflow document and make use of the new entities you have created. In the top-left corner you see two parameters. One is called **Workflow Instance**, and should be set to the entity that specializes of the system **Workflow** entity, set up in the previous step. 
+Now that your domain model has been set up, you can open your workflow document and make use of the new entities you have created. In the top-left corner you see two parameters. One is called **Workflow Instance**, and should be set to the entity that specializes of the system **Workflow** entity, set up in the previous step.
 
-The other is called **Workflow Context**, which you set by going over the association from your workflow instance entity to your workflow context entity. 
+The other is called **Workflow Context**, which you set by going over the association from your workflow instance entity to your workflow context entity.
 
 For each user task in your workflow, select the newly created entity for the task.
 
@@ -71,4 +71,3 @@ If you did not implement custom UI in your workflow pages, we highly recommend j
 ### 3.8 Secure Your User Tasks
 
 Securing user tasks now happens through the domain model by setting [entity accesses](module-security#entity-access), and you no longer need to select which module roles are allowed to execute a task. Setting target users remains unchanged.
-

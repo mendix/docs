@@ -27,15 +27,15 @@ As your tree view grows bigger, every tree node has to retrieve more data for it
 
 ### 2.2 Caching
 
-As users interact with the tree view, the same tree nodes can be expanded and collapsed multiple times. Instead of loading the necessary data every time a tree node is expanded, the widget caches its result when the data is loaded the first time. The next time, instead of retrieving everything from scratch, the widget uses the cache. This results in faster delivery and less network requests on subsequent visits of the same tree nodes.
+As users interact with the tree view, the same tree nodes can be expanded and collapsed multiple times. Instead of loading the necessary data every time a tree node is expanded, the widget caches its result when the data is loaded the first time. The next time, instead of retrieving everything from scratch, the widget uses the cache. Therefore, if you visit the same tree nodes again, the delivery is fast and the network requests are less.
 
 ### 2.3 Loading State
 
-When a Tree Node widget is nested inside another one, the outer tree node automatically shows a loading state when it is expanded for the first time. When the inner tree node has finished loading its data, the outer tree node automatically updates its state accordingly. This only applies to the first visit.
+When a Tree Node widget is nested inside another one, the parent tree node automatically shows a loading state when you expand it for the first time. The loading state is changed after the children tree node has finished loading its data. This only applies to the first visit.
 
 ### 2.4 Automatic Detection of End Nodes
 
-When you use the Tree Node widget to map out your entire domain model, not every tree branch has the same depth, but the configuration of [**Has children**](#general) widget property is set per tree node level, not per branch. For example, you configure your tree view goes 6 levels deep in total, but not every branch has data for all those 6 levels. To address this, after expanding a tree node in a branch, the widget automatically detects whether it contains data in the deeper level or that it is the last node in the branch (an end node). If it is an end node, the tree node is not clickable anymore and removes its icons from the header.
+You configure how many levels your tree view has. However, not every branch can have data at each level. For example, your tree view could go six levels deep according to your configuration, but in reality, not every branch has data for all six levels. To address this, when you try to expand a tree node in a branch, the widget automatically checks whether this tree node still has a subtree or it is the last node in this branch, namely, an end node. If it is an end node, this tree node is not clickable anymore and removes its icons from the header.
 
 ### 2.5 Accessibility
 
@@ -43,56 +43,57 @@ Out of the box, the Tree Node widget is fully accessible through keyboard contro
 
 ## 3 Configuration
 
-Drag and drop the Tree Node widget onto the page, and then configure the widget using the properties described in the following sections.
+Drag and drop the Tree Node widget onto the page and use the configuration properties described in the following sections.
 
 ### 3.1 General Tab {#general}
 
-* **Data source** (required) – The data source for the current level of tree node (optionally, the data source for the header and content of the widget)
+* **Data source** (required) – The data source for tree node, which can also be optionally used as the data source for the header and content of the widget
 
-* **Header type** (default: **Text**) – Determines the type of the header 
+* **Header type** (default: **Text**) – Defines the type of the header
 
   * When set to **Text**, you can configure the **Header caption** property
 
-  * When set to **Custom**, you can use other widgets to configure the header
+  * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
 
-    {{% alert type="info" %}}
-    The **Data source** of the widget can also be used as a data source for the header, regardless of the **Header type**.
-    {{% /alert %}}
+   {{% alert type="info" %}}
+   The **Data source** of the widget can also be used as a data source for the header, regardless of the **Header type**.
+   {{% /alert %}}
 
-* **Header caption** (configurable when **Header type** is set to **Text**) – you can enter the header of the current level in the field or click **Edit** to configure it in the **Edit Caption** dialog box
+* **Header caption** (configurable when **Header type** is set to **Text**) – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
 
-* **Has children** (default: **No**) – Indicates whether the current level of tree nodes has children or are end nodes
+* **Has children** (default: **No**) – Indicates if the current level of tree nodes has children tree nodes
 
-  * When set to **Yes**, you can define the children nodes
+  * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 
-* **Start expanded** (configurable when **Has children** is set to **Yes**; default: **No**) – Determines whether the content of the current level of tree nodes starts  expanded or collapsed
+* **Start expanded** (configurable when **Has children** is set to **Yes**; default: **No**) – Determines whether the content of the current level of tree nodes starts expanded or collapsed
 
-* **Animate** (configurable when [**Advanced options**](#advanced) is set to **Yes**; default: **Yes**) – Indicates whether the content is animated when the tree node expands and collapses
+* **Animate** (configurable when [**Advanced options**](#advanced) is set to **Yes**; default: **Yes**) – Defines whether the content is animated when a tree node expands and collapses
 
 ### 3.2 Advanced Tab {#advanced}
 
-The **Advanced options** property (default: **No**) – Determines whether the following advanced configuration properties for the widget become available:
+The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible.
 
-- Customization of icon visualization in the header on the [Visualization](#visualization) tab
-- Animations for the tree node headers and content on the [General](#general) tab
+When set to **Yes**, the following tabs and properties become visible:
+
+* [General](#general) tab
+  * **Animate**
+* [Visualization](#visualization) tab
+	* **Show icon**
+	* **Expanded icon**
+	* **Collapsed icon**
+	* **Animate icon**
 
 ### 3.3 Visualization Tab {#visualization}
 
 The **Visualization** tab is only visible when the [Advanced options](#advanced) is set to **Yes**. It includes the following properties:
 
-* **Show icon** (default: **Left**) – Determines the location of the icon relative to the header
-
+* **Show icon** (default: **Left**) – Defines the location of the icon relative to the header
   * When set to **Left**, the icon is placed to the left to the header 
   * When set to **Right**, the icon is placed to the right to the header
   * When set to **No**, the header has no icon
-
-* **Expanded icon** and **Collapsed icon** (configurable when **Show icon** is set to to either **Left** or **Right**) – Allows the custom configuration of the icons for the expanded and collapsed state
-
-  {{% alert type="info" %}}
-  To use custom icons, it is required to configure both **Expanded icon** and **Collapsed icon**.
-  {{% /alert %}}
-
-* **Animate icon** (default: **Yes**) – Determines whether the icon is animated when toggling between the expanded and collapsed state
+* **Expanded icon** (configurable when **Show icon** is set to either **Left** or **Right**) – Defines the custom icon used to indicate that the tree node is expanded
+* **Collapsed icon** (configurable when **Show icon** is set to either **Left** or **Right**) – Defines the custom icon used to indicate that the tree node is collapsed
+* **Animate icon** (default: **Yes**) – Defines whether the icon is animated when you expand or collapse a tree node
 
 ### 4 Styling
 
@@ -100,5 +101,5 @@ The Tree Node widget has default styles and works out of the box without Atlas U
 
 These are the design properties shipped with Atlas UI for this widget:
 
-* **Borders** (**Horizontal**, **Both**, **None** (default)) – Changes the border appearance.
-* **Hover** (**Yes**, **No** (default)) – Highlights an item when hovering over it.
+* **Borders** (**Horizontal**, **Both**, **None** (default)) – Changes the border appearance
+* **Hover** (**Yes**, **No** (default)) – Highlights an item when hovering over it

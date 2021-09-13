@@ -17,9 +17,9 @@ This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6)
 
 ## 2 Updatable attributes
 
-When external entities may have updatable attributes. The values of these attributes can be changes, for instance in a widget or by using the [change object activity](change-object).
+External entities may have updatable attributes. The values of these attributes can change, for instance in a widget or by using the [change object activity](change-object).
 
-Use the **Send External Object** activity to send these changes to app that publishes the entity. That app will persist the changes, overwriting the previous values of the attributes.
+Use the **Send External Object** activity to send these changes to the app that publishes the entity. That app will persist the changes, overwriting the previous values of the attributes.
 
 Only the changes are being sent, when two users make changes to different attributes, these changes are both applied separately.
 

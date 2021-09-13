@@ -38,7 +38,7 @@ It is good practice for publishers of a service to serve a notice of deprecation
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 
-External entities may be read-only. In that case it is not possible to change the structural values of attributes or associations between two external entities.
+It is not possible to change the structural values of attributes or associations between two external entities.
 
 When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
 

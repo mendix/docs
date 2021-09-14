@@ -125,14 +125,9 @@ Proxy settings for version control used in Mendix Studio Pro:
 For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
-### 5.2 Credentials
+### 5.2 Application Credentials{#app-creds}
 
-The SSO module supports two ways to get a valid MindSphere token locally. The method can be chosen by setting the value of the constant *CredentialsType* to one of the following settings:
-
-* **Application Credentials**: which is the default and recommended way
-* **Service Credentials**: which is the backup method for when Application Credentials are not possible
-
-#### 5.2.1 Application Credentials{#app-creds}
+The SSO module supports you in getting a valid MindSphere token locally via **Application Credentials**.
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen on app startup if the constant *AskForCredentialsOnStartUp* is true - otherwise communication to MindSphere is not possible.
 
@@ -184,10 +179,6 @@ For more information about creating app credentials, see the documentation on th
 To ensure that the correct application credentials are requested, you have to set the following constants in the **LocalDevelopment** folder of the **MindSphereSingleSignOn** module in addition to the other configuration constants.
 
 ![](attachments/mindsphere-development-considerations/image23.png)
-
-#### 5.2.2 Service Credentials
-As an alternative to the Application Credentials, you can choose the option Service Credentials. As with the Application Credentials a login screen will be open asking for the **Credentials ID** and the **Password**.
-Service Credentials can be requested via a service request to the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
 
 ### 5.3 Configuration
 

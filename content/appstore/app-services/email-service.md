@@ -24,11 +24,11 @@ The app service can be used into a microflow. This example microflow shows an en
 
 ![](attachments/email-service/microflow.png)
 
-When configuring the Java action in the microflow, specify the **Required Fields** (**From name** and **To**) as well as desired **Optional Fields** using expression syntax:
+When configuring the Java action in the microflow, specify the **Required Fields** (**From name**, **To**, and **Subject**) as well as desired **Optional Fields** using expression syntax:
 
 ![](attachments/email-service/java-action.png)
 
-This Email Service app service supports plain text, HTML formats, and attachments. 
+This Email Service app service supports messages in plain text or HTML formats. You can also send one or more attachments by providing a list of attachment objects.
 
 ## 4 Usage
 

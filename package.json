@@ -54,5 +54,6 @@
     "write-yaml": "^1.0.0",
     "yaml-front-matter": "^4.0.0",
     "yamljs": "^0.3.0"
-  }
+  },
+  "dependencies": {}
 }

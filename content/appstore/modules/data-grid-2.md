@@ -1,6 +1,7 @@
 ---
 title: "Data Grid 2"
 category: "Modules"
+parent: "data-widgets"
 description: "Describes the configuration and usage of the Data Grid 2 module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -14,7 +15,7 @@ Here is an example of a data grid using filters:
 
 ![Example of data grid using filters](attachments/data-grid-2/example.png)
 
-### 1.2 Advanced Options
+### 1.2 Advanced Options (Only for Studio)
 
 The data grid has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your data grid:
 
@@ -24,6 +25,7 @@ The data grid has an option to enable advanced options. When toggle this option 
 * Dynamic row and cell class
 * Column capabilities
 * Custom configuration
+* Header Filters
 
 ## 2 Capabilities
 
@@ -302,6 +304,26 @@ You can also define the default value of the widget, which will be predefined as
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
 
+### 7.5 Header filtering
+
+In order to enable filtering within the data grid header (outside the columns) you need to enable `Show header filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+
+* Autonumber
+* Boolean
+* Date & time
+* Decimal
+* Enumeration
+* Hashed string
+* Integer
+* Long
+* String
+
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+
+{{% alert type="info" %}}
+If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.
+{{% /alert %}}
+
 ## 8 Configuration
 
 You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro or **Configuration** in Studio.
@@ -322,7 +344,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 9 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data Grid 2 v1.1.0 retrieves all available values to do the sorting or filtering while the widget runs.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data Grid 2/Data widgets v1.1 and v1.2 retrieves all available values to do the sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 as we are using the new [Filtering Apis](https://docs.mendix.com/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#4-filter-helpers) to retrieve only the necessary data.
 
 ## 10 Troubleshooting
 

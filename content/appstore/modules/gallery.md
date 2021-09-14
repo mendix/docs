@@ -1,18 +1,31 @@
 ---
 title: "Gallery"
 category: "Modules"
-description: "Describes the configuration and usage of the Gallery module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "platform support"]
+parent: "data-widgets"
+description: "Describes the configuration and usage of the Gallery widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "gallery", "list view", "platform support"]
+
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Gallery](https://marketplace.mendix.com/link/component/xxx) widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](https://marketplace.mendix.com/link/component/116540), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
+The Gallery widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](https://marketplace.mendix.com/link/component/116540), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
 
 Here is an example of a Gallery widget using filters:
 
 ![Example of gallery using filter and sort](attachments/gallery/example.png)
+
+### 1.2 Advanced Options (Only for Studio)
+
+The gallery has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your gallery:
+
+* Pagination type
+* Pagination position
+* Empty list option
+* Dynamic item class
+* Filtering
+* Sorting
 
 ## 2 Configuration
 
@@ -68,7 +81,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ![Example of filtering](attachments/gallery/filtering.gif)
 
-In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the `Filtering tab`. You can select attributes of the following types:
+In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
 * Autonumber
 * Boolean
@@ -94,7 +107,7 @@ An example of text filter being used in the composable region combined with a dr
 
 ![Example of filtering composable region](attachments/gallery/filter-region.png)
 
-For more information about filters, see the [Filters](data-grid-2#7-filters) section of *Data View 2*.
+For more information about filters, see the [Filters](data-grid-2#7-filters) section of *Data Grid 2*.
 
 ## 4 Sorting
 

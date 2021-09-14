@@ -48,14 +48,14 @@ Manually building a widget package can be difficult, so Mendix recommends you us
 A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
-* A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
-* A client component of a widget located, for example, in  `com/mendix/widget/MyProgressCircle.js` for a widget with the ID `com.mendix.widget.MyProgressCircle`
+* A widget definition XML file, preferably located in *{widgetName}.xml* where `widgetName` is the last part of widget [ID](#widget-id)
+* A client component of a widget located, for example, in  *com/mendix/widget/MyProgressCircle.js* for a widget with the ID `com.mendix.widget.MyProgressCircle`
 * Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
-* Optionally, widget icons (*Note: these need to be PNG format*):
-    * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view. The ideal image size is 64x64 pixels, but other sizes will be resized to fit.
-    * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio. The ideal image size is 256x192 pixels, but other sizes will be resized to fit.
+* Optionally, widget icons (which must be the PNG format):
+    * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
-	* Note that all CSS files you add, except the one located in the `lib` sub-directory, will automatically be loaded in an app via the widget.
+	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 

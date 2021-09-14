@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree nod
 
 ## 1 Introduction
 
-[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing all new widgets that shows data in a specific structure.
+[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing  widgets that show data in a specific structure.
 
 This module contains the following widgets:
 

@@ -47,7 +47,7 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
 
 ### 3.1 General Tab {#general}
 
-* **Data source** (required) – The data source for tree node, which can also be optionally used as the data source for the header and content of the widget
+* **Data source** (required) – The data source of the widget, which can also be optionally used as the data source for the header and content of the widget
 
 * **Header type** (default: **Text**) – Defines the type of the header
 
@@ -56,12 +56,12 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
     * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
 
   {{% alert type="info" %}}
-  The **Data source** of the widget can also be used as a data source for the header, regardless of the **Header type**.
+  The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
   {{% /alert %}}
 
 * **Header caption** (configurable when **Header type** is set to **Text**) – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
 
-* **Has children** (default: **No**) – Indicates if the current level of tree nodes has children tree nodes
+* **Has children** (default: **Yes**) – Indicates if the current level of tree nodes has children tree nodes
 
     * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
 
@@ -82,6 +82,10 @@ When set to **Yes**, the following tabs and properties become visible:
     * **Expanded icon**
     * **Collapsed icon**
     * **Animate icon**
+
+{{% alert type="info" %}}
+The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro, there is no **Advanced** tab and all the advanced options listed above are always available on the related tabs.
+{{% /alert %}}
 
 ### 3.3 Visualization Tab {#visualization}
 

@@ -32,10 +32,16 @@ This Email Service app service supports messages in plain text or HTML formats. 
 
 ## 4 Usage
 
-You can choose to create a form where the end-user specifies **To**, **CC**, **BCC**, and the email body content. When sending an email, the **To** and **From Name** attributes are required:
+You can choose to create a form where the end-user specifies **To**, **CC**, **BCC**, and the email body content. When sending an email, the **To** and **From name** attributes are required:
 
 ![](attachments/email-service/attributes.png)
 
 Clicking **Send Email** will asynchronously send out the message to intended recipients.
 
 Each individual email ID to whom this message is sent is counted as utilization towards the allocated app service quota. Incorrect email addresses will result in the email bouncing.
+
+{{% alert type="info" %}}
+The maximum size of the list of recipients in the **To** list is 50.
+
+Sending attachments will use some of your data transfer limit. Your data transfer limit will depend on which plan you have subscribed to.
+{{% /alert %}}

@@ -9,6 +9,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### September 16th, 2021
+
+#### Improvements
+
+* API responses are now sanitized and will no longer have a chance of containing executable code.
+
+#### Fixes
+
+* We fixed an issue with pagination for Applications and Environments in the API.
+* We fixed styling issues.
+
 ### September 9th, 2021
 
 #### Fixes

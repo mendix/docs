@@ -30,6 +30,10 @@ For excellent deep-dive demonstrations of how to use these native mobile widgets
   data-type="inline"
 />
 
+{{% alert type="info" %}}
+Releases of Native Mobile Resources after v3.1.3 will indicate their version in a file located in **themesource/nativemobileresources/.version** in the project directory, whereas previous versions included a constant in the module.
+{{% /alert %}}
+
 ## 2 Native Widgets
 
 These are the native widgets included in these resources along with links to the GitHub repositories where they are stored (with further documentation as necessary):

@@ -71,7 +71,7 @@ In some circumstances, you might find that the two or three standard environment
 
 ### 1.4 Database
 
-Apps deployed to the Mendix Cloud are configured to use a PostgrSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
+Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
 
 If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
 

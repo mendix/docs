@@ -24,8 +24,6 @@ The OData protocol allows data to not only be read, but also created, updated, a
 
 ## 2 Prerequisites
 
-{If there are no prerequisites, leave this section out}
-
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Studio Pro version [9.6.0 or above](https://marketplace.mendix.com/link/studiopro/)
@@ -57,4 +55,4 @@ To see the capabilities of a particular OData entity,
 
 
 ## 5 Consuming OData resources in your Mendix app
-Paul explains that the CRUD letters visible in the Catalog match what you'll see in the Data Hub pane in Studio Pro. And corresponds to what you'll be able to do with the data when you consume that external entity in your app.
+**TODO** Data Modelling team explains that the CRUD letters visible in the Catalog match what you'll see in the Data Hub pane in Studio Pro. And corresponds to what you'll be able to do with the data when you consume that external entity in your app.

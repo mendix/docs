@@ -43,7 +43,6 @@ Features which were already released (Generally Available) on September 8, 2021 
 | End-user services - App switcher | December 2021 |
 | End-user services - Notifications | March 2022 |
 | End-user services - Branding | March 2022 |
-| Workflow | Currently in Public Beta<br/>Released December 2021 |
 | Studio Workflow templates | December 2021 |
 | Studio Expression Editor | GA |
 
@@ -52,8 +51,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 | Feature | Expected release date |
 | --- | --- |
 | Dashboards showing insight into employees on the platform and the activity around apps. | GA |
-| Overview of cloud environments. | Currently in Public Beta<br/>Released December 2021  |
-| Control platform user onboarding experience | Currently in Public Beta<br/>Released December 2021  |
+| Overview of cloud environments. | Currently in Public Beta<br/>GA release December 2021  |
+| Control platform user onboarding experience | Currently in Public Beta<br/>GA release December 2021  |
 | Apply company branding to End User Services | March 2022 |
 | Marketplace subscription dashboards | March 2022 |
 | Self-service subscription management | June 2022 |
@@ -103,7 +102,7 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 | Feature | | Expected release date |
 | --- | --- | --- |
-| Workflow GA | | December 2021 |
+| Workflow | Currently in Public Beta<br/>GA release December 2021 |
 | Smart App Services integrated in Workflow | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | September 2021 |
 | Smart App Services integrated in Workflow | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | November 2021 |
 | Smart App Services integrated in Workflow | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | December 2021 |

@@ -8,7 +8,7 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-If you would like to offer your Mendix application within the MindSphere eco system to other MindSphere customers (multi-tenant) and, optionally, use MindSphere's hosting offering, then **Mendix on MindSphere** would be the right choice.
+If you would like to have full integration within MindSphere displaying your application on the MindSphere Launchpad, manage the user access via the MindSphere Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the MindSphere eco system to other MindSphere customers (multitenancy), then **Mendix on MindSphere** is the right choice.
 
 ## 2 Mendix on MindSphere {#mendix-on-mindsphere}
 
@@ -17,15 +17,14 @@ With Mendix on MindSphere, a Mendix app can be fully integrated into Siemens Min
 * [Build a MindSphere app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - This Learning Path will teach you how to develop an app for MindSphere with Mendix
 * [Build a MindSphere App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - This Learning Path is for everyone who wants to have some deep dives in how to build a MindSphere App with the Mendix Platform
 
-
 Once your app is registered in MindSphere, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents.
 
 * [MindSphere Development Considerations](mindsphere-development-considerations) – covers things which you should address when developing for MindSphere, including the following:
 
-	* [Cloud Foundry environment variables](mindsphere-development-considerations#cfenvvars)
-	* [Local testing](mindsphere-development-considerations#localtesting)
-	* [Multi-tenancy](mindsphere-development-considerations#multitenancy)
-	* [Validation<br style="margin-bottom: 10px;">](mindsphere-development-considerations#validation)
+  * [Cloud Foundry environment variables](mindsphere-development-considerations#cfenvvars)
+  * [Local testing](mindsphere-development-considerations#localtesting)
+  * [Multi-tenancy](mindsphere-development-considerations#multitenancy)
+  * [Validation<br style="margin-bottom: 10px;">](mindsphere-development-considerations#validation)
 
 * [MindSphere Module Details](mindsphere-module-details) – describes more technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere
 

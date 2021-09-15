@@ -116,4 +116,4 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 ### 2.11 Studio Pro Pluggability
 
-Johan also announced *Studio Pro Pluggability*. This is currently a Mendix Labs feature and we currently do not have a planned date for public release.
+Johan also announced *Studio Pro Pluggability*, a Mendix Labs feature for which we do not have a public release date yet.

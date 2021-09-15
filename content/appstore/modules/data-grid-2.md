@@ -1,15 +1,15 @@
 ---
-title: "Data Grid 2"
+title: "Data Widgets"
 category: "Modules"
 parent: "data-widgets"
-description: "Describes the configuration and usage of the Data Grid 2 module, which is available in the Mendix Marketplace."
+description: "Describes the configuration and usage of the Data Widgets module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag and drop data-grid-specific widgets inside the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
+[Data Widgets](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag and drop data-grid-specific widgets inside the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
@@ -183,7 +183,7 @@ Sets of filters can be used in combination with data grids. To be able to use fi
 The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).
 {{% /alert %}}
 
-![Settings for data grid 2](attachments/data-grid-2/settings-show-column-filters.png)
+![Settings for data widgets](attachments/data-grid-2/settings-show-column-filters.png)
 
 Here is an example of dropzones for filters in Structure mode:
 
@@ -344,7 +344,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 9 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data Grid 2 and Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions higher than 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#4-filter-helpers) to retrieve only the necessary data.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#4-filter-helpers) to retrieve only the necessary data.
 
 ## 10 Troubleshooting
 

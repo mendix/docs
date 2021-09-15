@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Exposing OData contracts in Mendix Studio Pro
 
-When you plublish an entity in a published OData service, clients can read the data by default. In this step, we will allow clients to update the data as well.
+When you publish an entity in a published OData service, clients can read the data by default. In this step, we will allow clients to update the data as well.
 
 1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**
 2. Select the **Customer** entity and click **Edit**
@@ -42,7 +42,7 @@ When you plublish an entity in a published OData service, clients can read the d
 
 ## 4 Viewing OData capabilities in Data Hub Catalog
 
-The OData insertable, updatable, and deletable capabilities are all about the data in your application. The Data Hub Catalog provides an inventory of the metadata in your applications. You'll be able to see which capabilities which entities, attributes, and associations have. Actually making the changes to that data happens in your running Mendix app. 
+The OData insertable, updatable, and deletable capabilities are all about the data in your application. The Data Hub Catalog provides an inventory of the metadata in your applications. You can see the capabilities of entities, attributes, and associations. Changes to the data itself occur in the Mendix app(s), not in the Catalog.
 
 To see the capabilities of a particular OData entity, 
 

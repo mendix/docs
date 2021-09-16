@@ -89,12 +89,12 @@ In Mendix Studio Pro please follow the below steps:
 
 The email-service can be used into a microflow. The Email Service supports sending messages in plain text or HTML formats.. This representative microflow shows an entity model with the required attributes, a step for sending mail that will internally call the Java action, and a placeholder to capture the return code of the send mail action.
 
-![](attachments/email-service/Email_Text_Microflow.png)
+![](attachments/email-service/email-text-microflow.png)
 
 Email-service comes bundled with predefined Domain entities viz **EmailAttr** and **SendEmailResponse**. You can create a list using **EmailAttr** entity to specify  **To**, **CC**, **BCC** recipients. 
 [Working with Lists in microflow](https://docs.mendix.com/howto/logic-business-rules/working-with-lists-in-a-microflow)
 
-![](attachments/email-service/Inbuilt_Domain_Entitie.png)
+![](attachments/email-service/inbuilt-domain-entities.png)
 	
 When configuring the **Send email** activity in the microflow, specify the **Required Fields** (**From name**, **To**, and **Subject**) as well as desired **Optional Fields** using expression syntax:
 
@@ -104,7 +104,7 @@ For optional fields or the ones which need not be populated, you should select *
 
 You need to choose the **Content Type** and specify if you want to send **Text** or **HTML** message. After choosign the **Content Type** as "Text", the email body content can be specified by choosing **Edit** option against the attribute **Body**.
 
-![](attachments/email-service/Content_Type_Text.png)
+![](attachments/email-service/content-type-text.png)
 
 Clicking **Send Email** will asynchronously send out the message to intended recipients.
 

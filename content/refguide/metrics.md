@@ -1,7 +1,7 @@
 ---
 title: "Metrics"
 category: "Mendix Runtime"
-tags: ["studio pro"]
+tags: ["studio pro", "metrics", "micrometer"]
 ---
 
 ## 1 Introduction

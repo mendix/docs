@@ -49,12 +49,10 @@ First, download the *SendEmailModule.mpk* file for the [Email Service](https://m
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4. Open the **Project Explorer** to view the SendEmailModule module.
 
-The *SendEmailModule.mpk* package available in the Marketplace can be imported into Mendix Studio Pro. Once imported, the app service is visible in **App Explorer** and in the **Toolbox** pane of a microflow.
-
 ## 3 Obtaining a userName & secretKey {#obtain}
 
 Email-service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses email-service, you need to provide a valid combination of **userName and secretKey** as an environment variable in the deployment setting.
- 
+
 ### 3.1  Subscribing to Get a userName & secretKey
 
 On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to go to the subscription order page and follow these steps:
@@ -62,7 +60,7 @@ On the [Email Service](https://marketplace.mendix.com/link/component/118393) pag
 1. Fill in technical contact information (first name, last name, email address), the subscription amount, billing account information, and other required information. 
 
  ![](attachments/email-service/technical_contact.png)
- 
+
 2. Upon successful order creation, if you are the app's [Technical Contact](/developerportal/collaborate/app-roles#technical-contact), you will receive an order confirmation email.
 3. Click the link in the email to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
 4. In the list of your organization's subscriptions, click the **Email Service** subscription link to open the subscription details page.

@@ -2,7 +2,7 @@
 title: "Runtime Customization"
 category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
-tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
+tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Metrics", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
@@ -221,7 +221,16 @@ The settings below influence the behavior of the Mendix web client.
 | **com.mendix.webui.StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.mendix.webui.CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 10 Proxy Settings
+## 10 Metrics Settings
+
+The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [here](metrics) for more information and the specification of the settings format. 
+
+| Name | Description | Default Value |
+| --- | --- | --- |
+| **Metrics.Registries** | Registries to send metrics to |   |
+| **Metrics.ApplicationTags** | Common tags used for every meter |   |
+
+## 11 Proxy Settings
 
 The settings below allow you to use a proxy. 
 

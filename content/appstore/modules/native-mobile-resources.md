@@ -31,7 +31,7 @@ For excellent deep-dive demonstrations of how to use these native mobile widgets
 />
 
 {{% alert type="info" %}}
-Native Mobile Resources releases v3.1.3 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the project directory. Versions below v3.1.3 included a constant in the module indicating version.
+Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the project directory. Versions v3.1.3 and below included a constant in the module indicating version.
 {{% /alert %}}
 
 ## 2 Native Widgets

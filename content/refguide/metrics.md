@@ -10,13 +10,13 @@ Mendix supports reporting metrics through [Micrometer](https://micrometer.io/doc
 
 The Metrics can be configured and used with:
 
-* **Metrics registries configuration:** To configure the metrics supported by Mendix
-* **Application tags:** To include tags in all the metrics in application level
-* **Microflow activities:** Microflow activities to handle metrics in Studio (Pro)
-* **Java API:** Java API to handle metrics via Java action
-* **Logging:** LogNode for logging metrics
+* [Metrics registries configuration](#registries-configuration): To configure the metrics supported by Mendix
+* [Application tags](#application-tags): To include tags in all the metrics in application level
+* [Microflow activities](#microflow-activities): Activities to handle metrics in microflows
+* [Java API](#java-api): Java API to handle metrics via Java action
+* [Logging](#logging): LogNode for logging metrics
 
-## 2 Metrics registries configuration
+## 2 Metrics registries configuration {#registries-configuration}
 
 Micrometer can send metrics to multiple registries. To configure micrometer to a specific registry, below is the syntax to be configured in `runtime settings` with configuration key as `Metrics.Registries`. The setting should be in JSON format.
 
@@ -46,13 +46,12 @@ Type of the registry to use. Currently supported types are : `prometheus`, `jmx`
 
 ### settings (conditional mandatory)
 
-Settings for the specific registry. Each registry has different settings depending upon the type. Depending upon the default type of the settings in metrics, we can pass the settings or leave it to the default (If possible). Supported settings for each type are,
+Settings for the specific registry. Each registry has different settings depending upon the type. Depending upon the default type of the settings in metrics, we can pass the settings or leave it to the default (if possible). Supported settings for each type are as following.
 
 #### [Prometheus](https://prometheus.io/docs/introduction/overview/)
 
-  Multiple Prometheus registration is **NOT supported**. When the Prometheus registry is set, it can be accessed through `/prometheus` context path over admin endpoint.
+  Multiple Prometheus registrations is **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
-  `enabled`: creates the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
   `step`: The step size or reporting frequency to use.
 
 ##### Example 1
@@ -75,7 +74,6 @@ Settings for the specific registry. Each registry has different settings dependi
     {
       "type": "prometheus",
       "settings": {
-        "enabled": false,
         "step": "P3Y6M4DT12H30M5S"
       }
     }
@@ -84,7 +82,6 @@ Settings for the specific registry. Each registry has different settings dependi
 
 #### [Jmx](https://www.oracle.com/java/technologies/javase/javamanagement.html)
 
-  `enabled`: creates the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
   `step`: The step size or reporting frequency to use.
   `domain`: Jmx domain to publish the metrics.
 
@@ -123,6 +120,7 @@ Settings for the specific registry. Each registry has different settings dependi
   `userName`: userName for authentication.
   `password`: password for authentication.
   `step`: The step size or reporting frequency to use.
+  `enabled`: enables the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
 
 ##### Example 1
 
@@ -161,7 +159,8 @@ Settings for the specific registry. Each registry has different settings dependi
   `host`: Host name of the StatsD agent.
   `port`: Port of the StatsD agent.
   `step`: The step size or reporting frequency to use.
-  `protocol`: The protocol of the connection
+  `protocol`: The protocol of the connection.
+  `enabled`: enables the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
 
 ##### Example 1
 
@@ -195,7 +194,7 @@ Settings for the specific registry. Each registry has different settings dependi
 
 #### All settings details
 
-More Information about all the settings,
+More information about all the settings,
 
 | Setting      | DataType       | Mandatory | Type           | Description                                   | Default Value                      | Examples                                                                                                 |
 | ------------ | -------------- | ----------| -------------- | --------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------|
@@ -205,14 +204,14 @@ More Information about all the settings,
 | `userName`   | _String_       | Yes       | influx         | Authenticate requests with this user          | -                                  | -                                                                                                        |
 | `protocol`   | _String_       | No        | influx         | Protocol of the statsd connection             | UDP                                | TCP, UDP                                                                                                 |
 | `domain`     | _String_       | No        | jmx            | Jmx domain to publish the metrics             | metrics                            | "Mendix", "Employee"                                                                                     |
-| `enabled`    | _Boolean_      | No        | prometheus/jmx | Enables/Disables the meter                    | true                               | true, false                                                                                              |
+| `enabled`    | _Boolean_      | No        | influx/statsd  | Enables/Disables the meter                    | true                               | true, false                                                                                              |
 | `flavor`     | _StatsdFlavor_ | No        | statsd         | The variant of the StatsD protocol            | DATADOG                            | ETSY, TELEGRAF, SYSDIG                                                                                   |
 | `host`       | _String_       | No        | statsd         | The host name of the StatsD agent             | localhost                          | -                                                                                                        |
 | `port`       | _Int_          | No        | statsd         | The port of the StatsD agent                  | 8125                               | -                                                                                                        |
 | `step`       | _Duration_     | No        | all            | The step size (reporting frequency) to use    | 1m                                 | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |                                                                 |
-| `filters`    | _Json_         | No        | all            | Custom setting from Mendix to filter metrics  | -                                  | (Refer below)                                                                                            |
+| `filters`    | _Json_         | No        | all            | Custom setting from Mendix to filter metrics  | -                                  | [See below](#filters)                                                                                    |
 
-### filters (optional)
+### filters (optional) {#filters}
 
 Filters helps in filtering metrics based on given criterias. Below is the syntax,
 
@@ -306,7 +305,7 @@ The above filter discards metrics which starts with **"Unnamed.", "Invalid.", "I
     ]
     ```
 
-## 3 Application tags
+## 3 Application tags {#application-tags}
 
 Common tags which should be reported by every metric can be specified using the `Metrics.ApplicationTags` setting. This setting should be in JSON format.
 
@@ -319,10 +318,10 @@ Common tags which should be reported by every metric can be specified using the 
 }
 ```
 
-## 4 Microflow activities
+## 4 Microflow activities {#microflow-activities}
 See the description of these activities [here](metrics-activities).
 
-## 5 Java API
+## 5 Java API {#java-api}
 
 Micrometer metrics can be accessed through Java APIs as well inside mendix. This can be achieved by setting `com.mendix.metrics.Type`. The setting is default to `micrometer` though.
 
@@ -357,7 +356,7 @@ Below are deprecated usages which will be removed in the future releases,
 1. `com.mendix.metrics.Type` setting `logger` and `statsd` are deprecated. You will also get a warning message to start using `micrometer` metric type.
 2. In Java API methods `counter()`, `timer()`, `gauges()` and `sets()` are deprecated in `Core.metrics()`
 
-## 6 Logging
+## 6 Logging {#logging}
 
 Metering related log messages are sent to the `Metering` log node. If a registry is enabled that will be reported with severity debug.
 

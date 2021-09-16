@@ -320,7 +320,7 @@ Common tags which should be reported by every metric can be specified using the 
 ```
 
 ## 4 Microflow activities
-See the description of these activities here and here.
+See the description of these activities [here](metrics-activities).
 
 ## 5 Java API
 
@@ -360,3 +360,7 @@ Below are deprecated usages which will be removed in the future releases,
 ## 6 Logging
 
 Metering related log messages are sent to the `Metering` log node. If a registry is enabled that will be reported with severity debug.
+
+## 7 Read More
+
+* [Meter Concepts](https://micrometer.io/docs/concepts)

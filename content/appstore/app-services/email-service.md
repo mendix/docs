@@ -99,7 +99,7 @@ The Email Service can be used in a microflow. The Email Service supports sending
 
 ![](attachments/email-service/email-text-microflow.png)
 
-Email Service comes bundled with predefined Domain entities **EmailAttr** and **SendEmailResponse**. You can create a list using **EmailAttr** entity to specify  **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in microflow](howto/logic-business-rules/working-with-lists-in-a-microflow).
+Email Service comes bundled with predefined Domain entities **EmailAttr** and **SendEmailResponse**. You can create a list using **EmailAttr** entity to specify  **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in microflow](/howto8/logic-business-rules/working-with-lists-in-a-microflow).
 
 ![](attachments/email-service/inbuilt-domain-entities.png)
 

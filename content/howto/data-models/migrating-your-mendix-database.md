@@ -105,9 +105,9 @@ Having configured the Mendix app, just run the application locally and it will a
 
 To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/9.5/static/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
 
-### 4.2 Uploading an Exported PostgreSQL Database to the Mendix Cloud Database
+### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use Developer Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in the Developer Portal: select your app and  click the **Backup** and use the **Upload Backup** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment. After upload is done, stop the application. Select the uploaded backup and click on Restore Backup to restore the new Backup. Start the application. 
+Use the Developer Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in the Developer Portal: select your app, click **Backup**, and use the **Upload Backup** button to upload your Database, using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment. After the upload is done, stop the application. Select the uploaded backup and click **Restore Backup** to restore the new Backup. Then start the application.
 
 ## 5 Exporting a Mendix Cloud Database
 

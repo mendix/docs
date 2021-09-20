@@ -15,6 +15,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### Septebmer 13th, 2021
+
+#### Improvements
+
+* Your [Mendix Profile](/developerportal/community-tools/mendix-profile) got a visual update.
+* We removed the possibility to add a GitHub account to your profile.
+
 ### September 6th, 2021
 
 #### New Feature

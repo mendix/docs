@@ -76,7 +76,19 @@ Curators are assigned by the a [Mendix Admin](#admin) and they perform the follo
 * Ensure the discoverability of their assets by the relevant users
 * Enrich the metadata of registered services and datasets – for example descriptions, tags, and contact information
 
-## 4 Guide Categories
+## 4 Data Hub Licences{#data-hub-licences}
+
+In Mendix Data Hub, we offer two different types of licences. Data Hub Free edition, and Data Hub Premium.
+
+### 4.1 Data Hub Free edition
+
+All Mendix users have access to the Data Hub Free edition. With the Data Hub Free edition, you can retrieve or edit a 1000 objects per application, per day for each runtime instance when deployed. When that limit is exceeded, you’ll get an error when your applications tries to retrieve more data. For more information check out [licencing limitation](notion://www.notion.so/refguide/consumed-odata-service-requirements#license-limitations).
+
+### 4.2 Data Hub Premium
+
+With Data Hub Premium licence, apps are not limited by any means and can retrieve or edit unlimited objects.
+
+## 5 Guide Categories
 
 The *Data Hub Guide* is divided into the following categories:
 

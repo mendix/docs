@@ -32,7 +32,7 @@ The email service has following limitations:
 
 *  The number of recipients (To + CC + BCC) cannot exceed 50
 *  The cumulative size of the attachment(s) cannot exceed 10 MB
-*  Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mime-types-appendix.html)
+*  Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types](#unsupported-file-types)
 
 ### 1.4 Prerequisites
 This app service can only be used with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185).
@@ -124,7 +124,7 @@ To configure the **Send email** activity, double-click the activity and use expr
 
 Clicking **Send Email** asynchronously sends out the message to intended recipients.
 
-### 4.2 Sending message along with attachment(s) to recipients
+### 4.2 Sending Messages Along with Attachment(s) to Recipients
 
 This is a representative microflow that sends email with file attachments.
 	
@@ -135,8 +135,12 @@ To send messages with attachments, create a domain model **System.FileDocument**
 {{% todo %}}  screenshot needed - domain model for attachment {{/% todo %}}
 
 {{ alert type = "info" }}
-The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.
+The size of the attached file(s) multiplied by the number of recipients (To + CC + BCC) is counted against the Data transfer utilization.
 {{ /alert }}
+
+### 4.3 Unsupported File Types for Attachments {#unsupported-file-types}
+
+The following executables, scripts, and macros, are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, *.xnk*
 
 ### 4.4 Usage Dashboard
 

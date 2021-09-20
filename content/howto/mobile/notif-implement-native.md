@@ -12,16 +12,20 @@ This how-to will help you model the required elements for allowing your native a
 
 To make setup easy the module has snippets included that will help you with the initial setup.
 
-1. Go to **Marketplace modules** > **PushNotifications** > **USE ME**.
-1. Expand the **Native** folder.
-1. Open the snippet **NativeHomepage**.
-1. Copy all the contents into your Native navigation’s homepage.
+1. Expand the **Marketplace modules** > **PushNotifications** > **USE ME** folder.
+1. Find and copy the **Native** folder.
+1. Paste the **Native** folder contents into your own app's navigation.
+1. In your app's navigation, expand the new **Native** folder.
+1. Copy the snippet **NativeHomepage_Snippet**.
+1. Paste the snippet into your Native navigation’s homepage.
 
 ## 2 App Events Widget
 
-This will bring in the `App events` widget which is pre-configured and part of a snippet as you should not need to change it. If you already had an `App events` widget on your homepage make sure to follow the steps below, otherwise you may skip those steps.
+Following the previous section's instructions will bring the **App events** widget into your app. This widget is already configured and part of a snippet, so you should not need to change it. 
 
-1. Open the `App events` widget
+If you already had an **App events** widget on your homepage, follow these steps:
+
+1. Open the **App events** widget
 1.  Select for `On load` (first tab: `Page load`) the Call a nanoflow and specify the nanoflow `OnPageLoad_RegisterPushNotifications` from the `PushNotifications` module.<br /> 
 	a. If you already have a nanoflow selected, make sure to make a `Call nanoflow` activity to the before mentioned nanoflow in that existing nanoflow.<br />
 1.  Select for `On resume` (first tab: `Page load`) the Call a nanoflow and specify the nanoflow `OnPageLoad_RegisterPushNotifications` from the `PushNotifications` module. <br />

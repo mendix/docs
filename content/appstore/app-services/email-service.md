@@ -83,7 +83,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
    
    The system generates **userName** and **secretKey** and also returns **MailFromDomain**, **SPF Record Settings**, and **MX Record Settings**. For more details on MX and SPF configuration, see the section [MX and SPF Records](#mx-and-spf-records).
    
-   ![](attachments/email-service/binding_key_generation.png)
+   ![](attachments/email-service/binding-key-generation.png)
 
 8. Copy and save the **userName** and **secretKey**. You will use them later in your app.
 
@@ -91,17 +91,19 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 ### 3.2 Configuring userName and secretKey for App Deployment
 
-1. In Studio Pro, expand **SendEmailModule**.
+1. In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **userName** and **secretKey** are defined as constants. 
 
-2. Go to the **Configurations** tab. You can see **userName** and **secretKey** are defined as constants. 
+3. Double-click **userName** and enter the **userName** that you got.
 
-3. Fill in the **userName** and the **secretKey** that you got.
-
-4. Click **OK** to save the settings.
+3. Click **OK** to save the settings.
 
    ![](attachments/email-service/configure-username-secretkey.png)
 
-5. After you finish building the app, click **Run** to deploy your app to the cloud.
+4. Double-click **secretKey** and enter the **secretKey** that you got.
+
+5. Click **OK** to save the settings.
+
+6. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 
 ## 4 Usage
@@ -118,7 +120,7 @@ You can create a list using the **EmailAttr** entity to specify **To**, **CC**, 
 Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. Incorrect email addresses will result in the email bouncing.
 {{ /alert }}
 
-This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action. 
+This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
 ![](attachments/email-service/email-text-microflow.png)
 
@@ -126,31 +128,33 @@ To configure the **Send email** activity, double-click the activity and use expr
 
 ![](attachments/email-service/send-email-dialog-box.png)
 
-* **From name** (required) – Defines the sender of the email
+* **Required Fields**
 
-* **To** (required) – Defines the recipients of the email
+  * **From name** – Defines the sender of the email
+  * **To**  – Defines the recipients of the email
+  * **Subject**  – Defines the subject of the email
 
-* **Subject** (required) – Defines the subject of the email
+* **Optional Fields**
 
-* **Cc** (optional) – Defines the recipients on the CC list of the email
-
-* **Bcc** (optional) – Defines the recipients on the BCC list of the email
-
-* **Content type** (optional) – Defines whether the email is a **Text** or **HTML** message
-
-* **Body** (optional) – Defines the body of the email
-
-  {{ alert type = "info" }}
-  If you want to send an HTML message, you can use **Mendix Template** and inject contents into the template to generate the HTML string and  then include the generated HTML string in the **Body**.
+  {{ alert type = "warning" }}
+  For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.
   {{ /alert}} 
 
-* **Attachment** (optional) – Defines the attachment to the email
+  * **Cc** – Defines the recipients on the CC list of the email
 
-To avoid "missing value" error, you ought to choose "empty" in the dropdown list against a field. e.g. You dont' want have any email address in the BCC field, then you have to choose "empty" from the dropdown list.
+  * **Bcc** – Defines the recipients on the BCC list of the email
 
-![](attachments/email-service/avoid-missing-value-error.png)
+  * **Content type** – Defines whether the email is a **Text** or **HTML** message
 
-Triggering a microflow which uses such configured **Send email** activity, will asynchronously sends out the message to intended recipients.
+  * **Body** – Defines the body of the email
+
+    {{ alert type = "info" }}
+    If you want to send an HTML message, you can use **Mendix Template** and inject contents into the template to generate the HTML string and  then include the generated HTML string in the **Body**.
+    {{ /alert}} 
+    
+  * **Attachment** (optional) – Defines the attachment to the email
+
+After the **Send Email** activity is configured, once a microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
 ### 4.2 Sending message along with attachment(s) to recipients
 
@@ -160,7 +164,7 @@ This is a representative microflow that sends email with file attachments.
 	
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachment with this email.
 
-![](attachments/email-service/system-filedocument-model.png
+![](attachments/email-service/system-filedocument-model.png)
 
 {{ alert type = "info" }}
 The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.

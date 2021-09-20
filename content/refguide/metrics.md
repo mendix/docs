@@ -154,7 +154,7 @@ Settings for the specific registry. Each registry has different settings dependi
 
 #### [StatsD](https://www.datadoghq.com/dg/monitor/ts/statsd/)
 
-  `flavour`: Specifies the variant of the StatsD protocol to use.
+  `flavor`: Specifies the variant of the StatsD protocol to use.
   `host`: Host name of the StatsD agent.
   `port`: Port of the StatsD agent.
   `step`: The step size or reporting frequency to use.

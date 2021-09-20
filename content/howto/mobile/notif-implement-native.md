@@ -46,9 +46,9 @@ To ensure push notification integration executes properly on your native app you
 1. Open your app's **Navigation**.
 1. Click the **Native mobile (tablet & phone)** navigation tab.
 1. Click the **Synchronization configuration** button.
-1. Add `DeviceRegistration` and `NativeNotification` entities from the `PushNotifications` module
-1. Set the `Download` column for those two new entities to synchronize to `All Objects`
+1. If it is not already added, add the **DeviceRegistration** entity from the **PushNotifications** module.
+1. From the **Download** dropdown menu, select **All Objects** for that entity and click **OK**.
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-Now that you have everything setup it is time to deploy your native app. Click here for instructions on enabling push notifications when building a native app.
+Now that you have everything set up it is time to deploy your native app. Click here for instructions on enabling push notifications when building a native app. [ADD LINK]()

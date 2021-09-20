@@ -39,7 +39,28 @@ This app service can only be used with Studio Pro 8 versions starting with [8.18
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Email Service module into your application.
+1. Go to the Marketplace and download the *SendEmailModule.mpk* file for the [Email Service](https://marketplace.mendix.com/link/component/118393).
+
+2. To add the email service to your app in Mendix Studio Pro, follow these steps:
+
+   1. In the **Project Explorer**, right-click the project, click **Import module package**, and then select the *SendEmailModule.mpk*. 
+   
+      ![pop-up-menu-in-project-explorer](attachments/email-service/import-module-in-project-explorer.png)
+   
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
+	
+      {{% alert type="warning" %}}
+      If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
+      {{% /alert %}}
+   
+   2. In the **Import Module** dialog box, click **Import**. 
+   
+   3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+   
+   4. Open the **Project Explorer** to view the **SendEmailModule** module.
+
+Once imported, the app service is visible in **Project Explorer** and in the **Toolbox** pane of a microflow.
+
 
 ## 3 Configuration
 

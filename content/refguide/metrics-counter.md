@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Counter** activity can be used to increment a metrics counter with a specific value.
 
-![Counter](attachments/metrics-activities/counter.jpg)
+![Counter](attachments/metrics-activities/counter.png)
 
 ## 2 Properties
 
 An example of counter properties is represented in the image below:
 
-![Counter Properties](attachments/metrics-activities/counter-properties.jpg)
+![Counter Properties](attachments/metrics-activities/counter-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

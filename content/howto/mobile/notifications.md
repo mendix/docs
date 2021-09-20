@@ -10,12 +10,13 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 These guides will teach you to configure both push notifications (also known as remote notifications) and local notifications for your Mendix apps:
 
-* [Add Module Dependencies](add-module-depends) — 1 sentence doc description.
-* [Implement the Push Notifications Module](notif-implement-module) — 1 sentence doc description.
-* [Configure Push Notifications](notif-config-push) — 1 sentence doc description.
-* [Native Push Notification Implementation](notif-implement-native) — 1 sentence doc description.
-* [Build a Native Mobile App with Push Notifications](notif-build-native) — 1 sentence doc description.
-* [Send Your First Test Push Notification](notif-send-test) — 1 sentence doc description.
+* [Add Module Dependencies](add-module-depends) — Install the required dependency modules so your app can use push notifications.
+* [Implement the Push Notifications Module](notif-implement-module) — Learn to implement the Push Notifications Connector module.
+* [Set Up the Google Firebase Cloud Messaging Server](firebase-setup) — To send push notifications, you must set up a Firebase account and configure the service in your app..
+* [Configure Push Notifications](notif-config-push) — Learn to configure push notifications on the runtime.
+* [Native Push Notification Implementation](notif-implement-native) — Implement push notifications for a native app.
+* [Build a Native Mobile App with Push Notifications](notif-build-native) — Build a native app with push notifications enabled.
+* [Send Your First Test Push Notification](notif-send-test) — Send a test notification to confirm your app is working properly.
 
 For information on local notifications specifically, see [DOC NAME HERE](DOCNOTMADEYET).
 

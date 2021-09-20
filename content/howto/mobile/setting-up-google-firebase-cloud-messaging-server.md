@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
 parent: "notifications"
-menu_order: 97
+menu_order: 55
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
 

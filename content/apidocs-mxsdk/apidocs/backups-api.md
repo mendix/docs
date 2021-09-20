@@ -83,6 +83,7 @@ An object with the following key-value pairs:
 	"snapshots": [
 		{
 			"snapshot_id": "5deda9e2-f882-4925-830c-45e73c57366e",
+			"model_version": "8.12.7.11687",
 			"comment": "Uploaded snapshot",
 			"expires_at": "2021-08-05T18:38:41.000Z",
 			"state": "completed",

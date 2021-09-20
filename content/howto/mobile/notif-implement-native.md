@@ -43,9 +43,9 @@ By default this widget is configured with an **Example** action. It uses a non-p
 
 To ensure push notification integration executes properly on your native app you must adjust the objects that are synchronized to your mobile device:
 
-1. Open up your app's navigation.
-1. Go to your Native mobile navigation profile
-1. Click Synchronization configuration
+1. Open your app's **Navigation**.
+1. Click the **Native mobile (tablet & phone)** navigation tab.
+1. Click the **Synchronization configuration** button.
 1. Add `DeviceRegistration` and `NativeNotification` entities from the `PushNotifications` module
 1. Set the `Download` column for those two new entities to synchronize to `All Objects`
 

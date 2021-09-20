@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Gauge** activity can be used to set a gauge to a specific value.
 
-![Gauge](attachments/metrics-activities/gauge.jpg)
+![Gauge](attachments/metrics-activities/gauge.png)
 
 ## 2 Properties
 
 An example of gauge properties is represented in the image below:
 
-![Gauge Properties](attachments/metrics-activities/gauge-properties.jpg)
+![Gauge Properties](attachments/metrics-activities/gauge-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

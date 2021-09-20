@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Increment Counter** activity can be used to increment a metrics counter with one.
 
-![Increment Counter](attachments/metrics-activities/increment-counter.jpg)
+![Increment Counter](attachments/metrics-activities/increment-counter.png)
 
 ## 2 Properties
 
 An example of increment counter properties is represented in the image below:
 
-![Increment Counter Properties](attachments/metrics-activities/increment-counter-properties.jpg)
+![Increment Counter Properties](attachments/metrics-activities/increment-counter-properties.png)
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

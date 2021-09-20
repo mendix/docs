@@ -106,7 +106,6 @@ Settings for the specific registry. Each registry has different settings dependi
     {
       "type": "jmx",
       "settings": {
-        "enabled": false,
         "step": "P3Y6M4DT12H30M5S"
       }
     }
@@ -213,7 +212,7 @@ More information about all the settings,
 
 ### filters (optional) {#filters}
 
-Filters helps in filtering metrics based on given criterias. Below is the syntax,
+Filters helps in filtering metrics based on given criteria. Below is the syntax,
 
 ```json
 "filters" : [

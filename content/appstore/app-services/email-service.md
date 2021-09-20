@@ -28,14 +28,12 @@ This app service enables doing the following:
 * Send attachment(s) with a message
 
 ### 1.3 Limitations
-The email service has following limitations:
-
 *  The number of recipients (To + CC + BCC) cannot exceed 50
 *  The cumulative size of the attachment(s) cannot exceed 10 MB
 *  Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types](#unsupported-file-types)
 
 ### 1.4 Prerequisites
-This app service can only be used with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185).
+This app service can only be used with Studio Pro 9 versions starting with [9.4](/releasenotes/studio-pro/9.4).
 
 ## 2 Installation
 
@@ -43,11 +41,11 @@ This app service can only be used with Studio Pro 8 versions starting with [8.18
 
 2. To add the email service to your app in Mendix Studio Pro, follow these steps:
 
-   1. In the **Project Explorer**, right-click the project, click **Import module package**, and then select the *SendEmailModule.mpk*. 
+   1. In the **App Explorer**, right-click the app, click **Import module package**, and then select the *SendEmailModule.mpk*. 
    
-      ![pop-up-menu-in-project-explorer](attachments/email-service/import-module-in-project-explorer.png)
+      ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
    
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 	
       {{% alert type="warning" %}}
       If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
@@ -57,9 +55,9 @@ This app service can only be used with Studio Pro 8 versions starting with [8.18
    
    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
    
-   4. Open the **Project Explorer** to view the **SendEmailModule** module.
+   4. Open the **App Explorer** to view the **SendEmailModule** module.
 
-Once imported, the app service is visible in **Project Explorer** and in the **Toolbox** pane of a microflow.
+Once imported, the app service is visible in **App Explorer** and in the **Toolbox** pane of a microflow.
 
 
 ## 3 Configuration
@@ -161,7 +159,7 @@ The size of the attached file(s) multiplied by the number of recipients (To + CC
 
 ### 4.3 Unsupported File Types for Attachments {#unsupported-file-types}
 
-The following executables, scripts, and macros, are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, *.xnk*
+The following executables, scripts, and macros, are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk.
 
 ### 4.4 Usage Dashboard
 

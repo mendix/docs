@@ -181,7 +181,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 10. Select your access restriction profile as the **New Restriction Profile**, and **Save** it.
 
-### 4.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
+### 4.2 Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
 
 This second scenario is an extended version of the first scenario.
 

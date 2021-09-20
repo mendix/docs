@@ -69,6 +69,12 @@ By default, apps are deployed to the Mendix Cloud **v4**. Features which are cov
 
 In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
+### 1.4 Database
+
+Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
+
+If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
+
 ## 2 Deploying an App to the Mendix Cloud
 
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.
@@ -202,12 +208,15 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
 | XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 |Premium|||||||
 | S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
 | XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 | XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 
  The cloud resource packs below are still being used but are not available to new customers.
 

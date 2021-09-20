@@ -23,6 +23,8 @@ title: "Enter the title of the document"
 
 ### Fixes
 
+### Deprecations
+
 ### Limitations
 
 ### Breaking Changes

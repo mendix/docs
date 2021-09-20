@@ -40,6 +40,12 @@ The following examples demonstrate which output you get depending on input param
 * `parseDecimal('noDecimal', empty)` returns `empty`
 * `parseDecimal('3,241.98', '#,###.##')` returns `3241.98`
 
+Given a variable that is empty:
+
+* `parseDecimal($StingVariable)` will throw an error
+* `parseDecimal($StingVariable, empty)` returns an empty; the resulting variable may throw an error when used as a decimal (like in the expression `'$var > 0'`) 
+* `parseDecimal($StingVariable, 0)` returns `0`; the resulting variable will always be a decimal and never throw an exception
+
 ## 3 formatDecimal
 
 Converts a decimal value to a string value according to a specified format.
@@ -65,6 +71,10 @@ In nanoflows, this function only takes a single parameter described below:
 | Value            | Type    |
 | ---------------- | ------- |
 | Value to convert | Decimal |
+
+{{% alert type="warning" %}}
+It is not possible to use `formatDecimal()` with the optional format string (for example, `'#.00'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the system locale to specify the decimal format.
+{{% /alert %}}
 
 ### 3.2 Output
 

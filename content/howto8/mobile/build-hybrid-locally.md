@@ -29,6 +29,18 @@ To prepare your app for building, follow these instructions:
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
 
+#### 2.1.1 Customizing a DTAP Endpoint	
+
+Optionally, you can set various environments in the **config/environments.json** file. This can help if you are trying to make your build from your own specific test or acceptance environment. 
+
+To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
+
+```
+$ npm run package -- --env.target=test  # target the test endpoint for ARM architecture
+```
+
+Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
+
 ### 2.2 Building Your Prepared Project
 
 There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
@@ -140,9 +152,9 @@ The command to build your app locally for release is `npm run build -- android -
 
 	```
 	set PATH=%PATH%;C:\path-to-gradle-distribution
-
+      
 	set JAVA_HOME=C:\path-to-jdk-1.8-directory
-
+      
 	npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
 	```
 

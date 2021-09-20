@@ -25,28 +25,29 @@ Following the previous section's instructions will bring the **App events** widg
 
 If you already had an **App events** widget on your homepage, follow these steps:
 
-1. Open the **App events** widget
-1.  Select for `On load` (first tab: `Page load`) the Call a nanoflow and specify the nanoflow `OnPageLoad_RegisterPushNotifications` from the `PushNotifications` module.<br /> 
-	a. If you already have a nanoflow selected, make sure to make a `Call nanoflow` activity to the before mentioned nanoflow in that existing nanoflow.<br />
-1.  Select for `On resume` (first tab: `Page load`) the Call a nanoflow and specify the nanoflow `OnPageLoad_RegisterPushNotifications` from the `PushNotifications` module. <br />
-    a. If you already have a nanoflow selected make sure to make a `Call nanoflow` activity to the before mentioned nanoflow in that existing nanoflow.
+1. Open the **App events** widget.
+1.  In  **Page load**, select **Call a nanoflow** from the **On load**  dropdown menu. 
+2.  For **Nanoflow**, click **Select** and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module.<br /> 
+	a. If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow.<br />
+1. In **App resume**, select **Call a nanoflow** from the **On Resume** dropdown menu. 
+1. For **Nanoflow**, click and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module. <br />
+    a. If you already have a nanoflow selected, make a **Call nanoflow** activity to the  nanoflow in that existing nanoflow. <br /> 
 
 ## 3 Notifications Widget
 
-The snippet also adds the `Notifications` widget which allows for interacting with the notifications received by the app.
+The snippet also adds the **Notifications** widget which lets users interact with the notifications the app recieves.
 
-By default this widget is configured with an `Example` action and to use an NPE that stores the data received from the notifications to be used in the Nanoflow called upon receiving/opening the notification. Use this example to make your own actions.
+By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability#non-persistable)) that stores data received from the notifications, and then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
 ## 4 Customize Offline Synchronization
 
-To allow proper execution of the push notification integration on your native app. You will have to adjust the objects that are synchronized to your mobile device.
+To ensure push notification integration executes properly on your native app you must adjust the objects that are synchronized to your mobile device:
 
-
-1. Open up your project navigation.
-2. Go to your Native mobile navigation profile
-3. Click Synchronization configuration
-4. Add `DeviceRegistration` and `NativeNotification` entities from the `PushNotifications` module
-5. Set the `Download` column for those two new entities to synchronize to `All Objects`
+1. Open up your app's navigation.
+1. Go to your Native mobile navigation profile
+1. Click Synchronization configuration
+1. Add `DeviceRegistration` and `NativeNotification` entities from the `PushNotifications` module
+1. Set the `Download` column for those two new entities to synchronize to `All Objects`
 
 This will ensure that the correct objects are synchronized to your native apps.
 

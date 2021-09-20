@@ -95,7 +95,7 @@ If you already have the database, for example a test database in the cloud, you 
 
 ## 4 Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
-The Mendix cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
+The Mendix Cloud V4 environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
 The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
@@ -107,7 +107,15 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in the Developer Portal: select your app, click **Backup**, and use the **Upload Backup** button to upload your Database, using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment. After the upload is done, stop the application. Select the uploaded backup and click **Restore Backup** to restore the new Backup. Then start the application.
+Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud V4. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+
+1. Select your app.
+2. Click **Backups** in the left-hand menu
+3. Click **Upload Backup** to upload your Database.
+4. Select the exported database file from your local file system using the file chooser
+5. After the upload is done, stop the application.
+6. Select the uploaded backup and click **Restore Backup** to restore the new Backup.
+7. Finally, start the application.
 
 ## 5 Exporting a Mendix Cloud Database
 

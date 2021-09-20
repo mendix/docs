@@ -232,11 +232,11 @@ This policy is set up as the default in the MindSphere starter and example apps 
 
 ## 6 MindSphere Icons {#atlasui}
 
-The MindSphere Theme Pack includes two ways of including MindSphere icons in your app.
+The Siemens MindSphere Web Content includes two ways of including MindSphere icons in your app.
 
 ### 6.1 MindSphere Icons as SVGs
 
-You can select MindSphere icons from the MindSphere Theme Pack to be displayed as SVGs in your application.
+You can select MindSphere icons from the Siemens MindSphere Web Content to be displayed as SVGs in your application.
 
 1. Open the properties of a widget which can display an icon (for example a button).
 2. Click **Select...** next to *Icon*.
@@ -251,11 +251,11 @@ You cannot change the color of these icons from within Mendix.
 
 ### 6.2 MindSphere Icons as an Icon Font
 
-The MindSphere Theme Pack provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
+The Siemens MindSphere Web Content provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
 
 To do this:
 
-1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
+1. Find the icon you wish to use. These have the same names as the icons in the Siemens MindSphere Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
 
     ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
 

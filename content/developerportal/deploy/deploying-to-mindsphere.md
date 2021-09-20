@@ -93,9 +93,9 @@ If you have an existing app which was not based on the MindSphere app template, 
 
   This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
-* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Theme Pack](https://marketplace.mendix.com/link/component/108803/)
+* Siemens MindSphere Web Content (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Web Content](https://marketplace.mendix.com/link/component/108803/)
 
-  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
+  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens MindSphere Web Content](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
 ## 4 Configuring the Modules{#configure-modules}
 

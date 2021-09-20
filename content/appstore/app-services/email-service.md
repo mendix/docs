@@ -176,13 +176,14 @@ The following executables, scripts, and macros, are not supported as attachments
 
 ### 4.4 Usage Dashboard
 
-Usage Dashboard will be providing real-time statistics about your subscription's usage. For email-service, the usage is basically number of emails sent and data transfer usage. You can navigate to the Usage Dashboard by first logging into the Marketplace. Once on the Marketplace page, it will show you the list of your organization's subscriptions. The subscriptions will be a clickable link. Click the **Email Service** subscription link to open a new page. This page will have multiple tabs; the subscription Overview tab will show the usage dahboard for the given subscription. It will have 3 options to view Usage viz "Current Month", "Last Month", and "Till date".
+Usage Dashboard shows you real-time statistics about the usage of your subscription. To see the number of emails sent and data transfer usage for Email Service, follow these steps:
 
-* "Current Month" - Will show statistics for current month usage.
-* "Last Month" - will show usage statistics for last month.
-* "Till date" - will show usage statistics from the start of the subscription date to Today.
-
-Navigation - Marketplace >> Subscription >> Details Page >> Overview tab >> Usage Dashboard.
+1. Log into the Marketplace. You can see an overview of all the subscriptions of your organization.
+3. Click **Email Service**.
+4. Go to the **Overview** tab. It shows the following statistics:
+  * **Current Month** – Shows statistics for current month usage
+  * **Last Month** – Shows usage statistics for last month
+  * **Till date** – Shows usage statistics from the start of the subscription date to today
 
 ## 5 Mail From Domain Setting
 

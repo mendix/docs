@@ -43,7 +43,7 @@ The name of the counter to increment its value.
 
 ### 3.2 Value
 
-The value used to increment the counter's value. Values are specified with [expressions](expressions) and should be of type Integer/Long.
+The value used to increment the counter's value. Values are specified with [expressions](expressions) and should be of type Integer/Long. It's only possible to increment the counter, so values cannot be negative.
 
 ### 3.3 Tags
 

@@ -82,7 +82,7 @@ In Mendix Data Hub, we offer two different types of licences. Data Hub Free edit
 
 ### 4.1 Data Hub Free edition
 
-All Mendix users have access to the Data Hub Free edition. With the Data Hub Free edition, you can retrieve or edit a 1000 objects per application, per day for each runtime instance when deployed. When that limit is exceeded, you’ll get an error when your applications tries to retrieve more data. For more information check out [licencing limitation](notion://www.notion.so/refguide/consumed-odata-service-requirements#license-limitations).
+All Mendix users have access to the Data Hub Free edition. With the Data Hub Free edition, you can retrieve or edit a 1000 objects per application, per day for each runtime instance when deployed. When that limit is exceeded, you’ll get an error when your applications tries to retrieve more data. For more information check out [licencing limitation](/refguide/consumed-odata-service-requirements#license-limitations).
 
 ### 4.2 Data Hub Premium
 

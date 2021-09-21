@@ -17,7 +17,7 @@ The app service works with [Mendix SSO](/appstore/modules/mendix-sso), so no add
 ### 1.1 Typical Use Cases
 
 * The app service supports sending HTML and plain-text messages
-* You can add recipients in the "To", "CC" and, "BCC" lists to send emails to multiple recipients
+* You can add recipients in the "To", "CC", and "BCC" lists to send emails to multiple recipients
 * You can use this app service to send emails with or without attachments
 
 ### 1.2 Features
@@ -29,7 +29,7 @@ This app service enables doing the following:
 
 ### 1.3 Limitations
 
-*  The number of recipients (To + CC + BCC) cannot exceed 50
+*  The total number of recipients in the "To", "CC", and "BCC" lists cannot exceed 50
 *  The cumulative size of the attachment(s) cannot exceed 10 MB
 *  Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types](#unsupported-file-types)
 
@@ -44,19 +44,19 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 2. To add the email service to your app in Mendix Studio Pro, follow these steps:
 
    1. In the **App Explorer**, right-click the app, click **Import module package**, and then select the *SendEmailModule.mpk*. 
-   
-      ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
-   
+
+      ![pop-up-menu-in-app-explorer](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/import-module-in-app-explorer.png)
+
       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
-	
+
       {{% alert type="warning" %}}
       If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
       {{% /alert %}}
-   
+
    2. In the **Import Module** dialog box, click **Import**. 
-   
+
    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-   
+
    4. Open the **App Explorer** to view the **SendEmailModule** module.
 
 Once imported, the app service is visible in **App Explorer** and in the **Toolbox** pane of a microflow.
@@ -65,7 +65,7 @@ Once imported, the app service is visible in **App Explorer** and in the **Toolb
 
 Email Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Email Service, you need to get a valid combination of **userName** and **secretKey** and configure them as an environment variable in the deployment setting.
 
-### 3.1  Subscribing to Get a userName and secretKey {#obtain}
+### 3.1  Subscribing to Get userName and secretKey {#obtain}
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to go to the subscription order page.
 
@@ -80,10 +80,10 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
 
 7. Click **Create Keys** to generate the **userName** and **secretKey**. 
-   
+
    The system generates **userName** and **secretKey** and also returns **MailFromDomain**, **SPF Record Settings**, and **MX Record Settings**. For more details on MX and SPF configuration, see the section [MX and SPF Records](#mx-and-spf-records).
-   
-   ![](attachments/email-service/binding-key-generation.png)
+
+   ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/binding-key-generation.png)
 
 8. Copy and save the **userName** and **secretKey**. You will use them later in your app.
 
@@ -93,11 +93,11 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 1. In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **userName** and **secretKey** are defined as constants. 
 
-3. Double-click **userName** and enter the **userName** that you got.
+2. Double-click **userName** and enter the **userName** that you got.
 
 3. Click **OK** to save the settings.
 
-   ![](attachments/email-service/configure-username-secretkey.png)
+   ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/configure-username-secretkey.png)
 
 4. Double-click **secretKey** and enter the **secretKey** that you got.
 
@@ -112,7 +112,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 You can use the Email Service in a microflow to send HTML or plain text messages. Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
-![](attachments/email-service/inbuilt-domain-entities.png)
+![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/inbuilt-domain-entities.png)
 
 You can create a list using the **EmailAttr** entity to specify **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
@@ -122,11 +122,11 @@ Every email address to whom this message is sent is counted as utilization towar
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
-![](attachments/email-service/email-text-microflow.png)
+![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/email-text-microflow.png)
 
 To configure the **Send email** activity, double-click the activity and use expression syntax to specify the following settings in the **Send Email** dialog box:
 
-![](attachments/email-service/send-email-dialog-box.png)
+![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
 
@@ -151,20 +151,20 @@ To configure the **Send email** activity, double-click the activity and use expr
     {{ alert type = "info" }}
     If you want to send an HTML message, you can use **Mendix Template** and inject contents into the template to generate the HTML string and  then include the generated HTML string in the **Body**.
     {{ /alert}} 
-    
+
   * **Attachment** (optional) – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once a microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
-### 4.2 Sending message along with attachment(s) to recipients
+### 4.2 Sending Message Along with attachment(s) to Recipients
 
-This is a representative microflow that sends email with file attachments.
+This is a representative microflow that sends emails with file attachments.
 	
-![](attachments/email-service/microflow.png)
+![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/microflow.png)
 	
-The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachment with this email.
+The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
-![](attachments/email-service/system-filedocument-model.png)
+![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/system-filedocument-model.png)
 
 {{ alert type = "info" }}
 The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.
@@ -172,18 +172,18 @@ The size of the attached file(s) multiplied by the total number of recipients in
 
 ### 4.3 Unsupported File Types for Attachments  {#unsupported-file-types}
 
-The following executables, scripts, and macros, are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk.
+The following executables, scripts, and macros are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk.
 
-### 4.4 Usage Dashboard
+### 4.4 Viewing Statistics Using the Usage Dashboard
 
-Usage Dashboard shows you real-time statistics about the usage of your subscription. To see the number of emails sent and data transfer usage for Email Service, follow these steps:
+**Usage** Dashboard shows the real-time statistics about the usage of the app service. Follow the following steps to see the number of emails sent and data transfer usage for Email Service:
 
-1. Log into the Marketplace. You can see an overview of all the subscriptions of your organization.
-3. Click **Email Service**.
-4. Go to the **Overview** tab. It shows the following statistics:
-  * **Current Month** – Shows statistics for current month usage
-  * **Last Month** – Shows usage statistics for last month
-  * **Till date** – Shows usage statistics from the start of the subscription date to today
+1. Log into the Marketplace.
+2. Go to **My Marketplace** and click **Subscription** on the left navigation menu. You can get an overview of all the subscriptions of your organization.
+3. Click **Email Service** to open the page to see the details. The **Overview** tab shows the following statistics:
+   * **Current Month** – Shows statistics for current month usage
+   * **Last Month** – Shows usage statistics for last month
+   * **Till date** – Shows usage statistics from the start of the subscription date to today
 
 ## 5 Mail From Domain Setting
 

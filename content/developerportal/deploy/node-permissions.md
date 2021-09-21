@@ -132,4 +132,4 @@ A cloud node has a single Technical Contact. They manage the cloud node and can 
 
 The Technical Contact can give the technical contact role to another team member. Click **Change to Technical Contact** under the user who should be the new Technical Contact. After this, the new user has the Technical Contact role, the old user does not.
 
-For full details of the role of the Technical Contact, see [Technical Contact](/developerportal/collaborate/app-roles#technical-contact).
+For full details on this role, see the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) section of *App Roles*.

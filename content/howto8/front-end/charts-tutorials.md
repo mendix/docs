@@ -1,6 +1,6 @@
 ---
 title: "Use the Charts Widgets"
-category: "Front-End"
+category: "Front End"
 menu_order: 20
 description: "These how-to's will guide you in using charts in Mendix apps."
 tags: ["build", "app", "studio", "studio pro", "charts", "extensibility"]

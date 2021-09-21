@@ -181,7 +181,7 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 
 For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
 
-## 5 Permissions
+## 5 Permissions {#permissions}
 
 Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member. Team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
 

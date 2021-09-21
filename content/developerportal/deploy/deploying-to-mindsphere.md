@@ -19,10 +19,6 @@ MindSphere is the cloud-based, open IoT operating system from Siemens that lets 
 
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on MindSphere.
 
-{{% alert type="info" %}}
-You can create Mendix apps which make MindSphere API calls, but which are deployed to a cloud outside MindSphere. However, you will then need to handle user credentials yourself.
-{{% /alert %}}
-
 {{% alert type="warning" %}}
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/partners/siemens/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
 {{% /alert %}}

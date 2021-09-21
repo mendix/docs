@@ -49,6 +49,12 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+
+You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
+
+{{% /alert %}}
+
 ## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
 
 To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from the Mendix Cloud.

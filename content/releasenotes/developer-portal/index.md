@@ -15,6 +15,50 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### Septebmer 13th, 2021
+
+#### Improvements
+
+* Your [Mendix Profile](/developerportal/community-tools/mendix-profile) got a visual update.
+* We removed the possibility to add a GitHub account to your profile.
+
+### September 6th, 2021
+
+#### New Feature
+
+* Mendix Admins can now configure their own [single sign-on](/developerportal/control-center/set-up-sso-byoidp) configuration from the [Security](/developerportal/control-center/#security) tab of Control Center. 
+
+### September 2nd, 2021
+
+#### Improvements
+
+* We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
+* We implemented [context deep links](/developerportal/collaborate/manage-deeplinks) to all main app pages on the Developer Portal so you can easily share references.
+* We increased the performance of opening the [My Apps page](/developerportal#my-apps)
+
+#### Fixes
+
+* We fixed a bug where the pop-up window with pending invitations was shown twice.
+* We also fixed a layout bug on the invitation pop-up window that we accidentally introduced during the last release.
+
+### August 26th, 2021
+
+#### Improvements
+
+* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/index#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+
+### August 19th, 2021
+
+#### Improvements
+
+* We implemented the first batch of endpoints for mobile, in preparation for something cool coming your way.
+* We improved the way the Developer Portal shares data across its several components.
+* We made small improvements to the look and feel of the Developer Portal.
+
+#### Fixes
+
+* We fixed an issue with the app's [Team](/developerportal/collaborate/team) page where [Mendix Admins](/developerportal/control-center/#company) could not add or remove team members.
+
 ### July 27th, 2021
 
 #### Improvements
@@ -32,11 +76,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * You can now assign team members to a [user story](/developerportal/collaborate/stories#story-details).
-* We moved the [old version of the Stories UI](/developerportal/collaborate/stories#old). You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
+* We moved the old version of the Stories UI. You can now access it via the [More](/developerportal/collaborate/stories#more) button on the **Stories** page.
 * We removed the **Team** read-only overview page and send you straight to the [Manage Team](/developerportal/collaborate/team#managing) page.
-* We moved the [API Keys](/developerportal/collaborate/api-key) page to the [General Settings](/developerportal/collaborate/general-settings) page.
+* We moved the **API Keys** page to the [General Settings](/developerportal/collaborate/general-settings#api-keys) page.
 * We implemented a new responsive search panel.
-* We will remove the [Burndown Chart](/developerportal/collaborate/development#burndown) and [Release Plan](/developerportal/collaborate/development#release-plan) tabs from the Developer Portal on August 31st, 2021.
+* We will remove the **Burndown Chart** and **Release Plan** tabs from the Developer Portal on August 31st, 2021.
 
 ### June 15th, 2021
 
@@ -97,7 +141,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.
 	* Under your avatar on the right side of the top bar, there is an option to switch off the new navigation, which will be available for a limited amount of time.
 * We improved the search experience and added a full page of search results that can be accessed by clicking **View Search Results Page** at the bottom of the search drop-down menu or by pressing <kbd>Enter</kbd> after typing a search query
-* We changed the [My Apps](/developerportal/apps-list) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
+* We changed the [My Apps](/developerportal#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
 * You asked and we listened: We added new label colors for labels in [Stories](/developerportal/collaborate/stories). There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
 	* We reshuffled the navigation items in the [App Buzz](/developerportal/collaborate/buzz#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
@@ -174,7 +218,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * It is now possible to add or remove labels in the [Story Details](/developerportal/collaborate/stories#story-details) page.
-* We added a link to your app's [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal/apps-list).
+* We added a link to your app's [environments](/developerportal/deploy/environments) in the app tile on [My Apps](/developerportal#my-apps).
 
 #### Fixes
 
@@ -194,18 +238,18 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/mendix-profile/).
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/developerportal/community-tools/mendix-profile).
 * You can no longer create new polls on the company or app [Buzz](/developerportal/collaborate/buzz) page. Existing polls can still be answered.
 
 #### Fixes
 
-* We fixed several minor issues with the [My Apps](/developerportal/apps-list) page.
+* We fixed several minor issues with the [My Apps](/developerportal#my-apps) page.
 
 ### January 15th, 2021
 
 #### Improvements
 
-* We redesigned the [My Apps](/developerportal/apps-list) page.
+* We redesigned the [My Apps](/developerportal#my-apps) page.
 * You will now see labels when you are editing a [story](/developerportal/collaborate/stories#story-actions) using the new **Stories** UI. We will enable the editing of story labels and label colors in a future release.
 
 #### Fixes
@@ -230,7 +274,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We changed the home page of the Developer Portal to [My Apps](/developerportal/apps-list).
+* We changed the home page of the Developer Portal to [My Apps](/developerportal#my-apps).
 
 ### November 4th, 2020
 
@@ -249,7 +293,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#label) with the new UI; this functionality will be released in the future.
+* We redesigned the [story details](/developerportal/collaborate/stories#story-details) page and made it available for Public Beta usage. You can use the new design when the new story UI is enabled. Please note that it is currently not possible to add or manage [labels](/developerportal/collaborate/stories#managing-labels) with the new UI; this functionality will be released in the future.
 * When you add a [task](/developerportal/collaborate/stories#adding-task) to a commit of your app model, we now show the revision in the revision overview of the story details. Clicking the task will bring you to the story details page to which the task belongs.
 * We simplified the **Company Settings** tab of the **Company** page by removing some barely used attributes.
 
@@ -311,10 +355,10 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The [old Stories UI](/developerportal/collaborate/stories#old) will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
+* The [new Stories UI](/developerportal/collaborate/stories) has been improved with various sections. The old Stories UI will be made unavailable soon. We encourage you to turn your tasks that are still available in the old Stories UI into new stories before the old UI is inaccessible.
 * We improved performance on story-related actions such as drag-and-drop and status changes on large apps with many deleted items.
 * We renamed the default **End-User** team role to [Guest](/developerportal/collaborate/app-roles#team-roles) to better distinguish team roles from app user roles.
-* We removed the list appearance of the [My Company's Apps](/developerportal/apps-list/#my-company-apps) page.
+* We removed the list appearance of the [My Company's Apps](/developerportal#my-company-apps) page.
 
 #### Fixes 
 
@@ -325,7 +369,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* When you [delete a story or task](/developerportal/collaborate/stories#deleting) on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
+* When you delete a story or task on the [Stories](/developerportal/collaborate/stories) page, it is now irreversibly removed from the system.
 * We removed the ability to revert story-related changes in an app's history.
 * We removed the ability to delete several stories at once on the **Stories** page.
 * We simplified story maintenance by preventing nested tasks.
@@ -335,7 +379,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Fixes
 
 * We fixed a bug where the calendar icon on date/time input fields was not displayed properly.
-* We fixed a bug where the star icon on your [favorite apps](/developerportal/apps-list) was not displayed properly.
+* We fixed a bug where the star icon on your [favorite apps](/developerportal#my-apps) was not displayed properly.
 
 ### May 22nd, 2020
 
@@ -353,7 +397,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We fixed an issue where [favorited apps](/developerportal/apps-list) still showed up in the favorites view on the [My Apps](/developerportal/apps-list/) page after being deleted.
+* We fixed an issue where [favorited apps](/developerportal#my-apps) still showed up in the favorites view on the [My Apps](/developerportal#my-apps) page after being deleted.
 * We made performance improvements to the **My Apps** page.
 * We fixed an issue where the description field did not expand properly when creating a new [story](/developerportal/collaborate/stories).
 
@@ -405,7 +449,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We introduced the ability to [favorite](/developerportal/apps-list) apps from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
+* We introduced the ability to [favorite](/developerportal#my-apps) apps from the **My Apps** page and to filter on favorite apps. This is helpful when you have a large number of Mendix apps.
 
 ### September 24th, 2019
 
@@ -419,7 +463,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Launchpad Removal & App User Management Update
 
-* We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/apps-list/) page.
+* We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal#my-apps) page.
 * We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9th, 2019
@@ -516,7 +560,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Mendix Shop
 
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/community-tools/mendix-profile#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 	{{% image_container width="300" %}}![](attachments/shop.png)
 	{{% /image_container %}}
@@ -538,17 +582,17 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/mendix-profile/) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/community-tools/mendix-profile) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/mendix-profile/).
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/community-tools/mendix-profile).
 * Several UX updates were made to Developer Portal pages:
   * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
   * The **App** > **General** page has been redesigned.
-  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/mendix-profile/#connections) of your Mendix Profile.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/community-tools/mendix-profile#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 

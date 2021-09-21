@@ -19,6 +19,12 @@ These are the available list view widgets:
 * [Pagination](#pagination) – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
 * [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
 
+{{% alert type="warning" %}}
+
+If an entity in a list view has an attribute populated by a microflow, it will cause an error.
+
+{{% /alert %}}
+
 ### 1.1 Demo App
 
 For a demo app that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).

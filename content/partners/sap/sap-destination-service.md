@@ -40,6 +40,21 @@ The **Get Destination** action properties look like this:
 
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
 
+### 4.1 Authenticating SAP Destination Service
+
+By default, your destination will be found and authenticated using XSUAA. This is controlled using a constant `XSUAAEnabled` which defaults to `true`.
+
+![](attachments/sap-destination-service/xsuaaenabled.png)
+
+Set `XSUAAEnabled` to `true` if your application is using XSUAA for user authentication, and you want to use the generated access token to authenticate with destination service.
+
+If your destination uses `NoAuthentication` or `BasicAuthentication`, set `XSUAAEnabled` to `false` if one of the following conditions applies:
+
+* you use XSUAA for single sign on, but do not need or want to use the user access token for your destination service authentication
+* if you are not using XSUAA for user authentication in your app.
+
+With `XSUAAEnabled` set to `false`, the destination will use the `VCAP` settings of the environment for authentication.
+
 ## 5 Destination Entity
 
 The details of your SAP destination are held in the **Destination** entity which is part of the *SAPODataConnector* domain model. The entity looks like this:
@@ -150,11 +165,15 @@ The destination name should be recorded in a constant so that it is the same eve
 
 ### 6.2	Get Destination
 
-You should only need to get the destination once, before you perform any actions which use it.
+You need to get the destination at least once before you perform any actions which use it.
 
-You should catch any exceptions accessing the service in your microflows and, firstly, try to get the destination again in case your access token has expired. If the token has expired, the return code will be **401**.
+You should catch any exceptions when using the **Get Destination** to access the service in your microflows.
 
-If retrying the **Get Destination** action still causes an exception, then continue testing for other possible causes.
+![](attachments/sap-destination-service/get-destination-error-flow.png)
+
+If your access token has expired, you will get a return code of **401**. The access token cannot be refreshed automatically and the end user will be signed out and will need to sign in again to get a new token.
+
+If the **Get Destination** action returns a different error, or signing in again does not solve the issue, then continue testing for other possible causes.
 
 ### 6.3	Deploying Locally
 

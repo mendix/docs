@@ -7,6 +7,10 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/tencent-deploy.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 
@@ -74,7 +78,7 @@ In the first tab you can see the **Namespaces** in the cluster and their current
 There are two other tabs:
 
 * **Cluster Managers** – where you can see other people who have access to the cluster and can manage them
-* **Activity** – where you can see perform the following actions on the entire cluster
+* **Activity** – where you can see the following actions on the entire cluster
 
 #### 3.2.1 Cluster Managers
 
@@ -154,7 +158,7 @@ You can only see the environment details of an app if you are a member of the ap
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
-The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
+The following rights are available to the person who purchased the cluster resources, and members of a namespace with appropriate authorization:
 
 * Set up operating URLs for the namespace
 * View all environments in the namespace
@@ -253,7 +257,7 @@ First you need to create an environment:
    
     1. For development of the app, for example acceptance testing, choose **Development**.
 
-    2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
+    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
         {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
@@ -487,7 +491,7 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
-**Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
+* **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
 ### 5.3 Activity
 
@@ -573,9 +577,9 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a Free App.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
+For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
@@ -599,19 +603,19 @@ To change any constants, select the constant you want to edit and then click **E
 
 ### 6.3 Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
 ![](attachments/tencent-deploy/network-tab.png)
 
 ### 6.4 Runtime Tab
 
-On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/runtime-tab.png)
 
 ### 6.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/log-levels-tab.png)
 
@@ -649,7 +653,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 6.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
+On the **Debugger** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 

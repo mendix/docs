@@ -174,6 +174,8 @@ You can do this as follows:
 
 Once you are signed in to your cluster you can run the Configuration Tool.
 
+To install in non-interactive mode please see: [Install and Configure Mendix for Private Cloud Non-interactive Mode](private-cloud-cli-non-interactive)
+
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
     ![](attachments/private-cloud-cluster/installation-command.png)
@@ -726,6 +728,7 @@ You can choose one of the following registry types. OpenShift registries can onl
 * Generic registry with authentication – this supports most registries, for example Azure Container Registry, quay.io, or Docker Hub
 * Generic registry without authentication – this can be used for basic, self-hosted registries such as the ones included with Minikube and MicroK8s
 * Existing docker-registry secret
+* Google Cloud Container Registry
 
 **Additional Information**
 
@@ -738,6 +741,22 @@ For **Generic registry…** options, the configuration script will ask if the cr
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
+
+For **Google Cloud Container Registry**, the supported authentication is [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). You will need to supply the following:
+
+* `Registry Name`: google container registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
+* `Registry URL`: container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
+* `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
+* `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
+
+	Below is an example how to bind a google cloud service account to a kubernetes service account:
+	```shell
+	gcloud iam service-accounts add-iam-policy-binding \
+    		--role roles/iam.workloadIdentityUser \
+    		--member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+    		GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+	```
+
 
 #### 4.3.3 Proxy{#proxy}
 

@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Counter** activity can be used to increment a metrics counter with a specific value.
+The **Counter** activity can be used to increment a metrics counter by a specific value.
 
 ![Counter](attachments/metrics-activities/counter.png)
 
@@ -24,7 +24,7 @@ An example of counter properties is represented in the image below:
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The **Complete task** properties pane consists of the following sections:
+The **Counter** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -39,11 +39,11 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Name
 
-The name of the counter to increment its value.
+The name of the counter whose value you want to increment.
 
 ### 3.2 Value
 
-The value used to increment the counter's value. Values are specified with [expressions](expressions) and should be of type Integer/Long. It's only possible to increment the counter, so values cannot be negative.
+The value used to increment the counter's value. Values are specified with [expressions](expressions) and should be of type Integer/Long. It is only possible to increment the counter, so values cannot be negative.
 
 ### 3.3 Tags
 

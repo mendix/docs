@@ -12,13 +12,13 @@ The Metrics can be configured and used with:
 
 * [Metrics registries configuration](#registries-configuration): To configure the metrics supported by Mendix
 * [Application tags](#application-tags): To include tags in all the metrics in application level
-* [Microflow activities](#microflow-activities): Activities to handle metrics in microflows
-* [Java API](#java-api): Java API to handle metrics via Java action
-* [Logging](#logging): LogNode for logging metrics
+* [Microflow activities](#microflow-activities): To handle metrics in microflow activities
+* [Java API](#java-api): To handle metrics using a Java API in a Java action
+* [Logging](#logging): To log metrics to a log node
 
-## 2 Metrics registries configuration {#registries-configuration}
+## 2 Metrics Registries Configuration {#registries-configuration}
 
-Micrometer can send metrics to multiple registries. To configure micrometer to a specific registry, below is the syntax to be configured in `runtime settings` with configuration key as `Metrics.Registries`. The setting should be in JSON format.
+Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with configuration key as `Metrics.Registries`. See [Runtime Customization](custom-settings) for more information. The setting is in JSON format.
 
 **Configuration Key:** `Metrics.Registries`
 
@@ -38,19 +38,19 @@ Micrometer can send metrics to multiple registries. To configure micrometer to a
 ]
 ```
 
-The details about each settings are,
+The details of each settings are listed below:
 
 ### type (mandatory)
 
-Type of the registry to use. Currently supported types are : `prometheus`, `jmx`, `influx`, `statsd`. Depending upon the type of the registry the `settings` may vary.
+The type of the registry to use. Currently supported types are : `prometheus`, `jmx`, `influx`, and `statsd`. Depending on the type of the registry the `settings` may vary.
 
 ### settings (conditional mandatory)
 
-Settings for the specific registry. Each registry has different settings depending upon the type. Depending upon the default type of the settings in metrics, we can pass the settings or leave it to the default (if possible). Supported settings for each type are as following.
+These are settings for the registry. Each registry has different settings depending upon the **type** specified. Depending upon the default type of the settings in metrics, we can pass the settings or leave it to the default (if possible). Supported settings for each type are as follows:.
 
 #### [Prometheus](https://prometheus.io/docs/introduction/overview/)
 
-  Multiple Prometheus registrations is **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
+  Multiple Prometheus registrations are **NOT supported**. When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
   `step`: The step size or reporting frequency to use.
 
@@ -83,7 +83,7 @@ Settings for the specific registry. Each registry has different settings dependi
 #### [Jmx](https://www.oracle.com/java/technologies/javase/javamanagement.html)
 
   `step`: The step size or reporting frequency to use.
-  `domain`: Jmx domain to publish the metrics.
+  `domain`: The Jmx domain to which to publish the metrics.
 
 ##### Example 1
 
@@ -114,12 +114,12 @@ Settings for the specific registry. Each registry has different settings dependi
 
 #### [Influx](https://www.influxdata.com/)
 
-  `uri`: The URI for Influx backend
-  `db`: Database name to send the metrics.
-  `userName`: userName for authentication.
-  `password`: password for authentication.
+  `uri`: The URI for the Influx backend.
+  `db`: The database name to which to send the metrics.
+  `userName`: The userName for authentication.
+  `password`: The password for authentication.
   `step`: The step size or reporting frequency to use.
-  `enabled`: enables the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
+  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
 
 ##### Example 1
 
@@ -155,12 +155,12 @@ Settings for the specific registry. Each registry has different settings dependi
 #### [StatsD](https://www.datadoghq.com/dg/monitor/ts/statsd/)
 
   `flavor`: Specifies the variant of the StatsD protocol to use.
-  `host`: Host name of the StatsD agent.
-  `port`: Port of the StatsD agent.
+  `host`: The host name of the StatsD agent.
+  `port`: The port used by the StatsD agent.
   `step`: The step size or reporting frequency to use.
   `protocol`: The protocol of the connection.
-  `enabled`: enables the registry, if `true`. This helps in switching the meter _on/off_ with settings still in the configuration.
-
+  `enabled`: set to `true` to enable the registry. This helps in switching the meter _on_ and _off_ while keeping the settings in the configuration.
+  
 ##### Example 1
 
   ```json
@@ -212,7 +212,7 @@ More information about all the settings,
 
 ### filters (optional) {#filters}
 
-Filters helps in filtering metrics based on given criteria. Below is the syntax,
+Filters help in filtering metrics based on given criteria. Below is the syntax,
 
 ```json
 "filters" : [
@@ -222,16 +222,17 @@ Filters helps in filtering metrics based on given criteria. Below is the syntax,
 
 #### type
 
-Type of the filter to apply. Currently supported type is, <br>
-`nameStartsWith` : Filters the metric if it is started with the given name
+The type of filter to apply. Currently we support the following:
+
+* `nameStartsWith` : Filters the metric if it begins with the given values.
 
 #### result
 
-Result of applying the filter. If the filter matches the criteria, the mentioned result will be applied to the metric. Supported values are: `accept` (or) `deny`
+The result of applying the filter. If the filter matches the criteria, the result value will be applied to the metric. Supported values are: `accept` (or) `deny`.
 
 #### values
 
-List of values to be applied in the given filter type
+A list of values to be applied in the given filter type.
 
 ##### Example 1
 
@@ -247,7 +248,7 @@ List of values to be applied in the given filter type
 ]
 ```
 
-The above filter accepts metrics which starts with **"app.", "employee.", "myapp."**
+The above filter accepts metrics which starts with **"app."**, **"employee."**, or **"myapp."**
 
 ##### Example 2
 
@@ -266,13 +267,19 @@ The above filter accepts metrics which starts with **"app.", "employee.", "myapp
 ]
 ```
 
-The above filter discards metrics which starts with **"Unnamed.", "Invalid.", "Internal."**
+The above filter discards metrics which starts with **"Unnamed."**, **"Invalid."**, or **"Internal."**
 
-### ATTENTION
+### Notes
 
-1. There are also some internal metrics used by Mendix. Please note that, the filters will also have an effect on them. For example metrics emitted by Mendix which starts with "com.mendix." or "mx.".
-2. A metric with name & metric with the same name with tags will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
-3. filters are executed on first come first serve basis. Hence the first applied filter gets the priority. For example, If you have a below setup,
+{{% alert type="info" %}}
+The following should be taken into account when configuring the metrics registries.
+{{% /alert %}}
+
+1. There are also some internal metrics used by Mendix. Filters will also have an effect on them. For example metrics emitted by Mendix which starts with "com.mendix." or "mx.".
+
+2. If you have a metric and another metric with the same name but with additional tags, these will be considered as different metrics. Example, Metric ("app.counter1") and ("app.counter1" with tag ("version" -> "1")) are different.
+
+3. Filters are executed on a first come, first served basis. Hence the first applied filter gets the priority. For example, If you have a below setup,
 
     ```json
     [
@@ -287,7 +294,7 @@ The above filter discards metrics which starts with **"Unnamed.", "Invalid.", "I
     ]
     ```
 
-    This will work in different ways for metrics like **"app.others.counter"** due to the contradiction with the first `accept` filter **"app."**.
+    This will deny metrics like **"app.others.counter"** due to the contradiction with the first `accept` filter **"app."**.
 
 4. To accept only specific filters and deny all others, ensure to deny with value **""**. For example, to accept only "app."
 
@@ -304,7 +311,7 @@ The above filter discards metrics which starts with **"Unnamed.", "Invalid.", "I
     ]
     ```
 
-## 3 Application tags {#application-tags}
+## 3 Application Tags {#application-tags}
 
 Common tags which should be reported by every metric can be specified using the `Metrics.ApplicationTags` setting. This setting should be in JSON format.
 
@@ -317,19 +324,19 @@ Common tags which should be reported by every metric can be specified using the 
 }
 ```
 
-## 4 Microflow activities {#microflow-activities}
+## 4 Microflow Activities {#microflow-activities}
 See the description of these activities [here](metrics-activities).
 
 ## 5 Java API {#java-api}
 
-Micrometer metrics can be accessed through Java APIs as well inside mendix. This can be achieved by setting `com.mendix.metrics.Type`. The setting is default to `micrometer` though.
+Micrometer metrics can be accessed through Java APIs as well inside Mendix. This can be achieved by setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 **Configuration Key:** `com.mendix.metrics.Type`
 **Configuration Value:** `micrometer`
 
-### Current metrics and usage
+### 5.1 Current Metrics and Usage
 
-Currently supported metrics are `counter`, `gauge`, `timer`. We support [builder pattern](https://blogs.oracle.com/javamagazine/java-builder-pattern-bloch) to create the metrics and support `Tag` & `Description` which can be added to each metrics.
+Currently supported metrics are `counter`, `gauge`, and `timer`. We support [Bloch's builder pattern](https://blogs.oracle.com/javamagazine/java-builder-pattern-bloch) to create the metrics and support `Tag` and `Description` which can be added to each metric.
 
 To create the metrics,
 
@@ -346,18 +353,18 @@ Counter counter1 = Core.metrics().createCounter("app.strikes")
 Counter counter2 = Core.metrics().createCounter("app.count").build();
 ```
 
-In the same way, we can also create `gauge` and `timer` using `createGauge` and `createTimer` methods respectively.
+In the same way, we can also create a `gauge` and a `timer` using the `createGauge` and `createTimer` methods respectively.
 
-### Deprecated usages
+### 5.2 Deprecated usages
 
 Below are deprecated usages which will be removed in the future releases,
 
-1. `com.mendix.metrics.Type` setting `logger` and `statsd` are deprecated. You will also get a warning message to start using `micrometer` metric type.
-2. In Java API methods `counter()`, `timer()`, `gauges()` and `sets()` are deprecated in `Core.metrics()`
+1. `com.mendix.metrics.Type` setting `logger` and `statsd` are deprecated. You will also get a warning message to advise you to start using the `micrometer` metric type.
+2. The Java API methods `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated in `Core.metrics()`
 
 ## 6 Logging {#logging}
 
-Metering related log messages are sent to the `Metering` log node. If a registry is enabled that will be reported with severity debug.
+Metering-related log messages are sent to the `Metering` log node. If a registry is enabled, they will be reported with severity `debug`.
 
 ## 7 Read More
 

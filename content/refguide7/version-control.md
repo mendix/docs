@@ -14,7 +14,9 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-{{% alert type="warning" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
+{{% alert type="warning" %}}
+
+The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
 
 You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23. 
 {{% /alert %}}
@@ -81,7 +83,7 @@ Development of an app is done in a Development Line where a set of related chang
 
 The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
-#### 2.9.2 Branch Line
+#### 2.9.2 Branch Line {#branch-line}
 
 A Branch line is a way of making an independent set of changes which can be tested away from the Main Line.
 

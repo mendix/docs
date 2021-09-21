@@ -210,7 +210,7 @@ This test method contains the following test steps:
 
 To add the third test method, follow these steps:
 
-1.  Open your app and in the **Project Explorer**, open the **ProgramDetail** page.
+1.  Open your app and in the **App Explorer**, open the **ProgramDetail** page.
 2.  Select the **Expenses** tab:
   
     ![](attachments/18448634/18580389.png)

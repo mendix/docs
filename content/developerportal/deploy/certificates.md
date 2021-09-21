@@ -2,11 +2,11 @@
 title: "Certificates"
 parent: "mendix-cloud-deploy"
 menu_order: 30
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
 tags: ["client certificate", "certification authority", "PKCS12", "connections"]
 aliases:
     - /deployment/mendixcloud/certificates.html
     - /refguide/certificates.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,9 +14,13 @@ aliases:
 
 Certificates are used to authenticate users to apps. They can be used on both incoming and outgoing connections.
 
+{{% alert type="info" %}}
+Custom certificates cannot be configured for Free Apps.
+{{% /alert %}}
+
 ### 1.1 Incoming Connections
 
-To connect *to* your Mendix Cloud application *from* the internet, Mendix provides a *.mendixcloud.com* or *.mxapps.io* domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](custom-domains). This is not available for Free Apps.
+To connect *to* your Mendix Cloud application *from* the internet, Mendix provides a *.mendixcloud.com* or *.mxapps.io* domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](custom-domains).
 
 In addition, you can restrict incoming traffic by requiring client certificates signed by a certificate authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
@@ -37,7 +41,7 @@ Do not pin these certificates in your solutions.
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.
 
-## 3 Outgoing – Client Certificates{#client-certificates}
+## 3 Outgoing – Client Certificates {#outgoing-client-certificates}
 
 For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container which includes:
 

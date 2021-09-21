@@ -1,14 +1,14 @@
 ---
 title: "Modules"
-description: " "
+description: "Presents details on the modules available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "module"]
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
-The modules available in the Mendix Marketplace can be added to your app to provide new functionality with accompanying domain models and security options. These AppMarketplace modules function similarly to the [modules](/refguide/modules) you create for your app. 
+The modules available in the Mendix Marketplace can be added to your app to provide new functionality with accompanying domain models and security options. These Marketplace modules function similarly to the [modules](/refguide/modules) you create for your app. 
 
-When you download these modules, they will go into the **Project** > **App Store modules** folder.
+When you download these modules, they will go into the **App** > **Marketplace modules** folder.
 
 ## 2 Main Documents in This Category
 

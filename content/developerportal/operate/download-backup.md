@@ -4,6 +4,7 @@ parent: "backups"
 menu_order: 20
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -29,7 +30,7 @@ To download a backup of a Free App, follow these steps:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Apps** in the top navigation panel.
 2. Select the app from which you want to download the backup.
-3. Click **Backups** under the **Operate** category.
+3. Click **Backups**.
 4. Select the backup you want to download and click **Download Backup**.
 
     ![](attachments/download-a-backup/backupoptions-free.png)
@@ -43,7 +44,7 @@ To download a backup of a licensed app, follow these steps:
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 3. Select the node from which you want to download the backup.
-4. Click **Backups** under the **Operate** category.
+4. Click **Backups**.
 5. Select the environment from which you want to download the backup.
 
     ![](attachments/download-a-backup/environment.png)
@@ -53,7 +54,14 @@ To download a backup of a licensed app, follow these steps:
     ![](attachments/download-a-backup/backupoptions.jpg)
 
 7. Select a backup and click **Download Backup**.
-8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
+8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only** and click **Start**.
+
+    {{% alert type="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active and you can download it immediately.{{% /alert %}}
+    
+9. Once the download archive has been prepared, you can do one of the following:
+
+    * Click **Show URL** to see the URL of the backup
+    * Click **Download** to immediately initiate the download of the archive using your browser.
 
 ## 5 Read More
 

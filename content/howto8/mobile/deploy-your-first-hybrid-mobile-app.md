@@ -63,4 +63,4 @@ If you want to install this application as a native mobile app on your device, y
 
 ## 5 Read More
 
-* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application)

@@ -39,7 +39,7 @@ These environments are not editable and will be updated daily.
 We hope this makes it easier to start using ATS on new apps.
 
 {{% alert type="info" %}}
-This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@mansystems.nl** is invited to the app.
+This feature is only available for licensed Mendix apps and only if the user **smartdigitalfactory@clevr.nl** is invited to the app.
 {{% /alert %}}
 
 #### Configure a Default Selenium Hub & Environment

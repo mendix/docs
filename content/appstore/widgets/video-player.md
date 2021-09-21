@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "platform support", "widget", "vi
 
 ## 1 Introduction
 
-The [Video Player](https://appstore.home.mendix.com/link/app/110700/) widget enables playing videos from Youtube, Vimeo, Dailymotion, and external MP4 files.
+The [Video Player](https://marketplace.mendix.com/link/component/110700/) widget enables playing videos from Youtube, Vimeo, Dailymotion, and external MP4 files.
 
 ### 1.1 Features
 

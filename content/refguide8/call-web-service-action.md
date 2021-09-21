@@ -6,6 +6,10 @@ menu_order: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/call-web-service-action.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}
  This activity can only be used in **Microflows**.
 {{% /alert %}}
@@ -129,7 +133,7 @@ Select from one of the following:
 
 When you select **Override**, you can configure the client certificate that will be used. Click **Edit** to specify the **Client certificate identifier**. This identifier can be set in different places, depending on where you deploy the app:
 
-* When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](https://docs.mendix.com/developerportal/deploy/certificates#3-outgoing-client-certificates)
+* When you deploy the app to the Mendix cloud, the identifier is set when [pinning a client certificate](/developerportal/deploy/certificates#outgoing-client-certificates)
 * When you deploy the app elsewhere, the identifier is set in the custom setting [ClientCertificateUsages](custom-settings#ca-certificates)
 
 When this identifier is not set (either not pinned or not present in _ClientCertificateUsages_), the default settings will be used (as if **Use project settings** were selected).

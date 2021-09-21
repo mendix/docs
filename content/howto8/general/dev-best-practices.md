@@ -16,6 +16,17 @@ Even with the powerful navigation and search support in Mendix Studio Pro, adher
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
 * A clear structure helps in identifying reusable code
 
+For a deep-dive look into implementing such best practices, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/exmmApZY4jMYxqidrzehEQ.jpg"
+  data-uuid="exmmApZY4jMYxqidrzehEQ"
+  data-v="4"
+  data-type="inline"
+/>
+
 ## 2 Project Setup
 
 ### 2.1 The Application Development Language
@@ -36,7 +47,7 @@ Every project has at least one configuration, but it may have many. Every projec
 
 ### 2.4 User Roles
 
-The [user roles](/refguide8/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide8/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -327,8 +338,6 @@ Unused and excluded items should be removed from the model when they are no long
 
 [XPath](/refguide8/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
 
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
-
 ### 4.5 Security
 
 The [security](/howto8/security/) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
@@ -341,7 +350,7 @@ Apps should keep up with new Mendix releases as much as possible.
 
 ### 4.7 Marketplace Content
 
-When introducing a new [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
 Marketplace modules should NOT be modified. If an Marketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
 

@@ -7,6 +7,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service-requirements.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.
@@ -84,6 +88,12 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
+### 3.5 Associations
+
+An OData v3 association can only be used if it has two ends.
+
+An OData v4 navigation property can only be used as an association if it has a partner.
+
 ## 4 Data Hub License Limitations {#license-limitations}
 
 Mendix Data Hub is a separately licensed product. The type of license that you have determines the total number of data objects that can be requested from a consumed OData service *per day* for *each* runtime instance of an app.
@@ -93,7 +103,7 @@ There are two types of Data Hub licenses currently available:
 * **Data Hub** – this is the *default* license with no limitation on the number of OData objects that can be consumed.
 
 * **Freemium** – this enables you to retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data.
-The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
+  The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
 
   {{% alert type="info" %}}The Freemium Data Hub license is issued on an invitation-only basis. {{% /alert %}}
   {{% alert type="info" %}}For Mendix 8.12.3 and later, apps running without a [Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud) (and also when running from the Studios) do not have this limitation. This also means that you can run your app from the Studios without the Data Hub license limitations. {{% /alert %}}

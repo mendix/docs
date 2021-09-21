@@ -5,6 +5,10 @@ menu_order: 30
 tags: ["studio pro", "demo users", "demo-users", "project security"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/demo-users.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 

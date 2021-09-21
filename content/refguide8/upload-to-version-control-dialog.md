@@ -8,6 +8,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/upload-to-version-control-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
@@ -20,7 +24,7 @@ Use this setting to select the location where you want to store your app. There 
 
 ### 2.1 New Mendix Team Server
 
-You can create a new app on [Mendix Team Server](/developerportal/develop/team-server).
+You can create a new app on [Mendix Team Server](/developerportal/collaborate/team-server).
 
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field

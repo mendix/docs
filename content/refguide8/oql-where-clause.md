@@ -4,6 +4,9 @@ parent: "oql"
 tags: ["studio pro", "queries", "where"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-where-clause.pdf).
+{{% /alert %}}
 
 The WHERE clause specifies how the data being retrieved must be constrained.
 

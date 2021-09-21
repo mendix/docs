@@ -1,7 +1,7 @@
 ---
 title: "Use Notifications"
-parent: "native-mobile"
-menu_order: 11
+parent: "implementation"
+menu_order: 50
 description: Tutorials for configuring push and local notifications.
 tags: ["mobile", "native", "push", "local", "firebase"]
 ---

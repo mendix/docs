@@ -49,6 +49,7 @@ The following custom settings can be configured:
 | **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
+| **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
 
 ## 3 Log File Settings
 
@@ -83,6 +84,8 @@ The settings below influence the behavior of the log files. These settings can o
 ### 4.2 Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
+
+These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 
 | Name | Value | Default Value |
 | --- | --- | --- |

@@ -27,7 +27,7 @@ In this section you will create a JSON structure and import mapping for a REST s
 
 You must complete these steps with *one crucial change*: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
-Once successful, your project should have the following elements:
+Once successful, your app should have the following elements:
 
 * A JSON structure based on the airport data:
 

@@ -115,7 +115,7 @@ To set up a working directory for your script, follow these steps:
 
     The compiler options should be left as-is. The `files` directive is an array of strings with path names of all TypeScript files that make up your Node.js script or app. You can change it so that the compiler uses the right files.
 
-    Create new files in your project directory with Visual Studio Code by hovering with the mouse pointer over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
+    Create new files in your app directory with Visual Studio Code by hovering with the mouse pointer over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
 
 ## 5 Next Step
 

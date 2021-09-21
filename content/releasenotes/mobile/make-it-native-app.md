@@ -1,15 +1,23 @@
 ---
-title: "Make It Native App"
-category: "Mobile"
+title: "Make It Native 8 App"
+parent: make-it-native-parent
 menu_order: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
-tags: ["Native", "Android", "iOS", "Apple", "Android"]
-#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
 ---
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app).
 
 You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide/getting-the-make-it-native-app).
+
+## Android 2.2.2 / iOS 2.2.2
+
+**Release date: March 25th, 2021**
+
+### New Features
+
+* We unified the iOS and Android version numbers for clarity.
+* The app will now correctly identify Mendix Studio Pro 9 and prompt to install the Make It Native 9 version.
 
 ## Android 2.1.1
 
@@ -200,7 +208,7 @@ On Android:
 
 **Release date: August 1st, 2019**
 
-* This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. Both Android and iOS versions allow you to preview and debug your locally running native app project on any supported mobile platform. The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0).
+* This is the official release of the Android and iOS versions of the Make It Native app, with support for Mendix Studio Pro 8.0. Both Android and iOS versions allow you to preview and debug your locally running native app on any supported mobile platform. The apps are not backwards compatible with the Mendix Studio Pro 8.0.0 Beta versions of Mendix Studio Pro. For more information on Mendix Studio Pro 8.0, see the [8.0.0 Release Notes](/releasenotes/studio-pro/8.0).
 
 ### Known Issues
 

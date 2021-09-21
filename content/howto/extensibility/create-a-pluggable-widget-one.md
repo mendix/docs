@@ -24,21 +24,33 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+* Install the LTS version of [Node.js](https://nodejs.org).
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
-	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
-* Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
-* Install the Mendix Pluggable Widget Generator with the following command: ` $ npm install @mendix/generator-widget -g`
-* Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
+	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
+	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+* Install [Yeoman](https://yeoman.io/) with the following command:
+
+	```shell
+	  $ npm install -g yo
+	```
+
+* Install the Mendix Pluggable Widget Generator with the following command:
+
+	```shell
+	$ npm install -g @mendix/generator-widget
+	```
+
+* Install an integrated development environment (IDE) of your choice (Mendix
+  recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
 ## 3 Creating a TextBox Input Widget
 
 The following steps will teach you to build a pluggable input widget, and show you how to use the new pluggable widget API.
 
-### 3.1 Creating a Test Project{#creating-a-test-project}
+### 3.1 Creating a Test App {#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**.
+1. Open Mendix Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
 	a. In the domain model of **MyFirstModule**, add a new entity.<br />
 	b. Add a new attribute of type **String**.<br />
@@ -79,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix Project path: *../../*
+* Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
@@ -88,9 +100,11 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+
 ### 3.3 Adding the Attribute
 
-Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
+Open the **(YourMendixApp)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
 1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
@@ -120,9 +134,9 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* *TextBox.xml* is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition) used in Studio Pro which reads the widget's capabilities
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
-	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) only allows the selection of string attributes from the domain model
+	* The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute) only allows the selection of string attributes from the domain model
   
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
+3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm start`.
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 
@@ -138,11 +152,11 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	```tsx
 	import { Component, ReactNode, createElement } from "react";
-
+	
 	export interface InputProps {
 		value: string;
 	}
-
+	
 	export class TextInput extends Component<InputProps> {
 		render(): ReactNode {
 			return <input type="text" value={this.props.value} />;
@@ -200,26 +214,26 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
 
-7.  Add a test widget to the project home page:<br />
-	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
+7.  Add a test widget to the proappject home page:<br />
+	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize ProjeAppct Directory** from the Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
 	c. Select the newly-created **TextBox** widget at the bottom of the list.<br />
 	d. Place the widget below the standard text widget.<br />
-	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test Project](#creating-a-test-project) above.
+	e. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
 
 	The end result will be similar to the screenshot below:
 
 	![](attachments/pluggable-part-one/updateallwidgets.png)
 
-	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm run dev` command again. To refresh your widgets, press F4 or select Project > Synchronize Project Directory from the Mendix Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+	{{% alert type="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
-8.  When running the project, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
+8.  When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
 	![two text widgets](attachments/pluggable-part-one/twotextwidgets.png)
 
 ### 3.4 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#3-standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 
@@ -275,7 +289,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ### 3.5 Labeling the Input{#label-input}
 
-While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#label) to any widget.
+While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#label) to any widget.
 
 1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
@@ -285,7 +299,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the Project Directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the app directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
@@ -377,5 +391,5 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types)

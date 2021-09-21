@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-To use Mendix Studio Pro's native mobile app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
+To use Mendix Studio Pro's native mobile app capabilities, you can use the [Native Mobile Quickstart](https://marketplace.mendix.com/link/component/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
 
@@ -60,7 +60,7 @@ To view your app on a iOS device, you must download and install the Make It Nati
 
 Viewing your app on a mobile device will allow you to test native features and other aspects of your app. This section is written for mobile devices, but you may use an Android emulator mentioned in the [Prerequisites](#prerequisites) section above. To view your app, follow these steps:
 
-1. Locate your app's QR code in Mendix Studio Pro by clicking the drop-down menu next to the **View** button, then selecting **View in the Mendix App** and navigating to the **Native mobile** tab. Here you will see your test app's QR code.
+1. Locate your app's QR code in Mendix Studio Pro by clicking the drop-down menu next to the **View** button, then selecting **View on your device** and navigating to the **Native mobile** tab. Here you will see your test app's QR code.
 2. Start the Make It Native app by tapping its icon on your device.
 3.  Tap the  **Scan a QR Code** button:
 
@@ -100,6 +100,6 @@ For more detailed instructions on debugging a native mobile app, see [Debug Nati
 
 ## 4 Read More
 
-* [How to Build Pluggable Widgets](../extensibility/pluggable-widgets)
+* [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets)
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)

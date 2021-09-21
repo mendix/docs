@@ -8,7 +8,7 @@ description: "This document will teach you to use Calypso, a tool which improves
 
 ## 1 Introduction
 
-Calypso is a tool which makes it easier for you to customize your Mendix apps' styling. Designers and front-enders, Mac users and Windows users — everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. You simply need to install Calypso, choose your Mendix app, and start customizing. As you customize, Calypso eases your work by doing the following:
+Calypso is a tool which makes it easier for you to customize your Mendix apps' styling. Designers and front-end specialists, Mac users and Windows users — everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. You simply need to install Calypso, choose your Mendix app, and start customizing. As you customize, Calypso eases your work by doing the following:
 
 * Checks *SCSS* files for errors
 * Compiles *SCSS* files to *CSS*
@@ -17,6 +17,18 @@ Calypso is a tool which makes it easier for you to customize your Mendix apps' s
 * Injects the compiled *CSS* files into your browser so you can preview changes instantly 
 
 Calypso is the easiest styling solution for most users. However, if you already use a Gulp service worker in your development workflow please consult [How to Set Up Gulp & Sass](/howto8/front-end/sass-eight) for a styling solution which might suit you better.
+
+
+For a deep-dive look into styling with Calypso, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/M2NCccTnfnh7Yx2gjEyBpf.jpg"
+  data-uuid="M2NCccTnfnh7Yx2gjEyBpf"
+  data-v="4"
+  data-type="inline"
+/>
 
 ## 2 Prerequisites
 

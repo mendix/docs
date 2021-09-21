@@ -26,7 +26,7 @@ Before submitting a new Menix Support request, check these resources to make sur
 
 If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request
+## 3 Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 
@@ -54,6 +54,9 @@ To submit a request with Mendix Support, follow these steps:
 	* **Standard Change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container that require downtime (for example, changing memory or database size) can be requested [here](https://resize.mendix.com/index.html)
 	* **Standard Change: Change Mendix Cloud File Storage** – increase or decrease the file storage size
 	* **Standard Change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (for example, *something.mendixcloud.com*)
+
+        {{% alert type="info" %}}This URL change will apply to *all* your environments for this app. For example, the production environment will be *something.mendixcloud.com* and the acceptance environment will be *something-accp.mendixcloud.com*.{{% /alert %}}
+
 	* **Standard Change: Assign Mendix Admin** – make an existing Mendix user the [Mendix Admin](/developerportal/control-center/#company)
 	* **Standard Change: Request ATS License** – obtain a license to use ATS (for more information on this product, see [ATS](/addons/ats-addon/))
 	* **Standard Change: Request APD License** – obtain a license to use APD (for more information on this product, see [APD](/addons/apd-addon/))
@@ -68,15 +71,22 @@ To submit a request with Mendix Support, follow these steps:
 		* **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
 		* **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs))
 		* **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/addons/ats-addon/), [APD](/addons/apd-addon/), or [AQM](/addons/aqm-addon/))
-		* **App - Managed Service** - issues/questions regarding one of the Mendix managed services
+		* **App - Security** - issues/questions regarding the security of your Mendix app
 		* **App - Other** – any other issues/questions regarding your own app that you are developing on the Mendix Platform
 	* **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
 		* **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
+		* **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
 		* **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/collaborate/stories) or start a Sprint)
 		* **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
 		* **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
 		* **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs) files or [scale](/developerportal/deploy/scale-environment) your environment)
+		* **Developer Platform - Data Hub** – issues/questions regarding [Data Hub](/data-hub/) (for example, when you have difficulties accessing the Data Hub Catalog)
+		* **Developer Platform - Control Center** - issues/questions regarding [Control Center](/developerportal/control-center/index) (for example, when you have difficulties deactivating applications from the Control Center) 
+		* **Developer Platform - Studio** - issues/questions regarding [Mendix Studio](/studio/) (for example, when you have difficulties opening Mendix Studio)
+		* **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/hc) (for example, when you have difficulties creating Support tickets)
 		* **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
+	* **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
+
 5. Make sure all your attachments have finished uploading before clicking **Next**.
 
 The Mendix Support Portal will first suggest relevant documentation for you to read before you submit a request. Based on a complexity check, recommendations might be skipped to improve your experience. This complexity check takes your request priority and other factors into consideration.
@@ -129,20 +139,20 @@ You can add large attachments such as project files to the request. Please note 
 
 ### 5.3 Team Server Problems & Project Issues
 
-* [App ID](../settings/general-settings)
+* [App ID](/developerportal/settings/general-settings)
 
 ### 5.4 Studio & Studio Pro Problems
 
 * Mendix Studio type (Studio or Studio Pro)
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 ### 5.5 Marketplace Content Problems & Module, Widget & Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
-* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Test project (for details, see [How To Export A Mendix App Package](/refguide/export-project-package-dialog))
 * Reproducible steps
 
 {{% alert type="info" %}}

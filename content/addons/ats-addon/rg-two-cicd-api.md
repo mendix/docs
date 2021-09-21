@@ -8,7 +8,7 @@ parent: "rg-two-ats"
 With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the test cases that were not passed for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow, see the [How-To ATS CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd).
 
 {{% alert type="warning" %}}
-**For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact [Mansystems Support](https://www.mansystems.com/contact/) if you are having problems with this.
+**For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact [CLEVR Support](https://www.CLEVR.com/contact/) if you are having problems with this.
 {{% /alert %}}
 
 ## 2 CI/CD Templates
@@ -39,7 +39,7 @@ Configure the following options in the **New CI/CD Template** dialog box:
 
 For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](rg-two-supported-selenium-hub-provider).
 
-## 3 API
+## 3 API {#api}
 
 The ATS CI/CD API is based on the SOAP web service protocol. Currently there are three services available: **Run Job**, **Get Job Status**, and **RerunNotPassed**. The following sections show the structures of the request-and-response messages of these services.
 

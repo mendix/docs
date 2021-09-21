@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "password policy", "project security", "security"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/password-policy.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 You can specify a number of requirements for passwords. These requirements will be applied when creating new users or changing passwords of existing users.

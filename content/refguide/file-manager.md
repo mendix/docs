@@ -13,7 +13,11 @@ A file manager is used to upload and/or download files.
 
 ![File Manager](attachments/file-widgets/file-manager.png)
 
-It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
+A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](external-entities) with a `Contents` binary attribute.
+
+{{% alert type="info" %}}
+For an external entity to be used as a file source, it must be defined as a media element in the corresponding OData service. Such an element can be recognized by setting the `HasStream` attribute to `true` in its metadata.  
+{{% /alert %}}
 
 {{% alert type="info" %}}
 When uploading a file through the file manager, the FileDocument object will be committed immediately.
@@ -69,6 +73,10 @@ The **Type** property indicates how the end-user will be able to use the file ma
 **Max file size (MB)** determines the maximum size of files (in megabytes) that can be uploaded.
 
 Default: *5*
+
+{{% alert type="info" %}}
+This value cannot be set arbitrarily high as the platform to which the app is deployed may also impose a limitation on the size of the files that can be uploaded or downloaded.
+{{% /alert %}}
 
 #### 2.4.3 Allowed Extensions
 

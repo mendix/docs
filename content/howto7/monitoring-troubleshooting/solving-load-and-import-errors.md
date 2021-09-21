@@ -44,7 +44,7 @@ If the latest change on your branch line was committed by someone other than you
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [project package](../integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [project package](/howto7/integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the Project Yourself?
 
@@ -60,7 +60,7 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 5 Read More
 
-* [Debug a Hybrid Mobile App](../mobile/debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](/howto7/mobile/debug-a-mobile-app)
 * [Clearing Warning Messages in Mendix](clear-warning-messages)
 * [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debugging Java Actions](debug-java-actions)

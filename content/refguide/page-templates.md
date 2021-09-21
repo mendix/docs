@@ -12,15 +12,15 @@ aliases:
 
 Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. 
 
-When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Page templates as document types allow users to edit existing page templates and even create entirely new ones.
+When creating a new page, the user is presented with an overview of all the compatible page templates in the app. Page templates as document types allow users to edit existing page templates and even create entirely new ones.
 
 ## 2 Custom Page Templates
 
 By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
-Generally, page templates are stored in the project's [UI resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
+Generally, page templates are stored in the app's [UI resources package](ui-resources-package). This keeps them in sync with the app theme, as well as providing a handy place to consolidate all design-related data. 
 
-To create a page template, right-click a page in either the **Project Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create Page** wizard.
+To create a page template, right-click a page in either the **App Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create Page** wizard.
 
 As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different project.
 
@@ -50,7 +50,7 @@ Depending on the context in which a page is created, the user is presented with 
 
 Value | Description
 --- | ---
-Creating new pages *(default)* | The page template is available when creating new pages from most contexts, such as from the Project Explorer.
+Creating new pages *(default)* | The page template is available when creating new pages from most contexts, such as from the App Explorer.
 Generating edit pages | The page template is available when a user generates a new page from a new or edit button.
 Generating select pages | The page templates is available when the user generates a new page from a select button.
 

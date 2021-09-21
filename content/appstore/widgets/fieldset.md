@@ -8,24 +8,24 @@ tags: ["marketplace", "marketplace component", "widget", "fieldset", "token", "p
 
 ## 1 Introduction
 
-The [Fieldset](https://appstore.home.mendix.com/link/app/113922/Mendix/Fieldset) widget is a container which groups widgets within a form. Structuring a form helps end-users fill it out, especially when they rely on accessibility tools like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses.
+The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Fieldset) widget is a container which groups widgets within a form. Structuring a form helps end-users fill it out, especially when they rely on accessibility tools like a screen reader. For example, you could use this widget to group input widgets that belong to the same address when a form requires multiple addresses.
 
-## 2 Demo App
-
-For a demo app that has been deployed with this widget, click [here](https://fieldset-sandbox.mxapps.io).
-
-## 3 Features
+## 2 Features
 
 * Group widgets in a form
 * Attaches a legend to the group
 
-## 4 Limitations
+## 3 Limitations
 
 * This widget should only be used to group widgets belonging to a form
 
-## 5 Compatibility
+## 4 Compatibility
 
 This widget is compatible with the following products:
 
 * Mendix Studio
 * Mendix Studio Pro 8.3.1 and above
+
+## 5 Demo App
+
+For a demo app that has been deployed with this widget, click [here](https://fieldset-sandbox.mxapps.io).

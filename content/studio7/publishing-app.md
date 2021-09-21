@@ -45,7 +45,7 @@ The app preview is your personal preview of the app. Hence, only users logged in
 
 {{% alert type="warning" %}}
 
-Publishing is no longer available in Studio for app projects with Mendix version 7. You can either publish your app in Studio Pro or upgrade you app project to Mendix version 8 or above. For more information, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8).
+Publishing is no longer available in Studio for apps with Mendix version 7. You can either publish your app in Studio Pro or upgrade you app to Mendix version 8 or above. For more information, see [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8).
 
 {{% /alert %}}
 

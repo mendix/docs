@@ -26,7 +26,7 @@ The app is created on the Team Server, and a working copy is created in the **Pr
 
 ## 3 Joining a Project
 
-If there is already a Team Server enabled project, you can be invited to join it (see [App Team](/developerportal/collaborate/team).
+If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/collaborate/team).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 

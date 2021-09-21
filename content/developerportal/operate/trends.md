@@ -6,13 +6,18 @@ description: "Describes how to interpret various graphs and trends in the Mendix
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 aliases:
     - /howtogeneral/mendixcloud/trends.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Please do not rename the anchors in this document as they are used in links from the Developer Portal
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal.
 ---
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ## 1 Introduction
 
-To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs of both your app and its environment. These graphs show performance trends of your apps in the paid editions of the Mendix Cloud. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal**.
 
 {{% alert type="info" %}}
 This document describes the trends graphs available in Mendix Cloud v3. If your app is deployed to Mendix Cloud v4, please refer to [Trends in Mendix Cloud v4](trends-v4).
@@ -25,13 +30,13 @@ If you don't know which Mendix Cloud version you are using, you can find out by 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
 Assign permission by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Security** under the **Settings** category on the left.
+2. Click **Collaborate** > **Security** under the on the left.
 3. Go to the **Node Permissions** tab.
 4. Choose the environment for which you want to grant access.
 5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
@@ -45,7 +50,7 @@ Assign permission by following these steps:
 You can find the trends by following these steps:
 
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
-2. Click **Metrics** under the **Operate** category.
+2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
 
 ![](attachments/trends/environment.png)
@@ -306,7 +311,6 @@ The **Database node load** value is a composite value, calculated from a range o
 ## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [Database Size Reduction](database-size-reduction)
 * [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)

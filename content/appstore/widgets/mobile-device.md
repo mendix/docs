@@ -6,9 +6,13 @@ tags: ["marketplace", "marketplace component", "widget", "mobile device", "cordo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
+The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
 
 * Device ID – the unique ID of the device
 * Device platform – the platform on which the app runs (for example, Android, iOS, or web)
@@ -45,15 +49,11 @@ In some cases, it is important that end-users have downloaded the latest and cor
 
 ### 1.3 Dependencies
 
-* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your [locally built](/howto/mobile/customizing-phonegap-build-packages) app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
-
-### 1.4 Demo App
-
-For a demo app that has been deployed with this widget, see [here](http://deviceidwidget.mxapps.io).
+* Add the [cordova-plugin-app-version](https://github.com/whiteoctober/cordova-plugin-app-version) to your locally built app with this: `<plugin name="cordova-plugin-app-version" source="npm" spec="0.1.8" />`
 
 ## 2 Configuration
 
-Once you have set the widget in the context of an object and configured the necessary parameters, the widget will save device information to the context object. Note that the version and build information are only available when the cordova-plugin-app-version is used in the project configuration.
+Once you have set the widget in the context of an object and configured the necessary parameters, the widget will save device information to the context object. Note that the version and build information are only available when the cordova-plugin-app-version is used in the app configuration.
 
 For the **Data source** option on the **Data source** tab, select and set the respective attributes as strings.
 
@@ -62,21 +62,3 @@ For the **On get device information** option on the **Events** tab, select and s
 * **Nothing** – no action is performed
 * **Show page** – the page is shown that you set via **Page**
 * **Microflow** – a microflow action is executed that you set via **Microflow** when the device object is retrieved
-
-## 3 Developing This Marketplace Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-	* [karma-cli](https://www.npmjs.com/package/karma-cli)
-2. Fork and clone the [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device.git) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device/releases/). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/mobile-device](https://github.com/mendixlabs/mobile-device/issues).

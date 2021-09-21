@@ -102,9 +102,6 @@ As part of our continuous improvement process, your escalation will be documente
 
 ## 9 De-Escalation Process
 
-Once resolved to the customer's satisfaction, the situation is monitored for an agreed-upon period. The escalation team remains on standby and available in case the problem reoccurs during the monitoring period.
+Once resolved to the customer’s satisfaction, the situation is monitored for an agreed-upon period. The escalation team remains on standby and available in case the problem reoccurs during the monitoring period.
 
-The de-escalation process follows these steps:
-
-1. Once the monitoring period is successfully completed, the escalation is closed by the Escalation Manager after seeking agreement with the customer.
-2. Once the escalation is closed, a post-escalation review is conducted and added to the escalation record.
+Once the monitoring period is successfully completed, the escalation is closed by the Escalation Manager after seeking agreement with the customer.

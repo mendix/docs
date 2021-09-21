@@ -79,9 +79,9 @@ To set up your microflow, do the following:
 
 To make this microflow run after startup, do the following:
 
-1.  Double-click **Settings** in your Project Explorer:
+1.  Double-click **Settings** in your App Explorer:
 
-	{{% image_container width="400" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
+	{{% image_container width="400" %}}![App Explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
 2.  Click the **Runtime** tab:
 
@@ -221,6 +221,12 @@ Next you are going to create a show page action for **ON_tapNotification**.
 
 Now you will set up a data view on your home page.
 
+{{% alert type="info" %}}
+Local notifications do not support **On recieve** events.
+{{% /alert %}}
+
+Do the following:
+
 1. Drag and drop a **Data View** widget on your **Home_Native** page.
 2. Double-click your data view.
 3. Select **Data source** > **Type** > **Nanoflow**.
@@ -238,7 +244,7 @@ Now you will set up a data view on your home page.
 	{{% image_container width="500" %}}![guid string](attachments/native-push/set-guid-string.png){{% /image_container %}}
 
 9. Click **Actions** > **New**.
-10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification**.
+10. Create a **New Action** named *OpenPageWithParams*, set **On open** to **Call a nanoflow**, and select **ON_tapNotification** (see the note above concerning **On receive** events).
 
 	{{% image_container width="500" %}}![notification action](attachments/native-push/notif-action-2.png){{% /image_container %}}
 
@@ -252,5 +258,4 @@ Congratulations! You have harnessed the power of data to enhance your push notif
 
 ## 4 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

@@ -13,5 +13,6 @@ With Mendix you can build powerful native apps. Native mobile apps differ from h
 
 * [Getting the Make It Native App](getting-the-make-it-native-app)
 * [Native Navigation](native-navigation)
+* [Native Template](native-template)
 * [Native Mobile Styling](native-styling-refguide)
 * [Working with Vector Graphics](native-svg)

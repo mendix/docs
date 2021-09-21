@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 90
 description: "Describes the Mobile App page in the Mendix Developer Portal."
 tags: ["Developer Portal", "Mobile", "Mobile App", "Deploy"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -19,7 +20,7 @@ This page is divided into three tabs:
 {{% alert type="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto/mobile/build-hybrid-locally) for information on local building.
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
@@ -96,13 +97,12 @@ Take note of the required resolutions and file types for the image files, as the
 
 Once you begin the app buliding wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, and run on emulators.
 
-For iOS please follow the instructions in the [Building Your iOS App Locally](/howto/mobile/build-hybrid-locally#building-ios-locally) section of *How to Build a Mendix Hybrid App Locally*.
+For iOS please follow the instructions in the [Building Your iOS App Locally](/howto8/mobile/build-hybrid-locally#building-ios-locally) section of *How to Build a Mendix Hybrid App Locally*.
 
-For Android please follow the instructions in the [Building Your Android App Locally](/howto/mobile/build-hybrid-locally#building-android-locally) section of *How to Build a Mendix Hybrid App Locally*.
+For Android please follow the instructions in the [Building Your Android App Locally](/howto8/mobile/build-hybrid-locally#building-android-locally) section of *How to Build a Mendix Hybrid App Locally*.
 
 ## 5 Read More
 
 * [Deploy and Manage Guide](/developerportal/deploy)
 * [Offline Reference Guide](/refguide/offline-first)
-* [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

@@ -7,6 +7,10 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-settings.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
@@ -31,7 +35,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 

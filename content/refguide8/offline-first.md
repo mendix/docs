@@ -116,11 +116,15 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 {{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
-### 2.5 Error Handling {#error-handling}
+### 2.5 Limitations
+
+Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](synchronize#limitations) section of the *Synchronize Reference Guide*.
+
+### 2.6 Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.
 
-#### 2.5.1 Network-Related Errors {#network-errors}
+#### 2.6.1 Network-Related Errors {#network-errors}
 
 Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
 
@@ -136,7 +140,7 @@ If a network error occurs during the download phase, no data is updated on the d
 
 If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, if synchronization is called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
-#### 2.5.2 Model- or Data-Related Errors {#othererrors}
+#### 2.6.2 Model- or Data-Related Errors {#othererrors}
 
 During the synchronization, changed and new objects are committed. An object's synchronization might encounter problems due to the following reasons:
 
@@ -147,7 +151,7 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-### 2.5.3 Preventing Synchronization Issues {#prevent-sync-issues}
+### 2.6.3 Preventing Synchronization Issues {#prevent-sync-issues}
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
@@ -158,9 +162,9 @@ To avoid the problems mentioned above, we suggest following these best practices
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-### 2.5.4 Conflict Resolution {#conflict-res}
+### 2.6.4 Conflict Resolution {#conflict-res}
 
-It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach. 
+It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 
 If another approach is needed, conflicts can be detected in a before-commit microflow (for example, by using a revision ID attribute on the entity). Based on that, custom conflict resolution can be performed.
 
@@ -189,6 +193,7 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 
 * Passing an object or a list of a persistable entity is not supported.
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
+* Passing a non-persistable entity that was created in another microflow is not supported
 
 #### 4.1.2 UI Actions
 
@@ -253,3 +258,7 @@ System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supp
 ### 4.8 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
+
+### 4.9 Hashed String Attributes {#hashed-strings}
+
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

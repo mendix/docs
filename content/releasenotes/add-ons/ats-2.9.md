@@ -9,7 +9,7 @@ parent: "ats-2"
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22) can now be recorded and tested with ATS.
 
 ### Improvements
 

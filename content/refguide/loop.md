@@ -1,6 +1,6 @@
 ---
 title: "Loop"
-parent: "application-logic"
+parent: "microflows-and-nanoflows"
 menu_order: 80
 tags: ["studio pro", "loop", "iterate over", "for each", "while"]
 ---

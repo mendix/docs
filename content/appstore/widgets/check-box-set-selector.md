@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "check box set selector
 
 ## 1 Introduction
 
-The [Check Box Set Selector](https://appstore.home.mendix.com/link/app/121/) widget lets you use a list of check boxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector).
+The [Check Box Set Selector](https://marketplace.mendix.com/link/component/121/) widget lets you use a list of check boxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector).
 
 ### 1.1 Typical Usage Scenario
 

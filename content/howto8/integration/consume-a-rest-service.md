@@ -36,7 +36,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
-4. Create a module and name it *RESTconsume*. To add a new [JSON structure](../../refguide8/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+4. Create a module and name it *RESTconsume*. To add a new [JSON structure](/refguide8/json-structures) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
@@ -46,7 +46,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide8/import-mappings) specifies how the JSON relates to [entities](../../refguide8/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide8/import-mappings) specifies how the JSON relates to [entities](/refguide8/entities). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **Project Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -99,7 +99,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide8/microflows) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](/refguide8/microflows) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 
@@ -143,7 +143,7 @@ To create a page for this app, follow these steps:
 
 1. Open the **Homepage** and add a **Data view**.
 2. Right-click the **[Unknown]** bar and click, **Select entity**. Select the **Input** entity.
-3. For the **Data source – Type** select **Microflow** and click **Create new microflow**.
+3. For the **Data source – Type**, select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).
 5. Click **OK**.
 6. From **Container widgets**, add a new **Table** with one row and two columns.
@@ -170,12 +170,9 @@ To fill in the CreateInput microflow, follow these steps:
 1. In the **Project Explorer**, double-click **CreateInput**. 
 2. From the **Toolbox**, drag a **Create object** activity to the microflow.
 3. Double-click the activity.
-4. For **Entity**, click** **Select** and double-click **Input**.
-5. Click **OK**.
-6. If there is an undefined parameter object in the microflow, delete this.
-7. Double-click the red **End event**.
-8. Under **Return value**, enter `$NewInput`.
-9. Click **OK**
+4. For **Entity**, click **Select** and double-click **Input**, then click **OK**.
+5. Double-click the red **End event**.
+6. Under **Return value**, enter `$NewInput`, then click **OK**
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 

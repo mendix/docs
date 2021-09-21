@@ -10,8 +10,141 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
-
 ## 2021
+
+### September 10th, 2021
+
+#### Improvements
+
+* We added a new [custom environment variable](/developerportal/deploy/environments-details#custom-environment-variables) `USAGE_METRICS_EMAIL_FIELDS` which allows you to identify which entities are used to hold your end user details.
+
+#### Fixes
+
+* In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
+
+### August 26th, 2021
+
+#### Improvements
+
+* We added the ability to restore only a database, without restoring the other files in a backup.
+    You can do this in one of two ways:
+    * Through the [Developer Portal](/developerportal/operate/restore-backup#restore-cloud-backup)
+    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api)
+
+### August 6th, 2021
+
+#### Improvements
+
+* We moved the [Node Permissions](/developerportal/deploy/node-permissions) from the Security page to the [Environments](/developerportal/deploy/environments) page.
+* We added the ability to delegate node permission management to team members who are not the Technical Contact.
+
+#### Fixes
+
+* We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
+
+### July 23rd, 2021
+
+#### Improvements
+
+* We improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker. The version will be updated after a restart of the environment.
+
+#### Fixes
+
+* We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
+* We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
+
+### July 15th, 2021
+
+#### Improvements
+
+* Mendix Cloud v4 now supports incoming connections over Internet Protocol version 6 (IPv6).
+
+### July 5th, 2021
+
+#### Fixes
+
+* We fixed an issue where long-running restore jobs appear to fail when using [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1).  (Tickets 122197 and 125707)
+
+#### Announcement
+
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1). We recommend that you use [Backups API V2](/apidocs-mxsdk/apidocs/backups-api) which handles long-running backup and restore jobs more robustly.
+
+### June 14th, 2021
+
+#### Improvements
+
+* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
+
+### June 11th, 2021
+
+#### Mendix Cloud V3 Archived Logs
+
+* We have deleted archived logs older than 6 months for all Mendix Cloud **V3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+
+### June 8th, 2021
+
+#### Improvements
+
+* The [Mendix buildpack](https://github.com/mendix/cf-mendix-buildpack) that is
+  used to run your Mendix application will be automatically updated to the
+  latest version every time your app resumes in Mendix Cloud v4 Free Tier EU.
+
+### May 27th, 2021
+
+#### Improvements
+
+* We now retain daily backups on Mendix Cloud V4 for 30 days. Previously, it was two weeks.
+
+### May 18th, 2021
+
+#### Improvements
+
+* Mendix Cloud domains `mendixcloud.com` and `mxapps.io` now use DNSSEC to
+  authenticate DNS lookups. There is nothing that you need to do for this
+  change to take effect. Going forward, all DNS requests to these domains
+  will automatically use DNSSEC.
+
+### May 12th, 2021
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with `pg_dump` version 1.14. This version is shipped with PostgreSQL since October 2019 (PostgreSQL 12, 13). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.14 (PostgreSQL <= 11). The error that you will receive is `pg_restore: [archiver] unsupported version (1.14) in file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. Examples are PostgreSQL client version 12 or 13, or [PGAdmin version 4.12 or above](https://www.pgadmin.org/download/).
+
+### April 29th, 2021
+
+#### Improvements
+
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32. If you need more than 32 instances please contact Mendix Support.
+
+#### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
+
+To improve security and scalability of the connections made to applications in Mendix Cloud v4, **on July 1st, 2021** we will enable support for **Internet Protocol Version 6 (IPv6)** in **Mendix Cloud v4**. This will happen automatically, there is no need to redeploy your app.
+
+Enabling support for IPv6 means that clients who access your Mendix applications which have configured Access Restriction Profiles may not be able to connect to them when using IPv6.
+
+**What does this mean for you?**
+
+We are informing you about this date so that you can plan to update your Access Restriction Profiles and inform users about this change. Technical Contacts of affected apps will also be contacted directly.
+
+You can configure IPv6 ranges before July 1st, but the change will only come into effect on that date. Instructions for setting IP ranges can be found in the [Access Restriction Profiles](/developerportal/deploy/access-restrictions#ip-ranges) documentation.
+
+**Test your clients**
+
+You can test whether your client (browser or integrating client) is using IPv6, by using [https://ipv6-test.com](https://ipv6-test.com/).
+
+**Impact**
+
+Any clients that use IPv6 to connect to applications which have configured Access Restriction Profiles may experience connectivity issues from **July 1st, 2021** onwards.
+
+### April 15th, 2021
+
+#### Fix/Improvement
+
+* We implemented a new `upload` API which allows you to upload large (>300MB) app packages (.mda files) and still retrieve the package ID. More information is in [Deploy API – Version 2](/apidocs-mxsdk/apidocs/deploy-api-2). (Tickets 117609 and 117622)
+
+### March 30th, 2021
+
+* We have implemented various visual changes to the user interface of the Developer Portal.
 
 ### March 18th, 2021
 
@@ -69,14 +202,13 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     You need to redeploy of your app to implement these changes. All your existing metrics will continue to be sent to Datadog. There will be some minor changes around how database rate and counter metrics, but this does not affect gauges. See [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics) for more information.
 
-
 ## 2020
 
 ### December 17th, 2020
 
 * We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
-	For more information on custom environment variables, see [Runtime Tab](https://docs.mendix.com/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
+	For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details#custom-environment-variables) in the *Environment Details* documentation.
 
 * As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the Edit in Studio and Edit in Studio Pro buttons on the environments page.
 
@@ -88,9 +220,9 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on December 3rd.
 
-### December 3rd, 2020{#20201203}
+### December 3rd, 2020 {#20201203}
 
-* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](https://docs.mendix.com/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
+* We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
 
 ### November 26th, 2020
@@ -104,7 +236,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We added support to generate 1024x1024 App Store icons for iOS.
+* We added support to generate 1024x1024 icons for iOS.
 
 #### Fixes
 
@@ -114,7 +246,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Fixes
 
-* We resolved an issue where [HTTP headers](https://docs.mendix.com/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
+* We resolved an issue where [HTTP headers](/developerportal/deploy/environments-details#http-headers) were only returned for a successful request. You will have to redeploy your app to apply this fix. (Tickets 94915 and 107140)
 
     See [Mendix Buildpack Releases](https://github.com/mendix/cf-mendix-buildpack/releases) on *GitHub* for more information.
 
@@ -220,8 +352,8 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 #### Fixes
 
-* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro:
-	* We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro.
+* We fixed issues related to the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro:
+	* We rolled back the restriction for Mendix Cloud v3 apps in the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro.
 	* We improved the error messages for Mendix Cloud v4 apps that appear when you deploy from Studio Pro with no [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set or you do not have sufficient privileges to deploy to the Studios target.
 	* We fixed an issue where you were able to log in as a **Demo User** to the Studios target. Please note that in this scenario, you have to clear the Studios target and redeploy to the affected environment. The target can then be set after redeploying. (Ticket 106312)
 
@@ -231,7 +363,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1s
 
 * We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api). (Ticket 103241)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide/project-menu#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide/app-menu#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 #### Fixes
 
@@ -717,7 +849,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+* We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 *  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
 	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)

@@ -4,6 +4,10 @@ parent: "modules"
 tags: ["studio pro", "ui resources"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/ui-resources-package.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The UI resources package is a specific [module](modules) marked by a green icon in the Project Explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-templates) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 

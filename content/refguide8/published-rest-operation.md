@@ -8,6 +8,10 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-operation.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.

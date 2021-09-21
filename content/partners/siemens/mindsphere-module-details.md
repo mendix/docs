@@ -1,6 +1,6 @@
 ---
 title: "MindSphere Module Details"
-parent: "mindsphere"
+parent: "mendix-on-mindsphere"
 menu_order: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
@@ -13,6 +13,10 @@ aliases:
 
 ## 1 Introduction
 
+{{% alert type="warning" %}}
+This information is for apps which are deployed to MindSphere. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
+
 This page contains detailed information about the content of MindSphere modules for Mendix apps and what they are used for. If you want to deploy a Mendix app to MindSphere, the instructions are in [Deployment on Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
 This page can be used for troubleshooting issues with your deployment, or for assistance in additional customization you may wish to carry out.
@@ -21,7 +25,7 @@ This page can be used for troubleshooting issues with your deployment, or for as
 
 When running on MindSphere, the MindSphere user can use their MindSphere credentials to sign in to your app. This is referred to as Single Sign-On (SSO). To do this, you need to use the microflows and resources in the **MindSphereSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
 
-The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
+The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://marketplace.mendix.com/link/component/108805/).
 
 {{% alert type="warning" %}}
 The SSO module also requires changes to the app theme see the section on [MindSphere Theme Pack](#msthemepack), below.
@@ -57,9 +61,9 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 #### 2.2.1 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer* dock.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *App Explorer* dock.
 
-![Project settings dialog](attachments/mindsphere-module-details/image4.png)
+![App settings dialog](attachments/mindsphere-module-details/image4.png)
 
 #### 2.2.2 DS_MindSphereAccessToken
 
@@ -120,7 +124,7 @@ In MindSphere, these roles will look like this:
 
 And in the Mendix example app they will be mapped to these roles:
 
-![Mendix Project Security dialog](attachments/mindsphere-module-details/image9.png)
+![Mendix App Security dialog](attachments/mindsphere-module-details/image9.png)
 
 ## 3 MindSphere OS Bar {#msosbar}
 
@@ -130,7 +134,7 @@ You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar](h
 
 The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying the OS Bar URL. See [getting the MindSphere OS Bar](https://design.mindsphere.io/osbar/introduction.html#tab1anchor0) for a list of available URL locations.
 
-The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere app template, or can be downloaded from the Mendix Marketplace here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
+The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere app template, or can be downloaded from the Mendix Marketplace here: [MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/).
 
 {{% alert type="info" %}}
 The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.

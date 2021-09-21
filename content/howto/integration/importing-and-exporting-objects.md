@@ -2,7 +2,7 @@
 title: "Import & Export Objects"
 category: "Integration"
 menu_order: 2
-tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
+tags: ["mpk", "import", "export", "document", "module", "widget"]
 ---
 
 ## 1 Introduction
@@ -27,17 +27,17 @@ Please note throughout this how-to that Mendix packages are stored as Mendix pac
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
-### 2.1 Importing Project Packages
+### 2.1 Importing App Packages
 
 A Mendix package (*.mpk*) file can store a complete Mendix project.
 
-To import a complete Mendix project package, follow these steps:
+To import a complete Mendix app package, follow these steps:
 
-1. Click the **File** menu in  and select **Import Project Package...**:
+1. Click the **File** menu in  and select **Import App Package**:
 
-    ![](attachments/18448739/18582103.png)
+    ![](attachments/18448739/file-import-app-project.png)
 
-2. Select your Mendix project package file and click **Open**. The **Import Project Package** dialog box will appear:
+2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
 
     ![](attachments/18448739/18582101.png)
 
@@ -45,17 +45,17 @@ To import a complete Mendix project package, follow these steps:
 
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, or **Locally on disk**
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
-    * Determine the local folder where you would like to store your project in **Project directory**
+    * Determine the local folder where you would like to store your app in **App directory**
    
-3.  Click **OK**, and your project will be loaded in .
+3.  Click **OK**, and your app will be loaded in .
 
 ### 2.2 Importing Module Packages
 
-A Mendix package (*.mpk*) file can store a Mendix project module.
+A Mendix package (*.mpk*) file can store a Mendix app module.
 
 To import module packages, follow these steps:
 
-1. Right-click your project in the **Project Explorer** and select **Import Module Package**.
+1. Right-click your app in the **App Explorer** and select **Import Module Package**.
 
     ![](attachments/18448739/import-package.png)
 
@@ -70,11 +70,11 @@ To import module packages, follow these steps:
     {{% alert type="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
     {{% /alert %}}
 
-4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your project.
+4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 
-5. Click **OK**. You will see your new or replaced module in the **Project Explorer**.
+5. Click **OK**. You will see your new or replaced module in the **App Explorer**.
 
-    You will also see your changes in the **Changes** section of . In this example, the existing module has been deleted and replaced by the newly imported module:
+    You will also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
 
     ![](attachments/18448739/18582109.png)
 
@@ -113,7 +113,7 @@ The package can contain a single example of one of the following:
 
 To import module objects, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Import document from file...**:
+1. Right-click a module in the **App Explorer** and select **Import document from file...**:
 
     ![](attachments/18448739/18582100.png)
 
@@ -131,21 +131,21 @@ To import module objects, follow these steps:
 
 ### 2.4 Importing Widgets
 
-A Mendix package (*.mpk*) file can store one or more widgets. You need to place the Mendix package file in your project directory to import it.
+A Mendix package (*.mpk*) file can store one or more widgets. You need to place the Mendix package file in your app directory to import it.
 
 To import widgets, follow these steps:
 
-1. Click the **Project** menu and select **Show Project Directory in Explorer**:
+1. Click the **App** menu and select **Show App Directory in Explorer**:
 
     ![](attachments/18448739/18582108.png)
 
-2. Open the **widgets** folder in your project directory and put your Mendix package file there.
+2. Open the **widgets** folder in your app directory and put your Mendix package file there.
 
-3. Open the **Project** menu and select **Synchronize Project Directory** to synchronize the changes in the project directory:
+3. Open the **App** menu and select **Synchronize App Directory** to synchronize the changes in the app directory:
 
     ![](attachments/18448739/18582106.png)
 
-    {{% alert type="info" %}}You can also press **F4** to synchronize your project directory.
+    {{% alert type="info" %}}You can also press **F4** to synchronize your app directory.
     {{% /alert %}}
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
@@ -156,19 +156,19 @@ To learn more about importing content from the Marketplace, see [How to Use Mark
 
 ## 3 Exporting Objects
 
-### 3.1 Exporting Complete Project Packages
+### 3.1 Exporting Complete App Packages
 
-To export a project, follow these steps:
+To export an app, follow these steps:
 
-1. Click the **File** menu in  and select **Export Project Package...**
+1. Click the **File** menu in  and select **Export App Package**.
 
-    ![](attachments/18448739/18582091.png)
+    ![](attachments/18448739/file-export-package.png)
 
-2. The **Export Project Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
+2. The **Export App Package** dialog box will appear, which enables you to set the export location and select data to export (if required):
 
     ![](attachments/18448739/18582090.png)
 
-    The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the project has been started at least once.
+    The **Existing snapshot** option will only be available when a data snapshot was created earlier using the **Add snapshot of data** menu option from the **Team** menu. It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the app has been started at least once.
 
 3. Click **Export** to create the package.
 
@@ -176,11 +176,11 @@ To export a project, follow these steps:
 
 To export a module, follow these steps:
 
-1. Right-click a module in the **Project Explorer**, and select **Export module package...**:
+1. Right-click a module in the **App Explorer**, and select **Export module package...**:
 
     ![](attachments/18448739/18582095.png)
 
-    If your module refers to other modules in the project (that is, it is not self-contained), you will see a pop-up window warning you of this.
+    If your module refers to other modules in the app (that is, it is not self-contained), you will see a pop-up window warning you of this.
 
     ![](attachments/18448739/18582094.png)
 
@@ -188,14 +188,14 @@ To export a module, follow these steps:
 
     ![](attachments/18448739/18582093.png)
 
-    Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
+    Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you don't want to include these files, you can uncheck the boxes.
 
     {{% alert type="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the objects.
     {{% /alert %}}
 
 ### 3.3 Exporting Widgets
 
-Widgets are automatically available in the **widgets** folder in your project directory as *.mpk* files.
+Widgets are automatically available in the **widgets** folder in your app directory as *.mpk* files.
 
 ### 3.4 Exporting Module Documents
 
@@ -221,5 +221,5 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Modules](/refguide/modules)
-* [Project](/refguide/project)
+* [App](/refguide/project)
 * [Common Widgets](/refguide/common-widgets)

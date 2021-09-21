@@ -26,7 +26,7 @@ The app is created on the Team Server, and a working copy is created in the **Pr
 
 ## 3 Joining a Project
 
-If there is already a Team Server enabled project, you can be invited to join it (see [App Team](/developerportal/collaborate/team)).
+If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/collaborate/team)).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
@@ -372,11 +372,11 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 
 ### 9.5 Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your App Team is not yet ready to upgrade. 
+When working in different app with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, follow these steps:
 
-1. Inform your App Team of the situation and prevent them from making further commits.
+1. Inform your team of the situation and prevent them from making further commits.
 2. Close Studio Pro. 
 3. In Windows Explorer, go to your main app directory.
 4. Right-click the directory and select **TortoiseSVN** > **Show log**. 
@@ -385,7 +385,7 @@ To revert this version upgrade of the app model, follow these steps:
 7. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
 8. Start the desired Studio Pro version and download the app from Team Server.
 9. Check that everything is okay in your app.
-10. Inform your App Team that they need to do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their project folder before opening the project in the desired Studio Pro version again.
+10. Inform your team that they need to do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their project folder before opening the project in the desired Studio Pro version again.
 
 ## 10 Read More
 

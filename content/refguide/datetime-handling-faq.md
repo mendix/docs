@@ -15,9 +15,9 @@ A DateTime is nothing more than a number to a computer. This number represents t
 
 This also means there is NO timezone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or timezones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, timezones come into play.
 
-## 3 What Is the Purpose of the Default Time Zone Setting in Project Settings?
+## 3 What Is the Purpose of the Default Time Zone Setting in App Settings?
 
-The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for projects where people log in from multiple time zones because it will rarely be correct.
+The default time zone determines the time zone for newly created users and also sets a time zone for users that do not have a time zone when the server starts. If your application is only used in one time zone, setting this as the default will make sure that the users of your application never have to worry about setting their time zone. You should probably not use the default time zone setting for apps where people log in from multiple time zones because it will rarely be correct.
 
 ## 4 What Is the Purpose of Setting a Time Zone for a User?
 

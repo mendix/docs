@@ -1,6 +1,6 @@
 ---
 title: "Customize Your Styling"
-category: "Front-End"
+category: "Front End"
 menu_order: 9
 description: "These how-to's will guide you in styling your Mendix apps."
 tags: ["build", "app", "studio", "studio pro", "style", "styling"]

@@ -14,10 +14,6 @@ The OData Connector for SAP solutions needs to know details of the OData service
 
 Any OData service can be used to generate a data model using the OData Model Creator for SAP solutions. See [How To Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) for instructions on how to do this.
 
-{{% alert type="warning" %}}
-*OData Model Creator for SAP solutions* and *OData Connector for SAP solutions* only support SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
-{{% /alert %}}
-
 ## 2 SAP Data Models
 
 The Data Model module contains up to four resources which help to consume the OData Service:

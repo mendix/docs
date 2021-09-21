@@ -24,11 +24,22 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install a long term support (LTS) or current version of [Node.js](https://docs.npmjs.com/files/package.json#engines)
+* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
 	* For Windows, install using this [official installer](https://nodejs.org/en/download/package-manager/#windows)
-	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
-* Install [Yeoman](https://yeoman.io/) with the following command: ` $ npm install yo -g`
-* Install the Mendix Pluggable Widget Generator with the following command: ` $ npm install @mendix/generator-widget -g`
+	* For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and
+	  these [official tools](https://nodejs.org/en/download/package-manager/#macos)
+* Install [Yeoman](https://yeoman.io/) with the following command:
+
+	```shell
+	$ npm install -g yo
+	```
+
+* Install the latest Mendix Pluggable Widget Generator for Yeoman for Mendix 8 with the following command:
+
+	```shell
+	$ npm install -g @mendix/generator-widget@"<9"
+	```
+
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -88,6 +99,8 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 ![mx generator](attachments/pluggable-part-one/generatorblack.png)
 
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+
 ### 3.3 Adding the Attribute
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
@@ -120,7 +133,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* *TextBox.xml* is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition) used in Studio Pro which reads the widget's capabilities
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
-	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) only allows the selection of string attributes from the domain model
+	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#attribute) only allows the selection of string attributes from the domain model
   
 3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
@@ -219,7 +232,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 ### 3.4 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#3-standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 
@@ -275,7 +288,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ### 3.5 Labeling the Input{#label-input}
 
-While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#label) to any widget.
+While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#label) to any widget.
 
 1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
@@ -377,5 +390,5 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8)

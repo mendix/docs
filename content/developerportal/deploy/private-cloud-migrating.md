@@ -1,23 +1,27 @@
 ---
-title: "Migrating to Your Own Registry"
+title: "Hosting Your Own Registry"
 parent: "private-cloud-cluster"
 description: "Describes how to migrate Mendix images to a private cloud registry"
 menu_order: 10
 tags: ["Private Cloud", "Registry", "Migrate", "Image", "Export", "Import"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-When you have an OpenShift or Kubernetes cluster which is firewalled, you will need to host Mendix components in your own custom registry.
+When you have an OpenShift or Kubernetes cluster which is firewalled, you will need to host Mendix components in your own image registry.
 
-Storing images in your custom registry can also help as it caches images locally and saves network bandwidth.
+Storing images in your own registry can also help as it caches images locally and saves network bandwidth.
 
 This document explains how to export the components from the Mendix registry and import them into your own registry. It also explains how to tell the Mendix Configuration Tool to use your own registry when configuring the namespace.
 
 ## 2 Prerequisites for Migrating to Your Registry
 
-To export components from the Mendix registry, you will need access to the internet.
-You will also need all the other prerequisites for creating a Mendix for Private Cloud cluster, as documented in the [Prerequisites for Creating a Cluster](private-cloud-cluster#prerequisites) section of *Creating a Private Cloud Cluster*.
+To export components from the Mendix registry, you will need the following:
+
+* Access to the internet
+* A local or managed image registry
+* All the other prerequisites for creating a Mendix for Private Cloud cluster, as documented in the [Prerequisites for Creating a Cluster](private-cloud-cluster#prerequisites) section of *Creating a Private Cloud Cluster*.
 
 ## 3 Download the Mendix Configuration Tool
 
@@ -43,9 +47,9 @@ Follow these steps to export the Mendix components and store them on your local 
 
     The components you selected will be extracted from the Mendix repository and saved on your local machine. This will be in the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and U*ix. This can take some time. Wait for the message *The images for the selected components were exported successfully in tarballs*.
 
-## 5 Import Mendix Components Into Custom Registry
+## 5 Import Mendix Components Into Your Own Registry
 
-Once you have the Mendix components saved on your local machine, you can import them into your custom registry.
+Once you have the Mendix components saved on your local machine, you can import them into your own registry. This means that, once configured, Mendix will be able to find them, even if you have an air-gapped installation which is not connected to the internet.
 
 Perform the following steps.
 
@@ -93,7 +97,7 @@ With the `--registry` flag set, follow the instructions in the [Base Installatio
 
 With the `--registry` flag set, follow the instructions in the [Configure Namespace](private-cloud-cluster#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
-When you get to the stage [Review and Apply](private-cloud-cluster#review-apply), the YAML file which you create will contain the location of your custom registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and U*ix). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
+When you get to the stage [Review and Apply](private-cloud-cluster#review-apply), the YAML file which you create will contain the location of your own registry instead of the default Mendix registry. The patched YAML file is stored in the subfolder `.mxpc-cli/<project name/<folder name>/kube` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli\<project name\<folder name>\kube` in Windows or `/home/<User id>/.mxpc-cli/<project name/<folder name>/kube` for Mac and U*ix). The **Installer output** panel will confirm the location of the saved file when you click **Write YAML**.
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 

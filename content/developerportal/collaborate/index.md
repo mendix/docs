@@ -1,7 +1,11 @@
 ---
-title: "Collaboration Tools"
+title: "Collaboration"
 description: "Describes the collaboration tools available in the Mendix Developer Portal."
 tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
+aliases:
+    - /developerportal/develop/
+    - /developerportal/settings/
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -10,7 +14,8 @@ The Developer Portal supports collaboration with your team and the tracking of S
 
 ## 2 Main Documents in This Category
 
-* [Buzz](buzz) – describes the part of the Mendix Developer Portal where you can see and share ideas as well as discuss and collaborate with your team
-* [App Team](team) – details the page that presents an overview of your App Team members where you can also invite new members to your apps
 * [Stories](stories) – presents the page that lets you add, edit, and delete stories and Sprints
-* [Documents](documents) – describes where you can upload and download files related to your app
+* [Team](team) – details the page that presents an overview of your team members where you can also invite new members to your apps
+* [Feedback](feedback) – describes where you can manage feedback on your app
+* [Team Server](team-server) – presents the integration of Team Server with the Mendix Studios for managing requirements, implementation, and feedback
+* [General Settings](general-settings) – describes the diverse and powerful settings available for your app

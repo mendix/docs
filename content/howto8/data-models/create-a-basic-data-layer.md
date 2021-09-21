@@ -22,7 +22,7 @@ The domain model consists of entities and associations. An entity is the bluepri
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Download and install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Create a new app or have an existing app available
 
 ## 3 Creating Entities & Attributes

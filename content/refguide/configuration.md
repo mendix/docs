@@ -7,11 +7,11 @@ tags: ["studio pro", "configurations", "configuration"]
 
 ## 1 Introduction
 
-A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
+A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **App Explorer** > **App** > **Settings** > the **Configuration** tab. 
 
 You can define any number of configurations. The active configuration, as in, the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 
-You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
+You can use configurations to have different database settings for different people working on your app. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 
 {{% alert type="warning" %}}
 
@@ -34,8 +34,8 @@ A configuration contains the following:
 The **Database** tab has the following settings:
 
 * **Type** – the type of database in which the end-user data of your application is stored
-* **URL (not for built-in database)** – the URL of the database server that contains your project
-* **Database name (called Database SID for Oracle)** – the name of the database that contains your project
+* **URL (not for built-in database)** – the URL of the database server that contains your app
+* **Database name (called Database SID for Oracle)** – the name of the database that contains your app
 * **Use integrated security (only for SQL Server)** – with SQL Server you can use integrated security to gain access to the database. This means that your Windows credentials are used to sign in to SQL Server. If you disable integrated security you can enter a user name and password manually.
 * **User name (not for built-in database)** – the user name that is used to sign in to the database server. If you use integrated security, no user name has to be specified.
 * **Password (not for built-in database)** – the password that is used to sign in to the database server. If you use integrated security, no password has to be specified.
@@ -75,4 +75,4 @@ For settings overview, see [Runtime Customization](custom-settings).
 
 ## 3 Read More
 
-* [Project Settings](project-settings)
+* [App Settings](project-settings)

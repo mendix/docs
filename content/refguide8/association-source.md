@@ -5,6 +5,10 @@ tags: ["studio pro", "association", "data source"]
 menu_order: 60
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-source.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Association** source is a data source available to nested [data grids](data-grid), [template grids](template-grid), and [list views](list-view). 

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "simple check box set s
 
 ## 1 Introduction
 
-The [Simple Check Box Set Selector](https://appstore.home.mendix.com/link/app/2349/) enables rending a reference set association as a check box list. It is a useful replacement for the default [reference set selector](/refguide/reference-set-selector).
+The [Simple Check Box Set Selector](https://marketplace.mendix.com/link/component/2349/) enables rending a reference set association as a check box list. It is a useful replacement for the default [reference set selector](/refguide/reference-set-selector).
 
 ### 1.1 Typical Usage Scenario
 

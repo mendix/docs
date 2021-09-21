@@ -13,11 +13,11 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 
 | Concept      | Pluggable widgets                                                                                     | Custom widgets                                                           |
 | ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Framework    | [React](pluggable-widgets#client-component)                                                                         | [Dojo](/howto8/extensibility/widget-development#dojo)                 |
+| Framework    | [React](/apidocs-mxsdk/apidocs/pluggable-widgets#client-component)                                                                         | [Dojo](/howto8/extensibility/widget-development#dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
-| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#dynamic-value) | [Subscribe](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.subscribe) |
+| Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis#dynamic-value) | [Subscribe](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.subscribe) |
 | API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)                                     | [Mendix client API](https://apidocs.rnd.mendix.com/8/client/index.html)                |
-| Platform     | [Web and native](pluggable-widgets#widget-description)                                                            | Web                                                                      |
+| Platform     | [Web and native](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-description)                                                            | Web                                                                      |
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
@@ -37,4 +37,4 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 
 ## 3 Read More
 
-* [Pluggable Widgets API](pluggable-widgets)
+* [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)

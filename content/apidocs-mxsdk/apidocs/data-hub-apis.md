@@ -1,77 +1,37 @@
 ---
-title: "Data Hub API"
+title: "Data Hub APIs"
 category: "API Documentation"
-description: "This document describes the Data Hub API and generating the Personal Access Token."
+description: "This document describes the Data Hub APIs and generating the Personal Access Token."
+menu_order: 20
 tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access token"]
 ---
 
-## 1. Introduction
+## 1 Introduction
 
-The Data Hub API enables you to explore and discover data sources in Mendix Data Hub and use them to build new apps. You can also set up a registration flow in your deployment pipeline to register new data sources from your applications to the Data Hub Catalog.
+The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are OpenAPI (formerly Swagger) specifications with the following APIs available:
 
-{{% alert type="info" %}}
-To use the Mendix Data Hub a license is required.
+* [Search API](#search) — search and retrieve information on regisered assets that can be used in your app development
+* [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
+* [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
+
+{{% alert type="warning" %}}
+The Data Hub API v2 is now deprecated and will be removed. You should update your calls to this API and use the latest [Search](#search) and [Registration](#registration) API URLs.
 {{% /alert %}}
 
-## 2. The Data Hub API
-
-The [DataHubAPI](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/) is an Open API (formerly Swagger) specification which contains all the APIs for the operations that are currently available which include the following: 
-
-* Registration
-* Search
-
-You can access the API at: http://datahub-spec.s3-website.eu-central-1.amazonaws.com/.
-
 {{% alert type="info" %}}
-For the current release, the interactive features of the OpenAPI interface are not operational and therefore the **Try it out** feature does not work.
+The interactive features of the OpenAPI interface are not operational, so the **Try it out** feature does not work.
 {{% /alert %}}
 
-To access the API, authentication and authorization are required. Mendix users must obtain a Personal Access Token (PAT) as described in [Generating your Personal Access Token](#generatepat).
+## 2 Search API {#search}
 
-For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search.html) enables users to search and retrieve assets that are registered in Data Hub that satisfy the specified search criteria. For an example API call, see the [Search via the API](/data-hub/data-hub-catalog/search#search-api) section of *How to Search in the Data Hub Catalog*.
 
- `MxToken <your_token_secret> `
+## 3 Registration API {#registration}
 
-Where you insert the PAT in place of the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub.
+The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) can be used to register applications, environments, and services or data sources. See an example API call at [Register an Application](https://docs.mendix.com/data-hub/data-hub-catalog/register-data#register-application).
 
-## 3. Generating your Personal Access Token {#generatepat}
+The API includes `POST` methods for registering new assets where a UUID is generated and returned for the asset in the response body. There are also `PUT` calls to *update* assets for existing UUIDs or create new applications and environments for new UUIDs.
 
-Mendix users (with a registered account) can obtain the necessary PAT using the Mendix **Warden** app by following these steps: 
+## 4 Transform API {#transform}
 
-1. You can access the **Warden** app at: https://warden.mendix.com/.
-
-2. When you are prompted, sign-in using your username and password. The Warden Home page is shown:
-
-	![Warden Home Screen](attachments/dta-hub-apis/warden-home-screen.png)
-
-3. To create a new personal access token, click **Add** to go to the **Create a Personal Access Token** screen. 
-
-4. Enter a **Name** for the token. This name will be used when generated tokens are listed on the Warden home screen—that also identifies which tokens are being used.
-
-5. For the **Select scopes that can be used with this token:** under Data Hub, check both the **mx:datahub:services:read** and **mx:datahub:services:write**:
-
-	![create token home](attachments/dta-hub-apis/create-pat-token.png)
-
-6. Click **Create**. The token will be generated and displayed in a pop-up window:
-
-	![generated token](attachments/dta-hub-apis/generated-pat-token.png)
-
-7. Copy the **Token secret** to your clipboard by clicking the storage icon below the secret. 
-
-	{{% alert type="info" %}}Make sure that you keep this token in a secure place. You will not get another chance to view this token once you **Close** this dialog box.
-   {{% /alert %}}
-
-	{{% alert type="info" %}}For every request that is made to the Data Hub API, you must include the following in the `Authorization` header:
-
-`MxToken <your_token_secret>`
-
-Where you insert the **Token secret** that was generated for the *your_token_secret* string. This line will ensure that you have access your organization’s Data Hub{{% /alert %}}
-
-8. Click **Close** to return to the **Personal Access Tokens** home screen. Your generated token will be listed:
-
-	![token list](attachments/dta-hub-apis/token-list.png)
-
-9. For each token, **Last Used:** will show when the token was last used. 
-
-10. You can delete unused tokens by clicking the "bin" icon for the token.
-
+Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/data-hub/data-hub-catalog/register-data#transform-api) section of *How to Register OData Resources in the Data Hub Catalog*.

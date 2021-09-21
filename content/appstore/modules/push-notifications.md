@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "push notifications", "platform s
 
 ## 1 Introduction
 
-The [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
+The [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
 
 This module makes it easy for Mendix developers who want to include push notifications capability in their Mendix hybrid mobile apps.
 
@@ -27,7 +27,7 @@ Install the dependency *.jar* files:
 $ gradle prepareDeps
 ```
 
-Note that all project `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
+Note that all app `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
 
 * [Community Commons Function Library](community-commons-function-library)
 * [Encryption](encryption)
@@ -56,13 +56,4 @@ Export the module for the Marketplace, including the dependent *userlib* content
 ```bash
 $ gradle extractModule
 ```
-
-## 3 Read More
-
-* [How to Include Push Notifications](/howto/mobile/push-notifications)
-* [How to Implement Push Notifications](/howto/mobile/implementation-guide)
-* [How to Send Push Notifications](/howto/mobile/sending-push-notifications)
-* [How to Set Up the Apple Push Notifcation Server](/howto/mobile/setting-up-apple-push-notification-server)
-* [How to Set Up the Google Firebase Cloud Messaging Server](/howto/mobile/setting-up-google-firebase-cloud-messaging-server)
-* [How to Test the Push Notifications Implementation](/howto/mobile/testing-the-implementation)
 

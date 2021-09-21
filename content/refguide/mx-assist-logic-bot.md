@@ -20,6 +20,8 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
+You can switch MxAssist Logic Bot on and off in the top right corner of the microflow editor. 
+
 To access settings of MxAssist Logic Bot, open **Edit** > **Preferences >**the **General** tab >the **MxAssist Logic Bot** tab. For more information, see [Preferences](preferences-dialog).
 
 In the **MxAssist Logic Bot** tab, you can set the following: 
@@ -28,21 +30,21 @@ In the **MxAssist Logic Bot** tab, you can set the following:
 
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-    ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
+    ![Mx Assist Logic Bot Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
 
 For more information on preferences, see [Preferences](preferences-dialog).
 
 ## 3 Using MxAssist Logic Bot to Build Microflows
 
-MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](https://docs.mendix.com/refguide/microflows). A bow-tie appears on the dot when you hover over it:
+MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows):
 
-{{% image_container width="350" %}}![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png){{% /image_container %}}
+![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png)
 
 It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
 
 To use MxAssist Logic Bot, do the following:
 
-1. Click the bow-tie to see the next best action recommendations:
+1. Click the icon to see the next best action recommendations:
 
     ![Logic Bot Recommendations](attachments/mx-assist-logic-bot/mx-assist-recommendations.png)
 

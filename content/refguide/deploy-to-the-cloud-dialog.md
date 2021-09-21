@@ -1,6 +1,6 @@
 ---
 title: "Deploy to the Cloud"
-parent: "project-menu"
+parent: "app-menu"
 tags: ["studio pro"]
 ---
 
@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 This menu option dialog creates a versioned deployment package and deploys it to your environment in the Mendix Cloud.
 
-![Deploy to the Cloud dialog](attachments/project-menu/deploy-to-the-cloud.png)
+![Deploy to the Cloud dialog](attachments/app-menu/deploy-to-the-cloud.png)
 
 ## 2 Development Line
 

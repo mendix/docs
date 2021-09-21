@@ -1,14 +1,14 @@
 ---
 title: "Optimize Microflow Aggregates"
 category: "Logic & Business Rules"
-menu_order: 7
+menu_order: 70
 tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 
 ## 1 Optimization
 
-In some projects, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If all those microflows do a lot of retrieves and aggregates on large datasets, it is easy to run into performance or memory problems. 
+In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If all those microflows do a lot of retrieves and aggregates on large datasets, it is easy to run into performance or memory problems. 
 
 When a database retrieve activity is only used in list aggregate activities and a custom range is not configured, the platform can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you will not receive a heap space. This is because the microflow will never place all 100k records in memory. However, if you reuse the same list for multiple list aggregates, this does not apply. 
 
@@ -16,7 +16,7 @@ The Mendix Platform only creates an optimized SQL query if the list is not used 
 
 If you do want to use the list but you also want the optimized query, do two separate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
 
-When an average is calculated within an optimized SQL query, the rounding mode configured in the project settings will not be respected. The result that is returned will be rounded by the database according to the database settings. If the rounding mode setting for the project is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
+When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings will not be respected. The result that is returned will be rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 
 ![](attachments/18448676/18580944.png)
 

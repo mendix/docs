@@ -11,7 +11,7 @@ Once you have finished developing a Mendix mobile application, you will want to 
 {{% alert type="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto/mobile/build-hybrid-locally) for information on local building.
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
 
 To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
 {{% /alert %}}
@@ -29,7 +29,7 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. We have int
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
+* Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
@@ -44,7 +44,7 @@ To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
 2. Go to the Mendix app that you want to publish.
-3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
+3. Go to the **Deploy > Mobile app** entry in the side menu of the app.
 4. You will be shown the **Publish App for Mobile s** page, where you need to set up some options for your hybrid mobile app.
 5.  On the **App Info** tab set up the following settings for your app:</br>
 	a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>

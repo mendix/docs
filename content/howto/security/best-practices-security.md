@@ -39,7 +39,7 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
 
 These are the common cases and best practices:
 
@@ -120,7 +120,7 @@ Each application requires power users who should be able to administer technical
 
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
-The user name of the administrator can be changed in 's **Project Security** settings on the **Administrator** tab.
+The user name of the administrator can be changed in 's **App Security** settings on the **Administrator** tab.
 
 When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in  and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
@@ -140,7 +140,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
+You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
 
 ## 11 Adding HTTP Headers {#adding-http-header}
 
@@ -150,11 +150,11 @@ An example of an attack is when an application is embedded in an iframe. Applica
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe) for more information.
 
-## 12 Maintaining a High Level of Project Hygiene
+## 12 Maintaining a High Level of App Hygiene
 
-As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your project hygiene at a high level will reduce the chances of a vulnerable application.
+As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
 
-To keep your project hygiene at a good level, perform the following steps:
+To keep your app hygiene at a good level, perform the following steps:
 
 * Remove unused modules, widgets, and Java libraries
 * Remove microflows that are not being used (these appear as warnings in Studio Pro)
@@ -164,7 +164,7 @@ A good source of known vulnerabilities is the [Common Vulnerabilities and Exposu
 
 ## 13 Configuring User Roles & Access
 
-Which users and roles are defined within an application is different per app and project. However, there are some key guidelines to keep in mind when validating the user security:
+Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 
 * Anonymous access should be disabled if it has no function within the application
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
@@ -178,4 +178,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).

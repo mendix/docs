@@ -18,6 +18,12 @@ This document explains how to migrate the data in an existing Mendix database to
 * Import into an on-premise PostgreSQL database
 * Migrate a PostgreSQL database to a non-PostgreSQL database, including migrating a PostgreSQL database to SAP HANA
 
+{{% alert type="warning" %}}
+You cannot use these methods to transfer data from one app to another. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide/data-storage) for more information.
+
+If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication) module.
+{{% /alert %}}
+
 ## 2 Overview
 
 You can copy all the data from any Mendix-supported database management system to any other Mendix-supported database management system. For example you can copy demo, test, and production databases from built-in to PostgreSQL, and from PostgreSQL to built-in. You can also migrate production data from SQL Server or Oracle (on-premises) to PostgreSQL in our cloud.
@@ -36,7 +42,7 @@ For more information on the full list of available settings, see [Runtime Custom
 
 These settings can be configured as follows:
 
-*  Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+*  Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
 	![](attachments/migrating/19398970.png) 
 
@@ -55,7 +61,7 @@ Database migration is handled by Mendix as a normal database synchronization pha
 {{% alert type="warning" %}}
 Before the data copying process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure all the data is copied without any problems, especially in cases where the source database has a larger element value than what the current domain model specifies.
 
-As of version [8.1](/releasenotes/studio-pro/8.1), the source database structure and data do not change as part of the migration.
+The source database structure and data do not change as part of the migration.
 {{% /alert %}}
 
 ## 3 Using your PostgreSQL Database in Studio Pro
@@ -64,7 +70,7 @@ You can configure Studio Pro to use a PostgreSQL database instead of the inbuilt
 
 To do this, perform the following steps:
 
-1. Open your **Project '…'** > **Settings**.
+1. Open your **App** > **Settings**.
 
 2. Click **New** to add a new configuration from the **Configurations** tab.
 
@@ -89,19 +95,27 @@ If you already have the database, for example a test database in the cloud, you 
 
 ## 4 Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
-The Mendix cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
+The Mendix Cloud V4 environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
-The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
+The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
-Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it first by viewing the application in a browser. 
+Having configured the Mendix app, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it first by viewing the application in a browser. 
 
 ### 4.1 Exporting a PostgreSQL Database
 
 To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/9.5/static/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
 
-### 4.2 Uploading an Exported PostgreSQL Database to the Mendix Cloud Database
+### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use Developer Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
+Use the Developer Portal to upload the migrated, exported database backup to the Mendix Cloud V4. This can be accessed using the Nodes page in the Developer Portal. Perform the following steps:
+
+1. Select your app.
+2. Click **Backups** in the left-hand menu
+3. Click **Upload Backup** to upload your Database.
+4. Select the exported database file from your local file system using the file chooser
+5. After the upload is done, stop the application.
+6. Select the uploaded backup and click **Restore Backup** to restore the new Backup.
+7. Finally, start the application.
 
 ## 5 Exporting a Mendix Cloud Database
 
@@ -119,9 +133,9 @@ Below is general guidance on how to migrate a PostgreSQL database to a different
 
 #### 5.2.1 General Guidance
 
-The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
+The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix app the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
-Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
+Having configured the Mendix app, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
 
 #### 5.2.2 Migrating to SAP HANA on SAP BTP
 

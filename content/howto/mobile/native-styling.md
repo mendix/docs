@@ -1,7 +1,7 @@
 ---
 title: "Implement Native Mobile Styling"
-parent: "native-mobile"
-menu_order: 30
+parent: "implementation"
+menu_order: 25
 description: General information for native styling in Mendix.
 tags: ["styling", "design", "native"]
 ---
@@ -12,25 +12,25 @@ You can build native mobile apps with custom styling in Mendix Studio Pro. Styli
 
 ## 2 Theme Folder Structure
 
-For each app project, styling is stored in the **theme/styles** folder. From there styling is split into **native** and **web** folders. Both have the same structure. 
+For each app, styling is stored in the **theme** and **themesource** folders. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
 These folders have strict protocols:
 
-* Users should only add or change styling in the **app** folder 
-* The **app** folder has two files: *custom.js* and *custom-variables.js*—when changing the styling, always copy the variable you want to change from *native/core/variables.js*  to *native/app/custom-variables.js*
-* The *custom-variables.js* file will overwrite the *variables.js* file—do not change anything in the **core** folder directly, as this makes updating Atlas more difficult
+* Users should only add or change styling in **theme/native** or in their own user-defined module **themesource/your-module/native** folder (if they plan to create a reusable theming module)
+* The **native** folder has two files: *main.js* and *custom-variables.js* — when changing the styling, always copy the variable you want to change from *themesource/atlas_core/native/variables.js* to *theme/native/custom-variables.js*
+* The *custom-variables.js* file will overwrite the *variables.js* file — do not change anything in the **themesource/atlas_core/native** folder directly, as this makes updating Atlas more difficult
 * Any variables you want to change or add should be put in *custom-variables.js* 
-* Any classes you want to change or add should be put in *custom.js*
+* Any classes you want to change or add should be put in *theme/native/main.js* or in your own user-defined module's *themesource/your-module/native/main.js*.
 
-The **native/core/base** folder contains global helper classes. These classes are generic and can be put on all widgets. Some of them are also available as design properties in Mendix Studio Pro.
+The **themesource/atlas_core/native/core/base** folder contains global helper classes. These classes are generic and can be put on all widgets. Some of them are also available as design properties in Mendix Studio Pro.
 
-The **native/core/helpers** folder contains helper classes for widgets. Every widget has its own file which contains its design properties and some extra classes.
+The **themesource/atlas_core/native/core/helpers** folder contains helper classes for widgets. Every widget has its own file which contains its design properties and some extra classes.
 
-The **native/core/helpers/_helperfunctions** folder contains multiple helper functions. These functions can help you style more easily. For example, the `adjustFont` function receives a font and adjusts it to the screen size. This will make your font sizes responsive. For more information about these helper classes, see their descriptions in the code.
+The **themesource/atlas_core/native/core/_functions** folder contains multiple helper functions. These functions can help you style more easily. For example, the `adjustFont` function receives a font and adjusts it to the screen size. This will make your font sizes responsive. For more information about these helper classes, see their descriptions in the code.
 
-The **native/core/widgets** folder contains the default widget styling. Every widget has its own file which contains its default class name.
+The **themesource/atlas_core/native/core/widgets** folder contains the default widget styling. Every widget has its own file which contains its default class name.
 
-In **native/ui_resources** you will find resource package styling. Here you can find all styling related to building blocks, page templates and layouts.
+In **themesource/atlas_nativemobile_content/native** you will find resource package styling. Here you can find all styling related to building blocks, page templates and layouts.
 
 ## 3 Classes
 
@@ -42,5 +42,5 @@ Available in Mendix Studio and Mendix Studio Pro, design properties are an easie
 
 ## 5 Read More
 
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto/front-end/atlas-ui)
 * [Get Started with Native Mobile](getting-started-with-native-mobile)

@@ -1,11 +1,16 @@
 ---
 title: "Projects API"
 category: "API Documentation"
+menu_order: 50
 ---
 
 ## 1 Introduction
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
+
+{{% alert type="warning" %}}
+As of June 20th, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+{{% /alert %}}
 
 ## 2 Error Handling
 
@@ -85,7 +90,7 @@ The DeleteApp operation will remove an application, including all resources that
 
 | Name | Type |	Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
+| ProjectID |	String | ID of the project/app, as can be found under the app settings. |
 | User | String | The email address you use to log into your Mendix account.|
 | ApiKey | String | An API Key associated to the user account of the User.|
 

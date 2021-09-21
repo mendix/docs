@@ -176,7 +176,7 @@ When an end-user clicks a drop-down button, a pop-up window with a list of items
 
 * Items with the **Create object** event are only shown when you have sufficient permissions on. For more information, see [Security](security). 
 
-* Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [Project Security](project-security) and [Anonymous Users](anonymous-users). 
+* Items with the **Sign out** event are not shown for anonymous users. For more information on different security levels and anonymous users, see [App Security](project-security) and [Anonymous Users](anonymous-users). 
 
 
 {{% /alert %}}

@@ -2,13 +2,14 @@
 title: "Private Cloud"
 category: "Deployment"
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
-menu_order: 45
+menu_order: 48
 tags: ["Deployment", "Private Cloud", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-**Mendix for Private Cloud** allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster. It automates operations such as database provisioning, monitoring, and logging, that you would have to perform manually if you used the Mendix Docker buildpack.
+**Mendix for Private Cloud** allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster. It automates operations, such as database provisioning, that you would have to perform manually if you used the Mendix Docker buildpack. It also provides options for monitoring and logging through third-party tools. 
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix for Private Cloud allows you to do this while keeping the familiar components of Docker and Kubernetes.
 
@@ -71,14 +72,34 @@ The table below shows the differences between the capabilities for apps deployed
 | Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used | Services supplied by the database server and file storage used |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
-| Remote debugging | Mendix Developer Portal + Studio Pro | Not supported | Not supported |
+| Remote debugging | Mendix Developer Portal + Studio Pro | Mendix Developer Portal + Studio Pro | Not supported |
 
 ## 4 Licensing Mendix for Private Cloud{#licensing}
 
-Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent. You will need one license for each namespace you want to manage.
+### 4.1 Operator License
 
-You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment thirty days after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent.
+
+You will need one license for each namespace you want to manage.
+
+You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it. You will need to provide Mendix Support with the namespace where the operator is running, they will provide you with an operator license which needs to be installed in the cluster namespace. 
+
+You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
+
+### 4.2 Runtime License
 
 The Operator license is independent of a Mendix Runtime license which removes trial restrictions from a Mendix App itself. You will need both licenses to manage and run an application through Mendix for Private Cloud.
 
-You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it.
+You will also need to obtain this through [Mendix Support](https://support.mendix.com). What you receive will depend on how you are running your app.
+
+#### 4.2.1 Online Private Cloud Apps
+
+If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
+
+If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](private-cloud-deploy#change-subscription-secret)
+
+If your app is **Standalone**, then you will have to provide the subscription secret by [editing the CR](private-cloud-operator#edit-cr) in the cluster.
+
+#### 4.2.2 Offline Private Cloud Apps
+
+If your app is unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to provide these by [editing the CR](private-cloud-operator#edit-cr) in the cluster.

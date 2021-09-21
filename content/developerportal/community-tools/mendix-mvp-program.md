@@ -1,7 +1,7 @@
 ---
-title: "Mendix MVP Program"
+title: "MVP Program"
 category: "Community Tools"
-menu_order: 50
+menu_order: 6
 description: "Describes how the Mendix Community MVP program works."
 tags: ["community", "mvp"]
 aliases:
@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-We know our community plays a huge role in the success of the Mendix Platform. And with the [Most Valuable Professional (MVP) program](https://developer.mendixcloud.com/link/mvp), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
+We know our community plays a huge role in the success of the Mendix Platform. And with the [Most Valuable Professional (MVP) program](https://www.mendix.com/mvp-program/), we want to recognize our loyal developers for their ongoing contributions and commitment to Mendix.
 
 The MVP program has been designed to empower the community by retaining our top contributors' high level of knowledge, giving them a closer view of the Mendix roadmap, and making them even more important and visible in the Mendix community.
 
@@ -28,7 +28,7 @@ There are a few simple guidelines for the selection process:
 
 ## 3 Profile
 
-The Mendix MVPs represent the spirit of the Mendix community. They are highly engaged (with the [Mendix Forum](mendix-forum), [Marketplace](/appstore/general/app-store-overview), [Meetups](index#meetups), etc.), help other developers, and actively share their results. 
+The Mendix MVPs represent the spirit of the Mendix community. They are highly engaged (with the Mendix [Forum](mendix-forum), [Marketplace](/appstore/general/app-store-overview), [Meetups](https://community.mendix.com/p/community), etc.), help other developers, and actively share their results. 
 
 These are the labels we use to describe our MVP recognition requirements:
 
@@ -71,4 +71,4 @@ By participating in the MVP program, each MVP agrees to release, indemnify, defe
 
 ## 6 Read More
 
-* [Mendix Profile](/developerportal/mendix-profile/)
+* [Mendix Profile](/developerportal/community-tools/mendix-profile)

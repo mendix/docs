@@ -14,6 +14,24 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2021
 
+### Hybrid App Base 5.0.6
+
+**Release date: June 17th, 2021**
+
+#### Improvements
+
+* Hybrid apps now include support for Android API 30.
+
+#### Fixes 
+
+* We updated the allowed navigation tags with the correct Mendix hosts.
+
+### Hybrid App Base 5.0.5
+
+**Release date: April 16th, 2021**
+
+* We upgraded the push notification library to fix an issue with iOS push notifications.
+
 ### Hybrid App Base 5.0.4
 
 **Release date: March 16th, 2021**
@@ -195,7 +213,7 @@ If your app does not employ push notifications, you can still use the Phonegap B
 
 {{% alert type="warning" %}}
 
-This is a major version upgrade of the hybrid app project.
+This is a major version upgrade of the hybrid app.
 
 {{% /alert %}}
 
@@ -266,7 +284,7 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | `@mendix/phonegap-plugin-push`                              | 1.5.3                | 1.11.1-mx.1.0.0      | Renamed from `phonegap-plugin-push`                          |
 | `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11               | 4.2.2-mx.1.0.0       | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
 
-We have tested extensively against real-life projects and commonly used widgets from the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html).
+We have tested extensively against real-life projects and commonly used widgets from the [Mendix Marketplace](https://marketplace.mendix.com/).
 
 ### Hybrid App Base 2.3.2
 

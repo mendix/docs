@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "mx model reflection", "token con
 
 ## 1 Introduction
 
-The [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/) module can be used to show the reflection of the configuration in your domain model. The module creates an object for each entity, attribute, and reference.
+The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
 
 ### 1.1 Typical Use Cases
 
@@ -53,5 +53,5 @@ All the patterns use the locale from the context. Based on the user's language, 
 
 ## 3 Read More
 
-* [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)
-* [How to Import Excel Documents](https://docs.mendix.com/howto/integration/importing-excel-documents)
+* [How to Export to Excel](/howto/integration/using-the-excel-exporter)
+* [How to Import Excel Documents](/howto/integration/importing-excel-documents)

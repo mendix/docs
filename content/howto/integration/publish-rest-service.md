@@ -18,7 +18,7 @@ Mendix allows you to publish REST web services natively from . This how-to will 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Setting Up the Example Project
 
@@ -37,7 +37,7 @@ Your page should now look like this:
 
 ![](attachments/publish-rest-service/order_NewEdit_Page.png)
 
-Add the overview page to your project navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
+Add the overview page to your app navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
 
 ## 4 Publishing the Service
 
@@ -45,9 +45,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.1 Creating the Mapping
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Mappings** > **Message Definitions**:
-
-	![](attachments/publish-rest-service/message_definition.png)
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Message Definitions**:
 
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
 3.  The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
@@ -65,7 +63,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.2 Configuring the REST Service
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Published Services** > **Published REST Service**:
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**:
 
 	![](attachments/publish-rest-service/AddRestService.png)
 
@@ -95,9 +93,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/RetrieveOrder.png)
 
-11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
-
-	![](attachments/publish-rest-service/AddExportMapping.png)
+11. <a name="eleven"></a>From the App Explorer, right-click the RESTExample module and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
 
 12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then select the **MD_Orders** mapping created earlier via the **Select** button:
 

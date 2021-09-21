@@ -1,15 +1,15 @@
 ---
-title: "Project Settings"
+title: "App Settings"
 parent: "project"
 menu_order: 10
-description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
+description: "Settings which apply to the app as a whole."
+tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
+In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
 ![](attachments/project-settings/project-settings-configuration.png)
 
@@ -31,7 +31,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -86,7 +86,7 @@ The default time zone determines the time zone for newly created users. If your 
 
 ### 3.8 Scheduled Event Time Zone {#scheduled}
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
+The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
@@ -134,13 +134,13 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode{#rounding}
+### 3.10 Rounding Numbers{#rounding}
 
-The rounding mode is used to select how to round numbers when performing calculations.
+The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
-This table presents the results of rounding the input to one digit with the given rounding mode:
+This table presents the results of rounding the input to one digit with the given method of rounding numbers:
 
 | Input Number | Half Away from Zero  *(default)* | Half to the Nearest Even Number |
 | --- | --- | --- |
@@ -167,41 +167,7 @@ In production, this only works with licenses based on concurrent users.
 
 Default: *Yes*
 
-### 3.12 Uniqueness Validation
-
-This option can have two different values: **Runtime** and **Database**. **Database** will be the default value.
-
-#### 3.12.1 Database
-
-When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
-
-Database is the recommended setting, because it ensures data accuracy at the highest level.
-
-#### 3.12.2 Runtime
-
-When **Runtime** is selected, the uniqueness of attributes and associations is handled in the Mendix Runtime and not at the database level.
-
-#### 3.12.3 Switching Uniqueness Validation Values
-
-You can always switch between **Runtime** and **Database**.
-
-##### 3.12.3.1 Switching from Runtime to Database
-
-Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
-
-Before switching to the Database option, the **DataStorage.EnableDiagnostics** custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
-
-For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
-
-##### 3.12.3.2 Switching from Database to Runtime
-
-Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
-
-### 3.13 Web Service Calls {#web-service-calls}
-
-The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
-
-## 4 Languages Tab
+## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](translatable-texts).
 
@@ -261,40 +227,72 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 ### 6.1 UI Resources Package
 
-The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI resources package](ui-resources-package). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 6.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
-Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
 
 Switching from a ZIP file to a UI resources package is straightforward:
 
 1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 
-2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
+2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other apps without worrying about reference errors.
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab {#miscellaneous}
+### 6.3 Marking as a UI Resources Module
 
-These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
+Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-### 7.1 Bundle Widgets When Running Locally
+![green module](attachments/project-settings/green-module.png)
+
+### 6.4 Ordering UI Resource Modules
+
+When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
+
+You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
+
+![app theme settings](attachments/project-settings/app-theme-settings.png)
+
+## 7 Workflows Tab {#workflows}
+
+### 7.1 User Entity
+
+**User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
+
+## 7.2 Execution
+
+Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
+
+### 7.2.1 Parallel Workflow Executions
+
+Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
+
+### 7.2.2 Parallel Task Executions
+
+Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
+
+## 8 Miscellaneous Tab {#miscellaneous}
+
+These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
+
+### 8.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Variable Names in Microflows
+### 8.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 7.3 Activity Default Colors
+### 8.3 Activity Default Colors
 
-This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
+This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

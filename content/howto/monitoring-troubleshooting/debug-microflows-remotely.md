@@ -1,6 +1,6 @@
 ---
 title: "Debug Microflows Remotely"
-parent: "debug-microflows"
+parent: "debug-microflows-and-nanoflows"
 tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
 
@@ -108,7 +108,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
 {{% alert type="warning" %}}
-If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the Technical Contact or the project Scrum Master to provide the correct permissions.
+If you do cannot connect the debugger, then you do not have sufficient permissions to your app. Ask the Technical Contact or the app Scrum Master to provide the correct permissions.
 {{% /alert %}}
 
 1. Open the **Connect Debugger** dialog box – you can do this in two ways within Studio Pro:
@@ -141,6 +141,6 @@ The debugger is now connected to your app running in the cloud.
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Java Actions](debug-java-actions)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 

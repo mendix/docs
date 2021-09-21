@@ -19,7 +19,7 @@ Version control in Mendix is built on top of [Apache Subversion](https://subvers
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/collaborate/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
 To commit to the Team Server you will need to have a role in the project which allows you to edit the app.
 
@@ -207,4 +207,4 @@ Note that errors can be introduced by the [merge](#merge) process even if no con
 
 * [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
 * [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app
-* [Team Server Overview](/developerportal/develop/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)
+* [Team Server](/developerportal/collaborate/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

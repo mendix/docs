@@ -8,7 +8,7 @@ tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 
 ## 1 Introduction
 
-To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your project, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see the [Deployment](/developerportal/deploy/) section of the Developer Portal documentation.
+To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your app, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see the [Deployment](/developerportal/deploy/) section of the Developer Portal documentation.
 
 This description of deployment is based on an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
@@ -30,7 +30,7 @@ This is the docker environment specification which specifies the docker environm
 
 ### 2.3 Project MPK
 
-This is the project model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
+This is the app model as created by Studio Pro or Studio. It cannot be directly interpreted by the Mendix Runtime.
 
 ### 2.4 MX Build
 
@@ -45,9 +45,9 @@ This is the command line interpreter which allows Cloud Foundry environments to 
 The buildpack is the Mendix script which controls the deployment of Mendix models to a cloud environment. it performs the following tasks:
 
 * identifies the target environment and bound services such as database and file storage
-* if it receives a project in mpk format it initiates Mxbuild to convert it into mda format
+* if it receives an app in mpk format it initiates Mxbuild to convert it into mda format
 * it identifies the correct version of the Java Runtime Environment and pushes it to the environment
-* it identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the project mda which defines the project
+* it identifies the correct version of the Mendix Runtime and uses m2ee to push the Runtime Server to the environment, with a link to the app *.mda* which defines the app
 
 ### 2.7 Project MDA
 

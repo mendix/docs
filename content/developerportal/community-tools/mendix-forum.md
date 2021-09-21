@@ -1,7 +1,7 @@
 ---
-title: "Mendix Forum"
+title: "Forum"
 category: "Community Tools"
-menu_order: 30
+menu_order: 4
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -10,7 +10,7 @@ description: "Describes the Mendix Forum, where the Mendix community can ask and
 
 The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](/developerportal/mendix-profile/#public) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](/developerportal/community-tools/mendix-profile) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your Mendix Profile will open, so make sure you [set your profile to public](/developerportal/community-tools/mendix-profile#public) so everyone can see your details and progress!
 
 There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. On each tab, you can see the **Top contributors**, which lists the five Mendix community developers who have the most Mendix Forum points in the last 30 days.
 

@@ -8,9 +8,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/download-from-version-control-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
-Use the **Download from Version Control Server…** menu item to download an app from an SVN version control server (for example, [Team Server](/developerportal/develop/team-server)). If you are currently editing an app, the project will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
+Use the **Download from Version Control Server…** menu item to download an app from an SVN version control server (for example, [Team Server](/developerportal/collaborate/team-server)). If you are currently editing an app, the project will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
 {{% alert type="info" %}}
 If the downloaded app was created with a different version of Mendix, you will be asked if it can be converted to the current version.
@@ -28,7 +32,7 @@ If **Enable private version control** is set in the project [Preferences](prefer
 
 Use the **Team Server App** dropdown to choose the app you want to download.
 
-For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/collaborate/team-server).
 
 ### 2.2 Private Server
 

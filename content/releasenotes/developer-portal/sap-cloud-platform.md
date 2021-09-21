@@ -12,6 +12,62 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### August 30th, 2021
+
+* You can now upload your service configurations directly from the Configurator without having to download the configuration first.
+* We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
+
+### August 19th, 2021
+
+#### Improvements – OData Connector for SAP Solutions
+
+* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service). Users will now be signed out so that they can retrieve a new access token.
+* We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
+
+### July 26th, 2021
+
+#### Improvements
+
+* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
+    {{% alert type="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module) Marketplace module.{{% /alert %}}
+    
+### July 14th, 2021
+
+#### Fix
+
+* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+
+### June 16th, 2021
+
+#### Improvements
+
+* We released a new version of the [OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator) and [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector) which support read-only access to SAP OData Gateway Services which use OData version 4. This is in addition to the existing support for OData versions 2 and 3.
+
+#### Fix
+
+* We fixed an issue where the activity log reported the wrong value when the memory of the environment was scaled. (Ticket 122642)
+
+### June 2nd, 2021
+
+#### Improvements
+
+* We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
+
+### May 27th, 2021
+
+#### Improvements
+
+* We have added support for the [Deep Link](/appstore/modules/deep-link) module for apps using the SAP XSUAA Connector. When you set up the module, you need to set the **LoginLocation** constant to `/xsauaalogin/` to ensure your end users are logged in.
+
+### March 28th, 2021
+
+#### Fix
+
+* We resolved an issue where a change in SAP BTP meant that apps using XSUAA could not be deployed.
+
+    (Tickets 118831 118847 118861 118862 118874 118876 118908 118925 118935 118983 119020)
+
 ### February 10th, 2021
 
 #### Improvements
@@ -99,7 +155,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry App Store services from within the Mendix Developer Portal.
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 #### Limitation
 

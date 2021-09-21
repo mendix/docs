@@ -33,7 +33,7 @@ If you plan to deploy your app for testing on an iOS device, make sure you have 
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
-## 3 Getting Your Tokens
+## 3 Getting Your Tokens {#getting-your-tokens}
 
 To use the Mendix Native Mobile Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
 

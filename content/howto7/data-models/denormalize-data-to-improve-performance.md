@@ -148,9 +148,9 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [How to Define Access Rules Using XPath](/howto7/logic-business-rules/define-access-rules-using-xpath)
 * [Attributes](/refguide7/attributes)
 * [Event Handlers](/refguide7/event-handlers)
 

@@ -70,5 +70,5 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)

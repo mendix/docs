@@ -6,6 +6,10 @@ description: "Describes how the XPath query language is used in Mendix by presen
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
@@ -74,7 +78,6 @@ The following XPath functions are available:
 	* [not](xpath-not)
 	* [true](xpath-true)
 	* [false](xpath-false)
-	
 ## 6 Example
 
 **How to find the right path to XPath**

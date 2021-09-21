@@ -18,8 +18,8 @@ The Mendix Modeler has a built-in consistency checker that validates if the appl
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)
-* Read [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* Read [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer)
+* Read [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Debugging Overview
 
@@ -108,7 +108,7 @@ To use breakpoint conditions, follow these steps:
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [How to Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
 * [How to Log Levels](log-levels)

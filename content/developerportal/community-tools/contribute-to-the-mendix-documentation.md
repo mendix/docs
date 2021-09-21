@@ -1,7 +1,7 @@
 ---
 title: "Contribute to the Documentation"
 category: "Community Tools"
-menu_order: 10
+menu_order: 5
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -89,7 +89,7 @@ Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](documentation-writing-guidelines)
 * Make sure the document files comply with these naming conventions:
-	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your Project," the filename should be `create-your-project.md`)
+	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
 	* Document file names should always be lower-case with a hyphen (`-`) between each word
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:
@@ -120,19 +120,6 @@ To access the license agreement, go to the the **Checks** section of the pull re
 
 This only needs to be done once.
 
-## 7 Gaining Mendix Points {#GainingMendixPoints}
-
-As you add knowledge to the documentation that will help your fellow Mendix developers, you will gain Mendix points for each contribution!
-
-Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Profile. For more information, see the [Authorizing GitHub Connection](/developerportal/mendix-profile/#github) section in *Mendix Profile*
-
-The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
-
-* For a small contribution to the documentation – 5 points
-* For a large contribution to the documentation – 15 points
-
-The points are awarded when the pull request is merged.
-
-## 8 Read More
+## 7 Read More
 
 * [Documentation Writing Guidelines](documentation-writing-guidelines)

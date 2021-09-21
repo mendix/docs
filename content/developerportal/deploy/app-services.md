@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 100
 description: "Describes the App Services page in the Developer Portal."
 tags: ["Developer Portal", "App Services", "Deploy"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -12,7 +13,7 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 App services are deprecated and  were removed in Studio Pro 9. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
 {{% /alert %}}
 
-The **App Services** page provides an overview of possible resources that can be published to the [Mendix Marketplace](https://appstore.home.mendix.com/):
+The **App Services** page provides an overview of possible resources that can be published to the [Mendix Marketplace](https://marketplace.mendix.com/):
 
 * **App Service**
 * **Application**
@@ -30,7 +31,7 @@ For more information, see [Published App Services](/refguide8/published-app-serv
 
 ### 2.1 Settings
 
-In **Settings** you can manage the following:
+In **General Settings** you can manage the following:
 
 * App service info
 * Documentation

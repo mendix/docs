@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Common Native Mobile Issues"
-parent: "native-mobile"
-menu_order: 80
+parent: "get-started"
+menu_order: 40
 description: Troubleshoot common issues associated with building and running native mobile apps.
 tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 ---
@@ -16,7 +16,7 @@ To troubleshoot issues related to the [Make it Native](/refguide/getting-the-mak
 
 ### 2.1 Port Issues
 
-We recommend keeping the **Runtime port** in **Project Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 ### 2.2 Wifi Network Settings
 
@@ -57,4 +57,3 @@ To use Studio Pro on a Mac device, you will first need to install and configure 
 ## 4 Read More
 
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)
-* [Native Builder Reference Guide](/refguide/native-builder)

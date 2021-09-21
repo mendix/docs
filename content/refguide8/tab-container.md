@@ -9,6 +9,10 @@ aliases:
 #The anchor <tab-page> below is mapped, so it should not be removed or changed.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/tab-container.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.

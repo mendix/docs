@@ -31,7 +31,7 @@ You can perform the following basic function when working in the page editor:
 
 To open a page in Studio Pro, do the following:
 
-1. In the [Project Explorer](project-explorer), open a module where this page is located. 
+1. In the [App Explorer](project-explorer), open a module where this page is located. 
 
 2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
@@ -45,10 +45,10 @@ The selected page is opened.
 
 To create a new page, do the following:
 
-1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
+1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
-    {{% image_container width="350" %}}![](attachments/page/add-page.png)
-    {{% /image_container %}}
+    ![](attachments/page/add-page.png)
+    
 
 2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
@@ -62,7 +62,7 @@ A new page is created.
 
 To delete a page, do the following:
 
-1. In the [Project Explorer](project-explorer), select a page you would like to delete and right-click it.
+1. In the [App Explorer](project-explorer), select a page you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected page is deleted. 

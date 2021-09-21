@@ -20,7 +20,7 @@ You can find various elements in your app via the **Find** option. For example, 
 
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 
-3. In the **Look in** section unselect items in your project where you do not want to search in:  
+3. In the **Look in** section unselect items in your app where you do not want to search in:  
 
    ![Look in Section](attachments/find-and-find-advanced/look-in.jpg)
 
@@ -30,7 +30,7 @@ You can see search results in the **Find Results** pane:
 
 ## 3 Find Advanced Option
 
-With the **Find Advanced** option you can set advanced criteria and find specific elements in your project, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
+With the **Find Advanced** option you can set advanced criteria and find specific elements in your app, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
 
 ### 3.1 Finding Object Activities {#find-object-activities}
 
@@ -71,7 +71,7 @@ Modules downloaded from the Marketplace might contain a lot of unused items. If 
 
 {{% alert type="info" %}}
 
-Any objects which are excluded from the project will not show up in the unused items list.
+Any objects which are excluded from the app will not show up in the unused items list.
 
 {{% /alert %}}
 
@@ -83,9 +83,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
 
-   ![](attachments/find-and-find-advanced/mark-as-used-property.png)
-
-## 4 Find Usages Option
+## 4 Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 
@@ -97,7 +95,7 @@ To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
 2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
-   ![Find Usages](attachments/find-and-find-advanced/find-usages.png)
+    {{% image_container width="350" %}}![Find Usages](attachments/find-and-find-advanced/find-usages.png){{% /image_container %}}
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 
 ![Find Results Pane](attachments/find-and-find-advanced/found-usages.png)

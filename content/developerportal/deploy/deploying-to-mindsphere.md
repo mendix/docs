@@ -1,22 +1,23 @@
 ---
 title: "Siemens MindSphere"
 category: "Deployment"
-menu_order: 45
+menu_order: 42
 description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #launchpad below is mapped from the MindSphere themepack in the Marketplace, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
+{{% alert type="warning" %}}
+This information is for deploying apps to the MindSphere platform. It does not apply to MindSphere IIoT for Makers.
+{{% /alert %}}
+
 MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on MindSphere.
-
-{{% alert type="info" %}}
-You can create Mendix apps which make MindSphere API calls, but which are deployed to a cloud outside MindSphere. However, you will then need to handle user credentials yourself.
-{{% /alert %}}
 
 {{% alert type="warning" %}}
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/partners/siemens/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
@@ -37,7 +38,7 @@ To deploy and register your app within MindSphere you need the following prerequ
 
 * A MindSphere user account on a **Developer** or a **Start for Free** tenant
 * A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin` — these are already granted on Start for Free tenants.
-* [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
+* [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 The following are also required if you want to deploy and run the Mendix app on MindSphere Cloud Foundry:
 
@@ -72,11 +73,11 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
 
-4. Click **Download** to create a new app project using this app.
+4. Click **Download** to create a new app using this app as the template.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
 
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -84,15 +85,15 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 If you have an existing app which was not based on the MindSphere app template, you must import the required customization. The three modules which must be imported are:
 
-* MindSphere SSO from the Mendix Marketplace here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
+* MindSphere SSO from the Mendix Marketplace here: [Siemens MindSphere SSO](https://marketplace.mendix.com/link/component/108805/)
 
   This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
-* MindSphere OS Bar Connector from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
+* MindSphere OS Bar Connector from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
 
   This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
-* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/)
+* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Theme Pack](https://marketplace.mendix.com/link/component/108803/)
 
   This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
@@ -160,9 +161,9 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
+If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings* dialog box accessed through the **App Explorer**.
 
-![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
+![App settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
@@ -193,13 +194,17 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 
 ### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
 
-Just click the Run Button in Mendix Studio Pro.
+Just click the Publish Button in Mendix Studio Pro.
 
 ![Deploy to Mendix](attachments/deploying-to-mindsphere/runMendixApp.png)
 
 Once your app is deployed you can automatically register the app in your MindSphere tenant.
 
 ### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to MindSphere Cloud Foundry
+
+{{% alert type="info" %}}
+There is a limit of 1.5GB on the size of the Mendix deployment package (MDA file) which can be deployed to MindSphere.
+{{% /alert %}}
 
 #### 5.2.1 Pushing to Cloud Foundry
 
@@ -210,7 +215,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 To create a Mendix deployment package from your app, do the following:
 
 1.  Open your app in Studio Pro.
-2.  Select **Project** > **Create Deployment Package...**.
+2.  Select **App** > **Create Deployment Package**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
 
@@ -221,7 +226,7 @@ To create a Mendix deployment package from your app, do the following:
 Your deployment package will be created, and its location displayed in an information message.
 
 {{% alert type="info" %}}
-By default, the deployment package will be created in the *releases* folder of your project.
+By default, the deployment package will be created in the *releases* folder of your app.
 {{% /alert %}}
 
 ##### 5.2.1.2 Deploying the Application to Cloud Foundry using CF CLI

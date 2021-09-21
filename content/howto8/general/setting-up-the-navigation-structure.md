@@ -12,8 +12,8 @@ Once you created some pages, it is important that your users can access them. Fo
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Create a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Create your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+*   [Create a basic data layer](/howto8/data-models/create-a-basic-data-layer)
+*   [Create your first two Overview and Detail pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Setting a Default Home Page {#home}
 
@@ -124,11 +124,11 @@ Now that you have created a menu structure it is time to start using it on pages
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your project,  you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+To avoid adding the menu widget on every page in your project,  you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets).
 
 ## 7 Read More
 
 * [Atlas UI](/howto8/front-end/atlas-ui)
-* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [Use Layouts and Snippets](../front-end/layouts-and-snippets)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages)
+* [Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets)
+* [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

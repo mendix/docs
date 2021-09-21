@@ -20,7 +20,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* Mendix Desktop Modeler from the [Marketplace](https://appstore.home.mendix.com/link/modeler)
+* Mendix Desktop Modeler from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 
@@ -48,7 +48,7 @@ Earlier versions of the Mendix Push Notifications Connector supported Google Clo
 
 ## 6 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository).
 
 ## 7 Documents in This Section
 

@@ -26,7 +26,7 @@ Guidelines for usage.
 Example usage.
 {{% /alert %}}
 
-## Mansystems (Add-ons)
+## CLEVR (Formerly Known as Mansystems) (Add-ons)
 
 ### ATS Helper
 

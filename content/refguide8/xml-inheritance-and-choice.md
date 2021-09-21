@@ -4,6 +4,10 @@ parent: "mapping-documents"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xml-inheritance-and-choice.pdf).
+{{% /alert %}}
+
 ## 1 Obtaining an Object by Entity specialization
 
 There are two special cases for XSD elements in mapping documents: choice and inheritance.

@@ -5,13 +5,15 @@ description: "An API to allow the triggering of backups creation, restore, downl
 menu_order: 20
 ---
 
+{{% alert type="warning" %}}
+This documents version 1 of the backups API **which is now deprecated**.
+
+You are advised to use the [Backups API V2](backups-api) which uses asynchronous calls to support  long-running tasks.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The Backups API allows you to manage data snapshots of applications hosted in the Mendix Cloud. Data snapshots consist of a Postgresql database dump and file objects referenced from the database. You can create new snapshots, and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups).
-
-{{% alert type="info" %}}
-This documents version 1 of the backups API. A new [V2 API](backups-api) is available which uses asynchronuous operations of long-running tasks.
-{{% /alert %}}
+The Backups API allows you to manage data snapshots of applications hosted in the Mendix Cloud. Data snapshots consist of a PostgreSQL database dump and file objects referenced from the database. You can create new snapshots, and restore or download them. Uploading snapshots is currently only supported via the [Developer Portal](/developerportal/operate/backups).
 
 ## 2 Authentication
 

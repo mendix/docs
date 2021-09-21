@@ -6,6 +6,10 @@ tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/synchronize.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
@@ -36,7 +40,7 @@ This mode synchronizes objects partially, based on a selection:
 ![Synchronize](attachments/client-activities/synchronize-objects-selection.png)
 {{% /image_container %}}
 
-With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional, 
+With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
 meaning both the server database and the local database is updated for the selected objects.
 
 If the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.
@@ -54,9 +58,9 @@ If the set of objects selected for synchronization contains objects without loca
 
 The **Synchronize** activity properties consists of the following sections:
 
-* [Action](#action) 
+* [Action](#action)
 
-* [Common](#common)  
+* [Common](#common)
 
 	{{% image_container width="300" %}}![Synchronize Action Properties](attachments/client-activities/synchronize-properties.png){{% /image_container %}}
 
@@ -68,7 +72,17 @@ The **Action** section of the properties pane shows the action associated with t
 
 {{% snippet file="refguide8/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## 5 Limitations {#limitations}
+
+Running multiple synchronization processes at the same time is not supported, regardless of the type (**full** or **selective**).
+
+If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown:
+
+**Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed.**
+
+Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide8/error-event#errorhandlers).
+
+## 6 Read More
 
 * [Activities](activities)
 * [Offline-first](offline-first)

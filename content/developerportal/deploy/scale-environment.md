@@ -4,6 +4,7 @@ parent: "mxcloudv4"
 menu_order: 20
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -55,7 +56,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}
+    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 

@@ -1,6 +1,7 @@
 ---
 title: "Client API"
 category: "API Documentation"
+menu_order: 15
 tags: ["Client API", "API"]
 ---
 

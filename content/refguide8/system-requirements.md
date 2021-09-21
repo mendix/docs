@@ -7,6 +7,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/system-requirements.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document presents the system requirements for the various parts of the Mendix Platform.
@@ -50,7 +54,7 @@ Always use the version of TortoiseSVN which matches your app model. If you open 
 
 ## 3 Team Server {#ts}
 
-The [Team Server](/developerportal/develop/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/collaborate/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -105,13 +109,13 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
-* [MariaDB](mysql) 10.2, 10.3
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
+* [IBM DB2](db2) 11.1 and 11.5 for Linux, Unix, and Windows
+* [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](mysql) 8.0
-* [Oracle Database](oracle) 18, 19
-* PostgreSQL 9.5, 9.6, 10, 11, 12, 13
+* [Oracle Database](oracle) 19
+* PostgreSQL 9.6, 10, 11, 12, 13
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

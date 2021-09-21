@@ -11,7 +11,7 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app.
 
 {{% alert type="warning" %}}
-The implementation described in this how-to will not work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
+The implementation described in this how-to will not work when you have enabled anonymous users in your app. Disable anonymous users in your app to use this implementation.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -66,7 +66,7 @@ The second problem is that Cordova does not store cookies permanently. And since
 
 ## 5 The Solution
 
-Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific projects.
+Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific apps.
 
 ### 5.1 The JavaScript<a name="javascript"></a>
 
@@ -156,7 +156,6 @@ To use the hybrid app package, follow these steps:
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
-    
 ### 5.3 The SAML Module 
 
 {{% alert type="warning" %}}
@@ -172,5 +171,5 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 * [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Debug a Hybrid Mobile App](debug-a-mobile-app)
-* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Debug a Hybrid Mobile Application](/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

@@ -51,9 +51,24 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
 #### Running the Server
 
+##### Windows
+
+The steps in this section assume you have installed Hugo and Node in the root directory of your local repository. For example, Hugo is installed in *C:\Projects\Mendix\docs\hugo*. If this is not the case, you will have to edit the commands in step 3 to reflect their install paths.
+
+Running the server is done by performing the following steps:
+
+1. In a terminal window navigate to your local repository directory. 
+2. Run command `SETLOCAL`.
+3. Run command `SET PATH="%PATH%;C:\Projects\Mendix\docs\node;C:\Projects\Mendix\docs\hugo"`.
+4. Run command `npm.cmd run win-serve-test`.
+5. Wait for the site to build, it can take over 30 seconds.
+6. When it's done, open a browser and go to [http://localhost:4000](http://localhost:4000).
+
+##### Other
+
 Running the server is done by executing the following command: `npm run serve-test`.
 
-It takes a few seconds (Windows can take longer) to build the site and setup the server.
+It takes a few seconds to build the site and setup the server.
 
 When it's done, open a browser and go to [http://localhost:4000](http://localhost:4000).
 

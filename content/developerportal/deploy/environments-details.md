@@ -4,6 +4,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 7
 description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-whitelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
@@ -38,6 +39,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
+* **Secondary Backup Location** the region where the backup is stored
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
@@ -86,6 +88,10 @@ In Mendix Cloud v4 environments, you have two additional action buttons:
 
 #### 2.1.3 Logging and Debugging in Mendix Cloud v3
 
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
+
 ![](attachments/environments-details/actions-v3.png)
 
 In Mendix Cloud v3 environments, you have two additional action buttons:
@@ -119,6 +125,8 @@ In **Scaling**, there are two sliders that you can control:
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
+
+{{% alert type="info" %}}The maximum value for **Memory per instance** equals the **Total Allocated Memory** of your plan, but it cannot exceed 32 GB. The maximum number of instances will change according to the **Memory per instance** you have chosen in such a way that `Max instances x Memory per instance = Total Allocated Memory`.{{% /alert %}}
 
 If you have 1GB RAM of the **Total Allocated Memory**, you have one instance available to store your memory.
 
@@ -183,7 +191,7 @@ With scheduled events, you can let the Runtime execute a microflow at a specific
 
 For more information, see [Scheduled Events](/refguide/scheduled-events).
 
-### 3.2 Constants
+### 3.2 Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
@@ -203,7 +211,7 @@ You have to restart your application before the changes will be made.
 
 For more information, see [Constants](/refguide/constants).
 
-## 4 Network Tab
+## 4 Network Tab{#network-tab}
 
 {{% image_container width="50%" %}}
 ![](attachments/environments-details/network1.png)
@@ -233,7 +241,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an iframe with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
+For the deprecated Mendix Cloud v3, only *X-Frame-Options* was supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |
@@ -353,7 +361,7 @@ IP Addresses must be within the following ranges:
 | 172.32.0.0 | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions
+### 4.4 Path-Based Access Restrictions{#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -440,7 +448,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
@@ -484,6 +492,7 @@ Select **Supported** and you can choose from the following variables:
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **METRICS_AGENT_CONFIG** – passes a configuration JSON to control the metrics passed to Datadog
 * **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
+* **USAGE_METRICS_EMAIL_FIELDS** – if your app uses specializations of the `System.User` entity to store users, use this variable to point to the them. This enables us to identify internal and external users of your app. The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app which contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user. If you have multiple specializations of `System.User`, you can specify the values in comma-separated format. That is `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`. In the following example there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
 In addition, to support features which are in beta, you can add **Unsupported** environment variables. If you are involved in using a beta feature, you will be told what **Name** needs to be entered here and what the **Value** should be.
 

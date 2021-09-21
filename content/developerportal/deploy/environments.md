@@ -4,11 +4,12 @@ parent: "mendix-cloud-deploy"
 menu_order: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
+On the **Environments** page, there are four tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -20,6 +21,8 @@ In the **Environments** section of the **Deploy** category, there is an overview
 * **Access Restriction Profiles**
     * IP Address Filtering
     * TLS Client Certificate Verification
+* **Permissions**
+    * [Node Permissions](/developerportal/deploy/node-permissions)
     
    ![](attachments/environments/environment-tab.png)       
 
@@ -96,7 +99,7 @@ There are three types of environment statuses:
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
 {{% /alert %}}
 
-To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+To see the details of the alerts, click **Alerts**. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
 
 **Actions**
 
@@ -174,11 +177,17 @@ For more information, see [Custom Domains](custom-domains).
 
 ## 4 Access Restriction Profiles {#asp}
 
-In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
+In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, then any match on either the IP range or the client certificate will grant access. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
 
 For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
 
-## 5 Read More 
+## 5 Permissions {#permissions}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member. Team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
+
+For more information on managing node permissions, see [Node Permissions](node-permissions).
+
+## 6 Read More 
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](environments-details)

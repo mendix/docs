@@ -18,8 +18,8 @@ Mendix Studio Pro has a built-in consistency checker that validates if the appli
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)
-* Read [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* Read [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer)
+* Read [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Debugging Overview
 
@@ -82,7 +82,7 @@ Breakpoints are points in a microflow where the application will halt execution.
         * **Step over** moves the debugger to the next step in the same microflow
     * Click **Step out** to instruct the debugger to leave the sub microflow or loop (this is basically the opposite of **Step Into**)
     * Click **Continue** to instruct the debugger to continue until it reaches another breakpoint
-    
+
 For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide8/studio-pro-overview#debugger-shortcuts) section of *Studio Pro Overview*.
 
 ## 6 Variables Viewer
@@ -118,7 +118,7 @@ To use breakpoint conditions, follow these steps:
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)

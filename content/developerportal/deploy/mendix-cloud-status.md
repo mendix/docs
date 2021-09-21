@@ -6,6 +6,7 @@ description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
 aliases:
     - /developerportal/operate/mendix-cloud-status.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction

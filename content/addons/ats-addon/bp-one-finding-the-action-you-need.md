@@ -64,7 +64,7 @@ When you are looking for a specific widget or content of that widget, use the wi
 
 When you want to find a widget always use the _Find/Assert Widget_ action if possible. 
 
-If you want to find something more specific inside a widget or the widget does not have a `mx-name`. Then use "Find" in combination with the widget name as displayed in the [Mendix Marketplace](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
+If you want to find something more specific inside a widget or the widget does not have a `mx-name`. Then use "Find" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
 
 In case you cannot find a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
@@ -110,7 +110,7 @@ You cannot use the _Click Widget_ action because the menu item does not have its
 
 When you want to click a widget always use the _Click Widget_ action if possible. 
 
-If you want to click something more specific inside a widget or the widget does not have a `mx-name`. Then use "Click" in combination with the widget name as displayed in the [Mendix Marketplace](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
+If you want to click something more specific inside a widget or the widget does not have a `mx-name`. Then use "Click" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
 
 In case you cannot click a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
@@ -158,7 +158,7 @@ If the generic action does not work check if there is a specific one.
 
 When you want to set an input widget always use the _Set Value_ action if possible. 
 
-If you want to set a special input widget or the widget does not have a `mx-name`. Then use "Click" in combination with the widget name as displayed in the [Mendix Marketplace](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
+If you want to set a special input widget or the widget does not have a `mx-name`. Then use "Click" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
 
 In case you cannot set an input widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
@@ -202,7 +202,7 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
 When you want to get a value from a widget always use the _Get Value_ action if possible. 
 
-If you want to get the value from a specific widget or the widget does not have a `mx-name`. Then use "Get" in combination with the widget name as displayed in the [Mendix Marketplace](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
+If you want to get the value from a specific widget or the widget does not have a `mx-name`. Then use "Get" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
 
 In case you cannot get the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 
@@ -248,7 +248,7 @@ ATS also has a few specific actions for asserting values in a widget or inside A
 
 When you want to assert a value from a widget always use the _Assert Value_ action if possible.
 
-If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix Marketplace](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
+If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix Marketplace](https://marketplace.mendix.com/), the Mendix modeler. You can also find the name using the ATS Helper.
 
  In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](ht-one-create-custom-actions).
 

@@ -4,8 +4,13 @@ parent: "general"
 menu_order: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
-# NB have left out AWS and Azure Marketplace offerings for now, pending further research.
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+#NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/licensing-apps-outside-mxcloud.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -15,9 +20,7 @@ However, Free Apps are restricted in how long they run; they will stop running a
 
 To use your app in a production environment, you need to license it. The method for doing this differs depending on the environment to which you are deploying your app.
 
-{{% alert type="info" %}}
-The app will check for a license each time it is started.
-{{% /alert %}}
+The app will check for a license each time it is started. If the license expires while the app is running, it will continue to run until the next time it is started, when the license will be checked again.
 
 ## 2 Obtaining a Mendix License
 

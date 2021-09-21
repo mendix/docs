@@ -6,8 +6,13 @@ description: "How to use external email providers in Mendix, and how to configur
 tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
 aliases:
     - /deployment/mendixcloud/sending-email.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -24,7 +29,7 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 
 For apps deployed to Mendix Cloud v4 you must setup a third-party mail provider to send emails from your app.
 
-In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See {Mendix Mail Servers](#mendix-mail-servers), below, for more information.
+In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. Although it is convenient, you can encounter problems when using it. See [Mendix Mail Servers](#mendix-mail-servers), below, for more information.
 
 However, for new applications or applications that send large amounts of e-mail running on Mendix Cloud v3, we strongly recommend using an external e-mail service.
 

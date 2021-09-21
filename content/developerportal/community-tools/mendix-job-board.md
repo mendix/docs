@@ -1,7 +1,7 @@
 ---
-title: "Mendix Jobs Board"
+title: "Jobs Board"
 category: "Community Tools"
-menu_order: 40
+menu_order: 7
 description: "Describes the board where the Mendix community can post and find job opportunities."
 tags: ["job", "job board", "job dashboard"]
 aliases:
@@ -66,7 +66,7 @@ To post a job listing, you need a Mendix job dashboard account:
 * If you have an account already, click **Sign in**
 * If you are posting a job for the first time, fill out your details and an account will be automatically created for you
 	* Your username will be created based on the email address you enter
-	* With this account, you can manage all of your job listings (for more details, see the [Mendix Job Dashboard](#MendixJobDashboard) section)
+	* With this account, you can manage all of your job listings
 
 ![](attachments/mendix-job-board/post_job.png)
 
@@ -77,4 +77,4 @@ Each submitted job listing is reviewed and proofread by Mendix. If there is any 
 
 ## 4 Read More
 
-* [Mendix Profile](/developerportal/mendix-profile/)
+* [Mendix Profile](/developerportal/community-tools/mendix-profile)

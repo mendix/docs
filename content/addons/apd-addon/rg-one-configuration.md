@@ -19,7 +19,7 @@ In some cases, tools are run for a fixed period of time. However, running after 
 
 ## 3 License {#license}
 
-APM requires an application license that can be requested via email using the button in the configuration dialog. If the email client is not configured, you can use the **Manual license request** button and copy-paste the text in an email to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
+APM requires an application license that can be requested via email using the button in the configuration dialog. If the email client is not configured, you can use the **Manual license request** button and copy-paste the text in an email to [apmtool@clevr.com](mailto:apmtool@clevr.com).
 
 A license is required per app. Every license has an end date.
 

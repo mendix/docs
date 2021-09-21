@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 40
 description: "Reference documentation on deploying to SAP Business Technology Platform"
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +27,7 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the **Cloud Settings** tab of the **General Settings** in the left-hand menu of the Development Portal.
 
 ![](attachments/sap-cloud-platform/cloud-settings.png)
 
@@ -172,14 +173,21 @@ An environment is created; with more than one environment it is possible to tran
 
 ![](attachments/sap-cloud-platform/10-sap-env-tap.png)
 
-## 4 Create Package from Team Server
+## 4 Preparing Packages for Deployment
+
+There are two ways of getting a package ready to deploy to SAP.
+
+* Creating a package directly from a version of the app model held in Team Server
+* Uploading a package which has already been created
+
+### 4.1 Creating Package from Team Server
 
 At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
 
 {{% alert type="info" %}}
 You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in Studio Pro, this will automatically do the following:
+If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
 
 1. Commit the project.
 2. Generate a deployment package.
@@ -214,7 +222,30 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
+### 4.2 Uploading MDA
+
+Alternatively, you can upload an MDA which has already been created from the app model, for example using [Create Deployment Package](/refguide/create-deployment-package-dialog) from the App menu in Studio Pro.
+
+1. Click **Upload** in the **Deployment Package Repository**.
+
+2. Select the package accessible to your local machine.
+
+3. Click **Upload** to upload the MDA.
+
+    ![Upload button and dialog for uploading MDAs](attachments/sap-cloud-platform/upload-mda.png)
+
+The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
+
+{{% alert type="info" %}}
+There is a limit of 200MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+{{% /alert %}}
+
 ## 5 Deploy Package{#DeployPackage}
+
+{{% alert type="warning" %}}
+SAP BTP [has a limit of 1.5GB](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9c7092c7b7ae4d49bc8ae35fdd0e0b18.html#loio9809fa4f02cb4696baea5c23d6eaac94) on the size of a deployment package.
+{{% /alert %}}
+
 
 ### 5.1 Deploy to an Environment
 
@@ -263,6 +294,19 @@ When the package is ready to be deployed, a green tick will be shown next to the
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     ![](attachments/sap-cloud-platform/application-started.png)
+
+### 5.3 Unbinding and Deleting Service Instances
+
+If you want to remove a service instance from your environment, you can do it is follows:
+
+1. Click the three-dot menu for the service and select **Unbind Service** or **Delete Service**.
+
+    ![](attachments/sap-cloud-platform/unbind-service.png)
+
+    The options will do the following:
+
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
 ## 6 Transport App Between Environments{#TransportApp}
 
@@ -428,6 +472,10 @@ To connect a service in the section **Available Services**
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
 {{% alert type="info" %}}
+If you use the **PostgreSQL on SAP BTP** service on SAP BTP, Mendix can create a JSON file for you. See [Running Mendix on PostgreSQL](#sap-hyperscaler) in this document for more information.
+{{% /alert %}}
+
+{{% alert type="info" %}}
 If you use the **Application Autoscaler** service on SAP BTP, Mendix can create a JSON file for you. See [Application Autoscaler for SAP Business Technology Platform](/partners/sap/sap-autoscaler) for more information.
 {{% /alert %}}
 
@@ -458,15 +506,22 @@ If you no longer require a service you can unbind it or remove it from your app.
 **Unbinding a Service**
 
 1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
-2. Select **Unbind Service**.
+2. Select one of the following:
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
 
-3. Confirm by clicking **Unbind & Restart App** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Unbind*. However, this may leave the app in an unstable state.
+3. Confirm by clicking the appropriate button
+
+    * **Unbind**
+    * **Delete & Restart App**
+    * **Delete** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Delete*. However, this may leave the app in an unstable state as the service will be deleted from the environment
+    * **Cancel** – do not delete or unbind this service
 
     ![](attachments/sap-cloud-platform/service-unbind-warning.png)
 
-    Once the service is unbound, it is deleted from the app environment and returned to the list of **Available Services**.
+    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
 **Removing an Unbound Service**
 
@@ -478,7 +533,21 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
-#### 7.3.3 Service Names
+#### 7.3.3 Add Binding Configuration
+
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration.
+
+1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
+
+2. Select **Add Binding Configuration.
+
+3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
+
+    ![](attachments/sap-cloud-platform/add-binding-configuration.png)
+
+    See the documentation for the service you are configuring for more information.
+
+#### 7.3.4 Service Names
 
 The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
@@ -512,7 +581,7 @@ Only use unsupported environment variables if you know exactly what you are doin
 
 ## 8 Databases in SAP BTP{#databases}
 
-Mendix needs access to a relational database backend and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL or SAP HANA.
+Mendix needs access to a relational database back end and can run using different types of database. For deployment to SAP BTP, you have the choice of PostgreSQL or SAP HANA.
 
 ### 8.1 Running Mendix on PostgreSQL
 
@@ -534,7 +603,7 @@ During the creation of the environment, the selected PostgreSQL service will be 
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
-##### 8.1.1.2 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
+##### 8.1.1.1 SAP Hyperscaler PostgreSQL Configurator{#postgresql-configurator}
 
 To get help to create the configuration file, click the **Configurator** button.
 
@@ -546,7 +615,8 @@ On the new page which is displayed you can set the required values for your **SA
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
 {{% /alert %}}
 
-Click **Generate Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
+Click **Upload Configuration To Service** to automatically apply the generated configuration to the PostgreSQL database service.
+Alternatively, click **Download Configuration File** to create the file which you can then use on the **Services** tab to configure your PostgreSQL database.
 
 #### 8.1.2 Running Mendix on AWS RDS PostgreSQL{#aws-rds}
 
@@ -556,22 +626,7 @@ To use this database for your Mendix app, you will need to choose **AWS RDS Post
 
 ![](attachments/sap-cloud-platform/aws-rds.png)
 
-You will also have to provide **Configuration JSON** to enable your app to find the database. The configuration file will be similar to the example shown below:
-
-```json
-{
-   "adminPassword": "AdminPassword",
-   "adminUsername": "AdminUsername",
-   "backupRetentionPeriod": 14,
-   "dbEngineMajorVersion": "9.6",
-   "dbInstanceType": "db.t2.micro",
-   "dbName": "mynewdb",
-   "multiAz": true,
-   "resourceTechnicalName": "aws_account_name",
-   "storageEncrypted": false,
-   "storageGb": 20
-}
-```
+You will also need to set up the configuration of your AWS RDS PostgreSQL file. See [PostgreSQL on Amazon (AWS) for SAP Business Technology Platform](/partners/sap/sap-postgresql-on-aws) for more information.
 
 ### 8.2 Running Mendix on SAP HANA{#sap-hana}
 
@@ -639,7 +694,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ### 9.2 Deleting an App
 
-Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
 
 ![](attachments/sap-cloud-platform/leave-app.png)
 
@@ -667,7 +722,7 @@ If you are trying to bind more than one new service, it is not possible to ident
 
 ### 9.4 An Error Occurs While Deploying App From Studio Pro
 
-If an app is deployed to SAP using the Studio Pro **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
 {{% image_container width="50%" %}}
 ![](attachments/sap-cloud-platform/error-desktop-modeler.png)

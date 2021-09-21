@@ -9,6 +9,7 @@ aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
     - /developerportal/howto/how-to-link-app-to-node.html
     - /mendixcloud/how-to-link-app-to-node.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -131,8 +132,6 @@ An example of how this behavior can be used is given in the [Exchanging Linked A
 
 ### 4.3 Connecting Your App to a Licensed Node{#connect-app}
 
-There are two methods to connect your project to a licensed node.
-
 {{% alert type="info" %}}
 If there is already an app linked to the target node, it will be **unlinked automatically**.
 {{% /alert %}}
@@ -146,8 +145,6 @@ Apart from the app, the rest of the environment(s) in the target node will remai
 * Database (both structure and content)
 * File storage service (including all content)
 {{% /alert %}}
-
-#### 4.3.1 Connecting Your App: Method 1
 
 To connect your app to a licensed node, do the following:
 
@@ -172,32 +169,6 @@ To connect your app to a licensed node, do the following:
 6.  Validate with your [Two-Factor Authentication](two-factor-authentication).
 
 Your app is now connected to this node.
-
-#### 4.3.2 Connecting Your App: Method 2
-
-{{% alert type="info" %}}
-The method described below will only work if there is currently no app linked to the node.
-{{% /alert %}}
-
-To connect your app to a licensed node, do the following: 
-
-1.  Go to the [Developer Portal](http://sprintr.home.mendix.com).
-
-2.  Click **Apps** in the top navigation panel.
-
-3.  Click **My Apps** and select **Nodes**.
-
-    ![](attachments/licensing-apps/myapps.png)
-
-4. Select the node that to which you want to link an app **Select Node**.    
-
-    ![](attachments/licensing-apps/select-node.png)
-
-5.  Choose the app you want to connect by clicking **Connect to this app**.
-
-    ![](attachments/licensing-apps/connect-app.png)
-
-The app is now connected to the licensed node.
 
 ### 4.4 Restoring Backup{#restoring}
 

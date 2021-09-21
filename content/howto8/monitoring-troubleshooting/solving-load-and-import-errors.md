@@ -36,13 +36,13 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 3.1 Is This a Team Server Project?
 
-If your project is a [Team Server](/developerportal/develop/team-server) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/develop/team-server) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/developerportal/collaborate/team-server) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [project package](../integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [project package](/howto8/integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the Project Yourself?
 

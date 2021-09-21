@@ -5,6 +5,10 @@ menu_order: 150
 tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/parse-and-format-decimal-function-calls.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes parsing and formatting decimal function calls. For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html).

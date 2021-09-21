@@ -57,7 +57,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ## 3 Add an Index to Attributes in Sort Bars {#mxp003}
 
-[Sort bars](https://docs.mendix.com/refguide/sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
+[Sort bars](sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
 
 - Data grid
 - Template grid

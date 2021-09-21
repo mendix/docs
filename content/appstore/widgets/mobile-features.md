@@ -6,9 +6,13 @@ tags: ["marketplace", "marketplace component", "widget", "mobile feature", "spin
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Mobile Features](https://appstore.home.mendix.com/link/app/48902/) widget can be placed in a page layout and used in [hybrid mobile](/refguide/hybrid-mobile) applications.
+The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widget can be placed in a page layout and used in [hybrid mobile](/refguide/hybrid-mobile) applications.
 
 ### 1.1 Typical Use Cases
 

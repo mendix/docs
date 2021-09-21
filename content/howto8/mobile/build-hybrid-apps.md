@@ -17,6 +17,6 @@ The documents in this section focus on publishing hybrid apps in the Apple and G
 
 ## 2 Documents in This Section
 
+* [How to Build a Mendix Hybrid App Locally](build-hybrid-locally)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [How to Customize Local Build Packages](customizing-phonegap-build-packages)
 

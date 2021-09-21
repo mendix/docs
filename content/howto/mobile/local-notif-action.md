@@ -26,6 +26,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In this section you will learn to show a page when a user taps a notification.
 
+{{% alert type="info" %}}
+Local notifications do not support **On recieve** events.
+{{% /alert %}}
+
+To get started, do the following:
+
 1.  Drag and drop a **Notifications** widget onto your native home page. 
 
 	{{% image_container width="400" %}}![notifications widget](attachments/native-push/notif-widget.png){{% /image_container %}}
@@ -33,7 +39,7 @@ In this section you will learn to show a page when a user taps a notification.
 2. Double-click the widget.
 3. Click **Actions** > **New**. 
 4. Name your action *show_page*.
-5. Select **On open to** > **Show a Page**.
+5. Select **On open to** > **Show a Page** (see the note above concerning **On receive** events).
 6. Click **New** to make a new page.
 7. Type *NotifPage* into **Page Name**.
 8. Click **Blank** pane on the left and select the **Blank** page template. 
@@ -67,7 +73,7 @@ In **ACT_CreateAndSendNotification** you will set up the logic for tapping a not
 
 Great job setting up your notification. Now you can test it:
 
-1. Click **Run Locally** to update your app.
+1. Click the play button (**Run Locally**) to update your app.
 2. Start the app on your mobile device.
 3. Tap your **Send notification** button.
 4. Tap the notification to navigate to the page you selected.
@@ -77,5 +83,4 @@ Now you can show pages after notifications are tapped. Next, in [How to Use Loca
 
 ## 4 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

@@ -8,23 +8,33 @@ tags: ["marketplace", "marketplace component", "widget", "popup", "pop-up", "pop
 
 ## 1 Introduction
 
-The [Pop-Up Menu](https://appstore.home.mendix.com/link/app/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
+The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
 
 ### 1.1 Features
 
-* Add your own trigger element
-* Change the menu's position
-* Show the menu on-hover or on-click
-* Change the style of each item
-* Attach an on-click action to each item
-* Create your own custom items
+* Allows you to configure widgets that trigger the menu visibility.
+* Allows you to change the menu's relative position to the trigger widgets.
+* Shows the menu when hovering or clicking the trigger widgets.
+* Allows you to create textual or custom menu items with an on click action.
+* Allows for additional styling customizations through Atlas UI.
 
-## 2 Usage
+## 2 Configuration
 
-Place the widget anywhere you want on a page in your app.
+Drag and drop the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
 
-If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view) and configure the widget as **Render = Custom**.
+The **Menu items** property allows you to configure actions and dividers that are part of the menu. Click **New** to create a new item. On the **Edit Menu Items Item** dialog box, configure the tabs and properties described below.
 
-## 3 Developing This Marketplace Component
+The **General** tab in the **Edit Menu Items Item** dialog box has the following properties:
 
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/widgets-resources](https://github.com/mendix/widgets-resources/issues).
+* **Item type** (configurable when **Custom visualization** is set to **Yes**; default: **Button** ): Determines if the menu item is an action button or a divider for buttons.
+* **Text** (configurable when the **Item type** is **Button**): The text value to be displayed in the button.
+* **On click action** (configurable when the **Item type** is **Button**): Executes an action when the button is activated through mouse or keyboard.
+* **Style** (configurable when the **Item type** is **Button**; default: **Default**): Sets the button's brand style.
+
+Other main properties of the widget are as follows:
+
+* **Open on** (default: **Click** ): Determines whether hovering or clicking the trigger widget(s) displays the menu.
+* **Menu position** (default: **Bottom** ): Determines the location of a visible menu relative to the trigger area with widgets.
+* **Custom visualization** (default: **No** ): Determines whether menu items can be composed of text or widgets. Note that the on click action should still be configured on the menu items and not internal widgets.
+
+If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view) and set **Custom visualization** to **Yes**.

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "saml", "idp", "identity provider
 
 ## 1 Introduction
 
-The [SAML](https://appstore.home.mendix.com/link/app/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
+The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
 
 By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
@@ -27,6 +27,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
+{{% alert type="warning" %}}
+If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+{{% /alert %}}
+
 * [MxModelReflection](/appstore/modules/model-reflection)
 
 ## 2 Installation
@@ -42,6 +46,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 ## 3 Configuration
 
 Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+
+{{% alert type="info" %}}
+The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
+{{% /alert %}}
 
 You can choose what you want to enter for the entity ID, organization, and contact person. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 
 
@@ -126,6 +134,7 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unsupported action: [action], only ....."** – The URL is incorrect. Validate that the URL is correctly structured as *action: login, assertion, metadata, discovery*.
 * **“MSIS7046: The SAML protocol parameter ‘RelayState’ was not found or not valid.”** – This error can be shown on the ADFS server, most likely when you are using Mac OSX and a Safari browser. Setting the `BindingURI_Redirect` constant to true might help resolve the issue. By default, Mendix favors the `Post` binding, as the maximum size exceeds that of a `Redirect` binding due to its use of cookies and post information instead of URL parameters. The size can be a factor when using encryption.
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory), and also because it is a good idea to create two unique users (for example, "JoHnDoE@CoMpAnY.CoM" and "johndoe@company.com").
+* **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
 ## 6 URLs
 

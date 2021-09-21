@@ -50,9 +50,27 @@ To see the capabilities of a particular OData entity,
 
 3. Notice the highlighted **CRUD** letters next to the entity name in the search panel on the left and in the detailed information in the center. The purple letters indicate which operations are supported. The grey letters indicate which aren't. Hover over the letters to see which operations are supported.
 
-![entity capabilities](attachments/write-data/left-panel-crud.png)
-![entity capabilities](attachments/write-data/center-panel-crud.png)
+![entity capabilities](attachments/left-panel-crud.png)
+![entity capabilities](attachments/center-panel-crud.png)
 
 
 ## 5 Consuming OData resources in your Mendix app
-**TODO** Data Modelling team explains that the CRUD letters visible in the Catalog match what you'll see in the Data Hub pane in Studio Pro. And corresponds to what you'll be able to do with the data when you consume that external entity in your app.
+
+Just like in the Catalog you can see the CRUD capabilities of entities, attributes, and associations inside the Data Hub pane of the Mendix Studio Pro.
+
+ Version 1: The CRUD capabilities displayed in Studio Pro correspond to the values in the Catalog and also the support in Studio Pro.
+ Version 2: If Studio Pro supports displaying CRUD capabilities, then the values correspond to the values in the Catalog
+ 
+![crud capabilities](attachments/crud-capabilities.png)
+
+To consume an OData entity:
+ 1. Inside the Data Hub pane start typing in the search field
+ 2. Select your entity from the Data Hub pane. If you're not seeing any or enough results, try enabling the **Show development environment** filter on your search.
+ 3. Drag an entity to the Domain Model.
+ 4. Consume that entity anywhere in your module just like a local entity. This is based on the CRUD capabilities.
+ 
+ Is this part necessary??: After dragging an entity to the Domain Model you are free to change the properties as you wish.
+ Is this part necessary??: When consuming the resources inside Microflows, Pages, ... it acts the same as a local entity.
+ Is this part necessary??: In the Domain Model external entities have a purple color so it is easy to distinguish between different types.
+ Is this part necessary??: If this is the first entity from a Service inside the module, then this action will also add the Service to the module.
+

@@ -24,7 +24,7 @@ An example of gauge properties is represented in the image below:
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The **Complete task** properties pane consists of the following sections:
+The **Gauge** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -39,7 +39,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Name
 
-The name of the gauge to increment the value.
+The name of the gauge for which you want to set a value.
 
 ### 3.2 Value
 

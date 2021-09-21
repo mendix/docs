@@ -65,7 +65,7 @@ Once imported, the app service is visible in **App Explorer** and in the **Toolb
 
 Email Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Email Service, you need to get a valid combination of **userName** and **secretKey** and configure them as an environment variable in the deployment setting.
 
-### 3.1  Subscribing to Get userName and secretKey {#obtain}
+### 3.1  Subscribing to Get userName and secretKey {#key-generation}
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to go to the subscription order page.
 
@@ -81,7 +81,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 7. Click **Create Keys** to generate the **userName** and **secretKey**. 
 
-   The system generates **userName** and **secretKey** and also returns **MailFromDomain**, **SPF Record Settings**, and **MX Record Settings**. For more details on MX and SPF configuration, see the section [MX and SPF Records](#mx-and-spf-records).
+   The system generates **userName** and **secretKey** and also returns **MailFromDomain**, **SPF Record Settings**, and **MX Record Settings**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
 
    ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/binding-key-generation.png)
 
@@ -156,9 +156,9 @@ To configure the **Send email** activity, double-click the activity and use expr
 
 After the **Send Email** activity is configured, once a microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
 
-### 4.2 Sending Message Along with attachment(s) to Recipients
+### 4.2 Sending Message with Attachment(s) to Recipients
 
-This is a representative microflow that sends emails with file attachments.
+This is a representative microflow that sends emails with file attachment, if the file types are [supported](#unsupported-file-types).
 	
 ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/microflow.png)
 	
@@ -170,7 +170,7 @@ The **Attachment** attribute accepts a list of **FileDocumentObject**. You can e
 The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.
 {{ /alert }}
 
-### 4.3 Unsupported File Types for Attachments  {#unsupported-file-types}
+### 4.3 Unsupported File Types for Attachments {#unsupported-file-types}
 
 The following executables, scripts, and macros are not supported as attachments: *.ade*, *.adp*, *.app*, *.asp*, *.bas*, *.bat*, *.cer*, *.chm*, *.cmd*, *.com*, *.cpl*, *.crt*, *.csh*, *.der*, *.exe*, *.fxp*, *.gadget*, *.hlp*, *.hta*, *.inf*, *.ins*, *.isp*, *.its*, *.js*, *.jse*, *.ksh*, *.lib*, *.lnk*, *.mad*, *.maf*, *.mag*, *.mam*, *.maq*, *.mar*, *.mas*, *.mat*, *.mau*, *.mav*, *.maw*, *.mda*, *.mdb*, *.mde*, *.mdt*, *.mdw*, *.mdz*, *.msc*, *.msh*, *.msh1*, *.msh2*, *.mshxml*, *.msh1xml*, *.msh2xml*, *.msi*, *.msp*, *.mst*, *.ops*, *.pcd*, *.pif*, *.plg*, *.prf*, *.prg*, *.reg*, *.scf*, *.scr*, *.sct*, *.shb*, *.shs*, *.sys*, *.ps1*, *.ps1xml*, *.ps2* *.ps2xml*, *.psc1*, *.psc2*, *.tmp*, *.url*, *.vb*, *.vbe*, *.vbs*, *.vps*, *.vsmacros*, *.vss*, *.vst*, *.vsw*, *.vxd*, *.ws*, *.wsc*, *.wsf*, *.wsh*, .xnk.
 
@@ -185,25 +185,27 @@ The following executables, scripts, and macros are not supported as attachments:
    * **Last Month** – Shows usage statistics for last month
    * **Till date** – Shows usage statistics from the start of the subscription date to today
 
-## 5 Mail From Domain Setting
+## 5 Increasing the Deliverability of Your Emails
 
-When an email is sent, it has two addresses that indicate its source: a **“From”** address provided by the email header, and a **MAIL FROM** address (sometimes called the envelope sender) that the sending mail server specifies indicating the source of the message. When recipients view an email in their inbox, they see the email’s “From” address. In contrast, the MAIL FROM address, which is used by mail servers to return bounce messages and other error notifications.
+You can make your emails comply with [Domain-based Message Authentication, Reporting and Conformance (DMARC)](https://dmarc.org/) to increase the deliverability of your emails. This is a protocol that helps mail servers validate that an incoming email is authorised by the administrators of the sending domain. To comply with DMARC, you can use the Sender Policy Framework (SPF) method.
 
-By default, messages that you send through a email-service provider, uses a subdomain of the service provider as the MAIL FROM domain. While this may be sufficient for many senders, other senders prefer to set the MAIL FROM domain to a domain that they own & control. By setting up a custom **MAIL FROM** domain, your emails can comply with Domain-based Message Authentication, Reporting and Conformance **(DMARC)**.
+### 5.1 Configuring the Mail From Domain
 
-The DMARC validation can be achieved through Sender Policy Framework **(SPF)**. The only way to comply with DMARC through SPF is to use a custom MAIL FROM domain, because SPF validation requires the domain in the From address to match the MAIL FROM domain.
+If you want to use the SPF method to comply with DMARC, you must configure a custom Mail From domain. The Mail From address is used by mail servers to return bounce messages and other error notifications. The Mail From address is used together with another address called From address, which is included in the email header and shown to the email recipients, to indicate the source of an email. 
 
-Even though this is a small change from your recipient's perspective, this change has a huge positive impact on your reputation as a sender and your email deliverability. Email service providers distrust messages that don't have domain authentication set up because they cannot be sure that the message comes from you. Explicitly stating that it comes from you increases your reputation with email service providers which makes it much less likely that they will filter your mail and not allow it get through to your recipient's inbox, which increases your deliverability. You are also explicitly showing your recipients that this email comes from you, so they are less likely to mark your mail as spam.
+To configure the Mail From domain, you should work with your IT administrators to add the MX and SPF records, which you received during the [generation of your keys](#key-generation).
 
-### 5.1 MX and SPF Records {#mx-and-spf-records}
+### 5.2 SPF and MX Records {#spf-and-mx-records}
 
-Sender Policy Framework (SPF) is an email authentication method designed to detect forging sender addresses during the delivery of the email. SPF allows the receiving mail server to check during mail delivery that a mail claiming to come from a specific domain is submitted by an IP address authorized by that domain's administrators. The list of authorized sending hosts and IP addresses for a domain is published in the DNS records for that domain. 
+Sender Policy Framework (SPF) is an email authentication method. It is designed to detect forging sender addresses during the delivery of an email. During the delivery, SPF allows the mail server to check whether an incoming email claiming to come from a specific domain is submitted by an IP address authorized by the administrators of that domain. 
 
-A mail exchanger record (MX record) specifies the mail server responsible for accepting email messages on behalf of a domain name. It is a resource record in the Domain Name System (DNS)
+The SPF record is a list of authorized sending hosts and IP addresses for a domain, which is published in the domain's DNS records.
 
-You should work with your IT administrators to add the MX and SPF records, received during keys generation, into the DNS configuration of your domain. These records use the formats shown in the following table:
+A mail exchanger record (MX record) shows which mail server is responsible for accepting email messages on behalf of a domain name. It is a resource record in the DNS.
+
+The SPF record and MX record use the formats shown in the following table:
 
 | Name | Format | Value |
 | --- | --- | --- |
-| notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com |
 | notification.domain.com | TXT | "v=spf1 include:amazonses.com ~all" |
+|notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|

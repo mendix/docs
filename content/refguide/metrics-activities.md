@@ -10,8 +10,8 @@ The activities described in this document are in the **Metrics Activities** sect
 
 The following are the metrics activities you can use in your microflow:
 
-* [Counter](metrics-counter) – increments a counter with the specified value
-* [Increment Counter](metrics-increment-counter) – increments a counter with 1
+* [Counter](metrics-counter) – increments a counter by the specified value
+* [Increment Counter](metrics-increment-counter) – increments a counter by 1
 * [Gauge](metrics-gauge) – specifies the value of a gauge
 
 ## 2 Read More

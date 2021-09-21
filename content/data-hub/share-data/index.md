@@ -114,7 +114,7 @@ Do the following:
 
   When this entity set is consumed by another app via the Data Hub Catalog, the other app will see the data entered here.
 
-## 5 Using the Data Hub Catalog and Curating Your Own Service
+## 5 Using the Data Hub Catalog and Curating Your Own Service {#use-and-curate}
 
 The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
 

@@ -45,7 +45,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
    1. In the **App Explorer**, right-click the app, click **Import module package**, and then select the *SendEmailModule.mpk*. 
 
-      ![pop-up-menu-in-app-explorer](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/import-module-in-app-explorer.png)
+      ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
 
       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -83,7 +83,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
    The system generates **userName** and **secretKey** and also returns **MailFromDomain**, **SPF Record Settings**, and **MX Record Settings**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
 
-   ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/binding-key-generation.png)
+   ![](attachments/email-service/binding-key-generation.png)
 
 8. Copy and save the **userName** and **secretKey**. You will use them later in your app.
 
@@ -97,7 +97,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click **OK** to save the settings.
 
-   ![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/configure-username-secretkey.png)
+   ![](attachments/email-service/configure-username-secretkey.png)
 
 4. Double-click **secretKey** and enter the **secretKey** that you got.
 
@@ -112,7 +112,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 You can use the Email Service in a microflow to send HTML or plain text messages. Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
-![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/inbuilt-domain-entities.png)
+![](attachments/email-service/inbuilt-domain-entities.png)
 
 You can create a list using the **EmailAttr** entity to specify **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
@@ -122,11 +122,11 @@ Every email address to whom this message is sent is counted as utilization towar
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
-![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/email-text-microflow.png)
+![](attachments/email-service/email-text-microflow.png)
 
 To configure the **Send email** activity, double-click the activity and use expression syntax to specify the following settings in the **Send Email** dialog box:
 
-![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/send-email-dialog-box.png)
+![](attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
 
@@ -160,11 +160,11 @@ After the **Send Email** activity is configured, once a microflow that uses this
 
 This is a representative microflow that sends emails with file attachment, if the file types are [supported](#unsupported-file-types).
 	
-![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/microflow.png)
+![](attachments/email-service/microflow.png)
 	
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
-![](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/email-service/system-filedocument-model.png)
+![](attachments/email-service/system-filedocument-model.png)
 
 {{ alert type = "info" }}
 The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.

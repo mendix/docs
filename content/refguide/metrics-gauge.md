@@ -47,7 +47,7 @@ The value used to set the gauge to. Values are specified with [expressions](expr
 
 ### 3.3 Tags
 
-You can specify a list of tags to enrich the gauge name with key/value pairs.
+You can specify a list of tags to enrich the gauge name with key/value pairs. See [Tag Naming](https://micrometer.io/docs/concepts#_tag_naming) on the Micrometer site for more guidance on using tags.
 
 ## 4 Common Section {#common}
 

@@ -169,6 +169,7 @@ More information on the structure and content of this JSON object, together with
 
 The **Siemens_MindSphere_Web_Content**  is an *Atalas UI Resource* based on the [MindSphere Design System](https://design.mindsphere.io/) which includes the following:
 
+* Basic color codes and stylings
 * MindSphere Icons
 * An updated *index.html* file
 * A new *mindspherelogin.html* file
@@ -184,7 +185,7 @@ See also section [MindSphere Icons](/partners/siemens/mindsphere-development-con
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 
-The MindSphere app template, example apps, and Siemens MindSphere Web Content have an updated `index.html` file to allow integration with MindSphere.
+The [Siemens MindSphere Starter Application](https://marketplace.mendix.com/link/component/109130), example apps, and Siemens MindSphere Web Content have an updated `index.html` file to allow integration with MindSphere.
 
 If you are developing your app from a different app template just add the Siemens MindSphere Web Content module to your app to get the updated index.html. See the [index.html](#indexhtml) section, below, for details about the changes in the file.
 
@@ -198,11 +199,11 @@ The modified `index.html` file can be found in the /themesource/siemens_mindsphe
 
 ### 4.3 mindspherelogin.html
 
-The MindSphere app template, example app, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
+The Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content have a `mindspherelogin.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with MindSphere. This can be found in the /themesource/siemens_mindsphere_web_content/public folder of your project app.
 
 ### 4.4 Error pages
 
-These error pages are included in the MindSphere app template, example app, and Siemens MindSphere Web Content. This section explains why they are there.
+These error pages are included in the Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content. This section explains why they are there.
 
 #### Permission Denied Page
 
@@ -224,7 +225,7 @@ This page is shown in case that the provided MindSphere application scopes do no
 
 ### 5.1 index.html{#indexhtml}
 
-Various changes have been made to the standard Mendix index.html file to ensure compatibility with MindSphere. These are supplied by default in the MindSphere app template, example app, and Siemens MindSphere Web Content.
+Various changes have been made to the standard Mendix index.html file to ensure compatibility with MindSphere. These are supplied by default in the Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content.
 
 You will only have to make the changes below if you are configuring your existing Mendix app manually, without importing the Siemens MindSphere Web Content.
 

@@ -241,7 +241,7 @@ You can select MindSphere icons from the Siemens MindSphere Web Content to be di
 1. Open the properties of a widget which can display an icon (for example a button).
 2. Click **Select...** next to *Icon*.
 3. Select **Image** as the icon type.
-4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
+4. Find the image that you want and click **Select**. The MindSphere icons are in the module *Siemens_MindSphere_Web_Content*.
 
 ![Add icon as an image](attachments/mindsphere-development-considerations/svg-icon.png)
 
@@ -255,7 +255,7 @@ The Siemens MindSphere Web Content provides a font which contains icons. This me
 
 To do this:
 
-1. Find the icon you wish to use. These have the same names as the icons in the Siemens MindSphere Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
+1. Find the icon you wish to use. These have the same names as the icons in the Siemens MindSphere Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **Siemens_MindSphere_Web_Content** > **Icons**.
 
     ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
 

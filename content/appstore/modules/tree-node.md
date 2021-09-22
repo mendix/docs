@@ -67,11 +67,11 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
 
 * **Start expanded** (configurable when **Has children** is set to **Yes**; default: **No**) – Determines whether the content of the current level of tree nodes starts expanded or collapsed
 
-* **Animate** (configurable when [**Advanced options**](#advanced) is set to **Yes** in Mendix Studio; default: **Yes**) – Defines whether the content is animated when a tree node expands and collapses
+* **Animate** (configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio; default: **Yes**) – Defines whether the content is animated when a tree node expands and collapses
 
 ### 3.2 Advanced Tab {#advanced}
 
-The **Advanced options** button (default: **No**) determines whether advanced configuration properties become visible.
+The **Enable advanced options** button (default: **No**) determines whether advanced configuration properties become visible.
 
 When set to **Yes**, the following tabs and properties become visible:
 
@@ -89,7 +89,7 @@ The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro th
 
 ### 3.3 Visualization Tab {#visualization}
 
-The **Visualization** tab is only visible when the [Advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
+The **Visualization** tab is only visible when the [Enable advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
 
 * **Show icon** (default: **Left**) – Defines the location of the icon relative to the header
     * When set to **Left**, the icon is placed to the left to the header

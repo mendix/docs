@@ -17,3 +17,11 @@ This module contains the following widgets:
 * [Filters](data-grid-2#7-filters)
 * [Gallery](gallery)
 * [Tree node](tree-node)
+
+## 2 Migration
+
+If you were previously using the Data grid 2 module you need to follow the steps below before update it to the new Data Widgets module:
+
+- Rename the current DataGrid module (Under Marketplace modules) to DataWidgets in Studio Pro.
+- Open the marketplace and look for Data Widgets.
+- Download and replace the current DataWidgets (renamed) module.

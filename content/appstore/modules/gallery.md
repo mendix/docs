@@ -16,7 +16,7 @@ Here is an example of a Gallery widget using filters:
 
 ![Example of gallery using filter and sort](attachments/gallery/example.png)
 
-### 1.2 Advanced Options (Only for Studio)
+### 1.2 Advanced Options
 
 The gallery has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your gallery:
 

@@ -15,7 +15,7 @@ Here is an example of a data grid using filters:
 
 ![Example of data grid using filters](attachments/data-grid-2/example.png)
 
-### 1.2 Advanced Options (Only For Studio)
+### 1.2 Advanced Options
 
 The data grid has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your data grid:
 

@@ -54,21 +54,14 @@ To see the capabilities of a particular OData entity, do the following:
 
 ## 5 Consuming OData resources in your Mendix app
 
-Just like in the Catalog you can see the CRUD capabilities of entities, attributes, and associations inside the Data Hub pane of the Mendix Studio Pro.
+Just like in the Catalog you can see the CRUD capabilities of entities, attributes, and associations inside the Data Hub pane of Studio Pro.
 
- Version 1: The CRUD capabilities displayed in Studio Pro correspond to the values in the Catalog and also the support in Studio Pro.
- Version 2: If Studio Pro supports displaying CRUD capabilities, then the values correspond to the values in the Catalog
+In Studio Pro you might not see the same CRUD capabilities highlighted as in the Data Hub Catalog. A CRUD capability will only be highlighted when it is both supported by the contract and also by Studio Pro.
  
 ![crud capabilities](attachments/crud-capabilities.png)
 
 To consume an OData entity:
  1. Inside the Data Hub pane start typing in the search field
- 2. Select your entity from the Data Hub pane. If you're not seeing any or enough results, try enabling the **Show development environment** filter on your search.
- 3. Drag an entity to the Domain Model.
- 4. Consume that entity anywhere in your module just like a local entity. This is based on the CRUD capabilities.
- 
- Is this part necessary??: After dragging an entity to the Domain Model you are free to change the properties as you wish.
- Is this part necessary??: When consuming the resources inside Microflows, Pages, ... it acts the same as a local entity.
- Is this part necessary??: In the Domain Model external entities have a purple color so it is easy to distinguish between different types.
- Is this part necessary??: If this is the first entity from a Service inside the module, then this action will also add the Service to the module.
-
+ 2. Select your entity from the Data Hub pane. By default it shows only results published to the production environment. If you also want to see results from other environments, please click the filter button and check the **Show development environment** checkbox.
+ 3. Drag the entity to the domain model.
+ 4. Now you have an external entity in your domain model. Depending on the capabilities, for example the CRUD capabilities, you can use them to model your app as you would normally do.

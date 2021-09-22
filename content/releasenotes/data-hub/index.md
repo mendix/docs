@@ -11,12 +11,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### September 23rd, 2021
 
-#### Data Hub Free edition
-The Data Hub Free edition is now available to all users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/).
+#### Data Hub Free Edition
+
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/).
 
 #### Fixes
-- We fixed an issue where the **Curate** button would appear in the navigation for users who are not able to curate any content
-- We removed duplicate endpoints created due to an issue fixed during the September 9th release
+
+* We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
+* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
 
 ### September 16th, 2021
 
@@ -29,7 +31,7 @@ The Data Hub Free edition is now available to all users! Publish your data sourc
 * We fixed an issue with pagination for Applications and Environments in the API.
 * We fixed styling issues.
 
-### September 9th, 2021
+### September 9th, 2021 {#nine}
 
 #### Fixes
 

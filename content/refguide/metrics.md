@@ -46,7 +46,7 @@ The type of the registry to use. Currently supported types are : `prometheus`, `
 
 ### settings (conditional mandatory)
 
-These are settings for the registry. Each registry has different settings depending upon the **type** specified. Depending upon the default type of the settings in metrics, we can pass the settings or leave it to the default (if possible). Supported settings for each type are as follows:.
+These are settings for the registry. Each registry has different settings depending upon the **type** specified. Supported settings for each type are as follows:.
 
 #### [Prometheus](https://prometheus.io/docs/introduction/overview/)
 

@@ -141,3 +141,5 @@ Unfortunately there isn't a great workaround for this issue. If the scheduled ev
 ### 5.3 Long Running Events
 
 If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example, if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.
+
+{{% alert type="warning" %}} You can not run more then 10 different scheduled events in parallel. {{% /alert %}}

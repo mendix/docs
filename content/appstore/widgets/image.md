@@ -31,10 +31,19 @@ The following sections will describe the different available widget properties a
 
 The **Data source** section (required) is used to configure the data for the Image widget. It has the following properties:
 
-* **Data source** (default: **Image**) - Determines the data source for this Image widget. When set to **Image**, a static or dynamic image can be retrieved. When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object. When set to **Icon**, a static icon or image from **System.Images** can be retrieved.
-* **Image** and **Default image** (configurable when **Data source** is set to **Image**) - The **Image** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity. The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image.
-* **Image URL** (configurable when **Data source** is set to **Image URL**) - A text template to configure the image for this widget through a URL. This can be done either statically or dynamically through the attribute of a context object.
-* **Icon** (configurable when **Data source** is set to **Icon**) - Used to retrieve a static icon or image for the widget.
+* **Data source** – Determines the data source for this Image widget:
+	*  Default: **Image**	
+	*  When set to **Image**, a static or dynamic image can be retrieved
+	*  When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
+	*  When set to **Icon**, a static icon or image from **System.Images** can be retrieved
+* **Image** and **Default image** - Configurable when **Data source** is set to **Image**:
+	* The **Image** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
+	* The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
+* **Image URL** - A text template to configure the image for this widget through a URL:
+	* Configurable when **Data source** is set to **Image URL**
+	* Can be used statically or dynamically through the attribute of a context object
+* **Icon** - Used to retrieve a static icon or image for the widget:
+	* Configurable when **Data source** is set to **Icon**
 
 #### 2.1.2 Events Section
 

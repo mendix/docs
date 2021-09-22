@@ -1432,7 +1432,7 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 ### 11.28 Bar Chart
 
-The [bar chart widget](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) renders a horizontal bar graph based on static and dynamic data sets.
+The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
 The widget consists of the following elements:
 
@@ -1517,7 +1517,7 @@ The default class to style all bar chart widgets is named `com_mendix_widget_nat
 
 ### 11.29 Pie/Doughnut Chart
 
-The [pie/doughnut chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets.
+The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
 
 The widget consists of the following elements:
 
@@ -1549,8 +1549,8 @@ The widget consists of the following elements:
 | `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
 | `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
 | `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
-| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
-| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by ';'). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100). |
+| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';'). |
 | `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
 | `slices` | `padding` | Applies padding to all sides of the chart (number). |
 | `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
@@ -1560,7 +1560,7 @@ The widget consists of the following elements:
 | `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
 | `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
 
-The default class to style all pie/doughnut chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
 
 ## 12 Read More
 

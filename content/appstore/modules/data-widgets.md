@@ -20,8 +20,8 @@ This module contains the following widgets:
 
 ## 2 Migration
 
-If you were previously using the Data grid 2 module you need to follow the steps below before update it to the new Data Widgets module:
+If you were previously using the Data Grid 2 module, you must follow the steps below before updating it to the new Data Widgets module:
 
-- Rename the current DataGrid module (Under Marketplace modules) to DataWidgets in Studio Pro.
-- Open the marketplace and look for Data Widgets.
-- Download and replace the current DataWidgets (renamed) module.
+1. Rename the current **DataGrid** module (under **Marketplace** modules) to *DataWidgets* in Studio Pro.
+1. Open the Marketplace and search for **Data Widgets**.
+1. Download and replace the current (renamed) DataWidgets module.

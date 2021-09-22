@@ -63,7 +63,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 
 You cannot run more then 10 scheduled events in parallel.
 
-This limit is hard-coded and is independent of how the app is scaled.
+This limit cannot be overridden and is independent of how the app is scaled.
 
 ### 5.2 Calculating Intervals
 

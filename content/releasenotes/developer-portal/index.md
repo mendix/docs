@@ -15,7 +15,25 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
-### Septebmer 13th, 2021
+### September 23rd, 2021
+
+#### Improvements
+
+* We simplified the drag-n-drop behavior on the [Story Overview](/developerportal/collaborate/stories) page (old and new) to make it more stable
+* We added support for adding labels to stories on the Story Overview page
+* It is now possible to add labels and tasks when you [create a story](/developerportal/collaborate/stories#new-story)
+* We added the option to assign a team member when you [create a story](/developerportal/collaborate/stories#new-story)
+* We improved the look and feel of [story details](/developerportal/collaborate/stories#story-details) page
+* We removed support for the old story details page
+* Thanks to a lot of feedback from the community we have improved the new stories functionality to the point where we feel comfortable to remove the old stories. That's why we put a deprecation notice of 31 December on the old stories page
+* We made further preparations for the support of git enabled projects
+* We finished a year-long project where we modernized the way our developer portal communicates internally. This meant we removed the Integrator, one of the longest running internal platform apps, which was still running on Mendix 3. It's had a great run, but now the time came to say goodbye. It has been replaced with business events based on Kafka.
+
+#### Fixes
+
+* We fixed an issue where, under certain circumstances, an error was shown when a sprint was created from the new stories page
+
+### September 13th, 2021
 
 #### Improvements
 

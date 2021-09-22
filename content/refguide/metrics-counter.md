@@ -47,7 +47,7 @@ The value used to increment the counter's value. Values are specified with [expr
 
 ### 3.3 Tags
 
-You can specify a list of tags to enrich the counter name with key/value pairs.
+You can specify a list of tags to enrich the counter name with key/value pairs. See [Tag Naming](https://micrometer.io/docs/concepts#_tag_naming) on the Micrometer site for more guidance on using tags.
 
 ## 4 Common Section {#common}
 

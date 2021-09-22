@@ -76,22 +76,20 @@ Curators are assigned by the a [Mendix Admin](#admin) and they perform the follo
 * Ensure the discoverability of their assets by the relevant users
 * Enrich the metadata of registered services and datasets – for example descriptions, tags, and contact information
 
-## 4 Data Hub Licences{#data-hub-licences}
+## 4 Data Hub Licences {#data-hub-licences}
 
-In Mendix Data Hub, we offer two different types of licences. Data Hub Free edition, and Data Hub Premium.
+There are two types of licences for Mendix Data Hub: Data Hub Free and Data Hub Premium.
 
-### 4.1 Data Hub Free edition
+All Mendix users have access to the Data Hub Free edition. With this, you can retrieve or edit 1000 objects per application per day for each runtime instance when deployed. When that limit is exceeded, you get an error when your applications tries to retrieve more data. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 
-All Mendix users have access to the Data Hub Free edition. With the Data Hub Free edition, you can retrieve or edit 1000 objects per application, per day, for each runtime instance when deployed. When that limit is exceeded, you’ll get an error when your applications tries to retrieve more data. For more information check out [licencing limitation](/refguide/consumed-odata-service-requirements#license-limitations).
+With the Data Hub Premium licence, apps are not limited by any means and can retrieve or edit unlimited objects.
 
-### 4.2 Data Hub Premium
-
-With Data Hub Premium licence, apps are not limited by any means and can retrieve or edit unlimited objects.
+Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
 
 ## 5 Guide Categories
 
 The *Data Hub Guide* is divided into the following categories:
 
-* [How to Share Data Between Apps Using Mendix Data Hub](share-data/)
+* [How to Share Data Between Apps](share-data/)
 * [Data Hub Catalog](data-hub-catalog/)
 * [Data Hub Landscape](data-hub-landscape/)

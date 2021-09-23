@@ -20,7 +20,6 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 ## 2 Installation
 
 1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Invoice Processing Service module into your app.
-2. 
 2. In the **Toolbox**, drag the **Invoice Processing Service** activity from the **Document Data Capture Services** category into your microflow.
 
 ## 3 Configuration

@@ -216,7 +216,7 @@ Sender Policy Framework (SPF) is an email authentication method. During the deli
 To achieve The SPF validation, you must meet these two requirements:
 
 * The domain in the Mail From address of your email must authorize the sending mail server to send the email via a DNS record
-* The domain in the From address of your email must match the Mail From domain (the From address is included in the email header and shown to the email recipients, while the Mail From address is used by mail servers to return bounce messages and other error notifications. Both addresses are used to indicate the source of an email.)
+* The domain in the From address of your email must match the Mail From domain (the From address is used in the email header and shown to the email recipients, while the Mail From address is used by mail servers to return bounce messages and other error notifications. Both addresses are used to indicate the source of an email.)
 
 If you use the default Mail From domain of the Email Service, you can only meet the first requirement. To meet the second requirement, you must use your own Mail From domain.
 

@@ -94,10 +94,9 @@ To restore a backup file into your environment, use the following command:
 
 If you cannot run the data transfer tool from a local machine, because of network access issues, you need to run it in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a jump pod). To do this, follow the instructions below.
 
-Create a YAML file with a backup/restore pod configuration:
+Create a YAML file  (e.g. `/tmp/mendix-backup-restore.yaml`) with the following contents - containing backup/restore pod configuration:
 
-```shell
-cat <<EOF > /tmp/mendix-backup-restore.yaml
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -150,7 +149,6 @@ spec:
       preStop:
         exec:
           command: ["/bin/sh","-c","killall -w sleep"]
-EOF
 ```
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.

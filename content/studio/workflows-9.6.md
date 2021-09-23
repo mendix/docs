@@ -10,9 +10,9 @@ tags: ["workflow", "workflows", "9.6", "beta"]
 
 Workflows were introduced as a [Beta functionality](/releasenotes/beta-features/) in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. Workflows are still a Beta feature, but we are introducing significant changes to the functionality. For more information on what Beta feature means, see [Mendix Beta](/releasenotes/beta-features/).  
 
-During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we had to disabled the workflow editor for apps with Mendix version 9.6 in Studio. 
+During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we have to temporarily disable the workflow editor for apps with Mendix version 9.6 in Studio. 
 
-However, you can still use workflows when certain conditions described below are met. 
+However, you can still use workflows in Studio and Studio Pro. Below we provide some guidance to help you pick the right Mendix version based on the purpose of the app. 
 
 ## 2 Exploring the Workflow Functionality 
 
@@ -23,7 +23,7 @@ If you want to just try workflows out and do not plan to publish the app to prod
 To create an app with Mendix version 9.5, do the following:
 
 1. In the Developer Portal, click **Create App**.
-2. Choose any app template.
+2. Choose any app template. Some templates like **Approval App** and **Purchase Request** already have predefined workflows and pages.
 3.  Click **Advanced settings** and select **Template version** Studio Pro 9.5.0. 
 4. Click **Select This Template**.
 5. Name your app, choose a background color and an icon, and click **Create App**.

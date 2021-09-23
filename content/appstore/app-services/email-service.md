@@ -161,7 +161,7 @@ After the **Send Email** activity is configured, once the microflow that uses th
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables. 
 
-![](attachments/email-service/generate-html-file.png)
+![](attachments/email-service/generate-html-body-content-microflow.png)
 
 The second step creates an HTML file from the template contents after possible variable substitution.
 
@@ -169,7 +169,7 @@ The second step creates an HTML file from the template contents after possible v
 
 The third step generates a string from this HTML file using the **String from file** action.
 
-![](attachments/email-service/html-file-to-raw-string.png)
+![](attachments/email-service/string-from-file-dialog-box.png)
 
  Then you can add the generated string variable in the **Body** parameter of the **Send email** activity.
 

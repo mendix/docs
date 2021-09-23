@@ -130,28 +130,23 @@ To configure the **Send email** activity, double-click the activity and specify 
 ![](attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
-
   * **From name** – Defines the sender of the email
   * **To**  – Defines the recipients of the email
   * **Subject**  – Defines the subject of the email
+*  **Optional Fields**
 
-* **Optional Fields**
-
-  {{ alert type = "warning" }}
-  For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.
-  {{ /alert}} 
+   {{ alert type = "warning" }}
+   For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.
+   {{ /alert}} 
 
   * **Cc** – Defines the recipients on the CC list of the email
-
   * **Bcc** – Defines the recipients on the BCC list of the email
-
   * **Content type** – Defines whether the email is a **Text** or **HTML** message
+  *  **Body** – Defines the body of the email
 
-  * **Body** – Defines the body of the email
-
-    {{ alert type = "info" }}
-    If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).
-    {{ /alert}} 
+     {{ alert type = "info" }}
+     If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).
+     {{ /alert}} 
     
   * **Attachment** – Defines the attachment to the email
 
@@ -171,7 +166,7 @@ The third step generates a string from this HTML file using the **String from fi
 
 ![](attachments/email-service/string-from-file-dialog-box.png)
 
- Then you can add the generated string variable in the **Body** parameter of the **Send email** activity.
+ In the last step, you can add the generated string variable in the **Body** parameter of the **Send email** activity.
 
 
 ### 4.2 Sending Message with Attachment(s) to Recipients
@@ -199,7 +194,9 @@ The following file types are not supported as attachments:
 **Usage** Dashboard shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
+
 2. Go to **My Marketplace** and click **Subscription** on the left navigation menu. You can get an overview of all the subscriptions of your organization.
+
 3. Click **Email Service** to open the page to see the details. The **Overview** tab shows the following statistics:
    * **Current Month** – Shows statistics for current month usage
    * **Last Month** – Shows usage statistics for last month

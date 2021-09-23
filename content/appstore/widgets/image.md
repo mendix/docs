@@ -66,15 +66,15 @@ The **Accessibility** sections allows you to configure accessibility features fo
 
 The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the Image widget. It includes the following properties:
 
-* **Width unit** and **Width** - the width of the widget in relation to the rest of the elements on the page
+* **Width unit** and **Width** - The width of the widget in relation to the rest of the elements on the page:
 	* The available **Width unit** options are **Auto**, **Percentage**, and **Pixels**
 	* The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
 	* These two properties need to be used together to work
-* **Height unit** and **Height** - the height of the widget in relation to the rest of the elements on the page
+* **Height unit** and **Height** - The height of the widget in relation to the rest of the elements on the page:
 	* The available **Height unit** options **Auto** and **Pixels**. **Auto** will keep the aspect ratio of the image
 	* The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
 	* These two properties need to be used together to work
-* **Show** - Determines how the image will be shown
+* **Show** - Determines how the image will be shown:
 	* Default: **Full image**
 	* When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
 * **Responsive** - When set to **Yes**, the image will scale with its parent container:

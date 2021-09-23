@@ -150,20 +150,29 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Body** – Defines the body of the email
 
     {{ alert type = "info" }}
-    
-    If you want to send an HTML message, you can use any possible way to generate HTML content and use that generated HTML string in the **Body** of the email. The representative microflow below indicates a possible way to generate HTML content using a Template. The template can contain fixed text along with some placeholders for variables. The Generate Document step creates an HTML file from the template contents after possible variable substitution. 
-![](attachments/email-service/generate-html-file.png)
-
-    The next step is to generate a string from this HTML file. This can be achieved through an available activity (**String from file**). The generated string variable can then be used in the send-email activity's **Body** parameter.
-![](attachments/email-service/html-file-to-raw-string.png)
-
+    If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).
     {{ /alert}} 
-
-    {{% todo %}}[Provide more info on Mendix template]{{% /todo %}}
-  
+    
   * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
+
+#### 4.1.1 Generating HTML Body Content {#generate-html-body}
+
+The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables. 
+
+![](attachments/email-service/generate-html-file.png)
+
+The second step creates an HTML file from the template contents after possible variable substitution.
+
+![](attachments/email-service/generate-document-dialog-box.png)
+
+The third step generates a string from this HTML file using the **String from file** action.
+
+![](attachments/email-service/html-file-to-raw-string.png)
+
+ Then you can add the generated string variable in the **Body** parameter of the **Send email** activity.
+
 
 ### 4.2 Sending Message with Attachment(s) to Recipients
 

@@ -49,29 +49,37 @@ The **Data source** section (required) is used to configure the data for the Ima
 
 The **Events** sections allows you to configure what happens when the user interacts with the image. It includes the following properties:
 
-* **On click type** (default: **Action**) - Determines the type of On click for this Image widget. When set to **Action**, the **On click** property can be used to configure a Mendix action. When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image.
-* **On click** (configurable when **On click type** is set to **Action**) - An action property to configure a Mendix action for when a user clicks on the image.
+* **On click type** - Determines the type of On click for this Image widget:
+	* Default: **Action**
+	* When set to **Action**, the **On click** property can be used to configure a Mendix action
+	* When set to **Enlarge**, the image will enlarge into a lightbox when a user clicks on the image
+* **On click** - An action property to configure a Mendix action for when a user clicks on the image:
+	* Configurable when **On click type** is set to **Action** 
 
 #### 2.1.3 Accessibility Section
 
 The **Accessibility** sections allows you to configure accessibility features for the Image widget. It includes the following properties:
 
-* **Alternative text** - Alternative text of the image for accessibility purposes.
+* **Alternative text** - Alternative text of the image for accessibility purposes
 
 ### 2.2 Dimensions Tab {#dimensions}
 
 The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the Image widget. It includes the following properties:
 
-* **Width unit** and **Width** – the width of the widget in relation to the rest of the elements on the page
+* **Width unit** and **Width** - the width of the widget in relation to the rest of the elements on the page
 	* The available **Width unit** options are **Auto**, **Percentage**, and **Pixels**
 	* The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
 	* These two properties need to be used together to work
-* **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
+* **Height unit** and **Height** - the height of the widget in relation to the rest of the elements on the page
 	* The available **Height unit** options **Auto** and **Pixels**. **Auto** will keep the aspect ratio of the image
 	* The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
 	* These two properties need to be used together to work
-* **Show** (default: **Full image**) - Determines how the image will be shown. When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present.
-* **Responsive** (default: **Yes**) - When set to **Yes**, the image will scale with its parent container. It will never get larger than its original size, but it can become smaller.
+* **Show** - Determines how the image will be shown
+	* Default: **Full image**
+	* When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
+* **Responsive** - When set to **Yes**, the image will scale with its parent container:
+	* Default: **Yes**
+	* The image will never get larger than its original size, but it can become smaller
 
 ### 3 Styling
 
@@ -79,6 +87,9 @@ The Image widget is shipped with default styles and works out of the box without
 
 These are the design properties shipped with Atlas UI for this widget:
 
-* **Image style** (**Rounded**, **Circle**, **Square**, **None** (default)) - Changes the style of the image.
-* **Center image** (**Yes**, **No** (default)) - Determines whether the image is centered horizontally in its container or not.
-* **Image fit** (**Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)) - Changes the fit of the image according to the object-fit CSS property.
+* **Image style** - Changes the style of the image:
+	* **Rounded**, **Circle**, **Square**, **None** (default)
+* **Center image** - Determines whether the image is centered horizontally in its container or not:
+	* **Yes**, **No** (default) 
+* **Image fit** - Changes the fit of the image according to the object-fit CSS property:
+	* **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default) 

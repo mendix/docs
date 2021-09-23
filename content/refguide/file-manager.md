@@ -1,6 +1,6 @@
 ---
 title: "File Manager"
-parent: "file-widgets"
+parent: "image-and-file-widgets"
 tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,7 +11,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 
 A file manager is used to upload and/or download files.
 
-![File Manager](attachments/file-widgets/file-manager.png)
+![File Manager](attachments/image-and-file-widgets/file-manager.png)
 
 A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](external-entities) with a `Contents` binary attribute.
 
@@ -27,7 +27,7 @@ When uploading a file through the file manager, the FileDocument object will be 
 
 An example of file manager properties is represented in the image below:
 
-{{% image_container width="250" %}}![File Manager Properties](attachments/file-widgets/file-manager-properties.png)
+{{% image_container width="250" %}}![File Manager Properties](attachments/image-and-file-widgets/file-manager-properties.png)
 {{% /image_container %}}
 
 File manager properties consist of the following sections:
@@ -78,7 +78,7 @@ Default: *5*
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
-If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
+If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
 
 #### 2.4.4 Show File in Browser
 
@@ -97,6 +97,6 @@ Default: *False*
 ## 3 Read More
 
 * [Page](page)
-* [Images, Videos & Files](file-widgets)
+* [Images, Videos & Files](image-and-file-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 * [System Texts](system-texts)

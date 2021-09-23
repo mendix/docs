@@ -1,6 +1,6 @@
 ---
 title: "Container"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 20
 tags: ["studio pro", "container", "structure", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,7 +10,7 @@ tags: ["studio pro", "container", "structure", "widget"]
 
 A container is a layout element that can be used to simultaneously style, hide, drag, or delete a group of widgets placed in it:
 
-![Container Example](attachments/container-widgets/container.png)
+![Container Example](attachments/structure-widgets/container.png)
 
 In a browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 semantic elements (for example, `section`, `main`, `article`, `nav`).
 
@@ -18,7 +18,7 @@ In a browser, it is rendered as a simple `div` element by default. It is also po
 
 An example of container properties is represented in the image below:
 
-{{% image_container width="300" %}}![Container Properties](attachments/container-widgets/container-properties.png)
+{{% image_container width="300" %}}![Container Properties](attachments/structure-widgets/container-properties.png)
 {{% /image_container %}}
 
 Container properties consist of the following sections:
@@ -83,5 +83,5 @@ The **On-click** property specifies the action that will be executed when the us
 ## 4 Read More
 
 * [Page](page)
-* [Structure](container-widgets)
+* [Structure](structure-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

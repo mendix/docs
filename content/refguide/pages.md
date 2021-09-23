@@ -46,10 +46,10 @@ All the documents described above are built using widgets. There are many kinds 
 Widgets are grouped into the following categories:
 
 * [Data containers](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
-* [Common widgets](common-widgets) are commonly found on any page, layout, or snippet
-* [Structure  widgets](container-widgets) can contain other widgets
+* [Text widgets](text-widgets) are used to display textual information to the end-user
+* [Structure  widgets](structure-widgets) can contain other widgets 
 * [Input elements](input-widgets) make it possible to show and edit the values of attributes and associations
-* [Images, videos & files](file-widgets) allow you to work with files, including images stored in files
+* [Images, videos & files](image-and-file-widgets) allow you to work with files, images, and videos 
 * [Buttons](button-widgets) are buttons that trigger actions
 * [Menus & navigation](menu-widgets) allow the user to navigate through the application
 * [Reports](report-widgets) aggregate data and show it in the form of a table or a chart

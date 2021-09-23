@@ -90,33 +90,33 @@ An object with the following key-value pairs:
 
 ```json
 {
-   "snapshots":[
-      {
-         "status_message":"Completed backup creation",
-         "model_version":"1.0.0.7",
-         "expires_at":"2020-03-03T12:59:12.000Z",
-         "finished_at":"2020-02-18T12:59:12.000Z",
-         "updated_at":"2020-02-18T12:59:12.000Z",
-         "snapshot_id":"5f8ace23-19df-4134-bd67-c338142a6097",
-         "created_at":"2020-02-18T12:59:12.000Z",
-         "comment":"Automatically created nightly snapshot",
-         "state":"completed"
-      },
-      {
-         "status_message":"Completed backup creation",
-         "model_version":"1.0.0.7",
-         "expires_at":"2020-03-02T12:58:09.000Z",
-         "finished_at":"2020-02-17T12:58:10.000Z",
-         "updated_at":"2020-02-17T12:58:10.000Z",
-         "snapshot_id":"83c50645-1863-4583-843a-d72a56e5221b",
-         "created_at":"2020-02-17T12:58:09.000Z",
-         "comment":"Automatically created nightly snapshot",
-         "state":"completed"
-      }
-   ],
-   "total":17,
-   "offset":0,
-   "limit":2
+	"limit": 5,
+	"offset": 0,
+	"total": 32,
+	"snapshots": [
+		{
+			"snapshot_id": "5deda9e2-f882-4925-830c-45e73c57366e",
+			"model_version": "8.12.7.11687",
+			"comment": "Uploaded snapshot",
+			"expires_at": "2021-08-05T18:38:41.000Z",
+			"state": "completed",
+			"status_message": "Completed extraction",
+			"created_at": "2021-05-05T18:38:41.000Z",
+			"finished_at": "2021-05-05T18:40:12.000Z",
+			"updated_at": "2021-05-05T18:40:12.000Z"
+		},
+		{
+			"snapshot_id": "bf45ed4d-3308-4fb9-876b-36453ba149bf",
+			"model_version": "8.12.7.11687",
+			"comment": "Automatically created nightly snapshot",
+			"expires_at": "2021-05-18T01:41:27.000Z",
+			"state": "completed",
+			"status_message": "Completed backup creation",
+			"created_at": "2021-05-04T01:41:27.000Z",
+			"finished_at": "2021-05-04T01:45:47.000Z",
+			"updated_at": "2021-05-04T01:45:47.000Z"
+		}
+	]
 }
 ```
 

@@ -3,7 +3,7 @@ title: "Mendix Cloud v4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
 description: "Frequently asked questions about Mendix Cloud v4"
-tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services"]
+tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

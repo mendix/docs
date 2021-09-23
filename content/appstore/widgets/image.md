@@ -71,7 +71,7 @@ The **Dimensions** tab allows you to configure settings that are related to the 
 	* The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
 	* These two properties need to be used together to work
 * **Height unit** and **Height** - The height of the widget in relation to the rest of the elements on the page:
-	* The available **Height unit** options **Auto** and **Pixels**. **Auto** will keep the aspect ratio of the image
+	* The available **Height unit** options **Auto** and **Pixels** (**Auto** will keep the aspect ratio of the image)
 	* The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
 	* These two properties need to be used together to work
 * **Show** - Determines how the image will be shown:

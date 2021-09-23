@@ -150,7 +150,13 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Body** – Defines the body of the email
 
     {{ alert type = "info" }}
-    If you want to send an HTML message, you can use the Mendix template – you can inject contents into the Mendix template to generate the HTML string and then include the generated HTML string in the **Body**.
+    
+    If you want to send an HTML message, you can use any possible way to generate HTML content and use that generated HTML string in the **Body** of the email. The representative microflow below indicates a possible way to generate HTML content using a Template. The template can contain fixed text along with some placeholders for variables. The Generate Document step creates an HTML file from the template contents after possible variable substitution. 
+![](attachments/email-service/generate-html-file.png)
+
+    The next step is to generate a string from this HTML file. This can be achieved through an available activity (**String from file**). The generated string variable can then be used in the send-email activity's **Body** parameter.
+![](attachments/email-service/html-file-to-raw-string.png)
+
     {{ /alert}} 
 
     {{% todo %}}[Provide more info on Mendix template]{{% /todo %}}

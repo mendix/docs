@@ -214,4 +214,3 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Modules](/refguide/modules)
 * [App](/refguide/project)
-* [Common Widgets](/refguide/common-widgets)

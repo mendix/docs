@@ -11,13 +11,13 @@ aliases:
 [Mendix Data Hub](https://hub.mendix.com) is a product for integrating app development with the data available from the many applications in an organization. It is the central hub in an organization for finding and connecting to the relevant shared datasets. It also ensures consistency in the data used throughout the organization. Data Hub enables reliable data sources to be located centrally from one point and for users to connect to them through it. 
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required, which also includes the integration of Data Hub in Studio Pro.
+To use the Mendix Data Hub a license is required, which also includes the integration of Data Hub in Studio Pro. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-The Data Hub integration is available in Studio Pro version 8.14 and above. To use the latest functionality of Data Hub download the latest version of Studio Pro. {{% /alert %}}
+The Data Hub integration is available in Studio Pro version [8.14](/releasenotes/studio-pro/8.14) and above. To use the latest functionality of Data Hub, download the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). {{% /alert %}}
 
-Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps Using Mendix Data Hub](share-data/).
+Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps](share-data/).
 
 ## 2 Overview of Mendix Data Hub
 

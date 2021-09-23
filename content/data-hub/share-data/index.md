@@ -20,7 +20,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps.
+To use the Mendix Data Hub a license is required. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -114,7 +114,7 @@ Do the following:
 
   When this entity set is consumed by another app via the Data Hub Catalog, the other app will see the data entered here.
 
-## 5 Using the Data Hub Catalog and Curating Your Own Service
+## 5 Using the Data Hub Catalog and Curating Your Own Service {#use-and-curate}
 
 The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
 

@@ -27,7 +27,7 @@ The following sections will describe the different available widget properties a
 
 ### 2.1 General Tab {#general}
 
-#### 2.1.1 Data source Section
+#### 2.1.1 Data Source Section
 
 The **Data source** section (required) is used to configure the data for the Image widget. It has the following properties:
 

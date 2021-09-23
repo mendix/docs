@@ -157,8 +157,6 @@ while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-![Mendix Connector kit module app with tests](attachments/how-to-connector-kit/project_test.png)
-
 ### 5.2 Managing Libraries
 
 When you export the module package for publishing in the Marketplace, you only want to include the relevant Java libraries. The easiest way to manage this is to use a build tool to specify and download the relevant dependencies.

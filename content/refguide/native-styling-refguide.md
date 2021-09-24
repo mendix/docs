@@ -617,9 +617,9 @@ The navigation style properties are as follows:
 
 The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 
-## 11 Add-On Widgets
+## 11 Add-Ons
 
-Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other apps. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 

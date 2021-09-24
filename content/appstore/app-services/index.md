@@ -17,4 +17,4 @@ App services like [3D Viewer](3d-viewer) start with a free trial for development
 ## 2 Main Documents in This Category
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
-* [Email Service](email-service)
+* [Email Service](email-service) – enables sending HTML and plain text emails with attachments in your web apps

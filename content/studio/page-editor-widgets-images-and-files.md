@@ -1,5 +1,5 @@
 ---
-title: "Images & Files"
+title: "Images, Videos & Files"
 parent: "page-editor-widgets"
 description: "Describes image and file widgets in Mendix Studio."
 menu_order: 30
@@ -8,7 +8,7 @@ tags: ["studio", "page editor", "image", "image widgets", "widgets", "file", "fi
 
 ## 1 Introduction 
 
-**Images & Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
+**Images, Videos & Files** are widgets that allow end-users to view, download, and upload images or files. For example, with an image uploader end-users will be able to upload a profile image:
 
 {{% image_container width="350" %}}![](attachments/page-editor-widgets-images-and-files/image-uploader-example.png)
 {{% /image_container %}}
@@ -24,7 +24,6 @@ There are the following image and file widgets in Mendix Studio:
 *   **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
   
 	![](attachments/page-editor-widgets-images-and-files/images-and-files.png)
-    
 
 ## 2 Static and Dynamic Image Properties
 

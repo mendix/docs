@@ -60,7 +60,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
    4. Open the **App Explorer** to view the **SendEmailModule** module.
 
-Once imported, the app service is visible in the **App Explorer** and in the **Toolbox** pane of a microflow.
+Once imported, the app service is visible in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 
 ## 3 Configuration
 

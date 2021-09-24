@@ -12,24 +12,44 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is an importable module that enables sending messages to a Microsoft Teams channel.
 
-## 2 Configuration
+![](attachments/ms-teams-connector/message.png)
 
-The connector activity can be used in a microflow for Mendix versions [9.0](/releasenotes/studio-pro/9.0) and above.
+### 1.1 Typical Use Cases
 
-![](attachments/ms-teams-connector/microflow.png)
+*  You can send messages to a Microsoft Teams channel using a microflow
 
-It can also be used in a [workflow](/refguide/workflows):
+   ![](attachments/ms-teams-connector/microflow.png)
 
-![](attachments/ms-teams-connector/workflow.png)
+*  You can send messages to a Microsoft Teams channel using a [workflow](/refguide/workflows)
 
-Just provide the Teams channel webhook (`channelEndpoint` is the webhook URL) and the text message (only text messages are currently supported) to post on the channel: 
+   ![](attachments/ms-teams-connector/workflow.png)
+
+### 1.2 Limitations
+
+* Currently, only text messages are supported
+
+### 1.3 Prerequisites
+
+The app service can only be used with Studio Pro 9 versions starting from [9.0](/releasenotes/studio-pro/9.0).
+
+## 2 Installation
+
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the General Purpose OCR component into your application.
+
+2. In the **Toolbox**, drag the **Microsoft Teams Connector** activity into your microflow or workflow.
+
+   {{% todo %}}[**validate the second step**]{{% /todo %}}
+
+## 3 Configuration
+
+1. In Microsoft Teams, [create a webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html).
+
+2. In Studio Pro, click the **Microsoft Teams Connector** activity that is used in a microflow or workflow to configure it.
+
+   {{% todo %}}[**check how to set the arguments**]{{% /todo %}}
+
+3. Set the Microsoft Teams channel webhook (**channelEndpoint** is the webhook URL).
+
+4. Set the text message to post on the channel.
 
 ![](attachments/ms-teams-connector/action.png)
-
-{{% alert type="info" %}}
-For more information on Teams webhooks, see [Create a Webhook URL for a channel in Microsoft Teams](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html).
-{{% /alert %}}
-
-You can post the message using a microflow or a workflow:
-
-![](attachments/ms-teams-connector/message.png)

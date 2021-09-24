@@ -28,7 +28,7 @@ Mendix is extremely serious about security. The Mendix cloud environment adheres
 
 ### My data is valuable and confidential – what happens to it?
 
-We adhere to strict security standards and regard you to be the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your project was deleted, by filing a support ticket.
+We adhere to strict security standards and regard you to be the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your project was deleted, by filing a Support ticket.
 
 ### How do I know the Team Server will be consistently available?
 

@@ -121,6 +121,12 @@ With this option, you can enable the new merge algorithm that is used when you u
 
 Default: *disabled*
 
+### 6.5 Team Server Git
+
+With this options, Studio Pro will start using the Git version of Team Server. Your projects will be created with a Git Version Control Backend, and will be built and deployed to a Git oriented infrastructure. This is a Beta features, and not yet suited to production usage. After applying this setting, you will need to restart Studio Pro for it to take effect.
+
+Default: *disabled*
+
 ## 7 Read More
 
 * [Upload to Version Control Server](upload-to-version-control-dialog)

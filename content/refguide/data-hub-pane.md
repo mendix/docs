@@ -47,7 +47,7 @@ The following functionality is available in the pane:
 
 ### 2.2 Data Hub App Pane
 
-When no search string has been specified in the **Data Hub** pane, the **App** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
+When no search string has been specified in the **Data Hub** pane, the **Used in your app** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 
@@ -147,6 +147,11 @@ Attributes for a service are listed in alphabetical order. If you right-click an
 In the above example, there are two attributes, **Addresses** and **FavoriteColors** which are not supported and therefore will not be included in your model:
 
 {{% image_container width="300" %}}![multiple associations](attachments/data-hub-pane/unsupported-attributes.png){{% /image_container %}}
+
+### 4.2.4 CRUD Capabilities
+
+If the entity, association, or attribute support any of the capabilities and it is also supported by Studio Pro, then it will be displayed in the Data Hub pane.
+Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update.
 
 ## 5 Read More
 

@@ -260,8 +260,6 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
 
-	![add javascript action call](attachments/jsactions-advanced/add-jsaction-call.png)
-
 	![select search GitHub users](attachments/jsactions-advanced/select-searchgithub-users.png)
 
 	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that your icon image will need to be in an existing [image collection](/refguide/image-collection):

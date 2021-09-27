@@ -184,4 +184,4 @@ Great job! Now you have the image list that shows attached images and your users
 
 Congratulations! You have configured the report that allows your users to attach images and displays these images in the list.
 
-[Preview your app](/studio/publishing-app) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images, Videos & Files](/studio/page-editor-widgets-images-and-files).
+[Preview your app](/studio/publishing-app) to test how the image uploading works. You can also configure a button to attach files instead of images. For more information on files, see [Images & Files](/studio/page-editor-widgets-images-and-files).

@@ -55,7 +55,7 @@ Widget categories are described in the table below:
 | [Structure](page-editor-widgets-structure)             | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
 | [Input Elements](page-editor-widgets-input-elements)   | Contains elements that can be used for inputting data.       |
 | [Text](page-editor-widgets-text)                       | Contains text display widgets.                               |
-| [Images, Videos & Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. |
+| [Images & Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. |
 | [Buttons](page-editor-widgets-buttons)                 | Contains buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link. |
 | [Data Buttons](page-editor-widgets-buttons)            | Contains buttons that manipulate data and are used to create or delete an object, save or cancel changes. |
 | [Workflow Buttons](page-editor-widgets-buttons)        | Contains buttons that are related to [workflows](workflows) and are used to call  a workflow, complete or show a [user task](workflows-user-task), show a workflow page. |

@@ -123,7 +123,13 @@ Default: *disabled*
 
 ### 6.5 Team Server Git
 
-With this options, Studio Pro will start using the Git version of Team Server. Your projects will be created with a Git Version Control Backend, and will be built and deployed to a Git oriented infrastructure. This is a Beta features, and not yet suited to production usage. After applying this setting, you will need to restart Studio Pro for it to take effect.
+With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
+
+{{% alert type="warning" %}}
+This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/). 
+{{% /alert %}}
+
+After applying this setting, you need to restart Studio Pro.
 
 Default: *disabled*
 

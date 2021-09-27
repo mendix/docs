@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is an importable module that enables sending messages to a Microsoft Teams channel.
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is a module that enables sending messages to a Microsoft Teams channel.
 
 ![](attachments/ms-teams-connector/message.png)
 
@@ -34,11 +34,11 @@ The app service can only be used with Studio Pro 9 versions starting from [9.0](
 
 ## 2 Installation
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the General Purpose OCR component into your application.
+1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the component into your application.
 
 2. In the **Toolbox**, drag the **Microsoft Teams Connector** activity into your microflow or workflow.
 
-   {{% todo %}}[**validate the second step**]{{% /todo %}}
+   {{% todo %}}[**validate the workflow part in the second step**]{{% /todo %}}
 
 ## 3 Configuration
 
@@ -52,4 +52,6 @@ The app service can only be used with Studio Pro 9 versions starting from [9.0](
 
 4. Set the text message to post on the channel.
 
-![](attachments/ms-teams-connector/action.png)
+   ![values-added-in-microsoft-teams-connector-dialog-box](attachments/ms-teams-connector/action.png)
+
+5. Click **OK** to save the changes and close the window.

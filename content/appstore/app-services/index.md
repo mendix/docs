@@ -19,3 +19,4 @@ For details on participating in the Mendix Vendor program, see [How to Sell Your
 ## 2 Main Documents in This Category
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
+* [General Purpose OCR](general-purpose-ocr) – extracts text from images or PDF documents and get output in JSON and XML formats in bulk

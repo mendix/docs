@@ -70,25 +70,25 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to order a subscription.
 
-2. Fill in the **Number of End Users**,  [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. After the order is created successfully, the Technical Contact receives two emails, one is an order confirmation email and the other is an email to confirm the email address.
+2. Fill in the **Number of End Users**,  [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-3. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. In the order confirmation email, click the link to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
+4. Click **Email Service** to open the subscription details page.
 
-5. In the list of your organization's subscriptions, click the **Email Service** subscription link to open the subscription details page.
+5. Click **Create Binding Keys**.
 
-6. Click **Create Binding Keys**.
+6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
 
-7. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
-
-8. Click **Create Keys** to generate the **SecretKey** and **UserName**. 
+7. Click **Create Keys** to generate the **SecretKey** and **UserName**. 
 
    The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
 
    ![](attachments/email-service/binding-key-generation.png)
 
-9. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
+8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
+
+9. After the order is created successfully, the Technical Contact also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
 ### 3.2 Configuring userName and secretKey for App Deployment
 
@@ -195,9 +195,9 @@ The following file types are not supported as attachments:
 
 1. Log into the Marketplace.
 
-2. Go to **My Marketplace** and click **Subscription** on the left navigation menu. You can get an overview of all the subscriptions of your organization.
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-3. Click **Email Service** to open the page to see the details. The **Overview** tab shows the following statistics:
+3. Click **Email Service** to open the subscription details page. The **Overview** tab shows the following statistics:
    * **Current Month** – Shows statistics for current month usage
    * **Last Month** – Shows usage statistics for last month
    * **Till date** – Shows usage statistics from the start of the subscription date to today

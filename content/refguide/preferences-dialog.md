@@ -119,7 +119,7 @@ Default: *enabled*
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
 
-Default: *disabled*
+Default: *enabled*
 
 ## 7 Read More
 

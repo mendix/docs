@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "image", "platform supp
 
 ## 1 Introduction
 
-The [Image]() widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a mircoflow, and more.
+The Image widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a mircoflow, and more.
 
 ### 1.1 Features
 

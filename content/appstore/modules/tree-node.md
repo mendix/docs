@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap
 
 The Tree Node widget displays a level of tree nodes.
 
-We recommend to use multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](https://docs.mendix.com/appstore/widgets/accordion) widget is a better alternative.
+We recommend using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion) widget is a better alternative.
 
 ## 2 Features
 
@@ -23,11 +23,11 @@ We recommend to use multiple Tree Node widgets in a nested matter. In this way, 
 
 ### 2.1 Lazy Loading
 
-As your tree view grows bigger, every tree node has to retrieve more data for its subtree. This can negatively impact the performance of the tree view and slow down any user interaction. To address this, every Tree Node widget only loads the data that is necessary to view the current state of the tree view. Any subsequent data is deferred until user interaction.
+As your tree view grows bigger, every tree node has to retrieve more data for its subtree. This can negatively impact the performance of the tree view and slow down any user interaction. To address this, each Tree Node widget loads only the data that is necessary for viewing the current tree view. Any subsequent data is deferred until user interaction.
 
 ### 2.2 Caching
 
-As users interact with the tree view, the same tree nodes can be expanded and collapsed multiple times. Instead of loading the necessary data every time a tree node is expanded, the widget caches its result when the data is loaded the first time. The next time, instead of retrieving everything from scratch, the widget uses the cache. Therefore, if you visit the same tree nodes again, the delivery is fast and the network requests are less.
+As users interact with the tree view, the same tree nodes can be expanded and collapsed multiple times. Instead of loading the necessary data every time a tree node is expanded, the widget caches its result when the data is loaded the first time. The next time, instead of retrieving everything from scratch, the widget uses the cache. Therefore, if you visit the same tree nodes again, the delivery is fast and the network requests are smaller.
 
 ### 2.3 Loading State
 
@@ -47,27 +47,27 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
 
 ### 3.1 General Tab {#general}
 
-* **Data source** (required) – The data source of the widget, which can also be optionally used as the data source for the header and content of the widget
+* **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
+   * Required
+* **Header type** – defines the type of the header
+   * Default: **Text**
+   * When set to **Text**, you can configure the **Header caption** property
+   * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
+   
+    {{% alert type="info" %}}
+    The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
+    {{% /alert %}}
 
-* **Header type** (default: **Text**) – Defines the type of the header
-
-    * When set to **Text**, you can configure the **Header caption** property
-
-    * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
-
-  {{% alert type="info" %}}
-  The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
-  {{% /alert %}}
-
-* **Header caption** (configurable when **Header type** is set to **Text**) – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
-
-* **Has children** (default: **Yes**) – Indicates if the current level of tree nodes has children tree nodes
-
-    * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
-
-* **Start expanded** (configurable when **Has children** is set to **Yes**; default: **No**) – Determines whether the content of the current level of tree nodes starts expanded or collapsed
-
-* **Animate** (configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio; default: **Yes**) – Defines whether the content is animated when a tree node expands and collapses
+* **Header caption** – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
+   * Configurable when **Header type** is set to **Text**
+* **Has children** – indicates if the current level of tree nodes has children tree nodes
+   * Default: **Yes**
+   * When set to **Yes**, a new region becomes available at the bottom of the widget where you can add another widget as child nodes
+* **Start expanded** – determines whether the content of the current level of tree nodes starts expanded or collapsed
+   * Configurable when **Has children** is set to **Yes**; default: **No**
+* **Animate** – defines whether the content is animated when a tree node expands and collapses
+   * Default: **Yes**
+   * Configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio
 
 ### 3.2 Advanced Tab {#advanced}
 
@@ -91,13 +91,17 @@ The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro th
 
 The **Visualization** tab is only visible when the [Enable advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
 
-* **Show icon** (default: **Left**) – Defines the location of the icon relative to the header
-    * When set to **Left**, the icon is placed to the left to the header
-    * When set to **Right**, the icon is placed to the right to the header
-    * When set to **No**, the header has no icon
-* **Expanded icon** (configurable when **Show icon** is set to either **Left** or **Right**) – Defines the custom icon used to indicate that the tree node is expanded
-* **Collapsed icon** (configurable when **Show icon** is set to either **Left** or **Right**) – Defines the custom icon used to indicate that the tree node is collapsed
-* **Animate icon** (default: **Yes**) – Defines whether the icon is animated when you expand or collapse a tree node
+* **Show icon** – defines the location of the icon relative to the header
+   * Default: **Left**
+   * When set to **Left**, the icon is placed to the left to the header
+   * When set to **Right**, the icon is placed to the right to the header
+   * When set to **No**, the header has no icon
+* **Expanded icon** – defines the custom icon used to indicate that the tree node is expanded
+   * Configurable when **Show icon** is set to either **Left** or **Right**
+* **Collapsed icon** – defines the custom icon used to indicate that the tree node is collapsed
+   * Configurable when **Show icon** is set to either **Left** or **Right**
+* **Animate icon**– defines whether the icon is animated when you expand or collapse a tree node
+   * Default: **Yes**
 
 ### 4 Styling
 
@@ -105,5 +109,7 @@ The Tree Node widget has default styles and works out of the box without Atlas U
 
 These are the design properties shipped with Atlas UI for this widget:
 
-* **Borders** (**Horizontal**, **Both**, **None** (default)) – Changes the border appearance
-* **Hover** (**Yes**, **No** (default)) – Highlights an item when hovering over it
+* **Borders** – changes the border appearance
+   * **Horizontal**, **Both**, **None** (default)
+* **Hover** – Highlights an item when hovering over it
+   * **Yes**, **No** (default)

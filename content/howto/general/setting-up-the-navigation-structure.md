@@ -29,8 +29,6 @@ Do the following:
 
 1.  Open **App** > **Navigation**.
 
-    ![](attachments/setting-up-the-navigation-structure/open-navigation.png)
-
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:

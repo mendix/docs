@@ -1,6 +1,6 @@
 ---
 title: "Image Uploader"
-parent: "file-widgets"
+parent: "image-and-file-widgets"
 tags: ["studio pro", "image uploader", "file widget", "widget"] 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,17 +9,17 @@ tags: ["studio pro", "image uploader", "file widget", "widget"]
 
 ## 1 Introduction
 
-An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be displayed by an image viewer. It must be placed inside a data view connected to the entity System.Image or a specialization thereof.
+An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be displayed by a dynamic image. It must be placed inside a data view connected to the entity System.Image or a specialization thereof.
 
 In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
-![Image Uploader](attachments/file-widgets/image-uploader.png)
+![Image Uploader](attachments/image-and-file-widgets/image-uploader.png)
 
 ## 2 Properties
 
 An example of image uploader properties is represented in the image below:
 
-{{% image_container width="250" %}}![Image Uploader Properties](attachments/file-widgets/image-uploader-properties.png)
+{{% image_container width="250" %}}![Image Uploader Properties](attachments/image-and-file-widgets/image-uploader-properties.png)
 {{% /image_container %}}
 
 Image uploader properties consist of the following sections:
@@ -55,7 +55,7 @@ Default: *5*
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon (for example, `txt;doc`).
 
-If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/image viewer** > **Error: incorrect file extension** will be shown below the file manager.
+If a file with an extension that is not allowed is selected, a [system text](system-texts) for **File manager/dynamic image** > **Error: incorrect file extension** will be shown below the file manager.
 
 #### 2.4.3 Thumbnail Width
 
@@ -76,5 +76,5 @@ If a file with an extension that is not allowed is selected, a [system text](sys
 ## 3 Read More
 
 * [Page](page)
-* [File Widgets](file-widgets)
+* [Images, Videos & Files](image-and-file-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

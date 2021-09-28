@@ -126,7 +126,7 @@ To create a page for this app, follow these steps:
 3. For the **Data source – Type** select **Microflow**.
 4. For the **Microflow Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).
 5. Click **OK**.
-6. From **Container widgets**, add a new **Table** with one row and two columns.
+6. From **Structure**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
 8. Delete the **Summary** field.
 9. From the **App Explorer**, drag **Microflow** into the right column.

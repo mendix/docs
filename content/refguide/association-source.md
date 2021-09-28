@@ -15,13 +15,13 @@ The **Association** source retrieves objects from memory, not from the database.
 
 {{% /alert %}}
 
-An **Association** data source fills the widget with objects linked to another object by an association. To provide the context, the data widget needs to be nested within another data widget.
+An **Association** data source fills the widget with objects linked to another object by an association. To provide the context, the data container needs to be nested within another data container.
 
-Data widgets that can function as a container for other data widgets are the [template grid](template-grid), [list view](list-view), and [data view](data-view).
+Data containers that can have other data containers inside them are the [template grid](template-grid), [list view](list-view), and [data view](data-view).
 
 {{% alert type="warning" %}}
 
-Sorting columns and searching is not possible in data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
+Sorting columns and searching is not possible in data containers with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 
 {{% /alert %}}
 
@@ -34,4 +34,4 @@ The **Entity (path)** property specifies the association by which the widget is 
 ## 3 Read More
 
 * [Associations](associations)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)

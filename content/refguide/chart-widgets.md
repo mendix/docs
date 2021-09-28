@@ -1,5 +1,5 @@
 ---
-title: "Chart Widgets"
+title: "Charts"
 parent: "pages"
 menu_order: 70
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
@@ -7,7 +7,7 @@ tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 
 ## 1 Introduction
 
-Chart widgets allow you to display data series visually on your app pages in a wide range of charts.
+Charts allow you to display data series visually on your app pages in a wide range of charts.
 
 [Basic Charts](#basic-charts) are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace (for more information, see [Charts](/appstore/widgets/charts)). Basic charts are based on version 1.47.4 of plotly.js.
 

@@ -8,7 +8,7 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-A *data view* is a starting point for showing the contents of one object on a page.  A data view typically contains input widgets like text boxes. 
+A *data view* is a starting point for showing the contents of one object on a page.  A data view typically contains input elements like text boxes. 
 
 For example, if you want to fill out the information on each customer, a data view is the best way to do that.
 
@@ -56,7 +56,7 @@ The **General** section properties of are described in the table below:
 
 | General Section Property           | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
-| Form Orientation                   | Determines the position of the [input element labels](page-editor-widgets-input-elements#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input widgets</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
+| Form Orientation                   | Determines the position of the [input element labels](page-editor-widgets-input-elements#show-label) inside the data view. You can choose the following orientation: <ul><li>**Horizontal** – the labels will be placed next to the input elements</li><li>**Vertical** – the labels will be placed above the input elements</li></ul> Note that a data view with a vertical orientation cannot be placed inside a data view with a horizontal orientation. In that case, the form will be rendered horizontally. |
 | Read-Only *(disabled by default)*  | When enabled, all [input elements](page-editor-widgets-input-elements) (for example, a text area, a check box) in the data view will be in read-only mode. |
 | Show Footer *(enabled by default)* | A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights. |
 

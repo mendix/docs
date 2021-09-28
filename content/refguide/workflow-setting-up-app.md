@@ -9,7 +9,7 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 ## 1 Introduction
 
-**Workflow Commons** is a workflow-specific module that contains a lot of preconfigured documents, such as pages, snippets, page teamples, microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app, however, this requires some preparation first. 
+**Workflow Commons** is a workflow-specific module that contains a lot of preconfigured documents, such as pages, snippets, page templates, and microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app, however, this requires some preparation first. 
 
 Before adding the Workflow Commons module to your app, make sure you have completed the following:
 
@@ -21,7 +21,7 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 
 By default, Workflow Commons will integrate with [Mendix SSO](https://marketplace.mendix.com/link/component/117212) that allows you to invite and manage users and roles in the [Manage App Users page](/developerportal/collaborate/general-settings) in the Developer Portal. You can download Mendix SSO from the Mendix Marketplace. If you do not have Mendix SSO installed, you will see some consistency errors after installing Workflow Commons. After adding the Mendix SSO module, the consistency errors caused by the installation of Workflow Commons will be gone. If you want to implement a different user authentication and user management method, you can replace the references made to Mendix SSO in Workflow Commons with the user entity of your preference.
 
-## 3 Workflow Commons Components
+## 3 Workflow Commons Components {#components}
 
 The purpose of Workflow Commons is to provide you with useful pages, page templates, snippets, and microflows that can save you development time. All documents in the **Private** folder are meant for internal purposes within the module itself, but you can find a couple of useful documents that you can make use of in the **UseMe** folder.
 
@@ -30,19 +30,24 @@ The purpose of Workflow Commons is to provide you with useful pages, page templa
 There are three pages provided with the Workflow Commons module to get you and your users started with workflows. The functionality contained in these pages works out-of-the-box. Simply add these pages to the [navigation](navigation) of your app to start using them. 
 You can find the following pages in Workflow Commons:
 
-*   **DefaultWorkflowAdmin** – The default workflow admin page that a workflow administrator can use to view and manage a workflow instance. This page can be used in the _Show workflow admin page_ microflow activity and button action.
-*   **TaskDashboard** – Gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
-*   **TaskInbox** – Contains a handy list of all tasks that a user can interact with. _My open tasks_ shows the tasks assigned to current users, _All open tasks_ is a list of tasks they could pick up, _Unassigned tasks_ shows all unassigned tasks, and _Completed tasks_ gives an overview of all tasks that were finished.
-*   **WorkflowAdminCenter** – A navigational page for workflow administrators. From here, a workflow administrator can go the the _Workflow dashboard_, which gives them general statistics of workflows, much like the _MyTaskDashboard_ does for users. Workflow administrators also gain access to the _Workflow Admin Center_, where they can see all the instances of specific workflows and make changes to their data or even abort them.
+*   **DefaultWorkflowAdmin** – The default workflow admin page that a workflow administrator can use to view and manage a workflow instance. This page can be used in the **Show workflow admin page** microflow activity and button action.
+*   **TaskDashboard** –  This page gives end-users an overview of their performance in your app's workflows. It contains such information as how many tasks your users have completed, how long they take on average to complete a task, and what percentage of their tasks they complete within the deadline.
+*   **TaskInbox** – This page contains a handy list of all tasks that a user can interact with. **My open tasks** shows the tasks assigned to current users, **All open tasks** is a list of tasks they could pick up, **Unassigned tasks** shows all unassigned tasks, and **Completed tasks** gives an overview of all tasks that were finished.
+*   **WorkflowAdminCenter** – A navigational page for workflow administrators. From here, a workflow administrator can go the the **Workflow Dashboard**, which gives them general statistics of workflows, much like the **TaskDashboard** does for users. Workflow administrators also gain access to the **Workflow Admin Center**, where they can see all the instances of specific workflows and make changes to their data or even abort workflows.
+*   **WorkflowDashboard** – This page gives you workflow/task based metrics and direct access to all *WorkflowInstance* and *WorkflowUserTask* data. When you want to use the Workflow Dashboard as your only admin go-to page, add this to the navigation instead of the **WorkflowAdminCenter**. 
+*   **MyInitiatedWorkflows** – A useful page for those users who initiate workflows. This page gives them an overview of all their initiated workflows. They can view the current state, task timeline and can withdraw (abort) workflows that are in progress, paused, or incompatible.
 
 ### 3.2 Page Templates
 
 Workflow Commons contains page templates to easily get you started with building workflow-related pages. These templates are automatically suggested to you when you make a new page from either the user task or workflow properties. 
 You can find the following page templates in Workflow Commons:
 
+*   **MyInitiatedWorkflows** – This page template allows users who initiate workflows keep track of their progress. A user is also able to withdraw a workflow if it is still in progress.
 *   **UserTask_Basic** – A basic template that shows a header with the task name and description, a sidebar with details about the assignee and status of the task, and a main view where input widgets and buttons to complete the task are generated.
-*   **UserTask_Extended** – Does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
-*   **Workflow_Overview** – Can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an action menu for administrators. There are three tabs, _General information_, _Task details_, and _Notes and attachments_. In the _General information_ tab, you will see the current state of the workflow, when it has started and ended, as well as the due date and potential reasons for failure. The activity timeline is displayed, and there is a section with generated input widgets that allows administrators to make changes to the data in the workflow. For more information about the individual tasks: who worked on them and who would have been able to pick them up, go to the _Task details_ tab. Finally, the _Notes and attachments_ tab provides an overview of all the notes and attachments that were added for this workflow.
+*   **UserTask_Extended** –  This page template does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
+*   **Workflow_Admin** – This template can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an action menu for administrators. There are three tabs, **General information**, **Task details**, and **Notes and attachments**. In the **General information** tab, you see the current state of the workflow, start and end date and time, as well as the due date and potential reasons for failure. The activity timeline is displayed, and there is a section with generated input widgets that allows administrators to make changes to the data in the workflow. In the **Task details** tab, you can view information on individual tasks: who worked on them and who would have been able to pick them up. Finally, the **Notes and attachments** tab provides an overview of all the notes and attachments that were added for this workflow.
+*   **Workflow_TaskDashboard** – This page template can be used to generate your own **TaskDashboard**, for example, when you want to use your own metrics or add context information.
+*   **Workflow_TaskInbox** – This page template can be used to generate your own ***TaskInbox*** page, for example, when you would like to add context information from your business data to this page.
 
 ### 3.3 Snippets
 

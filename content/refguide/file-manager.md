@@ -74,6 +74,10 @@ The **Type** property indicates how the end-user will be able to use the file ma
 
 Default: *5*
 
+{{% alert type="info" %}}
+This value cannot be set arbitrarily high as the platform to which the app is deployed may also impose a limitation on the size of the files that can be uploaded or downloaded.
+{{% /alert %}}
+
 #### 2.4.3 Allowed Extensions
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`

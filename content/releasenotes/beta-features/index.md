@@ -1,5 +1,5 @@
 ---
-title: "Mendix Beta Features"
+title: "Mendix Beta"
 tags: ["Beta", "Studio Pro", "Features", "Feature Flags", "products", "features and products"]
 #notoc: true
 #layout: wide

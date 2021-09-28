@@ -73,7 +73,7 @@ First you need to create an environment:
 5. Select the **Purpose**.
    
   1. For development of the app, for example acceptance testing, choose **Development**.
-  2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
+  2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which ensures that your app runs as a licensed app. See [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between free/test apps and licensed apps.
 
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
@@ -192,7 +192,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 4.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project.
+This lists the deployment packages which have been created for this app.
 
 ![](attachments/private-cloud-deploy/image17.png)
 
@@ -242,7 +242,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 ### 4.2 Environments {#environments}
 
-This section shows all the environments created for this app project.
+This section shows all the environments created for this app.
 
 ![](attachments/private-cloud-deploy/image19.png)
 
@@ -319,7 +319,7 @@ This opens the **Environment Details** page which is described in more detail in
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
+* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
@@ -379,7 +379,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 5.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 5.1.3.3 Scale Application
 
@@ -435,9 +435,9 @@ If any of these garbage collection steps fail, you will no longer see the enviro
 
 ##### 5.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a Free App.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
+For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
@@ -477,9 +477,25 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 
 ### 5.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app.
 
-![](attachments/private-cloud-deploy/log-levels-tab.png)
+![](attachments/private-cloud-deploy/log-levels-tab-1.png)
+
+The **NODE** is a **Log node name** that you specified in your Mendix application. In the example below, the constant `MyFirstModile.LogNode` is used as a log node name. In this case you need put the *value* of the constant (in this case, `Test Service`) as a NODE on the Log Levels tab.
+
+![](attachments/private-cloud-deploy/log-levels-tab-2.png)
+
+You can find your logs in your Mendix application pod inside the Mendix container using the command below:
+
+```
+kubectl logs <pod-name> -c mendix
+```
+
+This might produce the log below for the example described above.
+
+![](attachments/private-cloud-deploy/log-levels-tab-3.png)
+
+For more information, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ### 5.6 TLS
 

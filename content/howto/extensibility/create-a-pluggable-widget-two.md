@@ -188,7 +188,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 				className={this.props.class}
 				tabIndex={this.props.tabIndex}
 				onUpdate={this.onUpdateHandle}
-				disabled={this.isReadOnly()}
+				disabled={this.props.textAttribute.readOnly}
 			/>
 			<Alert>{validationFeedback}</Alert>
 		</Fragment>;

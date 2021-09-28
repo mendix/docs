@@ -20,18 +20,35 @@ We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
-* [Red Hat OpenShift Container Platform](https://www.openshift.com/) (versions 4 and 3.11)
+* [Red Hat OpenShift Container Platform](https://www.openshift.com/)
 * [MicroK8s](https://microk8s.io/)
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
+* [Google Cloud Platform](https://cloud.google.com/)
 
 {{% alert type="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
-
-Only Kubernetes versions 1.13 through 1.20 are officially supported.
-
-Mendix for Private Cloud has not been evaluated against Kubernetes 1.21 and later versions.
 {{% /alert %}}
+
+#### 2.1.1 Supported Versions
+
+Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which officially supports:
+
+* Kubernetes versions 1.19 through 1.21
+* OpenShift 4.6 through 4.7
+
+{{% alert type="warning" %}}
+Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+
+This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+
+Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
+{{% /alert %}}
+
+Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:
+
+* Kubernetes versions 1.13 through 1.21
+* OpenShift 3.11 through 4.7
 
 ### 2.2 Cluster Requirements
 
@@ -41,13 +58,15 @@ To install the Mendix Operator, the cluster administrator will need permissions 
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPUs and 2 GB memory available. This is enough to run one simple app.
+The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components .
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
 
 ### 2.3 Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) or *OpenShift Online Pro* because they don't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
+
+Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported. 
 
 ## 3 Container Registries
 
@@ -100,12 +119,20 @@ To use an ECR registry, the Mendix Operator will need an AWS Identity and Access
 
 The EKS cluster should be configured so that it can [pull images from ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
+### 3.5 Google Artifact Registry and Container Registry
+
+[Google Cloud Platform](https://cloud.google.com/) provides [artifact registry](https://cloud.google.com/artifact-registry) and [container-registry](https://cloud.google.com/container-registry).
+
+Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
+
+
+
 ## 4 Databases
 
 The following databases are supported, and provide the features listed.
 
 | Database | Data Persists | Provisioned by Operator |
-| === | === | === |
+| --- | --- | --- |
 | Ephemeral | No | Yes |
 | Standard PostgreSQL | Yes | Yes |
 | Microsoft SQL Server | Yes | Yes |
@@ -138,6 +165,7 @@ The following managed PostgreSQL databases are supported:
 * [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) 
 * [Amazon Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/)
 * [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/).
+* [Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres).
 
 Amazon PostgreSQL instances require additional firewall configuration to allow connections from the Kubernetes cluster.
 
@@ -252,6 +280,12 @@ An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/stor
 
 Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage containers or accounts.
 
+### 5.5 Google Cloud Storage
+
+[Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
+
+Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
+
 ## 6 Networking
 
 {{% alert type="info" %}}
@@ -295,6 +329,7 @@ Mendix for Private Cloud is compatible with the following ingress controllers:
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
 * [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [Ingress for External HTTP(S) Load Balancing](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb)
 
 For ingress, it is possible to do the following:
 

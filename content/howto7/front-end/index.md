@@ -1,5 +1,5 @@
 ---
-title: "Front-End"
+title: "Front End"
 ---
 
 ## 1 Introduction 

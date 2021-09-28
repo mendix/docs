@@ -47,7 +47,7 @@ This table compares the nomenclature:
 ### Other Improvements
 
 * The custom search dialog boxes for creating schedules and job templates have been replaced with the standard ATS search dialog box.
-* With the growth in popularity of ATS, we see that users are creating bigger test suites, which was putting stress on the ATS back-end. Therefore, we are releasing several optimizations for processing the results from a test run. We expect this to improve performance for all users, but especially for users with large test suites. 
+* With the growth in popularity of ATS, we see that users are creating bigger test suites, which was putting stress on the ATS back end. Therefore, we are releasing several optimizations for processing the results from a test run. We expect this to improve performance for all users, but especially for users with large test suites. 
 
 ### Fixes
 

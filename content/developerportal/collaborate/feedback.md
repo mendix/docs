@@ -34,9 +34,9 @@ There are three types of feedback item:
 Feedback can go through four different stages:
 
 * **Open** – the feedback is awaiting a response from the team
-* **Handled ** – the team has looked into the feedback and has requested further information
-* **Accepted ** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
-* **Closed ** – the team has closed the feedback
+* **Handled** – the team has looked into the feedback and has requested further information
+* **Accepted** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
+* **Closed** – the team has closed the feedback
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
 

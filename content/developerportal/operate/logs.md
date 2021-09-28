@@ -41,16 +41,14 @@ View Live Log | view today's log on the screen
 
 For apps deployed to the deprecated Mendix Cloud version 3 (v3), you can select which environment you want logs for. Production logs will require two-step authentication.
 
-You can fetch the current log and download it, or you can view and download an archived log. All timestamps are shown in UTC.
+You can view the current log in your browser, or you can view and download an archived log. All timestamps are shown in UTC.
  
 Logs on Mendix Cloud v3 are rotated and archived every 5MB. The logs are kept for at least 3 months.
-
-![Logs Page v3](attachments/logs/log-v3.png)
 
 Action Button | Performs the Action
 :---|:---
 Download Archived Log | download a log selected from the list underneath
-Download Current Log | view the current log on the screen and download it, if required
+View Current Log | view the current log in a new browser tab
 
 ## 4 Apps on SAP Business Technology Platform
 

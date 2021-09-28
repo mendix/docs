@@ -134,7 +134,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 2. Choose the **Product** *MindSphere IoT*.
 
-3. Click **Generate Keys**.
+3. Click **Create Binding Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
@@ -148,7 +148,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
-You can find more information about managing binding keys in the [Service Management Dashboard](/appstore/general/app-store-overview#service-management) section of *Marketplace Overview*.
+You can find more information about managing binding keys in the [Subscriptions](/appstore/general/app-store-overview#subscriptions) section of *Marketplace Overview*.
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
@@ -302,4 +302,3 @@ Setting log levels to trace can have in impact on performance and should only be
 Publishing contracts to Data Hub can fail with a *HTTP 500 INTERNAL SERVER ERROR* when the combination of Asset Type,  Aspect Type, and Aspect Name is very long. The publish operation will fail if the string `AGGR_{AspectType}_{AspectName}_{AssetType}` is more than 200 characters long.
 
 For example, consider an **Asset Type** *CNGTurbine*, with **Aspect Type** *PowerConsumption* and **Aspect** *PrimaryMotor*. This would produce the string `AGGR_PowerConsumption_PrimaryMotor_CNGTurbine` (45 characters) which is less than 200 characters long and can be published successfully. If it were longer than 200 characters, publication would fail.
-

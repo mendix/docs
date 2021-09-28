@@ -9,6 +9,20 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### September 7th, 2021
+
+#### New Features
+
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](https://docs.mendix.com/appstore/general/app-store-overview#types), and Studio Pro **Compatibility**. 
+* We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
+* We have listed 10+ **Premium** [app services](https://docs.mendix.com/appstore/app-services/), and we now support a self-service [subscription](/appstore/general/app-store-overview#subscriptions) experience using credit card for two app services in supported regions.
+
+### August 12th, 2021
+
+#### Improvements
+
+* We have replaced the **Download** button with the **Start with Template** button for the **Create New App** category.
+
 ### July 29th, 2021
 
 #### New Features
@@ -39,7 +53,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 * We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service)):
 	* Automatic provisioning of the app service on subscription.
-	* The [Service Management Dashboard](/appstore/general/app-store-overview#service-management), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+	* The [Service Management Dashboard](/appstore/general/app-store-overview#subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4th, 2021
 
@@ -96,7 +110,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 #### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview#catalog), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/general/app-store-overview#home), [catalog](/appstore/general/app-store-overview), [component details](/appstore/general/app-store-overview#details), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/general/share-app-store-content) to the Marketplace.
 
@@ -162,7 +176,7 @@ You can now create [user groups](/appstore/general/app-store-overview#user-group
 
 The former App Store **Content Managers** and **External Downloaders** groups have been removed. Members of these groups have been migrated to a new temporary user group called **Migrated Data**. Former “content managers” have been added as user group [members] (/appstore/general/app-store-overview#members), and former “external downloaders” have been added as [guests](/appstore/general/app-store-overview#guests).
 
-Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
+Content that was marked as **Protected** as well as content marked as **Shared with Others** has been migrated to the [Content](/appstore/general/app-store-overview#group-content) tab of the Migrated Data user group. This makes all “externally shared” content protected for that user group.
 
 ### October 1st, 2019
 
@@ -274,13 +288,13 @@ We have noticed that when searching in the App Store (via the **Search Mendix** 
 
 #### SAP OData Connector Version 4.0.0
 
-This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/partners/sap/sap-destination-service).
+This version of the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525/) allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP back end services. See [SAP Destination Service](/partners/sap/sap-destination-service).
 
 The following authentication types are currently supported in SAP Destination Services:
 
-* PrincipalPropagation authentication and ProxyType on-premise (Connectivity Service/Cloud Connector/On premise backend)
+* PrincipalPropagation authentication and ProxyType on-premise (Connectivity Service/Cloud Connector/On premise back end)
 * Oauth2SALMAssertion authentication (For Neo Platform apps)
-* Basic and None authentication for public backends
+* Basic and None authentication for public back ends
 
 #### SAP Leonardo Machine Learning Foundation Connector Version 1.0.0
 

@@ -117,6 +117,44 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
+### 3.7 Triggering a Workflow
+
+You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
+
+#### 3.7.1 Triggering a Workflow from a Page {#trigger-page}
+
+To start the workflow, you can add a widget with a specific on-click action on a page. For more information on on-click actions, see [Events Section](page-editor-widgets-events-section).
+
+Do the following:
+
+1. Open a page from where you would like to trigger a workflow.
+2. Make sure you have a data container with the workflow entity on your page. For more information on the workflow entity, see the [Data](workflow-properties#data) section in *Workflow Properties*.
+3. Drag and drop a widget that has on-click action in its properties (for example, a button) inside the data container with the workflow entity. 
+4. Open button's properties > **Events** section. 
+5. Set **On Click Action** to **More**.
+6. Set **Action** to **Call Workflow**. 
+7. Set **Workflow** to the workflow you would like to trigger.
+
+You have configured the button to trigger the workflow.
+
+#### 3.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+
+To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Activities](microflows#microflow-workflow-activities) section in *Microflows*.  
+
+Do the following:
+
+1. Open a microflow that will trigger a workflow.
+2. Make sure the microflow has a necessary parameter with the workflow entity. For more information on the workflow entity, see the [Data](workflow-properties#data) section in *Workflow Properties*.
+3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+4. Open the activity properties.
+5. Set **Workflow** to to the workflow you would like to trigger.
+6. Set **Workflow Object** to the workflow context.
+7. Set **Workflow Name** for the variable, list, or object returned by this activity.
+
+Now this microflow triggers the selected workflow:
+
+![Call Workflow Example](attachments/workflows/call-workflow-example.jpg)
+
 ## 4 Toolbox Elements
 
 The **Toolbox** tab contains elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following sections are used:

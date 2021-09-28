@@ -1,11 +1,12 @@
 ---
 title: "General Settings"
 category: "Collaboration"
-menu_order: 10
+menu_order: 8
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:
     - /developerportal/settings/general-settings
+    - /developerportal/settings/api-key
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
@@ -106,9 +107,26 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 API Keys
+## 5 API Keys {#api-keys}
 
-Here you can manage your app's API keys. For more information, see [API Keys](api-key).
+In **API Keys**, there is an overview of the API keys created for your app with the following information:
+
+*   **API Key Name**
+*   Date of **Creation**
+*   Date **Last Used**
+
+{{% image_container width="550" %}}![](attachments/general-settings/keys.png)
+{{% /image_container %}}
+
+To create a new app API key, click **Create API Key**  and follow these steps:
+
+1.  Fill in the **API key name**.	
+2.  Click **Generate API Key** to be able to use the app API key.
+
+	{{% alert type="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
+	{{% /alert %}}
+	
+Click **Revoke** to delete an app API key.
 
 ## 6 Editing App Info {#editing}
 
@@ -166,4 +184,3 @@ To leave the app, click **Leave App**. For details on leaving, deleting, and dea
 
 * [Leave & Delete an App](leave-delete-app)
 * [Manage Deep Links](manage-deeplinks)
-* [API Keys](api-key)

@@ -61,7 +61,7 @@ This is the URL where the public key can be found to enable token validation dur
 
 The MindSphereSingleSignOn module also provides microflows which are used to support SSO within MindSphere and allow the user’s **tenant** and **email** to be obtained for use within the app (*DS_MindSphereAccount*)
 
-The microflows *DS_MindSphereAccessToken* and *DS_GetAccessTokenForScheduledEvents* could be used for getting the users access token / technical access token which are needed on REST calls to MindSphere.
+The microflows *DS_MindSphereAccessToken* and *DS_GetAccessTokenForScheduledEvents* can be used for getting the users access token / technical access token which are needed on REST calls to MindSphere.
 
 ![Folder structure showing microflows in the MindSphereSingleSignOn module](attachments/mindsphere-module-details/image3.png)
 

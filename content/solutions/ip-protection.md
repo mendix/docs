@@ -11,7 +11,7 @@ The Mendix Solutions Guide is under active development and will be regularly ext
 
 ## 1 Introduction
 
-As a publisher of Solutions, App Services, Connectors and Modules for which subscriptions are sold on the Mendix Marketplace, you will have Intellectual Property (IP) Protection concerns. You will want to protect the intellectual property or IP contained within the model that makes up your Solution, App Service, Connector or Module. This includes any custom usage metering: by hiding the implementation, consumers cannot accidentally or intentionally disable usage metering. Therefore, it is a good idea to consider applying at least some IP Protection in your Solutions, App Services, Connectors and other Modules.
+Subscriptions for Solutions, App Services, Connectors and Modules are sold on the Mendix Marketplace. As publisher, you will have Intellectual Property (IP) Protection concerns. You will want to protect the intellectual property or IP contained within the model that makes up your Solution, App Service, Connector or Module. This includes any custom usage metering: by hiding the implementation, consumers cannot accidentally or intentionally disable usage metering. Therefore, it is a good idea to consider applying at least some IP Protection in your Solutions, App Services, Connectors and other Modules.
 
 ## 2 Why IP Protection?
 
@@ -43,6 +43,10 @@ Not all parts of a Solution, App Service, Connector or Module need to be protect
 * *Any part of the solution that the consumer should never modify.* Hide implementation details behind APIs to ensure consumers or implementation teams focusing on extensions are not distracted by implementation details.
 
 ## 4. Applying IP Protection effectively
+
+{{% alert type="info" %}}
+IP Protection is currently in private beta and only available to select early adopters. Reach out to the Solutions Vendor Program team to request access.
+{{% /alert %}}
 
 ### 4.1 Architecting for IP Protection
 

@@ -9,20 +9,11 @@ The Mendix Solutions Guide is under active development and will be regularly ext
 
 ## 1 Introduction
 
-Mendix [introduced the ISV program](https://www.mendix.com/blog/introducing-the-mendix-isv-partner-program/) to support companies looking to develop solutions, supporting the full range of organizations - from startups to large enterprises. Under beneficial terms, Mendix provides ISVs & Startups with a Mendix license for development & operations of Mendix apps to implement solutions for their customers.
+Mendix [introduced the ISV program](https://www.mendix.com/blog/introducing-the-mendix-isv-partner-program/) to support companies looking to develop solutions, supporting the full range of organizations - from startups to large enterprises. Under beneficial terms, Mendix provides Independent Software Vendors (ISVs) & Startups with a Mendix license for development & operations of Mendix apps to implement solutions for their customers.
 
-## 2 ISV Program
 
-The Mendix ISV Program enables established companies, existing Mendix partners, and startups to successfully develop, bring to market, sell, and deploy software solutions built on Mendix. It is designed to provide simple terms, low initial investment, valuable enablement, and a win-win business model that benefits the partner as well as Mendix.
+## 2 Solution Vendor & Startup Programs
 
-[Read more & apply](https://www.mendix.com/marketplace-vendor-program/solutions/)!
+Mendix supports aspiring solutions vendors and startups in their adoption of Mendix as a development platform for their solutions. The Solutions Vendor & Startup Program teams are the point of contact for any inquiries, including requesting access to early adopter stage technologies like IP Protection.
 
-## 3 Startup program
-
-The Mendix ISV Startup Program enables early stage companies looking to build a software business and monetize their domain expertise by selling solutions. The Mendix ISV Startup Program provides startups with tools and resources to develop, deploy, bring to market, and sell software solutions built on Mendix’s low-code development platform. The economic model of the Mendix ISV Startup Program is based on a revenue sharing agreement that enables startups to establish a profitable and predictable business model.
-
-[Read more & apply](https://www.mendix.com/startup-program/)!
-
-## 4 Get started
-
-Contact our ISV & Startup program teams and get start yourself by reading the [Development](development) section in the Solutions Guide.
+Read more about the [programs](vendor-programs).

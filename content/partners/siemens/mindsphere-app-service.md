@@ -21,6 +21,8 @@ With the use of MindSphere IIoT for Makers, you have an integrated developer exp
 
 MindSphere IIoT for Makers packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
+To find out how to develop for Siemens MindSphere, follow this documentation or have a look into the Mendix Academy Learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
+
 ### 1.1 Limitations
 
 MindSphere IIoT for Makers is easy to add to your app but has the following limitations:

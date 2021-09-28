@@ -61,7 +61,7 @@ For more information about the deployment options see [Deploying to MindSphere](
 
 To start the Auto Registration process just click the **Publish** button.
 
-![](attachments/mindsphere-example-app/autoreg-publish.png).
+![](attachments/mindsphere-example-app/autoreg-publish.png)
 
 Once your app is deployed to Mendix, click **View App**.
 
@@ -89,7 +89,7 @@ All apps running within MindSphere need to be registered. When you open your app
 
 	![Choose app registration](attachments/mindsphere-example-app/autoreg-name-description.png)
 
-	On a **Start for Free** tenant the **admin** role will be assigned automatically to your account. For all other tenants, you have to select at least one application role which will be assigned to your account automatically.
+	On a **Start for Free** tenant the **admin** role will be assigned automatically to your account. For all other tenants, you have to select at least one application user role which will be assigned to your account automatically.
 
 4. Click **Register** to start the registration process on your tenant.
 
@@ -97,7 +97,7 @@ All apps running within MindSphere need to be registered. When you open your app
 	
 	{{% alert type="warning" %}}Do **not** launch your application directly.{{% /alert %}}
 	
-	The MindSphere Operations Insight app uses quite a lot of MindSphere APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore you have to do this for the Operations Insight application as well.
+	The MindSphere Operations Insight app uses quite a lot of MindSphere APIs. When you register an application you also have to grant access to each API you want to use in your application. Therefore, you have to do this for the Operations Insight application.
 	
 5. Click **Developer Cockpit** to take you to grant access to the APIs.
 
@@ -155,7 +155,7 @@ For more information see the MindSphere documentation [Roles & Scopes for Applic
 
 ## 5 Run the app locally
 
-To run and test your app locally follow the steps described in [Local Testing](/partners/siemens/mindsphere-development-considerations#localtesting)
+To run and test your app locally follow the steps described in [Local Testing](/partners/siemens/mindsphere-development-considerations#localtesting).
 
 ## 6 Read More
 

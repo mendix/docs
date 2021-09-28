@@ -18,7 +18,7 @@ Here is an example of a Gallery widget using filters:
 
 ### 1.2 Advanced Options
 
-The gallery has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your gallery:
+The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
 * Pagination type
 * Pagination position

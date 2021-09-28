@@ -114,6 +114,8 @@ For [Team Server](/developerportal/collaborate/team-server) app, the **Stories**
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](data-widgets)) by dragging them from the **Toolbox** onto your page.
 
+The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the bottom-right corner of the **Toolbox**. 
+
 ### 3.11 Debug Windows
 
 For more information on debugging, see [How to Debug Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows).

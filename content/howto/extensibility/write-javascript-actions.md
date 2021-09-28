@@ -124,8 +124,6 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
-	![javascript action call](attachments/write-javascript-actions/selectjsactioncall.png)
-	
 	![select text to speech action](attachments/write-javascript-actions/selectjsactioncalldetail.png)
 	
 	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection). 

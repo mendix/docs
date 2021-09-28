@@ -68,7 +68,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     2. Set **Category** to **Integration**.
 
-    3. Set Icon to **icon_activity**:
+    3. Set Icon to **pt_feedback_checkmark**:
 
         ![Expose as Workflow Action Settings](attachments/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png)
 

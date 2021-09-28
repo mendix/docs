@@ -121,6 +121,18 @@ With this option, you can enable the new merge algorithm that is used when you u
 
 Default: *disabled*
 
+### 6.5 Team Server Git
+
+With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
+
+{{% alert type="warning" %}}
+This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/). 
+{{% /alert %}}
+
+After applying this setting, you need to restart Studio Pro.
+
+Default: *disabled*
+
 ## 7 Read More
 
 * [Upload to Version Control Server](upload-to-version-control-dialog)

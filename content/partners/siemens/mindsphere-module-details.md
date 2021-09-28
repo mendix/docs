@@ -28,9 +28,9 @@ When running on MindSphere, the MindSphere user can use their MindSphere credent
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://marketplace.mendix.com/link/component/108805/).
 
 {{% alert type="warning" %}}
-The SSO module also requires changes to the app theme see the section on [Siemens MindSphere Web Content](#msthemepack), below.
+The SSO module also requires changes to the app theme. See the section on [Siemens MindSphere Web Content](#msthemepack), below.
 
-Please ensure that you also download the **latest version** of the Siemens MindSphere Web Content when you download the SSO module.
+Please ensure that you also download the *latest version* of the Siemens MindSphere Web Content module when you download the SSO module.
 {{% /alert %}}
 
 ### 2.1 Constants
@@ -143,7 +143,7 @@ The MindSphereOSBarConfig module provides a constant **OSBarURL** for specifying
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere app template, or can be downloaded from the Mendix Marketplace here: [MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/).
 
 {{% alert type="info" %}}
-The MindSphere OS Bar Connector also needs the Siemens MindSphere Web Content, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
+The MindSphere OS Bar Connector also needs the Siemens MindSphere Web Content module, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
 {{% /alert %}}
 
 ### 3.1 Configuring the OS Bar
@@ -167,27 +167,27 @@ More information on the structure and content of this JSON object, together with
 
 ## 4 Siemens MindSphere Web Content{#msthemepack}
 
-The **Siemens_MindSphere_Web_Content**  is an *Atalas UI Resource* based on the [MindSphere Design System](https://design.mindsphere.io/) which includes the following:
+The **Siemens_MindSphere_Web_Content** module is an *Atlas UI Resource* based on the [MindSphere Design System](https://design.mindsphere.io/) which includes the following:
 
-* Basic color codes and stylings
+* Basic color codes and styling
 * MindSphere Icons
 * An updated *index.html* file
 * A new *mindspherelogin.html* file
 * New Error pages:
   * permission-denied (*error_page/403.html*)
-  * maximum number ob sessions exceeded (*error_page/LicenseException.html*)
+  * maximum number of sessions exceeded (*error_page/LicenseException.html*)
   * public key url (*error_page/PublicKeyUrl.html*)
   * role mapping (*error_page/RoleMapping.html*)
 
 ### 4.1 MindSphere Icons
 
-See also section [MindSphere Icons](/partners/siemens/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the Siemens MindSphere Web Content.
+See also the [MindSphere Icons](/partners/siemens/mindsphere-development-considerations#atlasui) section of *MindSphere Development Considerations* for a discussion about adding icons from Siemens MindSphere Web Content.
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 
 The [Siemens MindSphere Starter Application](https://marketplace.mendix.com/link/component/109130), example apps, and Siemens MindSphere Web Content have an updated `index.html` file to allow integration with MindSphere.
 
-If you are developing your app from a different app template just add the Siemens MindSphere Web Content module to your app to get the updated index.html. See the [index.html](#indexhtml) section, below, for details about the changes in the file.
+If you are developing your app from a different app template just add the Siemens MindSphere Web Content module to your app to get the updated index.html. See the [index.html](#indexhtml) section, below, for details about the changes to the file.
 
 The changes are required to support:
 
@@ -211,15 +211,15 @@ This is the general *permission denied* page, and will be shown if your app is c
 
 #### Licence exceeded
 
-This page is shown when the maximum number ob sessions is exceeded.
+This page is shown when the maximum number of sessions is exceeded.
 
 #### Public Key URL
 
-This page is shown in case that the **PublicKeyURL** does not match the issuer from the given bearer token.
+This page is shown if the **PublicKeyURL** does not match the issuer of the given bearer token.
 
 #### Role mapping
 
-This page is shown in case that the provided MindSphere application scopes do not match to any given Mendix application roles.
+This page is shown if the provided MindSphere application scopes do not match any of the roles in the Mendix application.
 
 ## 5 Appendices
 
@@ -227,7 +227,7 @@ This page is shown in case that the provided MindSphere application scopes do no
 
 Various changes have been made to the standard Mendix index.html file to ensure compatibility with MindSphere. These are supplied by default in the Siemens MindSphere Starter Application, example apps, and Siemens MindSphere Web Content.
 
-You will only have to make the changes below if you are configuring your existing Mendix app manually, without importing the Siemens MindSphere Web Content.
+You will only have to make the changes below if you are configuring your existing Mendix app manually, without importing Siemens MindSphere Web Content.
 
 Run your app locally, copy the *index.html* from the /deployment folder to /theme/web folder of your app project and apply the changes described below.
 
@@ -326,7 +326,7 @@ and directly after the script of the X-XRSR put the following script
 ```
 
 {{% alert type="info" %}}
-IF you do not use the **Siemens MindSphere Web Content** module you have to create the mindspherelogin.html by your own in the folder /theme/web. See the [mindspherelogin.html](#mindspherelogin) section, below.
+IF you do not use the **Siemens MindSphere Web Content** module you have to create the mindspherelogin.html yourself in the folder /theme/web. See the [mindspherelogin.html](#mindspherelogin) section, below.
 {{% /alert %}}
 
 #### 5.1.3 OS Bar
@@ -394,7 +394,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 
 A new login file `mindspherelogin.html` is needed to support MindSphere SSO. This is supplied by default in the MindSphere app template, example app, and Siemens MindSphere Web Content.
 
-You will only have to create a `mindspherelogin.html` file in the folder /theme/web with the following content if you are configuring your existing Mendix app manually, without importing the Siemens MindSphere Web Content.
+You will only have to create a `mindspherelogin.html` file in the folder /theme/web with the following content if you are configuring your existing Mendix app manually, without importing Siemens MindSphere Web Content.
 
 ```html
 <!doctype html>

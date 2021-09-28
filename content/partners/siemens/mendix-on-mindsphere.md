@@ -30,4 +30,4 @@ Once your app is registered in MindSphere, there are a number of things you need
 
 If you want to work with an example application, look at the following document:
 
-* [How to  Use the Siemens MindSphere Operations Insight Example App](mindsphere-example-app) - contains documentation and assistance in using the Operations Insight Example App available in the Marketplace
+* [How to  Use the Siemens MindSphere Operations Insight Example App](mindsphere-example-app) – this contains documentation and assistance in using the Operations Insight Example App available in the Marketplace

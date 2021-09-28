@@ -13,14 +13,14 @@ tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree nod
 This module contains the following widgets:
 
 * [Data Grid 2](data-grid-2)
-* [Drop-down sort](gallery#4.1-drop-down-sort)
+* [Drop-Down Sort](gallery#4.1-drop-down-sort)
 * [Filters](data-grid-2#7-filters)
 * [Gallery](gallery)
 * [Tree node](tree-node)
 
 ## 2 Migration
 
-If you were previously using the Data Grid 2 module, you must follow the steps below before updating it to the new Data Widgets module:
+If you were previously using the Data Grid 2 module, you must follow these steps before updating it to the new Data Widgets module:
 
 1. Rename the current **DataGrid** module (under **Marketplace** modules) to *DataWidgets* in Studio Pro.
 1. Open the Marketplace and search for **Data Widgets**.

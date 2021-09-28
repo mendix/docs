@@ -107,7 +107,7 @@ An example of text filter being used in the composable region combined with a dr
 
 ![Example of filtering composable region](attachments/gallery/filter-region.png)
 
-For more information about filters, see the [Filters](data-grid-2#7-filters) section of *Data Grid 2*.
+For more information about filters, see the [Filters](data-grid-2#filters) section of *Data Grid 2*.
 
 ## 4 Sorting
 

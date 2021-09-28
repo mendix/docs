@@ -13,7 +13,7 @@ tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree nod
 This module contains the following widgets:
 
 * [Data Grid 2](data-grid-2)
-* [Drop-Down Sort](gallery#4.1-drop-down-sort)
+* [Drop-Down Sort](gallery#dropdown)
 * [Filters](data-grid-2#7-filters)
 * [Gallery](gallery)
 * [Tree node](tree-node)

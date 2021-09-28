@@ -1,6 +1,5 @@
 ---
 title: "Use the Siemens MindSphere Operations Insight Example App"
-linktitle: "Use Operations Insight Example App for Siemens MindSphere"
 parent: "mendix-on-mindsphere"
 menu_order: 110
 tags: ["Siemens", "MindSphere", "Example", "Operations Insight", "Time Series", "REST", "API"]

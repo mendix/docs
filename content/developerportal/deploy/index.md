@@ -84,7 +84,13 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows) and [Unix Deployment](unix-like).
 
-## 12 Main Documents in This Category
+## 12 Mendix Applications on Industrial Edge
+
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shopfloor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+
+To find out how to do this, read [Mendix Applications on Industrial Edge](mendix-app-on-industrial-edge).
+
+## 13 Main Documents in This Category
 
 * [General](general) – information which applies to deployments in many different environments
 * [Mendix Cloud](mendix-cloud-deploy) – how to deploy to, and configure, the Mendix Cloud
@@ -95,5 +101,6 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [Cloud Foundry](cloud-foundry-deploy) – how to deploy to a Cloud Foundry-based platform
 * [Docker](docker-deploy) – how to deploy directly in a Docker container
 * [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
+* [Mendix Applications on Industrial Edge](mendix-app-on-industrial-edge) – how to bring Mendix application on to the Industrial Edge
 * [Mobile App](mobileapp) – how to publish your mobile app
 * [App Services](app-services) – how to publish to the Mendix Marketplace

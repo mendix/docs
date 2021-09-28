@@ -116,6 +116,7 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
+    - "Feature Release Calendar (MxWorld 2021)"
     - "Mendix Beta"
 developerportal:
   space: "Developer Portal Guide"
@@ -206,7 +207,6 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
-    - "Themes"
     - "App Services"
     - "Connectors"
     - "Modules"

@@ -163,7 +163,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 * Right-click a drop-zone allows you to insert a widget into it
 
-* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
 	![Frequently-used widgets](attachments/page/frequently-used.png)
 

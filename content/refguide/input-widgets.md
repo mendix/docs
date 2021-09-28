@@ -1,22 +1,22 @@
 ---
-title: "Input Widgets"
+title: "Input Elements"
 parent: "pages"
 menu_order: 30
 description: "Widgets which can be added to pages to view and edit attributes of objects."
-tags: ["studio pro", "input widgets", "widget", "reference selector", "reference set", "association", "edit", "data input"]
+tags: ["studio pro", "input elements", "widget", "reference selector", "reference set", "association", "edit", "data input"]
 ---
 
 ## 1 Introduction
 
-Input widgets show data to the end-user and, optionally, allow them to edit the data.
+Input elements show data to the end-user and, optionally, allow them to edit the data.
 
-Input widgets need to be linked to an attribute of an entity in order to function. As such, they must be placed within a data widget containing by an object of that entity type.
+Input elements need to be linked to an attribute of an entity in order to function. As such, they must be placed within a data widget containing by an object of that entity type.
 
-For example, the input widgets can be placed inside a [data view](data-view):
+For example, the input elements can be placed inside a [data view](data-view):
 
 ![Data view containing widgets](attachments/input-widgets/data-view.png)
 
-There are several different input widgets, these are used for different [data types](data-types) and for different types of [association](associations). The input widgets category contains the following widgets:
+There are several different input elements, these are used for different [data types](data-types) and for different types of [association](associations). The input elements category contains the following widgets:
 
 *   [Text Box](text-box) – displays and, optionally, allows the end-user to add or edit text data from a *numeric* or *string-like* attribute:
 

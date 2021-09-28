@@ -75,7 +75,7 @@ For more details, see [How to Curate Registered Assets](curate).
 
 Mendix Data Hub enables organizations to manage the data that is shared from the different sources. Security of the shared datasets is crucial, and this includes access to the shared data and authentication of users.
 
-Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. This is described in [Data Hub License](/refguide/consumed-odata-service-requirements#license-limitations).
+Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and datasets, see [Data Accessibility and Security](security).
 

@@ -5,6 +5,12 @@ menu_order: 05
 tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
+{{% alert type="warning" %}}
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. We introduced workflows as a Beta feature in Mendix 9 and are now incorporating feedback we received from our community to improve workflows.
+
+Workflows in Studio are available for apps with Mendix version 9.5.
+{{% /alert %}}
+
 ## 1 Introduction 
 
 Workflow is a new visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 

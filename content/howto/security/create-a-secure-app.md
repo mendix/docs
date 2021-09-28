@@ -23,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Know how to create a domain model (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
 * Know how to create menu items (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
-* Know how to add action buttons (for details, see [Button Widgets](/refguide/button-widgets))
+* Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 

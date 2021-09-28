@@ -26,10 +26,11 @@ This section describes the features of a consumed OData service that are support
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
-* **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the app
-* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable
-* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable
+* **Countable** – an entity set marked as `Countable="false"` prevents the user from adding the entity to the app
+* **Filterable** – an entity set marked as `Filterable="false"` sets all properties as non-filterable
+* **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable
 * Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
+* **Updatable** - an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for instance, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change object action](change-object). For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` can be used to list the (navigation)properties that cannot be updated.
 
 An entity can only be used when it is accessible through an entity set.
 

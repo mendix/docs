@@ -1,6 +1,7 @@
 ---
 title: "Workflow Activities"
 parent: "activities"
+menu_order: 90
 tags: ["studio pro", "microflow", "workflow", "workflow activities"]
 ---
 

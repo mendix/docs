@@ -15,7 +15,7 @@ Workflows in Studio are available for apps with Mendix version 9.5.
 
 Workflow is a new visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
-This how-to explains how to build an employee onboarding process using the workflow editor. For more information on how to build a similar process in Studio Pro, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure).
+This how-to explains how to build an employee onboarding process using the workflow editor. 
 
 **This how-to will teach you how to do the following:**
 

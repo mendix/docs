@@ -14,7 +14,7 @@ This module contains the following widgets:
 
 * [Data Grid 2](data-grid-2)
 * [Drop-Down Sort](gallery#dropdown)
-* [Filters](data-grid-2#7-filters)
+* [Filters](data-grid-2#filters)
 * [Gallery](gallery)
 * [Tree node](tree-node)
 

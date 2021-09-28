@@ -21,24 +21,27 @@ Attributes of associated objects can be accessed using multiple slashes (for exa
 
 You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```sql
 $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 ```
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
 
-### 1.1 Example
+### 1.1 Examples
 
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
-```
+```sql
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
 {{% alert type="warning" %}}
-When an object is empty, accessing an attribute is considered invalid. If part of an expression is invalid, it will cause an exception and the result will return `false`. The object's attribute cannot be accessed and the expression cannot be evaluated. This can be crucial when evaluating multiple statements within an expression. For example, evaluating the expression:
+When an object is empty, accessing an attribute is considered invalid. If part of an expression is invalid, it will cause an exception and the result will return `false`. The object's attribute cannot be accessed and the expression cannot be evaluated. This can be crucial when evaluating multiple statements within an expression. See the examples below for more information.
+{{% /alert %}}
 
-```
+Evaluating the expression:
+
+```sql
 $emptyObject/attribute != $validObject/attribute or $emptyObject = empty
 ```
 
@@ -46,12 +49,11 @@ will always return `false`, as long as `emptyObject` is empty. The second part o
 
 To have both checks evaluated, the order of statements needs to be reversed:
 
-```
+```sql
 $emptyObject = empty or $emptyObject/attribute != $validObject/attribute
 ```
 
 This way the first statement gets evaluated.
-{{% /alert %}}
 
 ### 1.2 Regular Expressions
 

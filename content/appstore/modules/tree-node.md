@@ -111,5 +111,5 @@ These are the design properties shipped with Atlas UI for this widget:
 
 * **Borders** – changes the border appearance
    * **Horizontal**, **Both**, **None** (default)
-* **Hover** – Highlights an item when hovering over it
+* **Hover** – highlights an item when hovering over it
    * **Yes**, **No** (default)

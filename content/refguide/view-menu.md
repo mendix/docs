@@ -112,7 +112,7 @@ For [Team Server](/developerportal/collaborate/team-server) app, the **Stories**
 
 ### 3.10 Toolbox {#toolbox}
 
-The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data widgets](data-widgets)) by dragging them from the **Toolbox** onto your page.
+The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](data-widgets)) by dragging them from the **Toolbox** onto your page.
 
 ### 3.11 Debug Windows
 

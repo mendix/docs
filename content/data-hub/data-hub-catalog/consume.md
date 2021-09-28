@@ -12,7 +12,7 @@ The Data Hub Catalog is a catalog of OData services exposing datasets that you c
 
 This document provides general information and guidelines on consumed datasets in apps. For details on using shared datasets in Studio Pro, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.
 
-For details on the security of the data that the shared datasets connect to, and for defining access to the datasets to specified user roles, see [Data Accessibility and Security](security).
+For details on the security of the data that the shared datasets connect to, and for defining access to the datasets for specified user roles, see [Data Accessibility and Security](security).
 
 ## 2 Using Registered Assets in your App {#consuming-services-entities}
 
@@ -20,7 +20,7 @@ Shared data which is represented by the exposed datasets registered in the Data 
 
 You can use the Catalog to find registered data sources and use the [Copy Data Source URI](search#service-details) button obtain the OData service URI which can be used in other enterprise applications.
 
-The following sections summarize important points when using OData services and registered datasets in your apps in Studio Pro.
+The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 
 ### 2.1 Services
 
@@ -32,19 +32,19 @@ When a new version of the OData service for an external entity is registered in 
 This is not compulsory, and users can continue to use an older version of a service unless the new version was deployed to the same service endpoint as the previous version. In Studio Pro, new versions of a service are indicated and users can choose to **Update** the service, or **Switch** to another version of the service deployed to another endpoint.
 {{% /alert %}}
 
-It is good practice that publishers of a service serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint. In this case, in Studio Pro, users will get the option to **Switch** to the new version. 
+It is good practice for publishers of a service to serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint and Studio Pro users will get the option to **Switch** to the new version. 
 
 ### 2.2 Consumed (External) Entities
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 
-External entities are read-only, so it is not possible to change te structural values of attributes or associations between two external entities.
+It is not possible to change the structural values of attributes or associations between two external entities.
 
-When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can only define read access, and also access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
+When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability#persistable) and [non-persistable](/refguide/persistability#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](security)).
 
 You can associate external entities with local entities (both [persistable and non-persistable](/refguide/persistability). However, the external entity cannot be the owner of an association, which means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
 
-Mendix entities that are specializations in the the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities the inheritance relationship will not be present in the metadata contract or when both are consumed. 
+Mendix entities that are specializations in the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities, the inheritance relationship will not be present in the metadata contract or when both are consumed. 
 
 {{% alert type="warning" %}}
 Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
@@ -57,10 +57,6 @@ Data for external entities is not in the consuming app's database but in the dat
 The data set that is associated with the consumed entity is maintained in the publishing app.
 
 Access  to the data is through the published REST OData service, with "reading" and "querying" of the data by the consuming app.
-
-{{% alert type="info" %}}
-This means that there are currently no "writes" or requests to the originating app to change data by the consuming app. 
-{{% /alert %}}
 
 ## 3 Operations on External Entities in Consuming Apps
 

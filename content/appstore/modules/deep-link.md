@@ -87,7 +87,7 @@ Follow these steps to update this homepage microflow:
 1. Make the first activity in this custom microflow a [microflow call](/refguide/microflow-call) activity that calls `Deeplink.DeeplinkHome`.
 2. Configure the microflow to return a Boolean value that indicates if the module will start triggering a microflow.
 3. Add an exclusive split that handles the result of `Deeplink.DeeplinkHome`:
-	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module will then call the correct microflow
+	* When the result of `Deeplink.DeeplinkHome` is true, the custom microflow should end, and the module then calls the correct microflow
 	* When the result is false, the microflow should continue with a [show page](/refguide/show-page) activity that opens the page or microflow that is your default home page (as in, the original intended behavior)
 
 ### 2.7 Constants (Optional)
@@ -96,5 +96,6 @@ Follow these steps to update this homepage microflow:
 * **LoginLocation** – If user credentials are required but are not present in the session, the user will get redirected to this location. This constant's value can either be fully qualified (for example, `https://myapp.xyz.com/mylogin.html`) or relative to the site (for example, `/mylogin.html`). If the constant value is empty, the default built-in Mendix login page is used.
 	* To make sure the end-user gets sent back to original deep link URL after having logged in, append `&f=true&cont=` to the constant (for example, `/mylogin.html&f=true&cont=`)
 	* When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` — *note that this construction does not work for other SSO modules, such as XSUAA*
+	* When the app is using MendixSSO for SSO and the end-user should be redirected to the deep link again, use `/openid/login?f=true&cont=`
 	* Use `/mindspherelogin.html?redirect_uri=` as login location when using the module with a MindSphere app. (Requires MindSphere SSO >= V2.0).
   * When using XSUAA, this constant should be set to `/xsauaalogin/`

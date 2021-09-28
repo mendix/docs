@@ -18,9 +18,9 @@ If you want to use push notifications with custom apps which created with native
 
 ## 3 Setting Up Your Mendix Project
 
-Create a Mendix project using the Native Mobile Quickstart starter app:
+Create a Mendix project using the Blank Native Mobile App:
 
-1. Open Mendix Studio Pro. **Select File** > **New Project**, and then select the **Native Mobile Quickstart** app.
+1. Open Mendix Studio Pro. **Select File** > **New Project**, and then select the **Blank Native Mobile App** app.
 1. Click **Use this starting point**.
 1. Click **Create app** to close the dialog box.
 

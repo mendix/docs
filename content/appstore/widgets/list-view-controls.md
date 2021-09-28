@@ -14,10 +14,10 @@ These are the available list view widgets:
 
 * [Check box filter](#check-box-filter) – filters a list view with various constraints when checked or unchecked
 * [Drop-down filter](#drop-down-filter) – filters a list view with various options that can be selected from a drop-down
-* [Drop-down sort](#drop-down-sort) – Adds an interactive sort to your list view.
-* [Header sort](#header-sort) – Add sorting behavior to the headers of a list view.
-* [Pagination](#pagination) – Adds bootstrap like paging to a list view and page numbers similar to in-built data grid
-* [Text box search](#text-box-search) – Adds an interactive search box to all of your list view
+* [Drop-down sort](#drop-down-sort) – adds an interactive sort to your list view.
+* [Header sort](#header-sort) – add sorting behavior to the headers of a list view.
+* [Pagination](#pagination) – adds bootstrap like paging to a list view and page numbers similar to in-built data grid
+* [Text box search](#text-box-search) – adds an interactive search box to all of your list view
 
 {{% alert type="warning" %}}
 
@@ -58,7 +58,9 @@ The widget connects to the first list view it finds from within its parent conta
 
 ### 2.3 Example
 
+{{% image_container width="300" %}}
 ![](attachments/list-view-controls/check-box-filter.gif)
+{{% /image_container %}}
 
 ## 3 Drop-Down Filter Widget {#drop-down-filter}
 
@@ -82,7 +84,9 @@ When placed above a list view, this widget enables filtering the list view at ru
 
 ### 3.3 Example
 
+{{% image_container width="300" %}}
 ![](attachments/list-view-controls/drop-down-filter.gif)
+{{% /image_container %}}
 
 ## 4 Drop-Down Sort Widget {#drop-down-sort}
 
@@ -101,13 +105,18 @@ This widget adds an interactive sort to your list view. It supports sorting on a
 
 ### 4.3 Example
 
+{{% image_container width="300" %}}
 ![](attachments/list-view-controls/drop-down-sort.gif)
+{{% /image_container %}}
+
 
 ## 5 Header Sort Widget {#header-sort}
 
 This is an example of the header sort widget:
 
+{{% image_container width="300" %}}
 ![](attachments/list-view-controls/header-sort.gif)
+{{% /image_container %}}
 
 ## 6 Pagination Widget {#pagination}
 
@@ -130,16 +139,22 @@ With this widget, you can add Bootstrap-like paging to your list view, similar t
 ### 6.3 Examples
 
 * Lower pagination:
-
+	
+	{{% image_container width="300" %}}
 	![](attachments/list-view-controls/lower-pagination.gif)
+	{{% /image_container %}}
   
 * Multiple paginations:
 
+	{{% image_container width="300" %}}
 	![](attachments/list-view-controls/multiple-pagination.gif)
+	{{% /image_container %}}
 
 * Page size:
-
+	
+	{{% image_container width="300" %}}
 	![](attachments/list-view-controls/page-size.gif)
+	{{% /image_container %}}
 	
 ## 7 Text Box Search Widget {#text-box-search}
 
@@ -158,7 +173,9 @@ Add an interactive search box to all of your list views with this widget. This s
 
 ### 7.3 Sample
 
-![](attachments/list-view-controls/text-box-search.gif)	
+{{% image_container width="300" %}}
+![](attachments/list-view-controls/text-box-search.gif)
+{{% /image_container %}}
 
 ## 8 Developing This Marketplace Component
 

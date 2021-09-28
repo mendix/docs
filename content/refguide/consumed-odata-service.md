@@ -86,6 +86,24 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
+### 2.7 Error handling microflow
+
+When a call to the OData service fails, users will see a generic error message. Create an error handling microflow to change this message.
+
+When the service responds with an unsuccesful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
+
+The microflow should have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value, otherwise it is `empty`.
+
+The microflow must return a `String` containing the error message. If it returns `empty`, the original generic message is used.
+
+Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
+
+{{% alert type="info" %}}
+
+The *error handling microflow* feature was introduced in Studio Pro 9.6.0.
+
+{{% /alert %}}
+
 ## 3 Metadata Tab {#metadata}
 
 In the **Metadata** tab, you can select a metadata file or use metadata obtained through a URL:
@@ -120,14 +138,15 @@ Click the **Properties** tab for the consumed OData service which displays the p
 
 {{% image_container width="300" %}}![](attachments/consumed-odata-service/consumed-odata-service-doc-properties.png){{% /image_container %}}
 
-* **Entities** – the URL of the metadata defining the entities and associated datasets
-* **Documentation** – an additional description about this service for the current app
-* **Service name** – the name of the published OData service that is consumed
-* **Service version** – the version of the service that is consumed
-* **Service ID** – the unique identifier of the service in the Data Hub Catalog
-* **Application ID** – the unique identifier of the application that the service was published from in the Data Hub Catalog
-* **Metadata** – the contents of the metadata file defining the service
-*  **OData version** – the OData version: can be OData 3 or OData 4
+* **Entities** – The URL of the metadata defining the entities and associated datasets.
+* **Documentation** – An additional description about this service for the current app.
+* **Service name** – The name of the published OData service that is consumed.
+* **Service version** – The version of the service that is consumed.
+* **Service ID** – The unique identifier of the service in the Data Hub Catalog.
+* **Application ID** – The unique identifier of the application that the service was published from in the Data Hub Catalog.
+* **Metadata** – The contents of the metadata file defining the service.
+*  **OData version** – The OData version: can be OData 3 or OData 4.
+*  **Use QuerySegment** – When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. When set to `Yes`, then a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL, and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. This property was introduced in Studio Pro 9.6.0.
 
 ## 4 Updating or Switching a Consumed OData Service {#updating}
 

@@ -1,5 +1,5 @@
 ---
-title: "Authentication Widgets"
+title: "Authentication"
 parent: "pages"
 menu_order: 55
 tags: ["authentication", "widgets", "studio pro", "login", "password"]
@@ -11,7 +11,7 @@ Authentication widgets are used to sign users in and log them out.
 
 Use a [navigation profile setting](navigation#authentication) to direct users to the correct authentication page.
 
-The **Authentication widgets** category contains the following widgets:
+The **Authentication** category contains the following widgets:
 
 * [Login ID text box](login-id-text-box) – allows users to provide a login id for authentication
 

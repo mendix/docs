@@ -71,8 +71,6 @@ There is only room for one icon and if a document is both modified and moved it 
 
 For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
 
-![](attachments/using-version-control-in-studio-pro/project-explorer-documents.png)
-
 You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
 ![](attachments/using-version-control-in-studio-pro/changes-pane.png)

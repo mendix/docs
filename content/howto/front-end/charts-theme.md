@@ -36,7 +36,7 @@ To create the required custom configuration easily, follow these steps:
 
 1. Open a page with a chart.
 
-1. Open the chart widget settings.
+1. Open the chart settings.
 
 1. Go to the tab **Advanced**.
 
@@ -68,7 +68,7 @@ To create the required custom configuration easily, follow these steps:
 
     {{% alert type="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
-12. In Studio Pro, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
+12. In Studio Pro, set **Mode** in the chart to **Advanced**, to remove the Toggle Editor button.
 
     {{% alert type="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 

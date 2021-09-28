@@ -66,7 +66,7 @@ You can perform the following basic functions when working on workflows:
 
 To open a workflow in Studio Pro, do the following:
 
-1. In the [Project Explorer](project-explorer), open a module where this workflow is located.
+1. In the [App Explorer](project-explorer), open a module where this workflow is located.
 2. Navigate to the workflow’s location inside the module and double-click the workflow.
 
 The selected workflow is opened.
@@ -75,7 +75,7 @@ The selected workflow is opened.
 
 To add a workflow to your app, do the following:
 
-1. In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
+1. In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
 
     ![Add Workflow](attachments/workflows/add-workflow.jpg)
 
@@ -89,7 +89,7 @@ The workflow is created.
 
 To delete a workflow, do the following:
 
-1. In the [Project Explorer](project-explorer), select a workflow you would like to delete and right-click it.
+1. In the [App Explorer](project-explorer), select a workflow you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected workflow is deleted. 
@@ -163,11 +163,7 @@ You can find the following workflow-related entities in the System module:
 * **WorkflowDefinition** – Represents your workflow in the database. It contains two attributes, where **Name** and **Title** are **Name** and **Title** properties of the workflow and **Obsolete** is a Boolean that is marked as true when you delete your workflow. In this case, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](workflow-properties). 
 * **WorkflowTaskDefinition** – Represents your [user tasks](user-task) and [system activities](call-microflow) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **Obsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
 * **WorkflowInstance** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
-* **WorkflowTaskInstance** –  A representation of a running user task or a system activity, so every time when the new user task/system activity is started, the Runtime creates a new instance.
-* **WorkflowUserTask** - a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
-* **WorkflowSystemTask** – a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the system activity (**Call microflow**) and is used to show that the microflow has been executed. 
-* **WorkflowContext** – a basic entity for the objects that will be used as context for the workflow. The specialization of this entity is used as a **Workflow entity** in its properties. For more information on properties, see [Workflow Properties](workflow-properties). 
-* **WorkflowVersion** – This System entity is used for versioning and for the internal administration in the Runtime. When you add an activity and run your workflow, a new version will be created.
+* **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
 
 ## 5 Workflow Variables
 
@@ -175,8 +171,8 @@ Workflows have dedicated variables that can be used in an XPath and Expressions 
 
 The list of variables is described below: 
 
-* `$workflowData` – an instance of the workflow entity that is configured for a specific workflow (usually a specialization of **System.WorkflowContext**)
-* `$workflow` – an instance of a currently running workflow (**System.WorkflowInstance**)
+* `$WorkflowContext` – an instance of the business-related entity that travels through the workflow
+* `$WorkflowInstance` – an instance of a currently running workflow (**System.Workflow**)
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 
 
@@ -198,5 +194,4 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 ## 9 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

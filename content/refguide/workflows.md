@@ -75,9 +75,7 @@ The selected workflow is opened.
 
 To add a workflow to your app, do the following:
 
-1. In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
-
-    ![Add Workflow](attachments/workflows/add-workflow.jpg)
+1. In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**.
 
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 

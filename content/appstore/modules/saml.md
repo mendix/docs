@@ -108,11 +108,9 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 * **Authentication Context Classes** – This passes the allowed authentication methods. This has to be whatever the IdP requests, as there are no requirements within this module and all options are available. For the SAML protocol, the SP is required to pass in the authentication context. However, passing all options is not recommended, since that leads to significantly bigger (and slower) message exchange.
 * **Allow Idp Initiated Authentication** – By default, the module does not allow for unsolicited request. That means that every login has to be initiated from the Mendix application, and all the messages have to be exchanged using the same RequestID and RelayState. Some IdPs do not allow for the RelayState to be passed, or the authentication could be initiated by the IdP instead of at the SP. For all situations where the RelayState is not being generated or passed from the original login action at Mendix, this option should be enabled. By default, it does not allow for unsolicited requests, because that would be considered less secure.
 
-### 3.3 Setting SameSiteCookies to None
+### 3.3 Setting `SameSite` Cookies to `None`
 
-In Mendix 8 SameSite cookie defaults to “None”. In Mendix 9 however, the SameSite cookie defaults to “Strict” and thus the browser does not forward the session cookie issued by the /SSO/ handler if the login page of your IdP has popped up before (and for the same reason the deeplink also works if you have already logged in via your IdP before and its login page is therefore not opened).
-
-Currently setting com.mendix.core.SameSiteCookies (in the custom runtime settings, see https://docs.mendix.com/refguide/custom-settings) to “None” or “Lax” will tell the browser that your application accepts this cookie. 
+In Mendix 8, `SameSite` cookies default to `None`. In Mendix 9, however, `SameSite` cookies default to `Strict`. Therefore, if the login page of your Identity Provider (IdP) has popped up before, the browser does not forward the session cookies issued by the `/SSO/` handler. (For the same reason the deeplink also works, if you have already logged in via your IdP before and its login page is therefore not opened.) Currently setting `com.mendix.core.SameSiteCookies` to `None` or `Lax` in the [custom runtime settings](/refguide/custom-settings) will tell the browser that your application accepts this cookie. 
 
 ## 4 Advanced Configuration
 

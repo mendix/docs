@@ -36,9 +36,9 @@ The following errors might be returned by the service. In general, 4xx errors in
 | 404 (Not Found) | This service or resource does not exist. Please verify the URL you are using. |
 | 405 (Method Not allowed) | A service exists for this URL, but not in combination with the used HTTP method. |
 | 409 (Conflict) | There was a conflict with respect to the resource; for example, the resource which was attempted to be created already exists. |
-| 500 (Internal Server Error) / 560 (Internal Server Error) | The request is valid, but we failed to serve it. Please contact support. |
-| 502 (Bad Gateway) / 503 (Service Unavailable) | The server is currently offline. Please contact support if this problem persists. |
-| 504 (Gateway timeout) | Your request is being processed but the server aborted the response because the request took too long. Note that the request might have been applied still. Please contact support if this happens. |
+| 500 (Internal Server Error) / 560 (Internal Server Error) | The request is valid, but we failed to serve it. Please contact Support. |
+| 502 (Bad Gateway) / 503 (Service Unavailable) | The server is currently offline. Please contact Support if this problem persists. |
+| 504 (Gateway timeout) | Your request is being processed but the server aborted the response because the request took too long. Note that the request might have been applied still. Please contact Support if this happens. |
 
 ### 3.1 Error Codes
 

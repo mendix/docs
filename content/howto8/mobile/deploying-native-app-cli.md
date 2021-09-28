@@ -245,7 +245,7 @@ After your start your Native Builder build, you will see some or all of the foll
 
 If your build times out, you can either sign your app locally as described in [Android Local Signing](#android-local-signing) and [iOS Local Signing](#ios-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
-In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [support ticket](/developerportal/support/submit-support-request) with Mendix.
+In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [Support ticket](/developerportal/support/submit-support-request) with Mendix.
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 

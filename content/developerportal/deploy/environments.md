@@ -162,7 +162,7 @@ If you are the [Technical Contact](/developerportal/collaborate/app-roles#techni
 {{% alert type="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
 
-These are activities which are performed on a customer's behalf only with written approval through a support ticket. 
+These are activities which are performed on a customer's behalf only with written approval through a Mendix Support ticket. 
 {{% /alert %}}
 
 ## 3 Custom Domain

@@ -981,7 +981,7 @@ Fix your icon issue by introducing a default style for your container component:
 	
 	![collapsed with euro](attachments/build-native-widget/8-collapsed-w-euro-sign.png)
 
-#### 3.3.7 Adding a Collapsible Property
+#### 3.3.7 Adding a Collapsible Property {#adding-a-collapsible-property}
 
 You are close to completing your group box widget. There are two more features essential for a Mendix developer: setting if the group box should be collapsible and setting the initial state of being collapsed or not.
 

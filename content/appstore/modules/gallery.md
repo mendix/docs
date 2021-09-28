@@ -121,7 +121,7 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 
 ![Example of sorting configuration](attachments/gallery/sorting.png)
 
-### 4.1 Drop-Down Sort
+### 4.1 Drop-Down Sort {#dropdown}
 
 The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's **Sorting** tab.
 

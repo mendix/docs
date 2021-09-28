@@ -88,13 +88,13 @@ Custom authentication can be done with the microflow where the authentication va
 
 ### 2.7 Error handling microflow
 
-When a call to the OData service fails, users will see a generic error message. Choose an error handling microflow to change this message.
+When a call to the OData service fails, users will see a generic error message. Create an error handling microflow to change this message.
 
-When the service response with an unsuccesful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
+When the service responds with an unsuccesful status code (not in the 2XX range), or does not return a response at all, then this microflow decides which message to show to the user.
 
-The microflow may have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value, otherwise it is `empty`.
+The microflow should have an argument of type `System.HttpResponse`. If the OData service returns a response, the argument has a value, otherwise it is `empty`.
 
-The microflow must return a `String`: the error message. When it returns `empty`, the original generic message is used.
+The microflow must return a `String` containing the error message. If it returns `empty`, the original generic message is used.
 
 Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 

@@ -1,26 +1,26 @@
 ---
 title: "Dynamic Image"
-parent: "file-widgets"
+parent: "image-and-file-widgets"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-A Dynamic image widget can be used to display an image or its thumbnail. For example, you can show a profile picture:
+A dynamic image can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
 ![](attachments/pages/image-viewer.png)
 
-An Dynamic Image widget must be placed in a data view or a template grid.
+A dynamic image must be placed in a data view or a template grid.
 
 ## 2 Properties
 
-An example of Dynamic image properties is represented in the image below:
+An example of dynamic image properties is represented in the image below:
 
-{{% image_container width="250" %}}![ Dynamic Image Properties](attachments/file-widgets/image-viewer-properties.png)
+{{% image_container width="250" %}}![Dynamic Image Properties](attachments/image-and-file-widgets/image-viewer-properties.png)
 {{% /image_container %}}
 
-Dynamic Image properties consist of the following sections:
+Dynamic image properties consist of the following sections:
 
 * [Common](#common) 
 * [Data source](#data-source)
@@ -41,7 +41,7 @@ Dynamic Image properties consist of the following sections:
 
 #### 2.3.1 Entity (Path)
 
-The **Entity (path)** property specifies which object will be shown in the Dynamic image widget. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the Dynamic image widget as well.
+The **Entity (path)** property specifies which object will be shown in the dynamic image. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the dynamic image as well.
 
 ### 2.4  Events Section {#events}
 
@@ -110,5 +110,5 @@ Default: *Thumbnail*
 ## 3 Read More
 
 * [Page](page)
-* [File Widgets](file-widgets)
+* [Images, Videos & Files](image-and-file-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

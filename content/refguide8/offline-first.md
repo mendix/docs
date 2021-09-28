@@ -258,3 +258,7 @@ System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supp
 ### 4.8 Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
+
+### 4.9 Hashed String Attributes {#hashed-strings}
+
+Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.

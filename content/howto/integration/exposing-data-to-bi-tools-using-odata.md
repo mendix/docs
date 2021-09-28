@@ -36,9 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
 
 1. Open Studio Pro and add a folder named *OData Services* to **MyFirstModule**.
-2.  Right-click the new folder and select **Add other** > **Published OData service**:
-
-	![](attachments/18448736/18582029.png)
+2. Right-click the new folder and select **Add other** > **Published OData service**.
 
 3.  Enter the name **Assets** and click **OK**:
 

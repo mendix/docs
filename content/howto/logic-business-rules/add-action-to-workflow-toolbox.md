@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Exposing the Microflow as the Workflow Action
 
-For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
+For example, you have the Employee Onboarding process set up in your app. You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
 
 However, as the best practice we recommend using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
 
@@ -92,6 +92,5 @@ Congratulations! You have turned the microflow into the custom workflow action a
 
 ## 5 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure)
 * [Microflow Properties](/refguide/microflow)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

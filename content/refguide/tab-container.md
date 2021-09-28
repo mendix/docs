@@ -1,6 +1,6 @@
 ---
 title: "Tab Container"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 40
 tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
@@ -13,13 +13,13 @@ aliases:
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-![Tab Container](attachments/container-widgets/tab-container.png)
+![Tab Container](attachments/structure-widgets/tab-container.png)
 
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
 
-{{% image_container width="250" %}}![Tab Container Properties](attachments/container-widgets/tab-container-properties.png)
+{{% image_container width="250" %}}![Tab Container Properties](attachments/structure-widgets/tab-container-properties.png)
 {{% /image_container %}}
 
 Tab container properties consist of the following sections:
@@ -65,5 +65,5 @@ This property is not supported on native mobile pages.
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](structure-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

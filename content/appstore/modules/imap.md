@@ -16,7 +16,7 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 ### 1.2 Features
 
-* Configuration of multiple accounts.
+* Configuration of multiple accounts
 * Supported protocols:
 	* POP3 and POP3S
 	* IMAP and IMAPS

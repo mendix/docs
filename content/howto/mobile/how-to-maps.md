@@ -21,7 +21,7 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 * Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account] (https://developers.google.com/maps/gmp-get-started#create-billing-account).
 * Install Mendix Studio Pro v8.15.0 and above to use the Native Mobile App Builder
 
-## 3 Setting Up App Deep Linking {#set-up}
+## 3 Setting Up the Maps Module
 
 Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing app or make a new app from scratch. 
 

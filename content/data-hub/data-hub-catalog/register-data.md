@@ -60,7 +60,7 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
-#### 4.1.1 Creating a Data Hub Catalog Registration API token {#create-token}
+#### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
 
 You can create a Personal Access Token in the Mendix **Warden** application. Follow the steps below:
 

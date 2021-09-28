@@ -76,7 +76,7 @@ Continue on to the [Runtime API](runtime-api).
 
 ## 13 Stories API
 
-Use this API to extend the [requirements and project management](/developerportal/collaborate/planning-development) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
+Use this API to extend the [requirements and project management](/developerportal/collaborate/stories) capabilities of the Mendix Platform, or connect third-party service management and project management tools.
 
 For details, see [Stories API](stories-api).
 

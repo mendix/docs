@@ -159,6 +159,6 @@ To perform actions on a template grid, select it on a page and right-click it. T
 ## 5 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
 * [Properties Common in the Page Editor](common-widget-properties)

@@ -57,9 +57,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
     
     ![](attachments/create-a-custom-save-button/created-microflow.png)
 
-2. Open the **Toolbox** and select the **Commit object(s)** activity there:
-
-    ![](attachments/8784287/8946802.png)
+2. Open the **Toolbox** and select the **Commit object(s)** activity there.
 
 3. Drag a **Commit object(s)** action from the **Toolbox** to the flow between the start and end events.
 4.  Double-click the **Commit object(s)** activity to open its properties.

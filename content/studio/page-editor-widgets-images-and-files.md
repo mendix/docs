@@ -23,12 +23,12 @@ There are the following image and file widgets in Mendix Studio:
 
 *   **File Manager** – allows end-users to upload or/and download a file (in the **Toolbox**, you see  preconfigured file managers: **File Uploader** and **File Downloader**)
   
-	{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-and-files/images-and-files.png)
-    {{% /image_container %}}
+	![](attachments/page-editor-widgets-images-and-files/images-and-files.png)
+    
 
-## 2 Static Image and Dynamic Image Properties
+## 2 Static and Dynamic Image Properties
 
-Static image and dynamic image widgets allow you to display an image either from a file (statically) or from the database (dynamically).  
+Static and dynamic image widgets allow you to display an image either from a file (statically) or from the database (dynamically).  
 
 You can switch from one widget to another in properties:
 
@@ -38,7 +38,7 @@ You can switch from one widget to another in properties:
 
 In the **General** section, you can switch between static and dynamic image, select an image, configure its width and height, etc. 
 
-Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
+Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place the dynamic image inside it. 
 
 {{% image_container width="350" %}}![](attachments/page-editor-widgets-images-and-files/dynamic-image-data-view.png)
 {{% /image_container %}}

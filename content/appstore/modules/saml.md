@@ -110,7 +110,7 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 
 ### 3.3 Setting `SameSite` Cookies to `None`
 
-In Mendix 8, `SameSite` cookies default to `None`. In Mendix 9, however, `SameSite` cookies default to `Strict`. Therefore, if the login page of your Identity Provider (IdP) has popped up before, the browser does not forward the session cookies issued by the `/SSO/` handler. (For the same reason the deeplink also works, if you have already logged in via your IdP before and its login page is therefore not opened.) Currently setting `com.mendix.core.SameSiteCookies` to `None` or `Lax` in the [custom runtime settings](/refguide/custom-settings) will tell the browser that your application accepts this cookie. 
+In Mendix 9, `SameSite` cookies default to `Strict`. Therefore, if the login page of your Identity Provider (IdP) has popped up before, the browser does not forward the session cookies issued by the `/SSO/` handler. (For the same reason the deeplink also works, if you have already logged in via your IdP before and its login page is therefore not opened.) Currently setting `com.mendix.core.SameSiteCookies` to `None` or `Lax` in the [custom runtime settings](/refguide/custom-settings) will tell the browser that your application accepts this cookie. 
 
 ## 4 Advanced Configuration
 

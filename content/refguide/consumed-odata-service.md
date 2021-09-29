@@ -181,7 +181,7 @@ The **Update** option is available when Studio Pro detects that that the contrac
 
 #####  4.3.1.1 App Pane and Data Hub Search Pane
 
-In the **Used in your App** section and the **Data Hub Search Pane** an update arrow will indicate if there is a different contract at the Catalog endpoint:
+In the **Used in your App** and the **Data Hub Search Pane** sections an update arrow will indicate if there is a different contract at the Catalog endpoint:
 
 ![update service app-pane](attachments/consumed-odata-service/project-pane-update-available.png)
 

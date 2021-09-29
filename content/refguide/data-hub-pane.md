@@ -101,6 +101,8 @@ The search results and **Project** pane will show the following at a service lev
 
   * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
+  
+* ** Gray shield icon** if the service or entity is validated in the Catalog.
 
 * **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 

@@ -1,122 +1,112 @@
-# Metamodel Release Notes for version 9.6.0
+---
+title: "9.6"
+parent: "metamodel-9"
+---
 
-## CodeActions
+## 9.5.0
 
-### MicroflowActionInfo (Element)
+### CodeActions
 
+#### MicroflowActionInfo (Element)
 
-#### Property 'imageData'
+##### Property 'imageData'
 * Introduced; 
 
-## DomainModels
+### DomainModels
 
-### MappedValue (Element)
+#### MappedValue (Element)
 
-
-#### Property 'updatableRuntime'
+##### Property 'updatableRuntime'
 * Introduced; 
 
-### EntityRef (Element)
+#### EntityRef (Element)
 * Added public
 
-
-### DirectEntityRef (Element)
+#### DirectEntityRef (Element)
 * Added public
 
-
-### IndirectEntityRef (Element)
+#### IndirectEntityRef (Element)
 * Added public
 
-#### Property 'steps'
+##### Property 'steps'
 * Added public
 
-### EntityRefStep (Element)
+#### EntityRefStep (Element)
 * Added public
 
-
-### MemberRef (Element)
+#### MemberRef (Element)
 * Added public
 
-#### Property 'entityRef'
+##### Property 'entityRef'
 * Added public
 
-### AttributeRef (Element)
+#### AttributeRef (Element)
 * Added public
 
-
-### AssociationRef (Element)
+#### AssociationRef (Element)
 * Added public
 
+### Microflows
 
-## Microflows
-
-### SendExternalObject (Element)
+#### SendExternalObject (Element)
 * Introduced; 
 
+### Settings
 
-## Settings
+#### RuntimeSettings (Element)
 
-### RuntimeSettings (Element)
-
-
-#### Property 'useSystemContextForBackgroundTasks'
+##### Property 'useSystemContextForBackgroundTasks'
 * Introduced; 
 
-## Rest
+### Rest
 
-### ODataRemoteAssociationSource (Element)
+#### ODataRemoteAssociationSource (Element)
 
-
-#### Property 'updatableFromChild'
+##### Property 'updatableFromChild'
 * Introduced; "When you have a child object, can you set its associated parent?"
 
-#### Property 'updatableFromParent'
+##### Property 'updatableFromParent'
 * Introduced; "When you have a parent object, can you set its associated child?"
 
-### ODataMappedValue (Element)
+#### ODataMappedValue (Element)
 
-
-#### Property 'updatable'
+##### Property 'updatable'
 * Introduced; "Is the attribute updatable?"
 
-## Workflows
+### Workflows
 
-### Workflow (ModelUnit)
+#### Workflow (ModelUnit)
 
-
-#### Property 'contextEntity'
+##### Property 'contextEntity'
 * Deleted; 
 
-#### Property 'parameter'
+##### Property 'parameter'
 * Introduced; 
 
-#### Property 'workflowEntity'
+##### Property 'workflowEntity'
 * Introduced; 
 
-#### Property 'allowedModuleRoles'
+##### Property 'allowedModuleRoles'
 * Deleted; 
 
-#### Property 'allowedUserRoles'
+##### Property 'allowedUserRoles'
 * Deleted; 
 
-### Parameter (Element)
+#### Parameter (Element)
 * Introduced; 
 
+#### CallWorkflowActivity (Element)
 
-### CallWorkflowActivity (Element)
-
-
-#### Property 'parameterExpression'
+##### Property 'parameterExpression'
 * Introduced; 
 
-### UserTask (Element)
+#### UserTask (Element)
 
-
-#### Property 'userTaskEntity'
+##### Property 'userTaskEntity'
 * Introduced; 
 
-#### Property 'allowedModuleRoles'
+##### Property 'allowedModuleRoles'
 * Deleted; 
 
-#### Property 'allowedUserRoles'
+##### Property 'allowedUserRoles'
 * Deleted; 

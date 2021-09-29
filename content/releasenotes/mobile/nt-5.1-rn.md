@@ -5,6 +5,15 @@ menu_order: 20
 description: "Native Template 5.1 release notes."
 ---
 
+
+## 5.1.17
+
+**Release date: September 29th, 2021**
+
+## Improvements
+
+With the release of iOS 15 it is required to re-compile apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+
 ## 5.1.16
 
 **Release date: September 9th, 2021**

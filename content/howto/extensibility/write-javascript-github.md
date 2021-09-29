@@ -44,9 +44,7 @@ This how-to comes paired with an app package prepared for you by Mendix. To down
 
 To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
-1.  Add a new **JavaScript action** in your Mendix app:
-
-	![add javascript action](attachments/jsactions-advanced/add-js-action.png)
+1.  In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
 
 2.  Name it *SearchGitHubUsers*:
 

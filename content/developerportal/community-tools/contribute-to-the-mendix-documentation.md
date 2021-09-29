@@ -40,7 +40,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com)
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Documentation in GitHub {#editing}

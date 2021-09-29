@@ -17,10 +17,6 @@ parent: "metamodel-9"
 
 * We introduced the `updatableRuntime` property.
 
-#### EntityRef, DirectEntityRef, EntityRefStep, AttributeRef & AssociationRef (Element)
-
-* We made these elements public, which means you can use them without first loading the unit.
-
 ####  IndirectEntityRef (Element)
 
 * We made this element public, which means you can use it without first loading the unit.
@@ -30,6 +26,10 @@ parent: "metamodel-9"
 
 * We made this element public, which means you can use it without first loading the unit.
 * We made the `entityRef` property public.
+
+#### EntityRef, DirectEntityRef, EntityRefStep, AttributeRef & AssociationRef (Element)
+
+* We made these elements public, which means you can use them without first loading the unit.
 
 ### Microflows
 

@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed an issue where searching in the Data Hub pane in Studio Pro would cause an error in some cases.
+* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro caused an error.
 
 ### September 23rd, 2021
 

@@ -25,7 +25,7 @@ parent: "model-sdk"
 
 * We added support for Mendix [9.4.0](/releasenotes/studio-pro/9.4).
 * We added support for Mendix Metamodel [9.4.0](metamodel-9.4).
-* We improved the performance of the `by name` reference list property.
+* We improved the performance of by-name references.
 * We improved the `getFile` documentation in the Model SDK.
 * We removed usage of NodeJS's `util` library.
 

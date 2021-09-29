@@ -3,21 +3,19 @@ title: "9.6"
 parent: "metamodel-9"
 ---
 
-## 9.5.0
+## 9.6.0
 
 ### CodeActions
 
 #### MicroflowActionInfo (Element)
 
-##### Property 'imageData'
-* Introduced; 
+* We introduced the `imageData` property.
 
 ### DomainModels
 
 #### MappedValue (Element)
 
-##### Property 'updatableRuntime'
-* Introduced; 
+* We introduced the `updatableRuntime` property.
 
 #### EntityRef (Element)
 * Added public
@@ -49,64 +47,42 @@ parent: "metamodel-9"
 ### Microflows
 
 #### SendExternalObject (Element)
-* Introduced; 
+
+* We introduced this element.
 
 ### Settings
 
 #### RuntimeSettings (Element)
 
-##### Property 'useSystemContextForBackgroundTasks'
-* Introduced; 
+* We introduced the `useSystemContextForBackgroundTasks` property.
 
 ### Rest
 
 #### ODataRemoteAssociationSource (Element)
 
-##### Property 'updatableFromChild'
-* Introduced; "When you have a child object, can you set its associated parent?"
-
-##### Property 'updatableFromParent'
-* Introduced; "When you have a parent object, can you set its associated child?"
+* We introduced the `updatableFromChild` property. When you have a child object, use this to identify that you can set its associated parent.
+* We introduced the `updatableFromParent` property. When you have a parent object, use this to identify that you can set its associated child.
 
 #### ODataMappedValue (Element)
 
-##### Property 'updatable'
-* Introduced; "Is the attribute updatable?"
+* We introduced the `updatable` property. Use this to identify that the attribute is updatable.
 
 ### Workflows
 
 #### Workflow (ModelUnit)
 
-##### Property 'contextEntity'
-* Deleted; 
-
-##### Property 'parameter'
-* Introduced; 
-
-##### Property 'workflowEntity'
-* Introduced; 
-
-##### Property 'allowedModuleRoles'
-* Deleted; 
-
-##### Property 'allowedUserRoles'
-* Deleted; 
+* We introduced the `parameter` and `workflowEntity` properties. 
+* We deleted the `contextEntity`, `allowedModuleRoles`, and `allowedUserRoles` properties.
 
 #### Parameter (Element)
-* Introduced; 
+
+* We introduced this element.
 
 #### CallWorkflowActivity (Element)
 
-##### Property 'parameterExpression'
-* Introduced; 
+* We introduced the `parameterExpression` property.
 
 #### UserTask (Element)
 
-##### Property 'userTaskEntity'
-* Introduced; 
-
-##### Property 'allowedModuleRoles'
-* Deleted; 
-
-##### Property 'allowedUserRoles'
-* Deleted; 
+* We introduced the `userTaskEntity` property.
+* We deleted the `allowedModuleRoles` and `allowedUserRoles` properties.

@@ -17,32 +17,19 @@ parent: "metamodel-9"
 
 * We introduced the `updatableRuntime` property.
 
-#### EntityRef (Element)
-* Added public
+#### EntityRef, DirectEntityRef, EntityRefStep, AttributeRef & AssociationRef (Element)
 
-#### DirectEntityRef (Element)
-* Added public
+* We made these elements public, which means you can use them without first loading the unit.
 
-#### IndirectEntityRef (Element)
-* Added public
+####  IndirectEntityRef (Element)
 
-##### Property 'steps'
-* Added public
-
-#### EntityRefStep (Element)
-* Added public
+* We made this element public, which means you can use it without first loading the unit.
+* We made the `steps` property public.
 
 #### MemberRef (Element)
-* Added public
 
-##### Property 'entityRef'
-* Added public
-
-#### AttributeRef (Element)
-* Added public
-
-#### AssociationRef (Element)
-* Added public
+* We made this element public, which means you can use it without first loading the unit.
+* We made the `entityRef` property public.
 
 ### Microflows
 

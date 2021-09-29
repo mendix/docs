@@ -102,8 +102,9 @@ To deploy your app to your new Mendix Cloud v4 environment, you need to do the f
     * Custom environment variables
     * Preferred maintenance window
     * Tags
+    * Custom Domain Certificates – the new environment will need to have the same Custom Domain Certificates as the V3 environment, see [Changing a Custom Domain](#custom-domain) for advice on copying Custom Domain Certificates
 
-    {{% alert type="info" %}}You do not need to set up your **Custom Domains**. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
+    {{% alert type="info" %}}You do not need to point your **Custom Domains** to a new destination. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
 
 ### 4.3 Replicating the Data {#replicating-data}
 
@@ -389,7 +390,7 @@ To change the App URL (if you are not using a custom domain) you will need to co
 * **App ID** for the new app, which is available from the *General* page for the new (v4) app
 * **App ID** for the old app, which is available from the *General* page for the old (v3) app
 
-### 5.7 Changing a Custom Domain
+### 5.7 Changing a Custom Domain{#custom-domain}
 
 If you have a custom domain which you want to transfer to your v4 deployment, you will need to bear the following information in mind.
 

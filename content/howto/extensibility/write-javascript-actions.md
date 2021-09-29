@@ -23,11 +23,9 @@ Nanoflows are more powerful with pluggable nanoflow actions — called JavaScrip
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  Create a new **JavaScript action** in your Mendix app:
+1.  In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
 
-	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
-
-2.  Give it a descriptive name:
+2.  Give the JavaScript action a descriptive name:
 
 	![naming dialog](attachments/write-javascript-actions/descriptivename.png)
 

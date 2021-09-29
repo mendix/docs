@@ -295,7 +295,12 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 ##### 4.2.2.2 Applying a Different SameSite Setting
 
-From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
+From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+
+* for Mendix version 8 (8.12 and above), the default is `SameSite=None`, which means that they *can* be used in an iframe
+* for Mendix version 9.0 and above, the default is `SameSite=Strict`, which means that they *cannot* be used in an iframe
+
+You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
 For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
 

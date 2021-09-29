@@ -10,7 +10,7 @@ parent: "model-sdk"
 
 * We added support for Mendix [9.6.0](/releasenotes/studio-pro/9.6).
 * We added support for Mendix Metamodel [9.6.0](metamodel-9.6).
-* We replaced the Request (deprecated) package with the Got in Model SDK.
+* We replaced the `Request` (deprecated) package with `Got`.
 
 ## 4.54.0 {#454}
 

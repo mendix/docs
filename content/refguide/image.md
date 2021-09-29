@@ -62,7 +62,7 @@ The width of an image. Possible values of this property are described in the tab
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
 | Auto  *(default)*       | The width of the given image is used.                        |
-| Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Pixels     | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
 
 {{% alert type="info" %}}This property is not supported on native mobile pages.{{% /alert %}}

@@ -56,7 +56,7 @@ To see the capabilities of a particular OData entity, do the following:
 
 Just like in the Catalog you can see the CRUD capabilities of entities, attributes, and associations inside the Data Hub pane of Studio Pro.
 
-In Studio Pro you might not see the same CRUD capabilities highlighted as in the Data Hub Catalog. A CRUD capability will only be highlighted when it is both supported by the contract and also by Studio Pro.
+In Studio Pro you might not see all the CRUD capabilities highlighted that are highlighted in Data Hub Catalog. A CRUD capability will only be highlighted when it is both supported by the contract and also by Studio Pro.
  
 ![crud capabilities](attachments/crud-capabilities.png)
 

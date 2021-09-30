@@ -55,7 +55,7 @@ There are a few other differences between the way you develop and deploy apps in
 
 ## 3 Prerequisites
 
-There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
 
 For further prerequisites see the sections below.
 

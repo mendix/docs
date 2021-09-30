@@ -192,7 +192,7 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 **Auto Registration** process is only available on region Europe 1.
 {{% /alert %}}
 
-### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
+### 5.1 Option A: Deploy with Mendix Studio Pro to the Mendix Cloud
 
 Just click the Publish Button in Mendix Studio Pro.
 

@@ -70,7 +70,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to order a subscription.
 
-2. Fill in the **Number of End Users**,  [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
@@ -84,7 +84,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
    The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
 
-   ![](attachments/email-service/binding-key-generation.png)
+   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
 8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
 
@@ -113,7 +113,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 You can use the Email Service in a microflow to send HTML or plain text messages. The Email Service comes bundled with predefined entities **EmailAttr** and **SendEmailResponse**.
 
-![](attachments/email-service/inbuilt-domain-entities.png)
+![emailattr-and-sendemailresponse-entities](attachments/email-service/inbuilt-domain-entities.png)
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
@@ -123,11 +123,11 @@ Every email address to whom this message is sent is counted as utilization towar
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
-![](attachments/email-service/email-text-microflow.png)
+![microflow-to-send-emails](attachments/email-service/email-text-microflow.png)
 
 To configure the **Send email** activity, double-click the activity and specify the following settings in the **Send Email** dialog box with expression syntax:
 
-![](attachments/email-service/send-email-dialog-box.png)
+![send-email-dialog-box](attachments/email-service/send-email-dialog-box.png)
 
 * **Required Fields**
   * **From name** – Defines the sender of the email
@@ -156,15 +156,15 @@ After the **Send Email** activity is configured, once the microflow that uses th
 
 The following microflow shows a possible way to generate HTML content using a template. The template contains fixed text with some placeholders for variables.
 
-![](attachments/email-service/generate-html-body-content-microflow.png)
+![microflow-to-generate-html-body-content](attachments/email-service/generate-html-body-content-microflow.png)
 
 The second step creates an HTML file from the template contents after possible variable substitution.
 
-![](attachments/email-service/generate-document-dialog-box.png)
+![generate-document-dialog-box](attachments/email-service/generate-document-dialog-box.png)
 
 The third step generates a string from this HTML file using the **String from file** action.
 
-![](attachments/email-service/string-from-file-dialog-box.png)
+![string-from-file-dialog-box](attachments/email-service/string-from-file-dialog-box.png)
 
  In the last step, you can add the variable for the generated HTML content into the **Body** field of the **Send email** activity.
 
@@ -173,11 +173,11 @@ The third step generates a string from this HTML file using the **String from fi
 
 This is a representative microflow that sends emails with file attachments. The file attachments should have the file types that are [supported](#unsupported-file-types).
 	
-![](attachments/email-service/microflow.png)
+![microflow-to-send-message-with-attachments](attachments/email-service/microflow.png)
 	
 The **Attachment** attribute accepts a list of **FileDocumentObject**. You can either use **System.FileDocument** or use [File Dropper](https://marketplace.mendix.com/link/component/111497) to create a list of **FileDocumentObject** that will be sent as attachments with the email.
 
-![](attachments/email-service/system-filedocument-model.png)
+![filedocument-entity](attachments/email-service/system-filedocument-model.png)
 
 {{ alert type = "info" }}
 The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.

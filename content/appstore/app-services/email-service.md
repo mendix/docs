@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 
 ## 1 Introduction
 
-{{% todo %}}[**Verify Marketplace Doc tab**]{{% /todo %}}
+{{% todo %}}[**Verify Marketplace Documentation tab**]{{% /todo %}}
 
 The [Email Service](https://marketplace.mendix.com/link/component/118393) app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
 
@@ -42,21 +42,21 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
 1. Go to the Marketplace and download the *SendEmailModule.mpk* file for the [Email Service](https://marketplace.mendix.com/link/component/118393).
 
-2. To add the Email Service to your app in Mendix Studio Pro, follow these steps:
+2.  To add the Email Service to your app in Mendix Studio Pro, follow these steps:
 
-   1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
+    1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
 
-       ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
+        ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
 
-       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-   2. In the **Import Module** dialog box, click **Import**. 
+    2. In the **Import Module** dialog box, click **Import**. 
 
-   3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
-   4. Open the **App Explorer** to view the **SendEmailModule** module.
+    4. Open the **App Explorer** to view the **SendEmailModule** module.
 
 Once imported, the app service is visible in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 

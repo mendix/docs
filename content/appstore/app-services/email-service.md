@@ -50,9 +50,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-    {{% alert type="warning" %}}
-    If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
-    {{% /alert %}}
+    {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    2. In the **Import Module** dialog box, click **Import**. 
 
@@ -117,9 +115,7 @@ You can use the Email Service in a microflow to send HTML or plain text messages
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
-{{% alert type="info" %}}
-Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.
-{{% /alert %}}
+{{% alert type="info" %}}Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.{{% /alert %}}
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 
@@ -135,19 +131,15 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Subject**  – Defines the subject of the email
 *  **Optional Fields**
 
-   {{ alert type = "warning" }}
-   For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.
-   {{% /alert %}}
+   {{ alert type = "warning" }}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
   * **Cc** – Defines the recipients on the CC list of the email
   * **Bcc** – Defines the recipients on the BCC list of the email
   * **Content type** – Defines whether the email is a **Text** or **HTML** message
   *  **Body** – Defines the body of the email
 
-   {{ alert type = "info" }}
-   If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).
-   {{% /alert %}}
-    
+   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).{{% /alert %}}
+  
   * **Attachment** – Defines the attachment to the email
 
 After the **Send Email** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the recipients.
@@ -179,9 +171,7 @@ The **Attachment** attribute accepts a list of **FileDocumentObject**. You can e
 
 ![filedocument-entity](attachments/email-service/system-filedocument-model.png)
 
-{{ alert type = "info" }}
-The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.
-{{% /alert %}}
+{{% alert type="info" %}}The size of the attached file(s) multiplied by the total number of recipients in the "To", "CC", and "BCC" lists is counted against the Data transfer utilization.{{% /alert %}}
 
 #### 4.2.1 Unsupported File Types for Attachments {#unsupported-file-types}
 

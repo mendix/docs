@@ -5,6 +5,8 @@ parent: "metamodel-9"
 
 ## 9.6.0
 
+**Release date: September 17th, 2021**
+
 ### CodeActions
 
 #### MicroflowActionInfo (Element)

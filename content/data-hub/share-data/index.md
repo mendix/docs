@@ -66,8 +66,6 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 
 You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
 
-![](attachments/share-data/customer-overview-home-page.png)
-
 Go ahead and customize the homepage further by changing the banner text.
 
 ## 4 Publishing to the Data Hub Catalog {#publishing}
@@ -170,13 +168,11 @@ To do this, follow the steps below:
 
 	{{% alert type="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
 
-	Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service in Studio, and follow the link to **View in Data Hub Catalog**.
+	Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Data Hub Catalog**.
 
 	![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
-
-	![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 

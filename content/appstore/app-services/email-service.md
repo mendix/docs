@@ -131,7 +131,7 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Subject**  – Defines the subject of the email
 *  **Optional Fields**
 
-   {{ alert type = "warning" }}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
+   {{% alert type="warning" %}}For all **Optional Fields**, you must either define a value or select **empty** for the field. Otherwise, you will get an "missing value" error.{{% /alert %}}
 
   * **Cc** – Defines the recipients on the CC list of the email
   * **Bcc** – Defines the recipients on the BCC list of the email

@@ -80,11 +80,11 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
 
-7. Click **Create Keys** to generate the **SecretKey** and **UserName**. 
+7.  Click **Create Keys** to generate the **SecretKey** and **UserName**. 
 
-   The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
+    The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
 
-   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
+    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
 8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
 
@@ -92,9 +92,9 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 ### 3.2 Configuring userName and secretKey for App Deployment
 
-1. In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
+1.  In the **App Explorer**, go to **SendEmailModule** > **Configurations**. You can see **SecretKey** and **UserName** are defined as constants. 
 
-   ![](attachments/email-service/configure-username-secretkey.png)
+    ![](attachments/email-service/configure-username-secretkey.png)
 
 2. Double-click **SecretKey** and enter the **SecretKey** that you got.
 
@@ -117,9 +117,7 @@ You can use the Email Service in a microflow to send HTML or plain text messages
 
 You can create a list using the **EmailAttr** entity to specify the **To**, **CC**, **BCC** recipients. For more information, see [Working with Lists in a Microflow](/howto/logic-business-rules/working-with-lists-in-a-microflow).
 
-{{% alert type="info" %}}
-Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back.
-{{ /alert }}
+{{% alert type="info" %}} Every email address to whom this message is sent is counted as utilization towards the allocated app service quota. If the email addresses are incorrect, the email will bounce back. {{ /alert }}
 
 This representative microflow contains an entity with the required attributes, an action to send an email that internally calls the Java action, and a placeholder to capture the return code of the sending email action.
 

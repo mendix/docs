@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap
 
 ## 1 Introduction
 
-The Tree Node widget displays a level of tree nodes.
+The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
 We recommend using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion) widget is a better alternative.
 

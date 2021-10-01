@@ -8,8 +8,6 @@ tags: ["marketplace", "marketplace component", "app service", "email"]
 
 ## 1 Introduction
 
-{{% todo %}}[**Verify Marketplace Documentation tab**]{{% /todo %}}
-
 The [Email Service](https://marketplace.mendix.com/link/component/118393) app service enables including an email component in your Mendix application. Just add the minimum required configuration and you are good to go.
 
 The app service works with [Mendix SSO](/appstore/modules/mendix-sso), so no additional authentication changes are required.

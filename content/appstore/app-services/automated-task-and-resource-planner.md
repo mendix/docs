@@ -189,9 +189,13 @@ A list of task ids that must finish before starting the current task.
 
 ### 4.2 Response
 
+![response](attachments/automated-task-and-resource-planner/response.png)
+
 If the response went well you can retrieve the TaskResponse and map the results to your own entities.
 
 #### 4.2.1 PlanningResponse
+
+![planning-response](attachments/automated-task-and-resource-planner/planning-response.png)
 
 The solution to the planning request. 
 
@@ -206,7 +210,9 @@ The solution to the planning request.
 
 #### 4.2.2 TaskResponse
 
- A Task in a planning response
+![timeslot-response](attachments/automated-task-and-resource-planner/task-response.png)
+
+A Task in a planning response
 
 | **Name**           | **Documentation**                                          |
 | ------------------ | ---------------------------------------------------------- |
@@ -214,6 +220,8 @@ The solution to the planning request.
 | AssignedResourceID | The id of the resource that this task has been assigned to |
 
 #### 4.2.3 TimeSlotResponse
+
+![timeslot-response](attachments/automated-task-and-resource-planner/timeslot-response.png)
 
 | **Name**      | **Documentation**                                            |
 | ------------- | ------------------------------------------------------------ |
@@ -224,6 +232,8 @@ The solution to the planning request.
 
 #### 4.2.4 Warning
 
+![warning](attachments/automated-task-and-resource-planner/warning.png)
+
 A list of warnings for this task
 
 | **Name** | **Documentation**                                            |
@@ -231,6 +241,8 @@ A list of warnings for this task
 | Value    | ●   MISSING_REQUIRED_PROPERTIES  ●   NO_TIME_SLOTS_PLANNED  ●   NO_VALID_TIME_FOUND  ●   OUTSIDE_EXECUTION_WINDOW  ●   OVERLAP  ●   RESOURCE_MISMATCH  ●   RESOURCE_NOT_AVAILABLE  ●   SOFT_PINNED_RESOURCES_CHANGED  ●   SOFT_PINNED_TIME_SLOTS_CHANGED |
 
 #### 4.2.5 ValidationError
+
+![validation-error](attachments/automated-task-and-resource-planner/validation-error.png)
 
 Error information
 
@@ -240,6 +252,8 @@ Error information
 | ErrorMessage | A human readable error code   |
 
 #### 4.2.6 ErrorReference
+
+![error-reference](attachments/automated-task-and-resource-planner/error-reference.png)
 
 Points to the object which caused the validation error. This can either be the source of the error or the target.
 

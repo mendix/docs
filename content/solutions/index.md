@@ -32,9 +32,9 @@ Read more on [solution types](solution-types) in the Development section.
 
 ### 3.1 Important sections in the Solutions Guide
 
-Make sure to read through the entire Solutions Guide. A good starting point is the [Development](development) section. Some of the most important topics addressed are:
+Make sure to read through the entire Solutions Guide. A good starting point is the [Development](development) section. The most important topics addressed in the guide are:
 
-- [Architecting solutions](solution-types)
+- [Architecting for adaptation](adaptive-solution-architecture)
 - Applying [IP protection](ip-protection) in your solution
 <!-- TODO: Custom usage metering to implement different pricing models -->
 - [Version Control](version-control) processes suited to solution development

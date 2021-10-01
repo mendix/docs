@@ -1,8 +1,8 @@
 ---
-title: "Architecting different Solution types"
+title: "Architecting Adaptive Solutions"
 category: "Development"
-description: "Different types of solutions for different business models"
-tags: [ "solutions", "solution types", "adaptive solutions", "prescriptive solutions" ]
+description: "Architect a solution for adaptation"
+tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---
 
 {{% alert type="info" %}}

@@ -11,7 +11,7 @@ The Mendix Solutions Guide is under active development and will be regularly ext
 
 ## 1 Introduction
 
-Mendix [introduced the ISV program](https://www.mendix.com/blog/introducing-the-mendix-isv-partner-program/) to support companies looking to develop solutions, supporting the full range of organizations - from startups to large enterprises. Under beneficial terms, Mendix provides Independent Software Vendors (ISVs) & Startups with a Mendix license for development & operations of Mendix apps to implement solutions for their customers.
+Mendix supports companies looking to develop solutions, supporting the full range of organizations - from startups to large enterprises. Mendix has two programs to support you: The Solution Vendor Program and the Startup Program.
 
 
 ## 2 Solution Vendor Program
@@ -21,7 +21,7 @@ The Mendix Solution Vendor Program enables established companies, existing Mendi
 [Read more & apply](https://www.mendix.com/marketplace-vendor-program/solutions/)!
 
 
-## 3 Startup program
+## 3 Startup Program
 
 The Mendix Startup Program enables early stage companies looking to build a software business and monetize their domain expertise by selling solutions. The Mendix Startup Program provides startups with tools and resources to develop, deploy, bring to market, and sell software solutions built on Mendix’s low-code development platform. The economic model of the Mendix Startup Program is based on a revenue sharing agreement that enables startups to establish a profitable and predictable business model.
 

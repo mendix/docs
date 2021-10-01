@@ -36,7 +36,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 {{ % todo %}}[how to set up the account?]{{% /todo %}}
 
 ### 1.4 Dependencies
-* COmmunity Commons Function Library
+* Community Commons Function Library
 * Encryption
 
 ### 1.5 Demo App
@@ -92,6 +92,8 @@ Settings for this planning. Create this object and associate it to the PlanningR
 
 #### 4.1.2 Task
 
+![task](attachments/automated-task-and-resource-planner/task.png)
+
 A task is a unit of work. Tasks will be assigned to resources and TimeSlots. A task can be the delivery of an order, a work order ticket, a reservation, etc. Tasks are associated to the PlanningRequest and at least one task is required to make a request. 
 
 | **Name**                       | **Documentation**                                            |
@@ -114,6 +116,8 @@ A task is a unit of work. Tasks will be assigned to resources and TimeSlots. A t
 
 #### 4.1.3 Resource
 
+![resource](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/automated-task-and-resource-planner/resource.png)
+
 A resource in a planning request. This can be a mechanic, a tennis court, a delivery driver, etc. At least one resource is required to make a request.
 
 | **Name**           | **Documentation**                                            |
@@ -124,6 +128,8 @@ A resource in a planning request. This can be a mechanic, a tennis court, a deli
 
 #### 4.1.4 Property
 
+![property](attachments/automated-task-and-resource-planner/property.png)
+
 Properties are used to restrict the tasks a resource can pick up. A resource needs to have the required properties to pick up a task. Properties are required if the RequiredProperties setting is set to true. 
 
 | **Name** | **Documentation**                                            |
@@ -131,6 +137,8 @@ Properties are used to restrict the tasks a resource can pick up. A resource nee
 | Value    | String that needs  to match for the RequiredProperty and the ResourceProperty.  RequiredProperty:  The set properties on the resource that are required to fix a task.  ResourceProperty:  The properties that the resource possesses to pick up tasks. |
 
 #### 4.1.5 Location
+
+![location](attachments/automated-task-and-resource-planner/location.png)
 
 A location with id and coordinates. This can be
 
@@ -150,6 +158,8 @@ Locations are optional, but if used they need to be added to all the tasks and r
 
 #### 4.1.6 TimeSlot
 
+![timeslot](attachments/automated-task-and-resource-planner/timeslot.png)
+
 A time interval. Is used for:
 
 ●   *PinnedTimeslots*: Must only be set if resourcePinType is SOFT or HARD.
@@ -168,6 +178,8 @@ A time interval. Is used for:
 | Reference | Reference which can be used by  the client to map error messages to client side entities. Not used by the  planner other than validations. |
 
 #### 4.1.7 Dependency
+
+![dependency](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/automated-task-and-resource-planner/dependency.png)
 
 A list of task ids that must finish before starting the current task.
 

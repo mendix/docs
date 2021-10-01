@@ -116,7 +116,7 @@ A task is a unit of work. Tasks will be assigned to resources and TimeSlots. A t
 
 #### 4.1.3 Resource
 
-![resource](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/automated-task-and-resource-planner/resource.png)
+![resource](attachments/automated-task-and-resource-planner/resource.png)
 
 A resource in a planning request. This can be a mechanic, a tennis court, a delivery driver, etc. At least one resource is required to make a request.
 
@@ -179,7 +179,7 @@ A time interval. Is used for:
 
 #### 4.1.7 Dependency
 
-![dependency](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/automated-task-and-resource-planner/dependency.png)
+![dependency](attachments/automated-task-and-resource-planner/dependency.png)
 
 A list of task ids that must finish before starting the current task.
 

@@ -90,5 +90,5 @@ Clicking a node will display details of the node in the **Metadata** pane. You c
 ### 2.6 Consumed Datasets
 If you click the **Entity** icon on the consume line, the names of the datasets that are being consumed from the service will be shown in the right panel.
 
-![arrow convention](attachments/use-landscape/consume-arrow-entitites-list.png)
+![arrow convention](attachments/use-landscape/consume-arrow-entities-list.png)
 

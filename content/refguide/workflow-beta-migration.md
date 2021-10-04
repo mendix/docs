@@ -16,10 +16,10 @@ This document explains how to migrate your existing workflow apps to the improve
 
 The following is changed in the domain model of the System Module:
 
-1. The `WorkflowSystemTask`, and `WorkflowVersion` entities have been removed and are now handled in the background by the runtime.
-2. The `WorkflowTaskInstance` entity has been merged into the `WorkflowUserTask` entity.
-3. The `WorkflowContext` entity has been removed, and the entities in your domain model will no longer need to specialize from it. For more information, see the [Set Up Your Domain Model](#domain-model) section below.
-4. The `WorkflowInstance` entity has been renamed to `Workflow` to be more in line with how entity naming is done in Mendix.
+1. The **WorkflowSystemTask**, and **WorkflowVersion** entities have been removed and are now handled in the background by the runtime.
+2. The **WorkflowTaskInstance** entity has been merged into the **WorkflowUserTask** entity.
+3. The **WorkflowContext** entity has been removed, and the entities in your domain model will no longer need to specialize from it. For more information, see the [Set Up Your Domain Model](#domain-model) section below.
+4. The **WorkflowInstance** entity has been renamed to **Workflow** to be more in line with how entity naming is done in Mendix.
 5. Some attributes have received small naming updates.
 
 ## 3 Migrating Your App That Has Workflow Functionality

@@ -17,15 +17,11 @@ Before adding the Workflow Commons module to your app, make sure you have comple
 * Install Atlas 3 from the Mendix Marketplace, as Workflow Commons depends on it 
 * As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas Core, Atlas Web Content, and Data Widgets
 
-## 2 Preparing Your App
-
-By default, Workflow Commons will integrate with [Mendix SSO](https://marketplace.mendix.com/link/component/117212) that allows you to invite and manage users and roles in the [Manage App Users page](/developerportal/collaborate/general-settings) in the Developer Portal. You can download Mendix SSO from the Mendix Marketplace. If you do not have Mendix SSO installed, you will see some consistency errors after installing Workflow Commons. After adding the Mendix SSO module, the consistency errors caused by the installation of Workflow Commons will be gone. If you want to implement a different user authentication and user management method, you can replace the references made to Mendix SSO in Workflow Commons with the user entity of your preference.
-
-## 3 Workflow Commons Components {#components}
+## 2 Workflow Commons Components {#components}
 
 The purpose of Workflow Commons is to provide you with useful pages, page templates, snippets, and microflows that can save you development time. All documents in the **Private** folder are meant for internal purposes within the module itself, but you can find a couple of useful documents that you can make use of in the **UseMe** folder.
 
-### 3.1 Pages
+### 2.1 Pages
 
 There are three pages provided with the Workflow Commons module to get you and your users started with workflows. The functionality contained in these pages works out-of-the-box. Simply add these pages to the [navigation](navigation) of your app to start using them. 
 You can find the following pages in Workflow Commons:
@@ -37,7 +33,7 @@ You can find the following pages in Workflow Commons:
 *   **WorkflowDashboard** – This page gives you workflow/task based metrics and direct access to all *Workflow* and *WorkflowUserTask* data. When you want to use the Workflow Dashboard as your only admin go-to page, add this to the navigation instead of the **WorkflowAdminCenter**. 
 *   **MyInitiatedWorkflows** – A useful page for those users who initiate workflows. This page gives them an overview of all their initiated workflows. They can view the current state, task timeline and can withdraw (abort) workflows that are in progress, paused, or incompatible.
 
-### 3.2 Page Templates
+### 2.2 Page Templates
 
 Workflow Commons contains page templates to easily get you started with building workflow-related pages. These templates are automatically suggested to you when you make a new page from either the user task or workflow properties. 
 You can find the following page templates in Workflow Commons:
@@ -49,11 +45,11 @@ You can find the following page templates in Workflow Commons:
 *   **Workflow_TaskDashboard** – This page template can be used to generate your own **TaskDashboard**, for example, when you want to use your own metrics or add context information.
 *   **Workflow_TaskInbox** – This page template can be used to generate your own ***TaskInbox*** page, for example, when you would like to add context information from your business data to this page.
 
-### 3.3 Snippets
+### 2.3 Snippets
 
 If you would like to customize page templates, you can do that with the help of the snippets provided by Workflow Commons. You can find them in the **Snippets** folder of the Workflow Commons module.
 
-### 3.4 Microflows
+### 2.4 Microflows
 
 Preconfigured microflows help you assigning user tasks, and one allows you to abort workflows.
 You can find the following microflows in Workflow Commons:
@@ -63,7 +59,7 @@ You can find the following microflows in Workflow Commons:
 *   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 *   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
 
-## 4 Setting Up User Assignment and Security
+## 3 Setting Up User Assignment and Security
 
 The Workflow Commons module has two module roles for you to make use of. Users with the **User** module role will gain access to the **MyTaskDashboard** and **MyTaskInbox** pages, as well as the ability to create and change their own attachments and notes on workflows. Giving someone **Administrator** privileges allows them to explore the **WorkflowAdminCenter**, manage attachments and notes from anyone, and abort workflows.
 
@@ -73,13 +69,13 @@ Depending on the required user roles for your application, you may have the need
 2.   Link the user role to the **Administrator** module role in Workflow Commons.
 3.   Link the user role to both the **User** and **WorkflowAdministrator** module roles in the System module.
 
-Finally, go to the Workflows tab in your [app settings](project-settings#workflows) and select the same user entity as the one you are using in Workflow Commons. If you using Mendix SSO, set it to **MendixSSO.MendixSSOUser**. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](user-task).
+Finally, go to the Workflows tab in your [app settings](project-settings#workflows) and select the same user entity as the one you are using in Workflow Commons. You can then use the properties of this entity to filter the users that can pick up a task in the task's user assignment property. For more information on user task properties, see [User Task](user-task).
 
-## 5 Customizing Workflow Commons
+## 4 Customizing Workflow Commons
 
 While Workflow Commons does provide useful documents out-of-the-box, you might have the need to change the content and, for example, make pages company-specific. When doing so, we recommend that you make a copy of the document that you will be changing to a local module called **WorkflowCommonsCustomizations**, so that you do not accidentally overwrite your changes in the future when upgrading to a newer version. Feel free to also browse around in the **Private** folder of the module to discover the snippets and sub-microflows.
 
-## 6 Workflow Best Practices
+## 5 Workflow Best Practices
 
 We recommend the following best practices when working with workflows:
 
@@ -87,7 +83,7 @@ We recommend the following best practices when working with workflows:
 *   When creating a user task, add a short description of the target users to the caption of the task. An example could be **HR: Schedule onboarding training** in an employee onboarding workflow.
 *   When creating a microflow for a system task, prefix it with **WF\_**, so everyone knows it is being used in a workflow.
 
-## 7 Read More
+## 6 Read More
 
 *   [Workflows](workflows)
 

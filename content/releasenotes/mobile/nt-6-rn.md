@@ -19,11 +19,11 @@ description: "Native Template 6 release notes."
 
 ### Improvements
 
-With the release of iOS 15 it is required to re-compile apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
 
 ## 6.2.4
 
-**Release date: September 23th, 2021**
+**Release date: September 23rd, 2021**
 
 ### Improvements
 

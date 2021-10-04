@@ -20,7 +20,7 @@ Mendix Cloud version 3 has been deprecated and will be turned off shortly. This 
 ## 2 Migration considerations
 
 {{% alert type="warning" %}}
-We strongly advise you not to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4.
+Do not upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4, Mendix Support will not be able to assist you.
 
 If you need to upgrade your runtime version, ensure that it is fully tested in Cloud V3 before attempting to migrate to Cloud v4.
 {{% /alert %}}
@@ -55,7 +55,7 @@ There are a few other differences between the way you develop and deploy apps in
 
 ## 3 Prerequisites
 
-There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
 
 For further prerequisites see the sections below.
 

@@ -5,6 +5,10 @@ menu_order: 20
 tags: ["on-premises", "git", "version control"]
 ---
 
+{{% alert type="warning" %}}
+This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control).	
@@ -127,7 +131,6 @@ For the previous checkout method do the following:
 4.  If you have checked out the app at least once, you can then pick one of the existing locations on disk and the app will open (shown here with two previous checkouts):
 
 	![Open App dialog](attachments/on-premises-git-howto/open-app-dialog.png)
-	
 
 For the previous local disk method do the following:
 
@@ -135,7 +138,6 @@ For the previous local disk method do the following:
 2. In a file browser dialog box, browse to the directory containing your app and double-click the *.mpr* file (or select it and click **Open**):
 
 	![Open App Select File](attachments/on-premises-git-howto/open-app-select-file.png)
-   
 ### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
 
 Once you have an unversioned app, you can upload it to your private team server. 

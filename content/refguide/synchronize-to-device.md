@@ -64,7 +64,7 @@ When adding **Synchronize to device** to a microflow consider the following:
 * This action should be used in combination with the [Nothing (preserve data)](offline-first#customizable-synchronization) option to make sure your data is not cleared during a synchronize action.
 * **Synchronize to device** action works in an append mode, it does not replace all data in the database.
 Any existing data is kept and only objects that are sent to the client are affected.
-* synchronizing the same object or list multiple times will synchronize it only once. The latest commited state will be synchronized.
+* Synchronizing the same object or list multiple times will synchronize it only once. The latest committed state will be synchronized.
 * When synchronizing an already existing dirty object, dirty values are overridden and dirty status is cleaned.
 But uncommitted changes are still available in the app until you rollback the object.
 * **Synchronize to device** always overrides the existing data when the same object has been found in the database.

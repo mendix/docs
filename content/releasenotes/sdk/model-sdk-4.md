@@ -4,11 +4,19 @@ parent: "model-sdk"
 #When updating, remember to update the Latest Mendix Releases file
 ---
 
+## 4.55.0 {#455}
+
+**Release date: September 17th, 2021**
+
+* We added support for Mendix [9.6.0](/releasenotes/studio-pro/9.6).
+* We added support for Mendix Metamodel [9.6.0](metamodel-9.6).
+* We replaced the `Request` (deprecated) package with `Got`.
+
 ## 4.54.0 {#454}
 
 **Release date: August 23rd, 2021**
 
-* We added support for Mendix [9.5.0](/releasenotes/studio-pro/9).
+* We added support for Mendix [9.5.0](/releasenotes/studio-pro/9.5).
 * We added support for Mendix Metamodel [9.5.0](metamodel-9.5).
 
 ## 4.53.0 {#453}
@@ -17,6 +25,9 @@ parent: "model-sdk"
 
 * We added support for Mendix [9.4.0](/releasenotes/studio-pro/9.4).
 * We added support for Mendix Metamodel [9.4.0](metamodel-9.4).
+* We improved the performance of by-name references.
+* We improved the `getFile` documentation in the Model SDK.
+* We removed usage of NodeJS's `util` library.
 
 ## 4.52.0 {#452}
 

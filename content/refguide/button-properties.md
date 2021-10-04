@@ -207,8 +207,6 @@ To add items to a drop-down buttons, do the following:
    4. Click **OK**.
 4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
 
-
-
 ### 2.7 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
@@ -216,8 +214,7 @@ To add items to a drop-down buttons, do the following:
 ## 3 Read More
 
 * [Page](page)
-* [Button Widgets](button-widgets)
+* [Buttons](button-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 * [On Click Event & Events Section](on-click-event)
-
 

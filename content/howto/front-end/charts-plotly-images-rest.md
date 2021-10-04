@@ -43,7 +43,7 @@ To make a call to *Plotly API images* REST endpoint, follow these steps:
 
 1. Add a **Data view** with data source as a microflow that returns a new **DataSource** object.
 
-1. In the **Data view**, place input widgets with source attribute as **Data** and **Layout**.
+1. In the **Data view**, place input elements with source attribute as **Data** and **Layout**.
 
     ![Data view](attachments/charts/plotly-api/charts-call-rest-data-view.png)
 

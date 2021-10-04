@@ -105,11 +105,11 @@ By adjusting the canvas width, you can emulate the end-user's view of the page i
 
 {{% /alert %}}
 
-After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data widgets in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input widgets, since they need a source. 
+After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data containers in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input elements, since they need a source. 
 
-Two of the most useful widget types are menu widgets and snippets. You will learn more about those two types below.
+Two of the most useful widget types are menus & navigation and snippets. You will learn more about those two types below.
 
-## 5 Menu Widgets
+## 5 Menus & Navigation
 
 ### 5.1 Menu Bar
 
@@ -146,7 +146,7 @@ For tablet and phone configuration, you need to choose the appropriate profile t
 
 ### 5.5 App Navigation
 
-The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menu widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
+The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menus and navigation widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
 
 ### 5.6 Device Profiles {#profiles}
 

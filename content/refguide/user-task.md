@@ -22,12 +22,12 @@ When the workflow reaches the user task activity, the task is created and will b
 User task properties consist of the following sections:
 
 * [Common](#common)
+* [Data]( #data)
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [Events](#events)
 * [General](#general)
 * [Outcomes](#outcomes)
-* [Security](#security)
 * [Task page](#task-page)
 * [User assignment](#user-assignment)
 
@@ -35,21 +35,25 @@ User task properties consist of the following sections:
 
 **Name** is the internal name of the user task. When referring to the user task in the app you will use this name. It must be unique within the workflow, but you can have two user tasks with the same name in different workflows. 
 
-### 2.2 Display Information Section {#display-info}
+### 2.2 Data {#data} 
 
-#### 2.2.1 Task Name
+**Entity** is an entity that stores data on the user task execution. You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
+
+### 2.3 Display Information Section {#display-info}
+
+#### 2.3.1 Task Name
 
 **Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task. 
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
-#### 2.2.2 Task Description
+#### 2.3.2 Task Description
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates. 
 
 The **Task description** can contain parameters that are written between braces, e.g. {1}.
 
-#### 2.2.3 Parameters {#parameters}
+#### 2.3.3 Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. For example, you can display when the task is due using the **DueDate** parameter.
 
@@ -60,7 +64,7 @@ Parameters have the following settings:
 * **Index** – an identification number of a parameter
 * **Expression** – an XPath expression that will be displayed
 
-##### 2.2.3.1 Adding New Parameters
+##### 2.3.3.1 Adding New Parameters
 
 To add a parameter to the **Task name** or the **Task description**, do the following:
 
@@ -79,7 +83,7 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
     ![Task Description Example](attachments/user-task/task-description-example.jpg) 
 
 
-##### 2.2.3.2 Performing Other Actions on Parameters
+##### 2.3.3.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -88,31 +92,21 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-### 2.3 Due Date Section {#due-date}
+### 2.4 Due Date Section {#due-date}
 
 **Due by** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the user task. If you are using the **Workflow Commons** module, **Due by** is used in page templates and preconfigured dashboards. 
 
-### 2.4 Events Section {#events}
+### 2.5 Events Section {#events}
 
 **On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
 
-### 2.5 General Section {#general}
+### 2.6 General Section {#general}
 
 **Caption** defines a title of the user task. 
 
-### 2.6 Outcomes Section {#outcomes}
+### 2.7 Outcomes Section {#outcomes}
 
 The outcomes property allows you to create new outcomes for the user task. Outcomes are translated into different outgoing paths of the user task and can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the user task, while another one can use the **Reject** outcome. 
-
-### 2.7 Security Section {#security}
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the user task. 
-
-{{% alert type="info" %}}
-
-Only assigned users, which are defined in the [User Assignment Section](#user-assignment) below, will be able to see the user task and interact with it.
-
-{{% /alert %}}
 
 ### 2.8 Task Page Section {#task-page}
 

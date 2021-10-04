@@ -84,7 +84,7 @@ All apps running within MindSphere need to be registered. When you open your app
 
 	{{% alert type="info" %}}If you have more then one tenant with a Developer Cockpit option, MindSphere will present you with a list of those tenants. Choose the tenant in which you want to register your app.<br/><br/>If you have only one tenant on MindSphere, the process will automatically select this tenant for you.{{% /alert %}}
 
-3. Give a **DIsplay Name**, **Internal Name**, and, optionally, a **Description** in order to register your app.
+3. Give a **Display Name**, **Internal Name**, and, optionally, a **Description** in order to register your app.
 
 	![Choose app registration](attachments/mindsphere-example-app/autoreg-name-description.png)
 
@@ -108,21 +108,23 @@ All apps running within MindSphere need to be registered. When you open your app
 
 	![Choose app registration](attachments/mindsphere-example-app/devcockpit-app-details.png)
 
-7. Add the following MindSphere API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the picture below:
+7. Add the following MindSphere API Roles to your app and assign them to correct application roles **admin** and **user**, as shown in the table below:
 
-	* mdsp:core:assetmanagement.standarduser
-	* mdsp:core:em.eventcreator
-	* mdsp:core:em.eventmanager
-	* mdsp:core:em.eventviewer
-	* mdsp:core:iot.filAdmin
-	* mdsp:core:iot.filUser
-	* mdsp:core:.iot.tsaUser
-	* mdsp:core:.iot.timUser
-	* mdsp:core:mindconnect.fullaccess
-	* mdsp:core:mindconnect.readonly
-	* mdsp:core:tm.tenantUser
-	* mdsp:core:tsm.full-access
-	* mdsp:core:tsm.read-only
+| **MindSphere application role** | **Admin** | **User** |
+| ------------------------------- | --------- | -------- |
+| mdsp:core:assetmanagement.standarduser | X |  X |
+| mdsp:core:em.eventcreator | X |   |
+| mdsp:core:em.eventmanager | X |   |
+| mdsp:core:em.eventviewer | X |  X |
+| mdsp:core:iot.filAdmin | X |   |
+| mdsp:core:iot.filUser | X |  X |
+| mdsp:core:.iot.tsaUser | X |  X |
+| mdsp:core:.iot.timUser | X |  X |
+| mdsp:core:mindconnect.fullaccess | X |   |
+| mdsp:core:mindconnect.readonly | X |  X |
+| mdsp:core:tm.tenantUser | X |  X |
+| mdsp:core:tsm.full-access | X |   |
+| mdsp:core:tsm.read-only | X |  X |
 
 	![Choose app registration](attachments/mindsphere-example-app/devcockpit-mdsp-api-roles.png)
 

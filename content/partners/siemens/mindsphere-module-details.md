@@ -326,7 +326,7 @@ and directly after the script of the X-XRSR put the following script
 ```
 
 {{% alert type="info" %}}
-IF you do not use the **Siemens MindSphere Web Content** module you have to create the mindspherelogin.html yourself in the folder /theme/web. See the [mindspherelogin.html](#mindspherelogin) section, below.
+If you do not use the **Siemens MindSphere Web Content** module you have to create the mindspherelogin.html yourself in the folder /theme/web. See the [mindspherelogin.html](#mindspherelogin) section, below.
 {{% /alert %}}
 
 #### 5.1.3 OS Bar

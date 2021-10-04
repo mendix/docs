@@ -85,17 +85,17 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 If you have an existing app which was not based on the MindSphere app template, you must import the required customization. The three modules which must be imported are:
 
-* MindSphere SSO from the Mendix Marketplace here: [Siemens MindSphere SSO](https://marketplace.mendix.com/link/component/108805/)
+* **Siemens MindSphere SSO** from the Mendix Marketplace here: [Siemens MindSphere SSO](https://marketplace.mendix.com/link/component/108805/)
 
-  This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
+	This module enables users who are logged in to MindSphere to use your app without having to sign in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
-* MindSphere OS Bar Connector from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
+* **MindSphere OS Bar Connector** from the Mendix Marketplace here: [Siemens MindSphere OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
 
-  This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
+	This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
-* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix Marketplace here: [Siemens MindSphere Theme Pack](https://marketplace.mendix.com/link/component/108803/)
+* **Siemens MindSphere Web Content** from the Mendix Marketplace here: [Siemens MindSphere Web Content](https://marketplace.mendix.com/link/component/108803/)
 
-  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
+	This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens MindSphere Web Content](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
 ## 4 Configuring the Modules{#configure-modules}
 
@@ -192,7 +192,7 @@ A Mendix based application for MindSphere can be deployed to Mendix or to MindSp
 **Auto Registration** process is only available on region Europe 1.
 {{% /alert %}}
 
-### 5.1 Option A: Deploy with Mendix Studio to the Mendix Cloud
+### 5.1 Option A: Deploy with Mendix Studio Pro to the Mendix Cloud
 
 Just click the Publish Button in Mendix Studio Pro.
 

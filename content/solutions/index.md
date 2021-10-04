@@ -21,7 +21,7 @@ Read more about the [Mendix Solutions Vendor & Startup programs](general).
 
 So, what is a solution? Essentially, a solution is any Mendix app that is suitable to be sold to multiple different customers as a service. This means the app is built to match the needs & expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. This means that general Mendix development principles & best practices apply - see below for useful links. And this also means: you can get started right away, from any template available on the Mendix Platform.
 
-Customers often require more from a solution then it supports out-of-the-box. Whether it is an integration with an existing system in the customer's IT landscape, or change to better match the processes of the customer, or simply an adjusted UI to better match the jargon of the customer, these adaptations require more than just a prescriptive SaaS solution: an adaptive solution is required, to make the solution fit to the specific needs of the customer as possible.
+Customers often require more from a solution then it supports out-of-the-box. Whether it is an integration with an existing system in the customer's IT landscape, or change to better match the processes of the customer, or simply an adjusted UI to better match the jargon of the customer, these adaptations require more than just a prescriptive SaaS solution: solution adaptation is required to make the solution fit to the specific needs of the customer.
 
 ![Adaptive Solution Architecture](attachments/adaptive-solution-architecture.png)
 

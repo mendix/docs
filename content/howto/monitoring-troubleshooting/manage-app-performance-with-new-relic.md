@@ -51,7 +51,7 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 ## 3.2 Setting Up Your Mendix Deployment
 
-### 3.2.1 Cloud Foundry {#cloud-foundry)
+### 3.2.1 Cloud Foundry {#cloud-foundry}
 
 Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 

@@ -5,6 +5,14 @@ menu_order: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.6
+
+**Release date: October 4th, 2021**
+
+### Fixes
+
+* We fixed an issue with the `OpenURL` javascript action on Android 11+ devices.
+
 ## 6.2.5
 
 **Release date: September 29th, 2021**

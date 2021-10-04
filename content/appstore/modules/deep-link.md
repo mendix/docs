@@ -99,9 +99,9 @@ Follow these steps to update this homepage microflow:
 	 * When the app is using SAML for SSO and the end-user should be redirected to the deep link again, use either `https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=`
 	
       {{% alert type="info" %}}`https://myapp.xyz.com/SSO/login?a=MyApp&f=true&cont=` or `/SSO/login?f=true&cont=` does not work for other SSO modules, such as XSUAA. {{% /alert %}}
-    
+   
       {{% alert type="warning" %}}When using the Deep Link module together with the [SAML](saml) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. <br/>To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. <br />If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings).{{% /alert %}}
-    
+   
   * Use `/mindspherelogin.html?redirect_uri=` as login location when using the module with a MindSphere app (requires MindSphere SSO >= V2.0)
 
   * When using XSUAA, this constant should be set to `/xsauaalogin/`

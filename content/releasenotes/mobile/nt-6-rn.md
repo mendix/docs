@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issue with the `OpenURL` javascript action on Android 11+ devices.
+* We fixed an issue with the `OpenURL` JavaScript action on Android devices which use version 11 and above.
 
 ## 6.2.5
 

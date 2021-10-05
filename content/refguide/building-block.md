@@ -38,7 +38,7 @@ The image selected will appear in the **Building Blocks** tab of Studio's **Tool
 
 The category is used to group building blocks inside the **Toolbox**.
 
-### 4.4 Category weight
+### 4.4 Category Weight
 
 The category weight determines the order of categories inside the **Toolbox** (in ascending order). If building blocks with the same category have different category weights, the lowest is used to determine the position.
 

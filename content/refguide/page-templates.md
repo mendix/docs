@@ -46,11 +46,11 @@ The image selected will appear in the **Create Page** wizard. Selecting a repres
 
 ### 5.3 Category
 
-The category is used to group page templates in the **Create Page** dialog.
+The category is used to group page templates in the **Create Page** dialog box.
 
-### 5.4 Category weight
+### 5.4 Category Weight
 
-The category weight determines the order of categories inside the **Create Page** dialog (in ascending order). If page templates with the same category have different category weights, the lowest is used to determine the position.
+The category weight determines the order of categories inside the **Create Page** dialog box (in ascending order). If page templates with the same category have different category weights, the lowest is used to determine the position.
 
 ### 5.5 Shown When
 

@@ -42,7 +42,7 @@ You can create associations between local [persistable entities](persistability#
 
 When an external entity is dragged into the domain model, the  **Consumed Odata** document that is added to the model will display the values of the metadata contract from the service endpoint.
 
-In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **App** pane.
+In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **Used in your App** section.
 
 If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow:
 

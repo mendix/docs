@@ -47,12 +47,21 @@ To see the capabilities of a particular OData entity, do the following:
 
 1. Go to the Data Hub Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Data Hub Catalog and Curating Your Own Service](/data-hub/share-data#use-and-curate) section of *Share Data Between Apps*.
 1. Select your entity from the left-side search results pane. If you are not seeing many results, try removing the **Production** filter on your search.
-1.  Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported. The grey letters indicate which are not. Hover over the letters to see which operations are supported:
+1. Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported. The gray letters indicate which are not. Hover over the letters to see which operations are supported:
 
-    ![entity capabilities](attachments/write-data/left-panel-crud.png)
-    ![entity capabilities](attachments/write-data/center-panel-crud.png)
+![entity capabilities](attachments/left-panel-crud.png)
+![entity capabilities](attachments/center-panel-crud.png)
 
+## 5 Consuming OData resources in your Mendix app
 
-## 5 Consuming OData Resources in your Mendix App
+Just like in the Catalog you can see the CRUD capabilities of entities, attributes, and associations inside the Data Hub pane of Studio Pro.
 
-**TODO** Data Modelling team explains that the CRUD letters visible in the Catalog match what you'll see in the Data Hub pane in Studio Pro. And corresponds to what you'll be able to do with the data when you consume that external entity in your app.
+In Studio Pro you might not see all the CRUD capabilities highlighted that are highlighted in Data Hub Catalog. A CRUD capability will only be highlighted when it is both supported by the contract and also by Studio Pro.
+ 
+![crud capabilities](attachments/crud-capabilities.png)
+
+To consume an OData entity:
+ 1. Inside the Data Hub pane, start typing in the search field.
+ 2. Select your entity from the Data Hub pane. By default it shows only results published to the production environment. If you also want to see results from other environments, please click the filter button and check the **Show development environment** checkbox.
+ 3. Drag the entity to the domain model.
+ 4. Now you have an external entity in your domain model. Depending on the capabilities, for example the CRUD capabilities, you can use them to model your app as you would normally do.

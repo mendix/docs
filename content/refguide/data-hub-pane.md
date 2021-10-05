@@ -47,7 +47,7 @@ The following functionality is available in the pane:
 
 ### 2.2 Data Hub App Pane
 
-When no search string has been specified in the **Data Hub** pane, the **App** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
+When you do not enter search text in the **Data Hub** pane, then **Used in your app** section is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
 
 {{% image_container width="300" %}}![Project Section](attachments/data-hub-pane/project-section.png){{% /image_container %}}
 
@@ -101,6 +101,8 @@ The search results and **Project** pane will show the following at a service lev
 
   * **View in Data Hub Catalog** – click this to go to the **Data Source Details** page in the Data Hub Catalog
   * **Go to connection settings** – click this to open the [consumed OData service](consumed-odata-service) document
+  
+* ** Gray shield ** icon if the service or entity is validated in the Catalog.
 
 * **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the app to the contract that is now available:
 
@@ -147,6 +149,11 @@ Attributes for a service are listed in alphabetical order. If you right-click an
 In the above example, there are two attributes, **Addresses** and **FavoriteColors** which are not supported and therefore will not be included in your model:
 
 {{% image_container width="300" %}}![multiple associations](attachments/data-hub-pane/unsupported-attributes.png){{% /image_container %}}
+
+### 4.2.4 CRUD Capabilities
+
+If the entity, association, or attribute supports any of the capabilities and it is also supported by Studio Pro, then it will be displayed in the Data Hub pane.
+Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update.
 
 ## 5 Read More
 

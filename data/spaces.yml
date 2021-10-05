@@ -217,6 +217,7 @@ data-hub:
   priority: false
   menu_categories:
     - "Share Data Between Apps"
+    - "Write Data to Another App"
     - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"

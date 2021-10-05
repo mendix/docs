@@ -21,9 +21,7 @@ You can search in the Data Hub Catalog through the **Data Hub** pane to discover
 In the Data Hub Catalog, registered published services are referred to as *data sources* and exposed entities will show the **Entity set** name and are called *datasets.*
 {{% /alert %}}
 
-To display the **Data Hub** pane, click **View** > **Data Hub**:
-
-{{% image_container width="300" %}}![data-hub-pane](attachments/data-hub-pane/data-hub-pane-empty.png){{% /image_container %}}
+To display the **Data Hub** pane, click **View** > **Data Hub**.
 
 ## 2 Data Hub Pane in the Domain Model
 

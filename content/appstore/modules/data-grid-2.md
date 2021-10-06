@@ -1,6 +1,5 @@
 ---
 title: "Data Grid 2"
-category: "Modules"
 parent: "data-widgets"
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "platform support"]

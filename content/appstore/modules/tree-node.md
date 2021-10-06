@@ -1,6 +1,5 @@
 ---
 title: "Tree Node"
-category: "Modules"
 parent: "data-widgets"
 description: "Describes the purpose, features, and configurations of the Tree Node widget which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap", "platform support"]

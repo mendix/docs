@@ -235,14 +235,14 @@ The typical edit-existing-object flow consists of these steps:
 1. Select an object in a table of objects page (overview page).
 2. Display the Edit/New page (which may already be cached).
 3. Show object values already available in the page displayed by the browser.
-4. Save the changed attributes of the object to the Runtime Server.
+4. Change and validate the changed attributes of the object in the Runtime Server.
 5. Retrieve the object from the database.
 6. Validate the object changes.
 7. Commit the changes in the database.
 
 ![](attachments/communication-patterns/19399032.png)
 
-Save the changes to the database:
+Change and validate the changed attributes of the object in the Runtime Server:
 
 ```json
 {
@@ -262,7 +262,7 @@ Save the changes to the database:
 This will trigger the following actions on the database:
 
 *   Get the original object from the database
-*   Update the attribute(s) changed by the user in the Runtime
+*   Update the attribute(s) changed by the user in the Runtime Server
 
 The first step is required to determine all the data business logic and validations defined on the entity.
 

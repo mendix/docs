@@ -54,9 +54,9 @@ A basic scenario using an *Employee* entity can be modeled in Mendix using the f
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
 
-### 3.1 Read the Objects Required to Display an Object Table
+### 3.1 Read the Objects Required to Display an Datagrid
 
-Displaying a table of objects consists of the following steps:
+Displaying a list of objects in a data grid consists of the following steps:
 
 1. Getting the definition of the page (which may already be cached).
 2. Getting the data to be displayed in the page.

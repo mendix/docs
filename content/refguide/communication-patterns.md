@@ -502,12 +502,6 @@ This XPath expression is translated in a number of steps to a database query:
 
 The Runtime Server can run as a single process, or it can be horizontally scaled to facilitate more concurrent users and improve availability. In this scenario, multiple Mendix Studio Pro instances are running. These instances run independently, there will not be any communication between the processes.
 
-#### 5.4.1 Single Instance
+#### 5.4.1 Multi-Instance
 
-Within a single instance, the Scala Akka actor model is used to handle all processing in the Runtime Server efficiently. Using an actor model for concurrency has this benefit:  The number of concurrent users that can be processed is not limited by the number of threads available, as threads are not allocated per request, but rather by processing responsibility
-
-To process Mendix Client requests received by the Runtime Server, the actions required are dispatched to an Akka actor. This actor has a dedicated thread pool. Every (microflow) action is handled by a separate message to the action dispatcher actor. This optimizes usage of threads for blocking actions. For example, if an action part of a microflow calls an external web service and is blocked waiting for a response, this only impacts the threadpool for the action dispatcher, not for the HTTP request handler.
-
-#### 5.4.2 Multi-Instance
-
-Mendix Runtime state is stored in the Mendix Client. This means that, when running in a horizontally scaled scenario, all instances run behind a load balancer and requests are sent to whichever instance is most appropriate.
+Mendix Runtime state is stored in the Mendix Client. This means that, when running in a horizontally scaled scenario, all instances run behind a load balancer and requests are sent to whichever instance is available.

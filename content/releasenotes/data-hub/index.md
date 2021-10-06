@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Improvements
 
-* We upgraded the search engine to OpenSearch 1.0.
+* We upgraded the Data Hub Catalog search engine to OpenSearch 1.0.
 
 #### Fixes
 

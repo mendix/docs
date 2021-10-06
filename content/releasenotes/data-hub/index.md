@@ -9,6 +9,16 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### October 7th, 2021
+
+#### Fixes
+* Fix issue that caused older Studio Pro versions not being able to connect to the catalog
+
+### Improvements
+* Upgraded search engine to OpenSearch 1.0
+
+
+
 ### September 30th, 2021
 
 #### Fixes

@@ -1,5 +1,5 @@
 ---
-title: "Data Widgets"
+title: "Data Containers"
 parent: "pages"
 menu_order: 15
 tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid"]
@@ -7,9 +7,9 @@ tags: ["studio pro", "data widgets", "data containers", "data view", "list view"
 
 ## 1 Introduction
 
-Data widgets display contents of one object or a list of objects. 
+Data containers display contents of one object or a list of objects. 
 
-The Data widgets category contains the following widgets:
+The Data containers category contains the following widgets:
 
 * [Data view](data-view) – This widget shows the contents of exactly one object. If, for example, you want to show details of a single program item, you would use a data view for this:
 

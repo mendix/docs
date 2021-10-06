@@ -19,7 +19,6 @@ Workflow properties consist of the following sections:
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [General](#general)
-* [Security](#security)
 
 ### 2.1 Admin Page Section {#admin-page} 
 
@@ -41,11 +40,19 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 ### 2.3 Data Section {#data}
 
-**Workflow entity** is an entity that is used as a workflow context. It should be a [specialization](generalization-and-association) of the **Workflow Context** entity from the **System** module. For more information on workflow-related entities in the System module, see the the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*. 
+#### 2.3.1 Workflow Instance
 
-We recommend to keep the workflow entity "clean", meaning, to only have attributes on it that are important for the current instance of your workflow and add other data via associations:
+**Workflow instance** is an entity that stores data on the workflow process. This entity should be a specialization of the **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
 
-![Domain Model Example](attachments/workflow-properties/domain-model-example.png)
+#### 2.3.2 Workflow Context
+
+**Workflow context** is a business-related entity that travels through the workflow. 
+
+{{% alert type="info" %}}
+
+**Workflow instance** should have a one-to-one or a one-to-many association to the **Workflow context**. 
+
+{{% /alert %}}
 
 ### 2.4 Display Information Section {#display-info}
 
@@ -109,17 +116,6 @@ In addition to adding new parameters, you can perform the following actions on p
 
 **Caption** defines a title of the workflow. You cannot change the [Name](#name) of the workflow but you can change the **Caption**.
 
-### 2.7 Security Section {#security}
-
-**Allowed roles** defines which [module role](module-security#module-role) the user must have to be able to execute the workflow.
-
-{{% alert type="warning" %}}
-These roles are only checked when the workflow is executed from the client. 
-{{% /alert %}}
-
-For more information, see [Module Security](module-security).
-
 ## 3 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Workflows](workflows)

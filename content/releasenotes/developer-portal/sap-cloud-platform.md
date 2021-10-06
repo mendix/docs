@@ -12,6 +12,18 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### August 30th, 2021
+
+* You can now upload your service configurations directly from the Configurator without having to download the configuration first.
+* We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
+
+### August 19th, 2021
+
+#### Improvements – OData Connector for SAP Solutions
+
+* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service). Users will now be signed out so that they can retrieve a new access token.
+* We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
+
 ### July 26th, 2021
 
 #### Improvements

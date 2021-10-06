@@ -33,7 +33,7 @@ To build the Docker image, follow these steps:
 2. Restart the computer to ensure that you have been granted access to Docker.
 3. Unzip the buildpack into a location of your choice.
 4. Open the **Command Prompt** and navigate to the folder where you unzipped the buildpack. 
-5. Open your app project in Studio Pro and select the menu option **App** > **Show App Directory in Explorer**:
+5. Open your app in Studio Pro and select the menu option **App** > **Show App Directory in Explorer**:
 
     ![](attachments/docker-deploy/create-deployment-package.png)
 

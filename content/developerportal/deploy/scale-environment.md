@@ -19,7 +19,7 @@ The scaling options on possible cloud versions are the following:
 
 | Cloud Version | Scaling Options | Limitations |
 | ------------- | --------------- | ----------- |
-| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a support ticket with [Mendix Support](https://support.mendix.com/) |
+| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a ticket with [Mendix Support](https://support.mendix.com/) |
 | Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
 
 **This how-to will teach you how to do the following:**
@@ -56,7 +56,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
 6. Set the **Memory per instance** that you want to use.
 
-    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}
+    {{% alert type="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
 
 7. Click **Apply**. This will restart your environment to apply the changes.
 

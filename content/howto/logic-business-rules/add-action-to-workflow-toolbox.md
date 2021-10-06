@@ -26,11 +26,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
-* Your project has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
 ## 3 Exposing the Microflow as the Workflow Action
 
-For example, you have the Employee Onboarding process set up in your app. For more information on how to configure this process with workflows, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure). You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
+For example, you have the Employee Onboarding process set up in your app. You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
 
 However, as the best practice we recommend using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
 
@@ -68,7 +68,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     2. Set **Category** to **Integration**.
 
-    3. Set Icon to **icon_activity**:
+    3. Set Icon to **pt_feedback_checkmark**:
 
         ![Expose as Workflow Action Settings](attachments/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png)
 
@@ -92,6 +92,5 @@ Congratulations! You have turned the microflow into the custom workflow action a
 
 ## 5 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](workflow-how-to-configure)
 * [Microflow Properties](/refguide/microflow)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

@@ -16,7 +16,7 @@ tags: ["secure", "outgoing", "encryption", "TLS/HTTPS", "proxy", "SSH", "VPN"]
 
 While all inbound connections to apps in the Mendix Cloud are secured with TLS, your apps can also connect to other services over the Internet. Some of these services will be third-party services and you will have to match the security settings set up by the service owner. Sometimes the service may be owned by you, or someone else in your company, and you can control how connection security is implemented.
 
-There are various methods which are used for securing connections from *Backend services* to your *app* via the internet. This document sometimes refers to the Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
+There are various methods which are used for securing connections from *back end services* to your *app* via the internet. This document sometimes refers to the Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
 
 ## 2 Scenarios
 
@@ -28,7 +28,7 @@ In some cases, encryption and authentication on connections is unnecessary. In t
 
 ### Scenario 2 - TLS/HTTPS
 
-This is the most common scenario. The client app verifies the server certificate for the backend service and sets up an encrypted connection. Trust is verified via the chain of trust to a certificate authority in the client's trust store.
+This is the most common scenario. The client app verifies the server certificate for the back end service and sets up an encrypted connection. Trust is verified via the chain of trust to a certificate authority in the client's trust store.
 
 Using encryption, data sent and received over the connection cannot be decoded if it is intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS.
 
@@ -46,7 +46,7 @@ The rest of the security features of scenario 2 can also be applied.
 
 ### Scenario 4 - Proxy Server for TLS Offloading
 
-If a backend service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
+If a back end service owned by you does not support HTTPS out of the box, you can add a HTTPS reverse proxy server such as NGINX or HAProxy in front of it. This HTTPS reverse proxy can optionally also act as a firewall and can be deployed in a highly available way.
 
 Migrations of back-end services within your data center can be done transparently by decoupling it from the public address of your service. The app in the Mendix Cloud simply connects to an HTTPS endpoint.
 

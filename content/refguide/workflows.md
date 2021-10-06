@@ -66,7 +66,7 @@ You can perform the following basic functions when working on workflows:
 
 To open a workflow in Studio Pro, do the following:
 
-1. In the [Project Explorer](project-explorer), open a module where this workflow is located.
+1. In the [App Explorer](project-explorer), open a module where this workflow is located.
 2. Navigate to the workflow’s location inside the module and double-click the workflow.
 
 The selected workflow is opened.
@@ -75,9 +75,7 @@ The selected workflow is opened.
 
 To add a workflow to your app, do the following:
 
-1. In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**:
-
-    ![Add Workflow](attachments/workflows/add-workflow.jpg)
+1. In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add workflow**.
 
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
@@ -89,7 +87,7 @@ The workflow is created.
 
 To delete a workflow, do the following:
 
-1. In the [Project Explorer](project-explorer), select a workflow you would like to delete and right-click it.
+1. In the [App Explorer](project-explorer), select a workflow you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected workflow is deleted. 
@@ -111,6 +109,49 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
+### 3.6 Triggering a Workflow
+
+You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
+
+#### 3.6.1 Triggering a Workflow from a Page {#trigger-page}
+
+To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event & Events Section](on-click-event).
+
+Do the following:
+
+1. Open a page from where you would like to trigger a workflow.
+2. Make sure you have a data container with the workflow context on your page. 
+3. Drag and drop a widget that has on-click event in its properties (for example, a button) inside the data container with the workflow context. 
+4. Open button's properties > **Events** section. 
+5. Set **On-click** property to **Call workflow**. 
+6. Set **Workflow** to the workflow you would like to trigger.
+
+You have configured the button to trigger the workflow.
+
+#### 3.6.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+
+To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](workflow-call).  
+
+Do the following:
+
+1. Open a microflow that will trigger a workflow.
+
+2. Make sure the microflow has a necessary parameter with the workflow context.
+
+3. In the **Toolbox**, find **Call workflow** activity and drag and drop it to the microflow.
+
+4. Double-click the activity to open its properties.
+
+5. Set **Workflow** to to the workflow you would like to trigger.
+
+6. Set **Context object** to the workflow context:
+
+    ![Call Workflow Example](attachments/workflows/call-workflow-example.png)
+
+7. Click **OK**.
+
+Now when you run this microflow, it will trigger the selected workflow. 
+
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
 There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
@@ -120,11 +161,7 @@ You can find the following workflow-related entities in the System module:
 * **WorkflowDefinition** – Represents your workflow in the database. It contains two attributes, where **Name** and **Title** are **Name** and **Title** properties of the workflow and **Obsolete** is a Boolean that is marked as true when you delete your workflow. In this case, the workflow still stays in the database (and you will still be able to create reports with it), but Mendix marks that it does not exist anymore. For more information on properties, see [Workflow Properties](workflow-properties). 
 * **WorkflowTaskDefinition** – Represents your [user tasks](user-task) and [system activities](call-microflow) in the database. It contains two attributes, where **Name** is a **Name** property of the user task or a system activity, and **Obsolete** is a Boolean that is marked as true when you delete a user task/system activity from your workflow. They still stay in the database (and you will still be able to create reports with them), but Mendix marks that they do not exist anymore. 
 * **WorkflowInstance** – A representation of a running workflow, so every time when the new workflow is started, the Runtime creates a new instance.
-* **WorkflowTaskInstance** –  A representation of a running user task or a system activity, so every time when the new user task/system activity is started, the Runtime creates a new instance.
-* **WorkflowUserTask** - a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
-* **WorkflowSystemTask** – a specialization of **WorkflowTaskInstance**. This entity is created when the Runtime executes the system activity (**Call microflow**) and is used to show that the microflow has been executed. 
-* **WorkflowContext** – a basic entity for the objects that will be used as context for the workflow. The specialization of this entity is used as a **Workflow entity** in its properties. For more information on properties, see [Workflow Properties](workflow-properties). 
-* **WorkflowVersion** – This System entity is used for versioning and for the internal administration in the Runtime. When you add an activity and run your workflow, a new version will be created.
+* **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
 
 ## 5 Workflow Variables
 
@@ -132,8 +169,8 @@ Workflows have dedicated variables that can be used in an XPath and Expressions 
 
 The list of variables is described below: 
 
-* `$workflowData` – an instance of the workflow entity that is configured for a specific workflow (usually a specialization of **System.WorkflowContext**)
-* `$workflow` – an instance of a currently running workflow (**System.WorkflowInstance**)
+* `$WorkflowContext` – an instance of the business-related entity that travels through the workflow
+* `$WorkflowInstance` – an instance of a currently running workflow (**System.Workflow**)
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 
 
@@ -155,5 +192,4 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 ## 9 Read More
 
-* [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure)
 * [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app)

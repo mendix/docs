@@ -12,6 +12,36 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### September 10th, 2021
+
+#### Improvements
+
+* We added a new [custom environment variable](/developerportal/deploy/environments-details#custom-environment-variables) `USAGE_METRICS_EMAIL_FIELDS` which allows you to identify which entities are used to hold your end user details.
+
+#### Fixes
+
+* In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
+
+### August 26th, 2021
+
+#### Improvements
+
+* We added the ability to restore only a database, without restoring the other files in a backup.
+    You can do this in one of two ways:
+    * Through the [Developer Portal](/developerportal/operate/restore-backup#restore-cloud-backup)
+    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api)
+
+### August 6th, 2021
+
+#### Improvements
+
+* We moved the [Node Permissions](/developerportal/deploy/node-permissions) from the Security page to the [Environments](/developerportal/deploy/environments) page.
+* We added the ability to delegate node permission management to team members who are not the Technical Contact.
+
+#### Fixes
+
+* We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
+
 ### July 23rd, 2021
 
 #### Improvements

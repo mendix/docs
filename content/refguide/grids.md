@@ -19,5 +19,5 @@ Grids have the following components in common:
 
 * [Data Grid](data-grid)
 * [Template Grid](template-grid)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

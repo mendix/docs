@@ -3,6 +3,9 @@ title: "Uniqueness Constraint Migration"
 parent: "data-storage"
 menu_order: 30
 tags: ["studio pro"]
+aliases:
+    - /refguide/uniqueness-constraint-migration.html
+# referred to in M2EE error message
 ---
 
 ## 1 Introduction

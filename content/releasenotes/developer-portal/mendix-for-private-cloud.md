@@ -13,6 +13,69 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### September 27th, 2021
+
+#### Data migration tool (preview)
+
+* We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
+* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup#5-format-of-a-backup-file).
+
+This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer).
+
+### September 9th, 2021
+
+#### mxpc-cli v2.1.1 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0{#2.1.1}
+
+##### Fixes
+
+* We have fixed the [known issue with the outdated apps deployment label after upgrading a namespace to Mendix Operator v2.1.0](#2.1.0). The workaround of deleting app deployments manually in the previous version mxpc-cli v2.1.0 is no longer required. (Ticket 129150)
+
+#### Portal Improvements
+
+* We have updated the environment details page to show the status of individual pods.
+* We have added some validation when you configure Pod/Service/Ingress annotations in the portal.
+* We have added the ability to select the default target environment for Studio deployment.
+* We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.
+* We have improved the page to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
+
+### September 2nd, 2021
+
+#### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
+
+* We have added support for Google Cloud Platform.
+* We have added some new features to run our installer and configuration tools in a non-interactive way. [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive)
+* We have added more metrics in our sidecars.
+* We have added additional details about the Runtime status for each replica, including the license status and errors that might be preventing the Runtime from starting.
+* We have fixed an error `M2EE: An error occurred while executing action 'get_license_information'` that was sometimes logged while the Runtime was starting.
+
+##### Known Issue{#2.1.0}
+
+This issue is fixed in [version 2.1.1](#2.1.1) of `mxpc-cli`.
+
+* Upgrading a namespace from operator v2.0.0 to v2.1.0 causes app deployments to have outdated labels or annotations that make your environments unreachable.  (Ticket 129150)
+
+    To fix the issue, you must delete the app deployments using the following commands:
+
+    ```
+    kubectl delete deployment <app>-master -n <namespace>
+    kubectl delete deployment <app>-worker -n <namespace>
+    ```
+
+
+### August 12th, 2021
+
+#### Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0
+
+* We have switched all components to use the modern Kubernetes APIs: `networking.k8s.io/v1` and `apiextensions.k8s.io/v1`.
+  This change allows us to continue supporting future versions of Kubernetes.
+* This version of Mendix Operator and Gateway Agent only supports Kubernetes 1.19 and later versions.
+* Mendix Operator v1.12.\* and Mendix Gateway Agent v1.11.\* will continue in Long Term Support (LTS) to support clusters running older versions of Kubernetes.
+
+To upgrade an existing installation of Mendix for Private Cloud to Mendix Operator v2.0.0 and Mendix Gateway Agent v2.0.0, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide).
+
+{{% alert type="warning" %}}Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+{{% /alert %}}
+
 ### July 6th, 2021
 
 #### Portal Improvements

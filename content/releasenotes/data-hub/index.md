@@ -9,6 +9,87 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### September 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro caused an error.
+
+### September 23rd, 2021
+
+#### Data Hub Free Edition
+
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+
+#### Fixes
+
+* We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
+* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
+
+### September 16th, 2021
+
+#### Improvements
+
+* API responses are now sanitized and will no longer have a chance of containing executable code.
+
+#### Fixes
+
+* We fixed an issue with pagination for Applications and Environments in the API.
+* We fixed styling issues.
+
+### September 9th, 2021 {#nine}
+
+#### Fixes
+
+* We fixed an issue where updating a service version created a new endpoint instead of updating the existing one.
+* We fixed an issue that caused pagination URLs to be returned as *http* links rather than *https*.
+* We fixed an issue where clicking **Control Center** in the top bar of the [Data Hub administration](/developerportal/control-center/#data-hub) page navigated to the Data Hub home page. Now, it navigates to Control Center.
+
+### September 2nd, 2021
+
+#### Fixes
+
+* We removed the `SecurityClassification` from the `Endpoints` JSON structure of the [Register API](/apidocs-mxsdk/apidocs/data-hub-apis). The creation of endpoints as `Public` via the API is no longer allowed due to security reasons.
+
+### August 26th, 2021
+
+#### Improvements
+
+* The following API `GET` capabilities were added:
+    * `GET` a specific consumed endpoint
+    * `GET` all applications
+    * `GET` all environments for an application
+    * `GET` all consumed endpoints
+* A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
+* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/index#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+
+### August 19th, 2021
+
+#### Fixes
+
+* We fixed inconsistencies in contract and security scheme between an endpoint API spec and implementation.
+* We fixed an issue where the Mendix Admin did not see external users after adding them.
+* We fixed styling issues on the **Administration** page.
+
+###  August 12th, 2021
+
+#### New Features
+
+* We added the following write capabilities: 
+    * Parsing updatable, insertable, and deletable capabilities from annotations is now available in OData v4 contracts
+    * Write capabilities are returned on the [Data Hub Search API ](/apidocs-mxsdk/apidocs/data-hub-apis)
+    * Write capabilities are displayed on the Data Hub UI
+
+#### Fixes
+
+* We made improvements to Data Hub security.
+
+### August 5th, 2021
+
+#### Fixes
+
+* We made various security and UI fixes.
+
 ### July 29th, 2021
 
 #### New Feature
@@ -31,7 +112,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### New Features
 
-* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) endpoints now allow you to do the following:
+* New [Registration API](/apidocs-mxsdk/apidocs/data-hub-apis) endpoints now allow you to do the following:
   * `GET` all published endpoints
   * `GET`, `POST`, and `PUT` one individual published endpoint
 
@@ -48,14 +129,14 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### New Features
 
 * All [Data Hub APIs](/apidocs-mxsdk/apidocs/data-hub-apis) are now available at https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html. The original Data Hub API is now split into 2 APIs for search and registration operations and include the following changes:
-  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis#search-API) – includes GET calls for getting details of data sources
-  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis#registration-api) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
+  * [Search](/apidocs-mxsdk/apidocs/data-hub-apis) – includes GET calls for getting details of data sources
+  * [Register](/apidocs-mxsdk/apidocs/data-hub-apis) – PUT calls are added to enable users to update or register applications and environments by specifying a UUID
 
 ### May 27th, 2021
 
 #### New Features
 
-* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register#registration-form) Siemens Opcenter data sources.
+* A new connector has been added to the **Data Hub Home** for [registering](/data-hub/data-hub-catalog/register-data) Siemens Opcenter data sources.
 
 #### Improvements
 
@@ -67,7 +148,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Improvements
 
 * Datasets in the [search results list](/data-hub/data-hub-catalog/search#search-results) that are validated are now clearly indicated as such.
-* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register#registration-form) using the business application connectors from the **Data Hub Home**.
+* Custom owners can be added for an application when [registering data sources](/data-hub/data-hub-catalog/register-data) using the business application connectors from the **Data Hub Home**.
 * Further styling changes have been made to improve usability.
 
 ### May 6th, 2021
@@ -92,13 +173,13 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-*  [Registration](/data-hub/data-hub-catalog/register#registration-form) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
+*  [Registration](/data-hub/data-hub-catalog/register-data) of data sources using the business application connectors from the **Data Hub Home** is improved. For each connector, users can register data sources by selecting from a list of apps and environments already registered in the Catalog for the business application. When none are registered, the  "**Create New...**" option will be presented.
 
 ### March 18th, 2021
 
 #### Improvements
 
-* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/data-hub-catalog/register#registration-form)  Mendix OData v3 contracts.
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/data-hub/data-hub-catalog/register-data)  Mendix OData v3 contracts.
 * Data sources that are [validated](/data-hub/data-hub-catalog/curate#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
 * The [discoverability](/data-hub/data-hub-catalog/curate#discoverability) of a data source is displayed in the search results pane, the asset details screen and the the metadata panel.
 
@@ -107,13 +188,13 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 #### Improvements
 
 * Improvements have been made on the [discoverability](/data-hub/data-hub-catalog/curate#discoverability) of registered assets.
-* The functionality for [registering data sources from enterprise applications](/data-hub/data-hub-catalog/register#registration-form) is now responsive.
+* The functionality for [registering data sources from enterprise applications](/data-hub/data-hub-catalog/register-data) is now responsive.
 
 ### March 4th, 2021
 
 #### New Features
 
-* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/data-hub/data-hub-catalog/register#registration-form). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
+* Data sources from different enterprise business applications can now be registered more easily in Data Hub using the new [Registration functionality](/data-hub/data-hub-catalog/register-data). This will enable users to use those datasets when developing apps without having to worry about connectivity to the application. This functionality replaces the previous manual registration form.
 
 ### February 19th, 2021
 
@@ -164,12 +245,12 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### New Features
 
-* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for [published services](/data-hub/data-hub-catalog/register#odata-service-reg) of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
+* The [search details](/data-hub/data-hub-catalog/search#search-details) in the Data Hub Catalog now display the exposed **Datasets** (the entity set names of an entity) in place of the **entity** names. This means that for published services of Mendix apps, the name shown as the **Dataset** will be the Mendix **Exposed Entity set** name.
 * In the [Data Hub API](/apidocs-mxsdk/apidocs/data-hub-apis), the Search API (`GET` data) returns items that specify the entity sets instead of entity types. The response structure has been expanded by adding the fields `EntitySetName` `EntityTypeName` and `Namespace` at the `Item` and `ItemAssociation` level.
 
 #### Improvements
 
-* Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/data-hub-catalog/register#registration-form) or when using the `PUT` services API call for OData v4 services.
+* Contract validation has been improved when [manually registering Odata v4 contracts](/data-hub/data-hub-catalog/register-data) or when using the `PUT` services API call for OData v4 services.
 
 ### December 17th, 2020
 
@@ -198,7 +279,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 #### New Features
 
 * We have added new functionality for adding [Business and Technical Owner contact details](/data-hub/data-hub-catalog/curate#custom-owner) when curating the **Application Details** of a registered asset. Curators and owners can select owners from a drop-down list or create a new owner and add their contact details.
-* We have added a new tab to the Data Hub **Administration** page: [Owner Management](/data-hub/general/data-hub-admin-functions#customowners) which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
+* We have added a new tab to the Data Hub **Administration** page: Owner Management which provides an overview of the custom Business and Technical owners in the Data Hub Catalog. From this release, the Data Hub Administrator and curators can now add, edit, and remove custom owners from this list.
 
 #### Improvements
 

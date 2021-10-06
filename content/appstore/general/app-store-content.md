@@ -84,7 +84,7 @@ To add the Rating widget from the Marketplace via Studio Pro, follow these steps
 
     ![Add widget](attachments/app-store-content/add-widget.png)
 
-3. In the **Filter** bar, enter *Rating*. The downloaded widget is found in the **Add-on** widgets category. 
+3. In the **Filter** bar, enter *Rating*. The downloaded widget is found in the **Display** widgets category. 
 
     ![Rating widget highlighted in Select Widget dialog box](attachments/app-store-content/select-widget.png)
 
@@ -119,9 +119,9 @@ To configure the widget, follow these steps:
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
 
-### 4.2 Using a Module
+### 4.2 Using a Module {#module}
 
-You can also download an entire module from the Marketplace. A module includes the whole functionality and integration that can be very helpful when you are building your application.
+You can also download an entire module from the Marketplace. A module includes the whole functionality and instegration that can be very helpful when you are building your application.
 
 In this section, we will use the [Email with Templates](/appstore/modules/email-with-templates) module as an example. You can follow the steps to use any module from the Marketplace.
 
@@ -135,14 +135,15 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
     * **Add as a new module** – if you select this option, new entities are created in your app
     * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
-   
+      
+
     ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
     {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 
-4. Wait until a pop-up window shows **The module was successfully imported into your project.** Click **OK**.
+4. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
 5. Open the **App Explorer** and find the **EmailTemplate** module.
 

@@ -25,5 +25,5 @@ If you have a nested data view, you can select an entity that has associations w
 
 ## 3 Read More
 
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Associations](associations)

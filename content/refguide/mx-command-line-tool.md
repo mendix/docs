@@ -3,7 +3,7 @@ title: "mx Command-Line Tool"
 category: "General Info"
 menu_order: 50
 description: "Describes the options of the mx command-line tool"
-tags: ["mx", "project", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
+tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
 ---
 
 ## 1 Introduction
@@ -83,9 +83,9 @@ The `OPTIONS` are described in the table below:
 | Option | Default Value | Result |
 | --- | --- | --- |
 | `app-name` | App | Assigns the specified app name to the app. |
-| `output-dir` | Current directory | The directory in which to create the project. |
+| `output-dir` | Current directory | The directory in which to create the app. |
 | `language-code` | Optional | The default language of the app. |
-| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback) with the provided [Developer Portal app](/developerportal/apps-list/). |
+| `sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/collaborate/feedback) with the provided [Developer Portal app](/developerportal#my-apps). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package (*.mpk*) file. If this argument is omitted, the app is created with a default empty project template.
 

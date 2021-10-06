@@ -28,7 +28,6 @@ When an external entity is used in an app, the associated dataset for the entity
 
 External entities have some limitations compared to persistable entities:
 
-* External entities are read-only
 * The aggregate functions (average, sum, maximum, minimum) cannot be used on external entities
 * There are certain limitations on XPath constraints for external entities (for instance, you cannot filter on an association between a persistable entity and an external entity)
 * External entities cannot be used in datasets

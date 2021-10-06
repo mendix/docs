@@ -27,7 +27,7 @@ In addition, the Mendix SSO module has a default implementation for user adminis
 
 We are in the process of adding the Mendix SSO module to the Mendix app templates. Where it has been added, all you have to do is to set your security level to **Production** and your end-users will be able to sign in.
 
-You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app project. The version number is recorded in the **Version** constant within the module.
+You can see if your app has the Mendix SSO module, and which version it has, by looking in the **Marketplace modules** section in the **App Explorer** for your app. The version number is recorded in the **Version** constant within the module.
 
 ![](attachments/mendix-sso/mxsso-app-store-module.png)
 
@@ -73,15 +73,13 @@ You can deactivate Mendix SSO in two simple steps. This will remove the end-user
 
 To deactivate Mendix SSO, follow these two steps:
 
-1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your project to *login.html* — this removes the single sign-on button from your sign in screen:
+1. Follow the instructions below to rename the original login file (by default *login-without-sso.html*) in the **theme** folder of your app to *login.html* — this removes the single sign-on button from your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
-
-        ![Show project directory](attachments/mendix-sso/show-project-directory.png)
 
     2. Go to the **theme** folder.
     3. Rename *login.html* to *login-with-sso.html*.
     4. Rename *login-without-sso.html* to *login.html*.
-
+    
     ![File explorer showing two login files](attachments/mendix-sso/theme-folder-remove.png)
 
 2. Follow the instructions below to remove the microflow **MendixSSO_AfterStartup** as the **After startup** microflow.
@@ -166,9 +164,8 @@ To enable Mendix SSO in your app, follow these steps:
 
         ![Confirmation of user roles](attachments/mendix-sso/module-user-roles.png)
 
-5. Rename the file *login-with-sso.html* in the **theme** folder of your project to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
+5. Rename the file *login-with-sso.html* in the **theme** folder of your app to *login.html* by performing the following steps — this adds the single sign-on button to your sign in screen:
     1. Open your app directory in File Explorer by selecting the menu item **App** > **Show App Directory in Explorer**.
-        ![Show project directory](attachments/mendix-sso/show-project-directory.png)
     2. Go to the **theme** folder.
     3. Rename *login.html* to  *login-without-sso.html*.
     4. Rename *login-with-sso.html* to *login.html*.
@@ -207,7 +204,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 ### 5.2 Modifying Mendix SSO
 
 {{% alert type="warning" %}}
-We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your project. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
+We recommend that you do not modify the version of Mendix SSO which is in the Marketplace modules section of your app. In future, you may wish to import a newer version of the module and this will overwrite any changes you make.
 {{% /alert %}}
 
 The Mendix SSO module is written so that you can create a user entity in another module and use this entity to store the user information and as the basis of a new administration module.
@@ -216,7 +213,7 @@ The Mendix SSO module is written so that you can create a user entity in another
 
 To make a copy of the module, do the following:
 
-1. Add a new module to your app project. In these examples it is called **CustomMendixSSO**.
+1. Add a new module to your app. In these examples it is called **CustomMendixSSO**.
 
 2. Create the **Module roles** *User* and *Administrator* for the new module.
 

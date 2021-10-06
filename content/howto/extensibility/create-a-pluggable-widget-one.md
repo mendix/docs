@@ -289,7 +289,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ### 3.5 Labeling the Input{#label-input}
 
-While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#label) to any widget.
+While the Mendix input elements come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#label) to any widget.
 
 1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
@@ -309,7 +309,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
 3. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
 
-	![input widgets with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
+	![input elements with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
 
 ### 3.6 Handling Updates
 

@@ -27,7 +27,7 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
-    {{% alert type="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /image_container %}}
+    {{% alert type="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.
     
     {{% /alert %}}
 
@@ -40,7 +40,10 @@ The **Connection** tab displays the connection values for the consumed OData ser
 The **Service URL** displays the URL of the service endpoint:
 
 * Click **Select** to select another [constant](constants) for the service
-* Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint
+
+* Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint:
+
+    ![](attachments/consumed-odata-service/constant.png)
 
 
 ### 2.3 Timeout

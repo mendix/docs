@@ -34,7 +34,7 @@ The following functionality is available in the pane:
 * [View information](#viewing) on the service, its entities, attributes, and associations – When you enter a search term and browse through services, you can view various information on them.
 * [View services used in your app](#used-in-app) – Services and the entities that are currently being used in your app are displayed in the **Used in your App** section and are indicated with a green check-mark in the search results. For more information, see the [Used in Your App](#used-in-app) section below. 
 
-### 2.2 Used in Your App Section
+### 2.2 Used in Your App Section {#used-in-app}
 
 When you do not enter search text in the **Data Hub** pane, then **Used in your App** section is displayed. This shows the consumed services and the external entities used in the current app. The list of entities, associations, and attributes for the consumed services are shown as for the search results:
 

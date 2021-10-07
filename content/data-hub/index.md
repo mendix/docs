@@ -92,6 +92,5 @@ The *Data Hub Guide* is divided into the following categories:
 
 * [How to Share Data Between Apps](share-data/)
 * [How to Write Data to Another App](write-data/)
-* [General Info](general/)
 * [Data Hub Catalog](data-hub-catalog/)
 * [Data Hub Landscape](data-hub-landscape/)

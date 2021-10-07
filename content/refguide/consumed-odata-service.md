@@ -27,9 +27,8 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert type="info" %}} Studio Pro will always show the **Update** option for the **Consumed OData Service** where you can check if an update is available. In the Data Hub search and **App**  pane, when a different contract is detected at the service end-point, this will be indicated with an update arrow for the service. For further information on updating and switching services see the [Updating or Switching a Consumed OData service](#updating) section of this document. {{% /alert %}}
 
-    {{% alert type="info" %}}In the **Data Hub** pane consumed services that have an available **Update** will have an update arrow to indicate this:
-    {{% image_container width="300" %}}![update data hub pane](./attachments/data-hub-pane/data-hub-pane-update.png){{% /image_container %}}
-
+    {{% alert type="info" %}}In the **Data Hub** pane, consumed services have an **Update** icon (a blue arrow) if they have an update available.{{% /image_container %}}
+    
     {{% /alert %}}
 
 ### 2.1 Connection Tab
@@ -86,7 +85,7 @@ For more flexible HTTP request headers, you can select a microflow that returns 
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/data-hub/data-hub-catalog/security#http-header-validation) in the *Data Hub Guide*.
 {{% /alert %}}
 
-### 2.7 Error handling microflow
+### 2.7 Error Handling Microflow
 
 When a call to the OData service fails, users will see a generic error message. Create an error handling microflow to change this message.
 
@@ -198,11 +197,11 @@ When a change in the contract at a consumed endpoint is detected (possibly due t
 
 The **Update** option is available when Studio Pro detects that that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
 
-#####  4.3.1.1 App Pane and Data Hub Search Pane
+#####  4.3.1.1 Data Hub Pane
 
-In the **Used in your App** and the **Data Hub Search Pane** sections an update arrow will indicate if there is a different contract at the Catalog endpoint:
+In the **Data Hub** pane, in search results and in the **Used in your App** section an update arrow indicate if there is a different contract at the Catalog endpoint:
 
-![update service app-pane](attachments/consumed-odata-service/project-pane-update-available.png)
+![update service app-pane](attachments/consumed-odata-service/update-available.png)
 
 * The service version that is *currently consumed* is shown (in this example **1.0.0**)
 * Blue **Update** - click to open the **Update Service** box and update the contract to the new one. Studio Pro will retrieve the new contract at the Data Hub Catalog endpoint and this will be loaded in the app.

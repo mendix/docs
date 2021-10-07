@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### October 7th, 2021
+
+### Fixes
+
+* We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
+
 ### September 10th, 2021
 
 #### Improvements

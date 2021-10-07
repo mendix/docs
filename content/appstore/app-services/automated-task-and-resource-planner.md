@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "app service"]
 
 ## 1 Introduction
 
-{{ % todo %}}[Add the link to the marketplace page after the component is released]{{% /todo %}}
+{{% todo %}}[Add the link to the marketplace page after the component is released]{{% /todo %}}
 
 Powered by AI, the [Automated Task & Resource Planner]() app service is capable of solving complex planning cases and automatically creating the most efficient planning based on the available resources. The planner matches “tasks” with “resources” taking a wide range of constraints into account. 
 
@@ -17,7 +17,7 @@ The app service has a module containing a plug-and-play integration with the Aut
 
 To see how the app service can be used and implemented in a Mendix project, download the example app.
 
-{{ % todo %}}[Add the link to the example app]{{% /todo %}}
+{{%todo %}}[Add the link to the example app]{{% /todo %}}
 
 ### 1.1 Typical Use Cases
 
@@ -36,7 +36,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 ### 1.3 Prerequisites
 
 ●	You have an automated task and resource planner account
-{{ % todo %}}[how to set up the account?]{{% /todo %}}
+{{%todo %}}[how to set up the account?]{{% /todo %}}
 
 ### 1.4 Dependencies
 * Community Commons Function Library
@@ -45,7 +45,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 ### 1.5 Demo App
 For a demo app that has been deployed with this widget, see [here]().
 
-{{ % todo %}}[Provide a link to a maintained demo app where the component is used if available]{{% /todo %}}
+{{%todo %}}[Provide a link to a maintained demo app where the component is used if available]{{% /todo %}}
 
 ## 2 Installation
 
@@ -57,11 +57,11 @@ To configure this module, follow these steps:
      
 2. [Configure](/appstore/modules/encryption) the Encryption module.
 
-3. Add the `Settings_Snippet` and `Log_Snippet` to a custom page in a different module. {{ % todo %}}[Where can you find these?]{{% /todo %}}
+3. Add the `Settings_Snippet` and `Log_Snippet` to a custom page in a different module. {{%todo %}}[Where can you find these?]{{% /todo %}}
 
 4. After the deployment, go to the **Settings** page and enter the **Automated planning endpoint**, **username**, and **password**.
 
-     {{ % todo %}}[how to get to the **Settings** page?]{{% /todo %}}
+     {{%todo %}}[how to get to the **Settings** page?]{{% /todo %}}
 
 ![automated-planning-endpoint-username-settings](attachments/automated-task-and-resource-planner/automated-planning-endpoint-username-settings.png)
 
@@ -185,7 +185,7 @@ A time interval. Is used for:
 | ------------- | ------------------------------------------------------------ |
 | `Start`       | The start of the interval                                    |
 | `End`         | The end of the interval                                      |
-| Reference`    | Reference which can be used by  the client to map error messages to client side entities. Not used by the  planner other than validations. |
+| `Reference`   | Reference which can be used by  the client to map error messages to client side entities. Not used by the  planner other than validations. |
 
 #### 4.1.7 Dependency
 

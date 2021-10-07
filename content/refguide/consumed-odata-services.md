@@ -43,9 +43,7 @@ When an external entity is dragged into the domain model, the  **Consumed Odata*
 
 In the **Data Hub** pane, the service and the entity will be shown as consumed both in the search results pane and also in the **Used in your App** section.
 
-If the metadata contract at the specified service endpoint is different to the contract in the current app model, this will be indicated in the **Data Hub** pane search results and  **Properties** pane for the service with a blue **Update** arrow:
-
-{{% image_container width="300" %}}![Data Hub Pane update](attachments/consumed-odata-service/project-pane-update-available.png){{% /image_container %}}
+If the metadata contract at the specified service endpoint is different to the contract in the current app model, this is indicated in the **Data Hub** pane search results and the **Properties** pane for the service with an **Update** icon (a blue arrow).
 
 This means that the consumed service will have to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](consumed-odata-service#updating).
 

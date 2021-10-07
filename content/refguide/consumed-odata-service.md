@@ -42,7 +42,7 @@ The **Service URL** displays the URL of the service endpoint:
 * Click **Select** to select another [constant](/refguide/constants) for the service
 * Click **Show** to display the **Constant** dialog box displaying the service URL or endpoint:
 
-    ![Connection Tab](attachments/consumed-odata-service/consumed-service-constant.png)
+    ![Connection Tab](attachments/consumed-odata-service/constant.png)
 
 ### 2.3 Timeout
 

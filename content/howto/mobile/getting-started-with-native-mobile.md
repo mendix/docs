@@ -10,10 +10,12 @@ tags: ["native", "mobile", "developer", "test"]
 
 To use Mendix Studio Pro's native mobile app capabilities, you can use the [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) app from the Mendix Marketplace. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
-The Blank Native Mobile App also includes four modules:
+The Blank Native Mobile App also includes six modules:
 
 * **Administration** – helps you manage users
-* **Atlas UI Resources package** – allows for app styling
+* **Atlas Core** – allows for app styling
+* **Atlas NativeMobile Content** – allows for app styling
+* **Atlas Web Content** – allows for app styling
 * **Nanoflow Commons** – contains generic useful nanoflow actions
 * **Native Mobile Actions** – contains various native widgets and nanoflow actions that leverage device capabilities
 

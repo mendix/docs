@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
-We recommend using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion) widget is a better alternative.
+We recommend that you use multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion) widget is a better alternative.
 
 ## 2 Features
 
@@ -48,14 +48,13 @@ Drag and drop the Tree Node widget onto the page and use the configuration prope
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
    * Required
-* **Header type** – defines the type of the header
-   * Default: **Text**
-   * When set to **Text**, you can configure the **Header caption** property
-   * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
+*  **Header type** – defines the type of the header
+    * Default: **Text**
+    * When set to **Text**, you can configure the **Header caption** property
+    * When set to **Custom**, a new region becomes available where you can configure the header through other widgets
    
-    {{% alert type="info" %}}
-    The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
-    {{% /alert %}}
+    {{% alert type="info" %}}The **Data source** of the widget can also be used as a data source for the header and the content, regardless of the **Header type**.
+{{% /alert %}}
 
 * **Header caption** – you can enter the header caption in the field or click **Edit** to configure a text template in the **Edit Caption** dialog box
    * Configurable when **Header type** is set to **Text**

@@ -24,23 +24,19 @@ This app service best works with Studio Pro 8 starting with [8.18.5](/releasenot
 
 ## 2 Installation
 
-* Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download the *.mpk* file for **Receipt Processing**
+1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download the *.mpk* file for **Receipt Processing**
+2. To add the Receipt Processing Service to your app in Mendix Studio Pro, follow these steps:
+3.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app, click **Import module package**, and then select *ReceiptProcessing.mpk*.
 
-* To add the Receipt Processing Service to your app in Mendix Studio Pro, follow these steps:
+    ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
 
-    * In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app, click **Import module package**, and then select *ReceiptProcessing.mpk*.
-      
-  ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
-      
-  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
-      
-  {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-      
-* In the **Import Module** dialog box, click **Import**.
-    
-* Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-    
-* Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module.
+    In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+
+    {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+
+4. In the **Import Module** dialog box, click **Import**.
+5. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+6. Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module.
 
 Once imported, the app service is visible in the **App Explorer** or **Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
@@ -50,27 +46,25 @@ Receipt Processing Service is a premium Mendix product that is subject to a purc
 
 ### 3.1  Subscribing to Get Keys
 
-* On the [Receipt Processing Service](https://marketplace.mendix.com/link/component/118390) page, click **Subscribe** to order a subscription.
+1. On the [Receipt Processing Service](https://marketplace.mendix.com/link/component/118390) page, click **Subscribe** to order a subscription.
 
-* Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-* Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-* Click **Receipt Processing Service** to open the subscription details page.
+4. Click **Receipt Processing Service** to open the subscription details page.
 
-* Click **Create Binding Keys**.
+5. Click **Create Binding Keys**.
 
-* Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Receipt Processing Service.
+6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Receipt Processing Service.
 
-* Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**.
+7. Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
-The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
+   {{% alert type="warning" %}}Do not close this page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
 ![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
 
-{{% alert type="warning" %}}Once you close this page, you will not be able to retrieve the keys again.{{% /alert %}}
-
-* **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You will use them later for app deployment.
+8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You will use them later for app deployment. After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
@@ -112,7 +106,7 @@ Next include the [Receipt Processing Service](#extraction-activity) activity in 
 
 10. Copy the **Model Id** and use it in the [Receipt Processing Activity](#extraction-activity).
 
-### 4.2 Extracting the data {#extraction-activity}
+### 4.2 Extracting the Data {#extraction-activity}
 
 1. Drag and drop **Receipt Processing** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
 

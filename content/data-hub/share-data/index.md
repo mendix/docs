@@ -150,12 +150,13 @@ To do this, follow the steps below:
 
 2. Go to the domain model > **Data Hub** pane:
 
-	 {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
+	![data hub pane](attachments/share-data/data-hub-pane-empty.png)
 
 	If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
 	![](attachments/share-data/view-data-hub.png)
 	
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *{yourname}*.
+
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     ![Filter Icon](attachments/share-data/filter-icon.png)
@@ -166,11 +167,11 @@ To do this, follow the steps below:
 
 6. This entity is different from the blue entity container from the first app. This purple colored entity is called an *external entity*. The name of the OData service it is exposed in is displayed above it.
 
-	{{% alert type="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
+    ![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-	Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Data Hub Catalog**.
+    {{% alert type="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
 
-	![external entities](attachments/share-data/external-entities-in-domain-model.png)
+    Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Data Hub Catalog**.
 
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 

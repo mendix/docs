@@ -21,7 +21,7 @@ section [Training a Model](#document-model-training).
 
 ### 1.2 Limitation
 
-* Only images in JPG and JPEG formats are supported for Training a Module
+* Only images in JPG and JPEG formats are supported
 
 ### 1.3 Prerequisites
 
@@ -35,20 +35,20 @@ starting with [9.2](/releasenotes/studio-pro/9.2).
 
 * To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
 
-   * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
-     *IntelligentDocService.mpk*
+  * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
+    *IntelligentDocService.mpk*
 
-     ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
+    ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
 
-     In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+    In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+    {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-   * In the **Import Module** dialog box, click **Import**.
+  * In the **Import Module** dialog box, click **Import**.
 
-   * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+  * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
-   * Open the **App Explorer / Project Explorer** to view the **IntelligentDocService** module.
+  * Open the **App Explorer / Project Explorer** to view the **IntelligentDocService** module.
 
 Once imported, the app service is visible in the **App Explorer / Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
@@ -117,7 +117,6 @@ Next include the Intelligent Document Service activity in your microflow, which 
 
   Wait until **Import File** page opens.
 
-
 * Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
 
   ![Import File page](attachments/intelligent-document/import-file-page.png)
@@ -130,20 +129,22 @@ Next include the Intelligent Document Service activity in your microflow, which 
 
   ![Mark Document page](attachments/intelligent-document/mark-document-dialog-window.png)
 
-   1. Click **Add Markers**. The **Mark Document** dialog window opens.
-   2. On the left side, select an area in the image where text is expected.
-   3. On the right side, enter a **Marker ID** that is used for the area that you select.
-   4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
-   5. Click **Add Marker** to add the marker to the list of **Markers**.
-   6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
-   7. When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog window. The status of the images
-      becomes **Marked**.
+  1. Click **Add Markers**. The **Mark Document** dialog window opens.
+  2. On the left side, select an area in the image where text is expected.
+  3. On the right side, enter a **Marker ID** that is used for the area that you select.
+  4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+  5. Click **Add Marker** to add the marker to the list of **Markers**.
+  6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
+  7. When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog window. The status of the images
+     becomes **Marked**.
 
-  ![](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
-   8. Repeat the step above until you mark all the images. and Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+  ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
+  8. Repeat the step above until you mark all the images. and Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
 Once the **Status** of the model becomes **COMPLETED**, the model is ready to
-use.    ![](attachments/intelligent-document/new-model-status-completed.png)
+use.
+
+![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
 ### 4.2 Getting a JSON Mapping File {#mapping-file}
 
@@ -165,11 +166,11 @@ use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
 * Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in [Intelligent Document Activity](#extraction-activity)
 
-   * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
-     ![json-structure](attachments/intelligent-document/json-structure.png)
+  * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
+    ![json-structure](attachments/intelligent-document/json-structure.png)
 
-   * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
-     ![import-mapping](attachments/intelligent-document/import-mapping.png)
+  * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+    ![import-mapping](attachments/intelligent-document/import-mapping.png)
 
 * Copy the **Model Id** and use it in the  [Intelligent Document Activity](#extraction-activity).
 
@@ -179,7 +180,7 @@ use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
   ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
 
-* Images to be extracted shuold be passed as a list. As shown in above image, create list of image inherited from inherits from `System.Image`.
+* Images to be extracted should be passed as a list. As shown in above image, create list of image inherits from `System.Image`.
 
 * Double-click the **Intelligent Document Service** activity to open the dialog window.
 

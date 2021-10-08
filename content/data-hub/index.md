@@ -91,5 +91,6 @@ Contact your [Mendix Admin](/developerportal/control-center/#company) to find ou
 The *Data Hub Guide* is divided into the following categories:
 
 * [How to Share Data Between Apps](share-data/)
+* [How to Write Data to Another App](write-data/)
 * [Data Hub Catalog](data-hub-catalog/)
 * [Data Hub Landscape](data-hub-landscape/)

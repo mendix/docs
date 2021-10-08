@@ -20,31 +20,29 @@ The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) a
 
 ### 1.3 Prerequisites
 
-This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions
-starting with [9.2](/releasenotes/studio-pro/9.2).
+This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
 
 ## 2 Installation
 
-* Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download _mpk_ file for **Receipt Processing**
+* Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download the *.mpk* file for **Receipt Processing**
 
 * To add the Receipt Processing Service to your app in Mendix Studio Pro, follow these steps:
 
-    * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
-      *ReceiptProcessing.mpk*
+    * In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app, click **Import module package**, and then select *ReceiptProcessing.mpk*.
+      
+  ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
+      
+  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+      
+  {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+      
+* In the **Import Module** dialog box, click **Import**.
+    
+* Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+    
+* Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module.
 
-      ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
-
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
-
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-    * In the **Import Module** dialog box, click **Import**.
-
-    * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-
-    * Open the **App Explorer / Project Explorer** to view the **ReceiptProcessing** module.
-
-Once imported, the app service is visible in the **App Explorer / Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
+Once imported, the app service is visible in the **App Explorer** or **Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuration
 
@@ -76,13 +74,12 @@ The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-* In the **App Explorer / Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1. In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8)**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
-  ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
+![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
-* Double-click on each constant and and enter the respective keys.
-
-* Click **OK** to save the settings.
+2. Double-click on each constant and and enter the respective keys.
+3. Click **OK** to save the settings.
 
 
 ## 4. Usage
@@ -92,51 +89,55 @@ Next include the [Receipt Processing Service](#extraction-activity) activity in 
 
 ### 4.1 Getting a JSON Mapping File {#mapping-file}
 
-* Open the **Document Model Training** app.
-
-* Login in to the app using your **Mendix Account**.
-
-* Click **Environment** to show the **PreTrained Models** list.
-
-* Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
+1. Open the **Document Model Training** app.
+2. Login in to the app using your **Mendix Account**.
+3. Click **Environment** to show the **PreTrained Models** list.
+4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
 
 ![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
 
-* Drag sample images into the box where it says **Drag & Drop Image Here**.
+5. Drag sample images into the box where it says **Drag & Drop Image Here**.
 
-* Click **Download** to get the JSON file.
+6. Click **Download** to get the JSON file.
 
-* Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in the [Receipt Processing Activity](#extraction-activity).
+7. Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in the [Receipt Processing Activity](#extraction-activity).
 
-    * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
-      ![json-structure](attachments/receipt-processing/json-structure.png)
+8. From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
 
-    * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
-      ![import-mapping](attachments/receipt-processing/import-mapping.png)
+   ![json-structure](attachments/receipt-processing/json-structure.png)
 
-* Copy the **Model Id** and use it in the [Receipt Processing Activity](#extraction-activity).
+9. From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+
+   ![import-mapping](attachments/receipt-processing/import-mapping.png)
+
+10. Copy the **Model Id** and use it in the [Receipt Processing Activity](#extraction-activity).
 
 ### 4.2 Extracting the data {#extraction-activity}
 
-* Drag and drop **Receipt Processing** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
+1. Drag and drop **Receipt Processing** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
 
-  ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
+![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
-* Images to be extracted should be passed as a list. As shown in above image, create list of image from inherits from `System.Image`.
+2. Images to be extracted should be passed as a list. As shown in above image, create list of image from inherits from `System.Image`.
 
-* Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog window.
+3. Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog window.
 
-  ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
+![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
 
-* Click **Edit** to Select an **Image List** which inherits from `System.Image`.
+4. Click **Edit** to Select an **Image List** which inherits from `System.Image`.
 
-* In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
+5. In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
 
-  {{% alert type="info" %}} For details on how to get the JSON mapping fileand create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
+   {{% alert type="info" %}} For details on how to get the JSON mapping fileand create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
-* Click **OK** to save the changes and close the dialog window.
+6. Click **OK** to save the changes and close the dialog window.
 
 ### 4.3 Checking Statistics Using the Service Dashboard
 
-The **Usage** dashboard shows the real-time statistics about the usage of an app service.
-Log into the Marketplace. Go to **My Marketplace** to find Service Dashboard. More info at  [Subscriptions](/appstore/general/app-store-overview#subscriptions)
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
+
+1. Log into the Marketplace.
+
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+3. Click **Receipt Processing Service** to open the subscription details page. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

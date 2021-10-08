@@ -22,4 +22,3 @@ For details on participating in the Mendix Vendor program, see [How to Sell Your
 * [Intelligent Document](intelligent-document) – extracts text and key value pairs from documents
 * [Receipt Processing](receipt-processing) – automates the processing of receipts in bulk, without additional document training
 * [Invoice Processing](invoice-processing) – automates the processing of invoices almost immediately in bulk, without any document training
-

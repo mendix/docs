@@ -128,15 +128,15 @@ Next include the intelligent document service activity in your microflow, which 
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
     5. Click **Add Marker** to add the marker to the list of **Markers**.
     6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
-    7. When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog window. The status of the images becomes **Marked**.
+    7.  When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog window. The status of the images becomes **Marked**.
 
-    ![](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
+        ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
     
     8. Repeat the step above until you mark all the images. and Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
 Once the **Status** of the model becomes **COMPLETED**, the model is ready to use. 
 
-![](attachments/intelligent-document/new-model-status-completed.png)
+![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
 ### 4.2 Getting a JSON Mapping File {#mapping-file}
 
@@ -163,7 +163,7 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
    ![json-structure](attachments/intelligent-document/json-structure.png)
 
    2.  Use the JSON file and convert schema structure to be used by Import Mapping.
-   3.  From **App Explorer** or **Project Explorer**, create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+   3.  From **App Explorer** or **Project Explorer**, create [Import Mapping](/refguide/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
 
       ![import-mapping](attachments/intelligent-document/import-mapping.png)
 

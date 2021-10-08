@@ -12,8 +12,13 @@ The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) a
 
 * Pre-built ready-to-implement receipt document models
 * Extract data from images of receipts in bulk and map data to entities
+* The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Prerequisites
+### 1.2 Limitation
+
+* Only images in JPG and JPEG formats are supported
+
+### 1.3 Prerequisites
 
 This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions
 starting with [9.2](/releasenotes/studio-pro/9.2).
@@ -24,20 +29,20 @@ starting with [9.2](/releasenotes/studio-pro/9.2).
 
 * To add the Receipt Processing Service to your app in Mendix Studio Pro, follow these steps:
 
-   * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
-     *ReceiptProcessing.mpk*
+    * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
+      *ReceiptProcessing.mpk*
 
-     ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
+      ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
 
-     In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-   * In the **Import Module** dialog box, click **Import**.
+    * In the **Import Module** dialog box, click **Import**.
 
-   * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+    * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
 
-   * Open the **App Explorer / Project Explorer** to view the **ReceiptProcessing** module.
+    * Open the **App Explorer / Project Explorer** to view the **ReceiptProcessing** module.
 
 Once imported, the app service is visible in the **App Explorer / Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
@@ -83,7 +88,7 @@ The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 ## 4. Usage
 
 To use **Receipt Processing Service**, firstly using sample receipt, get [JSON mapping file and create Import Mapping](#mapping-file).
-Next include the Receipt Processing Service activity in your microflow, which will accept receipts to extract and Import Mapping.
+Next include the [Receipt Processing Service](#extraction-activity) activity in your microflow, which will accept receipts to extract and Import Mapping.
 
 ### 4.1 Getting a JSON Mapping File {#mapping-file}
 
@@ -103,11 +108,11 @@ Next include the Receipt Processing Service activity in your microflow, which wi
 
 * Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in the [Receipt Processing Activity](#extraction-activity).
 
-   * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
-     ![json-structure](attachments/receipt-processing/json-structure.png)
+    * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
+      ![json-structure](attachments/receipt-processing/json-structure.png)
 
-   * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
-     ![import-mapping](attachments/receipt-processing/import-mapping.png)
+    * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+      ![import-mapping](attachments/receipt-processing/import-mapping.png)
 
 * Copy the **Model Id** and use it in the [Receipt Processing Activity](#extraction-activity).
 
@@ -117,7 +122,7 @@ Next include the Receipt Processing Service activity in your microflow, which wi
 
   ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
-* Images to be extracted shuold be passed as a list. As shown in above image, create list of image inherited from inherits from `System.Image`.
+* Images to be extracted should be passed as a list. As shown in above image, create list of image from inherits from `System.Image`.
 
 * Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog window.
 

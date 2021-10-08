@@ -83,7 +83,7 @@ The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-* In the **App Explorer / Project Explorer**, go to **IntelligentDocService** > **Constants**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+* In the **App Explorer / Project Explorer**, go to **IntelligentDocService** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/intelligent-document/configurations-keys.png)
 
@@ -92,6 +92,9 @@ The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 * Click **OK** to save the settings.
 
 ## 4. Usage
+
+To make most out of **Intelligent Document Service**, firstly create trained model using Document Model Training app. [Train a model](#document-model-training)  using sample images by marking specific areas in images.
+Next include the Intelligent Document Service activity in your microflow, which will accept a trained model input, images to extract and [extract the data](#extraction-activity) from images in bulk and [map the data](#mapping-file) to entities.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -152,7 +155,7 @@ use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
 * Select a model that has the status **COMPLETED**.
 
-* Click **JSON Mapping File**. The **Sample Extraction** dialog window opens.
+* Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
 
 ![Sample Extraction dialog window](attachments/intelligent-document/sample-extraction-dialog-window.png)
 
@@ -160,13 +163,23 @@ use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
 * Click **Download** to get the JSON file.
 
-* Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in [Intelligent Document Model Activity](#extraction-activity)
+* Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in [Intelligent Document Activity](#extraction-activity)
 
-* Copy the **Model Id** and use it in the  [Intelligent Document Model Activity](#extraction-activity).
+  * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
+    ![json-structure](attachments/intelligent-document/json-structure.png)
 
-### 4.3 Extracting a data using Trained Document Model {#extraction-activity}
+  * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+     ![import-mapping](attachments/intelligent-document/import-mapping.png)
 
-* Drag and drop **Intelligent Document Service** activity from the **Document Data Capture Service** category in the **Toolbox**.
+* Copy the **Model Id** and use it in the  [Intelligent Document Activity](#extraction-activity).
+
+### 4.3 Extracting the data using Trained Document Model {#extraction-activity}
+
+* Drag and drop **Intelligent Document Service** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
+
+  ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
+
+* Images to be extracted shuold be passed as a list. As shown in above image, create list of image inherited from inherits from `System.Image`.
 
 * Double-click the **Intelligent Document Service** activity to open the dialog window.
 
@@ -176,11 +189,11 @@ use.    ![](attachments/intelligent-document/new-model-status-completed.png)
 
    {{% alert type="info" %}} After the training of a model is **COMPLETED** in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). {{% /alert %}}
 
-* Click **Edit** to Select an **Image List** which inherits from `System.Image`.
+* Click **Edit** to Select an **Image List** which is list of images inherits from `System.Image`.
 
 * In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
 
-   {{% alert type="info" %}} For details on how to get the JSON mapping file, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
+   {{% alert type="info" %}} For details on how to get the JSON mapping file and create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
 * Click **OK** to save the changes and close the dialog window.
 

@@ -6,89 +6,132 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built ready-to-implement trained document model. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
+The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built ready-to-implement trained document model. It is powered by **ABBYY&reg;**, extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
 
-### 1.2 Features
+### 1.1 Features
 
+* Pre-built ready-to-implement receipt document models
 * Extract data from images of receipts in bulk and map data to entities
 
-### 1.3 Limitation
+### 1.2 Prerequisites
 
-* Only supports images in JPG and JPEG formats
+This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions
+starting with [9.2](/releasenotes/studio-pro/9.2).
 
 ## 2 Installation
 
-1. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the Receipt Processing module into your app.
+* Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download _mpk_ file for **Receipt Processing**
 
-2. In the **Toolbox**, drag the **Receipt Processing Service** activity from the **Document Data Capture Services** category into your microflow.
+* To add the Receipt Processing Service to your app in Mendix Studio Pro, follow these steps:
+
+   * In the **App Explorer / Project Explorer**, right-click the app, click **Import module package**, and then select
+     *ReceiptProcessing.mpk*
+
+     ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
+
+     In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+
+     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+
+   * In the **Import Module** dialog box, click **Import**.
+
+   * Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+
+   * Open the **App Explorer / Project Explorer** to view the **ReceiptProcessing** module.
+
+Once imported, the app service is visible in the **App Explorer / Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuration
 
-1. Double-click the **Receipt Processing Servic**e activity to open the **Invoice Processing** dialog window.
+Receipt Processing Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Receipt Processing Service, you need to get a valid combination of certain keys and configure them as constants in the module.
 
-	![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
+### 3.1  Subscribing to Get Keys
 
-2. Select the **Model Id** of your model. You can also click **Edit** it.
+* On the [Receipt Processing Service](https://marketplace.mendix.com/link/component/118390) page, click **Subscribe** to order a subscription.
 
-   {{% alert type="info" %}}
-   After the training of a model is **COMPLETED **in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). 
-   {{% /alert %}}
+* Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-3. Select an **Image List** which inherits from `System.Image`. You can also click **Edit** to edit it.
+* Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. In the **Mapping** field, **Select** a **Mapping** file to define how extracted data is mapped.
+* Click **Receipt Processing Service** to open the subscription details page.
 
-   {{% alert type="info" %}}
-   For details on how to get a JSON mapping file, see [Getting a JSON Mapping File](#mapping-file).
-   {{% /alert %}}
+* Click **Create Binding Keys**.
 
-5. If you want to execute the extraction action in a task queue, select **Execute this Java action in a Task Queue**, then click **Select** and select a task queue.
+* Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Receipt Processing Service.
 
-   {{% alert type="info" %}}
-   For more information, see [Task Queue](/refguide/task-queue) (for Mendix version 9.0.3 and above) or [Process Queue](/appstore/modules/process-queue) (for Mendix version below 9.0.3).
-   {{% /alert %}}
+* Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**.
 
-6. Click **OK** to save the changes and close the dialog window.
+The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 
-7. To configure credential for the **Receipt Processing Service** activity, add the following constants with values in your Mendix app:
-   * Access_Key
-   * Encryption_Key
-   * Secret_Key
+![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
 
-     ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
+{{% alert type="warning" %}}Once you close this page, you will not be able to retrieve the keys again.{{% /alert %}}
 
-   {{% alert type="info" %}}
-   Credentials are generated when you create binding keys on Marketplace.
-   {{% /alert %}}
+* **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You will use them later for app deployment.
 
-## 4 Training a Document Model {#document-model-training}
+### 3.2 Configuring Keys for Application Deployment
 
-1. Open the **Document Model Training** app.
+* In the **App Explorer / Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
-2. Login in to the app using your **Mendix Account**.
+  ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
-3. Click **Environment**. The **Existing Models** list appears.
+* Double-click on each constant and and enter the respective keys.
 
-    ![Existing Models list](attachments/receipt-processing/existing-models-list.png)
+* Click **OK** to save the settings.
 
-    If the **Status** of a model is **COMPLETED**, then you can use its **Model Id** in the **Intelligent Document Service** activity.
 
-## 5 Getting a JSON Mapping File {#mapping-file} 
+## 4. Usage
 
-1. Open the **Document Model Training** app.
+To use **Receipt Processing Service**, firstly using sample receipt, get [JSON mapping file and create Import Mapping](#mapping-file).
+Next include the Receipt Processing Service activity in your microflow, which will accept receipts to extract and Import Mapping.
 
-2. Login in to the app using your **Mendix Account**.
+### 4.1 Getting a JSON Mapping File {#mapping-file}
 
-3. Click **Environment** to show the **Existing Models** list.
+* Open the **Document Model Training** app.
 
-4. Select a model that has the status **COMPLETED**.
+* Login in to the app using your **Mendix Account**.
 
-5. Click **JSON Mapping File**. The **Sample Extraction** dialog window opens.
+* Click **Environment** to show the **PreTrained Models** list.
 
-    ![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
+* Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
 
-6. Drag sample images into the box where it says **<Drag & Drop Image Here. Supports .jpg .jpeg.>**.
-  
-7. Click **Download** to get the JSON file. 
+![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
 
-8. Copy the **Model Id** and use it in the **Receipt Processing Service** activity.
+* Drag sample images into the box where it says **Drag & Drop Image Here**.
+
+* Click **Download** to get the JSON file.
+
+* Use this JSON file to create [JSON Mapping](/refguide8/mapping-documents) which will be used in the [Receipt Processing Activity](#extraction-activity).
+
+   * From **App Explorer / Project Explorer**, Create **[JSON structure](/refguide8/json-structures)**. Use JSON file and convert schema structure to be used by Import Mapping.
+     ![json-structure](attachments/receipt-processing/json-structure.png)
+
+   * From **App Explorer / Project Explorer**, Create [Import Mapping](/refguide8/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+     ![import-mapping](attachments/receipt-processing/import-mapping.png)
+
+* Copy the **Model Id** and use it in the [Receipt Processing Activity](#extraction-activity).
+
+### 4.2 Extracting the data {#extraction-activity}
+
+* Drag and drop **Receipt Processing** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
+
+  ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
+
+* Images to be extracted shuold be passed as a list. As shown in above image, create list of image inherited from inherits from `System.Image`.
+
+* Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog window.
+
+  ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
+
+* Click **Edit** to Select an **Image List** which inherits from `System.Image`.
+
+* In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
+
+  {{% alert type="info" %}} For details on how to get the JSON mapping fileand create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
+
+* Click **OK** to save the changes and close the dialog window.
+
+### 4.3 Checking Statistics Using the Service Dashboard
+
+The **Usage** dashboard shows the real-time statistics about the usage of an app service.
+Log into the Marketplace. Go to **My Marketplace** to find Service Dashboard. More info at  [Subscriptions](/appstore/general/app-store-overview#subscriptions)

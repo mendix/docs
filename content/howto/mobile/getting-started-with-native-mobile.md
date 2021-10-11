@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
 
-For details on making a Mendix app using the Blank Native Mobile App, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module containing widgets and nanoflow actions for native mobile apps. For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Blank Native Mobile App, download the Make It Native 9 app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000). This app template includes the latest version of Atlas UI, as well as the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module containing widgets and nanoflow actions for native mobile apps. For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App 
 
@@ -46,7 +46,7 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 #### 3.2.1 Downloading for Android
 
-To view your app on an Android device (or emulator), you must download and install the Make It Native app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
+To view your app on an Android device (or emulator), you must download and install the Make It Native 9 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9):
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 

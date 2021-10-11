@@ -15,11 +15,11 @@ The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) a
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Technical Provider
-OCR technology used by **Receipt Processing** powered by **ABBYY&reg;**
+OCR technology used by **Receipt Processing** is powered by **ABBYY&reg;**
 
 ### 1.3 Limitation
 
-* Only images in JPG and JPEG formats are supported
+* Currently only supports images in JPG and JPEG formats
 
 ### 1.4 Prerequisites
 
@@ -65,7 +65,7 @@ Receipt Processing Service is a premium Mendix product that is subject to a purc
 
    {{% alert type="warning" %}}Do not close this page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
-![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
+    ![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
 
 8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You will use them later for app deployment. After you copy the keys, you can close the page.
 
@@ -73,7 +73,7 @@ Receipt Processing Service is a premium Mendix product that is subject to a purc
 
 1. In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8)**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
-![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
+    ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
 2. Double-click on each constant and and enter the respective keys.
 3. Click **OK** to save the settings.
@@ -86,12 +86,15 @@ Next include the [Receipt Processing Service](#extraction-activity) activity in 
 
 ### 4.1 Getting a JSON Mapping File {#mapping-file}
 
-1. Open the **Document Model Training** app.
+1. Open the **Document Model Training** application.
+
+    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
+
 2. Login in to the app using your **Mendix Account**.
 3. Click **Environment** to show the **PreTrained Models** list.
 4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
 
-![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
+    ![Sample Extraction dialog window](attachments/receipt-processing/sample-extraction-dialog-window.png)
 
 5. Drag sample images into the box where it says **Drag & Drop Image Here**.
 
@@ -111,23 +114,31 @@ Next include the [Receipt Processing Service](#extraction-activity) activity in 
 
 ### 4.2 Extracting the Data {#extraction-activity}
 
+To populate the extracted data into entity and further process it with [Event handlers](/refguide8/event-handlers) with the help of [Import Mapping](/refguide/mapping-documents#2-import-mappings).
+Below steps will help to get JSON which can be used while creating Import Mapping.
+
 1. Drag and drop **Receipt Processing** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
 
-![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
+    ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
 2. Images to be extracted should be passed as a list. As shown in above image, create list of image from inherits from `System.Image`.
 
 3. Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog window.
 
-![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
+    ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-window.png)
 
 4. Click **Edit** to Select an **Image List** which inherits from `System.Image`.
 
-5. In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
+5. In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.  This configuration will populate the extracted data into entity we mapped in Import Mapping.
 
    {{% alert type="info" %}} For details on how to get the JSON mapping fileand create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
+
 6. Click **OK** to save the changes and close the dialog window.
+
+Optionally for further automation, add [Event handlers](/refguide8/event-handlers) on those entity where we are populating the extracted data.
+You can call your own Microflow to process (modify, validate, pass data to next steps etc.) the extracted data when inserted into entity, which will allow you to achieve full end to end automation.
+To create event on your entity mapped in Import Mapping, please refer [Event handlers](/refguide8/event-handlers).
 
 ### 4.3 Checking Statistics Using the Service Dashboard
 

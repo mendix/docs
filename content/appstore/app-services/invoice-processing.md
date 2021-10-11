@@ -15,11 +15,11 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Technical Provider
-OCR technology used by **Invoice Processing** powered by **ABBYY&reg;**
+OCR technology used by **Invoice Processing** is powered by **ABBYY&reg;**
 
 ### 1.3 Limitation
 
-* Only supports images in JPG and JPEG formats
+* Currently only supports images in JPG and JPEG formats
 
 ### 1.4 Prerequisites
 
@@ -90,23 +90,25 @@ Next include the [Invoice Processing Service](#extraction-activity) activity in 
 
 ### 4.1 Creating a Document Model {#document-model-creating}
 
-1. Open the **Document Model Training** application. Get the URL from the [Service Dashboard](https://marketplace.mendix.com/link/component/118388) page.
+1. Open the **Document Model Training** application.
+
+    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
 
 2. Login in to the app using your **Mendix Account**.
 
-3.  Click **Environment** to show the **Existing Models** list.
+3. Click **Environment** to show the **Existing Models** list.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
 
     {{% alert type="info" %}} Model status should be **COMPLETED** to use its **Model Id**. {{% /alert %}}
 
-4.  To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog window opens.
+4. To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog window opens.
 
     ![Create Invoice Model dialog window](attachments/invoice-processing/create-invoice-model-dialog-window.png)
 
 5. Enter a unique **Model Name**, select a **Region**, and then click **Create Model**.
 
-6.  Wait until **Invoice Model** page opens.
+6. Wait until **Invoice Model** page opens.
 
     ![Create Invoice Model page](attachments/invoice-processing/create-invoice-model-page.png)
 
@@ -118,7 +120,12 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 ### 4.2 Getting a JSON Mapping File {#mapping-file}
 
-1. Open the **Document Model Training** app.
+To populate the extracted data into entity and further process it with [Event handlers](/refguide8/event-handlers) with the help of [Import Mapping](/refguide/mapping-documents#2-import-mappings).
+Below steps will help to get JSON which can be used while creating Import Mapping.
+
+1. Open the **Document Model Training** application.
+
+    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
 
 2. Login in to the app using your **Mendix Account**.
 
@@ -162,11 +169,15 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 5. Click **Edit** to Select an **Image List** which is list of images inherits from `System.Image`.
 
-6.  In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
+6.  In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.  This configuration will populate the extracted data into entity we mapped in Import Mapping.
 
     {{% alert type="info" %}} For details on how to get the JSON mapping file and create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
 7. Click **OK** to save the changes and close the dialog window.
+
+Optionally for further automation, add [Event handlers](/refguide8/event-handlers) on those entity where we are populating the extracted data.
+You can call your own Microflow to process (modify, validate, pass data to next steps etc.) the extracted data when inserted into entity, which will allow you to achieve full end to end automation.
+To create event on your entity mapped in Import Mapping, please refer [Event handlers](/refguide8/event-handlers).
 
 ### 4.4 Checking Statistics Using the Service Dashboard
 

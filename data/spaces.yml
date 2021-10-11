@@ -218,13 +218,6 @@ data-hub:
     - "Share Data Between Apps"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
-solutions:
-  space: "Solutions Guide"
-  priority: false
-  menu_categories:
-    - "General"
-    - "Development"
-    - "Deployment"
 product-naming:
   space: "Mendix Product Naming Guide"
   priority: false

@@ -25,11 +25,14 @@ If you are using your own private registry, follow the [Migrating to Your Own Re
 to migrate new component versions of Mendix for Private Cloud into your private registry.
 
 {{% alert type="warning" %}}
-Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+If you're using Mendix for Private Cloud Operator v1.\*.\* and are planning to upgrade to Kubernetes 1.22, follow these steps first:
 
-This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+1. Upgrade your cluster to Kubernetes 1.21
+2. Upgrade all namespaces in your cluster to Mendix for Private Cloud Operator v2.\*.\*
+3. Validate that Mendix for Private Cloud is working correctly in all namespaces
 
-Mendix for Private Cloud has not been fully validated to support Kubernetes 1.22.
+Kubernetes 1.22 [deprecated](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/) multiple APIs;
+upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources such as Ingresses to be compatible with APIs available in Kubernetes 1.22.
 {{% /alert %}}
 
 ## 2 Prerequisites

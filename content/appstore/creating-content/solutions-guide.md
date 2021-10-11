@@ -25,7 +25,7 @@ Customers often require more from a solution than it supports out-of-the-box. Wh
 
 ![Adaptive Solution Architecture](attachments/adaptive-solution-architecture.png)
 
-Read more on [solution types](solution-types) in the Development section.
+Read more on [adaptive solutions](adaptive-solution-architecture) in the Development section.
 
 ## 3 Useful resources
 

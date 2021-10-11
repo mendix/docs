@@ -1,6 +1,6 @@
 ---
 title: "Version Control"
-category: "Development"
+parent: "development"
 description: "Best practices for version control of Adaptive Solutions"
 tags: ["adaptive solutions", "version control"]
 ---

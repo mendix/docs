@@ -1,6 +1,6 @@
 ---
 title: "Solution Vendor and Startup Programs"
-category: "General"
+parent: "general"
 description: "Mendix supports solution developers through the Solution Vendor and Startup Programs"
 tags: [ "solutions", "vendors", "adaptive solutions", "prescriptive solutions" ]
 ---

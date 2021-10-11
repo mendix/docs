@@ -1,6 +1,6 @@
 ---
 title: "Architecting Adaptive Solutions"
-category: "Development"
+parent: "development"
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---

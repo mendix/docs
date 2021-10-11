@@ -1,6 +1,6 @@
 ---
 title: "IP Protection"
-category: "Development"
+parent: "development"
 description: "Protect intellectual property in Solutions, App Services & Connectors"
 tags: ["adaptive solutions", "ip protection"]
 ---

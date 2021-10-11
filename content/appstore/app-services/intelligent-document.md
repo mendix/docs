@@ -19,7 +19,7 @@ section [Training a Model](#document-model-training).
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Technical Provider
-* OCR technology used by **Intelligent Document Service** is powered by **ABBYY&reg;**
+* OCR technology used by Intelligent Document Service is powered by ABBYY&reg;.
 
 ### 1.3 Limitation
 
@@ -31,23 +31,25 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
 ## 2 Installation
 
-1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118388) and download the *.mpk*  file for Intelligent Document Service.
+1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118388) and download the *.mpk* file for Intelligent Document Service.
 
-2.  To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
+2. To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
 
-    1.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
+   1.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app.
 
-        ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
+   2. Click **Import module package** and then select *SendEmailModule.mpk*. 
 
-        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+      ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-    2. In the **Import Module** dialog box, click **Import**. 
+      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+   3. In the **Import Module** dialog box, click **Import**. 
 
-    4. Open the **App Explorer** or **Project Explorer** to view the **IntelligentDocService** module.
+   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
+
+   5. Open the **App Explorer** or **Project Explorer** to view the **IntelligentDocService** module.
 
 Once imported, the app service is visible in the **App Explorer** or **Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
@@ -63,7 +65,7 @@ Intelligent Document Service is a premium Mendix product that is subject to a pu
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Intelligent Document Service** to open the subscription details page.
+4. Click **Intelligent Document Service** to open [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
 
 5. Click **Create Binding Keys**.
 
@@ -71,11 +73,13 @@ Intelligent Document Service is a premium Mendix product that is subject to a pu
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates the **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
-    {{% alert type="warning" %}}Do not close this page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
+    {{% alert type="warning" %}}Do not close the following page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/intelligent-document/binding-key-generation.png)
 
-8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You will use them later for app deployment. After you copy the keys, you can close the page.
+8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment.
+
+After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
@@ -89,27 +93,25 @@ Intelligent Document Service is a premium Mendix product that is subject to a pu
 
 ## 4. Usage
 
-To make most out of **Intelligent Document Service**, firstly create a trained model using the Document Model Training app. [Train a model](#document-model-training) using sample images by marking specific areas in images.
-
-Next include the intelligent document service activity in your microflow, which will accept a trained model input, images to extract and [extract the data](#extraction-activity) from images in bulk and [map the data](#mapping-file) to entities.
+To make the most of **Intelligent Document Service**, first [train a model](#document-model-training) using sample images and then include the intelligent document service activity in your microflow. This microflow accepts the trained model input and images to extract, and then [extracts the data](#extraction-activity) from images in bulk and [maps the data](#mapping-file) to entities.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-1. Open the **Document Model Training** application. 
+1. Open the [Document Model Training application](https://datacapture.appservices.mendix.com/). 
 
-    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
+    {{% alert type="info" %}} You can also open the Document Model Training application by clicking the **Manage Instance** button on the [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
 
-2. Login in to the app using your **Mendix Account**.
+2. Log in to the app using your **Mendix Account**.
 
 3. Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document/existing-models-list.png)
 
-    {{% alert type="info" %}} Model status should be **COMPLETED** to use its **Model Id**. {{% /alert %}}
+    {{% alert type="info" %}} You can use the **Model Id** of a model only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
-4. To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog window opens.
+4. To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
-    ![Create New Model dialog window](attachments/intelligent-document/create-new-model-dialog-window.png)
+    ![Create New Model dialog box](attachments/intelligent-document/create-new-model-dialog-box.png)
 
 5. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
@@ -123,21 +125,27 @@ Next include the intelligent document service activity in your microflow, which 
 
     ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
 
-9. To mark an image, perform the following steps:
+9.  To mark an image, perform the following steps:
 
-    ![Mark Document page](attachments/intelligent-document/mark-document-dialog-window.png)
-
-    1. Click **Add Markers**. The **Mark Document** dialog window opens.
+    1. Click **Add Markers**. The **Mark Document** dialog box opens.
+    
+       ![Mark Document page](attachments/intelligent-document/mark-document-dialog-box.png)
+       
     2. On the left side, select an area in the image where text is expected.
+    
     3. On the right side, enter a **Marker ID** that is used for the area that you select.
+    
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+    
     5. Click **Add Marker** to add the marker to the list of **Markers**.
+    
     6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
-    7.  When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog window. The status of the images becomes **Marked**.
-
+    
+    7.  When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+    
         ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
     
-    8. Repeat the step above until you mark all the images. and Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+    8. Repeat the step above until you mark all the images and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
 Once the **Status** of the model becomes **COMPLETED**, the model is ready to use. 
 
@@ -145,22 +153,23 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 ### 4.2 Getting a JSON Mapping File {#mapping-file}
 
-To populate the extracted data into entity and further process it with [Event handlers](/refguide8/event-handlers) with the help of [Import Mapping](/refguide/mapping-documents#2-import-mappings).
-Below steps will help to get JSON which can be used while creating Import Mapping.
+Use [import mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity and further process it with [event handlers](/refguide/event-handlers). 
 
-1. Open the **Document Model Training** application.
+To get the JSON mapping file that can be used to create import mapping, perform the following steps:
 
-    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
+1. Open the [Document Model Training application](https://datacapture.appservices.mendix.com/). 
 
-2. Login in to the app using your **Mendix Account**.
+    {{% alert type="info" %}} You can also open the Document Model Training application by clicking the **Manage Instance** button on the [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
+
+2. Log in to the app using your **Mendix Account**.
 
 3. Click **Environment** to show the **Existing Models** list.
 
 4. Select a model that has the status **COMPLETED**.
 
-5. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
+5. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-    ![Sample Extraction dialog window](attachments/intelligent-document/sample-extraction-dialog-window.png)
+    ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
 
 6. Drag sample images into the box where it says **Drag & Drop Image Here**.
 
@@ -187,9 +196,9 @@ Below steps will help to get JSON which can be used while creating Import Mappin
 
 2. Create a list of image inherited from inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
 
-3. Double-click the **Intelligent Document Service** activity to open the dialog window.
+3. Double-click the **Intelligent Document Service** activity to open the dialog box.
 
-   ![Intelligent Document Service dialog window](attachments/intelligent-document/intelligent-document-service-dialog-window.png)
+   ![Intelligent Document Service dialog box](attachments/intelligent-document/intelligent-document-service-dialog-box.png)
 
 4. Click **Edit** to enter the **Model Id** of your model.
 
@@ -201,7 +210,7 @@ Below steps will help to get JSON which can be used while creating Import Mappin
 
    {{% alert type="info" %}} For details on how to get the JSON mapping file and create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
-7. Click **OK** to save the changes and close the dialog window.
+7. Click **OK** to save the changes and close the dialog box.
 
 Optionally for further automation, add [Event handlers](/refguide8/event-handlers) on those entity where we are populating the extracted data.
 You can call your own Microflow to process (modify, validate, pass data to next steps etc.) the extracted data when inserted into entity, which will allow you to achieve full end to end automation.

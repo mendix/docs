@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built ready-to-implement trained document model. It is powered by **ABBYY&reg;**, extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
+The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built ready-to-implement trained document model. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
 
 ### 1.1 Features
 
@@ -14,11 +14,14 @@ The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) a
 * Extract data from images of receipts in bulk and map data to entities
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Limitation
+### 1.2 Technical Provider
+OCR technology used by **Receipt Processing** powered by **ABBYY&reg;**
+
+### 1.3 Limitation
 
 * Only images in JPG and JPEG formats are supported
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
 

@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-With the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service, you can automate the processing of invoices in bulk almost immediately, without training any documents. This app service powered by **ABBYY&reg;**, supports invoices in the European Union and the United States.
+With the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service, you can automate the processing of invoices in bulk almost immediately, without training any documents. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 
@@ -14,11 +14,14 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 * Supports United States and European Union region
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Limitation
+### 1.2 Technical Provider
+OCR technology used by **Invoice Processing** powered by **ABBYY&reg;**
+
+### 1.3 Limitation
 
 * Only supports images in JPG and JPEG formats
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
 

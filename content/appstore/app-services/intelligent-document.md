@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies powered by **ABBYY&reg;** to extract text and key value pairs from documents.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from documents.
 
 To use the app service, you need to include the intelligent document service activity in your microflow. This activity expects a
 trained model input, which you create using the Document Model Training app. For more information, see the
@@ -18,11 +18,14 @@ section [Training a Model](#document-model-training).
 * Train a model using sample images by marking specific areas in images
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Limitation
+### 1.2 Technical Provider
+OCR technology used by **Intelligent Document Service** powered by **ABBYY&reg;**
+
+### 1.3 Limitation
 
 * Only images in JPG and JPEG formats are supported for training a model
 
-### 1.3 Prerequisites
+### 1.4 Prerequisites
 
 This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
 

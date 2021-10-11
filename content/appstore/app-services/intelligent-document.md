@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies powered by **ABBYY&reg;** to extract text and key value pairs from documents.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from documents.
 
 To use the app service, you need to include the intelligent document service activity in your microflow. This activity expects a
 trained model input, which you create using the Document Model Training app. For more information, see the
@@ -18,11 +18,14 @@ section [Training a Model](#document-model-training).
 * Train a model using sample images by marking specific areas in images
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Limitation
+### 1.2 Technical Provider
+* OCR technology used by **Intelligent Document Service** is powered by **ABBYY&reg;**
 
-* Only images in JPG and JPEG formats are supported for training a model
+### 1.3 Limitation
 
-### 1.3 Prerequisites
+* Currently only supports images in JPG and JPEG formats
+
+### 1.4 Prerequisites
 
 This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
 
@@ -92,17 +95,19 @@ Next include the intelligent document service activity in your microflow, which 
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-1. Open the [Document Model Training](https://datacapture.appservices.mendix.com/) application.
+1. Open the **Document Model Training** application. 
+
+    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
 
 2. Login in to the app using your **Mendix Account**.
 
-3.  Click **Environment** to show the **Existing Models** list.
+3. Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document/existing-models-list.png)
 
     {{% alert type="info" %}} Model status should be **COMPLETED** to use its **Model Id**. {{% /alert %}}
 
-4.  To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog window opens.
+4. To create and train a new model, click **Create New Model** on the page. The **Create New Model** dialog window opens.
 
     ![Create New Model dialog window](attachments/intelligent-document/create-new-model-dialog-window.png)
 
@@ -110,15 +115,15 @@ Next include the intelligent document service activity in your microflow, which 
 
 6. Wait until **Import File** page opens.
 
-7.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
+7. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
 
     ![Import File page](attachments/intelligent-document/import-file-page.png)
 
-8.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
+8. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
 
     ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
 
-9.  To mark an image, perform the following steps:
+9. To mark an image, perform the following steps:
 
     ![Mark Document page](attachments/intelligent-document/mark-document-dialog-window.png)
 
@@ -140,7 +145,12 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 ### 4.2 Getting a JSON Mapping File {#mapping-file}
 
-1. Open the **Document Model Training** app.
+To populate the extracted data into entity and further process it with [Event handlers](/refguide8/event-handlers) with the help of [Import Mapping](/refguide/mapping-documents#2-import-mappings).
+Below steps will help to get JSON which can be used while creating Import Mapping.
+
+1. Open the **Document Model Training** application.
+
+    {{% alert type="info" %}} You can access it from `Manage Instance` button on the **Service Management Dashboard**. See [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
 
 2. Login in to the app using your **Mendix Account**.
 
@@ -148,7 +158,7 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 4. Select a model that has the status **COMPLETED**.
 
-5.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
+5. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog window opens.
 
     ![Sample Extraction dialog window](attachments/intelligent-document/sample-extraction-dialog-window.png)
 
@@ -160,7 +170,7 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
    1.  From **App Explorer** (in Studio Pro 9) or **Project Explorer ** (in Studio Pro 8), right-click **JSON**, and from the pop-up menu, select **Add other** > [JSON structure](/refguide8/json-structures).
 
-   ![json-structure](attachments/intelligent-document/json-structure.png)
+       ![json-structure](attachments/intelligent-document/json-structure.png)
 
    2.  Use the JSON file and convert schema structure to be used by Import Mapping.
    3.  From **App Explorer** or **Project Explorer**, create [Import Mapping](/refguide/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
@@ -177,7 +187,7 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
 2. Create a list of image inherited from inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
 
-3.  Double-click the **Intelligent Document Service** activity to open the dialog window.
+3. Double-click the **Intelligent Document Service** activity to open the dialog window.
 
    ![Intelligent Document Service dialog window](attachments/intelligent-document/intelligent-document-service-dialog-window.png)
 
@@ -185,13 +195,17 @@ Once the **Status** of the model becomes **COMPLETED**, the model is ready to us
 
    {{% alert type="info" %}} After the training of a model is **COMPLETED** in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). {{% /alert %}}
 
-5.  Click **Edit** to select an **Image List** which is list of images inherits from `System.Image`.
+5. Click **Edit** to select an **Image List** which is list of images inherits from `System.Image`.
 
-6.  In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped.
+6. In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped. This configuration will populate the extracted data into entity we mapped in Import Mapping.
 
    {{% alert type="info" %}} For details on how to get the JSON mapping file and create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
 
 7. Click **OK** to save the changes and close the dialog window.
+
+Optionally for further automation, add [Event handlers](/refguide8/event-handlers) on those entity where we are populating the extracted data.
+You can call your own Microflow to process (modify, validate, pass data to next steps etc.) the extracted data when inserted into entity, which will allow you to achieve full end to end automation.
+To create event on your entity mapped in Import Mapping, please refer [Event handlers](/refguide8/event-handlers).
 
 ### 4.4 Checking Statistics Using the Usage Dashboard
 

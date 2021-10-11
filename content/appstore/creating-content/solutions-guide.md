@@ -1,5 +1,6 @@
 ---
 title: "Solutions Guide"
+category: "Creating Content"
 description: "A guide to best practices and techniques for using Mendix"
 tags: ["solutions guide", "adaptive solutions", "solutions"]
 ---

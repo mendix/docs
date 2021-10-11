@@ -1,5 +1,7 @@
 ---
 title: "General"
+parent: "solutions-guide"
+menu_order: 10
 tags: [ "solutions", "adaptive solutions" ]
 ---
 

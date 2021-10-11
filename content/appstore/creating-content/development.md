@@ -1,5 +1,7 @@
 ---
 title: "Development"
+parent: "solutions-guide"
+menu_order: 20
 description: "Development of Solutions"
 tags: [ "solutions", "development", "adaptive solutions" ]
 ---

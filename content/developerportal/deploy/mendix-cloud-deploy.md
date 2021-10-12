@@ -26,8 +26,8 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | --- | --- | --- |
 | **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.¹ |
-| **App vCPU**s | 0.5 | Depends on your pricing plan.¹ |
+| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
+| **App vCPU**s | 0.5 | Depends on your pricing plan.² |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |

@@ -25,10 +25,6 @@ If an entity in a list view has an attribute populated by a microflow, it will c
 
 {{% /alert %}}
 
-### 1.1 Demo App
-
-For a demo app that has been deployed with these widgets, see [here](https://listviewcontrols.mxapps.io).
-
 ## 2 Check Box Filter Widget {#check-box-filter}
 
 This widget enables filtering a list view at runtime with various constraints.

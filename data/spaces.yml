@@ -210,7 +210,8 @@ appstore:
     - "App Services"
     - "Connectors"
     - "Modules"
-    - "Widgets" 
+    - "Widgets"
+    - "Creating Content"
 data-hub:
   space: "Data Hub Guide"
   priority: false

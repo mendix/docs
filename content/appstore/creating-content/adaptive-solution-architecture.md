@@ -11,7 +11,7 @@ The Solutions Guide for creating content in the Marketplace is under active deve
 
 ## 1 Introduction
 
-The Mendix Solutions Platform brings the benefits of low code with Mendix to the world of solutions development. With the rapid development capability of the Mendix platform, adaptive solutions can be made to fit the customer's needs and context, and integrated with the customer's existing IT landscape.
+The Mendix Platform is well-suited to supporting the development of solutions. Rapid development with Mendix allows that adaptation of solutions to fit a customer's needs and context, and to integrate with the customer's existing IT landscape.
 
 ### 1.1 Structure of an Adaptive Solution
 

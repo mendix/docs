@@ -17,7 +17,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We have replaced the placeholder app when you add a new environment from Mendix 8 to Mendix 9. The Mendix 7 placeholder app can still be used to deploy Mendix 7 and Mendix 8 app.
+* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to  deploy a Mendix 7 or Mendix 8 app.
 
 ### September 27th, 2021
 

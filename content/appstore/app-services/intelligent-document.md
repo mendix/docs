@@ -9,8 +9,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from documents.
 
 To use the app service, you need to include the intelligent document service activity in your microflow. This activity expects a
-trained model input, which you create using the Document Model Training app. For more information, see the
-section [Training a Model](#document-model-training).
+trained model input, which you create using the Document Model Training app. For more information, see the section [Training a Model](#document-model-training).
 
 ### 1.1 Features
 

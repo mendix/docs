@@ -175,22 +175,22 @@ To get the JSON mapping file that can be used to create import mapping, perform 
 
 7. Click **Download** to get the JSON file.
 
-8. Follow these steps to use this JSON file to create [JSON Mapping](/refguide/mapping-documents), which will be used in [intelligent document activity](#extraction-activity):
+8. Follow these steps to use this JSON file to create [JSON mapping](/refguide/mapping-documents), which will be used in the [intelligent document activity](#extraction-activity):
 
    1.  From **App Explorer** (in Studio Pro 9) or **Project Explorer ** (in Studio Pro 8), right-click **JSON**, and from the pop-up menu, select **Add other** > [JSON structure](/refguide8/json-structures).
 
        ![json-structure](attachments/intelligent-document/json-structure.png)
 
-   2.  Use the JSON file and convert schema structure to be used by Import Mapping.
+   2.  Use the JSON file and convert schema structure to be used by import mapping.
    3.  From **App Explorer** or **Project Explorer**, create [Import Mapping](/refguide/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
 
       ![import-mapping](attachments/intelligent-document/import-mapping.png)
 
-9. Copy the **Model Id** and use it in the  [Intelligent Document Activity](#extraction-activity).
+9. Copy the **Model Id** and use it in the [intelligent document activity](#extraction-activity).
 
 ### 4.3 Extracting the data using Trained Document Model {#extraction-activity}
 
-1.  Drag and drop **Intelligent Document Service** activity to your microflow from the **Document Data Capture Service** category in the **Toolbox**.
+1.   In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
    ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
 

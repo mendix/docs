@@ -1,5 +1,6 @@
 ---
-title: "Solutions Guide"
+title: "Creating Solutions"
+linktitle: "Solutions"
 category: "Creating Content"
 description: "A guide to best practices and techniques for using Mendix"
 tags: ["solutions guide", "adaptive solutions", "solutions"]
@@ -19,7 +20,7 @@ Read more about the [Mendix Solutions Vendor & Startup programs](general).
 
 ## 2 What is a solution?
 
-What is a solution? Essentially, a solution is any Mendix app that is suitable to be sold to multiple different customers as a service. This means the app is built to match the needs & expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case general Mendix development principles & best practices apply - see below for useful links. So you can get started right away, from any template available on the Mendix Platform.
+What is a solution? Essentially, a solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs & expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case general Mendix development principles & best practices apply - see below for useful links. So you can get started right away, from any template available on the Mendix Platform.
 
 Customers often require more from a solution than it supports out-of-the-box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive Software as a Service (SaaS) solution: you need to allow the solution to be adapted to make it fit the specific needs of the customer.
 
@@ -36,7 +37,7 @@ Make sure to read through the entire Solutions Guide. A good starting point is t
 - [Architecting for adaptation](adaptive-solution-architecture)
 - Applying [IP protection](ip-protection) in your solution
 <!-- TODO: Custom usage metering to implement different pricing models -->
-- [Version Control](version-control) processes suited to solution development
+<!-- TODO: [Version Control](version-control) processes suited to solution development -->
 <!-- TODO: Deployment of solutions -->
 
 ### 3.2 Other helpful resources

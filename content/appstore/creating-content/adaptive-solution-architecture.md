@@ -67,4 +67,4 @@ When designing the interfaces of your solutions, you should:
 
 ### 2.3 Applying Intellectual Property (IP) Protection to Make the Common Core Immutable
 
-IP Protection can be used to make parts of the application model immutable by consumers. Review the [IP Protection](ip-protection) section of the Solutions Guide for practical guidance on how to apply IP Protection.
+IP Protection can be used to make parts of the application model immutable by customers. Review the [IP Protection](ip-protection) section of the Solutions Guide for practical guidance on how to apply IP Protection.

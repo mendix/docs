@@ -64,8 +64,7 @@ Maintenance efforts are also reduced, because hidden content cannot be altered, 
 
 #### 4.2.3 Protect Usage Metering
 
-* Verify that usage metering is ‘on the right side’, hidden behind the API
-* Hide usage metering to guarantee that customers neither accidentally nor intentionally disable it
+See the section [Protecting Usage Metering](#protect-metering) for more information.
 
 ### 4.3 Protecting Solutions
 
@@ -98,7 +97,7 @@ TODO: Add references to App Services & Connectors guides
 
 -->
 
-### 4.5 Protecting Usage Metering
+### 4.5 Protecting Usage Metering{#protect-metering}
 
 To ensure customers do not accidentally nor intentionally break usage metering, it is a good practice to hide the implementation of custom usage metering in a protected module.
 
@@ -118,6 +117,8 @@ When the asset is managed as an entity in the domain model, a gauge metric can b
 On every invocation of a transaction, you can use an incrementing counter metric to track the total number of transactions handled over a period of time.
 
 #### 4.5.3 Do's and Don'ts for Usage Metering
+
+Verify that usage metering is ‘on the right side’, hidden behind the API.
 
 Make sure the usage metering does not depend on specific invocation of an API. Relying on an AfterStartup microflow to start regular interval usage metering is not a good idea because it can be accidentally disabled. However, you can safely use the AfterStartup microflow if it is also used for functional purposes, for example starting a custom request handler, or initializing a module, without which the module does function.
 

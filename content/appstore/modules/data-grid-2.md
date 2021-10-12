@@ -26,6 +26,10 @@ The data grid has an option to enable advanced options. When toggle this option 
 * Custom configuration
 * Header Filters
 
+{{% alert type="info" %}}
+This option is available in Mendix Studio. In Mendix Studio Pro all the advanced options listed above are always available.
+{{% /alert %}}
+
 ## 2 Capabilities
 
 In the new data grid, you are able to choose how users can iterate within the grid. Iteration capabilities are listed below.

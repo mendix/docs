@@ -28,6 +28,10 @@ The gallery has an option to enable advanced options. When this option is toggle
 * Filtering
 * Sorting
 
+{{% alert type="info" %}}
+This option is available in Mendix Studio. In Mendix Studio Pro all the advanced options listed above are always available.
+{{% /alert %}}
+
 ## 2 Configuration
 
 Several options can be defined in the Gallery widget:

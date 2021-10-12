@@ -35,7 +35,7 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
 2. To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
 
-   1.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app.
+   1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
 
    2. Click **Import module package** and then select *SendEmailModule.mpk*. 
 
@@ -83,7 +83,7 @@ After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8) , go to **IntelligentDocService** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), go to **IntelligentDocService** > **Configurations**. You can see that **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/intelligent-document/configurations-keys.png)
 
@@ -93,7 +93,7 @@ After you copy the keys, you can close the page.
 
 ## 4. Usage
 
-To make the most of **Intelligent Document Service**, first [train a model](#document-model-training) using sample images and then include the intelligent document service activity in your microflow. This microflow accepts the trained model input and images to extract, and then [extracts the data](#extraction-activity) from images in bulk and [maps the data](#mapping-file) to entities.
+To make the most of **Intelligent Document Service**, [train a model](#document-model-training) using sample images first, and then include the intelligent document service activity in your microflow. This microflow should accept your trained model input and your images to extract, and then [extracts data](#extraction-activity) from images in bulk and [maps the data](#mapping-file) to entities.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -133,7 +133,7 @@ To make the most of **Intelligent Document Service**, first [train a model](#doc
        
     2. On the left side, select an area in the image where text is expected.
     
-    3. On the right side, enter a **Marker ID** that is used for the area that you select.
+    3. On the right side, enter a **Marker ID** that is used for the area that you selected.
     
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
     
@@ -141,21 +141,19 @@ To make the most of **Intelligent Document Service**, first [train a model](#doc
     
     6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
     
-    7.  When you make all the markers for this image, click on **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
+    7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
     
         ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
     
-    8. Repeat the step above until you mark all the images and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-
-Once the **Status** of the model becomes **COMPLETED**, the model is ready to use. 
+    8. Repeat the steps above until you mark all the images, then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
+    
+10. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
 
 ![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
-### 4.2 Getting a JSON Mapping File {#mapping-file}
+### 4.2 Getting a JSON Mapping File and Creating Import Mapping{#mapping-file}
 
-Use [import mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity and further process it with [event handlers](/refguide/event-handlers). 
-
-To get the JSON mapping file that can be used to create import mapping, perform the following steps:
+You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity and further process it with [event handlers](/refguide/event-handlers). To create Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
 1. Open the [Document Model Training application](https://datacapture.appservices.mendix.com/). 
 
@@ -165,7 +163,7 @@ To get the JSON mapping file that can be used to create import mapping, perform 
 
 3. Click **Environment** to show the **Existing Models** list.
 
-4. Select a model that has the status **COMPLETED**.
+4. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**.
 
 5. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
@@ -175,26 +173,25 @@ To get the JSON mapping file that can be used to create import mapping, perform 
 
 7. Click **Download** to get the JSON file.
 
-8. Follow these steps to use this JSON file to create [JSON mapping](/refguide/mapping-documents), which will be used in the [intelligent document activity](#extraction-activity):
+8. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click **JSON**, and from the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
-   1.  From **App Explorer** (in Studio Pro 9) or **Project Explorer ** (in Studio Pro 8), right-click **JSON**, and from the pop-up menu, select **Add other** > [JSON structure](/refguide8/json-structures).
+    ![json-structure](attachments/intelligent-document/json-structure.png)
 
-       ![json-structure](attachments/intelligent-document/json-structure.png)
+9.  Use the JSON file and convert schema structure, which will be used by Import Mapping.  {{% todo %}}[Clarify what this step means]{{% /todo %}}
+  
+10. In the **App Explorer** or **Project Explorer**, right-click **Import Mapping**, and from the pop-up menu, select **Add other** > [Import Mapping](/refguide/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.  {{% todo %}}[Clarify what this step means]{{% /todo %}}
 
-   2.  Use the JSON file and convert schema structure to be used by import mapping.
-   3.  From **App Explorer** or **Project Explorer**, create [Import Mapping](/refguide/mapping-documents#2-import-mappings). Map created above with JSON structure with entity.
+    ![import-mapping](attachments/intelligent-document/import-mapping.png)
 
-      ![import-mapping](attachments/intelligent-document/import-mapping.png)
+11. Copy the **Model Id** and use it in the [intelligent document activity](#extraction-activity).   {{% todo %}}[Where to copy Model Id? Back in the Document Training App?]{{% /todo %}}
 
-9. Copy the **Model Id** and use it in the [intelligent document activity](#extraction-activity).
-
-### 4.3 Extracting the data using Trained Document Model {#extraction-activity}
+### 4.3 Extracting the Data Using Trained Document Model {#extraction-activity}
 
 1.   In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
    ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
 
-2. Create a list of image inherited from inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
+2. Create a list of image that inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
 
 3. Double-click the **Intelligent Document Service** activity to open the dialog box.
 
@@ -202,19 +199,13 @@ To get the JSON mapping file that can be used to create import mapping, perform 
 
 4. Click **Edit** to enter the **Model Id** of your model.
 
-   {{% alert type="info" %}} After the training of a model is **COMPLETED** in the Document Model Training app, you can use its **Model Id**. For more information, see the section [Training a Document Model](#document-model-training). {{% /alert %}}
+5. Click **Edit** to select the **Image List** which is list of images that inherits from `System.Image`.
 
-5. Click **Edit** to select an **Image List** which is list of images inherits from `System.Image`.
-
-6. In the **Mapping** field, **Select** a **[JSON Mapping](/refguide8/mapping-documents)** file to define how extracted data is mapped. This configuration will populate the extracted data into entity we mapped in Import Mapping.
-
-   {{% alert type="info" %}} For details on how to get the JSON mapping file and create Imoprt Mapping, see [Getting a JSON Mapping File](#mapping-file). {{% /alert %}}
+6. In the **Mapping** field, **Select** the [JSON mapping file](#mapping-file) to define how extracted data is mapped. This can populate the extracted data into entity you mapped in Import Mapping.
 
 7. Click **OK** to save the changes and close the dialog box.
 
-Optionally for further automation, add [Event handlers](/refguide8/event-handlers) on those entity where we are populating the extracted data.
-You can call your own Microflow to process (modify, validate, pass data to next steps etc.) the extracted data when inserted into entity, which will allow you to achieve full end to end automation.
-To create event on your entity mapped in Import Mapping, please refer [Event handlers](/refguide8/event-handlers).
+{{% alert type="info" %}} Optionally for further automation, add event handlers on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation. For information about how to create event handlers on your entity, see [Event handlers](/refguide8/event-handlers). {{% /alert %}}
 
 ### 4.4 Checking Statistics Using the Usage Dashboard
 

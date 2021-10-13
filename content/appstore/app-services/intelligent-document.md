@@ -175,7 +175,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
 2. To add the JSON file to your app, perform the following steps:
 
-    1. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the module or the folder where you want to add the JSON file.
+    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
 
     2. From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 

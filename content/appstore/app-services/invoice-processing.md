@@ -76,7 +76,7 @@ After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), go to **InvoiceProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer **or the **Project Explorer** ), go to **InvoiceProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/invoice-processing/configurations-keys.png)
 
@@ -141,7 +141,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
 2. To add the JSON file to your app, perform the following steps:
 
-    1. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the module or the folder where you want to add the JSON file.
+    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
 
     2. From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 

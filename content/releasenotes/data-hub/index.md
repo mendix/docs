@@ -13,7 +13,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* Latest design changes, mainy Catalog page. Moved facts like environment and version to the newly-arranged right sidebar
+* We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like the **Environment Name** and **Version** to the newly arranged right sidebar menu.
 * Move ContractType field to the ServiceVersion level 
 * Added an informative tooltip on company dropdown and a popup for when the user is an external user for another company
 * In-app guidance added to notify the user that he can switch the company when accepted participation invitaion

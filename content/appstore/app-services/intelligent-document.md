@@ -17,14 +17,11 @@ trained model input, which you create using the Document Model Training app. For
 * Train a model using sample images by marking specific areas in images
 * The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
 
-### 1.2 Technical Provider
-* OCR technology used by Intelligent Document Service is powered by ABBYY&reg;.
-
-### 1.3 Limitation
+### 1.2 Limitation
 
 * Currently only supports images in JPG and JPEG formats
 
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
 This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
@@ -236,3 +233,6 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
 3. Click **Intelligent Document Service** to open the service management dashboard. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+
+## 5 Technical Provider
+The OCR technology used by Intelligent Document Service is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.

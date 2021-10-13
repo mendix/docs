@@ -60,7 +60,7 @@ Receipt Processing app service is a premium Mendix product that is subject to a 
 
 5. Click **Create Binding Keys**.
 
-6. Enter a good name for the binding keys. Make sure that the name includes the name of the app which uses the Receipt Processing app service.
+6. Enter a descriptive name for the binding keys. Make sure that the name includes the name of the app which uses the Receipt Processing app service.
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 

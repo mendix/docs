@@ -59,7 +59,7 @@ Invoice Processing Service is a premium Mendix product that is subject to a purc
 
 5. Click **Create Binding Keys**.
 
-6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Invoice Processing Service.
+6. Enter a descriptive name for the binding keys. Make sure that the name includes the name of the app which uses Invoice Processing Service.
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 

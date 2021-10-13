@@ -15,7 +15,7 @@ trained model input, which you create using the Document Model Training app. For
 
 * Extract data from images in bulk and map data to entities
 * Train a model using sample images by marking specific areas in images
-* Work with [Mendix SSO](/appstore/modules/mendix-sso)
+* Support [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Limitation
 
@@ -66,7 +66,7 @@ Intelligent Document Service is a premium Mendix product that is subject to a pu
 
 5. Click **Create Binding Keys**.
 
-6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Intelligent Document Service.
+6. Enter a good name for the binding keys. Make sure that the name includes the name of the app which uses Intelligent Document Service.
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates the **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
@@ -90,43 +90,44 @@ After you copy the keys, you can close the page.
 
 ## 4. Usage
 
-To use the **Intelligent Document Service**, first [train a model](#document-model-training) using sample images, then create an [Import Mapping](#mapping-file) that defines how to map the extracted data from images to entities, and then include the intelligent document service activity in a microflow. This microflow should be set up to accept your trained model and your image files to extract, [extract data](#extraction-activity) from images in bulk and then map the data to entities using the Import Mapping that you created.
+To use the Intelligent Document Service,, first [train a model](#document-model-training) using sample images, then create an [Import Mapping](#mapping-file) that defines how to map extracted data from images to entities, and then include the [intelligent document activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and your image files to extract, extract data from images in bulk and then map the data to entities using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-1. Log into the Marketplace with your Mendix account.
+1. Perform the following steps to log into the **Document Model Training** application:
 
-2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-3. Click **Intelligent Document Service** to open the service management dashboard.
-4.  Click **Manage Instance** to open the **Document Model Training** application.
+    1. Log into the Marketplace with your Mendix account.
+    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+    3. Click **Intelligent Document Service** to open the service management dashboard.
+    4. Click **Manage Instance** to open the **Document Model Training** application.
 
-    ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
+       ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
 
-5. Log into the application with your Mendix account.
+    5. Log into the application with your Mendix account.
 
-6. Click **Environment** to show the **Existing Models** list.
+2. Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document/existing-models-list.png)
 
     {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
-7. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
     ![Create New Model dialog box](attachments/intelligent-document/create-new-model-dialog-box.png)
 
-8. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
+4. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
-9. Wait until **Import File** page opens.
+5. Wait until **Import File** page opens.
 
-10. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
+6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
 
     ![Import File page](attachments/intelligent-document/import-file-page.png)
 
-11. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
+7. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
 
     ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
 
-12. To mark an image, perform the following steps:
+8. To mark an image, perform the following steps:
 
     1. Click **Add Markers**. The **Mark Document** dialog box opens.
 
@@ -148,31 +149,29 @@ To use the **Intelligent Document Service**, first [train a model](#document-mod
 
     8. Repeat the steps above until you mark all the images, then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
-13. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
+9. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
 
 ![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
-### 4.2 Creating Import Mapping{#mapping-file}
+### 4.2 Creating an Import Mapping{#mapping-file}
 
-You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity, and if necessary, further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity, and if necessary, further process the entity with [event handlers](/refguide/event-handlers).
 
-1. To create Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
-    1. Open the [Document Model Training application](https://datacapture.appservices.mendix.com/).
+    1. Log into the **Document Model Training** application with your Mendix account.
 
-    2. Log in to the app using your **Mendix Account**.
+    2. Click **Environment** to show the **Existing Models** list.
 
-    3. Click **Environment** to show the **Existing Models** list.
+    3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it in the [intelligent document service activity](#extraction-activity).
 
-    4. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Copy the **Model Id**. You will need it in the [intelligent document activity](#extraction-activity).
-
-    5. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
        ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
 
-    6. Drag sample images into the box where it says **Drag & Drop Image Here**.
+    5. Drag sample images into the box where it says **Drag & Drop Image Here**.
 
-    7. Click **Download** to get the JSON file.
+    6. Click **Download** to get the JSON file.
 
 2. To add the JSON file to your app, perform the following steps:
 
@@ -184,7 +183,7 @@ You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) 
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
 
-    4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure for Import Mapping.
+    4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the Import Mapping.
 
     5. Click **OK** to save the changes and close the dialog box.
 
@@ -202,7 +201,7 @@ You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) 
     6. Click **OK** to save the changes and close the dialog box.
 
 
-### 4.3 Extracting the Data Using Trained Document Model {#extraction-activity}
+### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
 
 1.   In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
@@ -216,7 +215,7 @@ You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) 
 
 4. Click **Edit** to enter the **Model Id** of your model.
 
-5. Click **Edit** to select the **Image List** which is list of images that inherits from `System.Image`.
+5. Click **Edit** to select the **Image List** which inherits from `System.Image`.
 
 6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into the entity.
 
@@ -236,3 +235,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 ## 5 Technical Provider
 The OCR technology used by Intelligent Document Service is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+

@@ -12,10 +12,7 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 
 * Extract data from images of invoices in bulk and map data to entities
 * Support United States and European Union region
-* Work with [Mendix SSO](/appstore/modules/mendix-sso)
-
-### 1.2 Technical Provider
-OCR technology used by **Invoice Processing** is powered by **ABBYY&reg;**
+* Support [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.3 Limitation
 
@@ -23,7 +20,7 @@ OCR technology used by **Invoice Processing** is powered by **ABBYY&reg;**
 
 ### 1.4 Prerequisites
 
-This app service best works with Studio Pro 8 starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
+This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
 ## 2 Installation
 
@@ -188,3 +185,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
 3. Click **Invoice Processing Service** to open the subscription details page. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+
+## 5 Technical Provider
+
+ The OCR technology used by Invoice Processing is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+

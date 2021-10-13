@@ -69,7 +69,7 @@ Configure the following properties in this section:
 
 ### 2.2 Advanced Tab {#advanced}
 
-The **Enable advanced options** button (default: **No**) determines whether advanced configuration properties become visible. 
+The **Enable advanced options** toggle (default: **No**) determines whether advanced configuration properties become visible. 
 
 When set to **Yes**, the following tabs and properties become visible:
 

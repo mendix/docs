@@ -6,7 +6,7 @@ tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---
 
 {{% alert type="info" %}}
-The Solutions Guide for creating content in the Marketplace is under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest content!
+These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
 {{% /alert %}}
 
 ## 1 Introduction

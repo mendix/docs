@@ -299,6 +299,19 @@ The following information of a `ListView` is getting automatically stored and re
  - sorting state (`sortOrder` field)
  - filtering state (`filter` field)
 
+### 2.8 Status of the Data {#status-of-the-data}
+
+`ListValue.status` holds the status of the data. Before accessing the actual data, the status must be checked.
+
+It is an enumerable of type `ValueStatus` which has the following members:
+
+When status is `ValueStatus.Available`, the list items are accessible and their representative GUIDs are exposed in `items` array.
+
+When status is `ValueStatus.Unavailable,` then the list items are not available.
+
+When status is `ValueStatus.Loading`, then the items are awaiting for the required information to arrive.
+
+
 ## 3 Linked Property Values
 
 ### 3.1 ListActionValue {#listactionvalue}

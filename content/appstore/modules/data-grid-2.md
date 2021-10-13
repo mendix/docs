@@ -27,7 +27,7 @@ The data grid has an option to enable advanced options. When this option is togg
 * Header Filters
 
 {{% alert type="info" %}}
-The Enable Advanced Options toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
 {{% /alert %}}
 
 ## 2 Capabilities

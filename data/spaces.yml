@@ -210,12 +210,15 @@ appstore:
     - "App Services"
     - "Connectors"
     - "Modules"
-    - "Widgets" 
+    - "Widgets"
+    - "Creating Content"
 data-hub:
   space: "Data Hub Guide"
   priority: false
   menu_categories:
     - "Share Data Between Apps"
+    - "Write Data to Another App"
+    - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:

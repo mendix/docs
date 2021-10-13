@@ -13,6 +13,5 @@ When you download a connector, it goes into [App Explorer](/refguide/project-exp
 ## 2 Main Documents in This Category
 
 * [AWS IoT](aws-iot) – enables connecting to IoT devices and data on AWS IoT
-* [Box](box) – provides an easy way to use [box](https://www.box.com) inside your Mendix application
 * [Database](database-connector) – incorporates your external data directly in your Mendix app
 * [IBM Watson Connector](ibm-watson-connector) – describes using connectors with Mendix that simplify the use of various IBM Watson™ services

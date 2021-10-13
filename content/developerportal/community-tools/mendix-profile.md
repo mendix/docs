@@ -259,7 +259,9 @@ Make a note of the API key, as it will only be shown once.
 
 ![](attachments/mendix-profile/api-key.png)
 
-Please note that we may cache your API key. This means that when you revoke an API key it may take some time before the change takes effect.
+{{% alert type="info" %}}
+We may cache your API key. This means that when you revoke an API key, it may take some time before the change takes effect.
+{{% /alert %}}
 
 For more information, see the following:
 

@@ -16,7 +16,7 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-The data grid has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your data grid:
+The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type
 * Pagination position
@@ -27,7 +27,7 @@ The data grid has an option to enable advanced options. When toggle this option 
 * Header Filters
 
 {{% alert type="info" %}}
-This option is available in Mendix Studio. In Mendix Studio Pro all the advanced options listed above are always available.
+The Enable Advanced Options toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
 {{% /alert %}}
 
 ## 2 Capabilities

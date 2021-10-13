@@ -12,11 +12,11 @@ The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget 
 
 ### 1.1 Features
 
-* Allows you to configure widgets that trigger the menu visibility.
-* Allows you to change the menu's relative position to the trigger widgets.
-* Shows the menu when hovering or clicking the trigger widgets.
-* Allows you to create textual or custom menu items with an on click action.
-* Allows for additional styling customizations through Atlas UI.
+* Allows you to configure widgets that trigger the menu visibility
+* Allows you to change the menu's relative position to the trigger widgets
+* Shows the menu when hovering or clicking the trigger widgets
+* Allows you to create textual or custom menu items with an on click action
+* Allows for additional styling customizations through Atlas UI
 
 ## 2 Configuration
 
@@ -26,15 +26,25 @@ The **Menu items** property allows you to configure actions and dividers that ar
 
 The **General** tab in the **Edit Menu Items Item** dialog box has the following properties:
 
-* **Item type** (configurable when **Custom visualization** is set to **Yes**; default: **Button** ): Determines if the menu item is an action button or a divider for buttons.
-* **Text** (configurable when the **Item type** is **Button**): The text value to be displayed in the button.
-* **On click action** (configurable when the **Item type** is **Button**): Executes an action when the button is activated through mouse or keyboard.
-* **Style** (configurable when the **Item type** is **Button**; default: **Default**): Sets the button's brand style.
+* **Item type** – determines if the menu item is an action button or a divider for buttons
+	* Default: **Button**
+	* Configurable when **Custom visualization** is set to **Yes**
+* **Text** – the text value to be displayed in the button
+	* Configurable when the **Item type** is **Button**
+* **On click action** – executes an action when the button is activated through mouse or keyboard.
+	* Configurable when the **Item type** is **Button**
+* **Style** – sets the button's brand style
+	* Default: **Default**
+	* Configurable when the **Item type** is **Button**
 
 Other main properties of the widget are as follows:
 
-* **Open on** (default: **Click** ): Determines whether hovering or clicking the trigger widget(s) displays the menu.
-* **Menu position** (default: **Bottom** ): Determines the location of a visible menu relative to the trigger area with widgets.
-* **Custom visualization** (default: **No** ): Determines whether menu items can be composed of text or widgets. Note that the on click action should still be configured on the menu items and not internal widgets.
+* **Open on** – determines whether hovering or clicking the trigger widgets displays the menu
+	* Default: **Click**
+* **Menu position**  – determines the location of a visible menu relative to the trigger area with widgets
+	* Default: **Bottom**
+* **Custom visualization** – determines whether menu items can be composed of text or widgets
+	* Default: **No**
+	* Note that the on click action should still be configured on the menu items and not internal widgets
 
 If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view) and set **Custom visualization** to **Yes**.

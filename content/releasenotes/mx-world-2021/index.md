@@ -8,7 +8,7 @@ tags: ["Mendix World", "announcements", "Features", "Feature Release", "products
 
 ## 1 Introduction
 
-At Mendix World on September 8, 2021, the keynote from Mendix CTO Johan den Haan announced a number of features which Mendix is releasing. Many of these are available immediately, but some are planned for future release in the months following Mendix World 2021. This document contains the calendar of expected release dates for these features.
+At Mendix World on September 8th, 2021, the keynote from Mendix CTO Johan den Haan announced a number of features which Mendix is releasing. Many of these are available immediately, but some are planned for future release in the months following Mendix World 2021. This document contains the calendar of expected release dates for these features.
 
 If you want to watch Johan's keynote again, you can find it at [Mendix World 2021](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1624031940353001Xclf) — you will need to register or have already registered for Mendix World 2021 to see this.
 

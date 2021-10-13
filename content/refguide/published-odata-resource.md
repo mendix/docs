@@ -93,3 +93,11 @@ Setting **Use paging** to **Yes** may result in inconsistency in the retrieved d
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 
 Default: *10000*
+
+## 8 Capabilities {#capabilities}
+
+A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes. Only users that have write entity access to attributes can update them.
+
+{{% alert type="info" %}}
+This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
+{{% /alert %}}

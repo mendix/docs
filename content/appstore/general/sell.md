@@ -20,7 +20,7 @@ Whether you are an established ISV, an ambitious startup, or a pioneering indepe
 
 ## 2 Becoming a Mendix Vendor {#vendor}
 
-The[Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, App Service Vendors, Mendix Solution Vendors, and Startups). This guide focuses on selling app services, but if you are a startup or you want to sell a full Mendix solution, read on to learn more.
+The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, App Service Vendors, Mendix Solution Vendors, and Startups). This guide focuses on selling app services, but if you are a startup or you want to sell a full Mendix solution, read on to learn more.
 
 Whether you are supplying an app service as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 

@@ -6,6 +6,7 @@ menu_order: 3
 
 These are the release notes for the [Mendix Metamodel](/apidocs-mxsdk/mxsdk/understanding-the-metamodel):
 
+* [9](metamodel-9)
 * [8](metamodel-8)
 
 {{% alert type="info" %}}

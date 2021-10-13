@@ -16,8 +16,8 @@ You can use the [Timeline](https://marketplace.mendix.com/link/component/115852/
 
 For the sake of simplicity, there are two modes available to create a timeline:
 
-* Basic – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app
-* Custom – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, group header/day divider, time indication, and content
+* **Basic** – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app
+* **Custom** – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, group header/day divider, time indication, and content
 
 ### 2.2 Selecting a Data Source
 

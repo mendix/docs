@@ -267,3 +267,7 @@ Excel and CSV export are not available in offline applications.
 ### 4.9 Hashed String Attributes {#hashed-strings}
 
 Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.
+
+### 4.10 Access Rules with XPath Constraints {#access-rules}
+
+While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a **Customer** entity with **Locked** (Boolean) and **Name** (string) attributes. There is an access rule where the **Name** attribute of the customer is writable only when the **Locked** attribute is false. Changing and committing the **Locked** attribute’s value while offline will not change the read-only status of the **Name** attribute. Instead, this change will take effect after you synchronize the changed **Customer** object.

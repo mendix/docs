@@ -9,6 +9,33 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### October 7th, 2021
+
+### Improvements
+
+* We upgraded the Data Hub Catalog search engine to OpenSearch 1.0.
+
+#### Fixes
+
+* We fixed an issue that caused older Studio Pro versions to not be able to connect to the Data Hub Catalog.
+
+### September 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro caused an error.
+
+### September 23rd, 2021
+
+#### Data Hub Free Edition
+
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+
+#### Fixes
+
+* We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
+* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
+
 ### September 16th, 2021
 
 #### Improvements
@@ -20,7 +47,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 * We fixed an issue with pagination for Applications and Environments in the API.
 * We fixed styling issues.
 
-### September 9th, 2021
+### September 9th, 2021 {#nine}
 
 #### Fixes
 

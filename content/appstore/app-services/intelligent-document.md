@@ -26,7 +26,8 @@ trained model input, which you create using the Document Model Training app. For
 
 ### 1.4 Prerequisites
 
-This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.2](/releasenotes/studio-pro/9.2).
+This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+
 
 ## 2 Installation
 
@@ -96,57 +97,61 @@ To use the **Intelligent Document Service**, first [train a model](#document-mod
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-1. Open the [Document Model Training application](https://datacapture.appservices.mendix.com/). 
+1. Log into the Marketplace with your Mendix account.
 
-    {{% alert type="info" %}} You can also open the Document Model Training application by clicking the **Manage Instance** button on the [Service Management Dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). {{% /alert %}}
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click **Intelligent Document Service** to open the service management dashboard.
+4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-2. Log in to the app using your **Mendix Account**.
+    ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
 
-3. Click **Environment** to show the **Existing Models** list.
+5. Log into the application with your Mendix account.
+
+6. Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document/existing-models-list.png)
 
     {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
-4. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+7. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
     ![Create New Model dialog box](attachments/intelligent-document/create-new-model-dialog-box.png)
 
-5. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
+8. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
-6. Wait until **Import File** page opens.
+9. Wait until **Import File** page opens.
 
-7. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
+10. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
 
     ![Import File page](attachments/intelligent-document/import-file-page.png)
 
-8. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
+11. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported is **Not Marked**.
 
     ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
 
-9.  To mark an image, perform the following steps:
+12. To mark an image, perform the following steps:
 
     1. Click **Add Markers**. The **Mark Document** dialog box opens.
-    
+
        ![Mark Document page](attachments/intelligent-document/mark-document-dialog-box.png)
        
     2. On the left side, select an area in the image where text is expected.
-    
+
     3. On the right side, enter a **Marker ID** that is used for the area that you selected.
-    
+
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
-    
+
     5. Click **Add Marker** to add the marker to the list of **Markers**.
-    
+
     6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
-    
+
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
-    
+
         ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
-    
+
     8. Repeat the steps above until you mark all the images, then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-    
-10. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
+
+13. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
 
 ![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
@@ -174,9 +179,9 @@ You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) 
 
 2. To add the JSON file to your app, perform the following steps:
 
-    1. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click your module, and from the pop-up menu, select **Add folder** to create the new folder *JSON*.
+    1. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the module or the folder where you want to add the JSON file.
 
-    2. Right-click the **JSON** folder, from the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
+    2. From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
        ![json-structure](attachments/intelligent-document/json-structure.png)
 
@@ -188,9 +193,9 @@ You need to use [Import Mapping](/refguide/mapping-documents#2-import-mappings) 
 
 3.  To create the Import Mapping, perform the following steps:
 
-    1. In the **App Explorer** or **Project Explorer**, right-click your module, and from the pop-up menu, select **Add folder** to create the new folder *Import Mapping*.
+    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
       
-    2. Right-click the **Import Mapping** folder, and from the pop-up menu, select **Add other** > **Import mapping**.
+    2. From the pop-up menu, select **Add other** > **Import mapping**.
     
     3. In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
     
@@ -230,4 +235,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-3. Click **Intelligent Document Service** to open the subscription details page. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Click **Intelligent Document Service** to open the service management dashboard. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.

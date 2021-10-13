@@ -15,7 +15,7 @@ trained model input, which you create using the Document Model Training app. For
 
 * Extract data from images in bulk and map data to entities
 * Train a model using sample images by marking specific areas in images
-* The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
+* Work with [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Limitation
 

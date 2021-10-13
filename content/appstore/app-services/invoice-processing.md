@@ -11,8 +11,8 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 ### 1.2 Features
 
 * Extract data from images of invoices in bulk and map data to entities
-* Supports United States and European Union region
-* The app service works with [Mendix SSO](/appstore/modules/mendix-sso)
+* Support United States and European Union region
+* Work with [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Technical Provider
 OCR technology used by **Invoice Processing** is powered by **ABBYY&reg;**

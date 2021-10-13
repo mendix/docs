@@ -32,7 +32,7 @@ You may have to add the final slash manually to follow the link.
 You may be asked to re-enter your Mendix credentials. Single Sign-On (SSO) is not yet implemented for the Team Server.
 {{% /alert %}}
 
-## 3 Revision History
+## 3 Revision History {#revision-history}
 
 For each revision, you can see the following information:
 

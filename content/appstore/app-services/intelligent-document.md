@@ -34,7 +34,7 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
    1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
 
-   2. Click **Import module package** and then select *SendEmailModule.mpk*. 
+   2. Click **Import module package** and then select the *.mpk* file.
 
       ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
 
@@ -80,7 +80,7 @@ After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), go to **IntelligentDocService** > **Configurations**. You can see that **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer** or **Project Explorer**, go to **IntelligentDocService** > **Configurations**. You can see that **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/intelligent-document/configurations-keys.png)
 
@@ -90,7 +90,7 @@ After you copy the keys, you can close the page.
 
 ## 4. Usage
 
-To use the Intelligent Document Service,, first [train a model](#document-model-training) using sample images, then create an [Import Mapping](#mapping-file) that defines how to map extracted data from images to entities, and then include the [intelligent document activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and your image files to extract, extract data from images in bulk and then map the data to entities using the Import Mapping that you created.
+To use the Intelligent Document Service, first [train a model](#document-model-training) using sample images, then create an [Import Mapping](#mapping-file) that defines how to map extracted data from images to entities, and then include the [intelligent document activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and your image files to extract, extract data from images in bulk and then map the data to entities using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -163,13 +163,13 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     2. Click **Environment** to show the **Existing Models** list.
 
-    3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it in the [intelligent document service activity](#extraction-activity).
+    3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
 
     4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
        ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
 
-    5. Drag sample images into the box where it says **Drag & Drop Image Here**.
+    5. Drag the sample images into the box where it says **Drag & Drop Image Here**.
 
     6. Click **Download** to get the JSON file.
 
@@ -234,5 +234,5 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 3. Click **Intelligent Document Service** to open the service management dashboard. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
 ## 5 Technical Provider
-The OCR technology used by Intelligent Document Service is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+The AI technology and OCR technology used by Intelligent Document Service is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 

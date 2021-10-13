@@ -46,7 +46,7 @@ Once imported, the app service is visible in the **App Explorer** or **Project E
 
 ## 3 Configuration
 
-Receipt Processing app service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses Receipt Processing app service, you need to get a valid combination of certain keys and configure them as constants in the module.
+The Receipt Processing app service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses the Receipt Processing app service, you need to get a valid combination of certain keys and configure them as constants in the module.
 
 ### 3.1  Subscribing to Get Keys
 
@@ -60,7 +60,7 @@ Receipt Processing app service is a premium Mendix product that is subject to a 
 
 5. Click **Create Binding Keys**.
 
-6. Enter a descriptive name for the binding keys. Make sure that the name includes the name of the app which uses the Receipt Processing app service.
+6. Enter a good name for the binding keys. Make sure that the name includes the name of the app which uses the Receipt Processing app service.
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
@@ -74,17 +74,17 @@ After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1. In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8)**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1. In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
-2. Double-click on each constant and and enter the respective keys.
+2. Double-click each constant and and enter the respective keys.
 3. Click **OK** to save the settings.
 
 
 ## 4. Usage
 
-To use Receipt Processing Service, firstly create an [Import Mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and your image files to extract, [extract data](#extraction-activity) from images in bulk and then map the data to entities using the Import Mapping that you created.
+To use the Receipt Processing app service, firstly create an [Import Mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and your image files to extract, [extract data](#extraction-activity) from images in bulk and then map the data to entities using the Import Mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 
@@ -171,3 +171,7 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
 3. Click **Receipt Processing** to open the subscription details page. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+
+## 5 Technical Provider
+
+The AI technology and OCR technology used by Receipt Processing is powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.

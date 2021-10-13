@@ -21,10 +21,6 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 * Execute a microflow or nanoflow or open a page when an image is clicked
 * Swipe through images on mobile devices
 
-### 1.2 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
-
 ## 2 Usage
 
 The widget requires a context configured on the **Data Source** tab. The possible data sources are described below.

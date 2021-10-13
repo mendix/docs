@@ -90,7 +90,7 @@ After you copy the keys, you can close the page.
 
 ## 4. Usage
 
-To use the **Intelligent Document Service**, first [train a model](#document-model-training) using sample images, and then include the intelligent document service activity in a microflow. This microflow should be set up to accept your trained model and your image files to extract, [extracts data](#extraction-activity) from images in bulk and then maps the data to entities using the [Import Mapping](#mapping-file) that you create.
+To use the **Intelligent Document Service**, first [train a model](#document-model-training) using sample images, then create an [Import Mapping](#mapping-file) that defines how to map the extracted data from images to entities, and then include the intelligent document service activity in a microflow. This microflow should be set up to accept your trained model and your image files to extract, [extract data](#extraction-activity) from images in bulk and then map the data to entities using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 

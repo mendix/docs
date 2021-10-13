@@ -229,7 +229,7 @@ In this section you can select an **Saved attribute** in order to save the curre
 
 #### 7.1.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. It means everytime the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.2 Drop-Down Filter
 
@@ -264,7 +264,7 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 
 #### 7.2.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. It means everytime the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
 
 
 ### 7.3 Number Filter

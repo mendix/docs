@@ -83,8 +83,8 @@ This is the settings for this planning. Create the object and associate it to th
 
 | **Attribute**                           | **Description**                                              |
 | --------------------------------------- | ------------------------------------------------------------ |
-| `ClusterExecutionWindowExclusionPeriod` | Any task where the last service window ends in this period after the `planningStart` is excluded from clustering and is treated as an outlier. This setting is only supported with the CLUSTERED planning type. If not set or equal to ` P0D`, no service windows are treated in a special way. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. Only Years(Y),Months(M),Weeks(W) and Days(D) are supported. |
-| `PlanningStartTime`                     | The time from when we will start planning.                   |
+| `ClusterExecutionWindowExclusionPeriod` | Any task where the last service dialog box ends in this period after the `planningStart` is excluded from clustering and is treated as an outlier. This setting is only supported with the CLUSTERED planning type. If not set or equal to ` P0D`, no service windows are treated in a special way. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. Only Years(Y),Months(M),Weeks(W) and Days(D) are supported. |
+| `PlanningStartTime`                     | The time from when we start planning.                        |
 | `SoftPinChangedTicketsThreshold`        | Maximum number of allowed changed soft pinned tasks.         |
 | `SoftPinTimeThreshold`                  | Maximum duration that a soft pinned tasks start or end time can change before the task is considered changed. The default value is `PT0S`, meaning all  changes are considered a change and new tasks are usually added to the end of  the work queue. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. |
 | `TimeLimit`                             | Maximum time that the planner will be allowed to take to solve the planning. If left empty, a configured default will be used. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. |
@@ -235,8 +235,9 @@ A Task in a planning response
 
 | **Attribute**   | **Description**                                              |
 | --------------- | ------------------------------------------------------------ |
-| `TravelStart`   | When the resource will start travelling                      |
-| `TravelBackEnd` | When the resource finishes traveling to the default location. Will be  null if this is not the last task of the day. |
+| `_id`           |                                                              |
+| `TravelStart`   | When the resource starts travelling                          |
+| `TravelBackEnd` | When the resource finishes traveling to the default location. Will be `null` if this is not the last task of the day. |
 | `WorkStart`     | When the resource will start  working                        |
 | `WorkEnd`       | When the resource will finish working                        |
 
@@ -244,11 +245,19 @@ A Task in a planning response
 
 ![warning](attachments/automated-task-and-resource-planner/warning.png)
 
-A list of warnings for this task
+`Warning` contains a list of warnings for this task. The possible values are described in the table:
 
-| **Attribute** | **Description**                                              |
-| ------------- | ------------------------------------------------------------ |
-| `Value`       | ●   MISSING_REQUIRED_PROPERTIES ●   NO_TIME_SLOTS_PLANNED  ●   NO_VALID_TIME_FOUND  ●   OUTSIDE_EXECUTION_WINDOW  ●   OVERLAP  ●   RESOURCE_MISMATCH  ●   RESOURCE_NOT_AVAILABLE  ●   SOFT_PINNED_RESOURCES_CHANGED  ●   SOFT_PINNED_TIME_SLOTS_CHANGED |
+| Possible Value | **Description**                                              |
+| ----- | ------------------------------------------------------------ |
+|    `MISSING_REQUIRED_PROPERTIES`    | |
+|`NO_TIME_SLOTS_PLANNED`  | |
+|`NO_VALID_TIME_FOUND`  | |
+|`OUTSIDE_EXECUTION_WINDOW`  | |
+|  `OVERLAP`  | |
+|`RESOURCE_MISMATCH`  | |
+|`RESOURCE_NOT_AVAILABLE`  | |
+|`SOFT_PINNED_RESOURCES_CHANGED`  | |
+|`SOFT_PINNED_TIME_SLOTS_CHANGED` | |
 
 #### 4.2.5 ValidationError
 
@@ -256,10 +265,10 @@ A list of warnings for this task
 
 Error information
 
-| **Attribute**  | **Description**               |
-| -------------- | ----------------------------- |
-| `ErrorCode`    | A machine readable error code |
-| `ErrorMessage` | A human readable error code   |
+| **Attribute**  | **Description**                |
+| -------------- | ------------------------------ |
+| `ErrorCode`    | A machine readable error code. |
+| `ErrorMessage` | A human readable error code.   |
 
 #### 4.2.6 ErrorReference
 
@@ -269,11 +278,11 @@ Points to the object which caused the validation error. This can either be the s
 
 | **Attribute** | **Description**                                              |
 | ------------- | ------------------------------------------------------------ |
-| `EntityType`  | The entityType of the object  that is referred to.           |
-| `Reference`   | The 'reference' string that was on the object is referred to. |
-| `SemanticID`  | The id known to the planner,  e.g. for tasks this will be the task id, for availability this will be a time  window. |
+| `EntityType`  | The entity type of the object that is referred to.           |
+| `Reference`   | The `reference` string that was on the object that is referred to. |
+| `SemanticID`  | The ID known to the planner. For tasks, this is the task ID. For availability, this is a time window. |
 
-Please see the demo application for examples on how to use the module.
+For examples on how to use the module, see the demo.
 
 Verschillende API-requests, request parameters, mogelijke responsen de potentiële fout scenario’s omvatten. Dit moet zowel vanuit een technisch perspectief (wat is er nodig voor het request) zijn, als vanuit een functioneel perspectief (wanneer en waarom welke requests uitvoeren en hoe de resultaten moeten worden geïnterpreteerd)
 

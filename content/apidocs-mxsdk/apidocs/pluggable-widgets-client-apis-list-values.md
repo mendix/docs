@@ -299,17 +299,25 @@ The following information of a `ListView` is getting automatically stored and re
  - sorting state (`sortOrder` field)
  - filtering state (`filter` field)
 
-### 2.8 Status of the Data {#status-of-the-data}
+### 2.8 Status of the List Value Items {#status-of-the-list-value-items}
 
-`ListValue.status` holds the status of the data. Before accessing the actual data, the status must be checked.
+```tsx
+export const enum ValueStatus {
+    Loading = "loading",
+    Unavailable = "unavailable",
+    Available = "available"
+}
 
-It is an enumerable of type `ValueStatus` which has the following members:
 
-When status is `ValueStatus.Available`, the list items are accessible and their representative GUIDs are exposed in `items` array.
+```
 
-When status is `ValueStatus.Unavailable,` then the list items are not available.
+`ListValue.status` provides the component with additional information about the state of the items, as well as if the component should handle them differently. 
 
-When status is `ValueStatus.Loading`, then the items are awaiting for the required information to arrive.
+* When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in `items` array.
+* When `status` is `ValueStatus.Unavailable`, then the list do not have such information such as when a parent data view’s data source has returned nothing. The `items` array is then always `undefined`.
+* When `status` is `ValueStatus.Loading`, then the list is awaiting for the required information to arrive. This happens when a parent data view is either waiting for its object to load or is reloading it due to a [refresh in client](/refguide/change-object#refresh-in-client).
+	* In case a list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
+	* In other cases, the `items` is `undefined`. This is a common situation while a page is still being loaded.
 
 
 ## 3 Linked Property Values

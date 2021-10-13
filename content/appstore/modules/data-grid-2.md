@@ -223,7 +223,7 @@ You can also define the default value of the widget which will be predefined as 
 
 #### 7.1.1 Configurations
 
-In this section you can select an **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be of type:
+In this section you can select an **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
 
 * Date & Time
 
@@ -254,7 +254,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 #### 7.2.1 Configurations
 
-In this section you can select an **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be of type:
+In this section you can select an **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
 
 * String
 

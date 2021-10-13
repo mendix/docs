@@ -69,6 +69,10 @@ Configure the following properties in this section:
 
 ### 2.2 Advanced Tab {#advanced}
 
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
 The **Enable advanced options** toggle (default: **No**) determines whether advanced configuration properties become visible. 
 
 When set to **Yes**, the following tabs and properties become visible:
@@ -90,10 +94,6 @@ When set to **Yes**, the following tabs and properties become visible:
 	* **Animate icon**
 	* **Expand icon**
 	* **Collapse icon**
-
-{{% alert type="info" %}}
-This option is available in Mendix Studio. In Mendix Studio Pro all the advanced options listed above are always available on the related tabs.
-{{% /alert %}}
 
 ### 2.3 Visualization Tab {#visualization}
 

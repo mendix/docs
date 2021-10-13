@@ -20,7 +20,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We removed BOM from the uploaded contract XMLs.
+* We removed byte order mark (BOM) from the uploaded contract XMLs.
 * A consumed entity in Studio Pro now works after upgrading from OData v3 to OData v4.
 
 ### October 7th, 2021

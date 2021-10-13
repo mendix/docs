@@ -14,9 +14,9 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Improvements
 
 * We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like the **Environment Name** and **Version** to the newly arranged right sidebar menu.
-* Move ContractType field to the ServiceVersion level 
-* Added an informative tooltip on company dropdown and a popup for when the user is an external user for another company
-* In-app guidance added to notify the user that he can switch the company when accepted participation invitaion
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data).
+* We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
+* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitaion.
 
 #### Fixes
 

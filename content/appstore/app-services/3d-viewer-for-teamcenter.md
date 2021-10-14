@@ -7,7 +7,7 @@ tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "comp
 
 ## 1 Introduction
 
-The 3D Viewer for Teamcenter module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/). This is an add-on module to the [3D Viewer](3d-viewer) app service that provides easy-to-use [nanoflows](/refguide/nanoflows) and [microflows](/refguide/microflows).
+The 3D Viewer for Teamcenter module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/). This is an add-on module to the [3D Viewer](3d-viewer) app service that provides easy-to-use nanoflows and microflows that help you work with 3D models.
 
 ### 1.1 Typical Use Cases
 
@@ -22,26 +22,26 @@ Using this module alone will not be enough to visualize a 3D model.
 This module enables doing the following:
 
 * Log in to a Teamcenter instance
-* Search  models from Teamcenter by setting revision rules
-* Get a model by setting revision rules
-* Visualize and perform operations on model when used with 3D Viewer app service
+* Search models from Teamcenter by setting revision rules
+* Get a model associated with Item Revision 
+* Visualize and inspect model when used with 3D Viewer app service
 
 ### 1.3 Dependencies
 
-If you want to visualize models stored in Teamcenter, you will also need to import the following components into your app project:
+If you want to visualize models stored in Teamcenter instance, you will also need to import the following components into your app project:
 
-* [3D Viewer](3d-viewer) app service – this component provides out-of-the-box widgets and the domain model entities needed to visualize a JT model
-* [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/) – this component is required for the 3D Viewer app service to connect and load the model from Teamcenter
+* [3D Viewer](https://marketplace.mendix.com/index.html) app service – this component provides out-of-the-box widgets and the domain model entities needed to visualize a JT model
+* [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) – this component is required for the 3D Viewer app service to connect and load the model from Teamcenter
 
 ### 1.4 Limitations
 
-To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](3d-viewer#limitations) section of *3D Viewer*.
+To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](3d-viewer#limitations) section of **3D Viewer**.
 
 ## 2 Prerequisites
 
 Make sure you have the following prerequisites:
 
-* [Studio Pro 8.13.1](https://appstore.home.mendix.com/link/modelers/) or above installed
+* [Studio Pro 9.4.0](https://appstore.home.mendix.com/link/modelers/) or above installed
 * A living Teamcenter instance (need `Teamcenter host address` and `Teamcenter FMS url` to configure the Teamcenter instance)
 * A Teamcenter account (it is better to have both an admin user account and a non-admin user account)
 
@@ -50,8 +50,8 @@ Make sure you have the following prerequisites:
 To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app project. Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import these components:
 
 * 3D Viewer for Teamcenter
-* [3D Viewer](3d-viewer) app service
-* [Teamcenter connector](https://appstore.home.mendix.com/link/app/111627/)  (v2.1.0) 
+* [3D Viewer](3d-viewer) app service（v.2.0.0 or above）
+* [Teamcenter connector](https://marketplace.mendix.com/link/component/111627)(v.3.3.0)
 
 After importing, you need to map the **Administrator** and **User** [module roles](/refguide/module-security#module-role) of the installed components to the applicable [user roles](/refguide/user-roles) in your app.
 
@@ -65,15 +65,13 @@ Finally, double-click the **Visualization Server** Java action and make sure **H
 
 ![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
-## 5 Using 3D Viewer For Teamcenter
+## 5 Usage
 
 The **3D Viewer** app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the **Teamcenter connector** module provides full-scale APIs for you to interact with a Teamcenter instance.  
 
 The **3D Viewer for Teamcenter** module acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
 
 To visualize and operate on the JT model from Teamcenter, use the 3D widgets that are included in the 3D Viewer app service to visualize the data obtained from the 3D Viewer for Teamcenter.
-
-![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
 ### 5.1 Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data
 
@@ -82,29 +80,29 @@ To get data from Teamcenter, the end-user needs to be authenticated and authoriz
 Follow these steps to build this login:
 
 1. Add a **Login** [button](/refguide/button-widgets) to a page in your app.
-2. Set the **On click** action to the **TcConnector** > **Published** > **APIs** > **Login** > **ExecuteAdminLogin** microflow.
+2. Set the **On click** action to the **Viewer3D_TC** > **USE_ME** > **Login** > **LoginTeamcenter** microflow.
 3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter Admin page where you can add, edit, and manage the Teamcenter instance that you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and set the instance to **Active**:
 
 	![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)
 
-4.  Return to THE **Login**, where you can enter your Teamcenter account to log in to the Teamcenter instance that you configured and set to active:
+4.  Return to the **Login**, where you can enter your Teamcenter account to log in to the Teamcenter instance that you configured and set to active:
 
 	![teamcenter-teamcenterlogin](attachments/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
 
 {{% alert type="info" %}}
-The above is an example Teamcenter login flow. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
+The above is an example Teamcenter login flow included in Viewer3D_TC module. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
 {{% /alert %}}
 
 ### 5.2 Getting a List of Corresponding Models from Teamcenter
 
-The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria and fetching a model list. This nanoflow will first check if an active Teamcenter user session is alive and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the nanoflow can be set as the data source of a [list view](/refguide/list-view). Additionally, by using **3dViewer_TC** > **USER_ME** > **SetRevisionRule**, you can apply specific revision rules to the search and get different model data returned.
+The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria(for example, search by Item name, Item ID or Revision ID ）and fetching a model list. This nanoflow will first check if an active Teamcenter user session is alive and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the SearchTC nanoflow can be set as the data source of a list view widget. Additionally, by using **Viewer3D_TC** > **USER_ME** > **ShowBOMLineQueryPopUp**, you can apply specific revision rules to the search and get different model data returned.
 
 Follow these steps to get the list:
 
 1. Create an **Open TC model** button and add it to a page in your app
 2. Set the **On click** action of the button to show a [pop-up page](/refguide/page-properties#pop-up).
 3. Add a list view to the pop-up page and set the **Data source** to **Viewer3D_TC/USE_ME/SearchTC**.
-4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named *createSearchCriteria* that creates a default **SearchCriteria** object and returns it as result. Set the **Data source** of the data view to this new nanoflow.
+4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named **createSearchCriteriaObject** that creates a default **SearchCriteria** object and returns it as result. Set the **Data source** of the data view to this new nanoflow.
 5.  Add a [text box](/refguide/text-box) and **Search** button to allow user to type in an item name (as in, a model name) and perform a search:
 
 	![teamcenter-tcmodellist](attachments/3d-viewer-for-teamcenter/teamcenter-tcmodellist.jpg)
@@ -117,11 +115,7 @@ Follow these steps to get the list:
 
 	![teamcenter-searchsync](attachments/3d-viewer-for-teamcenter/teamcenter-searchsync.jpg)
 
-7.  In the [console](/refguide/view-menu#console), there will be an error stating that the **Pagination** and **TCModelParamArray** parameters are missing for the **SearchTC** nanoflow input, so you need to fix this.
-	* **Pagination** is an entity defined in the **Viewer3D**'s domain model, so by setting values of its attribute, you can get a paginated model list. For now, just use the default setting, which is listing all models in one page.  
-	* **TCModelParamArray** is an entity defined in the **Viewer3D_TC**'s domain model. It is used to record revision rules user set for models in the list. If not set, default revision rule will be applied to models.
-
-	Since you are missing these two input parameters for the **SearchTC** nanoflow, wrap it with two data views, with one data view including the nanoflow that returns the **Pagination** object and the **TCModelParamArray** object set as the **Data source** for the other nanoflow.
+7.  Now you should have a model search page like this:   
 
 	![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
 
@@ -163,14 +157,17 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 There are other ways to visualize a model. The key idea is to pass a valid **ModelId** and **Model Source Type** to the 3D Viewer widget.
 {{% /alert %}}
 
-### 5.4 Setting Custom Revision Rules
+### 5.4 Search with Custom BOMLine Query 
 
-**SearchTC** requires a **TCModelParamsArray** object as an input parameter, which allows you to set the specific revision rules you want to apply to a model and get the model data based on these revision rules. If **TCModelParamsArray** is not specifically set, **SearchTC** will execute with the default revision rules.
+Other than searching Teamcenter server to get a list of ModelDocument objects with default BOMLine query. **Viewer_3D** also provides you with a **ShowBOMLineQueryPopUp** page that can enable you to set custom queries. 
+**ShowBOMLineQueryPopUp** page requires a **ModelDocument** object as an input parameter, which allows you to set the specific revision rules you want to apply to a model and get the model data based on these revision rules. If nothing is specifically set on the pop up, **SearchTC** will execute with the default default BOMLine query.
 
 Follow these steps to set custom revision rules:
 
-1. Add a button called *Set revision rule* to a list item.
-2. Set the **Viewer3D_TC/USE_ME/SetRevisionRules** nanoflow as the button's **On click** action:
+1. Add a button called **Set Revision Rule** to **ModelDocument** list item.
+2. Create a nanoflow **ShowBOMLineQueryPopUp** that simply show the **Viewer3D_TC/USE_ME/ShowBOMLineQueryPopUp**: 
+   ![teamcenter-showbomlinequery-nano](attachments/3d-viewer-for-teamcenter/teamcenter-showbomlinequery-nano.jpg)
+3. Set the **ShowBOMLineQueryPopUp** nanoflow as the button's **On click** action:
 
 	![teamcenter-setrevisionrules](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionrules.jpg)
 
@@ -178,6 +175,10 @@ Follow these steps to set custom revision rules:
 
 	![teamcenter-setrevisionpage](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionpage.jpg)
 
+### 5.5 Create ModelDocument from Item Revision
+
+As **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model, apart from getting a list of **ModelDocument** returned from **SearchTC** nanoflow. **Viewer3D_TC** also contains a microflow **GetModelDocumentByTCItemRevision** for you to construct a legal ModelDocument directly from Item Revision. This adds more flexibility on getting your model in Teamcenter visualized. 
+ 
 ## 8 Read More
 
 * [3D Viewer](3d-viewer)

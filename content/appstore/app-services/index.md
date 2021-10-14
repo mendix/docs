@@ -18,8 +18,8 @@ For details on participating in the Mendix Vendor program, see [How to Sell Your
 
 ## 2 Main Documents in This Category
 
-* [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps
-* [Email Service](email-service) – enables sending HTML and plain text emails with attachments in your web apps
+* [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
+* [Email Service](email-service) – enables sending HTML and plain text emails with attachments in your web apps
 * [Intelligent Document](intelligent-document) – extracts text and key value pairs from documents
 * [Invoice Processing](invoice-processing) – automates the processing of invoices in bulk
 * [Receipt Processing](receipt-processing) – automates the processing of receipts in bulk, without additional document training

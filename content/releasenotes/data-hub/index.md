@@ -9,6 +9,36 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### October 14th, 2021
+
+#### Improvements
+
+* We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data).
+* We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
+* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitaion.
+
+#### Fixes
+
+* We removed byte order mark (BOM) from the uploaded contract XMLs.
+* A consumed entity in Studio Pro now works after upgrading from OData v3 to OData v4.
+
+### October 7th, 2021
+
+#### Improvements
+
+* We upgraded the Data Hub Catalog search engine to OpenSearch 1.0.
+
+#### Fixes
+
+* We fixed an issue that caused older Studio Pro versions to not be able to connect to the Data Hub Catalog.
+
+### September 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro caused an error.
+
 ### September 23rd, 2021
 
 #### Data Hub Free Edition

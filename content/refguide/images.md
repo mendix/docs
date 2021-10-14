@@ -8,7 +8,7 @@ tags: ["Images", "Image Collections", "png", "Studio Pro"]
 
 ## 1 Introduction
 
-Images can be used to brighten up your application. [Navigation items](navigation-tree) and the various kinds of [buttons](button-widgets) have small images (icons) to left of their captions. Images can also be used in the image viewer widgets in [pages](pages) and [document templates](document-templates). Also, [enumeration values](enumerations#enum-value-properties) can have images that can then be shown in data grid columns.
+Images can be used to brighten up your application. [Navigation items](navigation-tree) and the various kinds of [buttons](button-widgets) have small images (icons) to left of their captions. Images can also be used in the dynamic image widgets in [pages](pages) and [document templates](document-templates). Also, [enumeration values](enumerations#enum-value-properties) can have images that can then be shown in data grid columns.
 
 The **System** module contains some images that are used by the standard components. If you place a data view on a page, the **Save** and **Cancel** buttons will have images from the **System** module on them. You can always use different images if you like. The same holds for images on the control bar buttons of the data grid.
 

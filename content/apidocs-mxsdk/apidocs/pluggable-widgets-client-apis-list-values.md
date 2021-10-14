@@ -280,12 +280,15 @@ if (/* check that all properties are filterable */) {
     console.log("Some attribute is not filterable");
 }
 ```
+### 2.5 Reloading {#listvalue-reload}
 
-### 2.5 Working With Actual Data
+It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`,`limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
+
+### 2.6 Working With Actual Data
 
 The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
 
-### 2.6 View State {#view-state}
+### 2.7 View State {#view-state}
 
 View state is a mechanism of storing the current state of a page when user navigates away from the page and restoring that state when user navigates back to the page. For example user has some sorting order applied in a DataGrid widget on an overview page and navigates away to a detail page. When user gets back to the overview page, the DataGrid widget will be initialized with previously used sorting order.
 

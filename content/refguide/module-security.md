@@ -18,7 +18,7 @@ Within a module you can define module roles and specify security settings for pa
 
 ## 2 Module Role {#module-role}
 
-A module role defines a set of access permissions that you can assign to a user. For more information on module roles, [user roles](user-roles), and their relation, see [Security](security).
+A module role is a specific role you create within the module to define a set of access permissions. The permissions are contained within the module. You can assign multiple module roles to a user role under the **App Security** > **User roles** tab. For more information on module roles, [user roles](user-roles), and their relation, see [Security](security).
 
 A module role has the following properties:
 

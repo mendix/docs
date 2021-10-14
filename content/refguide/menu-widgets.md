@@ -1,5 +1,5 @@
 ---
-title: "Menu Widgets"
+title: "Menus & Navigation"
 parent: "pages"
 menu_order: 45
 tags: ["studio pro", "menu widgets", "navigation", "widget"]
@@ -8,7 +8,7 @@ tags: ["studio pro", "menu widgets", "navigation", "widget"]
 
 ## 1 Introduction
 
-Menu widgets display menu items configured in the [Navigation](navigation) or in a [Menu](menu).
+Menus and navigation widgets display menu items configured in the [Navigation](navigation) or in a [Menu](menu).
 
 * [Menu Bar](menu-bar) – displays menu items of a [navigation profile](navigation#profiles) or a [menu](menu) document in a form of a horizontal bar
 

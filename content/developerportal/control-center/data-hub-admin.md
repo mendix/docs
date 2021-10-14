@@ -7,7 +7,7 @@ tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 
 ## 1 Introduction
 
-In the [Data Hub](/developerportal/control-center#data-hub) page of the **Control Center**, you can perform the following operations:
+In the [Data Hub](/developerportal/control-center#data-hub) page of Control Center, you can perform the following operations:
 
 * Assign and manage Data Hub [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Data Hub Catalog)

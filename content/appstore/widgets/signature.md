@@ -32,17 +32,16 @@ To use this widget, follow these steps:
 2. Create a page with a data view, and place the widget inside the data view.
 3. Optionally, on the **Canvas** properties tab, add the **Has signature** attribute to the entity in to toggle to clear the canvas.
 4. On the **Pen** tab, customize the signature by selecting a pen **Type** and the **Color** (which is an HTML color code).
-5. On the **Grid** tab, configure the following:
-	* **Show background grid** – when set to yes, a grid is shown in the background of the writable area
-	* **Cell width** – the width of the grid cell in pixels
-	* **Cell height** – the height of the grid cell in pixels
-	* **Line color** – the HTML color code of the grid lines
-	* **Line width** – the width of the grid line border in pixels
+5.  On the **Grid** tab, configure the following: <br />
+	a. **Show background grid** – when set to yes, a grid is shown in the background of the writable area <br />
+	b. **Cell width** – the width of the grid cell in pixels <br />
+	c. **Cell height** – the height of the grid cell in pixels <br />
+	d. **Line color** – the HTML color code of the grid lines <br />
+	e. **Line width** – the width of the grid line border in pixels
 6. On the **Appearance** tab in the **Common** section, custom CSS **Style** properties can be set for responsive design when the width and height are a percentage – for example:
 	`min-width: 200px;`
 	`max-width: 600px;`
 	`min-height: 200px;`
 	`max-height: 600px;`
 7. Upon running the application, after signing on the canvas, the **Has signature** attribute is toggled to show that the canvas has a signature. The end-user can toggle to **No** in order to clear the signature data source.
-8. When the form is submitted—which can be triggered by the start of a microflow or a save—the signature is captured and stored as an image. To view the result, the [Image Viewer](image-viewer) widget can be used.
-
+8. When the form is submitted—which can be triggered by the start of a microflow or a save—the signature is captured and stored as an image. To view the result, the [Dynamic Image](https://marketplace.mendix.com/link/component/13) widget can be used.

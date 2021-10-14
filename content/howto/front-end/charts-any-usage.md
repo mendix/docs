@@ -8,7 +8,7 @@ tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
 
 ## 1 Introduction
 
-The basic chart widgets provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
+The basic charts provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
 
 When the advanced options are not enough, the **Any Chart** widget can be used.
 

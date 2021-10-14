@@ -1,6 +1,6 @@
 ---
 title: "Group Box"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 30
 tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,13 +12,13 @@ tags: ["studio pro", "group box", "container widget", "widget"]
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically.
 
-![](attachments/container-widgets/group-box.jpg)
+![](attachments/structure-widgets/group-box.jpg)
 
 ## 2 Properties
 
 An example of group box properties is represented in the image below:
 
-{{% image_container width="300" %}}![Group Box Properties](attachments/container-widgets/group-box-properties.png)
+{{% image_container width="300" %}}![Group Box Properties](attachments/structure-widgets/group-box-properties.png)
 {{% /image_container %}}
 
 Group box properties consist of the following sections:
@@ -67,7 +67,7 @@ Possible values of this property are the following:
 ## 3 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
+* [Structure](structure-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)
 
 

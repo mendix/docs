@@ -15,6 +15,40 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### October 14th, 2021
+
+#### Improvements
+
+* We noticed our [API Keys](/developerportal/community-tools/mendix-profile#api-key) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
+* We added a [Team Server revision history](/developerportal/collaborate/team-server#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories#story-details) page.
+
+#### Fixes
+
+* We fixed an issue where you could not see the story details if one of the tasks had a title that was longer than 200 characters.
+
+### September 23rd, 2021
+
+#### Improvements
+
+* We simplified the drag-and-drop behavior on the [Stories Overview](/developerportal/collaborate/stories#overview) page (for both the new and old UI) to make it more stable.
+* We added support for adding labels to stories on the **Stories Overview** page.
+* It is now possible to add labels and tasks as well as assign a team member when you [create a story](/developerportal/collaborate/stories#new-story).
+* Thanks to a lot of feedback from the community, we have improved the new stories functionality to the point where we feel comfortable removing the old UI. Because of this, we will be deprecating the old UI on December 31st, 2021.
+* We improved the look and feel of the [story details](/developerportal/collaborate/stories#story-details) page, and we removed support for the old version of this page.
+* We made further preparations for the support of Git-enabled apps.
+* We finished a year-long project where we modernized the way the Developer Portal communicates internally. This meant we removed a long-running internal platform app, which had a great run, but now it is time to say goodbye. This app has been replaced with business events based on Kafka.
+
+#### Fixes
+
+* We fixed an issue where an error was shown when a Sprint was created from the [Stories](/developerportal/collaborate/stories#new-sprint) page.
+
+### September 13th, 2021
+
+#### Improvements
+
+* Your [Mendix Profile](/developerportal/community-tools/mendix-profile) got a visual update.
+* We removed the possibility to add a GitHub account to your profile.
+
 ### September 6th, 2021
 
 #### New Feature

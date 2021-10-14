@@ -60,7 +60,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
-| 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact support. |
+| 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact Support. |
 
 **Example Output**
 

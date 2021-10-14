@@ -20,7 +20,7 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * See the network of shared data in the Data Hub Landscape
 
 {{% alert type="info" %}}
-To use the Mendix Data Hub a license is required. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps.
+To use the Mendix Data Hub a license is required. The license enables you to discover all the shared assets that are registered in your organization and also use the Data Hub integration in Studio Pro to consume the shared datasets for building apps. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -65,8 +65,6 @@ Follow these steps to create a simple app in Mendix Studio Pro.
 12. From the **App Explorer** drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.
 
 You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
-
-![](attachments/share-data/customer-overview-home-page.png)
 
 Go ahead and customize the homepage further by changing the banner text.
 
@@ -114,7 +112,7 @@ Do the following:
 
   When this entity set is consumed by another app via the Data Hub Catalog, the other app will see the data entered here.
 
-## 5 Using the Data Hub Catalog and Curating Your Own Service
+## 5 Using the Data Hub Catalog and Curating Your Own Service {#use-and-curate}
 
 The **{yourname}CustomerODataService** from your app is now registered in the Data Hub Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
 
@@ -152,12 +150,13 @@ To do this, follow the steps below:
 
 2. Go to the domain model > **Data Hub** pane:
 
-	 {{% image_container width="300" %}}![data hub pane](attachments/share-data/data-hub-pane-empty.png){{% /image_container %}}
+	![data hub pane](attachments/share-data/data-hub-pane-empty.png)
 
 	If you do not see the **Data Hub** pane, click **View** > **Data Hub** to display it:
 	![](attachments/share-data/view-data-hub.png)
 	
 3. In the [Data Hub](/refguide/data-hub-pane) pane, enter the search string *{yourname}*.
+
 4. By default, search in the **Data Hub** pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
     ![Filter Icon](attachments/share-data/filter-icon.png)
@@ -168,15 +167,13 @@ To do this, follow the steps below:
 
 6. This entity is different from the blue entity container from the first app. This purple colored entity is called an *external entity*. The name of the OData service it is exposed in is displayed above it.
 
-	{{% alert type="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
+    ![external entities](attachments/share-data/external-entities-in-domain-model.png)
 
-	Click the information icon for the consumed service in the **Data Hub** Pane to see further information about the service in Studio, and follow the link to **View in Data Hub Catalog**.
+    {{% alert type="info" %}}For further information on external entities, see [External Entities](/refguide/external-entities) in the *Studio Pro Guide*.  {{% /alert %}}
 
-	![external entities](attachments/share-data/external-entities-in-domain-model.png)
+    Click the information icon for the consumed service in the **Data Hub** pane to see further information about the service, and follow the link to **View in Data Hub Catalog**.
 
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
-
-	![external entities](attachments/share-data/external-entity-metadata-docs.png)
 
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **OK**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 

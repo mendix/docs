@@ -10,6 +10,8 @@ Mendix Studio Pro and Studio contain a lot of core out-of-the-box widgets such a
 
 This guide presents documentation on configuring and using the latest versions of [platform-supported](/appstore/general/app-store-content-support#category) Marketplace components.
 
+It also contains guidelines on [creating Marketplace content](creating-content/) to share and sell.
+
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/app-store/).
 
 ## 2 Guide Categories
@@ -17,7 +19,7 @@ For details on the Studio Pro version required for use and when the component wa
 The *Marketplace Guide* is divided into the following categories:
 
 * [General Info](general/)
-* [Themes](themes/)
+* [Creating Content](creating-content/)
 * [App Services](app-services/)
 * [Connectors](connectors/)
 * [Modules](modules/)

@@ -20,7 +20,7 @@ Mendix Cloud version 3 has been deprecated and will be turned off shortly. This 
 ## 2 Migration considerations
 
 {{% alert type="warning" %}}
-We strongly advise you not to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4.
+Do not upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you do choose to upgrade your runtime version at the same time as migrating from Cloud v3 to Cloud v4, Mendix Support will not be able to assist you.
 
 If you need to upgrade your runtime version, ensure that it is fully tested in Cloud V3 before attempting to migrate to Cloud v4.
 {{% /alert %}}
@@ -51,10 +51,11 @@ There are a few other differences between the way you develop and deploy apps in
     * The database status is not visible on the node details screen
 * Mendix Cloud v4 only supports TLS 1.2 or above for incoming requests
     * If you have external clients connecting _to_ your application running in the Mendix Cloud, these clients have to support TLS 1.2 or above to be able to make a successful connection
+* In Mendix Cloud v4, the disk space available to your app in the runtime container is separate from the file storage and generally less than 3 GB. This has an impact on the possibilities for custom Java code, which is run on the runtime containers. When manipulating large files with custom Java code which creates temporary files, you can run into this disk size limitation. This means you might have to change your application logic to process multiple smaller files with Java code instead of using one large file, so that temporary files are garbage collected as you go along.
 
 ## 3 Prerequisites
 
-There are two methods of doing the migration. For both of them you first need to ensure that your app is on at least **Mendix version 6.0**, otherwise the migration will fail – it is preferable to be on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
+There are two methods of doing the migration. For both of them you first need to ensure that your app is on a supported version of Mendix, **Mendix version 7.0 and above**. For the best level of support, we recommend that you use version **7.23** which is the [long term support](/releasenotes/studio-pro/lts-mts) version of Mendix version 7.
 
 For further prerequisites see the sections below.
 
@@ -101,8 +102,9 @@ To deploy your app to your new Mendix Cloud v4 environment, you need to do the f
     * Custom environment variables
     * Preferred maintenance window
     * Tags
+    * Custom Domain Certificates – the new environment will need to have the same Custom Domain Certificates as the V3 environment, see [Changing a Custom Domain](#custom-domain) for advice on copying Custom Domain Certificates
 
-    {{% alert type="info" %}}You do not need to set up your **Custom Domains**. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
+    {{% alert type="info" %}}You do not need to point your **Custom Domains** to a new destination. When the app is migrated to v4, it will be given the same name as your current app and so your Custom Domain will automatically pick up the v4 app.{{% /alert %}}
 
 ### 4.3 Replicating the Data {#replicating-data}
 
@@ -388,7 +390,7 @@ To change the App URL (if you are not using a custom domain) you will need to co
 * **App ID** for the new app, which is available from the *General* page for the new (v4) app
 * **App ID** for the old app, which is available from the *General* page for the old (v3) app
 
-### 5.7 Changing a Custom Domain
+### 5.7 Changing a Custom Domain{#custom-domain}
 
 If you have a custom domain which you want to transfer to your v4 deployment, you will need to bear the following information in mind.
 

@@ -33,9 +33,9 @@ Follow the instructions below to set up your first local notification:
 
 1. Open Mendix Studio Pro.
 2. Select **File** > **New Project**.
-3.  Select the **Native Mobile Quickstart** app (also available online [here](https://marketplace.mendix.com/link/component/109511/)):
+3.  Select the **Blank Native Mobile App** (also available online [here](https://marketplace.mendix.com/link/component/109511/)):
 
-	![native mobile quickstart app](attachments/native-push/quickstart.png)
+	![Blank Native Mobile App](attachments/native-push/quickstart.png)
 
 4.  Click **Use this starting point**.
 5.  Click **Create App** to close the dialog box:

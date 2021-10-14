@@ -75,11 +75,11 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 4.2 Enable Private Version Control with Subversion{#enable}
+### 4.2 Enable Private Version Control with Subversion {#enable}
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in another Subversion server to which you have access. This will allow you to specify the location of the app on the Subversion server when opening, downloading, or uploading the app.
 
-### 4.3 Enable Private Version Control with Git
+### 4.3 Enable Private Version Control with Git 
 
 Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/collaborate/team-server), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
 
@@ -118,6 +118,18 @@ Default: *enabled*
 ### 6.4 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
+
+Default: *enabled*
+
+### 6.5 Team Server Git {#git}
+
+With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
+
+{{% alert type="warning" %}}
+This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/). 
+{{% /alert %}}
+
+After applying this setting, you need to restart Studio Pro.
 
 Default: *disabled*
 

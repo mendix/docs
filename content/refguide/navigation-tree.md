@@ -61,5 +61,5 @@ Only available when the [menu source](#menu-source) is set to **Menu document**.
 ## 3 Read More
 
 * [Page](page)
-* [Menu Widgets](menu-widgets)
+* [Menus & Navigation](menu-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

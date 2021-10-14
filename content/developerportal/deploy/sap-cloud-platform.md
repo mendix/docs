@@ -63,7 +63,7 @@ Currently supported regions are:
 * US Central (IA) Beta 
 * US East (VA)
 
-Please contact Mendix support if you have a requirement for an additional region.
+Please contact Mendix Support if you have a requirement for an additional region.
 {{% /alert %}}
 
 Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
@@ -161,7 +161,7 @@ To create a new environment, perform the following steps:
 
 10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
 
-    {{% alert type="info" %}}If you do not have a subscription secret, create a support ticket with Mendix Support and they will send you one.{{% /alert %}}
+    {{% alert type="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
 
 11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
 
@@ -539,7 +539,7 @@ When a service is in the **Services To Be Bound** section, you can add a new bin
 
 1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
 
-2. Select **Add Binding Configuration.
+2. Select **Add Binding Configuration**.
 
 3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
 

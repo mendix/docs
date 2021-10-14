@@ -47,7 +47,7 @@ That custom class can be easily accessed in Mendix Studio Pro:
 
 {{% image_container width="400" %}}![custom class](attachments/native-styling-refguide/custom-class.png){{% /image_container %}}
 
-When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Widgets](#understanding-data-widgets) section below. The example below shows how to extend a default class:
+When you want to apply styling to one instance of a widget, you can extend that widget’s default class. Each widget's default class is named in the [Data Containers](#understanding-data-widgets) section below. The example below shows how to extend a default class:
 
 ```javascript
 export const ActionButton = {
@@ -75,9 +75,9 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 
 For more information on creating your own classes, see the [Creating Your Own Classes](/howto/mobile/how-to-use-native-styling#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
-## 3  Data Widgets {#understanding-data-widgets}
+## 3  Data Containers {#understanding-data-widgets}
 
-Data widgets are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
+Data containers are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
 
 ### 3.1 Data View Widget
 
@@ -111,9 +111,9 @@ The widget’s style properties are as follows:
 
 The default class to style all list views is named `ListView`.
 
-## 4 Common Widgets
+## 4 Text Widgets
 
-Common widgets are used in almost all app pages. Because of their ubiquity, learning to style common widgets will make a large difference for your apps.
+Text widgets are used in almost all app pages. Because of their ubiquity, learning to style text widgets will make a large difference for your apps.
 
 ### 4.1 Text
 
@@ -132,28 +132,7 @@ The text widget shows text which can optionally contain parameters. For more inf
 
 The default class to style all texts is named `Text`.
 
-### 4.2 Image {#image}
-
-The image widget can be used to show a predefined image on a page, layout, or snippet. For more information on these widgets, see [Image Widgets](image). The widget’s style properties are as follows:
-
-```xml
-<container>
-	<image/>
-</container>
-```
-
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.  |       |
-| `container`  | `rippleColor` | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
-| `container`  | `underlayColor` | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-| `image`     | This has all ImageStyle properties. |       |
-| `imageDisabled` | Same properties as `image` | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
-
-The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Image Viewer](#image-viewer) section below.
-
-### 4.3 Page Title 
+### 4.2 Page Title 
 
 The page title widget shows the title of the page on which it is used. This can be the title defined on the page itself, or the override title defined when showing a page. For more information on this widget, consult [Page Title](page-title). The widget’s style properties are as follows:
 
@@ -170,7 +149,11 @@ The page title widget shows the title of the page on which it is used. This can 
 
 The default class to style all page titles is named `PageTitle`.
 
-### 4.4 Layout Grid
+## 5 Structure Widgets
+
+Structure  widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](structure-widgets).
+
+### 5.1 Layout Grid
 
 The layout grid widget can be used to structure the content on your page. You are able to create rows and columns which you can configure to have fixed or dynamic sizing.
 
@@ -212,11 +195,7 @@ The resulting DOM looks like this:
 </container>
 ```
 
-## 5 Container Widgets
-
-Container widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Container Widgets](container-widgets).
-
-### 5.1 Container 
+### 5.2 Container 
 
 A container widget can be used to style or hide a group of widgets. This widget does not have a visual representation by default, though styling can be used to add spacing. The widget’s style properties are as follows:
 
@@ -235,7 +214,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 
 The default class to style all page titles is named `Container`.
 
-### 5.2 Tab Container
+### 5.3 Tab Container
 
 Tab containers are used to show information categorized into multiple tab pages. Tab containers can help display information which exceeds a device’s screen space. This is how a default tab container widget could look in an app:
 
@@ -279,7 +258,7 @@ The widget’s style properties are as follows:
 
 The default class to style all tab containers is named `TabContainer`.
 
-### 5.3 Scroll Container
+### 5.4 Scroll Container
 
 A scroll container is used to make enable scrolling for a part of a page. This widget does not have a visual representation by default, though styling can be used to add spacing.  The widget’s style properties are as follows:
 
@@ -295,9 +274,9 @@ A scroll container is used to make enable scrolling for a part of a page. This w
 
 The default class to style all scroll containers is named `ScrollContainer`.
 
-## 6 Input Widgets
+## 6 Input Elements
 
-Input widgets are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Widgets](input-widgets).
+Input elements are typically used to show data to the user and allow them to edit data. For more information on these widgets, see [Input Elements](input-widgets).
 
 ### 6.1 Text Box {#text-box}
 
@@ -511,19 +490,40 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
-## 7 File Widgets
+## 7 Images, Videos & Files
 
-File widgets help your user app manage images and other files. For more information on these widgets, see [File Widgets](file-widgets).
+Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](image-and-file-widgets).
 
-### 7.1 Image Viewer {#image-viewer}
+### 4.2 Static Image {#image}
 
-An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
+The static image widget can be used to show a predefined image on a page, layout, or snippet. For more information on this widgets, see [Static Image](image). The widget’s style properties are as follows:
 
-The default class to style all image viewers is named  `NativeDynamicImage`.
+```xml
+<container>
+	<image/>
+</container>
+```
 
-## 8 Button Widgets
+| Element             | Style Properties                    | Description                                                  |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------ |
+| `container`         | This has all ViewStyle properties.  |                                                              |
+| `container`         | `rippleColor`                       | This is the color of the ripple on Android, and will be applied only when the container has an on click action set, otherwise it will be ignored (defaults to `rgba(0, 0, 0, 0.2)`). |
+| `container`         | `underlayColor`                     | This is the color while pressing the container on iOS, and will be applied only when the container has an on click action set, otherwise it will be ignored and defaulted to opacity only. |
+| `containerDisabled` | Same properties as `container`      | Overrides `container` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
+| `image`             | This has all ImageStyle properties. |                                                              |
+| `imageDisabled`     | Same properties as `image`          | Overrides `image` styles if the image has an on click action and the action cannot be executed or is disabled during action. |
 
-Button widgets help your user perform actions. For more information about these widgets, see [Button Widgets](button-widgets).
+The default class to style all static image styles is named `Image`. Please note that images loaded from the model are styled with `NativeDynamicImage` as described in the [Dynamic Image](#dynamic-image) section below.
+
+### 7.1 Dynamic Image {#dynamic-image}
+
+A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
+
+The default class to style all dynamic images is named  `NativeDynamicImage`.
+
+## 8 Buttons
+
+Buttons help your user perform actions. For more information about these widgets, see [Buttons](button-widgets).
 
 ### 8.1 Action Button
 
@@ -617,9 +617,9 @@ The navigation style properties are as follows:
 
 The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
 
-## 11 Add-On Widgets
+## 11 Add-Ons
 
-Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-on widgets might also be distributed through app templates, as well as modules importing pages from other apps. 
+Add-on widgets are distributed through the [Native Mobile Resources](/appstore/modules/native-mobile-resources) module, and are not shipped with Mendix Studio Pro. Other add-ons might also be distributed through app templates, as well as modules importing pages from other apps. 
 
 ### 11.1 Activity Indicator {#activity-indicator}
 

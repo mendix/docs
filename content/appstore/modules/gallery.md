@@ -19,6 +19,10 @@ Here is an example of a Gallery widget using filters:
 
 ### 1.2 Advanced Options
 
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
 * Pagination type

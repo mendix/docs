@@ -16,7 +16,11 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-The data grid has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your data grid:
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
+The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type
 * Pagination position
@@ -217,6 +221,16 @@ Here is an example of **Date Filter** with **Adjustable by user** defined as **N
 
 You can also define the default value of the widget which will be predefined as initial value when opening your data grid page.
 
+#### 7.1.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+
+* Date & Time
+
+#### 7.1.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
 ### 7.2 Drop-Down Filter
 
 ![Example of default drop-down filter](attachments/data-grid-2/dropdown-filter.png)
@@ -237,6 +251,21 @@ This widget also allows multiple selections by selecting **Multiselect** in the 
 ![Example of multi select drop-down filter](attachments/data-grid-2/dropdown-filter-multiselect.png)
 
 You can also define the empty option caption, which will be rendered as the first item if **Multiselect** if set as **No**. It allows users to clean the filter if pressed.
+
+#### 7.2.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+
+* String
+
+{{% alert type="warning" %}}
+If **Multiselect** is enabled you must select a String attribute containing `Unlimited` in its size.
+{{% /alert %}}
+
+#### 7.2.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
 
 ### 7.3 Number Filter
 
@@ -268,6 +297,19 @@ Here is an example of **Number Filter** with **Adjustable by user** set as **No*
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+
+#### 7.3.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+
+* Autonumber
+* Decimal
+* Integer
+* Long
+
+#### 7.3.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.4 Text Filter
 
@@ -302,6 +344,17 @@ Here is an example of Text Filter with **Adjustable by user** set to **No**:
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+
+#### 7.4.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+
+* Hashed string
+* String
+
+#### 7.4.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.5 Header Filtering
 

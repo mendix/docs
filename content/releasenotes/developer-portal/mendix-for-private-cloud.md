@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### October 14th, 2021
+
+#### Portal Improvements
+
+* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to  deploy a Mendix 7 or Mendix 8 app.
+
 ### September 27th, 2021
 
 #### Data migration tool (preview)

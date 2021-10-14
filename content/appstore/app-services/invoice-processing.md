@@ -20,7 +20,7 @@ With the [Invoice Processing](https://marketplace.mendix.com/link/component/1183
 
 ### 1.4 Prerequisites
 
-This app best service works with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
 ## 2 Installation
 
@@ -41,10 +41,8 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
     4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
 
-    5. Open the **App Explorer** or **Project Explorer** to view the **InvoiceProcessing** module.
+    5. Open the **App Explorer** or **Project Explorer** to view the **InvoiceProcessing** module. You can also find the app service in the **Document Data Capture Service** category in the **Toolbox**.
     
-
-Once imported, the app service is visible in the **App Explorer** or **Project Explorer** and in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuration
 
@@ -52,25 +50,25 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Invoice Processing Service](https://marketplace.mendix.com/link/component/118389) page, click **Subscribe** to order a subscription.
+1. On the [Invoice Processing Service](https://marketplace.mendix.com/link/component/118389) component page in the Marketplace, click **Subscribe** to order a subscription.
 
 2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Invoice Processing Service **to open [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
+4. Click **Invoice Processing Service **to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
 
 5. Click **Create Binding Keys**.
 
-6. Enter a descriptive name for the binding keys. Make sure that the name includes the name of the app which uses the Invoice Processing app service.
+6. Enter a descriptive name for the binding keys. Make sure the name includes the name of the app that will use the app service.
 
-7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
+7.  Click **Create Keys** to generate the **Access_Key**, the **Secret_Key** and the **Encryption_Key**.
 
-    {{% alert type="warning" %}}Do not close the page below yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
+    {{% alert type="warning" %}}When the page shows the generated keys, do not close this page immediately. Once you close the page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/invoice-processing/binding-key-generation.png)
 
-8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment. After you copy the keys, you can close the page.
+8. **Copy** and save the **Access_Key**, the **Secret_Key** and the **Encryption_Key** in a text file.. You need to use them later for app deployment. After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 

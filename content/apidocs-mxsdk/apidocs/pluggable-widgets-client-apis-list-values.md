@@ -308,7 +308,17 @@ export const enum ValueStatus {
     Available = "available"
 }
 
-
+if (this.props.listValue.status === ValueStatus.Available) {
+    return (
+        <div>
+            ...
+        </div>
+    );
+} else if (this.props.listValue.status === ValueStatus.Loading) {
+    return <p>Loading... Please, wait...</p>;
+} else if (this.props.listValue.status === ValueStatus.Unavailable) {
+    return <p>There are no available items to show.</p>;
+}
 ```
 
 `ListValue.status` provides the component with additional information about the state of the items, as well as if the component should handle them differently. 

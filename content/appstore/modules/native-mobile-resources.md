@@ -57,6 +57,7 @@ These are the native widgets included in these resources along with links to the
 | [List View Swipe](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/listview-swipe-native) | Shows controls on swipe for an interactive list view. |
 | [Maps](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/maps-native) | Shows locations on an interactive map. |
 | [Notifications](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/notifications-native) | Triggers actions based on incoming notifications. |
+| [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) | Renders a dataset as a pie or doughnut chart (depending on configuration) based on static data sets. |
 | <a name="popup-menu"></a>[Popup Menu](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/popup-menu-native) | Displays a context menu exactly where the user taps. |
 | [Progress Bar](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-bar-native) | Displays progress in a horizontal bar. |
 | [Progress Circle](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/progress-circle-native) | Displays progress in a circle with enclosed text. |

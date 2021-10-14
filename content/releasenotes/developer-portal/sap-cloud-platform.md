@@ -12,6 +12,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### October 14th, 2021
+
+#### Improvements
+
+* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform#binding-services) tab.
+
 ### August 30th, 2021
 
 * You can now upload your service configurations directly from the Configurator without having to download the configuration first.

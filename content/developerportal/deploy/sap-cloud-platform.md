@@ -539,7 +539,7 @@ When a service is in the **Services To Be Bound** section, you can add a new bin
 
 1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
 
-2. Select **Add Binding Configuration.
+2. Select **Add Binding Configuration**.
 
 3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
 

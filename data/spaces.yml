@@ -207,11 +207,11 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
+    - "Creating Content"
     - "App Services"
     - "Connectors"
     - "Modules"
     - "Widgets"
-    - "Creating Content"
 data-hub:
   space: "Data Hub Guide"
   priority: false

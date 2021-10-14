@@ -27,7 +27,7 @@ The control bar can also include a number of selection options and spreadsheet e
 
 ## 2 Control Bar Buttons
 
-Most properties of control bar buttons are the same as properties of button widgets. For more information on button properties, see [Button Properties](button-properties).
+Most properties of control bar buttons are the same as properties of buttons. For more information on button properties, see [Buttons](button-properties).
 
 Sections below describe the purpose of each control bar button and their specific properties if any. 
 
@@ -68,7 +68,7 @@ For example, you have an entity *Vehicle* and two specializations: *Bicycle* and
 
 ### 2.4 Action Button {#grid-action-button}
 
-An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Button Widgets](button-widgets). 
+An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Buttons](button-widgets). 
 
 ### 2.5 Remove Button {#remove-button}
 

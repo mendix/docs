@@ -31,10 +31,6 @@ Supported color pickers are based on the [React Color](http://casesandberg.githu
 * Material
 * Swatches
 
-### 1.2 Demo
-
-For a demo app that has been deployed with this widget, see [here](https://colorpicker.mxapps.io).
-
 ## 2 Configuration
 
 To configure this widget, follow these steps:

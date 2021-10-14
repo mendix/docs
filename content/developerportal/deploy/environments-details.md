@@ -39,6 +39,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Database Status** – (*Cloud v3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
+* **Secondary Backup Location** the region where the backup is stored
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
@@ -294,7 +295,12 @@ To avoid security issues when you want to embed the app in an iframe, we recomme
 
 ##### 4.2.2.2 Applying a Different SameSite Setting
 
-From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies is `SameSite=None`, which means that they can be used in an iframe. You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to add restrictions to apps running outside iframes.
+From **Mendix version 8.12**, you can control the value of SameSite in your cookies. The default for all cookies depends on the version of Mendix you are using:
+
+* for Mendix version 8 (8.12 and above), the default is `SameSite=None`, which means that they *can* be used in an iframe
+* for Mendix version 9.0 and above, the default is `SameSite=Strict`, which means that they *cannot* be used in an iframe
+
+You can change this value in the `com.mendix.core.SameSiteCookies` [custom runtime setting](#custom-runtime-settings) if you want to change iframe restrictions for your app.
 
 For **Mendix versions below 8.12** there was no SameSite value set on cookies and the behavior is dependent on the browser default. To ensure that cookies can be used within iframes, you can set the custom environment variable `SAMESITE_COOKIE_PRE_MX812` to `true` in [custom environment variables](#custom-environment-variables), which will set `SameSite=None; Secure;` for all your cookies.
 
@@ -447,7 +453,7 @@ Use the Custom Runtime Settings section to perform the following actions:
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
+For more information about runtime settings, read the [Runtime Customization](/refguide/custom-settings) and [Advanced Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
@@ -491,6 +497,7 @@ Select **Supported** and you can choose from the following variables:
 * **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **METRICS_AGENT_CONFIG** – passes a configuration JSON to control the metrics passed to Datadog
 * **SAMESITE_COOKIE_PRE_MX812** – set `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section
+* **USAGE_METRICS_EMAIL_FIELDS** – if your app uses specializations of the `System.User` entity to store users, use this variable to point to the them. This enables us to identify internal and external users of your app. The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app which contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user. If you have multiple specializations of `System.User`, you can specify the values in comma-separated format. That is `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`. In the following example there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 
 In addition, to support features which are in beta, you can add **Unsupported** environment variables. If you are involved in using a beta feature, you will be told what **Name** needs to be entered here and what the **Value** should be.
 

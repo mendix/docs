@@ -5,6 +5,38 @@ menu_order: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.6
+
+**Release date: October 4th, 2021**
+
+### Fixes
+
+* We fixed an issue with the `OpenURL` JavaScript action on Android devices which use version 11 and above.
+
+## 6.2.5
+
+**Release date: September 29th, 2021**
+
+### Improvements
+
+iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+
+## 6.2.4
+
+**Release date: September 23rd, 2021**
+
+### Improvements
+
+To support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. This version is backward compatible with previous Mendix Studio Pro 9 versions.
+
+## 6.2.3
+
+**Release date: September 7th, 2021**
+
+### Fixes
+
+* We fixed an issue with dependency resolution on Android.
+
 ## 6.2.2
 
 **Release date: July 29th, 2021**

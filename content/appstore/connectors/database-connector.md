@@ -35,7 +35,7 @@ These are the prerequisites for using this connector:
 
 ## 3 Getting Started
 
-Once you have imported the Database Connector into your app, you will have the **Database Connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
+Once you have imported the Database Connector into your app, you will have the **Database connector** category available in the **Toolbox**. The connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
 
 ![](attachments/database/database-connector-in-toolbox.png)
 
@@ -44,11 +44,11 @@ Once you have imported the Database Connector into your app, you will have the *
 #### 3.1.1 Usage
 
 To use any of **Execute parameterized query**, **Execute parameterized statement**, **Execute query** or **Execute statement**, in your Mendix application, drag them into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
- 
+
 The **Execute query** and **Execute parameterized query** actions should be used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for the other DML commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
- 
+
 For both queries and statements, the difference between the parameterized and regular versions are that the parameterized version takes a string template parameter, while the regular version takes a fully formed SQL command string with no placeholders.
- 
+
 {{% alert type="info" %}}
 The parameterized actions are only available with Database Connector versions 3.0.0 and above. For these, it is necessary to use Mendix [8.6.0](/releasenotes/studio-pro/8.6#860).
 {{% /alert %}}

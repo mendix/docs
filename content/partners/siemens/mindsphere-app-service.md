@@ -21,6 +21,8 @@ With the use of MindSphere IIoT for Makers, you have an integrated developer exp
 
 MindSphere IIoT for Makers packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
+This documentation will help you find out how to develop for Siemens MindSphere. Alternatively, have a look at the Mendix Academy Learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
+
 ### 1.1 Limitations
 
 MindSphere IIoT for Makers is easy to add to your app but has the following limitations:
@@ -134,7 +136,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 2. Choose the **Product** *MindSphere IoT*.
 
-3. Click **Generate Keys**.
+3. Click **Create Binding Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
@@ -148,7 +150,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
-You can find more information about managing binding keys in the [Service Management Dashboard](/appstore/general/app-store-overview#service-management) section of *Marketplace Overview*.
+You can find more information about managing binding keys in the [Subscriptions](/appstore/general/app-store-overview#subscriptions) section of *Marketplace Overview*.
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 

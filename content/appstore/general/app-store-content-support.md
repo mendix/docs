@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Content Support"
 category: "General Info"
-menu_order: 40
+menu_order: 50
 tags: ["marketplace", "support", "platform support", "community support", "deprecated"]
 description: "Describes the various levels of support available for using Marketplace content in your Mendix apps."
 aliases:
@@ -40,9 +40,9 @@ Support for content in this category is decided by Mendix on a case-by-case basi
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
-* Open an an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
+* Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages
-* Ask a question son the [Mendix Forum](https://mxforum.mendix.com/)
+* Ask a question on the [Mendix Forum](https://mxforum.mendix.com/)
 * Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

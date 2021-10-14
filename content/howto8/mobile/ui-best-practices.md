@@ -33,8 +33,8 @@ Which roles and staff make up your development team depends on the type of apps 
 In apps where custom UX or UI is more important (for example B2C and B2B apps) the following combinations are often employed:
 
 * **UI design + UX design** – This configuration is often used if an in-house UX team is used or a design agency is hired.
-* **UI design + UX design + Front-end development** – UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
-* **Mendix development + Front-end development** – A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
+* **UI design + UX design + front-end development** – UX or UI experts that also have the skills to implement their designs and UX are key for this configuration. For example, several people in Mendix Expert Services are of these type.
+* **Mendix development + front-end development** – A Mendix developer who knows how to implement styling, but does have to the skills to create the design.
 
 ## 3 Process
 

@@ -70,5 +70,5 @@ This property determines how the simple menu bar is laid out.
 ## 3 Read More
 
 * [Page](page)
-* [Menu Widgets](menu-widgets)
+* [Menus & Navigation](menu-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

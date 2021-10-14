@@ -4,6 +4,10 @@ description: "How to register OData resources in the Data Hub Catalog: through t
 category: "Data Hub Catalog"
 menu_order: 35
 tags: ["data hub catalog", "data hub", "external entities", "register", "published OData service" ,"how to", "registration"]
+aliases:
+    /data-hub/data-hub-catalog/register.html
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+#The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -15,7 +19,6 @@ There are three ways to register exposed OData services in the Data Hub Catalog.
 * [Through the Mendix Cloud](#mendix-cloud)
 * [Through the Data Hub Catalog Registration API](#registration-api)
 * [Through the Data Hub Catalog UI form](#registration-form)
-
 
 ## 2 Prerequisites
 
@@ -60,7 +63,7 @@ Once you have a Personal Access Token, follow this series of REST calls to regis
 
 The [Data Hub Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration.html) describes all the optional fields, required formats, other operations on these same paths. You will only fill out the required fields and one operation per path in this how-to. 
 
-#### 4.1.1 Creating a Data Hub Catalog Registration API token {#create-token}
+#### 4.1.1 Creating a Data Hub Catalog API token {#create-token}
 
 You can create a Personal Access Token in the Mendix **Warden** application. Follow the steps below:
 

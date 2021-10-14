@@ -1,7 +1,7 @@
 ---
 title: "Jobs Board"
 category: "Community Tools"
-menu_order: 40
+menu_order: 7
 description: "Describes the board where the Mendix community can post and find job opportunities."
 tags: ["job", "job board", "job dashboard"]
 aliases:
@@ -77,4 +77,4 @@ Each submitted job listing is reviewed and proofread by Mendix. If there is any 
 
 ## 4 Read More
 
-* [Mendix Profile](/developerportal/mendix-profile/)
+* [Mendix Profile](/developerportal/community-tools/mendix-profile)

@@ -203,10 +203,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 
 ``` json
 [ {
-  "locations": [ "AZ", "CA", "VT" ],
-  "locationmode": "USA-states",
-  "z": [ 10, 20, 40 ],
-  "type": "scattergeo"
+    "type": "choropleth",
+    "locations": ["AZ", "CA", "VT"],
+    "locationmode": "USA-states",
+    "z": [10,20,40],
+    "name": "Choropleth data"
 } ]
 ```
 

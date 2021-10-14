@@ -47,7 +47,7 @@ Every app has at least one configuration, but it may have many. Every app starts
 
 ### 2.4 User Roles
 
-The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use an UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -152,9 +152,9 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|---- |
-| On enter event            | OEN\_{Purpose}   | Input widgets   |
-| On change event           | OCH\_{Purpose}   | Input widgets   |
-| On leave event            | OLE\_{Purpose}   | Input widgets   |
+| On enter event            | OEN\_{Purpose}   | Input elements   |
+| On change event           | OCH\_{Purpose}   | Input elements   |
+| On leave event            | OLE\_{Purpose}   | Input elements   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
 | Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 

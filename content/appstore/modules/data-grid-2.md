@@ -229,7 +229,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 #### 7.1.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.2 Drop-Down Filter
 
@@ -264,7 +264,7 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 
 #### 7.2.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 
 ### 7.3 Number Filter
@@ -309,7 +309,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 #### 7.3.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.4 Text Filter
 
@@ -354,7 +354,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 #### 7.4.2 Events
 
-In this section you can select an action to be executed **On change** the filter value. This means every time the user types or selects a value it will be executed.
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.5 Header Filtering
 

@@ -30,17 +30,17 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
 1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118388) and download the *.mpk* file for Intelligent Document Service.
 
-2. To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
+2.  To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
 
-   1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
+    1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
 
-   2. Click **Import module package** and then select the *.mpk* file.
+    2.  Click **Import module package** and then select the *.mpk* file.
 
-      ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
+        ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
 
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3. In the **Import Module** dialog box, click **Import**. 
 
@@ -70,13 +70,11 @@ Intelligent Document Service is a premium Mendix product that is subject to a pu
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates the **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
-    {{% alert type="warning" %}}Do not close the following page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
+    {{% alert type="warning" %}}Do not close the page below yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/intelligent-document/binding-key-generation.png)
 
-8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment.
-
-After you copy the keys, you can close the page.
+8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment. After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
@@ -94,14 +92,14 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 ### 4.1 Training a Document Model {#document-model-training}
 
-1. Perform the following steps to log into the **Document Model Training** application:
+1.  Perform the following steps to log into the **Document Model Training** application:
 
-    1. Log into the Marketplace with your Mendix account.
-    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-    3. Click **Intelligent Document Service** to open the service management dashboard.
-    4. Click **Manage Instance** to open the **Document Model Training** application.
+    1.  Log into the Marketplace with your Mendix account.
+    2.  Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+    3.  Click **Intelligent Document Service** to open the service management dashboard.
+    4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-       ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
+        ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
 
     5. Log into the application with your Mendix account.
 
@@ -151,35 +149,35 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 9. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
 
-![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
+   ![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
 You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity, and if necessary, further process the entity with [event handlers](/refguide/event-handlers).
 
-1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
-    1. Log into the **Document Model Training** application with your Mendix account.
+    1.  Log into the **Document Model Training** application with your Mendix account.
 
-    2. Click **Environment** to show the **Existing Models** list.
+    2.  Click **Environment** to show the **Existing Models** list.
 
-    3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
+    3.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
 
-    4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    4.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-    5. Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
+    5.  Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
 
-       ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
+        ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON file.
 
-2. To add the JSON file to your app, perform the following steps:
+2.  To add the JSON file to your app, perform the following steps:
 
-    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
 
-    2. From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
+    2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
-       ![json-structure](attachments/intelligent-document/json-structure.png)
+        ![json-structure](attachments/intelligent-document/json-structure.png)
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
 
@@ -203,15 +201,15 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
 ### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1.   In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
+1.  In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
-   ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
+    ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
 
 2. Create a list of image that inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
 
-3. Double-click the **Intelligent Document Service** activity to open the dialog box.
+3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
-   ![Intelligent Document Service dialog box](attachments/intelligent-document/intelligent-document-service-dialog-box.png)
+    ![Intelligent Document Service dialog box](attachments/intelligent-document/intelligent-document-service-dialog-box.png)
 
 4. Click **Edit** to enter the **Model Id** of your model.
 

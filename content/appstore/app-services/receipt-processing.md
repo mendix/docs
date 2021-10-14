@@ -26,15 +26,15 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 
 1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download the *.mpk* file for Receipt Processing.
 
-2. To add the Receipt Processing service to your app in Mendix Studio Pro, follow these steps:
-   1. In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
-   2. Click **Import module package** and then select *ReceiptProcessing.mpk*.
+2.  To add the Receipt Processing service to your app in Mendix Studio Pro, follow these steps:
+    1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
+    2.  Click **Import module package** and then select *ReceiptProcessing.mpk*.
 
-   ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
+        ![pop-up-menu-in-app-explorer](attachments/receipt-processing/import-module-in-app-explorer.png)
 
-   In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-   {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 
@@ -64,17 +64,15 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**. 
 
-    {{% alert type="warning" %}}Do not close this page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
+    {{% alert type="warning" %}}Do not close the page below yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
 
-8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. 
-
-After you copy the keys, you can close the page.
+8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment. After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1. In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
@@ -98,28 +96,28 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
       
     3. Click **Receipt Processing** to open the service management dashboard.
       
-    4. Click **Manage Instance** to open the **Document Model Training** application.
+    4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-       ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
+        ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
       
-   5. Click **Environment** to show the **Existing Models** list.
-   
-   6. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it in the [receipt processing service activity](#extraction-activity).
-   
-   7. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    5. Click **Environment** to show the **Existing Models** list.
+      
+    6. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it in the [receipt processing service activity](#extraction-activity).
+      
+    7. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-   8. Drag a sample receipt, which can represent the receipts from which you extract data, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
+    8.  Drag a sample receipt, which can represent the receipts from which you extract data, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
 
-      ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
+        ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 
    9. Click **Download** to get the JSON file.
 
-2. To add the JSON file to your app, perform the following steps:
+2.  To add the JSON file to your app, perform the following steps:
 
-   1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
-   2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+    2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
-       ![json-structure](attachments/receipt-processing/json-structure.png)
+        ![json-structure](attachments/receipt-processing/json-structure.png)
 
    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
 
@@ -127,29 +125,29 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
    5. Click **OK** to save the changes and close the dialog box.
 
-3. To create the Import Mapping, perform the following steps:
+3.  To create the Import Mapping, perform the following steps:
 
-   1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
+    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
 
-   2. From the pop-up menu, select **Add other** > **Import mapping**.
+    2. From the pop-up menu, select **Add other** > **Import mapping**.
 
-   3. In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
+    3. In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
 
-   4. For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
+    4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
-      ![schema-source-json-structure](attachments/receipt-processing/schema-source-json-structure.png)
+        ![schema-source-json-structure](attachments/receipt-processing/schema-source-json-structure.png)
 
    5. Click **OK** to save the changes and close the dialog box.
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
-1. In the **Toolbox**, drag **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
+1.  In the **Toolbox**, drag **Receipt Processing** activity from the **Document Data Capture Service** category into your microflow.
 
     ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
 2. Create a list of image that inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
 
-3. Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
+3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-box.png)
 

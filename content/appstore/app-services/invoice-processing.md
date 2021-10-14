@@ -27,15 +27,15 @@ This app best service works with Studio Pro 8 versions starting with [8.18.5](/r
 1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118389) and download the *.mpk* file for **Invoice Processing**
 
 2.  To add the Invoice Processing Service to your app in Mendix Studio Pro, follow these steps:
-    1. In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app.
+    1.  In the **App Explorer** (in Studio Pro 9) or the **Project Explorer** (in Studio Pro 8), right-click the app.
 
-    2. Click **Import module package**, and then select *InvoiceProcessing.mpk*.
+    2.  Click **Import module package**, and then select *InvoiceProcessing.mpk*.
 
-       ![pop-up-menu-in-app-explorer](attachments/invoice-processing/import-module-in-app-explorer.png)
+        ![pop-up-menu-in-app-explorer](attachments/invoice-processing/import-module-in-app-explorer.png)
 
-       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
     3. In the **Import Module** dialog box, click **Import**.
 
@@ -66,13 +66,11 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 7.  Click **Create Keys** to generate the **Access_Key**, **Secret_Key** and **Encryption_Key**. The system generates **Access_Key**, **Secret_Key** and **Encryption_Key**.
 
-    {{% alert type="warning" %}}Do not close this page yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
+    {{% alert type="warning" %}}Do not close the page below yet. Once you close this page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/invoice-processing/binding-key-generation.png)
 
-8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**.
-
-After you copy the keys, you can close the page.
+8. **Copy** the **Access_Key**, **Secret_Key** and **Encryption_Key**. You need to use them later for app deployment. After you copy the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
@@ -93,22 +91,22 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
 1.  Perform the following steps to log into the **Document Model Training** application:
 
-    1. Log into the Marketplace with your Mendix account.
-    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-    3. Click **Invoice Processing** to open the service management dashboard.
-    4. Click **Manage Instance** to open the **Document Model Training** application.
+    1.  Log into the Marketplace with your Mendix account.
+    2.  Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+    3.  Click **Invoice Processing** to open the service management dashboard.
+    4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-       ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
+        ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
 
-    1. Login in to the app using your **Mendix Account**.
+    5. Login in to the app using your **Mendix Account**.
 
-2. Click **Environment** to show the **Existing Models** list.
+2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
 
     {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
-3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
     ![Create Invoice Model dialog box](attachments/invoice-processing/create-invoice-model-dialog-box.png)
 
@@ -126,27 +124,27 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
 You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity, and if necessary, further process the entity with [event handlers](/refguide/event-handlers).
 
-1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
-    1. Log into the **Document Model Training** application with your Mendix account.
+    1.  Log into the **Document Model Training** application with your Mendix account.
 
-    2. Click **Environment** to show the **Invoice Models** list.
+    2.  Click **Environment** to show the **Invoice Models** list.
 
-    3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
+    3.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
 
-    4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    4.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-    5. Drag the sample invoice, which you used to train the document model, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
+    5.  Drag the sample invoice, which you used to train the document model, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
 
-       ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
+        ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON file.
 
-2. To add the JSON file to your app, perform the following steps:
+2.  To add the JSON file to your app, perform the following steps:
 
-    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
 
-    2. From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
+    2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/receipt-processing/json-structure.png)
 
@@ -156,17 +154,17 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     5. Click **OK** to save the changes and close the dialog box.
 
-3. To create the Import Mapping, perform the following steps:
+3.  To create the Import Mapping, perform the following steps:
 
-    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
 
-    2. From the pop-up menu, select **Add other** > **Import mapping**.
+    2.  From the pop-up menu, select **Add other** > **Import mapping**.
 
-    3. In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
+    3.  In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
 
-    4. For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
+    4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
-       ![schema-source-json-structure](attachments/invoice-processing/schema-source-json-structure.png)
+        ![schema-source-json-structure](attachments/invoice-processing/schema-source-json-structure.png)
 
     5. Click **OK** to save the changes and close the dialog box.
 

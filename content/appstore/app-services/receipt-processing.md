@@ -108,9 +108,9 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
    
    7. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-      ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
+   8. Drag a sample receipt, which can represent the receipts from which you extract data, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
 
-   8. Drag sample images into the box where it says **Drag & Drop Image Here**.
+      ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 
    9. Click **Download** to get the JSON file.
 

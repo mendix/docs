@@ -119,7 +119,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 5. Wait until **Import File** page opens.
 
-6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**.
+6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
 
     ![Import File page](attachments/intelligent-document/import-file-page.png)
 
@@ -167,9 +167,9 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-       ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
+    5. Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
 
-    5. Drag the sample images into the box where it says **Drag & Drop Image Here**.
+       ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON file.
 

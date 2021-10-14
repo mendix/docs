@@ -129,13 +129,16 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
     1. Log into the **Document Model Training** application with your Mendix account.
+
     2. Click **Environment** to show the **Invoice Models** list.
+
     3. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract the data with the trained model ](#extraction-activity).
+
     4. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-       ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
+    5. Drag the sample invoice, which you used to train the document model, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
 
-    5. Drag the sample Invoice that you used to train the model into the box where it says **Drag & Drop Image Here**.
+       ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON file.
 

@@ -16,9 +16,10 @@ This reference guide describes how to use version control in Mendix Studio Pro. 
 To start a new app with version control do the following:
 
 1. Select **File** > **New App**.
-2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-3. Change the **App directory**, or leave the default suggested by Studio Pro.
-4. Click **Create app**.
+2. Select the starting point – an app template.
+3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
+5. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -31,14 +32,10 @@ If there is already a Team Server-enabled app, you can be invited to join it (se
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
 1. Choose **Open App** in Studio Pro.
-2. Select **Mendix Team Server** for **Where is your app stored?**.
-3. Choose your app from the **Team Server App** drop-down.
-4. Change the **App directory**, or leave the default suggested by Studio Pro.
-5. Click **Create app**.
+2. Choose your app from the list of the **Open App** dialog box.
+4. Click **Open in Studio Pro**.
 
 The app will be downloaded from the Team Server and opened in Studio Pro.
-
-![](attachments/using-version-control-in-studio-pro/open-new-team-server-app.png)
 
 ## 4 Day-to-Day Development
 
@@ -52,7 +49,7 @@ You can also see a **history** of all the changes which have been committed, no 
 
 ### 4.1 Status
 
-The status of your proappject is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (documents, folders, and modules) that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
@@ -270,7 +267,7 @@ After a reverse merge the app will look like the changes never happened; if you 
 
 There are two methods for fully replacing your main line with a branch line.
 
-The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
 1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.

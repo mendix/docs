@@ -64,7 +64,7 @@ To automatically start this module, follow these steps:
 1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow.
 2. Set the return type as Boolean with a **Value** of **true**.
 3. Set the microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
-4. Double-click the **Visualization Server** Java action and make sure the **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
+4.  Double-click the **Visualization Server** Java action and make sure the **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
 
 	![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
@@ -78,13 +78,13 @@ To visualize and operate on the JT model from Teamcenter, use the 3D widgets tha
 
 ### 5.1 Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data {#reusing}
 
-To get data from Teamcenter, the end-user needs to be authenticated and authorized. The Teamcenter connector provides both admin login logic and user login logic in the **App Store Modules** > **TcConnector** > **Published** > **APIs** > **Login** folder. Since you are building an app to enable the end-user to fetch data from Teamcenter and visualize it in the app, you will need to build a login for the end-user so that they can enter their Teamcenter user name and password to access the Teamcenter data.
+To get data from Teamcenter, the end-user of your app needs to be authenticated and authorized. The Teamcenter connector provides both admin and user login logic in the **Marketplace Modules** > **TcConnector** > **Published** > **APIs** > **Login** folder. Since you are building an app to enable the end-user to fetch data from Teamcenter and visualize it in the app, you will need to build a login for the end-user so that they can enter their Teamcenter user name and password to access Teamcenter data.
 
 Follow these steps to build this login:
 
 1. Add a **Login** [button](/refguide/button-widgets) to a page in your app.
 2. Set the **On click** action to the **Viewer3D_TC** > **USE_ME** > **Login** > **LoginTeamcenter** microflow.
-3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter Admin page where you can add, edit, and manage the Teamcenter instance that you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and set the instance to **Active**:
+3.  Run your app locally. When you click **Login**, you will be shown the Teamcenter admin page where you can add, edit, and manage the Teamcenter instance you want to connect to by providing the **Teamcenter Host Address** and **Teamcenter FMS URL** and setting the instance to **Active**:
 
 	![teamcenter-configuration](attachments/3d-viewer-for-teamcenter/teamcenter-configuration.jpg)
 
@@ -93,7 +93,7 @@ Follow these steps to build this login:
 	![teamcenter-teamcenterlogin](attachments/3d-viewer-for-teamcenter/teamcenter-teamcenterlogin.jpg)
 
 {{% alert type="info" %}}
-The above is an example Teamcenter login flow included in Viewer3D_TC module. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
+The above is an example Teamcenter login flow included in the **Viewer3D_TC** module. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
 {{% /alert %}}
 
 ### 5.2 Getting a List of Corresponding Models from Teamcenter

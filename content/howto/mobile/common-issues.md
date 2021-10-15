@@ -52,7 +52,7 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 ## 3 Configure Parallels
 
-To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](using-mendix-studio-pro-on-a-mac).
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).
 
 ## 4 Read More
 

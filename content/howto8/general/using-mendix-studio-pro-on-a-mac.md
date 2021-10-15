@@ -92,9 +92,9 @@ Congratulations! You have successfully viewed your app on a test device.
 
 ## 5 Viewing Changes to Your App on Your Testing Device
 
-For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
+For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto8/mobile/getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 
 ## 6 Read More
 
-* [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native Mobile App](how-to-use-native-styling)
+* [Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile)
+* [Style Your Mendix Native Mobile App](/howto8/mobile/how-to-use-native-styling)

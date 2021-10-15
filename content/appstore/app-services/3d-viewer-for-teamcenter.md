@@ -49,7 +49,7 @@ Make sure you have the following prerequisites in place:
 
 ## 3 Installation
 
-To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app project. Follow the instructions in [How to Use App Store Content in Studio Pro](../general/app-store-content) to import these components:
+To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) as necessary):
 
 * 3D Viewer for Teamcenter
 * [3D Viewer](3d-viewer) app service（v.2.0.0 or above）
@@ -59,19 +59,20 @@ After importing, you need to map the **Administrator** and **User** [module role
 
 ## 4 Initializing on App Startup
 
-To automatically start this module, create a **Startup** microflow, add **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow, then set the return type as Boolean with a **Value** of **true**.
+To automatically start this module, follow these steps:
 
-You need to set this microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
+1. Create a **Startup** microflow and add the **Viewer3D/USE_ME/VisServerAction** and **Viewer3D_TC/USE_ME/VisServerAction_TC** Java actions to the microflow.
+2. Set the return type as Boolean with a **Value** of **true**.
+3. Set the microflow as the after-startup step via **Project Settings** > **Runtime** > **After startup**.
+4. Double-click the **Visualization Server** Java action and make sure the **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
 
-Finally, double-click the **Visualization Server** Java action and make sure **Http endpoint** is set as `@Viewer3D.HttpEndpoint`:
-
-![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
+	![teamcenter-startupflow](attachments/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg)
 
 ## 5 Usage
 
-The **3D Viewer** app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the **Teamcenter connector** module provides full-scale APIs for you to interact with a Teamcenter instance.  
+The 3D Viewer app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the Teamcenter connector module provides full-scale APIs for you to interact with a Teamcenter instance.  
 
-The **3D Viewer for Teamcenter** module acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
+The 3D Viewer for Teamcenter module acts as an intermediate layer between the two components above. It mainly utilizes the APIs provided by the Teamcenter connector and provides nanoflows, Java actions, and microflows to get JT-format model data from the Teamcenter instance.  
 
 To visualize and operate on the JT model from Teamcenter, use the 3D widgets that are included in the 3D Viewer app service to visualize the data obtained from the 3D Viewer for Teamcenter.
 

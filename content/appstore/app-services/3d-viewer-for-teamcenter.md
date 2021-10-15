@@ -98,33 +98,34 @@ The above is an example Teamcenter login flow included in the **Viewer3D_TC** mo
 
 ### 5.2 Getting a List of Corresponding Models from Teamcenter
 
-The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria(for example, search by Item name, Item ID or Revision ID ）and fetching a model list. This nanoflow will first check if an active Teamcenter user session is alive and then perform the search, so logging in is essential before performing the model search. A list of **ModelDocument** objects will be returned as a result of this nanoflow; therefore, the SearchTC nanoflow can be set as the data source of a list view widget. Additionally, by using **Viewer3D_TC** > **USER_ME** > **ShowBOMLineQueryPopUp**, you can apply specific revision rules to the search and get different model data returned.
+The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria (for example, for searching by item name, item ID, or revision ID ）and fetching a model list. This nanoflow will first check if an active Teamcenter user session is alive and then perform the search, so logging in is essential before performing the model search. A list of ModelDocument objects will be returned as a result of this nanoflow, which means this nanoflow can be set as the data source of a list view widget. Additionally, by using **Viewer3D_TC** > **USER_ME** > **ShowBOMLineQueryPopUp**, you can apply specific revision rules to the search and get different model data returned.
 
 Follow these steps to get the list:
 
-1. Create an **Open TC model** button and add it to a page in your app
+1. Create an **Open TC model** button and add it to a page in your app.
 2. Set the **On click** action of the button to show a [pop-up page](/refguide/page-properties#pop-up).
 3. Add a list view to the pop-up page and set the **Data source** to **Viewer3D_TC/USE_ME/SearchTC**.
-4. Wrap the list view with a [data view](/refguide/data-view), as the **SearchTC** nanoflow requires a **SearchCriteria** object as the input parameter. So, then create a simple nanoflow named **createSearchCriteriaObject** that creates a default **SearchCriteria** object and returns it as result. Set the **Data source** of the data view to this new nanoflow.
-5.  Add a [text box](/refguide/text-box) and **Search** button to allow user to type in an item name (as in, a model name) and perform a search:
+4. Wrap the list view with a [data view](/refguide/data-view), as the SearchTC nanoflow requires a SearchCriteria object as the input parameter.
+5. Create a simple nanoflow and name it *createSearchCriteriaObject* that creates a default **SearchCriteria** object and returns it as result. Set the **Data source** of the data view to this new nanoflow.
+6.  Add a [text box](/refguide/text-box) and **Search** button to allow the end-user to type in an item name (as in, a model name) and perform a search:
 
 	![teamcenter-tcmodellist](attachments/3d-viewer-for-teamcenter/teamcenter-tcmodellist.jpg)
 
-6.  To enable showing the model list via the **Search** button click, the input parameter of the **SearchTC** nanoflow's **SearchCriteria** object needs to be updated on a button click. So, when end-user types in a model name in the text box, the model name should be saved to the **TCItemName** attribute of the **SearchCriteria** object:
+6.  To enable showing the model list for the search results, the input parameter of the SearchTC nanoflow's SearchCriteria object needs to be updated on a button click. So, when the end-user types in a model name in the text box, make sure the model name is saved to the **TCItemName** attribute of the **SearchCriteria** object:
 
 	![teamcenter-textboxchange](attachments/3d-viewer-for-teamcenter/teamcenter-textboxchange.jpg)
 
-	And when the end-user clicks the **Search** button, the change needs to be synchronized for List view widget to refresh the list. 
+	And when the end-user clicks the **Search** button, make sure the change is synchronized for the list view widget to refresh the list: 
 
 	![teamcenter-searchsync](attachments/3d-viewer-for-teamcenter/teamcenter-searchsync.jpg)
 
-7.  Now you should have a model search page like this:   
+You should have a model search page that looks like this:   
 
-	![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
+![teamcenter-wrapdataviews](attachments/3d-viewer-for-teamcenter/teamcenter-wrapdataviews.jpg)  
 
-8.  Run your app locally. Then log in to Teamcenter and open the the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
+Run your app locally, then log in to Teamcenter and open the the Teamcenter model pop-up window. Type in a model name and search. You will see a list of models that contain the entered item name.
 
-	![teamcenter-samplesearch](attachments/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg)
+![teamcenter-samplesearch](attachments/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg)
 
 ### 5.3 Opening a Model from the Model list
 

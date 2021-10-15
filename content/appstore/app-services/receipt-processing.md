@@ -11,7 +11,7 @@ The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) a
 ### 1.1 Features
 
 * Pre-built, ready-to-implement receipt document models
-* Extract data from images of receipts in bulk and map data to entities
+* Extract data from images of receipts in bulk and map data to an entity
 * Support [Mendix SSO](/appstore/modules/mendix-sso)
 
 ### 1.2 Limitation
@@ -24,9 +24,9 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
 ## 2 Installation
 
-1. Go to [Marketplace](https://marketplace.mendix.com/link/component/118390) and download the *.mpk* file for Receipt Processing.
+1. Go to the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace and download the *.mpk* file.
 
-2.  To add the Receipt Processing service to your app in Mendix Studio Pro, follow these steps:
+2.  To add the Receipt Processing app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer** (in Studio Pro 9) or **Project Explorer** (in Studio Pro 8), right-click the app.
     2.  Click **Import module package** and then select *ReceiptProcessing.mpk*.
 
@@ -34,7 +34,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
 3. In the **Import Module** dialog box, click **Import**.
 
@@ -60,55 +60,56 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 6. Enter a good name for the binding keys. Make sure the name includes the name of the app that will use the app service.
 
-7.  Click **Create Keys** to generate the **Access_Key**, the **Secret_Key** and the **Encryption_Key**.
+7.  Click **Create Keys** to generate **Access_Key**, **Secret_Key,** and **Encryption_Key**.
 
     {{% alert type="warning" %}}When the page shows the generated keys, do not close this page immediately. Once you close the page, you cannot retrieve the keys again.{{% /alert %}}
 
     ![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
 
-8. **Copy** and save the **Access_Key**, the **Secret_Key** and the **Encryption_Key** in a text file. You need to use them later for app deployment. After you copy the keys, you can close the page.
+8. **Copy** and save **Access_Key**, **Secret_Key**, and **Encryption_Key**. You need to use them later for app deployment. After you save the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 
-1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. You can see **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
+1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.
 
     ![Keys under Configurations in a tree view](attachments/receipt-processing/configurations-keys.png)
 
-2. Double-click each constant and and enter the respective keys.
-3. Click **OK** to save the settings.
+2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
 
 ## 4. Usage
 
-To use the Receipt Processing app service, firstly create an [Import Mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and your image files to extract, [extract data](#extraction-activity) from images in bulk and then map the data to entities using the Import Mapping that you created.
+To use the Receipt Processing app service, firstly create an [Import Mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the Import Mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 
-You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity, and if necessary, further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
-    1. Log into the Marketplace with your Mendix account.
-      
-    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-      
-    3. Click **Receipt Processing** to open the service management dashboard.
-      
-    4.  Click **Manage Instance** to open the **Document Model Training** application.
+   1. Log into the Marketplace with your Mendix account.
+     
+   2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+     
+   3. Click **Receipt Processing** to open the service management dashboard.
+     
+   4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-        ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
+       ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
+     
+   5. Log in to the application using your Mendix account.
       
-    5. Click **Environment** to show the **Existing Models** list.
-      
-    6. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it in the [receipt processing service activity](#extraction-activity).
-      
-    7. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+   6. Click **Environment** to show the **Existing Models** list.
 
-    8.  Drag a sample receipt, which can represent the receipts from which you extract data, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
+   7. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**.
 
-        ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
+   8. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
 
-   9. Click **Download** to get the JSON file.
+   9. Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts where data will be extracted. You can also click the box and select the file.
+
+      ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
+
+   10. Click **Download** to get the JSON file.
 
 2.  To add the JSON file to your app, perform the following steps:
 
@@ -143,22 +144,22 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
-2. Create a list of image that inherits from `System.Image`. Images to be extracted should be passed as a list, as shown in the microflow above.
+2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
 
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-box.png)
 
-4. Click **Edit** to select the **Image List** which inherits from `System.Image`.
+4. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
 
-5. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into the entity.
+5. For **Mapping**, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 
 
 6. Click **OK** to save the changes and close the dialog box.
 
 {{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
 
-### 4.3 Checking Statistics Using the Usage Dashboard
+### 4.3 Checking Statistics on the Usage Dashboard
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 

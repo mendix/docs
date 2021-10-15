@@ -129,7 +129,7 @@ Follow these steps to get the list:
 
 ### 5.3 Opening a Model from the Model list
 
-Now that you can get a list of models from calling the SearchTC nanoflow, you may want to visualize these models. The SearchTC nanoflow returns a list of ModelDocument objects, and for the models to be visualized, it is necessary to use the 3D widgets that are part of 3D Viewer. **Model Id** and **Model Source Type** are the unique identifiers for every JT model, and with these two properties, you can access and operate JT models. The ModelDocument object contains attributes (most importantly, ModelId and Model Source Type) that are needed to identify and visualize a JT model in the 3D widgets. As the 3D Viewer needs model ID and model source type to visualize a model, you will need to pass the ModelDocument object to the 3D Viewer widget.
+Now that you can get a list of models from calling the SearchTC nanoflow, you may want to visualize these models. The SearchTC nanoflow returns a list of ModelDocument objects, and for the models to be visualized, it is necessary to use the 3D widgets that are part of 3D Viewer. **Model ID** and **Model Source Type** are the unique identifiers for every JT model, and with these two properties, you can access and operate JT models. The ModelDocument object contains attributes (most importantly, the model ID and model source type) that are needed to identify and visualize a JT model in the 3D widgets. As the 3D Viewer needs the model ID and model source type to visualize a model, you will need to pass the ModelDocument object to the 3D Viewer widget.
 
 Since you built a model list pop-up page, one scenario is to select a list item on the pop-up page, then return the ModelDocument object to the home page to be visualized there. Follow these steps to enable this:
 
@@ -162,14 +162,17 @@ There are other ways to visualize a model. The key idea is to pass a valid model
 
 ### 5.4 Search with Custom BOMLine Query 
 
-Other than searching Teamcenter server to get a list of ModelDocument objects with default BOMLine query. **Viewer_3D** also provides you with a **ShowBOMLineQueryPopUp** page that can enable you to set custom queries. 
-**ShowBOMLineQueryPopUp** page requires a **ModelDocument** object as an input parameter, which allows you to set the specific revision rules you want to apply to a model and get the model data based on these revision rules. If nothing is specifically set on the pop up, **SearchTC** will execute with the default default BOMLine query.
+Other than searching Teamcenter server to get a list of ModelDocument objects with a default BOMLine query, **Viewer_3D** also provides you with a **ShowBOMLineQueryPopUp** page that can enable you to set custom queries. 
+
+The **ShowBOMLineQueryPopUp** page requires a **ModelDocument** object as an input parameter, which allows you to set the specific revision rules you want to apply to a model and get the model data based on these revision rules. If nothing is specifically set on the page, the **SearchTC** nanoflow will execute with the default default BOMLine query.
 
 Follow these steps to set custom revision rules:
 
-1. Add a button called **Set Revision Rule** to **ModelDocument** list item.
-2. Create a nanoflow **ShowBOMLineQueryPopUp** that simply show the **Viewer3D_TC/USE_ME/ShowBOMLineQueryPopUp**: 
-   ![teamcenter-showbomlinequery-nano](attachments/3d-viewer-for-teamcenter/teamcenter-showbomlinequery-nano.jpg)
+1. Add a button called **Set Revision Rule** to the **ModelDocument** list item.
+2.  Create a nanoflow called *ShowBOMLineQueryPopUp* that simply shows the **Viewer3D_TC/USE_ME/ShowBOMLineQueryPopUp**:
+
+	![teamcenter-showbomlinequery-nano](attachments/3d-viewer-for-teamcenter/teamcenter-showbomlinequery-nano.jpg)
+
 3. Set the **ShowBOMLineQueryPopUp** nanoflow as the button's **On click** action:
 
 	![teamcenter-setrevisionrules](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionrules.jpg)
@@ -178,11 +181,10 @@ Follow these steps to set custom revision rules:
 
 	![teamcenter-setrevisionpage](attachments/3d-viewer-for-teamcenter/teamcenter-setrevisionpage.jpg)
 
-### 5.5 Create ModelDocument from Item Revision
+### 5.5 Create a ModelDocument from an Item Revision
 
-As **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model, apart from getting a list of **ModelDocument** returned from **SearchTC** nanoflow. **Viewer3D_TC** also contains a microflow **GetModelDocumentByTCItemRevision** for you to construct a legal ModelDocument directly from Item Revision. This adds more flexibility on getting your model in Teamcenter visualized. 
+A **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model. In addition to getting a list of ModelDocument returned from the **SearchTC** nanoflow, **Viewer3D_TC** also contains the **GetModelDocumentByTCItemRevision** microflow for you to construct a legal ModelDocument directly from an item revision. This adds more flexibility for getting your model in Teamcenter visualized. 
  
 ## 8 Read More
 
 * [3D Viewer](3d-viewer)
-* [Teamcenter Connector](https://appstore.home.mendix.com/link/app/111627/)

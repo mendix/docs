@@ -1,20 +1,37 @@
 ---
 title: "Configure Parallels"
-parent: "build-native-apps"
-menu_order: 20
+parent: "index"
+menu_order: 2
 description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
 ## 1 Introduction
 
-Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. To start making Mendix native mobile apps on your Mac, follow this how-to.
+Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
+
+{{% alert type="warning" %}}
+Studio Pro does not run under Parallels on Apple Silicon Macs, such as the M1.
+{{% /alert %}}
+
+To start making Mendix native mobile apps on your Mac, follow this how-to.
 
 **This how-to will teach you how to do the following:**
 
 * Configure your Windows virtual machine for Mendix Studio Pro
 * Run a Mendix app on a test device using your Windows virtual machine
 * Make changes to your app, then view those changes on your test device
+
+For a deep-dive look into installing Studio Pro on a Mac, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/nJ9Tz8VnHPPKPrtSBgHv3U.jpg"
+  data-uuid="nJ9Tz8VnHPPKPrtSBgHv3U"
+  data-v="4"
+  data-type="inline"
+/>
 
 ## 2 Prerequisites
 
@@ -64,6 +81,10 @@ Congratulations! You have successfully configured port forwarding to enable test
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
+{{% /alert %}}
+
 Read the tips and steps below to view your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
@@ -92,9 +113,9 @@ Congratulations! You have successfully viewed your app on a test device.
 
 ## 5 Viewing Changes to Your App on Your Testing Device
 
-For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
+For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto/mobile/getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 
 ## 6 Read More
 
-* [Get Started with Native Mobile](getting-started-with-native-mobile)
-* [Style Your Mendix Native Mobile App](how-to-use-native-styling)
+* [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
+* [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

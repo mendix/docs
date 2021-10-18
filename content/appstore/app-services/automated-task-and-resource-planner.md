@@ -292,8 +292,4 @@ Troubleshooting issues is easiest done by investigating the logs that are stored
 
 ## 6 Read More
 
-Link to the swagger documentation:
-
-https://saas-acceptance.timeseries.com/swagger-ui/?urls.primaryName=field-service-planner
-
- 
+[Swagger documentation](https://saas-acceptance.timeseries.com/swagger-ui/?urls.primaryName=field-service-planner)

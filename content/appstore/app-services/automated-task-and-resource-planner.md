@@ -284,7 +284,7 @@ Points to the object which caused the validation error. This can either be the s
 
 For examples on how to use the module, see the demo.
 
-Verschillende API-requests, request parameters, mogelijke responsen de potentiële fout scenario’s omvatten. Dit moet zowel vanuit een technisch perspectief (wat is er nodig voor het request) zijn, als vanuit een functioneel perspectief (wanneer en waarom welke requests uitvoeren en hoe de resultaten moeten worden geïnterpreteerd)
+Various API requests, request parameters, possible responses include the potential error scenarios. This should be from a technical perspective (what is needed for the request) as well as from a functional perspective (when and why to execute which requests and how to interpret the results)
 
 ## 5 Troubleshooting
 

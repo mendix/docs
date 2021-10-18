@@ -1,5 +1,5 @@
 ---
-title: "General"
+title: "General Info"
 parent: "solutions-guide"
 menu_order: 10
 tags: ["solutions", "adaptive solutions"]

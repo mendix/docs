@@ -1,5 +1,5 @@
 ---
-title: "Creating Solutions"
+title: "Solutions"
 linktitle: "Solutions"
 category: "Creating Content"
 description: "A guide to best practices and techniques for using Mendix"

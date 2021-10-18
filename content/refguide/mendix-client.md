@@ -26,7 +26,7 @@ The three supported types of wrappers for mobile applications are as follows:
 * [Custom Developer apps](/howto/mobile/how-to-devapps)
 * [Native apps](/howto/mobile/deploying-native-app)
 
-The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota) later.
+The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/howto/mobile/how-to-ota-appcenter) later.
 
 A **Hybrid application**, for most purposes, can be treated as an app running in a browser. In this case, however, the browser is embedded in a mobile application and has access to some features of a mobile device through [Cordova](https://cordova.apache.org/) plugins. We recommend that you use a native mobile app rather than a hybrid app if you want to make Mendix apps which run on mobile devices.
 

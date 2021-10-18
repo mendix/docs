@@ -228,7 +228,7 @@ To be able to switch the language of a Mendix app, a device must be online and h
 
 ### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
 
-To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota-appcenter).
 
 To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
 

@@ -26,7 +26,7 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 	* [Use Notifications](notifications)
 * [Distribution](distribution)
 	* [Build Native Apps](build-native-apps)
-	* [Release Over the Air Updates with App Center's CodePush](how-to-ota)
+	* [Release Over the Air Updates with App Center's CodePush](how-to-ota-appcenter)
 * [Use Augmented Reality](ar-parent)
 * [Test Mendix Native Apps Using Appium](testing-mendix-native-apps-using-appium)
 

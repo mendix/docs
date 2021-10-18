@@ -131,4 +131,3 @@ Read more on TestFlight in the [official documentation](https://testflight.apple
 
 * [How to Deploy Your First Mendix Native Mobile App](deploying-native-app)
 * [Release Over the Air Updates with Mendix](how-to-ota)
-* [How to Release Over the Air Updates with App Center's CodePush](how-to-ota-appcenter)

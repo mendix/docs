@@ -44,8 +44,8 @@ To visualize a model from Teamcenter, the limitations are similar to those of 3D
 Make sure you have the following prerequisites in place:
 
 * [Studio Pro 9.4.0](/releasenotes/studio-pro/9.4) or above installed
-* A living Teamcenter instance (need the **Teamcenter Host Address** and **Teamcenter FMS URL** to configure the Teamcenter instance – for more information, see the [Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data](#reusing) section below)
-* A Teamcenter account (it is better to have both an admin user account and a non-admin user account)
+* A living Teamcenter instance (you need the **Teamcenter Host Address** and **Teamcenter FMS URL** to configure the Teamcenter instance – for more information, see the [Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data](#reusing) section below)
+* A Teamcenter account (it is best to have both an admin user account and a non-admin user account)
 
 ## 3 Installation
 
@@ -133,7 +133,7 @@ Now that you can get a list of models from calling the SearchTC nanoflow, you ma
 
 Since you built a model list pop-up page, one scenario is to select a list item on the pop-up page, then return the ModelDocument object to the home page to be visualized there. Follow these steps to enable this:
 
-1.  Add an entity called **PageObject** and associate it with the **ModelDocument** entity that is defined in **Viewer3D/Domain Model**:
+1.  Add a new entity that you name *PageObject* and associate it with the **ModelDocument** entity that is defined in **Viewer3D/Domain Model**:
 
 	![teamcenter-pageobject](attachments/3d-viewer-for-teamcenter/teamcenter-pageobject.jpg)
 
@@ -150,7 +150,7 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 
 	![teamcenter-popuppageobject](attachments/3d-viewer-for-teamcenter/teamcenter-popuppageobject.jpg)
 
-6. Create a nanoflow called *OpenSelectedModel* and set it as the **On click** action for the list view. This nanoflow enables updating the ModelDocument associated with the PageObject and returns an updated PageObject. Every time the end-user clicks a model list item, PageObject will be updated, and the home page that the end-user is on will be updated to the newly selected model.
+6. Create a nanoflow that you name *OpenSelectedModel* and set it as the **On click** action for the list view. This nanoflow enables updating the ModelDocument associated with the PageObject and returns an updated PageObject. Every time the end-user clicks a model list item, PageObject will be updated, and the home page that the end-user is on will be updated to the newly selected model.
 
 	![teamcenter-openselectedmodel](attachments/3d-viewer-for-teamcenter/teamcenter-openselectedmodel.jpg)
 
@@ -168,7 +168,7 @@ The **ShowBOMLineQueryPopUp** page requires a **ModelDocument** object as an inp
 
 Follow these steps to set custom revision rules:
 
-1. Add a button called **Set Revision Rule** to the **ModelDocument** list item.
+1. Add a button that you name *Set Revision Rule* to the **ModelDocument** list item.
 2.  Create a nanoflow called *ShowBOMLineQueryPopUp* that simply shows the **Viewer3D_TC/USE_ME/ShowBOMLineQueryPopUp**:
 
 	![teamcenter-showbomlinequery-nano](attachments/3d-viewer-for-teamcenter/teamcenter-showbomlinequery-nano.jpg)
@@ -185,6 +185,6 @@ Follow these steps to set custom revision rules:
 
 A **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model. In addition to getting a list of ModelDocument returned from the **SearchTC** nanoflow, **Viewer3D_TC** also contains the **GetModelDocumentByTCItemRevision** microflow for you to construct a legal ModelDocument directly from an item revision. This adds more flexibility for getting your model in Teamcenter visualized. 
  
-## 8 Read More
+## 6 Read More
 
 * [3D Viewer](3d-viewer)

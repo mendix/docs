@@ -8,7 +8,7 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-With Mendix Studio Pro, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions).
+With Mendix Studio Pro 9.7, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions).
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
@@ -26,11 +26,41 @@ Mendix OTA updates replaces the now deprecated App Center's CodePush OTA updates
 
 **This how-to will teach you how to do the following:**
 
+* Explain the rational behind Mendix's OTA solution
 * Enable OTA updates in your Native Mobile Profile
 * Build your app 
 * Preserve your model's integrity
 
-## 2 Prerequisites {#prerequisites}
+## 2 Why you should consider using Mendix's OTA update solution
+
+While we grew our experience in Native Mobile apps and looked at what our customers require, we identified the following short comings with third party OTA update solutions: 
+
+* Third party service requirement.
+* Complex release cycle. 
+* No single point of truth.
+* Lack of extensibility.
+
+Let us look at these points individually. 
+
+Third party service requirement, is self explanatory. It adds extra procurement steps; sometimes the companies behind the functionality might be blocked in certain regions. This adds unneeded overhead and costs time.
+
+Complex release cycle, summarises the steps required to release a new OTA update. In general changes need to be deployed to the runtime and then an extra step is required to release the new OTA updates for the apps. That costs time, requires more thought than it should and can be error prone. 
+
+No single point of truth means it is impossible to tell when and how the app should be updated or the new changes should be synchronised. Mendix removes a lot of complexity from thinking about things like synchronization or offline data. To do so, some premises have to be true. With third party solutions that is impossible to do accurately.
+
+Lack of extensibility, is more technical and affects mostly us. We cannot easily extend the functionality to fit our needs, hence we can not deliver new and better features. Think of features like delta updates, a more efficient way of pushing OTA bundles, would be impossible to add with third party solutions.
+
+With that in mind we developed a Mendix OTA update mechanism which focuses in solving those issues. 
+
+We moved the responsibility of OTA back to the runtime, hence moving back to a single point of truth. 
+
+In addition, instead of thinking of OTA packages and runtime deployments, we merged both actions in one. Instead deploying a new runtime is enough for the apps to get updated. 
+
+As the runtime is the one providing the OTA bundles, no third party service is required. 
+
+Finally by developing an in house solution we can continuously iterate and update the functionality to further enhance our offering.
+
+## 3 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -39,9 +69,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first) reference guide. Understand this document before issuing OTA updates or releasing new versions.
 
-## 3 When to Use OTA Updates
+## 4 When to Use OTA Updates
 
-### 3.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
+### 4.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
 
 It is good practice to *always* redeploy your Mendix app before pushing a new OTA update. However, releasing an OTA update without redeploying your Mendix app to Mendix Cloud in these cases is usually safe:
 
@@ -54,7 +84,7 @@ It is good practice to *always* redeploy your Mendix app before pushing a new OT
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first))
 
-### 3.2 When a Full Release Is Required
+### 4.2 When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android app, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
@@ -66,7 +96,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 4 Enable and build an app with Mendix OTA updates enabled {#build-with-ota-support}
+## 5 Enable and build an app with Mendix OTA updates enabled {#build-with-ota-support}
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them make sure you are on Studio Pro 9.7 or later then: 
 
@@ -83,7 +113,7 @@ Next you must build new binaries with this capability toggled on, and then relea
 
 To make the OTA update functionality available to your users, release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
-## 5 Deploying an OTA Update
+## 6 Deploying an OTA Update
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
@@ -99,7 +129,7 @@ To release a new version OTA, follow these steps:
 
 On the next restart of the application, the new OTA update will be downloaded and used. 
 
-## 6 Preserving Your Model's Integrity
+## 7 Preserving Your Model's Integrity
 
 Mendix native apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible:
 
@@ -108,7 +138,7 @@ Mendix native apps are offline first. This means you should be cautious when cha
 
 Generally, you should avoid making destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing OTA updates might put your end-users in an unrecoverable state.
 
-### 6.1 Offline Apps and Data Loss
+### 7.1 Offline Apps and Data Loss
 
 Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine you are hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. You release that morning. You push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Mobile Builder to push a new update to the apps. All seems to work fine.
 
@@ -117,7 +147,7 @@ That same morning however, your engineers were hard at work gathering field data
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 
 
-## 7 Read More
+## 8 Read More
 
 * [Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [Offline-First](/refguide/offline-first)

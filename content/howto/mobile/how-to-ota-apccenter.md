@@ -6,6 +6,10 @@ description: Describes pushing over the air updates (OTA) using App Center's Cod
 tags: ["native", "mobile", "ota", "native-builder", "over the air", "update", "deprecated"]
 ---
 
+{{% alert type="info" %}}
+OTA updates via App Center's CodePush are now deprecated. Please consider switching to the newly introduced [Mendix OTA update solution](how-to-ota). 
+{{% /alert %}}
+
 ## 1 Introduction
 
 Using Native Mobile Builder and Mendix Studio Pro, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions).
@@ -25,7 +29,23 @@ Currently OTA  does not update your app while the app is open or minimized.
 * Preserve your model's integrity
 * Transfer a CLI OTA-compatible app to the Native Mobile Builder 
 
-## 2 Prerequisites {#prerequisites}
+## 2 Why you should rather use the Mendix OTA update via the Runtime
+
+App Center's CodePush solution, is the industry standard solution for OTA update support for React Native apps, but falls short for Mendix's usecasesw.
+
+While we grew our experience in Native Mobile apps and looked at what our customers require, we identified the following short comings with CodePush OTA updates: 
+
+* Complex release cycle. 
+* No single point of truth.
+* Third party service requirement.
+* Lack of extensibility.
+
+With that in mind we developed a Mendix OTA update mechanism which focuses in solving those issues. We moved the responsibility of OTA back to the runtime, hence moving back to a single point of truth. In addition, instead of thinking of OTA packages and runtime deployments, we merged both actions in one. Instead deploying a new runtime is enough for the apps to get updated. As the runtime is the one providing the OTA bundles, no third party service is required. 
+Finally by developing an in house solution we can continuously iterate and update the solution to further enhance its functionality to fit Mendix's needs. 
+
+Therefor, consider using [Mendix OTA update solution](how-to-ota).
+
+## 3 Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -34,9 +54,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first) reference guide. Understand this document before issuing OTA updates or releasing new versions.
 
-## 3 When to Use OTA Updates
+## 4 When to Use OTA Updates
 
-### 3.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
+### 4.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
 
 It is good practice to *always* redeploy your Mendix app before pushing a new OTA update. However, releasing an OTA update without redeploying your Mendix app to Mendix Cloud in these cases is usually safe:
 
@@ -49,7 +69,7 @@ It is good practice to *always* redeploy your Mendix app before pushing a new OT
 * A new custom Javascript-only widget or module was added
 * Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first))
 
-### 3.2 When a Full Release Is Required
+### 4.2 When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android app, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
@@ -61,7 +81,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 4 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
+## 5 Build an App That Can Use CodePush OTA Updates {#build-with-ota-support}
 
 Apps built using the Mendix Native Mobile Builder have OTA updates with App Center's CodePush disabled by default. To make OTA updates via App Center's CodePush available to your app's users, you must toggle the **App Center OTA Support** capability on. 
 
@@ -83,7 +103,7 @@ Next you must build new binaries with this capability toggled on, and then relea
 
 To make the OTA update functionality available to your users, release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
-## 5 Deploying an OTA Update
+## 6 Deploying an OTA Update
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
@@ -112,7 +132,7 @@ To release a new version OTA, follow these steps:
 1. Tap **Confirm** to update your app.
 1. The app should reload and greet you with the following dialog box: **Information: Update is installed**.
 
-## 6 Preserving Your Model's Integrity
+## 7 Preserving Your Model's Integrity
 
 Mendix native apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible:
 
@@ -121,7 +141,7 @@ Mendix native apps are offline first. This means you should be cautious when cha
 
 Generally, you should avoid making destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing OTA updates might put your end-users in an unrecoverable state.
 
-### 6.1 Offline Apps and Data Loss
+### 7.1 Offline Apps and Data Loss
 
 Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine you are hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. You release that morning. You push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Mobile Builder to push a new update to the apps. All seems to work fine.
 
@@ -129,18 +149,18 @@ That same morning however, your engineers were hard at work gathering field data
 
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 
-## 7 Transferring a CLI OTA-Compatible App to Native Mobile Builder {#from-cli-to-ui}
+## 8 Transferring a CLI OTA-Compatible App to Native Mobile Builder {#from-cli-to-ui}
 
 The transition from the CLI to Mendix Native Mobile Builder for OTA-supporting apps requires a few manual steps. These steps ensure you do not have to release your apps to the app stores again. 
 
-### 7.1 Gathering the Required Information 
+### 8.1 Gathering the Required Information 
 
 1. Navigate to [App Center](https://appcenter.ms).
 1. While logged in, find the Android and iOS apps used for building your app.
 1. Check the URLs and note down the application ID as seen in the URLs. For example, in `https://appcenter.ms/users/user.name/apps/App-Android/distribute/code-push`, the Android app's ID is `App-Android`.
 1. If your app is built under an organization the URL might look like this: `https://appcenter.ms/orgs/org-name/apps/App-Android/distribute/code-push`. In this case, note the `org-name` as seen in the URL.
 
-### 7.2 Moving Your App to Native Mobile Builder
+### 8.2 Moving Your App to Native Mobile Builder
 
 1. Launch the Mendix Native Mobile Builder for your app.
 1. If you have not yet completed the setup wizard, complete it now.
@@ -174,8 +194,9 @@ Try to push an OTA update for an unreleased version of your app, for example v0.
 
 If the OTA release button remains disabled, verify that the app names added in the configuration are correct and make sure to add the organization property if your apps are under an organization. After you correct the mistakes, restart the Mendix Native Mobile Builder and try again.
 
-## 8 Read More
+## 9 Read More
 
+* [Release Over the Air Updates with Mendix](how-to-ota)
 * [Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [Offline-First](/refguide/offline-first)
 * [CodePush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

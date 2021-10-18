@@ -98,7 +98,7 @@ This is the settings for this planning. Create the object and associate it to `P
 | `Priorities` | Boolean | Enable use of Priorities. Some tasks may need to be assigned as early as possible, regardless of the travel  time. The planner allows setting Medium and High priorities for this purpose. |
 | `RequiredProperties`  | Boolean | Enable use of required properties. Some tasks might have requirements  as to what resource can pick them up. Requirements can be certifications,  having a key, or even types of resources. For example, a leak might require a  certified plumber, and a dig site might require an excavator. |
 | `SoftPinning` | Boolean | Enable soft pinning. A Human  planner is always able to override the planning suggested by the Field  Service Planner application. The human planner can pin tasks to a  pre-specified mechanic, a pre-specified time, or a combination of both. There  are multiple types of pins, a 'hard' pin will always be respected by the  planner. With a 'soft' pin the application will try to respect the pin if it  can, but makes no guarantees, for example if a higher priority task comes in. |
-| `TaskSplitting` | Boolean | Enable task splitting. In some cases tasks can span multiple days.  The planner will automatically split these into multiple appointments. It is  also possible to specify a minimum appointment duration, so the planner will  not make the task start 5 minutes before the end of the day. In the same  manner it is also possible to prevent the planner from splitting up a task  altogether. |
+| `TaskSplitting` | Boolean | Enable task splitting. In some cases tasks can span multiple days.  The planner will automatically split these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner will  not make the task start 5 minutes before the end of the day. In the same  manner it is also possible to prevent the planner from splitting up a task  altogether. |
 
 #### 4.1.2 Task
 
@@ -108,15 +108,15 @@ A task is a unit of work. Tasks will be assigned to resources and `TimeSlots`. A
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
-| `_id`  | String | The task id.|
-| `GroupID`| String | The group Id. For Multi-Resource Tickets. All partial tasks in the  same Multi-Resource task must have the same groupId. |
-| `Importance` |Integer| Indicates how important this  task is compared to others. If the planning has to choose a task to drop  because there isn't enough time to pick up all tasks, more important ones are  preferred over less important ones. Use priority or execution windows if the  planner should plan certain tasks before others. Default: 1 |
-| `MinimumTimeSlotDurationMinutes` | {{% todo %}}[Type?]{{% /todo %}} | The minimum duration of a time slot in minutes. Defaults to  workDurationMinutes if not set. |
-| `PinnedResource` | String | The resource id for the pinned  resource. Must only be set if resourcePinType is `SOFT` or `HARD`. |
-| `PreAssignedResource` | String | The id resource that this task is assigned to. If empty, the task  will start unassigned. |
-| `PreAssignedWorkStart` | Date and time | The pre-planned timeSlots. May be set on assigned tasks if pinnedTimeSlots is false, but is not required.  Setting it may improve performance on re-calculations. Must not be set on  unassigned tasks. |
-| `PreferredStartWindowWeight` | {{% todo %}}[Type?]{{% /todo %}} | The weight of the preferredStartWindows compared to minutes of travel  time. For example: if the preferredStartWindowWeight is 30, the planner will  allow up to 30 minutes of extra travel time across all resources, to make the  preferredStartWindows. |
-| `Priority` | Enumeration | Indicates how quickly this task  needs to be picked up. `MEDIUM` and `HIGH` priority tasks are planned as soon as  possible, possibly at the cost of total travel time. `HIGH` priority tasks are  planned before `MEDIUM` priority tasks if possible. `LOW` priority tasks are  planned as cheaply as possible. The optimizer will minimize total travel and  work time, even if it means that tasks will be done later. ExecutionWindows are always considered. A `LOW` priority task may be assigned earlier than a high priority task if its execution window ends earlier. Use 'importance' if  the planner must decide which task should be picked up if there is not enough time to pick it all up. |
+| `_id`  | String | The task ID. |
+| `GroupID`| String | The group ID for multi-resource tickets. All partial tasks in the  same Multi-Resource task must have the same group ID. |
+| `Importance` |Integer| Shows how important this task is compared to others. If the planning has to choose a task to drop because there is not enough time to pick up all tasks, more important ones are preferred over less important ones. Use priority or execution windows if the planner should plan certain tasks before others. The default value is `1`. |
+| `MinimumTimeSlotDurationMinutes` | {{% todo %}}[Type?]{{% /todo %}} | The minimum duration of a time slot in minutes. The default value is `workDurationMinutes` if not set. |
+| `PinnedResource` | String | The resource id for the pinned  resource. Set this value only if `resourcePinType` is `SOFT` or `HARD`. |
+| `PreAssignedResource` | String | The ID of the resource that this task is assigned to. If empty, the task will start unassigned. |
+| `PreAssignedWorkStart` | Date and time | The pre-planned timeSlots. May be set on assigned tasks if `pinnedTimeSlots` is `false`, but is not required.  Setting it may improve performance on re-calculations. You should not set it on unassigned tasks. |
+| `PreferredStartWindowWeight` | {{% todo %}}[Type?]{{% /todo %}} | The weight of the` preferredStartWindows` compared to minutes of travel  time. For example: if the `preferredStartWindowWeight` is `30`, the planner will  allow up to 30 minutes of extra travel time across all resources, to make the `preferredStartWindows`. |
+| `Priority` | Enumeration | Indicates how quickly this task  needs to be picked up. `MEDIUM` and `HIGH` priority tasks are planned as soon as  possible, possibly at the cost of total travel time. `HIGH` priority tasks are  planned before `MEDIUM` priority tasks if possible. `LOW` priority tasks are  planned as cheaply as possible. The optimizer will minimize total travel and  work time, even if it means that tasks will be done later. ExecutionWindows are always considered. A `LOW` priority task may be assigned earlier than a high priority task if its execution window ends earlier. Use 'importance' if the planner must decide which task should be picked up if there is not enough time to pick it all up. |
 | `Reference` | String | Reference which can be used by the client to map error messages to  client side entities. Not used by the planner other than validations. |
 | `ResourcePinType` | Enumeration | The pin type. If set to `HARD`,  the planner will never change this resource assignment. If set to `SOFT`, the  planner will only change the assignment if other tasks would be dropped. |
 | `TimeSlotPinType` | Enumeration | The pin type. If set to `HARD`, the planner will never change this time  slot assignment. If set to `SOFT`, the planner will only change the assignment  if other tasks would be dropped. |
@@ -144,7 +144,7 @@ Properties are used to restrict the tasks a resource can pick up. A resource nee
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
-| `Value`   | String | String that needs to match for the RequiredProperty and the ResourceProperty.  RequiredProperty:  The set properties on the resource that are required to fix a task.  ResourceProperty:  The properties that the resource possesses to pick up tasks. |
+| `Value`   | String | String that needs to match for the `RequiredProperty` and the `ResourceProperty`: <ul><li>`RequiredProperty`: The set properties on the resource that are required to fix a task.</li> <li>`ResourceProperty`: The properties that the resource possesses to pick up tasks.</li></ul> |
 
 #### 4.1.5 Location
 
@@ -164,7 +164,7 @@ Locations are optional, but if used they need to be added to all the tasks and r
 | --------- |--------|--------|
 | `Latitude` | Decimal | The latitude of the location.|
 | `Longitude`  | Decimal | The longitude of the location.|
-| `Reference`  | String | Reference which can be used by  the client to map error messages to client side entities. Not used by the  planner other than validations. |
+| `Reference`  | String | Reference which can be used by the client to map error messages to client side entities. Not used by the planner other than validations. |
 
 #### 4.1.6 TimeSlot
 
@@ -172,11 +172,11 @@ Locations are optional, but if used they need to be added to all the tasks and r
 
 A time interval. Is used for:
 
-●   *PinnedTimeslots*: Must only be set if resourcePinType is SOFT or HARD.
+●   *PinnedTimeslots*: Must only be set if `resourcePinType` is `SOFT` or `HARD`.
 
-●   *PreferredStartWindow*: A list of preferred windows when the task should start. No guarantee can be given that the task will be picked up within any of these windows. The importance of keeping to these windows is set by preferredStartWindowWeight
+●   *PreferredStartWindow*: A list of preferred windows when the task should start. No guarantee can be given that the task will be picked up within any of these windows. The importance of keeping to these windows is set by `preferredStartWindowWeight`
 
-●   *ExecutionWindow*: A list of windows when the task can be picked up. This usually relates to when a location is accessible. Service windows must be given if pinnedTimeSlots is false.
+●   *ExecutionWindow*: A list of windows when the task can be picked up. This usually relates to when a location is accessible. Service windows must be given if `pinnedTimeSlots` is `false`.
 
 ●   *Availability*: A list of times where the resource is available
 
@@ -184,7 +184,7 @@ A time interval. Is used for:
 | --------- |--------|--------|
 | `Start` | Date and time | The start of the interval|
 | `End`   | Date and time | The end of the interval|
-| `Reference`  | String | Reference which can be used by  the client to map error messages to client side entities. Not used by the  planner other than validations. |
+| `Reference`  | String | Reference which can be used by the client to map error messages to client side entities. Not used by the  planner other than validations. |
 
 #### 4.1.7 Dependency
 
@@ -194,7 +194,7 @@ A list of task ids that must finish before starting the current task.
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
-| `TaskID` | String | TaskID of the task that must  finish before the current task.|
+| `TaskID` | String | The ID of the task that must finish before the current task. |
 
 ### 4.2 Response
 
@@ -212,9 +212,9 @@ The solution to the planning request.
 | --------- |--------|--------|
 | `_id`   | String | The ID of the planning response.|
 | `CreationTime` | Date and time | Time when the planning was created.|
-| `Error` | String | An error message if an exception  occurred during execution. |
+| `Error` | String | An error message if an exception occurred during execution. |
 | `Status` | Enumeration | Execution status.|
-| `Username`  | String | Username of the user that  created the planning.|
+| `Username`  | String | Username of the user that created the planning. |
 
 #### 4.2.2 TaskResponse
 

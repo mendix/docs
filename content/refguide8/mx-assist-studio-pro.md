@@ -24,9 +24,13 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **MxAssist Logic Bot** section. For more information, see [Preferences](preferences-dialog).
+You can switch on and off the MxAssist Logic Bot using **On-Off** button in the top right corner of the microflow editor:
 
-In the **MxAssist Logic Bot** section, you can set the following: 
+# we need to add high quality image of the on-off
+
+To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](preferences-dialog).
+
+In the **Mendix Assist** tab, section **Logic Bot**, you can set the following: 
 
 * **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
 

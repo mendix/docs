@@ -69,13 +69,13 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 ## 4. Usage
 
-To use the Receipt Processing app service, firstly create an [Import Mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the Import Mapping that you created.
+To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 
-You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [import mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1. To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1. To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
    1. Log into the Marketplace with your Mendix account.
    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
    3. Click **Receipt Processing** to open the service management dashboard.
@@ -99,12 +99,12 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
         ![json-structure](attachments/receipt-processing/json-structure.png)
 
    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
-   4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the Import Mapping.
+   4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
    5. Click **OK** to save the changes and close the dialog box.
-3.  To create the Import Mapping, perform the following steps:
-    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
+3.  To create the import mapping, perform the following steps:
+    1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.
     2. From the pop-up menu, select **Add other** > **Import mapping**.
-    3. In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
+    3. In the **Add Import Mapping** dialog box, enter a **Name** for the import mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
         ![schema-source-json-structure](attachments/receipt-processing/schema-source-json-structure.png)
@@ -123,7 +123,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
     ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-box.png)
 
 4. For **Image List**, click **Edit** to select the **Image List** which inherits from `System.Image`.
-5. For **Mapping**, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
+5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 6. Click **OK** to save the changes and close the dialog box.
 
 {{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}

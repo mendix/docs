@@ -70,7 +70,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard)..
+4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
 5. Click **Create Binding Keys**.
 

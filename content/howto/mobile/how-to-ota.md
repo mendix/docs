@@ -12,7 +12,7 @@ With Mendix Studio Pro 9.7, you can update your Mendix native apps over the air 
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
-With OTA updates support via the Mendix runtime, you can simply deploy a new version of your app to the cloud and the apps will be updated automatically at the next restart .
+With OTA updates support via the Mendix runtime, you can simply deploy a new version of your app to the cloud and the apps will be updated automatically at the next restart as long as the device can access the runtime.
 
 This way the model, the runtime and the apps can be kept seamlessly in sync.
 

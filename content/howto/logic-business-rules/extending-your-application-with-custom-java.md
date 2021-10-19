@@ -103,7 +103,7 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
 	{{% /image_container %}}
 
-3. In the **Select widget** dialog box that appears, select **Buttons** > **Call microflow button**.
+3. In the **Select Widget** dialog box that appears, select **Buttons** > **Call microflow button**.
 
 4. In the **Select Microflow** dialog box, click **New** to create a new microflow.
 

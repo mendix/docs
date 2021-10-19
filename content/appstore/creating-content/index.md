@@ -12,4 +12,4 @@ This category of the Marketplace Guide covers all the things you need to know wh
 
 ## 2 Main Documents in This Category
 
-* [Creating Solutions](solutions-guide)
+* [Solutions](solutions-guide)

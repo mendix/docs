@@ -70,7 +70,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard)..
+4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard)..
 
 5. Click **Create Binding Keys**.
 
@@ -185,7 +185,7 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-3. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
+3. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
    * **Current Month** – Shows statistics for current month usage
    * **Last Month** – Shows usage statistics for last month
    * **Till date** – Shows usage statistics from the start of the subscription date to today

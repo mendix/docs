@@ -53,7 +53,6 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 4. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 7.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
-
 ### 3.2 Configuring Keys for Application Deployment
 
 1.  In the **App Explorer** or the **Project Explorer**, go to **ReceiptProcessing** > **Configurations**. **Access_Key**, **Secret_Key**, and **Encryption_Key** are defined as constants.

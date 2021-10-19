@@ -26,7 +26,7 @@ The key features of MxAssist Logic Bot are the following:
 
 You can switch on and off the MxAssist Logic Bot using **On-Off** button in the top right corner of the microflow editor:
 
-# we need to add high quality image of the on-off
+![On-Off Button](attachments/mx-assist-studio-pro/on-off-button.png)
 
 To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](preferences-dialog).
 
@@ -42,9 +42,7 @@ For more information on preferences, see [Preferences](preferences-dialog).
 
 ## 3 Using MxAssist Logic Bot to Build Microflows
 
-MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](/refguide8/microflows). A bow-tie appears on the dot when you hover over it:
-
-{{% image_container width="350" %}}![Logic Bot Icon](attachments/mx-assist-studio-pro/mendix-assist-icon.png){{% /image_container %}}
+MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](/refguide8/microflows). 
 
 It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
 

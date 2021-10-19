@@ -1,5 +1,5 @@
 ---
-title: "Automated Task and Resource Planner"
+title: "Automated Task & Resource Planner"
 category: "App Services"
 description: " "
 tags: ["marketplace", "marketplace component", "app service"]
@@ -14,10 +14,6 @@ tags: ["marketplace", "marketplace component", "app service"]
 Powered by AI, the [Automated Task & Resource Planner]() app service is capable of solving complex planning cases and automatically creating the most efficient planning based on the available resources. The planner matches “tasks” with “resources”, taking a wide range of constraints into account. 
 
 The app service has a module containing a plug-and-play integration with the Automated Task & Resource Planner API.
-
-To see how the app service can be used and implemented in a Mendix project, download the example app.
-
-{{% todo %}}[Add the link to the example app. Is the example app same as the demo app?]{{% /todo %}}
 
 ### 1.1 Typical Use Cases
 
@@ -35,7 +31,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 
 ### 1.3 Prerequisites
 
-*	You have an automated task and resource planner account
+*	You have an Automated Task & Resource Planner account
 {{% todo %}}[how to set up the account?]{{% /todo %}}
 
 ### 1.4 Dependencies
@@ -43,7 +39,12 @@ You can use this app service when you want to automatically schedule tasks in yo
 * Encryption
 
 ### 1.5 Demo App
-For a demo app that has been deployed with this widget, see [here]().
+To see how the app service can be used and implemented in a Mendix project, check out the following demo apps for different industries:
+
+* Delivery Planning: Coffee Hardware delivers various office coffee machines to different customers within the Netherlands. They use the Automated Task & Resource Planner to generate the most efficient daily routes for their drivers to deliver the orders to the customer. The planning is shown in different ways: the route per driver and a calendar overview.
+* Call Scheduling: Customers of Sky Bank have filled out an online contact form with a callback request. They indicated that their question is about opening accounts, stocks, mortgages or money transfers. They can also indicate their preferred language. The Automated Task & Resource Planner is used to schedule the calls as efficiently as possible based on availability of the call center agents and preferences of the customer. The Planner takes into account that the agents work either a morning or afternoon shift and that calls concerning mortgages and stocks are expected to last 60 minutes and calls regarding the other two subjects 30 minutes.
+* Matching Planning: Simply Smashing has several tennis courts available for club members to enjoy a game of tennis. The Automated Task & Resource Planner takes the available time slots of 60 minutes, requested tennis court types, opening times and priority level of a match into account when creating the schedule. When the “human” planner would like to manually plan a match, the request can be selected and the available time slots and tennis court that meet the requirements are shown in green. It is possible to manually set the time slot or specific court so the Planner will make sure these appointments are taken into account.
+* Maintenance and Repair: Ofixed has a workforce of skilled mechanics to meet the maintenance and repair needs of their customers. The Automated Task & Resource Planner matches the mechanics with the right skills to complete the customer's service request and schedule the appointments. In doing so the Planner is taking a wide range of constraints into account, such as deadlines, customer preferred time windows, roster of the mechanics, overtime, dependencies between work orders, preceding service requests, office opening hours and priorities. Service requests that span over multiple days will be automatically split into multiple appointments. The ‘human’ planner is able to manually plan or alter existing appointments and secure (pin) mechanics or time.
 
 {{% todo %}}[Provide a link to a maintained demo app where the component is used if available]{{% /todo %}}
 

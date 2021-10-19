@@ -27,7 +27,7 @@ If you have a web server and a custom application with a non-OData data source, 
 There are certain limitations on Consumed OData services. See more detail on this  [here](https://docs.mendix.com/refguide/consumed-odata-services#2-odata-services-and-external-entities).
 
 
-# IMAGE
+![Data Hub connecting to non-OData resources](/attachments/non-odata.jpg)
 
 *Diagram representing how an OData API wrapper can be used to connect a custom application datasource to a Mendix Studio Pro app*
 

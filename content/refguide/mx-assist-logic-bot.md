@@ -20,11 +20,9 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-## 2 MxAssist Logic Bot Settings
+You can switch MxAssist Logic Bot on and off using the **On-Off** button in the top right corner of the microflow editor:
 
-You can switch on and off the MxAssist Logic Bot using **On-Off** button in the top right corner of the microflow editor:
-
-# we need to add high quality image of the on-off
+![On-Off-Button](attachments/mx-assist-logic-bot/mx-assist-on-off-button.png)
 
 To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](preferences-dialog).
 
@@ -34,7 +32,7 @@ In the **Mendix Assist** tab, section **Logic Bot**, you can set the following:
 
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-  ![Suggestions for System Variables](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
+  ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
 
 For more information on preferences, see [Preferences](preferences-dialog).
 

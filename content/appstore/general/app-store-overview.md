@@ -266,7 +266,7 @@ You can also select a group of binding keys and click **Manage Instance** to go 
 This additional management option is only available for specific app services where necessary.
 {{% /alert %}}
 
-#### 4.8.2 Creating Binding Keys
+#### 4.8.2 Creating Binding Keys {#creating-binding-keys}
 
 To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 

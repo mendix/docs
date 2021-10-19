@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies<sup>1</sup> to extract text and key value pairs from images of documents in bulk.
 
 ### 1.1 Features
 
@@ -22,7 +22,6 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
-
 ## 2 Installation
 
 1. Go to the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace and download the *.mpk* file.
@@ -33,7 +32,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
     2.  Click **Import module package** and then select the *.mpk* file.
 
-        ![pop-up-menu-in-app-explorer](attachments/intelligent-document/import-module-in-app-explorer.png)
+        ![pop-up-menu-in-app-explorer](attachments/intelligent-document-service/import-module-in-app-explorer.png)
 
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
@@ -47,7 +46,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
 ## 3 Configuration
 
-The intelligent Document Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses the Intelligent Document Service, you need to get a valid combination of certain keys and configure them as constants in the module.
+The Intelligent Document Service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses the Intelligent Document Service, you need to get a valid combination of certain keys and configure them as constants in the module.
 
 ### 3.1  Subscribing to Get Keys
 
@@ -57,7 +56,7 @@ The intelligent Document Service is a premium Mendix product that is subject to 
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
+4. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
 5. Click **Create Binding Keys**.
 
@@ -67,7 +66,7 @@ The intelligent Document Service is a premium Mendix product that is subject to 
 
     {{% alert type="warning" %}}When the page shows the generated keys, do not close this page immediately. Once you close the page, you cannot retrieve the keys again.{{% /alert %}}
 
-    ![accesskey-secretkey-encryptionkey-generated](attachments/intelligent-document/binding-key-generation.png)
+    ![accesskey-secretkey-encryptionkey-generated](attachments/intelligent-document-service/binding-key-generation.png)
 
 8. **Copy** and save **Access_Key**, **Secret_Key**, and **Encryption_Key**. You will need them for app deployment. After you save the keys, you can close the page.
 
@@ -75,10 +74,9 @@ The intelligent Document Service is a premium Mendix product that is subject to 
 
 1.  In the **App Explorer** or **Project Explorer**, go to **IntelligentDocService** > **Configurations**. **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
 
-    ![Keys under Configurations in a tree view](attachments/intelligent-document/configurations-keys.png)
+    ![Keys under Configurations in a tree view](attachments/intelligent-document-service/configurations-keys.png)
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
-
 
 ## 4. Usage
 
@@ -93,19 +91,19 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     3.  Click **Intelligent Document Service** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-        ![Document model training app login page](attachments/intelligent-document/document-model-training-app.png)
+        ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
     5. Log into the application with your Mendix account.
 
 2. Click **Environment** to show the **Existing Models** list.
 
-    ![Existing models list](attachments/intelligent-document/existing-models-list.png)
+    ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)
 
     {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
 3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
-    ![Create New Model dialog box](attachments/intelligent-document/create-new-model-dialog-box.png)
+    ![Create New Model dialog box](attachments/intelligent-document-service/create-new-model-dialog-box.png)
 
 4. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
 
@@ -113,11 +111,11 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
 
-    ![Import File page](attachments/intelligent-document/import-file-page.png)
+    ![Import File page](attachments/intelligent-document-service/import-file-page.png)
 
 7. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
-    ![Add Marker and IDs page](attachments/intelligent-document/add-marker-and-ids-image-unmarked.png)
+    ![Add Marker and IDs page](attachments/intelligent-document-service/add-marker-and-ids-image-unmarked.png)
 
 8.  To mark an image, perform the following steps:
 
@@ -129,7 +127,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
 
-        ![Mark Document page](attachments/intelligent-document/mark-document-dialog-box.png)
+        ![Mark Document page](attachments/intelligent-document-service/mark-document-dialog-box.png)
 
     5. Click **Add Marker** to add the marker to the list of **Markers**.
 
@@ -137,17 +135,17 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
 
-        ![add markers and id status is marked](attachments/intelligent-document/add-marker-and-ids-image-status-marked.png)
+        ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
 
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 
 9.  Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
 
-    ![new model status completed](attachments/intelligent-document/new-model-status-completed.png)
+    ![new model status completed](attachments/intelligent-document-service/new-model-status-completed.png)
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
-You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
 1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
@@ -161,7 +159,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     5.  Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
 
-        ![Sample Extraction dialog box](attachments/intelligent-document/sample-extraction-dialog-box.png)
+        ![Sample Extraction dialog box](attachments/intelligent-document-service/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON file.
 
@@ -171,7 +169,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
-        ![json-structure](attachments/intelligent-document/json-structure.png)
+        ![json-structure](attachments/intelligent-document-service/json-structure.png)
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
 
@@ -189,7 +187,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
     
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
     
-        ![schema-source-json-structure](attachments/intelligent-document/schema-source-json-structure.png)
+        ![schema-source-json-structure](attachments/intelligent-document-service/schema-source-json-structure.png)
     6. Click **OK** to save the changes and close the dialog box.
 
 
@@ -197,13 +195,13 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 
 1.  In the **Toolbox**, drag **Intelligent Document Service** activity from the **Document Data Capture Service** category into your microflow.
 
-    ![intelligent-document-microflow](attachments/intelligent-document/intelligent-document-microflow.png)
+    ![intelligent-document-microflow](attachments/intelligent-document-service/intelligent-document-microflow.png)
 
 2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
 
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
-    ![Intelligent Document Service dialog box](attachments/intelligent-document/intelligent-document-service-dialog-box.png)
+    ![Intelligent Document Service dialog box](attachments/intelligent-document-service/intelligent-document-service-dialog-box.png)
 
 4. For **Model Id**, click **Edit** to enter the **Model Id** of your model.
 
@@ -223,8 +221,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-3. Click **Intelligent Document Service** to open the service management dashboard. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+3. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
-## 5 Technical Provider
-The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+
+<sup>1</sup> The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.<br />
 

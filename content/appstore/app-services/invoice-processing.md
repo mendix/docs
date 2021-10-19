@@ -6,7 +6,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
-Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
+Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk<sup>1</sup>. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 
@@ -43,7 +43,6 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
     5. Open the **App Explorer** or **Project Explorer** to view the **InvoiceProcessing** module. You can also find the app service in the **Document Data Capture Service** category in the **Toolbox**.
     
-
 ## 3 Configuration
 
 The Invoice Processing app service is a premium Mendix product that is subject to a purchase and subscription fee. To successfully deploy an app that uses the Invoice Processing app service, you need to get a valid combination of certain keys and configure them as constants in the module.
@@ -56,7 +55,7 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
+4. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
 5. Click **Create Binding Keys**.
 
@@ -78,8 +77,6 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 2. For each constant, double-click the constant, enter the key that you saved, and click **OK** to save the changes.
 
-
-
 ## 4 Usage
 
 To use the Invoice Processing app service, first [train a model](#document-model-training) with vendor information and business unit information from a sample invoice, then create an [Import Mapping](#mapping-file) that defines how to map extracted data from images to an entity, and then include the [invoice processing service activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the Import Mapping that you created.
@@ -90,7 +87,7 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
     1.  Log into the Marketplace with your Mendix account.
     2.  Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-    3.  Click **Invoice Processing** to open the service management dashboard.
+    3.  Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
     4.  Click **Manage Instance** to open the **Document Model Training** application.
 
         ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
@@ -119,7 +116,7 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
-You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mappings) to populate the extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
 1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
@@ -192,12 +189,8 @@ You need to use an [Import Mapping](/refguide/mapping-documents#2-import-mapping
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
-3. Click **Invoice Processing** to open the subscription details page. On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
-
-## 5 Technical Provider
-
-The AI and OCR technologies used by Invoice Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+<sup>1</sup> The AI and OCR technologies used by Invoice Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.<br />
 

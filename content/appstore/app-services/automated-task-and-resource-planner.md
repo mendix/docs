@@ -25,23 +25,17 @@ You can use this app service when you want to automatically schedule tasks in yo
 
 ### 1.2 Features
 
-●	Scheduling tasks
-
-●	Priority tickets
-
-●	Travel time
-
-●	Required skills/properties
-
-●	Time windows
-
-●	Overtime
-
-●	Rosters
+*	Scheduling tasks
+*	Priority tickets
+*	Travel time
+*	Required skills/properties
+*	Time windows
+*	Overtime
+*	Rosters
 
 ### 1.3 Prerequisites
 
-●	You have an automated task and resource planner account
+*	You have an automated task and resource planner account
 {{% todo %}}[how to set up the account?]{{% /todo %}}
 
 ### 1.4 Dependencies
@@ -64,9 +58,7 @@ To configure this module, follow these steps:
      * [Encryption](https://marketplace.mendix.com/link/component/1011) module
      
 2. [Configure](/appstore/modules/encryption) the Encryption module.
-
 3. Add the `Settings_Snippet` and `Log_Snippet` to a custom page in a different module. {{% todo %}}[Where can you find these?]{{% /todo %}}
-
 4. After the deployment, go to the **Settings** page and enter the **Automated planning endpoint**, **username**, and **password**.
 
      {{% todo %}}[how to get to the **Settings** page? Where to get username and password?]{{% /todo %}}
@@ -106,8 +98,7 @@ This is the settings for this planning. Create the object and associate it to `P
 | `Priorities` | Boolean | Enables using `priorities`. Some tasks may need to be assigned as early as possible, regardless of the travel time. The planner allows setting `Medium` and `High` priorities for this purpose. |
 | `RequiredProperties`  | Boolean | Enables using required properties. Some tasks might have requirements. Requirements can be certifications, having a key, or even types of resources. For example, a leak can require a  certified plumber, and a dig site can require an excavator. |
 | `SoftPinning` | Boolean | Enables soft pinning. A human planner is always able to override the planning suggested by the field service planner application. The human planner can pin tasks to a  pre-specified mechanic, a pre-specified time, or a combination of both. There are different types of pins, 'hard' pins are always followed by the planner, while 'soft' pins are followed by the application as much as possible, but if the situation requires a change, for example, if a higher priority task comes in, then the application changes the plan. |
-| `TaskSplitting` | Boolean | Enables splitting a task. In some cases tasks can span multiple days. When the value is `true`, the planner automatically splits these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner does not make the task start shortly before the end of the day. When the value is `false`, the planner cannot split up a task. |
-|  |  |  |
+| `TaskSplitting` | Boolean | Enables splitting a task. In some cases tasks can span multiple days. When the value is `true`, the planner automatically splits these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner does not make the task start shortly before the end of the day. When the value is `false`, the planner cannot split up a task |,
 
 #### 4.1.2 Task
 

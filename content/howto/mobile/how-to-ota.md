@@ -8,7 +8,7 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-With Mendix Studio Pro 9.7, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions).
+With Mendix Studio Pro 9.7, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without the burden of going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 

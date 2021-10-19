@@ -2,7 +2,7 @@
 title: "Release Over the Air Updates with Mendix"
 parent: "distribution"
 menu_order: 20
-description: Describes enabling over the air updates natively.
+description: Describes enabling over the air updates using built-in functionality.
 tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 

@@ -31,7 +31,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 
 ●	Travel time
 
-●	Required skills / properties
+●	Required skills/properties
 
 ●	Time windows
 
@@ -69,7 +69,7 @@ To configure this module, follow these steps:
 
 4. After the deployment, go to the **Settings** page and enter the **Automated planning endpoint**, **username**, and **password**.
 
-     {{% todo %}}[how to get to the **Settings** page?]{{% /todo %}}
+     {{% todo %}}[how to get to the **Settings** page? Where to get username and password?]{{% /todo %}}
 
 ![automated-planning-endpoint-username-settings](attachments/automated-task-and-resource-planner/automated-planning-endpoint-username-settings.png)
 
@@ -142,14 +142,14 @@ A resource in a planning request. This can be a mechanic, a tennis court, a deli
 | Attribute | Type | Description |
 | --------- |--------|--------|
 | `_id`   | String | The resource ID. |
-| `MaxOvertimeMinutes` | Integer | The maximum number of minutes of overtime that the resource can make. Overtime is only used to finish a task. New tasks are not started within this time. |
-| `Reference`  | String | Reference which can be used by the client to map error messages to client side entities. Not used by the planner other than validations. |
+| `MaxOvertimeMinutes` | Integer | The maximum overtime in minutes that the resource can make. Overtime is only used to finish a task. New tasks are not started within this time. |
+| `Reference`  | String | The reference which can be used by the client to map error messages to client-side entities. Not used by the planner other than validations. |
 
 #### 4.1.4 Property
 
 ![property](attachments/automated-task-and-resource-planner/property.png)
 
-Properties are used to restrict the tasks a resource can pick up. A resource needs to have the required properties to pick up a task. Properties are required if the RequiredProperties setting is set to true. 
+Properties are used to restrict the tasks that a resource can pick up. A resource needs to have the required properties to pick up a task. Properties are required if the `RequiredProperties` setting is set to `true`. 
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
@@ -159,15 +159,15 @@ Properties are used to restrict the tasks a resource can pick up. A resource nee
 
 ![location](attachments/automated-task-and-resource-planner/location.png)
 
-A location with id and coordinates. This can be
+A location with ID and coordinates. A location can be the following:  {{% todo %}}check the format of the text – should it be formatted as code?{{% /todo %}}
 
-●   *TaskLocation*: location of the task 
+●   TaskLocation: location of the task
 
-●   *CurrentLocation*: Current location of the resource
+●   CurrentLocation: Current location of the resource
 
-●   *DefaultLocation*: Default location of the resource (where the resource starts and ends the day)
+●   DefaultLocation: Default location of the resource (where the resource starts and ends the day)
 
-Locations are optional, but if used they need to be added to all the tasks and resources.
+Locations are optional, but if used, they need to be added to all the tasks and resources.
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
@@ -179,7 +179,7 @@ Locations are optional, but if used they need to be added to all the tasks and r
 
 ![timeslot](attachments/automated-task-and-resource-planner/timeslot.png)
 
-A time interval. Is used for:
+`TimeSlot` is a time interval. Is used for:
 
 ●   *PinnedTimeslots*: Must only be set if `resourcePinType` is `SOFT` or `HARD`.
 

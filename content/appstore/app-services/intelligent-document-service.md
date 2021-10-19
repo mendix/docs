@@ -6,6 +6,8 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
+{{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
+
 The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies<sup>1</sup> to extract text and key value pairs from images of documents in bulk.
 
 ### 1.1 Features

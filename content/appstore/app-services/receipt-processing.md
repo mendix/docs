@@ -6,6 +6,8 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
+{{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
+
 The [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built, ready-to-implement trained document model<sup>1</sup>. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
 
 ### 1.1 Features

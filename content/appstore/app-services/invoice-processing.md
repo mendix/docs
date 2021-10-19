@@ -6,6 +6,8 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 ## 1 Introduction
 
+{{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
+
 Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk<sup>1</sup>. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
@@ -79,7 +81,7 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 ## 4 Usage
 
-To use the Invoice Processing app service, first [train a model](#document-model-training) with vendor information and business unit information from a sample invoice, then create an [import mapping](#mapping-file) that defines how to map extracted data from images to an entity, and then include the [invoice processing service activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
+To use the Invoice Processing app service, first [train a model](#document-model-training) with vendor information and business unit information from a sample invoice, then create an [Import Mapping](#mapping-file) that defines how to map extracted data from images to an entity, and then include the [invoice processing service activity](#extraction-activity) in a microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the Import Mapping that you created.
 
 ### 4.1 Training a Document Model {#document-model-training}
 
@@ -116,9 +118,9 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
-You need to use an [import mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
+You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1.  To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
 
     1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
 
@@ -144,17 +146,17 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
 
-    4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
+    4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the Import Mapping.
 
     5. Click **OK** to save the changes and close the dialog box.
 
-3.  To create the import mapping, perform the following steps:
+3.  To create the Import Mapping, perform the following steps:
 
-    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
 
     2.  From the pop-up menu, select **Add other** > **Import mapping**.
 
-    3.  In the **Add Import Mapping** dialog box, enter a **Name** for the import mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
+    3.  In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
 
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
@@ -178,7 +180,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
 5. Click **Edit** to select the **Image List** which inherits from `System.Image`.
 
-6. In the **Mapping** box, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
+6. In the **Mapping** box, **Select** the Import Mapping that you created to define how extracted data should be mapped into an entity.
 
 7. Click **OK** to save the changes and close the dialog box.
 

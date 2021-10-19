@@ -70,7 +70,6 @@ To use the Invoice Processing app service, first [train a model](#document-model
 ### 4.1 Training a Document Model {#document-model-training}
 
 1.  Perform the following steps to log into the **Document Model Training** application:
-
     1.  Log into the Marketplace with your Mendix account.
     2.  Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
     3.  Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
@@ -122,7 +121,6 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the Import Mapping.
     2.  From the pop-up menu, select **Add other** > **Import mapping**.
     3.  In the **Add Import Mapping** dialog box, enter a **Name** for the Import Mapping and click **OK**. The **Select schema elements for import mapping** dialog box opens.
-
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
 
         ![schema-source-json-structure](attachments/invoice-processing/schema-source-json-structure.png)

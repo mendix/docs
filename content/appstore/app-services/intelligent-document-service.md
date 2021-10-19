@@ -55,7 +55,6 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 4. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
-
 ### 3.2 Configuring Keys for Application Deployment
 
 1.  In the **App Explorer** or **Project Explorer**, go to **IntelligentDocService** > **Configurations**. **Access_Key**, **Secret_Key** and **Encryption_Key** are defined as constants.
@@ -79,7 +78,6 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
     5. Log into the application with your Mendix account.
-
 2. Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)

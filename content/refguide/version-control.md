@@ -13,7 +13,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro (SVN and Git), Studio, and the Developer Portal (SVN only).
+Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 ## 2 Concepts {#concepts}
 
@@ -31,7 +31,7 @@ Within the [Team Server](#team-server) each app is stored in a repository. This 
 
 A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
-Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from Studio Pro in two circumstances:
+Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro in two circumstances:
 
 * The app is committed to the repository
 * A Studio Pro working copy is updated from a Studio working copy
@@ -59,13 +59,17 @@ When a conflict occurs, a developer has to intervene to decide how it should be 
 
 ### 2.7 Update {#update}
 
-Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the Team Server repository and merges the differences into the current working copy.
+Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
-### 2.8 Commit {#commit}
+### 2.8 Commit/Push {#commit}
 
-Committing is the action, invoked in Studio Pro, of sending all your changes to the [repository](#repository) and making a new [revision](#revision).
+Committing is the action, invoked in Studio Pro, of creating a set of changes and pushing/sending all your changes to the [repository](#repository) and making a new [revision](#revision).
+
+{{% alert type="info" %}}
+When working in Studio Pro Git, it is possible to store the committed data in a local repository, but not yet push/send it to the central [repository](#repository). In SVN these actions are always done together.
+{{% /alert %}}
 
 If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are not conflicts, the changes are then sent to the repository to make a new revision.
 
@@ -101,7 +105,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert type="info" %}}
-Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) at the moment 
+Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) from version 9.8.0.
 {{% /alert %}}
 
 ### 2.12 Repository Service
@@ -186,7 +190,11 @@ Initially, developers using Studio only have access to the development line for 
 
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
-In Mendix each revision within a [repository](#repository) is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
+In Mendix each commit within a [repository](#repository) is given a unique identifier. 
+
+{{% alert type="info" %}}
+In SVN the unique identifiers are numbers. As each commit has a unique number in this case, ersion numbers given to revisions along any chosen branch line may not be consecutive.
+{{% /alert %}}
 
 ![](attachments/version-control/image8.png)
 

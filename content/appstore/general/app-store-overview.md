@@ -248,7 +248,7 @@ The table presents the **Products** you have subscribed to, the **Type** of plan
 
 Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
 
-#### 4.8.1 Service Management Dashboard
+#### 4.8.1 Service Management Dashboard {#service-management-dashboard}
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 

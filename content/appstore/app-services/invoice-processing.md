@@ -8,7 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 {{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
 
-Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk<sup>1</sup>. It supports invoices in the European Union and the United States.
+Powered by AI and OCR technologies<sup>1</sup>, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 

@@ -9,7 +9,7 @@ tags: ["studio pro", "logic bot", mendix assist", "AI", "assist", "mx assist"]
 
 MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic (microflows) in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your microflow based on the already designed activities, parameters, and other context-related information. 
 
-MxAssist Logic Bot is built using machine learning analysis of over twelve million anonymized application logics (microflows)*—*built with Mendix*—*to detect and learn the best practice patterns in microflows.
+MxAssist Logic Bot is built using the machine learning analysis of over twelve million anonymized application logics (microflows) built with Mendix to detect and learn the best practice patterns in microflows.
 
 The key features of MxAssist Logic Bot are the following: 
 
@@ -35,7 +35,6 @@ In the **Mendix Assist** tab, section **Logic Bot**, you can set the following:
   ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
 
 For more information on preferences, see [Preferences](preferences-dialog).
-
 
 ## 3 Using MxAssist Logic Bot to Build Microflows
 

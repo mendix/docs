@@ -24,7 +24,7 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-You can switch on and off the MxAssist Logic Bot using **On-Off** button in the top right corner of the microflow editor:
+You can switch MxAssist Logic Bot on and off clicking the **On-Off** button in the top right corner of the microflow editor:
 
 ![On-Off Button](attachments/mx-assist-studio-pro/on-off-button.png)
 

@@ -51,15 +51,8 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 4. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-5. Click **Create Binding Keys**.
-6. Enter a good name for the binding keys. Make sure the name includes the name of the app that will use the app service.
-7.  Click **Create Keys** to generate **Access_Key**, **Secret_Key,** and **Encryption_Key**.
+7.  Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
-    {{% alert type="warning" %}}When the page shows the generated keys, do not close this page immediately. Once you close the page, you cannot retrieve the keys again.{{% /alert %}}
-
-    ![accesskey-secretkey-encryptionkey-generated](attachments/receipt-processing/binding-key-generation.png)
-
-8. **Copy** and save **Access_Key**, **Secret_Key**, and **Encryption_Key**. You need to use them later for app deployment. After you save the keys, you can close the page.
 
 ### 3.2 Configuring Keys for Application Deployment
 

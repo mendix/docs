@@ -30,7 +30,7 @@ This app service enables doing the following:
 
 * The total number of recipients in the "To", "CC", and "BCC" lists cannot exceed 50
 * The cumulative size of the attachment(s) cannot exceed 10 MB
-* Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see [Unsupported File Types for Attachments](#unsupported-file-types)
+* Certain files, for example, executables, scripts, and macros, are not supported as attachments. For an exhaustive list of unsupported file types, see the [Unsupported File Types for Attachments](#unsupported-file-types) section
 
 ### 1.4 Prerequisites
 
@@ -70,19 +70,11 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard)..
+4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#4-8-1-service-management-dashboard).
 
-5. Click **Create Binding Keys**.
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys. The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the [SPF and MX Records](#spf-and-mx-records) section.
 
-6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
-
-7.  Click **Create Keys** to generate the **SecretKey** and **UserName**. 
-
-    The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
-
-    ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
-
-8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
+   ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
 9. After the order is created successfully, the Technical Contact also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
@@ -136,7 +128,7 @@ To configure the **Send email** activity, double-click the activity and specify 
   * **Content type** – Defines whether the email is a **Text** or **HTML** message
   *  **Body** – Defines the body of the email
 
-   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see [Generating HTML Body Content](#generate-html-body).{{% /alert %}}
+   {{% alert type="info" %}}If you want to send an HTML message, you can generate HTML content, and add the generated HTML string in the **Body** field. For more information, see the [Generating HTML Body Content](#generate-html-body) section below.{{% /alert %}}
   
   * **Attachment** – Defines the attachment to the email
 

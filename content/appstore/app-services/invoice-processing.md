@@ -59,17 +59,7 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 4. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-5. Click **Create Binding Keys**.
-
-6. Enter a descriptive name for the binding keys. Make sure the name includes the name of the app that will use the app service.
-
-7.  Click **Create Keys** to generate **Access_Key**, **Secret_Key**, and **Encryption_Key**.
-
-    {{% alert type="warning" %}}When the page shows the generated keys, do not close this page immediately. Once you close the page, you cannot retrieve the keys again.{{% /alert %}}
-
-    ![accesskey-secretkey-encryptionkey-generated](attachments/invoice-processing/binding-key-generation.png)
-
-8. **Copy** and save **Access_Key**, **Secret_Key**, and **Encryption_Key**. You need to use them later for app deployment. After you save the keys, you can close the page.
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
 ### 3.2 Configuring Keys for Application Deployment
 

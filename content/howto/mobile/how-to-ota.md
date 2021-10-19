@@ -129,23 +129,6 @@ To release a new version OTA, follow these steps:
 
 On the next restart of the application, the new OTA update will be downloaded and used. 
 
-## 7 Preserving Your Model's Integrity
-
-Mendix native apps are offline first. This means you should be cautious when changing the following elements, and should avoid changing them if possible:
-
-* The navigation profile
-* An offline-first entity (for example, with entity name changes or new entity relationships)
-
-Generally, you should avoid making destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing OTA updates might put your end-users in an unrecoverable state.
-
-### 7.1 Offline Apps and Data Loss
-
-Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine you are hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. You release that morning. You push a new runtime by clicking the **Publish** button in Studio Pro, and then run the Native Mobile Builder to push a new update to the apps. All seems to work fine.
-
-That same morning however, your engineers were hard at work gathering field data in a remote area. Later that afternoon the engineers return back to the city and attempt to synchronize their data using the app's built-in synchronize button. Their synchronization fails. They do the only thing they can think of: restart the app. When the app starts they are greeted with the **Update Available** screen. They hit the continue button, get updated, and their data is lost or partially synchronized.
-
-This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix developer, you have to think twice before doing major chages that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
-
 
 ## 8 Read More
 

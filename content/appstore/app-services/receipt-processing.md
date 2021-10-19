@@ -10,6 +10,8 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 Powered by AI and OCR technologies<sup>1</sup>, the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built, ready-to-implement trained document model<sup>1</sup>. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
 
+<small><sup>1</sup> The AI and OCR technologies used by Receipt Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
+
 ### 1.1 Features
 
 * Pre-built, ready-to-implement receipt document models
@@ -39,7 +41,7 @@ This app service works best with Studio Pro 8 versions starting with [8.18.5](/r
 
 3. In the **Import Module** dialog box, click **Import**.
 4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-6. Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module. You can also find the app service in the **Document Data Capture Service** category in the **Toolbox**.
+5. Open the **App Explorer** or **Project Explorer** to view the **ReceiptProcessing** module. You can also find the app service in the **Document Data Capture Service** category in the **Toolbox**.
 
 ## 3 Configuration
 
@@ -129,5 +131,3 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
-
-<sup>1</sup>The AI and OCR technologies used by Receipt Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.<br />

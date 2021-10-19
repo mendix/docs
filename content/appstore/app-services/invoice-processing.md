@@ -1,5 +1,5 @@
 ---
-title: "Invoice Processing Service"
+title: "Invoice Processing"
 category: "App Services"
 tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 ---
@@ -9,6 +9,8 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 {{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
 
 Powered by AI and OCR technologies<sup>1</sup>, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
+
+<small><sup>1</sup> The AI and OCR technologies used by Invoice Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
 
 ### 1.2 Features
 
@@ -47,7 +49,7 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Invoice Processing Service](https://marketplace.mendix.com/link/component/118389) component page in the Marketplace, click **Subscribe** to order a subscription.
+1. On the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) component page in the Marketplace, click **Subscribe** to order a subscription.
 2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 4. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
@@ -152,6 +154,4 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
-
-<sup>1</sup> The AI and OCR technologies used by Invoice Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.<br />
 

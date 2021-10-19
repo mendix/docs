@@ -18,7 +18,7 @@ Mendix [introduced the Mendix Solutions Vendor program](https://www.mendix.com/b
 
 Read more about the [Mendix Solutions Vendor & Startup programs](general).
 
-## 2 What is a solution?
+## 2 What Is a Solution?
 
 What is a solution? Essentially, a solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs & expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case general Mendix development principles & best practices apply - see below for useful links. So you can get started right away, from any template available on the Mendix Platform.
 
@@ -28,9 +28,9 @@ Customers often require more from a solution than it supports out-of-the-box. Wh
 
 Read more on [adaptive solutions](adaptive-solution-architecture) in the Development section.
 
-## 3 Useful resources
+## 3 Useful Resources
 
-### 3.1 Important sections in the Solutions Guide
+### 3.1 Important Sections in the Solutions Guide
 
 Make sure to read through the entire Solutions Guide. A good starting point is the [Development](development) section. The most important topics addressed in the guide are:
 
@@ -40,11 +40,11 @@ Make sure to read through the entire Solutions Guide. A good starting point is t
 <!-- TODO: [Version Control](version-control) processes suited to solution development -->
 <!-- TODO: Deployment of solutions -->
 
-### 3.2 Other helpful resources
+### 3.2 Other Helpful Resources
 
 - General Mendix development with Studio Pro: [Reference Guide](/refguide) and [Howtos](/howto)
 - General Mendix [best practices](/howto/general/dev-best-practices) - these equally apply to solutions development
 
-## 4 Get started
+## 4 Get Started
 
 Read up on [general](general) information on solutions development on the Mendix Solutions Platform and review the [Development](development) section in the Solutions Guide. Then [create your app](https://new.mendix.com/) and Go Make It!

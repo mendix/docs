@@ -15,7 +15,7 @@ The **Send External Object** can be used to persist changes to an external objec
 This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
 {{% /alert %}}
 
-## 2 Updatable attributes
+## 2 Updatable Attributes
 
 External entities may have updatable attributes. The values of these attributes can change, for instance in a widget or by using the [change object activity](change-object).
 

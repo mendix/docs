@@ -14,7 +14,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed an issue where Business owner name was not visible in the Metadata of Datasource.
+* We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search#busines-owner) name was not visible in the metadata of a data source.
 
 ### October 14th, 2021
 

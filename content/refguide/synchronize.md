@@ -34,7 +34,6 @@ The behavior of this mode can be configured through [synchronization configurati
 
 With the **Unsychronized objects** mode, all objects with changes committed to the offline database are synchronized.
 Information about objects deleted since the last synchronization is also sent to the server.
-The synchronization is bi-directional, meaning both the server database and the local database are updated for these objects. 
 
 For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
@@ -51,10 +50,11 @@ The **Selected object(s)** mode synchronizes objects partially, based on a selec
 {{% /image_container %}}
 
 With this mode, only the selected objects or lists are synchronized.
-The synchronization is bi-directional, meaning both the server database and the local database are updated for the selected objects.
+
 Deleted objects cannot be synchronized using selective synchronization.
 
-For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
+All the three modes perform synchronization in two phases: upload and download.
+For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](offline-first#synchronization-types) section of the Offline-first guide.
 
 ## 3 Synchronization Behavior {#synchronization-behavior}
 

@@ -48,13 +48,13 @@ If **Refresh in client** is set to *Yes* then all widgets will be updated, inclu
 When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
-#### 3.2.1 Activity used in a microflow that is called from the Client in an Online App
+#### 3.2.1 Activity used in a microflow that is called from the client in a responsive web app or a PWA
 
 If **Refresh in client** is set to *No*, the data sources are not rerun, and widgets which need to reload data will still display the object(s).
 
 If set to *Yes*, the deletion is reflected across the client, which includes reloading the relevant [data sources](data-sources).
 
-#### 3.2.2 Activity used in a microflow that is called in an Offline, Native, or Hybrid App
+#### 3.2.2 Activity used in a microflow that is called in an offline-first app
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
@@ -63,14 +63,15 @@ For more information, see the [Microflows](offline-first#microflows) section of 
 #### 3.2.3 Activity used in a nanoflow
 
 **Refresh in client** option is not configurable when the activity is used in a nanoflow.
-All changes immediately take effect in the client while executing such a nanoflow.
+All changes immediately take effect in the client while executing such a nanoflow,
+which is effectively similar to when **Refresh in client** set to "yes".
 
 ## 4 Limitations
 
 When using the activity in a nanoflow that is accessible from an offline profile mind the following limitations:
 
 * Deleting non-persistable objects is not supported.
-* Non-default behavior for associations is not supported.
+* If an object passed to the activity is referenced by another object, only the “keep objects” option for the “on delete” configuration of the association is supported.
 * Before and after delete events will be triggered only upon synchronization of the deleted object.
 * Before and after delete events will not be triggered for uncommitted objects.
 
@@ -82,7 +83,7 @@ For more information see the [Deleting Objects](/refguide/offline-first#deleting
 
 ## 6 What Happens During a Delete?
 
-### 6.1 Activity used in a microflow or a nanoflow in an Online App
+### 6.1 Activity used in a microflow or a nanoflow in a responsive web app or a PWA
 
 Clicking a Delete button or triggering a delete activity will initiate the delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
@@ -96,11 +97,11 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 
 ![](attachments/object-activities/18582171.png)
 
-### 6.2 Activity used in a nanoflow in an Offline App
+### 6.2 Activity used in a nanoflow in an offline-first app
 
 The client does the following, depending on the type of an object being deleted:
 
-#### 6.2.1 Deleting a new persistable object
+#### 6.2.1 Deleting a persistable object that has not been committed yet
 
 * Remove the object from memory
 
@@ -109,18 +110,20 @@ clear the references from all the objects that were found to the deleted object.
 
 No before or after delete events will be executed in this case.
 
-#### 6.2.2 Deleting a non-synchronized committed persistable object
+#### 6.2.2 Deleting a persistable object that is committed, but hasn't been synchronized with the runtime yet
 
 * Remove the object from memory
 
 * Search the device database for all objects that reference the deleted object,
   clear the references from all the objects that were found to the deleted object.
-  
+
 * Delete the object from the device database.
+  
+* Clear all references to the deleted object from any uncommitted objects.
 
 No before or after delete events will be executed in this case.
 
-#### 6.2.3 Deleting a synchronized committed persistable object
+#### 6.2.3 Deleting a persistable object that exists in the runtime database
 
 * Remove the object from memory
 
@@ -137,6 +140,6 @@ For more information see the [Deleting Objects](/refguide/offline-first#deleting
 
 #### 6.2.4 Deleting an non-persistable object
 
-Deleting an NPE is not supported in a nanoflow in an Offline App.
+Deleting an NPE is not supported in a nanoflow in an offline-first app.
 
 For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.

@@ -49,7 +49,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
-## 4 Feedback Details
+## 4 Feedback Details {#feedback-details}
 
 Clicking **Details** or the title of a feedback item opens the item's details page, where you can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 

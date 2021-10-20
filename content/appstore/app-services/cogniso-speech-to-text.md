@@ -8,9 +8,9 @@ draft: true
 
 ## 1 Introduction
 
-The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service on mendix cloud that enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to work with the voice and audio to text transcriptions with state-of-the-art speech recognition. Also included are whole functionalities and integrations that can be very helpful when building your own voice to text applications. All you need to do is drag and drop items and configure them.
+The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service on Mendix Cloud that enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to transcribe voice and audio to text with state-of-the-art speech recognition. Also included are whole functionality and integrations that can be very helpful when building your own voice-to-text applications. All you need to do is drag and drop items and configure them.
 
-This app service does the heavy-lifting for you so you do not have to build a voice to text application from scratch.
+This app service does the heavy-lifting for you so you do not have to build a voice-to-text application from scratch.
 
 Here is an overview of what the CognisoSpeechToText contains:
 
@@ -27,16 +27,16 @@ In most cases, you will only need what is contained in the **SpeechToText/USE_ME
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on mendix cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enable wake up message, switch different language options, customize voice to text action, setup voice to action feedback and much more.
+You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wake up message, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more. {{% todo %}}[what is wake up message?]{{% /todo %}}
 
 ### 1.2 Features
 
-This app service enables doing the following with Microphone widget:
+This app service enables doing the following with the Microphone widget:{{% todo %}}[Which Microphone widget?]{{% /todo %}}{{% todo %}}[what is wake up message?]{{% /todo %}}
 
-* Customize voice to text action
-* Customize audio to text action
+* Customize voice-to-text action
+* Customize audio-to-text action
 * Customize wake up message
-* Enable voice to action feedback
+* Enable voice-to-action feedback
 * Switch different language options
 * Translate non-English transcripts into English
 
@@ -48,7 +48,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 First, download the *CognisoSpeechToText.mpk* file for the [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
 
-1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *CognisoSpeechToText.mpk*. 
+1. Right-click your app in the **App Explorer**, click **Import module package**, and select the *CognisoSpeechToText.mpk*. 
 2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
 	![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
@@ -108,11 +108,11 @@ The **StartService** microflow is used to set up a cognitive speech to text back
 
 #### 4.4 Widgets {#widgets}
 
-#### 4.4.1 Core Widgets
+##### 4.4.1 Core Widgets
 
 The core widgets required to perform voice to text actions are described below.
 
-#### 4.4.1.1 Microphone {#microphone}
+###### 4.4.1.1 Microphone {#microphone}
 
 This widget provides customization of voice to text actions.
 

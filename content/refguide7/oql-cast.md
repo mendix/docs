@@ -40,4 +40,4 @@ The table below describes which CAST conversions are supported:
 | FLOAT | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔* | ✔*<sup><small>2</small></sup> |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-<small>[1] – BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.<br />[2] – The conversion of DATETIME, DECIMAL, and FLOAT to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.</small>
+<small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.<br />[2] The conversion of DATETIME, DECIMAL, and FLOAT to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.</small>

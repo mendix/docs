@@ -170,7 +170,7 @@ To set these tags, do the following:
 2. Click **Details** to select an environment you are monitoring with Datadog. 
 3. Open the **Tags** tab.
 4. Add a **Tag** – this is the string which is sent to Datadog as a tag.
-  ![Example metric showing tags in Datadog](attachments/datadog-metrics/set-tags.png)
+    ![Example metric showing tags in Datadog](attachments/datadog-metrics/set-tags.png)
 5. **Restart** the application.
 
 Setting these values for your app means that all metrics from this environment of your app will have these tags. For example, the tags for mx.microflow.time.avg for this set of metrics include **app:customermanagement** and **env:accp**.
@@ -220,7 +220,7 @@ You can specify which request handlers, microflows, and activities are reported 
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
-**<details><summary><sup><small>[1]</small></sup>Request Handlers (click to see list)</summary>**
+**<details><summary><sup><small>[1 ]</small></sup>Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Datadog:
 

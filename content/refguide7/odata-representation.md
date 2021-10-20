@@ -23,8 +23,8 @@ This document describes how entities are represented in a published OData servic
 | Long <sup>2</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String | Edm.String | John | John |
 
-<small><sup>1</sup>Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
-<sup>2</sup>When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. See [https://support.microsoft.com/en-us/kb/269370](https://support.microsoft.com/en-us/kb/269370) for more information.</small>
+<small><sup>1 </sup>Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
+<sup>2</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. See [https://support.microsoft.com/en-us/kb/269370](https://support.microsoft.com/en-us/kb/269370) for more information.</small>
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 

@@ -67,11 +67,11 @@ To use the Cogniso Speech To Text features, your app needs to be bound to the Co
 
 If you app does not have an after-startup microflow set, follow these steps:
 
-1. Create a **Startup** microflow and add the **CognisoSpeechToText/USE_ME/StartService** Microflow to it.
+1. Create a **Startup** microflow and add the **SpeechToText/USE_ME/StartService** Microflow to it.
 2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
 3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
 
-If your project already has a microflow set to execute after startup, you need to extend it with the **CognisoSpeechToText/USE_ME/StartService** Microflow and configure it as described in the above steps. 
+If your project already has a microflow set to execute after startup, you need to extend it with the **SpeechToText/USE_ME/StartService** Microflow and configure it as described in the above steps. 
 
 ## 4 CognisoSpeechToText Content
 
@@ -248,7 +248,7 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
 1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **CognisoSpeechToText.LicenseToken**.
+2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 3. Fill in the **Value** with your obtained LicenseToken.
 4.  Click **OK** to confirm the settings.
 

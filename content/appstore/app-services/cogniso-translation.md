@@ -145,7 +145,7 @@ To receive information on how to get the license token for [Cogniso Translation]
 In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
 1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **CognisoTranslation.LicenseToken**.
+2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **Translation.LicenseToken**.
 3. Fill in the **Value** with your obtained LicenseToken.
 4.  Click **OK** to confirm the settings.
 

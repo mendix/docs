@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### October 25, 2021
+
+#### mxpc-cli v2.1.2 for Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
+
+* We have added support to configure a new storage type plan ceph.
+* We have added a new option to prevent data deletion in storage plan type minio, amazon-s3, azure blob, google cloud, and ceph.
+  The new option will prevent files deleted from storage when an environment is removed.
+
 ### October 14th, 2021
 
 #### Portal Improvements

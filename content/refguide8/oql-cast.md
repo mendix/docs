@@ -43,5 +43,4 @@ The table below describes which CAST conversions are supported:
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
-* [1] – BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.
-* [2] – The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.
+<Small>[1] – BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.<br />[2] – The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.</small>

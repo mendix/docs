@@ -12,11 +12,11 @@ The SAP Logging Connector allows a Mendix app to output logs in a format support
 
 By using this connector, logs will be output in a JSON format with the following fields:
 
-* `msg` - the actual log message
-* `level` - the log level
-* `written_at` - the log timestamp as reported by the Mendix app
-* `written_ts` - the log timestamp which can be used for ordering the logs
-* `stacktrace` - the stack trace attached to the log message (if it exists)
+* `msg` – the actual log message
+* `level` – the log level
+* `written_at` – the log timestamp as reported by the Mendix app
+* `written_ts` – the log timestamp which can be used for ordering the logs
+* `stacktrace` – the stack trace attached to the log message (if it exists)
 
 In addition, the Connector supports multiline log messages.
 
@@ -50,7 +50,7 @@ To initialize the connector, do the following:
 6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Business Technology Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
 
     ![SapLogLevel is set to Info](attachments/sap-logger/edit_log_level_constant.png)
- 
+
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 
 ## 4 Notes

@@ -220,7 +220,7 @@ You can specify which request handlers, microflows, and activities are reported 
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
-**<details><summary><sup><small>[1 ]</small></sup>Request Handlers (click to see list)</summary>**
+**<details><summary><sup><small>[1 ]</small></sup> Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Datadog:
 
@@ -237,7 +237,7 @@ The following Mendix *request handler* calls will be passed to Datadog:
 You can find help in analyzing some of these values in [Trends in Mendix Cloud v4](trends-v4).
 </details>
 
-**<details><summary><sup><small>[2]</small></sup>Activities (click to see list)</summary>**
+**<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**
 
 The following Mendix *activities* can be passed to Datadog:
 

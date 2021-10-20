@@ -19,14 +19,14 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* On the [Project Team overview](/developerportal/collaborate/team#managing) we now show deactivated users. These users can no longer sign in to the platform or contribute to the project and were until now hidden from view. By showing deactivated users, project administrators now have the opportunity to remove them from the project team.
-* During our continuous monitoring we noticed that creating a project during peak hours caused performance issues and sometimes resulted in timeouts. We mitigated these problems by restructuring the project create process.
+* The app [Team](/developerportal/collaborate/team#managing) overivew now shows deactivated users. These users can no longer sign in to the Mendix Platform or contribute to the app, and they were until now hidden from view. By showing deactivated users, app administrators have the opportunity to remove them from the app team.
+* During our continuous monitoring, we noticed that creating an app during peak hours caused performance issues and sometimes resulted in timeouts. We mitigated these problems by restructuring the app creation process.
 
 #### Fixes
 
-* We fixed an issue which we accidentally introduced during the October 14th release and in which users were no longer able to post comments under [Feedback details](/developerportal/collaborate/feedback#4-feedback-details) (Tickets #132892, #132959, #132983, #133075)
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where users were no longer able to post comments on a [feedback item's details page](/developerportal/collaborate/feedback#feedback-details). (Tickets 132892, 132959, 132983, 133075)
 
-### October 14th, 2021
+### October 14th, 2021 {#oct-fourteen}
 
 #### Improvements
 

@@ -394,10 +394,9 @@ The metadata panel at the right of the asset details screen displays details fro
 These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](curate#tags) section of *How to 
 Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
-#### 3.6.2 Business Owner
+#### 3.6.2 Business Owner {#busines-owner}
 
-This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to 
-Curate Registered Assets*.
+This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](curate#changing-owners) section of *How to Curate Registered Assets*.
 
 #### 3.6.3 Technical Owner
 

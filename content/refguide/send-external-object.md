@@ -31,4 +31,4 @@ Some services may have updatable attributes that are part of the key of the enti
 
 Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use the **Send External Object** activity instead.
 
-The [save button](button-widgets) does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has the **Send External Object** activity.
+The [Save](button-widgets) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has the **Send External Object** activity.

@@ -20,10 +20,12 @@ ROUND ( numeric_expression , length )
 
 `numeric_expression` specifies the expression which must be rounded. This expression must be a numeric expression.
 
+{{% alert type="info" %}}
+
+If `numeric_expression` is `NULL` (empty), the function will return `NULL`.
+
+{{% /alert %}}
+
 ### 2.2 length
 
 `length` specifies the amount of decimals to which the expression must be rounded.
-
-## 3 Empty numeric_expression throws an error 
-
-When you pass a numeric variable as numeric_expression, then round($MyVar, 12) will throw an error if $MyVar is empty.

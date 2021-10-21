@@ -321,7 +321,7 @@ if (this.props.listValue.status === ValueStatus.Available) {
 }
 ```
 
-`ListValue.status` provides the component with additional information about the state of the items, as well as if the component should handle them differently. 
+The `status` property provides the component with additional information about the state of the items and how the component should handle them.
 
 * When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in `items` array.
 * When `status` is `ValueStatus.Unavailable`, then the list do not have such information such as when a parent data view’s data source has returned nothing. The `items` array is then always `undefined`.

@@ -34,7 +34,7 @@ If you need to preserve the data in your current running app, **make a backup**!
 
 Build data migration microflows if necessary.
 
-### 3.3 Upgrade to Mendix 9.6 or Above
+### 3.3 Upgrade to Mendix 9.6
 
 Upgrade your app to Mendix version 9.6.
 

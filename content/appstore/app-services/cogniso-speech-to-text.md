@@ -4,6 +4,7 @@ category: "App Services"
 menu_order: 1
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
 draft: true
+
 ---
 
 ## 1 Introduction
@@ -14,14 +15,14 @@ This app service does the heavy-lifting for you so you do not have to build a vo
 
 Here is an overview of what the CognisoSpeechToText contains:
 
-| Item | Name |
-| ---  | --- |
-| [Predefined entities](#predefined-entities) | MediaDocument |
-| [Constants](#constants) | LicenseToken, TokenEndpoint |
-| [Microflow](#microflow) | BatchTranscription, StartService |
-| [Nanoflow](#nanoflow) |  |
-| [Java action](#java-action) |  |
-| [Widgets](#widgets) | Microphone |
+| Item                                        | Name                             |
+| ------------------------------------------- | -------------------------------- |
+| [Predefined entities](#predefined-entities) | MediaDocument                    |
+| [Constants](#constants)                     | LicenseToken, TokenEndpoint      |
+| [Microflow](#microflow)                     | BatchTranscription, StartService |
+| [Nanoflow](#nanoflow)                       |                                  |
+| [Java action](#java-action)                 |                                  |
+| [Widgets](#widgets)                         | Microphone                       |
 
 In most cases, you will only need what is contained in the **SpeechToText/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
@@ -46,32 +47,50 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-First, download the *CognisoSpeechToText.mpk* file for the [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
+1. Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118590) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
 
-1. Right-click your app in the **App Explorer**, click **Import module package**, and select the *CognisoSpeechToText.mpk*. 
-2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
+2. To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
 
-	![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
-	
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+   1. In the **App Explorer**, right-click the app.
 
-3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4. Open the **Project Explorer** to view the CognisoSpeechToText module. You can see a collection of ready to use items under the CognisoSpeechToText folder. Besides, if you go to Toolbox window, you will also notice a collection of widgets are added to Toolbox widget list, under the **Cognitive AI widgets** category. 
-5. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+   2. Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
 
-Now you have succesfully added the Cogniso Speech To Text resources to your app.
+      ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
 
-## 3 Initializing Cogniso Speech To Text on App Startup
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-To use the Cogniso Speech To Text features, your app needs to be bound to the Cogniso Speech To Text service. This is achieved by executing a microflow when the app starts. The Cogniso Speech To Text contains a Java action called **StartService**, which can start the Cogniso Speech To Text service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the 3D Viewer when the app starts. (running after startup usually means you want to run a specific tool all the time)
+      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the ***Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-If you app does not have an after-startup microflow set, follow these steps:
+   3. In the **Import Module** dialog box, click **Import**. 
 
-1. Create a **Startup** microflow and add the **SpeechToText/USE_ME/StartService** Microflow to it.
-2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-3.  Set this microflow as the **After startup** step via **Project Settings** > **Runtime** > [After startup](/refguide8/project-settings#after-startup).
+   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
 
-If your project already has a microflow set to execute after startup, you need to extend it with the **SpeechToText/USE_ME/StartService** Microflow and configure it as described in the above steps. 
+   5. Open the **App Explorer**  to view the **CognisoSpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
+
+3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+
+You have succesfully added the Cogniso Speech To Text resources to your app.
+
+## 3 Initializing Cogniso Speech To Text When App Starts
+
+To use the Cogniso Speech To Text features, bind your app to the Cogniso Speech To Text service. To do this, execute a microflow when the app starts. 
+
+* If you app has an after-startup microflow set, perform the following steps:
+
+  1. Go to the after-startup microflow set in your app.
+
+   	 {{% todo %}}[image]{{% /todo %}}
+
+  2. From the after-startup microflow set, call the a Java action **StartService** , which can start the Cogniso Speech To Text service. This automatically starts the 3D Viewer when the app starts. To run a tool after the app starts usually means you want to run a specific tool all the time.
+  3. Extend the microflow with the **SpeechToText/USE_ME/StartService** microflow.
+  4. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
+  5. On the menu bar, go to a **App Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup) to set the **Startup** microflow as the **After startup** step.
+
+* If your app does not have an after-startup microflow set, perform the following steps:
+
+  1. Create a **Startup** microflow and add the **SpeechToText/USE_ME/StartService** Microflow to it.
+  2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
+  3. On the menu bar, go to **App Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup) to set the **Startup** microflow as the **After startup** step.
 
 ## 4 CognisoSpeechToText Content
 
@@ -81,9 +100,9 @@ The **MediaDocument** entity is a conceptual entity that inherit from **System.F
 
 ![mediadocument](attachments/cogniso-speech-to-text/mediadocument.png)
 
-| Attribute | Description |
-| --- | --- |
-| **Transcript** | The base64-encoded audio data string. |
+| Attribute        | Description                               |
+| ---------------- | ----------------------------------------- |
+| **Transcript**   | The base64-encoded audio data string.     |
 | **LanguageCode** | The language code of this media document. |
 
 ### 4.2 Constants {#constants}
@@ -119,24 +138,24 @@ This widget provides customization of voice to text actions.
 For this widget to perform voice to text correctly, set the following properties:
 
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-	* **Language**  – the option **Enable language selection** enable custom language settings to perform speech conversion in microphone widget.
-		* **language** - determines which language to perform speech conversion in microphone widget; this accepts a String value, the default language is US-English.
-	* **Wakeup**  – the option **Enable wakeup** determines whether to activate microphone via wakeup message
-		* **wakeupMessage** - the valid string value which approximatly contain two-four words to activate the voice to action, if message is empty means actions are always activated. 
-		* **wakeupResponse** - the valid string value to give voice response to user when the voice to action is activated. 
-		* **maxIdleTime** - the number to deactivate the voice to action after the specified idle time in seconds. This value less or equals to zero means the microphone are on standby forever once activated.
+  * **Language**  – the option **Enable language selection** enable custom language settings to perform speech conversion in microphone widget.
+    * **language** - determines which language to perform speech conversion in microphone widget; this accepts a String value, the default language is US-English.
+  * **Wakeup**  – the option **Enable wakeup** determines whether to activate microphone via wakeup message
+    * **wakeupMessage** - the valid string value which approximatly contain two-four words to activate the voice to action, if message is empty means actions are always activated. 
+    * **wakeupResponse** - the valid string value to give voice response to user when the voice to action is activated. 
+    * **maxIdleTime** - the number to deactivate the voice to action after the specified idle time in seconds. This value less or equals to zero means the microphone are on standby forever once activated.
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
-	* **On transcript** – by binding a String attribute to the **transcript** property, you can use this attribute as an voice input parameter send to backend service to match with voice to text actions.
-	* **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
+  * **On transcript** – by binding a String attribute to the **transcript** property, you can use this attribute as an voice input parameter send to backend service to match with voice to text actions.
+  * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
 * On the **Voice to Action** tab, there are some optional customization options for voice to text actions:
-	* **Actions**  – the option **Enable action** determines whether to enable speech actions.
-		* **Actions** – the actions to take when a transcript is matched
-			* **Utterance** – the utterance of action item could be string template following natural language syntax or valid JavaScript regular expression.
-			* **Action** – the action of action item triggered when received transcript matches action text.
-			* **Feedback** – the voice feedback of action item provided to user after an action is to be activated.
-		* **Arguments** – the captured arguments in transcript as comma separated list. This requires you to specify parameterized action text in above table.
-		* **Fallback message** – the message to notify user when no matched action is found.
-		* **Translate** – The option to translate non-English transcripts and utterances into English for syntax analysis, enable this when you want to use non-English languages.
+  * **Actions**  – the option **Enable action** determines whether to enable speech actions.
+    * **Actions** – the actions to take when a transcript is matched
+      * **Utterance** – the utterance of action item could be string template following natural language syntax or valid JavaScript regular expression.
+      * **Action** – the action of action item triggered when received transcript matches action text.
+      * **Feedback** – the voice feedback of action item provided to user after an action is to be activated.
+    * **Arguments** – the captured arguments in transcript as comma separated list. This requires you to specify parameterized action text in above table.
+    * **Fallback message** – the message to notify user when no matched action is found.
+    * **Translate** – The option to translate non-English transcripts and utterances into English for syntax analysis, enable this when you want to use non-English languages.
 
 ## 5 Using Cogniso Speech To Text
 
@@ -149,6 +168,7 @@ When you start from a blank app template in Mendix Studio Pro, you can follow th
 For the [Microphone](#microphone) widget to perform voice to text actions, three data source attributes should be set: **transcript**, **Actions** and **Arguments**. To match voice to text actions, pass captured arguments to triggered actions, a set of action items should be configured in Microphone widget.
 
 Follow these steps to configure this voice to text action:
+
 1. Place a [Microphone](#microphone) widget on the page.
 2. Create an entity and call it *Microphone* in your app module's domain model.
 3. Wrap the Microphone widget inside a new data view widget.
@@ -165,6 +185,7 @@ Follow these steps to configure this voice to text action:
 In this section, you will learn how to config wake-up message to wakeup the backend service automatically with two key attributes **Wakeup message** and **Wakeup response**. Please notify that this is an experimental feature.
 
 Follow these steps to configure this wake-up message:
+
 1. Enable wakeup message to active microphone.
 2. Setup message with no more than two words to active the voice to action.
 3. Setup voice response message to notify user when voice voice to action is activated.
@@ -248,11 +269,14 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
 
 1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
-3. Fill in the **Value** with your obtained LicenseToken.
-4.  Click **OK** to confirm the settings.
 
-	![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
+2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
+
+3. Fill in the **Value** with your obtained LicenseToken.
+
+4. Click **OK** to confirm the settings.
+
+   ![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
 
 5. When you finish building the app, click **Run** to deploy your app to the cloud.
 

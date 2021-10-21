@@ -247,7 +247,7 @@ Both autonumbers and calculated attributes require input from the server; theref
 ### 4.4 Default Attribute Values {#default-attributive}
 
 {{% alert type="warning" %}}
-This limitation applies only for Mendix 9.7 and below. Mendix 9.8 and above supports default attributes.
+This limitation applies only to Mendix 9.7 and below. Mendix 9.8 and above supports default attributes.
 {{% /alert %}}
 
 Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.

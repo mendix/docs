@@ -302,6 +302,8 @@ The following information of a `ListView` is getting automatically stored and re
 
 ### 2.8 Status of the List Value Items {#status-of-the-list-value-items}
 
+The `status` property provides the component with additional information about the state of the items and how the component should handle them:
+
 ```tsx
 export const enum ValueStatus {
     Loading = "loading",
@@ -322,7 +324,7 @@ if (this.props.listValue.status === ValueStatus.Available) {
 }
 ```
 
-The `status` property provides the component with additional information about the state of the items and how the component should handle them:
+More specifically, the `status` property functions as follows:
 
 * When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in the `items` array.
 * When `status` is `ValueStatus.Unavailable`, then the list does not have any available data and the `items` array is `undefined`. This can be the case if the data source depends on a surrounding data view which has no data.

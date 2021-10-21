@@ -73,7 +73,9 @@ When using the activity in a nanoflow that is accessible from an offline profile
 * Deleting non-persistable objects is not supported.
 * If an object passed to the activity is referenced by another object, only the “keep objects” option for the “on delete” configuration of the association is supported.
 * Before and after delete events will be triggered only upon synchronization of the deleted object.
-* Before and after delete events will not be triggered for uncommitted objects.
+* Before and after delete events will not be triggered for an object that doesn't exist in the runtime database.
+  When you create an object in the client and optionally commit it, it doesn't exist in the runtime database until you synchronize it.
+  Deleting such an object removes it from the device and doesn't require synchronization, therefore the before and after events of the corresponding entity will not be triggered.
 
 For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.
 

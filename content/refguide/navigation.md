@@ -57,7 +57,7 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.5 Native Phone
+### 2.5 Native Phone {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 

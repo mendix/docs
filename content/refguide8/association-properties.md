@@ -73,7 +73,7 @@ Despite it's name, navigability is usually only important when adding or changin
 | Delete {name of entity} object and {name of other entity} object(s) as well<sup><small>[1]</small></sup> | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity}<sup><small>[2]</small></sup> object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-<sup><small>[1]</small></sup>This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
+<sup><small>[1]</small></sup> This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
 ![](attachments/associations/association-delete-both.png)
 

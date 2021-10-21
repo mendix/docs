@@ -18,11 +18,20 @@ Workflow is a visual language in Mendix Studio and Studio Pro that allows you to
 
 A workflow is composed of elements that you can drag and drop on a path. Below is a categorized overview of all elements. The following categories are used:
 
+* [Parameters](#parameters)
 * [General](#general)
 * [User tasks](#user-tasks)
 * [System actions](#system)
 
-### 2.1 General {#general}
+### 2.1 Workflow Parameters {#parameters}
+
+[Workflow parameters](workflow-parameters) are input data for your workflow. 
+
+The **WorkflowInstance** parameter stores data on the workflow process. 
+
+The **WorkflowContext** parameter is a business-related data that travels through the workflow. 
+
+### 2.2 General {#general}
 
 Elements in the general category help you control the workflow path, for example, add parallel paths or end them. 
 
@@ -40,13 +49,13 @@ The elements of this category are described in the table below:
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](microflow#expose-as-workflow-action) section in *Microflow Properties*.
 {{% /alert %}}
 
-### 2.2 User Tasks {#user-tasks}
+### 2.3 User Tasks {#user-tasks}
 
 [User task](user-task) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 ![User Task](attachments/workflows/user-task.png)
 
-### 2.3 System Actions {#system}
+### 2.4 System Actions {#system}
 
 [Call microflow](call-microflow) activity calls a selected microflow. 
 

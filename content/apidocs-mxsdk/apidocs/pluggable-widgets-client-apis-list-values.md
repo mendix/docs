@@ -323,7 +323,7 @@ if (this.props.listValue.status === ValueStatus.Available) {
 
 The `status` property provides the component with additional information about the state of the items and how the component should handle them.
 
-* When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in `items` array.
+* When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in the `items` array.
 * When `status` is `ValueStatus.Unavailable`, then the list do not have such information such as when a parent data view’s data source has returned nothing. The `items` array is then always `undefined`.
 * When `status` is `ValueStatus.Loading`, then the list is awaiting for the required information to arrive. This happens when a parent data view is either waiting for its object to load or is reloading it due to a [refresh in client](/refguide/change-object#refresh-in-client).
 	* In case a list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.

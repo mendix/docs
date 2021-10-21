@@ -178,6 +178,10 @@ This property is shown if **Value** is set to **Stored**.
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
 
+{{% alert type="warning" %}}
+Default value property is not supported for offline-first apps created in Mendix 9.7 and below. For such an attribute the value specified under the "Default Value When Not Specified" column will be used.
+{{% /alert %}}
+
 | Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |
 | AutoNumber | 1 | Starting value of this attribute. If there are already objects of this entity, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |

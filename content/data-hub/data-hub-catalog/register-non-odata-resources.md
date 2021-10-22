@@ -34,3 +34,9 @@ The diagram below represents how an OData API wrapper can be used to connect a c
 
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Data Hub Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services).
 
+
+## Exposing OData High Code Examples
+
+Here are some examples of writing OData services in .NET: 
+  * [Creating a Simple OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
+  * [Full .NET OData Documentation](https://docs.microsoft.com/en-us/odata/webapi/getting-started)

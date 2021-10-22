@@ -25,11 +25,17 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 
 ### 2.1 Workflow Parameters {#parameters}
 
-[Workflow parameters](workflow-parameters) are input data for your workflow. 
+[Workflow parameters](workflow-parameters) are input data for your workflow:
 
-The **WorkflowInstance** parameter stores data on the workflow process. 
+In the workflow editor, there are the following parameters:
 
-The **WorkflowContext** parameter is a business-related data that travels through the workflow. 
+* The **WorkflowInstance** parameter stores data on the workflow process:
+
+    ![Workflow Instance Example](attachments/workflows/workflow-instance.png)
+
+* The **WorkflowContext** parameter is a business-related data that travels through the workflow:
+
+    ![Workflow Context Example](attachments/workflows/workflow-context.png)
 
 ### 2.2 General {#general}
 

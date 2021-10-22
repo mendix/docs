@@ -11,8 +11,10 @@ tags: ["URL", "sub-domain", "folders", "subdirectories"]
 When you deploy your app outside the Mendix Cloud, you can choose the URL which points to your app. However, there are some restrictions on where you should deploy your app.
 
 {{% alert type="info" %}}
-In this document, `domain` is used to identify the domain registered to you through the *Internet Corporation for Assigned Names and Numbers (ICANN)*. This includes the *top level domain*. For example, `example.com` would be a `domain` as used in this document.
+In this document, `domain` is used to identify the domain registered to you through the *Internet Corporation for Assigned Names and Numbers (ICANN)*. This is sometimes referred to as the [apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site). This includes the *top level domain*. For example, `example.com` would be a `domain` as used in this document.
 {{% /alert %}}
+
+For apps deployed to the Mendix Cloud, you can customize a URL by adding [custom domains](custom-domains).
 
 ## 2 Paths
 
@@ -22,4 +24,6 @@ If you want to deploy several apps on the same domain, you should use different 
 
 ## 3 Main Domain Name
 
-Do not deploy your app directly at the main domain, `https://domain/`. This conflicts with the `https://www.domain/` URL as the main domain is often redirected there if there is no subdomain specified.
+Do not deploy your app directly at the apex domain, `https://domain/`. This conflicts with the `https://www.domain/` URL as the main domain is often redirected there if there is no subdomain specified.
+
+Additionally, you would not be able to have additional custom domains for your app as you cannot create a CNAME record which points to an apex domain.

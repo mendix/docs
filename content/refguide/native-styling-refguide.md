@@ -400,11 +400,11 @@ The widget’s render hierarchy is as follows for uniform:
 
 ### 6.4 Check Box
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or checkbox. This is how a check box widget in switch render mode could look in an app:
+A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
 
 {{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
 
-This is how a check box widget in checkbox render mode could look in an app:
+This is how a check box widget in checkbox render mode looks by default:
 
 {{% image_container width="350" %}}![check box in checkbox render mode](attachments/native-styling-refguide/check-box-checkbox.png){{% /image_container %}}
 
@@ -1595,7 +1595,7 @@ The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_w
 
 ### 11.30 Switch
 
-A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget could look in an app:
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
 
 {{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
 

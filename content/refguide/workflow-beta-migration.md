@@ -54,8 +54,6 @@ After upgrading to the Mendix version 9.6 and above, you will notice that your w
 
 For every workflow in your application you now need an entity that represents the instances of the workflow and will be used by the **Workflow Instance** parameter in the workflow editor. This entity needs to be a specialization of the **Workflow** entity in the System module and has to be connected to your workflow context entity via either a one-to-one or one-to-many association, where the owner is the **Workflow Instance** entity. 
 
-{{% todo %}}[Mentions the **Workflow** entity that is not mentions in **Workflow Entities in the System Module** section of the **Workflows** document.]{{% /todo %}}
-
 ### 3.6 Reconfigure Your Workflow {#reconfigure-workflow}
 
 Now that your domain model has been set up, you can open your workflow document and make use of the new entities you have created. In the top-left corner you see two parameters. One is called **Workflow Instance**, and should be set to the entity that specializes of the system **Workflow** entity, set up in the previous step.

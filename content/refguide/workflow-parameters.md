@@ -19,8 +19,6 @@ The **WorkflowContext** parameter is a business-related data that travels throug
 
 ## 2 Properties
 
-The workflow parameters properties consists the **Output** section. 
-
 ### 2.1 Entity
 
 The entity used by the workflow parameter. 

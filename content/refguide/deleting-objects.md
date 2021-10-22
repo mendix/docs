@@ -71,13 +71,21 @@ which is effectively similar to when **Refresh in client** set to "yes".
 When using the activity in a nanoflow that is accessible from an offline profile mind the following limitations:
 
 * Deleting non-persistable objects is not supported.
-* If an object passed to the activity is referenced by another object, only the “keep objects” option for the “on delete” configuration of the association is supported.
+* If the entity of an object passed to the activity has any associations with other entities in the domain model,
+  the delete behavior for each of the associations for the entity you want to delete must be set to "Keep {associated entity name} object(s)". <sup><small>[1]</small></sup>
+  Setting a different delete behavior option triggers a consistency error. 
+  For more information on delete behavior of associations see the [Delete Behavior](/refguide/association-properties#delete-behavior) section of *Association Properties*.
 * Before and after delete events will be triggered only upon synchronization of the deleted object.
 * Before and after delete events will not be triggered for an object that doesn't exist in the runtime database.
   When you create an object in the client and optionally commit it, it doesn't exist in the runtime database until you synchronize it.
   Deleting such an object removes it from the device and doesn't require synchronization, therefore the before and after events of the corresponding entity will not be triggered.
 
 For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.
+
+<sup><small>[1]</small></sup> For example in the situation below the "On delete of 'Customer' object" option should be set to "Keep 'Order' objects":
+
+![](attachments/object-activities/delete-limitations-example-0.png)
+![](attachments/object-activities/delete-limitations-example-1.png)
 
 ## 5 Common Section{#common}
 

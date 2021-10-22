@@ -71,9 +71,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 4 When to Use OTA Updates
 
-### 4.1 Safely Pushing OTA Updates Without Redeploying {#safeToUpdate}
+### 4.1 Use cases for OTA updates {#safeToUpdate}
 
-It is good practice to *always* redeploy your Mendix app before pushing a new OTA update. However, releasing an OTA update without redeploying your Mendix app to Mendix Cloud in these cases is usually safe:
+OTA updates are useful in the following cases:
 
 * Style changes
 * Static image, text, or other static asset changes

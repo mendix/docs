@@ -8,9 +8,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **check box** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean*. It displays a tick if the value is true and remain empty if it is false.
+A **check box** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Boolean*. This widget can be rendered as a checkbox or a switch. If checkbox, it displays a tick if the value is true and remain empty if it is false. If switch, it displays a track with right-positioned thumb button if the value is true and a left-positioned thumb button if it is false.
 
-{{% alert type="info" %}}In native mobile applications, the check box widget is rendered as a toggle.{{% /alert %}}
+{{% alert type="info" %}}In native mobile applications, the check box widget is rendered as a switch.{{% /alert %}}
 
 A check box must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the check box widget, between square brackets, and colored blue.
 
@@ -32,6 +32,7 @@ Check box properties consist of the following sections:
 * [Design Properties](#design-properties)
 * [Editability](#editability)
 * [Events](#events)
+* [Formatting](#formatting)
 * [Label](#label)
 * [Visibility](#visibility)
 
@@ -73,11 +74,15 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="refguide/events-section-link.md" %}}
 
-### 2.6 Label Section{#label}
+### 2.6 Formatting Section{#formatting}
+
+The render mode property determines whether the widget renders as a switch or a checkbox.
+
+### 2.7 Label Section{#label}
 
 {{% snippet file="refguide/label-section-link.md" %}}
 
-### 2.7 Visibility Section{#visibility}
+### 2.8 Visibility Section{#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 

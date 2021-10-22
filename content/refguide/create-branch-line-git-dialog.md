@@ -20,11 +20,27 @@ The **Create Branch Line** dialog box is displayed.
 
 For more information on how to manage branch lines, see the [Managing Development Lines](collaborative-development#managing-branches) section in *Collaborative Development* and [Branch Line Manager](branch-line-manager-dialog). For information on the version control, see [Version Control](version-control). 
 
-## 2 Base Branch Line
+## 2 Create Branch From
 
-**Base branch line** allows you to choose the development line from which you want to create the branch line. 
+**Create branch from** allows you to choose the development line you want to create the branch line from. You can choose one of the following options:
 
-## 3 Branch Name
+* <a name="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
+* <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
+* <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
+
+## 3 Branch Line 
+
+This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
+
+Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+
+## 4 Tagged Version
+
+This setting is only available when you select [Tagged version](#tagged-version) in **Create branch from**.  
+
+Select from which tagged version you want to create a branch line. Every time you create a deployment archive a tag is created so that you can always refer back to that version of the app.
+
+## 5 Branch Name
 
 Enter a name for the new branch line.
 
@@ -32,7 +48,11 @@ Enter a name for the new branch line.
 Branch names cannot include special characters (for example, `@`, `$`, `#`). 
 {{% /alert %}}
 
-## 4 Read More
+## 6 Existing Branch Lines
+
+Since branch line names must be unique, this option shows the existing branch lines, so that you do not accidentally create a branch line with the same name.
+
+## 7 Read More
 
 * [Version Control](version-control)
 * [Collaborative Development](collaborative-development)

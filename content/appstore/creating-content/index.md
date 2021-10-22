@@ -4,6 +4,10 @@ description: "How to create content for the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service", "solution"]
 ---
 
+{{% alert type="info" %}}
+These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
+{{% /alert %}}
+
 ## 1 Introduction
 
 Creating content for the Mendix Marketplace can be as simple as uploading an existing module to share with others, or creating a complete app service or solution which you can sell to other Mendix customers.

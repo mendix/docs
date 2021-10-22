@@ -16,32 +16,18 @@ This section provides information and guidance on how to develop solutions you c
 
 ## 2 What Is a Solution?
 
-A solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs and expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case, general Mendix development principles and best practices apply. This means you can get started building a solution with any template available on the Mendix Platform.
+A solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs and expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case, general Mendix development [best practices](/howto/general/dev-best-practices) apply, and you can get started building a solution with any template available on the Mendix Platform.
 
-Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted to make it fit the specific needs of a customer.
+Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted so that it can fit the specific needs of a customer.
 
 ![Adaptive Solution Architecture](attachments/adaptive-solution-architecture.png)
 
-For more details on solutions, see [Architecting Adaptive Solutions](adaptive-solution-architecture).
+For more details on building solutions, see [Architecting Adaptive Solutions](adaptive-solution-architecture).
 
-## 3 Useful Resources
+## 3 Read More
 
-### 3.1 Important Sections in the Solutions Guide
+Start with the [General Info](general) section, which provides details on the Mendix vendor programs that will support you in building solutions.
 
-Make sure to read through the entire Solutions Guide. A good starting point is the [Development](development) section. The most important topics addressed in the guide are:
+Then, proceed to the [Development](development) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
 
-- [Architecting for adaptation](adaptive-solution-architecture)
-- Applying [IP protection](ip-protection) in your solution
-
-<!-- TODO: Custom usage metering to implement different pricing models -->
-<!-- TODO: [Version Control](version-control) processes suited to solution development -->
-<!-- TODO: Deployment of solutions -->
-
-### 3.2 Other Helpful Resources
-
-- General Mendix development with Studio Pro: [Reference Guide](/refguide) and [Howtos](/howto)
-- General Mendix [best practices](/howto/general/dev-best-practices) - these equally apply to solutions development
-
-## 4 Get Started
-
-Read up on [general](general) information on solutions development on the Mendix Solutions Platform and review the [Development](development) section in the Solutions Guide. Then [create your app](https://new.mendix.com/) and Go Make It!
+After reading through these sections, [create your app](https://new.mendix.com/) and Go Make It!

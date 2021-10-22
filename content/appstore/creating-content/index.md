@@ -12,4 +12,8 @@ This category of the Marketplace Guide covers all the things you need to know wh
 
 ## 2 Main Documents in This Category
 
+{{% alert type="info" %}}
+These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
+{{% /alert %}}
+
 * [Solutions](solutions-guide)

@@ -5,10 +5,6 @@ description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---
 
-{{% alert type="info" %}}
-These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
-{{% /alert %}}
-
 ## 1 Introduction
 
 The Mendix Platform is well-suited to supporting the development of solutions. Rapid development with Mendix allows for the adaptation of solutions to fit a customer's needs and context, and to integrate with the customer's existing IT landscape.

@@ -75,14 +75,14 @@ When using the activity in a nanoflow accessible from an offline profile, please
 * Setting a different delete behavior option triggers a consistency error
 * Before and after delete events will be triggered only upon synchronization of the deleted object
 * Before and after delete events will not be triggered for an object that does not exist in the runtime database
-* When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
-* Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
+*  When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
+	* Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
 
 For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.
 
-For more information on delete behavior of associations, see the [Delete Behavior](/refguide/association-properties#delete-behavior) section of *Association Properties*.
+For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties#delete-behavior) section of *Association Properties*.
 
-<a name="delete-example"></a> For example, in the situation below the **On delete of 'Customer' object** option should be set to **Keep 'Order' objects**:
+<a name="delete-example"></a> For example, the **On delete of 'Customer' object** option below should be set to **Keep 'Order' objects**:
 
 ![](attachments/object-activities/delete-limitations-example-0.png)
 ![](attachments/object-activities/delete-limitations-example-1.png)
@@ -104,7 +104,7 @@ In detail, this is what happens during deletions:
 	* If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
 	* Changes made prior to the rollback will be kept
 * Database:
-	* If an object has the state **Instantiated**, there will be no database communication required
+	* If an object has the **Instantiated** state, there will be no database communication required
 	* For any other status, a delete query is executed in the database
 * Result:
 	* The object will be removed from memory and (if applicable) from the database
@@ -114,33 +114,33 @@ In detail, this is what happens during deletions:
 
 ### 6.2 Activity Used in a Nanoflow in an Offline-First App 
 
-The client does the following, depending on the type of an object being deleted:
+Depending on the type of an object being deleted, the client acts as described below.
 
 #### 6.2.1 Deleting a Persistable Object Which Has Not Been Committed 
 
-* Remove the object from memory
-* Search the device database for all objects that reference the deleted object
-* clear the references from all the objects that were found to the deleted object
+1. Removes the object from memory.
+1. Searches the device database for all objects that reference the deleted object.
+1. Clears all references to the deleted object from all objects found previously.
 
 No before or after delete events will be executed in this case.
 
 #### 6.2.2 Deleting a Committed Persistable Object That Has Not Been Synchronized with the Runtime 
 
-* Remove the object from memory
-* Search the device database for all objects that reference the deleted object
-* Clear the references from all the objects that were found to the deleted object
-* Delete the object from the device database
-* Clear all references to the deleted object from any uncommitted objects
+1. Removes the object from memory.
+1. Searches the device database for all objects that reference the deleted object.
+1. Clears all references to the deleted object from all objects found previously.
+1. Deletes the object from the device database.
+1. Clear all references to the deleted object from any uncommitted objects.
 
 No before or after delete events will be executed in this case.
 
 #### 6.2.3 Deleting a Persistable Object That Exists in the Runtime Database
 
-* Remove the object from memory
-* Search the device database for all objects that reference the deleted object
-* Clear the references from all the objects that were found to the deleted object
-* Delete the object from the device database
-* Mark the object as deleted in the offline database to make it possible to synchronize the deletion with the server
+1. Removes the object from memory.
+1. Searches the device database for all objects that reference the deleted object.
+1. Clears all references to the deleted object from all objects found previously.
+1. Deletes the object from the device database.
+1. Marks the object as deleted in the offline database, which makes it possible to synchronize the deletion with the server.
 
 Before and after events for the deleted object will be executed upon synchronization.
 

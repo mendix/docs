@@ -29,7 +29,7 @@ Currently OTA  does not update your app while the app is open or minimized.
 * Preserve your model's integrity
 * Transfer a CLI OTA-compatible app to the Native Mobile Builder 
 
-## 2 Why you should rather use the Mendix OTA update via the Runtime
+## 2 Why You Should Use Mendix's OTA Update Solution
 
 App Center's CodePush solution is the industry standard for OTA update support for React Native apps. However, as a third-party option, it has a few shortcomings when it comes to allowing you to OTA update your apps.
 

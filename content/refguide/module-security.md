@@ -57,23 +57,13 @@ Note that these roles are only checked when the microflow is executed from the c
 
 **Nanoflow Access** defines which nanoflows can be executed by users with a certain module role. The menu bar is optimized so that it only shows nanoflows that the user has access to. 
 
-The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modules roles. You can choose to show the unused nanoflows in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
+The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modules roles. You can choose to show the unused nanoflows in the matrix or hide them by enabling/disabling the **Show unused nanoflows** setting. 
 
 ![](attachments/module-security/nanoflow-access-tab.png)
 
 For each combination you can indicate whether or not the module role has access to the nanoflow. You can also edit this information in the [nanoflow](nanoflow) using the **Allowed roles** property.
 
-## 5 Workflow Access {#workflow-access}
-
-**Workflow access** defines which workflows can be triggered by users with a certain module role. 
-
-The **Workflow access** tab is displayed as a matrix showing workflows and modules roles. You can choose to show the unused workflows in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
-
-![Workflow Access](attachments/module-security/workflow-access.png)
-
-For each combination you can indicate whether or not the module role can start the workflow. You can also edit this information in a [workflow](workflow-properties) using the **Allowed roles** property.
-
-## 6 Entity Access {#entity-access}
+## 5 Entity Access {#entity-access}
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies.
 
@@ -83,7 +73,7 @@ The **Entity Access** tab is displayed as a matrix showing access rules that app
 
 Each access rule in turn applies to a set of module roles. For more information, see [Access Rules](access-rules).
 
-## 7 OData Access 
+## 6 OData Access 
 
 **OData Access** defines for each module role whether users with this role are authorized to access OData resources for each OData service exposed within the module.
 
@@ -93,7 +83,7 @@ The **OData Access** tab is displayed as a matrix showing published OData servic
 
 For each combination, you can indicate whether the module role has access to the published OData service. You can also edit this information in [published OData services](published-odata-services) using the **Allowed roles** property in the **Settings** tab.
 
-## 8 REST Access
+## 7 REST Access
 
 **REST Access** defines for each module role whether users with this role are authorized to access REST resources for each REST service exposed within the module. 
 
@@ -105,7 +95,7 @@ For each REST service, you can indicate whether or not the module role has acces
 
 The **REST Access** tab is visible only when the service has the security set to require authentication. For more information, see [published REST services](published-rest-services).
 
-## 9 Data Set Access
+## 8 Data Set Access
 
 **Data Set Access** shows the access which the module role has to each [dataset](data-sets).
 
@@ -120,7 +110,7 @@ The constraints are defined in the parameter definitions of the data set. Whethe
 The ranges are defined in the parameters of the data set. Whether values in these ranges are allowed is defined in the **Data Set Access**.
 {{% /alert %}}
 
-## 10 Read More
+## 9 Read More
 
 * [Security](security)
 * [User roles](user-roles)

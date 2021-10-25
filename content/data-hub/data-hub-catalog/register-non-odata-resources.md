@@ -39,5 +39,5 @@ Once the OData service is available, find the generated *$metadata* file for you
 
 You can find the following examples of how to write an OData service in .NET: 
 
-  * [Creating a Simple OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
-  * [Full .NET OData Documentation](https://docs.microsoft.com/en-us/odata/webapi/getting-started)
+  * [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
+  * [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)

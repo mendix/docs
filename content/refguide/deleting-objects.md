@@ -116,7 +116,7 @@ In detail, this is what happens during deletions:
 
 Depending on the type of an object being deleted, the client acts as described below.
 
-#### 6.2.1 Deleting a Persistable Object Which Has Not Been Committed 
+#### 6.2.1 Deleting a Persistable Object Which Has Not Been Committed  
 
 1. Removes the object from memory.
 1. Searches the device database for all objects that reference the deleted object.
@@ -124,7 +124,7 @@ Depending on the type of an object being deleted, the client acts as described b
 
 No before or after delete events will be executed in this case.
 
-#### 6.2.2 Deleting a Committed Persistable Object That Has Not Been Synchronized with the Runtime 
+#### 6.2.2 Deleting a Committed Persistable Object That Has Not Been Synchronized with the Runtime
 
 1. Removes the object from memory.
 1. Searches the device database for all objects that reference the deleted object.

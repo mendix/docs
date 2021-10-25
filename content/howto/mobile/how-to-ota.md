@@ -8,20 +8,18 @@ tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 
 ## 1 Introduction
 
-With Mendix Studio Pro 9.7, you can update your Mendix native apps over the air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without the burden of going through the entire release process.
+Using Mendix Studio Pro v9.7 and above, you can update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
-With OTA updates support via the Mendix runtime, you can simply deploy a new version of your app to the cloud and the apps will be updated automatically at the next restart as long as the device can access the runtime.
-
-This way the model, the runtime and the apps can be kept seamlessly in sync.
+With OTA updates support via the Mendix runtime, you can simply deploy a new version of your app to the cloud. Then, the changed apps will be updated automatically at the next restart as long as devices can access the runtime. This way the model, runtime, and apps can be kept seamlessly in sync.
 
 {{% alert type="info" %}}
 Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Mendix OTA updates replaces the now deprecated App Center's CodePush OTA updates solution. When opting in for OTA updates via the Mendix Runtime Codepush OTA updates will be disabled. 
+Mendix OTA updates are the replacement for the deprecated [App Center's CodePush OTA updates solution](how-to-ota-appcenter). When opting in for OTA updates via the Mendix Runtime, Codepush OTA updates will be disabled. 
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -31,34 +29,16 @@ Mendix OTA updates replaces the now deprecated App Center's CodePush OTA updates
 * Build your app 
 * Preserve your model's integrity
 
-## 2 Why you should consider using Mendix's OTA update solution
+## 2 Why You Should Use Mendix's OTA Update Solution
 
-While we grew our experience in Native Mobile apps and looked at what our customers require, we identified the following short comings with third party OTA update solutions: 
+Third-party OTA update solutions present the following shortcomings: 
 
-* Third party service requirement.
-* Complex release cycle. 
-* No single point of truth.
-* Lack of extensibility.
+* **Third-party service requirements** – The third-party service requirement adds extra procurement steps; sometimes the companies behind the functionality might be blocked in certain regions. This adds unneeded overhead and costs time.
+* **Complex release cycle** – Complex release cycles can slow your app updates. In general, changes need to be deployed to your Mendix server and then an extra step is required to release the new OTA updates for your apps. That costs time, requires careful decision making, and can incur errors. 
+* **No single point of truth** – No single point of truth means it is impossible to tell when and how the app should be updated or the new changes should be synchronised. Mendix removes a lot of complexity from thinking about things like synchronization or offline data. To do so, some premises have to be true. With third party solutions that is impossible to do accurately.
+* **Lack of extensibility** – Lack of extensibility, is more technical and affects mostly us. Third-party solutions are too generic and meant to work for everyone, meaning that you sacrifice performance and extensibility. Using our own solution we can tailor it specifically to Mendix's and by extension your requirements. 
 
-Let us look at these points individually. 
-
-Third party service requirement, is self explanatory. It adds extra procurement steps; sometimes the companies behind the functionality might be blocked in certain regions. This adds unneeded overhead and costs time.
-
-Complex release cycle, summarises the steps required to release a new OTA update. In general changes need to be deployed to your Mendix server and then an extra step is required to release the new OTA updates for the apps. That costs time, requires more thought than it should and can be error prone. 
-
-No single point of truth means it is impossible to tell when and how the app should be updated or the new changes should be synchronised. Mendix removes a lot of complexity from thinking about things like synchronization or offline data. To do so, some premises have to be true. With third party solutions that is impossible to do accurately.
-
-Lack of extensibility, is more technical and affects mostly us. Third-party solutions are too generic and meant to work for everyone, meaning that you sacrifice performance and extensibility. Using our own solution we can tailor it specifically to Mendix's and by extension your requirements. 
-
-With that in mind we developed a Mendix OTA update mechanism which focuses in solving those issues. 
-
-Your Mendix server is the single source of truth, as OTA updates are served from the same end point.
-
-In addition, instead of thinking of OTA packages and deployments, we merged both actions in one. Instead deploying a new application to your server is enough for the native apps to get updated the next time they are restarted and the devices are updated. 
-
-As your Mendix server is the one providing the OTA bundles, no third party service is required. 
-
-Finally by developing an in house solution we can continuously iterate and update the functionality to further enhance our offering.
+With these shortcomings in mind, we developed a Mendix OTA update mechanism which solves these issues. Your Mendix server is the single source of truth, as OTA updates are served from the same endpoint. In addition, instead of thinking of OTA packages and deployments, we merged both actions into one. Instead of deploying a new application to your server, the native apps can simply be updated the next time they are restarted and the devices are updated. As your Mendix server is the one providing the OTA bundles, no third-party service is required. Finally, by developing an in-house solution we can continuously improve it based on your feedback.
 
 ## 3 Prerequisites {#prerequisites}
 

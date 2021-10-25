@@ -286,6 +286,10 @@ Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage 
 
 Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting. 
 
+### 5.6 Ceph
+
+[Ceph](https://ceph.io/en/) is supported with the S3-compatible interface [Ceph Object Gateway](https://docs.ceph.com/en/mimic/radosgw/). The Mendix Operator will need the endpoint, access key, and secret key to access the storage. Please check the Ceph documentation for information on how to get the credentials.
+
 ## 6 Networking
 
 {{% alert type="info" %}}

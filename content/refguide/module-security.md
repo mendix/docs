@@ -47,7 +47,7 @@ The **Microflow access** tab is displayed as a matrix showing microflows and mod
 
 ![](attachments/module-security/microflow-access-tab.png)
 
-For each combination you can indicate whether or not the module role has access to the microflow or the nanoflow. You can also edit this information in a [microflow](microflow) or [nanoflow](nanoflow) using the **Allowed roles** property.
+For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](microflow) using the **Allowed roles** property.
 
 {{% alert type="info" %}}
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
@@ -61,7 +61,7 @@ The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modul
 
 ![](attachments/module-security/nanoflow-access-tab.png)
 
-For each combination you can indicate whether or not the module role has access to the microflow or the nanoflow. You can also edit this information in a [microflow](microflow) or [nanoflow](nanoflow) using the **Allowed roles** property.
+For each combination you can indicate whether or not the module role has access to the nanoflow. You can also edit this information in the [nanoflow](nanoflow) using the **Allowed roles** property.
 
 ## 5 Workflow Access {#workflow-access}
 

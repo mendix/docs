@@ -36,7 +36,9 @@ Once you have upgraded to the newest version, you cannot revert the upgrade. Als
 
 Once there is a new version of an add-on module that is compatible with your app, you will see the **Update** button next to it – click it to update the add-on. 
 
-When modules are dependent on other modules, you can update them only together otherwise your app will not function properly. For example, the latest version of  Workflow Commons might need the latest version of the Data Widgets module. Studio detects such dependencies automatically and notifies you about them. 
+When modules are dependent on other modules, you can update them only together otherwise your app will not function properly. For example, the latest version of  Workflow Commons might needs the latest version of the Atlas Core module. Studio detects such dependencies automatically and notifies you about them:
+
+![Dependencies Found Pop-up Window](attachments/settings-version-and-add-ons/dependencies-found.png)
 
 ## 4 Read More
 

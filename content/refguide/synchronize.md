@@ -16,6 +16,8 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 ## 2 Synchronization Modes
 
+All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](offline-first#synchronization-types) section of the Offline-first Reference Guide.
+
 ### 2.1 All Objects
 
 {{% image_container width="200" %}}
@@ -32,10 +34,7 @@ The behavior of this mode can be configured through [synchronization configurati
 ![Synchronize](attachments/client-activities/synchronize-unsynchronized-objects.png)
 {{% /image_container %}}
 
-With the **Unsychronized objects** mode, all objects with changes committed to the offline database are synchronized.
-Information about objects deleted since the last synchronization is also sent to the server.
-
-For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
+Using the **Unsynchronized objects** mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
 ### 2.3 Selected Objects {#selected-objects}
 
@@ -49,19 +48,14 @@ The **Selected object(s)** mode synchronizes objects partially, based on a selec
 ![Synchronize](attachments/client-activities/synchronize-objects-selection.png)
 {{% /image_container %}}
 
-With this mode, only the selected objects or lists are synchronized.
-
-Deleted objects cannot be synchronized using selective synchronization.
-
-All the three modes perform synchronization in two phases: upload and download.
-For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](offline-first#synchronization-types) section of the Offline-first guide.
+Using this mode, only the selected objects or lists are synchronized. Deleted objects cannot be synchronized using selective synchronization. 
 
 ## 3 Synchronization Behavior {#synchronization-behavior}
 
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
 {{% alert type="warning" %}}
-The settings in [synchronization configuration](offline-first#customizable-synchronization) are not applied for the **Unsychronized objects** and **Selected object(s)** modes.
+The settings in [synchronization configuration](offline-first#customizable-synchronization) are not applied for the **Unsynchronized objects** and **Selected object(s)** modes.
 {{% /alert %}}
 
 In the **Selected object(s)** mode, if the set of objects selected for synchronization contains any objects that have not been committed yet, those objects will be skipped and thus not synchronized.

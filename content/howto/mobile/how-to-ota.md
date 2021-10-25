@@ -51,7 +51,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 4 When to Use OTA Updates
 
-### 4.1 Use cases for OTA updates {#safeToUpdate}
+### 4.1 Use Cases for OTA Updates {#safeToUpdate}
 
 OTA updates are useful in the following app development cases:
 
@@ -111,7 +111,7 @@ To release a new version OTA, follow these steps:
 
 On the next restart of the application, the new OTA update will be downloaded and used. 
 
-## 8 Read More
+## 7 Read More
 
 * [Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app)
 * [Offline-First](/refguide/offline-first)

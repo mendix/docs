@@ -53,11 +53,7 @@ This mode performs both the upload and the download phases for all entities used
 
 #### 2.1.2 Synchronize Unsynchronized Objects {#unsynchronized-objects}
 
-This type of synchronization can only be done through a **Synchronize** action inside a nanoflow.
-
-In this mode, all objects with changes committed to the offline database are synchronized.
-
-Information about objects deleted since the last synchronization is also sent to the server.
+This type of synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server.
 
 #### 2.1.3 Selective Synchronization {#selective-sync}
 
@@ -85,11 +81,10 @@ For example, synchronizing only a committed `City` object referencing an offline
 
 The upload phase executes the following operations after validation:
 
-1. The local database can be modified only by committing or deleting an object. Such an object can be a new object created (while offline), or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
+1. The local database can be modified only by committing or deleting an object. Such an object can be a new object created while offline, or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
 2. There might be objects deleted from the local database since the last synchronization. The upload phase checks which objects have been deleted.
 3. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-4. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. Information about deleted objects is also sent to the server, so the server can delete them from its database too.
-   This step is performed in a single network request. Any configured before- or after-commit, before- or after-delete event handlers on these objects will run on the server as usual, after the data has been uploaded and before it is downloaded.
+4. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
 
 
 #### 2.2.2 Download Phase {#download}

@@ -56,9 +56,7 @@ For every workflow in your application you now need an entity that represents th
 
 ### 3.6 Reconfigure Your Workflow {#reconfigure-workflow}
 
-Now that your domain model has been set up, you can open your workflow document and make use of the new entities you have created. In the top-left corner you see two parameters. One is called **Workflow Instance**, and should be set to the entity that specializes of the system **Workflow** entity, set up in the previous step.
-
-The other is called **Workflow Context**, which you set by going over the association from your workflow instance entity to your workflow context entity.
+Now that your domain model has been set up, you can open your workflow document and make use of the new entities you have created. In workflow properties > **Data** section, there are two properties: one is called **Workflow instance**, and should be set to the entity that specializes of the system **Workflow** entity, set up in the previous step. The other is called **Workflow context**, which you set by going over the association from your workflow instance entity to your workflow context entity.
 
 For each user task in your workflow, select the newly created entity for the task.
 

@@ -5,10 +5,6 @@ description: "Mendix supports solution developers through the Solution Vendor an
 tags: [ "solutions", "vendors", "solution vendor", "startup", "adaptive solutions", "prescriptive solutions" ]
 ---
 
-{{% alert type="info" %}}
-These guides for creating content in the Marketplace are under active development and will be regularly extended with new sections. Make sure to check in regularly to stay up to date with the latest documentation!
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix supports the full range of organizations looking to develop solutions, from startups to large enterprises. Mendix has two programs to support you: the Solution Vendor Program and the Startup Program.

@@ -244,7 +244,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 When your app service is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 
-Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible.  We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
+Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible. We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
 You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 

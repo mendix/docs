@@ -1,7 +1,7 @@
 ---
 title: "Curate Registered Assets"
 category: "Data Hub Catalog"
-menu_order: 40
+menu_order: 45
 description: "Curating and enhancing findability of data assets in Data Hub"
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---

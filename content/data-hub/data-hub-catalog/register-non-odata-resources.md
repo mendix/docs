@@ -10,8 +10,8 @@ tags: ["Data Hub", "Data Hub Catalog", "registration", "OData", "register data"]
 
 The Data Hub Catalog collects metadata from exposed services and currently supports only OData v3 and v4 XML resources. If you want to connect something other than OData, you can do so by wrapping it in OData and then registering the data source contract file in the Data Hub Catalog. Afterwards, you can make it available for being consumed in Mendix Studio Pro. Currently there are two ways to wrap data in OData:
 
-- [Expose OData via a Mendix app](#use-mendix-app)
-- [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
+* [Expose OData via a Mendix app](#use-mendix-app)
+* [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
 
 ## 2 Expose OData via a Mendix App {#use-mendix-app}
 
@@ -35,8 +35,9 @@ The diagram below represents how an OData API wrapper can be used to connect a c
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Data Hub Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services).
 
 
-## Exposing OData High Code Examples
+### 3.1 Examples of Exposing OData with a Service Wrapper
 
-Here are some examples of writing OData services in .NET: 
+You can find the following examples of how to write an OData service in .NET: 
+
   * [Creating a Simple OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
   * [Full .NET OData Documentation](https://docs.microsoft.com/en-us/odata/webapi/getting-started)

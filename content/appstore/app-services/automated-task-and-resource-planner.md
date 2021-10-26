@@ -22,7 +22,7 @@ You can use this app service when you want to automatically schedule tasks in yo
 ### 1.2 Features
 
 *	Scheduling tasks
-*	Priority tickets
+*	Priority tasks
 *	Travel time
 *	Required skills/properties
 *	Time windows
@@ -84,35 +84,35 @@ This is the settings for this planning. Create the object and associate it to `P
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
-| `ClusterExecutionWindowExclusionPeriod` | {{% todo %}}[Type?]{{% /todo %}} | Any task where the last service dialog box ends in this period after the `planningStart` is excluded from clustering and is treated as an outlier. This setting is only supported with the `CLUSTERED` planning type. If the value is not set or equals to ` P0D`, no service windows are treated in a special way. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. Only Years(Y), Months(M), Weeks(W) and Days(D) are supported.{{% todo %}}check the description{{% /todo %}} |
+| `ClusterExecutionWindowExclusionDays` | Integer | Only affects the `CLUSTERED` planning type. Defines a period in days since planningStart in which tasks will be clustered separately. All tasks for which the last service window ends inside this period, will be clustered with other tasks with the same service window.<br/>If set to `0`, no service windows are treated in a special way. |
 | `PlanningStartTime`   | Date and time | The time from when you start planning. |
-| `SoftPinChangedTicketsThreshold` | | The maximum number of allowed changed soft pinned tasks. |
-| `SoftPinTimeThreshold`  | String | The maximum amount of time in minutes that a task can move before the engine considers it a change. The default value is `PT0S`, this means all changes are considered a change and new tasks are usually added to the end of the work queue. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. |
-| `TimeLimit`| String | The maximum amount of time in minutes that the planner is allowed to take to solve the planning. If the value is empty, a configured default is used. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations.{{% todo %}}Where to configure the default?{{% /todo %}} |
-| `UnimprovedTimeLimit` | Boolean | Finishes if the planner does not find a new better solution within this time. If the value is empty, a configured default is used. This uses the [ISO-8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations) for durations. {{% todo %}}Where to configure the default?{{% /todo %}}{{% todo %}}check the description{{% /todo %}} |
+| `SoftPinChangedTasksThreshold ` | Integer | The maximum number of allowed changed soft pinned tasks. |
+| `SoftPinTimeThresholdMinutes	` | Integer | The maximum duration in minutes that a soft pinned task's start or end time can change before the task is considered changed. If set to `0`, all changes are considered a change and new tasks are usually added to the end of the work queue. |
+| `TimeLimitSeconds` | Integer | The maximum time in seconds that the planner can spend without improving the planning. If the planning does not improve for for the specified amount of time the planner will finish early. If left empty, a configured default will be used. |
+| `UnimprovedTimeLimitSeconds` | Integer | The maximum time in seconds that the planner can spend without improving the planning. If the planning does not improve for for the specified amount of time the planner will finish early. If left empty, a configured default will be used. |
 | `AsTheCrowFliesTravel` | Boolean | Enables using haversine distance to find travel time. |
 | `Availability` | Boolean | Enables availability windows. Availability windows are times when a resource is available to work. It represents the workday, but holidays, weekends, and sick days should also be taken into account for this.{{% todo %}}check the description{{% /todo %}} |
 | `Clustering`   | Boolean | This is an option if the solver type `Fast`is still not fast enough, and locations tend to be clustered geographically, for example, in cities and towns. `Clustering` greatly reduces the total number of locations that need to be solved per planning, which in turn makes the total runtime a lot smaller. |
 | `ExecutionWindows`  | Boolean | Enables execution windows. Execution windows are times when a task can be picked up, outside these windows, it is impossible to work for some reasons, for example, because the location is closed.{{% todo %}}check the description{{% /todo %}} |
-| `Fast`  | Boolean | When the value is `true` the solver type is `Fast`. `Fast` contains a very limited subset of rules. It only deals with travel duration and work duration, and does not deal with anything that requires exact time, such as dependencies, pinning tickets, and multi-mechanic tickets. With the approach, the application does not need to check for dependencies or linked tickets, and a change in the beginning of the chain does not affect all the tickets that come after. In this way, the approach is much faster than `Full`. |
+| `Fast`  | Boolean | When the value is `true` the solver type is `Fast`. `Fast` contains a very limited subset of rules. It only deals with travel duration and work duration, and does not deal with anything that requires exact time, such as dependencies, pinning tasks, and multi-mechanic tasks. With the approach, the application does not need to check for dependencies or linked tasks, and a change in the beginning of the chain does not affect all the tasks that come after. In this way, the approach is much faster than `Full`. |
 | `OpenStreetMapsTravel` | Boolean | Enables Graphhopper (OpenStreetMaps) service to find the travel time |
 | `Priorities` | Boolean | Enables using `priorities`. Some tasks may need to be assigned as early as possible, regardless of the travel time. The planner allows setting `Medium` and `High` priorities for this purpose. |
 | `RequiredProperties`  | Boolean | Enables using required properties. Some tasks might have requirements. Requirements can be certifications, having a key, or even types of resources. For example, a leak can require a  certified plumber, and a dig site can require an excavator. |
 | `SoftPinning` | Boolean | Enables soft pinning. A human planner is always able to override the planning suggested by the field service planner application. The human planner can pin tasks to a  pre-specified mechanic, a pre-specified time, or a combination of both. There are different types of pins, 'hard' pins are always followed by the planner, while 'soft' pins are followed by the application as much as possible, but if the situation requires a change, for example, if a higher priority task comes in, then the application changes the plan. |
-| `TaskSplitting` | Boolean | Enables splitting a task. In some cases tasks can span multiple days. When the value is `true`, the planner automatically splits these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner does not make the task start shortly before the end of the day. When the value is `false`, the planner cannot split up a task |,
+| `TaskSplitting` | Boolean | Enables splitting a task. In some cases tasks can span multiple days. When the value is `true`, the planner automatically splits these into multiple appointments. It is also possible to specify a minimum appointment duration, so the planner does not make the task start shortly before the end of the day. When the value is `false`, the planner cannot split up a task |
 
 #### 4.1.2 Task
 
 ![task](attachments/automated-task-and-resource-planner/task.png)
 
-A task is a unit of work. A task can be the delivery of an order, a work order ticket, a reservation, etc. Tasks are assigned to `Resources` and `TimeSlots`. Tasks are associated to  `PlanningRequest` and at least one task is required to make a request. 
+A task is a unit of work. A task can be the delivery of an order, a work order task, a reservation, etc. Tasks are assigned to `Resources` and `TimeSlots`. Tasks are associated to  `PlanningRequest` and at least one task is required to make a request. 
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
 | `_id`  | String | The task ID. |
-| `GroupID`| String | The group ID for multi-resource tickets. All partial tasks in the same multi-resource task must have the same group ID. |
+| `GroupID`| String | The group ID for multi-resource tasks. All partial tasks in the same multi-resource task must have the same group ID. |
 | `Importance` |Integer| Shows how important this task is compared to others. If the planning has to choose a task to drop because there is not enough time to pick up all tasks, more important tasks are preferred over less important ones. Use priority or execution windows if the planner should plan certain tasks before others. The default value is `1`. |
-| `MinimumTimeSlotDurationMinutes` | {{% todo %}}[Type?]{{% /todo %}} | The minimum amount of a time slot in minutes. If the value is not set, the default value is `workDurationMinutes`. |
+| `MinimumTimeSlotDurationMinutes` | Integer | Example: 60<br/>Used for Task splitting. If a task is split into multiple timeSlots, this value indicates the minimum duration that each time slot must be, in minutes. If this value is equal to `workDurationMinutes`, the planner will not split the task. Defaults to `workDurationMinutes`, if not set. |
 | `PinnedResource` | String | The resource ID for the pinned resource. Set this value only if `resourcePinType` is `SOFT` or `HARD`. |
 | `PreAssignedResource` | String | The ID of the resource that this task is assigned to. If the value is empty, the task starts without being unassigned to a resource. |
 | `PreAssignedWorkStart` | Date and time | The pre-planned timeSlots. You cans set this to assigned tasks if `pinnedTimeSlots` is `false`, but it is not required. Setting it may improve performance on re-calculations. You should not set it on unassigned tasks. |

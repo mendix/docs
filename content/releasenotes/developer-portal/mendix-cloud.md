@@ -18,7 +18,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 Mendix Cloud V4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
 
-All newly created applications will be created with a database running PostgreSQL 13. Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications, and additionally, maintenance information will be visible from the Developer Portal.
+All newly-created applications will have a database running PostgreSQL 13.
+
+Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
 
 ### October 7th, 2021
 

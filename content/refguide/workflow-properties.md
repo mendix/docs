@@ -15,7 +15,6 @@ Workflow properties consist of the following sections:
 
 * [Admin page](#admin-page)
 * [Common](#common)
-* [Data](#data)
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [General](#general)
@@ -37,22 +36,6 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 #### 2.2.2 Documentation
 
 **Documentation** allows you to describe your workflow to make it easier for people to use and modify it.
-
-### 2.3 Data Section {#data}
-
-#### 2.3.1 Workflow Instance
-
-**Workflow instance** is an entity that stores data on the workflow process. This entity should be a specialization of the **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
-
-#### 2.3.2 Workflow Context
-
-**Workflow context** is a business-related entity that travels through the workflow. 
-
-{{% alert type="info" %}}
-
-**Workflow instance** should have a one-to-one or a one-to-many association to the **Workflow context**. 
-
-{{% /alert %}}
 
 ### 2.4 Display Information Section {#display-info}
 

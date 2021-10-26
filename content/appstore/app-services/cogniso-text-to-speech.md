@@ -43,22 +43,27 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-First, download the *CognisoTextToSpeech.mpk* file for the [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) from the Marketplace. When you want to add the app service to your app in Mendix Studio Pro, follow these steps:
+1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextToSpeech.mpk* file.
+2. To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
 
-1. Right-click the project in the **Project Explorer**, click **Import module package**, and select the *CognisoTextToSpeech.mpk*. 
-2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
+   1. In the **App Explorer**, right-click the app.
 
-	![import-text-to-speech](attachments/cogniso-text-to-speech/import-text-to-speech.png)
-	
-	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+   2. Click **Import module package** and then select *CognisoTextToSpeech.mpk* file.
 
-3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4. Open the **Project Explorer** to view the CognisoTextToSpeech module. You can see a collection of ready to use items under the CognisoSpeechToText folder. Besides, if you go to Toolbox window, you will also notice a collection of widgets are added to Toolbox widget list, under the **Cognitive AI widgets** category. 
-5. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-Now you have succesfully added the Cogniso Text To Speech resources to your app.
+      ![import-text-to-speech](attachments/cogniso-text-to-speech/import-text-to-speech.png)
 
-## 3 CognisoTextToSpeech Content
+     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+
+   3. In the **Import Module** dialog box, click **Import**. 
+   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
+   5. Open the **App Explorer**  to view the **CognisoTextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
+3. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
+
+You have successfully added the Cogniso Speech To Text resources to your app.
+
+## 3 Configuration
 
 ### 3.1 Predefined Entities {#predefined-entities}
 

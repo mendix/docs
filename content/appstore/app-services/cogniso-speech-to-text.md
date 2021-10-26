@@ -49,7 +49,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 1. Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118590) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
 
-2. To add the Intelligent Document Service to your app in Mendix Studio Pro, follow these steps:
+2. To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
 
    1. In the **App Explorer**, right-click the app.
 
@@ -69,7 +69,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-You have succesfully added the Cogniso Speech To Text resources to your app.
+You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 

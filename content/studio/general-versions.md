@@ -36,7 +36,7 @@ When you see the upgrade notification, you can either stay on the current versio
 
 {{% alert type="info" %}} 
 
-Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio.  {{% todo %}}[Add info on what version that is]{{% /todo %}}
+Studio has a minimum supported Mendix Studio version. This means that if the Mendix version of your app is lower than the minimum supported version, the upgrade is obligatory; otherwise, you will not be able to work on your app in Studio. 
 
 {{% /alert %}}
 

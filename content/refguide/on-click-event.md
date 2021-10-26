@@ -267,8 +267,6 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 The **Call workflow** event triggers the specified workflow. 
 
-An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data) defined in the workflow properties. 
-
 The following properties are specific for this event:
 
 * **Workflow** – A [workflow](workflows) that should be executed.

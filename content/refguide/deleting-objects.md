@@ -78,14 +78,17 @@ When using the activity in a nanoflow accessible from an offline profile, please
 *  When you create an object in the client and optionally commit it, it does not exist in the runtime database until you synchronize it
 	* Deleting such an object removes it from the device and does not require synchronization, therefore the before and after events of the corresponding entity will not be triggered
 
-For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.
-
 For more information on associations' delete behavior, see the [Delete Behavior](/refguide/association-properties#delete-behavior) section of *Association Properties*.
 
 <a name="delete-example"></a> For example, the **On delete of 'Customer' object** option below should be set to **Keep 'Order' objects**:
 
+{{% image_container width="350" %}}
 ![](attachments/object-activities/delete-limitations-example-0.png)
+{{% /image_container %}}
+
+{{% image_container width="350" %}}
 ![](attachments/object-activities/delete-limitations-example-1.png)
+{{% /image_container %}}
 
 ## 5 Common Section{#common}
 
@@ -144,10 +147,6 @@ No before or after delete events will be executed in this case.
 
 Before and after events for the deleted object will be executed upon synchronization.
 
-For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.
-
 #### 6.2.4 Deleting a Non-Persistable Object
 
 Deleting a NPE is not supported in a nanoflow in an offline-first app.
-
-For more information see the [Deleting Objects](/refguide/offline-first#deleting-objects) section of the *Offline-First Reference Guide*.

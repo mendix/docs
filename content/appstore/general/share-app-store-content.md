@@ -107,7 +107,7 @@ To add content to the Marketplace, follow these steps:
 	
 	![](attachments/share-app-store-content/public-private.jpg)
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
+	{{% alert type="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
 	{{% /alert %}}
 
 5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
@@ -115,7 +115,7 @@ To add content to the Marketplace, follow these steps:
 	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
 	c. The **Category** you selected earlier will be listed here. You can change this if necessary.<br />
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change the **Category** after the inital version is published.
+	{{% alert type="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.
 	{{% /alert %}}
 
 	d. Select the **Studio Pro Version** on which you built the content.<br />
@@ -176,7 +176,7 @@ To add content to the Marketplace, follow these steps:
 
 	![](attachments/share-app-store-content/enable.png)
 	
-	You can also optionally add a **Video** and **Demo**.
+	You can optionally add a **Video** and **Demo**.
 	
 12. <a name="publish"></a>Finally, on the **Review & publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 

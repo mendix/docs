@@ -13,14 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
-### October ???, 2021
+### October 27th, 2021
 
-#### Prometheus metrics
+#### Prometheus Metrics
 
 * We have documented how to collect logs and metrics in Mendix for Private Cloud.
 * We have created a reference Grafana dashboard that offers a familiar experience for [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4) users.
 
-To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or a later version) and follow the [instructions](/developerportal/deploy/private-cloud-monitor).
+To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and follow the [instructions](/developerportal/deploy/private-cloud-monitor).
 
 ### October 25th, 2021
 

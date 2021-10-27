@@ -180,7 +180,7 @@ In the Consumed OData Service document associated with your MindSphere service, 
 
 ![Binding](attachments/mindsphere-app-service/data-hub-authentication.png)
 
-Set the **Error handling microflow** to be *MindsphereIIoTAuthenticator.DH_ErrorHandler*. This microflow is executed in case of an error, it logs the error and provides a human readable string of the error, which is shown to the user in an error message.
+Set the **Error handling microflow** to be *MindsphereIIoTAuthenticator.DH_ErrorHandler*. This microflow is executed in case of an error, it logs the error and provides a human readable string of the error, which is shown to the user in an error message. See [Custom Error Handling](#ts-customerrorhandling) for further details.
 
 ![Binding](attachments/mindsphere-app-service/data-hub-error-handling.png)
 
@@ -291,13 +291,12 @@ For example, Time Series can only be sorted using the timestamp attribute. If yo
 
 ## 9 Troubleshooting
 
-### 9.1 Custom Error Handling
+### 9.1 Custom Error Handling{#ts-customerrorhandling}
 
 Custom Error Handling is possible when using OData in Microflows e.g. on a retrieve action. On the error path of the action you get the human readable error string in the variable **$latestError/Message**. Use this variable as input to *MindsphereIIoTAuthenticator.DH_MindSphereErrorFromString* in order to get 
 a *MindSphereError* entity. Now implement your custom error handling based on e.g. the **StatusCode** of the error.
 
 ![Binding](attachments/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png)
-
 
 ### 9.2 Internal Server Error and Long Names
 

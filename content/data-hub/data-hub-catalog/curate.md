@@ -126,7 +126,7 @@ Currently, by default, the application icon is determined by the application typ
 
 When you want to upload a custom icon or image, the following apply:
 
-* The accepted file types are ***.png***, ***.jpg***, and ***.jpeg***
+* The accepted file types are *.png*, *.jpg*, and *.jpeg*
 
 * The maximum accepted file size is 50 KB
 
@@ -222,9 +222,9 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
-## 6 Discoverable & Validate {#discoverability}
+## 6 Discoverable & Validated {#discoverability}
 
-The discoverabile and validate properties of registered assets can be set from the Curate bar for the selected asset.
+The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
 
 ### 6.1 Discoverable
 

@@ -251,7 +251,7 @@ Use the following command to create an OpenShift Route object to access Grafana 
 oc --namespace {project} create route edge loki-grafana --service=loki-grafana --insecure-policy=Redirect
 ```
 
-To get the Grafana web UI URL, run the following command: replace `{project}` with the project name (for example `grafana`):
+To get the Grafana web UI URL (domain), run the following command: replace `{project}` with the project name (for example `grafana`):
 
 ```shell
 oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*].host}"

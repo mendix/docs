@@ -8,23 +8,45 @@ draft: true
 
 ## 1 Introduction
 
-The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service on mendix cloud that enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. This app service uses machine learning to find insights and relationships in text. Also identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic. All you need to do is drag and drop items and configure them.
+The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service on mendix cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. This app service uses machine learning to find insights and relationships in text. Also identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a text analytics application from scratch.
 
 Here is an overview of what the CognisoTextAnalytics contains:
 
-| Item | Name |
-| ---  | --- |
-| [Predefined entities](#predefined-entities) | Detector, Language, Response, DominantLanguageDetector, DominantLanguage, SentimentDetector, Sentiment, SentimentScore, EntityDetector, Entity, PiiEntityDetector, PiiEntity, KeyPhraseDetector, KeyPhrase, SyntaxDetector, SyntaxToken |
-| [Constants](#constants) | LicenseToken, TokenEndpoint |
-| [Enumeration](#enumeration) | EntityType, PartOfSpeechTag, PiiEntityType, SentimentType |
-| [Microflow](#microflow) | BatchTranscription, StartService |
-| [Nanoflow](#nanoflow) |  |
-| [Java action](#java-action) |  |
-| [Widgets](#widgets) |  |
+* [Predefined entities](#predefined-entities)
+	* Detector
+	* Language
+	* Response
+	* DominantLanguageDetector
+	* DominantLanguage
+	* SentimentDetector
+	* Sentiment
+	* SentimentScore
+	* EntityDetector
+	* Entity
+	* PiiEntityDetector
+	* PiiEntity
+	* KeyPhraseDetector
+	* KeyPhrase
+	* SyntaxDetector
+	* SyntaxToken
+* [Constants](#constants)
+	* LicenseToken
+	* TokenEndpoint
+* [Enumeration](#enumeration)
+	* EntityType
+	* PartOfSpeechTag
+	* PiiEntityType
+	* SentimentType
+* [Microflow](#microflow) 
+  * BatchTranscription
+  * StartService
+* [Nanoflow](#nanoflow)
+* [Java action](#java-action)
+* [Widgets](#widgets)
 
-In most cases, you will only need what is contained in the **TextAnalytics/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **TextAnalytics** > **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 

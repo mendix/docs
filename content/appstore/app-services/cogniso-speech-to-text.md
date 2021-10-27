@@ -24,7 +24,7 @@ Here is an overview of what the CognisoSpeechToText contains:
 | [Java action](#java-action)                 |                                  |
 | [Widgets](#widgets)                         | Microphone                       |
 
-In most cases, you will only need what is contained in the **SpeechToText/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 

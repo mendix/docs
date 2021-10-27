@@ -8,22 +8,27 @@ draft: true
 
 ## 1 Introduction
 
-The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service on mendix cloud that enables you to easily convert written text into human voice in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to work with the state-of-the-art of text to voice conversion. Also included are whole functionalities and integrations that can be very helpful when building your own text to voice applications. All you need to do is drag and drop items and configure them.
+The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service on mendix cloud enables you to easily convert written text into human voice in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to work with the state-of-the-art of text to voice conversion. Also, the whole functionality and integrations that are included can be very helpful when building your own text to voice applications. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a text to voice application from scratch.
 
 Here is an overview of what the CognisoTextToSpeech contains:
 
-| Item | Name |
-| ---  | --- |
-| [Predefined entities](#predefined-entities) | SpeechSynthesizer, Voice |
-| [Constants](#constants) | LicenseToken, TokenEndpoint |
-| [Microflow](#microflow) | CreateSpeechSynthesizer |
-| [Nanoflow](#nanoflow) | SynthesizeSpeech |
-| [Java action](#java-action) |  |
-| [Widgets](#widgets) | AudioPlayer |
+* [Predefined entities](#predefined-entities) 
+	* SpeechSynthesizer
+	* Voice
+* [Constants](#constants)
+	* LicenseToken,
+	* TokenEndpoint
+* [Microflow](#microflow)
+	* CreateSpeechSynthesizer
+* [Nanoflow](#nanoflow)
+	* SynthesizeSpeech
+* [Java action](#java-action)
+* [Widgets](#widgets)
+	* AudioPlayer
 
-In most cases, you will only need what is contained in the **TextToSpeech/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 

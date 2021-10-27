@@ -1,5 +1,5 @@
 ---
-title: "Monitoring environments in Mendix for Private Cloud"
+title: "Monitoring Environments in Mendix for Private Cloud"
 parent: "private-cloud"
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 menu_order: 31
@@ -9,40 +9,40 @@ tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}}Monitoring Mendix for Private Cloud environments is supported in Mendix Operator v2.1.0 and later versions.{{% /alert %}}
+{{% alert type="info" %}}Monitoring Mendix for Private Cloud environments is supported in Mendix Operator v2.1.0 and above.{{% /alert %}}
 
 Mendix for Private Cloud provides a [Prometheus](https://prometheus.io/) API that can be scraped by a local Prometheus server.
 This API can also be used by other monitoring solutions such as [Datadog](https://docs.datadoghq.com/integrations/prometheus/).
 
 The metrics API can only be accessed inside the Kubernetes cluster, and metrics are never sent to the Mendix Private Cloud Portal.
-To collect, store and display metrics, you will need to install a local monitoring solution.
+To collect, store, and display metrics, you will need to install a local monitoring solution.
 
-Mendix for Private Cloud writes all logs into the standard output (`stdout` and `stderr`).
+Mendix for Private Cloud writes all logs to the standard output (`stdout` and `stderr`).
 Any Kubernetes log processing solution should be able to read and collect those logs.
-This document shows an example how to use [Loki](https://grafana.com/docs/loki/next/) and [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/) to collect those logs.
+This document shows an example how to use [Grafana Loki](https://grafana.com/docs/loki/next/) and [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/) to collect those logs.
 
 This document will help you quickly set up a solution for monitoring Mendix for Private Cloud environments.
 You can customize this solution to match the requirements of your team or organization.
 
-## 2 Installing monitoring tools{#install-grafana-loki}
+## 2 Installing Monitoring Tools{#install-grafana-loki}
 
-If you already have installed Prometheus, Loki and Grafana in your cluster, you can skip this section and to directly to [enable metrics scraping](#enable-metrics-scraping).
+If you already have installed Prometheus, Loki, and Grafana in your cluster, you can skip this section and go directly to [enable metrics scraping](#enable-metrics-scraping).
 
-This section contains a quick start guide how to install Grafana and its dependencies in a cluster by using the [Loki Helm chart](https://grafana.com/docs/loki/latest/installation/helm/).
+This section contains a quick start guide on how to install Grafana and its dependencies in a cluster by using the [Loki Helm chart](https://grafana.com/docs/loki/latest/installation/helm/).
 In addition, this section explains how to install and configure a logging solution based on [Loki](https://grafana.com/docs/loki/next/).
 
 {{% alert type="warning" %}}These instructions have been simplified to make the installation process as easy as possible.
 
-Before installing Prometheus, Loki and Grafana in a production environment, consult with your cluster administrator and IT security teams
-to ensure that the logging/monitoring solution is compliant with your organization's security policies.{{% /alert %}}
+Before installing Prometheus, Loki, and Grafana in a production environment, consult with your cluster administrator and IT security teams
+to ensure that this logging/monitoring solution is compliant with your organization's security policies.{{% /alert %}}
 
 ### 2.1 Prerequisites
 
-{{% alert type="warning" %}}The Grafana Helm chart doesn't yet support Kubernetes 1.22 and later versions.{{% /alert %}}
+{{% alert type="warning" %}}The Grafana Helm chart doesn't yet support Kubernetes version 1.22 anda above.{{% /alert %}}
 
 Before installing Grafana, make sure you have [installed Helm](https://grafana.com/docs/loki/latest/installation/helm/) and can access your Kubernetes cluster.
 
-Download the latest version of the Grafana Helm chart:
+Download the latest version of the Grafana Helm chart using the following commands:
 ```
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
@@ -50,8 +50,8 @@ helm repo update
 
 ### 2.2 Installation in Kubernetes{#install-in-k8s}
 
-This section documents how to install Grafana and Prometheus into a a Kubernetes cluster.
-For installation in OpenShift, use [Installation in OpenShift](#install-in-openshift) instructions.
+This section documents how to install Grafana and Prometheus into a Kubernetes cluster.
+For installation in OpenShift, use the [Installation in OpenShift](#install-in-openshift) instructions.
 
 #### 2.2.1 Preparations
 
@@ -61,7 +61,7 @@ Create a new namespace (replace `{namespace}` with the namespace name, for examp
 kubectl create namespace {namespace}
 ```
 
-Create a Secret containing the Grafana admin password (replace `{namespace}` with the namespace name, for example `grafana`; `{username}` with the admin username, for example `admin`; `{password}` with the admin password):
+Use the following command to create a secret containing the Grafana admin password: replace `{namespace}` with the namespace name (for example `grafana`); `{username}` with the admin username (for example `admin`); and `{password}` with the admin password:
 
 ```shell
 kubectl --namespace {namespace} create secret generic grafana-admin --from-literal=admin-user={username} --from-literal=admin-password={password}
@@ -69,7 +69,7 @@ kubectl --namespace {namespace} create secret generic grafana-admin --from-liter
 
 This username and password can be used later to log into Grafana.
 
-#### 2.2.2 Install the Grafana Loki stack
+#### 2.2.2 Install the Grafana Loki Stack
 
 Run the following commands in a Bash console, (replace `{namespace}` with the namespace name, for example `grafana`):
 
@@ -102,7 +102,7 @@ If your Kubernetes cluster requires a StorageClass to be specified, add the foll
 --set grafana.persistence.storageClassName={class},loki.persistence.storageClassName={class},prometheus.server.persistentVolume.storageClass={class}
 ```
 
-#### 2.2.3 Expose the Grafana web UI
+#### 2.2.3 Expose the Grafana Web UI
 
 Create an Ingress object to access Grafana from your web browser (replace `{namespace}` with the namespace name, for example `grafana`; `{domain}` with the domain name, for example `grafana.mendix.example.com`):
 
@@ -160,7 +160,7 @@ This annotation specifies the starting UID and range of UIDs allowed to be used 
 
 Choose a UID from the allowed range, for example 1001280000.
 
-#### 2.3.2 Install the Grafana Loki stack
+#### 2.3.2 Install the Grafana Loki Stack
 
 Run the following commands in a Bash console, (replace `{uid}` with the UID chosen in the previous step, for example 1001280000; and `{project}` with the project name, for example `grafana`):
 
@@ -192,7 +192,7 @@ You might need to adjust some parameters to match the scale and requirements of 
 
 See more details in the [Loki installation guide](https://grafana.com/docs/loki/next/installation/helm/).
 
-#### 2.3.3 Add permissions to collect container logs
+#### 2.3.3 Add Permissions to Collect Container Logs
 
 To read logs from Pods (including logs from Mendix app environments), the Loki stack uses [Promtail](https://grafana.com/docs/loki/next/clients/promtail/).
 
@@ -243,7 +243,7 @@ volumes:
 EOF
 ```
 
-#### 2.3.4 Expose the Grafana web UI
+#### 2.3.4 Expose the Grafana Web UI
 
 Create an OpenShift Route object to access Grafana from your web browser (replace `{project}` with the project name, for example `grafana`):
 
@@ -257,7 +257,7 @@ To get the Grafana web UI URL, run the folling command (replace `{project}` with
 oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*].host}"
 ```
 
-## 3 Enable metrics scraping{#enable-metrics-scraping}
+## 3 Enable Metrics Scraping{#enable-metrics-scraping}
 
 To collect Mendix app environment metrics for a specific environment, Prometheus needs to discover and scrape Pods with the following annotations:
 
@@ -270,7 +270,7 @@ Prometheus supports [multiple ways](https://prometheus.io/docs/prometheus/latest
 but the easiest is to use Pod annotations.
 It's possible to specify annotations for all Mendix app environments in the namespace, or set annotations only for specific environments.
 
-### 3.1 Enable scraping for entire namespace
+### 3.1 Enable Scraping for Entire Namespace
 
 To enable scraping annotations for all environments in a namespace, add the following `runtimeDeploymentPodAnnotations` in [Mendix App Deployment settings](private-cloud-cluster#advanced-deployment-settings):
 
@@ -291,11 +291,11 @@ spec:
 
 and restart the Mendix Operator.
 
-### 3.2 Enable scraping for a specific environment
+### 3.2 Enable Scraping for a Specific Environment
 
 If you'd like to enable Prometheus scraping only for a specific environment, you can add the Prometheus scraping annotations just for that environment.
 
-#### 3.2.1 Enable scraping in Connected mode
+#### 3.2.1 Enable Scraping in Connected Mode
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
@@ -323,7 +323,7 @@ If you'd like to enable Prometheus scraping only for a specific environment, you
 
 <!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
 
-#### 3.2.2 Enable scraping in Standalone mode
+#### 3.2.2 Enable Scraping in Standalone Mode
 
 {{% alert type="info" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud Portal.{{% /alert %}}
 
@@ -348,7 +348,7 @@ spec:
 
 Save and apply the changes.
 
-## 4 Setting up a Grafana dashboard
+## 4 Setting up a Grafana Dashboard
 
 Mendix for Private Cloud offers a reference dashboard that looks similar to [Mendix Cloud V4 metrics](/developerportal/operate/trends-v4).
 
@@ -363,7 +363,7 @@ The Mendix Runtime Prometheus metrics are not yet supported by Mendix for Privat
 The reference dashboard provided in this document will not be compatible with the native Mendix 9.6 metrics.
 {{% /alert %}}
 
-### 4.1 Import the dashboard
+### 4.1 Import the Dashboard
 
 To install the reference dashboard, download the [dashboard JSON](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard-1.0.0.json) to a local file.
 
@@ -382,7 +382,7 @@ To install the reference dashboard, download the [dashboard JSON](https://cdn.me
 
     ![](attachments/private-cloud-monitor/grafana-import-settings.png)
 
-### 4.2 Using the dashboard
+### 4.2 Using the Dashboard
 
 Press the **Dashboards** button, then **Manage** and click _Mendix app dashboard_ to open the dashboard:
 
@@ -402,7 +402,7 @@ You will need to select the currently running Pod from the dropdown to monitor i
 {{% alert type="info" %}}This dashboard is provided for reference and can be used as an example.
 You can use it to build a custom dashboard with details that are relevant for your organization - such as aggregating metrics per namespace/project or displaying additional metrics from another source.{{% /alert %}}
 
-### 4.3 Configuring metrics links
+### 4.3 Configuring Metrics Links
 
 To provide Mendix app developers quick access to the dashboard, you can set the **Metrics** and **Logs** links in the namespace configuration.
 

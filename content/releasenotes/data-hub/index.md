@@ -9,13 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
-### October 28st, 2021
+### October 28th, 2021
 
 #### Fixes
 
 * We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search#busines-owner) name was not visible in the metadata of a data source.
-* Temporary Administration link is removed from the home page. Owner management screen is now available from [Curate](/data-hub/data-hub-catalog/curate) tab, for Curators, and from [Administration screen](/developerportal/control-center/data-hub-admin#custom-owners), for Mendix Administrators.
-
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/data-hub/data-hub-catalog/curate) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin#custom-owners) page in Control Center for Mendix Administrators.
 
 ### October 14th, 2021
 

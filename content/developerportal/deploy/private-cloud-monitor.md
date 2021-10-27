@@ -38,7 +38,7 @@ to ensure that this logging/monitoring solution is compliant with your organizat
 
 ### 2.1 Prerequisites
 
-{{% alert type="warning" %}}The Grafana Helm chart doesn't yet support Kubernetes version 1.22 anda above.{{% /alert %}}
+{{% alert type="warning" %}}The Grafana Helm chart doesn't yet support Kubernetes version 1.22 and above.{{% /alert %}}
 
 Before installing Grafana, make sure you have [installed Helm](https://grafana.com/docs/loki/latest/installation/helm/) and can access your Kubernetes cluster.
 

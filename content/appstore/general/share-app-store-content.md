@@ -90,7 +90,7 @@ To add content to the Marketplace, follow the steps in each section below.
 
 ### 4.1 Getting Started
 
-To start click **Add content** in the top-right corner of the Marketplace home screen:
+To start, click **Add content** in the top-right corner of the Marketplace home screen:
 
 ![](attachments/share-app-store-content/add-content-button.jpg)
 
@@ -116,7 +116,7 @@ Follow these steps to continue adding content:
 	
 ### 4.2 General
 
-On the **General** page,  you need to provide information about your component. The information you entered above is pre-filled on this page.
+On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
 
 Follow these steps to describe your content:
 
@@ -193,9 +193,10 @@ You can attach images to your documentation in one of two ways (uploaded images 
 	
 You can optionally add a **Video** and **Demo**.
 	
-### 4.5 Publication {#publish}
 
-Finally, on the **Review & publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+### 4.5 Publish {#publish}
+
+Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
 ![](attachments/share-app-store-content/publish.png)
 

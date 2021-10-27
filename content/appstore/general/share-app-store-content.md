@@ -166,7 +166,9 @@ Enter **Release Notes** for the component in the box provided describing what is
 
 ### 4.4 Enable {#doc}
 
-On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). Follow the template for the recommended content:
+On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). 
+
+Follow the template for the recommended content:
 
 * You must fill out the following sections in order to submit your component:
 	* An extended **Description** of the component

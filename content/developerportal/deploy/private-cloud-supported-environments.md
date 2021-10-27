@@ -32,7 +32,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 #### 2.1.1 Supported Versions
 
-Mendix for Private Cloud Operator **v2.\*.\*** is the latest version which officially supports:
+Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
 * Kubernetes versions 1.19 through 1.21
 * OpenShift 4.6 through 4.7
@@ -45,7 +45,7 @@ This version of Kubernetes was released recently and is not yet offered or fully
 Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
 {{% /alert %}}
 
-Mendix for Private Cloud Operator **v1.12.\*** is an LTS release which officially supports older Kubernetes versions:
+Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
 
 * Kubernetes versions 1.13 through 1.21
 * OpenShift 3.11 through 4.7
@@ -347,7 +347,7 @@ For ingress, it is possible to do the following:
 For each environment, the URL will be automatically generated based on the domain name.
 For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.
 
-The DNS server should be configured to route all subdomains (the `*` subdomain, for example, *.mendix.example.com) to the ingress/load balancer.
+The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
 
 It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
 
@@ -357,7 +357,7 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 There are multiple ways of managing TLS certificates:
 
-* The Ingress controller can have a default certificate with a wildcard domain (for example, _\*.mendix.example.com_). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
+* The Ingress controller can have a default certificate with a wildcard domain (for example, `*.mendix.example.com`). For Ingress controllers which support for [Let's Encrypt](https://letsencrypt.org/), the Ingress controller can also request and manage TLS certificates automatically.
 * Providing a TLS certificate secret for each environment.
 * Using [cert-manager](https://cert-manager.io/) or a similar solution by using Ingress annotations. This service can be used to automatically request TLS certificates and create secrets for the Ingress controller.
 

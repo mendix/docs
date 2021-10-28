@@ -13,9 +13,9 @@ To use Mendix Studio Pro's native mobile app capabilities, you can use the [Blan
 The Blank Native Mobile App also includes six modules:
 
 * **Administration** – helps you manage users
-* **Atlas Core** – allows for app styling
-* **Atlas NativeMobile Content** – allows for app styling
-* **Atlas Web Content** – allows for app styling
+* **Atlas Core** – enables app styling
+* **Atlas Native Mobile Content** – enables app styling
+* **Atlas Web Content** – enables app styling
 * **Nanoflow Commons** – contains generic useful nanoflow actions
 * **Native Mobile Actions** – contains various native widgets and nanoflow actions that leverage device capabilities
 

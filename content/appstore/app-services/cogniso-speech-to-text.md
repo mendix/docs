@@ -32,11 +32,11 @@ In most cases, you will only need what is contained in the **SpeechToText** > **
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wake up message, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more. {{% todo %}}[what is wake up message?]{{% /todo %}}
+You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup message, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more. {{% todo %}}[what is wakeup message?]{{% /todo %}}
 
 ### 1.2 Features
 
-This app service enables doing the following with the Microphone widget:{{% todo %}}[Which Microphone widget?]{{% /todo %}}{{% todo %}}[what is wake up message?]{{% /todo %}}
+This app service enables doing the following with the Microphone widget:
 
 * Customize voice-to-text action
 * Customize audio-to-text action
@@ -47,30 +47,26 @@ This app service enables doing the following with the Microphone widget:{{% todo
 
 ### 1.3 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with [9.4.0](../../releasenotes/studio-pro/9.4).
+This app service can only be used with Studio Pro 9 versions starting with [9.4.0](releasenotes/studio-pro/9.4).
 
 ## 2 Installation
 
 1. Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118590) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
 
-2. To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
 
-   1. In the **App Explorer**, right-click the app.
+    1. In the **App Explorer**, right-click the app.
+    2. Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
 
-   2. Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
+       ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
 
-      ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
+       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the ***Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
-   3. In the **Import Module** dialog box, click **Import**. 
-
-   4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-
-   5. Open the **App Explorer**  to view the **CognisoSpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-
+    3. In the **Import Module** dialog box, click **Import**. 
+    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
+    5. Open the **App Explorer**  to view the **CognisoSpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
 3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 You have successfully added the Cogniso Speech To Text resources to your app.
@@ -82,7 +78,7 @@ To use the Cogniso Speech To Text features, bind your app to the Cogniso Speech 
 * If you app has an after-startup microflow set, perform the following steps:
 
   1. Go to the after-startup microflow set in your app.
-
+  
    	 {{% todo %}}[image]{{% /todo %}}
 
   2. From the after-startup microflow set, call the a Java action **StartService** , which can start the Cogniso Speech To Text service. This automatically starts the 3D Viewer when the app starts. To run a tool after the app starts usually means you want to run a specific tool all the time.
@@ -165,7 +161,7 @@ For this widget to perform voice to text correctly, set the following properties
 
 Cogniso Speech To Text provides the Microphone widget to convert voice into text with customizable actions.
 
-When you start from a blank app template in Mendix Studio Pro,  follow the steps below to set up customizable voice-to-text actions quickly.
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable voice-to-text actions quickly.
 
 ### 5.1 Converting Voice into Text in Your Browser
 

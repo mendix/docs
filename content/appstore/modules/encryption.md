@@ -8,25 +8,32 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 
 ## 1 Introduction
 
-The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption of strings (for example, passwords) using AES.
+The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption needs. Currently the followings are supported:
 
-### 1.1 Typical Use Cases
+* Plain text encryption (for example, passwords)
+* FileDocument encryption
 
-The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrpyted way in the database. The key used for encrypting passwords is configured as a constant and remains on the application server.
+## 2 Plain Text Encryption
 
-### 1.2 Limitations
+Encrypts and decrypts plain texts by using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. The key used for encryption is configured as a constant and remains on the application server.
 
-* Encryption using AES only
+### 2.1 Typical Use Cases
 
-## 2 Configuration
+The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrpyted way in the database. 
 
-### 2.1 EncryptionKey Constant
+### 2.2 Limitations
+
+* Currently only AES is supported
+
+### 2.3 Configuration
+
+#### 2.3.1 EncryptionKey Constant
 
 Set the `EncryptionKey` constant located in the **Private - String en/de-cryption** folder. Make sure the key consists of 16 characters.
 
 In version 2.2.0, the key length was increased from 128 to 256 bits. The `EncryptionKey` constant must now have a key with 32 characters. The `LegacyEncryptionKey` constant can be used for the 128 bits, in order to decrypt strings that were encrypted using an older version of the Encryption module.
 
-### 2.2 EncryptionPrefix Constant
+#### 2.3.2 EncryptionPrefix Constant
 
 Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
 
@@ -40,3 +47,15 @@ In version 1.4.1, the AES algorithm used for encrypting/decrypting text was swit
 {{% alert type="warning" %}}
 If you are updating the module from a version below 1.4.1 to 1.4.1 or above (including 2.2.0 and above), do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
 {{% /alert %}}
+
+## 3 FileDocument Encryption
+
+Encrypts and decrypts FileDocument entities' contents by using [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symetric encryption is embedded into encrypted file content. Certificate to use asymetric encryption of the symetric key is stored in the database.
+
+### 3.1 Typical Use Cases
+
+One of the typical usage scenario may be a project/module that stores customer's photos or any sensitive documents. In such case you may want to encrypt those documents in a way that only the owner can see.
+
+### 3.2 Configuration
+
+No any global configuration needed. However certificates should be generated or should be uploaded up-front by using `CertificateManagement` page.

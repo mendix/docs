@@ -65,7 +65,7 @@ This app service enables doing the following:
 
 ### 1.3 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with [9.4.0](../../releasenotes/studio-pro/9.4).
+This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4).
 
 ## 2 Installation
 

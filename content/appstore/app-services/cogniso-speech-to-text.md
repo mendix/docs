@@ -32,15 +32,15 @@ In most cases, you will only need what is contained in the **SpeechToText** > **
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup message, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more. {{% todo %}}[what is wakeup message?]{{% /todo %}}
+You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more.
 
 ### 1.2 Features
 
 This app service enables doing the following with the Microphone widget:
 
-* Customize voice-to-text action
-* Customize audio-to-text action
-* Customize wake up message
+* Customize voice-to-text actions
+* Customize audio-to-text actions
+* Customize wakeup messages
 * Enable voice-to-action feedback
 * Switch different language options
 * Translate non-English transcripts into English
@@ -100,62 +100,79 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 ![mediadocument](attachments/cogniso-speech-to-text/mediadocument.png)
 
-| Attribute        | Description                               |
-| ---------------- | ----------------------------------------- |
-| **Transcript**   | The base64-encoded audio data string.     |
-| **LanguageCode** | The language code of this media document. |
+| Attribute        | Data Type | Description|
+| ---------------- | ---- | -----------|
+| **Transcript**   | String | The base64-encoded audio data string.     |
+| **LanguageCode** | String | The language code of this media document. |
 
 ### 4.2 Constants {#constants}
 
-The **LicenseToken** constant is used to provide a valid CognisoSpeechToText license token for the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to be able to use the CognisoSpeechToText functionalities in a deployed app, you  need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+#### 4.2.1 Lincese Token
+
+The **LicenseToken** constant is used to provide a valid CognisoSpeechToText license token for the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to be able to use the CognisoSpeechToText fucntionality in a deployed app, you  need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how CognisoSpeechToText works, that is to say, you will only build and run an app that uses CognisoSpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with default value which points to the production environment of deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+#### 4.2.2 TokenEndpoint
+
+The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 4.3 Microflow {#microflow}
+
+#### 4.3.1 BatchTranscript
 
 The **BatchTranscription** microflow takes a **MediaDocument** object as an input parameter and converts the based64-encoded audio string into text.
 
 ![batchtranscription](attachments/cogniso-speech-to-text/batchtranscription.png)
 
+#### 4.3.2 StartService
+
 The **StartService** microflow is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Cogniso Speech To Text provides. It is exposed as microflow actions.
 
 ![startservice](attachments/cogniso-speech-to-text/startservice.png)
 
-#### 4.4 Widgets {#widgets}
+### 4.4 Widgets {#widgets}
 
-##### 4.4.1 Core Widgets
+#### 4.4.1 Core Widgets
 
 The core widgets required to perform voice-to-text actions are described below.
 
-###### 4.4.1.1 Microphone {#microphone}
+##### 4.4.1.1 Microphone {#microphone}
 
-This Microphone widget provides customization of voice-to-text actions.
+This Microphone widget provides the customization of voice-to-text actions.
 
 For this widget to perform voice to text correctly, set the following properties:
 
-* On the **General** tab, there are some optional customization options for changing the widget's behavior:
-  * **Language**  – the option **Enable language selection** enables custom language settings to perform speech conversion in microphone widget.
-    * **language**  – determines which language to use for speech conversion in the Microphone widget (default language: US-English, data type: String)
-  * **Wakeup**  – the option **Enable wakeup** determines whether to activate microphone via wakeup message
-    * **wakeupMessage**  – the valid string value which approximately contains two-four words to activate the voice to action (an empty message means actions are always activated) {{% todo %}}[what is two-four words?]{{% /todo %}}{{% todo %}}[what is the voice to action?]{{% /todo %}}
-    * **wakeupResponse** – the valid string value to give voice response to user when the voice to action is activated. {{% todo %}}[what is the voice to action?]{{% /todo %}}
-    * **maxIdleTime** – the number of seconds after which the voice to action is deactivated (A value less or equals to zero means the microphone is always on standby once activated){{% todo %}}[what is the voice to action?]{{% /todo %}}
-* On the **Events** tab, there are some optional customization options for changing the Microphone widget's behavior:
+*   **General** tab
+  * **Enable language selection** – when set to **Yes**, custom language settings are enabled
+    * **language**  – determines which language to use for speech conversion (default language: US-English, data type: String)
+  * **Enable wakeup** – when set to **Yes**, the following custom language settings for speech conversion are enabled:
+    * **wakeupMessage**  – the valid string value which approximately contains two-four words to activate the voice-to-text action (if the message is empty, the actions are always activated) {{% todo %}}[what is two-four words?]{{% /todo %}}
+    * **wakeupResponse** – the valid string value to give voice response to users when the voice-to-text action is activated.
+    * **maxIdleTime** – the number of seconds after which the voice-to-text action is deactivated (if the value is less or equals to zero, the microphone is always on standby once activated)
+* **Events** tab
   * **On transcript** – by binding a String attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to back-end service to match with voice-to-text actions
+    * **transcript**
+    * **Action**
   * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error occurs
-* On the **Voice to Action** tab, there are some optional customization options for voice-to-text actions:
+    * **Error**
+    * **Action**
+* **Voice to Action** tab
   * **Actions**  – the option **Enable action** determines whether to enable speech actions
     * **Actions** – the actions to take when a transcript is matched
       * **Utterance** – the utterance of action item can be a string template following natural language syntax or a valid JavaScript regular expression.
       * **Action** – the action of action item triggered when the received transcript matches action text
       * **Feedback** – the voice feedback of action item provided to users after an action is to be activated.{{% todo %}}[what is to-be activated?]{{% /todo %}}
+      
     * **Arguments** – the captured arguments in transcript as a comma-separated list. This requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
+    
     * **Fallback message** – the message to notify users when no matched action is found.
+    
     * **Translate** – the option to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
+* **Common** tab
+* **Appearance** tab
 
 ## 5 Using Cogniso Speech To Text
 
@@ -172,49 +189,54 @@ Follow these steps to configure this voice-to-text action:
 1. Add a [Microphone](#microphone) widget on the page.
 2. Create an entity and name it *Microphone* in your app module's domain model.
 3. Wrap the Microphone widget inside a new data view widget.
-4. Create a nanoflow, name it *CreateMicrophoneObject*, and set this as the data source of the data view.
-5. On the **Events** tab, set the transcript attribute of the Microphone widget by setting **transcript**.
-6. On the **Voice to Action** tab, set the arguments attribute of the Microphone widget by setting **Arguments**.
-7. On the **Voice to Action** tab, configure the matching actions of the Microphone widget by setting **Utterance**, **Action**, and **Feedback** of action items.
-8. Run your app locally. You can now perform voice-to-text actions directly in the browser:
+4. Create a nanoflow and name it *CreateMicrophoneObject*
+5. Set the nanoflow as the data source of the data view.
+6. Double-click the **Microphone** widget. The **Edit Microphone** dialog box opens.
+7. Go to the **Events** tab, set the transcript attribute of the Microphone widget by setting **transcript**.
+8. Go to the **Voice to Action** tab, set **Arguments** attribute of the Microphone widget.
+9. On the **Voice to Action** tab, configure the matching actions of the Microphone widget by setting **Utterance**, **Action**, and **Feedback** of **Action** items.
+10. Run your app locally. You can now perform voice-to-text actions directly in the browser.
 
 ![runlocally-speech-to-text](attachments/cogniso-speech-to-text/runlocally-speech-to-text.png)
 
 ### 5.2 Customizing Wakeup Message {#experimental}
 
-In this section, you will learn how to config wakeup message to wakeup the backend service automatically with two key attributes **Wakeup message** and **Wakeup response**.
+In this section, you will learn how to configure wakeup message to wake up the back-end service automatically with two key attributes **Wakeup message** and **Wakeup response**.
 
 {{% alert type="info" %}}The configuration of wakeup messages is an experimental feature.{{% /alert %}}
 
 Follow these steps to configure this wakeup message:
 
-1. Enable wakeup message to active the microphone.
-2. Set up message with no more than two words to active the voice to action.
-3. Set up voice response message to notify users when voice to action is activated.
+1. Double-click the **Microphone** widget. The **Edit Microphone** dialog box opens.
+2. On the **General** tab, select **Yes** for **Enable wakeup** to active the microphone.
+3. Set up a **Wakeup message** with no more than two words to active the voice to action.
+4. Set up a **Wakeup response** message to notify users when voice to action is activated.
 
 ![wakeup-message](attachments/cogniso-speech-to-text/wakeup-message.png)
 
+5. Click **OK** to save the changes and close the dialog box.
+
+You have made the basic settings of the Microphone widget.
+
 ### 5.3 Customizing Voice to Text Actions
 
-In previous use case, you already finish basic settings of working microphone.
+The voice-to-text action allows you to customize **Action** items (**Utterance**, **Actions** and **Voice Feedback**). You can build a customized, automated conversation scenario by make listing of speech matching rules. You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
 
-In this section, the voice-to-text action allows you to customize action items with **Utterance**, **Actions** and **Voice Feedback** respectively. You can build a customized, automated conversation scenario by make listing of speech matching rules. Once you get started with action items, you may want to manage those actions by click **New**, **Delete**, **Edit** these function buttons.
+#### 5.3.1 Utterance
 
-#### 5.3.1 Customizing Utterance
+**Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules which are triggered on speech conversion. We also have some interal trie filters to extract the key point of short sentences.{{% todo %}}[what are interal trie filters?]{{% /todo %}}
 
-The utterance of action item can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules which is triggered on speech conversion. We also have some interal trie filters to extract the key point of short sentence..{{% todo %}}[what are interal trie filters?]{{% /todo %}}
+For instance, you can set short sentence as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the Microphone widget will match this action to perform next move to execute actions.
 
-For instance, you can set short sentence as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. For example, if you say `rotate model 35 degree around x direction`, microphone will match this action to perform next move to execute actions.
+#### 5.3.2 Actions
 
-#### 5.3.2 Setting Actions
+You can select from a list of customized actions for **Action**. This action is triggered when a received transcript matches action text.
 
-Like other Mendix events, you can select from a list of customized actions for **Action**. This action is triggered when a received transcript matches action text.
+#### 5.3.3 Voice Feedback
 
-#### 5.3.3 Setting Voice Feedback
+**Voice feedback** can be a string template following natural language syntax, which is provided to user after an action is to be activated.
 
-The voice feedback of action item can be a string template following natural language syntax, which provided to user after an action is to be activated.
-
-For instance, you can set voice feedback as `model is rotated {0} degree around {1} direction` with `{0}` and `{1}` are parameters passed through **Arguments** in Microphone.
+For instance, you can set voice feedback as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the Microphone widget.
 
 ![microphone-voicetoaction-sample](attachments/cogniso-speech-to-text/microphone-voicetoaction-sample.png)
 
@@ -222,23 +244,23 @@ For instance, you can set voice feedback as `model is rotated {0} degree around 
 
 Multiple events can be picked up by the [Microphone](#microphone) widget and can be used to build your customized event handling logic.
 
-There are two main types of events that can be picked up on the Microphone widget, which are described in the sections below.
+There are two main types of events that can be picked up by the Microphone widget, which are described in the sections below.
 
 #### 5.4.1 On Error {#on-error}
 
-By selecting one attribute to set the **Error** event, you can pick up an error raised by the Microphone widget.
+By binding an attribute to the **Error** event, you can pick up an error raised by the Microphone widget.
 
-**Error** takes a String attribute. You can define an attribute and bind that attribute to this property. In an running app, when there's problem converting voice into text, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by microphone and add custom actions to trigger when error arises.
+**Error** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, when there is a problem with converting voice into text, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by microphone and add custom actions to trigger when error arises.
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.png)
 
-Like other Mendix events, you can select from a list of actions upon a Microphone error for **Action**. One possible use case is show a error pop up page to let user know the error details.
+You can select an **Action** from a list of actions upon a Microphone error, for example, the action can be to show an error pop-up window to provide error details to users.
 
 ![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
 
 #### 5.4.2 On Transcript {#on-transcript}
 
-By selecting one attribute to set the **transcript** event, you can pick up the result of speech conversion by the Microphone widget.
+By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the Microphone widget.
 
 **transcript** takes a String attribute. You can define an attribute and bind that attribute to this property. This attribute stores the result of the voice-into-text conversion, which matches the action items in the Microphone widget to trigger action. 
 

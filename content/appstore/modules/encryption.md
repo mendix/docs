@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 
 ## 1 Introduction
 
-The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption needs. Currently the followings are supported:
+The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption needs. Currently the following is supported:
 
 * Plain text encryption (for example, passwords)
 * FileDocument encryption
@@ -19,7 +19,7 @@ Encrypts and decrypts plain texts by using [AES](https://en.wikipedia.org/wiki/A
 
 ### 2.1 Typical Use Cases
 
-The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrpyted way in the database. 
+The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
 
 ### 2.2 Limitations
 
@@ -58,4 +58,8 @@ One of the typical usage scenario may be a project/module that stores customer's
 
 ### 3.2 Configuration
 
-No any global configuration needed. However certificates should be generated or should be uploaded up-front by using `CertificateManagement` page.
+No configuration is needed. However certificates should be generated or should be uploaded up-front by using `CertificateManagement` page.
+
+{{% alert type="info" %}}
+To use the FileDocument encryption, microflows `Encrypt_Document` and `Decrypt_Document` are provided under the `_USE ME/PGP` folder. The microflows are annotated with explanations and you can find more details when you open in the Studio Pro.
+{{% /alert %}}

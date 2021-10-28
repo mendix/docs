@@ -7,15 +7,11 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 ## 1 Introduction
 
-The **Branch Line Manager** is used to manage the [branch lines](version-control#branches) of an app that are stored on a version control server. The dialog box looks the same for both SVN and Git version control except for a few minor differences:
+The **Branch Line Manager** is used to manage the [branch lines](version-control#branches) of an app that are stored on a version control server.
 
-*  Dialog box for SVN:
-
-	![SVN Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
-
-*  Dialog box for Git:
-
-	![Git Branch Line Manager](attachments/version-control-menu/git-branch-line-manager.png)
+	![Team Server Branch Line Manager](attachments/version-control-menu/branch-line-manager-sprintr-app.png)
+	
+	![Private Server Branch Line Manager](attachments/version-control-menu/branch-line-manager-private-server-app.png)
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 

@@ -9,10 +9,8 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 The **Branch Line Manager** is used to manage the [branch lines](version-control#branches) of an app that are stored on a version control server.
 
-	![Team Server Branch Line Manager](attachments/version-control-menu/branch-line-manager-sprintr-app.png)
+![Team Server Branch Line Manager](attachments/version-control-menu/branch-line-manager.png)
 	
-	![Private Server Branch Line Manager](attachments/version-control-menu/branch-line-manager-private-server-app.png)
-
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:

@@ -2,10 +2,13 @@
 title: "Create Branch Line (Git)"
 parent: "branch-line-manager-dialog"
 menu_order: 20
+draft: true
 tags: ["studio pro", "create branch line"]
 ---
 
 ## 1 Introduction
+
+{{% todo %}}[Decide later if this document should be deleted + delete all links to it, or delete the draft from metadata.]{{% /todo %}}
 
 For Git, use the **Create Branch Line** dialog box to create a new [branch line](version-control#branches) via the **Branch Line Manager**:
 

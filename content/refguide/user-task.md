@@ -13,6 +13,8 @@ For example, you can add filters and assign a task to users with the Manager rol
 
 ![User Task Example](attachments/user-task/user-task.jpg)
 
+Each user task should have a user task entity that specializes from the **WorkflowUserTask** entity in the System module. For more information on the user task entity, see the [Data](#data) section below.
+
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)

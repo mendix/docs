@@ -25,7 +25,7 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 
 ### 2.1 Workflow Parameters {#parameters}
 
-[Workflow parameters](workflow-parameters) are input data for your workflow:
+[Workflow parameters](workflow-parameters) are input data for your workflow.
 
 In the workflow editor, there are the following parameters:
 

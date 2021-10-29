@@ -246,7 +246,19 @@ Multiple events can be picked up by the [Microphone](#microphone) widget and can
 
 There are two main types of events that can be picked up by the Microphone widget, which are described in the sections below.
 
-#### 5.4.1 On Error {#on-error}
+#### 5.4.1 On Transcript {#on-transcript}
+
+By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the Microphone widget.
+
+**transcript** takes a String attribute. You can define an attribute and bind that attribute to this property. This attribute stores the result of the voice-into-text conversion, which matches the action items in the Microphone widget to trigger action. 
+
+![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
+
+You can select an **Action** from a list of actions. For example, the action can be to show the whole content of the voice-to-text conversion history.
+
+![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
+
+#### 5.4.2 On Error {#on-error}
 
 By binding an attribute to the **Error** event, you can pick up an error raised by the Microphone widget.
 
@@ -258,29 +270,19 @@ You can select an **Action** from a list of actions upon a Microphone error, for
 
 ![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
 
-#### 5.4.2 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the Microphone widget.
-
-**transcript** takes a String attribute. You can define an attribute and bind that attribute to this property. This attribute stores the result of the voice-into-text conversion, which matches the action items in the Microphone widget to trigger action. 
-
-![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
-
-Like other Mendix events, you can select from a list of customized actions for **Action**. One possible use case is show the whole content of the voice-to-text conversion history.
-
-![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
 
 ## 6 Others
 
-### 6.1 Batching mode of speech conversion
+### 6.1 Batching Mode of Speech Conversion
 
-In the previous section, we introduced the usage of the icrophone widget, any voice to text conversion are contained in microphone. While, sometimes you need to implement it in the backend service rather than user interface operations. In this case, batching scription is your best option to convert any mendix mediaDocument into written text.
+In the previous section, we introduced the usage of the Microphone widget, any voice to text conversion are contained in microphone. While, sometimes you need to implement it in the backend service rather than user interface operations. In this case, batching scription is your best option to convert any mendix mediaDocument object into written text.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
 Cogniso Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
 
-### 7.1 Obtaining a LicenseToken with trial version
+### 7.1 Obtaining a LicenseToken with Trial version
 
 When you need to run your app with Cogniso Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
 
@@ -294,7 +296,7 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 
 1. In the **Configurations** tab, click **Edit**. 
 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
+2. On the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 
 3. Fill in the **Value** with your obtained LicenseToken.
 

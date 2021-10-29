@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Introduction
 
-The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service on mendix cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. This app service uses machine learning to find insights and relationships in text. Also identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic. All you need to do is drag and drop items and configure them.
+The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service on Mendix cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a text analytics application from scratch.
 
@@ -46,11 +46,11 @@ Here is an overview of what the CognisoTextAnalytics contains:
 * [Java action](#java-action)
 * [Widgets](#widgets)
 
-In most cases, you will only need what is contained in the **TextAnalytics** > **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **TextAnalytics** > **USE_ME** folder. The content in the **TextAnalytics** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on mendix cloud that enables you to easily identifies the language of the text; extracts key phrases, places, people, brands, or events; understands how positive or negative the text is; analyzes text using tokenization and parts of speech; and automatically organizes a collection of text files by topic in your mendix applications.
+You can use this app service on Mendix cloud to easily identify the language of the text, extract key phrases, places, people, brands, or events, understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topics in your Mendix applications.
 
 ### 1.2 Features
 
@@ -197,53 +197,53 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 ### 3.3 Microflow {#microflow}
 
-The **CreateDominantLanguageDetector** microflow takes **text** and **languageCode** string as an input parameters to create DominantLanguageDetector as return object from backend service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from back-end service.
 
 ![createdominantlanguagedetector](attachments/cogniso-text-analytics/createdominantlanguagedetector.png)
 
-The **CreateEntityDetector** microflow takes **text** and **languageCode** string as an input parameters to create CreateEntityDetector as return object from backend service.
+The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from backend service.
 
 ![createentitydetector](attachments/cogniso-text-analytics/createentitydetector.png)
 
-The **CreateKeyPhraseDetector** microflow takes **text** and **languageCode** string as an input parameters to create CreateKeyPhraseDetector as return object from backend service.
+The **CreateKeyPhraseDetector** microflow takes  **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as return object from backend service.
 
 ![createkeyphrasedetector](attachments/cogniso-text-analytics/createkeyphrasedetector.png)
 
-The **CreatePiiEntityDetector** microflow takes **text** and **languageCode** string as an input parameters to create CreatePiiEntityDetector as return object from backend service.
+The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from backend service.
 
 ![createpiientitydetector](attachments/cogniso-text-analytics/createpiientitydetector.png)
 
-The **CreateSentimentDetector** microflow takes **text** and **languageCode** string as an input parameters to create CreateSentimentDetector as return object from backend service.
+The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as return object from backend service.
 
 ![createsentimentdetector](attachments/cogniso-text-analytics/createsentimentdetector.png)
 
-The **CreateSyntaxDetector** microflow takes **text** and **languageCode** string as an input parameters to create CreateSyntaxDetector as return object from backend service.
+The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as return object from backend service.
 
 ![createsyntaxdetector](attachments/cogniso-text-analytics/createsyntaxdetector.png)
 
 ### 3.4 Nanoflow {#nanoflow}
 
-The **DetectDominantLanguage** nanoflow takes **languageDetector** object as an input parameter to get list of dominant languages.
+The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
 ![detectdominantlanguage](attachments/cogniso-text-analytics/detectdominantlanguage.png)
 
-The **DetectEntities** nanoflow takes **entityDetector** object as an input parameter to get list of entities.
+The **DetectEntities** nanoflow takes the **entityDetector** object as an input parameter to get a list of entities.
 
 ![detectentities](attachments/cogniso-text-analytics/detectentities.png)
 
-The **DetectKeyPhrases** nanoflow takes **keyPhrasesDetector** object as an input parameter to get list of key phrases.
+The **DetectKeyPhrases** nanoflow takes the **keyPhrasesDetector** object as an input parameter to get a list of key phrases.
 
 ![detectkeyphrases](attachments/cogniso-text-analytics/detectkeyphrases.png)
 
-The **DetectPiiEntities** nanoflow takes **piiEntitiesDetector** object as an input parameter to get list of Pii entities.
+The **DetectPiiEntities** nanoflow takes the **piiEntitiesDetector** object as an input parameter to get a list of PII entities.
 
 ![detectpiientities](attachments/cogniso-text-analytics/detectpiientities.png)
 
-The **DetectSentiment** nanoflow takes **sentimentDetector** object as an input parameter to get sentiment object.
+The **DetectSentiment** nanoflow takes the **sentimentDetector** object as an input parameter to get a sentiment object.
 
 ![detectsentiment](attachments/cogniso-text-analytics/detectsentiment.png)
 
-The **DetectSyntax** nanoflow takes **syntaxDetector** object as an input parameter to get list of syntax tokens.
+The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input parameter to get a list of syntax tokens.
 
 ![detectsyntax](attachments/cogniso-text-analytics/detectsyntax.png)
 
@@ -330,7 +330,7 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 ## 4 Using Cogniso Text Analytics
 
-Cogniso Text Analytics provides actions that enables you to easily identifies the language of the text; extracts key phrases, understands how positive or negative the text is; analyzes text using tokenization and parts of speech.
+Cogniso Text Analytics provides actions that enables you to easily identify the language of the text, extract key phrases, understand how positive or negative the text is, and analyze text using tokenization and parts of speech.
 
 When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to setup customizable text analytic actions quickly.
 
@@ -438,16 +438,15 @@ To receive information on how to get the license token for [Cogniso Text Analyti
 
 #### 5.2.1 Configuring the LicenseToken in Studio Pro
 
-In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
+1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
+2. In the **Configurations** tab, click **Edit**. 
+3. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
+4. Fill in the **Value** with your obtained LicenseToken.
+5.  Click **OK** to confirm the settings.
 
-1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-3. Fill in the **Value** with your obtained LicenseToken.
-4.  Click **OK** to confirm the settings.
+    ![licensetoken-inmendix](attachments/cogniso-text-analytics/licensetoken-inmendix.png)
 
-	![licensetoken-inmendix](attachments/cogniso-text-analytics/licensetoken-inmendix.png)
-
-5. When you finish building the app, click **Run** to deploy your app to the cloud.
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
 #### 5.2.2 Configuring the LicenseToken in Developer Portal
 

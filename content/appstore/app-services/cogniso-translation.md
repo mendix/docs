@@ -27,7 +27,7 @@ Here is an overview of what the CognisoTranslation contains:
 * [Java action](#java-action)
 * [Widgets](#widgets)
 
-In most cases, you will only need what is contained in the **Translation ** > **USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **Translation ** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
@@ -104,7 +104,7 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 ### 3.3 Microflow {#microflow}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** object as input parameters and creates translator action in back-end service.
+The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator action in back-end service.
 
 ![createtranslator](attachments/cogniso-translation/createtranslator.png)
 
@@ -128,7 +128,7 @@ From the **CreateTranslator** microflow and **TranslateText** nanoflow to perfor
 
 Follow these steps to configure this text translation actions:
 1. Add a new data view on the page.
-2. Create a nanoflow and name it *CreateTranslator*. {{% todo %}}[Same name cannot be used]{{% /todo %}}
+2. Create a nanoflow and name it *CreateTranslator*.
 3. Set the nanoflow as the data source of the data view.
 4. Add a textArea.
 5. Set inputText of the data view object as the data source.

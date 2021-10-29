@@ -8,14 +8,14 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 
 ## 1 Introduction
 
-The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the encryption needs. Currently the following is supported:
+The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the following encryption needs:
 
 * Plain text encryption (for example, passwords)
-* FileDocument encryption
+* FileDocument encryption (for example, files of photos)
 
 ## 2 Plain Text Encryption
 
-Encrypts and decrypts plain texts by using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. The key used for encryption is configured as a constant and remains on the application server.
+Encrypt and decrypt plain texts using the [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. The key used for encryption is configured as a constant and remains on the application server.
 
 ### 2.1 Typical Use Cases
 
@@ -50,16 +50,16 @@ If you are updating the module from a version below 1.4.1 to 1.4.1 or above (inc
 
 ## 3 FileDocument Encryption
 
-Encrypts and decrypts FileDocument entities' contents by using [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symetric encryption is embedded into encrypted file content. Certificate to use asymetric encryption of the symetric key is stored in the database.
+Encrypt and decrypt the contents of FileDocument entities using the [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symetric encryption is embedded into encrypted file content. The certificate to use asymetric encryption of the symetric key is stored in the database.
 
 ### 3.1 Typical Use Cases
 
-One of the typical usage scenario may be a project/module that stores customer's photos or any sensitive documents. In such case you may want to encrypt those documents in a way that only the owner can see.
+One of the typical usage scenarios may be a project/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
 
 ### 3.2 Configuration
 
-No configuration is needed. However certificates should be generated or should be uploaded up-front by using `CertificateManagement` page.
+No configuration is needed. However, you should generate or upload certificates upfront using the **CertificateManagement** page.
 
 {{% alert type="info" %}}
-To use the FileDocument encryption, microflows `Encrypt_Document` and `Decrypt_Document` are provided under the `_USE ME/PGP` folder. The microflows are annotated with explanations and you can find more details when you open in the Studio Pro.
+To use the FileDocument encryption, you need to use these two microflows – **Encrypt_Document** and **Decrypt_Document**. The microflows are in the **USE ME** > **PGP** folder. They are annotated with explanations and you can find more details when you open them in Mendix Studio Pro.
 {{% /alert %}}

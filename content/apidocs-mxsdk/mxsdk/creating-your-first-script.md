@@ -18,41 +18,35 @@ After setting up all the prerequisites, you can start writing a first script tha
 2.  Copy the following code to the  `script.ts` file:
 
     ```ts
-    import { MendixSdkClient, OnlineWorkingCopy } from 'mendixplatformsdk';
-    import { domainmodels } from 'mendixmodelsdk';
-
-    const username = 'richard.ford51@example.com';
-    const apikey = '364fbe6d-c34d-4568-bb7c-1baa5ecdf9d1';
-    const client = new MendixSdkClient(username, apikey);
+    import { domainmodels } from "mendixmodelsdk";
+    import { MendixPlatformClient } from "mendixplatformsdk";
 
     async function main() {
-        const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
-        const workingCopy = await project.createWorkingCopy();
+        const client = new MendixPlatformClient();
 
-        const domainModel = await loadDomainModel(workingCopy);
+        const app = await client.createNewApp(`NewApp-${Date.now()}`, {
+            repositoryType: "git",
+            useAppTemplate: true,
+            templateDownloadURL:
+                "https://
+                appstore.home-test.mendix.com/rest/packagesapi/v1/version/number/27250/StarterApp_Blank.mpk"
+        });
+
+        const workingCopy = await app.createTemporaryWorkingCopy("main");
+        const model = await workingCopy.openModel();
+
+        const domainModelInterface = model.allDomainModels().filter(dm => dm.containerAsModule.name === "MyFirstModule")[0];
+        const domainModel = await domainModelInterface.load();
+
         const entity = domainmodels.Entity.createIn(domainModel);
         entity.name = `NewEntity_${Date.now()}`;
-        entity.location = { x: 100, y: 100 };
 
-        try {
-            const revision = await workingCopy.commit();
-            console.log(`Successfully committed revision: ${revision.num()}. Done.`)
-        } catch (error) {
-            console.error('Something went wrong:', error);
-        }
+        await workingCopy.commitToTeamServer("main");
     }
 
-    function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {
-        const dm = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === 'MyFirstModule')[0];
-
-        return dm.load();
-    }
-
-    main();
+    main().catch(console.error);
     ```
-
-3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](/apidocs-mxsdk/apidocs/authentication).
-
+Don't forget to [Setup your Personal Access Token](setup-your-pat.md) before executing the script.
 ### 2.1 Code Explanation
 
 Here are some explanations about the script:

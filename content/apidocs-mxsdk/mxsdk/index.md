@@ -18,6 +18,7 @@ Browse the reference documentation below about the Mendix Metamodel:
 Follow these step-by-step guides to learn everything you need about using the SDK:
 
 * [How to Set Up Your Development Environment](setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
+* [How to Set Up Your Personal Access Token](setup-your-pat) – guides you in the process of creating and saving your Personal Access token. This token is required to authenticate your script.
 * [How to Create Your First Script](creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
 * [How to Create the Domain Model](creating-the-domain-model) – guides you in the process of creating a more extensive domain model
 * [How to Manipulate Existing Models](manipulating-existing-models) – teaches you how to change things in the model, close the server connection, and find and load units and elements

@@ -15,7 +15,7 @@ The Blank Native Mobile App also includes six modules:
 * **Administration** – helps you manage users
 * **Atlas Core** – enables app styling
 * **Atlas Native Mobile Content** – allows you to style native mobile apps with page templates and building blocks
-* **Atlas Web Content** – allows you to style progressive web apps with page templates and building blocks
+* **Atlas Web Content** – allows you to style web apps and progressive web apps with page templates and building blocks
 * **Nanoflow Commons** – contains generic useful nanoflow actions
 * **Native Mobile Actions** – contains various native widgets and nanoflow actions that leverage device capabilities
 

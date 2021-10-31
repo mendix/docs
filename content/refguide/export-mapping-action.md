@@ -62,7 +62,7 @@ Validation against schema is only applicable if an export mapping is selected th
 
 This determines whether the export action should validate the outgoing XML against the schema (XSD).
 
-Setting this to yes can ipmact performance!
+Setting this to yes can impact performance!
 
 Default: *No*
 

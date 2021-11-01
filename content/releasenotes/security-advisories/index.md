@@ -1,7 +1,9 @@
 ---
 title: "Security Advisories"
-category: "Studio Pro"
-menu_order: 2
+tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens security advisory"]
+#notoc: true
+#layout: wide
+#toc-level: "3"
 ---
 
 ## 1 Introduction

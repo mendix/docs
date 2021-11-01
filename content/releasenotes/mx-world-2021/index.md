@@ -1,6 +1,6 @@
 ---
 title: "Feature Release Calendar (MxWorld 2021)"
-tags: ["Mendix World", "announcements", "Features", "Feature Release", "products", "features and products", Calendar]
+tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
 #notoc: true
 #layout: wide
 #toc-level: "3"

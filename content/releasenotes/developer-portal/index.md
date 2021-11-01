@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate
 
-* We have renewed the SSL/TLS certificate for \*.mendixcloud.com. The old certificate will expire on 10 November. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do. If you run services that connect to a \*.mendixcloud.com endpoint and use a static or outdated trust store, we advise you to update their certificates. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2021-10-29.crt.txt). This can be done from today, you do not have to wait for the old certificate to expire.
+* We have renewed the SSL/TLS certificate for \*.mendixcloud.com. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do. If you run services that connect to a \*.mendixcloud.com endpoint and use a static or outdated trust store, we advise you to update their certificates. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2021-10-29.crt.txt). This can be done from today, you do not have to wait for the old certificate to expire.
 
     Current certificate details:
     * Subject: *.mendixcloud.com

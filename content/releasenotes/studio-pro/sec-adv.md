@@ -16,16 +16,16 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 
 ## 2 Security Advisories
 
-| CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) | Studio Pro Version Fixes |
+| CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | 5.3 | (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | Fixed in [9.7.0](9.7#5.3) |
-| (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | 4.0 | (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | Fixed in [9.6.1](9.6#4.0), [8.18.12](8.18#4.0), [7.23.26](7.23#4.0) |
-| CVE-2021-33718 | 5.3 | [Access Check Bypass Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-352521.pdf) | ? |
-| CVE-2021-33712 | 8.1 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-522654.pdf) | ? |
-| CVE-2021-31339 | 4.3 | [Information Disclosure Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-854248.pdf) | ? |
-| CVE-2021-31341 | 4.3 | [Information Disclosure Vulnerability in Mendix Database Replication Module](https://cert-portal.siemens.com/productcert/pdf/ssa-919955.pdf) | ? |
-| CVE-2021-27394 | 8.1 | [Privilege Escalation Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-875726.pdf) | Fixed in [7.14.2](7.14#875726), [7.23.19](7.23#875726), [8.6.9](8.6#875726), [8.12.5](8.12#875726), [8.17.0](8.17#875726) |
-| CVE-2021-25672 | 6.8 | [Mendix Forgot Password App Store Module](https://cert-portal.siemens.com/productcert/pdf/ssa-917115.pdf) | ? |
+| (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | 5.3 | (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | Fixed in Studio Pro [9.7.0](9.7#5.3) |
+| (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | 4.0 | (To be [published by Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) on November 9th, 2021) | Fixed in Studio Pro [9.6.1](9.6#4.0), [8.18.12](8.18#4.0), [7.23.26](7.23#4.0) |
+| CVE-2021-33718 | 5.3 | [Access Check Bypass Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-352521.pdf) | See the SSA description for remediation details |
+| CVE-2021-33712 | 8.1 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-522654.pdf) | See the SSA description for remediation details |
+| CVE-2021-31339 | 4.3 | [Information Disclosure Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-854248.pdf) | See the SSA description for remediation details |
+| CVE-2021-31341 | 4.3 | [Information Disclosure Vulnerability in Mendix Database Replication Module](https://cert-portal.siemens.com/productcert/pdf/ssa-919955.pdf) | See the SSA description for remediation details |
+| CVE-2021-27394 | 8.1 | [Privilege Escalation Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-875726.pdf) | See the SSA description for remediation details |
+| CVE-2021-25672 | 6.8 | [Mendix Forgot Password App Store Module](https://cert-portal.siemens.com/productcert/pdf/ssa-917115.pdf) | See the SSA description for remediation details |
 
 ## 3 More Information
 

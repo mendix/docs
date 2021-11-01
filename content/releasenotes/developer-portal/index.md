@@ -15,6 +15,26 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### November 1st 2021
+
+#### Update of `*.mendixcloud.com` SSL/TLS certificate
+
+* We will renew the SSL/TLS certificate for \*.mendixcloud.com. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do. When you run services that connect to a \*.mendixcloud.com endpoint and use a static or outdated trust store, we advise you to update them. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2021-10-29.crt.txt).
+
+    Current certificate details:
+    * Subject: *.mendixcloud.com
+    * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
+    * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
+    * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
+    * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
+
+	New certificate details:
+    * Subject: *.mendixcloud.com
+    * Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+    * Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
+    * SHA-256 Fingerprint: BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70
+    * SHA-1 Fingerprint: 0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11
+	
 ### October 21st, 2021
 
 #### Improvements

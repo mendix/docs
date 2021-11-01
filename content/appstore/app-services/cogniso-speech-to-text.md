@@ -73,24 +73,21 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-To use the Cogniso Speech To Text features, bind your app to the Cogniso Speech To Text service. To do this, execute a microflow when the app starts. 
+To use the Cogniso Speech To Text features, your app needs to be bound to the Cogniso Speech To Text service. To do this, the app should run a microflow when it starts. The Cogniso Speech To Text contains a Java action – the **StartService** microflow, which can start the Cogniso Speech To Text service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the Cogniso Speech To Text  when the app starts.
 
-* If you app has an after-startup microflow set, perform the following steps:
 
-  1. Go to the after-startup microflow set in your app.
-  
-   	 {{% todo %}}[image]{{% /todo %}}
+1.  If you app does not have an after-startup microflow set, perform the following steps:
+   1. Create a microphone in the module.
+   2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the new microflow that you created.
+   3.  Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
 
-  2. From the after-startup microflow set, call the a Java action **StartService** , which can start the Cogniso Speech To Text service. This automatically starts the 3D Viewer when the app starts. To run a tool after the app starts usually means you want to run a specific tool all the time.
-  3. Extend the microflow with the **SpeechToText/USE_ME/StartService** microflow.
-  4. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-  5. On the menu bar, go to a **App Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup) to set the **Startup** microflow as the **After startup** step.
+       ![startup-microflow](attachments/cogniso-speech-to-text/startup-microflow.png)
 
-* If your app does not have an after-startup microflow set, perform the following steps:
-
-  1. Create a **Startup** microflow and add the **SpeechToText/USE_ME/StartService** Microflow to it.
-  2. Set the return type of the microflow to **Boolean** with a **Value** of **true**.
-  3. On the menu bar, go to **App Settings** > **Runtime** > [After startup](/refguide/project-settings#after-startup) to set the **Startup** microflow as the **After startup** step.
+2. If you app does not have an after-startup microflow set, do as follows:
+   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow that you created.
+   2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
+3. In the App Explorer, go to **Settings**. The **App Settings** dialog box opens.
+4. Go to the **Runtime** tab. Set **After startup** to the **StartupFlow** microflow that you just created in your module.
 
 ## 4 Configuration
 

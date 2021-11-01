@@ -355,7 +355,7 @@ Mendix for Private Cloud offers a reference dashboard that looks similar to [Men
 In addition, this dashboard will display Mendix app and Runtime logs.
 
 {{% alert type="warning" %}}
-Mendix for Private Cloud uses a `m2ee-metrics` sidecar that collects metrics from the [admin port](/refguide/monitoring-mendix-runtime) and translates them into a format supproted by Prometheus.
+Mendix for Private Cloud uses a `m2ee-metrics` sidecar that collects metrics from the [admin port](/refguide/monitoring-mendix-runtime) and translates them into a format supported by Prometheus.
 This approach works with all Mendix versions, starting from Mendix 7.23.
 
 Mendix 9.6 introduces native [Prometheus metrics](/refguide/metrics).

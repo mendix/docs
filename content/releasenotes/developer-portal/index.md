@@ -15,7 +15,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
-### November 1st 2021
+### November 1st, 2021
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate
 

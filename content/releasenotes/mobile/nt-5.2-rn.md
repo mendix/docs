@@ -5,6 +5,22 @@ menu_order: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.6
+
+**Release date: November 2nd, 2021**
+
+## Fixes
+
+* We fixed a bug on Android that would not allow an app to reload correctly after the first login.
+
+## 5.2.5
+
+**Release date: October 25th, 2021**
+
+## Improvements
+
+We improved the Sqlite database lifecycle on Android. This should remove the possibility for dead locks when the application is being restarted, for instance after an over the air update.
+
 ## 5.2.4
 
 **Release date: September 29th, 2021**

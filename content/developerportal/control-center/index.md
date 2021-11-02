@@ -23,7 +23,7 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) 
 ## 2 Dashboard {#dashboard}
 
 {{% alert type="info" %}}
-This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Mendix Beta Features](/releasenotes/beta-features/).
+This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Versions](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:

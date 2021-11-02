@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+This functionality is in Beta. For more information on Beta products, see [Beta Versions](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction

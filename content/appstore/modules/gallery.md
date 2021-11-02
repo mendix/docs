@@ -1,6 +1,5 @@
 ---
 title: "Gallery"
-category: "Modules"
 parent: "data-widgets"
 description: "Describes the configuration and usage of the Gallery widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "gallery", "list view", "platform support"]
@@ -14,9 +13,15 @@ The [Gallery](https://marketplace.mendix.com/link/component/116540) widget, a re
 
 Here is an example of a Gallery widget using filters:
 
+{{% image_container width="300" %}}
 ![Example of gallery using filter and sort](attachments/gallery/example.png)
+{{% /image_container %}}
 
 ### 1.2 Advanced Options
+
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
 
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
@@ -59,7 +64,9 @@ This option is only available when `Pagination` is marked as `Paging buttons` an
 
 When this option is defined as custom it will show a composable region. Here you can place widgets that will be presented when no items are available to be shown, as well as when the filter does not return any data:
 
+{{% image_container width="300" %}}
 ![Example of empty message](attachments/gallery/empty-message.png)
+{{% /image_container %}}
 
 #### 2.3.5 Dynamic Item Class
 
@@ -67,7 +74,9 @@ In the new Gallery widget we offer an option to dynamically apply a CSS class to
 
 In this example we check the value of `CountryName`, then if the attribute is equal to `Spain` apply the class `.my-custom-class` to the items:
 
+{{% image_container width="300" %}}
 ![Example of dynamic item class](attachments/gallery/dynamic-item-class.png)
+{{% /image_container %}}
 
 ### 2.4 Events
 
@@ -79,7 +88,9 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ## 3 Filtering
 
+{{% image_container width="300" %}}
 ![Example of filtering](attachments/gallery/filtering.gif)
+{{% /image_container %}}
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
@@ -101,17 +112,23 @@ If a filter is being used and its type does not match with any selected attribut
 
 An example of filtering configuration:
 
+{{% image_container width="300" %}}
 ![Example of filtering configuration](attachments/gallery/filtering.png)
+{{% /image_container %}}
 
 An example of text filter being used in the composable region combined with a drop-down sort:
 
+{{% image_container width="300" %}}
 ![Example of filtering composable region](attachments/gallery/filter-region.png)
+{{% /image_container %}}
 
 For more information about filters, see the [Filters](data-grid-2#filters) section of *Data Grid 2*.
 
 ## 4 Sorting
 
+{{% image_container width="300" %}}
 ![Example of sorting](attachments/gallery/sorting.gif)
+{{% /image_container %}}
 
 In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
@@ -119,7 +136,9 @@ In the new Gallery widget it is possible to add sorting widgets to the composabl
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
 {{% /alert %}}
 
+{{% image_container width="300" %}}
 ![Example of sorting configuration](attachments/gallery/sorting.png)
+{{% /image_container %}}
 
 ### 4.1 Drop-Down Sort {#dropdown}
 

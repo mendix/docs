@@ -13,6 +13,8 @@ For example, you can add filters and assign a task to users with the Manager rol
 
 ![User Task Example](attachments/user-task/user-task.jpg)
 
+Each user task should have a user task entity that specializes from the **WorkflowUserTask** entity in the System module. For more information on the user task entity, see the [Data](#data) section below.
+
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
 ![Task Inbox](attachments/user-task/task-inbox.jpg)
@@ -37,7 +39,9 @@ User task properties consist of the following sections:
 
 ### 2.2 Data {#data} 
 
-**Entity** is an entity that stores data on the user task execution. You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
+**Entity** is an entity that stores data on the user task execution. Once you drag and drop a user task to the workflow, the entity is created automatically for every user task, which specializes from the **WorkflowUserTask** entity in the System module. For more information on entities, see [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
+
+You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
 
 ### 2.3 Display Information Section {#display-info}
 

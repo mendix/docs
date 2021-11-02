@@ -38,6 +38,7 @@ The home page is your entry point to the various parts of the Mendix Marketplace
 | [Connectors](/appstore/connectors/) | Connectors are for connecting data services. They have content that you can drag from the [Connector](/refguide/view-menu#connector) pane in Studio Pro into your app.|
 | [Modules](/appstore/modules/) | Modules are packages of functionality for your app. They consist of a domain model, security options, and other elements like microflows, pages, or Java actions. Modules are mostly used for complex functionality that needs business or Java logic. |
 | [Widgets](/appstore/widgets/) | Widgets are single user-interface elements like containers, drop-down menus, and buttons. Select a widget, configure it, and add it to pages and snippets in your app. |
+| **Platform Services** | These services for Mendix Platform integration accessible through the Marketplace include [Data Hub](/data-hub/). |
 
 The following filter options are also available:
 
@@ -248,7 +249,7 @@ The table presents the **Products** you have subscribed to, the **Type** of plan
 
 Clicking a **Product** name takes you to the service management dashboard, which is described in the sections below.
 
-#### 4.8.1 Service Management Dashboard
+#### 4.8.1 Service Management Dashboard {#service-management-dashboard}
 
 This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
 
@@ -266,7 +267,7 @@ You can also select a group of binding keys and click **Manage Instance** to go 
 This additional management option is only available for specific app services where necessary.
 {{% /alert %}}
 
-#### 4.8.2 Creating Binding Keys
+#### 4.8.2 Creating Binding Keys {#creating-binding-keys}
 
 To create binding keys for a specific [subscription](#subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
 

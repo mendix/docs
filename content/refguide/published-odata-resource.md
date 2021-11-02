@@ -94,7 +94,7 @@ When **Use paging** is set to **Yes**, the number of objects per page can be set
 
 Default: *10000*
 
-## 8 Capabilities
+## 8 Capabilities {#capabilities}
 
 A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes. Only users that have write entity access to attributes can update them.
 

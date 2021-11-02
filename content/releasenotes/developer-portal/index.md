@@ -15,6 +15,48 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### November 1st, 2021
+
+#### Update of `*.mendixcloud.com` SSL/TLS certificate
+
+* We have renewed the SSL/TLS certificate for \*.mendixcloud.com. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome and Internet Explorer automatically trust the new certificate. In that case there is nothing you have to do. If you run services that connect to a \*.mendixcloud.com endpoint and use a static or outdated trust store, we advise you to update their certificates. The new SSL/TLS certificate can be downloaded [here](attachments/mendixcloud.com-2021-10-29.crt.txt). This can be done from today, you do not have to wait for the old certificate to expire.
+
+    Current certificate details:
+    * Subject: *.mendixcloud.com
+    * Issuer: C = US, O = DigiCert Inc, OU = www.digicert.com, CN = RapidSSL TLS RSA CA G1
+    * Validity: Sep 12 00:00:00 2019 GMT - Nov 10 12:00:00 2021 GMT
+    * SHA-256 Fingerprint: AE:55:1D:88:32:E1:7E:BF:AB:0D:F3:2F:57:57:C8:98:8D:87:3F:E8:F6:5F:A6:09:82:EA:37:F7:12:25:A5:D3
+    * SHA-1 Fingerprint: 5E:4D:05:9B:FE:54:3F:B6:D8:A4:D7:86:7F:3B:50:9A:EE:09:35:8F
+
+	New certificate details:
+    * Subject: *.mendixcloud.com
+    * Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+    * Validity: Oct 29 00:00:00 2021 GMT - Oct 29 23:59:59 2022 GMT
+    * SHA-256 Fingerprint: BF:AE:01:9F:93:5A:D9:92:35:B5:BA:9F:E4:AE:56:99:21:17:44:51:56:17:A2:11:A1:FE:3B:42:9C:B4:B6:70
+    * SHA-1 Fingerprint: 0F:3B:31:9F:86:6E:65:2D:5F:7A:EF:35:64:04:45:67:58:E4:ED:11
+	
+### October 21st, 2021
+
+#### Improvements
+
+* The app [Team](/developerportal/collaborate/team#managing) overview now shows deactivated users. These users can no longer sign in to the Mendix Platform or contribute to the app, and they were until now hidden from view. By showing deactivated users, app administrators have the opportunity to remove them from the app team.
+* During our continuous monitoring, we noticed that creating an app during peak hours caused performance issues and sometimes resulted in timeouts. We mitigated these problems by restructuring the app creation process.
+
+#### Fixes
+
+* We fixed an issue accidentally introduced in the [October 14th](#oct-fourteen) release where you were no longer able to post comments on a [feedback item's details page](/developerportal/collaborate/feedback#feedback-details). (Tickets 132892, 132959, 132983, 133075)
+
+### October 14th, 2021 {#oct-fourteen}
+
+#### Improvements
+
+* We noticed our [API Keys](/developerportal/community-tools/mendix-profile#api-key) overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
+* We added a [Team Server revision history](/developerportal/collaborate/team-server#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the [story details](/developerportal/collaborate/stories#story-details) page.
+
+#### Fixes
+
+* We fixed an issue where you could not see the story details if one of the tasks had a title that was longer than 200 characters.
+
 ### September 23rd, 2021
 
 #### Improvements

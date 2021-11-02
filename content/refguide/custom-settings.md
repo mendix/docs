@@ -57,6 +57,7 @@ The following custom settings can be configured:
 | **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |
 | **TrackWebServiceUserLastLogin** | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | **UploadedFilesPath** | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
+| **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 9.6.1 and above. | false |
 
 ## 3 Log File Settings
 
@@ -75,7 +76,7 @@ The settings below influence the behavior of the log files. These settings can o
 | Name | Description | Default Value |
 | --- | --- | --- |
 | **ClientQueryTimeout** | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
-| **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE,` `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
+| **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | **DatabaseUserName** | Name required for authentication to the database. | |
 | **DatabasePassword** | Password for the `DatabaseUserName` supplied above. | |
 | **DatabaseHost** | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
@@ -117,7 +118,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseJdbcUrl** | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). This feature is not supported for PostgreSQL databases. |   |
 | **SourceDatabaseName** | The name of the source database. |   |
 | **SourceDatabasePassword** | The password for the connection to the source database. |   |
-| **SourceDatabaseType** | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, or `SQLSERVER`. |   |
+| **SourceDatabaseType** | The type of the source database. Possible values: `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. |   |
 | **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
 | **SourceDatabaseUseSsl** | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |

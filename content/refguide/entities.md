@@ -36,8 +36,7 @@ The entity type defines how the data is handled and there are two types:
 
 
 {{% alert type="info" %}}
-You can also use data sources from other applications in your app  through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model:
- ![Virtual Entity Example](attachments/data-hub-pane/virtual-entity-example.png) 
+You can also use data sources from other applications in your app through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
 
 For further information see [External Entities](external-entities).
 {{% /alert %}}

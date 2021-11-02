@@ -1,6 +1,6 @@
 ---
 title: "Feature Release Calendar (MxWorld 2021)"
-tags: ["Mendix World", "announcements", "Features", "Feature Release", "products", "features and products", Calendar]
+tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
 #notoc: true
 #layout: wide
 #toc-level: "3"
@@ -19,7 +19,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 ![Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation.](attachments/index/innovations.png)
 
 {{% alert type="info" %}}
-Features which were already released (Generally Available) on September 8, 2021 are marked **GA**. For more information on **Public Beta** releases, see [Mendix Beta](/releasenotes/beta-features/).
+Features which were already released (Generally Available) on September 8, 2021 are marked **GA**. For more information on **Public Beta** releases, see [Beta Versions(/releasenotes/beta-features/).
 {{% /alert %}}
 
 

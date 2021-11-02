@@ -62,7 +62,7 @@ Background execution is done in so called **Task Queues**. They can be created i
     
     The total number of worker threads is limited to 40 (per cluster node). There is no hard limit on cluster nodes.
 
-### 2.3 Scheduling Microflow Executions
+### 2.3 Queueing Microflow Executions
 
 #### 2.3.1 In Studio Pro
 
@@ -85,7 +85,7 @@ Core.microflowCall("AModule.SomeMicroflow")
 
 The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
 
-### 2.4 Scheduling Java Action Executions
+### 2.4 Queueing Java Action Executions
 
 #### 2.4.1 In Studio Pro
 

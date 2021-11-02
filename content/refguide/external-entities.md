@@ -34,7 +34,7 @@ To add an external entity to your app model, follow these steps:
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-	![ Virtual Entity and OData Service files](attachments/external-entities/consumed-service-docs.png)
+	    ![ Virtual Entity and OData Service files](attachments/external-entities/consumed-service-docs.png)
 
 {{% alert type="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -42,12 +42,12 @@ When you drag an entity that is associated with an entity from the same service 
 
 For further information, see [Consumed OData Service](consumed-odata-service).
 
-In the **App** section of the **Data Hub** pane the consumed entities that are in the current app are listed:
+The consumed entities of the current app are listed in the **Used in your App** section of the **Data Hub** pane:
 
 ![ Virtual Entity and OData Service files](attachments/external-entities/data-hub-app.png)
 
 {{% alert type="info" %}}
-If there is a newer version of a consumed service becomes available in the Data Hub Catlog, this will be indicated in the **Data Hub** pane by an update arrow against the service name. For more information, see the [Updating or Switching a Consumed OData Service](consumed-odata-service#updating) section in *Consumed OData Service*.
+When a new version of a consumed service becomes available in the Data Hub Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](consumed-odata-service#updating) section in *Consumed OData Service*.
 {{% /alert %}}
 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the source application and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the source app) will automatically be made in the local module.

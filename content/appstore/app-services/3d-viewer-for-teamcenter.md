@@ -5,8 +5,6 @@ description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support", "teamcenter"]
 ---
 
-{{% todo %}}[**Add Marketplace link**]{{% /todo %}}
-
 ## 1 Introduction
 
 The [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608) module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627). This is an add-on module to the [3D Viewer](3d-viewer) app service that provides easy-to-use nanoflows and microflows that help you work with 3D models.
@@ -184,7 +182,7 @@ Follow these steps to set custom revision rules:
 ### 5.5 Create a ModelDocument from an Item Revision
 
 A **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model. In addition to getting a list of ModelDocument returned from the **SearchTC** nanoflow, **Viewer3D_TC** also contains the **GetModelDocumentByTCItemRevision** microflow for you to construct a legal ModelDocument directly from an item revision. This adds more flexibility for getting your model in Teamcenter visualized. 
- 
+
 ## 6 Read More
 
 * [3D Viewer](3d-viewer)

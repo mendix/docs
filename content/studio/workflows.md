@@ -15,7 +15,7 @@ Workflows in Studio are available for apps with Mendix version 9.5.
 ## 1 Introduction
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+This functionality is in Beta. For more information on Beta products, see [Beta Versions](/releasenotes/beta-features/).
 {{% /alert %}}
 
 Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to to solve your business problems that involve processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 

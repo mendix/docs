@@ -19,7 +19,7 @@ description: "Native Template 5.2 release notes."
 
 ## Improvements
 
-We improved the Sqlite database lifecycle on Android. This should remove the possibility for dead locks when the application is being restarted, for instance after an over the air update.
+* We improved the SQLite database life cycle on Android. This should remove the possibility of dead locks when an app is being restarted, for example after an over-the-air update.
 
 ## 5.2.4
 
@@ -27,7 +27,7 @@ We improved the Sqlite database lifecycle on Android. This should remove the pos
 
 ## Improvements
 
-iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
 
 ## 5.2.3
 

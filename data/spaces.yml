@@ -116,8 +116,9 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
-    - "Feature Release Calendar (MxWorld 2021)"
+    - "Security Advisories"
     - "Mendix Beta"
+    - "Feature Release Calendar (MxWorld 2021)"
 developerportal:
   space: "Developer Portal Guide"
   priority: false

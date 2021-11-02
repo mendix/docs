@@ -1,7 +1,7 @@
 ---
 title: "Setup your Personal Access Token"
 parent: "sdk-howtos"
-menu_order: 20
+menu_order: 11
 ---
 
 # Setup your Personal Access Token

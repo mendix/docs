@@ -20,6 +20,7 @@ Follow these step-by-step guides to learn everything you need about using the SD
 * [How to Set Up Your Development Environment](setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
 * [How to Set Up Your Personal Access Token](setup-your-pat) – guides you in the process of creating and saving your Personal Access token. This token is required to authenticate your script.
 * [How to Create Your First Script](creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
+* [How to Use Mendix Pltatform SDK](using-platform-sdk) – guides you on how to use the Platform SDK to create/open/delete Mendix apps and how to make changes to your app
 * [How to Create the Domain Model](creating-the-domain-model) – guides you in the process of creating a more extensive domain model
 * [How to Manipulate Existing Models](manipulating-existing-models) – teaches you how to change things in the model, close the server connection, and find and load units and elements
 * [How to Generate Code from the Model](generating-code-from-the-model) – explains how to write code to alter your model

@@ -294,7 +294,7 @@ You can select an **Action** from a list of actions upon an error, for example, 
 
 ### 6.1 Batching Mode of Speech Conversion
 
-Sometimes you need to implement the speech conversion as a back-end service rather than a user interface operation. Then batching subscription is your best option to convert any mendix mediaDocument object into written text.
+Sometimes you need to implement the speech conversion as a back-end service rather than a user interface operation. Then batching subscription is your best option to convert any mendix **mediaDocument** object into written text.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

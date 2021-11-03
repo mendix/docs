@@ -132,15 +132,15 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 5. Make sure only the module **MyFirstModule** is selected. This can restrict batch translation to this module.
 
-   ![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
+    ![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
 
 6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
 
-   ![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
+    ![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
 
 7. Enter translations in the **Translation (Russian, Russia)** column for a few terms: **Cancel**, **Delete**, and **Edit**, for example.
 
-   ![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
+    ![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
 
 8. Click **Translate** to save the current translations.
 

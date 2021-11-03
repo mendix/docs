@@ -50,6 +50,10 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
+### 2.4 Error: Unable to Detect Studio Pro
+
+If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
+
 ## 3 Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).

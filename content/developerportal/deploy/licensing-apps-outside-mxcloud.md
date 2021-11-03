@@ -14,9 +14,20 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 
 ## 1 Introduction
 
-Mendix allows you to build **Free Apps** which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix. You can deploy these to the Mendix Cloud, or to another public or private cloud of your choice, for example SAP Business Technology Platform (SAP BTP).
+On the Mendix Cloud, you can build [Free Apps](mendix-cloud-deploy#free-app) which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix.
 
-However, Free Apps are restricted in how long they run; they will stop running after around 2 hours. If they are run outside the Mendix Cloud, they cannot have more than ten users. There are also restrictions on how they can be configured. A full list of restrictions is available in [Mendix Cloud](mendix-cloud-deploy) – note that some of these restrictions are specific to Free Apps running on Mendix Cloud.
+You can also deploy apps without a license to another public or private cloud of your choice, for example SAP Business Technology Platform (SAP BTP). This gives you the opportunity to try things out and to build and test apps using both the functionality of Mendix and your target cloud.
+
+Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions which are listed in the table below:
+
+| Feature | Unlicensed App | Licensed App |
+| --- | --- | --- |
+| **Number of Concurrent Users** | 6 | Depends on your pricing plan.¹ |
+| **Sleep Mode** | Goes into Sleep Mode after two hours or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
+| **Number of Named Users** | No Limit | Depends on your pricing plan.¹ |
+| **Data Hub** | No Limit | Depends on your pricing plan.¹ |
+
+¹ The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
 To use your app in a production environment, you need to license it. The method for doing this differs depending on the environment to which you are deploying your app.
 

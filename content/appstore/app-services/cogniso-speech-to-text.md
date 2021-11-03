@@ -52,13 +52,13 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
 
     1. In the **App Explorer**, right-click the app.
-    2. Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
+    2.  Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
 
-       ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
+        ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
 
-       In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
 
-       {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
     3. In the **Import Module** dialog box, click **Import**. 
     4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -69,21 +69,21 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-To use the Cogniso Speech To Text features, your app needs to be bound to the Cogniso Speech To Text service. To do this, the app should run a microflow when it starts. The Cogniso Speech To Text contains a Java action – the **StartService** microflow, which can start the Cogniso Speech To Text service for you. Call this Java action from your app's after-startup microflow, and this will automatically start the Cogniso Speech To Text  when the app starts.
+It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the StartService microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings.md#after-startup) setting to call the StartService microflow.
 
 
-1.  If you app does not have an after-startup microflow set, perform the following steps:
-   1. Create a microphone in the module.
+1.  If you app does not have an after-startup microflow, perform the following steps:
+   1. Create a microphone in your module.
    2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the new microflow that you created.
-   3.  Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
+   3.  Set the return type of the microflow to **Boolean** with **true** as the **Return value**.
 
        ![startup-microflow](attachments/cogniso-speech-to-text/startup-microflow.png)
 
-2. If you app does not have an after-startup microflow set, do as follows:
-   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow that you created.
+2. If you app has an after-startup microflow, perform the following:
+   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow.
    2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
-3. In the App Explorer, go to **Settings**. The **App Settings** dialog box opens.
-4. Go to the **Runtime** tab. Set **After startup** to the **StartupFlow** microflow that you just created in your module.
+3. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
+4. Go to the **Runtime** tab. Set **After startup** to the microflow that calls the StartService microflow.
 
 ## 4 Configuration
 

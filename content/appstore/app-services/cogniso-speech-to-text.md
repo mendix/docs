@@ -1,10 +1,9 @@
 ---
 title: "Cogniso Speech To Text"
 category: "App Services"
-menu_order: 1
+description: " "
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
 draft: true
-
 ---
 
 ## 1 Introduction
@@ -246,7 +245,7 @@ The voice-to-text action allows you to customize **Action** items. You can build
 
 #### 5.3.1 Utterance
 
-**Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules which are triggered on speech conversion. We also have some interal trie filters to extract the key point of short sentences.{{% todo %}}[what are interal trie filters?]{{% /todo %}}
+**Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules which are triggered on speech conversion. We also have some internal trie filters to extract the key point of short sentences.
 
 For instance, you can set short sentence as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the Microphone widget will match this action to perform next move to execute actions.
 

@@ -1,7 +1,7 @@
 ---
 title: "Cogniso Translation"
 category: "App Services"
-menu_order: 1
+description: " "
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 draft: true
 ---

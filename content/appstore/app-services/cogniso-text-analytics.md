@@ -1,7 +1,7 @@
 ---
 title: "Cogniso Text Analytics"
 category: "App Services"
-menu_order: 1
+description: " "
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]
 draft: true
 ---

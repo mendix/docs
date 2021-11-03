@@ -1,7 +1,7 @@
 ---
 title: "Cogniso Text To Speech"
 category: "App Services"
-menu_order: 1
+description: " "
 tags: ["text to speech", "service", "app store", "marketplace", "component", "platform support"]
 draft: true
 ---

@@ -3,7 +3,6 @@ title: "Cogniso Text Analytics"
 category: "App Services"
 description: " "
 tags: ["text analytics", "service", "app store", "marketplace", "component", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

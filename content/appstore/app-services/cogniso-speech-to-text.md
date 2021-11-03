@@ -3,7 +3,6 @@ title: "Cogniso Speech To Text"
 category: "App Services"
 description: " "
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

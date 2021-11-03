@@ -3,7 +3,6 @@ title: "Cogniso Translation"
 category: "App Services"
 description: " "
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
-draft: true
 ---
 
 ## 1 Introduction

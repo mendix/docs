@@ -16,10 +16,10 @@ Here is an overview of what CognisoSpeechToText contains:
 * [Constants](#constants)
 	* LicenseToken
 	* TokenEndpoint
-* [Microflows](#microflow) 
+* [Microflows](#microflows) 
 	* BatchTranscription
 	* StartService
-* [Nanoflows](#nanoflow) 
+* [Nanoflows](#nanoflows) 
 * [Java action](#java-action) 
 * [Widgets](#widgets) 
 	* Microphone
@@ -69,7 +69,7 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the StartService microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings.md#after-startup) setting to call the StartService microflow.
+It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings.md#after-startup) setting to call the **StartService** microflow.
 
 
 1.  If you app does not have an after-startup microflow, perform the following steps:
@@ -83,7 +83,7 @@ It is good to run the Cogniso Speech to Text service automatically when your app
    1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow.
    2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
 3. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
-4. Go to the **Runtime** tab. Set **After startup** to the microflow that calls the StartService microflow.
+4. Go to the **Runtime** tab. Set **After startup** to the microflow that calls the **StartService** microflow.
 
 ## 4 Configuration
 
@@ -102,7 +102,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 4.2.1 Lincese Token
 
-The **LicenseToken** constant is used to provide a valid CognisoSpeechToText license token for the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to be able to use the CognisoSpeechToText fucntionality in a deployed app, you  need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant offers a valid CognisoSpeechToText license token to the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to use the CognisoSpeechToText fucntionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how CognisoSpeechToText works, that is to say, you will only build and run an app that uses CognisoSpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
@@ -110,9 +110,9 @@ For details on how to get a license token, see the [Obtaining a LicenseToken for
 
 #### 4.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
-### 4.3 Microflow {#microflow}
+### 4.3 Microflows{#microflows}
 
 #### 4.3.1 BatchTranscript
 
@@ -130,28 +130,29 @@ The **StartService** microflow is used to set up a cognitive speech-to-text back
 
 #### 4.4.1 Core Widgets
 
-The only core widget required to perform voice-to-text is the Microphone widget.
+The only core widget required to perform the voice-to-text action is the Microphone widget.
 
 ##### 4.4.1.1 Microphone {#microphone}
 
-This Microphone widget provides the customization of voice-to-text actions.
+This Microphone widget provides settings for the customization of voice-to-text actions.
 
-For this widget to perform voice to text correctly, set the following properties:
+To let this widget perform voice to text correctly, set the following properties:
 
 *   **General** tab
   * **Enable language selection** – when set to **Yes**, custom language settings are enabled
     * **language**  – determines which language to use for speech conversion (default language: US-English, data type: String)
-  * **Enable wakeup** – when set to **Yes**, the following custom language settings for speech conversion are enabled:
-    * **wakeupMessage**  – the valid string value which approximately contains two to four words to activate the voice-to-text action (if the message is empty, the actions are always activated)
-    * **wakeupResponse** – the valid string value to give a voice response to users when the voice-to-text action is activated
-    * **maxIdleTime** – the number of seconds after which the voice-to-text action is deactivated (if the value is less or equals to zero, the microphone is always on standby once activated)
+  * **Enable wakeup** – when set to **Yes**, the following custom settings for wakeup messages are enabled:
+    * **wakeupMessage**  – the string which approximately contains two to four words to activate the voice-to-action (if this is empty, the actions are always activated)
+    * **wakeupResponse** – the string to give to users as a voice response when the voice-to-action is activated
+    * **Max allowed idle time** – the number of seconds after which the voice-to-text action is deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
+    * **Enable wakeup** – decides whether to activate the Microphone widget via a wakeup message (this is an experimental feature)
 * **Events** tab
-  * **On transcript** – by binding a String attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to back-end service to match with voice-to-text actions
-    * **transcript**
-    * **Action**
-  * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error occurs
-    * **Error**
-    * **Action**
+  * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service to trigger an action
+    * **transcript**  – sets a string attribute as a voice input parameter
+    * **Action** – sets which action is executed  when a transcript is received
+  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error occurs
+    * **Error** – sets a string attribute as the error message
+    * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
   * **Actions**  – the option **Enable action** determines whether to enable speech actions
     * **Actions** – the actions to take when a transcript is matched

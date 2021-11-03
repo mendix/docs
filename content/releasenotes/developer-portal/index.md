@@ -15,6 +15,12 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### November 4th, 2021
+
+#### Improvements
+
+* We redesigned our story archive page to allow you to more easily search through completed stories by id, name, description or sprint.
+
 ### November 1st, 2021
 
 #### Update of `*.mendixcloud.com` SSL/TLS certificate

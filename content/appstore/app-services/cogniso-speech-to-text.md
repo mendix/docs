@@ -130,11 +130,11 @@ The **StartService** microflow is used to set up a cognitive speech-to-text back
 
 #### 4.4.1 Core Widgets
 
-The only core widget required to perform the voice-to-text action is the Microphone widget.
+The only core widget required to perform the voice-to-text action is the **Microphone** widget.
 
 ##### 4.4.1.1 Microphone {#microphone}
 
-This Microphone widget provides settings for the customization of voice-to-text actions.
+This **Microphone** widget provides settings for the customization of voice-to-text actions.
 
 To let this widget perform voice to text correctly, set the following properties:
 
@@ -145,12 +145,12 @@ To let this widget perform voice to text correctly, set the following properties
     * **wakeupMessage**  – the string which approximately contains two to four words to activate the voice-to-action (if this is empty, the actions are always activated)
     * **wakeupResponse** – the string to give to users as a voice response when the voice-to-action is activated
     * **Max allowed idle time** – the number of seconds after which the voice-to-text action is deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
-    * **Enable wakeup** – determines whether to activate the Microphone widget via a wakeup message (this is an experimental feature)
+    * **Enable wakeup** – determines whether to activate the **Microphone** widget via a wakeup message (this is an experimental feature)
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service to trigger an action
     * **transcript**  – sets a string attribute as a voice input parameter
     * **Action** – sets which action is executed  when a transcript is received
-  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error occurs
+  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the **Microphone** widget and set custom actions that are trigged when an error occurs
     * **Error** – sets a string attribute as the error message
     * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
@@ -161,7 +161,7 @@ To let this widget perform voice to text correctly, set the following properties
       * **Action** – the action triggered when the received transcript matches an utterance
       * **Feedback** – the voice feedback provided to users when an action is triggered
 
-    * **Arguments** – the captured arguments in transcript as a comma-separated list. This requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
+    * **Arguments** – the captured arguments in a transcript as a comma-separated list. This requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
 
     * **Fallback message** – the message to notify users when no action is matched
 
@@ -169,15 +169,15 @@ To let this widget perform voice to text correctly, set the following properties
 
 ## 5 Using Cogniso Speech To Text
 
-Cogniso Speech To Text provides the Microphone widget to convert voice into text with customizable actions.
+Cogniso Speech To Text provides the **Microphone** widget to convert voice into text with customizable actions.
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable voice-to-text actions quickly.
 
 ### 5.1 Converting Voice into Text in Your Browser
 
-To let the [Microphone](#microphone) widget perform voice-to-text actions, set these three data source attributes: **transcript**, **Actions** and **Arguments**. To match voice-to-text actions, pass captured arguments to triggered actions, configure a set of action items in the Microphone widget.
+To let the [Microphone](#microphone) widget perform voice-to-text actions, set these three data source attributes: **transcript**, **Actions** and **Arguments**. To match voice-to-text actions, pass captured arguments to triggered actions, configure a set of action items in the **Microphone** widget.
 
-Follow these steps to configure this voice-to-text action:
+Follow these steps to configure the voice-to-text action:
 
 1. In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
 
@@ -198,7 +198,7 @@ Follow these steps to configure this voice-to-text action:
 
 3. From the **Toolbox**, add a Data View widget to your page.
 4. Inside the Data View widget, add a [Microphone](#microphone) widget.
-5.  Perform the following steps to set the CreateMicrophoneObject nanoflow as the data source of the Data View widget:
+5.  Set the CreateMicrophoneObject nanoflow as the data source of the Data View widget:
    1. Double-click the Data View widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. Click **Select** and select the CreateMicrophoneObject nanoflow for **Nanoflow**.
@@ -207,7 +207,7 @@ Follow these steps to configure this voice-to-text action:
     2. For **transcript**, click **Select** and select the **NewTranscript** attribute.
     3. Go to the **Voice to Action** tab.
     4. For **Arguments**, click **Select** and select the **Arguments** attribute.
-    5. For **Actions**, click **New**, and set **Utterance**, **Action**, and **Feedback** to add a new **Action**. For example:
+    5. For **Actions**, click **New**, and set **Utterance**, **Action**, and **Feedback** to add a new action. For example:
 
        ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
        
@@ -225,36 +225,36 @@ Configure wakeup message to wake up the back-end service automatically with two 
 
 Follow these steps to configure this wakeup message:
 
-1. Double-click the **Microphone** widget. The **Edit Microphone** dialog box opens.
-2. On the **General** tab, select **Yes** for **Enable wakeup** to activate the microphone.
-3. Set up a **Wakeup message** with no more than two words to activate the voice to action.
-4. Set up a **Wakeup response** message to notify users when voice to action is activated.
+1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
+2. On the **General** tab, select **Yes** for **Enable wakeup** to enable activating the **Microphone** widget via wakeup messages.
+3. Set up a **Wakeup message** with no more than two words.
+4. Set up a **Wakeup response** which is used as a voice response to users when a voice-to-action is activated.
 
 ![wakeup-message](attachments/cogniso-speech-to-text/wakeup-message.png)
 
 5. Click **OK** to save the changes and close the dialog box.
 
-You have made the basic settings of the Microphone widget.
+You have made the basic settings for the **Microphone** widget.
 
 ### 5.3 Customizing Voice to Text Actions {#actions}
 
-The voice-to-text action allows you to customize **Action** items. You can build a customized, automated conversation scenario by setting up **Utterance**, **Actions** and **Voice Feedback**. You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
+You can build a customized, automated conversation scenario by setting up **Utterance**, **Actions** and **Voice Feedback**. You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
 
 #### 5.3.1 Utterance
 
-**Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules which are triggered on speech conversion. We also have some internal trie filters to extract the key point of short sentences.
+**Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
-For instance, you can set short sentence as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the Microphone widget will match this action to perform next move to execute actions.
+For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set.
 
 #### 5.3.2 Actions
 
-You can select from a list of customized actions for **Action**. This action is triggered when a received transcript matches the action text.
+You can select an **Action** from a list of actions. This action is triggered when a received transcript matches an utterance.
 
 #### 5.3.3 Voice Feedback
 
-**Voice feedback** can be a string template following natural language syntax, which is provided to user after an action is to be activated.
+**Voice feedback** can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
-For instance, you can set voice feedback as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the Microphone widget.
+For instance, you can set **Voice feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
 ![microphone-voicetoaction-sample](attachments/cogniso-speech-to-text/microphone-voicetoaction-sample.png)
 
@@ -262,29 +262,29 @@ For instance, you can set voice feedback as `model is rotated {0} degree around 
 
 Multiple events can be picked up by the [Microphone](#microphone) widget and can be used to build your customized event handling logic.
 
-There are two main types of events that can be picked up by the Microphone widget, which are described in the sections below.
+There are two main types of events that can be picked up by the **Microphone** widget, which are described in the sections below.
 
 #### 5.4.1 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the Microphone widget.
+By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the **Microphone** widget.
 
-**transcript** takes a String attribute. You can define an attribute and bind that attribute to this property. This attribute stores the result of the voice-into-text conversion, which matches the action items in the Microphone widget to trigger actions. 
+**transcript** takes a string attribute. You can define an attribute and bind that attribute to **transcript**. This attribute stores the result of text converted from voice, which matches an utterance in the **Microphone** widget to trigger an action. 
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
 
-You can select an **Action** from a list of actions. For example, the action can show the whole content of the voice-to-text conversion history.
+You can select an **Action** from a list of actions. For example, the app can show the whole content of the voice-to-text conversion history.
 
 ![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
 
 #### 5.4.2 On Error {#on-error}
 
-By binding an attribute to the **Error** event, you can pick up an error raised by the Microphone widget.
+By binding an attribute to the **Error** event, you can pick up an error raised by the **Microphone** widget.
 
-**Error** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, when there is a problem with converting voice into text, the error event will be triggered, and the error information will be populated to this Error attribute. You can easily obtain this error message raised by the Microphone widget and add custom actions to trigger when error arises.
+**Error** takes a string attribute. You can define an attribute and bind that attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. You can easily obtain this error message raised by the **Microphone** widget and set custom actions that are triggered when error arises.
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.png)
 
-You can select an **Action** from a list of actions upon a Microphone error, for example, the action can show an error pop-up window to provide error details to users.
+You can select an **Action** from a list of actions upon an error, for example, the app can show a pop-up window to provide error details to users.
 
 ![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
 

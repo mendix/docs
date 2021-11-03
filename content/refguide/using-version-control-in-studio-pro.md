@@ -66,7 +66,7 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
 {{% /alert %}}
 
-For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
+For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. The folders and modules containing changes will be depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
 
 You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
@@ -80,7 +80,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
-To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **App** > **Commit...** menu item.
+To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
 ![Commit Button](attachments/using-version-control-in-studio-pro/commit-button.png)
 
@@ -112,7 +112,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 Updating retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
-To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **App** > **Update** menu item.
+To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **Version Control** > **Update** menu item.
 
 ![Update Button](attachments/using-version-control-in-studio-pro/update-button.png)
 

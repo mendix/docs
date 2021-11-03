@@ -30,7 +30,7 @@ There are two different performance issues with calculated attributes that you c
 
 Retrieve activities trigger the logic of calculated attributes, which can lead to database actions and microflow calls being executed (objects retrieving each other through calculated attributes).
 
-If data widgets (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
+If data containers (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
 
 #### 2.1.1 Steps to Fix
 
@@ -57,7 +57,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ## 3 Add an Index to Attributes in Sort Bars {#mxp003}
 
-[Sort bars](sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
+[Sort bars](sort-bar) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
 - Data grid
 - Template grid

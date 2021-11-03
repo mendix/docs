@@ -8,7 +8,7 @@ tags: ["studio pro", "data set", "dataset"]
 
 ## 1 Introduction
 
-A dataset can be used to define the data shown in [reporting widgets](report-widgets) in [pages](pages).
+A dataset can be used to define the data shown in [reports](report-widgets) in [pages](pages).
 
 A dataset is defined using either an [OQL query](oql) or a custom [Java action](java-actions). To constrain a dataset, parameters can be defined which can be used in the OQL query or Java action.
 

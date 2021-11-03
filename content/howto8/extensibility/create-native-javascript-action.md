@@ -52,7 +52,7 @@ Follow these instructions to set up your NFC project:
 
 1. Open Mendix Studio Pro.
 1. Select **File** > **New Project**.
-1. Select the **Native Mobile Quickstart** app (also available online [here](https://marketplace.mendix.com/link/component/109511/)).
+1. Select the **Blank Native Mobile App** (also available online [here](https://marketplace.mendix.com/link/component/109511/)).
 1. Click **Use this starting point**.
 1. Name your app NativeNFC and click **Create App** to close the dialog box.
 1. Rename module **NativeMobile** to *NativeNFC*. You will add your implementation In this module.

@@ -49,7 +49,6 @@ To create a new page, do the following:
 
     ![](attachments/page/add-page.png)
     
-
 2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     ![](attachments/page/create-page.png)
@@ -75,12 +74,9 @@ In **Structure mode**, there are several ways to add an element on a page:
 
 1.  Through the **Toolbox**:
 
-    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.
-    
-        ![](attachments/page/toolbox.png)
-      
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
     2. Select an element you would like to add and drag and drop this element on your page.
-   
+    
 2. Through the menu at the top of the page:
 
     1. Do one of the following:
@@ -167,7 +163,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
 * Right-click a drop-zone allows you to insert a widget into it
 
-* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
 
 	![Frequently-used widgets](attachments/page/frequently-used.png)
 

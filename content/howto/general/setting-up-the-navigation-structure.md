@@ -29,8 +29,6 @@ Do the following:
 
 1.  Open **App** > **Navigation**.
 
-    ![](attachments/setting-up-the-navigation-structure/open-navigation.png)
-
 2. Some navigation profiles are open in a tab by default, for example, the **Responsive** one. To open other navigation profiles, do the following:
 
     1. Click **Add navigation profile**, select the profile type depending on the type of the interface you are working on:
@@ -41,9 +39,7 @@ Do the following:
 
 3. In **Home pages** > **Default home page**, click **Select**.
 
-4. Select the page you want to use as the default home page. The example below uses *Homepage_Web*:
-
-    ![](attachments/setting-up-the-navigation-structure/select-home-page.jpg)
+4. Select the page you want to use as the default home page. 
 
 5. Click **Select**.
 

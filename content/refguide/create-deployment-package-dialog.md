@@ -19,7 +19,7 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 | SAP BTP | 1.5GB |
 | Mendix for Private Cloud | 200MB |
 
-This is the uncompressed size of the deployment package (.mpk file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
+This is the uncompressed size of the deployment package (.mda file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
 
 Unfortunately, from the error shown on the log during deployment is not always clear that the package size is a problem. But if you have issues deploying your app you should check the package size as one possible cause.
 {{% /alert %}}

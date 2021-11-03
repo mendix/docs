@@ -11,7 +11,7 @@ The state is in the client (web browser). This allows the server to be scaled to
 To do this, use the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination to dump the state into the browser console. The state is displayed in a JSON object and is grouped by entity type. If the entity is not-persistable, this is indicated with the suffix `[NPE]`.
 
 {{% alert type="info" %}}
-The <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination works in all browsers except Mozilla Firefox in [Parallels](/howto/mobile/using-mendix-studio-pro-on-a-mac).
+The <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination works in all browsers except Mozilla Firefox in [Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).
 {{% /alert %}}
 
 ## 2 Details

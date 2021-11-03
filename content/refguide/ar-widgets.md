@@ -17,9 +17,9 @@ to create AR experiences. The following terms will be used frequently:
 
 ## 2 Overview of AR Widgets
 
-There are 9 total AR Widgets. Some are container widgets, while others are visual widgets:
+There are 9 total AR Widgets. Some are structure widgets, while others are visual widgets:
 
-Container widgets:
+Structure  widgets:
 
 1.  **Containter (AR)**
 2.  **Image Tracker (AR)**
@@ -34,7 +34,7 @@ Visual widgets:
 8.  **Sphere (AR)**
 9.  **Square (AR)**
 
-## 3 Container Widgets 
+## 3 Structure Widgets 
 
 This are the AR widgets that can contain other widgets:
 
@@ -43,7 +43,7 @@ This are the AR widgets that can contain other widgets:
 * **Plane Selector (AR)**
 * **Node (AR)**
 
-These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Container widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
+These widgets do not necessarily add something visual to the AR scene. Instead, they provide functionality or allow you to group other widgets. Structure  widgets function as new starting points for the widgets embedded in them. When you start an AR app, the location of your phone serves as the origin.
 
 ### 3.1 Container (AR)
 

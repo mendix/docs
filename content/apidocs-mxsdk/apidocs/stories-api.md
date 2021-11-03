@@ -17,7 +17,8 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 {{% /alert %}}
 
-[Get WSDL](attachments/9535497/19398865.wsdl)
+To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](attachments/9535497/19398865.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service).
+
 
 ## 2 Published Microflows
 

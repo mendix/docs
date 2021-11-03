@@ -24,10 +24,6 @@ The [Video Player](https://marketplace.mendix.com/link/component/110700/) widget
 
 * File hosted in Mendix Server cannot be played in the Safari browser
 
-### 1.3 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://videoplayer-sandbox.mxapps.io/).
-
 ## 2 Configuration
 
 Place the widget inside or outside a context of an object that has a value attribute. If you do not place the widget

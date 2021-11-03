@@ -57,7 +57,7 @@ You can also open PWA profiles on your device via the **View on your device** op
 
 {{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-dialog.png){{% /image_container %}}
 
-Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/mobile/using-mendix-studio-pro-on-a-mac).
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).
 
 {{% alert type="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.

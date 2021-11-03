@@ -103,7 +103,7 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 

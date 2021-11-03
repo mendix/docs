@@ -69,6 +69,12 @@ By default, apps are deployed to the Mendix Cloud **v4**. Features which are cov
 
 In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
+### 1.4 Database
+
+Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
+
+If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
+
 ## 2 Deploying an App to the Mendix Cloud
 
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.

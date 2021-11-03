@@ -11,7 +11,7 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 This documentation describes the adaptations needed to develop Mendix native mobile apps for MindSphere. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations, and allows access to all native device capabilities.
 Details about building native mobile apps with Mendix can be found in the [Native Mobile How Tos](/howto/mobile/native-mobile) section.
 
-The [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) is an app template which is based on the **Native Mobile Quickstart** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
+The [Siemens MindSphere Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) is an app template which is based on the **Blank Native Mobile App** from Mendix and includes all you need to start developing a native mobile app for your MindSphere tenant.
 
 On a phone there is no MindSphere launchpad - therefore the app has to implement the login to MindSphere itself. The template contains a login page which is shown to the user at startup.
 The end-user signs in to MindSphere outside the native application, in a browser, and your app is started after a successful login via a "Deep Link". Details about this process can be found in [Developing Mobile Apps for MindSphere](https://developer.mindsphere.io/howto/howto-develop-mobile-app-with-mdsp.html) in the MindSphere documentation. But do not worry - the implementation is already part of the app template - just use it.

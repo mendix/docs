@@ -94,6 +94,10 @@ In both cases you need `repository write` permission.
 
 We have a compatibility limitation with AWS CodeCommit in Git Technology Preview for Studio Pro.
 
+### 2.5 Graphics Card
+
+If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
+
 ## 3 Team Server {#ts}
 
 The [Team Server](/developerportal/collaborate/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:

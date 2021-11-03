@@ -52,8 +52,6 @@ To create logic to call the web service, follow these steps:
 
 4.  Open the **Toolbox** and drag a **Create variable** activity to the line between the start and end event.
 
-    ![](attachments/8784287/8946802.png)
-
 5. Double-click the new activity to open the **Create Variable** properties editor.
 
 6. For the **Data Type**, select **Integer/Long** and enter *100* as the value. For the **Output Variable Name** enter *TemperatureInCelsius*:

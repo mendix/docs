@@ -90,7 +90,7 @@ We support the following comparison operators:
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<sup>1</sup> In OData 3, the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`
+<small><sup>1</sup> In OData 3, the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
 ### 4.5 Combining Filters
 

@@ -7,34 +7,32 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service on Mendix Cloud that enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to transcribe voice and audio to text with state-of-the-art speech recognition. Also included are whole functionality and integrations that can be very helpful when building your own voice-to-text applications. All you need to do is drag and drop items and configure them.
+The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service on Mendix Cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. With this app service, you can build apps to transcribe voice and audio to text with state-of-the-art speech recognition. This app service can be very helpful when building your own voice-to-text applications.  This app service does the heavy-lifting for you so you do not have to build a voice-to-text application from scratch. All you need to do is drag and drop items and configure them.
 
-This app service does the heavy-lifting for you so you do not have to build a voice-to-text application from scratch.
-
-Here is an overview of what the CognisoSpeechToText contains:
+Here is an overview of what CognisoSpeechToText contains:
 
 * [Predefined entities](#predefined-entities)
 	* MediaDocument 
 * [Constants](#constants)
 	* LicenseToken
 	* TokenEndpoint
-* [Microflow](#microflow) 
+* [Microflows](#microflow) 
 	* BatchTranscription
 	* StartService
-* [Nanoflow](#nanoflow) 
+* [Nanoflows](#nanoflow) 
 * [Java action](#java-action) 
 * [Widgets](#widgets) 
 	* Microphone
 
-In most cases, you will only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
+In most cases, you only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you do not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix Cloud that enables you to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more.
+You can use this app service on Mendix Cloud to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more.
 
 ### 1.2 Features
 
-This app service enables doing the following with the Microphone widget:
+This app service enables doing the following:
 
 * Customize voice-to-text actions
 * Customize audio-to-text actions

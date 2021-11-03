@@ -659,16 +659,14 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
 {{% alert type="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available.
-
-If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements, you can add the services in the SAP BTP cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans**, and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
+If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does support the `hanatrial-schema` database.
 {{% /alert %}}
 
-For trial accounts which have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
+For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
 
 ![](attachments/sap-cloud-platform/hanatrial-schema.png)
 
-If your trial account does not include the hanatrial schema, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+If your trial account does not include `hanatrial-schema`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
 
 ## 9 Issues
 

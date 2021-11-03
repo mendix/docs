@@ -145,7 +145,7 @@ To let this widget perform voice to text correctly, set the following properties
     * **wakeupMessage**  – the string which approximately contains two to four words to activate the voice-to-action (if this is empty, the actions are always activated)
     * **wakeupResponse** – the string to give to users as a voice response when the voice-to-action is activated
     * **Max allowed idle time** – the number of seconds after which the voice-to-text action is deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
-    * **Enable wakeup** – decides whether to activate the Microphone widget via a wakeup message (this is an experimental feature)
+    * **Enable wakeup** – determines whether to activate the Microphone widget via a wakeup message (this is an experimental feature)
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service to trigger an action
     * **transcript**  – sets a string attribute as a voice input parameter
@@ -154,19 +154,18 @@ To let this widget perform voice to text correctly, set the following properties
     * **Error** – sets a string attribute as the error message
     * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
-  * **Actions**  – the option **Enable action** determines whether to enable speech actions
-    * **Actions** – the actions to take when a transcript is matched
-      * **Utterance** – the utterance of action item can be a string template following natural language syntax or a valid JavaScript regular expression.
-      * **Action** – the action of action item triggered when the received transcript matches action text
-      * **Feedback** – the voice feedback of action item provided to users after an action is to be activated.{{% todo %}}[what is to-be activated?]{{% /todo %}}
-      
+  *  **Enable action** –  when set to **Yes**, the following custom settings for actions are enabled:
+
+    * **Actions** – a list of actions to take when a transcript matches an utterance
+      * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
+      * **Action** – the action triggered when the received transcript matches an utterance
+      * **Feedback** – the voice feedback provided to users when an action is triggered
+
     * **Arguments** – the captured arguments in transcript as a comma-separated list. This requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
-    
-    * **Fallback message** – the message to notify users when no matched action is found.
-    
-    * **Translate** – the option to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
-* **Common** tab
-* **Appearance** tab
+
+    * **Fallback message** – the message to notify users when no action is matched
+
+    * **Translate** – determines whether to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
 
 ## 5 Using Cogniso Speech To Text
 

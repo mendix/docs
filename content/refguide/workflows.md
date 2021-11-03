@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+This functionality is in Beta. For more information on Beta products, see [Beta Versions](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -25,13 +25,15 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 
 ### 2.1 Workflow Parameters {#parameters}
 
-[Workflow parameters](workflow-parameters) are input data for your workflow:
+[Workflow parameters](workflow-parameters) are input data for your workflow.
 
 In the workflow editor, there are the following parameters:
 
 * The **WorkflowInstance** parameter stores data on the workflow process:
 
     ![Workflow Instance Example](attachments/workflows/workflow-instance.png)
+    
+    The entity of this parameter is automatically generated when you create a new workflow.
 
 * The **WorkflowContext** parameter is a business-related data that travels through the workflow:
 
@@ -96,7 +98,7 @@ To add a workflow to your app, do the following:
 
     ![Adding Workflow](attachments/workflows/add-workflow-dialog.jpg)
 
-The workflow is created.
+The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](workflow-parameters).
 
 ### 3.3 Deleting a Workflow
 
@@ -106,6 +108,12 @@ To delete a workflow, do the following:
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected workflow is deleted. 
+
+{{% alert type="info" %}}
+
+The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
+
+{{% /alert %}}
 
 ### 3.4 Adding Elements to a Workflow 
 

@@ -47,6 +47,7 @@ The following custom settings can be configured:
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure', and 'com.mendix.storage.swift'. | com.mendix.storage.localfilesystem |
 | com.mendix.storage.PerformDeleteFromStorage | Introduced in version 7.19.<br/>Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
+| EnableFileDocumentCaching | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 7.23.26 and above. | false |
 
 ## 3 Log File Settings
 

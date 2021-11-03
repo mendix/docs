@@ -23,7 +23,7 @@ The **WorkflowContext** parameter is a business-related data that travels throug
 
 The entity used by the workflow parameter. 
 
-For **WorkflowInstance** parameter uses an entity that stores data on the workflow process. This entity should be a specialization of the **Workflow** entity in the System module. For more information, see the [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
+For **WorkflowInstance** parameter uses an entity that stores data on the workflow process. An **WorkflowInstance** entity (a specialization of **System.Workflow**) is generated when you create a new workflow and is automatically related to this parameter. You can add attributes to this entity that are specific to the workflow process and will be used throughout it. 
 
 The **WorkflowContext** parameter uses a business-related entity that travels through the workflow. 
 

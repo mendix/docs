@@ -168,12 +168,12 @@ To fix the issue, do the following:
 
 Using multiple levels of inheritance and too many specializations on entities can affect performance, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specializations security rules and, on a large dataset, will lead to slow queries. 
 
-### 7.1 Steps to Fix
+### 8.1 Steps to Fix
 
 Do not use more than two levels of inheritance or overuse specializations on entities especially if you are using XPath for an entity access.
 
 Consider the following alternatives:
 
-- Combine attributes in one entity and add an enumeration instead of setting the generalization
-- Create entities with a one-to-one association instead of setting the generalization
-- Create a non-persistable entity that inherits from the outcome of your business logic
+1. Combine attributes in one entity and add an enumeration instead of setting the generalization
+2. Create entities with a one-to-one association instead of setting the generalization
+3. Create a non-persistable entity that inherits from the outcome of your business logic

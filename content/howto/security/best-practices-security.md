@@ -4,6 +4,8 @@ category: "Security"
 menu_order: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
 tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
+aliases:
+    - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
@@ -37,14 +39,14 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix App Store](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
 
 These are the common cases and best practices:
 
 *	HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
-    *	Use the XSSSanitize action from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module to strip malicious code from the entered HTML
-    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [CommunityCommons](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) module
-*	Database connections (for example, using a [Database Connector](https://appstore.home.mendix.com/link/app/2888/Mendix/Database-Connector)), where user input is being used within constraints – these are the ways to avoid this abuse:
+    *	Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library) module to strip malicious code from the entered HTML
+    *	Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module
+*	Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector)), where user input is being used within constraints – these are the ways to avoid this abuse:
     *	Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     *	Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
@@ -88,17 +90,13 @@ Your application might require sensitive information that should be extra encryp
 * Connection information for consumed services (like credentials, service locations, or keys)
 * Personal information (like bank account numbers or social security numbers)
 
-This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption) available from the Mendix App Store provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
+This data is defined within the domain model and stored within the database of your application. To minimize the impact of this information when it is leaked, we recommend storing this data in a (symmetric) encrypted manner. The [Encryption](/appstore/modules/encryption) module available from the Mendix Marketplace provides a way to encrypt this sensitive information in a database record based on an encryption key that is stored at the Mendix application server.
 
 ## 7 Using a Third-Party Identity Provider
 
 When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
 
-Mendix offers a range of App Store modules that enable your application to be connected with these services, including:
-
-* [SAML](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
-* [LDAP](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
-* [Kerberos](https://appstore.home.mendix.com/link/app/25/Mendix/Kerberos-Single-Sign-On)
+Mendix offers the [SAML](/appstore/modules/saml) module that enables your application to be connected with these services.
 
 Your application can gain the following benefits from using an identity provider:
 
@@ -122,7 +120,7 @@ Each application requires power users who should be able to administer technical
 
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
-The user name of the administrator can be changed in 's **Project Security** settings on the **Administrator** tab.
+The user name of the administrator can be changed in 's **App Security** settings on the **Administrator** tab.
 
 When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in  and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
@@ -142,21 +140,21 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
+You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
 
 ## 11 Adding HTTP Headers {#adding-http-header}
 
 HTTP headers can add an additional layer of security and help you detect certain attacks. For information on how to add HTTP headers, see the [HTTP Headers](/developerportal/deploy/environments-details#http-headers) section in *Environment Details*.  
 
-An example of an attack is when an application is embedded in an Iframe. Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured within the Mendix Developer Portal at your node’s environment details via **HTTP Headers**.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe) for more information.
 
-## 12 Maintaining a High Level of Project Hygiene
+## 12 Maintaining a High Level of App Hygiene
 
-As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your project hygiene at a high level will reduce the chances of a vulnerable application.
+As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your app hygiene at a high level will reduce the chances of a vulnerable application.
 
-To keep your project hygiene at a good level, perform the following steps:
+To keep your app hygiene at a good level, perform the following steps:
 
 * Remove unused modules, widgets, and Java libraries
 * Remove microflows that are not being used (these appear as warnings in Studio Pro)
@@ -166,12 +164,12 @@ A good source of known vulnerabilities is the [Common Vulnerabilities and Exposu
 
 ## 13 Configuring User Roles & Access
 
-Which users and roles are defined within an application is different per app and project. However, there are some key guidelines to keep in mind when validating the user security:
+Which users and roles are defined within an application is different per app and app. However, there are some key guidelines to keep in mind when validating the user security:
 
 * Anonymous access should be disabled if it has no function within the application
   * Some applications have anonymous access enabled, solely to serve a custom login form – this can be replaced by modifying the default *login.html* within your theme (which will also help the user experience with an improved loading time)
 * Roles managing other user roles should be as strict as possible (configured via **User management** within the user role options)
-* The role of the app project’s administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
+* The role of the app's administrator user (default **MxAdmin**) should only be able to create the actual administrative accounts (or configure SSO)
 
 ## 14 Scanning Uploaded Files for Malicious Content {#scanning-for-malicious-content}
 
@@ -180,4 +178,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix App Store content, see [How to Use the App Store Content](/developerportal/app-store/app-store-content).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).

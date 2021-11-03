@@ -18,13 +18,13 @@ Mendix allows you to publish REST web services natively from . This how-to will 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Setting Up the Example Project
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new app project and rename the **MyFirstModule** module to **RESTExample**.
+1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
 2. Open the domain model of the RESTExample module.
 3.  Create entities with an association like this:
 
@@ -37,7 +37,7 @@ Your page should now look like this:
 
 ![](attachments/publish-rest-service/order_NewEdit_Page.png)
 
-Add the overview page to your project navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
+Add the overview page to your app navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
 
 ## 4 Publishing the Service
 
@@ -45,9 +45,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.1 Creating the Mapping
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Mappings** > **Message Definitions**:
-
-	![](attachments/publish-rest-service/message_definition.png)
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Message Definitions**:
 
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
 3.  The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
@@ -65,9 +63,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.2 Configuring the REST Service
 
-1.  In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Published Services** > **Published REST Service**:
-
-	![](attachments/publish-rest-service/AddRestService.png)
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**.
 
 2. Enter *PRS_OrderService*  for the **Name** of your REST service. The REST service is now opened
 3.  Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:
@@ -95,9 +91,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/RetrieveOrder.png)
 
-11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
-
-	![](attachments/publish-rest-service/AddExportMapping.png)
+11. <a name="eleven"></a>From the App Explorer, right-click the RESTExample module and select **Add other** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
 
 12. In the **Select schema elements for export mapping** dialog box, select the **Message definition** option, and then select the **MD_Orders** mapping created earlier via the **Select** button:
 
@@ -134,7 +128,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 To view and try out your app, follow these steps:
 
-1. Run your app and open it in the browser via this URL: http://localhost:8080/rest-doc/.
+1. Run your app and open it in the browser via this URL: `http://localhost:8080/rest-doc/`.
 2.  You will see a page with the documentation of all your published REST services:
 
 	![](attachments/publish-rest-service/RESTTestOverview.png)
@@ -188,7 +182,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1.  After the activity for retrieving from the database, add a decision activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
 	![](attachments/publish-rest-service/OrderNotFoundResponse.png)
 
@@ -202,12 +196,6 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Example
-
-**How to publish REST in Studio Pro 8**
-
-{{% youtube Ff_P84NOcZk %}}
-
-## 7 Read More
+## 6 Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

@@ -5,7 +5,7 @@ parent: "apm-1"
 
 ## 1.10.1
 
-[Download](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor)
+[Download](https://marketplace.mendix.com/link/component/6127/Mendix/Mendix-Application-Performance-Monitor)
 
 ### Mendix 7 Compatibility
 
@@ -13,11 +13,11 @@ This is the first version that is also fully available for Mendix 7. Due to some
 
 * Package 1
   * This is the standard package, which is fully compatible with Mendix 7
-  * This is available in the [Mendix App Store](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor)
+  * This is available in the [Mendix Marketplace](https://marketplace.mendix.com/link/component/6127/Mendix/Mendix-Application-Performance-Monitor)
 
 * Package 2
   * This is the same version packaged for Mendix 6
-  * This is available on the **All Versions** tab in the App Store via the Modeler
+  * This is available on the **All Versions** tab in the Marketplace via the Modeler
 
 With the release of Mendix 7, the Mendix documentation changed and the help links in APM pointed to the wrong location. This has been fixed.
 

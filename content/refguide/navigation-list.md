@@ -1,6 +1,6 @@
 ---
 title: "Navigation List"
-parent: "container-widgets"
+parent: "structure-widgets"
 menu_order: 70
 tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,24 +16,28 @@ A navigation list can be used to attach an action to an entire row when a user c
 
 For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-![Navigation List](attachments/container-widgets/navigation-list.png)
+![Navigation List](attachments/structure-widgets/navigation-list.png)
 
 ## 2 Properties
 
 An example of navigation list properties is represented in the image below:
 
-{{% image_container width="350" %}}![Navigation List Properties](attachments/container-widgets/navigation-list-properties.png)
+{{% image_container width="250" %}}![Navigation List Properties](attachments/structure-widgets/navigation-list-properties.png)
 {{% /image_container %}}
 
 Navigation list properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
+
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
 
 ### 2.3 Visibility Section {#visibility}
 
@@ -55,7 +59,7 @@ In the **General** section, you can set a specific on click event for each navig
 
 {{% alert type="info" %}}
 
-Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [Starting Microflows](starting-microflows). 
+Microflows set as an on click event for a navigation list item have no **Execution**, **Confirmation**, or **Advanced** microflow settings. For more information on calling a microflow, see [On Click Event & Events Section](on-click-event#call-microflow). 
 
 {{% /alert %}}
 
@@ -66,5 +70,5 @@ Microflows set as an on click event for a navigation list item have no **Executi
 ## 4 Read More
 
 * [Page](page)
-* [Container Widgets](container-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Structure](structure-widgets)
+* [Properties Common in the Page Editor](common-widget-properties)

@@ -1,8 +1,7 @@
 ---
 title: "Contribute to the Documentation"
 category: "Community Tools"
-frontpage_featured: true
-menu_order: 20
+menu_order: 5
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -10,7 +9,7 @@ tags: ["documentation", "community"]
 
 ## 1 Introduction
 
-The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the Mendix Studio Pro Guide that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
+All Mendix documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the *Studio Pro Guide* that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
 
 All the Mendix documentation is stored in a [GitHub repository](https://github.com/mendix/docs). With a GitHub account, you can edit all existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it.
 
@@ -41,10 +40,10 @@ Before starting with this how-to, make sure you have completed the following pre
 
 You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com)
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
-## 3 Editing the Documentation in GitHub
+## 3 Editing the Documentation in GitHub {#editing}
 
 To edit existing documentation, follow these steps:
 
@@ -56,24 +55,41 @@ To edit existing documentation, follow these steps:
 If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately. 
 {{% /alert %}}
 
-## 4 Writing New Documentation {#new-documentation}
+## 4 Leaving Feedback on the Documentation
+
+If you find an issue with the documentation – whether that is a typo, a missing step, or a specific technical problem – we want to know about it so we can improve!
+
+When you click the **Feedback** button on the right side of the screen, you will be brought to our GitHub repo's [Issues](https://github.com/mendix/docs/issues) page. Please include the following details in your feedback:
+
+* The document you are working with
+* A detailed description of what is wrong
+* Details on what can be improved or what the fix is, if applicable
+* Screenshots of your Mendix Platform usage, if applicable 
+
+We look at all feedback and take it seriously, and we will be in contact about how to resolve it.
+
+{{% alert type="info" %}}
+You need to have a GitHub account to leave feedback. The good news is that, with that same GitHub account, you can also send a pull request with a direct [edit](#editing) of the documentation or even [new documentation](#new-documentation).
+{{% /alert %}}
+
+## 5 Writing New Documentation {#new-documentation}
 
 The sections below present the key steps in writing new documentation for Mendix.
 
-### 4.1 Using a Template
+### 5.1 Using a Template
 
-To submit a new how-to or Mendix Studio Pro Guide page to the Mendix documentation, start with a Mendix documentation template:
+To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, start with a Mendix documentation template:
 
-* To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md)
-* To get the Mendix Studio Pro Guide page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-reference-guide-page-template.md)
+* To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/how-to-template.md)
+* To get the *Studio Pro Guide* page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/ref-guide-page-template.md)
 
-### 4.2 Guidelines & Conventions {#naming}
+### 5.2 Guidelines & Conventions {#naming}
 
 Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](documentation-writing-guidelines)
 * Make sure the document files comply with these naming conventions:
-	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your Project," the filename should be `create-your-project.md`)
+	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
 	* Document file names should always be lower-case with a hyphen (`-`) between each word
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:
@@ -83,7 +99,7 @@ Follow these guidelines and conventions when writing:
 	* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located (this sub-folder should have the same name as the document file name you are working on)
 	* The following image extensions are allowed: *.png* (preferred), *.jpg*, *.gif*
 
-### 4.3 Submitting Your Work
+### 5.3 Submitting Your Work
 
 When you are ready to submit your work, follow these guidelines:
 
@@ -96,28 +112,13 @@ Finally, create a pull request that specifies the Mendix **development** branch 
 You may receive a response to your pull request asking for verification of specific issues. Do not panic! We just want to make sure your documentation submission fits well with what we have.
 {{% /alert %}}
 
-## 5 Signing the Contributor License Agreement
+## 6 Signing the Contributor License Agreement
 
-The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
+The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
-To access the license agreement, go to the **Conversation** tab of the pull request and click **Details** for **clahub**:
-
-![](attachments/contribute-to-the-mendix-documentation/license_agreement.png)
+To access the license agreement, go to the the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
 
 This only needs to be done once.
-
-## 6 Gaining Mendix Points {#GainingMendixPoints}
-
-As you add knowledge to the documentation that will help your fellow Mendix developers, you will gain Mendix points for each contribution!
-
-Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see the [Authorizing GitHub Connection](/developerportal/mendix-profile/index#github) section in *Mendix Profile*
-
-The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
-
-* For a small contribution to the documentation – 5 points
-* For a large contribution to the documentation – 15 points
-
-The points are awarded when the pull request is merged.
 
 ## 7 Read More
 

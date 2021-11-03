@@ -7,11 +7,11 @@ tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 
 ## 1 Introduction
 
-The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose a starter app that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio). 
+The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose an app template that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/studio). 
 
 **This how-to will teach you how to do the following:**
 
-* Choose a starter app
+* Choose an app template
 * Edit your app in the Web Modeler
 * Choose a page template
 * Customize your theme
@@ -22,21 +22,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Mendix account (sign up [here](https://www.mendix.com/try))
 
-## 2 Choosing Your Starter App
+## 2 Choosing Your App Template
 
-In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. On the **Starter Apps** tab, there are a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
-
-![Starter Apps in the Developer POrtal](attachments/get-started-with-atlasui/start_choose_your_starter_app.png)
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
 
 For more information about Atlas UI, see [Atlas UI](index). 
 
 ## 3 Editing Your App in the Web Modeler
 
-You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen:
-
-{{% image_container width="300" %}}
-![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
-{{% /image_container %}}
+You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen.
 
 Note that when you click **Edit App** for any Atlas UI app, it will automatically open in the Web Modeler. If you need to edit the app in the Desktop Modeler, click the drop-down menu on the **Edit App** button and select **Edit in Desktop Modeler**.
 
@@ -70,7 +64,7 @@ The **[Theme Customizer](/studio/theme-customizer)** allows you to customize you
 
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [General Info](/studio/general) 
 * [Page Editor](/studio/page-editor)

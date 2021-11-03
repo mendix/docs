@@ -1,7 +1,7 @@
 ---
 title: "XPath Keywords & System Variables"
 parent: "xpath-constraints"
-tags: ["studio pro"]
+tags: ["studio pro", "BeginOfCurrent"]
 ---
 
 ## 1 Overview
@@ -38,7 +38,7 @@ System variables can be used to obtain system or date related values. The availa
 
 ### 3.2 User Roles
 
-These will be created for each user role in your app project. Here is an example:
+These will be created for each user role in your app. Here is an example:
 
 | Token | Description |
 | --- | --- |
@@ -89,6 +89,7 @@ The following tokens can be used to add or subtract a period of time from a date
 | `[%MinuteLength%]` | The length of one minute. |
 | `[%SecondLength%]` | The length of one second. |
 | `[%WeekLength%]` | The length of one week (seven days). |
+| `[%MonthLength%]` | The length of one month. |
 | `[%YearLength%]` | The length of one year. |
 
 {{% alert type="info" %}}

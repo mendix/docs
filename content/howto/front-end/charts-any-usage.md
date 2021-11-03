@@ -8,7 +8,7 @@ tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
 
 ## 1 Introduction
 
-The basic chart widgets provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
+The basic charts provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
 
 When the advanced options are not enough, the **Any Chart** widget can be used.
 
@@ -25,7 +25,7 @@ With **Any Chart** you can build all the chart types that are possible with Plot
 Before starting this how-to, make sure you have the following prerequisites:
 
 * The latest version of Mendix Studio Pro
-* The latest **Any Chart** widget module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/106517/Mendix/AnyChart)
+* The latest [Any Chart](/appstore/modules/any-chart) module
 * An understanding of JSON data structures
 
 ## 3 Chart Structure
@@ -40,14 +40,14 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
 1. Create a page with a data view (Chart context).
 2. Add the Any Chart widget in the data view.
-3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet#line-chart):
+3. Select the line chart sample from the [Any Chart cheat sheet](/refguide/charts-any-cheat-sheet#line-chart):
 
     ```json
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]
     ```
 
 4. In Studio Pro, copy the data into the Any Chart widget property tab **Data**, field **Static**.
-5. Run the project to confirm the chart renders correctly.
+5. Run the app to confirm the chart renders correctly.
 6. Split the data into static and dynamic parts that are going to be generated from the domain model.
 
     Static :  
@@ -64,7 +64,7 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
     ![Any Chart Configuration](attachments/charts/any-chart-configuration.png)
 
-7. Run the project to preview the chart.
+7. Run the app to preview the chart.
 
     ![Any Chart result](attachments/charts/charts-any-sample.png)
 
@@ -100,20 +100,15 @@ The editor is only a playground and no settings are stored. All changes you make
 To fine tune a Charts widget configuration, follow these steps:
 
 1. In the **Data** tab, set the **Mode** option to **Development**.
-
-2. Run the project, and open the page containing the chart.
-
+2. Run the app, and open the page containing the chart.
 3. Click the **Toggle Editor** button on the top right of the chart to fine-tune your settings.
 
     ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
-4. In the editor, select either **Data** or **Layout** from the dropdown menu.
-
+4. In the editor, select either **Data** or **Layout** from the drop-down menu.
 5. Edit Static or Data settings.
-
 6. Copy the new settings and apply them in Studio Pro.
-
-7. Re-run the project to confirm the changes have been applied.
+7. Re-run the app to confirm the changes have been applied.
 
 ## 7 Read More
 

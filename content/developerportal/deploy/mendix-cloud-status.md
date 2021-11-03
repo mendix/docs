@@ -4,11 +4,14 @@ parent: "mendix-cloud-deploy"
 menu_order: 21
 description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
+aliases:
+    - /developerportal/operate/mendix-cloud-status.html
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Mendix hosts a variety of services in the cloud. These include the environments for apps which are deployed to the Mendix Cloud, as well as various online services (such as *Buzz* Project Management).
+Mendix hosts a variety of services in the cloud. These include the environments for apps which are deployed to the Mendix Cloud, as well as various online services (such as **Buzz** Project Management).
 
 The status of all these services is reported on a single page: [https://status.mendix.com/](https://status.mendix.com/).
 

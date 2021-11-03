@@ -54,7 +54,7 @@ With these three pieces of information, you shouold be able to find the cause of
 ## 4 Read More
 
 * [How to Clear Warning Messages](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [How to Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
 * [How to Log Levels](log-levels)

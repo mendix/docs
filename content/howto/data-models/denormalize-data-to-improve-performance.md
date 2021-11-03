@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-This how-to explains how you can improve performance by de-normalizing data in Mendix.
+This how-to explains how you can improve performance by denormalizing data in Mendix.
 
 **This how-to will teach you how to do the following:**
 
@@ -18,16 +18,18 @@ This how-to explains how you can improve performance by de-normalizing data in M
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create a basic data layer (for details, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
+* Create a [basic data layer](create-a-basic-data-layer)
 
 ## 3 Denormalization
 
-Let's assume that the domain model contains two related entities called Customer and Order. The customer overview page needs to show the name of the customer and the total order amount next to each other. Showing the customer name is easy, but the total order amount needs to be calculated.
+For an example scenario, a domain model contains two related entities called Customer and Order. The customer overview page needs to show the name of the customer and the total order amount next to each other. Showing the customer name is easy, but the total order amount needs to be calculated.
 
 To show the total order amount, there are two options:
 
-* First option: create a calculated attribute in the Customer entity to compute the total order amount (the downside of this option is that the calculated attributes bring down the performance of overview pages)
-* Second option: create a persistable attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
+* First option: create a calculated attribute in the Customer entity to compute the total order amount
+	* The drawback of this option is that the calculated attributes bring down the performance of overview pages
+* Second option: create a persistable attribute in the Customer entity that stores the total order amount in the database – this is called denormalization
+	* The drawback of this option is that the redundant data needs to be kept in sync (but this is easy with Mendix [event handlers](/refguide/event-handlers))
 
 To enable denormalization, follow these steps:
 
@@ -144,9 +146,9 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)
 * [Set Up Data Validation](setting-up-data-validation)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [Define Access Rules Using XPath](/howto/logic-business-rules/define-access-rules-using-xpath)
 * [Attributes](/refguide/attributes)
 * [Event Handlers](/refguide/event-handlers)
 

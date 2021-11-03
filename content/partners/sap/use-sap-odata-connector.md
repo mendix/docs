@@ -16,8 +16,8 @@ The OData Connector for SAP solutions is a specific SAP connector for integratin
 * Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
-{{% alert type="warning" %}}
-The OData Connector for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% alert type="info" %}}
+Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
 {{% /alert %}}
 
 ## 2 Prerequisites{#prerequisites}
@@ -29,9 +29,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Getting the OData Connector for SAP Solutions Module
 
-To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix App Store to download the [OData Connector for SAP solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
+To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix Marketplace to download the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's Marketplace modules.
 
-For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
+For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
 ## 4 Getting an SAP Data Model
 
@@ -67,7 +67,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 13. Open your app in Mendix Studio Pro.
 
-14. Right-click the project in the **Project Explorer** and select **Import module package…**.
+14. Right-click the project in the **App Explorer** and select **Import module package…**.
 
     ![](attachments/use-sap-odata-connector/import-module.png)
 
@@ -79,11 +79,11 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 For more information, see [Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) and [SAP Data Models](/partners/sap/sap-data-models).
 
-## 3 Using the OData Connector for SAP Solutions
+## 5 Using the OData Connector for SAP Solutions
 
 In this section, you will learn how to implement the data connector in your Mendix app. These steps assume you are using a blank Mendix app with a module called MyFirstModule.
 
-### 3.1 Creating a Microflow{#microflow}
+### 5.1 Creating a Microflow{#microflow}
 
 To create the microflow for this retrieve, follow these steps:
 
@@ -114,7 +114,7 @@ The final result of your microflow should look like this:
 
 ![](attachments/use-sap-odata-connector/get-list.png)
 
-### 3.2 Creating a Page
+### 5.2 Creating a Page
 
 To create a page to show the objects in a list, follow these steps:
 
@@ -134,7 +134,7 @@ To create a page to show the objects in a list, follow these steps:
 Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
 {{% /alert %}}
 
-## 4 Read More
+## 6 Read More
 
 * [OData Connector for SAP Solutions](/partners/sap/sap-odata-connector)
 * [SAP Data Models](/partners/sap/sap-data-models)

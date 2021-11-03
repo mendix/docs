@@ -1,8 +1,8 @@
 ---
 title: "Template Grid"
-parent: "data-widgets"
-menu_order: 30
-tags: ["studio pro", "template grid", "data widgets"]
+parent: "grids"
+menu_order: 20
+tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,7 +41,7 @@ Template grid properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
 
@@ -64,80 +64,88 @@ The list view supports the following types of data sources:
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-### 3.3 General Section {#general}
+### 3.3 Design Properties Section {#design-properties}
 
-#### 3.3.1 Show Control Bar
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 3.4 General Section {#general}
+
+#### 3.4.1 Show Control Bar {#show-control-bar}
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
 {{% alert type="warning" %}}
-
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](control-bar) for more information.
-
 {{% /alert %}}
 
-_Default value:_ True
+Default: *True*
 
-#### 3.3.2 Show Paging Buttons
+#### 3.4.2 Show Paging Bar {#show-paging-bar}
 
-This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
+With this property, you can change the way the paging bar is shown.
 
-_Default value:_ True
+| Value | Description |
+| --- | --- |
+| Yes (with total count) | The paging bar is shown, including the **Go to last page** button and the total count of objects. |
+| Yes (without total count) | The paging bar is shown (except for the **Go to last page** button). Also, the total count of objects is not shown, as page numbers are shown instead. |
+| No | The paging buttons are not shown. |
 
-#### 3.3.3 Number of Rows
+Default: *Yes (with total count)*
+
+{{% alert type="warning" %}}
+Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
+{{% /alert %}}
+
+#### 3.4.3 Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows of templates that will be shown on one page.
 
-_Default value:_ 3
+Default: *3*
 
-#### 3.3.4 Number of Columns
+#### 3.4.4 Number of Columns {#number-of-columns}
 
 With this property you can change the number of templates that will be shown next to each other in one row.
 
-_Default value:_ 2
+Default: *2*
 
-#### 3.3.5 Style Template
+#### 3.4.5 Style Template {#style-template}
 
 The style template property allows you to choose from three different styling of the template grid. These stylings depend on your theme package.
 
-#### 3.3.6 Selection Mode
+#### 3.4.6 Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the grid.
 
 | Value | Description |
 | --- | --- |
 | No selection | The user cannot select items. |
-| Single selection | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
+| Single selection  *(default)* | The user can select a single item by clicking on it. Clicking another item will make that item the selection. |
 | Single selection and maintain | The user can select one item at a time by clicking on it. Users cannot deselect an item. By default the first item will be selected and removing a selected item will autoselect a subsequent item. |
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
-_Default value:_ Single selection
-
-#### 3.3.7 Select First
+#### 3.4.7 Select First {#select-first}
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
-_Default value:_ False
+Default: *False*
 
-#### 3.3.8 Default Button Trigger
+#### 3.4.8 Default Button Trigger {#default-button-trigger}
 
-The default button can be triggered by a single or a double click on a row.
+The default button can be triggered by a single or a double click a row.
 
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click | A double click triggers the default button. |
+| Double click *(default)* | A double click triggers the default button. |
 
-_Default value:_ Double click
-
-#### 3.3.9 Refresh Time (in Seconds)
+#### 3.4.9 Refresh Time (in Seconds) {#refresh-time}
 
 If the refresh time is non-zero, the template grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
-_Default value:_ 0
+Default: *0*
 
-### 3.4 Visibility Section {#visibility}
+### 3.5 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
@@ -151,6 +159,6 @@ To perform actions on a template grid, select it on a page and right-click it. T
 ## 5 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

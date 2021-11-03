@@ -1,8 +1,10 @@
 ---
 title: "Implement Best Practices for UX Design"
-category: "Front-End"
+category: "Front End"
 menu_order: 10
-tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "Front-End"]
+tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
+aliases:
+    - /howtogeneral/bestpractices/ux-best-practices.html
 ---
 
 ## 1 Introduction
@@ -11,7 +13,7 @@ tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button",
 This how-to is based on the blog post [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870), a Mendix partner company.
 {{% /alert %}}
 
-In a Mendix App Team, the UX Designer's job is to improve the user experience of applications in as many ways as possible. However, sometimes logical solutions from a development perspective are not the best solutions from a UX perspective. 
+In a Mendix team, the UX Designer's job is to improve the user experience of applications in as many ways as possible. However, sometimes logical solutions from a development perspective are not the best solutions from a UX perspective. 
 
 This set of best practices is for UX Designers to think carefully about what they can add to app development process.
 

@@ -1,24 +1,25 @@
 ---
 title: "Work with Lists in a Microflow"
 category: "Logic & Business Rules"
-menu_order: 6
+menu_order: 60
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: ["microflow", "logic", "list"]
 ---
 
 ## 1 Introduction
 
-In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains) in the *Mendix Studio Pro Guide*. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
+In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains) in the *Studio Pro Guide*. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
 
 ## 2 Preparing the Data Structure, GUI and Example Data
 
-To see the results of this how-to it is necessary that you setup a test project with test data.
+To see the results of this how-to it is necessary that you setup a test app with test data.
 
-Before you continue, make sure that you know how to create:
+Before you continue, make sure that you know how to create the following:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto/data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto/front-end/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto/general/setting-up-the-navigation-structure).
+* Domain models – if you need more information, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer)
+* Overview and detail pages – if you need more information, see [How to 
+Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)
+*  Menu items – if you need more information, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 
 1.  Create the following domain model:
 
@@ -41,29 +42,27 @@ In the previous section you have set up a basic data structure and created some 
 1.  Create a new microflow by right-clicking the module and selecting **Add** > **Microflow**.
 2.  Name the Microflow _IVK_SetOrderToComplete_.
 
-    ![](attachments/18448686/18581093.png)
+	![](attachments/18448686/18581093.png)
 
 3.  Save the new menu item by clicking **OK**. You should see an empty Microflow like this:
 
-    ![](attachments/8784287/8946316.png)
+	![](attachments/8784287/8946316.png)
 
 4.  Add an **Action** button to the toolbar of the orders overview:
 
-    ![](attachments/18448686/18581118.png)
+	![](attachments/18448686/18581118.png)
 
 5.  Double-click the action button and in its properties, enter *Set Processing to Complete* for the **Caption**.
 6.  For **On click**, select **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow.
 
-    ![](attachments/18448686/18581054.png)
+	![](attachments/18448686/18581054.png)
 
 7.  Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
-8.  Open the **Toolbox**. It should be on the bottom right of .
-
-    ![](attachments/8784287/8946802.png)
+8.  Open the **Toolbox** and search for the **Retrieve** action.
 
 9.  Drag a **Retrieve** action from the toolbox to the line between the green start and red end event. This inserts a retrieve action activity.
 
-    ![](attachments/18448686/18581091.png)
+	![](attachments/18448686/18581091.png)
 
 10. Double-click the retrieve activity to open its properties.
 11. Select **From database** for the **Source** option.
@@ -71,27 +70,24 @@ In the previous section you have set up a basic data structure and created some 
     a. For **Entity**, select **Order**_<br>
     b. For **List**, enter **OrderList**<br>
 
-    {{% alert type="info" %}}
-    With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
+	{{% alert type="info" %}}With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
+	{{% /alert %}}
 
-    {{% /alert %}}
 13.  Add the following XPath expression in the XPath constraint field: `[OrderStatus = 'Processing']`. This expression will filter the list to only orders with the status **Processing**.
 14. Your properties screen should look like this:
 
-    ![](attachments/18448686/18581088.png)
+	![](attachments/18448686/18581088.png)
 
-    {{% alert type="info" %}}
-    With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
+	{{% alert type="info" %}}With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
+	{{% /alert %}}
 
-    {{% /alert %}}
+You should see a microflow like this:
 
-    You should see a Microflow like this:
-
-    ![](attachments/18448686/18581087.png)
+![](attachments/18448686/18581087.png)
 
 ## 4 Iterate Over a List of Objects
 
-In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the 'Change object' activity to change the status of the order object.
+In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
 
 1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
   
@@ -99,16 +95,10 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 2.  Drag a **Loop** action from the **Toolbox** to the line behind the **OrderProcessingList** action activity.
 
-    ![](attachments/18448686/18581086.png)
+	![](attachments/18448686/18581086.png)
 
-    {{% alert type="info" %}}
-    A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed.
-
-    For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
-
-    The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
-
-    {{% /alert %}}
+	{{% alert type="info" %}}A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events. The iterator, which looks the same as a parameter, represents the current object in the list for each iteration. Beneath it the name of the object is shown in black and the entity type of the object in blue. For more information, see [Loop](/refguide/loop).
+	{{% /alert %}}
 
 3.  Double click the loop activity and select the **OrderList** to iterate over.
 
@@ -133,6 +123,10 @@ In the previous section you retrieved a list of orders with the status 'Processi
 9. Set **Commit** and **Refresh in Client** to **Yes** to commit your changes to the database and refresh your list in the client so your changes will be visible, then click **OK**. Your microflow should look like this:
 
     ![](attachments/18448686/18581076.png)
+    
+	Or, to optimize the number of commits, you can perform the commit outside of the loop. This way, there will be a single commit to the database instead of one per order:
+
+	![](attachments/8784287/working-with-lists-optimization.jpg)
 
 11. **Re-deploy** your application.
 12. Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
@@ -165,15 +159,12 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581069.png)
 
-6.  Double click the **Change variable** activity to open its **properties** and set the following properties:<br>
+6.  Double click the **Change variable** activity to open its **Properties** and set the following properties:<br>
     a. For **Variable** select **CalculatedTotalPrice**.<br>
     b. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.<br>
 
-    {{% alert type="info" %}}
-
-    By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
-
-    {{% /alert %}}
+	{{% alert type="info" %}}By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
+	{{% /alert %}}
 
     ![](attachments/18448686/18581067.png)
 
@@ -211,7 +202,7 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581059.png)
 
 4.  Click **OK**.
-5.  Double click on the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5.  Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
   
     ![](attachments/18448686/18581055.png)
 
@@ -246,6 +237,5 @@ In the previous sections you filtered the list of orders from database on attrib
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
-*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)
 *   [Optimizing Retrieve Activities](optimizing-retrieve-activities)

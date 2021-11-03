@@ -1,14 +1,14 @@
 ---
 title: "Charts"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Charts widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "chart", "line chart", "area chart", "column chart", "bar chart", "heat map", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Charts](https://appstore.home.mendix.com/link/app/105695/) widget enables plotting and comparing your data across different charts.
+The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
 These are the available charts:
 
@@ -20,10 +20,6 @@ These are the available charts:
 * Time series chart
 * Heat chart
 * Bubble chart
-
-### 1.1 Demo App Project
-
-For a demo app project that has been deployed with these widgets, see [here](https://charts102.mxapps.io).
 
 ## 2 Basic Configuration
 
@@ -68,8 +64,8 @@ These are the properties for configuring Pie chart data:
 	* **Entity** (required) – the entity from which the data values will be retrieved
 * **Data points** tab
 	* **Name attribute** (required) – the attribute that contains the data point captions
-	* **Value attribute ** (required) – the attribute that contains the data point values
-	* **Color attribute ** (required) – the attribute that contains the data point colors
+	* **Value attribute** (required) – the attribute that contains the data point values
+	* **Color attribute** (required) – the attribute that contains the data point colors
 	* **Sort attribute** – the attribute to use for sorting the X-axis data
 
 ### 2.6 Time Series Chart {#time-series}
@@ -144,7 +140,7 @@ For the full Plotly API reference, see [JavaScript Figure Reference](https://plo
 
 ### 3.5 Theme-Based Advanced Configuration
 
-The settings above can also be added in a global context via the **theme** folder of your Mendix app project root directory.
+The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
 Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON should be in the following format:
 
@@ -197,16 +193,11 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
 {{% /alert %}}
 
-## 4 Developing This App Store Component
+## 4 Read More
 
-For details on development, see [Development](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/Development.md).
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/charts](https://github.com/mendixlabs/charts/issues).
-
-## 5 Read More
-
-* [How to Fine-Tune a Chart with Advanced Settings](https://docs.mendix.com/howto/front-end/charts-advanced-tuning)
-* [How to Create a Basic Chart](https://docs.mendix.com/howto/front-end/charts-basic-create)
-* [How to Use a Chart with a REST Data Source](https://docs.mendix.com/howto/front-end/charts-basic-rest)
-* [How to Create a Dynamic Series Chart](https://docs.mendix.com/howto/front-end/charts-dynamic-series)
-* [How to Use the Charts Theme](https://docs.mendix.com/howto/front-end/charts-theme)
+* [Charts Configuration](/refguide/charts-configuration)
+* [How to Fine-Tune a Chart with Advanced Settings](/howto/front-end/charts-advanced-tuning)
+* [How to Create a Basic Chart](/howto/front-end/charts-basic-create)
+* [How to Use a Chart with a REST Data Source](/howto/front-end/charts-basic-rest)
+* [How to Create a Dynamic Series Chart](/howto/front-end/charts-dynamic-series)
+* [How to Use the Charts Theme](/howto/front-end/charts-theme)

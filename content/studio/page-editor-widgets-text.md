@@ -1,5 +1,5 @@
 ---
-title: "Text Widgets"
+title: "Text"
 parent: "page-editor-widgets"
 description: "Describes typography widgets in Mendix Studio."
 menu_order: 40
@@ -8,49 +8,29 @@ tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 
 ## 1 Introduction 
 
-Text is a group of [widgets](page-editor-widgets) that consists of **[Text, Paragraph, Headings (H1-H6)](#text-widget)**, and the [**Page Title**](#page-title-widget). They are used to display textual information to the end-user. 
+Text is a group of [widgets](page-editor-widgets) that consists of [Text, Paragraph, Headings (H1-H6)](#text-widget), and the [Page Title](#page-title-widget). They are used to display textual information to the end-user. For example, you can display a text paragraph:
+
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-text/paragraph-example.png)
+{{% /image_container %}}
 
 ## 2 Text, Paragraph, and Headings General Properties {#text-widget}
 
 You can use **Text**, **Paragraph**, or **Heading** widgets to display a text to the end-user. In **Properties** > **General**, you can type the text that will be displayed, define if it contains attribute values, and set the [render mode](#render-mode). 
 
-### 2.1 Content
+### 2.1 Content {#content}
 
-In **Content**, you define the text that will be shown. You can also add attributes, and the attribute value will be displayed to the user. For example, when the user logs in to the account, a greeting message can be shown, where *Name* and *NumberOfMessages* are attribute values: 
+In **Content**, you define the text that is shown to end-users. You can also display dynamic data here: attribute values and expression outcomes. 
+
+When add attributes, the attribute value is displayed to the user. Choose **Add** > **Attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to select an attribute.  For example, when the user logs in to the account, a greeting message can be shown, where *Name* and *NumberOfMessages* are attribute values: 
 
 ![](attachments/page-editor-widgets-text/content-example.png)
 
-#### 2.1.1 Configuring Content Without Adding Attributes
+You can also configure an expression and display the expression outcome (for more information on expressions, see [Expressions](expressions)). Choose **Add** > **Expression Outcome** to write an expression. For example, you can show an price excluding VAT and including it:
 
-To configure **Content** without adding attributes, you can do one of the following:
+![Content Example Expressions](attachments/page-editor-widgets-text/content-example-expression.png)
 
-* Double-click the widget on the page and start typing the text you want to show to the end-user; press <kbd>Enter</kbd> to save changes
-* Open **Properties** of the widget, delete the default text in the **General** section > **Content**, and type the message you want to show to the end-user
+To edit **Content**, double-click the widget on the page.
 
-#### 2.1.2 Configuring Content and Adding Attributes
-
-To configure **Content** and add attributes to it, do the following:
-
-1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties](page-editor-data-view-list-view). This is necessary to allow attributes of the selected entity to be inserted into the text. 
-
-2.  Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
-
-    {{% image_container width="350" %}}![](attachments/page-editor-widgets-text/content.png)
-    {{% /image_container %}}
-
-3. To insert attribute values into your message, click **Add attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.  The list of attributes which can be inserted will be shown. 
-
-4.  Scroll through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
-
-    {{% image_container width="350" %}}![](attachments/page-editor-widgets-text/list-of-attributes.png)
-    {{% /image_container %}}
-
-5. Type the rest of the text, and insert more attributes if required, to finish your message.
-
-You have configured the **Content** of your widget. If you want to edit it, you can double click the widget in the page; the **Edit Text** pop-up dialog will be shown for widgets with attributes in their content.
-
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-text/edit-text.png)
-{{% /image_container %}}
 
 ### 2.2 Render Mode {#render-mode}
 
@@ -85,11 +65,15 @@ You can put several **Title** widgets on your page, but they will all display th
 
 {{% /alert %}}
 
-## 4 Design Section {#input-elements-design}
+## 4 Conditional Visibility Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+{{% snippet file="studio/visibility-section-link.md" %}}
 
-## 5 Read More
+## 5 Design Section {#input-elements-design}
+
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
+
+## 6 Read More
 
 * [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

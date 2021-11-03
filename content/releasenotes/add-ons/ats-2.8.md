@@ -21,11 +21,11 @@ Mendix applications which are based on Mendix version 7.13, 7.14 or 7.15, can no
 
 * In addition to testing on real devices via browserstack it is now possible to test on real devices by using Saucelabs. We have preselected some devices for Saucelabs for different Android versions. Check the [ATS reference guide for more details](/addons/ats-addon/rg-two-mobile).
 * We added support for testing on Android 8 devices.
-* When testing on mobile devices we now simulate setting dropdown values via the native dialogs for mobile, same as we do for date and time dialogs.
+* When testing on mobile devices we now simulate setting drop-down values via the native dialogs for mobile, same as we do for date and time dialogs.
 
 ### Cancelling
 
-We have completely redesigned the back-end for canceling jobs. You will see that cancelled jobs stop executing much faster than before. Steps which are interruptible e.g. sleep will be interrupted immediately instead of waiting them to finish. We also update the status for test cases or suites which were not started at the time of cancelling.
+We have completely redesigned the back end for canceling jobs. You will see that cancelled jobs stop executing much faster than before. Steps which are interruptible for example, sleep will be interrupted immediately instead of waiting them to finish. We also update the status for test cases or suites which were not started at the time of cancelling.
 
 ### Recording integration
 

@@ -9,53 +9,62 @@ tags: ["studio pro", "page", "properties"]
 
 This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 
-## 2 Common Section
+## 2 Properties
 
-### 2.1 Name
+An example of page properties is represented in the image below:
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support).
+{{% image_container width="250" %}}![Page Properties](attachments/page/page-properties.png)
+{{% /image_container %}}
 
-### 2.2 Documentation
+Page properties consist of the following sections:
 
-This property can be used to store developer documentation. End-users will never see this documentation.
+* [Common](#common)
+* [Designer](#designer)
+* [General](#general)
+* [Navigation](#navigation)
+* [Pop-up](#pop-up)
+* [Usage](#usage)
 
-### 2.3 Class
+### 2.1 Common Section {#common}
 
-The class property allows you to specify one or more cascading style sheet (CSS) classes for the widget. The classes should be separated by a space. The classes will be applied to the widget in the browser and the widget will get the corresponding styling. The classes should be classes in the theme that is used in the project. It overrules the default styling of the widget.
+{{% snippet file="refguide/common-section-link.md" %}}
 
-Styling is applied in the following order:
+### 2.2 Designer Section {#designer}
 
-1. The default styling defined by the theme the project uses.
-2. The `Class` property.
-3. The `Style` property.
+{{% snippet file="refguide/designer-properties.md" %}}
 
-You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button in **Structure mode**.
+### 2.3 General Section {#general}
 
-![](attachments/common-widgets-properties/show-styles.png)
+#### 2.3.1 Platform
 
-### 2.4 Style
+The values for the **Platform** property are:
 
-The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. 
+* Web *(default)* – pages which are going to be displayed in a browser or hybrid mobile app
+* Native – pages which are going to be displayed in a native mobile app
 
-You can see which widgets in a page have styling applied via the style or class property by clicking the <strong>Show styles</strong> button in **Structure mode**.
+#### 2.3.2 Layout Type {#layout-type}
 
-## 3 Design Section
+The **Layout type**, determines the purpose of the page and how it is opened.
 
-{{% snippet file="refguide/canvas-width-property.md" %}}
+| Layout Type         | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| **Responsive**      | Pages that will work fine on all types of devices.           |
+| **Tablet specific** | Pages to be displayed on a tablet because the responsive option does not provide a good user interface on a tablet. |
+| **Phone specific**  | Pages to be displayed on a phone because the responsive option does not provide a good user interface on a phone. |
+| **Modal pop-up**    | Pages that appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
+| **Pop-up**          | Pages that appear as *modeless* pop-up windows.              |
 
-{{% snippet file="refguide/canvas-height-property.md" %}}
+#### 2.3.3 Layout
 
-## 4 General Section
+The [layout](layout) on which this page is based.
 
-### 4.1 Title {#title}
+#### 2.3.4 Title {#title}
 
-The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, the [*Create* button](control-bar) and the [*Edit* button](control-bar) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
+The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. 
 
-### 4.2 Layout
+The title can be overridden. For example, the [Create button](control-bar) and the [Edit button](control-bar) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
-This is the [layout](layout) on which this page is based.
-
-### 4.3 URL
+#### 2.3.6 URL
 
 The URL of the page can be used to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
@@ -65,50 +74,52 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * */orders/* – the URL for a page with a data grid for `Orders` (in a browser, the URL will look like `http://example.mendixcloud.com/p/orders/`)
 
-* */order/{Id}* – the URL for a page with data from a particular `Order` (actual URLs in a browser will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
+* */order/{Id}* – the URL for a page with data from a particular `Order` (in a browser, the URL will look like `http://example.mendixcloud.com/p/order/3212449487634321`, wherein `3212449487634321` is the unique identifier of the `Order`)
 
-## 5 Navigation Section
+### 2.4 Navigation Section {#navigation}
 
-### 5.1 Visible For
+#### 2.4.1 Visible For
 
-These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](button-widgets) for editing).
+This property defines for what module roles the page is visible. This has an effect on [menus and navigation widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](button-widgets) for editing).
 
 For more information, see [Module Security](module-security).
 
-## 6 Pop-Up Section
+### 2.5 Pop-Up Section {#pop-up}
 
-The pop-up properties are only relevant for pop-up pages (as opposed to content pages).
+The **Pop-up** section is only displayed for pop-up pages. For more information on what pop-up pages are, see the [Layout Type](#layout-type) section.
 
-### 6.1 Width (Pixels)
+#### 2.5.1 Width (in Pixels)
 
-This specifies the pop-up width in pixels. When set to 0, the width is determined automatically.
+This property specifies the pop-up page width in pixels. When set to 0, the width is determined automatically.
 
-*Default value:* 0
+Default: *0*
 
-### 6.2 Height (Pixels)
+#### 2.5.2 Height (in Pixels)
 
-Specifies the pop-up height in pixels. When set to 0, the height is determined automatically.
+This property specifies the pop-up page height in pixels. When set to 0, the height is determined automatically.
 
-*Default value:* 0
+Default: *0*
 
-### 6.3 Resizable
+#### 2.5.3 Resizable
 
-Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
+This property specifies whether the end-user can resize the pop-up or not.
 
-*Default value:* Yes
+Default: *Yes*
 
-### 6.4 Close Action
+#### 2.5.4 Close Action
 
-Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
+Configures the behavior of a button that closes the pop-up page. The default behavior of the pop-up close button is to rollback any changes and close the pop-up window. 
 
-*Default value:* Default (cancel)
+If you want to customize the behavior of the pop-up close button, you can point to a button on the page. When the pop-up close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the pop-up close button will revert back to the default behavior.
 
-## 7 Usage Section
+Default: *Default (cancel)*
 
-### 7.1 Mark as Used
+### 2.6 Usage Section {#usage}
+
+#### 2.6.1 Mark as Used
 
 You can search for unused items in Studio Pro by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
 
-By setting the propery **Mark as used** to **Yes**, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
+By setting the property **Mark as used** to *Yes*, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 
-*Default value:* No
+*Default value*: No

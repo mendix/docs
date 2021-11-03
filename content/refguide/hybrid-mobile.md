@@ -1,19 +1,19 @@
 ---
 title: "Hybrid Mobile"
 category: "Mobile"
-menu_order: 2
+menu_order: 3
 tags: ["mobile", "hybrid", "studio pro"]
 ---
 
 ## 1 Introduction
 
-Mendix hybrid apps are web applications wrapped inside native app containers. The documents listed below will help you prepare, package, and customize your Mendix hybrid apps.
+Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
 
-## 2 Documents in This Section
+For more information see this [Hybrid Mobile Apps Deprecation with Mendix 9](https://www.mendix.com/blog/hybrid-mobile-apps-deprecation-with-mendix-9/) blog entry.
 
-* [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
-* [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-* [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages)
-* [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
-* [Managing App Signing Keys](managing-app-signing-keys)
-* [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
+For hybrid mobile documentation see these Mendix 8 documents:
+
+* [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile)
+* [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile)
+
+

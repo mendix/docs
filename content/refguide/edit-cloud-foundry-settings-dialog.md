@@ -1,47 +1,69 @@
 ---
-title: "Edit Cloud Foundry Settings Dialog"
-parent: "dialogs"
+title: "Edit Cloud Foundry Settings"
+parent: "run-menu"
 tags: ["Cloud Foundry", "Deploy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-**Note**: More information on deploying to Cloud Foundry can be found here: [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
+## 1 Introduction
 
-## Step 1: Entering credentials
+The **Edit Cloud Foundry Settings** menu option allows you to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-The first step in configuring your app for Cloud Foundry deployment is to enter the account information of the Cloud Foundry instance you wish to use.
+{{% alert type="info" %}}
+More information on deploying to Cloud Foundry can be found in [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
+{{% /alert %}}
 
-### API endpoint
+## 2 Entering Credentials
 
-The URL of the Cloud Foundry instance that will be used for deployment.
+The first step in configuring your app for Cloud Foundry deployment is to enter the account information of the Cloud Foundry account you wish to use.
 
-### User name
+![Enter Cloud Foundry Credentials](attachments/run-menu/cloud-foundry-credentials.png)
 
-The user name of your Cloud Foundry account.
+Enter the details on the screen, as described below, then click **Next** to validate the specified credentials and show the next configuration step.
 
-### Password
+### 2.1 API Endpoint
 
-The password of your Cloud Foundry account.
+The URL defining the **API endpoint** of the Cloud Foundry platform that will be used for deployment.
 
-Pressing the 'Next' button will validate the specified credentials and show the next configure step.
+### 2.2 User Name
 
-## Step 2: Selecting the Cloud Foundry app
+The **User name** of your Cloud Foundry account.
 
-The second (and final) configure step will allow you to select an app in the Cloud Foundry instance to which your Mendix app will be deployed.
+### 2.3 Password
 
-### Organization
+The **Password** of your Cloud Foundry account.
 
-Select the organization you want to use. Note that at least one organization must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within Mendix Studio Pro.
+## 3 Selecting the Cloud Foundry App
 
-### Space
+The second step allows you to select an existing app, or create a new app, in the Cloud Foundry organization. This is where your Mendix app will be deployed.
 
-Select the space you want to use. Note that at least one space must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within Mendix Studio Pro.
+![Enter Settings for Cloud Foundry App](attachments/run-menu/cloud-foundry-app-settings.png)
 
-### App
+### 3.1 Organization
 
-Select the Cloud Foundry app you want to use. You can choose to either use an existing one, or to create a new one. When creating a new app, first choose the domain in which the app will run and then enter a name for the app.
+Select the **Organization** you want to use. If no organizations are available, you will need to configure one in your Cloud Foundry account; it is not possible to create a new one from within Mendix Studio Pro.
 
-### Buildpack
+### 3.2 Space
 
-Here you can enter the URL of the buildpack you want to use in your Cloud Foundry app. Only change this if you don't want to use the default Mendix buildpack.
+Select the **Space** you want to use. Note that the space you want to use must already be configured in your Cloud Foundry account; it is not possible to create a new one from within Mendix Studio Pro.
+
+### 3.3 App
+
+Either **Select existing app** if you want to use an existing app environment, or **Create new app** if you want to create a new app environment.
+
+#### 3.3.1 Select Existing App
+
+If you **Select existing app** you will be able to choose the correct app from a drop-down list.
+
+#### 3.3.2 Create New App
+
+If you **Create new app** you will need to do the following:
+
+1. Select the **Domain** in which the app will run from the drop-down.
+2. Enter the **App name** for the app.
+
+The URL for your app will be {App name}.(Domain).
+
+### 3.4 Buildpack
+
+Here you can enter the URL of the **Buildpack** you want to use in your Cloud Foundry app. Only change this if you don't want to use the default Mendix buildpack.

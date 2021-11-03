@@ -26,9 +26,9 @@ To see the results of this how-to, it is necessary that you set up a test projec
 
 Before you continue, make sure that you know how to create the following:
 
-* Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Domain models (for more information, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (for more information, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
 
 1.  Create the following domain model:
 
@@ -48,7 +48,7 @@ Before you continue, make sure that you know how to create the following:
 
 In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
 
-1.  Open your **orders overview** and right click on the (empty) section above the **Search** button.
+1.  Open your **orders overview** and right click the (empty) section above the **Search** button.
 
     {{% alert type="warning" %}}
 
@@ -58,12 +58,12 @@ In the previous section you set up a basic data structure and created some sampl
 
     ![](attachments/18448705/18581359.png)
 
-2.  Right click on the search bar section and select **Add search field** > **Drop-down**.
+2.  Right click the search bar section and select **Add search field** > **Drop-down**.
 3.  Add the **OrderStatus** attribute to the search field and define the name.
 
     ![](attachments/18448705/18581355.png)
 
-4.  Redeploy your application and click on the **Search** button on your orders overview. The new search field appears.
+4.  Redeploy your application and click the **Search** button on your orders overview. The new search field appears.
 
     ![](attachments/18448705/18581354.png)
 

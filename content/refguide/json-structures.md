@@ -1,6 +1,7 @@
 ---
 title: "JSON Structures"
 parent: "integration"
+menu_order: 40
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -22,8 +23,6 @@ When you paste or modify the JSON snippet, it is automatically checked for valid
 ![](attachments/18450089/19398781.png)
 
 You cannot press "OK" without making the JSON valid.
-
-JSON snippets with `:`, `^`, or `|` in property names are currently not supported.
 
 {{% /alert %}}
 
@@ -74,7 +73,7 @@ Each JSON property is composed of a key ("name") and a value ("John"). If the va
 *   "string". Converted into an attribute of type String.
 *   123\. Converted into an attribute of type Integer.
 *   true or false. Converted into an attribute of type Boolean.
-*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type DateTime.
+*   "1985-04-12T23:20:50.52Z". Converted into an attribute of type **Date and time**.
 *   12.50\. Converted into an attribute of type Decimal.
 
 ### 2.2 JSON Arrays
@@ -89,6 +88,6 @@ A JSON array is contained in square brackets (between `[` and `]`). It contains 
 
 {{% alert type="info" %}}
 
-The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (e.g. string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
+The first item of the array will be used to determine the type of the items in the array. Mixed arrays are unsupported. A mixed array is an array with entries of different data types (for example, string and integer). In the tree structure, a error will appear that you cannot use mixed arrays in your mappings.
 
 {{% /alert %}}

@@ -3,7 +3,7 @@ title: "Expose a Web Service"
 category: "Integration"
 menu_order: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
-tags: ["web service", "expose", "integration"]
+tags: ["web service", "expose", "integration", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -19,7 +19,7 @@ Mendix supports many ways to expose the functionality and data of your applicati
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
+* Download the latest version of [Mendix Studio Pro](https://marketplace.mendix.com/)
 
 {{% alert type="warning" %}}
 
@@ -29,12 +29,12 @@ This how-to was written based on Studio Pro version 5.20. All the images, names,
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer):
 
     ![](attachments/7831572/8945665.png)
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure).
 4. Run the application and add some data to expose in the web service.
 
 ## <a name="4"></a>4 Creating a Published Web Service
@@ -54,7 +54,7 @@ To create a published web service, follow these steps:
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Mendix Studio Pro Guide*):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the *Studio Pro Guide*):
 
         ![](attachments/18448728/18581712.png)
 
@@ -68,12 +68,14 @@ To create a published web service, follow these steps:
 
 To create the functionality to expose, follow these steps:
 
-1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)).
+1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item)).
 2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     ![](attachments/18448728/18581709.png)
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/083d4d13-b438-4980-b0ba-90d9a3f59f40/getcustomers?embed=true" allowfullscreen=""></iframe>
+	Reference this microflow:
+    
+    ![](attachments/18448728/model.jpg)
 
 ## <a name="6"></a>6 Publishing a Microflow
 
@@ -129,7 +131,7 @@ To get a WSDL, follow these steps:
 
 To change the user authentication, follow these steps:
 
-1. Double-click the published web service in the **Project Explorer** to open it.
+1. Double-click the published web service in the **App Explorer** to open it.
 2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
 
     ![](attachments/18448728/18581702.png)
@@ -146,7 +148,7 @@ Mendix enables creating your own user management functionality as long as your o
 
 When exposing a web service, consider the following things:
 
-* In Studio Pro some words are reserved for Mendix use (for example, type, enum)
+* In Studio Pro some words are reserved for Mendix use (for example, type, Enumeration)
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 
@@ -157,7 +159,6 @@ When exposing a web service, consider the following things:
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Enable Selenium Support](selenium-support)
-* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Import XML Documents](importing-xml-documents)
 * [Consume a REST Service](consume-a-rest-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

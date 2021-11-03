@@ -2,119 +2,279 @@
 title: "Translate Your App Content"
 category: "Collaboration"
 menu_order: 50
-tags: ["studio pro"]
+tags: ["studio pro", "translate app", "batch translate", "translate"]
 ---
 
 ## 1 Introduction
 
-Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Using translatable texts (for example, labels, button names, menu items) that are tracked and stored in your app project, you can quickly make your app multilingual and translate the content from English to many other languages.
+Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
 **This how-to will teach you how to do the following:**
 
-* Set the development language
-* Import and export translations
-* Configure language operations
-* Perform batch replacement and batch translation
+* Add a new language to your app
+* Change the working language
+* Translate individual items of text
+* Translate multiple items of text in one operation
+* Change multiple items of text in one operation
+* Copy a translation from one language to another
 
-## 2 Adding App Project Languages
+It is assumed that you know the basics of creating new apps and editing them.
 
-The app project language is the main language of the app when it is run. There must be a default app project language, and **English, United States** is the app project language set automatically by default. You can add as many languages as you like by following these steps:
+## 2 Creating a Sample App
 
-1.  In the **Project Explorer**, open the app project's **Settings** and go to the **Languages** tab.
+To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
-	![](attachments/Translating+Your+App+Content/01_project_settings.png)
+When you create an app from a Mendix template, there is one language available. This is **English, United States**, which you will usually set to be the **Default language**. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
 
-2. 	Click **Add**, select the desired language, and click **OK**.
+To create your app, do the following:
 
-	![](attachments/Translating+Your+App+Content/02_dutch.png)
+1. Create a new app using the **Blank App** template. If given the option, leave the **Default language** as **English, United States**.
 
-If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
+2. Open the app in Studio Pro.
 
-Any app project language can be used as a development language in Studio Pro (for details, see the [Changing the Development Language](#changingthedevelopmentlanguage) section below).
+3. Create a domain model in MyFirstModule with two entities:
 
-## 3 Changing the Development Language {#changingthedevelopmentlanguage}
+	* **Order** with the **Integer** attribute **OrderNumber**
+	* **Product** with the **String** attribute **ProductName**
+	
+		![Domain model for How To](attachments/translate-your-app-content/domain-model.png)
 
-The development language is the language used to define translatable texts as you develop your app in Studio Pro. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in Studio Pro will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
+4. Right-click one of the entities and select **Generate overview pages**.
 
-You can change the language setting if desired in Studio Pro by going to: **Language** > **Current Language**.
+5. In the **Generate pages** dialog box, ensure both entities are selected and click **OK**.
 
-![](attachments/Translating+Your+App+Content/04_switch_development_language.png)
+	![Options selected for Generate Pages](attachments/translate-your-app-content/generate-pages.png)
+	
+	This generates some pages containing text for you to translate.
 
-Mendix recommends setting your development language at the start of your app project, because all the added text (for example, button labels) will be added to the selected language library (so that it can be reused in other app projects).
+6. Open the page **Product_NewEdit** and add a new **Button** widget.
 
-After selecting your development language, the pages will display their labels and content in that language. Labels that haven’t yet been translated to the selected language will display the text of the default language (which was set in the app project **Settings**) between angle brackets (`<` `>`).
+7. Change the text on the new button to **Order**. You will use this button to allow the end-user to order the product they are viewing. Ignore the warnings about the setup of this button.
 
-When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict Studio Pro is in checking for a translation in the **Language Operations** settings of your app project (see the next section, [Configuring Language Operations](#toconfigurelanguageoperations)).
+	![Product New Edit page with an Order button](attachments/translate-your-app-content/order-button.png)
 
-### 3.1 Configuring Language Operations {#toconfigurelanguageoperations}
+8. Open the page **Home_Web** and put some text into the title and subtitle.
 
-To update the language settings in Studio Pro, go to **Language > Language Operations**.
+	![Product New Edit page with an Order button](attachments/translate-your-app-content/home-page-text.png)
 
-![](attachments/Translating+Your+App+Content/language_operations.png)
+You now have an app with some translatable texts.
 
-In the **Selection** section of the dialog window, you can select the documents and modules that you want to update. The columns of languages for which there are items but which are not included in the app project are gray.
+## 3 Adding App Languages
 
-In the **Operation** section of the dialog box, there are four language operation options, which are described below.
+You can now add an additional language to your app.
 
-* **Move** – moves the source language to the destination language, which ovewrites all the texts in the destination language with those in the source language
-	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the move language operation
-	* Texts that are absent in the source language will be absent in the desination language
-	* Following this operation, all the texts in the source language will be deleted
-* **Copy** – copies the source language to the destination language, which ovewrites all the texts in the desination language with those in the source language
-	* Select the **Source language** and the **Destination language** in their respective drop-down menus for the copy language operation
-	* Texts that were absent in the source language will be absent in the desination language
-* **Swap** – swaps the source lanauge and the destination language, which moves all the texts in the source lanauge to the destination language and vice versa
-	* Select the **First language** and the **Second language** in their respective drop-down menus for the swap language operation
-* **Delete** – deletes all the texts in the language selected in the **Language** drop-down menu
+If you want to create the whole app in a language other than the current default, it is best to do this before you start creating the app. If you want to add alternative languages, it is best to do this when your app is nearing completion, as it reduces the amount of work needed to do the translation from the default language, especially if there is already a translation for that language.
 
-Click **Apply** to apply the selected language operation.
+To add an additional language, do the following:
 
-## 4 Translating Labels
+1. Select the menu item **Language** > **Language settings** to open the **App Settings** dialog box.
 
-### 4.1 Consolidating Labels & Perform Batch Replace
+2. Click **Add** to open the **Add Language** dialog box.  
 
-There may be some text in your app that occurs in more than one place, so before you translate, it is best to consolidate similar labels so that they stay the same after the translation. The language in your app will be more consistent if you have a high occurrence/text ration, as that means you reuse existing text across your app, which will increase the user experience.
+3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
 
-To search for phrases that look similar and replace them as a batch, follow these steps:
+	{{% alert type="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
-1. Go to **Language** > **Batch Replace**.
-2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
-3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
+4. Click **OK** to save the changes. The **Add Language** dialog box closes.
 
-	![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
+   In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Russian as their language.
+   
+   ![Language settings tab in the app settings dialog](attachments/translate-your-app-content/language-settings.png)
 
-4. Enter the new replacement text under **Replace with**, and then click **Replace**.
+5. Click **OK**. The **App Settings** dialog box closes.
 
-### 4.2 Translating Labels
+## 4 Changing the Current Language
 
-To translate a label, follow these steps:
+The current language is the language of the dictionary where any text you enter is stored. At the lower-right corner of the Studio Pro window, the language indicator shows which language is the current language.
 
-1. Select the desired development language from the language drop-down menu in Studio Pro toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
-2. Words that have not been automatically translated (that is, those words that are in angle brackets) must be manually translated one-by-one or through batch translation (see below).
+To change your current language to Russian, do the following:
 
-### 4.3 Performing Batch Translation
+1. Click the language indicator at the lower-right corner of the Studio Pro window.
+2. Select **Russian, Russia** to make that your current language.
 
-Instead of going through the pages and translating labels one-by-one, it's much more efficient to use the batch translate option.
+	![Change the current language](attachments/translate-your-app-content/change-language.png)
 
-You can also filter to specific modules and use the search to find specific labels.
+	{{% alert type="warning" %}}If you do further development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
-To enable batch translation, follow these steps:
+## 5 Translating an Individual Piece of Text
 
-1. Go to **Language** > **Batch Translate**.
-2. Select the **Source language** and **Destination language**.
-3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
-4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
+Now that your current language is Russian, you can translate some of the texts into that language.
 
-	![](attachments/Translating+Your+App+Content/11_filter_module.png)
+1. Open the **Home_Web** page in Studio Pro.
 
-5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
+	The untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
+	
+	![untranslated-texts](attachments/translate-your-app-content/untranslated-texts.png)
+	
+2. Enter your translation for the two text items on the page.
 
-#### 4.3.1 Text Occurrence & Context
+	![Home page with translated text](attachments/translate-your-app-content/home-page-russian.png)
 
-Because some labels and other texts are in the list multiple times, it’s important to know where in your app they’re being used. You can see this using the **Occurrence** window at the bottom of the **Batch translate** dialog box.
+You have now added a translation for these two pieces of text.
 
-For example, there may be two English labels with the word "address." If you translate this to Dutch, it’s important to know if the word is used in the context of "someone's contact details" or in the context of "talking to a person in a certain way" (for example, in Dutch, the first meaning translates to “adres,” but the second meaning translates to "aanspreken").
+## 6 Using Batch Translate
 
-## 5 Exporting & Importing Translations
+You can translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 
-If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (*.xlsx*) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.
+Mendix offers you a way to add a translation for all occurrences of a text at once.
+
+### 6.1 Translating Multiple Texts {#translate-multiple-texts}
+
+To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following:
+
+1. Select the menu option **Language** > **Batch Translate**. The **Batch Translate** dialog box opens.
+
+2. Select **English, United States (default)** as the **Source language** and **Russian, Russia** as the **Destination language**.
+
+3. Click **OK**.
+
+4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module, rather than everything. To change this, click **Select** next to **Documents/modules**. The **Select Documents/Modules** dialog box opens.
+
+5. Make sure only the module **MyFirstModule** is selected. This can restrict batch translation to this module.
+
+   ![Select only MyFirstModule](attachments/translate-your-app-content/batch-translate-myfirstmodule.png)
+
+6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
+
+   ![Translatable texts in MyFirstModule](attachments/translate-your-app-content/batch-translate-initial.png)
+
+7. Enter translations in the **Translation (Russian, Russia)** column for a few terms: **Cancel**, **Delete**, and **Edit**, for example.
+
+   ![Translate Cancel, Delete, and Edit into Russian](attachments/translate-your-app-content/batch-translate-cancel-delete-edit.png)
+
+8. Click **Translate** to save the current translations.
+
+9. **Close** the dialog box.
+
+10. Open the **Product_NewEdit** page. The related terms now have Russian translations.
+
+	![Product New Edit page showing the cancel button translated into Russian](attachments/translate-your-app-content/product-new-edit-partial-translation.png)
+
+### 6.2 Dealing With More Complex Translations
+
+Sometimes a single word in the source language does not have a single translation in the destination language.
+
+To deal with this situation, follow the steps below:
+
+1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) again to see the list of texts in your module which can be translated from **English, United States** to **Russian, Russia**.
+
+2. In the **Source text contains** field, enter *Order*.
+
+3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** section.
+
+	![All source texts containing the word 'order' with the locations of the text 'order' shown](attachments/translate-your-app-content/batch-translate-order.png)
+	
+4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
+
+   ![Order button on Product New Edit page](attachments/translate-your-app-content/product-new-edit-order.png)
+
+   In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
+
+5. If you made any translations, click **Translate** to save them.
+
+6. **Close** the dialog box.
+
+7. In our app, the text *Order* is used as the command to order a product, and also used to refer to the Order entity. However, in Russia the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
+
+8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
+
+   ![Order button on Product New Edit page translated into Russian](attachments/translate-your-app-content/product-new-edit-order-russian.png)
+
+9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
+
+   Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
+
+   ![All source texts containing the word 'order' showing that ones with different translations are shown separately. ](attachments/translate-your-app-content/batch-translate-order-split.png)
+
+10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
+
+    ![All source texts containing the word 'order' showing two different translations for Order. ](attachments/translate-your-app-content/batch-translate-order-2-translations.png)
+
+11. Click **Translate** to save the translation.
+
+12. **Close** the dialog box.
+
+You can now check that the correct translation has been applied to the other instances of *Order*, for example on the **Order_Overview** page.
+
+## 7 Replacing Text in Current Language
+
+Once you have made some translations, you may want to look at just the translations to check for spelling or consistency. To do this, use **Batch replace** as follows:
+
+1. Ensure that your current language is the language you want to review. Batch replace works only on the currently selected language.
+
+2. Select the menu item **Language** > **Batch replace**.
+
+	The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Source text contains** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
+	
+	![All texts which have been translated into Russian.](attachments/translate-your-app-content/batch-replace-russian-initial.png)
+	
+	You can see that you have been inconsistent with use of capital letters. So you need to make it more consistent.
+
+3. Enter the new text in the **Replace with** column.
+
+	![All texts which have been translated into Russian.](attachments/translate-your-app-content/batch-replace-russian-capitals.png)
+
+4. Click **Replace** to update the translation dictionary.
+
+5. **Close** the dialog box.
+
+
+## 8 Copying to a New Language
+
+Having translated your app, you may want to translate it into another related language (for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Russian, Russia** into **Belarusian, Belarus**). Many of the translations will be the same, so you do not want to type them again.
+
+To copy our Russian translations into a Belarusian dictionary, you can do the following:
+
+1. Go to **Language**  > **Language Settings**. The **App Settings** dialog box opens.
+
+2. Click **Add** to add **Belarusian, Belarus** as an app language.
+
+   ![Belarusian added to the app](attachments/translate-your-app-content/language-settings-belarusian.png)
+
+3. Click **OK** to save the changes and close the **App Settings** dialog box.
+
+4. Go to **Language** > **Language Operations**. The **Language Operations** dialog box opens.
+
+5. Select **MyFirstModule**. In the **Russian, Russia** column, it shows **11**. This means there are 11 translations in the Russian dictionary.
+
+6. Select **Copy** for the **Operation**.
+
+7. Select **Russian, Russia** as the **Source language**.
+
+8. Select **Belarusian, Belarus** as the **Destination language**.
+
+9. Click **Apply**. Now in the **Belarusian, Belarus** column, it shows **11**, too. Your Russian texts are copied to the Belarusian dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Russian and Belarusian translations are different.
+
+10. **Close** the **Language Operation** dialog box.
+
+## 9 Other Considerations
+
+Now you know how to make translations of translatable texts, there are a couple of other things you may wish to investigate.
+
+### 9.1 Completeness
+
+You probably want to check if you miss any text that should have been translated. It is a big task to go through your app manually and check every piece of text. Mendix provides you with a completeness check for your languages.
+
+To set up the completeness check, do the following:
+
+1. Go to **Language > Language Settings**. The **App Settings** dialog box opens.
+2. In the grid, double-click the language for which you want to set the completeness check. The **Edit Language** dialog box opens.
+3.  Select the **Check completeness** check box.
+4. Click **OK** to close the **Edit Language** dialog box. 
+5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
+
+For more information, see [Advanced Language Settings](../../refguide/language-settings#advanced) in the *Language Settings* reference guide.
+
+### 9.2 Sharing Translations With Other Apps
+
+You have seen how you can create translations easily and even copy your new translation to a new language in the current app.
+
+What if you have several apps and want to add Russian to all of them? Maybe you want to translate your own modules from scratch, but you will not want to translate the system module, administration module, and Atlas UI all over again, as they do not change and you already have perfect translations for these.
+
+Mendix allows you to export a translation to an Excel file, either for the whole app or just selected modules. You can then import this translation to another app and have your translation available to you.
+
+For more information, see [Exporting & Importing Text](../../refguide/batch-translate#export-import) in the *Batch Translate* reference guide.
+
+## 10 Read More
+
+* [Language Menu](../../refguide/translatable-texts)

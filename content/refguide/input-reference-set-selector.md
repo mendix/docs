@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](association-properties) by selecting the associated object(s).
+An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](associations) by selecting the associated object(s).
 
 An input reference set selector must be placed in a [data widget](data-widgets).
 
@@ -36,7 +36,7 @@ For example, using the domain model above, the following input reference set sel
 
 An example of input reference set selector properties is represented in the image below:
 
-{{% image_container width="400" %}}![](attachments/input-reference-set-selector/input-reference-set-selector-properties.png)
+{{% image_container width="250" %}}![](attachments/input-reference-set-selector/input-reference-set-selector-properties.png)
 {{% /image_container %}}
 
 Reference set selector properties consist of the following sections:
@@ -57,23 +57,9 @@ Reference set selector properties consist of the following sections:
 
 ### 2.2 Data Source Section {#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
-The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference set selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
+The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association, of type reference set, starting in the entity of the data view.
 
 ### 2.3 Design Properties Section {#design-properties}
 
@@ -97,7 +83,7 @@ The select page property determines which page is displayed when the input refer
 
 If an input reference set selector is never editable, a select page is not required.
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 {{% alert type="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.
@@ -109,7 +95,7 @@ You can generate a new page to show by right-clicking the widget and selecting *
 
 ### 2.8 Selectable Objects Section {#selectable-objects}
 
-The properties in the Selectable objects section determine the objects from which the end user can make a selection. You can add an **XPath constraint**, or use a **Constrained by** path.
+The properties in the Selectable objects section determine the objects from which the end user can make a selection. As source, you can use **Database** or **XPath**. When using **XPath**, you can add an **XPath constraint**, or use a **Constrained by** path.
 
 For more information, see the [XPath](reference-selector#xpath-constraints) section of *Reference Selector*.
 

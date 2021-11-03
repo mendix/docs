@@ -80,7 +80,7 @@ public long getNamedUserCount();
 }
 ```
 
-This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
+This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
 ```
 package jmx.actions;
@@ -153,7 +153,7 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [How to Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
 * [How to Log Levels](log-levels)

@@ -1,7 +1,7 @@
 ---
 title: "Find Things in the Model"
 parent: "manipulating-existing-models"
-tags: ["app store module", "module"]
+tags: ["marketplace", "app store module", "module"]
 ---
 
 ## 1 Introduction
@@ -10,9 +10,9 @@ The `model` object you get back from `workingCopy.model()` can be used to find a
 
 ## 2 The model.root Property
 
-The `root` object refers to the `root` project node in the **Project Explorer** in Studio Pro. From there, you can walk through the app project tree and into specific documents.
+The `root` object refers to the `root` project node in the **App Explorer** in Studio Pro. From there, you can walk through the app tree and into specific documents.
 
-For example, this snippet finds the name of the first attribute of the `Customer` entity in the first module of your app project:
+For example, this snippet finds the name of the first attribute of the `Customer` entity in the first module of your app:
 
 ```js
 const model = workingCopy.model();
@@ -48,7 +48,7 @@ For more information, see [How to Load Units and Elements](loading-units-and-ele
 
 ## 5 The model.allModules Function
 
-Implement this snippet to fetch information on all the App Store modules used in your app project:
+Implement this snippet to fetch information on all the Marketplace modules used in your app:
 
 ```js
 const model = workingCopy.model();

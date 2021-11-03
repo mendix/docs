@@ -12,11 +12,7 @@ Mendix apps can consume OData services exposed by SAP back-end systems. To do th
 
 The OData Connector for SAP solutions needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.
 
-Any OData service can be used to generate a data model using the OData Model Creator for SAP solutions. See [How To Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator) for instructions on how to do this.
-
-{{% alert type="warning" %}}
-*OData Model Creator for SAP solutions* and *OData Connector for SAP solutions* only support SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
-{{% /alert %}}
+Any OData service can be used to generate a data model using the OData Model Creator for SAP solutions. See [How To Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator) for instructions on how to do this.
 
 ## 2 SAP Data Models
 
@@ -52,4 +48,4 @@ The enumeration **FunctionNames** contains a list of functions which are exposed
 ## 3 Read More
 
 * [OData Connector for SAP Solutions](sap-odata-connector)
-* [How To Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator)
+* [How To Use the OData Model Creator for SAP Solutions](use-sap-odata-model-creator)

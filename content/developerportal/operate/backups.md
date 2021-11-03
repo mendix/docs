@@ -4,15 +4,14 @@ category: "Operations"
 menu_order: 40
 description: "The Backups page of the Developer Portal described."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Backups are created every night or on-demand, as described in the [Backups](#backups) section, below.
+Backup snapshots are created every night or on-demand, as described in the [Backups](#backups) section, below.
 
-Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally. 
-
-You can also buy a replication/failover add-on to enable incremental backups with a 15 minute interval for both the database and file documents.
+Backup snapshots contain both the database and file documents referred to in the database.
 
 ## 2 Creation and Retention Schedules
 
@@ -20,20 +19,38 @@ The pruning schedule applies to nightly backups *and* backups initiated by users
 
 The following backups are retained:
 
-* Nightly backups: two weeks
+* Nightly backups: 30 days
 * Weekly backups (Sunday night): three months
 * Monthly backups (First Sunday night of the month): one year
 * Manual (user-initiated) backups: three months
 
-The start time of nightly backups is between 21:00 and 05:00 **UTC**.
+### 2.1 Nightly Backups
+
+The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center – this may vary if *Summer Time* or other adjustments are in place. The **Estimated Duration** indicates the period during which backups are expected to be taken from apps in that region – your app can be backed up at any time during this period and the exact period during which backups are taken can change due to factors at the data center which are outside Mendix's control.
+
+| Region | Start Time (UTC) | Local Time | Estimated Duration |
+| --- | --- | --- | --- |
+| Dublin | 23:00 | 00:00 |  3 hours |
+| Frankfurt | 00:00 | 01:00 | 3 hours |
+| London | 23:00 | 23:00 | 2 hours |
+| Oregon | 07:00 | 00:00 | 1 hour |
+| Singapore | 17:00 | 01:00 | 1 hour |
+| Tokyo | 16:00 | 01:00 | 1 hour |
+| N. Virginia | 05:00 | 00:00 | 4 hours |
+
+Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
+
+### 2.2 Notes on Retention
+
+The Monthly backup is from the *first* Sunday in the month. If the first nightly backup takes place after the first Sunday in the month, then there will be no monthly backup retained for that month. In this case, you can download a copy of a nightly or weekly backup if you need to retain a backup for longer than three months.
 
 ## 3 Backups{#backups}
 
-The **Backups** page under the **Operate** category presents options for managing your backups. These are described below.
+The **Backups** page presents options for managing your backups. These are described below.
 
 ### 3.1 Create Backup
 
-This will automatically generate a backup from your application data. See [Create a Backup](create-backup).
+This will automatically generate a backup snapshot from your application data. See [Create a Backup](create-backup).
 
 ### 3.2 Upload Backup
 
@@ -43,17 +60,21 @@ The sections below present details on uploading data in recent Mendix Cloud vers
 
 In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application. 
 
-Anything you can download you can also upload again, which means you can upload the following:
+Anything you can download you can also upload again, which means you can upload archives containing the following:
 
 * **Full Snapshot**
 * **Database Only**
 * **Files Only**
 
 {{% alert type="info" %}}
-Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it. This functionality can be used to move file documents from one environment to another (especially useful if you have a lot of file documents). It will still be necessary to upload a **Database Only** archive to make sure the database can be restored.
+Uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it.
 {{% /alert %}}
 
 #### 3.2.2 Uploading Data in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Our Mendix Cloud V3 is deprecated, currently in a grace period, and will be retired at the beginning of Q3 2021. To continue running your licensed Mendix application on the Mendix Cloud, you need to migrate your app to Mendix Cloud V4. To learn more about Mendix Cloud V4 and how to migrate from Mendix Cloud V3, please visit the following page: [Migrate to Mendix Cloud V4](/developerportal/deploy/migrating-to-v4). 
+{{% /alert %}}
 
 {{% alert type="warning" %}}
 In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data.
@@ -70,7 +91,7 @@ You can upload two types of data:
 
 ### 3.3 Download Backup
 
-You can download one of the following: 
+You can download a backup archive containing one of the following: 
 
 * **Full Snapshot**
 * **Database Only**
@@ -79,14 +100,14 @@ You can download one of the following:
 See [Download a Backup](download-backup) for more information.
 
 {{% alert type="info" %}}
-As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
+As the download archive is generated on request, it is not possible to estimate the file size before requesting a download.
 {{% /alert %}}
 
 ### 3.4 Restore Backup
 
-You can choose the **destination** environment to which you want to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
+You can choose the **destination** environment to which you want to restore the backup snapshot. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
-If you restore a backup that was originally deployed with an older Mendix version, you will get a warning. You can still restore the backup, but you will have to deploy the older model later on. 
+If you restore a backup snapshot that was originally deployed with an older Mendix version, you will get a warning. You can still restore the data, but you will have to deploy the older model later on. 
 
 {{% alert type="info" %}}
 In Mendix Cloud v4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
@@ -106,10 +127,13 @@ Backup Details | Cloud Version | Description
 **ID**/ <br /> **Snapshot id** | v3 <br /> v4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | v3 <br /> v4 | The creation date of the backup
 **Expires on** | v3 & v4 | The date on which the backup will be removed from the system
-**Mendix version** | v3 & v4 | The version of the deployment package used during backup creation
+**Model version** | v3 & v4 | The version of the deployment package used during backup creation
+**Snapshot Size Uncompressed (MB)** | v4 | The size of database dump and files of the snapshot in MB
 **Comment** | v3 & v4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
+
+![Backup Details](attachments/backups/backup-details.png)
 
 ## 4 Known issues
 
@@ -120,5 +144,4 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
-* [How to Restore a Backup Locally](database-size-reduction)
-* [Database Size Reduction](database-size-reduction)
+* [How to Restore a Backup Locally](restore-backup-locally)

@@ -6,23 +6,25 @@ menu_order: 3
 
 ## 1 Introduction
 
-Katalon is a popular graphical testing tool, which is why Mansystems decided to build an integration between ATS and Katalon. This integration allows testers to leverage the power of Katalon and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a custom keyword in Katalon.
+Katalon is a popular graphical testing tool, which is why CLEVR decided to build an integration between ATS and Katalon. This integration allows testers to leverage the power of Katalon and combine it with the ease-of-use and Mendix-focus of ATS. With this integration, executing an ATS function is as simple as calling a custom keyword in Katalon.
 
 {{% alert type="info" %}}
-Before you start writing tests, you need to import the ATS keywords library via *ats.jar*":<br />
+Before you start writing tests, you need to import the ATS keywords library via *ats.jar*:<br />
 
-![](attachments/ov-function-api/Untitled-c2515c50-1464-4085-9f88-818d003cb89a.png)
+![](attachments/ov-function-api/library.png)
 {{% /alert %}}
 
 ## 2 Configuring the ATS Settings
 
-![](attachments/ov-function-api/Untitled-816b4502-24ab-4343-93c2-fc280a84325f.png)
+To configure the ATS settings, you need to enter the **Project ID**, **API key**, and **URL**:
+
+![](attachments/ov-function-api/settings.png)
 
 ## 3 Executing an ATS Function
 
-![](attachments/ov-function-api/Untitled-6cec466e-90c1-42a6-8231-07bd86663472.png)
+![](attachments/ov-function-api/executing.png)
 
-```groovy
+```
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -37,9 +39,9 @@ CustomKeywords.'ats.Mendix.Login'('user', 'password', false)
 
 Assert using ATS:
 
-![](attachments/ov-function-api/Untitled-3d2eeb2a-2d3c-44b5-ba13-6d3c112ca5e8.png)
+![](attachments/ov-function-api/assert1.png)
 
-```groovy
+```
 WebUI.openBrowser('')
 
 //go to the URL and wait for the Mendix application to load
@@ -55,11 +57,11 @@ CustomKeywords.'ats.Mendix.Login'('user', 'password', false)
 CustomKeywords.'ats.Widget_Assert.AssertValue'('listView1 index-0 textBox1', 'foo', null, false)
 ```
 
-Aternately, assert values using [Cucumber](https://cucumber.io/):
+Aternatively, assert values using [Cucumber](https://cucumber.io/):
 
-![](attachments/ov-function-api/Untitled-4a003a6d-6867-44b8-a846-7bfa9cca8d3f.png)
+![](attachments/ov-function-api/assert2.png)
 
-```groovy
+```
 WebUI.openBrowser('')
         
 // go to the URL and wait for the mendix application to load

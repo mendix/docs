@@ -1,8 +1,14 @@
 ---
-title: "New Database Set Up on SQL Server"
+title: "New Database Setup on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
 menu_order: 10
+tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", "Extensions", "Role"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/setting-up-a-new-sql-server-database.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -22,24 +28,28 @@ When setting up a new database for Mendix, most of the settings can be left to t
 
 In the database options, the default properties need to be evaluated. When choosing a collation, pay attention to the type of collation you are going to use. Mendix uses UTF-8 for all data evaluation. Depending on your exact locale, you will most likely want to choose one of the `SQL_Latin1_General_` collations. The exact encoding will depend on your OS. For an *en_US* installation, this will be `CP1`.
 
-The last two options identify how sorting and uniqueness is interpreted. For example, the collation option `_CS_` indicates that the collation sorting style will be case-sensitive. For more information on collations, see [Windows Collation Sorting Style](https://msdn.microsoft.com/en-us/library/ms143515.aspx).
+The last two options identify how sorting and uniqueness is interpreted. For example, the collation option `_CS_` indicates that the collation sorting style will be case-sensitive. For more information on collations and case sensitivity, see  [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior) and the Microsoft documentation [Windows Collation Name](https://docs.microsoft.com/en-us/sql/t-sql/statements/windows-collation-name-transact-sql).
 
 As a recovery model, Mendix only requires the **Simple** mode. The functionality offered in the **Full** recovery model option is not used by Mendix; usage of this recovery model will not hurt Mendix, but it could increase the data usage of all the transactions and might slow down any rollbacks in case of an error.
 
 ![](attachments/setting-up-a-new-sql-server-database/18580675.png)
 
-After the database is created, the Mendix Platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
+After the database is created, the Mendix Runtime can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges which are implicitly assigned to the `db_owner` role. If the user used by the Mendix Runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
-## 3 Configuring the Read Committed Snapshot Isolation Level
+## 3 Enabling Read Committed Snapshot Isolation Level and Snapshot Isolation
+
+Mendix apps using SQL Server use both **Read Committed Snapshot** and **Snapshot Isolation** features for their database. This allows read operations to continue even if the record has been updated by a concurrent transaction, improving concurrency. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15).
 
 {{% alert type="info" %}}
-You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
+You only need to follow these steps if the database user used by the Mendix Runtime does not have enough permission to issue the `ALTER DATABASE` command (usually the `sysadmin` role).
 {{% /alert %}}
 
-The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
+The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. This can be achieved by executing the following commands on the database:
 
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
+
+ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
 {{% alert type="info" %}}
 You need to replace `MySchema` with the name of your schema.
@@ -86,7 +96,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 #### 4.2.2 Create Procedure usp_nextsequencevalue
 
 {{% alert type="info" %}}
-This is normally executed automatically by the Mendix runtime so long as the database user used by Mendix has permission to create procedures.
+This is normally executed automatically by the Mendix Runtime so long as the database user used by Mendix has permission to create procedures.
 {{% /alert %}}
 
 ```

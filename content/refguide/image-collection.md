@@ -22,10 +22,8 @@ Too many large static images in your app can lead to performance issues. If you 
 
 To add an image collection, do the following.
 
-1. Right-click a module in the **Project Explorer**
-2. Select **Add other > Image collection**
-
-    ![Add an image collection](attachments/image-collection/add-collection.png)
+1. Right-click a module in the **App Explorer**.
+2. Select **Add other > Image collection**.
 
 3. Give your image collection a name.
 

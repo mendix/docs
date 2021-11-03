@@ -1,6 +1,8 @@
 ---
 title: "Document Templates"
 category: "Desktop Modeler"
+aliases:
+    - /refguide7/Document+Templates.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +14,7 @@ Document Templates are used to model a template required as input for a document
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [document template](document-template) itself.
 {{% /alert %}}
 
-The document templates also contain components, also know as _widgets_. Below is a categorized overview of all widgets. The following categories are used:
+Document templates may contain components, also known as _widgets_. Below is an overview of all widget categories:
 
 * [Core widgets](#core) are central to building document templates in Mendix. These are the widgets that can show a list of entities or a single entity
 * [Layout widgets](#layout) are used to structure the layout of your document templates

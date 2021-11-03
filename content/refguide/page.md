@@ -31,7 +31,7 @@ You can perform the following basic function when working in the page editor:
 
 To open a page in Studio Pro, do the following:
 
-1. In the [Project Explorer](project-explorer), open a module where this page is located. 
+1. In the [App Explorer](project-explorer), open a module where this page is located. 
 
 2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
@@ -45,11 +45,11 @@ The selected page is opened.
 
 To create a new page, do the following:
 
-1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
+1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to create a page in and select **Add page**:
 
     ![](attachments/page/add-page.png)
-
-2.  In the **Create Page** dialog window, fill in the **Page name** and select a **Navigation layout**.
+    
+2.  In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
     ![](attachments/page/create-page.png)
 
@@ -61,7 +61,7 @@ A new page is created.
 
 To delete a page, do the following:
 
-1. In the [Project Explorer](project-explorer), select a page you would like to delete and right-click it.
+1. In the [App Explorer](project-explorer), select a page you would like to delete and right-click it.
 2. In the displayed list, select **Delete** and confirm your choice by clicking **Delete** in the pop-up dialog.
 
 The selected page is deleted. 
@@ -72,24 +72,22 @@ The way you can add an element on a page depends on a mode you are editing your 
 
 In **Structure mode**, there are several ways to add an element on a page:
 
-1.  Through the **Toolbox**: <br/>
-    a. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. <br/>
+1.  Through the **Toolbox**:
+
+    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
+    2. Select an element you would like to add and drag and drop this element on your page.
     
-    ![](attachments/page/toolbox.png)<br/>
-   
-    c. Select an element you would like to add and drag and drop this element on your page. <br/>
-   
-2. Though the menu at the top of the page: <br/>
+2. Through the menu at the top of the page:
 
-    a.  Do one of the following:<br/>
+    1. Do one of the following:
 
-    ​	i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).<br/>
+        i. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
 
-    ​	ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.<br/>
+        ii. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
-    ​	![](attachments/page/top-menu.png)
-
-    b. Click a drop-zone on a page to position an element.  <br/>
+        ![](attachments/page/top-menu.png)
+        
+    2. Click a drop-zone on a page to position an element.
 
 3. By right-clicking a drop-zone:<br/>
 
@@ -97,7 +95,8 @@ In **Structure mode**, there are several ways to add an element on a page:
 
     b. Select between adding a widget or a building block.<br/>
 
-    ![](attachments/page/adding-widget-in-drop-zone.png)<br/>
+    {{% image_container width="400" %}}![](attachments/page/adding-widget-in-drop-zone.png)
+    {{% /image_container %}}<br/>
 
     c. Select an element you would like to add and confirm your choice by clicking **Select**.
 
@@ -116,7 +115,10 @@ To view properties of an element, do one of the following:
 
 ### 2.6 Arranging Elements on a Page {#arrange-elements}
 
-To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
+To cut/copy/paste you can use the following shortcuts:
+
+* <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
+* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
 
 {{% alert type="info" %}}
 
@@ -145,43 +147,50 @@ Both modes allow you to edit your page by doing the following:
 * Dragging widgets from the **Toolbox** pane onto the page
 * Dragging widgets, and their contents, from one place on the page to another
 * Viewing and editing properties of each widget in the **Properties** pane
-* Opening a **Properties** dialog window from the menu you get when you right-click the widget
+* Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
 ### 3.1 Structure Mode {#structure-mode}
 
-In Structure mode, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+
+* You can zoom a page in or out using the **Zoom** drop-down menu in the top-right corner of a page
 
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 
-    ![Frequently-used widgets](attachments/page/structure-mode-info.png)
+	![Frequently-used widgets](attachments/page/structure-mode-info.png)
 
-* Each widget has a drop zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
-* Right-click on a drop zone allows you to insert a widget into it
-* There is a menu at the top of the page of data widgets – these cannot be dragged, but are positioned by clicking a drop zone after selecting the widget
+* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
 
-    ![Frequently-used widgets](attachments/page/frequently-used.png)
+* Right-click a drop-zone allows you to insert a widget into it
 
-* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button.
+* There is a menu at the top of the page of data containers – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget
+
+	![Frequently-used widgets](attachments/page/frequently-used.png)
+
+* Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
     ![Show styles button](attachments/page/show-styles.png)
 
 ### 3.2 Design Mode {#design-mode}
 
-In Design mode, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
+In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a tablet:
+For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
 ![Design mode page as displayed on a tablet](attachments/page/design-mode-example.png)
 
-It has the following features which are not available in Structure mode:
+It has the following features which are not available in **Structure mode**:
 
 * The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
+* The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
-* The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button
-
-    ![Show styles button](attachments/page/design-factor.png)
+	![Show styles button](attachments/page/design-factor.png)
 
 * The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
+* Toggle showing conditionally-visible widgets in the top bar:
+
+	![Show conditional visibility](attachments/page/conditional-visibility.jpg)
+
 
 ## 4 Read More
 

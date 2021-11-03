@@ -1,63 +1,67 @@
 ---
 title: "Database Source"
 parent: "data-sources"
-tags: ["studio pro"]
+tags: ["studio pro", "database", "data source"]
+menu_order: 10
 ---
 
+## 1 Introduction
 
-If database is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device. 
+If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device.
+
+You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](access-rules) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules . Access rules will also be applied when executing microflows which saves you from repeating constraints.
+
+## 2 Properties
+
+### 2.1 Entity (Path)
+
+The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
+
+{{% image_container width="400" %}}![Data Source Example](attachments/data-widgets/data-source-example.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 
-Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to constraints on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating constraints.
+This differs from the [association data source](association-source) when objects are retrieved from the memory, not database.
 
 {{% /alert %}}
 
-## Components
+### 2.2 Show Search Bar {#show-search-bar}
 
-### Search bar
-
-See [Search Bar](search-bar).
-
-### Sort bar
-
-See [Sort Bar](sort-bar).
-
-## Properties
-
-### Entity (Path)
-
-The entity (path) property specifies the target of the database query. A top-level data grid is always connected to an entity.
-
-A nested data grid can either be connected to an entity or to an entity path starting in the entity of the containing data view. The entity path follows one association of type reference in the opposite direction in which the association's arrow is pointing (from * to 1).
-
-Please note that this differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
-
-### Show search bar
-
-With this property you can influence if and when a search bar is shown.
+**Show search bar** is only available for data grids. You can select if and when the **[Search bar](search-bar)** of the data grid is shown.
 
 | Value | Description |
 | --- | --- |
 | Never | No search bar or search button are ever shown. Effectively disables search. |
-| With button (initially open) | The user can open and close the search bar using the search button; the search bar is initially open. |
-| With button (initially closed) | The user can open and close the search bar using the search button; the search bar is initially closed. |
+| With button (initially open) | An end-user can open and close the search bar using the [**Search** button](control-bar#search-button); the search bar is initially open. |
+| With button (initially closed) *(default)*  | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always | The search bar is always visible and cannot be close, nor is there a search button. |
 
-_Default value:_ With button (initially closed)
+### 2.3 Wait for Search
 
-### Wait for search
+The **Wait for search** property is available if **[Show search bar](#show-search-bar)** is set to *With button (initially open)* or to *Always*. 
 
-If set to true, the grid will remain empty of contents until a search has been performed. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
+When **Wait for search** is set to *Yes*, the grid will remain empty of contents the end-user initiates a search. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
 
-_Default value:_ false
+Default: *false*
 
-### Constraints{#constraints}
+### 2.4 Constraints{#constraints}
 
-Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied after constraints already applied through security. Each constraint consists of an attribute, an operator and a value. Multiple constraints will limit the data even more ("and"). There is no way to create "or" constraints, except by switching to an [XPath data source](xpath-source).
+Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the XPath constraint will be applied first.
+
+Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
+
+![Constraint Example](attachments/data-widgets/constraint-example.png)
+
+Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](xpath-source) and create an XPath constraint.
 
 {{% alert type="warning" %}}
 
-Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
+Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](access-rules) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 
 {{% /alert %}}
+
+## 3 Read More
+
+* [Data Containers](data-widgets)
+* [Data Grid](data-grid)

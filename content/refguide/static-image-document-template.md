@@ -2,6 +2,9 @@
 title: "Static Image (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Static+Image+(document+template).html
+    - /refguide/static-image-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +14,7 @@ A static image shows a predefined image. It can be put either inside or outside 
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918133.png)
+![](attachments/document-templates/918133.png)
 
 A static image inside a table cell.
 

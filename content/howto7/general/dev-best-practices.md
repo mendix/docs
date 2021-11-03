@@ -15,7 +15,7 @@ Even with the powerful navigation and search support in the Mendix Modeler, adhe
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
 * A clear structure helps in identifying reusable code
 
-## 2 Project Setup
+## 2 App Setup
 
 ### 2.1 The Application Development Language
 
@@ -25,17 +25,17 @@ There are some reasons why certain parts of an application may use another langu
 
 For more information, see [How to Translate Your App Content](/howto7/collaboration-requirements-management/translate-your-app-content).
 
-### 2.2 Project Name
+### 2.2 App Name
 
-Every project is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and will want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.
+Every app is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more apps in the future, and will want to be able to recognize this app. We recommend leaving out dates or Mendix version numbers in the app name, since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
 
-Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** or **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
+Every app has at least one configuration, but it may have many. Every app starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** or **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
-The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide7/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a UpperCamelCase notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -45,7 +45,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have UpperCamelCase names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
@@ -55,11 +55,11 @@ The [module roles](/refguide7/module-role) should have logical names that reflec
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide7/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes app-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use UpperCamelCase, for example, **HousekeepingRecord** or **LogEntry**.
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide7/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use UpperCamelCase, for example, **FirstName** or **TelephoneNumber**.
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
 
@@ -89,15 +89,15 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
-The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your project.
+The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your app.
 
 #### 3.3.1 Process-Related Sources
 
-Every project consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
+Every app consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
 
 #### 3.3.2 Entity-Related Sources
 
-Every project has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
+Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
 ### 3.4 Microflows
 
@@ -164,7 +164,7 @@ For the microflow that you use in your [scheduled events](/refguide7/scheduled-e
 
 #### 3.4.7 Project Microflows
 
-Your [project settings](/refguide7/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
+Your [project settings](/refguide7/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-microflow Prefix |
 |-----------------|----------------|----------------------|
@@ -292,7 +292,7 @@ The normal flow in a microflow should be aligned from left to right to ensure re
 
 Avoid crossing of lines of the links between the microflow elements.
 
-If you decide to color code the different activities in your project, be sure to align within your team on their meaning.
+If you decide to color code the different activities in your app, be sure to align within your team on their meaning.
 
 #### 4.2.4 Complexity
 
@@ -318,11 +318,9 @@ Unused and excluded items should be removed from the model when they are no long
 
 [XPath](/refguide7/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in the Modeler is used with all options enabled.
 
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
-
 ### 4.5 Security
 
-The [security](/howto7/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto7/security/) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 
@@ -330,8 +328,8 @@ It is recommended **not** to assign default rights to new members when defining 
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.7 App Store Components
+### 4.7 Marketplace Content
 
-When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
+When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+Marketplace modules should **not** be modified. This is because, if a Marketplace module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing a Marketplace module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual Marketplace module, it is advisable to combine them in a separate extension module wherever possible.

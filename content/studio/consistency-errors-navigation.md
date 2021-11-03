@@ -1,28 +1,39 @@
 ---
 title: "Navigation Consistency Errors"
-category: "Consistency Errors"
+parent: "consistency-errors"
+menu_order: 20
 description: "Describes navigation consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "navigation"]
+#To update screenshots in this document, use the Consistency Errors app.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Mendix Studio. For more information on navigation, see [Navigation Document](navigation).
+In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Mendix Studio. For more information on navigation, see [Navigation Document](navigation).
 
 An example of a consistency error is when you set a page that has a data view as a menu item. 
+
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Checks** panel).
 
 ## 2 Navigation Consistency Errors 
 
 The most common errors you can come across when configuring a navigation item are described in the table below:
 
-| Error Code | Text in the Checks Panel                                     | Element Where the Error Occurs                               | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Checks Panel                                  | Element Where the Error Occurs                               | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | Property 'On click' of menu item {name of the menu item}.    | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a menu item. | Pass an object to the page: open properties>the **Events** section, set the on-click action to **Page**, and enable the **Create Object** option and select an **Entity**. For more information, see section [2.1 Error Fix When the Selected Page Expects an Object](#page-expects-an-object) |
-| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Property 'On click' of menu item 'Home'                      | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](#home-page-expects-an-object) | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](#home-page-expects-an-object) |
-| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Default home page of navigation profile 'Hybrid_tablet_app_online'/ 'Hybrid_phone_app_online' | In Studio Pro, you can configure several navigation profiles, while only the responsive navigation profile is shown and can be configured in Studio. The home page of the responsive profile is by default set as the home page for the Hybrid app navigation profiles, which can be configured in Studio Pro only. <br />For more information on profiles, see [Navigation](/refguide/navigation) in the *Mendix Studio Pro Guide*. | Switch to Studio Pro and change the home page for the navigation profile of **Hybrid tablet app online** or **Hybrid phone app online** in **Navigation**. |
+| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | Property 'On click' of menu item {name of the menu item}.    | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a menu item. | Pass an object to the page: open properties>the **Events** section, set the on-click action to **Page**, and enable the **Create Object** option and select an **Entity**. For more information, see the [Error Fix Example for CE0568](#page-expects-an-object) section |
+| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Property 'On click' of menu item 'Home'                      | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object) section. |
+| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Default home page of navigation profile 'Hybrid_tablet_app_online'/ 'Hybrid_phone_app_online' | In Studio Pro, you can configure several navigation profiles, while only the responsive navigation profile is shown and can be configured in Studio. The home page of the responsive profile is by default set as the home page for the Hybrid app navigation profiles, which can be configured in Studio Pro only. <br />For more information on profiles, see [Navigation](/refguide/navigation) in the *Studio Pro Guide*. | Switch to Studio Pro and change the home page for the navigation profile of **Hybrid tablet app online** or **Hybrid phone** in **Navigation**. |
 | CE0548     | Items with subitems cannot have an action themselves.        | A menu item that has a sub-item.                             | You assigned an on-click action to a menu item that has a sub-item, when menu items that have sub-items cannot have on-click actions assigned to  them. | You need to either set the on-click action of the menu item to *Nothing*, or delete/move the sub-item. |
 
-### 2.1 Error Fix When the Selected Page Expects an Object {#page-expects-an-object}
+### 2.1 Error Fix Example for CE0568 {#page-expects-an-object}
 
 When you set a page with a data view as a menu item, you get a consistency error, because the page expects an object to be passed to it. 
 
@@ -45,13 +56,13 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
 Now when a user clicks the navigation item, a new object of type *ProgramItem* will be created and passed to the **Program** page.
 
-### 2.2. Error Fix When the Home Page Expects an Object  {#home-page-expects-an-object}
+### 2.2. Error Fix Example for CE0529 {#home-page-expects-an-object}
 
 If you set a page that expects an object to be passed to it as the home page (for example, a page with a data view), you will get a consistency error.
 
-For example, you have set **Customer Details** page as the home page in your **Navigation**. 
+For example, you have set **Customer Details** page as the default home page in your **Navigation**. 
 
-![Navigation Item Properties](attachments/consistency-errors-navigation/navigation-item-properties.png)
+![Navigation Item Properties](attachments/consistency-errors-navigation/home-page.png)
 
 You have the **Customer Details** page with a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
@@ -64,7 +75,7 @@ In this example, the best way to solve the error is to set another page as the h
 
 However, you can also solve this error by creating a microflow that will create a new *Customer* object and pass it to the page, do the following:
 
-1. Open **Navigation** > properties of the home page menu item.
+1. Open **Navigation** > properties of the menu item set as the home page.
 
 2.  Change the **On Click Action** from **Page** to **Microflow**. 
 
@@ -86,12 +97,11 @@ However, you can also solve this error by creating a microflow that will create 
 
 8.  Open the **Show Page** activity properties and do the following:<br />
 
-    a.  Set **Page** to **Home**.<br />
+    a.  Set **Page** to **Customer_Details**, which you have set as homepage in the navigation.<br />
 
     b. Set **Object to pass** to **NewCustomer**.<br />
 
-    {{% image_container width="350" %}}![Show Page Properties](attachments/consistency-errors-navigation/show-page-properties.png)
-    {{% /image_container %}}
+    ![Show Page Properties](attachments/consistency-errors-navigation/show-page-properties.png)
 
 Now the new object of type *Customer* will be created and passed to the home page.
 

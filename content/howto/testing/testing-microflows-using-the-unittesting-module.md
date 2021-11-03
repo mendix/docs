@@ -18,30 +18,27 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
-* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
-* Review the App Store components used in this how-to:
+* Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
+* Review the Marketplace components used in this how-to:
 
-    | App Store Item | Version Used in This How-to |
+    | Component | Version Used in This How-to |
     | --- | --- |
-    | [Unit Testing](https://appstore.home.mendix.com/link/app/390/) | 8.0.0 |
-    | [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) | 8.1.0 |
-    | [ObjectHandling](https://appstore.home.mendix.com/link/app/37114/) | 3.0.0 |
+    | [Unit Testing](/appstore/modules/unit-testing) | 8.0.0 |
+    | [Community Commons Function Library](/appstore/modules/community-commons-function-library) | 8.1.0 |
+    | [Object Handling](/appstore/modules/object-handling) | 3.0.0 |
 
-	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the App Store component versions listed above. When using later versions of these App Store components, images and/or names on your screen may be different than what is used in this how-to.
+	{{% alert type="warning" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.
 	{{% /alert %}}
 
 ## 3 The Unit Testing Module
 
 In this chapter you will set up the unit testing module and run the example tests.
 
-1. Create a new project.
-2. Download the [Unit Testing module](https://appstore.home.mendix.com/link/app/390/).
-3. Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
-4. Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
-5.  Open the **Settings** of the project:
-
-	![](attachments/18448633/18580371.png)
-
+1. Create a new app.
+2. Download the [Unit Testing](/appstore/modules/unit-testing) module.
+3. Download the [Community Commons Function Library](/appstore/modules/community-commons-function-library) module.
+4. Download the [Object Handling](/appstore/modules/object-handling) module.
+5.  Open the **Settings** of the app.
 6. Click the **Runtime** tab.
 7. Click the **Select** button to select an **After startup** microflow:
 
@@ -52,7 +49,7 @@ In this chapter you will set up the unit testing module and run the example test
 	![](attachments/18448633/18580369.png)
 
 9. Click **OK**.
-10. Open the **Navigation** of the project.
+10. Open the **Navigation** of the app.
 11. Click **New item** to add a new item to the menu.
 12. Enter _UnitTestOverview_ in the **Caption** field.
 13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
@@ -63,7 +60,7 @@ In this chapter you will set up the unit testing module and run the example test
 
 	![](attachments/18448633/18580362.png)
 
-15. Run the project locally.
+15. Run the app locally.
 16. Go to `http://localhost:8080/index.html`.
 17. Click **UnitTestOverview** in the navigation.
 
@@ -84,7 +81,7 @@ In this chapter you will set up the unit testing module and run the example test
 19. Click **Details** for Unit Testing.TestValidUnitTest to see the relevant details of the test case:
 
 	![](attachments/18448633/18580340.png)
-  
+
 ## 4 Creating a Microflow Test
 
 In this section, you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with *Test*. A test microflow should have no input arguments and a Boolean or string as the result type. For a Boolean result type, true means success, false means the test failed. For a string result type, any non-empty string indicates a failed test.
@@ -104,7 +101,7 @@ To create the microflow, follow these steps:
 
 4.  Create a microflow called **Promote** that looks like this:
 
-	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/d5d6ad4f-bcc8-4ce8-a999-a86370bc6ffe/promote?embed=true" allowfullscreen=""></iframe>
+	![](attachments/18448633/promote.jpg)
 
 ### 4.2 Creating a Unit Test
 
@@ -133,21 +130,15 @@ To create the microflow, follow these steps:
 14. Double-click the **End event**, select **Boolean** as the return **Type**, and enter `true` as the **Return value**.
 15. The microflow should look like the model below:
 
-	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
+	![](attachments/18448633/promotetojunior.jpg)
 
 16. Create three more test microflows as shown below:
 
-	**Test_PromoteEmployeeToMedior**:
-
-	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
-
-	**Test_PromoteEmployeeToSenior**:
+	![](attachments/18448633/promotetomedior.jpg)
 	
-	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
+	![](attachments/18448633/promotetosenior.jpg)
 
-	**Test_PromoteEmployeeWhenAlreadySenior**:
-	
-	<iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
+	![](attachments/18448633/stillsenior.jpg)	
 
 17. Run the app locally and view it. 
 18. Click **UnitTestOverview** in the navigation, and click **MyFirstModule** in the list of modules that contain one or more test cases:

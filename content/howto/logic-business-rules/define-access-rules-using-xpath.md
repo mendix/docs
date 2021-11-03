@@ -1,13 +1,13 @@
 ---
 title: "Define Access Rules Using XPath"
 category: "Logic & Business Rules"
-menu_order: 10
+menu_order: 100
 tags: ["microflow", "logic", "access rule", "xpath"]
 ---
 
 ## 1 Introduction
 
-The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints) in the *Mendix Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules) in the *Mendix Studio Pro Guide*.
+The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints) in the *Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules) in the *Studio Pro Guide*.
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the Order entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to "paid."
 
@@ -25,17 +25,17 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     ![](attachments/18448705/18581378.png)
 
-    For more information on creating a domain model, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer).
-2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)).
-3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)).
-4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](../security/create-a-secure-app)).
+    For more information on creating a domain model, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer).
+2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages)).
+3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)).
+4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto/security/create-a-secure-app)).
 
     ![](attachments/18448681/18581008.png)
     
-5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](../security/create-a-secure-app):
+5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto/security/create-a-secure-app):
 
     ![](attachments/18448681/18581005.png)
-6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](../security/create-a-secure-app)):
+6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](/howto/security/create-a-secure-app)):
 
     ![](attachments/18448681/18580997.png)
 
@@ -76,7 +76,6 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [Create a Custom Save Button](create-a-custom-save-button)
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Work with Lists in a Microflow](working-with-lists-in-a-microflow)

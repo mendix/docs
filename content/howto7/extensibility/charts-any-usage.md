@@ -25,7 +25,7 @@ With **Any Chart** you can build all the chart types that are possible with Plot
 Before starting this how-to, make sure you have the following prerequisites:
 
 * The latest Mendix modeler
-* The latest **Any Chart** widget module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/106517/Mendix/AnyChart)
+* The latest **Any Chart** widget module from the [Mendix Marketplace](/appstore/modules/any-chart)
 * An understanding of JSON data structures
 
 ## 3 Chart Structure
@@ -40,14 +40,14 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
 1. Create a page with a data view (Chart context).
 2. Add the Any Chart widget in the data view.
-3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide7/charts-any-cheat-sheet#line-chart):
+3. Select the line chart sample from the [Any Chart cheat sheet](/refguide7/charts-any-cheat-sheet#line-chart):
 
     ```json
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]
     ```
 
 4. In the modeler, copy the data into the Any Chart widget property tab **Data**, field **Static**.
-5. Run the project to confirm the chart renders correctly.
+5. Run the app to confirm the chart renders correctly.
 6. Split the data into static and dynamic parts that are going to be generated from the domain model.
 
     Static :  
@@ -64,7 +64,7 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
     ![Any Chart Configuration](attachments/charts/any-chart-configuration.png)
 
-7. Run the project to preview the chart.
+7. Run the app to preview the chart.
 
     ![Any Chart result](attachments/charts/charts-any-sample.png)
 
@@ -101,7 +101,7 @@ To fine tune a Charts widget configuration, follow these steps:
 
 1. In the **Data** tab, set the **Mode** option to **Development**.
 
-2. Run the project, and open the page containing the chart.
+2. Run the app, and open the page containing the chart.
 
 3. Click the **Toggle Editor** button on the top right of the chart to fine-tune your settings.
 
@@ -113,7 +113,7 @@ To fine tune a Charts widget configuration, follow these steps:
 
 6. Copy the new settings and apply them in the modeler.
 
-7. Re-run the project to confirm the changes have been applied.
+7. Re-run the app to confirm the changes have been applied.
 
 ## 7 Read More
 

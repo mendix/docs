@@ -1,6 +1,7 @@
 ---
 title: "Change List"
 parent: "list-activities"
+menu_order: 2
 tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,41 +14,56 @@ Note that there are minor differences between the way this function works in mic
 
 ## 1 Introduction
 
-With this activity you can change a list.
+The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it. The activity works directly on the list provided, in contrast to the [List operation](list-operation) activity.
 
-{{% alert type="info" %}}
+## 2 Properties
 
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+An example of change list properties is represented in the image below:
 
-{{% /alert %}}
+![change list properties](attachments/list-activities/change-list-properties.png)
 
-## 2 Input Properties
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-### 2.1 List
+The change list properties pane consists of the following sections:
 
-Specifies the list that is changed.
+* [Action](#action)
+* [Common](#common)
 
-## 3 Action Properties
+## 3 Action Section{#action}
 
-### 3.1 Type
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 List
+
+The name of the list to be changed.
+
+### 3.2 Type
 
 Defines the type of change that is applied to the list.
 
 | Option | Description |
 | --- | --- |
-| Add | The object(s) referred to by value are added to the list. The same object can be added multiple times. |
-| Remove | The object(s) referred to by value are removed from the list. If there are duplicate objects in the list, then only one will be removed. If you ask to remove an object which isn't in the list, there is no error |
+| Add *(default)* | The object(s) in the value property are added to the list. See [notes](#notes) below for additional information. |
+| Remove | The object(s) in the value property are removed from the list. If there are duplicate objects in the list, then only one will be removed. If you ask to remove an object which isn't in the list, there is no error. |
 | Clear | The list is emptied. |
-| Replace | The list is emptied and the object(s) referred to by value are added to the list. |
+| Replace | The list is emptied and the object(s) in the value property are added to the list. |
 
-_Default value:_ Add
+#### 3.2.1 Notes When Using the Add Type{#notes}
 
-If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [List Operation](list-operation) to examine the list before adding the object(s).
+If you do not want duplicates in your (microflow) list, you can either remove the object(s) first, or use the **Contains** [list operation](list-operation) to examine the list before adding the object(s).
 
 {{% alert type="warning" %}}
-Currently, this works differently in **nanoflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.
+Currently, this works differently in **nanoflows** and **microflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.
 {{% /alert %}}
 
-### 3.2 Value
+### 3.3 Value
 
-Value defines the objects that are used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of objects of the same type of [entity](entities) as the input list.
+Value defines the objects that are used to change the list. The value is entered using an [expression](expressions). The expression must result in an object or list of objects of the same type of [entity](entities) as the input list.
+
+## 4 Common Section{#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}

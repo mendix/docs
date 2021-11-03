@@ -6,7 +6,7 @@ tags: ["studio pro"]
 
 ## 1 Overview
 
-The `year-from-dateTime()` function extracts the amount of years from a `DateTime` attribute so it can be used to compare to a value.
+The `year-from-dateTime()` function extracts the amount of years from a `Date and time` attribute so it can be used to compare to a value.
 
 ## 2 Example
 

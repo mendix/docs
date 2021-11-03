@@ -19,10 +19,10 @@ Mendix is the app platform for the enterprise organization, and in enterprise so
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* A custom file document (see [How to Work with Images & Files](../data-models/working-with-images-and-files))
-* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Domain models (see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* A custom file document (see [How to Work with Images & Files](/howto7/data-models/working-with-images-and-files))
+* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure & GUI
 
@@ -41,7 +41,7 @@ To prepare the data structure and the GUI, follow these steps:
     ![](attachments/18448727/18581650.png)
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure).
 
 ## 4 Adding an XML Schema (XSD)
 
@@ -150,8 +150,6 @@ To import the XML file, follow these steps:
 * [How to Export XML Documents](export-xml-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Handle Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Exporting to a CSV Button](/refguide7/export-to-csv-button)
 

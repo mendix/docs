@@ -14,12 +14,12 @@ Adding large amounts of data to your application, for example rootdata or data f
 
 Before starting this how-to, make sure you know how to do the following:
 
-* Create domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
-* Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/app-store-content))
-* Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
+* Create domain models (see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Create menu items (see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
+* Create microflows (see [How to Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world)
+* Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content))
+* Secure your applications (see [How to Create a Secure App](/howto7/security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI, and Modules
 
@@ -31,7 +31,7 @@ Follow these steps:
   
     ![](attachments/18448735/18581969.png)
 
-    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
+    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](/howto7/data-models/working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
@@ -59,7 +59,7 @@ As an enumeration is used for the **OrderStatus** attribute, a microflow needs t
 
 ## 5 Using the Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
+In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](/appstore/modules/model-reflection). In this part of the How-to you will learn to do so.
 
 1.  Click **Run Locally** to start your application:
 
@@ -113,7 +113,7 @@ Based on the structure of the file you want to import, you will setup your templ
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
     {{% /alert %}}
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+9.  Under the **Connect columns to attributes** section, click **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
   
     ![](attachments/18448735/18581964.png)
 
@@ -277,9 +277,6 @@ Once you have completed an Excel template you can export the template for exampl
 * [Importing Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [The Export to CSV Button](/refguide7/export-to-csv-button)
-

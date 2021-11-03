@@ -4,12 +4,13 @@ category: "Operations"
 menu_order: 10
 description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-On the **Metrics** page, under the **Operate** category, you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
+On the **Metrics** page you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
 
@@ -45,7 +46,7 @@ You can click the following buttons to execute actions:
 *   **Refresh** refreshes the list of running requests
 
 *   **Kill request** stops the selected request
-    {{% alert type="warning" %}}If you kill a request, it will not complete and the end-user may receive an error.{{% /alert %}}
+    {{% alert type="warning" %}}If you stop a request, it will not complete and the end-user may receive an error.{{% /alert %}}
     
 *   **Details** shows you the **Action Stack** for the selected request. An Action Stack displays all the actions currently on the call stack. The bottom action is the one which is currently being performed. It was triggered by the action above it and so forth. The details shown for an Action Stack are:
     *   Name
@@ -54,7 +55,7 @@ You can click the following buttons to execute actions:
 
 ## 4 Cache
 
-Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
+Mendix Runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
 
 ![User session cache details](attachments/metrics/cache-summary.png)
 
@@ -70,5 +71,4 @@ Runtime versions 7 and above are stateless and do not cache Mendix objects on th
 
 ## 5 Read More
 
-* [Database Size Reduction](database-size-reduction)
 * [Environment Details](/developerportal/deploy/environments-details)

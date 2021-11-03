@@ -35,7 +35,7 @@ If you want to publish your app in the Apple App Store or Google Play, you have 
 
 ### 5.1 Hybrid Mobile Widgets
 
-To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
+To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix Marketplace. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
 
 ![](attachments/modeler-core/16844052.png)
 
@@ -47,7 +47,6 @@ Separate profiles are available for building [offline apps](offline). These apps
 
 * [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
 * [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-* [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages)
 * [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
 * [Getting the Mendix Mobile App](getting-the-mendix-app)
 * [Managing App Signing Keys](managing-app-signing-keys)

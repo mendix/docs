@@ -73,7 +73,7 @@ The **Roles and Permissions** screen consist of three tabs:
 
 The **Roles** tab lists all roles and indicates the number of pages and microflows these roles can access. 
 
-The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. You can decide which pages and microflows a particular role can access: tick/untick the box per document to grant/restrict access for it. To select/deselect all documents click on the **More Options** icon next to the user role.
+The **Page Access** and **Microflow Access** tabs contain a table where all pages/microflows are listed in rows, and all roles are placed in columns. You can decide which pages and microflows a particular role can access: tick/untick the box per document to grant/restrict access for it. To select/deselect all documents click the **More Options** icon next to the user role.
 
 As a result, you will get a matrix specific for each role. 
 
@@ -159,7 +159,7 @@ You can test how your app looks like for different roles the following way:
 
 1. [Preview your app](publishing-app).
 
-2. Click a user icon in the right-hand side of the screen:
+2. Click a user icon on the right side of the screen:
 
     ![](attachments/settings-security/user-icon.png)
 
@@ -179,10 +179,10 @@ To manage App Users, open **Roles and Permissions** and click **Manage Users** i
 
 ![](attachments/settings-security/manage-users-button.png)
 
-You will be taken to the [App User Management](/developerportal/settings/general-settings#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
+You will be taken to the [App User Management](/developerportal/collaborate/general-settings#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
 
 {{% alert type="info" %}}
-People invited to join your App Team in the Developer Portal are not added as App Users automatically, so you will need to invite your App Team members if necessary.
+People invited to join your team in the Developer Portal are not added as App Users automatically, so you will need to invite your team members if necessary.
 {{% /alert %}}
 
 {{% alert type="info" %}}

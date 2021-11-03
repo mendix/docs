@@ -49,17 +49,16 @@ Go to the section of the log that corresponds to the time of the error. There wi
 2. The type of error that occurred.
 3. The expression in which the error occurred.
 
-With these three pieces of information, you shouold be able to find the cause of the error. If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation.
+With these three pieces of information, you should be able to find the cause of the error. If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation.
 
 ## 4 Read More
 
 * [Clear Warning Messages](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
+* [Debug Microflows and Nanoflows](debug-microflows-and-nanoflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Debug Java Actions](debug-java-actions)
-* [Handle Common SSO Errors](handle-common-mendix-sso-errors)
 * [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

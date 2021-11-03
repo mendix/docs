@@ -1,12 +1,20 @@
 ---
-title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
+title: "Publish a Mendix Hybrid Mobile App in Mobile s"
 category: "Mobile Development"
 menu_order: 60
-tags: ["mobile", "app store", "phonegap"]
+tags: ["mobile", "marketplace", "phonegap"]
 ---
 ## 1 Introduction
 
-Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
+Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple iOS and Google Android. We make it possible to produce platform-specific native mobile apps. For more details on deploying platform-specific apps, see [Mobile App](/developerportal/deploy/mobileapp).
+
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
+
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+{{% /alert %}}
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
@@ -15,14 +23,13 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. We have int
 * Set up app signing keys
 * Complete the app-packaging process
 * Install an iOS or Android app on a test device
-* Upload your app to the Apple App Store or Google Play Store
+* Upload your app to the Apple  or Google Play Store
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
-	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a free app to try out its mobile features 
+* Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
@@ -36,9 +43,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 To start the packaging process, follow these steps:
 
 1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
-2. Go to the project of the Mendix app that you want to publish.
-3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
-4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
+2. Go to the Mendix app that you want to publish.
+3. Go to the **Deploy > Mobile app** entry in the side menu of the app.
+4. You will be shown the **Publish App for Mobile s** page, where you need to set up some options for your hybrid mobile app.
 5.  On the **App Info** tab set up the following settings for your app:</br>
 	a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
 	b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
@@ -48,14 +55,14 @@ To start the packaging process, follow these steps:
 
 	* If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.
 
-8. Click **Publish for Mobile App Stores**. You will be presented with the **Build Mobile App Store Packages** page.
+8. Click **Publish for Mobile s**. You will be presented with the **Build Mobile  Packages** page.
 9. Select the environment in which you want to publish.
 
 	* For Free Apps, the only option is **Sandbox**
 	* For apps running on a licensed cloud node, you can choose from **Test**, **Acceptance**, and **Production** (depending on what is available on your cloud node)
 	* For apps using [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy#flexible-environments) you will be able to select the environment from a drop-down list of environments.
 
-10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide7/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
+10. Leave the default choice of how to build the package **Build Mobile  packages for me by sending the build configuration to Adobe PhoneGap Build** selected. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing Local Build Packages](/refguide7/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
 11. Before proceeding, you must accept linking your PhoneGap account to your Mendix account:
 
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
@@ -83,10 +90,10 @@ For publishing to a specific platform, see the subsequent sections of this how-t
 
 ## 5 Preparing and Publishing for iOS{#publishing-for-ios}
 
-Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
+Apple provides general information on [publishing an iOS app in the Apple ](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
 1. Click the **Signing Keys** tab, and under **iOS**, click **add a key**. 
-2. A pop-up window will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys).
+2. A pop-up window will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see the [Managing App Signing Keys Reference Guide](/refguide7/managing-app-signing-keys).
 3. Give the key a title that you can easily recognize, and upload the files.
 4. Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with the yellow background on the same row as the key and enter the passphrase. As the pop-up window states, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
 5. Now you are ready to configure the app. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to go to the details of the app.
@@ -99,7 +106,7 @@ Your PhoneGap Build account is now ready and you can continue the packaging proc
 To complete the packaging process in the Mendix Developer Portal, follow these steps:
 
 1. Close the **Adobe PhoneGap Build** tab and go back to the original **Mendix Developer Platform** tab.
-2. Click **Restart build job** to restart the packaging process. You will be presented with a page showing the build status of your apps titled **Building Mobile App Store Packages**. It will display the status of **Building** while PhoneGap Build is processing your app. Once ready, it will display the status of **Done**, and a button will be available to start the download of your iOS package.
+2. Click **Restart build job** to restart the packaging process. You will be presented with a page showing the build status of your apps titled **Building Mobile  Packages**. It will display the status of **Building** while PhoneGap Build is processing your app. Once ready, it will display the status of **Done**, and a button will be available to start the download of your iOS package.
 3. When the build process is done, click **Download iOS package** and save the package (the *.ipa* file) to your computer.
 
 ### 5.2 Installing the iOS App on Your Test Device
@@ -120,7 +127,7 @@ To install the iOS app on your test device, follow these steps:
 
 The app should now be visible on your device. Open it and log in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
 
-### 5.3 Uploading the iOS App to the App Store
+### 5.3 Uploading the iOS App to the Apple App Store
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app.
@@ -202,5 +209,5 @@ The video below shows how to build a PhoneGap app in the cloud. After showing yo
 ## 8 Read More
 
 * [Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](debug-a-mobile-app)
 * [Include Push Notifications](push-notifications)

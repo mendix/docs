@@ -20,7 +20,7 @@ You can publish your own webservices in a Mendix application. These webservices 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
-*   Complete the how-to [Exposing a web service](../integration/expose-a-web-service)
+*   Complete the how-to [Exposing a web service](/howto7/integration/expose-a-web-service)
 
 | Software | Version used in this how-to |
 | --- | --- |
@@ -35,17 +35,19 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 3 Publishing More Microflows as Web Service Operation
 
-In the how-to [Exposing a web service](../integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In the how-to [Exposing a web service](/howto7/integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1.  Open the **Mendix Desktop Modeler**.
-2.  Open the project you created in the how-to [Exposing a web service](../integration/expose-a-web-service).
+2.  Open the project you created in the how-to [Exposing a web service](/howto7/integration/expose-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
+	![](attachments/18448632/model1.jpg)
+
 4.  Create a **Microflow** that deletes a customer and returns a boolean.
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/33c17aed-c915-420b-b433-0c22614a0273/deletecustomer?embed=true"></iframe>
-5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](../integration/expose-a-web-service).
+	![](attachments/18448632/model2.jpg)
+
+5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](/howto7/integration/expose-a-web-service).
 
 ## 4 Creating a new SOAP Project
 
@@ -222,16 +224,16 @@ Congratulations! You have just created your first automated test with SoapUI.
 
 ## 9 Read More
 
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+*   [Finding the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](/howto7/monitoring-troubleshooting/clear-warning-messages)
 *   [Testing web services using SoapUI](testing-web-services-using-soapui)
-*   [Monitoring Mendix using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
-*   [Debugging Java actions remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
-*   [Log Levels](../monitoring-troubleshooting/log-levels)
-*   [Debugging Java Actions](../monitoring-troubleshooting/debug-java-actions)
-*   [Common Mendix SSO Errors](../monitoring-troubleshooting/handle-common-mendix-sso-errors)
-*   [Debugging Microflows](../monitoring-troubleshooting/debug-microflows)
-*   [Debugging Microflows Remotely](../monitoring-troubleshooting/debug-microflows-remotely)
+*   [Monitoring Mendix using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx)
+*   [Debugging Java actions remotely](/howto7/monitoring-troubleshooting/debug-java-actions-remotely)
+*   [Log Levels](/howto7/monitoring-troubleshooting/log-levels)
+*   [Debugging Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions)
+*   [Common Mendix SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors)
+*   [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 Learn more about this topic using the following helpful links:
 

@@ -17,7 +17,7 @@ With JavaScript actions, you can extend your application's functionality in ways
 
 {{% alert type="info" %}}
 
-Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{JavaScript action name}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
+Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{JavaScript action name}.js* in the subdirectory **javascriptsource{module name}/actions/** in your app directory.
 
 The skeletons of these *.js* files are generated automatically when you save an action, and those JavaScript actions can immediately be edited in the embedded code editor.
 
@@ -27,7 +27,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 ## 2 General Settings
 
-After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
+After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
 {{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
 
@@ -47,7 +47,7 @@ In a JavaScript action's **Code** tab, you can see its parameters' values and ha
 
 ![parameter code](attachments/javascript-actions/parameter-code.png)
 
-You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog window after double-clicking its activity in your nanoflow:
+You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog box after double-clicking its activity in your nanoflow:
 
 {{% image_container width="400" %}}![call javascript action dialog](attachments/javascript-actions/call-js-action-dialog.png){{% /image_container %}}
 
@@ -64,23 +64,27 @@ This setting handles the parameter's name. A name is required. Names must start 
 |  Object    |   The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject. |
 |   List   |   The list parameter type allows you to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects. |
 |   Entity   |   The entity parameter type is a placeholder. It stands in for an entity that will be replaced with a new entity's name when it is called in a nanoflow. Additionally, the entity type can be used to fill in a type parameter. In the generated JavaScript action template code, this type is represented as a string.  |
+|   Nanoflow   |   The nanoflow parameter type allows you to pass a nanoflow that you can call from your JavaScript action. The value of the parameter is an async function, where calling will trigger the configured nanoflow. You can specify parameters as a JavaScript object, and capture the return value of the nanoflow once execution finishes. For example, you can call a nanoflow that has a string `Name` parameter and returns a `User` object with this given name: `const user = await nanoflowParameter({ Name: "John Doe" });`. |
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
-|   Return   |   The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.   |
 
 #### 2.2.3 Category
 
-Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
 #### 2.2.4 Description
 
-For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
+For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-## 3 Type Parameter Settings
+### 2.3 Return Type
+
+The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
+
+## 3 Type Parameter
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
@@ -88,7 +92,7 @@ A type parameter is a placeholder for an entity type which will be filled with a
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
-## 4 Expose as Nanoflow Action Settings
+## 4 Expose as Nanoflow Action
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
@@ -110,7 +114,7 @@ A category is required when exposing a JavaScript action. Use categories to orga
 
 An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
 
-## 5 Documentation Settings
+## 5 Documentation
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
@@ -120,9 +124,42 @@ Documentation is visible in the **Code** tab. Your documentation also is copied 
 
 {{% image_container width="450" %}}![documentation js file](attachments/javascript-actions/documentation-js-file.png){{% /image_container %}}
 
-## 6 Code Settings
+## 6 Code
 
-In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
+In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. The code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`.
+
+The code has three sections: an import list, an extra code block, and a user code block. All code that is added should go in one of these blocks. Code outside the blocks will lost when re-generating the template code on deploy or update of the JavaScript action settings. 
+
+Additional imports should start with `import` and be placed above `// BEGIN EXTRA CODE`. Extra code should be placed between `// BEGIN USER CODE` and `// END USER CODE`. User implementation code should be placed between `// BEGIN EXTRA CODE` and `// END EXTRA CODE`.
+
+``` js
+// This file was generated by Mendix Studio Pro.
+//
+// WARNING: Only the following code will be retained when actions are regenerated:
+// - the import list
+// - the code between BEGIN USER CODE and END USER CODE
+// - the code between BEGIN EXTRA CODE and END EXTRA CODE
+// Other code you write will be lost the next time you deploy the app.
+import { Big } from "big.js";
+
+// BEGIN EXTRA CODE
+ function sayHello(message) {
+     window.alert("Hello: " + message);
+ }
+// END EXTRA CODE
+
+/**
+ * Show an alert message to an user.
+ * @param {string} message - Message shown to the user.
+ * @returns {Promise.<void>}
+ */
+export async function Hello(message) {
+	// BEGIN USER CODE
+	sayHello(message);
+	return Promise.resolve();
+	// END USER CODE
+}
+```
 
 ## 7 Read More
 

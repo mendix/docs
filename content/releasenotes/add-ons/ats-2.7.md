@@ -39,7 +39,7 @@ For all the details please refer to [results section in the ATS reference guide]
 
 #### Removed support for Windows XP, MacOS 9 and MacOS 10
 
-These platforms were not able to work properly with the browser versions that we officially support. In some cases e.g. MacOS10 in combination with Firefox browser, the selenium driver v3.8.1, which is the official selenium version that we support, is simply not supported for MacOS10. By removing support for these outdated platforms we are able to focus on the performance and stability for the platforms that are used much more in the real world.
+These platforms were not able to work properly with the browser versions that we officially support. In some cases for example, MacOS10 in combination with Firefox browser, the selenium driver v3.8.1, which is the official selenium version that we support, is simply not supported for MacOS10. By removing support for these outdated platforms we are able to focus on the performance and stability for the platforms that are used much more in the real world.
 
 #### Removed support for Testingbot
 
@@ -56,14 +56,13 @@ The same holds for the function parameters.
 * We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the dataset, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
 * Selecting a dataset for a test case now uses the sidebar search dialog.
 
-
 ### Improvements
 
 * We added the corresponding provider logos for Browserstack and Saucelabs.
 * We sped up the opening of the edit page for large datasets.
 * When editing a value for parameter of type number it is now possible to use the edit dialog, same as for text parameters.
 * When running from Browserstack or Saucelabs we select by default the Windows 10 platform and FullHD resolution. For MacOS the resolution UXGA is selected by default. We hope that this will save a few clicks.
-* We have changed the platform selection to use icons instead of a dropdown. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.
+* We have changed the platform selection to use icons instead of a drop-down. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.
 * We removed the "View" button for pre-conditions where the condition is related to a function. Since function can not be viewed this button is not needed.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
@@ -83,7 +82,7 @@ The same holds for the function parameters.
 * When editing a folder and clicking cancel, the changes to the folder name were still saved. We fixed this so that clicking cancel does not result in any changes being applied.
 * When moving a folder it would sometimes happen the the name is suffixed with "(moved) (moved)" to avoid a conflict. This is fixed so that the folder name gets the suffix "(moved)" instead.
 * Due to a bug it was no longer possible to expand certain items on the dashboard anymore. This is now fixed.
-* When testing on Internet Explorer the calculation of the application context e.g. dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
+* When testing on Internet Explorer the calculation of the application context for example, dialog was not working. This had the effect that sometimes an element was found that was not within the current context which probably then causes a test case to fail. This is now fixed.
 * We fixed an issue in the recorder where the recorder would send too much information to ATS causing it to slow down significantly.
 * Due to a bug it was possible to create a test case with a non-unique name from a story. This is now fixed.
 * We fixed a bug where an update of a story type in Sprintr would not be updated correctly in ATS.

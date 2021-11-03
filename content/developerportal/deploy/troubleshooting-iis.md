@@ -4,7 +4,12 @@ parent: "deploy-mendix-on-microsoft-windows"
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 menu_order: 40
 tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Console", "errors"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-iis.pdf).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -52,7 +57,7 @@ This section describes a few common problems that people have run into when sett
 
 We cannot provide a solution here for all the problems you may find. Use the techniques below to isolate the cause of your problem. If the solution is not clear, there are many resources on the internet which can help you to solve your specific issue.
 
-You can also ask for help on the [Mendix forum](https://forum.mendixcloud.com/index4.html).
+You can also ask for help on the [Mendix Forum](https://forum.mendixcloud.com/index4.html).
 
 If you have some useful tips, please feel free to add them to this document.
 
@@ -69,7 +74,7 @@ You can see the login page in the browser, but when triggering an action you get
 * Did you have to enable or install additional plugins?
 	
 	If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
-		
+	
 * Did you add new configuration settings, like the rewrite rule?
 	
 	Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option.
@@ -110,33 +115,11 @@ Open the application and inspect the requests with your browser's developers too
     
 ## 4 Troubleshooting Mendix Service Console Errors{#msc-errors}
 
-### 4.1 Update Process: Directory Not Empty
-
-Sometimes, *shortly after the update process has begun*, a popup tells you that the directory was not empty. This means that some of the app files from the old app cannot be removed after it has been backed up (for example if they were locked by another Windows process). This error is not fatal as all needed files will be overwritten by the new app version.
-
-Please install Mendix Service Console 4.1 or later to reduce the chance that this error occurs; from version 4.1 and up, the update process will go further after showing this error.
-
-### 4.2 Update Process: Invoke or BeginInvoke Cannot be Called
-
-Please upgrade the Mendix Service Console to version 4.1 or later if you see the following error *just before the end of the app update process*:
-
-![](attachments/troubleshooting-iis/18580725.png)
-
-### 4.3 Unable to Start Server
-
-Sometimes, you can see the following error when you start an app:
-
-![](attachments/troubleshooting-iis/18580724.png)
-
-With an invalid license, the app *should* start in trial mode.
-
-If this popup is shown there is a deeper cause. Firstly, try starting the app on a new database. If this works, then the database is probably corrupt. This can sometimes happen if you migrated a database from an app deployed on Mendix Cloud **v4** to an app deployed on Mendix Cloud **v3**. 
-
-### 4.4 Security Errors While Starting Service
+### 4.1 Security Errors While Starting Service
 
 When the system gives security errors while starting the service, make sure that the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to prefix the user name with the domain name; that is, use DOMAIN_NAME\user_name instead of just user_name.
 
-### 4.5 Type Initialization
+### 4.2 Type Initialization
 
 Sometimes the Event Viewer shows a message like this:
 
@@ -144,7 +127,7 @@ Sometimes the Event Viewer shows a message like this:
 EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.
 ```
 
-Make sure that the user account used to run the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
+Make sure that the user account used to run the service has enough rights to the folders containing the Mendix Service executables.
 
 ## 5 Read More
 
@@ -155,5 +138,4 @@ Make sure that the user account used to run the service has enough rights to the
 *   [Debugging Java actions remotely](/howto/monitoring-troubleshooting/debug-java-actions-remotely)
 *   [Log Levels](/howto/monitoring-troubleshooting/log-levels)
 *   [Debugging Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
-*   [Common Mendix SSO Errors](/howto/monitoring-troubleshooting/handle-common-mendix-sso-errors)
-*   [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows and Nanoflows](/howto/monitoring-troubleshooting/debug-microflows-and-nanoflows)

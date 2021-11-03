@@ -1,9 +1,9 @@
 ---
-title: "SAP Fiori / Mendix Building Blocks"
-category: "SAP"
-menu_order: 70
-description: "A summary of the building blocks which can be used to make an SAP Fiori themed app"
-tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX"]
+title: "SAP Fiori 2.5 / Mendix Building Blocks"
+parent: "sap-fiori-3-0"
+menu_order: 10
+description: "A summary of the building blocks which can be used to make an SAP Fiori version 2.5 themed app"
+tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX", "2.5"]
 ---
 
 ## 1 Introduction
@@ -12,9 +12,9 @@ This document contains a summary of the building blocks you can use to create an
 
 To use these building blocks, you can either
 
-* use the **Blank App for SAP Fiori themed apps** app template; this can chosen when creating a new app, or be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/53585/
+* use the **Blank App for SAP Fiori themed apps** app template; this can chosen when creating a new app, or be downloaded from the Marketplace here – https://marketplace.mendix.com/link/component/53585/
 
-* add the *UI Package for SAP Fiori themed apps* to your app: this can be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/107625/
+* add the *UI Package for SAP Fiori themed apps* to your app: this can be downloaded from the Marketplace here – https://marketplace.mendix.com/link/component/107625/
 
 ## 2 Building Blocks
 

@@ -18,7 +18,7 @@ With the _ATS Recorder_ plugin installed, you can start a recording session at a
 
 ![Open recording session with 4 recorded test steps](attachments/rg-one-recorder/21168177.png)
 
-Some recorded test steps offer you multiple actions to choose from, for example when setting the value of a text box. Here you can either have an action to change the value of the text box or choose to assert the value of the text box. To change the selected action click on the recorded test step under _Recorded Events_. On the right-hand side, if multiple actions are proposed, select the action you want to execute by clicking the _Select_ button.
+Some recorded test steps offer you multiple actions to choose from, for example when setting the value of a text box. Here you can either have an action to change the value of the text box or choose to assert the value of the text box. To change the selected action click the recorded test step under _Recorded Events_. On the right side, if multiple actions are proposed, select the action you want to execute by clicking the _Select_ button.
 
 {{% alert type="info" %}}
 

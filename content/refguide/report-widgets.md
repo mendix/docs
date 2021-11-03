@@ -1,8 +1,8 @@
 ---
-title: "Report Widgets"
+title: "Reports"
 parent: "pages"
 menu_order: 50
-tags: ["studio pro", "report widgets", "report", "widgets"]
+tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,14 +10,26 @@ tags: ["studio pro", "report widgets", "report", "widgets"]
 
 ## 1 Introduction
 
-With reporting, you can create reports over the database data. Reporting is used for creating aggregated information (for example , total sales per customer). 
+With reports widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example , total sales per customer). 
 
 The **Report widgets** category contains the following widgets:
 
-* [**Report grid**](report-grid)  – displays data in a form of a table; data for the reporting widgets is provided by [Datasets](data-sets) 
-* [**Report parameter**](report-parameter) – allows a user to specify a parameter of a [dataset](data-sets) that is then used for filtering the data displayed in a report. However, you must also add a [Generate report button](report-button) widget so that it is possible to regenerate the report after specifying the parameter.
-* [**Report date parameter**](report-date-parameter) – allows a user to specify the DateTime parameter of a [dataset](data-sets), which is then used for filtering the data displayed in a report
-* [**Generate report button**](report-button) – generates a report when an end-user click the button
+* [Report grid](report-grid) – displays data in a form of a table; the data for the reports is provided by a [Data set](data-sets)
+
+    ![Example report grid](attachments/report-widgets/report-grid-example.png)
+
+* [Report parameter](report-parameter) – allows the end-user to specify a parameter of a [Data set](data-sets) that is then used for filtering the data displayed in a report
+
+    ![Example report parameter](attachments/report-widgets/report-parameter-example.png)
+
+* [Report date parameter](report-date-parameter) – allows the end-user to specify the DateTime parameter of a [data set](data-sets), which is then used for filtering the data displayed in a report
+
+    ![Example report date parameter](attachments/report-widgets/report-date-parameter-example.png)
+
+* [Generate report button](report-button) – generates a report when the end-user clicks the button
+
+    ![Example generate report button](attachments/report-widgets/generate-report-button-example.png)
+
 
 ## 2 Performing Basic Functions
 

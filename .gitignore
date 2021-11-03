@@ -18,7 +18,10 @@ yarn-error.log
 manifest_test.yml
 _scripts/hugo_bin
 .vscode/settings.json
+.idea
 
-mx-*
+mx-1-get-hugo-and-node.ps1
+mx-2-install-dependencies.bat
+mx-3-run-server.bat
 bin
-content/howto/front-end/calypso.md
+package-lock.json

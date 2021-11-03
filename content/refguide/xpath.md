@@ -2,15 +2,15 @@
 title: "XPath"
 category: "App Modeling"
 menu_order: 90
-description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
+description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 tags: ["studio pro"]
 ---
 
-## 1 Overview of XPath
+## 1 Introduction
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
-XPath queries can be written both in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity, and directly in code in the .java files of you Java actions. Note that not all operators are supported by Studio Pro, and that the syntax of your query may differ between Studio Pro and Java environments.
+XPath queries can be written both in Studio Pro, for example when you want to specify a constraint on the data retrieved in a Retrieve microflow activity, and directly in code in the *.java* files of your Java actions. Note that not all operators are supported by Studio Pro, and that the syntax of your query may differ between Studio Pro and Java environments.
 
 Examples of XPath queries are:
 
@@ -22,9 +22,7 @@ Examples of XPath queries are:
     Retrieve the average of the total prices of all paid orders.
 
 {{% alert type="warning" %}}
-
-In Studio Pro you do not write complete queries but only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']` you only write `[Name='Jansen']` in the context of a customer. In Java you do write whole queries including the double slashes and the entity name.
-
+In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
 ## 2 XPath Elements
@@ -51,8 +49,6 @@ Element D of a query is optional and specifies an attribute of the retrieved ent
 
 Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](xpath-avg), [count](xpath-count), [max](xpath-max), [min](xpath-min) and [sum](xpath-sum). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
 
-The exception to these basic guidelines is the ID query. See [XPath id](xpath-id) for more information.
-
 ## 3 Tokens
 
 For details, see [XPath Tokens](xpath-tokens).
@@ -78,3 +74,13 @@ The following XPath functions are available:
 	* [not](xpath-not)
 	* [true](xpath-true)
 	* [false](xpath-false)
+	
+## 6 Example
+
+**How to find the right path to XPath**
+
+{{% alert type="info" %}}
+This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
+{{% /alert %}}
+
+{{% youtube sdabUY-w4ZU %}}

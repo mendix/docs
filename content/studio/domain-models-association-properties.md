@@ -1,6 +1,6 @@
 ---
 title: "Associations"
-category: "Domain Model"
+parent: "domain-models"
 description: "Describes the association properties in Mendix Studio."
 tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,13 +13,10 @@ An association describes a relation between entities. In the domain model, an as
 In Mendix Studio, associations have the following properties:
 
 * [Name](#name)
-
 * [Multiplicity](#multiplicity)
+* [Delete behavior](#delete-behavior)
 
-*  [Delete behavior](#delete-behavior)
-
-   {{% image_container width="300" %}}![](attachments/domain-models-association-properties/association-properties.png)
-   {{% /image_container %}}
+    ![](attachments/domain-models-association-properties/association-properties.png)
 
 In relation to the module the associations can be of two types:
 
@@ -37,15 +34,18 @@ Multiplicity  defines the number of possible referred objects. The cardinality (
 Multiplicity can be of the following types:
 
 * One-to-one – one X object is associated with one Y object
-* one-to-many – one X object is associated with multiple Y object
+* One-to-many – one X object is associated with multiple Y object
 * Many-to-many – multiple X objects are associated with multiple Y objects
 
 Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is the entity the association starts from, so it is located at the start of the arrow. In one-to-one associations both entities are owners. 
 
-{{% image_container width="400" %}}![](attachments/domain-models-association-properties/association-domainmodel.png)
-{{% /image_container %}}
+![](attachments/domain-models-association-properties/association-domainmodel.png)
 
-You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
+You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association.
+
+{{% alert type="info" %}}
+For more details on the reasoning underlying associations, ownership, and multiplicity, see the [Introduction](/refguide/associations#intro) section of *Associations* in the *Studio Pro Guide*.
+{{% /alert %}}
 
 ## 4 Delete Behavior {#delete-behavior}
 
@@ -57,7 +57,7 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). <br />You can also specify an error message for your end-users when they try to delete an object that is associated with other entity's objects. For example: "You cannot delete this location, because a course is associated with it." |
 
-For examples of delete behavior configuring, see section [7 Delete Behavior](../../howto/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
+For examples of delete behavior configuring, see [Delete Behavior](/howto/data-models/create-a-basic-data-layer#delete-behavior) section in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
 
 
 ## 5 Cross-Module Associations {#cross-module-associations}
@@ -66,7 +66,7 @@ Cross-module association makes an association between entities of different modu
 
 {{% alert type="info" %}}
 
-You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and App Store modules) and make cross-module associations in Studio. 
+You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models (except the System module and Marketplace modules) and make cross-module associations in Studio. 
 
 {{% /alert %}}
 
@@ -92,3 +92,4 @@ Cross module associations have the following properties:
 ## 6 Read More
 
 * [Domain Model](domain-models)
+* [Pages](page-editor)

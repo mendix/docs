@@ -1,5 +1,5 @@
 ---
-title: "Data Grid Properties"
+title: "Data Grid"
 parent: "page-editor-widgets"
 description: "Describes a data grid in the page editor of Mendix Studio."
 menu_order: 15
@@ -8,11 +8,11 @@ tags: ["studio", "page editor", "pages", "data view", "list view"]
 
 ## 1 Introduction 
 
-This document describes a data grid in Mendix Studio.
-
-A data grid shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
+A *data grid* shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
 
 ![](attachments/page-editor-data-grid/data-grid-example.png)
+
+A data grid belongs to the **Data Container** category of widgets. For more information on different widget categories, see [Widgets](page-editor-widgets). 
 
 ## 2 Data Grid Properties
 
@@ -24,6 +24,7 @@ Data grid contains the following properties:
 * [Search](#grid-search)
 * [Events](#grid-events)
 * [Control Bar](#grid-control-bar)
+* [Conditional Visibility](#visibility)
 * [Design](#grid-design-section)
 
 ### 2.1 Data Source {#grid-data-source}
@@ -36,7 +37,7 @@ The **Data Source** section properties are described in the table below:
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. However, if the entity has more than eight attributes, you can choose whether you want to generate columns for all of them or select only several attributes. <br/>**Filter** – limits data in the data grid. You can create a filter only after you specify an entity for the data grid. For more information on data filtering, see [Data Filters](data-filters).<br />**Sort Order** – the order in which rows in the data grid are shown. You can specify a sort order only after you select an entity for the data grid. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
 | Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). |
 | XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
 | Association          | Available to data grids placed inside a data view or a list view. The data grid is filled with the objects linked to a data view/list view object by an association. Sorting columns and searching is not possible in data widgets with an association data source. |
@@ -60,18 +61,21 @@ The **Columns** section properties are described in the table below:
 
 In the **Grid Column** properties, you can select the attribute, change the name, width, and editability of the data grid column. 
 
-![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-grid/grid-column-properties.png)
+{{% /image_container %}}
 
 The properties are described in the table below:
 
-| Property        | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| Attribute       | Determines which attribute of the object will be displayed in this column. Note that you need to configure the grid's data source first to select an attribute. For more information, see section [2 Data Source](#grid-data-source). |
-| Caption         | Defines which caption will be shown in the column header.    |
-| Width           | Displayed for **Column Width In** set to *Percentages*. Determines how much space in percentage the column should take. |
-| Fixed Width     | Displayed for **Column Width In** set to *Pixels*. Determines if this column should have a fixed width or use the available space. When enabled, you can type in the fixed width in **Width In Pixels** (see below). |
-| Width In Pixels | Displayed only when **Fixed Width** is enabled. You can type in the value in this setting for the fixed column width. |
-| Editable        | When enabled, clicking fields in this column will allow end-users to edit values directly, without the need for an edit form. <br />Only available if **Database** is selected as the data source of the grid. For more information on data source, see section [2 Data Source](#grid-data-source). |
+| Property           | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Attribute          | Determines which attribute of the object will be displayed in this column. Note that you need to configure the grid's data source first to select an attribute. For more information, see section [2 Data Source](#grid-data-source). |
+| Caption            | Defines which caption will be shown in the column header.    |
+| Width              | Displayed for **Column Width In** set to *Percentages*. Determines how much space in percentage the column should take. |
+| Fixed Width        | Displayed for **Column Width In** set to *Pixels*. Determines if this column should have a fixed width or use the available space. When enabled, you can type in the fixed width in **Width In Pixels** (see below). |
+| Width In Pixels    | Displayed only when **Fixed Width** is enabled. You can type in the value in this setting for the fixed column width. |
+| Editable           | When enabled, clicking fields in this column will allow end-users to edit values directly, without the need for an edit form. <br />Only available if **Database** is selected as the data source of the grid. For more information on data source, see section [2 Data Source](#grid-data-source). |
+| Aggregate Function | With this property, you can calculate a sum, count, average, minimum, or maximum value that will be calculated and shown at the bottom of the data grid column. For example, you can display the total number of orders of a customer.<br />Only available for columns with attributes of type Decimal, Integer, and Long. |
+| Aggregate Caption  | Displayed only when **Aggregate Function** is selected. Defines which caption will be shown at the bottom of the grid column. |
 
 ### 2.3 Rows {#grid-rows}
 
@@ -144,9 +148,9 @@ A range search field has the following specific properties:
 
 * **Maximum Value** – determines which attribute of the entity the search term must fall below 
 
-  *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
+    *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-      ![](attachments/page-editor-data-grid/range-search-field-properties.png)
+        ![](attachments/page-editor-data-grid/range-search-field-properties.png)
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -154,13 +158,17 @@ The control bar allows you to control the objects displayed in the data grid by 
 
 The **Control Bar** section properties are described below: 
 
-*  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
-
-    ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
-
+*  **Show Paging Controls** – indicates if the buttons for paging through the data grid are visible to the end-user and has the following options:
+   
+    * **Yes (with total count)** – paging buttons are shown, including the **Go to last page** button and the total count of objects
+    * **Yes (without total count)** – paging buttons are shown except for the **Go to last page** button. Also, the total count of objects is not shown, as page numbers are shown instead
+    * **No** – The paging buttons are not shown. Hide the buttons if you are sure that the data grid will contain only one page
+    
+        ![Show Paging Controls](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
+    
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
-*  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [**Events**](#grid-events) section) the grid item, the default button (action) will be triggered
+*  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [Events](#grid-events) section) the grid item, the default button (action) will be triggered
 
     ![](attachments/page-editor-data-grid/control-bar-default-button.png)
 
@@ -175,7 +183,7 @@ By default, the data grid will be created with a **Search Bar Toggle Button**, *
 
 You can add more buttons to the data grid and configure them for a specific on-click action. 
 
-In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Button Widgets](page-editor-widgets-buttons) and [Events Section in Widgets](page-editor-widgets-events-section).
+In the **On Click Action** section, you can select a data grid specific action for a button (for example, deselect all or export to Excel), or a standard one (for example, execute a microflow or save changes). For more information on buttons and standard on click actions, see [Buttons](page-editor-widgets-buttons) and [Events Section](page-editor-widgets-events-section).
 
 Data grid specific actions are the following ones:
 
@@ -187,7 +195,7 @@ Data grid specific actions are the following ones:
 
 * **Select** – confirms the choice of a row of the grid when it is used for selecting an object for a drop-down with an association selected as a data source or reference set selector. For this reason, the select button can only be placed on a grid that is connected to a drop-down with an association as a data source or a reference set selector
 
-* **Select All** – allows the end-user to select all objects in the grid; can only be used if you set **[Selection Mode](#selection-mode)** to **Multi-selection** or **One-click multi-selection** (for more information, see section [2.6 Events](#grid-events))
+* **Select All** – allows the end-user to select all objects in the grid; can only be used if you set [Selection Mode](#selection-mode) to **Multi-selection** or **One-click multi-selection** (for more information, see section [2.6 Events](#grid-events))
 
 * **Deselect All** – deselects all selected objects in the grid
 
@@ -201,7 +209,7 @@ Data grid specific actions are the following ones:
 
 	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-      ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
+        ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 
@@ -230,9 +238,13 @@ The **Events** section properties are described in the table below:
 | **On Click Action Trigger**                      | Determines how the action selected in the **On Click Action** property is triggered. Possible values of this property are the following: <ul><li>**Double-click** – a double click triggers the selected on-click action</li><li>**Single-click** – a single click triggers the selected on-click action. Single-click cannot be used in combination with **Single selection** mode (see below)</ul> |
 | **Selection Mode** <a name="selection-mode"></a> | Determines the way an end-user selects item in the data grid. Possible values of this property are the following: <ul><li>**No selection** – the user cannot select items</li><li>**Single selection** –  the user can select one item at a time by clicking it</li><li>**Always one selection** – the user can select one item at a time by clicking it, however, the user cannot deselect an item (by default the first item will be selected)</li><li>**Multi-selection** – the user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking other items. Simply clicking an item will deselect all items and make the clicked item the selection.</li><li>**One-click multi-selection** – the user can select multiple items by simply clicking them.</li></ul> |
 
-### 2.7 Design {#grid-design-section}
+### 2.7 Conditional Visibility {#visibility}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
+{{% snippet file="studio/visibility-section-link.md" %}}
+
+### 2.8 Design {#grid-design-section}
+
+For information on the **Design** section and its properties, see [Design Section](page-editor-widgets-design-section).
 
 ## 3 Read More
 

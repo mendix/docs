@@ -25,7 +25,7 @@ List view properties consist of the following sections:
 
 * [Common](#common)
 * [Data source](#data-source)
-* Design Properties
+* [Design Properties](#design-properties)
 * [General](#general)
 * [Templates](#templates)
 * [Visibility](#visibility)
@@ -45,48 +45,54 @@ The list view supports the following types of data sources:
 * [Database source](database-source) – objects are retrieved directly form the database. The database source can be used in [offline](offline-first) applications. 
 * [XPath source](xpath-source) – objects are retrieved directly form the database
 * [Microflow source](microflow-source) – calculates the list of objects by executing a microflow
-* Nanoflow source – calculates the list of objects by executing a nanoflow
+* [Nanoflow source](nanoflow-source) – calculates the list of objects by executing a nanoflow
 * [Association source](association-source) – follows an association to get to objects
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
 {{% alert type="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 
-### 2.3 General Section {#general}
+### 2.3 Design Properties Section{#design-properties}
 
-#### 2.3.1 Editable
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.4 General Section {#general}
+
+#### 2.4.1 Editable
 
 If this property is set to *Yes*, items in the list view can be edited. The changes made to list view items can be saved with a **Save** button and reverted with a **Cancel** button. **On click** and **Page size** properties are not displayed to avoid confusion about what changes are saved or reverted.
 
-#### 2.3.2 On Click 
+#### 2.4.2 On Click 
 
 An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](on-click-event). 
 
-#### 2.3.3 Page Size
+#### 2.4.3 Page Size {#page-size}
 
 the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-#### 2.3.4 Scroll Direction
+{{% alert type="info" %}}The **Load more** button is not visible on native mobile pages. The list view will automatically load new items, when the last of the currently loaded items is shown.{{% /alert %}}
+
+#### 2.4.4 Scroll Direction
 
 {{% alert type="info" %}}The scroll direction property is only supported on native mobile pages.{{% /alert %}}
 
 This property determines whether the list view lays out its items vertically (default) or horizontally.
 
-#### 2.3.5 Number of Columns
+#### 2.4.5 Number of Columns
 
 {{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 With this property you can change the number of items that will be shown next to each other in one row.
 If you set the scroll direction property to horizontal, this property determines the number of items per column.
 
-#### 2.3.6 Pull Down Action
+#### 2.4.6 Pull Down Action
 
 {{% alert type="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 
 The pull down action defines what action is performed when you drag downwards on a list view.
 Its common behavior is to update the contents of the list view by synchronizing data.
 
-### 2.4 Templates Section {#templates}
+### 2.5 Templates Section {#templates}
 
 {{% alert type="warning" %}}Templates are not supported on native mobile pages.{{% /alert %}}
 
@@ -100,7 +106,7 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 {{% /alert %}}
 
-### 2.5 Visibility Section {#visibility}
+### 2.6 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
@@ -115,6 +121,6 @@ To perform actions on a list view, select it on a page and right-click it. The l
 ## 4 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
-* [Properties Common for Widgets](common-widget-properties)
+* [Properties Common in the Page Editor](common-widget-properties)

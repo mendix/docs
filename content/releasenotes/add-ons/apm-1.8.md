@@ -7,7 +7,7 @@ parent: "apm-1"
 
 The theme for this version is a tool summary on a dashboard and improved styling.
 
-### GUI Makeover to Match Style With Mansystems Applications Test Suite
+### GUI Makeover to Match Style With CLEVR Applications Test Suite
 
 The new console is more about presenting information instead of more stop/start buttons and navigation.
 
@@ -43,8 +43,8 @@ The statistics tool now gathers statistics over different time periods:
 
 ### Bug Fixes and Minor Changes
 
-* We replaced the Mansystems customized String Formatter widget with the AppStore FormatString widget, in order to reduce the number of custom widgets and to keep APM maintainable.
-* We made custom APM versions of the standard AppStore widgets in order to prevent conflicts with other versions of the widget for customers.
+* We replaced the CLEVR customized String Formatter widget with the Mendix Marketplace's FormatString widget, in order to reduce the number of custom widgets and to keep APM maintainable.
+* We made custom APM versions of the standard Mendix Marketplace widgets in order to prevent conflicts with other versions of the widget for customers.
 * We moved the JDBC settings from the query tool to the global settings in order to simplify and separate the configuration from usage.
 * The ChartJS has been customized to show the horizontal scale of the type time and to auto-refresh so that it looks better and automatically updates the screen.
 * The expiry date is now automatically populated so that the user can see the duration of the license and does not have to manually enter it.

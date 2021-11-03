@@ -44,7 +44,7 @@ Enter the correct credentials and you will be signed in to Studio Pro.
 
 ## 3 Creating and Deploying Apps Using SSO
 
-When you create an SAP app or a new SAP Cloud Platform environment, you may be asked to sign in to SAP.
+When you create an SAP app or a new SAP Business Technology Platform (SAP BTP) environment, you may be asked to sign in to SAP.
 
 This is triggered if you do not already have an active session in the SAP region you have selected.
 
@@ -56,13 +56,13 @@ If you need to enter your credentials you will be asked for them:
 
 ![](attachments/sap-single-sign-on/sap-login-screen.png)
 
-Enter the correct credentials and you will be signed in to continue the creation of your SAP Cloud Platform environment.
+Enter the correct credentials and you will be signed in to continue the creation of your SAP BTP environment.
 
 ## 4 Resolving "Go back to where you originally came from" Error
 
 ![](attachments/sap-single-sign-on/go-back.png)
 
-This error happens when working with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you are logged in on the Mendix platform under one username, but logged in to the SAP region in which you are working under a different username.
+This error happens when working with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you are logged in on the Mendix Platform under one username, but logged in to the SAP region in which you are working under a different username.
 
 When you click **Go back to where you originally came from**, you will see a second error message which you will have to clear by clicking **OK**.
 
@@ -109,4 +109,4 @@ You cannot solve this problem by changing your email address on Mendix. This **d
 
 ## 5 Read More
 
-* [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
+* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform)

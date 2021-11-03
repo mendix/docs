@@ -16,8 +16,8 @@ Before starting this how-to, make sure you are familiar with the following:
 
 * CICD
 * Using REST services
-* [Mendix Unit Testing module](https://appstore.home.mendix.com/link/app/390/) (only if used in your application)
-* [Mendix Application Test Suite](/addons/ats-addon/) (only if used in your application)
+* [Unit Testing](/appstore/modules/unit-testing) module (only if used in your application)
+* [Application Test Suite](/addons/ats-addon/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -57,7 +57,7 @@ Before proceeding to the next step, you need to wait for the build of the deploy
 
 ![](attachments/implement-cicd-pipeline/04RetrievePackageStatus.png)
 
-### <a name="DeployToNextEnvironment"></a>3.3 Deploying to the Next Environment
+### 3.3 Deploying to the Next Environment {#deploying-to-the-next-environment}
 
 After building the deployment package, you can now deploy the new package to the next (Test, Acceptance, etc.) environment. To do this, use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 
@@ -97,7 +97,7 @@ The sections below show you how to execute unit and ATS (UI) tests remotely. The
 
 #### 3.4.1 Unit Tests
 
-One way of doing unit tests in a Mendix app is by using the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/) available from the Mendix App Store. This module already [exposes an API to execute remote calls](https://appstore.home.mendix.com/link/app/390/#running-unit-tests-through-the-remote-api).
+One way of doing unit tests in a Mendix app is by using the [Unit Testing](/appstore/modules/unit-testing) module available from the Mendix Marketplace. This module already exposes an API to execute remote calls.
 
 First, you need to start the tests.
 
@@ -116,11 +116,11 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd#four).
+ATS has its own [API for CICD](/addons/ats-addon/rg-two-cicd-api#api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats-addon/ht-two-ats-and-ci-cd#ats-and-ci-cd).
 
 ### 3.5 Next Steps
 
-If you need to promote to another environment, repeat the steps in section [3.3 Deploying to the Next Environment](#DeployToNextEnvironment).
+If you need to promote to another environment, repeat the steps in [Deploying to the Next Environment](#deploying-to-the-next-environment) section.
 
 ## 4 Jenkins/VSTS Examples
 

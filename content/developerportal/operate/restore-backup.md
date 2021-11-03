@@ -4,6 +4,7 @@ parent: "backups"
 menu_order: 30
 description: "How to restore a backup."
 tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
@@ -14,6 +15,12 @@ The backup can be stored in the cloud, associated with the environment from whic
 
 {{% alert type="info" %}}
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions) for more information.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+You cannot transfer data from one app to another by restoring a backup from one app to a different app. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide/data-storage) for more information.
+
+If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication) module.
 {{% /alert %}}
 
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
@@ -34,15 +41,29 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
+    ![](attachments/restore-a-backup/restore-backup.png)
+
 {{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
 
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+
+You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
+
+{{% /alert %}}
+
 ## 3 Restoring a Backup for a Different Licensed Cloud Node{#restore-local-backup}
 
 To transfer backups between environments, you will need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup which has expired and been deleted from the Mendix Cloud.
+
+{{% alert type="warning" %}}
+You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.
+
+The app previously deployed to the node does not, however, need to have had the same Domain Model as the data you are restoring.
+{{% /alert %}}
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
@@ -54,7 +75,7 @@ To transfer backups between environments, you will need a downloaded backup file
 
     In **Mendix Cloud v4**, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application.
 
-    In **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
+    In the deprecated **Mendix Cloud v3**, this will *not* add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The existing deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
 4. In Mendix Cloud **v3** you will need to confirm this by clicking **Yes**, because this action will immediately stop your app.
 
@@ -123,11 +144,23 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 
 {{% alert type="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
+
+The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
 ### tree folder
 
-This contains the files which are stored in external file storage. Each file is stored in a second level location:
+This contains the files which are stored in external file storage. Each file has the name of the uuid used within Mendix to identify the resource.
+
+#### Mendix Cloud V4
+
+For Mendix Cloud V4 the files are stored in a flat structure.
+
+#### Mendix Cloud V3
+
+The situation for the deprecated Mendix Cloud v3 is slightly different. If you need to restore a backup to Mendix Cloud V3, you will need to implement the structure described below. The restore functionality in Mendix Cloud V4 will also recognize this structure if you are restoring a backup taken on V3 to a V4 environment.
+
+Each file is stored in a second level location:
 
 ```
 /tree

@@ -27,7 +27,7 @@ The models which are supported by the Connector for SAP Leonardo Machine Learnin
 
 To use the Connector for SAP Leonardo Machine Learning Foundation, you need the following prerequisites:
 
-* The Connector for SAP Leonardo Machine Learning Foundation downloaded into your app from the Mendix App Store; it can be found here: https://appstore.home.mendix.com/link/app/107221/Mendix/SAP-Leonardo-Machine-Learning-Foundation-Connector
+* The [SAP Leonardo Machine Learning Foundation](https://marketplace.mendix.com/link/component/107221/) connector downloaded into your app project from the Mendix Marketplace
 * An API key obtained from the SAP API Business Hub
 
     1. Go to the SAP Leonardo Machine Learning Foundation - Functional Services page here: https://api.sap.com/package/SAPLeonardoMLFunctionalServices.
@@ -46,11 +46,11 @@ To use the Connector for SAP Leonardo Machine Learning Foundation, you need the 
 
 ## 3 Setting up the API Key {#api-key}
 
-The Connector for SAP Leonardo Machine Learning Foundation actions are available in your microflows, once you have imported the Connector for SAP Leonardo Machine Learning Foundation module from the Mendix App Store.
+The Connector for SAP Leonardo Machine Learning Foundation actions are available in your microflows, once you have imported the Connector for SAP Leonardo Machine Learning Foundation module from the Mendix Marketplace.
 
 Every call to SAP Leonardo Machine Learning Foundation needs to be authenticated by a valid **API key**. Instructions for obtaining this are in the [Prerequisites](#prerequisites) section above.
 
-The API key needs to be pasted as the value of the constant, **APIKey** which is found in *Project '...' > App Store modules > LeonardoMachineLearning > Constants*.
+The API key needs to be pasted as the value of the constant, **APIKey** which is found in **App** > **Marketplace modules** > **LeonardoMachineLearning** > **Constants**.
 
 ![Paste the API key](attachments/sap-leonardo-connector/paste-api-key.png)
 
@@ -60,7 +60,7 @@ Each action from the Connector for SAP Leonardo Machine Learning Foundation is d
 
 ### 4.1 ClassifyImage
 
-This implements the [**Inference Service for Customizable Image Classification (classification)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in it from a set of 1000 categories such as trees, animals, food, vehicles, people, and more. A description of the service can be found on the SAP site here: [Inference Service for Customizable Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/d7b4564d6625412c9e50ad1514308043.html). 
+This implements the [Inference Service for Customizable Image Classification (classification)](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in it from a set of 1000 categories such as trees, animals, food, vehicles, people, and more. A description of the service can be found on the SAP site here: [Inference Service for Customizable Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/d7b4564d6625412c9e50ad1514308043.html). 
 
 ![ClassifyImage action](attachments/sap-leonardo-connector/classify-image-input.png)
 
@@ -100,7 +100,7 @@ The **ClassifyImage** action returns a list of objects of entity type *LeonardoM
 
 ### 4.2 ClassifyProductFromImage
 
-This implements the [**Product Image Classification API (inference_sync)**](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies them into a fixed set of categories of products that are common in eCommerce. A description of the service can be found on the SAP site here: [Inference Service for Product Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3013afaa529440429a6e63dfd31d1799.html). 
+This implements the [Product Image Classification API (inference_sync)](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies them into a fixed set of categories of products that are common in eCommerce. A description of the service can be found on the SAP site here: [Inference Service for Product Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3013afaa529440429a6e63dfd31d1799.html). 
 
 ![ClassifyProductFromImage action](attachments/sap-leonardo-connector/classify-product-from-image-input.png)
 
@@ -128,7 +128,7 @@ The **ClassifyProductFromImage** action returns a list of objects of entity type
 
 ### 4.3 DetectFace
 
-This implements the [**Inference Service for Face Detection (face-detection)**](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in it, if any. It returns information declaring a boundary box per face. A description of the service can be found on the SAP site here: [Inference Service for Face Detection](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3c58688fc6b14c8faf80fa5e99d88e32.html). 
+This implements the [Inference Service for Face Detection (face-detection)](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in it, if any. It returns information declaring a boundary box per face. A description of the service can be found on the SAP site here: [Inference Service for Face Detection](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3c58688fc6b14c8faf80fa5e99d88e32.html). 
 
 ![DetectFace action](attachments/sap-leonardo-connector/detect-face-input.png)
 
@@ -158,7 +158,7 @@ The **DetectFace** action returns a list of objects of entity type *LeonardoMach
 
 ### 4.4 DetectTopic
 
-This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/topic_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks topics in the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
+This implements the [Inference Service for Topic Detection (topic-detection)](https://api.sap.com/api/topic_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks topics in the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
 
 ![DetectTopic action](attachments/sap-leonardo-connector/detect-topic-input.png)
 
@@ -202,7 +202,7 @@ The **DetectTopic** action returns an object of entity type *LeonardoMachineLear
 
 ### 4.5 ExtractImageFeature
 
-This implements the [**Inference Service For Customizable Image Feature Extraction (feature-extraction)**](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing.
+This implements the [Inference Service For Customizable Image Feature Extraction (feature-extraction)](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing.
 
 The values in the feature vector extracted from the image can be used as input to the ScoreSimilarity action. See the section on [ScoreSimilarity](#score-similarity), below.
 
@@ -233,7 +233,7 @@ The **ExtractImageFeature** action returns a list of objects of entity type *Leo
 
 ### 4.6 RecognizeOpticalCharacter (OCR)
 
-This implements the [**Inference Service for Optical Character Recognition (OCR)**](https://api.sap.com/api/ocr_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes one portable document file with the .pdf extension, or one image file in .jpeg, .jpe, or .png format as input. It returns the result in text or xml format.
+This implements the [Inference Service for Optical Character Recognition (OCR)](https://api.sap.com/api/ocr_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes one portable document file with the .pdf extension, or one image file in .jpeg, .jpe, or .png format as input. It returns the result in text or xml format.
 
 ![RecognizeOpticalCharacter (OCR) action](attachments/sap-leonardo-connector/ocr-input.png)
 
@@ -278,7 +278,7 @@ The **RecognizeOpticalCharacter (OCR)** action returns an object of entity type 
 
 ### 4.7 ScoreSimilarity {#score-similarity}
 
-This implements the [**Inference Service For Similarity Scoring (similarity-scoring)**](https://api.sap.com/api/similarity_scoring_api/resource) service of SAP Leonardo Machine Learning Foundation. It compares vectors using a similarity score based on the cosine similarity of the vectors. The vectors retrieved from the **ExtractImageFeature** microflow action or from the *Inference Service for Document Feature Extraction* SAP Leonardo Machine Learning Foundation service can be used as inputs to this service.
+This implements the [Inference Service For Similarity Scoring (similarity-scoring)](https://api.sap.com/api/similarity_scoring_api/resource) service of SAP Leonardo Machine Learning Foundation. It compares vectors using a similarity score based on the cosine similarity of the vectors. The vectors retrieved from the **ExtractImageFeature** microflow action or from the *Inference Service for Document Feature Extraction* SAP Leonardo Machine Learning Foundation service can be used as inputs to this service.
 
 ![ExtractImageFeature action](attachments/sap-leonardo-connector/score-similarity-input.png)
 
@@ -342,7 +342,7 @@ If *numSimilarVectors* is set to *1* then the action will return just the best s
 
 ### 4.8 Translate
 
-This implements the [**Inference Service For Machine Translation (translation)**](https://api.sap.com/api/translation_api/resource) service of SAP Leonardo Machine Learning Foundation. It translates one or more strings from a source language to one or more target languages. The Inference Service for Machine Translation is powered by SAP Translation Hub and is trained on SAP-related content to provide accurate domain adaptation and terminology coverage. A description of the service can be found on the SAP site here: [Inference Service for Machine Translation](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c730c916e6e947df9a634b33b66e5ee0.html). 
+This implements the [Inference Service For Machine Translation (translation)](https://api.sap.com/api/translation_api/resource) service of SAP Leonardo Machine Learning Foundation. It translates one or more strings from a source language to one or more target languages. The Inference Service for Machine Translation is powered by SAP Translation Hub and is trained on SAP-related content to provide accurate domain adaptation and terminology coverage. A description of the service can be found on the SAP site here: [Inference Service for Machine Translation](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c730c916e6e947df9a634b33b66e5ee0.html). 
 
 ![Translate action](attachments/sap-leonardo-connector/translate-input.png)
 
@@ -355,13 +355,13 @@ An object of entity type *LeonardoMachineLearning.Translation*. This must be ass
 |Entity/Attribute|Description|
 |---|---|
 |**Translation**|One object which is associated with target languages and text to be translated, grouped into units|
-|SourceLanguage|The language of the source text, identified by a two character string (e.g. 'en' for English)|
+|SourceLanguage|The language of the source text, identified by a two character string (for example, 'en' for English)|
 |**Units**|A way of grouping text to be translated|
 |**Original Value**|One or more objects containing fragments of text to be translated|
 |Value|A string to be translated|
 |**Target Languages**|A way of grouping the target languages for the translation|
 |**TargetLanguagesValue**|One or more objects containing a target language for the translation|
-|Value|A target language for the translation, identified by a two character string (e.g. 'de' for German)|
+|Value|A target language for the translation, identified by a two character string (for example, 'de' for German)|
 
 For example, to translate the two texts *Hello* and *Goodbye* from English to both Spanish and German, you need to create objects as shown below:
 
@@ -390,7 +390,7 @@ The **Translate** action returns an object of entity type *LeonardoMachineLearni
 
 ## 5 Binding SAP Leonardo Machine Learning Foundation Services to Your App
 
-You can use the SAP Leonardo Machine Learning (ML) Foundation Connector to access the services on *SAP API Business Hub*. Here, you can explore the services in an *"as-simple-as-possible deployment"*. However, to use the full abilities of the services, you need to bind a ML Foundation Service to your app running in SAP Cloud Platform. More information on the distinction is available in the SAP blog post [Production-ready integration of SAP Leonardo Machine Learning Foundation services with an SAP S/4HANA side-by-side extension built with the SAP S/4HANA Cloud SDK](https://blogs.sap.com/2018/07/29/production-ready-integration-of-sap-leonardo-machine-learning-foundation-services-with-an-sap-s4hana-side-by-side-extension-built-with-the-sap-s4hana-cloud-sdk/).
+You can use the SAP Leonardo Machine Learning (ML) Foundation Connector to access the services on *SAP API Business Hub*. Here, you can explore the services in an *"as-simple-as-possible deployment"*. However, to use the full abilities of the services, you need to bind a ML Foundation Service to your app running in SAP Business technology Platform (SAP BTP). More information on the distinction is available in the SAP blog post [Production-ready integration of SAP Leonardo Machine Learning Foundation services with an SAP S/4HANA side-by-side extension built with the SAP S/4HANA Cloud SDK](https://blogs.sap.com/2018/07/29/production-ready-integration-of-sap-leonardo-machine-learning-foundation-services-with-an-sap-s4hana-side-by-side-extension-built-with-the-sap-s4hana-cloud-sdk/).
 
 The following sections describe how to bind a ML Foundation Service to your app.
 
@@ -398,7 +398,7 @@ The following sections describe how to bind a ML Foundation Service to your app.
 
 The ML Foundation Trial is not added automatically to your quota. Therefore, you need to add it manually.
 
-1. Go to the SAP Cloud Platform cockpit for your account.
+1. Go to the SAP BTP cockpit for your account.
 
 2. Choose the **Entitlements** and choose the *ML Foundation Trial* entitlement.
 
@@ -410,19 +410,19 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 ### 5.2 Binding an Instance of a ML Foundation Service to Your App
 
-1. Go to the **Space** where your app is deployed on SAP Cloud Platform.
+1. Go to the **Space** where your app is deployed on SAP BTP.
 
 2. Select **ml-foundation-trial-beta** from the **Service Marketplace**
 
     ![choose the machine learning service from the marketplace](attachments/sap-leonardo-connector/choose-ml-service.png)
 
-3. Go to **Instances** and click on **New Instance** to add an instance of the service.
+3. Go to **Instances** and click **New Instance** to add an instance of the service.
 
 4. Choose the desired **Service Plan** and click **Next**.
 
 5. Add parameters, if required, and click **Next**. In most cases additional parameters are not required.
 
-6. Choose your app from the dropdown list of **Application**s. In most cases you will not need to add any parameters.
+6. Choose your app from the drop-down list of **Application**s. In most cases you will not need to add any parameters.
 
 7. Click **Next**.
 

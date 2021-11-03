@@ -1,8 +1,8 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
-category: "Front-End"
+category: "Front End"
 menu_order: 25
-tags: ["Front-End"]
+tags: ["front end"]
 ---
 
 ## 1 Introduction
@@ -18,15 +18,33 @@ This how-to explains how you can create overview and detail pages in Mendix.
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-*  Set up a basic data structure by reading [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer):
+*  Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer):
    
     ![](attachments/18448745/18582175.png)
 
-## 3 Creating an Overview Page
+## 3 Creating Overview & Detail Pages Automatically
 
-To create a new overview page and add it to your project, follow these steps:
+To create the overview and detail pages for your data structure, follow these steps:
 
-1.  Right-click the module and select **Add** > **Page**.
+1. In the domain model, right-click the **Customer** entity and select **Generate overview pages**. 
+2. Select both entities in the **Generate pages** dialog box.
+3. Click **OK**.
+
+And there you go! For each entity, an overview page and a detail page is generated. Also, an **Entity_Menu** snippet is created and added to each overview page.
+
+{{% alert type="info" %}}
+Mendix can do even more of the work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer** and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
+{{% /alert %}}
+
+## 4 Creating Overview & Detail Pages Manually
+
+For a better understanding of Mendix Studio Pro, this section describes the manual steps for creating these pages.
+
+### 4.1 Creating the Overview Page
+
+To create a new overview page and add it to your app, follow these steps:
+
+1. Right-click the module and select **Add** > **Page**.
 2. Click **Responsive**.
 3. Enter *CustomerOverview* in **Page name**.
 4. Select _Sidebar_Full_Responsive_ as the navigation layout.
@@ -55,7 +73,9 @@ You should now have an overview page with a data grid like this:
 
 ![](attachments/18448704/18581330.png)
 
-## 3 Creating a Detail Page
+### 4.1 Creating the Detail Page
+
+To create a new detail page manually, follow these steps:
 
 1.  Right-click **New** on the data grid on the overview page and select **Generate page**.
 2.  Select **PopupLayout** as the **Navigation layout**.
@@ -71,17 +91,16 @@ You should now have an overview page with a data grid like this:
 
     ![](attachments/18448704/18581325.png)
 
-## 4 Navigation and Security
+## 5 Navigation & Security
 
-1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
-2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](../security/create-a-secure-app).
+Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure).
 
-## 5 Read More
+If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto/security/create-a-secure-app).
 
+## 6 Read More
+
+* [Atlas UI](atlas-ui)
 * [Use Layouts and Snippets](layouts-and-snippets)
-* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Page](/refguide/page)

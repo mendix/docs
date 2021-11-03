@@ -3,6 +3,7 @@ title: "Version Control"
 description: "This document gives definitions and explains the version control  process"
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 ## 1 Introduction
@@ -10,17 +11,17 @@ tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collabo
 Version Control allows you to manage your app development in two ways:
 
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [Main Line](#main-line) contains all the completed features that have been worked on separately.
+* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro, Studio, and the Developer Portal.
+Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git] (https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro (SVN and Git), Studio, and the Developer Portal (SVN only).
 
 ## 2 Concepts {#concepts}
 
 ### 2.1 Team Server {#team-server}
 
-[Team Server](/developerportal/develop/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+[Team Server](/developerportal/collaborate/team-server) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-To commit to the Team Server you will need to have a role in the project which allows you to edit the app. For more information, see section [App Team Roles](https://docs.mendix.com/developerportal/company-app-roles/#app-team-roles) in *Company & App Roles*.
+To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/collaborate/app-roles#team-roles) section *App Roles*.
 
 ### 2.2 Repository {#repository}
 
@@ -49,14 +50,14 @@ If any of the differences cannot be applied, then there is a [conflict](#conflic
 
 ### 2.6 Conflict {#conflict}
 
-A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. Examples are the following:
+A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. These are some examples:
 
-* the properties of a widget are changed in the revision and the working copy but to different settings
-* a document is moved or deleted in the revision but has been changed in a different way in the working copy.
+* The properties of a widget are changed in the revision and the working copy but to different settings
+* A document is moved or deleted in the revision but has been changed in a different way in the working copy
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update
+### 2.7 Update {#update}
 
 Updating is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the Team Server repository and merges the differences into the current working copy.
 
@@ -70,17 +71,17 @@ If Studio is enabled for this development line, the process first ensures that t
 
 ### 2.9 Development Line {#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the [Main Line](#main-line) and [Branch Lines](#branch-line).
+Development of an app is done in a development line where a set of related changes is made. There are two types of development lines: the [main line](#main-line) and [branch lines](#branch-line).
 
 #### 2.9.1 Main Line {#main-line}
 
-The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
+The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
 #### 2.9.2 Branch Line {#branch-line}
 
-A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
+A branch line is a way of making an independent set of changes which can be tested away from the main line.
 
-See [Branches](#branches), below, for more information on how branch lines can be used.
+See the [Branches](#branches) section below for more information on how branch lines can be used.
 
 ### 2.10 Studio Enabled {#studio-enabled}
 
@@ -88,7 +89,7 @@ You may enable Studio for one of the development lines. This means that a develo
 
 Studio cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Studio enabled.
+For app templates created via the Developer Portal, the main line of a new app will be Studio enabled.
 
 ### 2.11 Tag
 
@@ -99,13 +100,17 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Patch: used to identify a fix to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
+{{% alert type="info" %}}
+Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) at the moment 
+{{% /alert %}}
+
 ### 2.12 Repository Service
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
 ## 3 Version Control Processes for a Single Branch {#vc-single}
 
-The figure below shows how two developers might work on a [Studio enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 
@@ -169,7 +174,7 @@ This is done using [Branch Lines](#branch-line).
 
 ### 4.1 Main Line
 
-All apps are developed along the main line (also referred to as **trunk**). Here you have all development happening along a single line, with all changes built upon the previous revision:
+All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
 ![](attachments/version-control/image7.png)
 
@@ -189,10 +194,10 @@ In Mendix each revision within a [repository](#repository) is given a unique ver
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 
-On the other hand, you may want to add the features from one branch line into another development line. Two cases for doing this are:
+On the other hand, you may want to add the features from one branch line into another development line. These are two cases for doing this:
 
-* you develop new features in a branch line and want to include them in your main development line
-* you want to take advantage of a bug fix which was made on another branch line
+* You develop new features in a branch line and want to include them in your main development line
+* You want to take advantage of a bug fix which was made on another branch line
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
@@ -205,6 +210,5 @@ Note that errors can be introduced by the [merge](#merge) process even if no con
 ## 5 Main Documents in This Category
 
 * [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
-* [Team Server Overview](/developerportal/develop/team-server) – introduces topics relating to Team Server and app development
 * [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app
-* [Team Server Overview](/developerportal/develop/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)
+* [Team Server](/developerportal/collaborate/team-server) – presents an overview of viewing Team Server information in the Developer Portal (for example, revision summary and details)

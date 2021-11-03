@@ -9,7 +9,7 @@ parent: "common-widgets"
 
 For input widgets it is recommended to use the more powerful [label property](text-box) to describe their purpose.
 
-For all other text use the [text widget](text) as it provides more features, e.g. text templates, and generates semantically correct HTML.
+For all other text use the [text widget](text) as it provides more features, for example, text templates, and generates semantically correct HTML.
 
 {{% /alert %}}
 

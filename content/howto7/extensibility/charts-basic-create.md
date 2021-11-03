@@ -22,9 +22,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest Mendix desktop modeler
 
-* Download the latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Download the latest [Charts Widget](/appstore/widgets/charts) from the Mendix Marketplace
 
-## 3 Implementing the Charts Widget in an Existing Project
+## 3 Implementing the Charts Widget in an Existing App
 
 In this section, you will create a chart with basic sample data.
 
@@ -62,7 +62,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
     ![Data view showing the Value entity](attachments/charts/charts-create-new-value.png)
 
-5. Right-click on the data view and select **Go to microflow**.
+5. Right-click the data view and select **Go to microflow**.
 
 6. In the new **DS_NewValue** microflow, create a new *Value* object and set that object as the return.
 
@@ -102,7 +102,7 @@ To configure a Charts widget, follow these steps:
 
 To view the chart, follow these steps:
 
-1. Run the project.
+1. Run the app.
 
 2. In your browser, open the data entry page.
 

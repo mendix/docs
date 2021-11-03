@@ -3,6 +3,9 @@ title: "Moving from Modeler Version 6 to 7"
 category: "General"
 menu_order: 20
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
+aliases:
+    - /refguide/moving-from-6-to-7.html
+    - /releasenotes/studio-pro/6.10.html
 ---
 
 ## 1 Introduction
@@ -30,7 +33,7 @@ Seriously, make a backup!
 
 ### 2.2 Converting to the Latest Mendix 6 Version
 
-Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version. For details on the latest Mendix 6 version, see the [Desktop Modeler version 6.10 release notes](/releasenotes/studio-pro/6.10).
+Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version.
 
 ### 2.3 Fixing Errors, Warnings & Deprecations
 
@@ -46,11 +49,11 @@ For details on the removed and deprecated APIs, see the **Breaking changes** sec
 
 Now you are ready to convert, so simply open your project in the new Desktop Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7. When you deloy your app from the Modeler, double check all the domain model changes in the synchronization dialog box in order to avoid unexpected modifications. 
 
-### 3.1 Upgrading App Store Modules
+### 3.1 Upgrading Marketplace Modules
 
-After the conversion, verify if there is a newer version available of your App Store modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
+After the conversion, verify if there is a newer version available of your Marketplace modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
 
-In Mendix 7, the App Store modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
+In Mendix 7, the Marketplace modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
 
 ### 3.2 Double Checking Project Changes
 
@@ -78,7 +81,7 @@ We optimized the system to reduce the performance impact of enabling this by def
 
 ### 4.3 NPE Attribute-Level Security
 
-We have prohibited non-persistent entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
+We have prohibited non-persistable entity (NPE) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
 
 ### 4.4 Autocommitted Objects for System Sessions
 
@@ -100,9 +103,9 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 
 ### 4.8 Client API Changes
 
-The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#get).
+The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#get).
 
-Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
+Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
 
 Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. Use these at your own risk, or better yet, don't use them at all!
 

@@ -1,78 +1,112 @@
 ---
 title: "Developer Portal Guide"
-description: "A description of the sections in the Developer Portal and links to more detail"
-tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
+description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
+tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
+The [Developer Portal](http://sprintr.home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-You can go to any part of the Developer Portal using the menu items described below.
+## 2 Navigation {#navigation}
 
-## 2 Buzz {#buzz}
+To create a new app click **Create App**, which will open a page where you can choose a starting pointing for your new app:
 
-In the company [Buzz](collaborate/buzz), you can communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
+![](attachments/create-app.png)
 
-![](attachments/developerportal-buzz.png)
+On the right side of the top bar, you can search and access your [Mendix Profile](/developerportal/community-tools/mendix-profile). You can also click the **+** icon to create a new app.
 
-## 3 Apps
+On the left side of the top bar, you open an access menu by clicking the **Switch-to** menu:
 
-In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
+{{% image_container width="300" %}}
+![](attachments/switcher.png)
+{{% /image_container %}}
 
-![](attachments/developerportal-apps.png)
+You can then access the following parts of the Mendix Platform:
 
-If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
+* **Mendix Home** – the [My Apps](/developerportal#my-apps) page
+* [Studio](/studio/)
+* **Get Studio Pro** – the [Studio Pro](/refguide/) download page in the [Mendix Marketplace](/appstore/)
+* **Cloud**  – the [Nodes](/developerportal/deploy/node-permissions) page, which shows a list of all the licensed Mendix Cloud nodes to which you have access
+	* Clicking **Details** on this page opens the [Environments](/developerportal/deploy/environments) page for the app that is deployed to a node
+	* For details on the **Cluster Manager** option in the top bar, see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster)
+* [Control Center](/developerportal/control-center/)
+* [Marketplace](/appstore/)
+* [Data Hub](/data-hub/)
+* [Academy](https://academy.mendix.com/link/home)
+* [Docs](https://docs.mendix.com/)
+* [Forum](/developerportal/community-tools/mendix-forum)
+* [Community](community-tools)
 
-## 4 People
+Click [Company Buzz](collaborate/buzz) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
 
-In [People](mendix-profile/index#connections), you can view the other members of the Mendix community and also invite people to the Mendix Platform :
+Click [Company Apps](/developerportal#my-company-apps) to see all the apps created by members of your company.
 
-![](attachments/developerportal-people.png)
+If you want to turn on the old navigation/header, click your avatar and toggle **New Navigation** to **Off**.
 
-## 5 Community
+## 3 My Apps {#my-apps}
 
-In [Community](/developerportal/community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+The **My Apps** page shows you a summary of your apps:
 
-![](attachments/developerportal-community.png)
+![Apps tiles](attachments/apps-tiles.jpg)
 
-## 6 App Store
+**All** displays all the apps for which you are a [Team](/developerportal/collaborate/team) member. Any apps you pin with the pin icon will appear in the **Pinned** tab. 
 
-In the [Mendix App Store](/developerportal/app-store/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
+Click an app tile to see the app [Buzz](/developerportal/collaborate/buzz).
 
-![](attachments/developerportal-app-store.png)
+Using the drop-down menu, you can choose to sort the apps in the following ways:
 
-## 7 Academy 
+* **Most Recent** first
+* Alphabetical order of **App Name**
 
-The [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
+By clicking the ellipsis (**…**) in the app tile, you can quickly perform a number of actions:
 
-![](attachments/developerportal-academy.png)
+![Quick actions menu for an app](attachments/quick-action-menu.jpg)
 
-## 8 Forum
+The actions available depend on the app selected:
 
-In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
+* **Edit in Mendix Studio**
+* **Edit in Mendix Studio Pro**
+* **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-![](attachments/developerportal-forum.png)
+To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
-## 9 Docs
+## 4 My Company's Apps & Buzz {#my-company-apps}
 
-The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-tools/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
+In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
-![](attachments/developerportal-docs.png)
+![](attachments/company-links.png)
 
-## 10 Getting Assistance
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
+
+You can also sort the order of the apps here.
+
+If you click an app for which you are a team member, you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
+
+If you click an app for which you are not an team member, you will see the app details:
+
+{{% image_container width="400" %}}
+![Example of app details](attachments/app-details.png)
+{{% /image_container %}}
+
+For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz#company-buzz) section of *Buzz*.
+
+## 5 Getting Assistance
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
-![](attachments/developerportal-assistance.png)
+![](attachments/developerportal-assistance.jpg)
 
 * **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/index4.html)
-* **Check the Documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
+* **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
 
-## 11 Document Categories
+## 6 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
 

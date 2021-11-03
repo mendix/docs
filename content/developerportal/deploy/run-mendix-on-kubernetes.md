@@ -2,16 +2,25 @@
 title: "Run Mendix on Kubernetes"
 parent: "docker-deploy"
 menu_order: 20
-tags: ["kubernetes", "cloud", "deployment"]
+tags: ["Kubernetes", "cloud", "deployment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes extends Mendix's support for Docker by providing a platform to automate deployments and scale apps with high availability.
+This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/). Kubernetes is the standard Docker orchestration platform supported by Mendix. If possible, we suggest you use [Mendix for Private Cloud](private-cloud) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away some of the heavy lifting. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements).
 
-This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Turn-key Cloud Solutions](https://kubernetes.io/docs/setup/pick-right-solution/).
+{{% alert type="warning" %}}
+Do not use these instructions if you are using Mendix for Private Cloud — many of the steps here are not needed. For deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](private-cloud) documentation.
+{{% /alert %}}
 
-For more details on Kubernetes, see [Kubernetes Documentation](https://kubernetes.io/docs/home/).
+A Mendix application needs, as a minimum, a database to run. In this example you provision a PostgreSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements). 
+
+If the application makes use of FileDocument or FileImage entities, a storage service needs to be attached as well. See [Mendix System Requirements](/refguide/system-requirements) for supported external storage services. In this how-to you use a node-bound storage volume as an example. For more information, see [Architecture Overview](#architecture), below.
+
+This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
+
+For more details on Kubernetes, see the [Kubernetes Documentation](https://kubernetes.io/docs/home/) site.
 
 All the configuration files used in this how-to are also available on GitHub.
 
@@ -36,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
 
-## 3 Architecture Overview
+## 3 Architecture Overview{#architecture}
 
 This section explains the components needed for Mendix app deployment. This architecture overview shows all the components in the deployment:
 
@@ -62,31 +71,42 @@ To access your Mendix applications inside a pod from outside of the Kubernetes, 
 
 ### 4.1 Deploying the PostgreSQL Database
 
+Once Minikube is running you'll need to configure your local environment to use the Docker daemon using the following command:
+
+```bash
+minikube docker-env
+```
+
+You'll need to build your image in Minikube if you haven't done so yet. See [Docker](docker-deploy) for the steps to do this.
+
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
 {{% alert type="info" %}}
 
-For simplicity and compatibility with ```minikube```, we mount a folder from the ```minikube node```. This approach is not recommended for production.
+For simplicity and compatibility with `minikube`, we mount a folder from the `minikube node`. This approach is not recommended for production.
 
 {{% /alert %}}
 
 Here is the definition of the `postgres-deployment.yaml` database component:
 
-```
-apiVersion: apps/v1beta1
+```yml
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
   template:
     metadata:
       labels:
-        service: postgres
+        app: postgres
     spec:
       containers:
         - name: postgres
-          image: postgres:10.1
+          image: postgres:11
           ports:
             - containerPort: 5432
           env:
@@ -111,7 +131,7 @@ And finally, it is necessary to expose the database as a service and make it ava
 
 (`postgres-service.yaml`):
 
-```
+```yml
 apiVersion: v1
 kind: Service
 metadata:
@@ -121,20 +141,20 @@ spec:
   ports:
     - port: 5432
   selector:
-    service: postgres
+    app: postgres
 ```
 
 To create all the mentioned components, use the following:
 
-```
+```bash
 kubectl create -f postgres-deployment.yaml
 kubectl create -f postgres-service.yaml
 ```
 
 The database is now created. To verify the installation, check out the logs:
 
-```
-# kubectl logs $(kubectl get pods -lservice=postgres -o name)
+```bash
+kubectl logs $(kubectl get pods -lapp=postgres -o name)
 ```
 
 This is the expected output:
@@ -143,24 +163,37 @@ This is the expected output:
 2017-09-14 08:34:37.538 UTC [1] LOG:  database system is ready to accept connections
 ```
 
-Windows users need to execute this inline command first to get the pod name and the logs:
+The host and port values will be needed to deploy the application. To get these we execute the following command:
 
-```
-# kubectl get pods -lservice=postgres -o name
-pods/posgres-whSsHA
-
-# kubectl logs <name>
+```bash
+kubectl get service postgres-service
 ```
 
-### 4.2 Deploying the Application
+Windows users need to execute these inline commands first to get the pod name
+
+```bash
+kubectl get pods -lapp=postgres -o name
+```
+
+and use the pod name to retrieve the logs:
+
+```bash
+kubectl logs <name>
+```
+
+### 4.2 Deploying the Application{#deploy}
 
 With the database running, we can deploy our application. We'll be using a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, see the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
 
-Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secret file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secrets file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
+
+{{% alert type="info" %}}
+The Secret values in the secrets file must be base64 encoded.
+{{% /alert %}}
 
 `mendix-app-secrets.yaml`:
 
-```
+```yml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -173,25 +206,33 @@ data:
   license-id: YOUR_LICENSE_ID
 ```
 
-To create the secret in Kubernetes we execute the following command:
+YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the command:
 
+```bash
+kubectl get ep postgres-service
 ```
-$ kubectl create -f mendix-app-secrets.yaml
+
+See [Run a Mendix Docker Image](run-mendix-docker-image) for expected value formats.
+
+To create the secrets in Kubernetes we execute the following command:
+
+```bash
+kubectl create -f mendix-app-secrets.yaml
 ```
 
 Once the database service and the secrets are created, you can create the application, which is defined in the file below.
 
 `mendix-app.yaml`:
 
-```
-apiVersion: apps/v1beta2
+```yml
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mendix-k8s-stateful
   labels:
     app: mendix-k8s
 spec:
-  serviceName: mendix-k8s-ss
+  serviceName: mendix-app-service
   replicas: 2
   selector:
     matchLabels:
@@ -203,9 +244,10 @@ spec:
     spec:
       containers:
         - name: mendix-app
-          image: mendix/sample-app-kubernetes:v2
+          image: <hub-user>/<repo-name>:<tag>
+          imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8080 
           volumeMounts:
             - mountPath: "/build/data/files"
               name: mendix-data
@@ -215,6 +257,11 @@ spec:
                 secretKeyRef:
                   name: mendix-app-secrets
                   key: admin-password
+            - name: DATABASE_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: db-endpoint
             - name: LICENSE_ID
               valueFrom:
                 secretKeyRef:
@@ -224,24 +271,32 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mendix-app-secrets
-                  key: license-key
-            - name: DATABASE_ENDPOINT
-              valueFrom:
-                secretKeyRef:
-                  name: mendix-app-secrets
-                  key: db-endpoint
+                  key: license-key      
       volumes:
         - hostPath:
             path: "/home/docker/mendix-files"
           name: mendix-data
-
 ```
 
+Replace `<hub-user>/<repo-name>:<tag>` with the Docker image of your app, for example, `mendix/sample-app-kubernetes:v3`.
+
+Create a Docker image of your Mendix app using the instructions in the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) on GitHub.
+
+Once you have created the Docker image, push it to the Docker hub using the following command:
+
+```bash
+docker push <hub-user>/<repo-name>:<tag>
+```
+
+Where `<hub-user>/<repo-name>:<tag>` is the Docker image of your app identified in *mendix-app.yaml*. For the example above, this is again `mendix/sample-app-kubernetes:v3`.
+
+{{% alert type="info" %}}
 In this example, we use a local storage folder on the node to show how to externalize the data stored for your app from the Docker container. For production systems, we recommend using the storage provided on the selected cloud platform.
+{{% /alert %}}
 
 Deploy the application to Kubernetes:
 
-```
+```bash
 kubectl create -f mendix-app.yaml
 ```
 
@@ -263,11 +318,13 @@ The definition of publishing the Mendix app as a NodePort service is described i
 
 `mendix-app-service.yaml`:
 
-```
+```yml
 apiVersion: v1
 kind: Service
 metadata:
   name: mendix-app-service
+  labels:
+    app: mendix-k8s
 spec:
   ports:
   - port: 8080
@@ -279,13 +336,19 @@ spec:
 
 Deploy the service:
 
-```
+```bash
 kubectl create -f mendix-app-service.yaml
+```
+
+Check if the application is running using the command:
+
+```bash
+minikube service mendix-app-service
 ```
 
 To get the URL to the application on Minikube, execute this command and open the link in your browser:
 
-```
+```bash
 minikube service mendix-app-service --url
 ```
 
@@ -295,4 +358,4 @@ Congratulations! You have deployed your first Mendix app in Kubernetes.
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
-* [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/azure-kubernetes-cicd-reference-impl)
+

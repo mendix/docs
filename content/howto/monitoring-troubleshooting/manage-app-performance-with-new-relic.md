@@ -18,6 +18,10 @@ New Relic is a flexible application performance management tool that provides in
 
 * Set up application performance management for your Mendix application on New Relic
 
+{{% alert type="warning" %}}
+New Relic is not supported for apps deployed to the Mendix Cloud.
+{{% /alert %}}
+
 ## 2 Prerequisite
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
@@ -26,11 +30,11 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure New Relic so that it can be used for application performance monitoring of your Mendix application.
+In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
 
-## 3.1 Setting up New Relic (On-Premises Only)
+## 3.1 Setting Up New Relic (On-Premises Only)
 
-The following steps are only relevant for on-premises deployments (skip to [2.2.1 Cloud Foundry](#CloudFoundry) if you are deploying your Mendix application to Cloud Foundry).
+The following steps are only relevant for on-premises deployments (if you are deploying your Mendix application to Cloud Foundry, skip to the [Cloud Foundry](#cloud-foundry) section below).
 
 1. Sign in to New Relic and create a new application:
 
@@ -47,11 +51,11 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 ## 3.2 Setting Up Your Mendix Deployment
 
-### <a name="CloudFoundry"></a>3.2.1 Cloud Foundry
+### 3.2.1 Cloud Foundry {#cloud-foundry}
 
 Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
-### 3.2.2 On Premise Linux & Windows Service Console
+### 3.2.2 On-PremiseS Linux & Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 
@@ -65,7 +69,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
-1. Open your Mendix application, and click **Settings** in the **Project Explorer**.
+1. Open your Mendix application, and click **Settings** in the **App Explorer**.
 
 2. Open a configuration:
 
@@ -88,7 +92,7 @@ Your database calls and queries will now be visible on the database page:
 
 ## 6 Further Documentation
 
-For more information on New Relic, see the New Relic documentation here: [https://docs.newrelic.com/](https://docs.newrelic.com/).
+For more information on New Relic, see the [New Relic documentation](https://docs.newrelic.com/).
 
 ## 7 Read More
 
@@ -96,9 +100,4 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [Clear Warning Messages in Mendix](clear-warning-messages)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
-* [Set Log Levels](log-levels)
-* [Debug Microflows](debug-microflows)
-* [Debug Java Actions](debug-java-actions)
-* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [Solve Load & Import Errors](solving-load-and-import-errors)
-* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Monitoring Tools](https://github.com/mendix/cf-mendix-buildpack#monitoring-tools) in the *cf-mendix-buildpack* repo on GitHub

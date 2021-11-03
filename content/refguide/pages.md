@@ -4,15 +4,24 @@ category: "App Modeling"
 menu_order: 30
 tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#This document also has a redirect from opening-pages (which has been deleted)
 ---
 
 ## 1 Introduction
 
-A page is an end-user interface of a Mendix application. Pages are created, edited, manipulated in the page editor. 
+A page is the basic end-user interface of a Mendix application. It is used to display information to the end-user, allow end-users to create and edit information, and enable end-users to trigger additional automated processing.
 
-Every page is based on a page layout and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets).  
+Mendix is a [Single Page Application (SPA)](https://en.wikipedia.org/wiki/Single-page_application) which means that all interaction takes place in a single browser tab/window. A consequence of this is that new pages cannot be opened in a different tab or window.
+
+Pages are created, edited, and manipulated in the page editor. 
+
+Every page is based on a page [layout](layout) and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets).  
 
 ![](attachments/pages/page-structure.png)
+
+Pages can be linked, so that one page can open another page. If this second page contains a [data widget](data-widgets) with a page parameter data source, then an object or objects can be passed from the current page to the new page. For information on opening pages, and triggering other sorts of event, see [On Click Event & Events Section](on-click-event).
+
+Pages are opened either in the current pane of the browser or in a pop-up, child, window. Where the page is opened depends on its [layout type](layout#layout-type). Mendix performs navigation as efficiently as possible. If a new page uses the same layout as the old one, only the data on the page will refresh rather than the whole page being built from scratch.
 
 For more information on page properties, see [Page](page).
 
@@ -30,23 +39,23 @@ Type | Description
 [![](attachments/pages/menu-icon.png)Menu](menu) | A [menu](menu) defines a menu structure that can be used by a menu widget. 
 [![](attachments/pages/image-collection-icon.png)Image collection](image-collection) | An [image collection](image-collection) is a page resource where you place custom images to use them in your application. For more information, see [Images](images). 
 
-## 3 Widgets and Their Categories
+## 3 Widgets and Their Categories {#widgets-categories}
 
 All the documents described above are built using widgets. There are many kinds of widgets, and not every widget can be used on all of the document types. Layouts support widgets for giving structure to pages, but not widgets for showing data. This is to make the intention of layouts clear: they should define what comes where and not much more. However, snippets can be placed in layouts, and that is an indirect way to include more kinds of widgets in a layout.
 
 Widgets are grouped into the following categories:
 
-* [Data widgets](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
-* [Common widgets](common-widgets) are commonly found on any page, layout, or snippet
-* [Container widgets](container-widgets) can contain other widgets
-* [Input widgets](input-widgets) make it possible to show and edit the values of attributes and associations
-* [File widgets](file-widgets) allow you to work with files, including images stored in files
-* [Button widgets](button-widgets) are buttons that trigger actions
-* [Menu widgets](menu-widgets) allow the user to navigate through the application
-* [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
-* [Authentication widgets](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
-* Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript
-  * [Chart widgets](chart-widgets) are add-on widgets that graphically represent data using various chart types
+* [Data containers](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
+* [Text widgets](text-widgets) are used to display textual information to the end-user
+* [Structure  widgets](structure-widgets) can contain other widgets 
+* [Input elements](input-widgets) make it possible to show and edit the values of attributes and associations
+* [Images, videos & files](image-and-file-widgets) allow you to work with files, images, and videos 
+* [Buttons](button-widgets) are buttons that trigger actions
+* [Menus & navigation](menu-widgets) allow the user to navigate through the application
+* [Reports](report-widgets) aggregate data and show it in the form of a table or a chart
+* [Authentication](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
+* Add-ons can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
+  * [Charts](chart-widgets) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More
 

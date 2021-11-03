@@ -13,9 +13,9 @@ Standard charts provide the most common settings through the widget configuratio
 
 This cheat sheet with JSON snippets will provide some samples of advance configuration.
 
-The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/). Charts support plotly.js version 1.47.4.
 
-When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the app store.
+When the advanced configuration does not suffice have a look at the [Any Chart](https://marketplace.mendix.com/link/component/106437/Mendix/Any-Chart) widget in the Marketplace.
 
 ## 2 Layout (All Charts) {#layout-all}
 
@@ -144,7 +144,7 @@ Adjust y to -0.2 for long X-axis ticks.
 }
 ```
 
-![Legend configurations](attachments/pages/charts/advanced-layout-legend.gif)
+![Legend configurations](attachments/charts/advanced-layout-legend.gif)
 
 More options can be found here: [Legend configurations](https://plot.ly/javascript/reference/#layout-legend).
 
@@ -177,7 +177,7 @@ The axes properties apply to charts with x and y axes. They can be configured as
 }
 ```
 
-![Axes configurations](attachments/pages/charts/axes.gif)
+![Axes configurations](attachments/charts/axes.gif)
 
 More options can be found here: [Axes configurations](https://plot.ly/javascript/reference/#layout-xaxis).
 
@@ -208,7 +208,7 @@ These properties apply to charts with more than one Y axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-y-axes-data-properties).
 
-![Multiple Y axes configurations](attachments/pages/charts/multiple-y.gif)
+![Multiple Y axes configurations](attachments/charts/multiple-y.gif)
 
 More options can be found here: [Multiple Y axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -245,7 +245,7 @@ These properties apply to charts with more than one X axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-x-axes-data-properties).
 
-![Multiple X axes configurations](attachments/pages/charts/multiple-x.gif)
+![Multiple X axes configurations](attachments/charts/multiple-x.gif)
 
 More options can be found here: [Multiple X axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -253,7 +253,7 @@ More options can be found here: [Multiple X axes configurations](https://plot.ly
 
 Titles, axes and series can contain complex mathematical expressions.
 
-![Math formula](attachments/pages/charts/math-formula.png)
+![Math formula](attachments/charts/math-formula.png)
 
 ```
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
@@ -282,7 +282,7 @@ The title appears above the chart. It can be configured as:
 }
 ```
 
-![Title configurations](attachments/pages/charts/title.gif)
+![Title configurations](attachments/charts/title.gif)
 
 More options can be found here: [Title configurations](https://plot.ly/javascript/reference/#layout-title).
 
@@ -313,7 +313,7 @@ Creates space around the chart.
 }
 ```
 
-![ Margin configurations ](attachments/pages/charts/margin.gif)
+![ Margin configurations ](attachments/charts/margin.gif)
 
 More options can be found here: [Margin configurations](https://plot.ly/javascript/reference/#layout-margin).
 
@@ -337,7 +337,7 @@ A small pop-up box that appears when the user moves the mouse pointer over a cha
 }
 ```
 
-![Tooltip configurations](attachments/pages/charts/tooltip.gif).
+![Tooltip configurations](attachments/charts/tooltip.gif).
 
 More options can be found here: [Tooltip configurations](https://plot.ly/javascript/reference/#layout-hovermode).
 
@@ -385,7 +385,7 @@ Sets the range based on the plotted values, adjusting to fit them.
   }
 }
 ```
-![Range mode](attachments/pages/charts/normal.gif)
+![Range mode](attachments/charts/normal.gif)
 
 **nonnegative:**
 
@@ -399,7 +399,7 @@ Shows only positive values, the range is based on the plotted positive values.
 }
 ```
 
-![Range mode](attachments/pages/charts/nonnegative.gif)
+![Range mode](attachments/charts/nonnegative.gif)
 
 **tozero:**
 
@@ -413,7 +413,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 }
 ```
 
-![Range mode](attachments/pages/charts/tozero.gif)  
+![Range mode](attachments/charts/tozero.gif)  
 
 {{% alert type="info" %}}
 When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
@@ -437,7 +437,7 @@ When **fill** for the series is set to something other than *none*, the Y-axis r
 ```
 {{% /alert %}}
 
-![Range mode](attachments/pages/charts/rangemode-note.gif)
+![Range mode](attachments/charts/rangemode-note.gif)
 
 More options can be found here: [range mode configurations](https://plot.ly/javascript/reference/#layout-yaxis-rangemode).
 
@@ -449,7 +449,7 @@ These properties are applied to specific types of chart only. For each chart, da
 
 A mode and line configuration can be added in the **Advanced** configuration of the series.
 
-![Line styles](attachments/pages/charts/line-styles.png)
+![Line styles](attachments/charts/line-styles.png)
 
 ``` json
 [
@@ -493,7 +493,7 @@ A mode and line configuration can be added in the **Advanced** configuration of 
 
 The type of a series can be changed. For example, you can make a bar series into a line series:
 
-![Column chart data properties](attachments/pages/charts/combine-list-bar.gif)
+![Column chart data properties](attachments/charts/combine-list-bar.gif)
 
 ### 3.3 Pie Chart
 
@@ -505,7 +505,7 @@ Displays a circular graph divided into slices to illustrate numerical proportion
 }
 ```
 
-![Pie chart data properties](attachments/pages/charts/pie-chart.png)
+![Pie chart data properties](attachments/charts/pie-chart.png)
 
 More options can be found here: [Pie chart data properties](https://plot.ly/javascript/reference/#pie).
 
@@ -526,7 +526,7 @@ Displays a line chart with the areas below the lines filled with colors.
 }
 ```
 
-![Area chart data properties](attachments/pages/charts/area-chart.png)
+![Area chart data properties](attachments/charts/area-chart.png)
 
 More options can be found here: [Area chart data properties](https://plot.ly/javascript/reference/#area).
 
@@ -534,7 +534,7 @@ More options can be found here: [Area chart data properties](https://plot.ly/jav
 
 The example below shows how you can set up filter buttons to filter a chart by time.
 
-![Line chart data properties](attachments/pages/charts/time-series-filters.png).
+![Line chart data properties](attachments/charts/time-series-filters.png).
 
 ``` json
 {
@@ -598,7 +598,7 @@ Displays two different Y axes with different scales, according to the ranges of 
 ]
 ```
 
-![Multiple Y axes properties](attachments/pages/charts/data-multiple-y.png)
+![Multiple Y axes properties](attachments/charts/data-multiple-y.png)
 
 ### 3.7 Multiple X Axes Data Properties {#multiple-x-axes-data-properties}
 
@@ -619,11 +619,11 @@ Displays two different X axes with different scales.
 ]
 ```
 
-![Multiple X axes properties](attachments/pages/charts/data-multiple-x.png).
+![Multiple X axes properties](attachments/charts/data-multiple-x.png).
 
 ## 4 Configurations Options (All Charts) {#config-options}
 
-The following configuration options are available in all charts.
+The following configuration options are available in all charts (presented here as an example with formatting for the `nl` `locale`):
 
 ```json
 {
@@ -632,11 +632,57 @@ The following configuration options are available in all charts.
   "modeBarButtonsToRemove": [ "sendDataToCloud", "lasso2d", "select2d", "hoverClosestCartesian", "hoverCompareCartesian", "toggleSpikelines" ],
   "locale": "nl",
   "locales": {
-    "nl": {
-      "dictionary": {
-        "Download plot as a png": "Opslaan als PNG"  
-      }
-    }
-  }
- }
+		"nl": {
+			"dictionary": {
+				"Download plot as a png": "Opslaan als PNG"
+			},
+			"format": {
+				"days": ["zondag",
+				"maandag",
+				"dinsdag",
+				"woensdag",
+				"donderdag",
+				"vrijdag",
+				"zaterdag"],
+				"shortDays": ["zon",
+				"maa",
+				"din",
+				"woe",
+				"don",
+				"vri",
+				"zat"],
+				"months": ["januari",
+				"februari",
+				"maart",
+				"april",
+				"mei",
+				"juni",
+				"juli",
+				"augustus",
+				"september",
+				"oktober",
+				"november",
+				"december"],
+				"shortMonths": ["jan",
+				"feb",
+				"maa",
+				"apr",
+				"mei",
+				"jun",
+				"jul",
+				"aug",
+				"sep",
+				"okt",
+				"nov",
+				"dec"],
+				"date": "%d-%m-%Y",
+				"datetime": "%d-%m-%Y %H:%M",
+				"year": "%Y",
+				"month": "%b %Y",
+				"dayMonth": "%d %b",
+				"dayMonthYear": "%d %b %Y"
+			}
+		}
+	}
+}
 ```

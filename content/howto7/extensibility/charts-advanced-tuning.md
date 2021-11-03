@@ -21,7 +21,7 @@ The individual Charts widgets can be fine-tuned with advanced settings. The sett
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Installed the latest Mendix modeler
-* Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Downloaded the latest [Chart Widget](/appstore/widgets/charts) from the Mendix Marketplace
 * Setup a chart, see [How to create a chart](charts-basic-create)
 
 ## 3 Changing the Layout {#layout-changes}
@@ -32,13 +32,13 @@ This is what the original chart looks like:
 
 To create a custom layout, follow these steps:
 
-1. Open a project containing a chart.
+1. Open an app containing a chart.
 2. Open the page with the charts widget.
 3. Open the charts widget settings.
 4. Go to the tab **Advanced**.
 5. Set the **Mode** to **Developer**.
     ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
-6. Run the project.
+6. Run the app.
 7. In your browser, open the page with the chart.
 8. Click on the button **Toggle Editor**.
 9. In the **Layout** section add the following **Custom setting**:

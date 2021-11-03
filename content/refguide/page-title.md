@@ -1,8 +1,8 @@
 ---
 title: "Page Title"
-parent: "common-widgets"
+parent: "text-widgets"
 menu_order: 50
-tags: ["studio pro", "page title", "common widgets"]
+tags: ["studio pro", "page title", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ tags: ["studio pro", "page title", "common widgets"]
 
 This widget displays a page title of the current page that is set in [page properties](page-properties#title).
 
-![Page Title Example](attachments/common-widgets/page-title-example.png)
+![Page Title Example](attachments/text-widgets/page-title-example.png)
 
 {{% alert type="info" %}}
 
@@ -22,25 +22,29 @@ The page title widget makes it possible to embed the page title in a [layout](la
 
 An example of page title properties is represented in the image below:
 
-{{% image_container width="350" %}}![Page Title Properties](attachments/common-widgets/page-title-properties.png)
+{{% image_container width="300" %}}![Page Title Properties](attachments/text-widgets/page-title-properties.png)
 {{% /image_container %}}
 
 Page title properties consist of the following sections:
 
 * [Common](#common)
-* Design Properties
+* [Design Properties](#design-properties)
 * [Visibility](#visibility)
 
 ### 2.1 Common Section {#common}
 
 {{% snippet file="refguide/common-section-link.md" %}}
 
-### 2.2 Visibility Section {#visibility}
+### 2.2 Design Properties Section {#design-properties}
+
+{{% snippet file="refguide/design-section-link.md" %}} 
+
+### 2.3 Visibility Section {#visibility}
 
 {{% snippet file="refguide/visibility-section-link.md" %}}
 
 ## 3 Read More
 
 * [Page](page)
-* [Common Widgets](common-widgets)
-* [Properties Common for Widgets](common-widget-properties)
+* [Text Widgets](text-widgets)
+* [Properties Common in the Page Editor](common-widget-properties)

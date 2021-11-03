@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Date and Time*. It uses the values set in the **Languages** tab of **Project Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
+A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](data-types) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
 
 A date picker must be placed in a [data widget](data-widgets) and displays an attribute of the object(s) retrieved by that widget. The name of the attribute to be displayed is shown inside the date picker, between square brackets, and colored blue.
 
@@ -41,7 +41,7 @@ Date picker properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -83,7 +83,7 @@ The format chosen here does not affect how data is stored; in all cases both a d
 
 The possible values for date format are shown below:
 
-* **Date** (this is the default)
+* **Date** *(default)*
 * **Time**
 * **Date and time**
 * **Custom** (see below for more details)
@@ -112,7 +112,7 @@ Placeholder text will not be displayed if a native date picker is available (tha
 
 ### 2.8 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.9 Visibility Section{#visibility}
 

@@ -1,69 +1,25 @@
 ---
-title: "Atlas UI"
-category: "Front-End"
+title: "UI Design"
+category: "Front End"
 menu_order: 5
-tags: ["Atlas", "UI", "UX", "user experience"]
+tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction
 
-Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework).
+Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3](https://atlas.mendix.com) site for more information about Atlas.
 
-### 1.1 Mendix Studio
+If you use an older version of Mendix Studio Pro, see [atlas2.mendix.com](https://atlas2.mendix.com/) for information on Atlas 2.
 
-[Mendix Studio](/studio) brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in Mendix Studio is styled with the Atlas UI framework. For more information, see [Get Started with Atlas UI](get-started-with-atlasui). 
+If you are migrating from Atlas 2 to Atlas 3, see [How to Migrate from Atlas 2 to Atlas 3](/refguide/moving-from-atlas-2-to-3).
 
-### 1.2 Design Principles
+Atlas comes with a default design system which can be fully tailored and extended. New apps are based on this design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
+The following how-to's are available here:
 
-#### 1.2.1 Simplicity
+* [Get Started](get-started) — Learn more about Atlas UI and get started on your first customizations.
+* [Customize Styling](customize-styling-new) — Customize your styling in deeper ways. Specifically, you will see how our progressive and web apps use SASS (SCSS) and our  native mobile apps use JavaScript to create your app's styling.
+* [Configure Module-Level Theme Settings](module-level-theme-settings) — Use module-level theme settings to control theme system behavior. This allows you to control which elements your developers can and cannot use.
+* [Create a Company Design System](create-a-company-design-system) — Create a company design system: a "UI kit" which  contains all the elements that a team needs to design, realize, and develop a product.
+* [Extend Design Properties](extend-design-properties) — Learn the basics of design properties and how to make your own.
 
-Freedom from complexity: we strive for simplicity to help you focus on what is important.
-
-#### 1.2.2 Harmony
-
-Create familiarity and consistency throughout your apps landscape, regardless of the device you use.
-
-#### 1.2.3 Flexibility
-
-Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
-
-![](attachments/howto/atlas_ui_preview.png)
-
-## 2 Design Elements
-
-Our UI library is fully integrated into tMendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
-
-![](attachments/howto/designelements.png)
-
-**1** **Navigation Layouts**
-
-When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
-
-**2** **Page Templates**
-
-Page templates are predesigned collections of building blocks that can be used as-is, or you can enhance them with custom building blocks and widgets.
-
-**3** **Building Blocks**
-
-Building blocks are single-purpose user interface elements and are comprised of multiple widgets. Multiple building blocks are usually used together on one page.
-
-**4** **Widgets**
-
-Widgets are small user interface elements (alerts, buttons, charts, etc.) used to enhance existing building blocks.
-
-**5** **Design Properties**
-
-You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
-
-## 3 Read More
-
-* [Get Started with Atlas UI](get-started-with-atlasui)
-* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
-* [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
-* [Share Company Atlas UI Resources](share-company-atlas-ui-resources)
-* [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
-* [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Troubleshooting Atlas UI Changes](/refguide/migration-atlas)
-* [Use Calypso](calypso)

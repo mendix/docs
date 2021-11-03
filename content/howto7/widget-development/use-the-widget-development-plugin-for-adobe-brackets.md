@@ -6,7 +6,7 @@ tags: ["widget", "develop widget", "plugin", "adobe", "brackets"]
 
 ## 1 Introduction
 
-This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget project. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated development environment (IDE) for creating custom widgets for the Mendix Platform.
+This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget app. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated development environment (IDE) for creating custom widgets for the Mendix Platform.
 
 **This how-to will teach you how to do the following:**
 
@@ -51,7 +51,7 @@ To create a new widget, follow these steps:
 
     ![](attachments/18448565/18579932.png)
 
-    The name of the widget is very important, as this name is the name used in Mendix. Using the [CamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
+    The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
 
     These are some details on the settings:
 
@@ -113,7 +113,7 @@ The `src` directory contains the source files for your widget:
 
 ### 5.3 The Test Directory
 
-The `test` directory contains a fully prepared Mendix test project for testing your widget:
+The `test` directory contains a fully prepared Mendix test app for testing your widget:
 
 ![](attachments/18448565/18579921.png)
 
@@ -143,5 +143,5 @@ These are some interesting books and articles you can read to dive into the sour
 
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
 [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/7/client/)
+* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.rnd.mendix.com/7/client/index.html)
 * This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)

@@ -8,18 +8,18 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) from the Mendix App Store. In this how-to, you will set up import templates and import data into your app using this module.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer) from the Mendix Marketplace. In this how-to, you will set up import templates and import data into your app using this module.
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you know how to do the following:
 
-* Create domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
-* Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/app-store-content))
-* Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
+* Create domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
+* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
+* Create menu items (see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
+* Create microflows (see [How to Trigger a Microflow From a Menu Item](/howto/logic-business-rules/trigger-microflow-from-menu-item)
+* Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content))
+* Secure your applications (see [How to Create a Secure App](/howto/security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI & Modules
 
@@ -31,10 +31,10 @@ Before you can start importing data into your application, you first need to set
 
 	Create an enumeration for the **OrderStatus** attribute with the values of **Open**, **Processing**, and **Complete**.
   
-	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files)).
+	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files)).
 2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix App Store (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
+4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
 5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
 6.  Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
@@ -59,10 +59,10 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 ## 5 Using Application Model Metadata in the Client
 
-In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection) module. In this section, you will learn how to do this by following these steps:
+In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection) module. In this section, you will learn how to do this by following these steps:
 
-1.  Click **Run Locally** to start your application.
-2.  Click **View** to open your application in the browser.
+1.  Click the play button (**Run Locally**) to start your application.
+2.  Click **View App** to open your application in the browser.
 3.  **Log in** as an Administrator.
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
 5.  Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case  is **MyFirstModule**:

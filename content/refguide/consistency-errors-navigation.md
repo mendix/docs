@@ -3,25 +3,32 @@ title: "Navigation Consistency Errors"
 parent: "consistency-errors"
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
+#To update screenshots in this document, use the Consistency Errors app.
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. 
+In this document, we explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. An example of a consistency error is when you set a page that has a data view as a menu item. 
 
-An example of a consistency error is when you set a page that has a data view as a menu item. 
+{{% alert type="info" %}}
+
+This document does not describe *all* the errors, as there are a lot of errors that can occur, some of which are simple and do not need extra explanation, others are rare and/or heavily dependent on a use-case. 
+
+{{% /alert %}}
+
+Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
 ## 2 Navigation Consistency Errors 
 
 The most common errors you can come across when configuring a navigation item are described in the table below:
 
-| Error Code | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
+| Error Code | Message in the Errors Pane                                   | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | You have set a page that expects an object to be passed to it (a page with a data view and a **Context** data source) as a menu item. | Pass an object to the page by changing the **On click** property  of the menu item from **Show a page** to **Create object**. For more information, see section [2.1 Error Fix When the Selected Page Expects an Object](#page-expects-an-object) |
-| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a home page. But a home page has no object that is passed to it, because it is the starting point of a flow. | You can use a microflow as the home page that will open the preferred page and pass a specific object to the home page. For more information, see section [2.2 Error Fix When the Selected Home Page Expects an Object](#home-page-expects-an-object) |
-| CE0548     | Items with subitems cannot have an action themselves.        | You assigned an [on-click event](on-click-event) to a menu item that has a sub-item, when menu items that have sub-items cannot have on-click events assigned to them. | You need to either set the on-click event of the menu item to *Nothing*, or delete/move the sub-item. |
+| CE0568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | You have set a page that expects an object to be passed to it (a page with a data view and the **Context** data source) as a menu item. | Pass an object to the page by changing the **On click** property  of the menu item from **Show a page** to **Create object**. For more information, see the [Error Fix Example for CE0568](#page-expects-an-object) section. |
+| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a home page. But the home page has no object that is passed to it, because it is the starting point of a flow. | You can use a microflow as the home page that will open the preferred page and pass a specific object to the home page. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object). |
+| CE0548     | Items with subitems cannot have an action themselves.        | You have assigned an [on-click event](on-click-event) to a menu item that has a sub-item, when menu items with have sub-items cannot have on-click events assigned to them. | You need to either set the on-click event of the menu item to *Nothing*, or delete/move the sub-item. |
 
-### 2.1 Error Fix When the Selected Page Expects an Object {#page-expects-an-object}
+### 2.1 Error Fix Example for CE0568 {#page-expects-an-object}
 
 When you set a page with a data view as a menu item, you get a consistency error, because the page expects an object to be passed to it. 
 
@@ -32,24 +39,19 @@ For example, you have created a menu item called **Program** for a **Responsive*
 To fix the error, you can create an object and pass it to the page. Do the following:
 
 1. Open the navigation for the responsive profile.
+2.  Open properties of the **Program** menu item, and do the following: 
+    1. Change the **On click** property from **Show a page** to **Create object**.
+2. Set **ProgramItem** as **Entity (path)**. 
+    3. Set **Program** as **On click page**. 
 
-2.  Open properties of the **Program** menu item, and do the following: <br/>
 
-    a. Change the **On click** property from **Show a page** to **Create object**. <br/>
+Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
-    b. Set **ProgramItem** as **Entity (path)**. <br/>
-
-    c. Set **Program** as **On click page**. <br/>
-
-    ![Menu Item Properties](attachments/consistency-errors-navigation/menu-item-properties.png)<br/>
-
-Now when a user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
-
-### 2.2. Error Fix When the Selected Home Page Expects an Object {#home-page-expects-an-object}
+### 2.2. Error Fix Example for CE0529 {#home-page-expects-an-object}
 
 If you set a page that expects an object to be passed to it as a home page for a [navigation profile](navigation#properties), you will get a consistency error.
 
-Let us study an example: you have added a data view that expects an object of type *Customer* to the home page of the responsive profile, and you get a consistency error. 
+For example, you have added a data view that expects an object of type *Customer* to the home page of the responsive profile, and you get a consistency error. 
 
 ![Home Page Error](attachments/consistency-errors-navigation/home-page-error.png)
 
@@ -61,13 +63,13 @@ You can fix this error by creating a microflow that will that will create a new 
 
     ![Default Home Page Setting](attachments/consistency-errors-navigation/default-home-page-field.png)
 
-3. In the **Select Navigation Target** dialog window, click **New**, then select **Create Microflow**.
+3. In the **Select Navigation Target** dialog box, click **New**, then select **Create Microflow**.
 
 4. Name the microflow *ACT_Open_HomePage*.
 
-5. Open the created microflow, add a **Create Object** activity to it 
+5. Open the created microflow, add a **Create object** activity to it 
 
-6.  For the **Create Object** activity, set **Entity** to **Customer**. 
+6.  For the **Create object** activity, set **Entity** to **Customer**. 
 
     ![Create Object Properties](attachments/consistency-errors-navigation/create-object-properties.png)
 

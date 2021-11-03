@@ -1,6 +1,10 @@
 ---
 title: "Validation Feedback"
 parent: "client-activities"
+menu_order: 70
+tags: ["studio pro", "validation feedback", "client activities"]
+aliases:
+    - /refguide/Validation+Feedback.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -8,29 +12,48 @@ parent: "client-activities"
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
-
-With this action, you can display a red text below a widget that displays an attribute or association.
-
-{{% alert type="info" %}}
-
-See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
-
+{{% alert type="warning" %}}
+This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](offline-first#microflows) section of the *Offline-First Reference Guide*.
 {{% /alert %}}
 
-## 2 Action Properties
+## 1 Introduction
 
-### 2.1 Object
+The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
 
-Object defines for which object the message will be shown.
+{{% image_container width="200" %}}
+![Validation Feedback](attachments/client-activities/validation-feedback.png)
+{{% /image_container %}}
 
-### 2.2 Member
+## 2 Properties
 
-Member defines for which attribute or association the message will be shown. In the case of a [reference selector](reference-selector) or [reference set selector](reference-set-selector) you should select the association that is edited with the selector.
+There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-### 2.3 Template
+![Validation Feedback Properties](attachments/client-activities/validation-feedback-properties.png)
 
-Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
+The **Validation feedback** properties pane consists of the following sections:
+
+* [Action](#action)
+* [Common](#common)
+
+## 3 Action Section {#action}
+
+The **Action** section of the properties pane shows the action associated with this activity.
+
+You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
+
+You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+
+### 3.1 Variable
+
+**Variable** specifies which object will be validated.
+
+### 3.2 Member
+
+**Member** defines for which attribute or association the message will be shown. In you have a [reference selector](reference-selector) or [reference set selector](reference-set-selector), you should select the association that is edited with these widgets.
+
+### 3.3 Template
+
+**Template** is the message that will be shown to the end-user. The template can contain parameters that are written as a number between braces, for example, {1}. The first parameter has number 1, the second 2, etc.
 
 {{% alert type="warning" %}}
 
@@ -38,6 +61,14 @@ Nanoflows do not support text templates in validation feedback. Only a static me
 
 {{% /alert %}}
 
-### 2.4 Parameters
+### 3.4 Parameters
 
-For each parameter in the template you define an expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](expressions) resulting in a string.
+Parameters are attributes the value of which will be displayed. Parameters need to be entered using [expressions](expressions) resulting in a string.
+
+## 4 Common Section {#common}
+
+{{% snippet file="refguide/microflow-common-section-link.md" %}}
+
+## 5 Read More
+
+* [Activities](activities)

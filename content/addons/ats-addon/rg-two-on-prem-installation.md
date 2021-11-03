@@ -7,7 +7,7 @@ tags: ["ats", "installation", "requirements"]
 
 ## 1 Introduction
 
-ATS runs on top of Mendix 6. For details on system requirements, see [System Requirements](/refguide6/system-requirements). On-premises is a deployment option for ATS. 
+ATS runs on top of Mendix 6. On-premises is a deployment option for ATS. 
 
 ## 2 Hardware Requirements & Hardware Sizing
 
@@ -34,11 +34,11 @@ This section describes the software requirements for running ATS.
 
 ### 3.1 Operating System
 
-For details on the operating system, see the [Operating System](/refguide6/system-requirements#operatingsystem) section in *System Requirements*. ATS itself has no requirements regarding the operating system.
+ATS itself has no requirements regarding the operating system.
 
 ### 3.2 Java
 
-For details on Java, see the [Java](/refguide6/system-requirements#java) section in *System Requirements*. ATS itself has no requirements regarding the Java.
+ATS itself has no requirements regarding the Java.
 
 ### 3.3 Mendix Business Server
 
@@ -46,7 +46,7 @@ ATS requires Mendix Business Server, version 6.10.10.
 
 ### 3.4 Database
 
-For details on the database, see the [Database Server](/refguide6/system-requirements#database-server) section in *System Requirements*. ATS itself has no requirements regarding the database.
+ATS itself has no requirements regarding the database.
 
 ### 3.5 Selenium
 
@@ -54,7 +54,7 @@ Only the selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9	| 3.8.1 |	[Download here](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) | JRE 8
+2.9	| 3.141.59 |	[Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### 3.6 Chrome Driver
 
@@ -62,7 +62,7 @@ Only the Chrome driver version that is delivered as part of the ATS installation
 
 ATS Version	| Supported Chrome driver version | Download 
 ---|---|---
-2.9 | 2.35 | [Download here](http://chromedriver.storage.googleapis.com/index.html?path=2.35/)
+2.9 | 75 | [Download here](https://chromedriver.storage.googleapis.com/index.html?path=75.0.3770.140/)
 
 ### 3.7 Firefox (Gecko) Driver
 
@@ -70,7 +70,7 @@ Only the Gecko driver version that is delivered as part of the ATS installation 
 
 ATS Version	| Supported Gecko driver version | Download 
 ---|---|---
-2.9 | 0.19.1 | [Download here](https://github.com/mozilla/geckodriver/releases/tag/v0.19.1)
+2.9 | 0.24.0 | [Download here](https://github.com/mozilla/geckodriver/releases/tag/v0.24.0)
 
 ### 3.8 Internet Explorer Driver
 
@@ -84,17 +84,17 @@ ATS Version	| Supported Gecko driver version | Download
 
 The following browsers are supported to operate ATS (on their supported OS):
 
-* Firefox 17 (ESR) or higher
+* Firefox 75 (ESR) or higher
 * Google Chrome 22 or higher
 
 ## 4 Web Servers
 
 A web server can be used to serve static content and proxy the dynamic content. A web server can be used to encrypt the communication using https.
 
-Mansystems does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
+CLEVR does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
 
 When using Nginx, we recommend to change the following settings in the server section:
 
 * keepalive_timeout 65000
 * client_max_body_size 64M
-* proxy_read_timeout 180s
+* proxy_read_timeout 180s 

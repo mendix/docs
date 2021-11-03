@@ -10,8 +10,8 @@ Once you've created some pages you want to give users the ability to access them
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
+*   [Creating a basic data layer](/howto7/data-models/create-a-basic-data-layer)
+*   [Creating your first two Overview and Detail pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Setting a Default Home Page
 
@@ -93,13 +93,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
 
-    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](../front-end/layouts-and-snippets).
+    To prevent repeating the previous steps for every page in your app, Studio Pro supports something called layouts. With layouts you can define a base structure for pages in your app. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets).
 
 ## 6 Read More
 
-* [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
-* [How to Set Up the Mendix UI Framework with Just CSS](../front-end/setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Koala](../front-end/setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Mendix UI Framework with Scout](../front-end/setup-mendix-ui-framework-with-scout)
-* [How to Use Layouts and Snippets](../front-end/layouts-and-snippets)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Atlas UI](/howto7/front-end/atlas-ui)
+* [How to Create Your First Two Overview & Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages)
+* [How to Use Layouts and Snippets](/howto7/front-end/layouts-and-snippets)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

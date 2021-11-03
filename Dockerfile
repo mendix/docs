@@ -9,10 +9,16 @@ ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINA
 RUN dpkg -i /tmp/hugo.deb \
 	&& rm /tmp/hugo.deb
 
-RUN npm i -g yarn
+RUN npm i --force -g yarn
 
-# Based on guidance at http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-RUN useradd --user-group --create-home app
+# The node docker images by default provides a `node` user as the non-root user.
+# However, as we have configured `app` as the user for our needs, lets
+# update the `node` user's login, homedir and gid to match our custom user.
+# Without these changes, non-root user doesn't match the local host user's uid/gid.
+# More details can be found here:
+# https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#non-root-user
+RUN usermod -d /home/app -l app node
+RUN groupmod -n app node
 
 ENV HOME=/home/app
 WORKDIR $HOME

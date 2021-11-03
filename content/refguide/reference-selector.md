@@ -8,9 +8,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](association-properties) by selecting the associated object.
+A **reference selector** is used to display and, optionally, allow the end-user to select the value of a one-to-one or one-to-many [association](associations) by selecting the associated object.
 
-A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by that widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
+A reference selector must be placed in a [data widget](data-widgets). The object(s) retrieved by this data widget must be at the *many* end of a one-to-many association, or at either end of a one-to-one association.
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
@@ -53,23 +53,9 @@ Reference selector properties consist of the following sections:
 
 ### 2.2 Data Source Section{#data-source}
 
-{{% snippet file="refguide/attribute-path-property.md" %}}
+{{% snippet file="refguide/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute of an associated entity is shown in the reference selector. The path must follow one association of type reference starting in the entity of the data view.
-
-{{% alert type="info" %}}
-In the case of a reference selector you are selecting an association to another object. The attribute should indicate uniquely to the end-user which object is being selected.
-{{% /alert %}}
-
-The attribute can be of one of the following [data types](data-types):
-
-* Autonumber
-* Date and Time
-* Decimal
-* Enumeration
-* Integer
-* Long
-* String
 
 ### 2.3 Design Properties Section{#design-properties}
 
@@ -93,34 +79,35 @@ The formatting section applies only to the way that numeric attributes are displ
 * Integer
 * Long
 
-{{% todo %}}[Need to do something about numeric formatting]{{% /todo %}}
-
-{{% snippet file="refguide/numeric-formatting.md" %}}
+{{% snippet file="refguide/numeric-formatting-link.md" %}}
 
 ### 2.7 General Section{#general}
-
 
 #### 2.7.1 Select Using{#select-using}
 
 {{% alert type="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
 
-The reference selector allows the end user to select objects by using either a drop-down or a pop-up page. If you choose to select using a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a selection pop-up.
+The reference selector allows the end-user to select objects by using either a drop-down menu or a pop-up page. If you choose to to use a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a page selection pop-up window.
 
 | Value | Description |
 | --- | --- |
-| Drop-down *(default)* | Select the reference using a drop-down. |
-| Page | Select the reference using a pop-up page. |
+| **Drop-down** *(default)* | Select the reference using a drop-down menu. |
+| **Page** | Select the reference using a pop-up page. |
 
-* The advantage of selecting using a drop-down is that it is very efficient – the end-user can choose with fewer keystrokes as all the information is on the same page.
-* The advantage of selecting using a page is that the end-user can search the objects, and more information about each object can be displayed – if there are a lot of objects (say, more than 20) to select from, we suggest selecting is done using a page.
+* The advantage of selecting using a [Drop-down](#drop-down) is that it is very efficient – the end-user can make a selection with fewer keystrokes, as all the information is on the same page
+* The advantage of selecting using a [Page](#page) is that the end-user can search the objects, and more information about each object can be displayed – if there are a lot of objects to select from (for example, more than 20), it is recommended that selecting is done using a page
 
-**Select Using Drop-down**
+{{% alert type="warning" %}}
+There is a small difference in functionality between a **Drop-down** reference selector and a **Page** reference selector. When changing a reference selector item that also has a linked list included in a second drop-down menu or page, the **Page** reference selector is NOT cleared as it is with a **Drop-down** reference selector.
+{{% /alert %}}
 
-The drop-down reference selector is similar to a [drop down](drop-down) for an enumeration, except that it allows users to choose from a list of objects which can be associated with the current object, rather than a list of values from an enumeration.
+#### 2.7.1.1 Drop-Down {#drop-down}
+
+The drop-down reference selector is similar to a [drop-down](drop-down) for an enumeration, except that it allows users to choose from a list of objects which can be associated with the current object, rather than a list of values from an enumeration.
 
 The reference selector displays an attribute from the objects which can be linked to the current entity via an association. The chosen attribute should be unique for each object which can be associated, otherwise the end-user will have difficulty choosing the correct one. For example, you should display a company _name_ (which will hopefully be unique) rather than the company _region_ (which will probably not be unique to a company).
 
-**Select Using Page**
+#### 2.7.1.2 Page {#page}
 
 Select using a page, links a button to the right of the widget with a pop-up page which is used to make the selection. You must choose the page to be displayed using the [Select Page](#select-page) property.
 
@@ -148,7 +135,7 @@ It is recommended that you generate a new page to show by right-clicking the wid
 
 ![Generate a select page by right-clicking the widget](attachments/reference-selector/generate-select-page.png)
 
-See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 **Page title**
 
@@ -275,7 +262,7 @@ In microflow settings you can specify what parameters are passed to the microflo
 
 ### 2.10 Validation Section{#validation}
 
-{{% snippet file="refguide/widget-validation.md" %}}
+{{% snippet file="refguide/widget-validation-link.md" %}}
 
 ### 2.11 Visibility Section{#visibility}
 

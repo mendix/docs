@@ -1,16 +1,20 @@
 ---
 title: "Radio Button List"
 category: "Widgets"
-description: " "
-tags: [ ]
-draft: true
+description: "Describes the configuration and usage of the Radio Button List widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "radio button list", "platform support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+This widget is partly deprecated – the [Attribute Radio Button list](#attribute-radio-button-list) type is deprecated, but the [Association Radio Button list](#association-radio-button-list) type is still supported.
+{{% /alert %}}
 
 ## 1 Introduction
 
-The [Radio Button List](https://appstore.home.mendix.com/link/app/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
+The [Radio Button List](https://marketplace.mendix.com/link/component/20/) widget enables rendering an attribute or association as a radio button list. The widget is used with enumeration values, Boolean values, and references, and it is a useful replacement for the default drop-down menu or reference selector widget.
 
-### 1.1 Typical Usage Scenarios
+### 1.1 Typical Use Cases
 
 Visualize all the possible options in your user interface, instead of just forcing your end-user to open a drop-down menu to view all available options.
 
@@ -20,9 +24,13 @@ Visualize all the possible options in your user interface, instead of just forci
 * Specify the text of labels for a Boolean attribute
 * Attach a microflow for the on-change event
 
+### 1.3 Limitations
+
+* **On change** has no effect on the form. The workaround is to add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.
+
 ## 2 Installation
 
-Download the widget into your app project and add either **Association Radio Button List** or **Attribute Radio Button List** to a data view on a page. Configure the properties dscribed below to determine how the widget will behave in your application.
+Download the widget into your app and add either **Association Radio Button List** or **Attribute Radio Button List** to a data view on a page. Configure the properties dscribed below to determine how the widget will behave in your application.
 
 ## 3 Properties
 
@@ -36,7 +44,7 @@ Download the widget into your app project and add either **Association Radio But
 
 * **On change** – this is the microflow that will be invoked for an on-change event
 
-### 3.2 Attribute Radio Button List Properties
+### 3.2 Attribute Radio Button List Properties {#attribute-radio-button-list}
 
 #### 3.2.1 Data Source Tab
 
@@ -47,7 +55,7 @@ Download the widget into your app project and add either **Association Radio But
 * **True label (Boolean attribute)** – the label that will be shown if your **Target attribute** is of the Boolean type and the attribute value is **True**
 * **False label (Boolean attribute)** – the label that will be shown if your **Target attribute** is of the Boolean type and the attribute value is **False**
 
-### 3.3 Association Radio Button List Properties
+### 3.3 Association Radio Button List Properties {#association-radio-button-list}
 
 #### 3.3.1 Data Source Tab
 
@@ -73,9 +81,4 @@ The configuration of the widget's required properties would be the following:
 
 * **Entity to list**: CompanyDepartment
 * **Label**: Name (string attribute of CompanyDepartment)
-* **Association**: Employee_CompanyDeparment/CompanyDepartment.
-
-## 5 Known Bugs
-
-* **On change** has no effect on the form.
-	* Workaround: add a microflow to the on-change property of the widget. This microflow must contain a change activity. The change activity must have **Refresh in client** enabled.
+* **Association**: Employee_CompanyDeparment/CompanyDepartment

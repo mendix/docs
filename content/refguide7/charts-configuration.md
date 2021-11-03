@@ -7,7 +7,7 @@ tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configura
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
+This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix Marketplace here: https://marketplace.mendix.com/link/component/105695/.
 
 This guide covers the following widgets:
 
@@ -61,7 +61,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto7/extensibility/charts-basic-rest)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](/howto7/extensibility/charts-basic-rest)
 
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
@@ -112,7 +112,7 @@ Add series and configure their properties, each series represents a dataset. For
 
     * **Color attribute**: the attribute in the series entity which defines the HTML color used when displayed this series – *there may be more than one color attribute if the chart allows different values (for example an area chart has separate line and fill colors)
 
-    * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistent** entities, such as those used when defining a REST datasource*
+    * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistable** entities, such as those used when defining a REST datasource*
 
     * **Series sort order**: *Ascending* or *Descending*
 
@@ -215,7 +215,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Column color**: HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Column color**: HTML color of the column for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.2 Line Chart
 
@@ -231,7 +231,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Line color**: HTML color of the line for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.3 Pie Chart
 
@@ -241,7 +241,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Show legend**: Displays a legend on the pie chart
 
-* **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Colors**: Contains the color of each slice for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 * **Refresh interval (ms)**: Refresh the chart in intervals of ms, when set to 0 refresh is disabled
 
@@ -261,9 +261,9 @@ The properties above are common across the chart types. In this section, the pro
 
 3. **Static series** Tab
 
-    * **Border color**: HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Border color**: HTML color of the border for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
+    * **Area color**: HTML color of the area within the border for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
 
 ### 3.5 Bar Chart
 
@@ -273,7 +273,7 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
     
-    * **Bar color**: HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Bar color**: HTML color of the bar for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ### 3.6 Time Series Chart
 
@@ -291,9 +291,9 @@ The properties above are common across the chart types. In this section, the pro
 
     * **Series name**: this will be displayed in any legend on the chart
 
-    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Line color**: HTML color of the line for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
+    * **Area color**: HTML color of the area within the border for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
 
 ### 3.7 Heat Map
 
@@ -305,7 +305,7 @@ The properties above are common across the chart types. In this section, the pro
 
 * **Show values**: Display data values on the chart: Yes , No
 
-* **Font value color**: HTML color of the values displayed on the heat map e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Font value color**: HTML color of the values displayed on the heat map for example, green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 * **X-axis label**: Label to be displayed on the X-axis
 

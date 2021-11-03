@@ -21,7 +21,7 @@ The core concept of a UI resources package as an easily shared source of design 
 
 When a UI resources package is imported into the project, it will automatically overwrite the project's **theme** folder with its own theme files. A **theme_old** folder will be created to back up the previous theme. This means that any classes and styles added to templates in the package can be capitalized on fully by the theme without having to worry about the styling breaking when you import the template into a new project. As long as the template or building block remains in the same UI resources package, it will look exactly the way it was designed. 
 
-Note that the replacement of the theme folder only occurs when importing a new UI resources package from an external source, such as an *.mpk* or the App Store. Selecting a different existing module as the UI resources package will not affect the theme folder.
+Note that the replacement of the theme folder only occurs when importing a new UI resources package from an external source, such as an *.mpk* or the Marketplace. Selecting a different existing module as the UI resources package will not affect the theme folder.
 
 ## 3 Page Templates and Building Blocks
 

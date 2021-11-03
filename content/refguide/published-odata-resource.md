@@ -3,66 +3,101 @@ title: "Published OData Resource"
 parent: "published-odata-services"
 tags: ["studio pro"]
 ---
-{{% alert type="warning" %}}
 
-This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](published-odata-services) documentation.
+## 1 Introduction
+
+This document describes the properties of a published OData resource. 
+
+For an overview of OData services, see [Published OData Services](published-odata-services).
+
+## 2 Adding or Editing a Resource
+
+### 2.1 Add a Resource
+
+Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
+
+An alternative way to add a resource is by right-clicking an entity in the **Domain Model** and choosing **Expose as OData resource**. You will be asked to select a published OData service, or create a new one. 
+
+### 2.2 Edit a Resource
+
+In the **Entitiies** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
+
+It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
+
+You can see the location where the resource will be published in **Example of location**.
+
+In the **Public documentation** tab, you can provide a summary and a description of the exposed entity.
+
+{{% alert type="info" %}}
+
+[IBM DB2](db2) does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore, the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. 
 
 {{% /alert %}}
 
-## 1 Adding or Editing a Resource
+## 3 Selecting Exposed Attributes and Associations {#exatass}
 
-The **Add resource** or **Edit** button in the Published OData Service document will open an editor window for the published resource. The editor window is separated in two parts: **Resource** and **Uniform Resource Identifier**. The former lets you specify which entity and entity attributes to expose, whereas the latter lets you customize the location where the resource will be published.
+When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.
 
-Another way to add a resource is by right-clicking on an entity in the domain model and clicking **Expose as OData resource**. Doing so will prompt you to select or create a published OData service document to add the new resource to. After the document has been selected, the published resource editor will be displayed.
+{{% alert type="info" %}}
 
-![](attachments/16713722/16843929.png)
+The **System.ID** attribute is used as a key in OData services and must always be checked.
 
-### 1.1 Resource
+{{% /alert %}}
 
-Press **Select** to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
+Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
-![](attachments/16713722/16843930.png)
+{{% alert type="info" %}}
 
-IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](db2) page.
+Attributes of type **Binary** cannot be exported through OData services except for the **Contents** field of the **System.FileDocument** attribute.
 
-## 2 Selecting Exposed Attributes & Associations
+{{% /alert %}}
 
-When an entity to publish has been selected, press **Select** to open a dialog that allows you to select individual attributes to expose.
+## 4 Mapping from Internal Names to Exposed Names
 
-The _System_._ID_ attribute is used as a key in OData services and is therefore not allowed to be unchecked.
+Use **Exposed entity name** in the **Edit published resource** window to customize the name of the resource that is exposed to the outside world. The default is the name of the exposed entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
 
-Attributes of published entities are nillable by default, meaning that if their value is **empty** then they will be encoded as explicit nulls in the OData content. If you deselect the _nillable_ column, the attribute cannot be **empty** (otherwise a runtime error would occur).
+{{% alert type="info" %}}
 
-Attributes of type binary are not allowed to be exported through OData services, other than the Contents field of System.FileDocument.
+Location URIs must be unique. Exposing two different resources at the same location will result in a consistency error.
 
-## 3 Mapping from Internal Names to Exposed Names
+{{% /alert %}}
 
-Use the **Exposed entity name** field to customize the name of your resource that is exposed to the outside world. By default, the name is the same as the name of the exposed entity from your domain model. You can change this to any name which starts with a letter followed by letters or digits with a maximum length of 480 characters. Be aware however that the location URIs must be unique. Exposing two different resources on the same location will result in a consistency error.
+Attributes and associations can be customized in the same way by clicking **Edit** in the list on the right. 
 
-This also applies to attributes and associations. In the **Exposed attributes and associations** screen, you can also override the **exposed name**. 
+For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). The default is the same as the name of the association in the domain model.
 
-For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). You can also specify the name of the association using the **exposed association name** column. By default, the name is the same as the name of the association in the domain model.
+{{% alert type="info" %}}
 
-When these names have been overriden, the name of the entity, attribute or association as defined in your domain model will not be exposed to the outside world, for all OData communication the exposed name will be used.
+When names have been customized in this way, the name of the entity, attribute, or association as defined in the domain model will not be exposed to the outside world. For all OData communication, the exposed name is used.
 
-These features make it easier to refactor your domain model without affecting external APIs.
+{{% /alert %}}
 
-## 4 Exposed Set Name
+These features make it easier to refactor the domain model without affecting external APIs.
 
-Use the **Exposed set name** field to set the name of the entity set. This is the last part of the URL of the resource.
+## 5 Exposed Set Name
 
-_Default value:_ Entity name + s
+It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published resource** window. This forms the last part of the URL of the resource as given in the **Example of location**.
 
-## 5 Use Paging
+Default: *{Entity name}s*
 
-If you enable this option, you can set a maximum number of objects per response, with a link included to the next set of objects. A client like Tableau can use this to show progress and will automatically keep following the links until all data is retrieved. Memory usage of clients can be improved if you use paging with a reasonable page size.
+## 6 Use Paging
 
-**Note that enabling this does mean that retrieved data can be inconsistent**, because you're no longer retrieving data within a single transaction. For example, you are sorting on an Age attribute in an entity called Customer and retrieving customers with 1000 objects per page. Now a customer gets deleted in between two calls, it means that the customer with Age 23 at position 1001 now moves to position 1000, meaning that this object that you _would_ have gotten on the next page now moves to the first page and is not retrieved anymore. The other way around with data inserts in between calls can cause you to see duplicates. So only use this option when this kind of inconsistency is acceptable.
+The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
-_Default value:_ No
+Default: *No*
 
-## 6 Page Size
+Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 then moves to position 1000. This means that the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
-When Use paging is set to Yes, you can set the amount of objects per page here.
+## 7 Page Size
 
-_Default value:_ 10000
+When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
+
+Default: *10000*
+
+## 8 Capabilities {#capabilities}
+
+A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes. Only users that have write entity access to attributes can update them.
+
+{{% alert type="info" %}}
+This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
+{{% /alert %}}

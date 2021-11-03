@@ -3,8 +3,6 @@ title: "2"
 parent: "model-sdk"
 ---
 
-These are the release notes for the Model SDK version 2.
-
 ## 2.9.1
 
 | Impact | Description                                                  |
@@ -16,7 +14,7 @@ These are the release notes for the Model SDK version 2.
 | Impact | Description                                                  |
 | ------ | ------------------------------------------------------------ |
 | None   | Added support for Mendix 6.10.0 (and 6.9.0.1), and updated PageTemplates for MM 6.9.0. |
-| None   | Moving an element to a non-listy property of a new parent element (e.g. to widget of a DivContainer) has been fixed. |
+| None   | Moving an element to a non-listy property of a new parent element (for example, to widget of a DivContainer) has been fixed. |
 
 ## 2.8.1
 
@@ -48,7 +46,7 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 | Impact | Description |
 | --- | --- |
 | Fix | Fixed Model SDK for published `mendixmodelsdk` NPM package missing `dist/` and failing on `npm install`. |
-| None | Add support -that's only accessible for trusted backend clients!- for providing a project-to-working copy mapping, locking/unlocking working copies and extra meta data regarding merge requests. |
+| None | Add support -that's only accessible for trusted back end clients!- for providing a project-to-working copy mapping, locking/unlocking working copies and extra meta data regarding merge requests. |
 | None | Widened a parameter type in internal interfaces and classes to fix a problem with using the Model SDK in a Safari browser. |
 | None | Refactored MxCheck expression AST hierarchy. |
 | None | The Deploy API now returns an additional field `startedFullDeployment` which is `false` if the app was fast-deployed (and completed now), or `true` if a full deployment was needed and further status of the app can be polled through `deployStatus` calls. |
@@ -71,8 +69,8 @@ Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM)
 | None | Added support for Mendix 6.6.0. |
 | None | `getFilePaths` accepts an option objects which can define `format` (either `zip` or `json`), `filter` (glob pattern) and `path` (output filename if format is `zip`). |
 | None | Output filename is no longer mandatory for `getFile` / `getFiles` / `exportMpk`. If not provided, raw response is provided in the callback instead. |
-| None | Support for forcing full deployment. Deploying a working copy is functionality that's not accessible to regular Model SDK users (as in, non-trusted backends), so no impact. |
-| None | Fixed a bug with delete deltas not being sent while they should - this e.g. caused 2 translations to be created for the title text of a new page, with the translations having the same language code. |
+| None | Support for forcing full deployment. Deploying a working copy is functionality that's not accessible to regular Model SDK users (as in, non-trusted back ends), so no impact. |
+| None | Fixed a bug with delete deltas not being sent while they should - this for example, caused 2 translations to be created for the title text of a new page, with the translations having the same language code. |
 | None | More (complete) support for running model checks from the SDK: corrected implementation of check level groups, renamed `hasPrefix` standard library method for expressions (checks and queries) to `startsWith`. |
 
 ## 2.4.0
@@ -118,19 +116,19 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | story# | impact | description |
 | --- | --- | --- |
 | 612773 | High | The mechanics of model elements being contained has been reworked: see below for more details. |
-| 634662 | Low | The `toPlainJson` method on elements and units has been renamed to `toJSON`, because e.g. the Chrome Developer Tools understand this to produce nice, human-readably representations of such objects. Rename all usages of `toPlainJson` to `toJSON` to fix your code. |
+| 634662 | Low | The `toPlainJson` method on elements and units has been renamed to `toJSON`, because for example, the Chrome Developer Tools understand this to produce nice, human-readably representations of such objects. Rename all usages of `toPlainJson` to `toJSON` to fix your code. |
 | 639825 | Low | Broken by-name references are automatically fixed when a target is added to the model again. |
 | 637545 | None | Minor internal modifications for upcoming Mendix version 6.3.0. |
-| 633932 | None | Added support for long-lived working copies (that are not deleted after 24 hours) to SDK. Note that this is currently **not** available to non-trusted backends! |
+| 633932 | None | Added support for long-lived working copies (that are not deleted after 24 hours) to SDK. Note that this is currently **not** available to non-trusted back ends! |
 | 620108 | None | Removed exported interface `IObservable` from an internal namespace and replaced its use by the one from the `MObservable` library. |
 | 631960 | None | Added support for checking deployment status. |
-| 623906 | None | Added support for deploying from the SDK. Note that this is currently **not** supported on non-trusted backends! |
+| 623906 | None | Added support for deploying from the SDK. Note that this is currently **not** supported on non-trusted back ends! |
 
-The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modelling language.
+The following **breaking** changes are made per 612773 and as a result of new insights on interference between containment and versioning/history of the Mendix modeling language.
 This interference leads to elements having different kinds of containment throughout their history.
 In turn, this necessitated us to make some fundamental changes to avoid having to have breaking changes in the future.
 
-*   The `container` property is not strictly typed anymore; e.g., `domainmodels.Attribute.container` is not of type `Entity` anymore but of a general `Container` type.
+*   The `container` property is not strictly typed anymore; for example, `domainmodels.Attribute.container` is not of type `Entity` anymore but of a general `Container` type.
 *   Instead, `containerAs<T>` properties of type `T` are introduced on all elements. This property returns the instance of `T` which contains the element or throws if it's not contained by an instance of `T`. To avoid those exceptions, use `container` together with `instanceof`-guards.
 *   In case an element is contained by _multiple_ properties (as in, more than 1), `createIn<T>Under<P>` methods are generated which creates a new element in a given instance of `T` under property `P`. Several previously-existing `createIn` methods have been replaced by a `createIn<T>Under<P>` method, where these `createIn` methods considered only 1 containing property.
 *   Elements that are contained by one property in at least one version will have a `createIn` method that works as expected for those versions and throws for other versions.

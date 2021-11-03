@@ -1,35 +1,63 @@
 ---
 title: "Expressions"
 parent: "application-logic"
-menu_order: 100
+menu_order: 30
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
 tags: ["studio pro", "expressions", "microflow expressions"]
+aliases:
+    - /refguide/microflow-expressions.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Expressions can for example be used to change a member of an object based on logic. 
+Expressions change a value based on a function or combination of functions. 
 
-Named items in the microflow (for example objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refers to an object named `customer`).
+Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
 
-Attributes and associations of objects are accessed using a slash (for example, the Name attribute of the customer object is referred to as `$customer/Name`, and the CRM.Customer_Order association of the customer object is referred to as `$customer/CRM.Customer_Order`).
+Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
-Expressions can contain several operations which are applied using standard algebraic rules for precedence and associativity (for example, `1 + 2 + 3`). Brackets can be used to change the precedence and associativity, or for clarity.
+Attributes of associated objects can be accessed using multiple slashes (for example, the **Number** attribute of a single associated **CRM.Order** is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
 
-### 1.1 Example
+You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-As an example, imagine an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). The rule is that, if the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
-
+```sql
+$CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 ```
+
+Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
+
+### 1.1 Examples
+
+For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
+
+```sql
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
-An overview of the operators which can be used in expressions is shown below.
+{{% alert type="warning" %}}
+When an object is empty, accessing an attribute is considered invalid. If part of an expression is invalid, it will cause an exception and the result will return `false`. The object's attribute cannot be accessed and the expression cannot be evaluated. This can be crucial when evaluating multiple statements within an expression. See the examples below for more information.
+{{% /alert %}}
+
+Evaluating the expression:
+
+```sql
+$emptyObject/attribute != $validObject/attribute or $emptyObject = empty
+```
+
+will always return `false`, as long as `emptyObject` is empty. The second part of the statement never gets evaluated.
+
+To have both checks evaluated, the order of statements needs to be reversed:
+
+```sql
+$emptyObject = empty or $emptyObject/attribute != $validObject/attribute
+```
+
+This way the first statement gets evaluated.
 
 ### 1.2 Regular Expressions
 
-For details on regular expressions, sub-expressions, and quantifiers, see [Regular Expressions](regular-expressions).
+[Regular Expression](regular-expressions) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings is the same as the ones described in the [Expression](regular-expressions#expression) section of *Regular Expressions*.
 
 ## 2 Unary Expressions
 
@@ -111,6 +139,8 @@ For details on regular expressions, sub-expressions, and quantifiers, see [Regul
 * [`hoursBetween`](between-date-function-calls) – the hours between two dates
 * [`daysBetween`](between-date-function-calls) – the days between two dates
 * [`weeksBetween`](between-date-function-calls) – the weeks between two dates
+* [`calendarMonthsBetween`](between-date-function-calls) - the months between two dates
+* [`calendarYearsBetween`](between-date-function-calls) - the years between two dates
 
 ## 12 Add Date Function Calls
 
@@ -148,17 +178,19 @@ See [To String](to-string) for details.
 
 See [Parse Integer](parse-integer) for details.
 
-## 16 Parse/Format Decimal Function Calls
+## 16 Parse & Format Decimal Function Calls
 
 * [`parseDecimal`](parse-and-format-decimal-function-calls) – converts a string to a decimal
 * [`formatDecimal`](parse-and-format-decimal-function-calls) – converts a decimal to a string
 
-## 17 Parse/Format Date Function Calls
+## 17 Parse & Format Date Function Calls
 
 * [`parseDateTime[UTC]`](parse-and-format-date-function-calls) – converts a string to a date value
 * [`formatDateTime[UTC]`](parse-and-format-date-function-calls) – converts a date value to a string
 * [`formatTime[UTC]`](parse-and-format-date-function-calls) – converts the time part of a date value to a string
 * [`formatDate[UTC]`](parse-and-format-date-function-calls) – converts the date part of a date value to a string
+* [`dateTimeToEpoch`](parse-and-format-date-function-calls) – converts a date to a long
+* [`epochToDateTime`](parse-and-format-date-function-calls) – converts a long to a date
 
 ## 18 Enumerations in Expressions
 

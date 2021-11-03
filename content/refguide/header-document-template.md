@@ -2,6 +2,9 @@
 title: "Header (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/header-(document-template).html
+    - /refguide/Header+(document+template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -9,15 +12,17 @@ tags: ["studio pro"]
 
 When enabled, the header will be inserted at the top of every page. Other widgets can be put in the header.
 
-For inserting page numbers, see [Static Label](static-label-document-template).
-
 {{% alert type="info" %}}
 
-![](attachments/819203/918236.png)
+![](attachments/document-templates/918236.png)
 
 A header.
 
 {{% /alert %}}
+
+For details on enabling the header from the properties of the document template itself, see the [Appearance Properties](document-template#appearance-properties) section of *Document Template*.
+
+For details on inserting page numbers, see [Static Label](static-label-document-template).
 
 ## 2 Appearance
 

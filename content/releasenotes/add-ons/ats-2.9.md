@@ -9,7 +9,7 @@ parent: "ats-2"
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22) can now be recorded and tested with ATS.
 
 ### Improvements
 
@@ -29,7 +29,7 @@ Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22
 
 ### Improvements
 
-* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 * We have continued optimize how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
 
 ### (Potentially) Breaking change
@@ -40,7 +40,7 @@ In previous versions, the Set Value function typed in a value in an input field 
 
 Since ATS version 2.9.4, the Set Value function unfocuses the widget after setting the value and waits for the on-change and on-leave microflows to finish before proceeding with the next steps in a test case. We hope that this makes tests more stable when on-change microflows are used, since the wait ensures that such microflows have finished executing before proceeding with the test.
 
-We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a support ticket.
+We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a Support ticket.
 
 ## 2.9.3
 

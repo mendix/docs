@@ -1,348 +1,480 @@
 ---
 title: "IBM Cloud"
 category: "Deployment"
+menu_order: 65
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
-menu_order: 30
-tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
+tags: ["IBM", "IBM Cloud", "Deployment", "Environment"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.
+As a Mendix user [with an IBM Cloud account](https://cloud.ibm.com/registration) you have access to many IBM resources which you want to use in a Mendix app deployed to IBM Cloud. This document explains how you can create environments, deploy to IBM Cloud, and manage these deployments using the Mendix Developer Portal.
 
-**This how-to will teach you how to do the following:**
+This document describes two ways of managing IBM Cloud:
 
-* Select an IBM app template and ask Mendix to create the app
-* Create a deployment package for IBM Cloud
-* Deploy to, and test your app on, IBM Cloud
+* Initial setup of the environment when creating a new app: see the section [Set Up IBM Cloud environment for the First Time](#FirstTime)
+* Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
-## 2 Prerequisites
+## 2 Set Up IBM Cloud Environment for the First Time {#FirstTime}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before you can manage your IBM Cloud environment using the Developer Portal, you will need to set it up. There are two circumstances in which you will have to set up IBM Cloud for the first time.
 
-* Have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) – you will need version 7.11.0 or higher
-* Be familiar with the basic concepts of editing and deploying a Mendix app
-* Be familiar with the basic concepts of IBM Starter Kits and Toolchain
+1. You have an existing app which has never been deployed on IBM Cloud and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-## 3 Creating the New App and Setting Up IBM Cloud
+2. You are creating a new app from an IBM app template. See [New IBM App](#NewIBMApp).
 
-You have decided to create a new Mendix app using an IBM template which you will ask Mendix to deploy to your account on IBM Cloud.
+### 2.1 Change Cloud Settings {#ChangeCloudSettings}
 
-### 3.1 Creating a New App
-
-Firstly, you create your Mendix app which you wish to deploy.
-
-To start creating a new app, follow these steps:
-
-1.  Sign in to your Mendix Account.
-
-2.  Click **Create App** to create a new app.
-
-    ![](attachments/ibm-cloud/createapp.png)
-
-3.  Click an IBM app to choose it as the starting point for your app.
-
-    ![](attachments/ibm-cloud/choosestartingpoint.png)
-
-4.  Click **Use this app**.
-
-5.  Choose a name for your app and click **Create App**.
-
-6.  Wait while Mendix creates a copy of the starter app you have chosen and takes you to a page from which you can set up IBM Cloud.
-
-### 3.2 Setting Up the Project on IBM Cloud
-
-Mendix knows you want to deploy to  IBM Cloud, but you need tell it more about your project so that IBM Cloud can add the resources you need.
-
-To set up IBM Cloud, follow these steps:
-
-1.  Click **Setup Cloud**.
-
-    ![](attachments/ibm-cloud/landing.png)
-
-2.  Sign in to IBM Cloud if you are not already logged in.
-
-    The **App name** name of your project is already filled in. It is recommended that you do not change this; changing this name will not change the name of your app in the Mendix Developer Portal.
-
-3. Ensure that the correct account is shown at the top right of the screen (next to your avatar) if you have access to more than one account on IBM Cloud.
-
-4. Choose the appropriate **Resource Group**.
-
-5.  Click **Create**.
-
-    ![](attachments/ibm-cloud/createnewproject.png)
-
-6.  Click **Link Account**.
-
-    ![](attachments/ibm-cloud/linkaccount.png)
-
-    This is only required for new projects. It links this project to the project on Mendix.
-
-    If you have not linked an IBM Cloud project to Mendix before, you will be asked to confirm that IBM Cloud can have access to some of your Mendix data. Please **Authorize** this.
-
-    You will now be returned to the project page.
-
-7.  Click **Choose Deployment**.
-
-    ![Choose Deployment](attachments/ibm-cloud/choosedeployment_1.png)
-
-    You can choose to deploy to Cloud Foundry or Kubernetes.
-
-#### 3.2.1 Deploying to Cloud Foundry
-
-1.  Set the **Number of instances**; the default is _1_.
-
-2.  Set the **Memory allocation per instance**; the default is _512_.
-
-3. Choose the **Region**, **Organization**, **Space**, and **Domain** to deploy to.
-
-4. Change the **Host** if required; the default is the name of your app.
-
-    {{% alert type="warning" %}}It is possible that your deployment will fail if your **Host** is not unique within your region. If this occurs, use a different host name.{{% /alert %}}
-
-5.  Click **Create**.
-
-    ![](attachments/ibm-cloud/choosedeployment-cf.png)
-
-6. Wait until the **Deployment Details** indicate that the toolchain is configured.
-
-    ![](attachments/ibm-cloud/deploymentconfigured.png)
-
-    Your IBM Cloud Foundry environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
-
-#### 3.2.2 Deploying to Kubernetes
-
-{{% alert type="warning" %}}Please note that the default setup for deploying to Kubernetes to IBM Cloud is not currently suitable for production environments. Please refer to [IBM documentation](https://console.bluemix.net/docs/apps/tutorials/tutorial_mendix_kubernetes.html) or contact [Mendix support](https://support.mendix.com) if you want to use Kubernetes for a production environment on IBM Cloud.
-{{% /alert %}}
-
-1. Choose the **Region**, **Organization**, **Space**, and **Cluster name** to deploy to.
-
-2.  Click **Create**.
-
-    ![](attachments/ibm-cloud/choosedeployment-k8.png)
-
-3. Wait until the **Deployment Details** indicate that the toolchain is configured.
-
-    ![](attachments/ibm-cloud/deploymentconfigured.png)
-
-Your IBM Kubernetes environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
-
-### 3.3 Creating a Package for IBM Cloud {#create-package}
-
-Before you can deploy a package to IBM Cloud you have to create it.
-
-#### 3.3.1 Deploying from Within Mendix Studio
-
-It is not possible to deploy your app directly from Studio. Studio is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of Studio Pro.
-
-Sync your app with Studio Pro as described in [Collaborative Development](/refguide/collaborative-development).
-
-Once you have your app in Studio Pro, you can do one of the following: 
-
-* deploy it directly from Studio Pro (see the [Deploying from Within Studio Pro](#deploy-dm) section)
-* commit from Studio Pro and then deploy it from the Developer Portal (see the [Deploying from the Developer Portal](#deploy-dp) section)
-
-#### 3.3.2 Deploying from Within Studio Pro{#deploy-dm}
-
-You can deploy your app automatically from Studio Pro. However, you will have less control over the deployment than deploying from the Developer Portal.
-
-Click **Run** in Studio Pro. This will automatically:
-
-* commit the project
-* generate a deployment package from the latest commit in the current branch
-* push the deployment package to IBM Cloud
-
-You will still need to go to IBM Cloud and manually deploy the package; a message within Studio Pro will let you know when the package is ready and will give you the link to IBM Cloud. See [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
-
-#### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
-
-At any time, you can create a new deployment package from a committed version of the project. If you are working with Studio Pro you will have to commit the project first.
-
-To create a package for IBM Cloud within Developer Portal, follow these steps:
-
-1.  Return to the Mendix Developer Portal. If you are looking at your app on IBM Cloud you can click **Edit on Mendix** to return to Mendix.
-
-2.  Open the **Environments** page.
-
-    You are now ready to create a deployment package which you will then push to IBM Cloud.
-
-3.  Click **Create package from teamserver**.
-
-    ![](attachments/ibm-cloud/createpackage.png)
-
-4.  Select the branch on which to base the build and click **Next**.
-
-    ![](attachments/ibm-cloud/selectbranch.png)
-
-    {{% alert type="info" %}}Initially, you will only have the Main line. However, when you create deployment packages in the future, there may be other branches available.
-    {{% /alert %}}
-
-5.  Select the revision of this branch and click **Next**.
-
-    ![](attachments/ibm-cloud/selectrevision.png)
-
-    {{% alert type="info" %}}You will see a number if revisions. Note that a package cannot be created from the first revision as this contains no application template.
-    {{% /alert %}}
-
-    {{% alert type="warning" %}}Please do not choose to create a package from revision number 1.
-    {{% /alert %}}
-
-6.  Type a **Tag description** (optional) and set the version number for this build.
-
-7.  Click **Build this revision**.
-
-    ![](attachments/ibm-cloud/entertag.png)
-
-8.  Click **OK** to confirm the information message.
-
-    ![](attachments/ibm-cloud/projectbeingbuilt.png)
-
-9.  Click **Details** next to the deployment package to see details of the deployment package.
-
-    ![](attachments/ibm-cloud/packagedetailsbutton.png)
-
-    You can now see and manipulate the package details.
-
-10. Click **Environments** to return to the previous page.
-
-    ![](attachments/ibm-cloud/packagedetails.png)
-
-    When the project is built it will appear in the list of deployment packages. While it is being built, there will be a 'spinner' showing that the package is not yet complete. Once the package is ready for deployment this will be replaced by a tick.
-
-    ![](attachments/ibm-cloud/packagelist.png)
-
-    The package is still within the Mendix environment and needs to be pushed to IBM Cloud. From there it can be deployed.
-
-11. Click **Push** next to the package you want to deploy. This will push this deployment package to IBM Cloud.
-
-### 3.4 Deploying a Package to IBM Cloud{#deploy-package}
-
-{{% alert type="info" %}}A package is sent to IBM Cloud to be deployed. Currently you have to do this deployment manually.
-{{% /alert %}}
-
-1.  Click the **here** link or the **Open IBM Cloud** button to go to your IBM Cloud project page.
-
-    ![](attachments/ibm-cloud/pushrequest.png)
-
-    Alternatively, follow the link you are given in Studio Pro.
-
-    You may need to configure your browser to allow the IBM Cloud page to open.
-
-    You will now be back on your IBM Cloud project page.
-
-2.  Click **Deploy Application**.
-
-    ![](attachments/ibm-cloud/readytodeploy.png)
-
-    You will see a confirmation message in the top right of the screen.
-
-    ![Mendix app being deployed](attachments/ibm-cloud/being-deployed.png)
-
-3.  Wait until the app is deployed. This can take several minutes.
-
-    If you want to see the progress then do the following:
-
-    * Click **View toolchain**
-    * Click the **DELIVER > Delivery Pipeline** tool in the toolchain
-    * The **Deploy Stage** will indicate *STAGE PASSED* when your app has been deployed (if you are encountering issues, you can click the link on this page to see the build log)
-
-    {{% alert type="info" %}}Although there is a button here marked **View app**, it is not currently possible to see your app this way. You will need to view it from the Mendix site.
-    {{% /alert %}}
-
-    
-    {{% alert type="info" %}}Under some circumstances, the toolchain for Kubernetes cannot be built.<br /><br />Go to the toolchain and look at the log from the **Build Stage**. If the log includes the message `You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`, then you will need to remove any images by going to **Containers > Registry > Images** and deleting them.
-    
-    {{% /alert %}}
-
-    You can also see when your deployment is complete from the Mendix app's *Environments* page.
-
-5.  Click **Edit on Mendix** to return to Mendix.
-
-6.  Click **Environments** to see the Mendix environments page.
-
-    When the deployment is complete you will see your deployed app under **Managed by IBM Cloud**. You will also see activities related to the deployment under **Activity**.
-
-7.  Click **View App** to run and view your app.
-
-    ![](attachments/ibm-cloud/viewapp.png)
-
-    You can also view your app directly using the url which is given to you:
-
-    ![](attachments/ibm-cloud/deployurl.png)
-
-
-## 4 Runtime Configuration
-
-Once your app is deployed, you can make changes to the runtime on IBM Cloud.
-
-To change your runtime configuration, perform the following steps:
-
-1. Go to IBM Cloud by clicking the **Details** button next to your environment, or using the **Open IBM Cloud** button.
-
-2. Click **Dashboard** above the name of your app.
-
-    ![The dashboard in the app breadcrumb navigation](attachments/ibm-cloud/select-dashboard.png)
-
-3. Find your app in the Dashboard - use the search box if required.
-
-4. Click the name of your app. Note that due to naming restrictions some characters in your app name may have been changed or removed (such as the spaces in this example).
-
-    ![Select your app from the list](attachments/ibm-cloud/dashboard-select-app.png)
-
-5. Click **Runtime** in the menu.
-
-    ![The runtime page](attachments/ibm-cloud/dashboard-runtime.png)
-
-    You can now change the number of instances, and the memory for each instance. You can also change the values of application constants, development mode, and scheduled events. 
-
-### 4.1 Memory and Instances
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
 {{% alert type="warning" %}}
-Any changes you make to the memory and instances configuration for the IBM Cloud runtime will be overwritten next time you deploy your app.
-
-You can only make these changes permanent by creating a new environment from Mendix, or by changing the **manifest.yml** file in the IBM Repository for your app.
-
-![manifest.yml in the IBM Cloud repository](attachments/ibm-cloud/manifest-yml.png)
-
+If you have an app running on SAP Business Technology Platform, deploying it to IBM Cloud will not be successful because of the customization done within SAP Mendix apps.
 {{% /alert %}}
 
-To change the memory and instances configuration temporarily, do the following:
+![](attachments/ibm-cloud/cloud-setting.png)
 
-1. Increase or decrease the number of instances, or the memory per instance, using the +/- buttons.
+Click **Set up IBM Cloud** and you will be taken to IBM Cloud welcome page.
 
-2. Click **Save**; the environment will be restarted to apply the new setting.
+![](attachments/ibm-cloud/cloud-settings-landing-page.png)
 
-    ![Change runtime memory](attachments/ibm-cloud/change-runtime-memory.png)
+Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
-    You will get a warning that this change is not permanent - see the note above.
+### 2.2 New IBM App {#NewIBMApp}
 
-### 4.2 Environment Variables and App Constants
+In this scenario, you choose a Mendix app template for IBM and give it a name.
 
-1. Click **Environment variables** to change the environment variables.
+Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
-    ![Select environment variables tab](attachments/ibm-cloud/runtime-environment-variables.png)
+### 2.3 Set Up Region {#SetUpRegion}
 
-    The environment variables contain three pieces of information which can be useful in managing your app. These are:
+You are now prompted with an IBM Cloud login screen. Select the region where your IBM Cloud is located.
 
-    * DEVELOPMENT_MODE – this is *true* if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security); it is recommended that this is changed to *false* for acceptance or production environments
-    * Constants within the app – these have the format *MX_{module name}_{constant name}
-    * SCHEDULED_EVENTS – by default, this is a comma separated list of all the scheduled events enabled in the app
+Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create the following:
 
-2. Change the values of these variables by typing the new values. Clicking **Save** will apply the new values and restart the environment.
+* Database
+* Route
 
-    ![Select environment variables tab](attachments/ibm-cloud/save-new-variable-values.png)
+![](attachments/ibm-cloud/01-ibm-select-region.png)
 
-    For a full discussion of Mendix and environment variables in Cloud Foundry, see [Run Mendix in Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) in the cf-mendix-buildpack GitHub project.
+If you have already logged on to IBM and your IBM session has not expired, you will only have to choose the region. If you do not have a current IBM session you will be asked for your IBM credentials as well. Providing your credentials will grant the Deployment Portal access to manage your IBM Cloud account.
 
-    {{% alert type="info" %}}Unlike the memory and instance configuration, values that you change here are changed permanently and will not be overwritten the next time you deploy the app.{{% /alert %}}
+You will be taken to the IBM authentication page to enter your IBM credentials
 
-## 5 Status of IBM Cloud Deployment
+You will now be asked to provide the final details for IBM Cloud development environment.
 
-The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to IBM via the Developer Portal, you can check the Mendix status page to see if IBM Cloud deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+![](attachments/ibm-cloud/create-development.png)
 
-## 6 Read More
+You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
-* [IBM Cloud account](https://console.bluemix.net/registration/)
-* [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+If you do not choose a Custom database, you will still be able to choose from a range of different databases. Please ensure that the database you choose is supported by your quota plan for this region and organization.
+
+If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
+
+Your development environment is now configured and you can now develop your app.
+
+## 3 Create a New Environment {#NewEnvironment}
+
+You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
+
+This is done from the **Environments** page of the Developer Portal:
+
+![](attachments/ibm-cloud/environments-dev-page.png)
+
+1. Click **Add Environment** to start the wizard.
+
+    ![](attachments/ibm-cloud/add-environment.png)
+
+2.  Select the region where you want your app to be deployed.
+
+    ![](attachments/ibm-cloud/ibm-env-0.png)
+
+    If no session is active for that region, or the current session does not have access to that region, you will be asked for your IBM credentials for that region.
+
+3.  Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:  `{appname}-{environment name}.{domain}`
+
+	This is an example URL:
+
+	```http
+	https://myApp-Development.eu-gb.mybluemix.net
+	```
+
+    ![](attachments/ibm-cloud/07-ibm-env-1.png)
+
+4.  Click **Next**.
+
+5.  Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
+
+    ![](attachments/ibm-cloud/08-ibm-env-2.png)
+
+6.  Set the size of the memory that the app needs in order to run. This can also be changed later.
+
+7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
+
+8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization.
+
+    If you choose **Custom database** you will need to enter a name for the database and the plan.
+
+    ![](attachments/ibm-cloud/custom-database.png)
+
+9. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
+
+    {{% alert type="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
+
+10. Click **Next** to create the environment and finish the setup.
+
+    ![](attachments/ibm-cloud/09-ibm-env-3.png)
+
+An environment is created; with more than one environment it is possible to transport your application between environments (see [Transport App Between Environments](#TransportApp), below).
+
+![](attachments/ibm-cloud/10-ibm-env-tap.png)
+
+## 4 Create Package from Team Server
+
+At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
+
+{{% alert type="info" %}}
+You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
+
+If you click **Run** or **Publish** in Studio Pro, this will automatically do the following:
+
+1. Commit the project.
+2. Generate a deployment package.
+3. Deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment).
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+You will still have to deploy your app in the Developer Portal the very first time to ensure that all the services are bound correctly.
+{{% /alert %}}
+
+1. Go to the **Environments** page of the Developer Portal.
+
+    ![](attachments/ibm-cloud/environments-page.png)
+
+2. Click **Create package from Team Server** to start the wizard.
+
+3.  Select the branch on the Team server which you want to use.
+
+    ![](attachments/ibm-cloud/03-ibm-select-branch.png)
+
+4.  Select the revision of the branch you want to build.
+
+    ![](attachments/ibm-cloud/04-ibm-select-revision.png)
+
+5.  Add a version number and Tag description as required. The revision number will be added to the version number automatically.
+
+    ![](attachments/ibm-cloud/05-ibm-define-tag.png)
+
+6.  Click **Build this revision** to build the package.
+
+    ![](attachments/ibm-cloud/06-ibm-build-revision.png)
+
+When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
+
+## 5 Deploy Package {#DeployPackage}
+
+### 5.1 Deploy to an Environment
+
+1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to IBM Cloud.
+
+    ![](attachments/ibm-cloud/ibm-revision-built.png)
+
+2.  Change the deployment environment if required.
+
+    ![](attachments/ibm-cloud/ibm-transport.png)
+
+3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+
+### 5.2 Configure the Application {#ConfigureTheApplication}
+
+1. You will see confirmation of the package which has been transported.
+
+    ![](attachments/ibm-cloud/transport-deploy.png)
+
+2. Change any constants in the Constants tab: select the constant you want to edit and then click **Edit**.
+
+    ![](attachments/ibm-cloud/transport-constants.png)
+
+3. Toggle any scheduled events in the Scheduled Events tab: select the scheduled event you want to enable or disable and click **Toggle**.
+
+    ![](attachments/ibm-cloud/transport-events.png)
+
+4. Select any additional services you need for your app. For more information see [Binding Services](#binding-services), below.
+
+    {{% image_container width="75%" %}}![](attachments/ibm-cloud/transport-services.png){{% /image_container %}}
+
+    {{% alert type="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
+
+5. Click **Continue** to continue to the Start Application confirmation page.
+
+6. Click **Start Application** to start the application on IBM Cloud.
+
+    ![](attachments/ibm-cloud/start-application.png)
+
+    {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
+
+7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
+
+    ![](attachments/ibm-cloud/application-started.png)
+
+## 6 Transport App Between Environments {#TransportApp}
+
+1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.
+
+    ![](attachments/ibm-cloud/transport-environments.png)
+
+2.  Change the deployment environment if required by clicking **Change environment**.
+
+    ![](attachments/ibm-cloud/transport-from-to.png)
+
+3.  Click **Transport** to deploy the package to the IBM Cloud environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
+
+When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
+
+## 7 Environment Details {#EnvironmentDetails}
+
+The environment details page contains three tabs: General, Model Options and Services. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
+
+![](attachments/ibm-cloud/environment-details.png)
+
+{{% alert type="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
+
+Changes made to the app in IBM Cloud Portal are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
+
+### 7.1 General Tab
+
+This tab contains information on how the application is deployed on IBM Cloud.
+
+![](attachments/ibm-cloud/11-ibm-env-details.png)
+
+Most of this page shows information about the app, but there are several options which allow you to change the app.
+
+#### 7.1.1 Start/Stop Application
+
+If the application is running, click **Stop Application** and confirm when asked to stop the application.
+
+The button will change to **Start Application** which you can click to (re)start the application.
+
+{{% alert type="info" %}}
+You may need to use this option to stop and start your app after changing one of the settings on this page.
+{{% /alert %}}
+
+If you receive an error trying to start the app, please refer to the [App Will Not Start](#willnotstart) section under *Issues*, below.
+
+#### 7.1.2 Change Admin Password
+
+Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
+
+#### 7.1.3 View Recent Log
+
+Click **View Recent Log** to see recent events written to the log.
+
+#### 7.1.4 Delete Environment
+
+**Delete Environment** enables you to delete the environment and, optionally, all its resources: including the app.
+
+You will be asked to confirm that this environment should be removed. You will also be asked to confirm that the resources associated with the environment should also be removed. Note that the default is NOT to remove the resources.
+
+![](attachments/ibm-cloud/delete-environment.png)
+
+{{% alert type="info" %}}
+If you do not select **Remove resources** in this dialog, the resources will be left in IBM Cloud. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within IBM Cloud Portal.
+{{% /alert %}}
+
+#### 7.1.5 Change Development Mode
+
+Click **Change** to change the Development Mode toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
+
+#### 7.1.6 Scaling
+
+If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
+
+Use the **Instances** slider to change the number of instances of the app which can run. This allows you to scale the app horizontally to support a large numbers of users, or to improve the app's resilience by allowing it to continue to run if there are any issues with one of the instances.
+
+Use the **Memory per instance** slider to change the amount of memory allocated to each instance of the app ("user's current memory").
+
+Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped it will not be started automatically; the new settings will be used the next time the application is started.
+
+Click **Reset** to return the values to what they were before the sliders were moved.
+
+#### 7.1.7 Change License Subscription ID
+
+Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
+
+### 7.2 Model Options Tab
+
+This tab displays the application constants and allows you to edit them. It also lets you enable or disable scheduled events.
+
+![](attachments/ibm-cloud/12-ibm-model-options.png)
+
+{{% alert type="info" %}}
+You need to restart your app if you change any of these options.
+{{% /alert %}}
+
+#### 7.2.1 Scheduled Events
+
+You can see the status of each scheduled event. CURRENTLY ENABLED shows the status in the running app. ENABLED shows that status that will be applied the next time the app is restarted.
+
+To change the state of a scheduled event, select it, then click **Toggle** to change the ENABLED flag.
+
+#### 7.2.2 Constants
+
+You can see the value of all the constants used by the app. CURRENT VALUE is the value in the running app. NEW VALUE is the value which will be used the next time the app is restarted.
+
+To change a value, select the constant you want to change and click **Edit**.
+
+### 7.3 Services Tab{#binding-services}
+
+This tab displays Cloud Foundry services which are bound to the app, waiting to be bound to the app, or available to be bound to the app. These are the services which are available to you in IBM Cloud Platform and are the same services that you can see in the IBM Cloud Platform marketplace.
+
+{{% image_container width="50%" %}}
+![](attachments/ibm-cloud/service-tab.png)
+{{% /image_container %}}
+
+{{% alert type="warning" %}}
+**If you unbind the database (compose-for-postgreSQL) service, your app will probably stop working**
+
+Other services should be selected, bound, and unbound through this **Services** page. Changes made in the IBM Cloud Portal will *not* be reflected in the Mendix Developer Portal.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Changes to bound services will not take place immediately. You will have to stop and start your application to activate the changes.
+
+Services which will be bound when the application is stopped and restarted are listed in the category **Services To Be Bound**. You will also see an information message in this case: the button **Review Services** will list the services which are not currently bound.
+{{% /alert %}}
+
+#### 7.3.1 Connecting Services
+
+To connect a service in the section **Available Services**
+
+1. Select one or more services (you can search for them by name).
+2. Select a **Plan** for each service. This must be a plan which is part of your quota for this space.
+3. Select a JSON **File** to upload if you need to add extra configuration.
+4. Click **Connect Services**.
+
+    ![](attachments/ibm-cloud/service-connect.png)
+
+    The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
+
+**Uploading Configuration File**
+
+To upload the JSON **File** to configure the service being bound, follow these steps:
+
+1. Select the service in the **Service To Be Bound** section.
+2. Click the ellipsis (**…**) next to the service for which you want to upload the file.
+3. Select **Add Binding Configuration**.
+4. Select the JSON **File** to upload.
+5. Click **Save**.
+
+The service bindings will be created with the provided configurations when you restart the application. 
+
+{{% alert type="info" %}}
+If you receive an error, and the service fails to bind please check all aspects of your IBM account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
+{{% /alert %}}
+
+If you receive an error trying to restart the app, please refer to the [App Will Not Start](#willnotstart) section under *Issues*, below.
+
+#### 7.3.2 Unbinding and Removing Services
+
+If you no longer require a service you can unbind it or remove it from your app.
+
+**Unbinding a Service**
+
+1. Click the ellipsis (**…**) next to the service you want to unbind in the **Bound Services** section.
+2. Select **Unbind Service**.
+
+    ![](attachments/ibm-cloud/service-unbind.png)
+
+3. Confirm by clicking **Unbind & Restart App** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Unbind*. However, this may leave the app in an unstable state.
+
+    ![](attachments/ibm-cloud/service-unbind-warning.png)
+
+    Once the service is unbound, it is deleted from the app environment and returned to the list of **Available Services**.
+
+**Removing an Unbound Service**
+
+1. Click the ellipsis next to the service you want to remove in the **Services To Be Bound** section.
+
+2. Select **Remove Service**.
+
+3. Confirm by clicking **Remove**
+
+    The service is deleted from the app environment and returned to the list of **Available Services**.
+
+## 8 Databases in IBM Cloud{#databases}
+
+Mendix needs access to a relational database back end and can run using different types of database. For example: PostgreSQL database
+
+### 8.1 Running Mendix on PostgreSQL
+
+When you create your environment on IBM Cloud, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
+
+
+## 9 Issues
+
+### 9.1 Environment is not Created
+
+If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
+
+![](attachments/ibm-cloud/failed-environment.png)
+
+This could be caused by exceeding your organization quota limit for a service which you are trying to create, or for some other reason. To find the exact cause, do the following:
+
+1. Click **Details** next to the failed environment.
+
+    ![](attachments/ibm-cloud/failed-details.png)
+
+2. Click **Details** on the error message at the top of the page.
+
+    ![](attachments/ibm-cloud/failed-more-details.png)
+
+A more detailed description of the reason why the environment creation failed will be displayed.
+
+![](attachments/ibm-cloud/failed-description.png)
+
+### 9.2 Deleting an App
+
+Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on IBM Cloud. You can leave the app by going to the **General Settings** page of the Developer Portal and clicking **Leave app**.
+
+![](attachments/ibm-cloud/leave-app.png)
+
+If you are the last member of the app development team, you will be asked if you want to delete the app.
+
+![](attachments/ibm-cloud/delete-app.png)
+
+{{% alert type="info" %}}
+This will not stop the app and delete the deployment of the app in IBM Cloud.
+
+If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.
+{{% /alert %}}
+
+You can still delete the app and its resources from IBM Cloud Portal, but you will then have to remove all the resources individually.
+
+### 9.3 App Will Not Start{#willnotstart}
+
+Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
+
+![](attachments/ibm-cloud/service-bind-error.png)
+
+This indicates that IBM Cloud Portal is not able to bind the service, even though it has been instantiated correctly. If you remove the service from the app, then the app should restart successfully.
+
+If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to IBM Cloud Portal where you can use the service name in the error message to find which service is causing the error.
+
+### 9.4 An Error Occurs While Deploying App From Studio Pro
+
+If an app is deployed to IBM using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+
+{{% image_container width="50%" %}}
+![](attachments/ibm-cloud/error-desktop-modeler.png)
+{{% /image_container %}}
+
+If you use the Developer Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
+
+![](attachments/ibm-cloud/error-not-bound.png)
+
+Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
+
+## 10 Status of IBM Cloud Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to IBM Cloud via the Developer Portal, you can check the Mendix status page to see if IBM Cloud deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.

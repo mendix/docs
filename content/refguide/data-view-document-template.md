@@ -2,6 +2,9 @@
 title: "Data View (Document Template)"
 parent: "document-templates"
 tags: ["studio pro"]
+aliases:
+    - /refguide/Data+View+(document+template).html
+    - /refguide/data-view-(document-template).html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +14,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918139.png)
+![](attachments/document-templates/918139.png)
 
 A data view showing orderline information.
 

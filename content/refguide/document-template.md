@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](document-templates) overview documentation.
 
-## 2 Appearance Properties
+## 2 Appearance Properties {#appearance-properties}
 
 ### 2.1 Page Format
 
@@ -38,7 +38,7 @@ Indicates whether the header and/or footer are also shown on the first page.
 You must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
 {{% /alert %}}
 
-*Default value*: True.
+Default: *True.*
 
 ### 2.7 Enable Header
 
@@ -56,7 +56,7 @@ For details, see [Style](style).
 
 ### 4.1 Name
 
-The name of the document template. You can change the name via the project explorer.
+The name of the document template. You can change the name via the App Explorer.
 
 ### 4.2 Documentation
 

@@ -3,6 +3,8 @@ title: "Implement Community Best Practices for App Performance"
 category: "General Info"
 menu_order: 8
 tags: ["best practice", "performance", "community"]
+aliases:
+    - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
 ---
 
 ## 1 Introduction
@@ -15,7 +17,7 @@ This document is created by and for the Mendix community. It collects performanc
 
 A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document describes some best practices to apply during development to in order to get a better performing app.
 
-To put the best practices in perspective, let's quote some of the giants. First, Einstein's "Everything should be made as simple as possible, but no simpler." And next, programming giant Donald Knuth's "Premature optimization is the root of all evil." Both of these quotes suggest refraining from difficult constructs for the sake of performance unless you really need them and have already investigated simpler alternatives. You might need a load test and good measurement tooling, but that is out of the scope of this document.
+To put the best practices in perspective, let us quote some of the giants. First, Einstein's "Everything should be made as simple as possible, but no simpler." And next, programming giant Donald Knuth's "Premature optimization is the root of all evil." Both of these quotes suggest refraining from difficult constructs for the sake of performance unless you really need them and have already investigated simpler alternatives. You might need a load test and good measurement tooling, but that is out of the scope of this document.
 
 Other best practices might conflict with performance best practices. For example, security might require event handlers, and performance requires minimizing them. Good architecture is often a trade-off between different quality aspects. So, make motivated choices.
 
@@ -31,15 +33,16 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especially reference sets—cause extra queries and thus extra load on the database.
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
-* Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
-	* Combine attributes in one entity and add an enum to determine its specialization.
+* Do not use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
+	* Combine attributes in one entity and add an enumeration to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
 	* Add a non-persistable layer with inheritance that is populated by your business logic.
-* Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
+* Do not use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
+* Avoid using more than one [association](/refguide/associations) between entities, especially if such associations give different access levels. Instead, use [enumerations](/refguide/enumerations) within one of the entities, or add an intermediary entity between the entities that contains an enumeration with the association type. For example, if different user types are accessing a document, do not create the associations **Document_Owner**, **Document_Editor**, **Document_Viewer**, etc. Instead, add an intermediary entity named **DocumentAccess** between the entities that contains an enumeration named **AccessType**, with the possible values of **Owner**, **Editor**, and **Viewer**.
 
 ##  3 Index Best Practices
 
-Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:
+Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practices apply:
 
 * Create as many indexes as needed. Although every index takes up space and the `insert`, `update`, and `delete` statements will be a bit slower, your queries will benefit a lot.
 * Since Mendix will retrieve the object for you with all of its columns, your index is needed for two reasons. The first reason is to get the unique internal Mendix IDs fast. The second reason is for sorting.
@@ -70,7 +73,8 @@ Indexes is a topic with a long history of best practices from the database world
 * Try to prevent multiple identical data sources, since they load the object multiple times.
 * Minimize conditional visibility.
 * Give the user feedback. If this takes more than a few seconds, provide a progress indication.
-* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
+* Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](/appstore/modules/community-commons-function-library) in the Mendix Marketplace to run microflows in the background or have a [task queue](/refguide/task-queue) to control the load and prevent peaks in background work.
+* When using a filter via an attribute from an associated entity in a data grid, restricting possible options is suggested in the drop-down search field so that only objects that have an association to the entity in the grid are fetched. For example scenario, you have a grid for the **Order** entity where you want to add a drop-down search field to filter by **Order_Customer/Customer/Name**. It would be beneficial to add the following [XPath](/refguide/xpath) constraint to the drop-down search field: `[Order_Customer/Order]`. That way only **Customer**s with **Order**s will be available in the drop-down search. This is necessary because in some databases, filtering by non-existing criteria is slow, even if all indices are in place.
 
 ## 6 Infrastructure Best Practices
 
@@ -79,7 +83,7 @@ Indexes is a topic with a long history of best practices from the database world
 
 ## 7 XPath Best Practices
 
-* Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enum> = valueA`, `<enum> = valueB`, `integer>valueA`, or `integer<valueB`.
+* Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enumeration> = valueA`, `<enumeration> = valueB`, `integer>valueA`, or `integer<valueB`.
 * Combine paths to the same associated entity if query logic allows this.
 * In older PostgreSQL databases, it was wise to start the XPath with attribute clauses, since the database query optimizer was processing clauses in order. Nowadays, it is claimed that the query optimizer has improved, and this "rule" is no longer needed.
 * Make sure that the attributes used are indexed.
@@ -97,6 +101,6 @@ For OQL, many of the same best practices apply as for XPath.
 
 ## 10 Web Services & XML Best Practices
 
-* Use SHA256 instead of BCrypt.
+* Use SSHA256 instead of BCrypt.
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.

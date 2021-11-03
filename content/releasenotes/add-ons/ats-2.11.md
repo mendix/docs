@@ -42,14 +42,14 @@ For more details, see the [ATS 2 Reference Guide](/addons/ats-addon/rg-two-cicd-
 
 **Release date: June 4th 2019**
 
-### Support for More Mendix App Store Widgets
+### Support for More Mendix Marketplace Widgets
 
 We are constantly on the lookout for popular widgets that we can support with ATS. With this release, we are happy to announce support for recording and testing the following widgets:
 
-* [AutoComplete Widget](https://appstore.home.mendix.com/link/app/2695/)
-* [Switch](https://appstore.home.mendix.com/link/app/50324/)
-* [Format String](https://appstore.home.mendix.com/link/app/264/)
-* [CustomString](https://appstore.home.mendix.com/link/app/1426/)
+* [AutoComplete Widget](https://marketplace.mendix.com/link/component/2695/)
+* [Switch](/appstore/widgets/switch)
+* [Format String](/appstore/widgets/format-string)
+* [CustomString](https://marketplace.mendix.com/link/component/1426/)
 
 ### Improvements
 

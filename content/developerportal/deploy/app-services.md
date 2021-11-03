@@ -4,15 +4,16 @@ category: "Deployment"
 menu_order: 100
 description: "Describes the App Services page in the Developer Portal."
 tags: ["Developer Portal", "App Services", "Deploy"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
 {{% alert type="info" %}}
-App services are deprecated and marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+App services are deprecated and  were removed in Studio Pro 9. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
 {{% /alert %}}
 
-The **App Services** page provides an overview of possible resources that can be published to the [Mendix App Store](https://appstore.home.mendix.com/):
+The **App Services** page provides an overview of possible resources that can be published to the [Mendix Marketplace](https://marketplace.mendix.com/):
 
 * **App Service**
 * **Application**
@@ -20,17 +21,17 @@ The **App Services** page provides an overview of possible resources that can be
 
 ## 2 App Service
 
-App services are aimed at sharing functionality between your Mendix apps. You can create app services in Mendix Studio Pro and publish the created app content and functionality within your company or to the entire Mendix Community. Users of your app service can directly drag actions that you designed into their microflows in Studio Pro and use your entities and data in their apps. 
+App services are aimed at sharing functionality between your Mendix apps. You can create app services in Mendix Studio Pro and publish the created app content and functionality within your company or to the entire Mendix community. Users of your app service can directly drag actions that you designed into their microflows in Studio Pro and use your entities and data in their apps. 
 
 On the **App Service** page, you can see a list of the available app services, with whom the app service is shared, and what the current statuses are.
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Studio Pro Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
+For more information, see [Published App Services](/refguide8/published-app-services) in the *Studio Pro Guide*.
 
 ### 2.1 Settings
 
-In **Settings** you can manage the following:
+In **General Settings** you can manage the following:
 
 * App service info
 * Documentation
@@ -40,9 +41,9 @@ On the right side of the screen, you can choose with whom you want to **Share th
 
 * Nobody
 * My company
-* Mendix Community
+* Mendix community
 
-Saving your settings will update your app service's listing in the Mendix App Store. Note that publishing to the Community App Store is subject to an approval process. However, your app service will be available for your colleagues while it is awaiting approval.
+Saving your settings will update your app service's listing in the Mendix Marketplace. Note that publishing to the Mendix Marketplace is subject to an approval process. However, your app service will be available for your colleagues while it is awaiting approval.
 
 #### 2.1.1 App Service Info
 
@@ -55,7 +56,7 @@ In this tab, you can manage the following:
     * Add or edit tags
 * **Avatar**
     * Add or edit the app service avatar – this small avatar will represent your app service in grids
-    * Add or edit the App Store avatar – this big avatar will showcase your app service in the Mendix App Store
+    * Add or edit the Marketplace avatar – this big avatar will showcase your app service in the Mendix Marketplace
 
 #### 2.1.2 Documentation
 
@@ -75,23 +76,21 @@ On this page, you can review the environments of which applications are currentl
 
 ## 3 Application
 
-By selecting **Application**, you can publish the application's model in the Mendix App Store.
+By selecting **Application**, you can publish the application's model in the Mendix Marketplace.
 
-Click **Go to App Store** to publish your app's model.
+Click **Go to Marketplace** to publish your app's model.
 
-For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
+For more information, see [How to Share Marketplace Content](/appstore/general/share-app-store-content).
 
 ## 4 Widget
 
-By selecting **Widget**, you can upload a widget to the Mendix App Store.
+By selecting **Widget**, you can upload a widget to the Mendix Marketplace.
 
-Click **Go to App Store** to upload your widget.
+Click **Go to Marketplace** to upload your widget.
 
-For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
+For more information, see [How to Share Marketplace Content](/appstore/general/share-app-store-content).
 
 ## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
-* [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)
-* [Published App Service](/refguide/published-app-services)
-* [How to Share App Store Content](../app-store/share-app-store-content)
+* [Published App Service](/refguide8/published-app-services)

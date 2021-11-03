@@ -20,13 +20,13 @@ The Wikipedia REST service allows you to retrieve the summary of a page. This se
 
 We will start by providing the Modeler as an example of what the REST service returns:
 
-1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti)
+1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
    * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
 
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 2. Copy the whole JSON snippet.
-3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide7/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
+3.  Now you need to add a new JSON structure to your app. A [JSON structure](/refguide7/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
     a. Right-click the module in the **Project Explorer**.<br>
     b. Select **Add** > **Mapping** > **JSON structure**.<br>
     c. Paste the JSON snippet.<br>
@@ -34,11 +34,11 @@ We will start by providing the Modeler as an example of what the REST service re
 
     ![](attachments/consume-a-rest-service/json-structure.png)
 
-5. Click **OK**
+5. Click **OK**.
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide7/import-mappings) specifies how the JSON relates to [entities](../../refguide7/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
+An [import mapping](/refguide7/import-mappings) specifies how the JSON relates to [entities](/refguide7/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
 
 To create an import mapping:
 
@@ -74,7 +74,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide7/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](/refguide7/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 
@@ -168,4 +168,3 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

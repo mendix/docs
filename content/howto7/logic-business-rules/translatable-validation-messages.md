@@ -21,7 +21,7 @@ Or if you need to differentiate between the different validation messages you ca
 
 ## 2 Simple Alternative for Translating Messages
 
-There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modelling out all language combinations. For each validation message you have to add splits and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
+There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modeling out all language combinations. For each validation message you have to add splits and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
 
 ![](attachments/translatable/18581626.png)
 
@@ -39,13 +39,15 @@ Create an enumeration containing all validation messages
 
 This is the microflow you should use to create the message you should store in the entity:
 
-<iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/34614f4f-a2d3-43ff-81c8-a14605e06a05/get-i18n-text-using-1-parameter?embed=true" allowfullscreen=""></iframe><iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/c1d54c7d-def4-4b39-9d90-92c6d5dab59f/get-i18n-text-using-2-parameters?embed=true" allowfullscreen=""></iframe>
+![](attachments/translatable/model1.jpg)
 
-The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modelling.
+![](attachments/translatable/model2.jpg)
 
-<iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/45864420-7a30-42cd-9f36-ba0976fd5315/get-i18n-text?embed=true" allowfullscreen=""></iframe>
+The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modeling.
+
+![](attachments/translatable/model3.jpg)
 
 The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token nr to indicate the position (as in, {1}, {2}, {3})
 
-<iframe width="100%" height="495px" frameborder="0" src="https://modelshare.mendix.com/models/6a80d12a-5670-48fe-bbdf-ba793af6cf8d/replace-i18n-token?embed=true" allowfullscreen=""></iframe>
+![](attachments/translatable/model4.jpg)
 

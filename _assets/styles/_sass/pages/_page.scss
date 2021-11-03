@@ -124,7 +124,7 @@ $block: 'mx';
       blockquote {
         border-left: 4px solid #e8e8e8;
         padding-left: 20px;
-        font-size: 18px;
+        font-size: 14px;  /* Too big - set font size as defaul */
         opacity: .6;
         letter-spacing: -1px;
         font-style: italic;
@@ -147,13 +147,29 @@ $block: 'mx';
         margin: 0;
       }
 
-      /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
-      h2, h3, h4{
-        margin: 1em 0 0 0;
+      /* but a curve around the border of the search and changes to 82% to align with featured lists and added a minimum width with @media for it to be 100% on smaller screens*/
+      .input-group .form-control {
+        border-radius: 4px;  
+              
+        @media (min-width: 1200px) {
+          max-width: 82%;
+          
+        }
       }
 
+      /* Headers have a slightly larger space above - to make them a bit more obvious without increasing the font size */
+      /* Since Mx-dock (20210330) scrolling to anchors leaves anchor under the mx-dock. Changing h2/h3/h4 links */
+      /* to resolve this using one of the solutions here: https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+      h2, h3, h4{
+        margin-top: -30px;
+        padding-top: 48px;
+      }
+
+      /* apply heading anchor trick on h5 as well with smaller top margin*/
       h5 {
         font-size: 16px;
+        margin-top: -38px;
+        padding-top: 48px;
       }
       h6 {
         font-size: 14px;
@@ -252,13 +268,15 @@ $block: 'mx';
 
     @include element('frontpage-block') {
       display: block;
-      margin: $frontpage-search-block-margins 0;
-      padding: 0 0 $frontpage-search-block-margins;
-      border-bottom: 1px solid $border-color;
+      /* The margin and padding were using frontpage-search-block-margins for margin and padding, I changed them for the sections on the front page to be closer to each other */
+      margin: 20px 0 0;
+      padding: 0 0 40px;
+      /* a line on the front page is not needed, we can divide elements with margins and paddings */
+      //border-bottom: 1px solid $border-color;
       @include element('404-title') {
         margin: 0 auto;
         display: block;
-        text-align: center;
+        text-align: center;        
       }
     }
 

@@ -83,7 +83,6 @@ The extra sub-microflow option is based on the Mendix reusability principle. You
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Set Up Error Handling](set-up-error-handling)

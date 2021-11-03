@@ -39,7 +39,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 Follow these steps to install and run the Company Expenses app:
 
 1. Open the Mendix Destkop Modeler.
-2.  Click the App Store icon in the top toolbar:
+2.  Click the Marketplace icon in the top toolbar:
 
 	![](attachments/18448631/18580298.png)
 
@@ -217,13 +217,13 @@ Now the test steps will have `mx-name-` CSS selectors rather than the Selenium d
 
 * [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)
 * [How to Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Clear Warning Messages in Mendix](/howto7/monitoring-troubleshooting/clear-warning-messages)
 * [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
-* [How to Log Levels](../monitoring-troubleshooting/log-levels)
-* [How to Debug Java Actions](../monitoring-troubleshooting/debug-java-actions)
+* [How to Monitor Mendix Using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx)
+* [How to Debug Java Actions Remotely](/howto7/monitoring-troubleshooting/debug-java-actions-remotely)
+* [How to Log Levels](/howto7/monitoring-troubleshooting/log-levels)
+* [How to Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions)
 
 Learn more about this topic using the following helpful link:
 

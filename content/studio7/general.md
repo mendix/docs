@@ -17,46 +17,25 @@ The picture below shows the components of Studio's interface:
 
 ## 2 Opening Studio
 
-### 2.1 Opening Studio via the Developer Portal {#opening-studio-via-dev-portal}
+You can open Mendix Studio [via Developer Portal](#opening-studio-via-dev-portal) or [via Studio Pro](#opening-via-studio-pro). 
 
-You can edit an app in Mendix Studio by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Studio** option in the drop-down menu of the **Edit App** button. 
+### 2.1 Opening Studio via Developer Portal {#opening-studio-via-dev-portal}
 
-{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
-{{% /image_container %}}
+You can edit an app in Mendix Studio by opening your app in [Developer Portal](https://home.mendix.com) and clicking **Edit in Studio**:
 
-{{% alert type="warning" %}}
+![](attachments/general/edit-app.jpg)
 
-The drop-down menu on the **Edit App** button is only available for **Free Apps**.
+If you do not see **Edit in Studio**, go to [General Settings](/developerportal/collaborate/general-settings) in the Developer Portal and [enable Studio](/developerportal/collaborate/general-settings#web).
 
-Some apps are not suitable for Studio. The following ones are not suitable to run in Studio:<br />
-
-* Apps below **Mendix 7.5** version<br />
-* Apps that are not based on the Atlas UI framework
-
-{{% /alert %}}
-
-When Studio is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
-
-![](attachments/general/not-enabled.png)
-
-{{% alert type="info" %}}
-Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable Studio.
-{{% /alert %}}    
-
-On the **Settings** page, Studio can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
-
-![](attachments/general/enabling.png)
-
-### 2.2 Opening Studio via Studio Pro
+### 2.2 Opening Studio via Studio Pro {#opening-via-studio-pro}
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
-1. In Studio Pro, open the project in that you want to view in Studio.
+1. In Studio Pro, open the app in that you want to view in Studio.
 
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
     ![](attachments/general/globe-icon.png)
-
 
 The app opens in Studio.
 
@@ -130,7 +109,7 @@ The top bar provides the following options:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
 | [Publish button](publishing-app) | Deploy and run the app. Update your app to deploy the latest changes you made in Studio. Once deployed, click **View** to view your app in action. For more information, see [Publishing Your App](publishing-app) |
 | [Checks button](checks) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use C shortcut to view the **Checks** panel. |
-| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Studio 7 Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
+| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix community<li>**Check the  Documentation** – a link to the [Studio 7 Guide](index)</li><li>**Contact Mendix Support** – a link to the [Mendix Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://academy.mendix.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 

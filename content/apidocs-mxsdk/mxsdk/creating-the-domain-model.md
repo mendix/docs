@@ -24,7 +24,7 @@ To be able to create such a domain model, there are several questions that you n
 2.  Which SDK classes do you need to use?
 3.  How do you use those SDK classes?
 
-The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [*Studio Pro Guide*](/refguide/), [References](sdk-refguide), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
+The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Studio Pro Guide](/refguide/), [References](sdk-refguide), and the [Model SDK API](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html) documentation.
 
 The *Studio Pro Guide* gives an overview of what can be configured for different parts of the Mendix app model, the Mendix Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 
@@ -36,7 +36,7 @@ First, you start with creation of the two entities, `Customer` and `Invoice`. En
 
 The relevant concept in the app model can be found in the Mendix Metamodel reference guide. In this case, you are working on the domain model, so the [Domain Model](domain-model-metamodel) page is the starting point. In the Overview section, `Entity` is visible, which is the likely candidate for creation of new domain model entities.
 
-So how do you set these properties with the SDK? The Model SDK API docs provide us with this information. On the [`domainmodels.Entity`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) page, you can find everything that is configurable for domain model entities, including the properties  [`name`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)  and [`documentation`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation) . They are of type `string`, which means that you can directly set their value to any `string` value.
+So how do you set these properties with the SDK? The Model SDK API docs provide us with this information. On the [`domainmodels.Entity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) page, you can find everything that is configurable for domain model entities, including the properties  [`name`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)  and [`documentation`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation) . They are of type `string`, which means that you can directly set their value to any `string` value.
 
 To create a new `Customer` entity, you create a single entity instance in a domain model and then set its name.
 
@@ -45,7 +45,7 @@ const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 ```
 
-An `Entity` also has a [`location`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)  property, which defines where the entity is shown in the domain model editor in Studio Pro. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
+An `Entity` also has a [`location`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)  property, which defines where the entity is shown in the domain model editor in Studio Pro. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
 
 ```ts
 customer.location = { x: 100, y: 100 };
@@ -77,12 +77,12 @@ Metamodel reference guide
 
 Model SDK API docs
 
-*   [domainmodels.Entity](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
-*   [Entity.name](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)
+*   [domainmodels.Entity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
+*   [Entity.name](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)
 
-*   [Entity.documentation](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation)
+*   [Entity.documentation](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation)
 
-*   [Entity.location](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
+*   [Entity.location](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
 
 ## 3 Creating an Association
 
@@ -90,9 +90,9 @@ The next step is to create an association between the `Customer` and `Invoice` e
 
 The *Studio Pro Guide* explains that [Associations](/refguide/associations) have an owner and are a reference (set). In the Mendix Metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The Metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
 
-So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
+So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
 
-To create a standard reference (one-to-many) association, you instantiate one Association instance, set its name, and define the `child` and `parent` properties. The `child` property points to the '1'-side of the association, and the `parent` property points to the 'many'-side of the association. They can be set with any entity reference from the domain model of the same module (for cross-module associations, use [`CrossAssociation`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.crossassociation.html)).
+To create a standard reference (one-to-many) association, you instantiate one Association instance, set its name, and define the `child` and `parent` properties. The `child` property points to the '1'-side of the association, and the `parent` property points to the 'many'-side of the association. They can be set with any entity reference from the domain model of the same module (for cross-module associations, use [`CrossAssociation`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.crossassociation.html)).
 
 The following code snippet creates an association between the `Customer` and `Invoice` associations:
 
@@ -132,10 +132,10 @@ Metamodel reference guide
 
 Model SDK API docs
 
-*   [Association](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
-*   [AssociationBase](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.associationbase.html)
-*   [Association.parent](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
-*   [Association.child](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
+*   [Association](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
+*   [AssociationBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.associationbase.html)
+*   [Association.parent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
+*   [Association.child](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
 
 ## 4 Configuring a Generalization
 
@@ -143,7 +143,7 @@ Finally, you want to configure the `Customer` entity to be a specialization of `
 
 The Metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the Mendix Metamodel for inheritance is structured.
 
-In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
+In the Model SDK, the [`Entity.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
@@ -158,18 +158,15 @@ const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
 ```
 
-New entities by default have a `NoGeneralization` set, so the `generalization` property for the `Customer` entity needs to be updated:
-
-```ts
-customer.generalization = generalization;
-```
-
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
 
 ```ts
-const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
+const customer = domainmodels.Entity.createIn(domainModel);
+customer.name = `Customer`;
+customer.location = { x: 100, y: 100 };
 
 const generalization = domainmodels.Generalization.createIn(customer);
+const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 generalization.generalization = systemUser;
 ```
 
@@ -183,9 +180,9 @@ Metamodel reference guide
 
 Model SDK API docs
 
-*   [Generalization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
-*   Property  [`generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
-*   [NoGeneralization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
+*   [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
+*   Property  [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
+*   [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
 
 ## 5 Conclusion
 

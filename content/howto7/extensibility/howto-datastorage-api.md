@@ -55,7 +55,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 ![](attachments/dsapi/image007.png)
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your Xpath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
@@ -78,7 +78,7 @@ The following example illustrates how you can use the OQL APIs for reporting pur
 *	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
 *	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
 
-The following non-persistent entity shows what data you are interested in for your report:
+The following non-persistable entity shows what data you are interested in for your report:
 
 * For every department you want to know
     * its name,
@@ -141,13 +141,13 @@ The microflow to execute the Java action is similar to the previous example, but
 
 ![](attachments/dsapi/image042.png)
 
-Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get the OQL query of the Dataset specified.
+Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get the OQL query of the Dataset specified.
 
 ![](attachments/dsapi/image043.png)
 
 ## 5 Retrieving Objects Using SQL (Beta - Mendix 7 and Above)
 
-As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database. (This feature is currently in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
+As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database. (This feature is currently in Beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 
@@ -170,7 +170,7 @@ The Java implementation below implements the following steps:
 
 You can find the complete Java source code on GitHub: [RetrieveAdvancedSQL](https://github.com/ako/QueryApiBlogPost/blob/master/javasource/hr/actions/RetrieveAdvancedSql.java).
 
-You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistent entity DepartmentSummary as defined previously.
+You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistable entity DepartmentSummary as defined previously.
 
 ![](attachments/dsapi/image029.png)
 

@@ -7,13 +7,11 @@ tags: ["mobile", "hybrid"]
 
 ## 1 Introduction
 
-A Mendix hybrid app is a web application which runs inside a container that can be installed as a native app on your device. Hybrid apps can be deployed using the Mendix Platform, their containers enable native capabilities like camera and GPS app functions, and they can be published to the Apple App Store and Google Play. 
+Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
 
-## 2 Documents in This Section
+For more information see this [Hybrid Mobile Apps Deprecation with Mendix 9](https://www.mendix.com/blog/hybrid-mobile-apps-deprecation-with-mendix-9/) blog entry.
 
-* [Include Push Notifications](push-notifications)
-* [Configure the Mendix Feedback Widget for iOS](feedback-widget-ios)
-* [Implement SSO on a Hybrid App with Mendix & SAML](implement-sso-on-a-hybrid-app-with-mendix-and-saml)
-* [Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+For hybrid mobile documentation see these Mendix 8 documents:
+
+* [Hybrid Mobile How To Documentation](/howto8/mobile/hybrid-mobile)
+* [Hybrid Mobile Reference Guide](/refguide8/hybrid-mobile)

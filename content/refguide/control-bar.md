@@ -1,13 +1,25 @@
 ---
 title: "Control Bar"
-parent: "data-grid"
-tags: ["studio pro", "control bar", "data grid", "template grid", "reference set selector", "control bar buttons"]
+parent: "grids"
+menu_order: 30
+tags: ["studio pro", "control bar", "add button", "deselect all button", "export to csv button", "grid action button", "grid new button", "remove button", "search button", "select button", "select all button", "data grid", "template grid", "reference set selector", "control bar buttons"]
+aliases:
+    - /refguide/add-button.html
+    - /refguide/deselect-all-button.html
+    - /refguide/export-to-csv-button.html
+    - /refguide/export-to-excel-button.html
+    - /refguide/grid-action-button.html
+    - /refguide/grid-new-button.html
+    - /refguide/remove-button.html
+    - /refguide/search-button.html
+    - /refguide/select-all-button.html
+    - /refguide/select-button.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with **[Search](#search-button)** **[New](#create-button)**, [**Edit**](#grid-action-button), and [**Delete**](#grid-action-button) buttons in the control bar:
+A control bar of a [template grid](template-grid), [data grid](data-grid), and [reference set selector](reference-set-selector) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with [Search](#search-button), [New](#create-button), [Edit](#grid-action-button), and [Delete](#grid-action-button) buttons in the control bar:
 
 ![Data Grid Control Bar](attachments/data-widgets/control-bar-example.png)
 
@@ -15,7 +27,7 @@ The control bar can also include a number of selection options and spreadsheet e
 
 ## 2 Control Bar Buttons
 
-Most properties of control bar buttons are the same as properties of button widgets. For more information on button properties, see [Button Properties](button-properties).
+Most properties of control bar buttons are the same as properties of buttons. For more information on button properties, see [Buttons](button-properties).
 
 Sections below describe the purpose of each control bar button and their specific properties if any. 
 
@@ -42,7 +54,7 @@ You can use an existing page or you can generate the appropriate page by either:
 
 Both these options allow you to create a page which has the correct format for use by the add button. You can, of course, edit the page to meet your own requirements once it has been generated.
 
-For more information, see [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
+See the [Show a Page](on-click-event#show-page) section of *On Click Event & Events Section*. Note that select pages must have a [pop-up layout](layout#layout-type).
 
 ### 2.3 Create Button {#create-button}
 
@@ -56,7 +68,7 @@ For example, you have an entity *Vehicle* and two specializations: *Bicycle* and
 
 ### 2.4 Action Button {#grid-action-button}
 
-An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Button Widgets](button-widgets). 
+An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Buttons](button-widgets). 
 
 ### 2.5 Remove Button {#remove-button}
 
@@ -76,18 +88,16 @@ The **Selection type** property determines whether the **Select all** button sho
 
 | Value       | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Select page | Clicking this button selects all objects on the current page. |
+| Select page *(default)* | Clicking this button selects all objects on the current page. |
 | Select all  | Clicking this button selects all objects.                    |
 
 {{% alert type="warning" %}}
 
-Due to technical limitations, a button with the **Select all** selection type cannot be combined with [**Remove**](#remove-button), [**Delete**](#grid-action-button), or **[Select](#select-button)** buttons. 
+Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons. 
 
 An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
 
 {{% /alert %}}
-
-_Default value:_ Select page
 
 ### 2.8 Deselect All Button {#deselect-all-button}
 
@@ -113,10 +123,8 @@ The **Maximum number of rows** property indicates the maximum number of rows tha
 
 The **Date export format** property defines the format dates will be exported. The possible options are the following ones:
 
-* **Date value** – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
+* **Date value** *(default)*  – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
 * **Text** – date values are exported exactly as shown in the data grid
-
-_Default value:_ Date value
 
 {{% alert type="warning" %}}
 
@@ -140,19 +148,19 @@ Constraints you are using for search fields and sorting will also be exported.
 
 **Decimal separator** is a string used to separate the fractional part from the whole part in decimal values.
 
-_Default value:_ .
+Default: *.*
 
 #### 2.10.2 Group Separator
 
 **Group separator** is a string used to separate groups of digits in large numbers.
 
-_Default value:_ ,
+Default: *,*
 
 #### 2.10.3 Delimiter
 
 **Delimiter** is a string used to delimit values in the resulting CSV file.
 
-_Default value:_ ;
+Default: *;*
 
 #### 2.10.4 Maximum Number of Rows
 

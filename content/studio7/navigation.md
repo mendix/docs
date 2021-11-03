@@ -18,7 +18,7 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 
 {{% alert type="info" %}}
 
-In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Mendix Studio Pro Guide*. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Studio Pro Guide*. 
 
 {{% /alert %}}
 

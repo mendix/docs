@@ -35,7 +35,7 @@ For details on the widget life cycle, reference this documentation:
 
  * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
  * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
- * [Tutorial: Widget Life Cycle](https://apidocs.mendix.com/6/client/tutorial-widget-lifecycle.html)
+ * [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 
@@ -47,7 +47,7 @@ This information is also covered in [Expert Series: Kickstart Your Widget Develo
 
 ### 3.4 Interacting with Mendix Runtime
 
-Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.mendix.com/7/client).
+Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.rnd.mendix.com/7/client).
 
 ### 3.5 Configuring the Widget in Mendix
 
@@ -65,7 +65,7 @@ This category of how-to's presents in-depth information on how to build your own
 
 ### 4.1 Learn by Example
 
-Most of the widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the App Store screen:
+Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the Marketplace screen:
 
 ![](attachments/widget-development/appstore-github-link.png)
 
@@ -77,7 +77,7 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 ### 4.3 Ask the Community
 
-Within the Mendix Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is the place to go to when you have questions.
+Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
 
 ## 5 Main Documents in This Category
 

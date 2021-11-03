@@ -1,19 +1,22 @@
 ---
-title: "Customizing PhoneGap Build Packages"
+title: "Customizing Local Build Packages"
 category: "Mobile Development"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The Mendix Platform integrates with the Adobe PhoneGap Build service to provide you with hybrid mobile apps that are ready to be installed on your devices or published to mobile app stores. One step in the integration is the creation of a PhoneGap package, and automatic upload of it to PhoneGap Build. We put a generic runtime into the package and configure it for your specific app. For most Mendix Apps, this is sufficient and convenient.
+{{% alert type="warning" %}}
+Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
 
-However, in rare cases you might want to customize the app. We provide the option to download the PhoneGap package yourself. This gives you the opportunity to customize it according to your needs. Afterwards, you can upload it manually to PhoneGap Build, and obtain the built packages from there.
+To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally) for information on local building.
+
+To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto/mobile/build-native-apps).
+{{% /alert %}}
 
 ## 2 Downloading the PhoneGap Package
 
-To download the PhoneGap package, publish your app for mobile app stores through the Developer Portal. At the "Build Mobile App Store Packages" page, under "How should the device packages be built?", choose the non-default option "Generate the Adobe PhoneGap Build configuration. I will manage the build process manually myself." Click the green button "Download PhoneGap Build Package" to download the PhoneGap package.
+To download the local build  package, publish your app for mobile app stores through the Developer Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
 
-## 3 Customizing the PhoneGap Package
+## 3 Customizing the Local Build Package
 
-You can customize the PhoneGap package to your wishes. If you plan on uploading the package to PhoneGap Build manually, we recommend you follow [the documentation specific for PhoneGap Build](http://docs.phonegap.com/phonegap-build/). Once you have customized your app according to your needs, you can upload it to PhoneGap Build to create mobile hybrid app packages.
+You can customize the local build package to suit your use case. Once you have customized your app according to your needs, you can build your app locally using the Cordova CLI or XCode by following [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally).

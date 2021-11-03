@@ -1,6 +1,7 @@
 ---
 title: "DateTime Handling FAQ"
 parent: "date-and-time-handling"
+notoc: true
 ---
 
 
@@ -36,13 +37,9 @@ This will be less ambiguous because it will always run at the same time in UTC, 
 
 Currently you can work around this issue by scheduling 2 events that are running at 02:00 in both DST periods. In the Microflow you can check what DST you're currently in and either execute the rest of the Microflow or not.
 
-### Can you tell me how to do that check in a Microflow?
-
-You can download the DateTimeLibrary App Store module to get an implementation for this.
-
 ### How is a non-localized date supposed to work?
 
-Per attribute of type DateTime you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
+Per attribute of type DateTime you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
 ### If I assign a non-localized date the value of token: `[%CurrentDateTime%]` what should I be seeing in the client if I am in EST? It is currently 14:15 (EST), should I see that time or 19:15?
 
@@ -67,7 +64,7 @@ Whether something is a local date or not is irrelevant in this case. Note that t
 
 ### I would like to plan an event at the start of office hours in a different time zone. How would I do this?
 
-You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions. The DateTimeLibrary App Store module also provides this functionality. It works in the same way as parseDateTime at [Parse and format date function calls](parse-and-format-date-function-calls) but has an additional parameter for a time zone.
+You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions.
 
 ### What does the setting Scheduled event time zone do?
 

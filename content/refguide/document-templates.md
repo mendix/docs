@@ -3,6 +3,8 @@ title: "Document Templates"
 parent: "resources"
 menu_order: 90
 tags: ["studio pro", "document template"]
+aliases:
+    - /refguide/Document+Templates.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -37,7 +39,7 @@ For more information, see [Data Grid (Document Template)](data-grid-document-tem
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918138.png)
+![](attachments/document-templates/918138.png)
 
 A data grid showing a list of orders with a description and the referenced customer name.
 
@@ -51,7 +53,7 @@ For more information, see [Data View (Document Template)](data-view-document-tem
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918139.png)
+![](attachments/document-templates/918139.png)
 
 A data view showing order line information.
 
@@ -65,7 +67,7 @@ For more information, see [Template Grid (Document Template)](template-grid-docu
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918137.png)
+![](attachments/document-templates/918137.png)
 
 A template grid showing products with name and description.
 
@@ -84,7 +86,7 @@ For more information, see [Table (Document Template)](table-document-template).
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918134.png)
+![](attachments/document-templates/918134.png)
 
 A table with four rows and three columns. Last row containing a data view with another table.
 
@@ -98,7 +100,7 @@ For more information, see [Page Break (Document Template)](page-break-document-t
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918135.png)
+![](attachments/document-templates/918135.png)
 
 A page break
 
@@ -122,7 +124,7 @@ For more information, see [Dynamic Label (Document Template)](dynamic-label-docu
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918131.png)
+![](attachments/document-templates/918131.png)
 
 A dynamic label linking to a customer name.
 
@@ -136,7 +138,7 @@ For more information, see [Dynamic Image (Document Template)](dynamic-image-docu
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918132.png)
+![](attachments/document-templates/918132.png)
 
 A dynamic image inside a table cell, showing the preset default image.
 
@@ -154,7 +156,7 @@ For more information, see [Static Label (Document Template)](static-label-docume
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918130.png)
+![](attachments/document-templates/918130.png)
 
 A label with text 'Customer name'.
 
@@ -174,7 +176,7 @@ For more information, see [Static Image (Document Template)](static-image-docume
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918133.png)
+![](attachments/document-templates/918133.png)
 
 A static image inside a table cell.
 

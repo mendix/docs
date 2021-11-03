@@ -4,11 +4,12 @@ parent: "mendix-cloud-deploy"
 menu_order: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
+#To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
+On the **Environments** page, there are four tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -20,6 +21,8 @@ In the **Environments** section of the **Deploy** category, there is an overview
 * **Access Restriction Profiles**
     * IP Address Filtering
     * TLS Client Certificate Verification
+* **Permissions**
+    * [Node Permissions](/developerportal/deploy/node-permissions)
     
    ![](attachments/environments/environment-tab.png)       
 
@@ -96,7 +99,7 @@ There are three types of environment statuses:
 The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
 {{% /alert %}}
 
-To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+To see the details of the alerts, click **Alerts**. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
 
 **Actions**
 
@@ -126,7 +129,7 @@ You can use the **Search...** box to find a specific environment.
 
 **Reordering Environments**
 
-If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can reorder the environments by dragging and dropping:
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) you can reorder the environments by dragging and dropping:
 
 ![](attachments/environments/reorder-environments.gif)
 
@@ -138,14 +141,28 @@ For flexible environments there is only one action you can take :
 
 There is no concept of staging, and you need to deploy your app directly to the target environment.
 
+#### 2.2.3 Setup Studios Deployment
+
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for an app, you will be see the **Setup Studios Deployment** button which enables you to set the target environment to which apps will be deployed from Studio and Studio Pro. For more information, see [Studio Deployment Settings](studio-deployment-settings).
+
+![](attachments/environments/setup-studios-target.png)
+
 ### 2.3 Activity
 
 ![](attachments/environments/activity.png)
 
+If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) you will see the **Download to CSV** button and can download a copy of the activity log as follows:
+
+1. Click **Download to CSV**.
+2. Choose the period for which you want to download log entries. If you choose **Custom Period** you will need to enter a valid period using **Start Date** and **End Date**.
+
+    ![](attachments/environments/download-activity-log.png)
+3. Click **Download**.
+
 {{% alert type="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
 
-These are activities which are performed on a customer's behalf only with written approval through a support ticket. 
+These are activities which are performed on a customer's behalf only with written approval through a Mendix Support ticket. 
 {{% /alert %}}
 
 ## 3 Custom Domain
@@ -158,11 +175,19 @@ There is also a section with an overview of linked custom domains.
 
 For more information, see [Custom Domains](custom-domains).
 
-## 4 Access Restriction Profiles
+## 4 Access Restriction Profiles {#asp}
 
-In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
+In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, then any match on either the IP range or the client certificate will grant access. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
 
-## 5 Read More 
+For more information on setting up access restriction profiles, see [Restrict Access for Incoming Requests](access-restrictions)
+
+## 5 Permissions {#permissions}
+
+Here, the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) and other team members who can *Manage Permissions* can manage various permissions to the environments for each team member. Team members who have permission to *Deploy, Publish, and Monitor* can view the permissions.
+
+For more information on managing node permissions, see [Node Permissions](node-permissions).
+
+## 6 Read More 
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](environments-details)

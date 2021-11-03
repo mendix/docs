@@ -6,7 +6,7 @@ tags: ["xml", "widget"]
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
 
 ## 2 Start of the Widget XML
 
@@ -347,4 +347,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Read More
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](../widget-development/use-the-widget-development-plugin-for-adobe-brackets)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets)

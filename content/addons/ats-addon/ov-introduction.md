@@ -70,12 +70,12 @@ Using the menu, you can navigate to different pages inside ATS:
 
 ATS has the following different user role settings.
 
-### 4.1 SCRUM Master
+### 4.1 Scrum Master
 
-The SCRUM Master of your app can access the **App Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium Hub for executing your tests. This is the only difference with other roles.
+The Scrum Master of your app can access the **App Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium Hub for executing your tests. This is the only difference with other roles.
 
 ### 4.2 Others
 
-All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **App Settings** of your app.
+All other roles in your app have access to ATS. The only difference is that the Scrum Master can access the **App Settings** of your app.
 
 For more information, see the [ATS 2 Reference Guide](rg-two-ats).

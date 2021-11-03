@@ -5,12 +5,9 @@ parent: "ats-2"
 
 ## 2.25
 
-**Release date: November 2th, 2021**
+**Release date: November 2nd, 2021**
 
-### ATS upgrad to Mendix 8.18.7
+### Improvements 
 
-In this release ATS source code and model has been upgraded to Mendix 8.18.7
-
-### ATS Webservices Authentication Changed
-
-ATS Job running webservice is no longer needs Username and Password combination to authenticate the requests, the Api token is enough to authenticate the request.
+* The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18#8187).
+* An ATS Job a running web service no longer needs a user name and password combination to authenticate the requests. The API token is enough to authenticate the request.

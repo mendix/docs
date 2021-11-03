@@ -54,8 +54,7 @@ The header of your Partner Profile has important contact details about your comp
 ![](attachments/how-to-set-up-your-partner-profile/header.png)
 {{% /image_container %}}
 
-You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public.
- So, click the 'Edit Profile' button and add this information to the header. The email address will allow customers to contact you via the **Contact us** button: 
+You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public (the email address will allow customers to contact you via the **Contact us** button). So, click **Edit Profile** and add this information to the header:
 
 {{% image_container width="550" %}}
 ![](attachments/how-to-set-up-your-partner-profile/address.png)

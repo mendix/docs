@@ -69,7 +69,7 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings.md#after-startup) setting to call the **StartService** microflow.
+It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting to call the **StartService** microflow.
 
 
 1.  If you app does not have an after-startup microflow, perform the following steps:

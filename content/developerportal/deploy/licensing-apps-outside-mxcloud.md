@@ -27,7 +27,7 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 | **Number of Named Users** | No Limit | Depends on your pricing plan.¹ |
 | **Data Hub** | No Limit | Depends on your pricing plan.¹ |
 
-¹ The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ The Mendix pricing plans are listed in the [Mendix Pricing Plans](mendix-cloud-deploy#plans) section of the *Mendix Cloud* documentation. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
 To use your app in a production environment, you need to license it. The method for doing this differs depending on the environment to which you are deploying your app.
 

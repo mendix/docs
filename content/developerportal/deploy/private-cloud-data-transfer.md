@@ -152,7 +152,7 @@ spec:
 ```
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
-If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the targer PostgreSQL version.
+If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).
 
 {{% alert type="warning" %}}
 Before importing a backup file into an environment, the environment should be stopped (scaled down to 0 replicas).

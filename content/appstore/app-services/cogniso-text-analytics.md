@@ -250,10 +250,10 @@ The **SentimentType** is an enumeration that incorporates all the information of
 
 | Caption | Name |
 | --- | --- |
-| **Positive** | Positive |
-| **Negative** | Negative |
-| **Neutral** | Neutral |
-| **Mixed** | Mixed |
+| Positive | Positive |
+| Negative | Negative |
+| Neutral | Neutral |
+| Mixed | Mixed |
 
 The **EntityType** is an enumeration that incorporates all the information of supported entity type.
 
@@ -261,15 +261,15 @@ The **EntityType** is an enumeration that incorporates all the information of su
 
 | Caption | Name |
 | --- | --- |
-| **Person** | Positive |
-| **Location** | Negative |
-| **Organization** | Neutral |
-| **Commerical Item** | Mixed |
-| **Event** | Positive |
-| **Date** | Negative |
-| **Quantity** | Neutral |
-| **Title** | Mixed |
-| **Other** | Mixed |
+| Person | Positive |
+| Location | Negative |
+| Organization | Neutral |
+| Commerical Item | Mixed |
+| Event | Positive |
+| Date | Negative |
+| Quantity | Neutral |
+| Title | Mixed |
+| Other | Mixed |
 
 The **PartOfSpeechTag** is an enumeration that incorporates all the supported part of speech tags.
 
@@ -277,23 +277,23 @@ The **PartOfSpeechTag** is an enumeration that incorporates all the supported pa
 
 | Caption | Name |
 | --- | --- |
-| **Adjective** | Adjective |
-| **Adposition** | Adposition |
-| **Adverb** | Adverb |
-| **Auxiliary** | Auxiliary |
-| **Conjunction** | Conjunction |
-| **Determiner** | Determiner |
-| **Interjection** | Interjection |
-| **Noun** | Noun |
-| **Numeral** | Numeral |
-| **Particle** | Particle |
-| **Pronoun** | Pronoun |
-| **Proper Noun** | Proper_Noun |
-| **Punctuation** | Punctuation |
-| **Subordinating Conjunction** | Subordinating_Conjunction |
-| **Symbol** | Symbol |
-| **Verb** | Verb |
-| **Other** | Other |
+| Adjective | Adjective |
+| Adposition | Adposition |
+| Adverb | Adverb |
+| Auxiliary | Auxiliary |
+| Conjunction | Conjunction |
+| Determiner | Determiner |
+| Interjection | Interjection |
+| Noun | Noun |
+| Numeral | Numeral |
+| Particle | Particle |
+| Pronoun | Pronoun |
+| Proper Noun | Proper_Noun |
+| Punctuation | Punctuation |
+| Subordinating Conjunction | Subordinating_Conjunction |
+| Symbol | Symbol |
+| Verb | Verb |
+| Other | Other |
 
 The **PiiEntityType** is an enumeration that incorporates all the information of supported Personally Identifiable Information (PII) types.
 
@@ -301,27 +301,27 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 | Caption | Name |
 | --- | --- |
-| **Bank Account Number** | Bank_Account_Number |
-| **Bank Routing** | Bank_Routing |
-| **Credit Debit Number** | Credit_Debit_Number |
-| **Credit Debit CVV** | Credit_Debit_CVV |
-| **Credit Debit Expiry** | Credit_Debit_Expiry |
-| **Pin** | Pin |
-| **Email** | Email |
-| **Address** | Address |
-| **Name** | Name |
-| **Phone** | Phone |
-| **SSN** | SSN |
-| **Date Time** | Date_Time |
-| **Passport Number** | Passport_Number |
-| **Driver ID** | Driver_Id |
-| **URL** | URL |
-| **Age** | Age |
-| **User Name** | User_Name |
-| **Password** | Password |
-| **IP Address** | IP_Address |
-| **MAC Address** | MAC_Address |
-| **All** | All |
+| Bank Account Number | Bank_Account_Number |
+| Bank Routing | Bank_Routing |
+| Credit Debit Number | Credit_Debit_Number |
+| Credit Debit CVV | Credit_Debit_CVV |
+| Credit Debit Expiry | Credit_Debit_Expiry |
+| Pin | Pin |
+| Email | Email |
+| Address | Address |
+| Name | Name |
+| Phone | Phone |
+| SSN | SSN |
+| Date Time | Date_Time |
+| Passport Number | Passport_Number |
+| Driver ID | Driver_Id |
+| URL | URL |
+| Age | Age |
+| User Name | User_Name |
+| Password | Password |
+| IP Address | IP_Address |
+| MAC Address | MAC_Address |
+| All | All |
 
 ## 4 Using Cogniso Text Analytics
 
@@ -329,19 +329,34 @@ Cogniso Text Analytics provides actions that enables you to easily identify the 
 
 When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to setup customizable text analytic actions quickly.
 
-### 4.1 Performing language detection in Your Browser
+### 4.1 Performing Language Detection in Your Browser
 
-From the **CreateDominantLanguageDetector** microflow and **DetectDominantLanguage** nanoflow to perform language detection.
+Use the **CreateDominantLanguageDetector** microflow and **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detectection:
+1. Create a nanoflow as follows:
+   1. Name the nanoflow *CreateDominantLanguageDetector*.
+   2. Add the **CreateDominantLanguageDetector** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+   3. Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-Follow these steps to configure this language detect action:
-1. Place a new data view on the page.
-2. Create a nanoflow, call it *CreateDominantLanguageDetector*, and set this as the data source of the data view.
-3. Place a textArea and set inputText of data view object as the data source.
-4. Place a button, call it *Detect Dominant Language*, and set nanoflow **DetectDominantLanguage** as the action of events.
-5. Place a templateGrid, set *Association* as data source type, set *DominantLanguage* as entity path 
-6. Run your app locally. You can now perform language detection directly in the browser:
+      ![call-createdominantlanguagedetector-microflow](attachments/cogniso-text-analytics/call-createdominantlanguagedetector-microflow.png)
 
-![runlocally-language-detection](attachments/cogniso-text-analytics/runlocally-language-detection.png)
+   4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+
+      ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
+
+2. From the **Toolbox**, add a Data View widget to your page.
+3. Double-click the Data Viewer widget and for **Data source**, set **Nanoflow** as the **CreateDominantLanguageDetector** nanoflow, and click **OK**.
+4. Add a Text Area widget and change the following settings:
+   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from the data view.
+   3. For **Label caption**, enter *Text*.
+5. Add a Button widget and change the following settings:
+   1. Name the button *Detect Dominant Language*.
+   2. Double-click the button to open the **Action Button** dialog box.
+   3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **DetectDominantLanguage** .
+6. Place a templateGrid, set *Association* as data source type, set *DominantLanguage* as entity path.
+7.  Run your app locally. You can now perform language detection directly in the browser:
+
+    ![runlocally-language-detection](attachments/cogniso-text-analytics/runlocally-language-detection.png)
 
 ### 4.2 Performing sentiment detection in Your Browser
 

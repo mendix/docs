@@ -146,30 +146,40 @@ When you start from a blank app template in Mendix Studio Pro, you can follow th
 To let the [AudioPlayer](#audioplayer) widget convert text to voice, you need to set two data source attributes: **Source** and **Controls**. To match text to voice actions, pass captured arguments to triggered actions, you need to configure a set of action items in **AudioPlayer** widget.
 
 Follow these steps to configure the text-to-voice conversion:
-1. From the **Toolbox**, add a Data View widget to your page.
-2. Inside the Data View widget, add an [AudioPlayer](#audioplayer) widget.
 3.  Create a nanoflow as follows:
-   1.  Name the nanoflow *CreateSpeechSynthesizer*.
-   2. Add a create object activity to the nanoflow.
-   3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the **SpeechSynthesizer** entity as the **Entity**.
-   4.  Right-click the create object activity and select **Set $SpeechSynthesizer as return value** in the pop-up menu.
+   1. Name the nanoflow *CreateSpeechSynthesizer*.
+   2. Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+   3.  Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+       ![call-createspeechsynthesizer-microflow](attachments/cogniso-text-to-speech/call-createspeechsynthesizer-microflow.png)
+    
+   4. Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
+   
+      ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
+   
+4. From the **Toolbox**, add a Data View widget to your page.
+   
+3. Double-click the **Data View** widget and for **Data source**, set **Nanoflow** as the **CreateSpeechSynthsizer** nanoflow, and click **OK**.
 
-       ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
+4. Inside the Data View widget, add an [AudioPlayer](#audioplayer) widget.
 
-4. Add a Text Area widget and change the following settings:
+5. Add a Text Area widget and change the following settings:
+
    1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **Text** attribute from the data view.
    3. For **Label caption**, enter *Text*.
-5. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
-6. Add a Button widget and change the following settings:
+
+6. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
+
+7. Add a Button widget and change the following settings:
    1. Name the button *Synthesize Speech*.
    2. Double-click the button to open the **Action Button** dialog box.
    3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **SynthesizeSpeech** .
-7.  Double-click the Audio Player widget, and on the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
+
+8. Double-click the Audio Player widget, and on the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
 
    ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
-8. Run your app locally. You can convert text to voice directly in the browser:
+9. Run your app locally. You can convert text to voice directly in the browser:
 
    ![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)
 

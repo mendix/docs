@@ -40,7 +40,7 @@ Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and w
 
 Doing so can interrupt your operations when Mendix updates these certificates.
 
-Pinning bypasses the built-in certificate chains of your operating system or JVM, and is widely considered a bad practice. 
+Pinning a certificate bypasses the built-in certificate chains of your operating system or JVM, and is widely considered a bad practice. 
 {{% /alert %}}
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.

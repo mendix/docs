@@ -7,9 +7,9 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service on Mendix Cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. With this app service, you can build apps to transcribe voice and audio to text with state-of-the-art speech recognition. This app service can be very helpful when building your own voice-to-text applications.  This app service does the heavy-lifting for you so you do not have to build a voice-to-text application from scratch. All you need to do is drag and drop items and configure them.
+With the [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service, you can easily convert voice and audio into written text in your web applications and then trigger customized actions. This app service can be very helpful when building your own voice-to-text applications. It enables you to build an app to transcribe voice and audio to text with state-of-the-art speech recognition, without building a voice-to-text app from scratch. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what CognisoSpeechToText contains:
+The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. Here is an overview of what CognisoSpeechToText contains:
 
 * [Predefined entities](#predefined-entities)
 	* MediaDocument 
@@ -28,17 +28,17 @@ In most cases, you only need what is contained in the **SpeechToText** > **USE_M
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix Cloud to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedbacappk and much more.
+You can use this app service to easily convert voice into written text in your mendix apps and trigger a custom action. You can perform some basic operations, such us enabling wakeup messages, using different language options, customizing voice-to-text conversion, setting up voice-to-action feedback and much more.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
 * Customize voice-to-text actions
-* Customize audio-to-text actions
+* Use batching mode to implement the speech conversion as a back-end service
 * Customize wakeup messages
 * Enable voice-to-action feedback
-* Switch different language options
+* Support different language options
 * Translate non-English transcripts into English
 
 ### 1.3 Prerequisites
@@ -130,27 +130,27 @@ The **StartService** microflow is used to set up a cognitive speech-to-text back
 
 #### 4.4.1 Core Widgets
 
-The only core widget required to perform the voice-to-text action is the **Microphone** widget.
+The only core widget required to convert voice to text or convert voice to actions is the **Microphone** widget.
 
 ##### 4.4.1.1 Microphone {#microphone}
 
-This **Microphone** widget provides settings for the customization of voice-to-text actions.
+This **Microphone** widget provides custom settings for voice-to-text and voice-to-action conversions.
 
-To let this widget perform voice to text correctly, set the following properties:
+To make the widget perform conversion correctly, set the following properties:
 
 *   **General** tab
   * **Enable language selection** – when set to **Yes**, custom language settings are enabled
     * **language**  – determines which language to use for speech conversion (default language: US-English, data type: String)
-  * **Enable wakeup** – when set to **Yes**, the following custom settings for wakeup messages are enabled:
-    * **wakeupMessage**  – the string which approximately contains no more than two words to activate the voice-to-action (if this is empty, the actions are always activated)
-    * **wakeupResponse** – the string to give to users as a voice response when the voice-to-action is activated
-    * **Max allowed idle time** – the number of seconds after which the voice-to-text action is deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
+  * **Enable wakeup** – when set to **Yes**, the following custom settings for waking up the **Microphone** widget are enabled:
+    * **wakeupMessage**  – a string which contains no more than two words to activate voice-to-action conversion (if this is empty, the actions are always activated)
+    * **wakeupResponse** – a string to give to users as a voice response when voice-to-action conversion is activated
+    * **Max allowed idle time** – the number of seconds after which voice-to-action conversion becomes deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
     * **Enable wakeup** – determines whether to activate the **Microphone** widget via a wakeup message (this is an experimental feature)
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service to trigger an action
     * **transcript**  – sets a string attribute as a voice input parameter
     * **Action** – sets which action is executed  when a transcript is received
-  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the **Microphone** widget and set custom actions that are trigged when an error occurs
+  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by back-end service and set custom actions that are trigged when an error occurs
     * **Error** – sets a string attribute as the error message
     * **Action** – sets which action is executed when an error occurs
 * **Voice to Action** tab
@@ -161,7 +161,7 @@ To let this widget perform voice to text correctly, set the following properties
       * **Action** – the action triggered when the received transcript matches an utterance
       * **Feedback** – the voice feedback provided to users when an action is triggered
 
-    * **Arguments** – the captured arguments in a transcript as a comma-separated list. This requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
+    * **Arguments** – the captured arguments in a transcript as a comma-separated list (this requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
 
     * **Fallback message** – the message to notify users when no action is matched
 
@@ -169,15 +169,15 @@ To let this widget perform voice to text correctly, set the following properties
 
 ## 5 Using Cogniso Speech To Text
 
-Cogniso Speech To Text provides the **Microphone** widget to convert voice into text with customizable actions.
+You can use Cogniso Speech To Text to convert voice to text and then trigger a customizable action.
 
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable voice-to-text actions quickly.
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable actions quickly.
 
 ### 5.1 Converting Voice into Text in Your Browser
 
-To let the [Microphone](#microphone) widget perform voice-to-text actions, set these three data source attributes: **transcript**, **Actions** and **Arguments**. To match voice-to-text actions, pass captured arguments to triggered actions, configure a set of action items in the **Microphone** widget.
+To let the [Microphone](#microphone) widget perform voice-to-text actions, set these data source attributes: **transcript**, **Actions** and **Arguments**. To match voice-to-text actions, pass captured arguments to triggered actions, configure a set of action items in the **Microphone** widget.
 
-Follow these steps to configure the voice-to-text action:
+Follow these steps to configure the voice-to-text conversion:
 
 1. In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
 
@@ -207,12 +207,7 @@ Follow these steps to configure the voice-to-text action:
     2. For **transcript**, click **Select** and select the **NewTranscript** attribute.
     3. Go to the **Voice to Action** tab.
     4. For **Arguments**, click **Select** and select the **Arguments** attribute.
-    5. For **Actions**, click **New**, and set **Utterance**, **Action**, and **Feedback** to add a new action. For example:
-
-       ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
-       
-       {{% alert type="warning" %}}For more information about **Actions**, see [Customizing Voice to Text Actions](#actions) section.{{% /alert %}}
-
+    
 7. Run your app locally. You can perform voice-to-text actions directly in the browser.
 
 ![runlocally-speech-to-text](attachments/cogniso-speech-to-text/runlocally-speech-to-text.png)
@@ -226,9 +221,9 @@ Configure wakeup message to wake up the back-end service automatically with two 
 Follow these steps to configure this wakeup message:
 
 1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
-2. On the **General** tab, select **Yes** for **Enable wakeup** to enable activating the **Microphone** widget via wakeup messages.
+2. On the **General** tab, select **Yes** for **Enable wakeup** to enable activating the back-end service via wakeup messages.
 3. Set up a **Wakeup message** with no more than two words.
-4. Set up a **Wakeup response** which is used as a voice response to users when a voice-to-action is activated.
+4. Set up a **Wakeup response** which is used as a voice response to users when the back-end service is activated.
 
 ![wakeup-message](attachments/cogniso-speech-to-text/wakeup-message.png)
 
@@ -236,9 +231,13 @@ Follow these steps to configure this wakeup message:
 
 You have made the basic settings for the **Microphone** widget.
 
-### 5.3 Customizing Voice to Text Actions {#actions}
+### 5.3 Customizing Voice to Action Conversions {#actions}
 
-You can build a customized, automated conversation scenario by setting up **Utterance**, **Actions** and **Voice Feedback**. You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
+You can build a customized, automated conversation scenario by setting up **Utterance**, **Actions** and **Voice Feedback**.
+
+![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
+
+You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
 
 #### 5.3.1 Utterance
 
@@ -278,9 +277,9 @@ You can select an **Action** from a list of actions. For example, the app can sh
 
 #### 5.4.2 On Error {#on-error}
 
-By binding an attribute to the **Error** event, you can pick up an error raised by the **Microphone** widget.
+By binding an attribute to the **Error** event, you can pick up an error raised by the back-end service.
 
-**Error** takes a string attribute. You can define an attribute and bind that attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. You can easily obtain this error message raised by the **Microphone** widget and set custom actions that are triggered when error arises.
+**Error** takes a string attribute. You can define an attribute and bind that attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. You can easily obtain this error message raised by the back-end service and set custom actions that are triggered when error arises.
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.png)
 

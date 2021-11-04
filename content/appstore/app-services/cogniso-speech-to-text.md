@@ -208,7 +208,7 @@ Follow these steps to configure the voice-to-text conversion:
     3. Go to the **Voice to Action** tab.
     4. For **Arguments**, click **Select** and select the **Arguments** attribute.
     
-7. Run your app locally. You can perform voice-to-text actions directly in the browser.
+7. Run your app locally. You can convert speech to text directly in the browser.
 
 ![runlocally-speech-to-text](attachments/cogniso-speech-to-text/runlocally-speech-to-text.png)
 

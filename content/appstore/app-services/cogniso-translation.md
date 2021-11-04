@@ -7,7 +7,7 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) app service on mendix cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
+The [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) app service  you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
 
 This app service does the heavy-lifting for you so you do not have to build a text translation application from scratch.
 

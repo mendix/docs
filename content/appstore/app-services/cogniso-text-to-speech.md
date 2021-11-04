@@ -147,42 +147,31 @@ To let the [AudioPlayer](#audioplayer) widget convert text to voice, you need to
 
 Follow these steps to configure the text-to-voice conversion:
 1. From the **Toolbox**, add a Data View widget to your page.
-
 2. Inside the Data View widget, add an [AudioPlayer](#audioplayer) widget.
-
-3. Create a nanoflow as follows:
-
+3.  Create a nanoflow as follows:
    1.  Name the nanoflow *CreateSpeechSynthesizer*.
-
    2. Add a create object activity to the nanoflow.
-
    3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the **SpeechSynthesizer** entity as the **Entity**.
+   4.  Right-click the create object activity and select **Set $SpeechSynthesizer as return value** in the pop-up menu.
 
-   4. Right-click the create object activity and select **Set $SpeechSynthesizer as return value** in the pop-up menu.
-
-      ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
+       ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
 
 4. Add a Text Area widget and change the following settings:
-
    1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **Text** attribute from the data view.
    3. For **Label caption**, enter *Text*.
-
 5. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
-
-5. Add a Button widget and change the following settings:
-
+6. Add a Button widget and change the following settings:
    1. Name the button *Synthesize Speech*.
    2. Double-click the button to open the **Action Button** dialog box.
    3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **SynthesizeSpeech** .
+7.  Double-click the Audio Player widget, and on the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
 
-6. On the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
+   ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
-  ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
+8. Run your app locally. You can convert text to voice directly in the browser:
 
-7. Run your app locally. You can now perform text to voice actions directly in the browser:
-
-![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)
+   ![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)
 
 ## 5 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
@@ -198,16 +187,15 @@ To receive information on how to get the license token for [Cogniso Text To Spee
 
 #### 5.2.1 Configuring the LicenseToken in Studio Pro
 
-In Mendix Studio Pro, go to [Project Settings](/refguide8/project-settings) and follow these steps:
+1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
+2. In the **Configurations** tab, click **Edit**. 
+3. On the **Constants** tab of the dialog box, create a new constant with the predefined constant  **TextToSpeech.LicenseToken**.
+4. Fill in the **Value** with your obtained LicenseToken.
+5.  Click **OK** to confirm the settings.
 
-1. In the **Configurations** tab, click **Edit**. 
-2. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **TextToSpeech.LicenseToken**.
-3. Fill in the **Value** with your obtained LicenseToken.
-4.  Click **OK** to confirm the settings.
+	  ![licensetoken-inmendix](attachments/cogniso-text-to-speech/licensetoken-inmendix.png)
 
-	![licensetoken-inmendix](attachments/cogniso-text-to-speech/licensetoken-inmendix.png)
-
-5. When you finish building the app, click **Run** to deploy your app to the cloud.
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
 #### 5.2.2 Configuring the LicenseToken in Developer Portal
 

@@ -7,11 +7,11 @@ tags: ["text analytics", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service on Mendix cloud enables you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. All you need to do is drag and drop items and configure them.
+The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service enables you to easily convert voice and audio into written text in your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
 
-This app service does the heavy-lifting for you so you do not have to build a text analytics application from scratch.
+With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what the CognisoTextAnalytics contains:
+The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. Here is an overview of what the CognisoTextAnalytics contains:
 
 * [Predefined entities](#predefined-entities)
 	* Detector
@@ -100,89 +100,85 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 
 ![dominantlanguage](attachments/cogniso-text-analytics/dominantlanguage.png)
 
-| Attribute | Description |
-| --- | --- |
-| **ConfidenceScore** | The confident score of dominant language. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `ConfidenceScore` | Decimal |The confident score of dominant language. |
 
 The **Language** entity is a conceptual entity that incorporates all the information of supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![language](attachments/cogniso-text-analytics/language.png)
 
-| Attribute | Description |
-| --- | --- |
-| **Name** | The name of the language. |
-| **Code** | The code of the language. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `Name` | String | The name of the language. |
+| `Code` | String |The code of the language. |
 
 The **Detector** entity is a conceptual entity that incorporates all the information of supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![detector](attachments/cogniso-text-analytics/detector.png)
 
-| Attribute | Description |
-| --- | --- |
-| **InputText** | The input text of target detector. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `InputText` | String |The input text of target detector. |
 
 The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of supported sentiment object to help you perform sentiment analysis from given text.
 
 ![sentiment](attachments/cogniso-text-analytics/sentiment.png)
 
-| Attribute | Description |
-| --- | --- |
-| **SentimentType** | The customized sentiment type enumeration. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `SentimentType` | Enumeration | The customized sentiment type enumeration. |
 
 The **SentimentScore** entity is an conceptual entity that incorporates all the information of supported level of confidence of sentiment score detector object.
 
 ![sentimentscore](attachments/cogniso-text-analytics/sentimentscore.png)
 
-| Attribute | Description |
-| --- | --- |
-| **Positive** | The level of confidence that The detector has in the accuracy of its detection of the POSITIVE sentiment. |
-| **Negative** | The level of confidence that The detector has in the accuracy of its detection of the NEGATIVE sentiment. |
-| **Neutral** | The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
-| **Mixed** | The level of confidence that the detector has in the accuracy of its detection of the MIXED sentiment. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `Positive` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the POSITIVE sentiment. |
+| `Negative` | Decimal | The level of confidence that The detector has in the accuracy of its detection of the NEGATIVE sentiment. |
+| `Neutral` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
+| `Mixed` | Decimal |The level of confidence that the detector has in the accuracy of its detection of the MIXED sentiment. |
 
 The **Entity** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **EntityDetector** that incorporates all the information of supported entity object to help you perform entity detection from given text.
 
 ![entity](attachments/cogniso-text-analytics/entity.png)
 
-| Attribute | Description |
-| --- | --- |
-| **EntityType** | The customized entity type enumeration. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `EntityType` | Enumeration |The customized entity type. |
 
 The **PiiEntity** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of supported PII entity object to help you perform PII entity detection from given text.
 
 ![piientity](attachments/cogniso-text-analytics/piientity.png)
 
-| Attribute | Description |
-| --- | --- |
-| **PiiEntityType** | The customized PII entity type enumeration. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `PiiEntityType` | Enumeration | The customized PII entity type. |
 
 The **KeyPhrase** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **KeyPhraseDetector** that incorporates all the information of supported key phrase object to help you perform key phrase detection from given text.
 
 ![keyphrase](attachments/cogniso-text-analytics/keyphrase.png)
 
-| Attribute | Description |
-| --- | --- |
-|  |  |
-
 The **SyntaxToken** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **SyntaxDetector** that incorporates all the information of supported syntax token object to help you perform syntax token extraction from given text.
 
 ![syntaxtoken](attachments/cogniso-text-analytics/syntaxtoken.png)
 
-| Attribute | Description |
-| --- | --- |
-| **index** | The index of the token |
-| **PartOfSpeech** | The part of speech tag enumeration for the token. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `Index` | |The index of the token |
+| `PartOfSpeech` | |The part of speech tag enumeration for the token. |
 
 The **Response** entity is an conceptual entity that incorporates all the information of supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![response](attachments/cogniso-text-analytics/response.png)
 
-| Attribute | Description |
-| --- | --- |
-| **Text** | The word that was recognized in the source text. |
-| **BeginOffset** | The zero-based offset from the beginning of the source text to the first character in the word. |
-| **EndOffset** | The zero-based offset from the beginning of the source text to the last character in the word. |
-| **ConfidenceScore** | The level of confidence that TextAnalytics module has in the accuracy of the detection. |
+| Attribute | Data Type |Description |
+| --- | --- |--|
+| `Text` | String | The word that was recognized in the source text. |
+| `BeginOffset` | Integer |The zero-based offset from the beginning of the source text to the first character in the word. |
+| `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
+| `ConfidenceScore` | Decimal |The level of confidence that TextAnalytics module has in the accuracy of the detection. |
 
 ### 3.2 Constants {#constants}
 

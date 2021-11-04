@@ -111,13 +111,13 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string.
 
-![speechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer.png)
+
 
 ### 3.4 Nanoflow {#nanoflow}
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter and updates the **speechSynthesizer** audio string parameter.
 
-![synthesizeSpeech](attachments/cogniso-text-to-speech/synthesizespeech.png)
+
 
 ### 3.5 Widgets {#widgets}
 
@@ -148,7 +148,7 @@ To let the [AudioPlayer](#audioplayer) widget convert text to voice, you need to
 Follow these steps to configure the text-to-voice conversion:
 1. From the **Toolbox**, add a Data View widget to your page.
 
-2. Inside the Data View widget, add a [AudioPlayer](#audioplayer) widget.
+2. Inside the Data View widget, add an [AudioPlayer](#audioplayer) widget.
 
 3. Create a nanoflow as follows:
 
@@ -160,11 +160,21 @@ Follow these steps to configure the text-to-voice conversion:
 
    4. Right-click the create object activity and select **Set $SpeechSynthesizer as return value** in the pop-up menu.
 
-      ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer.png)
+      ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
 
-4. Place a textArea, set *Text* from data view object as the data source, while place a reference selector, set description from association in the input group box.
+4. Add a Text Area widget and change the following settings:
 
-5. Place a button, call it *Synthesize Speech*, and set nanoflow **SynthesizeSpeech** as the action of events.
+   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **Text** attribute from the data view.
+   3. For **Label caption**, enter *Text*.
+
+5. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
+
+5. Add a Button widget and change the following settings:
+
+   1. Name the button *Synthesize Speech*.
+   2. Double-click the button to open the **Action Button** dialog box.
+   3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **SynthesizeSpeech** .
 
 6. On the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
 

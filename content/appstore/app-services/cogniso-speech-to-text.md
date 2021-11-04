@@ -43,7 +43,7 @@ This app service enables doing the following:
 
 ### 1.3 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with
+This app service can only be used with Studio Pro 9 versions starting with [9.4](/releasenotes/studio-pro/9.4).
 
 ## 2 Installation
 
@@ -142,7 +142,7 @@ To let this widget perform voice to text correctly, set the following properties
   * **Enable language selection** – when set to **Yes**, custom language settings are enabled
     * **language**  – determines which language to use for speech conversion (default language: US-English, data type: String)
   * **Enable wakeup** – when set to **Yes**, the following custom settings for wakeup messages are enabled:
-    * **wakeupMessage**  – the string which approximately contains two to four words to activate the voice-to-action (if this is empty, the actions are always activated)
+    * **wakeupMessage**  – the string which approximately contains no more than two words to activate the voice-to-action (if this is empty, the actions are always activated)
     * **wakeupResponse** – the string to give to users as a voice response when the voice-to-action is activated
     * **Max allowed idle time** – the number of seconds after which the voice-to-text action is deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
     * **Enable wakeup** – determines whether to activate the **Microphone** widget via a wakeup message (this is an experimental feature)
@@ -294,7 +294,7 @@ You can select an **Action** from a list of actions upon an error, for example, 
 
 ### 6.1 Batching Mode of Speech Conversion
 
-Sometimes you need to implement the speech conversion as a back-end service rather than a user interface operation. Then batching subscription is your best option to convert any mendix **mediaDocument** object into written text.
+Sometimes you need to implement the speech conversion as a back-end service rather than a user interface operation. Then batching transcription is your best option to convert any mendix **mediaDocument** object into written text.
 
 ## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

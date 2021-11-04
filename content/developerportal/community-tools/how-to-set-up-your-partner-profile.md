@@ -34,13 +34,13 @@ To sign in to the Partner Profile, edit it, and make it public, follow these ste
 
     If you are not authorized to edit the profile but your colleagues are, a list with their email addresses is shown. To gain access to editing the profile, you can contact them so that they can add you as an editor (for details, see the [Changing the Profile Editor](#editors) section). If none of your colleagues are authorized, click **Feedback** on the right side of the screen and submit a feedback item to gain access.<br>
 
-4.  Once you are in edit mode, click this icon to edit each field of the Partner Profile:
+4.  Once you are in edit mode, click the form field to edit the Partner Profile:
 
-    ![](attachments/how-to-set-up-your-partner-profile/icon.png)
+    ![](attachments/how-to-set-up-your-partner-profile/edit-profile-field.png)
     
     For details about editing, start with [5 Editing the Overview](#editing).<br>
     
-5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Close Edit Mode**:
+5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Save and Exit**:
 
     ![](attachments/how-to-set-up-your-partner-profile/close-edit.png)
 
@@ -54,7 +54,7 @@ The header of your Partner Profile has important contact details about your comp
 ![](attachments/how-to-set-up-your-partner-profile/header.png)
 {{% /image_container %}}
 
-You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public. So, click the edit icon and add this information to the header (the email address will allow customers to contact you via the **Contact us** button): 
+You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public (the email address will allow customers to contact you via the **Contact us** button). So, click **Edit Profile** and add this information to the header:
 
 {{% image_container width="550" %}}
 ![](attachments/how-to-set-up-your-partner-profile/address.png)

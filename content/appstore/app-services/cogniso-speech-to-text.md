@@ -1,5 +1,5 @@
 ---
-title: "Cogniso Speech To Text"
+sptitle: "Cogniso Speech To Text"
 category: "App Services"
 description: " "
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
@@ -191,7 +191,7 @@ Follow these steps to configure the voice-to-text conversion:
 2. Create a nanoflow as follows:
    1. Name the nanoflow *CreateMicrophoneObject*.
    2. Add a create object activity to the nanoflow.
-   3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the Microphone entity as the **Entity**.
+   3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the **Microphone** entity as the **Entity**.
    4. Right-click the create object activity and select **Set $NewMicriphone as return value** in the pop-up menu.
 
       ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)

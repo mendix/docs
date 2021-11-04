@@ -111,13 +111,13 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string.
 
-![speechsynthesizer](attachments/cogniso-text-to-speech/createSpeechsynthesizer.png)
+![speechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer.png)
 
 ### 3.4 Nanoflow {#nanoflow}
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter and updates the **speechSynthesizer** audio string parameter.
 
-![synthesizeSpeech](attachments/cogniso-text-to-speech/synthesizeSpeech.png)
+![synthesizeSpeech](attachments/cogniso-text-to-speech/synthesizespeech.png)
 
 ### 3.5 Widgets {#widgets}
 
@@ -143,17 +143,32 @@ When you start from a blank app template in Mendix Studio Pro, you can follow th
 
 ### 4.1 Converting Text into Voice in Your Browser
 
-For the [AudioPlayer](#audioplayer) widget to perform text to voice actions, two data source attributes should be set: **Source** and **Controls**. To match text to voice actions, pass captured arguments to triggered actions, a set of action items should be configured in AudioPlayer widget.
+To let the [AudioPlayer](#audioplayer) widget convert text to voice, you need to set two data source attributes: **Source** and **Controls**. To match text to voice actions, pass captured arguments to triggered actions, you need to configure a set of action items in **AudioPlayer** widget.
 
-Follow these steps to configure this text to voice action:
-1. Place a [AudioPlayer](#audioplayer) widget on the page.
-2. Wrap the Microphone widget inside a new data view widget.
-3. Create a nanoflow, call it *CreateSpeechSynthesizer*, and set this as the data source of the data view.
+Follow these steps to configure the text-to-voice conversion:
+1. From the **Toolbox**, add a Data View widget to your page.
+
+2. Inside the Data View widget, add a [AudioPlayer](#audioplayer) widget.
+
+3. Create a nanoflow as follows:
+
+   1.  Name the nanoflow *CreateSpeechSynthesizer*.
+
+   2. Add a create object activity to the nanoflow.
+
+   3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the **SpeechSynthesizer** entity as the **Entity**.
+
+   4. Right-click the create object activity and select **Set $SpeechSynthesizer as return value** in the pop-up menu.
+
+      ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer.png)
+
 4. Place a textArea, set *Text* from data view object as the data source, while place a reference selector, set description from association in the input group box.
+
 5. Place a button, call it *Synthesize Speech*, and set nanoflow **SynthesizeSpeech** as the action of events.
+
 6. On the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
 
-	![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
+  ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
 7. Run your app locally. You can now perform text to voice actions directly in the browser:
 

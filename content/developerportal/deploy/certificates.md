@@ -36,7 +36,7 @@ You may need to use certificates to set up connections from your Mendix Cloud ap
 Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and will be updated on a regular basis, without notice. This is part of our regular operations and security posture.
 
 {{% alert type="warning" %}}
-Do not pin these certificates in your solutions.
+**Do not pin these certificates in your solutions.**
 
 Doing so can interrupt your operations when Mendix updates these certificates.
 

@@ -12,7 +12,7 @@ These activities can only be used in **Microflows**.
 The **Send External Object** can be used to persist changes to an external object.
 
 {{% alert type="info" %}}
-The possibility to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The possibility to send association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8)
+The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8)
 {{% /alert %}}
 
 ## 2 Updatable External Entities
@@ -21,7 +21,7 @@ External entities may have updatable attributes. The values of these attributes 
 
 Use the **Send External Object** activity to send the changed attributes and the changed associations that the entity owns to the app that publishes the entity. That app will persist the changes, overwriting the previous values of the attributes and associations.
 
-Only the changes are being sent. When two users make changes to different attributes or associations, these changes are both applied separately. For changed associations, this activity sends only the entity identifiers of the entities that have been added to or removed from the association.
+Only the changes are sent. If two users make changes to different attributes or associations, these changes are applied separately. For changed associations, this activity sends only the object identifiers of the objects that have been added to or removed from the association.
 
 This activity can only send objects from an OData service.
 

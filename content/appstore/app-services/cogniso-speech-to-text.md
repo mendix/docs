@@ -28,7 +28,7 @@ In most cases, you only need what is contained in the **SpeechToText** > **USE_M
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on Mendix Cloud to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedback and much more.
+You can use this app service on Mendix Cloud to easily convert audio and voice into written text in your mendix applications. You can perform some basic operations, such us enabling wakeup messages, switching different language options, customizing voice-to-text action, setting up voice-to-action feedbacappk and much more.
 
 ### 1.2 Features
 
@@ -43,7 +43,7 @@ This app service enables doing the following:
 
 ### 1.3 Prerequisites
 
-This app service can only be used with Studio Pro 9 versions starting with [9.4.0](releasenotes/studio-pro/9.4).
+This app service can only be used with Studio Pro 9 versions starting with
 
 ## 2 Installation
 

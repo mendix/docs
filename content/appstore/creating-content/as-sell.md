@@ -12,7 +12,7 @@ aliases:
 
 Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/general/share-app-store-content) your [app service](/appstore/app-services/) in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
-![](attachments/sell/benefits.png)
+![](attachments/as-sell/benefits.png)
 
 **This how-to will teach you how to do the following:**
 
@@ -87,7 +87,7 @@ The Marketplace provides a trustworthy experience for sharing and consuming app 
 
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your app service.
 
-![](attachments/sell/journey.png)
+![](attachments/as-sell/journey.png)
 
 To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your app service. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your app service and get support via best practices and success stories from like-minded Mendix Vendors.
 

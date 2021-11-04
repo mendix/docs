@@ -111,13 +111,13 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string.
 
-
+![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer.png)
 
 ### 3.4 Nanoflow {#nanoflow}
 
 The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter and updates the **speechSynthesizer** audio string parameter.
 
-
+![synthesizespeech](attachments/cogniso-text-to-speech/synthesizespeech.png)
 
 ### 3.5 Widgets {#widgets}
 

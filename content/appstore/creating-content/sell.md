@@ -4,6 +4,8 @@ category: "General Info"
 menu_order: 30
 description: "Describes how to start selling your app service in the Mendix Marketplace."
 tags: ["marketplace", "vendor", app service"]
+aliases:
+    - /appstore/general/sell.html
 ---
 
 ## 1 Introduction

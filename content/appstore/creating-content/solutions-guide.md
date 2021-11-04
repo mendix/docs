@@ -2,6 +2,7 @@
 title: "Solutions"
 linktitle: "Solutions"
 category: "Creating Content"
+menu_order: 1
 description: "A guide to best practices and techniques for using Mendix"
 tags: ["solutions guide", "adaptive solutions", "solutions"]
 ---

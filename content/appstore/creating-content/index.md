@@ -16,5 +16,5 @@ This category of the Marketplace Guide covers all the things you need to know wh
 
 ## 2 Main Documents in This Category
 
-* [Sell Your App Service in the Marketplace](sell) – details how to prepare and sell your app service as a Mendix Vendor
+* [Sell Your App Service in the Marketplace](as-sell) – details how to prepare and sell your app service as a Mendix Vendor
 * [Solutions](solutions-guide) – presents detailed considerations to keep in mind when developing solutions

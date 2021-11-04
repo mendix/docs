@@ -136,7 +136,7 @@ The only core widget required to convert voice to text or convert voice to actio
 
 This **Microphone** widget provides custom settings for voice-to-text and voice-to-action conversions.
 
-To make the widget perform conversion correctly, set the following properties:
+To make the widget perform conversions correctly, set the following properties:
 
 *   **General** tab
   * **Enable language selection** – when set to **Yes**, custom language settings are enabled

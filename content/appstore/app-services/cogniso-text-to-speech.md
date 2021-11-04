@@ -7,11 +7,9 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service on mendix cloud enables you to easily convert written text into human voice in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets that enable you to build apps to work with the state-of-the-art of text to voice conversion. Also, the whole functionality and integrations can be very helpful when building your own text to voice applications. All you need to do is drag and drop items and configure them.
+The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-voice app from the scratch. All you need to do is drag and drop items and configure them.
 
-This app service does the heavy-lifting for you so you do not have to build a text to voice application from scratch.
-
-Here is an overview of what the CognisoTextToSpeech contains:
+The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. Here is an overview of what the CognisoTextToSpeech contains:
 
 * [Predefined entities](#predefined-entities) 
 	* SpeechSynthesizer
@@ -27,18 +25,18 @@ Here is an overview of what the CognisoTextToSpeech contains:
 * [Widgets](#widgets)
 	* AudioPlayer
 
-In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
+In most cases, you only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you do not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on mendix cloud that enables you to easily convert written text into voice in your mendix applications. You can perform some basic operations, such us synthesize speech from given text with different language options, play synthesized audio with AudioPlayer widget.
+You can use this app service to easily convert written text into voice in your mendix apps. You can perform some basic operations, such us synthesizing speech from given text with different language options, playing synthesized audio with the **AudioPlayer** widget, and much more.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
 * Customize text to voice action
-* Switch different language options
+* Support different language options
 * Play synthesized audio with AudioPlayer widget
 
 ### 1.3 Prerequisites
@@ -75,45 +73,49 @@ The **SpeechSynthesizer** entity is a conceptual entity that incorporates all th
 
 ![speechsynthesizer](attachments/cogniso-text-to-speech/speechsynthesizer.png)
 
-| Attribute | Description |
-| --- | --- |
-| **Text** | The text string need to be converted. |
-| **Audio** | The base64-encoded audio data string. |
+| Attribute |Data Type | Description|
+| --- | --- |---|
+| `Text` | String |The text string need to be converted. |
+| `Audio` | String |The base64-encoded audio data string. |
 
-The **Voice** entity is an entity referenced from **SpeechSynthesizer** that incorporates all the information of supported voice object.
+The **Voice** entity is an entity referenced from **SpeechSynthesizer** that incorporates all the information of the supported voice object.
 
 ![voice](attachments/cogniso-text-to-speech/voice.png)
 
-| Attribute | Description |
-| --- | --- |
-| **LanguageName** | The language name of voice object. |
-| **LanguageCode** | The language code of voice object. |
-| **VoiceName** | The name of voice object. |
-| **VoiceId** | The UUID of voice object. |
-| **SampleRate** | The sample rate of voice. |
-| **Description** | The text string of voice description. |
+| Attribute |Data Type | Description|
+| --- | --- |---|
+| `LanguageName` | String |The language name of the voice object. |
+| `LanguageCode` | String |The language code of the voice object. |
+| `VoiceName` | String |The name of the voice object. |
+| `VoiceId` | String |The UUID of the voice object. |
+| `SampleRate` | String |The sample rate of voice. |
+| `Description` | String |The text string of the voice description. |
 
-There are many-to-many association between SpeechSynthesizer and Voice entities.
+There is a many-to-many association between SpeechSynthesizer and Voice entities.
 
 ### 3.2 Constants {#constants}
 
-The **LicenseToken** constant is used to provide a valid CognisoTextToSpeech license token for the app that uses CognisoTextToSpeech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextToSpeech is a commercial product, to be able to use the CognisoTextToSpeech functionalities in a deployed app, you will need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+#### 3.2.1 Lincese Token
 
-However, if you only plan to try how CognisoTextToSpeech works  (meaning, build and run an app that uses CognisoTextToSpeech locally in Studio Pro or deploy to a Mendix Free App environment), you need to subscribe a trialed version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+The **LicenseToken** constant is used to provide a valid CognisoTextToSpeech license token for the app that uses CognisoTextToSpeech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextToSpeech is a commercial product, to use the CognisoTextToSpeech functionalities in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+
+However, if you only plan to try how CognisoTextToSpeech works, that is to say, you will only build and run an app that uses CognisoTextToSpeech locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trialed version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for cognitive text to speech service backend authentication. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
+#### 3.2.2 TokenEndpoint
+
+The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive text-to-speech service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 3.3 Microflow {#microflow}
 
-The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from voice object as input parameters, also return the **speechSynthesizer** object that contains the based64-encoded audio string and text string.
+The **CreateSpeechSynthesizer** microflow takes **text** and **languageCode** from a voice object as input parameters, and returns a **speechSynthesizer** object that contains the based64-encoded audio string and text string.
 
-![speechsynthesizer](attachments/cogniso-text-to-speech/speechsynthesizer.png)
+![speechsynthesizer](attachments/cogniso-text-to-speech/createSpeechsynthesizer.png)
 
 ### 3.4 Nanoflow {#nanoflow}
 
-The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** as an input parameter, syntheize audio string from input parameter and update **speechSynthesizer** audio string parameter.
+The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an input parameter, syntheizes audio string from the input parameter and updates the **speechSynthesizer** audio string parameter.
 
 ![synthesizeSpeech](attachments/cogniso-text-to-speech/synthesizeSpeech.png)
 
@@ -121,21 +123,21 @@ The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** as an input para
 
 #### 3.5.1 Core Widgets
 
-The core widgets required to perform text-to-voice actions are described below.
+The core widget required to perform text-to-voice actions is the **AudioPlayer** widget.
 
 #### 3.5.1.1 AudioPlayer {#audioplayer}
 
-This widget provides customization of text to voice actions.
+The **AudioPlayer** widget provides custom settings for text-to-voice actions.
 
-For this widget to perform text to voice correctly, set the following properties:
+To make this widget convert text to voice correctly, set the following properties:
 
-* **General** tab, there are some optional customization options for changing the widget's behavior:
-	* **Source**  – the value of the Audio attribute of a speechSynthesizer object
+* **General** tab
+	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object
 	* **Controls**  – determines if it offers controls to allow the end user to control audio playback, including volume, seeking, and pause/resume playback; this accepts a Boolean value
 
 ## 4 Using Cogniso Text To Speech
 
-Cogniso Text To Speech provides audioplayer widget to convert text into voice with customizable actions.
+Cogniso Text To Speech provides the **AudioPlayer**  widget to convert text into voice with customizable actions.
 
 When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to setup customizable text to voice actions quickly.
 

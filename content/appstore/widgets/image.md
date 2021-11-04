@@ -31,19 +31,22 @@ The following sections will describe the different available widget properties a
 
 The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
 
-* **Data source** – determines the data source for this widget
+* **Image type** – determines the data source for this widget
 	*  Default: **Image**	
 	*  When set to **Image**, a static or dynamic image can be retrieved
 	*  When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
 	*  When set to **Icon**, a static icon or image from **System.Images** can be retrieved
-* **Image** and **Default image** – configurable when **Data source** is set to **Image**
-	* The **Image** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
+* **Image Source** and **Default image** – configurable when **Image type** is set to **Image**
+	* The **Image source** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
 	* The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
 * **Image URL** – a text template to configure the image for this widget through a URL
-	* Configurable when **Data source** is set to **Image URL**
+	* Configurable when **Image type** is set to **Image URL**
 	* Can be used statically or dynamically through the attribute of a context object
 * **Icon** – used to retrieve a static icon or image for the widget
-	* Configurable when **Data source** is set to **Icon**
+    * Configurable when **Image type** is set to **Icon**
+* **Background image** - used to render image as a background
+	* More content can be put inside
+	* Design properties will have no effect
 
 #### 2.1.2 Events Section
 
@@ -78,8 +81,9 @@ The **Dimensions** tab allows you to configure settings that are related to the 
 	* Default: **Full image**
 	* When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
 * **Responsive** – when set to **Yes**, the image will scale with its parent container
-	* Default: **Yes**
-	* The image will never get larger than its original size, but it can become smaller
+    * Default: **Yes**
+    * The image will never get larger than its original size, but it can become smaller
+    * This option will be hidden if **Image type** - **Icon** is set
 
 ### 3 Styling
 

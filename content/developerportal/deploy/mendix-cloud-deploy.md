@@ -83,7 +83,7 @@ When your app is running on the Mendix Cloud it will automatically be given its 
 
 You can customize a URL by adding [custom domains](custom-domains).
 
-Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports only (80 and 443 respectively).
+Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
 ## 2 Deploying an App to the Mendix Cloud
 

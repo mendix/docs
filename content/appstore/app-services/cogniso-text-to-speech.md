@@ -9,7 +9,7 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-voice app from the scratch. All you need to do is drag and drop items and configure them.
 
-The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. Here is an overview of what the CognisoTextToSpeech contains:
+Here is an overview of what the CognisoTextToSpeech contains:
 
 * [Predefined entities](#predefined-entities) 
 	* SpeechSynthesizer
@@ -168,18 +168,16 @@ Follow these steps to configure the text-to-voice conversion:
    2. For **Data source**, Select the **Text** attribute from the data view.
    3. For **Label caption**, enter *Text*.
 
-6. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
-
-7. Add a Button widget and change the following settings:
+5. Place a reference selector, set description from association in the input group box. {{% todo %}}[check what this is]{{% /todo %}}
+6. Add a Button widget and change the following settings:
    1. Name the button *Synthesize Speech*.
    2. Double-click the button to open the **Action Button** dialog box.
    3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **SynthesizeSpeech** .
-
-8. Double-click the Audio Player widget, and on the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
+7.  Double-click the Audio Player widget, and on the **General** tab, set **Source** to **$currentObject/Audio**, by binding the base64-encoded audio data string.
 
    ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
-9. Run your app locally. You can convert text to voice directly in the browser:
+8. Run your app locally. You can convert text to voice directly in the browser:
 
    ![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)
 
@@ -197,9 +195,12 @@ To receive information on how to get the license token for [Cogniso Text To Spee
 
 #### 5.2.1 Configuring the LicenseToken in Studio Pro
 
-1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
-2. In the **Configurations** tab, click **Edit**. 
-3. On the **Constants** tab of the dialog box, create a new constant with the predefined constant  **TextToSpeech.LicenseToken**.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+
+3. On the **Constants** tab, create a new constant with the predefined constant  **TextToSpeech.LicenseToken**.
+
 4. Fill in the **Value** with your obtained LicenseToken.
 5.  Click **OK** to confirm the settings.
 

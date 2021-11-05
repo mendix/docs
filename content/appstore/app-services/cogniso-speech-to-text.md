@@ -7,9 +7,9 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-With the [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service, you can easily convert voice and audio into written text in your web applications and then trigger customized actions. This app service can be very helpful when building your own voice-to-text applications. It enables you to build an app to transcribe voice and audio to text with state-of-the-art speech recognition, without building a voice-to-text app from scratch. All you need to do is drag and drop items and configure them.
+The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
-The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows, and a set of widgets. Here is an overview of what CognisoSpeechToText contains:
+Here is an overview of what the app service contains:
 
 * [Predefined entities](#predefined-entities)
 	* MediaDocument 
@@ -19,25 +19,22 @@ The app service contains out-of-the-box Java actions, JavaScript actions, domain
 * [Microflows](#microflows) 
 	* BatchTranscription
 	* StartService
-* [Nanoflows](#nanoflows) 
-* [Java action](#java-action) 
 * [Widgets](#widgets) 
 	* Microphone
 
-In most cases, you only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you do not need it.
+In most cases, you will only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to easily convert voice into written text in your mendix apps and trigger a custom action. You can perform some basic operations, such us enabling wakeup messages, using different language options, customizing voice-to-text conversion, setting up voice-to-action feedback and much more.
+You can use this app service to convert voice into text and trigger custom actions in your mendix apps. You can also customize these actions and specify voice feedback messages that your app sends to users. You can offer users different language options.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
-* Customize voice-to-text actions
-* Use batching mode to implement the speech conversion as a back-end service
-* Customize wakeup messages
-* Enable voice-to-action feedback
+* Convert speech to text
+* Trigger actions and give users voice feedback messages
+* Support the batch mode to implement speech conversion as a back-end service
 * Support different language options
 * Translate non-English transcripts into English
 
@@ -48,9 +45,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 ## 2 Installation
 
 1. Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118590) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
-
 2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
-
     1. In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *CognisoSpeechToText.mpk*. 
 
@@ -69,10 +64,10 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-It is good to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting to call the **StartService** microflow.
+It can be useful to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
 
 
-1.  If you app does not have an after-startup microflow, perform the following steps:
+1.  If your app does not have an after-startup microflow, perform the following steps:
    1. Create a microphone in your module.
    2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the new microflow that you created.
    3.  Set the return type of the microflow to **Boolean** with **true** as the **Return value**.
@@ -83,7 +78,8 @@ It is good to run the Cogniso Speech to Text service automatically when your app
    1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow.
    2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
 3. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
-4. Go to the **Runtime** tab. Set **After startup** to the microflow that calls the **StartService** microflow.
+4. Go to the **Runtime** tab. 
+5. Set **After startup** to the microflow that calls the **StartService** microflow.
 
 ## 4 Configuration
 
@@ -102,7 +98,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 4.2.1 Lincese Token
 
-The **LicenseToken** constant offers a valid CognisoSpeechToText license token to the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to use the CognisoSpeechToText fucntionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant offers a valid CognisoSpeechToText license token to the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to use the CognisoSpeechToText functionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how CognisoSpeechToText works, that is to say, you will only build and run an app that uses CognisoSpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
@@ -114,142 +110,141 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 ### 4.3 Microflows{#microflows}
 
-#### 4.3.1 BatchTranscript
+#### 4.3.1 StartService
+
+The **StartService** microflow is a Java action which starts the Cogniso Speech To Text service. It is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Cogniso Speech To Text provides.
+
+![startservice](attachments/cogniso-speech-to-text/startservice.png)
+
+#### 4.3.2 BatchTranscript {#batchtranscript}
 
 The **BatchTranscription** microflow takes a **MediaDocument** object as an input parameter and converts the based64-encoded audio string into text.
 
 ![batchtranscription](attachments/cogniso-speech-to-text/batchtranscription.png)
 
-#### 4.3.2 StartService
-
-The **StartService** microflow is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Cogniso Speech To Text provides. It is exposed as microflow actions.
-
-![startservice](attachments/cogniso-speech-to-text/startservice.png)
-
 ### 4.4 Widgets {#widgets}
 
 #### 4.4.1 Core Widgets
 
-The only core widget required to convert voice to text or convert voice to actions is the **Microphone** widget.
+The only core widget required is the **Microphone** widget.
 
 ##### 4.4.1.1 Microphone {#microphone}
 
-This **Microphone** widget provides custom settings for voice-to-text and voice-to-action conversions.
-
-To make the widget perform conversions correctly, set the following properties:
+You can make the following settings for the **Microphone** widget:
 
 *   **General** tab
-  * **Enable language selection** – when set to **Yes**, custom language settings are enabled
-    * **language**  – determines which language to use for speech conversion (default language: US-English, data type: String)
-  * **Enable wakeup** – when set to **Yes**, the following custom settings for waking up the **Microphone** widget are enabled:
-    * **wakeupMessage**  – a string which contains no more than two words to activate voice-to-action conversion (if this is empty, the actions are always activated)
-    * **wakeupResponse** – a string to give to users as a voice response when voice-to-action conversion is activated
-    * **Max allowed idle time** – the number of seconds after which voice-to-action conversion becomes deactivated (if this is less or equals to zero, the microphone is always on standby once activated)
-    * **Enable wakeup** – determines whether to activate the **Microphone** widget via a wakeup message (this is an experimental feature)
+  * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
+    * **language**  – sets the default language (if empty, the default language is US-English)
 * **Events** tab
-  * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service to trigger an action
-    * **transcript**  – sets a string attribute as a voice input parameter
-    * **Action** – sets which action is executed  when a transcript is received
-  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by back-end service and set custom actions that are trigged when an error occurs
-    * **Error** – sets a string attribute as the error message
-    * **Action** – sets which action is executed when an error occurs
-* **Voice to Action** tab
+  * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service and set a custom action that is executed when the transcript is received
+     * **transcript**  – sets a string attribute as the voice input parameter
+     * **Action** – sets which action is executed when the transcript is received (if empty, no action is executed)
+  * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
+     * **Error** – sets a string attribute as the error message
+     * **Action** – sets which action is executed when an error occurs
+*   **Voice to Action** tab
   *  **Enable action** –  when set to **Yes**, the following custom settings for actions are enabled:
-
-    * **Actions** – a list of actions to take when a transcript matches an utterance
-      * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
-      * **Action** – the action triggered when the received transcript matches an utterance
-      * **Feedback** – the voice feedback provided to users when an action is triggered
-
-    * **Arguments** – the captured arguments in a transcript as a comma-separated list (this requires you to specify parameterized action text in above table.{{% todo %}}[which table?]{{% /todo %}}
-
-    * **Fallback message** – the message to notify users when no action is matched
-
-    * **Translate** – determines whether to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
+     * **Actions** – a list of actions to execute when a transcript matches an utterance
+         * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
+         * **Action** – the action that is executed when the received transcript matches an utterance
+         * **Feedback** – the voice feedback provided to users when an action is triggered
+  *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to  **Actions**
+  *  **Fallback message** – the message to notify users when no action is matched
+  *  **Translate** – determines whether to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
 
 ## 5 Using Cogniso Speech To Text
 
 You can use Cogniso Speech To Text to convert voice to text and then trigger a customizable action.
 
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable actions quickly.
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up custom actions quickly.
 
-### 5.1 Converting Voice into Text in Your Browser
+### 5.1 Converting Speech into Text in Your Browser
 
-To let the [Microphone](#microphone) widget perform voice-to-text actions, set these data source attributes: **transcript**, **Actions** and **Arguments**. To match voice-to-text actions, pass captured arguments to triggered actions, configure a set of action items in the **Microphone** widget.
+To let the [Microphone](#microphone) widget convert speech to text and trigger a custom action, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
 
-Follow these steps to configure the voice-to-text conversion:
+Below are the steps to build an example web app which can convert speech to text and triggers actions.
 
-1. In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
-
-   | Attribute       | Data Type |
-   | --------------- | --------- |
-   | `NewTranscript` | String    |
-   | `AllTranscript` | String    |
-   | `Arguments`     | String    |
-   | `Error`         | String    |
-
-2. Create a nanoflow as follows:
+1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
+   * `NewTranscript` (String)
+   * `AllTranscript` (String)
+   * `Arguments` (String)
+   * `Error` (String)
+2.  Create a nanoflow as follows:
    1. Name the nanoflow *CreateMicrophoneObject*.
    2. Add a create object activity to the nanoflow.
-   3. Double-click the create object activity to open the **Create Object** dialog box and **Select** the **Microphone** entity as the **Entity**.
-   4. Right-click the create object activity and select **Set $NewMicriphone as return value** in the pop-up menu.
-
-      ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
-
-3. From the **Toolbox**, add a Data View widget to your page.
-4. Inside the Data View widget, add a [Microphone](#microphone) widget.
-5.  Set the CreateMicrophoneObject nanoflow as the data source of the Data View widget:
-   1. Double-click the Data View widget to open the **Edit Data View** dialog box.
+   3. Double-click the create object activity to open the **Create Object** dialog box. 
+   4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
+   5.  Right-click the create object activity and select **Set $NewMicriphone as return value** in the pop-up menu.
+   
+       ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
+   
+3. From the **Toolbox**, add a **Data view** widget to your page.
+4. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
+5.  Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
+   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
-   3. Click **Select** and select the CreateMicrophoneObject nanoflow for **Nanoflow**.
-6.  Double-click the **Microphone** widget to open the **Edit Microphone** dialog box, and change the following settings:
-    1. Go to the **Events** tab.
-    2. For **transcript**, click **Select** and select the **NewTranscript** attribute.
-    3. Go to the **Voice to Action** tab.
-    4. For **Arguments**, click **Select** and select the **Arguments** attribute.
+   3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
+6.  Change the settings of the **Microphone** widget as follows:
+    1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
+    2. Go to the **Events** tab.
+    3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
+    4. Go to the **Voice to Action** tab.
+    5. For **Arguments**, **Select** the **Arguments** attribute.
+    6. For **Actions**, click **New** to open the **Edit Actions Item** dialog box and set up new actions, for example:
     
-7. Run your app locally. You can convert speech to text directly in the browser.
+       ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
+    
+       For more information, see the [Converting Voice to Actions](#actions) section below.
 
-![runlocally-speech-to-text](attachments/cogniso-speech-to-text/runlocally-speech-to-text.png)
+7. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
-### 5.2 Customizing Wakeup Message {#experimental}
+### 5.2 Handling Microphone Events
 
-Configure wakeup message to wake up the back-end service automatically with two key attributes **Wakeup message** and **Wakeup response**.
+Multiple events can be picked up by the [Microphone](#microphone) widget and can be used to build your customized event handling logic.
 
-{{% alert type="info" %}}The configuration of wakeup messages is an experimental feature.{{% /alert %}}
+There are two main types of events that can be picked up by the **Microphone** widget, which are described in the sections below.
 
-Follow these steps to configure this wakeup message:
+#### 5.2.1 On Transcript {#on-transcript}
 
-1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
-2. On the **General** tab, select **Yes** for **Enable wakeup** to enable activating the back-end service via wakeup messages.
-3. Set up a **Wakeup message** with no more than two words.
-4. Set up a **Wakeup response** which is used as a voice response to users when the back-end service is activated.
+By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion.
 
-![wakeup-message](attachments/cogniso-speech-to-text/wakeup-message.png)
+**transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice, which matches an utterance to trigger an action. You can select an **Action** from a list of actions.
 
-5. Click **OK** to save the changes and close the dialog box.
+![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
 
-You have made the basic settings for the **Microphone** widget.
+For example, you can set up the **Action** to make the app show all the voice-to-text conversion history.
 
-### 5.3 Customizing Voice to Action Conversions {#actions}
+![show-transcript-history](attachments/cogniso-speech-to-text/show-transcript-history.png)
 
-You can build a customized, automated conversation scenario by setting up **Utterance**, **Actions** and **Voice Feedback**.
+#### 5.2.2 On Error {#on-error}
 
-![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
+By binding an attribute to the **Error** event, the app can pick up an error raised by the back-end service.
 
-You can use **New**, **Delete**, and **Edit** to create a new action, delete an existing action, and edit an existing action.
+**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select an **Action** from a list of actions.
 
-#### 5.3.1 Utterance
+![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
+
+For example, you can set up the **Action** to make the app show a pop-up window to show error details to users.
+
+![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
+
+## 5.2 Converting Voice to Actions {#actions}
+
+This app service allows you to set up rules to convert voice to actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+
+You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
+
+#### 5.2.1 Utterance
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
 For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set.
 
-#### 5.3.2 Actions
+#### 5.2.2 Actions
 
-You can select an **Action** from a list of actions. This action is triggered when a received transcript matches an utterance.
+You can select an **Action** from a list of actions. This action is triggered when the received transcript matches an utterance.
 
-#### 5.3.3 Voice Feedback
+#### 5.2.3 Voice Feedback
 
 **Voice feedback** can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
@@ -257,73 +252,35 @@ For instance, you can set **Voice feedback** as `model is rotated {0} degree aro
 
 ![microphone-voicetoaction-sample](attachments/cogniso-speech-to-text/microphone-voicetoaction-sample.png)
 
-### 5.4 Handling Microphone Events
+### 5.3 Using the Batch Mode
 
-Multiple events can be picked up by the [Microphone](#microphone) widget and can be used to build your customized event handling logic.
+When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 
-There are two main types of events that can be picked up by the **Microphone** widget, which are described in the sections below.
-
-#### 5.4.1 On Transcript {#on-transcript}
-
-By binding an attribute to the **transcript** event, you can pick up the result of speech conversion by the **Microphone** widget.
-
-**transcript** takes a string attribute. You can define an attribute and bind that attribute to **transcript**. This attribute stores the result of text converted from voice, which matches an utterance in the **Microphone** widget to trigger an action. 
-
-![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
-
-You can select an **Action** from a list of actions. For example, the app can show the whole content of the voice-to-text conversion history.
-
-![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
-
-#### 5.4.2 On Error {#on-error}
-
-By binding an attribute to the **Error** event, you can pick up an error raised by the back-end service.
-
-**Error** takes a string attribute. You can define an attribute and bind that attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. You can easily obtain this error message raised by the back-end service and set custom actions that are triggered when error arises.
-
-![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.png)
-
-You can select an **Action** from a list of actions upon an error, for example, the app can show a pop-up window to provide error details to users.
-
-![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
-
-
-
-## 6 Others
-
-### 6.1 Batching Mode of Speech Conversion
-
-Sometimes you need to implement the speech conversion as a back-end service rather than a user interface operation. Then batching transcription is your best option to convert any mendix **mediaDocument** object into written text.
-
-## 7 Obtaining a LicenseToken to Deploy Your App {#obtain}
+## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
 Cogniso Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
 
-### 7.1 Obtaining a LicenseToken with Trial version
+### 6.1 Obtaining a LicenseToken with Trial version
 
 When you need to run your app with Cogniso Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
 
 To receive information on how to get the license token for [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
-### 7.2 Configuring a LicenseToken for App Deployment
+### 6.2 Configuring a LicenseToken for App Deployment
 
-#### 7.2.1 Configuring the LicenseToken in Studio Pro
+#### 6.2.1 Configuring the LicenseToken in Studio Pro
 
-1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
+4. Fill in the **Value** with your obtained LicenseToken.
+5.  Click **OK** to confirm the settings.
 
-1. In the **Configurations** tab, click **Edit**.
+    ![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
 
-2. On the **Constants** tab of the dialog box, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-3. Fill in the **Value** with your obtained LicenseToken.
-
-4. Click **OK** to confirm the settings.
-
-   ![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
-
-5. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 7.2.2 Configuring the LicenseToken in Developer Portal
+#### 6.2.2 Configuring the LicenseToken in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

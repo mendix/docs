@@ -11,7 +11,7 @@ The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/11859
 
 With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
 
-The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art text analytics actions. Here is an overview of what the CognisoTextAnalytics contains:
+Here is an overview of what the CognisoTextAnalytics contains:
 
 * [Predefined entities](#predefined-entities)
 	* Detector
@@ -448,9 +448,9 @@ To receive information on how to get the license token for [Cogniso Text Analyti
 
 #### 5.2.1 Configuring the LicenseToken in Studio Pro
 
-1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
-2. In the **Configurations** tab, click **Edit**. 
-3. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
 4. Fill in the **Value** with your obtained LicenseToken.
 5.  Click **OK** to confirm the settings.
 

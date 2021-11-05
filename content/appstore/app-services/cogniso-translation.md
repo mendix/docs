@@ -158,13 +158,17 @@ To receive information on how to get the license token for [Cogniso Translation]
 
 #### 5.2.1 Configuring the LicenseToken in Studio Pro
 
-1. In Mendix Studio Pro, go to [App Settings](/refguide/project-settings).
-2. In the **Configurations** tab, click **Edit**. 
-3. In the **Constants** tab of the dialog box, create a new constant with the predefined constant **Translation.LicenseToken**.
-4. Fill in the **Value** with your obtained LicenseToken.
-5.  Click **OK** to confirm the settings.
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 
-    ![licensetoken-inmendix](attachments/cogniso-translation/licensetoken-inmendix.png)
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+
+3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
+
+4. Fill in the **Value** with your obtained LicenseToken.
+
+5. Click **OK** to confirm the settings.
+
+   ![licensetoken-inmendix](attachments/cogniso-translation/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 

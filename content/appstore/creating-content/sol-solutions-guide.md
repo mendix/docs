@@ -21,12 +21,12 @@ A solution is any Mendix app that is suitable to be sold to multiple different c
 
 Customers often require more from a solution than it supports out of the box. Whether it is an integration with an existing system in the customer's IT landscape, a change to better match the processes of the customer, or simply an adjusted UI to better match the brand of the customer, these adaptations require more than just a prescriptive software-as-a-service (SaaS) solution. This means you need to enable the solution to be adapted so that it can fit the specific needs of a customer.
 
-For more details on building solutions, see [Architecting Adaptive Solutions](sol-architecting).
+To get started on building solutions, see [Architecting Adaptive Solutions](sol-architecting). Then, continue reading how to apply [IP Protection](sol-ip-protection) to make your solution ready to sell to customers.
 
-## 3 Read More
+## 3 Vendor Programs
 
-Start with the [General Info](sol-general) section, which provides details on the Mendix vendor programs that will support you in building solutions.
+Mendix introduced the Solution Vendor Program to support the full range of organizations—from startups to large enterprises—looking to develop solutions. Under beneficial terms, Mendix provides independent software vendors (ISVs) and startups with a Mendix license for the development and operation of Mendix apps to implement solutions for their customers.
 
-Then, proceed to the [Developing Solutions](sol-development) section, which presents principles and best practices for developing solutions on the Mendix Platform that are ready to be sold on the Marketplace.
+Mendix supports aspiring solutions vendors and startups in their adoption of Mendix as a development platform for their solutions. The Mendix Solution Vendor Program and Mendix Startup Program teams are the point of contact for any inquiries, including requesting access to early-adopter stage technologies like intellectual property protection.
 
-After reading through these sections, [create your app](https://new.mendix.com/) and Go Make It!
+For more information, see [How to Become a Mendix Vendor](vendor).

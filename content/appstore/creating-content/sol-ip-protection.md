@@ -1,6 +1,7 @@
 ---
 title: "IP Protection"
-parent: "sol-development"
+parent: "sol-solutions-guide"
+menu_order: 2
 description: "Protect intellectual property in Solutions, App Services & Connectors"
 tags: ["adaptive solutions", "ip protection"]
 ---

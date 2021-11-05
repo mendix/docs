@@ -1,6 +1,7 @@
 ---
 title: "Architecting Adaptive Solutions"
-parent: "sol-development"
+parent: "sol-solutions-guide"
+menu_order: 1
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---

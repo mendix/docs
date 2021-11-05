@@ -22,16 +22,24 @@ The process is simple: sign up as a [Mendix Vendor](#vendor), design and build y
 
 ## 2 Becoming a Mendix Vendor {#vendor}
 
-The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, app service vendors, solution vendors, and startups). There are two types of vendors this doc will focus on:
+### 2.1 Types of Vendors
 
-* [Solution vendors](https://www.mendix.com/marketplace-vendor-program/solutions/)
-* App service vendors
+The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) includes opportunities for a variety of types of partners (for example, app service vendors, solution vendors, and startups). There are three types of specific vendor programs at Mendix:
 
 [**NO SPECIFIC PAGE FOR APP SERVICES LIKE ONE FOR SOLUTIONS? LINK FROM GENERIC VENDOR PROGRAM PAGE ABOVE REDIRECTS BACK TO THE HOW TO SELL APP SERVICE DOC**]
 
+* App Service Vendor Program
+* [Mendix Solution Vendor Program](https://www.mendix.com/marketplace-vendor-program/solutions/)
+	* Enables established companies, existing Mendix partners, and startups to successfully develop, bring to market, sell, and deploy software solutions built on Mendix
+	* Designed to provide simple terms, low initial investment, valuable enablement, and a win-win business model that benefits the partner as well as Mendix
+* [Mendix Startup Program](https://www.mendix.com/startup-program/)
+	* Enables early-stage companies looking to build a software business and monetize their domain expertise by selling solutions
+	* Provides startups with tools and resources to develop, deploy, bring to market, and sell software solutions built on Mendix’s low-code development platform
+	* Includes an economic model based on a revenue sharing agreement that enables startups to establish a profitable and predictable business model
+
 Whether you are supplying an app service or a solution as an individual with your own business or you are acting on behalf of your organization, you will be in great company by joining the Mendix Vendor Program.  We only need some key information from you before you are ready to offer your product through the Mendix Marketplace. Mendix will work with you throughout the application process to make your submission experience as simple as possible.
 
-### 2.1 Applying to the Mendix Vendor Program
+### 2.2 Applying to the Mendix Vendor Program
 
 Whether you are an individual supplier with your own business or you are supplying an app service or solution on behalf of your company, your first step is to make sure you have a [Mendix Platform account](https://signup.mendix.com/). This is necessary, since your Mendix Vendor account will be associated with your Mendix ID.
 
@@ -57,7 +65,7 @@ If you want to offer paid content, you must also provide the following details:
 | Account Number | The account number for the legal entity or individual. |
 | Account Holder Name | The name registered with the account. |
 
-### 2.2 Mendix Vendor License Agreement {#vendor-license}
+### 2.3 Mendix Vendor License Agreement {#vendor-license}
 
 Whether you are offering a free or paid app service or solution through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 

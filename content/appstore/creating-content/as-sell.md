@@ -1,5 +1,5 @@
 ---
-title: "Sell Your App Service in the Marketplace"
+title: "Make Your App Service Marketplace-Ready"
 category: "Creating Content"
 menu_order: 2
 description: "Describes how to start selling your app service in the Mendix Marketplace."
@@ -7,6 +7,8 @@ tags: ["marketplace", "vendor", app service"]
 aliases:
     - /appstore/general/sell.html
 ---
+
+[**KEEP THIS FOR APP SERVICES - MORE LIKELIHOOD OF GETTING FIRST DIVISION THROUGH**]
 
 ## 1 Introduction
 
@@ -21,7 +23,7 @@ aliases:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [Becoming a Mendix Vendor]() and sign up to the specific vendor program for the content you are going to build
+* Read [Becoming a Mendix Vendor](vendor-programs) and sign up to the Mendix Vendor Program
 * In addition to defining the business case for your app service or solution (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
 
 [**IS THERE AN EMAIL ADDRESS FOR CONTACT ON SOLUTIONS HERE?**]

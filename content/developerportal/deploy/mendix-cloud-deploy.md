@@ -79,11 +79,11 @@ If you need to use a different database, you will need to look at deploying your
 
 ### 1.5 URLs and Ports
 
-When your app is running on the Mendix Cloud it will automatically be given its own URL. This is of the form `(appname){-environment}.mxapps.io`. For licensed apps, the environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain.
+When your app is running on the Mendix Cloud it will automatically be given its own URL. For licensed apps this is of the form `(appname){-environment}.mendixcloud.io`. The environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain. Free apps have a URL of the form `{appname}.mxapps.io`.
 
 You can customize a URL by adding [custom domains](custom-domains).
 
-Mendix apps cannot use custom ports. They communicate via TCP/443 or TCP/80 only.
+Mendix apps cannot use custom ports. They only communicate via TCP/80 redirected to TCP/443.
 
 ## 2 Deploying an App to the Mendix Cloud
 

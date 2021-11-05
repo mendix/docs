@@ -5,6 +5,18 @@ menu_order: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.7
+
+**Release date: November 5th, 2021** 
+
+## Improvements
+
+We identified and added a missing configuration that was failing the `OpenURL` and `CallPhoneNumber` javascript action on Android 11+ devices. Without it the actions will fail.
+
+## Fixes
+
+* We fixed an issue with the `OpenURL` and `CallPhoneNumber` javascript actions on Android 11+ devices.
+
 ## 5.2.6
 
 **Release date: November 2nd, 2021**

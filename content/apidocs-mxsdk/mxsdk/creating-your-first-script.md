@@ -141,7 +141,7 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 
 1.  In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
 2.  Open the new app, and on the right side, click **Edit**.
-3.  If you have the latest [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
+3.  If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
 
 ## 5 Next Step
 

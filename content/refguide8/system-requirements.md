@@ -52,6 +52,10 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
+### 2.3 Graphics Card
+
+If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
+
 ## 3 Team Server {#ts}
 
 The [Team Server](/developerportal/collaborate/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
@@ -112,7 +116,7 @@ Current support:
 * [IBM DB2](db2) 11.1 and 11.5 for Linux, Unix, and Windows
 * [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](mysql) 8.0
 * [Oracle Database](oracle) 19
 * PostgreSQL 9.6, 10, 11, 12, 13

@@ -48,11 +48,14 @@ Manually building a widget package can be difficult, so Mendix recommends you us
 A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
-* A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
-* A client component of a widget located, for example, in  `com/mendix/widget/MyProgressCircle.js` for a widget with the ID `com.mendix.widget.MyProgressCircle`
-* Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetDefinitionXmlName}.editorPreview.js*
+* A widget definition XML file, preferably located in *{widgetName}.xml* where `widgetName` is the last part of widget [ID](#widget-id)
+* A client component of a widget located, for example, in  *com/mendix/widget/MyProgressCircle.js* for a widget with the ID `com.mendix.widget.MyProgressCircle`
+* Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
+* Optionally, widget icons (which must be the PNG format):
+    * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
-	* Note that all CSS files you add, except the one located in the `lib` sub-directory, will automatically be loaded in an app via the widget
+	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 
@@ -81,8 +84,6 @@ A simple widget XML file might look like this:
     <?xml version="1.0" encoding="utf-8" ?>
     <widget [attibutes]>
         <name>{User friendly widget name}</name>
-        <icon>{base64 encoded icon}</icon>
-    
         <properties>
             [properties]
         </properties>
@@ -118,7 +119,6 @@ After widget attributes, you will see a description of a widget that will be pre
 
 ```xml
 	<name>My Progress Card</name>
-	<icon>[image base64]</icon>
 ```
 In Mendix Studio Pro, the widget described above would look like this:
 
@@ -135,7 +135,7 @@ You can provide additional help information to widget users by using a help page
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
 ```xml
-    <helpUrl>https://appstore.home.mendix.com/link/app/105695/</helpUrl>
+    <helpUrl>https://marketplace.mendix.com/link/component/105695/</helpUrl>
 ```
 
 For more complex help pages you can link to a markdown page. For security reasons, URLs have the following restrictions:
@@ -143,6 +143,33 @@ For more complex help pages you can link to a markdown page. For security reason
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
+
+#### 4.2.2 Toolbox Category {#toolbox-category}
+
+{{% alert type="info" %}}
+This feature was introduced in Mendix Studio Pro v9.4.
+{{% /alert %}}
+
+To provide more clarity for Studio and Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio and Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
+
+When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. It is possible to specify different categories for Studio and Studio Pro. When only the Studio Pro category is specified, then that category is also used in Studio.
+
+A category can by provided through `studioCategory` and `studioProCategory` tags:
+
+```xml
+   <studioProCategory>Open Street Maps</studioProCategory>
+   <studioCategory>Maps</studioCategory>
+```
+
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatiacally in the Studio Pro UI. In Studio a widget will end up in the **Maps** category.
+
+{{% alert type="info" %}}
+The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+{{% /alert %}}
 
 ### 4.3 Widget Properties Definition {#properties-definition}
 
@@ -229,7 +256,7 @@ This is how the property group structure is represented in Studio Pro:
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
-Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties#name), [Class](/refguide/common-widget-properties#class), [Style](/refguide/common-widget-properties#style), and **Design Properties**.
+Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties#name), [Class](/refguide/common-widget-properties#class), [Style](/refguide/common-widget-properties#style), and [Design Properties](/apidocs-mxsdk/apidocs/design-properties).
 
 ## 6 Widget Property
 

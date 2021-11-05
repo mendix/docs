@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Community Tools"
-menu_order: 60
+menu_order: 3
 description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
@@ -20,7 +20,7 @@ The purpose of the Partner Profile is to provide the Mendix community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/mendix-profile/))
+* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/community-tools/mendix-profile))
 
 ## 3 Signing In to the Partner Profile
 
@@ -34,13 +34,13 @@ To sign in to the Partner Profile, edit it, and make it public, follow these ste
 
     If you are not authorized to edit the profile but your colleagues are, a list with their email addresses is shown. To gain access to editing the profile, you can contact them so that they can add you as an editor (for details, see the [Changing the Profile Editor](#editors) section). If none of your colleagues are authorized, click **Feedback** on the right side of the screen and submit a feedback item to gain access.<br>
 
-4.  Once you are in edit mode, click this icon to edit each field of the Partner Profile:
+4.  Once you are in edit mode, click the form field to edit the Partner Profile:
 
-    ![](attachments/how-to-set-up-your-partner-profile/icon.png)
+    ![](attachments/how-to-set-up-your-partner-profile/edit-profile-field.png)
     
     For details about editing, start with [5 Editing the Overview](#editing).<br>
     
-5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Close Edit Mode**:
+5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Save and Exit**:
 
     ![](attachments/how-to-set-up-your-partner-profile/close-edit.png)
 
@@ -54,7 +54,7 @@ The header of your Partner Profile has important contact details about your comp
 ![](attachments/how-to-set-up-your-partner-profile/header.png)
 {{% /image_container %}}
 
-You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public. So, click the edit icon and add this information to the header (the email address will allow customers to contact you via the **Contact us** button): 
+You must complete the **Address** and **Email Address** fields before you can make your Partner Profile public (the email address will allow customers to contact you via the **Contact us** button). So, click **Edit Profile** and add this information to the header:
 
 {{% image_container width="550" %}}
 ![](attachments/how-to-set-up-your-partner-profile/address.png)
@@ -163,7 +163,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/mendix-profile/#public) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Selecting Your Profile Visibility](/developerportal/community-tools/mendix-profile#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 

@@ -10,12 +10,74 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
-
 ## 2021
+
+### October 26th, 2021
+
+#### Improvements
+
+Mendix Cloud V4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
+
+All newly-created applications will have a database running PostgreSQL 13.
+
+Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
+
+### October 7th, 2021
+
+### Fixes
+
+* We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
+
+### September 10th, 2021
+
+#### Improvements
+
+* We added a new [custom environment variable](/developerportal/deploy/environments-details#custom-environment-variables) `USAGE_METRICS_EMAIL_FIELDS` which allows you to identify which entities are used to hold your end user details.
+
+#### Fixes
+
+* In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
+
+### August 26th, 2021
+
+#### Improvements
+
+* We added the ability to restore only a database, without restoring the other files in a backup.
+    You can do this in one of two ways:
+    * Through the [Developer Portal](/developerportal/operate/restore-backup#restore-cloud-backup)
+    * Using the [Backups API V2](/apidocs-mxsdk/apidocs/backups-api)
+
+### August 6th, 2021
+
+#### Improvements
+
+* We moved the [Node Permissions](/developerportal/deploy/node-permissions) from the Security page to the [Environments](/developerportal/deploy/environments) page.
+* We added the ability to delegate node permission management to team members who are not the Technical Contact.
+
+#### Fixes
+
+* We now prevent you from allocating more memory than is available when [scaling your environment](/developerportal/deploy/scale-environment) when you have multiple instances, ensuring that deployments do not fail because of a lack of memory. 
+
+### July 23rd, 2021
+
+#### Improvements
+
+* We improved the environment details by making the PostgreSQL version dynamic using the information available from the service broker. The version will be updated after a restart of the environment.
+
+#### Fixes
+
+* We fixed an issue where custom JSON error descriptions were not returned for REST endpoints. If you have defined custom HTML error pages for your app, they will be disabled for request handlers that typically do not serve HTML content. These include SOAP, OData, and REST endpoints defined in your app.
+* We fixed an issue where the free application environment page showed an app as deployed in Mendix Cloud when it was not.
+
+### July 15th, 2021
+
+#### Improvements
+
+* Mendix Cloud v4 now supports incoming connections over Internet Protocol version 6 (IPv6).
 
 ### July 5th, 2021
 
-#### Fix
+#### Fixes
 
 * We fixed an issue where long-running restore jobs appear to fail when using [Backups API V1](/apidocs-mxsdk/apidocs/backups-api-v1).  (Tickets 122197 and 125707)
 
@@ -66,11 +128,9 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### April 29th, 2021
 
-#### Improvement
+#### Improvements
 
-* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32.
-
-    If you need more than 32 instances please contact Mendix Support.
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details#scaling) your app to 32. If you need more than 32 instances please contact Mendix Support.
 
 #### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1st, 2021**
 
@@ -158,7 +218,6 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     You need to redeploy of your app to implement these changes. All your existing metrics will continue to be sent to Datadog. There will be some minor changes around how database rate and counter metrics, but this does not affect gauges. See [Datadog for v4 Mendix Cloud](/developerportal/operate/datadog-metrics) for more information.
 
-
 ## 2020
 
 ### December 17th, 2020
@@ -177,7 +236,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     This is a requested improvement after the release of [December 3rd](#20201203). Note that changes to the log levels are still permanent as announced on December 3rd.
 
-### December 3rd, 2020{#20201203}
+### December 3rd, 2020 {#20201203}
 
 * We added the ability to permanently change the Log Levels in Mendix Cloud v4 for an app so that they persist between restarts. This was in response to customer requests. (Ticket 101413)<br/>Log Levels will only become persistent after the next restart of your app, so you may have to set them one more time.<br/>For more information on log levels, see [Log Levels Tab](/developerportal/deploy/environments-details#log-levels) in the *Environment Details* documentation.
 * You can now retrieve the version of the buildpack used in deployment via the Deploy API [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) call. The version is returned as `RuntimeLayer`. You will need to redeploy your app to ensure it returns this in the API response.
@@ -193,7 +252,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We added support to generate 1024x1024 App Store icons for iOS.
+* We added support to generate 1024x1024 icons for iOS.
 
 #### Fixes
 

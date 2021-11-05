@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "object handling", "community com
 
 ## 1 Introduction
 
-The [Object Handling](https://appstore.home.mendix.com/link/app/37114/) module is a collection of reusable actions concerning object handling.
+The [Object Handling](https://marketplace.mendix.com/link/component/37114/) module is a collection of reusable actions concerning object handling.
 
 This is a module from the Mendix Community Commons, which is a series of modules for and by the Mendix community that extend the low-code capabilities of the Mendix Platform.
 

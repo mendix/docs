@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "progress bar", "bootst
 
 ## 1 Introduction
 
-The [Progress Bar](https://appstore.home.mendix.com/link/app/48910/) widget displays a progress bar.
+The [Progress Bar](https://marketplace.mendix.com/link/component/48910/) widget displays a progress bar.
 
 The widget does the following:
 

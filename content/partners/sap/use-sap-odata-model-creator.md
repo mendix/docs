@@ -55,7 +55,7 @@ There are four ways to generate your data model.
 
 ### 3.1 Using the API Business Hub{#APIBusHub}
 
-Your SAP back-end OData API is held in the API Business Hub.
+Your SAP back end OData API is held in the API Business Hub.
 
 {{% alert type="info" %}}
 There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.
@@ -108,7 +108,7 @@ You have now created the module. The [Using the Data Model Module in a Mendix Ap
 
 ### 3.2 Selecting an API from the SAP Catalog Service{#catalog}
 
-Your SAP back-end OData API is held in the SAP Catalog Service.
+Your SAP back end OData API is held in the SAP Catalog Service.
 
 {{% alert type="info" %}}
 There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.

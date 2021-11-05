@@ -39,9 +39,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Migrating to Mendix Basic
 
-To migrate your free app and its database to your Mendix Basic environment, follow the steps in the sections below.
+To migrate your Free App and its database to your Mendix Basic environment, follow the steps in the sections below.
 
-### 3.1 Open your free app
+### 3.1 Open your Free App
 
 1. Go to the [Developer Portal](https://home.mendix.com) and sign in if necessary.
 

@@ -9,6 +9,39 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+### Release 1.0.107
+
+**Release date: July 26th, 2021**
+
+#### Fixes
+
+* We fixed an issue with deleted files not being removed correctly during a native template upgrade operation.
+* We fixed an issue where Google API changes introduced problems for Android native app builds. For more information, see [Update Needed for Android Native Mobile Apps](https://www.mendix.com/blog/update-needed-for-android-native-mobile-apps/). 
+
+### Release 1.0.105
+
+**Release date: July 16th, 2021**
+
+#### Improvements
+
+* We added proxy support and network stability improvements.
+* We reworked the Mendix Native Builder network stack.
+* We expect greater stability even over mediocre internet connections.
+* The Mendix Native Builder can now use OS-specific proxy settings to do requests.
+
+App Center's CodePush OTA page improvements:
+
+* We improved the UX of the App Center's CodePush OTA page.
+* The platform selector will now correctly represent available platforms. Platforms that do not yet have an App Center build setup will be disabled by default. 
+* We added visible links for the App Center apps targeted by each platform. This makes it easier to identify cases where the Mendix Native Mobile bulder does not target the expected apps.
+* The OTA button is now a callout button that visually summarizes the reasons why a OTA update might not currently be possible.
+
+#### Fixes
+
+* We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
+* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
+
 ### Release 1.0.90
 
 **Release date: June 22nd, 2021**
@@ -29,7 +62,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 {{% alert type="info" %}}
 This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 {{% /alert %}}
- 
+
 Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/mobile/native-build-locally).
 
 In the wizard, new projects can be configured to use one of 2 build types:  
@@ -89,7 +122,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ##### OTA based on App Center CodePush
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota-appcenter).
 
 #### Improvements 
 
@@ -110,7 +143,7 @@ still fail if the keystore values are invalid.
 #### Improvements 
 
 * Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will 
-still fail if the keystore values are invalid.
+  still fail if the keystore values are invalid.
   
 #### Fixes
 

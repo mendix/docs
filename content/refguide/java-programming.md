@@ -25,7 +25,7 @@ Code outside the blocks is regenerated each time when you deploy your model, thu
 // - the import list
 // - the code between BEGIN USER CODE and END USER CODE
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
-// Other code you write will be lost the next time you deploy the project.
+// Other code you write will be lost the next time you deploy the app.
 // Special characters, e.g., é, ö, à, etc. are supported in comments.
 
 package myfirstmodule.actions;

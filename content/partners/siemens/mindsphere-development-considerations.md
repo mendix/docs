@@ -125,20 +125,34 @@ Proxy settings for version control used in Mendix Studio Pro:
 For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
-### 5.2 Credentials
+### 5.2 Application Credentials{#app-creds}
 
-The SSO module supports two ways to get a valid MindSphere token locally. The method can be chosen by setting the value of the constant *CredentialsType* to one of the following settings:
+The SSO module supports you in getting a valid MindSphere token locally via **Application Credentials**.
 
-* **Application Credentials**: which is the default and recommended way
-* **Service Credentials**: which is the backup method for when Application Credentials are not possible
-
-#### 5.1.1 Application Credentials{#app-creds}
-
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForCredentialsOnStartUp*.
+When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen on app startup if the constant *AskForCredentialsOnStartUp* is true - otherwise communication to MindSphere is not possible.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}
 
 This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
+
+{{% alert type="info" %}}
+**Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
+
+Storing the *Client Secret* inside the project is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value. See step 6 below for information on how to get these values.
+
+{{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/envvariables.png){{% /image_container %}}
+
+On startup, the system checks if there is an environment variable present with the name equal to your *Client ID* value and uses its value as *ClientSecret*.
+The *ClientID* is built from the combination of:
+
+```*Host tenant*-*Cockpit application name*-*Cockpit application version*```
+
+Ensure you have filled these constants correctly.
+If everything is setup correctly the form is auto filled and submitted.
+
+Don't forget to restart Studio Pro after you change / add the environment variable.
+{{% /alert %}}
+
 
 To create the app credentials:
 
@@ -165,10 +179,6 @@ For more information about creating app credentials, see the documentation on th
 To ensure that the correct application credentials are requested, you have to set the following constants in the **LocalDevelopment** folder of the **MindSphereSingleSignOn** module in addition to the other configuration constants.
 
 ![](attachments/mindsphere-development-considerations/image23.png)
-
-#### 5.2.2 Service Credentials
-As an alternative to the Application Credentials, you can choose the option Service Credentials. As with the Application Credentials a login screen will be open asking for the **Credentials ID** and the **Password**.
-Service Credentials can be requested via a service request to the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
 
 ### 5.3 Configuration
 
@@ -222,16 +232,16 @@ This policy is set up as the default in the MindSphere starter and example apps 
 
 ## 6 MindSphere Icons {#atlasui}
 
-The MindSphere Theme Pack includes two ways of including MindSphere icons in your app.
+The **Siemens MindSphere Web Content** module includes two ways of including MindSphere icons in your app.
 
 ### 6.1 MindSphere Icons as SVGs
 
-You can select MindSphere icons from the MindSphere Theme Pack to be displayed as SVGs in your application.
+You can select MindSphere icons from Siemens MindSphere Web Content to be displayed as SVGs in your application.
 
 1. Open the properties of a widget which can display an icon (for example a button).
 2. Click **Select...** next to *Icon*.
 3. Select **Image** as the icon type.
-4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
+4. Find the image that you want and click **Select**. The MindSphere icons are in the module *Siemens_MindSphere_Web_Content*.
 
 ![Add icon as an image](attachments/mindsphere-development-considerations/svg-icon.png)
 
@@ -241,11 +251,11 @@ You cannot change the color of these icons from within Mendix.
 
 ### 6.2 MindSphere Icons as an Icon Font
 
-The MindSphere Theme Pack provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
+**Siemens MindSphere Web Content** provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
 
 To do this:
 
-1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **MindSphere_UI_Resources** > **Icons**.
+1. Find the icon you wish to use. These have the same names as the icons in Siemens MindSphere Web Content and are listed in the *App Explorer* dock under **App** > **Marketplace modules** > **Siemens_MindSphere_Web_Content** > **Icons**.
 
     ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
 

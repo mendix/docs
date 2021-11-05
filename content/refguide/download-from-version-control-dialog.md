@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-Use the **Download from Version Control Server…** menu item to download an app from a version control server (for example, [Team Server](/developerportal/collaborate/team-server)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
+Use the **Download from Version Control Server** menu item to download an app from a version control server (for example, [Team Server](/developerportal/collaborate/team-server)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
 {{% alert type="info" %}}
 If the downloaded app was created with a different version of Mendix, you will be asked if it can be converted to the current version.

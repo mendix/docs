@@ -45,7 +45,7 @@ information dialog with brief description of this activity/event is displayed ab
 The following options are available in the information dialog box:
 
 * **Don't show again** – disables the information dialog box (it will not be shown again when you insert other activities) 
-* **Lean More** – opens documentation on microflow activities
+* **Learn More** – opens documentation on microflow activities
 * **Thanks, I understand** – dismisses the current information dialog box 
 
 ## 3 Settings

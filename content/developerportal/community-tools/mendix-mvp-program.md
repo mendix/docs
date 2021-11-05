@@ -1,7 +1,7 @@
 ---
 title: "MVP Program"
 category: "Community Tools"
-menu_order: 50
+menu_order: 6
 description: "Describes how the Mendix Community MVP program works."
 tags: ["community", "mvp"]
 aliases:
@@ -71,4 +71,4 @@ By participating in the MVP program, each MVP agrees to release, indemnify, defe
 
 ## 6 Read More
 
-* [Mendix Profile](/developerportal/mendix-profile/)
+* [Mendix Profile](/developerportal/community-tools/mendix-profile)

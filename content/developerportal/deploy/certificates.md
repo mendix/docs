@@ -14,9 +14,13 @@ aliases:
 
 Certificates are used to authenticate users to apps. They can be used on both incoming and outgoing connections.
 
+{{% alert type="info" %}}
+Custom certificates cannot be configured for Free Apps.
+{{% /alert %}}
+
 ### 1.1 Incoming Connections
 
-To connect *to* your Mendix Cloud application *from* the internet, Mendix provides a *.mendixcloud.com* or *.mxapps.io* domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](custom-domains). This is not available for Free Apps.
+To connect *to* your Mendix Cloud application *from* the internet, Mendix provides a *.mendixcloud.com* or *.mxapps.io* domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](custom-domains).
 
 In addition, you can restrict incoming traffic by requiring client certificates signed by a certificate authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
@@ -29,10 +33,14 @@ You may need to use certificates to set up connections from your Mendix Cloud ap
 
 ## 2 Incoming – Certificates
 
-Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and can be updated without notice.
+Certificates for *.mendixcloud.com* and *.mxapps.io* are managed by Mendix and will be updated on a regular basis, without notice. This is part of our regular operations and security posture.
 
 {{% alert type="warning" %}}
-Do not pin these certificates in your solutions.
+**Do not pin these certificates in your solutions.**
+
+Doing so can interrupt your operations when Mendix updates these certificates.
+
+Pinning a certificate bypasses the built-in certificate chains of your operating system or JVM, and is widely considered a bad practice. 
 {{% /alert %}}
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.

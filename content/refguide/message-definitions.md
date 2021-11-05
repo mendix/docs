@@ -22,8 +22,6 @@ To add a message definitions document do the following:
 
 2. Choose **Add other > Message definitions**.
 
-    ![Right-click menu - add Message definitions](attachments/message-definitions/add-definitions-document.png)
-
 3. Give your message definitions a name and click **OK**.
 
 ## 3 Managing Message Definitions

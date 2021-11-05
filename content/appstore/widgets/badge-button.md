@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "badge button", "token"
 
 ## 1 Introduction
 
-The [Badge Button](https://appstore.home.mendix.com/link/app/52705/) widget can function as a special distinctive mark or token put on any display as a button.
+The [Badge Button](https://marketplace.mendix.com/link/component/52705/) widget can function as a special distinctive mark or token put on any display as a button.
 
 ### 1.1 Features
 

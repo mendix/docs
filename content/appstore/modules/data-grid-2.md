@@ -1,14 +1,14 @@
 ---
 title: "Data Grid 2"
-category: "Modules"
-description: "Describes the configuration and usage of the Data Grid 2 module, which is available in the Mendix Marketplace."
+parent: "data-widgets"
+description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "data grid", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-[Data grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag and drop data-grid-specific widgets inside the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag and drop data-grid-specific widgets inside the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
@@ -16,7 +16,11 @@ Here is an example of a data grid using filters:
 
 ### 1.2 Advanced Options
 
-The data grid has an option to enable advanced options. When toggle this option on, it enables numerous features to customize your data grid:
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
+The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
 
 * Pagination type
 * Pagination position
@@ -24,6 +28,7 @@ The data grid has an option to enable advanced options. When toggle this option 
 * Dynamic row and cell class
 * Column capabilities
 * Custom configuration
+* Header Filters
 
 ## 2 Capabilities
 
@@ -173,9 +178,9 @@ The new data grid can trigger some events while iterating with it.
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the rows. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
 
-## 7 Filters
+## 7 Filters {#filters}
 
-Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected it will appear in each column header a dropzone where you can place your desired filter widget.
+Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
 {{% alert type="warning" %}}
 The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).
@@ -216,6 +221,16 @@ Here is an example of **Date Filter** with **Adjustable by user** defined as **N
 
 You can also define the default value of the widget which will be predefined as initial value when opening your data grid page.
 
+#### 7.1.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+
+* Date & Time
+
+#### 7.1.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
 ### 7.2 Drop-Down Filter
 
 ![Example of default drop-down filter](attachments/data-grid-2/dropdown-filter.png)
@@ -236,6 +251,21 @@ This widget also allows multiple selections by selecting **Multiselect** in the 
 ![Example of multi select drop-down filter](attachments/data-grid-2/dropdown-filter-multiselect.png)
 
 You can also define the empty option caption, which will be rendered as the first item if **Multiselect** if set as **No**. It allows users to clean the filter if pressed.
+
+#### 7.2.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+
+* String
+
+{{% alert type="warning" %}}
+If **Multiselect** is enabled you must select a String attribute containing `Unlimited` in its size.
+{{% /alert %}}
+
+#### 7.2.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
 
 ### 7.3 Number Filter
 
@@ -267,6 +297,19 @@ Here is an example of **Number Filter** with **Adjustable by user** set as **No*
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+
+#### 7.3.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+
+* Autonumber
+* Decimal
+* Integer
+* Long
+
+#### 7.3.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 ### 7.4 Text Filter
 
@@ -302,6 +345,37 @@ You can also define the default value of the widget, which will be predefined as
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
 
+#### 7.4.1 Configurations
+
+In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+
+* Hashed string
+* String
+
+#### 7.4.2 Events
+
+In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
+### 7.5 Header Filtering
+
+In order to enable filtering within the data grid header (outside the columns) you need to enable `Show header filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+
+* Autonumber
+* Boolean
+* Date & time
+* Decimal
+* Enumeration
+* Hashed string
+* Integer
+* Long
+* String
+
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+
+{{% alert type="info" %}}
+If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
+{{% /alert %}}
+
 ## 8 Configuration
 
 You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro or **Configuration** in Studio.
@@ -322,7 +396,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 9 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data Grid 2 v1.1.0 retrieves all available values to do the sorting or filtering while the widget runs.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values#4-filter-helpers) to retrieve only the necessary data.
 
 ## 10 Troubleshooting
 

@@ -44,7 +44,15 @@ The display name determines by what name the page template will appear in the **
 
 The image selected will appear in the **Create Page** wizard. Selecting a representative image will allow users to easily distinguish between page templates. If left blank, the template will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
 
-### 5.3 Shown When
+### 5.3 Category
+
+The category is used to group page templates in the **Create Page** dialog box.
+
+### 5.4 Category Weight
+
+The category weight determines the order of categories inside the **Create Page** dialog box (in ascending order). If page templates with the same category have different category weights, the lowest is used to determine the position.
+
+### 5.5 Shown When
 
 Depending on the context in which a page is created, the user is presented with a different set of page templates to choose from. This setting determines which set the page template belongs to.
 
@@ -56,11 +64,11 @@ Generating select pages | The page templates is available when the user generate
 
 This setting may also place extra restrictions on the template. Page templates intended as new or edit pages require exactly one top-level data view be present. Page templates intended as Select pages require exactly one list view, data grid, or template grid. 
 
-### 5.4 Layout Type
+### 5.6 Layout Type
 
 [Layouts](layout) are all assigned a type in their properties. This type determines in which profiles the layout can be used. To ensure that a user can always map a page template to a compatible layout during page creation, a page template must be assigned one of these same layout types. In practice, this setting will affect in which profile tab of the **Create Page** wizard the page template is displayed. Additionally, it will automatically restrict the default layout setting to layouts of the same type.
 
-### 5.5 Preview Layout
+### 5.7 Preview Layout
 
 Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the **Create Page** wizard. For a full description of the interaction between a page template and its preview layout, see [Layout](layout).
 

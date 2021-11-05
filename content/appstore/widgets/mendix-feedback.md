@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "feedback", "platform s
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://appstore.home.mendix.com/link/app/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/collaborate/feedback) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/collaborate/stories) to improve your app.
 
 The Mendix Feedback widget is easy to set up and automatically attaches additional information to each submitted issue such as the user's name, role, active form, browser version, and screen resolution.
 
@@ -48,7 +48,7 @@ When you have left your feedback, you need to exit the feedback mode by clicking
 ![](attachments/feedback/exit.png)
 
 {{% alert type="info" %}}
-For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/mendix-profile/#feedback) section of *Mendix Profile*.
+For details on how to see all the feedback you have submitted, see the [Feedback](/developerportal/community-tools/mendix-profile#feedback) section of *Mendix Profile*.
 {{% /alert %}}
 
 ### 2.2 Editing the App
@@ -96,7 +96,7 @@ You should use the latest version of the Mendix Feedback widget, as it will prov
 
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1.  Download the latest version of the [Mendix Feedback](https://appstore.home.mendix.com/link/app/199/) widget from the Marketplace. You are strongly encouraged to use version 8.2.1 or above of the widget.
+1.  Download the latest version of the [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget from the Marketplace. You are strongly encouraged to use version 8.2.1 or above of the widget.
 2.  When the widget is included in your app, ensure that it is added to the homepage of the application. Open the homepage from your app's **App** > **Navigation**:
 
 	![](attachments/feedback/show-page.png)

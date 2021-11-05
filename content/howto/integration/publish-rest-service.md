@@ -18,7 +18,7 @@ Mendix allows you to publish REST web services natively from . This how-to will 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
 ## 3 Setting Up the Example Project
 
@@ -63,9 +63,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 ### 4.2 Configuring the REST Service
 
-1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**:
-
-	![](attachments/publish-rest-service/AddRestService.png)
+1.  In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Published REST Service**.
 
 2. Enter *PRS_OrderService*  for the **Name** of your REST service. The REST service is now opened
 3.  Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:

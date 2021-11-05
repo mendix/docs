@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "push notifications", "platform s
 
 ## 1 Introduction
 
-The [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
+The [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003/) module enables notifying end-users of events even when they are not actively using your app. This is a native capability provided by both Android and iOS devices and made available via the Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs).
 
 This module makes it easy for Mendix developers who want to include push notifications capability in their Mendix hybrid mobile apps.
 

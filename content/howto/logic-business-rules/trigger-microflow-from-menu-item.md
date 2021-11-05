@@ -1,7 +1,7 @@
 ---
 title: "Trigger a Microflow From a Menu Item"
 category: "Logic & Business Rules"
-menu_order: 1
+menu_order: 30
 tags: ["how-to", "microflow", "create microflow"]
 ---
 

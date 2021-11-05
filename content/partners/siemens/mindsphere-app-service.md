@@ -21,6 +21,8 @@ With the use of MindSphere IIoT for Makers, you have an integrated developer exp
 
 MindSphere IIoT for Makers packages come in various sizes. Please see the [Product Sheet](https://siemens.mindsphere.io/content/dam/mindsphere/terms/pdf/MindSphere_MindSphereIIoTforMakers_ProductSheet_SpecificTerms_v1.0.pdf) for full details.
 
+This documentation will help you find out how to develop for Siemens MindSphere. Alternatively, have a look at the Mendix Academy Learning path [Mendix IIoT for Makers](https://academy.mendix.com/link/path/114/Mendix-IIoT-for-Makers).
+
 ### 1.1 Limitations
 
 MindSphere IIoT for Makers is easy to add to your app but has the following limitations:
@@ -134,7 +136,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
 2. Choose the **Product** *MindSphere IoT*.
 
-3. Click **Generate Keys**.
+3. Click **Create Binding Keys**.
 
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 
@@ -148,7 +150,7 @@ To authenticate your calls you will need to provide the MindSphere IIoT Authenti
 
     ![Binding](attachments/mindsphere-app-service/binding-keys.png)
 
-You can find more information about managing binding keys in the [Service Management Dashboard](/appstore/general/app-store-overview#service-management) section of *Marketplace Overview*.
+You can find more information about managing binding keys in the [Subscriptions](/appstore/general/app-store-overview#subscriptions) section of *Marketplace Overview*.
 
 ## 4 Using MindSphere IIoT for Makers Through Mendix Data Hub{#using-data-hub}
 
@@ -164,7 +166,7 @@ Drag the [entities](/refguide/external-entities) you need into your domain model
 
 ### 4.2 Authenticating Calls to External Entities
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
 Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
@@ -182,7 +184,7 @@ In the Consumed OData Service document associated with your MindSphere service, 
 
 ### 5.1 Downloading the IIoT Authenticator Module
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
 Download the **MindSphere IIot Authenticator Module** by following the instructions [Downloading Content from the Marketplace](/appstore/general/app-store-content#downloading) in the document *How To Use Marketplace Content in Studio Pro*.
 
@@ -190,7 +192,7 @@ Download the **MindSphere IIot Authenticator Module** by following the instructi
 
 Calls to MindSphere are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service) for a full walkthrough on doing this. For calls to MindSphere, these calls need to be authenticated.
 
-To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://appstore.home.mendix.com/link/app/117578).
+To extract data from MindSphere, your calls to the MindSphere API need to be authenticated. This is done through the [MindSphere IIot Authenticator Module](https://marketplace.mendix.com/link/component/117578).
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
@@ -302,4 +304,3 @@ Setting log levels to trace can have in impact on performance and should only be
 Publishing contracts to Data Hub can fail with a *HTTP 500 INTERNAL SERVER ERROR* when the combination of Asset Type,  Aspect Type, and Aspect Name is very long. The publish operation will fail if the string `AGGR_{AspectType}_{AspectName}_{AssetType}` is more than 200 characters long.
 
 For example, consider an **Asset Type** *CNGTurbine*, with **Aspect Type** *PowerConsumption* and **Aspect** *PrimaryMotor*. This would produce the string `AGGR_PowerConsumption_PrimaryMotor_CNGTurbine` (45 characters) which is less than 200 characters long and can be published successfully. If it were longer than 200 characters, publication would fail.
-

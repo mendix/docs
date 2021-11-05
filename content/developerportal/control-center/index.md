@@ -8,51 +8,55 @@ aliases:
 
 ## 1 Introduction
 
-Users that sign up on the Mendix Platform are able to create new apps, invite others to their teams, deploy their apps, and invite end-users to give feedback on apps, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
+When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in the Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
 
 The [Mendix Control Center](https://controlcenter.mendix.com/) consists of the pages described below, which are for use by [Mendix Admins](#company).
 
-If your company does not already have a Mendix Admin, you will see a landing page that outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**.
+If your company does not already have a Mendix Admin, you will see a page that outlines the usage and goals of Control Center. You can also recommend a colleague for Mendix Admin status by clicking **Suggest a Mendix Admin**.
 
-If your company does already have a Mendix Admin (but you yourself are not a Mendix Admin), you will see this landing page:
+If your company already has a Mendix Admin but you yourself are not a Mendix Admin, you will see this page:
 
 ![](attachments/admin-exists.jpg)
 
-If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described in the sections below.
+If you are a Mendix Admin, you will immediately see the [Dashboard](#dashboard) page and can navigate to the pages described below.
 
 ## 2 Dashboard {#dashboard}
 
 {{% alert type="info" %}}
-This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Mendix Beta Features](/releasenotes/beta-features/).
+This new feature is currently in Beta. Please provide feedback via the feedback button on the right of the page. For more information, see [Beta Versions](/releasenotes/beta-features/).
 {{% /alert %}}
 
-The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform.
+The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 
 ![](attachments/dashboard.png)
 
-These are some examples of what the dashboard presents:
+These are some examples of what you can find on the dashboard:
 
-* **App Projects Created** – you can filter these [apps](#apps) by date
+* **Apps Created** – you can filter these [apps](#apps) by date
 * **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](#members) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts) can lead to security issues
 * **Certification Level** – presents the number of members per [Mendix certification](https://academy.mendix.com/link/certification)
+* **External Members** – click a part of this pie chart to see a list of external members from a specific company
 * **Company Feed** – presents events in your company, such as members joining the company and the created app
 
-## 3 App Projects {#apps}
+## 3 Apps {#apps}
 
-On the **Active App Projects** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated App Projects** tab lists your company's deactivated apps. The following details apply to deactivated apps:
+On the **Active Apps** tab of this page, you can see a list of the active apps that belong to your company. The **Deactivated Apps** tab lists your company's deactivated apps. The following details apply to deactivated apps:
 
 * A deactivated app still exists in the company, but it is invisible to regular users
 * You can only deactivate Free Apps that are not attached to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) nodes
 
-When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate Project** and **Delete Project** in this window. The window has the following tabs:
+When you click an app name, a pop-up window opens with the app profile. You have options to directly **Deactivate App** and **Delete App** in this window. The window has the following tabs:
 
-* **Project Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal. 
-* **Members** tab – This tab presents the active members and external members of the app. You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**. For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page. If you are a Mendix Admin, you can also add yourself to a team via this page.
-* **Project Roles** –  This tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app.
+* **App Info** – this tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings) page for your app in the Developer Portal
+* **Members** – this tab presents the active members and external members of the app
+	* You can directly deactivate a member from the app by clicking their name and selecting **Deactivate Member**
+	* For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/collaborate/team#managing) page
+	* As a Mendix Admin, you can also add yourself to a team via this page
+* **App Roles** –  this tab presents the team roles defined via the **Default App Roles** tab and/or customized for a particular app
 
-When you select one or more apps via the check boxes on the **Active App Projects** or **Deactivated App Projects** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
+When you select one or more apps via the check boxes on the **Active Apps** or **Deactivated Apps** tab, a context menu appears at the bottom of the screen with options for exporting app details to an *.xlsx* file, deactivating/activating apps, and deleting apps.
 
-The **Default App Project Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
+The **Default App Roles** tab shows the default [team roles](/developerportal/collaborate/app-roles#team-roles) assigned for every new app created in your company. Hovering over a role brings up options to **Delete** or **Edit** the role. Click **Add Role** to add a new default role, which includes permissions on accessing [Team Server](/developerportal/collaborate/team-server) and [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) information.
 
 ![](attachments/roles.jpg)
 
@@ -62,7 +66,7 @@ Members are users who can view and/or edit an app. On the **Active Members** tab
 
 ![](attachments/members.jpg)
 
-When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **App Projects** of which they are a member as well as their **Project role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
+When you click a company member's name, a pop-up window opens with their member profile. The profile displays the **Apps** of which they are a member as well as their **App role** for each app. Click an app name to go to its [app profile](#apps) pop-up window.
 
 On the **Deactivated Members** tab, you can see former members of your company who have been deactivated.
 
@@ -116,18 +120,20 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security
+## 8 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
-On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **Project History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
+On the **Single Sign-On** tab, you can set up an identity federation between the Mendix platform and your corporate identity provider. We call this feature *Bring Your Own Identity Provider (BYOIDP)* and you can find more information in [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp).
+
+On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 ![](attachments/security.jpg)
 
 ## 9 Cloud {#cloud}
 
 {{% alert type="warning" %}}
-This feature is not yet publicly available. Please talk to your CSM to enable this page.
+This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
 {{% /alert %}}
 
 The **Paid Environments** tab on this page presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy#fallback) option has been purchased as part of a Premium plan.   
@@ -146,6 +152,13 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 10 Read More
+## 10 Data Hub {#data-hub}
 
+An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
+
+For details on these tasks, see [Data Hub Administration](data-hub-admin).
+
+## 11 Read More
+
+* [Data Hub Administration](data-hub-admin)
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)

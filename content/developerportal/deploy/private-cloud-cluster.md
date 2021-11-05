@@ -9,7 +9,7 @@ tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 ![](attachments/private-cloud-cluster/mx4pc-architecture.png)
 
@@ -21,8 +21,8 @@ Once you have created your namespace, you can invite additional team members who
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A Kubernetes platform or OpenShift version 3.11 or above
-* An administration account for your platform
+* A Kubernetes platform with a version from 1.13 through 1.20, or OpenShift version 3.11 or above (version 4.4 and above is recommended)
+* An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
@@ -71,7 +71,7 @@ Should you consider using a connected environment, the following URLs should be 
     
   1. **Name** – The name you want to give the cluster you are creating.
   
-  2. **Type** – choose the correct type for your cluster.
+  2. **Type** – choose the correct type for your cluster. See [Supported Providers](private-cloud-supported-environments) for more information.
 
   3. **Description** – an optional description of the cluster which will be displayed under the cluster name in the cluster manager.
 
@@ -132,7 +132,9 @@ Now you can download the Configuration Tool by doing the following:
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
-	{{% alert type="info" %}}Choose the latest version, or at least version 1.9.0. Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
+	{{% alert type="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
+
+	{{% alert type="info" %}}Versions earlier than 1.9.0 are only available to allow _configuration_ of previously installed Mendix Operator versions.{{% /alert %}}
 
     {{% alert type="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
@@ -142,7 +144,7 @@ Now you can download the Configuration Tool by doing the following:
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
-### 4.2 Signing in to OpenShift{#openshift-signin}
+### 4.2 Signing in to the Platform{#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -171,6 +173,8 @@ You can do this as follows:
 ### 4.3 Running the Configuration Tool{#running-the-tool}
 
 Once you are signed in to your cluster you can run the Configuration Tool.
+
+To install in non-interactive mode please see: [Install and Configure Mendix for Private Cloud Non-interactive Mode](private-cloud-cli-non-interactive)
 
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
@@ -224,6 +228,8 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+![](attachments/private-cloud-cluster/configure-namespace.png)
+
 The options do the following:
 
 * **Database Plan** – will create a new database plan for your cluster — you must have at least one database plan in your namespace, but you can have more than one
@@ -241,7 +247,7 @@ The options do the following:
 
 	![](attachments/private-cloud-cluster/installation-wizard.png)
 
-3. Use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**) to navigate to the setup pages for each resource which you need to configure.
+3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**). 
 
 4. Each page will lead you through the information you need to supply.
 
@@ -256,6 +262,8 @@ The options do the following:
 
 ##### 4.3.2.1 Database Plan{#database-plan}
 
+A database plan tells the Operator how the Mendix app needs to connect to a database when it is deployed. Although the database plan might be valid, there also has to be a database instance for it to connect to. This database instance may be created when the database plan is applied, or it may be an existing database instance which the database plan identifies.
+
 Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 
 Once you have entered the details you can apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
@@ -265,7 +273,14 @@ Once you have entered the details you can apply two validation checks by clickin
 
 ![Database Plan Configuration](attachments/private-cloud-cluster/database-plan-config.png)
 
-The supported **Database Types** are described below:
+The following **Database Types** are supported:
+
+* PostgreSQL
+* Ephemeral
+* SQL Server
+* Dedicated JDBC
+
+They are described in more detail below:
 
 **Postgres** will enable you to enter the values to configure a PostgreSQL database. You will need to provide all the information about your PostgreSQL database such as plan name, host, port, database, user, and password.
 
@@ -685,14 +700,19 @@ To use this plan, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide)
 
 ##### 4.3.2.3 Ingress{#ingress}
 
-**OpenShift Route** will configure an OpenShift Route. This can only be used for OpenShift clusters.
+**openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows you to enable or disable TLS.
 
-**Ingress** will configure ingress according to the additional domain name you supply.
+**kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows you to configure the ingress path and custom ingress class (dependent on the Ingress controller) and enable or disable TLS.
 
-Both forms of ingress can have TLS enabled or disabled.
+**service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
+This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
 
 {{% alert type="info" %}}
-When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](#advanced-network-settings).
 {{% /alert %}}
 
 ##### 4.3.2.4 Registry{#registry}
@@ -708,6 +728,7 @@ You can choose one of the following registry types. OpenShift registries can onl
 * Generic registry with authentication – this supports most registries, for example Azure Container Registry, quay.io, or Docker Hub
 * Generic registry without authentication – this can be used for basic, self-hosted registries such as the ones included with Minikube and MicroK8s
 * Existing docker-registry secret
+* Google Cloud Container Registry
 
 **Additional Information**
 
@@ -720,6 +741,22 @@ For **Generic registry…** options, the configuration script will ask if the cr
 For **Amazon Elastic Container Registry**, you will need to configure registry authentication separately through [IAM roles](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
 When choosing the **Existing docker-registry secret**, you will need to add this secret to the `default` ServiceAccount manually, or provide registry authentication configuration in another way (depending on which registry authentication options the Kubernetes cluster vendor is offering).
+
+For **Google Cloud Container Registry**, the supported authentication is [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). You will need to supply the following:
+
+* `Registry Name`: google container registry full path name — for example `my-google-account-id/my-registry/dev-repo`.
+* `Registry URL`: container or artifact registry host — for example `us.gcr.io` or `europe-west4-docker.pkg.dev`.
+* `GCP Service Account`: [google service account](https://cloud.google.com/iam/docs/service-accounts) — for example `service-account-name@project-id.iam.gserviceaccount.com`.
+* `Kubernetes Service Account`: the kubernetes service account that will be created and annotated with your google service account during post configuration. You need to [bind](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) the kubernetes service account to your google service account.
+
+	Below is an example how to bind a google cloud service account to a kubernetes service account:
+	```shell
+	gcloud iam service-accounts add-iam-policy-binding \
+    		--role roles/iam.workloadIdentityUser \
+    		--member "serviceAccount:PROJECT_ID.svc.id.goog[K8S_NAMESPACE/KSA_NAME]" \
+    		GSA_NAME@PROJECT_ID.iam.gserviceaccount.com
+	```
+
 
 #### 4.3.3 Proxy{#proxy}
 
@@ -780,7 +817,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
-2. Paste the name of this `custom.crt` secret into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
+2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
    
    ![Custom TLS configuration](attachments/private-cloud-cluster/custom-tls-config.png)
 
@@ -828,13 +865,13 @@ When you have configured all the resources, do the following:
 
 ### 4.4 Confirming Namespace Configuration
 
-When the namespace is configured correctly, its status will become **Connected**. You may need to click the **Refresh** button if the screen does not update automatically.
+When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
 ![](attachments/private-cloud-cluster/image22.png)
 
 ## 5 Advanced Operator Configuration
 
-Some advanced configuration options of the Mendix Operator are not yet available in the reconfiguration script.
+Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
 
 Look at [Supported Providers](private-cloud-supported-environments) to ensure that your planned configuration is supported by Mendix for Private Cloud.
@@ -965,7 +1002,7 @@ You can change the following options:
 * **ingressClassName**: - optional, can be used to specify the Ingress Class name
 * **path**: - optional, can be used to specify the Ingress path; default value is `/`
 * **pathType**: - optional, can be used to specify the Ingress pathType; if not set, no pathType will be specified in Ingress objects
-* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Reconfiguration Script**
+* **domain**: - optional for `openshiftRoute`, required for `ingress`, used to generate the app domain in case no app URL is specified; if left empty when using OpenShift Routes, the default OpenShift `apps` domain will be used; this parameter is also configured through the **Configuration Tool**
 * **enableTLS**: - allows you to enable or disable TLS for the Mendix App's Ingress or OpenShift Route
 * **tlsSecretName**: - optional name of a `kubernetes.io/tls` secret containing the TLS certificate, can be a template: `{{.Name}}` will be replaced with the name of the CR for the Mendix app; if left empty, the default TLS certificate from the Ingress Controller or OpenShift Router will be used
 * **serviceType**: - can be used to specify the Service type, possible options are `ClusterIP` and `LoadBalancer`; if not specified, Services will be created with the `ClusterIP` type
@@ -990,6 +1027,10 @@ spec:
   runtimeDeploymentPodAnnotations:
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
+    # example: enable Prometheus metrics scraping
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8900'
+    prometheus.io/scrape: 'true'
 ```
 
 You can change the following options:
@@ -1344,7 +1385,7 @@ The new value for the annotation will only be applied when the application is re
 
 #### 6.2.2 Members
 
-By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These administration rights are:
+By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
 * Add and delete namespaces
 * Add, activate, or deactivate plans

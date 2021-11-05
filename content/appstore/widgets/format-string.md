@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 
 ## 1 Introduction
 
-The [Format String](https://appstore.home.mendix.com/link/app/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
+The [Format String](https://marketplace.mendix.com/link/component/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
 ### 1.1 Typical Use Cases
 
@@ -46,7 +46,7 @@ When you create a new attribute via the **Edit Attributes Item** dialog box, you
 ### 2.2 Behavior Tab
 
 * **On click** – the microflow to be invoked on click.
-* **Stop propagation** – when enabled, the click action is stopped from being handled via prevention of the click event from going to other components (this can be useful when you do not want other actions [like the selection in a list view] to happen)
+* **Stop propagation** – when enabled, the click action is stopped from being handled via prevention of the click event from going to other components (this can be useful when you do not want other actions like the selection in a list view to happen)
 * **Display string**<a name="display-string"></a> – this string is the heart of the widget and is used as a template for the content
 	* Use `${your_Variable_Name}` to have the attribute value inserted into this string
 	* Note that except for the replacements, this string is interpreted as HTML

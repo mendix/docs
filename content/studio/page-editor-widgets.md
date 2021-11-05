@@ -49,19 +49,21 @@ Widgets of Studio are divided into categories that you can see when you open the
 
 Widget categories are described in the table below:
 
-| Widget Category                                          | Description                                                  |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| Data Containers                                          | Contains a [data view](page-editor-data-view-list-view) (the starting point for showing the contents of one object),  [list view](page-editor-data-view-list-view) (the starting point for showing the contents of list of objects), and a [data grid](page-editor-data-grid) (shows a list of objects in a table format). |
-| [Structure](page-editor-widgets-structure)               | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
-| [Input Elements](page-editor-widgets-input-elements)     | Contains elements that can be used for inputting data.       |
-| [Text](page-editor-widgets-text)                         | Contains text display widgets.                               |
+| Widget Category                                        | Description                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| Data Containers                                        | Contains a [data view](page-editor-data-view-list-view) (the starting point for showing the contents of one object),  [list view](page-editor-data-view-list-view) (the starting point for showing the contents of list of objects), and a [data grid](page-editor-data-grid) (shows a list of objects in a table format). |
+| [Structure](page-editor-widgets-structure)             | Contains pre-set layout grids with a specific number of columns and widgets for controlling the placing widgets. |
+| [Input Elements](page-editor-widgets-input-elements)   | Contains elements that can be used for inputting data.       |
+| [Text](page-editor-widgets-text)                       | Contains text display widgets.                               |
 | [Images & Files](page-editor-widgets-images-and-files) | Contains widgets that help you display images, upload or/and download files and images. |
-| [Buttons](page-editor-widgets-buttons)                   | Contains a variety of buttons for placing on a page.         |
-| [Menus](/refguide/menu-widgets)                          | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
-| Add-ons                                                  | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
-| Charts                                                   | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
-| Display                                                  | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |
-| List view Controls                                       | Contains controls for the list view. This category consist of the [Marketplace widgets](#app-store-widgets). |
+| [Buttons](page-editor-widgets-buttons)                 | Contains buttons with general actions, such as opening or closing a page, calling a microflow, signing users out, opening a link. |
+| [Data Buttons](page-editor-widgets-buttons)            | Contains buttons that manipulate data and are used to create or delete an object, save or cancel changes. |
+| [Workflow Buttons](page-editor-widgets-buttons)        | Contains buttons that are related to [workflows](workflows) and are used to call  a workflow, complete or show a [user task](workflows-user-task), show a workflow page. |
+| [Menus](/refguide/menu-widgets)                        | Contains menu creation widgets. Currently, these widgets can be configured only in Studio Pro. |
+| Add-ons                                                | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the Marketplace profile they will be shown in the add-ons. |
+| Charts                                                 | Contains different charts. This category consist of the [Marketplace widgets](#app-store-widgets). |
+| Display                                                | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the [Marketplace widgets](#app-store-widgets). |
+| List view Controls                                     | Contains controls for the list view. This category consist of the [Marketplace widgets](#app-store-widgets). |
 
 ## 5 Widgets by Origin {#widgets-by-origin}
 

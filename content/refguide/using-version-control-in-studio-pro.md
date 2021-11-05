@@ -16,9 +16,10 @@ This reference guide describes how to use version control in Mendix Studio Pro. 
 To start a new app with version control do the following:
 
 1. Select **File** > **New App**.
-2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-3. Change the **App directory**, or leave the default suggested by Studio Pro.
-4. Click **Create app**.
+2. Select the starting point – an app template.
+3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
+5. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -31,14 +32,10 @@ If there is already a Team Server-enabled app, you can be invited to join it (se
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
 1. Choose **Open App** in Studio Pro.
-2. Select **Mendix Team Server** for **Where is your app stored?**.
-3. Choose your app from the **Team Server App** drop-down.
-4. Change the **App directory**, or leave the default suggested by Studio Pro.
-5. Click **Create app**.
+2. Choose your app from the list of the **Open App** dialog box.
+4. Click **Open in Studio Pro**.
 
 The app will be downloaded from the Team Server and opened in Studio Pro.
-
-![](attachments/using-version-control-in-studio-pro/open-new-team-server-app.png)
 
 ## 4 Day-to-Day Development
 
@@ -52,7 +49,7 @@ You can also see a **history** of all the changes which have been committed, no 
 
 ### 4.1 Status
 
-The status of your proappject is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (documents, folders, and modules) that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
@@ -69,9 +66,7 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
 {{% /alert %}}
 
-For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
-
-![](attachments/using-version-control-in-studio-pro/project-explorer-documents.png)
+For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. The folders and modules containing changes will be depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
 
 You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
@@ -85,7 +80,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
-To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **App** > **Commit...** menu item.
+To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
 ![Commit Button](attachments/using-version-control-in-studio-pro/commit-button.png)
 
@@ -117,7 +112,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 Updating retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
-To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **App** > **Update** menu item.
+To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **Version Control** > **Update** menu item.
 
 ![Update Button](attachments/using-version-control-in-studio-pro/update-button.png)
 
@@ -272,7 +267,7 @@ After a reverse merge the app will look like the changes never happened; if you 
 
 There are two methods for fully replacing your main line with a branch line.
 
-The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
 1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.

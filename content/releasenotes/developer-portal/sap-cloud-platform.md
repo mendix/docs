@@ -12,6 +12,38 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2021
 
+### October 14th, 2021
+
+#### Improvements
+
+* We added the ability to provide a custom *xs-security.json* file to configure an XSUAA service. This allows you to apply the configuration every time your app is deployed. You can add your configuration by unbinding and rebinding the XSUAA service in the [Services](/developerportal/deploy/sap-cloud-platform#binding-services) tab.
+
+### August 30th, 2021
+
+* You can now upload your service configurations directly from the Configurator without having to download the configuration first.
+* We added the ability to unbind services from your environment without deleting the service. This makes it easier to change the configuration of a service and then rebind it.
+
+### August 19th, 2021
+
+#### Improvements – OData Connector for SAP Solutions
+
+* We improved the error handling for expired access tokens when using [Get Destination](/partners/sap/sap-destination-service). Users will now be signed out so that they can retrieve a new access token.
+* We added the ability to fetch the SAP Destination even if the application is not XSUAA enabled or not using XSUAA.
+
+### July 26th, 2021
+
+#### Improvements
+
+* We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/partners/sap/sap-xsuaa-connector).
+
+    {{% alert type="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module) Marketplace module.{{% /alert %}}
+    
+### July 14th, 2021
+
+#### Fix
+
+* We resolved an issue where the PostgreSQL Hyperscaler service did not appear in the **Services** tab of the environment details. (Tickets 121404 and 123430)
+
 ### June 16th, 2021
 
 #### Improvements
@@ -129,7 +161,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry App Store services from within the Mendix Developer Portal.
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
 
 #### Limitation
 

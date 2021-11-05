@@ -112,19 +112,13 @@ The output is described in the table below:
 | -------------------- | ------- |
 | Length of the string | Integer |
 
-### 4.3 Example
+### 4.3 Examples
 
-If you use the following input:
-
-```java
-length('thisismystring')
-```
-
-The output is the following:
-
-```java
-14
-```
+| Input | Output |
+| --- | --- |
+| `length('thisismystring')` | 14 |
+| `length('$MyString')` and `MyString = 'qwer'` | 4 |
+| `length('$MyString')` and `MyString` is empty | 0 |
 
 ## 5 substring
 

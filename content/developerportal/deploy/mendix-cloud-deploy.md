@@ -24,10 +24,10 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| **Number of Users** | Unlimited users. | Depends on your pricing plan.¹ |
+| **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.¹ |
-| **App vCPU**s | 0.5 | Depends on your pricing plan.¹ |
+| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
+| **App vCPU**s | 0.5 | Depends on your pricing plan.² |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -41,8 +41,11 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Metrics, Alerts, and Log Levels** | Not available. | Available. |
 | **Historic Archived Logs** | Not available, only live logs are available. | Available. |
 | **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| **Support** | No Support. | Depending on license option. |
 
-¹The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ Unlicensed apps running on a different cloud platform (for example SAP BTP) have similar restrictions to Free Apps. They have additional restrictions, including only allowing six concurrent users.
+
+² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
 {{% alert type="info" %}}
 Free Apps are part of our Free Edition.
@@ -67,6 +70,12 @@ By default, apps are deployed to the Mendix Cloud **v4**. Features which are cov
 ### 1.3 Flexible Environments{#flexible-environments}
 
 In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+
+### 1.4 Database
+
+Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
+
+If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
 
 ## 2 Deploying an App to the Mendix Cloud
 
@@ -201,12 +210,15 @@ Mendix environments are sized by reference to cloud resource packs. The table be
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
 | XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 |Premium|||||||
 | S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
 | M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
 | L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
 | XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
 | XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 
  The cloud resource packs below are still being used but are not available to new customers.
 

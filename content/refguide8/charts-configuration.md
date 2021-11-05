@@ -11,7 +11,7 @@ tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://appstore.home.mendix.com/link/app/105695/). For more documentation, see [Charts](/appstore/widgets/charts) in the *Marketplace Guide*.
+This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix app templates based on Atlas UI. They can be included in other Mendix apps by downloading them from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/105695/). For more documentation, see [Charts](/appstore/widgets/charts) in the *Marketplace Guide*.
 
 This guide covers the following widgets:
 

@@ -87,7 +87,7 @@ There are two options to ensure that the language is changed:
     * sign out and sign in again
     * use their browser's refresh command
 2. Force Mendix to reload the page – for example by doing the following:
-    1. Add the platform supported widget [HTML / JavaScript Snippet](https://appstore.home.mendix.com/link/app/56/) to your app.
+    1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 
 ## 1 Introduction
 
-The [Rich Text](https://appstore.home.mendix.com/link/app/74889/) widget enables rich inline and toolbar text editing.
+The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget enables rich inline and toolbar text editing.
 
 ### 1.1 Features
 

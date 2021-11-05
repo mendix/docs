@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "database replication", "platform
 
 ## 1 Introduction
 
-You can use the [Database Replication](https://appstore.home.mendix.com/link/app/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
+You can use the [Database Replication](https://marketplace.mendix.com/link/component/160/) module to import data from existing databases into your Mendix application. You can configure how to map each table, column, and relation to your Mendix domain model. Complex mappings over multiple table joins are also possible. You can configured in the client or from Java.
 
 ### 1.1 Typical Use Cases
 

@@ -111,7 +111,7 @@ The ExposeTeamServerRevisionAsOnlineWorkingCopy operation takes a ProjectsAPI.Ex
 | Username | String | The email address of your Mendix account. |
 | ApiKey | String | An API key of your Mendix account. |
 | ProjectId | String | The ID of the project/app that you want to expose. |
-| Branch (can be `empty`) | String | Name of the branch to expose. If this value is `empty`, Main Line is exposed. |
+| Branch (can be `empty`) | String | Name of the branch to expose. If this value is `empty`, the main line is exposed. |
 | Revision (can be `empty`) | Integer/Long | Revision number to expose. If the value is `empty` or `-1`, the latest (HEAD) revision is exposed. |
 
 #### 3.4.2 Output
@@ -133,7 +133,7 @@ Reference this microflow:
 | Username | String | The email address of your Mendix account. |
 | ApiKey | String | An API key of your Mendix account. |
 | ProjectId | String | The ID of the project/app that you want to expose. |
-| Branch (can be `empty`) | String | Name of the branch to commit the changes to. If this value is `empty`, Main Line is used. |
+| Branch (can be `empty`) | String | Name of the branch to commit the changes to. If this value is `empty`, the main line is used. |
 | Revision   | Integer/Long | Revision number to base the changes on. If the value is `-1`, the latest (HEAD) revision is used. |
 
 #### 3.5.2 Output

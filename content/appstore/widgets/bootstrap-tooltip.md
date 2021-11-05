@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "p
 
 ## 1 Introduction
 
-The [Bootstrap Tooltip](https://appstore.home.mendix.com/link/app/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
+The [Bootstrap Tooltip](https://marketplace.mendix.com/link/component/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
 
 ### 1.1 Typical Usage Scenario
 

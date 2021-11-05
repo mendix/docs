@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "switch", "platform sup
 
 ## 1 Introduction
 
-The [Switch](https://appstore.home.mendix.com/link/app/50324/) widget enables toggling a Boolean attribute.
+The [Switch](https://marketplace.mendix.com/link/component/50324/) widget enables toggling a Boolean attribute.
 
 ## 2 Usage
 

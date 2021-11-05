@@ -13,7 +13,7 @@ tags: ["studio pro", "install", "install studio pro", "download"]
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/).
+Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). If you use a Mac device, see [Configure Parallels](using-mendix-studio-pro-on-a-mac) to configure your Windows virtual machine.
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
@@ -78,7 +78,7 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Framework 4.7.2](https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9704-06DD46E5F81D/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
+* [Microsoft .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 * [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe)
@@ -96,7 +96,7 @@ The Mendix Studio Pro installation experience includes all the tools and framewo
 It is possible to prepare the prerequisite installers beforehand, so that the Mendix Studio Pro setup process can pick them up instead of downloading from the remote location. Follow these steps to prepare the installers:
 
 1. Create a folder for the Mendix Studio Pro installer.
-2. Download the latest [Mendix Studio Pro installer](https://appstore.home.mendix.com/link/modelers/) and move it into folder you created.
+2. Download the latest [Mendix Studio Pro installer](https://marketplace.mendix.com/link/studiopro/) and move it into folder you created.
 3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:

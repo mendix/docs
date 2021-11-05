@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal/apps-list/) and [team](team) are described below.
+The roles defined in Developer Portal for an [app](/developerportal#my-apps) and [team](team) are described below.
 
 ## 2 Team Member
 
@@ -30,18 +30,15 @@ Within a team, there are predefined roles that can be provisioned to team member
 	* Note that node permissions must be provisioned by the [Technical Contact](#technical-contact)
 * Who can change the app's [general settings](/developerportal/settings/general-settings)
 
-The roles and permissions are defined in [Security](/developerportal/collaborate/security) on the **App Team** tab, where you can click **Role settings** for role and permission descriptions. As a Scrum Master, you can edit roles for the specific app of which you are the Scrum Master by clicking **Edit** next to a role or by clicking **New role** to create a custom new team role for that app.
-
-In addition, Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
+Scrum Masters can edit and create new team roles on the [Team](team) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/developerportal/control-center/).
 
 ## 4 App Contact {#app-contact}
 
-When you view the [General settings](/developerportal/settings/general-settings) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
+When you view the [General Settings](/developerportal/settings/general-settings) for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
 
 ![](attachments/app-roles/app-roles.png)
 
 The App Contact is visible to regular users and is the go-to person for questions on the app. If you build your own app, you will automatically become the App Contact and you will have the **Scrum Master** [team role](#team-roles). 
-
 
 To change the App Contact, you need to have a **Scrum Master** role or possess the team **Settings** permission.
 
@@ -53,7 +50,7 @@ You should provide the new App Contact with the Scrum Master role. Because the A
 
 ## 5 Technical Contact {#technical-contact}
 
-The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) or various [deployment](/developerportal/deploy) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact needs an MxID before Mendix can activate a license for an application.
+The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) or various [deployment](/developerportal/deploy) platforms. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact for a Free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in the Mendix Cloud or on premises.
 
@@ -84,8 +81,10 @@ It is currently not possible to select more than one Technical Contact in the Me
 
 If you are the current Technical Contact for an app, make another team member the Technical Contact by following these steps:
 
-1. Navigate to **Collaborate** > **Security**.
-2. Select the [Node Permissions](/developerportal/collaborate/security#node-permissions) tab.
-3.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
+1. Navigate to **Deploy** > **Environments**.
+2. Select the [Permissions](/developerportal/deploy/environments#permissions) tab.
+3.  Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
-	![](attachments/app-roles/change-technicalcontact.png)
+{{% alert type="info" %}}
+The Technical Contact will be changed for all environments..
+{{% /alert %}}

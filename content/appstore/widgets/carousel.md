@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "carousel", "image", "p
 
 ## 1 Introduction
 
-The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays images in a carousel.
+The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
 ### 1.1 Features
 
@@ -20,10 +20,6 @@ The [Carousel](https://appstore.home.mendix.com/link/app/47784/) widget displays
 * Navigate to the next or previous image
 * Execute a microflow or nanoflow or open a page when an image is clicked
 * Swipe through images on mobile devices
-
-### 1.2 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://carousel.mxapps.io/).
 
 ## 2 Usage
 

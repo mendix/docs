@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "pla
 
 ## 1 Introduction
 
-The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be used to change a number value using a slider.
+The [Slider](https://marketplace.mendix.com/link/component/48786/) widget can be used to change a number value using a slider.
 
 ### 1.1 Features
 
@@ -16,10 +16,6 @@ The [Slider](https://appstore.home.mendix.com/link/app/48786/) widget can be use
 * Execute a microflow when a slider value is changed or clicked
 * Show a tooltip on hover
 * Render slider with different bootstrap colors
-
-### 1.2 Demo App
-
-For a demo app that has been deployed with this widget, see [here](https://slider.mxapps.io/).
 
 ## 2 Configuration
 

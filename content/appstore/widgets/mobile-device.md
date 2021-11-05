@@ -12,13 +12,13 @@ This widget is deprecated.
 
 ## 1 Introduction
 
-The [Mobile Device](https://appstore.home.mendix.com/link/app/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
+The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget retrieves information about your device and mobile app. It can retrieve the following data:
 
-* Device ID – the unique ID of the device
-* Device platform – the platform on which the app runs (for example, Android, iOS, or web)
-* App name – the user-friendly name of app that is also displayed on your home screen and in the app stores 
-* App ID – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
-* App version – the version of your mobile app (for example, *1.2.1*)
+* **Device ID** – the unique ID of the device
+* **Device platform** – the platform on which the app runs (for example, Android, iOS, or web)
+* **App name** – the user-friendly name of app that is also displayed on your home screen and in the app stores 
+* **App ID** – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
+* **App version** – the version of your mobile app (for example, *1.2.1*)
 
 Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile) applications is recommended.
 

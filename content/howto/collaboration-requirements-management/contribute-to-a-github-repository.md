@@ -45,6 +45,6 @@ To submit changes, follow these guidelines:
 ## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
-* [Set Up a GitHub Repo to Publish an App Store Item](set-up-repo)
+* [Set Up a GitHub Repo to Publish a Marketplace Item](set-up-repo)
 * [Version Control](/refguide/version-control)
 * [Share the Development Database](sharing-the-development-database)

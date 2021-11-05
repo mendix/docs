@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "auto-load more", "load
 
 ## 1 Introduction
 
-The [Auto-Load More](https://appstore.home.mendix.com/link/app/50323/) widget loads more items on the list view as the end-user scrolls.
+The [Auto-Load More](https://marketplace.mendix.com/link/component/50323/) widget loads more items on the list view as the end-user scrolls.
 
 ## 2 Usage
 

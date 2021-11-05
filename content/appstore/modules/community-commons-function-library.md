@@ -1,5 +1,5 @@
 ---
-title: "Community Commons Function Library"
+title: "Community Commons"
 category: "Modules"
 description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "community commons function library", "community commons", "java action call", "platform support"]
@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "community commons function libra
 
 ## 1 Introduction
 
-The [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
+The [Community Commons](https://marketplace.mendix.com/link/component/170/) module adds a number of reusable Java methods to your app, which can be called from microflows or custom Java actions. The module also adds functionality for working with dates, batches, strings, internet, files, and configuration.
 
 ## 2 Usage
 
@@ -18,7 +18,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ## 3 Testing
 
-The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace . This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
+The Community Commons container project contains a variety of predesigned unit tests. To use these tests, download the [Unit Testing](/appstore/modules/unit-testing) module from the Mendix Marketplace. This module has a dependency on the [Object Handling](/appstore/modules/object-handling) module, so that module should also be imported to your app if you want to run the tests.
 
 ## 4 Function List
 
@@ -40,7 +40,7 @@ The Community Commons container project contains a variety of predesigned unit t
 * `Base64DecodeToFile` – This stores a base 64-encoded string plain in the provided target file document.
 * `Base64EncodeFile` – This converts an un-encoded file to a base 64-encoded string.
 * `StringToFile` – This stores a string in the provided file document. Multiple encodings are supported since version 7.4.1 of the module.
-* `StringFromFile` – This reads the contents form the provided file document and return it as string. Multiple encodings are supported since version 7.4.1 of the module.
+* `StringFromFile` – This reads the contents from the provided file document and returns it as string. Multiple encodings are supported since version 7.4.1 of the module.
 * `StoreURLToFileDocument` – This retrieves a document from an URL using an `HTTP GET` request.
 * `DuplicateFileDocument` – This clones the contents of one file document into another.
 * `GetFileSize` – This returns the file size of a file document in bytes.
@@ -50,12 +50,12 @@ The Community Commons container project contains a variety of predesigned unit t
 
 * `CreateLogNode` – This initializes a log node without having a log line.
 * `TimeMeasureStart` – This sets the start for timing something and prints the result to the log.
-* `TimeMeasureEnd` – This sets the end for timing something and prints the result to the log.
+* `TimeMeasureEnd` – This sets the end for timing something and prints the result to the log, and returns the time taken in milliseconds.
 
 ### 4.5 Misc
 
 * `AssertTrue` – This is shorthand for checking something and throwing an error if that something is not true. This function saves creating three microflow items for things that MUST be true.
-* `CreateUserIfNotExists` – This creates a user with a predefined password and role. This is useful during startup for integration purposes. The user always gets updated, even if the user already exists.
+* `CreateUserIfNotExists` – This microflow creates a user with a predefined password and role. This is useful during startup for integration purposes. The user always gets updated, even if the user already exists.
 * `Delay` – This causes a request to sleep for a number of milliseconds. This is useful for preventing brute force attacks or simulating latency delays.
 * `GetCFInstanceIndex` – This returns the Cloud Foundry instance index that is set during the deployment of the app in a cloud-native environment. Returns `0` for the leader instance, `1` or higher for slave instances, or `-1` when the environment variable could not be read (when running locally or on premises).
 * `GetApplicationUrl` – This returns the runtime URL of this application.
@@ -70,8 +70,8 @@ The Community Commons container project contains a variety of predesigned unit t
 * `executeMicroflowAsUser` – This executes the given microflow as if the `$currentuser` is the provided user (delegation).
 * `RunMicroflowAsyncInQueue` – This runs a microflow asynchronously (meaning, this function immediately returns and schedules the microflow to be run in the near future). The queue guarantees a first-come-first-serve order of the microflows, and only one action is served at a time. The microflow is run with system rights in its own transaction. This is very useful for running heavy microflows in the background.
 * `executeMicroflowInBackground` – This is similar to `RunMicroflowAsyncInQueue`, but it accepts one argument as parameter.
-* `executeMicroflowInBatches` – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
-* `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenerios.
+* `executeMicroflowInBatches`  – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
+* `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenarios.
 
 ### 4.7 ORM
 
@@ -105,20 +105,22 @@ The Community Commons container project contains a variety of predesigned unit t
 * `IsStringSimplified` – This determines whether a string can be further simplified by removing diacritics.
 * `RandomString` – This generates a random alphanumeric string of the desired length.
 * `RandomHash` – This generates a random hash perfectly to use as a random unique identifier.
-* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll`.
+* `RegexReplaceAll` – This performs a regular expression replace, which is identical to the microflow expression function `replaceAll` but supports more constructs.
 * `RegexQuote` – This escapes a string value so that it can be used literally with Mendix built-in `regex` replacement functions (for example, so the `$` sign is not interpreted as a back reference to a match).
+* `RemoveEnd` – This removes a string from the end of another string, if present.
 * `StringLeftPad` – This pads a string on the left to a certain length.
 * `StringRightPad` – This pads a string on the right to a certain length.
 * `StringSimplify` – This removes all the diacritics from a string.
-* `StringTrim` – This trims a string to the left and right (meaning, it removes all the surrounding whitespace characters such as tabs, spaces and returns).
+* `StringTrim` – This trims a string to the left and right (meaning, it removes all the surrounding whitespace characters such as tabs, spaces, and returns).
 * `SubstituteTemplate` – Given an object and a template, this substitutes all the fields in the template. This supports attributes, references, reference sets, and constants. Enums are displayed using their caption instead of the key.
 * `Base64Encode` – This converts a plain string to a base-64 encoded string.
 * `Base64Decode` – This converts a base-64 encoded string to the plain original string.
 * `XSSSanitize` – This removes all the potentially dangerous HTML from a string so that it can be safely displayed in a browser. This function should be applied to all HTML, which is displayed in the browser and can be entered by (untrusted) users.
-* `RandomStrongPassword` – This returns a random strong password containing at least one number, lower-case character,upper-case character, and strange character.
+* `RandomStrongPassword` – This returns a random strong password containing a specified minimum number of digits, upper-case characters, and special characters.
 * `EncryptString` – This decrypts an AES-encrypted string. The key length should exactly be 16 characters (128 bit).
 * `DecryptString` – This applies AES encryption to the value string using a symmetric key. The keylength should be exactly 16 characters (at 128 bit).
-* `GenerateHMAC_SHA256_hash` - This generates an asymmetric hash using the `HMAC_SHA256` hash algorithm.
+* `GenerateHMAC_SHA256_hash` – This generates a base-64 encoded asymmetric hash using the `HMAC_SHA256` hash algorithm.
+* `GenerateHMAC_SHA256` – This generates a hexadecimal encoded asymmetric hash using the `HMAC_SHA256` hash algorithm.
 * `SubstringAfter` – This returns the sub-string of a string after the first occurrence of a given separator.
 * `SubstringAfterLast` – This returns the sub-string of a string after the last occurrence of a given separator.
 * `SubstringBefore` – This returns the sub-string of a string before the first occurrence of a given separator.

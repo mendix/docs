@@ -1,7 +1,7 @@
 ---
 title: "Input Elements"
 parent: "page-editor-widgets"
-description: "Describes input widgets in Mendix Studio."
+description: "Describes input elements in Mendix Studio."
 menu_order: 20
 tags: ["studio", "page editor", "input elements", "input widgets", "widgets"]
 ---
@@ -32,7 +32,7 @@ You can find the description of input elements available in Studio in the table 
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix Marketplace](https://appstore.home.mendix.com/index3.html) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
+Apart from the standard input elements, you can also [download widgets from the Mendix Marketplace](https://marketplace.mendix.com/) to your app. For more information, see the [Widgets by Origin](page-editor-widgets#widgets-by-origin) section in *Widgets*.
 
 {{% /alert %}}
 

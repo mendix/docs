@@ -38,7 +38,7 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
 
 {{% alert type="info" %}}
-The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/) screen shows both licensed apps and Free Apps.
+The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal#my-apps) screen shows both licensed apps and Free Apps.
 {{% /alert %}}
 
 
@@ -693,7 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
-| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
+| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact Support. |
 
 **Example Output**
 
@@ -898,10 +898,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact support to upgrade your plan. |
+| 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact Support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024MB.|
 | 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
-| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact support to upgrade to the v4 Cloud to access this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact Support to upgrade to the v4 Cloud to access this functionality. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**

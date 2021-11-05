@@ -1,6 +1,6 @@
 ---
 title: "Architecting Adaptive Solutions"
-parent: "sol-developing"
+parent: "sol-development"
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---

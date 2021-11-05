@@ -2,13 +2,13 @@
 title: "Custom Domains on Tencent"
 parent: "tencent-deploy"
 menu_order: 10
-description: "How to configure custom domains on the Tencent platform as well as generate, upload, and renew certificates in Mendix."
+description: "How to configure custom domains on the Tencent platform as well as generate, upload, and renew certificates for HTTPS connections."
 tags: ["Custom Domain","Tencent Cloud", "certificates"]
 ---
 
 ## 1 Introduction
 
-The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
+When running Mendix on Tencent, you can add custom domains such as `https://myapp.mycompany.com/` to your environments. This how-to walks you through the process.
 
 {{% alert type="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to Free Apps.
@@ -23,7 +23,7 @@ You may not immediately see changes which affect DNS routing. This is because of
 **This how-to will teach you how to do the following:**
 
 * Generate a certificate request for your custom domain
-* Upload a custom domain certificate to the Mendix Cloud
+* Upload a custom domain certificate
 * Renew a custom domain certificate
 * Configure a custom domain for your environment
 
@@ -34,17 +34,18 @@ You may not immediately see changes which affect DNS routing. This is because of
 Before starting this how-to, you will need to have the following prerequisites:
 
 * a basic knowledge of DNS (Domain Name System)
-* a basic knowledge of SSL/TLS certificates:
-    * What is an SSL/TLS certificate and what it is used for?
-    * What is an intermediate certificate chain and what it is used for?
-    * What is an SSL/TLS private key and what it is used for?
-    * What is a certificate request and what it is used for?
-* a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
 * the correct permissions to your licensed node (for more information, see [Node Permissions](/developerportal/deploy/node-permissions))
+* if you are going to use HTTPS to connect to your app:
+    * a basic knowledge of SSL/TLS certificates:
+        * What is an SSL/TLS certificate and what it is used for?
+        * What is an intermediate certificate chain and what it is used for?
+        * What is an SSL/TLS private key and what it is used for?
+        * What is a certificate request and what it is used for?
+    * a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
 
 ### 2.2 Create and Configure a CNAME Record{#DNS}
 
-Before configuring your custom domain in the Mendix Cloud, you will need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
+Before configuring your custom domain in the Developer Portal, you will need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
 
 ![](attachments/tencent-custom-domains/21168230.png)
 
@@ -56,7 +57,27 @@ It is not possible to create a CNAME record for an apex/naked domain (meaning, a
 
 {{% /alert %}}
 
-## 3 Managing Custom Domains in the Mendix Cloud
+## 3 Adding Custom Domains
+
+To add a custom domains, follow these steps:
+
+1. Go to the [Developer Portal](https://apps.mendix.tencent-cloud.com/).
+
+2. Open the **Environments Details** page for your app.
+
+3. Click **Edit** next to the **App URL**
+
+    ![](attachments/tencent-custom-domains/environment-details-app-url.png)
+
+{{% alert type="info" %}}
+
+Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
+
+{{% /alert %}}
+
+## 4 Adding Certificates for Connecting Via HTTPS
+
+If you want users to connect to your app using HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). If you already have a signed SSL/TLS certificate, continue with [Uploading Your Own Custom Domain Certificate](#Uploading), below.
 
 Custom domain certificates (or just "certificates") are managed at the *application* level while custom domains are managed per *environment*.
 
@@ -66,23 +87,11 @@ You can choose which certificate to use when you configure a custom domain for a
 
 ![](attachments/tencent-custom-domains/21168233.png)
 
-To manage custom domains, follow these steps:
+### 4.1 Obtaining a New Signed Certificate
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+If you do not have an SSL/TLS certificate you can order one from a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in the Developer Portal for you.
 
-2. Open the **Environments** page for your app.
-
-3. Open the **Custom Domains** tab.
-
-    ![](attachments/tencent-custom-domains/custom-domains-tab.png)
-
-If you already have a signed SSL/TLS certificate, continue with [Uploading Your Own Custom Domain Certificate](#Uploading), below.
-
-## 4 Obtaining a New Signed Certificate
-
-If you do not have an SSL/TLS certificate you can order one from a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
-
-### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
+#### 4.1.1 Generating a Certificate Request for your Custom Domain{#Generating}
 
 To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow these steps:
 
@@ -106,7 +115,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
-### 4.2 Uploading a Signed Certificate{#Upload}
+#### 4.1.2 Uploading a Signed Certificate{#Upload}
 
 Once you have a signed SSL/TLS certificate, you can upload it by following these steps:
 
@@ -126,35 +135,29 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
-## 5 Uploading Your Own Custom Domain Certificate{#Uploading}
+### 4.2 Uploading Your Own Custom Domain Certificate{#Uploading}
 
 To upload a custom domain certificate, you need to have the following things prepared:
 
 * An SSL/TLS certificate that is self-signed, or signed by your certificate authority
-* An intermediate certificate chain provided by your certificate authority
 * An SSL/TLS private key
 
-To upload the custom domain certificate, follow these steps:
+To enable TLS and upload the custom domain certificate, follow these steps:
 
-1. Click **New** in the *Environments > Custom Domains* tab.
+1. Click the **TLS** tab on the *Environment Details* page for your app.
 
-2. Click **Upload Certificate, Chain and Key**.
+2. Select **Custom TLS Configuration**.
 
-    ![](attachments/tencent-custom-domains/upload-certificate.png)
+3. Select **Yes** for **Enable TLS?**.
 
-3. Type a **Description** for the certificate.
+4. Upload files containing the following:
 
-4. Paste the signed **TLS Certificate**.
+    1. the **TLS Private Key** 
+    2. the signed **TLS Certificate**
 
-5. Paste the **TLS Private Key**.
+    ![](attachments/tencent-custom-domains/upload-tls-files.png)
 
-6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
-
-    ![](attachments/tencent-custom-domains/21168228.png)
-
-7. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
-
-    {{% alert type="info" %}}The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.{{% /alert %}}
+5. Click **Save** to save your new custom domain certificate. It will be uploaded to the Developer Portal automatically.
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
@@ -162,7 +165,7 @@ You can add as many certificates as you need. Each certificate will be listed wi
 
 ![List of certificates](attachments/tencent-custom-domains/certificate-list.png)
 
-## 6 Renewing a Custom Domain Certificate
+### 4.3 Renewing a Custom Domain Certificate
 
 Custom domain certificates have an expiry date. There are two methods for renewing a custom domain certificate that is about to expire:
 
@@ -170,7 +173,7 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 * Update an existing custom domain certificate
 
-### 6.1 Method 1: Creating a New Custom Domain Certificate (Recommended)
+#### 4.3.1 Method 1: Creating a New Custom Domain Certificate (Recommended)
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
@@ -180,7 +183,7 @@ You can handle an expiring domain certificate by replacing it with a new one. Yo
 
 You can now select the new certificate for your custom domain (for more information, see [Configuring a Custom Domain](#Configuring)), below.
 
-### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
+#### 4.3.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.
 
@@ -190,9 +193,7 @@ You can also edit an existing custom domain certificate.
 For this you will need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
-## 7 Configuring a Custom Domain<a name="Configuring"></a>
-
-Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
+## 5 Configuring a Custom Domain{#Configuring}
 
 To configure a custom domain for your application environment, follow these steps:
 
@@ -212,44 +213,38 @@ To configure a custom domain for your application environment, follow these step
 
 6. Type the **Domain name** (for example *myapp.mycompany.com*).
 
-7. Select a **Certificate** from the drop-down list of uploaded certificates.
+7. If you are using HTTPS for your connections, select a **Certificate** from the drop-down list of uploaded certificates.
 
 8. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 
     ![](attachments/tencent-custom-domains/21168229.png)
     
-
 {{% alert type="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
 
 {{% /alert %}}
 
-## 8 Frequently Asked Questions
+## 6 Frequently Asked Questions
 
-### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate?
+### 6.1 Can I Create a `*.mycompany.com` Wildcard Certificate?
 
-Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single application.
+Yes. However, when you create the certificate request via the Mendix Developer Portal, you will only be able to use the wildcard certificate for the environments of a single application.
 
 If you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps.
 
 You can select the same wildcard certificate per environment by using it with different subdomains. For example, `test.mycompany.com`, `accp.mycompany.com`, and `app.mycompany.com`.
 
-### 8.2 How Do I Construct an Intermediate Certificate Chain Properly?
+### 6.2 How Do I Construct an Intermediate Certificate Chain Properly?
 
 Your certificate is signed by the certificate authority (CA). They sign your certificate with their intermediate certificate, rather than directly with the root certificate. Their intermediate certificate is signed with their own root certificate.
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-### 8.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
+### 6.3 How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the ApplicationRootUrl [custom runtime setting](/refguide/custom-settings#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](environments-details#custom-runtime-settings) section of *Environment Details*.
 
-## 9 Read More
+## 7 Read More
 
 * [Certificates](certificates)
-* [Environments](environments)
-* [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Licensing Mendix Cloud Apps](licensing-apps)
-* [App Roles](/developerportal/collaborate/app-roles)
-* [Control Center](/developerportal/control-center/)

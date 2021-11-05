@@ -1,6 +1,6 @@
 ---
 title: "General Info"
-parent: "solutions-guide"
+parent: "sol-solutions-guide"
 menu_order: 10
 tags: ["solutions", "adaptive solutions"]
 ---
@@ -13,4 +13,4 @@ Mendix introduced the Solution Vendor Program to support the full range of organ
 
 Mendix supports aspiring solutions vendors and startups in their adoption of Mendix as a development platform for their solutions. The Mendix Solution Vendor Program and Mendix Startup Program teams are the point of contact for any inquiries, including requesting access to early-adopter stage technologies like Intellectual Property Protection.
 
-For more information, see [Solution Vendor & Startup Programs](vendor-programs).
+For more information, see [Solution Vendor & Startup Programs](sol-vendor-programs).

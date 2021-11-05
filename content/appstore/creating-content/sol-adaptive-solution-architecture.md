@@ -1,6 +1,6 @@
 ---
 title: "Architecting Adaptive Solutions"
-parent: "development"
+parent: "sol-developing"
 description: "Architect a solution for adaptation"
 tags: [ "solutions", "adaptive solutions", "architecting solutions" ]
 ---
@@ -15,7 +15,7 @@ The Mendix Platform is well-suited to supporting the development of solutions. R
 
 In an adaptive solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptive solutions allow for design-time adaptation through model-level changes to cater to the needs of your customers.
 
-![Adaptive Solution architecture](attachments/sol/adaptive-solution-architecture.png)
+![Adaptive Solution architecture](attachments/sol/sol-adaptive-solution-architecture.png)
 
 ### 2.2 Adaptive Solution Examples
 
@@ -70,4 +70,4 @@ When designing the interfaces of your solutions, you should do the following:
 
 ### 3.3 Applying IP Protection to Make the Common Core Immutable
 
-IP protection can be used to make parts of the application model immutable by customers. For practical guidance, see [IP Protection](ip-protection).
+IP protection can be used to make parts of the application model immutable by customers. For practical guidance, see [IP Protection](sol-ip-protection).

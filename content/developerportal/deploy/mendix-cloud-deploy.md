@@ -77,6 +77,14 @@ Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. I
 
 If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
 
+### 1.5 URLs and Ports
+
+When your app is running on the Mendix Cloud it will automatically be given its own URL. This is of the form `(appname){-environment}.mxapps.io`. For licensed apps, the environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain.
+
+You can customize a URL by adding [custom domains](custom-domains).
+
+Mendix apps cannot use custom ports. They communicate via TCP/443 or TCP/80 only.
+
 ## 2 Deploying an App to the Mendix Cloud
 
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.

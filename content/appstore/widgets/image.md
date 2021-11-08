@@ -44,9 +44,7 @@ The **Data source** section (required) is used to configure the data for the wid
 	* Can be used statically or dynamically through the attribute of a context object
 * **Icon** – used to retrieve a static icon or image for the widget
     * Configurable when **Image type** is set to **Icon**
-* **Background image** - used to render image as a background
-	* More content can be put inside
-	* Design properties will have no effect
+* **Background image** – used to render image as a background
 
 #### 2.1.2 Events Section
 
@@ -92,8 +90,10 @@ The widget is shipped with default styles and works out of the box without Atlas
 These are the design properties shipped with Atlas UI for this widget:
 
 * **Image style** – changes the style of the image
-	* **Rounded**, **Circle**, **Square**, **None** (default)
+    * **Rounded**, **Circle**, **Square**, **None** (default)
 * **Center image** – determines whether the image is centered horizontally in its container or not
-	* **Yes**, **No** (default) 
+    * **Yes**, **No** (default) 
 * **Image fit** – changes the fit of the image according to the object-fit CSS property
-	* **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default) 
+    * **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)
+* **Align content** – align elements inside the container as a row or as a column
+    * **Left align as a row**, **Center align as a row**, **Right align as a row**, **Right align as a column**, **Center align as a column**, **Left align as a column**

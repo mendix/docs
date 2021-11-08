@@ -7,7 +7,7 @@ tags: ["text analytics", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service enables you to easily convert voice and audio into written text in your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
+The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service can take voice and audio input, convert it to written text, and then do text analytics for your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
 
 With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
 

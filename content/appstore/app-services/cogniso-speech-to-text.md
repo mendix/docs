@@ -147,7 +147,7 @@ You can make the following settings for the **Microphone** widget:
          * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
          * **Action** – the action that is executed when the received transcript matches an utterance
          * **Feedback** – the voice feedback provided to users when an action is triggered
-  *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to  **Actions**
+  *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
   *  **Fallback message** – the message to notify users when no action is matched
 
 ## 5 Using Cogniso Speech To Text

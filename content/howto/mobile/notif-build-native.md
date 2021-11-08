@@ -8,9 +8,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 ## 1 Introduction
 
-Now that your application is ready to deploy to iOS and/or Android it is time to build the native mobile app.
-
-[ ] Explain why
+Now that you have implemented push notifications, it is time to build and deploy the native mobile app. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
 ## 2 Build Your Native App
 

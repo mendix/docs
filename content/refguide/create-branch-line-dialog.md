@@ -14,7 +14,10 @@ Use the **Create Branch Line** dialog box to create a new [branch line](version-
 To view the **Create Branch Line** dialog box,  do the following:
 
 1. Open **Version Control** > **Manage Branch Lines**.
+
 2. In the **Branch Line Manager**, click **New**. 
+
+    {{% alert type="info" %}}You can only create a new branch for Git when it is the current checked-out and open app, otherwise the **New** button is disabled.{{% /alert %}}
 
 The **Create Branch Line** dialog box is displayed.
 

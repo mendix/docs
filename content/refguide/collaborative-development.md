@@ -145,7 +145,7 @@ To create a new branch line, do the following:
 		
 		![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
     
-	*  This is the dialog box for [Git](create-branch-line-git-dialog):
+	*  This is the dialog box for Git:
 
 		![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
 

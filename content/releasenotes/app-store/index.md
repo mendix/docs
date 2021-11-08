@@ -9,6 +9,17 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### November 17th, 2021
+
+#### New Feature
+
+* Supplier can now provide key Capabilities, banner, external links and Industry clouds for his/her component under Solutions and SolutionsTemplate categories
+
+#### Improvements
+
+* Release Note can now be added without sourceFile upload.
+* SourceFile is now optional for components under certain categories like AppServices and Solution Template where supplier can skip sourceFile upload if component is not downloadable.
+
 ### September 7th, 2021
 
 #### New Features

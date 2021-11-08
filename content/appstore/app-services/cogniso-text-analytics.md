@@ -33,17 +33,15 @@ Here is an overview of what the CognisoTextAnalytics contains:
 * [Constants](#constants)
 	* LicenseToken
 	* TokenEndpoint
-* [Enumeration](#enumeration)
-	* EntityType
-	* PartOfSpeechTag
-	* PiiEntityType
-	* SentimentType
-* [Microflow](#microflow) 
+* [Microflows](#microflows) 
   * BatchTranscription
   * StartService
 * [Nanoflow](#nanoflow)
-* [Java action](#java-action)
-* [Widgets](#widgets)
+* [Enumeration](#enumeration)
+  * EntityType
+  * PartOfSpeechTag
+  * PiiEntityType
+  * SentimentType
 
 In most cases, you will only need what is contained in the **TextAnalytics** > **USE_ME** folder. The content in the **TextAnalytics** > **Internal** folder is for internal use only and you will not need it.
 
@@ -96,7 +94,7 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ### 3.1 Predefined Entities {#predefined-entities}
 
-The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of supported dominant language object to help you get confident score of dominant language from given text.
+The **DominantLanguage** entity is an entity referenced from **DominantLanguageDetector** and **Language** that incorporates all the information of the supported dominant language object to help you get a confident score of the dominant language from given text.
 
 ![dominantlanguage](attachments/cogniso-text-analytics/dominantlanguage.png)
 
@@ -104,7 +102,7 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 | --- | --- |--|
 | `ConfidenceScore` | Decimal |The confident score of dominant language. |
 
-The **Language** entity is a conceptual entity that incorporates all the information of supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
+The **Language** entity is a conceptual entity that incorporates all the information of the supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![language](attachments/cogniso-text-analytics/language.png)
 
@@ -113,7 +111,7 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 | `Name` | String | The name of the language. |
 | `Code` | String |The code of the language. |
 
-The **Detector** entity is a conceptual entity that incorporates all the information of supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
+The **Detector** entity is a conceptual entity that incorporates all the information of the supported detector object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![detector](attachments/cogniso-text-analytics/detector.png)
 
@@ -121,7 +119,7 @@ The **Detector** entity is a conceptual entity that incorporates all the informa
 | --- | --- |--|
 | `InputText` | String |The input text of target detector. |
 
-The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of supported sentiment object to help you perform sentiment analysis from given text.
+The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of the supported sentiment object to help you perform sentiment analysis from given text.
 
 ![sentiment](attachments/cogniso-text-analytics/sentiment.png)
 
@@ -129,7 +127,7 @@ The **Sentiment** entity is an entity referenced from **SentimentDetector** and 
 | --- | --- |--|
 | `SentimentType` | Enumeration | The customized sentiment type enumeration. |
 
-The **SentimentScore** entity is an conceptual entity that incorporates all the information of supported level of confidence of sentiment score detector object.
+The **SentimentScore** entity is a conceptual entity that incorporates all the information of the supported level of confidence of the sentiment score detector object.
 
 ![sentimentscore](attachments/cogniso-text-analytics/sentimentscore.png)
 
@@ -140,7 +138,7 @@ The **SentimentScore** entity is an conceptual entity that incorporates all the 
 | `Neutral` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
 | `Mixed` | Decimal |The level of confidence that the detector has in the accuracy of its detection of the MIXED sentiment. |
 
-The **Entity** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **EntityDetector** that incorporates all the information of supported entity object to help you perform entity detection from given text.
+The **Entity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and is referenced from **EntityDetector** that incorporates all the information of the supported entity object to help you perform entity detection from given text.
 
 ![entity](attachments/cogniso-text-analytics/entity.png)
 
@@ -148,7 +146,7 @@ The **Entity** entity is a conceptual entity that inherit from **TextAnalytics.R
 | --- | --- |--|
 | `EntityType` | Enumeration |The customized entity type. |
 
-The **PiiEntity** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of supported PII entity object to help you perform PII entity detection from given text.
+The **PiiEntity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of the supported PII entity object to help you perform PII entity detection from given text.
 
 ![piientity](attachments/cogniso-text-analytics/piientity.png)
 
@@ -156,20 +154,20 @@ The **PiiEntity** entity is a conceptual entity that inherit from **TextAnalytic
 | --- | --- |--|
 | `PiiEntityType` | Enumeration | The customized PII entity type. |
 
-The **KeyPhrase** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **KeyPhraseDetector** that incorporates all the information of supported key phrase object to help you perform key phrase detection from given text.
+The **KeyPhrase** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **KeyPhraseDetector** that incorporates all the information of the supported key phrase object to help you perform key phrase detection from given text.
 
 ![keyphrase](attachments/cogniso-text-analytics/keyphrase.png)
 
-The **SyntaxToken** entity is a conceptual entity that inherit from **TextAnalytics.Response** entity and referenced from **SyntaxDetector** that incorporates all the information of supported syntax token object to help you perform syntax token extraction from given text.
+The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **SyntaxDetector** that incorporates all the information of the supported syntax token object to help you perform syntax token extraction from given text.
 
 ![syntaxtoken](attachments/cogniso-text-analytics/syntaxtoken.png)
 
 | Attribute | Data Type |Description |
 | --- | --- |--|
-| `Index` | |The index of the token |
-| `PartOfSpeech` | |The part of speech tag enumeration for the token. |
+| `Index` | Integer |The index of the token |
+| `PartOfSpeech` | Enumeration |The part of speech tag enumeration for the token. |
 
-The **Response** entity is an conceptual entity that incorporates all the information of supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
+The **Response** entity is a conceptual entity that incorporates all the information of the supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
 ![response](attachments/cogniso-text-analytics/response.png)
 
@@ -178,41 +176,42 @@ The **Response** entity is an conceptual entity that incorporates all the inform
 | `Text` | String | The word that was recognized in the source text. |
 | `BeginOffset` | Integer |The zero-based offset from the beginning of the source text to the first character in the word. |
 | `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
-| `ConfidenceScore` | Decimal |The level of confidence that TextAnalytics module has in the accuracy of the detection. |
+| `ConfidenceScore` | Decimal |The level of confidence that the TextAnalytics module has in the accuracy of the detection. |
 
 ### 3.2 Constants {#constants}
 
-The **LicenseToken** constant is used to provide a valid CognisoTextAnalytics license token for the app that uses CognisoTextAnalytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextAnalytics is a commercial product and subject to a subscription fee, to be able to use the CognisoTextAnalytics functionalities in a deployed app, you will need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid CognisoTextAnalytics license token for the app that uses CognisoTextAnalytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextAnalytics is a commercial product and subject to a subscription fee, to use the CognisoTextAnalytics functionalities in a deployed app, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
 However, if you only plan to try how CognisoTextAnalytics works  (meaning, build and run an app that uses CognisoTextAnalytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for cognitive speech to text service backend authentication. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
+The **TokenEndpoint** 
+constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
-### 3.3 Microflow {#microflow}
+### 3.3 Microflows {#microflows}
 
-The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from back-end service.
+The **CreateDominantLanguageDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create DominantLanguageDetector as a return object from the back-end service.
 
 ![createdominantlanguagedetector](attachments/cogniso-text-analytics/createdominantlanguagedetector.png)
 
-The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from backend service.
+The **CreateEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateEntityDetector as a return object from the back-end service.
 
 ![createentitydetector](attachments/cogniso-text-analytics/createentitydetector.png)
 
-The **CreateKeyPhraseDetector** microflow takes  **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as return object from backend service.
+The **CreateKeyPhraseDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateKeyPhraseDetector as a return object from the back-end service.
 
 ![createkeyphrasedetector](attachments/cogniso-text-analytics/createkeyphrasedetector.png)
 
-The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from backend service.
+The **CreatePiiEntityDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreatePiiEntityDetector as a return object from the back-end service.
 
 ![createpiientitydetector](attachments/cogniso-text-analytics/createpiientitydetector.png)
 
-The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as return object from backend service.
+The **CreateSentimentDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSentimentDetector as a return object from the back-end service.
 
 ![createsentimentdetector](attachments/cogniso-text-analytics/createsentimentdetector.png)
 
-The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as return object from backend service.
+The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCode** (String) as input parameters to create CreateSyntaxDetector as a return object from the back-end service.
 
 ![createsyntaxdetector](attachments/cogniso-text-analytics/createsyntaxdetector.png)
 
@@ -244,9 +243,7 @@ The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input pa
 
 ### 3.5 Enumeration {#enumeration}
 
-The **SentimentType** is an enumeration that incorporates all the information of supported sentiment type.
-
-![sentimenttype](attachments/cogniso-text-analytics/sentimenttype.png)
+The **SentimentType** is an enumeration that incorporates all the information of the supported sentiment type.
 
 | Caption | Name |
 | --- | --- |
@@ -255,9 +252,7 @@ The **SentimentType** is an enumeration that incorporates all the information of
 | Neutral | Neutral |
 | Mixed | Mixed |
 
-The **EntityType** is an enumeration that incorporates all the information of supported entity type.
-
-![entitytype](attachments/cogniso-text-analytics/entitytype.png)
+The **EntityType** is an enumeration that incorporates all the information of the supported entity type.
 
 | Caption | Name |
 | --- | --- |
@@ -272,8 +267,6 @@ The **EntityType** is an enumeration that incorporates all the information of su
 | Other | Mixed |
 
 The **PartOfSpeechTag** is an enumeration that incorporates all the supported part of speech tags.
-
-![partofspeechtag](attachments/cogniso-text-analytics/partofspeechtag.png)
 
 | Caption | Name |
 | --- | --- |
@@ -295,9 +288,7 @@ The **PartOfSpeechTag** is an enumeration that incorporates all the supported pa
 | Verb | Verb |
 | Other | Other |
 
-The **PiiEntityType** is an enumeration that incorporates all the information of supported Personally Identifiable Information (PII) types.
-
-![piientitytype](attachments/cogniso-text-analytics/piientitytype.png)
+The **PiiEntityType** is an enumeration that incorporates all the information of the supported Personally Identifiable Information (PII) types.
 
 | Caption | Name |
 | --- | --- |
@@ -325,13 +316,11 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 ## 4 Using Cogniso Text Analytics
 
-Cogniso Text Analytics provides actions that enables you to easily identify the language of the text, extract key phrases, understand how positive or negative the text is, and analyze text using tokenization and parts of speech.
-
-When you start from a blank app template in Mendix Studio Pro, you can follow the steps below to setup customizable text analytic actions quickly.
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytic actions quickly.
 
 ### 4.1 Performing Language Detection in Your Browser
 
-Use the **CreateDominantLanguageDetector** microflow and **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detectection:
+Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detectection:
 1. Create a nanoflow as follows:
    1. Name the nanoflow *CreateDominantLanguageDetector*.
    2. Add the **CreateDominantLanguageDetector** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
@@ -343,34 +332,109 @@ Use the **CreateDominantLanguageDetector** microflow and **DetectDominantLanguag
 
       ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
 
-2. From the **Toolbox**, add a Data View widget to your page.
-3. Double-click the Data Viewer widget and for **Data source**, set **Nanoflow** as the **CreateDominantLanguageDetector** nanoflow, and click **OK**.
-4. Add a Text Area widget and change the following settings:
+2. From the **Toolbox**, add a **Data view** widget to your page.
+
+3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
+
+   1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
+   2. For **Data source**, select **Nanoflow**.
+   3. **Select** the **CreateDominantLanguageDetector** nanoflow for **Nanoflow**.
+   4. Click **OK** to save the settings.
+
+4. From the **Toolbox**, add a **Text area** widget to your page.
+
+5. Change the settings of the **Text area** widget as follows:
+
    1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **InputText** attribute from the data view.
    3. For **Label caption**, enter *Text*.
-5. Add a Button widget and change the following settings:
-   1. Name the button *Detect Dominant Language*.
-   2. Double-click the button to open the **Action Button** dialog box.
-   3. In the **Event** section, set **On click** to **Call a nanoflow** and set **Nanoflow** to **DetectDominantLanguage** .
-6. Place a templateGrid, set *Association* as data source type, set *DominantLanguage* as entity path.
-7.  Run your app locally. You can now perform language detection directly in the browser:
+   3. Click **OK** to save the settings.
+
+6. From the **Toolbox**, add a **Button** widget to your page.
+
+7. Change the settings of the **Button** widget as follows:
+
+   1. Double-click the button to open the **Action Button** dialog box.
+   1. For Caption, enter *Detect Dominant Language*.
+   3. In the **Event** section, set **On click** to **Call a nanoflow**.
+   3. For **Nanoflow**, **Select** the **DetectDominantLanguage** nanoflow from the **USE_ME** folder.
+
+8. From the **Toolbox**, add a **Template grid** widget.
+
+9.  Change the settings of the **Template grid** widget as follows:
+
+   1. Double-click the button to open the **Edit Template Grid** dialog box.
+   2. Go to the **Data source** tab.
+   3. For the **Type** of the **Data source**, select **Association**.
+   4. For **Entity (path)**, select **DominantLanguage**.
+
+10. Run your app locally. You can perform language detection directly in the browser:
 
     ![runlocally-language-detection](attachments/cogniso-text-analytics/runlocally-language-detection.png)
 
-### 4.2 Performing sentiment detection in Your Browser
+### 4.2 Performing Sentiment Detection in Your Browser
 
-From the **CreateSentimentDetector** microflow and **DetectSentiment** nanoflow to perform sentiment detection.
+Use the **CreateSentimentDetector** microflow and **DetectSentiment** nanoflow to perform sentiment detection. Follow these steps to configure the sentiment detection:
 
-Follow these steps to configure this sentiment detect action:
-1. Place a new data view on the page.
-2. Create a nanoflow, call it *CreateSentimentDetector*, and set this as the data source of the data view.
-3. Place a textArea and set inputText of data view object as the data source.
-3. Place a reference selector and set name of language entity from association as the data source.
-4. Place a button, call it *Detect Sentiment*, and set nanoflow **DetectSentiment** as the action of events.
-5. Place a data view, and set *Sentiment* from association as the data source
-5. Place another data view inside of previous one, and set *SentimentScore* from association as the data source
-6. Run your app locally. You can now perform sentiment detection directly in the browser:
+1. Create a nanoflow as follows:
+
+   1. Name the nanoflow *CreateSentimentDetector*.
+
+   2. Add the **CreateSentimentDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+
+   3. Double-click the **CreateSentimentDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+
+      ![call-createsentimentdetector-microflow](attachments/cogniso-text-analytics/call-createsentimentdetector-microflow.png)
+
+2. From the **Toolbox**, add a **Data view** widget to your page.
+
+3. Set the **CreateSentimentDetector** nanoflow as the data source of the Data View widget as follows:
+
+   1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
+   2. For **Data source**, select **Nanoflow**.
+   3. **Select** the **CreateSentimentDetector** nanoflow for **Nanoflow**.
+   4. Click **OK** to save the settings.
+
+4. From the **Toolbox**, add a **Text area** widget to your page.
+
+5. Change the settings of the **Text area** widget as follows:
+
+   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from the data view.
+   3. For **Label caption**, enter *Text*.
+   4. Click **OK** to save the settings.
+
+6. From the **Toolbox**, add a **Reference selector **widget to your page.
+
+7. Change the settings of the **Reference selector** widget as follows:
+
+   1. Double-click the Text Area widget to open the **Edit Reference Selector** dialog box.
+   2. For **Data source**, select the **Name** attribute of the **Language** entity from association.
+
+8. From the **Toolbox**, add a **Button** widget to your page.
+
+9. Change the settings of the **Button** widget as follows:
+
+   1. Double-click the button to open the **Action Button** dialog box.
+   2. For Caption, enter *Detect Sentiment*.
+   3. In the **Event** section, set **On click** to **Call a nanoflow**.
+   4. For **Nanoflow**, **Select** the **DetectSentiment** nanoflow from the **USE_ME** folder.
+
+10. From the **Toolbox**, add a **Data view** widget to your page.
+
+11. Change the settings of the **Data view** widget as follows:
+
+    1. Double-click the button to open the **Data view** dialog box.
+    2. For **Entity (path)** of the **Data source**, select **Sentiment** from association.
+
+12. Inside the Data view widget, add another **Data view** widget.
+
+13. Change the settings of the second **Data view** widget as follows:
+
+    1. Double-click the button to open the **Data view** dialog box.
+    2. For **Entity (path)** of the **Data source**, select **SentimentScore** from association.
+
+14. Run your app locally. You can perform sentiment detection directly in the browser:
 
 ![runlocally-sentiment-detection](attachments/cogniso-text-analytics/runlocally-sentiment-detection.png)
 

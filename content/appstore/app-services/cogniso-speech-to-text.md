@@ -182,6 +182,7 @@ Below are the steps to build an example web app which can convert speech to text
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
+   3. Click **OK** to save the settings.
 6.  Change the settings of the **Microphone** widget as follows:
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
     2. Go to the **Events** tab.

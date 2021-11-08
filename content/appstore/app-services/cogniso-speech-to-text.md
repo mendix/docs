@@ -36,7 +36,6 @@ This app service enables doing the following:
 * Trigger actions and give users voice feedback messages
 * Support the batch mode to implement speech conversion as a back-end service
 * Support different language options
-* Translate non-English transcripts into English
 
 ### 1.3 Prerequisites
 
@@ -150,7 +149,6 @@ You can make the following settings for the **Microphone** widget:
          * **Feedback** – the voice feedback provided to users when an action is triggered
   *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to  **Actions**
   *  **Fallback message** – the message to notify users when no action is matched
-  *  **Translate** – determines whether to translate non-English transcripts and utterances into English for syntax analysis (enable this when you want to use non-English languages)
 
 ## 5 Using Cogniso Speech To Text
 

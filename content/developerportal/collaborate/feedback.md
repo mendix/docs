@@ -78,9 +78,9 @@ In the **Leave a comment** box, you can post a comment and start an exchange wit
 To process a feedback item, you can select one of the following in the **Actions** menu. The options available depend on the current status of your feedback.
 
 * **Accept feedback** – signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback item (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
-* **Mark 'Under review' ** – notifies the user who submitted the feedback as well as your team that the item is under review
-* **Mark as handled ** – changes the [feedback stage](#stages) of the item from **Open** to **Handled**, which then removes the item from your open items list but does not close it
-* * **Close feedback** – closes the feedback item; you can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted
+* **Mark 'Under review'** – notifies the user who submitted the feedback as well as your team that the item is under review
+* **Mark as handled** – changes the [feedback stage](#stages) of the item from **Open** to **Handled**, which then removes the item from your open items list but does not close it
+* **Close feedback** – closes the feedback item; you can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted
 
 If the feedback item has not yet been accepted, you can also change the feedback item's type by clicking **Convert to idea**, **Convert to question**, or **Convert to issue**. For more information, see the [Types of Feedback](#types) section.
 

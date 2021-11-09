@@ -35,28 +35,22 @@ This app service enables doing the following:
 * Customize text tranlation
 * Switch different language options
 
-### 1.3 Limitations
-
-The Cogniso Translation app service.{{% todo %}}[What are the limitationst?]{{% /todo %}}
-
-### 1.4 Prerequisites
+### 1.3 Prerequisites
 
 This app service can only be used with Studio Pro 9 versions starting with [9.4.0](/releasenotes/studio-pro/9.4).
 
 ## 2 Installation
 
 1. Go to the [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) component page in the Marketplace and download the *CognisoTranslation.mpk* file.
+2.  To add the Cogniso Translation app service to your app in Mendix Studio Pro, follow these steps:
+    1.  In the **App Explorer**, right-click the app.
+    2.  Click **Import module package** and then select the *CognisoTranslation.mpk*. 
 
-2. To add the Cogniso Translation app service to your app in Mendix Studio Pro, follow these steps:
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-   1. In the **App Explorer**, right-click the app.
-   2. Click **Import module package** and then select the *CognisoTranslation.mpk*. 
+        ![import-translation](attachments/cogniso-translation/import-translation.png)
 
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-
-      ![import-translation](attachments/cogniso-translation/import-translation.png)
-
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3. In the **Import Module** dialog box, click **Import**. 
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -200,27 +194,25 @@ Cogniso Translation is a premium Mendix product that is subject to a purchase an
 
 When you just need to run your app with Cogniso Translation locally or deploy as a Mendix Free App for testing and trial purposes, you will need a trial version of LicenseToken.
 
+### 5.2  Obtaining a LicenseToken
+
 To receive information on how to get the license token for [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
-### 5.2 Configuring a LicenseToken for App Deployment
+### 5.3 Configuring a LicenseToken for App Deployment
 
-#### 5.2.1 Configuring the LicenseToken in Studio Pro
+#### 5.3.1 Configuring the LicenseToken in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-
 3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-
 4. Fill in the **Value** with your obtained LicenseToken.
+5.  Click **OK** to save the settings.
 
-5. Click **OK** to save the settings.
-
-   ![licensetoken-inmendix](attachments/cogniso-translation/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/cogniso-translation/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 5.2.2 Configuring the LicenseToken in Developer Portal
+#### 5.3.2 Configuring the LicenseToken in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

@@ -67,25 +67,19 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 ## 2 Installation
 
 1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextAnalytics.mpk* file.
+2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+    1.  In the **App Explorer**, right-click the app.
+    2.  Click **Import module package** and then select *CognisoTextAnalytics.mpk*. 
 
-2. To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-   1. In the **App Explorer**, right-click the app.
+        ![import-text-analytics](attachments/cogniso-text-analytics/import-text-analytics.png)
 
-   2. Click **Import module package** and then select *CognisoTextAnalytics.mpk*. 
-
-   3. In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-
-      ![import-text-analytics](attachments/cogniso-text-analytics/import-text-analytics.png)
-
-      {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    4. In the **Import Module** dialog box, click **Import**. 
-
    5. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-
    6. Open the **App Explorer**  to view the **CognisoTextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
-
 3. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
 You have successfully added the Cogniso Speech To Text resources to your app.
@@ -99,7 +93,7 @@ The **DominantLanguage** entity is an entity referenced from **DominantLanguageD
 ![dominantlanguage](attachments/cogniso-text-analytics/dominantlanguage.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `ConfidenceScore` | Decimal |The confident score of dominant language. |
 
 The **Language** entity is a conceptual entity that incorporates all the information of the supported language object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
@@ -107,7 +101,7 @@ The **Language** entity is a conceptual entity that incorporates all the informa
 ![language](attachments/cogniso-text-analytics/language.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `Name` | String | The name of the language. |
 | `Code` | String |The code of the language. |
 
@@ -116,7 +110,7 @@ The **Detector** entity is a conceptual entity that incorporates all the informa
 ![detector](attachments/cogniso-text-analytics/detector.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `InputText` | String |The input text of target detector. |
 
 The **Sentiment** entity is an entity referenced from **SentimentDetector** and **SentimentScore** that incorporates all the information of the supported sentiment object to help you perform sentiment analysis from given text.
@@ -124,7 +118,7 @@ The **Sentiment** entity is an entity referenced from **SentimentDetector** and 
 ![sentiment](attachments/cogniso-text-analytics/sentiment.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `SentimentType` | Enumeration | The customized sentiment type enumeration. |
 
 The **SentimentScore** entity is a conceptual entity that incorporates all the information of the supported level of confidence of the sentiment score detector object.
@@ -132,7 +126,7 @@ The **SentimentScore** entity is a conceptual entity that incorporates all the i
 ![sentimentscore](attachments/cogniso-text-analytics/sentimentscore.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `Positive` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the POSITIVE sentiment. |
 | `Negative` | Decimal | The level of confidence that The detector has in the accuracy of its detection of the NEGATIVE sentiment. |
 | `Neutral` | Decimal |The level of confidence that The detector has in the accuracy of its detection of the NEUTRAL sentiment. |
@@ -143,7 +137,7 @@ The **Entity** entity is a conceptual entity that inherits from the **TextAnalyt
 ![entity](attachments/cogniso-text-analytics/entity.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `EntityType` | Enumeration |The customized entity type. |
 
 The **PiiEntity** entity is a conceptual entity that inherits from the **TextAnalytics.Response** entity and referenced from **PiiEntityDetector** that incorporates all the information of the supported PII entity object to help you perform PII entity detection from given text.
@@ -151,7 +145,7 @@ The **PiiEntity** entity is a conceptual entity that inherits from the **TextAna
 ![piientity](attachments/cogniso-text-analytics/piientity.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `PiiEntityType` | Enumeration | The customized PII entity type. |
 
 The **KeyPhrase** entity is a conceptual entity that inherits from **TextAnalytics.Response** entity and is referenced from **KeyPhraseDetector** that incorporates all the information of the supported key phrase object to help you perform key phrase detection from given text.
@@ -163,8 +157,8 @@ The **SyntaxToken** entity is a conceptual entity that inherits from **TextAnaly
 ![syntaxtoken](attachments/cogniso-text-analytics/syntaxtoken.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
-| `Index` | Integer |The index of the token |
+| --- | --- |---|
+| `Index` | Integer |The index of the token. |
 | `PartOfSpeech` | Enumeration |The part of speech tag enumeration for the token. |
 
 The **Response** entity is a conceptual entity that incorporates all the information of the supported response data object. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
@@ -172,7 +166,7 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 ![response](attachments/cogniso-text-analytics/response.png)
 
 | Attribute | Data Type |Description |
-| --- | --- |--|
+| --- | --- |---|
 | `Text` | String | The word that was recognized in the source text. |
 | `BeginOffset` | Integer |The zero-based offset from the beginning of the source text to the first character in the word. |
 | `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
@@ -320,17 +314,18 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 ### 4.1 Performing Language Detection in Your Browser
 
-Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detectection:
-1. Create a nanoflow as follows:
-   1. Name the nanoflow *CreateDominantLanguageDetector*.
-   2. Add the **CreateDominantLanguageDetector** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
-   3. Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLanguage** nanoflow to perform language detection. Follow these steps to configure the language detection:
 
-      ![call-createdominantlanguagedetector-microflow](attachments/cogniso-text-analytics/call-createdominantlanguagedetector-microflow.png)
+1.  Create a nanoflow as follows:
+    1. Name the nanoflow *CreateDominantLanguageDetector*.
+    2. Add the **CreateDominantLanguageDetector** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+    3.  Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-   4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+        ![call-createdominantlanguagedetector-microflow](attachments/cogniso-text-analytics/call-createdominantlanguagedetector-microflow.png)
 
-      ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
+   4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+
+       ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
@@ -514,11 +509,11 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     2. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-       ![call-createpiientitydetector-microflow](attachments/cogniso-text-analytics/call-createpiientitydetector-microflow.png)
+        ![call-createpiientitydetector-microflow](attachments/cogniso-text-analytics/call-createpiientitydetector-microflow.png)
       
-   4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+   4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
-      ![createpiientitydetector-nanoflow](attachments/cogniso-text-analytics/createpiientitydetector-nanoflow.png)
+       ![createpiientitydetector-nanoflow](attachments/cogniso-text-analytics/createpiientitydetector-nanoflow.png)
    
 2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreatePiiEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -554,16 +549,16 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 
 Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to perform syntax detection. Follow these steps to configure this syntax detect action:
 
-1. Create a nanoflow as follows:
-   1. Name the nanoflow *CreateEntityDetector*.
-   2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-   3. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+1.  Create a nanoflow as follows:
+    1. Name the nanoflow *CreateEntityDetector*.
+    2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    3.  Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
-      ![call-createsyntaxdetector-microflow](attachments/cogniso-text-analytics/call-createsyntaxdetector-microflow.png)
+        ![call-createsyntaxdetector-microflow](attachments/cogniso-text-analytics/call-createsyntaxdetector-microflow.png)
 
-   4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
+    4.  Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
-      ![createsyntaxdetector-nanoflow](attachments/cogniso-text-analytics/createsyntaxdetector-nanoflow.png)
+        ![createsyntaxdetector-nanoflow](attachments/cogniso-text-analytics/createsyntaxdetector-nanoflow.png)
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
 3. Set the **CreateSyntaxDetector** nanoflow as the data source of the **Data view** widget as follows:

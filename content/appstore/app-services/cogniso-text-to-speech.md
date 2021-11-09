@@ -45,17 +45,15 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 ## 2 Installation
 
 1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextToSpeech.mpk* file.
-2. To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+    1.  In the **App Explorer**, right-click the app.
+    2.  Click **Import module package** and then select *CognisoTextToSpeech.mpk* file.
 
-   1. In the **App Explorer**, right-click the app.
+        In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
 
-   2. Click **Import module package** and then select *CognisoTextToSpeech.mpk* file.
+        ![import-text-to-speech](attachments/cogniso-text-to-speech/import-text-to-speech.png)
 
-      In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project.
-
-      ![import-text-to-speech](attachments/cogniso-text-to-speech/import-text-to-speech.png)
-
-     {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+        {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
    3. In the **Import Module** dialog box, click **Import**. 
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
@@ -141,7 +139,7 @@ Follow these steps to configure the text-to-voice conversion:
     2.  Add the **CreateSpeechSynthesizer** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateSpeechSynthesizer** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
        
-       ![call-createspeechsynthesizer-microflow](attachments/cogniso-text-to-speech/call-createspeechsynthesizer-microflow.png)
+        ![call-createspeechsynthesizer-microflow](attachments/cogniso-text-to-speech/call-createspeechsynthesizer-microflow.png)
       
     4.  Right-click the **CreateSpeechSynthesizer** microflow and select **Set $speechSynthesizer as return value** in the pop-up menu.
     
@@ -151,9 +149,9 @@ Follow these steps to configure the text-to-voice conversion:
 
 3. Set the **CreateSyntaxDetector** nanoflow as the data source of the **Data view** widget as follows:
    1.  Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
-      2. For **Data source**, select **Nanoflow**.
-      3. **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
-      4. Click **OK** to save the settings.
+   2.  For **Data source**, select **Nanoflow**.
+   3.  **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
+   4.  Click **OK** to save the settings.
    
 4. Inside the **Data view** widget, add an [AudioPlayer](#audioplayer) widget.
 
@@ -165,7 +163,7 @@ Follow these steps to configure the text-to-voice conversion:
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.
    
-7. From the **Toolbox**, add a **Reference selector **widget to your page.
+7. From the **Toolbox**, add a **Reference selector** widget to your page.
 
 8. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.

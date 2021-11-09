@@ -19,21 +19,21 @@ Here is an overview of what the app service contains:
 * [Microflows](#microflows) 
 	* BatchTranscription
 	* StartService
-* [Widgets](#widgets) 
+* [Widgets](#widgets)
 	* Microphone
 
 In most cases, you will only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to convert voice into text and trigger custom actions in your mendix apps. You can also customize these actions and specify voice feedback messages that your app sends to users. You can offer users different language options.
+You can use this app service to convert voice into text and trigger custom actions in your mendix apps. You can also customize these actions and set voice feedback messages that your app sends to users. You can offer users different language options in your mendix app.
 
 ### 1.2 Features
 
 This app service enables doing the following:
 
 * Convert speech to text
-* Trigger actions and give users voice feedback messages
+* Trigger actions and give users voice feedback messages upon speech conversion
 * Support the batch mode to implement speech conversion as a back-end service
 * Support different language options
 
@@ -275,7 +275,7 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 4. Fill in the **Value** with your obtained LicenseToken.
-5.  Click **OK** to confirm the settings.
+5.  Click **OK** to save the settings.
 
     ![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
 

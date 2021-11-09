@@ -19,12 +19,10 @@ Here is an overview of what the CognisoTranslation contains:
 * [Constants](#constants)
 	* LicenseToken
 	* TokenEndpoint
-* [Microflow](#microflow)
+* [Microflows](#microflows)
 	* CreateTranslator
-* [Nanoflow](#nanoflow)
+* [Nanoflows](#nanoflows)
 	* TranslateText
-* [Java action](#java-action)
-* [Widgets](#widgets)
 
 In most cases, you will only need what is contained in the **Translation ** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
 
@@ -101,46 +99,98 @@ For details on how to get a license token, see the [Obtaining a LicenseToken for
 
 The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
 
-### 3.3 Microflow {#microflow}
+### 3.3 Microflows {#microflows}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator action in back-end service.
+The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator action in the back-end service.
 
 ![createtranslator](attachments/cogniso-translation/createtranslator.png)
 
-### 3.4 Nanoflow {#nanoflow}
+### 3.4 Nanoflows {#nanoflows}
 
-The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in back-end service, and eventually updates output text string of the **translator** object.
+The **TranslatorText** microflow takes the **translator** object as an input parameter, performs text translation actions in the back-end service, and eventually updates the output text string of the **translator** object.
 
 ![translatortext](attachments/cogniso-translation/translatortext.png)
 
-### 3.5 Java Action {#java-action}
-
 ## 4 Using Cogniso Translation
 
-Cogniso Translation provides a Microphone widget to perform text translation with customizable actions.{{% todo %}}[Check whether microphone is lower-case or upper-case?]{{% /todo %}}
-
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable voice-to-text actions quickly.
+ When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation quickly.
 
 ### 4.1 Performing Text Translation in Your Browser
 
-From the **CreateTranslator** microflow and **TranslateText** nanoflow to perform text translation.
+Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to perform text translation. Follow these steps to configure this text translation:
 
-Follow these steps to configure this text translation actions:
-1. Add a new data view on the page.
-2. Create a nanoflow and name it *CreateTranslator*.
-3. Set the nanoflow as the data source of the data view.
-4. Add a textArea.
-5. Set inputText of the data view object as the data source.
-6. Add a reference selector.
-7. Set language name from association in the input group box.
-8. Add another textArea.
-9. Set inputText of data view object as the data source.
-10. Add a reference selector.
-11. Set language name from association in the output group box.
-12. Wrap two group boxes into the data view you created in step 9.
-13. Add a button and name it *Translate*.
-14. Set the nanoflow **TranslateText** as the action of events.
-15. Run your app locally. You can now perform text translation directly in the browser:
+1.  Create a nanoflow as follows:
+
+    1.  Name the nanoflow *CreateTranslator*.
+    2.  Add the **CreateTranslator** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
+
+        ![call-createtranslator-microflow](attachments/cogniso-translation/call-createtranslator-microflow.png)
+
+    4.  Right-click the create object activity and select **Set $translator as return value** in the pop-up menu. 
+
+        ![createtranslator-nanoflow](attachments/cogniso-translation/createtranslator-nanoflow.png)
+
+2. From the **Toolbox**, add a **Data view** widget to your page.
+
+3. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
+
+   1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
+   2. For **Data source**, select **Nanoflow**.
+   3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
+   4. Click **OK** to save the settings.   
+
+2. From the **Toolbox**, add a **Text area** widget to your page.
+
+5. Change the settings of the **Text area** widget as follows:
+
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
+   3. For **Label caption**, enter *Text*.
+   4. Click **OK** to save the settings.   
+
+6. From the **Toolbox**, add a **Reference selector **widget to your page.
+
+7. Change the settings of the **Reference selector** widget as follows:
+
+   1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
+   2. For **Data source**, select the **Name** attribute of the **Language** entity from **Translator_InputLanguage**.  
+   3. For **Label caption**, enter *Language*.
+   4. Click **OK** to save the settings.  
+
+9. From the **Toolbox**, add a second **Text area** widget to your page.
+
+9. Change the settings of the **Text area** widget as follows:
+
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **OutputText** attribute from **Data view**.
+   3. For **Label caption**, enter *Text*.
+   4. Click **OK** to save the settings. 
+
+9. From the **Toolbox**, add a second **Reference selector **widget to your page.
+
+11. Change the settings of the **Reference selector** widget as follows:
+
+    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
+    2. For **Data source**, select the **Name** attribute of the **Language** entity from **Translator_OutputLanguage**.  
+    3. For **Label caption**, enter *Language*.
+    4. Click **OK** to save the settings.  
+
+12. Move these **Text area** widgets and **Reference selector** widgets into the **Data view** widget that you created.
+
+    ![data-view](attachments/cogniso-translation/data-view.png)
+
+14. From the **Toolbox**, add a **Button** widget to your page.
+
+14. Change the settings of the **Button** widget as follows:
+
+    1. Double-click the button to open the **Action Button** dialog box.
+    2. For Caption, enter *Translate*.
+    3. In the **Event** section, set **On click** to **Call a nanoflow**.
+    4. For **Nanoflow**, **Select** the **Translate** nanoflow from the **USE_ME** folder.
+    5. Click **OK** to save the settings.  
+
+15. Run your app locally. You can perform text translation directly in the browser:
 
 ![runlocally-translation](attachments/cogniso-translation/runlocally-translation.png)
 
@@ -166,7 +216,7 @@ To receive information on how to get the license token for [Cogniso Translation]
 
 4. Fill in the **Value** with your obtained LicenseToken.
 
-5. Click **OK** to confirm the settings.
+5. Click **OK** to save the settings.
 
    ![licensetoken-inmendix](attachments/cogniso-translation/licensetoken-inmendix.png)
 

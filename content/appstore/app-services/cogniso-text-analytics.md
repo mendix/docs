@@ -333,41 +333,31 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
       ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
-
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateDominantLanguageDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
-
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
-   3. Click **OK** to save the settings.
-
+   4. Click **OK** to save the settings.
 6. From the **Toolbox**, add a **Button** widget to your page.
-
 7. Change the settings of the **Button** widget as follows:
-
    1. Double-click the button to open the **Action Button** dialog box.
-   1. For Caption, enter *Detect Dominant Language*.
+   2. For Caption, enter *Detect Dominant Language*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
-   3. For **Nanoflow**, **Select** the **DetectDominantLanguage** nanoflow from the **USE_ME** folder.
-
+   4. For **Nanoflow**, **Select** the **DetectDominantLanguage** nanoflow from the **USE_ME** folder.
+   5. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Template grid** widget.
-
-9.  Change the settings of the **Template grid** widget as follows:
-
+9. Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
    4. For **Entity (path)**, select **DominantLanguage**.
-
+   5. Click **OK** to save the settings.  
 10. Run your app locally. You can perform language detection directly in the browser:
 
     ![runlocally-language-detection](attachments/cogniso-text-analytics/runlocally-language-detection.png)
@@ -388,35 +378,39 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
        ![createsentimentdetector-nanoflow](attachments/cogniso-text-analytics/createsentimentdetector-nanoflow.png)
     
 2. From the **Toolbox**, add a **Data view** widget to your page.
-3. Set the **CreateSentimentDetector** nanoflow as the data source of the Data View widget as follows:
+3. Set the **CreateSentimentDetector** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSentimentDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.   
 4. From the **Toolbox**, add a **Text area** widget to your page.
 5. Change the settings of the **Text area** widget as follows:
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.   
 6. From the **Toolbox**, add a **Reference selector **widget to your page.
 7. Change the settings of the **Reference selector** widget as follows:
-   1. Double-click the Text Area widget to open the **Edit Reference Selector** dialog box.
-   2. For **Data source**, select the **Name** attribute of the **Language** entity from association.   
+   1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
+   2. For **Data source**, select the **Name** attribute of the **Language** entity from **Detector_InputLanguage**.   
+   2. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Button** widget to your page.
 9. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Sentiment*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectSentiment** nanoflow from the **USE_ME** folder.
+   4. Click **OK** to save the settings.  
 10. From the **Toolbox**, add a **Data view** widget to your page.
 11. Change the settings of the **Data view** widget as follows:
     1. Double-click the button to open the **Data view** dialog box.
     2. For **Entity (path)** of the **Data source**, select **Sentiment** from association.
+    2. Click **OK** to save the settings.  
 12. Inside the Data view widget, add another **Data view** widget.
 13. Change the settings of the second **Data view** widget as follows:
     1. Double-click the button to open the **Data view** dialog box.
     2. For **Entity (path)** of the **Data source**, select **SentimentScore** from association.
+    2. Click **OK** to save the settings.  
 14. Run your app locally. You can perform sentiment detection directly in the browser:
 
 ![runlocally-sentiment-detection](attachments/cogniso-text-analytics/runlocally-sentiment-detection.png)
@@ -437,15 +431,15 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
       ![createkeyphrasedetector-nanoflow](attachments/cogniso-text-analytics/createkeyphrasedetector-nanoflow.png)
    
 2. From the **Toolbox**, add a **Data view** widget to your page.
-3. Set the **CreateKeyPhraseDetector** nanoflow as the data source of the Data View widget as follows:
+3. Set the **CreateKeyPhraseDetector** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateKeyPhraseDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
 4. From the **Toolbox**, add a **Text area** widget to your page.
 5. Change the settings of the **Text area** widget as follows:
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
 6. From the **Toolbox**, add a **Button** widget to your page.
@@ -454,12 +448,14 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
    2. For Caption, enter *Detect Key Phrases*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectKeyPhrases** nanoflow from the **USE_ME** folder.
+   4. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Template grid** widget.
 9.  Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
    4. For **Entity (path)**, select **KeyPhrase**.
+   4. Click **OK** to save the settings.  
 6. Run your app locally. You can perform key phrase detection directly in the browser:
 
 ![runlocally-keyphrase-detection](attachments/cogniso-text-analytics/runlocally-keyphrase-detection.png)
@@ -470,9 +466,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 
 1.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateEntityDetector*.
-    
     2. Add the **CreateEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-
     3.  Double-click the **CreateEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
     
         ![call-createentitydetector-microflow](attachments/cogniso-text-analytics/call-createentitydetector-microflow.png)
@@ -482,37 +476,31 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
        ![createentitydetector-nanoflow](attachments/cogniso-text-analytics/createentitydetector-nanoflow.png)
     
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
-3. Set the **CreateEntityDetector** nanoflow as the data source of the Data View widget as follows:
+3. Set the **CreateEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateEntityDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-   
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.
-   
 6. From the **Toolbox**, add a **Button** widget to your page.
-
 7. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Entities*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectEntities** nanoflow from the **USE_ME** folder.
-   
+   5. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Template grid** widget.
-
 9.  Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
-   4. For **Entity (path)**, select **Entity**.
-   
+   4. For **Entity (path)**, select **Entity**. 
+   5. Click **OK** to save the settings.  
 6. Run your app locally. You can perform entity detection directly in the browser:
 
 ![runlocally-entities-detection](attachments/cogniso-text-analytics/runlocally-entities-detection.png)
@@ -523,9 +511,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 
 1.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateEntityDetector*.
-    
     2. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-
     3.  Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
        ![call-createpiientitydetector-microflow](attachments/cogniso-text-analytics/call-createpiientitydetector-microflow.png)
@@ -535,37 +521,31 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
       ![createpiientitydetector-nanoflow](attachments/cogniso-text-analytics/createpiientitydetector-nanoflow.png)
    
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
-3. Set the **CreatePiiEntityDetector** nanoflow as the data source of the Data View widget as follows:
+3. Set the **CreatePiiEntityDetector** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreatePiiEntityDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-   
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.
-   
 6. From the **Toolbox**, add a **Button** widget to your page.
-
 7. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect PII Entities*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectPiiEntities** nanoflow from the **USE_ME** folder.
-   
+   5. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Template grid** widget.
-
 9.  Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
    4. For **Entity (path)**, select **PiiEntity**.
-   
+   5. Click **OK** to save the settings. 
 6. Run your app locally. You can perform PII entity detection directly in the browser:
 
 ![runlocally-pii-entities-detection](attachments/cogniso-text-analytics/runlocally-pii-entities-detection.png)
@@ -575,11 +555,8 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to perform syntax detection. Follow these steps to configure this syntax detect action:
 
 1. Create a nanoflow as follows:
-
    1. Name the nanoflow *CreateEntityDetector*.
-
    2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-
    3. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
       ![call-createsyntaxdetector-microflow](attachments/cogniso-text-analytics/call-createsyntaxdetector-microflow.png)
@@ -589,41 +566,31 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
       ![createsyntaxdetector-nanoflow](attachments/cogniso-text-analytics/createsyntaxdetector-nanoflow.png)
 
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
-3. Set the **CreateSyntaxDetector** nanoflow as the data source of the Data View widget as follows:
-
+3. Set the **CreateSyntaxDetector** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSyntaxDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
-
-   1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **InputText** attribute from the data view.
+   1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+   2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.
-
 6. From the **Toolbox**, add a **Button** widget to your page.
-
 7. Change the settings of the **Button** widget as follows:
-
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Syntax*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectSyntax** nanoflow from the **USE_ME** folder.
-
+   4. Click **OK** to save the settings.  
 8. From the **Toolbox**, add a **Template grid** widget.
-
 9. Change the settings of the **Template grid** widget as follows:
-
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
    4. For **Entity (path)**, select **SyntaxToken**.
-
+   5. Click **OK** to save the settings.  
 6. Run your app locally. You can perform syntax detection directly in the browser:
 
 ![runlocally-syntax-detection](attachments/cogniso-text-analytics/runlocally-syntax-detection.png)
@@ -650,7 +617,7 @@ To receive information on how to get the license token for [Cogniso Text Analyti
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
 4. Fill in the **Value** with your obtained LicenseToken.
-5.  Click **OK** to confirm the settings.
+5.  Click **OK** to save the settings.
 
     ![licensetoken-inmendix](attachments/cogniso-text-analytics/licensetoken-inmendix.png)
 

@@ -223,23 +223,23 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
 
-## 5.2 Converting Voice to Actions {#actions}
+### 5.3 Converting Voice to Actions {#actions}
 
 This app service allows you to set up rules to convert voice to actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
 You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 
-#### 5.2.1 Utterance
+#### 5.3.1 Utterance
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
 For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set.
 
-#### 5.2.2 Actions
+#### 5.3.2 Actions
 
 You can select an **Action** from a list of actions. This action is triggered when the received transcript matches an utterance.
 
-#### 5.2.3 Voice Feedback
+#### 5.3.3 Voice Feedback
 
 **Voice feedback** can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
@@ -247,7 +247,7 @@ For instance, you can set **Voice feedback** as `model is rotated {0} degree aro
 
 ![microphone-voicetoaction-sample](attachments/cogniso-speech-to-text/microphone-voicetoaction-sample.png)
 
-### 5.3 Using the Batch Mode
+### 5.4 Using the Batch Mode
 
 When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 

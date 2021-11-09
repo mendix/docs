@@ -316,7 +316,7 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 
 ## 4 Using Cogniso Text Analytics
 
-When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytic actions quickly.
+When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytics actions quickly.
 
 ### 4.1 Performing Language Detection in Your Browser
 

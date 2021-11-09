@@ -7,9 +7,7 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) app service  you to easily convert voice and audio into written text in your web applications. The app service contains out-of-the-box Java actions, JavaScript actions, domain models, nanoflows, microflows that enable you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
-
-This app service does the heavy-lifting for you so you do not have to build a text translation application from scratch.
+The [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) app service  you to easily convert voice and audio into written text in your web applications. The app service enables you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the CognisoTranslation contains:
 
@@ -101,7 +99,7 @@ The **TokenEndpoint** constant is used to provide a valid endpoint of security t
 
 ### 3.3 Microflows {#microflows}
 
-The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator action in the back-end service.
+The **CreateTranslator** microflow takes **inputText**, **inputLanguageCode**, and **outputLanguageCode** as input parameters and creates translator actions in the back-end service.
 
 ![createtranslator](attachments/cogniso-translation/createtranslator.png)
 

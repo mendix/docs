@@ -36,8 +36,8 @@ Here is an overview of what the CognisoTextAnalytics contains:
 * [Microflows](#microflows) 
   * BatchTranscription
   * StartService
-* [Nanoflow](#nanoflow)
-* [Enumeration](#enumeration)
+* [Nanoflows](#nanoflows)
+* [Enumerations](#enumerations)
   * EntityType
   * PartOfSpeechTag
   * PiiEntityType
@@ -215,7 +215,7 @@ The **CreateSyntaxDetector** microflow takes **text** (String) and **languageCod
 
 ![createsyntaxdetector](attachments/cogniso-text-analytics/createsyntaxdetector.png)
 
-### 3.4 Nanoflow {#nanoflow}
+### 3.4 Nanoflows {#nanoflows}
 
 The **DetectDominantLanguage** nanoflow takes the **languageDetector** object as an input parameter to get a list of dominant languages.
 
@@ -241,7 +241,7 @@ The **DetectSyntax** nanoflow takes the **syntaxDetector** object as an input pa
 
 ![detectsyntax](attachments/cogniso-text-analytics/detectsyntax.png)
 
-### 3.5 Enumeration {#enumeration}
+### 3.5 Enumerations {#enumerations}
 
 The **SentimentType** is an enumeration that incorporates all the information of the supported sentiment type.
 

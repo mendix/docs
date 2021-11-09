@@ -63,7 +63,7 @@ You have successfully added the Cogniso Speech To Text resources to your app.
 
 ## 3 Initializing Cogniso Speech To Text When App Starts
 
-It can be useful to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action –  the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
+It can be useful to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
 
 
 1.  If your app does not have an after-startup microflow, perform the following steps:
@@ -95,7 +95,7 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 ### 4.2 Constants {#constants}
 
-#### 4.2.1 Lincese Token
+#### 4.2.1 License Token
 
 The **LicenseToken** constant offers a valid CognisoSpeechToText license token to the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to use the CognisoSpeechToText functionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
@@ -138,7 +138,7 @@ The only core widget required is the **Microphone** widget. You can make the fol
      * **Error** – sets a string attribute as the error message
      * **Action** – sets which action is executed when an error occurs
 *   **Voice to Action** tab
-  *  **Enable action** –  when set to **Yes**, the following custom settings for actions are enabled:
+  *  **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
      * **Actions** – a list of actions to execute when a transcript matches an utterance
          * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
          * **Action** – the action that is executed when the received transcript matches an utterance

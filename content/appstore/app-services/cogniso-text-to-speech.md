@@ -92,7 +92,7 @@ There is a many-to-many association between SpeechSynthesizer and Voice entities
 
 ### 3.2 Constants {#constants}
 
-#### 3.2.1 Lincese Token
+#### 3.2.1 License Token
 
 The **LicenseToken** constant is used to provide a valid CognisoTextToSpeech license token for the app that uses CognisoTextToSpeech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextToSpeech is a commercial product, to use the CognisoTextToSpeech functionalities in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 

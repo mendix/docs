@@ -377,10 +377,8 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanoflow to perform sentiment detection. Follow these steps to configure the sentiment detection:
 
 1.  Create a nanoflow as follows:
-    1. Name the nanoflow *CreateSentimentDetector*.
-    
+    1. Name the nanoflow *CreateSentimentDetector*. 
     2. Add the **CreateSentimentDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-
     3.  Double-click the **CreateSentimentDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         ![call-createsentimentdetector-microflow](attachments/cogniso-text-analytics/call-createsentimentdetector-microflow.png)
@@ -390,47 +388,35 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
        ![createsentimentdetector-nanoflow](attachments/cogniso-text-analytics/createsentimentdetector-nanoflow.png)
     
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
 3. Set the **CreateSentimentDetector** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSentimentDetector** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings.
-   
+   4. Click **OK** to save the settings.   
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
    1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **InputText** attribute from the data view.
    3. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings.
-   
+   4. Click **OK** to save the settings.   
 6. From the **Toolbox**, add a **Reference selector **widget to your page.
-
 7. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the Text Area widget to open the **Edit Reference Selector** dialog box.
-   2. For **Data source**, select the **Name** attribute of the **Language** entity from association.
-   
+   2. For **Data source**, select the **Name** attribute of the **Language** entity from association.   
 8. From the **Toolbox**, add a **Button** widget to your page.
-
 9. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Sentiment*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectSentiment** nanoflow from the **USE_ME** folder.
-   
 10. From the **Toolbox**, add a **Data view** widget to your page.
-
 11. Change the settings of the **Data view** widget as follows:
     1. Double-click the button to open the **Data view** dialog box.
     2. For **Entity (path)** of the **Data source**, select **Sentiment** from association.
-    
 12. Inside the Data view widget, add another **Data view** widget.
-
 13. Change the settings of the second **Data view** widget as follows:
     1. Double-click the button to open the **Data view** dialog box.
     2. For **Entity (path)** of the **Data source**, select **SentimentScore** from association.
-    
 14. Run your app locally. You can perform sentiment detection directly in the browser:
 
 ![runlocally-sentiment-detection](attachments/cogniso-text-analytics/runlocally-sentiment-detection.png)
@@ -440,50 +426,40 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
 Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanoflow to perform key phrase detection. Follow these steps to configure this key phrase detect action:
 
 1.  Create a nanoflow as follows:
-    1. Name the nanoflow *CreateKeyPhraseDetector*.
-    
+    1. Name the nanoflow *CreateKeyPhraseDetector*.    
     2. Add the **CreateKeyPhraseDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
-
     3.  Double-click the **CreateKeyPhraseDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
-  
-      ![call-createkeyphrasedetector-microflow](attachments/cogniso-text-analytics/call-createkeyphrasedetector-microflow.png)
+    
+        ![call-createkeyphrasedetector-microflow](attachments/cogniso-text-analytics/call-createkeyphrasedetector-microflow.png)
     
    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
       ![createkeyphrasedetector-nanoflow](attachments/cogniso-text-analytics/createkeyphrasedetector-nanoflow.png)
    
 2. From the **Toolbox**, add a **Data view** widget to your page.
-
 3. Set the **CreateKeyPhraseDetector** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateKeyPhraseDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-   
 4. From the **Toolbox**, add a **Text area** widget to your page.
-
 5. Change the settings of the **Text area** widget as follows:
    1. Double-click the Text Area widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **InputText** attribute from the data view.
    3. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings.
-   
+   4. Click **OK** to save the settings. 
 6. From the **Toolbox**, add a **Button** widget to your page.
-
 7. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Key Phrases*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectKeyPhrases** nanoflow from the **USE_ME** folder.
-   
 8. From the **Toolbox**, add a **Template grid** widget.
-
 9.  Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
    3. For the **Type** of the **Data source**, select **Association**.
    4. For **Entity (path)**, select **KeyPhrase**.
-   
 6. Run your app locally. You can perform key phrase detection directly in the browser:
 
 ![runlocally-keyphrase-detection](attachments/cogniso-text-analytics/runlocally-keyphrase-detection.png)
@@ -606,6 +582,8 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
    3. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
+      ![call-createsyntaxdetector-microflow](attachments/cogniso-text-analytics/call-createsyntaxdetector-microflow.png)
+
    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 
       ![createsyntaxdetector-nanoflow](attachments/cogniso-text-analytics/createsyntaxdetector-nanoflow.png)
@@ -633,7 +611,7 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 7. Change the settings of the **Button** widget as follows:
 
    1. Double-click the button to open the **Action Button** dialog box.
-   2. For Caption, enter Detect Syntax*.
+   2. For Caption, enter *Detect Syntax*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
    4. For **Nanoflow**, **Select** the **DetectSyntax** nanoflow from the **USE_ME** folder.
 
@@ -654,19 +632,19 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
 Cogniso Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
 
-### 5.1 Obtaining a LicenseToken with trial version
+### 5.1 Obtaining a LicenseToken with Trial Version
 
 When you just need to run your app with Cogniso Text Analytics locally or deploy as a Mendix Free App for testing and trial purposes, you will need a trial version of LicenseToken.
 
 To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
-### 5.2  Subscribing to Get a LicenseToken
+### 5.2  Obtaining a LicenseToken
 
 To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
-### 5.2 Configuring a LicenseToken for App Deployment
+### 5.3 Configuring a LicenseToken for App Deployment
 
-#### 5.2.1 Configuring the LicenseToken in Studio Pro
+#### 5.3.1 Configuring the LicenseToken in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -678,7 +656,7 @@ To receive information on how to get the license token for [Cogniso Text Analyti
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 5.2.2 Configuring the LicenseToken in Developer Portal
+#### 5.3.2 Configuring the LicenseToken in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

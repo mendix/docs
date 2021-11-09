@@ -263,11 +263,13 @@ Cogniso Speech To Text is a premium Mendix product that is subject to a purchase
 
 When you need to run your app with Cogniso Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
 
+### 6.2  Obtaining a LicenseToken
+
 To receive information on how to get the license token for [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
-### 6.2 Configuring a LicenseToken for App Deployment
+### 6.3 Configuring a LicenseToken for App Deployment
 
-#### 6.2.1 Configuring the LicenseToken in Studio Pro
+#### 6.3.1 Configuring the LicenseToken in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -279,7 +281,7 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 6.2.2 Configuring the LicenseToken in Developer Portal
+#### 6.3.2 Configuring the LicenseToken in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

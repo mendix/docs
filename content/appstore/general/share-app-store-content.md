@@ -206,7 +206,7 @@ You can add one or more capabilities  leveraging this offering under the Use cas
 
 You also can add External links to the offerings under the external links sections.
 
-![](attachments/share-app-store-content/enable.png)
+![](attachments/share-app-store-content/capabilities.png)
 
 ### 4.6 Publish {#publish}
 

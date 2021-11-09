@@ -387,7 +387,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     
     4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
     
-       ![createsentimentdetector-nanoflow](/Users/Luyao.Zhang/Documents/GitHub/docs/content/appstore/app-services/attachments/cogniso-text-analytics/createsentimentdetector-nanoflow.png)
+       ![createsentimentdetector-nanoflow](attachments/cogniso-text-analytics/createsentimentdetector-nanoflow.png)
     
 2. From the **Toolbox**, add a **Data view** widget to your page.
 
@@ -447,7 +447,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
     3.  Double-click the **CreateKeyPhraseDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
   
       ![call-createkeyphrasedetector-microflow](attachments/cogniso-text-analytics/call-createkeyphrasedetector-microflow.png)
-     
+    
    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
       ![createkeyphrasedetector-nanoflow](attachments/cogniso-text-analytics/createkeyphrasedetector-nanoflow.png)
@@ -553,7 +553,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
     3.  Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
        ![call-createpiientitydetector-microflow](attachments/cogniso-text-analytics/call-createpiientitydetector-microflow.png)
-   
+      
    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
    
       ![createpiientitydetector-nanoflow](attachments/cogniso-text-analytics/createpiientitydetector-nanoflow.png)
@@ -605,8 +605,6 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
    2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
 
    3. Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
-
-      
 
    4. Right-click the create object activity and select **Set $detector as return value** in the pop-up menu.
 

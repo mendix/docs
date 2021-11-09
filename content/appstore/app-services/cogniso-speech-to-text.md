@@ -123,13 +123,9 @@ The **BatchTranscription** microflow takes a **MediaDocument** object as an inpu
 
 ### 4.4 Widgets {#widgets}
 
-#### 4.4.1 Core Widgets
+#### 4.4.1 Microphone {#microphone}
 
-The only core widget required is the **Microphone** widget.
-
-##### 4.4.1.1 Microphone {#microphone}
-
-You can make the following settings for the **Microphone** widget:
+The only core widget required is the **Microphone** widget. You can make the following settings for the **Microphone** widget:
 
 *   **General** tab
   * **Enable language selection** – when set to **Yes**, your users can select different languages in your app

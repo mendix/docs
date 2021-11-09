@@ -120,13 +120,9 @@ The **SynthesizeSpeech** nanoflow takes a **speechSynthesizer** object as an inp
 
 ### 3.5 Widgets {#widgets}
 
-#### 3.5.1 Core Widgets
+#### 3.5.1 AudioPlayer {#audioplayer}
 
-The core widget required is the **AudioPlayer** widget.
-
-#### 3.5.1.1 AudioPlayer {#audioplayer}
-
-You can make the following settings for the **AudioPlayer** widget:
+The core widget required is the **AudioPlayer** widget. You can make the following settings for the **AudioPlayer** widget:
 
 * **General** tab
 	* **Source**  – the value of the **Audio** attribute of a **speechSynthesizer** object

@@ -184,11 +184,6 @@ Follow the template for the recommended content:
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
-
-* Drag the image from file explorer to the editor (this will upload your image)
-* Click the Image button in the editor tools and enter a URL which points to an image
-
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 ![](attachments/share-app-store-content/enable.png)
@@ -198,15 +193,15 @@ You can optionally add a **Video** and **Demo**.
 ### 4.5 Capabilities 
 On the **Capabilities** page you can provide details about the Solution Templates.
 
-You need to select a recommendation for your categorization under the Industry clouds section.
+* You can select a recommendation for your categorization under the Industry clouds section.
 
-You can also attach a banner image. This image will be displayed on your content page.
+* You can also attach a banner image. This image will be displayed on your content page.
 
-You can add one or more capabilities  leveraging this offering under the Use cases section. For each use cases enter a name and a description.
+* You can add one or more capabilities  leveraging this offering under the Use cases section. For each use cases enter a name and a description.
 
-You also can add External links to the offerings under the external links sections.
+* You also can add External links to the offerings under the external links sections.
 
-![](attachments/share-app-store-content/enable.png)
+![](attachments/share-app-store-content/capabilities.png)
 
 ### 4.6 Publish {#publish}
 

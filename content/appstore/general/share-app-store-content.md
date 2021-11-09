@@ -150,7 +150,7 @@ Follow these steps to describe your content:
 
 ### 4.3 Package {#version}
 
-On the **Package** page, select your content source (note that if you are using **Solutions**, you will not see the option to select your content source).
+On the **Package** page, select your content source (note that if you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting content source will be optional).
 	
 * If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 	* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
@@ -195,8 +195,20 @@ You can attach images to your documentation in one of two ways (uploaded images 
 	
 You can optionally add a **Video** and **Demo**.
 	
+### 4.5 Capabilities 
+On the **Capabilities** page you can provide details about the Solution Templates.
 
-### 4.5 Publish {#publish}
+You need to select a recommendation for your categorization under the Industry clouds section.
+
+You can also attach a banner image. This image will be displayed on your content page.
+
+You can add one or more capabilities  leveraging this offering under the Use cases section. For each use cases enter a name and a description.
+
+You also can add External links to the offerings under the external links sections.
+
+![](attachments/share-app-store-content/enable.png)
+
+### 4.6 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 

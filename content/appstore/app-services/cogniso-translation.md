@@ -132,7 +132,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.   
 
-2. From the **Toolbox**, add a **Text area** widget to your page.
+4. From the **Toolbox**, add a **Text area** widget to your page.
 
 5. Change the settings of the **Text area** widget as follows:
 
@@ -150,7 +150,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    3. For **Label caption**, enter *Language*.
    4. Click **OK** to save the settings.  
 
-9. From the **Toolbox**, add a second **Text area** widget to your page.
+8. From the **Toolbox**, add a second **Text area** widget to your page.
 
 9. Change the settings of the **Text area** widget as follows:
 
@@ -159,7 +159,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
 
-9. From the **Toolbox**, add a second **Reference selector **widget to your page.
+10. From the **Toolbox**, add a second **Reference selector **widget to your page.
 
 11. Change the settings of the **Reference selector** widget as follows:
 
@@ -172,7 +172,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 
     ![data-view](attachments/cogniso-translation/data-view.png)
 
-14. From the **Toolbox**, add a **Button** widget to your page.
+13. From the **Toolbox**, add a **Button** widget to your page.
 
 14. Change the settings of the **Button** widget as follows:
 

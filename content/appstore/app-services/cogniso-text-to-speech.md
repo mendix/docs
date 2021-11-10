@@ -157,7 +157,7 @@ Follow these steps to configure the text-to-voice conversion:
 
 5. From the **Toolbox**, add a **Text area** widget to your page.
 
-5. Change the settings of the **Text area** widget as follows:
+6. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **Text** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.

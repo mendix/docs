@@ -16,13 +16,13 @@ Mendix adds the CVSS score and CVSS vector for security vulnerabilities describe
 Siemens publishes their CVEs on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisories
+## 2 Security Advisory Details
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | 5.3 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | Fixed in Studio Pro [9.7.0](/releasenotes/studio-pro/9.7#5.3), [9.6.2](/releasenotes/studio-pro/9.6#5.3), [8.18.13](/releasenotes/studio-pro/8.18#5.3) |
-| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | 3.1 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | Fixed in Studio Pro [9.7.0](/releasenotes/studio-pro/9.7#3.1), [9.6.2](/releasenotes/studio-pro/9.6#3.1), [8.18.13](/releasenotes/studio-pro/8.18#3.1) |
-| (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | 4.0 | (To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications)) | Fixed in Studio Pro [9.7.0](/releasenotes/studio-pro/9.7#4.0), [9.6.1](/releasenotes/studio-pro/9.6#4.0), [8.18.12](/releasenotes/studio-pro/8.18#4.0), [7.23.26](/releasenotes/studio-pro/7.23#4.0) |
+| <a name="42026"></a>CVE-2021-42026 | 3.1 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details |
+| <a name="42025"></a>CVE-2021-42025 | 5.3 | [Two Incorrect Authorization Vulnerabilities in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf) | See the SSA description for remediation details |
+| <a name="42015"></a>CVE-2021-42015 | 4.0 | [Information Disclosure Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-338732.pdf) | See the SSA description for remediation details |
 | CVE-2021-33718 | 5.3 | [Access Check Bypass Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-352521.pdf) | See the SSA description for remediation details |
 | CVE-2021-33712 | 8.1 | [Privilege Escalation Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/pdf/ssa-522654.pdf) | See the SSA description for remediation details |
 | CVE-2021-31339 | 4.3 | [Information Disclosure Vulnerability in Mendix Excel Importer Module](https://cert-portal.siemens.com/productcert/pdf/ssa-854248.pdf) | See the SSA description for remediation details |

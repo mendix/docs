@@ -9,7 +9,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
-### November 17th, 2021
+### November 18th, 2021
 
 #### New Feature
 

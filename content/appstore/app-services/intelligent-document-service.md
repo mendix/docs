@@ -78,23 +78,26 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
     5. Log into the application with your Mendix account.
-2. Click **Environment** to show the **Existing Models** list.
+2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)
 
     {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
 
-3. To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
+3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
     ![Create New Model dialog box](attachments/intelligent-document-service/create-new-model-dialog-box.png)
 
-4. Enter a unique **Model Name**, select a **Language**, and then click **Create Model**.
+4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
+
+    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You cab only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+
 5. Wait until the **Import File** page opens.
-6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
+6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
 
     ![Import File page](attachments/intelligent-document-service/import-file-page.png)
 
-7. Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
+7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
     ![Add Marker and IDs page](attachments/intelligent-document-service/add-marker-and-ids-image-unmarked.png)
 

@@ -71,21 +71,21 @@ To use the Receipt Processing app service, firstly create an [import mapping](#m
 
 You need to use an [import mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1. To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
-   1. Log into the Marketplace with your Mendix account.
-   2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-   3. Click **Receipt Processing** to open the service management dashboard.
-   4.  Click **Manage Instance** to open the **Document Model Training** application.
+1.  To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+    1. Log into the Marketplace with your Mendix account.
+    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+    3. Click **Receipt Processing** to open the service management dashboard.
+    4.  Click **Manage Instance** to open the **Document Model Training** application.
 
-       ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
-     
-   5. Log in to the application using your Mendix account.
-   6. Click **Environment** to show the **Existing Models** list.
-   7. Select your trained model. Make sure that the **Status** of the model is **COMPLETED**.
-   8. Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
-   9. Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts where data will be extracted. You can also click the box and select the file.
+        ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
 
-      ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
+    5.  Log in to the application using your Mendix account.
+    6.  Click **Environment** to show the **Existing Models** list.
+    7.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**.
+    8.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts where data will be extracted. You can also click the box and select the file.
+
+        ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 
    10. Click **Download** to get the JSON file.
 2.  To add the JSON file to your app, perform the following steps:

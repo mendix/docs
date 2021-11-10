@@ -88,7 +88,10 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
     ![Create Invoice Model dialog box](attachments/invoice-processing/create-invoice-model-dialog-box.png)
 
-4. Enter a unique **Model Name**, select a **Region**, and then click **Create Model**.
+4.  Enter a unique **Model Name**, select a **Region**, and then click **Create Model**.
+
+    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+   
 5. Wait until **Invoice Model** page opens.
 6. Fill in **Vendor Information** and **Business Unit Information** from the sample Invoice. The more input you provide, the more accurate your trained model will be.
 7. Click **Create Model**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.

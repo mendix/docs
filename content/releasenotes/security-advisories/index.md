@@ -16,7 +16,7 @@ Mendix adds the CVSS score and CVSS vector for security vulnerabilities describe
 Siemens publishes their CVEs on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisories
+## 2 Security Advisory Details
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |

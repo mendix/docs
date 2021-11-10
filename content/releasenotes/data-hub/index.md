@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### November 11th, 2021
+
+#### Fixes
+
+* We fixed an issue where Curator cannot access to pages 4+ in Company Assets page.
+* We fixed an issue on landscape view for a dataset.
+
 ### October 28th, 2021
 
 #### Fixes

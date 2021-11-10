@@ -7,7 +7,7 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
+The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the app service contains:
 
@@ -43,7 +43,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
 ## 2 Installation
 
-1.  Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118590) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
+1.  Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118408) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
 2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *CognisoSpeechToText.mpk*.
@@ -68,13 +68,13 @@ It can be useful to run the Cogniso Speech to Text service automatically when yo
 
 1.  If your app does not have an after-startup microflow, perform the following steps:
    1. Create a microphone in your module.
-   2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the new microflow that you created.
+   2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the new microflow that you created.
    3.  Set the return type of the microflow to **Boolean** with **true** as the **Return value**.
 
        ![startup-microflow](attachments/cogniso-speech-to-text/startup-microflow.png)
 
 2. If you app has an after-startup microflow, perform the following:
-   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** > **StartService** folder to the existing after-startup microflow.
+   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the existing after-startup microflow.
    2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
 3. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
 4. Go to the **Runtime** tab. 
@@ -168,7 +168,7 @@ Below are the steps to build an example web app which can convert speech to text
    2. Add a create object activity to the nanoflow.
    3. Double-click the create object activity to open the **Create Object** dialog box. 
    4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
-   5.  Right-click the create object activity and select **Set $NewMicriphone as return value** in the pop-up menu.
+   5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
    
        ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
    
@@ -189,7 +189,7 @@ Below are the steps to build an example web app which can convert speech to text
     
        ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
     
-       For more information, see the [Converting Voice to Actions](#actions) section below.
+       For more information, see the [Customizing Speech Recognition](#actions) section below.
 
 7. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
@@ -223,9 +223,9 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
 
-### 5.3 Converting Voice to Actions {#actions}
+### 5.3 Customizing Speech Recognition {#actions}
 
-This app service allows you to set up rules to convert voice to actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+This app service allows you to set up rules of speech recognition from voice to actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
 You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 
@@ -261,7 +261,7 @@ When you need to run your app with Cogniso Speech To Text locally or deploy as a
 
 ### 6.2  Obtaining a LicenseToken
 
-To receive information on how to get the license token for [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118590) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 6.3 Configuring a LicenseToken for App Deployment
 

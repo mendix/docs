@@ -7,7 +7,7 @@ tags: ["text to speech", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-voice app from the scratch. All you need to do is drag and drop items and configure them.
+The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118409) app service enables you to easily convert written text into human voice in your web applications. With this app service, you can build an app to work with the state-of-the-art of text to voice conversion, without building your own text-to-voice app from the scratch. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the CognisoTextToSpeech contains:
 
@@ -24,7 +24,7 @@ Here is an overview of what the CognisoTextToSpeech contains:
 * [Widgets](#widgets)
 	* AudioPlayer
 
-In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **TextToSpeech** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
@@ -44,8 +44,8 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextToSpeech.mpk* file.
-2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+1. Go to the [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextToSpeech.mpk* file.
+2.  To add the Cogniso Text To Speech app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *CognisoTextToSpeech.mpk* file.
 
@@ -57,10 +57,10 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
    3. In the **Import Module** dialog box, click **Import**. 
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5. Open the **App Explorer**  to view the **CognisoTextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
+   5. Open the **App Explorer**  to view the **CognisoTextToSpeech** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
 3. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-You have successfully added the Cogniso Speech To Text resources to your app.
+You have successfully added the Cogniso Text To Speech resources to your app.
 
 ## 3 Configuration
 
@@ -96,7 +96,7 @@ There is a many-to-many association between SpeechSynthesizer and Voice entities
 
 The **LicenseToken** constant is used to provide a valid CognisoTextToSpeech license token for the app that uses CognisoTextToSpeech to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTextToSpeech is a commercial product, to use the CognisoTextToSpeech functionalities in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to try how CognisoTextToSpeech works, that is to say, you will only build and run an app that uses CognisoTextToSpeech locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trialed version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+However, if you only plan to try how CognisoTextToSpeech works, that is to say, you will only build and run an app that uses CognisoTextToSpeech locally in Studio Pro or deploy to a Mendix Free App environment, you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
@@ -201,7 +201,7 @@ When you just need to run your app with Cogniso Text To Speech locally or deploy
 
 ### 5.2  Obtaining a LicenseToken
 
-To receive information on how to get the license token for [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118591) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/118409) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 5.3 Configuring a LicenseToken for App Deployment
 

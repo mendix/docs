@@ -7,7 +7,7 @@ tags: ["text analytics", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) app service can take voice and audio input, convert it to written text, and then do text analytics for your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
+The [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118412) app service can take voice and audio input, convert it to written text, and then do text analytics for your web applications. Powered by machine learning, this app service can find insights and relationships in text, identify the language of the text, extract key phrases, places, people, brands, or events; understand how positive or negative the text is, analyze text using tokenization and parts of speech, and automatically organize a collection of text files by topic. 
 
 With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
 
@@ -34,9 +34,19 @@ Here is an overview of what the CognisoTextAnalytics contains:
 	* LicenseToken
 	* TokenEndpoint
 * [Microflows](#microflows) 
-  * BatchTranscription
-  * StartService
+  * CreateDominantLanguageDetector
+  * CreateEntityDetector
+  * CreateKeyPhraseDetector
+  * CreatePiiEntityDetector
+  * CreateSentimentDetector
+  * CreateSyntaxDetector
 * [Nanoflows](#nanoflows)
+   * DetectDominantLanguage
+   * DetectEntities
+   * DetectKeyPhrases
+   * DetectPiiEntities
+   * DetectSentiment
+   * DetectSyntax
 * [Enumerations](#enumerations)
   * EntityType
   * PartOfSpeechTag
@@ -66,8 +76,8 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *CognisoTextAnalytics.mpk* file.
-2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+1. Go to the [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace and download the *CognisoTextAnalytics.mpk* file.
+2.  To add the Cogniso Text Analytics app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *CognisoTextAnalytics.mpk*. 
 
@@ -82,7 +92,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
    6. Open the **App Explorer**  to view the **CognisoTextAnalytics** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
 3. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-You have successfully added the Cogniso Speech To Text resources to your app.
+You have successfully added the Cogniso Text Analytics resources to your app.
 
 ## 3 Configuration
 
@@ -180,7 +190,7 @@ However, if you only plan to try how CognisoTextAnalytics works  (meaning, build
 
 For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
 
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive text analytics service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows {#microflows}
 
@@ -317,7 +327,7 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
 1.  Create a nanoflow as follows:
     1. Name the nanoflow *CreateDominantLanguageDetector*.
-    2. Add the **CreateDominantLanguageDetector** microflow from the **TextToSpeech** > **USE_ME** folder to the nanoflow.
+    2. Add the **CreateDominantLanguageDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateDominantLanguageDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         ![call-createdominantlanguagedetector-microflow](attachments/cogniso-text-analytics/call-createdominantlanguagedetector-microflow.png)
@@ -383,7 +393,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
    2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.   
-6. From the **Toolbox**, add a **Reference selector **widget to your page.
+6. From the **Toolbox**, add a **Reference selector** widget to your page.
 7. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. For **Data source**, select the **Name** attribute of the **Language** entity from **Detector_InputLanguage**.   
@@ -504,7 +514,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
 Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nanoflow to perform PII entity detection. Follow these steps to configure this PII entity detect action:
 
 1.  Create a nanoflow as follows:
-    1. Name the nanoflow *CreateEntityDetector*.
+    1. Name the nanoflow *CreatePiiEntityDetector*.
     2. Add the **CreatePiiEntityDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreatePiiEntityDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
@@ -549,7 +559,7 @@ Use the **CreatePiiEntityDetector** microflow and the **DetectPiiEntities** nano
 Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to perform syntax detection. Follow these steps to configure this syntax detect action:
 
 1.  Create a nanoflow as follows:
-    1. Name the nanoflow *CreateEntityDetector*.
+    1. Name the nanoflow *CreateSyntaxDetector*.
     2. Add the **CreateSyntaxDetector** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateSyntaxDetector** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
@@ -597,11 +607,11 @@ Cogniso Text Analytics is a premium Mendix product that is subject to a purchase
 
 When you just need to run your app with Cogniso Text Analytics locally or deploy as a Mendix Free App for testing and trial purposes, you will need a trial version of LicenseToken.
 
-To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118412) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 5.2  Obtaining a LicenseToken
 
-To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118593) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Cogniso Text Analytics](https://marketplace.mendix.com/link/component/118412) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 5.3 Configuring a LicenseToken for App Deployment
 

@@ -7,13 +7,13 @@ tags: ["translation", "service", "app store", "marketplace", "component", "platf
 
 ## 1 Introduction
 
-The [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) app service  you to easily convert voice and audio into written text in your web applications. The app service enables you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
+The [Cogniso Translation](https://marketplace.mendix.com/link/component/118411) app service  you to easily convert voice and audio into written text in your web applications. The app service enables you to build apps to work with state-of-the-art multi-language text translation. All you need to do is drag and drop items and configure them.
 
 Here is an overview of what the CognisoTranslation contains:
 
 * [Predefined entities](#predefined-entities)
-  * Language
-  * Translator
+    * Language
+    * Translator
 * [Constants](#constants)
 	* LicenseToken
 	* TokenEndpoint
@@ -22,7 +22,7 @@ Here is an overview of what the CognisoTranslation contains:
 * [Nanoflows](#nanoflows)
 	* TranslateText
 
-In most cases, you will only need what is contained in the **Translation ** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
+In most cases, you will only need what is contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only and you will not need it.
 
 ### 1.1 Typical Use Cases
 
@@ -41,7 +41,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) component page in the Marketplace and download the *CognisoTranslation.mpk* file.
+1. Go to the [Cogniso Translation](https://marketplace.mendix.com/link/component/118411) component page in the Marketplace and download the *CognisoTranslation.mpk* file.
 2.  To add the Cogniso Translation app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select the *CognisoTranslation.mpk*. 
@@ -57,7 +57,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
    5. Open the **App Explorer**  to view the **CognisoTranslation** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
 3.  Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-You have succesfully added the Cogniso Speech To Text resources to your app.
+You have succesfully added the Cogniso Translation resources to your app.
 
 ## 3 Configuration
 
@@ -85,11 +85,11 @@ The **Language** entity is an entity referenced from **Translator** that incorpo
 
 The **LicenseToken** constant is used to provide a valid CognisoTranslation license token for the app that uses CognisoTranslation to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoTranslation is a commercial product, to be able to use the CognisoTranslation functionality in a deployed app, you will need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to try how CognisoTranslation works  (meaning, build and run an app that uses CognisoTranslation locally in Studio Pro or deploy to a Mendix Free App environment), you need to subscribe a trialed version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+However, if you only plan to try how CognisoTranslation works  (meaning, build and run an app that uses CognisoTranslation locally in Studio Pro or deploy to a Mendix Free App environment), you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
-The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant is used to provide a valid endpoint of security token service for the back-end authentication of the cognitive translation service. The constant comes with default value which point to the production environment of deployed security token service. The security token service issue security tokens that authenticate user's identity. 
 
 ### 3.3 Microflows {#microflows}
 
@@ -114,7 +114,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 1.  Create a nanoflow as follows:
 
     1.  Name the nanoflow *CreateTranslator*.
-    2.  Add the **CreateTranslator** microflow from the **TextAnalytics** > **USE_ME** folder to the nanoflow.
+    2.  Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
 
         ![call-createtranslator-microflow](attachments/cogniso-translation/call-createtranslator-microflow.png)
@@ -196,7 +196,7 @@ When you just need to run your app with Cogniso Translation locally or deploy as
 
 ### 5.2  Obtaining a LicenseToken
 
-To receive information on how to get the license token for [Cogniso Translation](https://marketplace.mendix.com/link/component/118592) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Cogniso Translation](https://marketplace.mendix.com/link/component/118411) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 5.3 Configuring a LicenseToken for App Deployment
 

@@ -15,6 +15,12 @@ Retrieving an entity that is sorted on an attribute of one of its associated ent
 
 For example, you have two associated entities — **Person** and **Address** — and they have the **name** and **street** attributes, respectively. You cannot retrieve `Person` objects sorted on `Person_Address/Address/street`. 
 
+{{% alert type="info" %}}
+
+This limitation has been removed in Mendix versions 9.8.0 and above, and also from MTS version 9.6 patch version 3 (9.6.3) and above.
+
+{{% /alert %}}
+
 ## 3 Behavior of Unlimited & Very Long Strings
 
 ### 3.1 Comparison Functions

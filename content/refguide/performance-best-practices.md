@@ -166,7 +166,7 @@ To fix the issue, do the following:
 
 ## 8 Avoid Using Too Many Levels of Inheritance {#mxp009}
 
-Using multiple levels of inheritance and too many specializations on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries adding XPaths for every specialization access rule and leads to slow queries on a large dataset. 
+Using multiple levels of inheritance and too many specializations on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
 
 ### 8.1 Steps to Fix
 

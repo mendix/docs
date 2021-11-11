@@ -198,10 +198,10 @@ You can optionally add a **Video** and **Demo**.
 
 On the **Capabilities** page, you can provide the following details about a solutions template:
 
-* A recommendation for your categorization in the **Industry Cloud** section
+* A category recommendation in the **Industry Cloud** section
 * A **Banner** that will be displayed on your content page
-* One or more capabilities to leverage as offerings in the **Use Cases** section (for each use case, enter a name and description)
-* **External links** to the offerings
+* One or more capabilities to leverage in the **Use Cases** section (for each use case, enter a **Name** and **Description**)
+* **External links** relevant to the content
 
 ![](attachments/share-app-store-content/capabilities.png)
 

@@ -51,7 +51,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main();
     ```
 
-3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](/apidocs-mxsdk/apidocs/authentication).
+3.  Replace the `username` and `apikey` variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](/apidocs-mxsdk/apidocs/authentication).
 
 ### 2.1 Code Explanation
 

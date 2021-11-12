@@ -94,7 +94,7 @@ To set up a working directory for your script, follow these steps:
     ```bash
     $ npm install
     ```
-    If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
+    If you are using version control, make sure to ignore the `node_modules` directory, otherwise you end up committing dependencies.
 
 5.  In Code, create a [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 

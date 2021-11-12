@@ -61,7 +61,7 @@ To set up your development tools, follow these steps:
 
 To set up a working directory for your script, follow these steps:
 
-1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
+1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a [package.json](https://docs.npmjs.com/files/package.json) with default contents. Through this file you control your `npm` package. 
 
     ```bash
     $ mkdir my-app-generator
@@ -96,7 +96,7 @@ To set up a working directory for your script, follow these steps:
     ```bash
     $ npm install
     ```
-    If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
+    If you are using version control, make sure to ignore the `node_modules` directory, otherwise you end up committing dependencies.
 
 5.  In Code, create a [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file next to your *package.json*. The *tsconfig.json* file is used by the TypeScript compiler to compile your code in the proper manner to a JS file. Create it with the following contents. 
 

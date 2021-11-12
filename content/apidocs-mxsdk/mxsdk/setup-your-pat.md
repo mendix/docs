@@ -16,7 +16,7 @@ You can manage your Mendix personal access tokens via [warden](https://warden.me
 ![](attachments/sdk-intro/personal-access-token.png)
 
 ## 2. Save the Personal Access Token as an environment variable
-We do not recommend hard-coding your credentials (i.e. Personal Access Token) into your script. Instead, you can save it as an environment variable with the name of a variable called MENDIX_TOKEN. And the Mendix Platform SDK will read it automatically.
+We do not recommend hard-coding your credentials (i.e. Personal Access Token) into your script. Instead, you can save it as an environment variable with the name of a variable called `MENDIX_TOKEN` and the Mendix Platform SDK will read it automatically.
 
 Here are some useful links for setting the environment variable in different operating systems:
 * [Create and Modify Environment Variables on Windows](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0)

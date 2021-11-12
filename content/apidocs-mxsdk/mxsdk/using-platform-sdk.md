@@ -30,7 +30,7 @@ You can pass some options to `createNewApp`
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | repositoryType      | Type of repository to be used. Possible values: `svn` and `git`.                                                                                           |
 | summary             | Short description of the app.                                                                                                                              |
-| image               | Base64 encoded data of a app image (height and width between 200 and 400 px, maximum size 5 MB).                                                           |
+| image               | Base64 encoded data of an app image (height and width between 200 and 400 px, maximum size 5 MB).                                                           |
 | useAppTemplate      | Indicates whether repository must be initialized with the given app template. Either `templateId` or `templateDownloadURL` is mandatory when this is true. |
 | templateDownloadURL | URL of the download location of the app template package file (mpk). If the template package is private, this URL must be authenticated with a signature.  |
 | templateId          | UUID of the app template the app should be based on.                                                                                                       |

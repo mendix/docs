@@ -6,7 +6,7 @@ menu_order: 20
 
 ## 1 Introduction
 
-In [Setting Up Your Development Environment](setting-up-your-development-environment), you set up all the development tools. Now you will create an SDK script that automatically bootstraps a new Mendix app.
+In [Setting Up Your Development Environment](setting-up-your-development-environment) and [Setup your Personal Access Token](setup-your-pat), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing a First Script
 

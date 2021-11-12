@@ -229,6 +229,8 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 
 ![timeslot-response](attachments/automated-task-and-resource-planner/timeslot-response.png)
 
+`TimeSlotResponse` is a time slot for a task in the planning response.
+
 | Attribute | Type | Description |
 | --------- |--------|--------|
 | `_id`  | String | The ID of the the time slot response.  |
@@ -247,7 +249,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 
 ![validation-error](attachments/automated-task-and-resource-planner/validation-error.png)
 
-`ValidationError` is error information.
+`ValidationError` contains error information.
 
 | Attribute | Type | Description |
 | ------------- |------------|--------|

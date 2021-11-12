@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps below to sauce-up the map overviews in your applications with a minimal amount of effort!
 
-**After completing this how-to you will know:**
+**After completing this how-to, you will know:**
 
 *   How to configure the new style feature of the Google Maps widget
 *   Find and implement the right style matching your application
@@ -17,7 +17,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 
 ## 2 Preparation
 
-Before you start this how-to, please make sure you have completed the following prerequisites.
+Before you start this how-to, please make sure you have completed the following prerequisite.
 
 *   Have the latest version of the [Google Maps](/appstore/widgets/google-maps) widget in your app
 
@@ -29,13 +29,13 @@ These instructions are for the Google Maps widget which you can download from th
 
 ### 3.1 Widget Properties
 
-In this chapter I will explain how you can add styling to the Google Maps widget.
+In this chapter you will learn how to add styling to the Google Maps widget.
 
 1.  Open the properties of your Google Maps widget and go to the **Customisation** tab.
-    ![](attachments/19202780/19398957.png)
+    ![](attachments/style-google-maps/customisation-tab.png)
 
 2.  Simply enter the style in the **Style Array** section and you're done!
-    ![](attachments/19202780/19398956.png)
+    ![](attachments/style-google-maps/new-styling.png)
 
     Here is the example styling:
 
@@ -44,22 +44,21 @@ In this chapter I will explain how you can add styling to the Google Maps widget
     ```
 
 3.  The example style will give you this result:
-    ![](attachments/19202780/19398958.png)
+    ![](attachments/style-google-maps/style-example.png)
 
 ### 3.2 Finding the Right Style
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
 1.  On the website click **Explore:**
-    ![](attachments/19202780/19398959.png)
 2.  Explore the styles to find one that matches your application and click it:
-    ![](attachments/19202780/19398960.png)
+    ![](attachments/style-google-maps/snazzymaps-style.png)
 3.  On the lefthand pane you will see the style array:
-    ![](attachments/19202780/19398961.png)
+    ![](attachments/style-google-maps/snazzymaps-style-array.png)
 4.  Now simply press **Copy.** The style is copied to your clipboard.
 5.  Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzymaps:
 
-    ![](attachments/19202780/19398962.png)
+    ![](attachments/style-google-maps/snazzymaps-styling.png)
 
     The style array:
 
@@ -68,16 +67,16 @@ Choosing an existing style sheet from a large library that fits your application
     ```
 
 6.  And there it is:
-    ![](attachments/19202780/19398963.png)
+    ![](attachments/style-google-maps/new-style-example.png)
 
 ### 3.3 Upload Your Own Style Array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
 1.  Go-to Snazzymaps and click **Create.**
-    **![](attachments/19202780/19398964.png)** 
+    ![](attachments/style-google-maps/snazzymaps.png) 
 2.  Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
-    ![](attachments/19202780/19398965.png) 
+    ![](attachments/style-google-maps/custom-snazzymaps.png) 
 
     Happy modeling!
 

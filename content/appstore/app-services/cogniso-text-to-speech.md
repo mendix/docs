@@ -140,9 +140,9 @@ Follow these steps to configure the text-to-voice conversion:
     
         ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
    
-2. From the **Toolbox**, add a **Data vie**w widget to your page.
+2. From the **Toolbox**, add a **Data view** widget to your page.
 
-3. Set the **CreateSyntaxDetector** nanoflow as the data source of the **Data view** widget as follows:
+3. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
    1.  Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2.  For **Data source**, select **Nanoflow**.
    3.  **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.

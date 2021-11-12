@@ -20,3 +20,4 @@ For details on participating in the Mendix Vendor program, see [How to Sell Your
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
 * [Email Service](email-service) – enables sending HTML and plain text emails with attachments in your web apps
+* [Automated Task & Resource Planner](automated-task-and-resource-planner.md) – enables solving complex planning cases and automatically creating the most efficient planning based on available resources

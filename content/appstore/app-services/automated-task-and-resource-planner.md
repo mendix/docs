@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "app service"]
 
 {{% todo %}}[Add the link to the marketplace page after the component is released]{{% /todo %}}
 
-Powered by AI, the [Automated Task & Resource Planner]() app service can solve complex planning cases and automatically creating the most efficient planning based on available resources. The planner matches tasks with resources, taking a wide range of constraints into account. 
+Powered by AI, the [Automated Task & Resource Planner]() app service can solve complex planning cases and automatically create the most efficient planning based on available resources. The planner matches tasks with resources, taking a wide range of constraints into account. 
 
 The app service has a module containing a plug-and-play integration with the [Automated Task & Resource Planner API](#read-more). It contains the following entities and microflows:
 

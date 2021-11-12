@@ -92,7 +92,7 @@ To install this module, follow these steps:
 
 You can build the request using the entities from the module. The description of these entities is below.
 
-![planning-setting](attachments/automated-task-and-resource-planner/planning-setting.png)
+![planning-setting](attachments/automated-task-and-resource-planner/planning-request.png)
 
 `PlanningRequest` is the settings for this planning. An object is required for this entity. Create the object and associate the object to `PlanningRequest`.
 

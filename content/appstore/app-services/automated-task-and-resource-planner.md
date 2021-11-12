@@ -200,7 +200,7 @@ Locations are optional, but if used, they need to be added to all the tasks and 
 | --------- |--------|--------|
 | `TaskID` | String | The ID of the task that must finish before the current task. |
 
-### 3.1.2 Response
+#### 3.1.2 Response
 
 ![response](attachments/automated-task-and-resource-planner/response.png)
 
@@ -247,7 +247,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 
 ![validation-error](attachments/automated-task-and-resource-planner/validation-error.png)
 
-Error information
+`ValidationError` is error information.
 
 | Attribute | Type | Description |
 | ------------- |------------|--------|

@@ -11,16 +11,12 @@ The [Cogniso Translation](https://marketplace.mendix.com/link/component/118411) 
 
 Here is an overview of what the CognisoTranslation contains:
 
-* [Predefined entities](#predefined-entities)
-    * Language
-    * Translator
-* [Constants](#constants)
-	* LicenseToken
-	* TokenEndpoint
-* [Microflows](#microflows)
-	* CreateTranslator
-* [Nanoflows](#nanoflows)
-	* TranslateText
+| Item                                        | Name                        |
+| ------------------------------------------- | --------------------------- |
+| [Predefined entities](#predefined-entities) | Language, Translator        |
+| [Constants](#constants)                     | LicenseToken, TokenEndpoint |
+| [Microflows](#microflows)                   | CreateTranslator            |
+| [Nanoflows](#nanoflows)                     | TranslateText               |
 
 In most cases, you will only need what is contained in the **Translation** > **USE_ME** folder. The content in the **Translation** > **Internal** folder is for internal use only and you will not need it.
 

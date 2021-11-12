@@ -11,18 +11,13 @@ The [Cogniso Text To Speech](https://marketplace.mendix.com/link/component/11840
 
 Here is an overview of what the CognisoTextToSpeech contains:
 
-* [Predefined entities](#predefined-entities) 
-	* SpeechSynthesizer
-	* Voice
-* [Constants](#constants)
-	* LicenseToken
-	* TokenEndpoint
-* [Microflows](#microflows)
-	* CreateSpeechSynthesizer
-* [Nanoflows](#nanoflows)
-	* SynthesizeSpeech
-* [Widgets](#widgets)
-	* AudioPlayer
+| Item                                        | Name                        |
+| ------------------------------------------- | --------------------------- |
+| [Predefined entities](#predefined-entities) | SpeechSynthesizer, Voice    |
+| [Constants](#constants)                     | LicenseToken, TokenEndpoint |
+| [Microflows](#microflows)                   | CreateSpeechSynthesizer     |
+| [Nanoflows](#nanoflows)                     | SynthesizeSpeech            |
+| [Widgets](#widgets)                         | AudioPlayer                 |
 
 In most cases, you will only need what is contained in the **TextToSpeech** > **USE_ME** folder. The content in the **TextToSpeech** > **Internal** folder is for internal use only and you will not need it.
 

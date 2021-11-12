@@ -13,45 +13,13 @@ With this app service, you do not have to build a text analytics application fro
 
 Here is an overview of what the CognisoTextAnalytics contains:
 
-* [Predefined entities](#predefined-entities)
-	* Detector
-	* Language
-	* Response
-	* DominantLanguageDetector
-	* DominantLanguage
-	* SentimentDetector
-	* Sentiment
-	* SentimentScore
-	* EntityDetector
-	* Entity
-	* PiiEntityDetector
-	* PiiEntity
-	* KeyPhraseDetector
-	* KeyPhrase
-	* SyntaxDetector
-	* SyntaxToken
-* [Constants](#constants)
-	* LicenseToken
-	* TokenEndpoint
-* [Microflows](#microflows) 
-  * CreateDominantLanguageDetector
-  * CreateEntityDetector
-  * CreateKeyPhraseDetector
-  * CreatePiiEntityDetector
-  * CreateSentimentDetector
-  * CreateSyntaxDetector
-* [Nanoflows](#nanoflows)
-   * DetectDominantLanguage
-   * DetectEntities
-   * DetectKeyPhrases
-   * DetectPiiEntities
-   * DetectSentiment
-   * DetectSyntax
-* [Enumerations](#enumerations)
-  * EntityType
-  * PartOfSpeechTag
-  * PiiEntityType
-  * SentimentType
+| Item                                        | Name                                                         |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| [Predefined entities](#predefined-entities) | Detector, Language, Response, DominantLanguageDetector, DominantLanguage, SentimentDetector, Sentiment, SentimentScore, EntityDetector, Entity, PiiEntityDetector, PiiEntity, KeyPhraseDetector, KeyPhrase, SyntaxDetector, SyntaxToken |
+| [Constants](#constants)                     | LicenseToken, TokenEndpoint                                  |
+| [Microflows](#microflows)                   | CreateDominantLanguageDetector, CreateEntityDetector, CreateKeyPhraseDetector, CreatePiiEntityDetector, CreateSentimentDetector, CreateSyntaxDetector |
+| [Nanoflows](#nanoflows)                     | DetectDominantLanguage, DetectEntities, DetectKeyPhrases, DetectPiiEntities, DetectSentiment, DetectSyntax |
+| [Enumerations](#enumerations)               | EntityType, PartOfSpeechTag, PiiEntityType, SentimentType    |
 
 In most cases, you will only need what is contained in the **TextAnalytics** > **USE_ME** folder. The content in the **TextAnalytics** > **Internal** folder is for internal use only and you will not need it.
 

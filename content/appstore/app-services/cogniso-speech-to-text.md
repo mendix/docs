@@ -9,18 +9,14 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what the app service contains:
+Here is an overview of what CognisoSpeechToText contains:
 
-* [Predefined entities](#predefined-entities)
-	* MediaDocument 
-* [Constants](#constants)
-	* LicenseToken
-	* TokenEndpoint
-* [Microflows](#microflows) 
-	* BatchTranscription
-	* StartService
-* [Widgets](#widgets)
-	* Microphone
+| Item                                        | Name                             |
+| ------------------------------------------- | -------------------------------- |
+| [Predefined entities](#predefined-entities) | MediaDocument                    |
+| [Constants](#constants)                     | LicenseToken, TokenEndpoint      |
+| [Microflows](#microflows)                   | BatchTranscription, StartService |
+| [Widgets](#widgets)                         | Microphone                       |
 
 In most cases, you will only need what is contained in the **SpeechToText** > **USE_ME** folder. The content in the **SpeechToText** > **Internal** folder is for internal use only and you will not need it.
 
@@ -33,7 +29,8 @@ You can use this app service to convert voice into text and trigger custom actio
 This app service enables doing the following:
 
 * Convert speech to text
-* Trigger actions and give users voice feedback messages upon speech conversion
+* Support speech-triggered actions
+* Support voice feedback messages
 * Support the batch mode to implement speech conversion as a back-end service
 * Support different language options
 
@@ -189,7 +186,7 @@ Below are the steps to build an example web app which can convert speech to text
     
        ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
     
-       For more information, see the [Customizing Speech Recognition](#actions) section below.
+       For more information, see the [Customizing Speech-Triggered Actions](#actions) section below.
 
 7. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
@@ -223,9 +220,9 @@ For example, you can set up the **Action** to make the app show a pop-up window 
 
 ![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
 
-### 5.3 Customizing Speech Recognition {#actions}
+### 5.3 Customizing Speech-Triggered Actions {#actions}
 
-This app service allows you to set up rules of speech recognition from voice to actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+This app service allows you to set up rules of speech recognition that trigger actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
 You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 

@@ -26,9 +26,9 @@ While Helm might be suitable for applications that don't need to be frequently m
 
 Kubernetes offers a standard way to automate application management – the [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). An operator uses the standard Kubernetes [REST API](https://kubernetes.io/docs/reference/using-api/) and its own Kubernetes service account to monitor and manage Kubernetes resources for an application.
 
-Kubernetes supports custom extensions to its API called [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRs). A custom resource looks just like a standard Kubernetes resource (such as a pod, secret, or service) and represents a custom object type. Custom Resources are defined through [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) (CRDs) which are installed globally into a Kubernetes cluster. Custom Resources are plain text files can be updated using a text editor and managed through the Kubernetes API.
+Kubernetes supports custom extensions to its API called [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) (CRs). A CR looks just like a standard Kubernetes resource (such as a pod, secret, or service) and represents a custom object type. CRs are defined through [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) (CRDs) which are installed globally into a Kubernetes cluster. CRs are plain text files can be updated using a text editor and managed through the Kubernetes API.
 
-A Kubernetes operator contains one or more [Controllers](https://kubernetes.io/docs/concepts/architecture/controller/) that implement a control loop. A controller continuously monitors Custom Resources and performs the actions necessary to bring the resource into a desired state (expressed in the Custom Resource's `spec` field). Any status changes and updates will be reported through the Custom Resource's `status` field. An operator can be controlled through its Custom Resources either manually, using `kubectl`, or automatically, by other operators or components that can communicate with the Kubernetes API.
+A Kubernetes operator contains one or more [Controllers](https://kubernetes.io/docs/concepts/architecture/controller/) that implement a control loop. A controller continuously monitors CRs and performs the actions necessary to bring the resource into a desired state (expressed in the CR's `spec` field). Any status changes and updates will be reported through the CR's `status` field. An operator can be controlled through its CRs either manually, using `kubectl`, or automatically, by other operators or components that can communicate with the Kubernetes API.
 
 Red Hat's primary way of installing software into OpenShift uses operators, hosted on [operatorhub.io](https://operatorhub.io/). A few well-known operators include:
 
@@ -45,14 +45,14 @@ To find out more about Kubernetes operators, see the following links:
 
 ## 3 Mendix for Private Cloud Operator
 
-Mendix for Private Cloud contains multiple components. The following components are not a part of the Mendix Operator, but can manage or control it through Mendix Custom Resources:
+Mendix for Private Cloud contains multiple components. The following components are not a part of the Mendix Operator, but can manage or control it through Mendix CRs:
 
 * The Mendix Gateway Agent allows the Private Cloud Portal to manage environments
-* The Configuration Tool updates Custom Resources that are used to configure the Mendix Operator
+* The Configuration Tool updates CRs that are used to configure the Mendix Operator
 
 ### 3.1 What the Mendix Operator Offers
 
-After it has been installed and configured, the Mendix Operator will manage Mendix app environments. These environments can be configured by creating, updating or deleting the `MendixApp` Custom Resource (CR). The `MendixApp` CR is used to express the environment's desired state, and if the current state does not match the desired state the Mendix Operator will apply the changes necessary to bring the environment to the desired state.
+After it has been installed and configured, the Mendix Operator will manage Mendix app environments. These environments can be configured by creating, updating or deleting the `MendixApp` CR. This CR is used to express the environment's desired state, and if the current state does not match the desired state the Mendix Operator will apply the changes necessary to bring the environment to the desired state.
 
 The `MendixApp` CR can be modified by any Kubernetes API consumers: other operators; `kubectl`; or the Mendix Gateway Agent.
 

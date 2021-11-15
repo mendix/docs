@@ -13,9 +13,9 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
-### November ???, 2021
+### November 15th, 2021
 
-#### Supported platforms
+#### Supported Providers
 
 * We have completed validation of Kubernetes 1.22 and Postgres versions 11, 12 and 13.
 

@@ -32,7 +32,7 @@ If you're using Mendix for Private Cloud Operator v1.\*.\* and are planning to u
 3. Validate that Mendix for Private Cloud is working correctly in all namespaces
 
 Kubernetes 1.22 [deprecated](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/) multiple APIs;
-upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources such as Ingresses to be compatible with APIs available in Kubernetes 1.22.
+upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources such as ingresses to be compatible with APIs available in Kubernetes 1.22.
 {{% /alert %}}
 
 ## 2 Prerequisites

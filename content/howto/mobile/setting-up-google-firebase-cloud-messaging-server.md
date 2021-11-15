@@ -92,7 +92,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 	{{% image_container width="350" %}}![](attachments/push_notifications_cloud_messaging.png){{% /image_container %}}
 
-1. On this tab, upload either your APNs key or your APNs certificate(s).
+1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 
 ## 6 Setting Up a Service Account {#setting-up-a-service-account}
 
@@ -119,4 +119,4 @@ Only create an iOS application in your Firebase project when you plan on using F
 ## 8 Read More
 
 * [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
-* [Set Up Push Notifications](setting-up-native-push-notifications)
+* [Set Up Push Notifications](notifications)

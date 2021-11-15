@@ -3,7 +3,7 @@ title: "Implement the Push Notifications Module"
 parent: "notifications"
 menu_order: 54
 description: Tutorial for implementing the push notification module.
-tags: ["mobile", "native", "push", "local", "firebase"]
+tags: ["mobile", "native", "push", "local", "firebase, ios, android"]
 ---
 
 ## 1 Introduction

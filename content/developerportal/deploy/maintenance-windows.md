@@ -33,8 +33,6 @@ To view maintenance windows, you need to have monitor or backup access to your M
 Maintenance windows and planned maintenance are defined in UTC time format. When selecting a time period, remember to convert to UTC from your local time.
 {{% /alert %}}
 
-### 3.1 Configuring the Maintenance Window for Your Application
-
 Follow the instructions below to configure a maintenance window:
 
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
@@ -55,31 +53,9 @@ Follow the instructions below to configure a maintenance window:
 
 6. Choose one of the maintenance windows suggested.
 
-7. Click **Save** to confirm your new planned maintenance window.
+7. Click **Save** to confirm your new maintenance window.
 
-{{% alert type="info" %}}
-Changing your preferred maintenance window will not change the time of any planned maintenance which is already scheduled. You will need to reschedule planned maintenance separately.
-{{% /alert %}}
-
-### 3.2 Rescheduling Planned Maintenance for Your Application
-
-When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window.
-
-{{% alert type="info" %}}
-Planned maintenance windows are displayed in your local timezone, as indicated by the offset (for example `+02:00` in the image above).
-{{% /alert %}}
-
-You can reschedule planned maintenance up  to one hour before the beginning of the planned maintenance window by doing the following:
-
-1. Click **Reschedule** to override a planned maintenance window.
-
-2. Choose one of the maintenance windows suggested. It does not have to be in your preferred maintenance window.
-
-    {{% alert type="warning" %}}When rescheduling, the maintenance window options are in **UTC**. When you save a new planned maintenance window, it will be shown in the local timezone.{{% /alert %}}
-
-    ![](attachments/maintenance-windows/reschedule-maintenance.png)
-
-3. Click **Save** to confirm your new planned maintenance window. 
+If planned maintenance is already scheduled it will be moved to the new planned maintenance window.
 
 ## 4 Read More
 

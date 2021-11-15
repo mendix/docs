@@ -61,7 +61,7 @@ To install this module, follow these steps:
      * [Community Commons Function Library](https://marketplace.mendix.com/link/component/170) 
      * [Encryption](https://marketplace.mendix.com/link/component/1011)
 2. Configure [Encryption](/appstore/modules/encryption#configuration).
-3. Go to the Marketplace and download the *SendEmailModule.mpk* file for the [Automated Task & Resource Planner](https://marketplace.mendix.com/link/component/118393).
+3. Go to the Marketplace and download the *AutomatedPlanningCore.mpk* file for the [Automated Task & Resource Planner](https://marketplace.mendix.com/link/component/118393).
 4.  To add the Automated Task & Resource Planner to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select **mpk* file.
 
@@ -73,7 +73,7 @@ To install this module, follow these steps:
 
    3.  In the **Import Module** dialog box, click **Import**. 
    4.  Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-   5.  Open the **App Explorer** to view the **SendEmailModule** module.
+   5.  Open the **App Explorer** to view the **AutomatedPlanningCore** module.
 5. Add `Settings_Snippet` and `Log_Snippet` from the **\_USEME** folder to your page.
 6. After the deployment, go to the **Settings** page and enter the **Automated planning endpoint** as well as the **username** and **password** of your user account.
 

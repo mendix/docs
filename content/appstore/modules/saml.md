@@ -83,7 +83,6 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 
 * **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
-	
 
 {{% alert type="info" %}}
 If you want to automatically synchronize the IdP metadata, go to **_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the synchronisation of the IdP metadata. 

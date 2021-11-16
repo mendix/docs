@@ -55,7 +55,14 @@ Follow the instructions below to configure a maintenance window:
 
 7. Click **Save** to confirm your new maintenance window.
 
-If planned maintenance is already scheduled it will be moved to the new planned maintenance window.
+{{% alert type="info" %}}
+If planned maintenance is already scheduled for the current week it will be moved to the new planned maintenance window if this is still in the same week. However, if you move your maintenance window to before the current day and time the planned maintenance window will not be moved.
+
+For example: imagine today is Tuesday, your maintenance window is currently Thursday, and there is planned maintenance for Thursday this week.
+
+* If you change the maintenance window to Friday, the planned maintenance will move to Friday as it can still be done this week.
+* If you change the maintenance window to Monday, the planned maintenance remains on Thursday as it needs to be done this week and your next maintenance window is now next week.
+{{% /alert %}}
 
 ## 4 Read More
 

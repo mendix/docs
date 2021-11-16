@@ -9,16 +9,16 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
-### November 17th, 2021
+### November 18th, 2021
 
 #### New Feature
 
-* You can now provide key capabilities, a banner, external links, and industry cloud details for **Solution** and **Template** [component types](/appstore/general/app-store-overview#types).
+* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
 
 #### Improvements
 
 * You can now add [release notes](/appstore/general/share-app-store-content#version) for your new component version without uploading a new source file.
-* You can now skip uploading a source file for **App Service** and **Template** component types if your component is not downloadable.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#version) page for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7th, 2021
 

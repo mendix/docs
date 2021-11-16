@@ -85,7 +85,7 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 {{% alert type="info" %}}
-If you want to automatically synchronize the IdP metadata, go to **_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the synchronisation of the IdP metadata. 
+If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the synchronisation of the IdP metadata. 
 {{% /alert %}}
 
 #### 3.2.3 User Provisioning 

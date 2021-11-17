@@ -31,7 +31,7 @@ The **General** tab in the **Edit Menu Items Item** dialog box has the following
     * Configurable when **Custom visualization** is set to **Yes**
 * **Text** – the text value to be displayed in the button
     * Configurable when the **Item type** is **Button**
-* **Visible** – a Boolean expression indicating whether the item should be visible
+* **Visible** – a Boolean expression indicating whether the item is visible or not
 	* Default: **true**
 * **On click action** – executes an action when the button is activated through mouse or keyboard.
     * Configurable when the **Item type** is **Button**

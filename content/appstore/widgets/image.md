@@ -95,5 +95,5 @@ These are the design properties shipped with Atlas UI for this widget:
     * **Yes**, **No** (default) 
 * **Image fit** – changes the fit of the image according to the object-fit CSS property
     * **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)
-* **Align content** – align elements inside the container as a row or as a column
+* **Align content** – aligns elements inside the container as a row or as a column
     * **Left align as a row**, **Center align as a row**, **Right align as a row**, **Right align as a column**, **Center align as a column**, **Left align as a column**

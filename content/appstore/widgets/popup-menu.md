@@ -27,15 +27,17 @@ The **Menu items** property allows you to configure actions and dividers that ar
 The **General** tab in the **Edit Menu Items Item** dialog box has the following properties:
 
 * **Item type** – determines if the menu item is an action button or a divider for buttons
-	* Default: **Button**
-	* Configurable when **Custom visualization** is set to **Yes**
+    * Default: **Button**
+    * Configurable when **Custom visualization** is set to **Yes**
 * **Text** – the text value to be displayed in the button
-	* Configurable when the **Item type** is **Button**
+    * Configurable when the **Item type** is **Button**
+* **Visible** – a Boolean expression indicating whether the item should be visible
+	* Default: **true**
 * **On click action** – executes an action when the button is activated through mouse or keyboard.
-	* Configurable when the **Item type** is **Button**
+    * Configurable when the **Item type** is **Button**
 * **Style** – sets the button's brand style
-	* Default: **Default**
-	* Configurable when the **Item type** is **Button**
+    * Default: **Default**
+    * Configurable when the **Item type** is **Button**
 
 Other main properties of the widget are as follows:
 

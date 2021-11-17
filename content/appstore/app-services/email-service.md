@@ -61,14 +61,19 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 ### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
 
 1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try For Free** to start a trial.
+
 2. To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
-   
+
    For the trial, you do not need to fill in this information.
-   
+
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
 4. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
 5. Click **Create Binding Keys**.
+
 6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Email Service.
+
 7.  Click **Create Keys** to generate the **SecretKey** and **UserName**. 
 
     The system generates **SecretKey** and **UserName** and also returns **MailFromDomain**, **SPFRecordValue**, and **MXRecordValue**. For more details on SPF and MX configuration, see the section [SPF and MX Records](#spf-and-mx-records).
@@ -76,6 +81,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
     ![secretkey-username-mailfromdomain-spfrecordvalue-mxrecordvalue-generated](attachments/email-service/binding-key-generation.png)
 
 8. **Copy** the **SecretKey** and **UserName**. You will use them later for app deployment.
+
 9. After the order is created successfully, the Technical Contact also receives an email to confirm the email address. Follow the instructions in the email to confirm the email address. Once this email address is confirmed, this email address is used as the sender's email address when the app sends an email.
 
 ### 3.2 Configuring userName and secretKey for App Deployment

@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp008> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp010> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -164,3 +164,10 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 9 Access rules are duplicated. {#mxp010}
+
+Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
+
+### 9.1 Steps to Fix
+
+To fix the issue, remove duplicated access rules from entity properties.

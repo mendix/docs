@@ -18,6 +18,6 @@ These guides will teach you to configure push notifications (also known as remot
 * [Build a Native Mobile App with Push Notifications](notif-build-native) — Build a native app with push notifications enabled.
 * [Send Your First Test Push Notification](notif-send-test) — Send a test notification to confirm your app is working properly.
 
-This documentation is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications. For information on local notifications, see [Use Local Notifications](local-notif-parent).
+This documentation is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications). For information on local notifications, see [Use Local Notifications](local-notif-parent).
 
 To get started, begin with the series' first entry: [Add Module Dependencies](add-module-depends).

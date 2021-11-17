@@ -170,13 +170,20 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 ![](attachments/version-control/image6.png)
 
-## 4 Branches {#branches}
+
+## 4 Working locally
+
+This figure below illustrates how a single developer might work on changes and share them through Team Server. In this situation, the developer first creates an App. The initial local model is than sent to Team server. After this the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to Team server in a later stage. This for instance, can be the case if the developer is working in a situation where they do not have access to a network.
+
+![](attachments/version-control/image10.png)
+
+## 5 Branches {#branches}
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
 
 This is done using [Branch Lines](#branch-line).
 
-### 4.1 Main Line
+### 5.1 Main Line
 
 All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
@@ -186,7 +193,7 @@ This is the case for the version control processes described in the section [Ver
 
 Initially, developers using Studio only have access to the development line for which Studio is enabled. They can be switched to another development line, however, by a developer using Studio Pro.
 
-### 4.2 Branch Line
+### 5.2 Branch Line
 
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
@@ -198,7 +205,7 @@ In SVN the unique identifiers are numbers. As each commit has a unique number in
 
 ![](attachments/version-control/image8.png)
 
-### 4.3 Merging Branches {#merging-branches}
+### 5.3 Merging Branches {#merging-branches}
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 
@@ -215,7 +222,7 @@ As with the examples in the [Version Control Processes for a Single Branch](#vc-
 
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
-## 5 Main Documents in This Category
+## 6 Main Documents in This Category
 
 * [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
 * [Collaborative Development](collaborative-development) – describes the process of sharing app model changes when a team of more than one person is working on the app

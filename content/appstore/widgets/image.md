@@ -44,7 +44,7 @@ The **Data source** section (required) is used to configure the data for the wid
 	* Can be used statically or dynamically through the attribute of a context object
 * **Icon** – used to retrieve a static icon or image for the widget
     * Configurable when **Image type** is set to **Icon**
-* **Background image** – used to render image as a background
+* **Background image** – used to render an image as a background
 
 #### 2.1.2 Events Section
 

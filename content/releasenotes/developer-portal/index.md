@@ -15,6 +15,19 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2021
 
+### November 18th, 2021
+
+#### Improvements
+
+* With the arrival of git support we need a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/). We made some changes to the Developer Portal to accomodate this new version, which is currently being tested and will be published soon
+* We introduced a new version of the Feedback API that will be used by a new generation of Feedback Widgets coming to the Marketplace soon
+* Until now you were not able to delete or deactivate an app if it was still deployed to an environment, regardles of this environment being licensed or a sandbox. We changed this behavior; we now only check if the environment is licensed or not. A consquence of this change is that the little cloud icon on the app tiles on the [MyApps](/developerportal/index#my-apps) page is only displayed if your app is deployed to a licensed node.
+
+
+#### Fixes
+
+* We fixed some security issues
+
 ### November 4th, 2021
 
 #### Improvements

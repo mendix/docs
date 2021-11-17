@@ -36,7 +36,7 @@ The **Data source** section (required) is used to configure the data for the wid
 	*  When set to **Image**, a static or dynamic image can be retrieved
 	*  When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
 	*  When set to **Icon**, a static icon or image from **System.Images** can be retrieved
-* **Image Source** and **Default image** – configurable when **Image type** is set to **Image**
+* **Image source** and **Default image** – configurable when **Image type** is set to **Image**
 	* The **Image source** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
 	* The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
 * **Image URL** – a text template to configure the image for this widget through a URL

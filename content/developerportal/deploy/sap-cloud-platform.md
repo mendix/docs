@@ -659,7 +659,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
 {{% alert type="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does support the `hanatrial-schema` database.
+If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-schema` database.
 {{% /alert %}}
 
 For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.

@@ -26,5 +26,15 @@ You should now receive the notification on your device. If the application is al
 
 If the app is not open (or running in the background) it will deliver and show the notification in the usual location for Android/iOS devices. Click on the notification to trigger the in app action.
 
-Congratulations, you have just sent your first push notification!
+Congratulations, you have just sent your first push notification! 
 
+If you did not receive the message, check the applications logs to see if the message was sent succesfully. See the troubleshooting section below for solutions to the most common issues.
+
+## 3 Troubleshoot Notification Issues
+
+| Issue | Cause | Solution |
+|-----|----|-----|
+| Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Implementing Push Changes With the Native Mobile Builder](setting-up-native-push-notifications#auto-changes) section in *How To Set Up Push Notifications* and make sure you add the *google-services.json* file. |
+| Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#setting-up-a-service-account) in Firebase and upload it. |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | [Set the constant](#installing-your-module) **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
+| Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')**. | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](setting-up-google-firebase-cloud-messaging-server#setting-up-a-service-account) in Firebase and upload it. |

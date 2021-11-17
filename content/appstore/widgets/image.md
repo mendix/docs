@@ -81,7 +81,7 @@ The **Dimensions** tab allows you to configure settings that are related to the 
 * **Responsive** – when set to **Yes**, the image will scale with its parent container
     * Default: **Yes**
     * The image will never get larger than its original size, but it can become smaller
-    * This option will be hidden if **Image type** - **Icon** is set
+    * This option will be hidden if **Image type** is set to **Icon**
 
 ### 3 Styling
 

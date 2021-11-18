@@ -48,8 +48,6 @@ After opening an app in Studio Pro, you can see which development line (the main
 
 If you are on another line than the Studio enabled line, you can use the 
 
-Click the drop-down to select another line or click **OK** to open the currently selected line. 
-
 ![Open App Dialog Window](attachments/collaborative-development/branch-line-dialog.png)
 
 ### 4.1 Merging Latest Changes
@@ -137,15 +135,13 @@ To create a new branch line, do the following:
 
 	![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
-3.  In the **Create Branch Line** dialog box, set the following: <br/>
+3.  In the **Create Branch Line** dialog box, set the following: 
 
-	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> 
-	b. Select the **Revision**, if needed. <br/>
-	c. Type the name of the new line.<br/>
-
-	
+    1. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. 
+    2. Select the **Revision**, if needed. 
+    3. Type the name of the new line.
 		
-	![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+		![Create Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
     
 
 4.  After you have configured all the settings, click **OK**.

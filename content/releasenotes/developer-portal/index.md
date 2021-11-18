@@ -19,9 +19,14 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* The arrival of git support meant that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon
-* We introduced a new version of the Feedback API that will be used by a new generation of Feedback Widgets coming to the Marketplace soon
-* Until now you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox. We changed this behavior; we now only check if the environment is licensed or not. A consequence of this change is that the little cloud icon on the app tiles on the [MyApps](/developerportal/index#my-apps) page is only displayed if your app is deployed to a licensed node
+* The arrival of [Git support](/refguide/branch-line-manager-dialog#byo-server-app) means that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon.
+* We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api) that will be used by a new generation of [Feedback widgets](/appstore/widgets/mendix-feedback) coming to the Marketplace soon.
+* Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/index#my-apps) page is only displayed if your app is deployed to a licensed node.
+
+### Fixes
+
+* We fixed an issue where a request handler path with `.` broke transport. (Tickets 132865, 133292)
+* We fixed an issue with the custom HHTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Ticket 133172)
 
 ### November 4th, 2021
 

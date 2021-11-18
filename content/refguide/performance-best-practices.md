@@ -164,3 +164,12 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 10 Avoid Deeply Nested List Views {#mxp011}
+
+Using a deeply nested list view that is nested to two or more levels can affect page load performance.
+
+Nesting a list view in another list view (and so on) often results in poor page performance due to the increased number of requests and transferred data volume.
+
+### 10.1 How to Fix
+
+Consider restructuring your page. For example, use a second page or a pop up.

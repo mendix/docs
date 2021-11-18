@@ -9,6 +9,20 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### November 18th, 2021
+
+#### New Features
+
+* We released **Try for Free** for premium app service (like [Email Service](https://marketplace.mendix.com/link/component/118393)):
+	* This helps to evaluate capabilities offered and realize value of premium contents.
+	* This is a self-service experience.
+* You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
+
+#### Improvements
+
+* You can now add [release notes](/appstore/general/share-app-store-content#version) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Package](/appstore/general/share-app-store-content#version) page for **App Service** and **Solution Template** component types if your component is not downloadable.
+
 ### September 7th, 2021
 
 #### New Features

@@ -57,6 +57,6 @@ Select the start revision (revision with the lowest number) and the end revision
 
 ## 3 Merging Git Branches
 
-There is a simple branch merge scenario that is supported for Git only. Here, you have to specify which changes from the branch line you want to merge into the current one. 
+There is a simple branch merge scenario that is supported for Git only. You select a branch line you want to merge into the current one:
 
 ![Merge Dialog for Git](attachments/merge-dialog/merge-dialog-git.png)

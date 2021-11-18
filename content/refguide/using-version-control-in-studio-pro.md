@@ -116,7 +116,7 @@ Push is only available in Git. In SVN, pushing is done together with committing 
 
 {{% /alert %}}
 
-After committing you need to send the committed changes in the local repository to the Git remote repository if you want your changes to be accessible to others. 
+Pushing is the act of sending your local changes to Team Server. After committing you need to push the committed changes  if you want your changes to be accessible to others. By default this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 
@@ -239,11 +239,11 @@ When you want to merge the whole branch back to the main line to integrate the f
 
 3. Depending on the version control you are using, do one of the following:
 
-    1.  For SVN, choose **Merge feature branch**:
+    1.  **For SVN**, choose **Merge feature branch**:
 
         ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
 
-    1. For Git, select the branch you would like to merge from the **Branch line** drop-down list:
+    1. **For Git**, select the branch you would like to merge from the **Branch line** drop-down list:
 
         ![](attachments/using-version-control-in-studio-pro/merge-git.png)
 
@@ -271,11 +271,12 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**). {{% todo %}}[Decide on whether to leave this example on Port fix and make it clear it's about SVN or delete it.]{{% /todo %}}
+Select **Version Control > Merge Changes Here**, do the following depending on the version control you are using:
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_14-19-47.png)
+1. **For SVN**, select the appropriate type of merge (**Port fix**, **Merge feature branch**, and **Advanced merge** options are available)
+2. **For Git,** select the branch line to merge to the current branch. 
 
-You can merge a single revision or a whole range of revisions from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
+For more information on merge settings, see [Merge Dialog](merge-dialog).
 
 #### 7.2.3 Reverse Merging
 
@@ -287,7 +288,7 @@ For SVN, you can choose a range (**Start revision** and **End revision**):
 
 ![](attachments/using-version-control-in-studio-pro/revert-committed-changes.png)
 
-For Git, you can only revert a single revision:
+For Git, reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, and so on.
 
 ![](attachments/using-version-control-in-studio-pro/revert-changes-git.png)
 

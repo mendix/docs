@@ -12,6 +12,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 ### November 18th, 2021
 
 #### New Features
+
 * We released **Try For Free** for premium app service (like [Email Service](https://marketplace.mendix.com/link/component/118393)):
 	* This helps to evaluate capabilities offered and realize value of premium contents.
 	* This is a self-service experience.

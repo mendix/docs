@@ -30,7 +30,7 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the applications logs to see if the message was sent succesfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshoot Notification Issues
+## 3 Troubleshoot Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|

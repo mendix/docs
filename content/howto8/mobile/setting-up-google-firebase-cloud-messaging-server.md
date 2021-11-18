@@ -1,19 +1,19 @@
 ---
 title: "Set Up the Google Firebase Cloud Messaging Server"
-parent: "push-notifications"
-menu_order: 40
+parent: "notifications"
+menu_order: 55
 tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
 
 ## 1 Introduction
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android as well as iOS. In order to send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This tutorial will teach you how to register for FCM and configure the service in your app.
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android as well as iOS devices. In order to send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This tutorial will teach you how to register for FCM and configure the service in your app.
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Firebase account
+* Have a Firebase account (https://firebase.google.com)
 
 ## 3 Setting up a Firebase Project
 
@@ -81,7 +81,7 @@ Do the following to add your app to FCM:
 
 	{{% image_container width="350" %}}![](attachments/push-server/firebase/android_setup.png){{% /image_container %}}
 
-Bundle id must be matching with your package id. Make sure to repeat this step for IOS aswell.
+Bundle ID must be matching with your package ID. Make sure to repeat this step for iOS as well.
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 
@@ -92,7 +92,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 	{{% image_container width="350" %}}![](attachments/push_notifications_cloud_messaging.png){{% /image_container %}}
 
-1. On this tab, upload either your APNs key or your APNs certificate(s). For more information on APN SSL certificates, see [How to Set up the Apple Push Notification Server](setting-up-apple-push-notification-server).
+1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 
 ## 6 Setting Up a Service Account {#setting-up-a-service-account}
 
@@ -100,7 +100,7 @@ In the top-left corner of the screen, click the cogwheel and select **Project se
 
 {{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
-On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back end of your Mendix application.
+On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back-end of your Mendix application.
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
@@ -118,6 +118,5 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 ## 8 Read More
 
-* [Implement Push Notifications](implementation-guide)
+* [Set Up Push Notifications](notifications)
 * [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications)
-* [Set Up Push Notifications](setting-up-native-push-notifications)

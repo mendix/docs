@@ -60,7 +60,7 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 ### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
 
-1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try For Free** to start a trial.
+1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
 
 2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
 

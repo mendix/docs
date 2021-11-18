@@ -11,7 +11,7 @@ tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collabo
 Version Control allows you to manage your app development in two ways:
 
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [Main Line](#main-line) contains all the completed features that have been worked on separately.
+* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro, Studio, and the Developer Portal.
 
@@ -71,15 +71,15 @@ If Studio is enabled for this development line, the process first ensures that t
 
 ### 2.9 Development Line {#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the [Main Line](#main-line) and [Branch Lines](#branch-line).
+Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the [main line](#main-line) and [branch lines](#branch-line).
 
 #### 2.9.1 Main Line {#main-line}
 
-The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
+The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
 #### 2.9.2 Branch Line {#branch-line}
 
-A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
+A Branch Line is a way of making an independent set of changes which can be tested away from the main line.
 
 See [Branches](#branches), below, for more information on how branch lines can be used.
 
@@ -106,7 +106,7 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 ## 3 Version Control Processes for a Single Branch {#vc-single}
 
-The figure below shows how two developers might work on a [Studio enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a [Studio enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 

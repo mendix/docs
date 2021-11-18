@@ -18,6 +18,7 @@ Push notifications only work with apps created through the Mendix Native Mobile 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
+
 * Send one test push notification as described in [Use Notifications](notifications)
 
 If you want to use push notifications with custom apps which were created with Mendix Native Mobile Builder, make sure you have completed the following prerequisite:

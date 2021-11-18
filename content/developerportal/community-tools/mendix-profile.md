@@ -128,7 +128,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | --- | --- | --- |
 | Publish an app | 50 | N/A |
 | Publish a new app version | 25 | N/A |
-| Add an app review | 5 | N/A |
+| Add an app review | 5 | 25 |
 | Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/) | 5 | 5 |
 | Download an app from the Marketplace | 1 | 5 |
 
@@ -258,6 +258,10 @@ Make a note of the API key, as it will only be shown once.
 {{% /alert %}}
 
 ![](attachments/mendix-profile/api-key.png)
+
+{{% alert type="info" %}}
+We may cache your API key. This means that when you revoke an API key, it may take some time before the change takes effect.
+{{% /alert %}}
 
 For more information, see the following:
 

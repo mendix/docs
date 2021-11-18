@@ -152,9 +152,9 @@ For attributes, you can choose to store the value in the database or to calculat
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|---- |
-| On enter event            | OEN\_{Purpose}   | Input widgets   |
-| On change event           | OCH\_{Purpose}   | Input widgets   |
-| On leave event            | OLE\_{Purpose}   | Input widgets   |
+| On enter event            | OEN\_{Purpose}   | Input elements   |
+| On change event           | OCH\_{Purpose}   | Input elements   |
+| On leave event            | OLE\_{Purpose}   | Input elements   |
 | Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
 | Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
 
@@ -372,7 +372,7 @@ Apps should keep up with new Mendix releases as much as possible.
 
 When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-Marketplace modules should NOT be modified. If an ApMarketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
+Marketplace modules should NOT be modified. If a Marketplace module is modified, updating to a new version becomes much harder, because the changes will be overwritten when a new version is downloaded from the Marketplace. If changing an Marketplace module is unavoidable, you have two options:
 
 * Mark any changes you make explicitly and clearly, and perform them again when the module is updated
 * Copy the contents of the Marketplace module to another module in your app and use that module instead (remember that your app will no longer reflect updates to the original Marketplace module)

@@ -19,7 +19,7 @@ The scaling options on possible cloud versions are the following:
 
 | Cloud Version | Scaling Options | Limitations |
 | ------------- | --------------- | ----------- |
-| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a support ticket with [Mendix Support](https://support.mendix.com/) |
+| Mendix Cloud v3 | Vertical scaling | This needs to be done by raising a ticket with [Mendix Support](https://support.mendix.com/) |
 | Mendix Cloud v4 | Vertical and horizontal scaling | Horizontal scaling is only available for apps written in Mendix version 7.0 and above<br/>Scheduled events always run on the first instance |
 
 **This how-to will teach you how to do the following:**

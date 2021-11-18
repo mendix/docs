@@ -15,7 +15,6 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 
 * [Getting Started](get-started)
 	* [Get Started with Native Mobile](getting-started-with-native-mobile)
-	* [Configure Parallels](using-mendix-studio-pro-on-a-mac)
 	* [Troubleshoot Common Native Mobile Issues](common-issues)
 	* [Implement Best Practices for Native Mobile App UI](ui-best-practices)
 * [Implementation](implementation)
@@ -26,7 +25,8 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 	* [Use Notifications](notifications)
 * [Distribution](distribution)
 	* [Build Native Apps](build-native-apps)
-	* [Release Over the Air Updates with App Center's CodePush](how-to-ota)
+	* [Release Over the Air Updates with Mendix](how-to-ota)
+	* [(Deprecated) Release Over the Air Updates with App Center's CodePush](how-to-ota-appcenter)
 * [Use Augmented Reality](ar-parent)
 * [Test Mendix Native Apps Using Appium](testing-mendix-native-apps-using-appium)
 

@@ -48,7 +48,7 @@ Resizing operations will require your app to be restarted and it will be offline
 
 If you no longer need an environment, you can request Mendix Support to offboard it. Alternatively, you can reuse it for another app — see [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps#licensed-node) in *Licensing Mendix Cloud Apps* for more information.
 
-You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. If you cannot use the app for any reason, please raise a support ticket with [Mendix Support](https://support.mendix.com).
+You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. If you cannot use the app for any reason, please raise a ticket with [Mendix Support](https://support.mendix.com).
 
 Mendix Support will contact the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com) to confirm the details and timing.
 

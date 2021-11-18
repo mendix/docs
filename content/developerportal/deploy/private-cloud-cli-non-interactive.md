@@ -18,6 +18,7 @@ Please see [Download the Configuration Tool](private-cloud-cluster#download-conf
 {{% alert type="info" %}} Use "./mxpc-cli <command> --help" for more information about a given command. {{% /alert %}}
 
 The following parameters may be used in the commands:
+  
 * `--namespace` – a cluster namespace.
 * `--clusterType` – a cluster type *openshift* or *generic*.
 * `--clusterMode` – a cluster mode *standalone* or *connected*.

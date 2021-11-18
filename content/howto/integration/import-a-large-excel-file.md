@@ -108,7 +108,7 @@ To prepare your XSD file, follow these steps:
 
 ## 5 Importing into Your Application Project
 
-The XSD file is ready to be imported into . To import it, follow these steps:
+The XSD file is ready to be imported into. To import it, follow these steps:
 
 1. Open your app and create a new XSD schema:
 

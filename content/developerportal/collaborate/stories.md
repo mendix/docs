@@ -21,7 +21,7 @@ You can also manage the progress of tasks and Sprints from within Mendix Studio 
 
 This page has two tabs, which are described below.
 
-## 2 Overview
+## 2 Overview {#overview}
 
 The sections below describe the main actions to be performed on the **Overview** tab.
 

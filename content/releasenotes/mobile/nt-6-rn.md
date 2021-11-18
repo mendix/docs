@@ -5,6 +5,26 @@ menu_order: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.8
+
+**Release date: November 5th, 2021**
+
+### Fixes
+
+* We identified and added a missing configuration that was failing the `CallPhoneNumber` JavaScript action on devices using Android 11 and above. Without this new configuration, the action will fail.
+
+## 6.2.7
+
+**Release date: October 25th, 2021**
+
+### Improvements
+
+* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota).
+
+### Fixes
+
+* We fixed bugs and optimized performance.
+
 ## 6.2.6
 
 **Release date: October 4th, 2021**
@@ -19,7 +39,7 @@ description: "Native Template 6 release notes."
 
 ### Improvements
 
-iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
 
 ## 6.2.4
 
@@ -27,7 +47,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-To support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. This version is backward compatible with previous Mendix Studio Pro 9 versions.
+* To support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. This version is backward compatible with previous Mendix Studio Pro 9 versions.
 
 ## 6.2.3
 

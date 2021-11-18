@@ -177,3 +177,13 @@ Consider the following alternatives:
 * Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
 * Create entities with a one-to-one association instead of setting the generalization
 * Create a non-persistable entity that inherits from an outcome of your business logic
+
+## 10 Avoid Deeply Nested List Views {#mxp011}
+
+Using a deeply nested list view that is nested to two or more levels can affect page load performance.
+
+Nesting a list view in another list view (and so on) often results in poor page performance due to the increased number of requests and transferred data volume.
+
+### 10.1 How to Fix
+
+Consider restructuring your page. For example, use a second page or a pop up.

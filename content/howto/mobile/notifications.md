@@ -24,4 +24,4 @@ After you complete the how-to's above, you may wish to do more advanced tasks wi
 
 This documentation is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications). For information on local notifications, see [Use Local Notifications](local-notif-parent).
 
-To get started, begin with the series' first entry: [Add Module Dependencies](add-module-depends).
+To get started, begin with the series' first entry: [Add Module Dependencies](notif-add-module-depends).

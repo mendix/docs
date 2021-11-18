@@ -25,7 +25,7 @@ The typical usage scenario is when a project/module consumes a service where a u
 
 * Currently only AES is supported
 
-### 2.3 Configuration
+### 2.3 Configuration {#configuration}
 
 #### 2.3.1 EncryptionKey Constant
 

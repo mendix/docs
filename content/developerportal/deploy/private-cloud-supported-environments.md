@@ -34,15 +34,17 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.21
-* OpenShift 4.6 through 4.7
+* Kubernetes versions 1.19 through 1.22
+* OpenShift 4.6 through 4.8
 
 {{% alert type="warning" %}}
-Mendix for Private Cloud has not yet been fully validated to support Kubernetes 1.22, a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
+Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
-This version of Kubernetes was released recently and is not yet offered or fully supported by most distributions and providers.
+This version of Kubernetes is not yet offered or fully supported by most distributions and providers.
 
-Upgrading an existing cluster to Kubernetes 1.22 might cause issues with Mendix for Private Cloud.
+Mendix for Private Cloud Operator v2.\*.\* is compatible with Kubernetes 1.22.
+
+Existing clusters running Mendix for Private Cloud Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 {{% /alert %}}
 
 Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
@@ -157,6 +159,15 @@ The following standard PostgreSQL databases are supported:
 
 * PostgreSQL 9.6
 * PostgreSQL 10
+* PostgreSQL 11
+* PostgreSQL 12
+* PostgreSQL 13
+
+{{% alert type="info" %}}
+While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
+
+For best compatibility, use Postgres 12 - it's supported by the latest supported LTS versions of the Mendix Runtime.
+{{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.
 

@@ -39,9 +39,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 ## 2 Installation
 
 1. Go to the Marketplace and download the *SendEmailModule.mpk* file for the [Email Service](https://marketplace.mendix.com/link/component/118393).
-
 2.  To add the Email Service to your app in Mendix Studio Pro, follow these steps:
-
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *SendEmailModule.mpk*. 
 
         ![pop-up-menu-in-app-explorer](attachments/email-service/import-module-in-app-explorer.png)
@@ -51,9 +49,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
         {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
     2. In the **Import Module** dialog box, click **Import**. 
-
     3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-
     4. Open the **App Explorer** to view the **SendEmailModule** module.
 
 Once imported, the app service is visible in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
@@ -64,9 +60,11 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
 
 ### 3.1  Subscribing to Get SecretKey and UserName {#key-generation}
 
-1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to order a subscription.
+1. On the [Email Service](https://marketplace.mendix.com/link/component/118393) page, click **Subscribe** to start a subscription or click **Try For Free** to start a trial.
 
-2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
+
+    For the trial, you do not need to fill in this information.
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
@@ -93,13 +91,9 @@ Email Service is a premium Mendix product that is subject to a purchase and subs
     ![secretkey-and-username](attachments/email-service/configure-username-secretkey.png)
 
 2. Double-click **SecretKey** and enter the **SecretKey** that you got.
-
 3. Click **OK** to save the settings.
-
 4. Double-click **UserName** and enter the **UserName** that you got.
-
 5. Click **OK** to save the settings.
-
 6. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 
@@ -182,9 +176,7 @@ The following file types are not supported as attachments:
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Email Service, perform the following steps to check the number of emails sent and data transfer usage:
 
 1. Log into the Marketplace.
-
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
 3. Click **Email Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the following statistics:
    * **Current Month** – Shows statistics for current month usage
    * **Last Month** – Shows usage statistics for last month

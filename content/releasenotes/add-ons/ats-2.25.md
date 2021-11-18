@@ -10,4 +10,4 @@ parent: "ats-2"
 ### Improvements 
 
 * The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18#8187).
-* An ATS Job a running web service no longer needs a user name and password combination to authenticate the requests. The API token is enough to authenticate the request.
+* The ATS Job running web service no longer needs a username and password combination to authenticate the requests. The API token is enough to authenticate the request.

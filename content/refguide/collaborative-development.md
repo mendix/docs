@@ -44,11 +44,13 @@ For information on collaborative development from the Studio perspective, see [C
 
 ## 4 Studio Pro Perspective
 
-When you connect to an app that has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. 
+After opening an app in Studio Pro, you can see which development line (the main line or a branch line) Studio is enabled for by opening **Version Control** > **Manage Branch Lines**. 
+
+If you are on another line than the Studio enabled line, you can use the 
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
-![Open App Dialog Window](attachments/collaborative-development/open-app-dialog.png)
+![Open App Dialog Window](attachments/collaborative-development/branch-line-dialog.png)
 
 ### 4.1 Merging Latest Changes
 
@@ -141,13 +143,10 @@ To create a new branch line, do the following:
 	b. Select the **Revision**, if needed. <br/>
 	c. Type the name of the new line.<br/>
 
-	*  This is the dialog box for SVN:
+	
 		
-		![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+	![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
     
-	*  This is the dialog box for [Git](create-branch-line-git-dialog):
-
-		![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
 
 4.  After you have configured all the settings, click **OK**.
 

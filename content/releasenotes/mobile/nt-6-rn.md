@@ -5,6 +5,26 @@ menu_order: 10
 description: "Native Template 6 release notes."
 ---
 
+## 6.2.8
+
+**Release date: November 5, 2021**
+
+We identified and added a missing configuration that was failing the `CallPhoneNumber` javascript action on Android 11+ devices. Without it, the action will fail.
+
+### Fixes
+
+* We fixed an issue with the `CallPhoneNumber` javascript action on Android 11+ devices.
+
+## 6.2.7
+
+**Release date: October 25, 2021**
+
+With Mendix Studio Pro 9.7, Mendix added a new over the air update mechanism. With this new mechanism it's possible to update your apps directly via the runtime of your project and there's no need for 3rd party services. [Read More on the updated OTA how-to docs.](https://docs.mendix.com/howto/mobile/how-to-ota)
+
+### Fixes
+
+* We fixed bugs and optimised performance.
+
 ## 6.2.6
 
 **Release date: October 4th, 2021**

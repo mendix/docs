@@ -49,6 +49,7 @@ You can find examples on how to build the request in the demo apps from the Mark
 * Delivery Planning: Coffee Hardware delivers various office coffee machines to different customers within the Netherlands. They use the Automated Task & Resource Planner to generate the most efficient daily routes for their drivers to deliver the orders to the customer. The planning is shown in different ways: the route per driver and a calendar overview.
 * Call Scheduling: Customers of Sky Bank have filled out an online contact form with a callback request. They indicate that their questions are about opening accounts, stocks, mortgages, or money transfers. They can also indicate their preferred language. The Automated Task & Resource Planner is used to schedule the calls as efficiently as possible based on availability of the call center agents and preferences of customers. The planner takes into account that the agents work either a morning or afternoon shift and that calls concerning mortgages and stocks are expected to last 60 minutes and calls regarding the other two subjects 30 minutes.
 * Matching Planning: Simply Smashing has several tennis courts available for club members to enjoy a game of tennis. The Automated Task & Resource Planner takes the available time slots of 60 minutes, requested tennis court types, opening times and the priority levels of matches into account when creating the schedule. When a “human” planner would like to manually plan a match, the request can be selected and the available time slots and tennis court that meet the requirements are shown in green. It is possible to manually book a time slot or a specific court, so the planner makes sure these appointments are also taken into account.
+* Manufacturing: The injection molding manufacturing industry creates products by injecting molten material into a mold. Factory workers operate the machines during these processes. The Automated Task & Resource Planner makes an efficient schedule such that each worker and each machine have their own schedule with productions. In doing so, the Automated Task & Resource Planner takes the technology that is needed to create the product into account.
 * Maintenance and Repair: Ofixed has a workforce of skilled mechanics to meet the maintenance and repair needs of their customers. The Automated Task & Resource Planner matches the mechanics with the right skills to complete the customers' service requests and schedule the appointments. To do so, the planner is taking a wide range of constraints into account, such as deadlines, customers' preferred time windows, roster of the mechanics, overtime, dependencies between work orders, preceding service requests, office opening hours and priorities. Service requests that span over multiple days will be automatically split into multiple appointments. A "human" planner is able to manually plan or change existing appointments and secure (pin) mechanics or time.
 
 {{% todo %}}[Provide a link to a maintained demo app where the component is used if available]{{% /todo %}}
@@ -94,7 +95,7 @@ You can build the request using the entities from the module. The description of
 
 ![planning-setting](attachments/automated-task-and-resource-planner/planning-request.png)
 
-`PlanningRequest` is the settings for this planning. An object is required for this entity. Create the object and associate the object to `PlanningRequest`.
+`PlanningRequest` is the settings for this planning.
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
@@ -137,7 +138,7 @@ You can build the request using the entities from the module. The description of
 
 ![resource](attachments/automated-task-and-resource-planner/resource.png)
 
-`Resource` is the resource in a planning request. This can be a mechanic, a tennis court, a delivery driver, etc. At least one `Resource` is required to make a request.
+`Resource` is the resource that can be used for planning. This can be a mechanic, a tennis court, a delivery driver, etc. At least one `Resource` is required to make a request.
 
 | Attribute | Type | Description |
 | --------- |--------|--------|
@@ -241,7 +242,7 @@ If the response goes well, you can retrieve the `TaskResponse` and map the resul
 
 ![warning](attachments/automated-task-and-resource-planner/warning.png)
 
-`Warning` contains a list of warnings for this task. The possible values are described in the table:
+`Warning` is the warning for the task. It has one value. `TaskReponse` can contain a list of warnings. The possible values are described in the table:
 
 | Attribute | Type | Description |
 | --------- |--------|--------|

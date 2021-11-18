@@ -175,7 +175,15 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 
 ## 5 Customizing Mendix SSO {#customizing}
 
-The [Mendix SSO module](/appstore/modules/mendix-sso) comes with a default implementation of end-user administration. This default end-user administration is sufficient for most apps. However, you can create your own administration module if you want to do things in a different way.
+{{% alert type="warning" %}}
+This section only applies to version 2 of Mendix SSO. The administration functionality is removed in Mendix SSO v3.0 and above.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+In version 2 of the [Mendix SSO module](/appstore/modules/mendix-sso) there was a default implementation of end-user administration. This had dependencies on specific versions of Atlas UI and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
+{{% /alert %}}
+
+This section explains how to use this in your apps, and how to base your own administration module on this section if you want to do things in a different way.
 
 There are two ways you can modify the Mendix SSO module. You can use snippets from the Marketplace module Mendix SSO in your pages, or you can modify the Mendix SSO module in any way you like to support your end-user administration requirements.
 
@@ -267,11 +275,15 @@ Remember that data which comes from the end-user's Mendix ID via SSO (for exampl
 
 Mendix SSO works by providing end-users with tokens when they are authenticated. If end-users are having issues with Mendix SSO it can be useful to see the tokens, either for your own debugging or to provide information to Mendix Support.
 
-The default Mendix SSO administration module has a number of pages set up to enable you to see tokens. Alternatively, you can use snippets from the default module to create your own token display and administration pages.
-
 {{% alert type="info" %}}
 Tokens contain personal information, as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
 {{% /alert %}}
+
+{{% alert type="warning" %}}
+This rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed in Mendix SSO v3.0 and above.
+{{% /alert %}}
+
+versions of Mendix SSO below v3.0 contained a default Mendix SSO administration module with a number of pages set up to enable you to see tokens. They also contained snippets to allow you to create your own token display and administration pages. The rest of this section explains how these could be used.
 
 ### 6.1 Displaying Tokens on Pages
 

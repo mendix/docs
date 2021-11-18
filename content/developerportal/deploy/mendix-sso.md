@@ -176,7 +176,7 @@ Your app is now configured to use Mendix Single Sign-on when it is deployed to t
 ## 5 Customizing Mendix SSO {#customizing}
 
 {{% alert type="warning" %}}
-This section only applies to version 2 of Mendix SSO. The administration functionality is removed in Mendix SSO v3.0 and above.
+This section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -277,15 +277,35 @@ Mendix SSO works by providing end-users with tokens when they are authenticated.
 
 {{% alert type="info" %}}
 Tokens contain personal information, as well as authentication information. They should not be exposed routinely, and should only be shared on a need-to-know basis (for example, if you need help resolving an issue with SSO).
+
+Expired tokens are periodically and automatically deleted. Bear in mind that some tokens might have been revoked by the user.
+
+Local users don't have tokens as they don't sign in via SSO.
 {{% /alert %}}
+
+### 6.1 Tokens in Mendix SSO v3 and Above
+
+Tokens are held in the `Token` entity, and are associated with the end-user via the `Token_User` association.
+
+![](attachments/mendix-sso/domain-model-token.png)
+
+You can allow an administrator to see all the tokens by displaying them on an administration page of your app. For example, you can create a data grid sourced from the database entity `MendixSSO.Token` and display the attributes you require from the `Token` entity, and the associated `User` and `Session` entities.
+
+![](attachments/mendix-sso/token-datagrid.png)
+
+If you implement a page like this, ensure that security is set up to prevent unauthorized users accessing the page.
+
+The **SessionID** which is associated with a **TokenType** of `ID_TOKEN` is held in jwt format, so you can paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds.
+
+### 6.2 Tokens in Mendix SSO v2
 
 {{% alert type="warning" %}}
-This rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed in Mendix SSO v3.0 and above.
+This rest of this section only applies to version 2 of Mendix SSO. The administration functionality is removed and the domain model has changed in Mendix SSO v3.0 and above.
 {{% /alert %}}
 
-versions of Mendix SSO below v3.0 contained a default Mendix SSO administration module with a number of pages set up to enable you to see tokens. They also contained snippets to allow you to create your own token display and administration pages. The rest of this section explains how these could be used.
+Versions of Mendix SSO below v3.0 contained a default Mendix SSO administration module with a number of pages set up to enable you to see tokens. They also contained snippets to allow you to create your own token display and administration pages. The rest of this section explains how these could be used.
 
-### 6.1 Displaying Tokens on Pages
+#### 6.2.1 Displaying Tokens on Pages
 
 Individual end-users can see their tokens on the MendixSSO.MyTokensOverview page of the default implementation. Administrators may want to see all active tokens – these can be seen on the MendixSSO.TokensOverview page.
 
@@ -295,7 +315,7 @@ If you want administrators or end-users to be able to see tokens, it is recommen
 
 ![How to add navigation to the tokens overview pages in Mendix SSO](attachments/mendix-sso/token-navigation.png)
 
-#### 6.1.1 TokensOverview Page
+##### 6.2.1.1 TokensOverview Page
 
 The TokensOverview page allows administrators to see all tokens which have been issued to end-users of the app.
 
@@ -309,7 +329,7 @@ The page can also be used for administration. You can delete tokens which have e
 
 Deleting tokens from the TokensOverview page will cause end-users to lose access to the app. However, they will be able to sign in again if they are still end-users of the app.
 
-#### 6.1.2 MyTokensOverview Page 
+##### 6.2.1.2 MyTokensOverview Page 
 
 The MyTokensOverview page allows end-users to see their own access tokens.
 
@@ -317,7 +337,7 @@ The MyTokensOverview page allows end-users to see their own access tokens.
 
 The page can be used for troubleshooting – the end-user can see the creation and expiry dates of the tokens and, by clicking **View**, they can view the values held in the tokens. This can be useful for troubleshooting if the end-user is having difficulty getting proper access to the app.
 
-### 6.2 Displaying Tokens using Snippets
+#### 6.2.2 Displaying Tokens using Snippets
 
 The default tokens pages in the MendixSSO module are created using snippets.
 

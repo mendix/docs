@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### November 18th, 2021
+
+#### Improvements
+
+* Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
+
 ### November 11th, 2021
 
 #### Fixes

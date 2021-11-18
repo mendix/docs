@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### November 18th, 2021
+
+#### Portal Improvements
+
+* We have increased the Deployment Package limit from 200MB to 512MB.
+* We have fixed an issue when the Runtime version was not visible in the Transport package screen.
+* We have removed the restriction to use the `kubernetes.io/ingress.class` Ingress annotation.
+
 ### November 15th, 2021
 
 #### Supported Providers

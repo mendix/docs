@@ -547,7 +547,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 6.3 Deployment Package Size
 
-Mendix for Private Cloud has a limit of 200MB on the size of a deployment package.
+Mendix for Private Cloud has a limit of 512MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 

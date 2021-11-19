@@ -1,7 +1,7 @@
 ---
 title: "Writable OData Services"
 parent: "integration"
-menu_order: 10
+menu_order: 11
 tags: ["studio pro", "odata"]
 ---
 
@@ -11,22 +11,21 @@ This document describes the API used to update entities in both [consumed OData 
 
 ## 2 Entity Update
 
-In order to change an entity by its ID, you should perform (or handle) a `PATCH HTTP` request on a URL like `http://mysite/odata/myservice/myresource(ID)`. This is a partial update request, which means that only the attributes and associations mentioned in the request are going to be affected.
+To change an entity by its ID, perform (or handle) a `PATCH HTTP` request on a URL like `http://mysite/odata/myservice/myresource(ID)`. This is a partial update request, which means that only the attributes and associations mentioned in the request are affected.
 
-### 2.1 Attribute Update
+## 3 Attribute Update
 
-In order to change the value of an entity's attribute, a request with following JSON body should be performed:
+To change the value of an entity's attribute, perform a request with the following JSON body, where `<attributeNewValue>` has the same type as the corresponding attribute or `null` for nillable attributes:
 
 ```
 {
   "attributeExposedName": <attributeNewValue>
 }
 ```
-Where <attributeNewValue> has the same type as corresponding attribute or `null` for nillable attributes.
 
-### 2.2 Binding entities
+## 4 Binding Entities
 
-In order to bind an entity (E1) with another entity (E2) when they have 1-to-1 or 1-to-many (from 1-to- side) association a following request should be performed:
+To bind an entity (`E1`) with another entity (`E2`) when they have a one-to-one or one-to-many (from the "one" side) association, perform the following request:
 
 ```
 {
@@ -34,7 +33,7 @@ In order to bind an entity (E1) with another entity (E2) when they have 1-to-1 o
 }
 ```
 
-In order to bind an entity (E1) with another entity (E2) when they have many-to-many association a following request should be performed:
+To bind an entity (`E1`) with another entity (`E2`) when they have a many-to-many association, perform the following request:
 
 ```
 {
@@ -42,9 +41,9 @@ In order to bind an entity (E1) with another entity (E2) when they have many-to-
 }
 ```
 
-### 2.2 Binding Entities
+### 2.2 Unbinding Entities
 
-In order to unbind an entity (E1) from another entity (E2) when they have 1-to-1 or 1-to-many (from 1-to- side) association a following request should be performed:
+To unbind an entity from another entity when they have a one-to-one or one-to-many (from the "one" side) association, perform the following request:
 
 ```
 {
@@ -52,7 +51,7 @@ In order to unbind an entity (E1) from another entity (E2) when they have 1-to-1
 }
 ```
 
-In order to unbind an entity (E1) from another entity (E2) when they have many-to-many association a following request should be performed:
+To unbind an entity (`E1`) from another entity (`E2`) when they have a many-to-many association, perform the following request:
 
 ```
 {
@@ -60,4 +59,6 @@ In order to unbind an entity (E1) from another entity (E2) when they have many-t
 }
 ```
 
-Note: update from many side in 1-to-many association and from child side in many-to-many association with DEFAULT ownership is currently not supported. 
+{{% alert type="info" %}}
+Updating from the "many" side in one-to-many associations and from the child side in many-to-many association with DEFAULT ownership is currently not supported. 
+{{% /alert %}}

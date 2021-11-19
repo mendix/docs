@@ -96,7 +96,7 @@ Default: *10000*
 
 ## 8 Capabilities {#capabilities}
 
-A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes or associations. Only users that have write entity access to attributes can update them. For more information, see [Writable OData](writable-odata). 
+A published OData resource is always readable. Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes or associations. Only users that have write entity access to attributes can update them. For more information, see [Writable OData Services](writable-odata). 
 
 {{% alert type="info" %}}
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).

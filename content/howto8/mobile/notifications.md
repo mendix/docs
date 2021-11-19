@@ -20,7 +20,7 @@ These guides will teach you to configure push notifications (also known as remot
 
 After you complete the how-to's above, you may wish to do more advanced tasks with notifications. See the document below to **send push notifications to multiple devices**:
 
-* [Send Notifications to Multiple Devices](native-remote-notifications)
+* [Send Notifications to Multiple Devices](notif-mult-devices)
 
 This documentation is specifically for native mobile apps. For information on push notifications in hybrid apps, see [Set Up Hybrid Push Notifications](setting-up-hybrid-push-notifications). For information on local notifications, see [Use Local Notifications](local-notif-parent).
 

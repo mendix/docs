@@ -164,8 +164,7 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**. This is the same as having multiplicity set to `Multiple 'Group' objects are associated with multiple 'Accountant' objects` with Navigability set to `'Accountant' and 'Group' objects refer to each other`:
 
-{{% image_container width="500" %}}![](attachments/associations/association-accountant-group.png)
-{{% /image_container %}}
+![](attachments/associations/association-accountant-group.png)
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 

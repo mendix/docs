@@ -173,7 +173,7 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 ## 4 Working Locally
 
-The image below illustrates how a single developer might work on changes and share them through Team Server. In this situation, the developer creates an app first. The initial local model is than sent to Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to Team Server in a later stage. This for instance, can be the case if the developer is working in a situation where they do not have access to a network.
+The image below illustrates how a single developer might work on changes and share them through the Team Server. In this use case, the developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
 
 ![](attachments/version-control/image10.png)
 

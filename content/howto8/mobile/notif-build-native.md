@@ -10,7 +10,7 @@ tags: ["mobile", "native", "push", "local", "firebase"]
 
 Now that you have implemented push notifications, it is time to build and deploy the native mobile app. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
-## 2 Build Your Native App
+## 2 Build Your Native App {#build-native-app}
 
 1.  In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**. </br>
 	a. If you are building your native app for the first time, click [here](native-build-locally) for instructions.
@@ -23,4 +23,4 @@ Now that you have implemented push notifications, it is time to build and deploy
 
 When building for local development, keep in mind that the `Make it Native` app from Mendix does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
 
-Now you are able to build, the next step is to run your app in an emulator/test device, so you can try to [Send Your First Test Push Notification](notif-send-test).
+Now you are able to build, the next step is to run your app in an emulator/test device, so you can try to [Send Your First Test Push Notification](notif-send-test). 

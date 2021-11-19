@@ -150,6 +150,8 @@ Follow these steps to configure the text-to-voice conversion:
    
 4. Inside the **Data view** widget, add an [AudioPlayer](#audioplayer) widget.
 
+4. Double-click **Audio player** and set **Source** to *$currentObject/Audio*.
+
 5. From the **Toolbox**, add a **Text area** widget to your page.
 
 6. Change the settings of the **Text area** widget as follows:

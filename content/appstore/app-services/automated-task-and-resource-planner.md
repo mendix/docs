@@ -82,7 +82,6 @@ To install this module, follow these steps:
 6. After the deployment, go to your page.
 7. Enter the **Automated planning endpoint** as well as the **username** and **password** of your user account.
 
-
 ![automated-planning-endpoint-username-settings](attachments/automated-task-and-resource-planner/automated-planning-endpoint-username-settings.png)
 
 {{% todo %}}[how to get to the **Settings** page? {{% /todo %}}

@@ -13,9 +13,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-* We released **Try for Free** for premium app service (like [Email Service](https://marketplace.mendix.com/link/component/118393)):
-	* This helps to evaluate capabilities offered and realize value of premium contents.
-	* This is a self-service experience.
+* We released **Try for Free** for premium app services (like [Email Service](https://marketplace.mendix.com/link/component/118393)). This self-service experience helps to evaluate the capabilities offered and realize the value of premium content.
 * You can now provide key capabilities, a banner, external links, and industry cloud details when sharing new **Solution** and **Solution Template** [component types](/appstore/general/share-app-store-content#adding).
 
 #### Improvements

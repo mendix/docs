@@ -1,23 +1,22 @@
 ---
-title: "Published OData Services"
+title: "Writable OData Services"
 parent: "integration"
+menu_order: 10
+tags: ["studio pro", "odata"]
 ---
 
 ## 1 Introduction
 
-This document describes API to update entities in both Consumed and Publiched OData services.
-
-For an overview of OData services, see [Published OData Services](published-odata-services) and
- [Consumed OData Service](consumed-odata-service).
+This document describes the API used to update entities in both [consumed OData services](consumed-odata-services) and [published OData services](published-odata-services).
 
 ## 2 Entity Update
 
-In order to change an entity by its ID you should perform (or handle) a PATCH HTTP request on URL like http://mysite/odata/myservice/myresource(ID).
-This is a partial update request, meaning that only attributes/associations mentioned in request are going to be affected.
+In order to change an entity by its ID, you should perform (or handle) a `PATCH HTTP` request on a URL like `http://mysite/odata/myservice/myresource(ID)`. This is a partial update request, which means that only the attributes and associations mentioned in the request are going to be affected.
 
-### 2.1 Attribute update
+### 2.1 Attribute Update
 
-In order to change a value of entity's attribute a request with following JSON body should be performed:
+In order to change the value of an entity's attribute, a request with following JSON body should be performed:
+
 ```
 {
   "attributeExposedName": <attributeNewValue>
@@ -43,7 +42,7 @@ In order to bind an entity (E1) with another entity (E2) when they have many-to-
 }
 ```
 
-### 2.2 Binding entities
+### 2.2 Binding Entities
 
 In order to unbind an entity (E1) from another entity (E2) when they have 1-to-1 or 1-to-many (from 1-to- side) association a following request should be performed:
 

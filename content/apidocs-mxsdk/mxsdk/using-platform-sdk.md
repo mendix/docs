@@ -85,9 +85,21 @@ You can pass some options to `commitToTeamServer`
 | force          | Set to true to commit to a branch that is different from the working copy's base branch.                           |
 
 ## Change the Platfrom SDK configurations
-By default, the Platform SDK reads your personal access token from the environment variable ([more details on how to create and store your personal access token](setup-your-pat)). But you can change this configuration, for example you can load it from a file like in the following example:
+* By default, the Platform SDK reads your personal access token from the environment variable ([more details on how to create and store your personal access token](setup-your-pat)). But you can change this configuration, for example you can load it from a file like in the following example:
 ```ts
 setPlatformConfig({
     mendixToken: fs.readFileSync("mendix-token.txt", {encoding: "utf8"})
 });
+```
+* By default, the Platform SDK prints some logs to the console. You can customize the logging experience using the following APIs:
+```ts
+disableLogger()          // Disables all logging
+enableLogger()           // Enable logging through the console
+setLogger(customLogger); // Override the logger object
+```
+The custom logger object should have the following methods:
+```ts
+info(message?: string, ...optionalParams: any[]): any;
+warn(message?: string, ...optionalParams: any[]): any;
+error(message?: string, ...optionalParams: any[]): any;
 ```

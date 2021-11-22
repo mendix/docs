@@ -82,7 +82,7 @@ In addition, we highly recommend using a logging/monitoring stack such as Grafan
 ### 3.3 Processing Changes
 
 Following the Kubernetes operators best practices, the Mendix Operator does not have an internal state. Every time the Operator's control loop runs, the Operator checks if its managed resources match its desired state or whether they need to be updated. It then applies any changes necessary.
-Even if the `mendix-operator` deployment is stopped and started again after some time, it will be able to process any changes that happened while the Operator was not running. This also means that instead of processing individual changes (for example “enable debug mode”), the Operator updates resources (such as deployments) to match their desired state.
+If the `mendix-operator` deployment is stopped and started again after some time, it will process any changes between the state when it was stopped and the state when it is restarted. In other words, the Operator does not process individual changes (for example “enable debug mode”), it updates resources (such as deployments) to match the current desired state.
 
 Most resources are managed (owned) by the Operator, which means the Operator will roll back any properties it doesn't expect, allowing the Operator to automatically recover (heal) non-working configurations.
 
@@ -136,7 +136,7 @@ If you want to prevent developers from accessing secrets or other Kubernetes obj
 ### 3.5 Scope
 
 Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster.
-At the moment, it is not possible to install one global instance of the Operator for the entire cluster.
+It is not possible to install one global instance of the Operator for the entire cluster.
 
 On the other hand, CRDs are global within the cluster. Since all Mendix Operators in a cluster will be using the same shared CRD, it is critical that the latest version of the CRDs are installed in a cluster.  See the [Private Cloud upgrade instructions](private-cloud-upgrade-guide) for more information.
 
@@ -161,6 +161,6 @@ Running separate pods also allows the Operator to be restarted without interrupt
 The Mendix Operator is installed and upgraded using a custom tool (the `mxpc-cli` Configuration Tool). This tool requires only `kubectl` or `oc` to be installed on your system, and works identically in clusters and providers.
 We do not currently offer alternative installation options, such as [OLM](https://olm.operatorframework.io/) or Helm charts. If want to audit changes before they are applied, the `mxpc-cli` tool can generate a yaml file and `kubectl patch` instructions that can be reviewed and applied manually.
 
-The Operator cannot update `StorageInstance`s at the moment, it can only create or delete them. If you update a `StoragePlan` that is currently in use by one or several `StorageInstance`s (environments), it will not automatically update the `StorageInstance`s that were already created. Also, some changes such as switching to another database server will migrate the data between servers.
+The Operator cannot update `StorageInstance`s, it can only create or delete them. If you update a `StoragePlan` that is currently in use by one or several `StorageInstance`s (environments), it will not automatically update the `StorageInstance`s that were already created. Also, some changes such as switching to another database server will migrate the data between servers.
 
 To prevent a cascading reconfiguration of all environments in a namespace, the Operator does not monitor the `OperatorConfiguration` CR. If you make changes to the `OperatorConfiguration` CR, the Operator should be restarted manually. This will cause it to re-check and update every resource it is managing.

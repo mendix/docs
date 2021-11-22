@@ -8,6 +8,8 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 
 ## 1 Introduction
 
+The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows for configuring a mapping between a request handler and microflows. In other words, you can create additional entry points to specific parts of your application. 
+
 Use the [Deep Link](https://marketplace.mendix.com/link/component/43/) to add request handlers to your app that will trigger microflows.
 
 ### 1.1 Typical Use Cases
@@ -21,6 +23,31 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 
 The module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
+To use the Deep Link module, you can use the following approaches:
+
+#### 1.1.1 URL Property of a Page
+
+Mendix provides functionality to access specific parts in your application out of the box. You can access a page by specifying the [URL property of a page](/refguide/page-properties#2-3-6-url). 
+
+The advantage of this approach is that the mapping is explicitly configured in the application model. However, the approach has the following disadvantages:
+
+- This method of Deep Link can only be applied to pages
+- The object ID of the data is owned by Mendix runtime – when this changes for whatever reason, the link will be broken.
+
+#### 1.1.2 Published REST Service
+
+A published REST Service is basically the same concept as how the Deep Link module has bee set up: a request handler is mapped to microflow actions. A template with an example on how to set up such a Published REST Service can be found [here](https://marketplace.mendix.com/link/component/116642) 
+
+This approach has the following advantages:
+
+- The mapping is explicitly configured in the application model
+- Your implementation is based on concepts directly available in the Mendix IDE (Studio Pro) and runtime, for example, session handling and security.
+
+However, the disadvantage is the the redirect logic is executed before the Mendix client is loaded. This means that after processing the request you need to forward it to a page that contains a persistent object.
+
+So what does differentiate the Deep Link module from the previously mentioned approaches?
+The deep link module processes the request and creates a reference object which is being stored with the user session. When this is done, the user is forwarded to a location which takes care of loading the Mendix client. This is by default the `index.html` page. When the Mendix client is loaded, the `Home` microflow (configured in the model) is executed and the microflow which is configured to handle the deep link request is being executed.
+
 ### 1.2 Features
 
 * Create persistent links to view only pages, which you can use in emails or on your website
@@ -29,15 +56,15 @@ The module is design- and runtime-configurable, it respects security, and it sup
 
 ## 2 Configuration
 
-After importing the module into your application you need to configure it.
+After importing the module into your application, you need to configure it.
 
-### 2.1 Initializing the Deep Link Module on App Startup
-
-To automatically start this  module, the **DeepLink.Startdeeplink** microflow needs to be set as the startup microflow (via **App** > **Settings** > **Server** > **After startup**). 
-
-If you already have a startup microflow configured in your app, you need to extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
-
-The `/link/` path needs to be added as a request handler in your application. This will be covered when you add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app.
+1. Initialize the Deep Link module each time the app starts as follows:
+   * If your app does not have an after-startup microflow, perform the following steps:
+     1. In the **App Explorer**, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+     2. Go to the **Runtime** tab, set **After startup** to the **DeepLink.Startdeeplink** microflow from the **DeepLink** > **\_Use me** folder.
+   * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
+   
+   After you add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app, the `/link/` path is added as a request handler in your application.
 
 ### 2.2 Security
 

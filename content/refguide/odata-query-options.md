@@ -156,9 +156,9 @@ The body must adhere to *URL encoding* principles. So, for instance, spaces, tab
 
 ## 10 Updating objects {#updating-objects}
 
-When a published resource has the [capability](published-odata-resource#capabilities) **Updatable (write)**, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object.  For example: `PATCH /odata/myservice/v1/Exployees(8444249301330581)`. 
+When a published resource has the [Updatable (write)](published-odata-resource#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`). 
 
-Specify new values for attributes in the body of the request. For example:
+Specify new values for attributes in the body of the request. Here is an example:
 
 ```json
 {
@@ -168,7 +168,7 @@ Specify new values for attributes in the body of the request. For example:
 }
 ```
 
-When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. For example:
+When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
 
 ```json
 {
@@ -177,7 +177,7 @@ When the association refers to a single object, use the `@id` syntax to set an a
 }
 ```
 
-When the association refers to multiple objects, add or remote objects to the association by using the `@delta` syntax:
+When the association refers to multiple objects, add objects to or remove objects from the association by using the `@delta` syntax:
 
 ```json
 {
@@ -198,7 +198,5 @@ When the association refers to multiple objects, add or remote objects to the as
 Clients can only update an association from the entity that is the [owner](associations).
 
 {{% alert type="info" %}}
-*Updating attributes* was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
-
-*Updating associations* was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8).
+The updating attributes functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The updating associations functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8).
 {{% /alert %}}

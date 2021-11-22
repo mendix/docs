@@ -12,6 +12,8 @@ After setting up your configuration on the server, and deploying your native app
 
 ## 2 Send the Test Notification
 
+To send your first test notification, do the following:
+
 1. Login to your web application. 
 1. Go to the push notification administration page you added earlier to your navigation.
 1. Go to the **Devices** tab.

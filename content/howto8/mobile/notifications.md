@@ -14,8 +14,8 @@ These guides will teach you to configure push notifications (also known as remot
 * [Implement the Push Notifications Module](notif-implement-module) — Learn to implement the Push Notifications Connector module.
 * [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server) — Set up a Firebase account and configure the service in your app so that you can send push notifications.
 * [Configure Push Notifications](notif-config-push) — Learn to configure push notifications in the runtime.
-* [Native Push Notification Implementation](notif-implement-native) — Implement push notifications for a native app.
-* [Build a Native Mobile App with Push Notifications](notif-build-native) — Build a native app with push notifications enabled.
+* [Implement Push Notifications in Your Native App](notif-implement-native) — Implement push notifications for a native app.
+* [Build a Native App with Push Notifications Enabled](notif-build-native) — Build a native app with push notifications enabled.
 * [Send Your First Test Push Notification](notif-send-test) — Send a test notification to confirm your app is working properly.
 
 After you complete the how-to's above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:

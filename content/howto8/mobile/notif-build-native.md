@@ -12,7 +12,7 @@ Now that you have implemented push notifications, it is time to build and deploy
 
 ## 2 Build Your Native App {#build-native-app}
 
-1.  In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**. </br>
+1.  In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
 	a. If you are building your native app for the first time, click [here](native-build-locally) for instructions.</br>
 1. After choosing the type of build (local development or distribution) go to **App capabilities**.</br>
 1. Under **Firebase configuration** switch **Push notifications** to **On**.</br>

@@ -26,7 +26,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Community Commons*.
-1. Open the [Community Commons](https://marketplace.mendix.com/link/component/170) module
+1. Open the [Community Commons](https://marketplace.mendix.com/link/component/170) module.
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Community Commons marketplace guide](https://docs.mendix.com/appstore/modules/community-commons-function-library).
 

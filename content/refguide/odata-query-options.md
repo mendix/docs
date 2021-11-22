@@ -16,11 +16,11 @@ We currently only support the options described here.
 
 ### 2.1 Retrieving All Objects
 
-All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/myresource`. You can see this if you specify the URI in a browser.
+All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/Exployees`. You can see this if you specify the URI in a browser.
 
 ### 2.2 Retrieving a Single Object
 
-A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/myresource(8444249301330581)`.
+A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/Exployees(8444249301330581)`.
 
 ### 2.3 Retrieving Associated Objects
 
@@ -30,7 +30,7 @@ Associated objects can be retrieved by passing the `$expand` query parameter. Fo
 
 ### 3.1 Retrieving a Count of Objects
 
-You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/myresource/$count`.
+You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/Exployees/$count`.
 
 ### 3.2 (Inline) Count
 
@@ -152,4 +152,53 @@ If the OData query is too long to be sent as a `GET` request, clients can send t
 
 {{% alert type="info" %}}
 The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+{{% /alert %}}
+
+## 10 Updating objects {#updating-objects}
+
+When a published resource has the [capability](published-odata-resource#capabilities) **Updatable (write)**, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object.  For example: `PATCH /odata/myservice/v1/Exployees(8444249301330581)`. 
+
+Specify new values for attributes in the body of the request. For example:
+
+```json
+{
+  "Name": "John",
+  "FirstContact": "2012-12-03T07:16:23Z",
+  "DateOfBirth": null
+}
+```
+
+When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. For example:
+
+```json
+{
+  "Birthplace": { "@id": "Cities(511342)" },
+  "Region": null
+}
+```
+
+When the association refers to multiple objects, add or remote objects to the association by using the `@delta` syntax:
+
+```json
+{
+  "Customers@delta": [
+    {
+      "@id": "Customers(484)"
+    },
+    {
+      "@removed": {
+        "reason": "changed"
+      },
+      "@id": "Customers(712)"
+    }
+  ]
+}
+```
+
+Clients can only update an association from the entity that is the [owner](associations).
+
+{{% alert type="info" %}}
+*Updating attributes* was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
+
+*Updating associations* was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8).
 {{% /alert %}}

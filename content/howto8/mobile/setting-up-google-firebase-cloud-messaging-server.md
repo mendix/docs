@@ -40,7 +40,7 @@ With that done, continue with [Configuring APNs Credentials](#configuring) below
 
 ### 3.2 Creating a New FCM Project
 
-#### 3.2.1 Sign in to the Developers Console
+#### 3.2.1 Signing into the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 

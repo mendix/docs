@@ -23,7 +23,7 @@ There are two possible scenarios: you can create a new FCM project, or you can u
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Sign in to the Developer's Console
+#### 3.1.1 Sign into the Developer's Console
 
 Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 

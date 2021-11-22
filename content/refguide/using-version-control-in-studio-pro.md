@@ -112,11 +112,11 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 {{% alert type="info" %}}
 
-Push is only available in Git. In SVN, pushing is done together with committing automatically. 
+Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
 
 {{% /alert %}}
 
-Pushing is the act of sending your local changes to Team Server. After committing you need to push the committed changes  if you want your changes to be accessible to others. By default this is done when committing, but it is possible to wait for this step until later.
+Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
 

@@ -22,9 +22,9 @@ The first time you open this page it will present you with a wizard to set up th
 
 | **File**    | **Source**   | **Usage**      |
 | -------- | -------- | ------- |
-| (project_id)-firebase-adminsdk-(identifier).json | Google Firebase | Private key for the Firebase service account, used in runtime configuration. | 
-| GoogleServices-Info.plist | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
-| google-services.json | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
+| **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. | 
+| **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
+| **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
 
 These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. The private key for the Firebase service account must be uploaded in the configuration wizard (or manual configuration) in your Mendix app. The Android and iOS specific configuration files must be configured when you build your native apps for Android and iOS, see [Build a Native App with Push Notifications Enabled](notif-build-native).
 

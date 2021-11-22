@@ -8,15 +8,15 @@ tags: ["mobile", "native", "push", "local", "firebase, ios, android"]
 
 ## 1 Introduction
 
-Now that all the prerequisites have been implemented in your application it is time to implement the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. We will focus on a few simple steps first to get the basic configuration operational. Next steps will take care of configuration for local notifications, native push notifications, hybrid notifications and web notifications. 
+Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module. Complete the steps below to enable the basic configuration.
 
 ## 2 Download From Marketplace
 
-If you haven’t done so make sure to download the module from the Marketplace
+If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
 1. Open up the Marketplace from Studio Pro.
-1. Search for `Push Notification Connector`.
-1. Open the Push Notification Connector module.
+1. Search for *Push Notification Connector*.
+1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
 ## 3 Configure Your App {#config}
@@ -26,15 +26,14 @@ In order for your app to use to use the Push Connections Module, configure the f
 1. Open **Project** > **Security** in the App Explorer.
 1. Go to **User roles**.
 1.  Adjust the user roles that should have access to the push notifications:
-	a. `Administrator` module role should be assigned to at least one user executing configuration and administrative tasks. <br />
-	b. `Anonymous` module role may be assigned to your anonymous project user role. <br />
-	c. `User` is for any user role that needs to interact with notifications without being an `Administrator` or `Anonymous` user role.
+	a. The `Administrator` module role should be assigned to at least one user executing configuration and administrative tasks. <br />
+	b. The `Anonymous` module role may be assigned to your anonymous project user role. <br />
+	c. The `User` role is for any user role that needs to interact with notifications without being an `Administrator` or `Anonymous` user.
 1. Save the Security settings.
 1. Open up **Project** > **Navigation** in the App Explorer.
-1. Add a new open page navigation item to the `Responsive` navigation profile.
-1. Select the page **Administration** from the **PushNotifications** module.
-	a. This page is located in the `_USE ME/Web` folder of the **PusNotifications** module.
+1. Add a new open page navigation item to the **Responsive** navigation profile.
+1. Select the **Administration** page from the **PushNotifications** module. This page is located in the **_USE ME/Web** folder of the **PushNotifications** module.
 1. Add a microflow sub-call to your **Afterstartup** microflow for the microflow **AfterStartup_PushNotifications**.
-	a. If you do not have any afterstartup microflow configured yet read here how to set one up.
+	a. If you do not have an **Afterstartup** microflow configured yet, read [here](NEEDLINK) how to set one up.
 
-Now you are able to start your application and move on to the next step configuring your runtime.
+Now you are able to start your app and move on to the next step: [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server).

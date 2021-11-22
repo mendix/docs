@@ -31,19 +31,20 @@ The following sections will describe the different available widget properties a
 
 The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
 
-* **Data source** – determines the data source for this widget
+* **Image type** – determines the data source for this widget
 	*  Default: **Image**	
 	*  When set to **Image**, a static or dynamic image can be retrieved
 	*  When set to **Image URL**, an image will be loaded from URL, either statically or as an attribute of a context object
 	*  When set to **Icon**, a static icon or image from **System.Images** can be retrieved
-* **Image** and **Default image** – configurable when **Data source** is set to **Image**
-	* The **Image** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
+* **Image source** and **Default image** – configurable when **Image type** is set to **Image**
+	* The **Image source** widget property is used to configure the image of this widget either statically from **System.Images** or dynamically as an entity
 	* The **Default image** property is used to configure a fallback image for this widget when **Image** is configured as a dynamic image
 * **Image URL** – a text template to configure the image for this widget through a URL
-	* Configurable when **Data source** is set to **Image URL**
+	* Configurable when **Image type** is set to **Image URL**
 	* Can be used statically or dynamically through the attribute of a context object
 * **Icon** – used to retrieve a static icon or image for the widget
-	* Configurable when **Data source** is set to **Icon**
+    * Configurable when **Image type** is set to **Icon**
+* **Background image** – used to render an image as a background
 
 #### 2.1.2 Events Section
 
@@ -78,8 +79,9 @@ The **Dimensions** tab allows you to configure settings that are related to the 
 	* Default: **Full image**
 	* When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
 * **Responsive** – when set to **Yes**, the image will scale with its parent container
-	* Default: **Yes**
-	* The image will never get larger than its original size, but it can become smaller
+    * Default: **Yes**
+    * The image will never get larger than its original size, but it can become smaller
+    * This option will be hidden if **Image type** is set to **Icon**
 
 ### 3 Styling
 
@@ -88,8 +90,10 @@ The widget is shipped with default styles and works out of the box without Atlas
 These are the design properties shipped with Atlas UI for this widget:
 
 * **Image style** – changes the style of the image
-	* **Rounded**, **Circle**, **Square**, **None** (default)
+    * **Rounded**, **Circle**, **Square**, **None** (default)
 * **Center image** – determines whether the image is centered horizontally in its container or not
-	* **Yes**, **No** (default) 
+    * **Yes**, **No** (default) 
 * **Image fit** – changes the fit of the image according to the object-fit CSS property
-	* **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default) 
+    * **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)
+* **Align content** – aligns elements inside the container as a row or as a column
+    * **Left align as a row**, **Center align as a row**, **Right align as a row**, **Right align as a column**, **Center align as a column**, **Left align as a column**

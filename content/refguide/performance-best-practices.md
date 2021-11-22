@@ -180,10 +180,9 @@ Consider the following alternatives:
 
 ## 10 Avoid Deeply Nested List Views [MXP011] {#mxp011}
 
-Using a deeply nested list view that is nested to two or more levels can affect page load performance.
-
-Nesting a list view in another list view (and so on) often results in poor page performance due to the increased number of requests and transferred data volume.
-
-### 10.1 How to Fix
-
-Consider restructuring your page. For example, use a second page or a pop up.
+A list view is used on a page that is nested for two or more levels, for example, a list view is in list view and the second list view is in a data view. 
+When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
+    
+### 10.1 Steps to Fix
+    
+To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page. 

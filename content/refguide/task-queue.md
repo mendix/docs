@@ -107,6 +107,26 @@ Core.userActionCall("AModule.SomeJavaAction")
 
 The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
+#### 2.4.3 Retry on Failure
+
+As of Mendix 9.9.0 it is possible to automatically retry a task when it fails. The following options are available:
+
+1. Retry with a fixed delay: specify the maximum number of attempts and the wait time in between the attempts.
+2. Retry with an exponentially increasing delay: specify the maximum number of attempts and the wait time before the first retry. The wait time will double after each failed retry up to a maximum. This maximum can be specified optionally and defaults to 1 day.
+
+Each attempt will produce its own `System.ProcessedTask` entry. The sequence number of all theses entries will be the same, because they refer to the same task.
+
+The retry mechanism can be activated through the API, for instance:
+
+```java
+Core.microflowCall("AModule.SomeMicroflow")
+  .withRetry(10, Duration.ofSeconds(3))
+  .executeInBackground(context, "AModule.SomeQueueName");
+Core.userActionCall("AModule.SomeJavaAction")
+  .withExponentialRetry(8, Duration.ofSeconds(3), Duration.ofMinutes(1))
+  .executeInBackground(context, "AModule.SomeQueueName");
+```
+
 ### 2.5 Configuration options{#configuration}
 
 The period for a graceful shutdown of queues can be configured as a [custom runtime](custom-settings) setting in Studio Pro. 
@@ -206,7 +226,7 @@ Task queues have the following limitations:
 * Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistent Entity.
 * Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
 * The total amount of parallelism per node is limited to 40. This means that at most 40 queues with parallelism 1 can be defined, or a single queue with parallelism 40, or somewhere in between, as long as the total does not exceed 40.
-* Queued actions that have failed can't be rescheduled out-of-the-box currently. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
+* Queued actions that have failed can't be rescheduled out-of-the-box up on Mendix versions before 9.9.0. You can set up a scheduled microflow to re-attempt failed tasks. They can be queried from `System.ProcessedQueueTask` table.
 
 ### 4.3 High level implementation overview
 

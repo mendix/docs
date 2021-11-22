@@ -34,6 +34,6 @@ In order for your app to use to use the Push Connections Module, configure the f
 1. Add a new open page navigation item to the **Responsive** navigation profile.
 1. Select the **Administration** page from the **PushNotifications** module. This page is located in the **_USE ME/Web** folder of the **PushNotifications** module.
 1. Add a microflow sub-call to your **Afterstartup** microflow for the microflow **AfterStartup_PushNotifications**.
-	a. If you do not have an **Afterstartup** microflow configured yet, read [here](NEEDLINK) how to set one up.
+	a. If you do not have an **Afterstartup** microflow configured yet, read the [After Startup](/refguide/project-settings#after-startup) section of *App Settings* for more information.
 
 Now you are able to start your app and move on to the next step: [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server).

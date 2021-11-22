@@ -13,22 +13,22 @@ After setting up your configuration on the server, and deploying your native app
 ## 2 Send the Test Notification
 
 1. Login to your web application. 
-1. Go to the push notification administration page you added earlier to your navigation
-1. Go to the `Devices` tab
-1. Select the your test device
-1. Click `New Message` (or double click your test device)
-1. Fill in any `Title`/`Body` that you want for your notification
-1. Set the `Action name` to `Example`
-1. Leave the remaining fields to the defaults
-1. Click `Send`
+1. Go to the push notification administration page you added earlier to your navigation.
+1. Go to the **Devices** tab.
+1. Select the your test device.
+1. Click **New Message** (or double click your test device).
+1. Fill in any **Title**/**Body** that you want for your notification.
+1. Set the **Action name** to *Example*.
+1. Leave the remaining fields to the defaults.
+1. Click **Send**.
 
-You should now receive the notification on your device. If the application is already opened, the action will log a message (on log node `ExampleNotification`) and show a dialog in the app.
+You should now receive the notification on your device. If the application is already opened, the action will log a message (on log node **ExampleNotification**) and show a dialog box in the app.
 
-If the app is not open (or running in the background) it will deliver and show the notification in the usual location for Android/iOS devices. Click on the notification to trigger the in app action.
+If the app is not open (or running in the background) it will deliver and show the notification in the usual location for Android or iOS devices. Click on the notification to trigger the in-app action.
 
 Congratulations, you have just sent your first push notification! 
 
-If you did not receive the message, check the applications logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
+If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
 ## 3 Troubleshoot Notification Issues {#troubleshoot}
 

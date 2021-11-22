@@ -154,7 +154,7 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
-#### 3.3.2 Members
+#### 3.3.2 Members{#members}
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 

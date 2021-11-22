@@ -23,11 +23,6 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 * We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api) that will be used by a new generation of [Feedback widgets](/appstore/widgets/mendix-feedback) coming to the Marketplace soon.
 * Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/index#my-apps) page is only displayed if your app is deployed to a licensed node.
 
-#### Fixes
-
-* We fixed an issue where a request handler path with `.` broke transport. (Tickets 132865, 133292)
-* We fixed an issue with the custom HHTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Ticket 133172)
-
 ### November 4th, 2021
 
 #### Improvements

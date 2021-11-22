@@ -49,6 +49,12 @@ The platform client allows you to open an existing app using the app ID. You can
 const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
+## Get information about the repository of the app
+From the app object you can get some information about its repository. Such as repository type, url and the default branch name.
+```ts
+const repositoryInfo = app.getRepositoryInfo();
+```
+
 ## Delete an app
 The app object allows you to delete the corresponding Mendix app. Please note that all resources of this app will be deleted permanently.
 ```ts
@@ -73,10 +79,12 @@ const model = await workingCopy.openModel();
 
 ## Commit a temporary Working Copy
 After making the changes, you need to commit the changes back to Team Server.
+Make sure to call `await model.flushChanges()` when committing right after making changes. This makes sure that the mendixmodelsdk has been able to send the changes.
 ```ts
-await workingCopy.commitToTeamServer();
+await model.flushChanges();
+await workingCopy.commitToRepository();
 ```
-You can pass some options to `commitToTeamServer`
+You can pass some options to `commitToRepository`
 | Name           | Description                                                                                                        |
 |----------------|--------------------------------------------------------------------------------------------------------------------|
 | branchName     | You can specify a branch other than the working copy base branch. In that case you should set `force` to `true`.   |

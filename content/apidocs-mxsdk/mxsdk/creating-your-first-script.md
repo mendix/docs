@@ -26,10 +26,7 @@ After setting up all the prerequisites, you can start writing a first script tha
 
         const app = await client.createNewApp(`NewApp-${Date.now()}`, {
             repositoryType: "git",
-            useAppTemplate: true,
-            templateDownloadURL:
-                "https://
-                appstore.home-test.mendix.com/rest/packagesapi/v1/version/number/27250/StarterApp_Blank.mpk"
+            useAppTemplate: true
         });
 
         const workingCopy = await app.createTemporaryWorkingCopy("main");
@@ -41,7 +38,9 @@ After setting up all the prerequisites, you can start writing a first script tha
         const entity = domainmodels.Entity.createIn(domainModel);
         entity.name = `NewEntity_${Date.now()}`;
 
-        await workingCopy.commitToTeamServer("main");
+        await model.flushChanges();
+
+        await workingCopy.commitToRepository("main");
     }
 
     main().catch(console.error);
@@ -59,10 +58,7 @@ This line is where the MendixSdkClient object is instantiated.
 ```ts
 const app = await client.createNewApp(`NewApp-${Date.now()}`, {
             repositoryType: "git",
-            useAppTemplate: true,
-            templateDownloadURL:
-                "https://
-                appstore.home-test.mendix.com/rest/packagesapi/v1/version/number/27250/StarterApp_Blank.mpk"
+            useAppTemplate: true
         });
 
 const workingCopy = await app.createTemporaryWorkingCopy("main");
@@ -83,9 +79,10 @@ entity.name = `NewEntity_${Date.now()}`;
 Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the domain model of the default module named "MyFirstModule". After finding your document you have to obtain it in its fully-loaded form to be able to change it because Model SDK does not load the entire model into the client's memory. It only loads the public elements and properties of the document. Once you have loaded the domain model in memory with the function `domainModelInterface.load()`, you create a new Entity in the domain model and give it a name.
 
 ```ts
-await workingCopy.commitToTeamServer("main");
+await model.flushChanges();
+await workingCopy.commitToRepository("main");
 ```
-Once you're done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commitToTeamServer()`.
+Once you're done with the model changes, you can flush the changes to make sure the changes have been sent and then commit the working copy back to the Team Server by calling `workingCopy.commitToRepository()`.
 
 ## 3 Compiling and Running the Script
 
@@ -107,7 +104,12 @@ Once you're done with the model changes, you can commit the changes back to the 
 
     ```text
     $ node script.js
-    // TODO: Add the output
+    Creating new app 'NewApp-1637595970665'...
+    Successfully created app with id '64760e41-9507-42d3-99da-3950454dd40a'
+    Creating temporary working copy for branch 'main'...
+    Successfully created temporary working copy with id 'c70b078e-a323-42a7-b95d-7407a0e611d3' based on branch 'main'
+    Committing temporary working copy 'c70b078e-a323-42a7-b95d-7407a0e611d3' to branch 'main'...
+    Successfully committed the working copy with id 'c70b078e-a323-42a7-b95d-7407a0e611d3' to branch 'main'
     ```
 
 Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.

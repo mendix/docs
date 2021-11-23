@@ -74,7 +74,7 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 ## 4 Settings {#settings}
 
-When Odata resources are published, they are discovereble by default.Mendix admins can change the dafult discoverability status.
+Mendix admins can change the default discoverability status of the published datasources of the company. So when Odata resources are published, the discovereble status will be set as the status set by admin in the settings. The default value of this setting is set to true.
 
 ![Settings](attachments/data-hub-admin/Admin-Settings.PNG)
 

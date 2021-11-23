@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### Fixes
 
-* We fixed an issue with custom http header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
+* We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
 * We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
 
 ### October 26th, 2021

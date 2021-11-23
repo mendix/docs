@@ -353,3 +353,5 @@ Follow the steps below:
 8. Select the **Done!** option that appears once you have filled out all the required fields.
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
+
+The discoverable status of the OData service defaults to the value set by the company admin. To learn more about it [click here](#datasource-settings)

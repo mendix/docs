@@ -28,6 +28,6 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 
 The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
-To invoke receiving emails from an account, you can call the **RetrieveEmailMessages** java action.
+To invoke receiving emails from an account, you can call the **RetrieveEmailMessages** Java action.
 
-Set **EncryptionKey** constant for email account passowrd encryption.
+Set the **EncryptionKey** constant for email account passowrd encryption.

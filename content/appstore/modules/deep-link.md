@@ -54,17 +54,70 @@ The deep link module processes the request and creates a reference object which 
 * Provide a colleague a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to the user
 
-## 2 Configuration
+## 2. Configuration
 
 After importing the module into your application, you need to configure it.
 
-1. Initialize the Deep Link module each time the app starts as follows:
-   * If your app does not have an after-startup microflow, perform the following steps:
-     1. In the **App Explorer**, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-     2. Go to the **Runtime** tab, set **After startup** to the **DeepLink.Startdeeplink** microflow from the **DeepLink** > **\_Use me** folder.
-   * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **DeepLink.Startdeeplink** microflow.
-   
-   After you add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app, the `/link/` path is added as a request handler in your application.
+### 2.1 Initializing the Deep Link Module on App Startup
+
+The `/link/` path needs to be added as a request handler in your application. To do this, you only need to add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app.
+
+* If your app does not have an after-startup microflow, perform the following steps:
+  1. In the **App Explorer**, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+  2. Go to the **Runtime** tab.
+  2. For **After startup**, **Select** the **StartDeeplink** microflow from **Marketplace modules** > **DeepLink** > **\_Use me** > **Configuration** > **1. Add after startup to project settings**.
+* If your app has an after-startup microflow, extend it with a [sub-microflow activity](/howto/logic-business-rules/extract-and-use-sub-microflows) that calls the **StartDeeplink** microflow.
+
+### 2.2 Configuring the DeeplinkHome Microflow for the Default Home Page
+
+When the Mendix application is accessed, the application needs to check if a deep link request is associated to the user session. To achieve this, add the **DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation#default-home-page). For an example of how this should look, go to your **App Explorer** and see the **(Home_ResponsiveProfile)** microflow in **Marketplace modules** > **DeepLink** > **\_Use me** > **Configuration** > **2. Add Microflow as Default Homepage**.
+
+{{% alert type="info" %}}Make sure that all roles—including your guest roles—that are expected to access your application via a deep link have the **DeepLink.User** user role. Otherwise, access to objects owned by the Deep Link module will be denied. Make sure that roles that need to be able to change the configuration of the Deep Link module at runtime have the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
+
+{{% /alert %}}
+
+### 2.3 Adding the DeeplinkConfigurationOverview Snippet to a Custom Admin Page
+
+To configure and manage deep links at runtime, it is helpful to include the **DeeplinkConfigurationOverview** snippet to a custom page that is accessible to users who operate the app. It is required to add the **DeepLink.Admin** module role to the user roles that have access to the custom page.
+
+### 2.4 Optional Configuration
+
+The steps described here are not mandatory. However, they may support the implementation of the Deep Link module.
+
+#### 2.4.1 Deep Link Configuration in After Startup Microflow
+
+The advantage of ensuring the deeplink configuration from the After Startup flow is that the configuration consistent for every environment the application is deployed to.
+To configure deeplinks while being in design time you can utilize the following Java actions:
+
+* SetObjectParameterDeeplink - a deeplink that looks up an object based on an input parameter value and passes it to the configured handler microflow.
+* SetStringParameterDeeplink - a deeplink that passes input parameter values as string arguments to the configured handler microflow.
+
+### 2.4.2 Checking the Available Deep Link Configuration and Example URLs
+
+To view the available deep link configuration and a list of example URLs, add the the **DeeplinkExampleOverview** snippet from **Marketplace modules** > **DeepLink** > **\_Use me** > **Configuration** > **4. Optional steps** > **B. Add snippet to test page** to a custom page.
+
+### 2.5 Configure Constants
+
+* **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
+
+* **LoginLocation** – When authentication is required but the session is not of an authenticated user, the user will be redirected to this location. When the value is left empty, the default location in the theme folder is used: login.html
+
+The orginial deeplink location will be appended to the login location when the login location ends with a '='.
+
+For example, in case of Mendix SSO:
+'https://login.mendix.com/oidp/login?ret='
+
+Use `/mindspherelogin.html?redirect_uri=` as login location when using the module with a MindSphere app (requires MindSphere SSO >= V2.0)
+When using XSUAA, this constant should be set to `/xsauaalogin/`   
+
+* ** SSOHandlerLocation - When a deeplink is configured to allow anonymous users the SSO Handler is requested before redirecting the user to its destination.
+  The SSO Handler will only be requested when the user session is an anonymous user session. This is useful in situations where the SSO handler does not prompt users for authentication, allowing anonymous users.
+
+The orginial deeplink location will be appended to the login location when the login location ends with `a '='`.
+
+Example, in case of MendixSSO: `'/openid/login?continuation='`
+
+{{% alert type="warning" %}}When using the Deep Link module together with the [SAML](saml) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings).{{% /alert %}}
 
 ### 2.2 Security
 

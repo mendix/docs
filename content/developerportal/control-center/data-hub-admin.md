@@ -12,8 +12,7 @@ In the [Data Hub](/developerportal/control-center#data-hub) page of Control Cent
 * Assign and manage Data Hub [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Data Hub Catalog)
 * Invite and manage [External Users](#external-users)
-
-* Control the  default Discoverability settings of your company's data sources [Settings](#datasource-settings)
+* Control the  default discoverability settings of your company's data source [Settings](#datasource-settings)
 
 ## 2 Curators {#curator}
 
@@ -72,17 +71,18 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 ![Company selector](attachments/data-hub-admin/company_selector.png)
 
-## 4 Settings {#datasource-settings}
+## 4 Settings {#settings}
 
-Mendix admins can change the default discoverability status of the published datasources of the company. So when OData resources are published, the discoverable status defaults to the value set by the company admin. The default value of this setting is set to true.
+Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
+
+The default value of this setting is **On**:
 
 ![Settings](attachments/data-hub-admin/Admin-Settings.PNG)
 
 {{% alert type="info" %}}
-This setting does not work in retrospect, it will only apply for the  OData resources published after changing the setting.
+This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-When the discoverable value is explicitly declared on the registration form or the API field, it will take precedence over company settings value.
+When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
 {{% /alert %}}
-

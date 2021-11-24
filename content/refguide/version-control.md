@@ -105,7 +105,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert type="info" %}}
-Tags are not supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) from version 9.8.0.
+Tags will be supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) from version 9.8.0.
 {{% /alert %}}
 
 ### 2.12 Repository Service

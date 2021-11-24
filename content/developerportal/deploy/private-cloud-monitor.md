@@ -12,7 +12,7 @@ tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 {{% alert type="info" %}}Monitoring Mendix for Private Cloud environments is supported in Mendix Operator v2.1.0 and above.{{% /alert %}}
 
 Mendix for Private Cloud provides a [Prometheus](https://prometheus.io/) API that can be scraped by a local Prometheus server.
-This API can also be used by other monitoring solutions such as [Datadog](https://docs.datadoghq.com/integrations/prometheus/).
+This API can also be used by other monitoring solutions that support scraping the Prometheus API.
 
 The metrics API can only be accessed inside the Kubernetes cluster, and metrics are never sent to the Mendix Private Cloud Portal.
 To collect, store, and display metrics, you will need to install a local monitoring solution.

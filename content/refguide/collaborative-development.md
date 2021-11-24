@@ -44,9 +44,9 @@ For information on collaborative development from the Studio perspective, see [C
 
 ## 4 Studio Pro Perspective
 
-After opening an app in Studio Pro, you can see which development line (the main line or a branch line) Studio is enabled for by opening **Version Control** > **Manage Branch Lines**. You can see that the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
+After opening an app in Studio Pro, you can see which development line (the main line or a branch line) Studio is enabled for by opening **Version Control** > **Manage Branch Lines**. The development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
 
-If you are on another line than the Studio enabled line, you can select the desired branch in the grid and then use the **Switch Branch** button.
+If you are on another line than the Studio-enabled line, you can select the branch and click the **Switch Branch** button:
 
 ![Open App Dialog Window](attachments/collaborative-development/branch-line-dialog.png)
 

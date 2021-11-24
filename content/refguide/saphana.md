@@ -17,7 +17,7 @@ For example, you have two associated entities — **Person** and **Address** —
 
 {{% alert type="info" %}}
 
-This limitation has been removed in Mendix versions 9.8.0 and above, and also from MTS version 9.6 patch version 3 (9.6.3) and above.
+This limitation has been removed in Mendix versions 9.8.0 and above.
 
 {{% /alert %}}
 

@@ -167,10 +167,22 @@ Follow these steps to configure the text-to-voice conversion:
    2. For **Data source**, select the **Description** attribute of the **Voice** entity from **SpeechSynthesizer_Voice**.
    3. For **Label caption**, enter *Language*.
    4. Click **OK** to save the settings.
-   
-9. From the **Toolbox**, add a **Button** widget to your page.
 
-10. Change the settings of the **Button** widget as follows:
+9. Create a microflow as follows:
+    1.  Name the microflow *GetSupportedVoices*.
+    2.  Add the **speechSynthesizer** as input parameter and select **SpeechSynthesizer** entity from domain model of text to speech module as target object.
+    3.  Add a retrieve object activity to the microflow.
+    4.  Double-click the retrieve object activity to open the **Retrieve Objects** dialog box. 
+    5.  Select the **Source** as **By association**, select **Association** as **$speechSynthesizer/SpeechSynthesizer_SupportedVoices** and click **OK**.
+    6.  Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
+
+    ![getsupportedvoices-microflow](attachments/cogniso-text-to-speech/getsupportedvoices-microflow.png)
+
+10. On the **Selectable objects** tab, set the microflow as **GetSupportedVoices**.
+   
+11. From the **Toolbox**, add a **Button** widget to your page.
+
+12. Change the settings of the **Button** widget as follows:
 
     1. Double-click the button to open the **Action Button** dialog box.
     2. For Caption, enter *Synthesize Speech*.
@@ -178,13 +190,13 @@ Follow these steps to configure the text-to-voice conversion:
     4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **USE_ME** folder.
     5. Click **OK** to save the settings.  
 
-11. Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
+13. Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
 
-12. On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string, and set **Controls** to **true**.
+14. On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string, and set **Controls** to **true**.
 
     ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
-13. Run your app locally. You can convert text to voice directly in the browser:
+15. Run your app locally. You can convert text to voice directly in the browser:
 
     ![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)
 

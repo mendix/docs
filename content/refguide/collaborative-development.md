@@ -48,7 +48,7 @@ After opening an app in Studio Pro, you can see which development line (the main
 
 If you are on another line than the Studio-enabled line, you can select the branch and click the **Switch Branch** button:
 
-![Open App Dialog Window](attachments/collaborative-development/branch-line-dialog.png)
+![Open App Dialog Window](attachments/collaborative-development/switch-branch.png)
 
 ### 4.1 Merging Latest Changes
 
@@ -116,9 +116,8 @@ If you disable Studio for a development line it was enabled for and do not enabl
 To disable Studio, do the following:
 
 1. Select the branch that is enabled for Studio.
-2.  Click the **Disable for Mendix Studio** button:
+2.  Click the **Disable for Mendix Studio** button.
 
-	![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
 
 Studio is disabled for your app.
 
@@ -143,7 +142,6 @@ To create a new branch line, do the following:
 		
 		![Create Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
     
-
 4.  After you have configured all the settings, click **OK**.
 
 You have created a new branch line.

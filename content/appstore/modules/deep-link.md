@@ -53,7 +53,7 @@ You need to add the `/link/` path as a request handler in your app. To achieve t
 
 ### 3.2 Configuring the Microflow for the Default Home Page
 
-When a user accesses the Mendix app, the app needs to check if a deep link request is associated to the user session. To achieve this, add the **DeepLink.DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation#default-home-page)(via **App** > **Navigation** > **Home pages** > **Default home page**). For an example of this configuration, see the **DeepLink.Home_ResponsiveProfile** microflow.
+When a user accesses the Mendix app, the app needs to check if a deep link request is associated to the user session. To achieve this, add the **DeepLink.DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation#default-home-page) (via **App** > **Navigation** > **Home pages** > **Default home page**). For an example of this configuration, see the **DeepLink.Home_ResponsiveProfile** microflow.
 
 ### 3.3 Configuring Security Settings
 
@@ -86,16 +86,16 @@ To view all the available deep link configurations and example URLs, add the **D
 
 ### 3.6 Configuring Constants
 
-* **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`.
-* **LoginLocation** – When authentication is required but the session is not of an authenticated user, the user will be redirected to this location.
+* **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
+* **LoginLocation** – When authentication is required but the session is not of an authenticated user, the user will be redirected to this location
   * When the value is left empty, the default location `login.html` in the theme folder is used
   * When the login location ends with `= ` (for example, in the case of Mendix SSO: `https://login.mendix.com/oidp/login?ret=`), the original deep link location will be appended to the login location
-  * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required).
+  * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO V2.0 and above is required)
   * When using XSUAA, set the value to `/xsauaalogin/`   
 
 
 * **SSOHandlerLocation** – When a deep link is configured to support anonymous users, the SSO handler is requested before redirecting users to the destination
   * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler does not ask users for authentication to support anonymous users)
-  * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location.
+  * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location
 
 {{% alert type="warning" %}}When using the Deep Link module together with the [SAML](saml) module for SSO in Mendix 9 and above, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded. To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings).{{% /alert %}}

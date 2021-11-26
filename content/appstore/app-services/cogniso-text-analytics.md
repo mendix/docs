@@ -304,33 +304,45 @@ Use the **CreateDominantLanguageDetector** microflow and the **DetectDominantLan
 
        ![createdominantlanguagedetector-nanoflow](attachments/cogniso-text-analytics/createdominantlanguagedetector-nanoflow.png)
 
-2. From the **Toolbox**, add a **Data view** widget to your page.
+2. From the **Toolbox**, add a **Data view** widget.
 3. Set the **CreateDominantLanguageDetector** nanoflow as the data source of the **Data View** widget as follows:
    1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateDominantLanguageDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
-4. From the **Toolbox**, add a **Text area** widget to your page.
+4. Inside the **Data view**, add a **Text area** widget.
 5. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, Select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings.
-6. From the **Toolbox**, add a **Button** widget to your page.
+   4. Click **OK** to save the settings. 
+6. Inside the **Data view**, add a **Button** widget.
 7. Change the settings of the **Button** widget as follows:
    1. Double-click the button to open the **Action Button** dialog box.
-   2. For Caption, enter *Detect Dominant Language*.
+   2. For **Caption**, enter *Detect Dominant Language*.
    3. In the **Event** section, set **On click** to **Call a nanoflow**.
-   4. For **Nanoflow**, **Select** the **DetectDominantLanguage** nanoflow from the **USE_ME** folder.
-   5. Click **OK** to save the settings.  
-8. From the **Toolbox**, add a **Template grid** widget.
+   4. For **Nanoflow**, **Select** the **DetectDominantLanguage** nanoflow from the **TextAnalytics** > **USE_ME** folder.
+   5. Click **OK** to save the settings. 
+8. Inside the **Data view**, add a **Template grid** widget.
 9. Change the settings of the **Template grid** widget as follows:
    1. Double-click the button to open the **Edit Template Grid** dialog box.
    2. Go to the **Data source** tab.
-   3. For the **Type** of the **Data source**, select **Association**.
-   4. For **Entity (path)**, select **DominantLanguage**.
-   5. Click **OK** to save the settings.  
-10. Run your app locally. You can perform language detection directly in the browser:
+   3. Set **Type** to **Association**.
+   4. Set **Entity (path)** to **TextAnalytics.DominantLanguageDetector_DominantLanguages/TextAnalytics.DominantLanguage**.
+   5. Click **OK** to save the settings. 
+10. Inside the **Template grid** widget, add a **Text box** widget.
+11. Change the settings of the **Text area** widget as follows:
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. Set **Data source** to **DominantLanguage_Language/Language/Name**.
+    3. For **Label caption**, enter *Language*.
+    4. Click **OK** to save the settings.
+12. Inside the **Template grid** widget, add a second **Text box** widget.
+13. Change the settings of the **Text area** widget as follows:
+    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+    2. Set **Data source** to **ConfidenceScore** from **Template grid**.
+    3. For **Label caption**, enter *Score*.
+    4. Click **OK** to save the settings.
+14. Run your app locally. You can perform language detection directly in the browser:
 
     ![runlocally-language-detection](attachments/cogniso-text-analytics/runlocally-language-detection.png)
 

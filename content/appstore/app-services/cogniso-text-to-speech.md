@@ -141,18 +141,22 @@ Follow these steps to configure the text-to-voice conversion:
         ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
    
 2. Create a microflow as follows:
-   1. Name the microflow *GetSupportedVoices*.   
-   2. Add the **speechSynthesizer** as input parameter and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.   
-   3. Add a retrieve object activity to the microflow.
-   4. Double-click the retrieve object activity to open the **Retrieve Objects** dialog box. 
-   5. Set the **Source** to **By association**.   
-   6. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.   
-   7. Click **OK** to save the settings.   
-   6. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
+   1. Name the microflow *GetSupportedVoices*. 
+   2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+   2. Double-click the parameter to open the **Parameter** dialog box.
+   4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
+   5. For **Name**, enter *speechSynthesizer*.
+   6. Click **OK** to save the changes.
+   7. Add a retrieve object activity to the microflow.
+   8. Double-click the retrieve object activity to open the **Retrieve Objects** dialog box.
+   9. Set the **Source** to **By association**.
+   10. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.
+   11. Click **OK** to save the settings.
+   12. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
    
       ![getsupportedvoices-microflow](attachments/cogniso-text-to-speech/getsupportedvoices-microflow.png)
    
-3. From the **Toolbox**, add a **Data view** widget to your page.
+3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
    1.  Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
    2.  For **Data source**, select **Nanoflow**.
@@ -161,16 +165,18 @@ Follow these steps to configure the text-to-voice conversion:
 5. Inside the **Data view** widget, add a **Text area** widget.
 6. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-   2. For **Data source**, Select the **Text** attribute from **Data view**.
-   4. Click **OK** to save the settings.
+   2. Set **Data source** to **SpeechSynthesizer_Voice/Voice/SpeechSynthesizer_Voice/SpeechSynthesizer/Text**.
+   3. Click **OK** to save the settings.
 7. Inside the **Data view** widget, add a **Reference selector** widget.
 8. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
-   3. Set the microflow as **GetSupportedVoices**.
-   4. For **Data source**, select the **Description** attribute of the **Voice** entity from **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
-   5. For **Label caption**, enter *Language*.
-   6. Click **OK** to save the settings.
+   3. Set **Source** to **Microflow**.
+   4. Set the **Microflow** as **GetSupportedVoices**.
+   5. Go to the **General** tab.
+   6. Set **Data source** to **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
+   7. For **Label caption**, enter *Language*.
+   8. Click **OK** to save the settings.
 9. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget.
 10. Change the settings of the **Audio player** widget as follows:
     1.  Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
@@ -185,9 +191,8 @@ Follow these steps to configure the text-to-voice conversion:
     1. Double-click the button to open the **Action Button** dialog box.
     2. For **Caption**, enter *Synthesize Speech*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
-    4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **USE_ME** folder.
-    5. Click **OK** to save the settings.      
-
+    4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME **folder.
+    5. Click **OK** to save the settings. 
 13. Run your app locally. You can convert text to voice directly in the browser:
 
     ![runlocally-text-to-speech](attachments/cogniso-text-to-speech/runlocally-text-to-speech.png)

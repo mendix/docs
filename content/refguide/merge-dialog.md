@@ -29,7 +29,7 @@ This merge scenario allows you to merge a fix from a maintenance branch line to 
 
 Choose the branch line from which you want to merge the fix.
 
-#### 2.1.2 One Revision / Multiple Revisions
+#### 2.1.2 One Revision/Multiple Revisions
 
 Choose whether you want to merge just a single commit or a whole range of commits from the maintenance branch line. In the latter case both the start and end revisions must be selected. The start revision is the revision with the lowest number and the end revision is the revision with the highest number. Note that all revisions that are contained within the specified range are merged.
 
@@ -57,6 +57,7 @@ Select the start revision (revision with the lowest number) and the end revision
 
 ## 3 Merging Git Branches
 
-There is a simple branch merge scenario that is supported for Git only. You select a branch line you want to merge into the current one:
+In Git, there is a simple branch merge scenario: you select a branch line you want to merge into the current one.
 
 ![Merge Dialog for Git](attachments/merge-dialog/merge-dialog-git.png)
+

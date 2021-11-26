@@ -95,7 +95,7 @@ Studio cannot be used to develop the app if it is not enabled for any developmen
 
 For app templates created via the Developer Portal, the main line of a new app will be Studio enabled.
 
-### 2.11 Tag
+### 2.11 Tag {#tag}
 
 A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
 
@@ -105,7 +105,7 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 * Revision: this is added automatically and is the revision number of the commit
 
 {{% alert type="info" %}}
-Tags will be supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) from version 9.8.0.
+Tags are supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-server-app) and Team Server) from Mendix version 9.8.0.
 {{% /alert %}}
 
 ### 2.12 Repository Service
@@ -114,7 +114,7 @@ The Repository Service manages communication between Studio or Studio Pro and ot
 
 ## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
-The figure below shows how two developers might work on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
+The figure below shows how two developers might collaborate on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 
@@ -172,8 +172,7 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 ## 4 Working Locally in Studio Pro
 
-Another use case is when the developer is working locally in Studio Pro only. 
-The image below illustrates how a single developer might work on changes and share them through the Team Server. The developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
+Another use case is when the developer is working locally in Studio Pro only. The image below illustrates how a single developer might work on changes and share them through the Team Server. The developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
 
 ![](attachments/version-control/image10.png)
 

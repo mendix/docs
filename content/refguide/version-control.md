@@ -112,13 +112,13 @@ Tags will be supported by Studio Pro Git ([BYO](branch-line-manager-dialog#byo-s
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
-## 3 Version Control Processes for a Single Branch {#vc-single}
+## 3 Version Control Processes in Studio and Studio Pro for a Single Branch {#vc-single}
 
 The figure below shows how two developers might work on a [Studio-enabled](#studio-enabled) development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 
-### 3.1 Work in Studio Only
+### 3.2 Work in Studio Only
 
 The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
@@ -170,10 +170,10 @@ If there are conflicts, the developer using Studio Pro will need to resolve thes
 
 ![](attachments/version-control/image6.png)
 
+## 4 Working Locally in Studio Pro
 
-## 4 Working Locally
-
-The image below illustrates how a single developer might work on changes and share them through the Team Server. In this use case, the developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
+Another use case is when the developer is working locally in Studio Pro only. 
+The image below illustrates how a single developer might work on changes and share them through the Team Server. The developer creates an app first. The initial local model is than sent to the Team Server. After creating an app the developer makes changes, where they either have an option to send the changes directly to the server as indicated with change 2. Or they can first do a local commit, and then push the changes to the Team Server in a later stage. For example, it can be the case if the developer is working without access to a network.
 
 ![](attachments/version-control/image10.png)
 

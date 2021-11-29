@@ -153,7 +153,7 @@ To create a new branch line, do the following:
 
 You have created a new branch line.
 
-### 6.2 Deleting a Branch Line
+### 6.2 Deleting a Branch Line {#deleting}
 
 To delete a branch line, do the following:
 

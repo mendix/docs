@@ -4,6 +4,23 @@ parent: "nt-studio-pro-9-parent"
 menu_order: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.9
+
+**Release date: November 29th, 2021**
+
+We added support for encryption of the authentication token, for iOS and Android, and all cookies on Android.
+
+The token will be encrypted only for clients built with Mendix Studio Pro 9.8 or later. Previous Studio Pro version do not support this feature and tokens will remain unencrypted.
+
+All new application specific cookies, on Android, from here on, will be automatically encrypted independently of Studio Pro 9 version.
+
+### Improvements
+
+* We added support for the new native mobile encryption features introduced with Mendix Studio Pro 9.8.
+
+### Fixes
+
+* We added file storage support for Android 30 for the camera roll dependency.
 
 ## 6.2.6
 

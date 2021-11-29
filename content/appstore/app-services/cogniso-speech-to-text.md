@@ -153,42 +153,42 @@ When you start from a blank app template in Mendix Studio Pro, follow the steps 
 
 To let the [Microphone](#microphone) widget convert speech to text and trigger a custom action, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
 
-Below are the steps to build an example web app which can convert speech to text and triggers actions.
+Below are the steps to build an example web app which can convert speech to text and triggers actions:
 
 1.  In your app module's domain model, create an entity and name it *Microphone*, with the following attributes:
    * `NewTranscript` (String)
    * `AllTranscript` (String)
    * `Arguments` (String)
-   * `Error` (String)
+   * `Error` (String) 
 2.  Create a nanoflow as follows:
-   1. Name the nanoflow *CreateMicrophoneObject*.
-   2. Add a create object activity to the nanoflow.
-   3. Double-click the create object activity to open the **Create Object** dialog box. 
-   4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
-   5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
+    1. Name the nanoflow *CreateMicrophoneObject*.
+    2. Add a create object activity to the nanoflow.
+    3. Double-click the create object activity to open the **Create Object** dialog box. 
+    4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
+    5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
+      
+        ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
    
-       ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
-   
-3. From the **Toolbox**, add a **Data view** widget to your page.
-4. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
-5.  Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
+3. Add a **Data view** widget to your page.
+4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data Source**, select **Nanoflow** as the **Type**.
    3. **Select** the **CreateMicrophoneObject** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.
+5. Inside the **Data view** widget, add a [Microphone](#microphone) widget.
 6.  Change the settings of the **Microphone** widget as follows:
-    1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box.
-    2. Go to the **Events** tab.
+    1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
+    2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
-    4. Go to the **Voice to Action** tab.
-    5. For **Arguments**, **Select** the **Arguments** attribute.
-    6. For **Actions**, click **New** to open the **Edit Actions Item** dialog box and set up new actions, for example:
-    
+    4. Go to the **Voice to Action** tab.   
+    5. For **Actions**, click **New** to open the **Edit Actions Item** dialog box and set up new actions, for example:
+
        ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
     
        For more information, see the [Customizing Speech-Triggered Actions](#actions) section below.
-
-7. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
+    
+7. For **Arguments**, **Select** the **Arguments** attribute.
+8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
 ### 5.2 Handling Microphone Events
 
@@ -200,7 +200,7 @@ There are two main types of events that can be picked up by the **Microphone** w
 
 By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion.
 
-**transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice, which matches an utterance to trigger an action. You can select an **Action** from a list of actions.
+**transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
 ![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
 
@@ -212,7 +212,7 @@ For example, you can set up the **Action** to make the app show all the voice-to
 
 By binding an attribute to the **Error** event, the app can pick up an error raised by the back-end service.
 
-**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when there is a problem with converting voice into text, the error event is triggered, and the error information is populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select an **Action** from a list of actions.
+**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. When there is a problem with converting voice into text in a running app, the error event is triggered, and the error information is populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
 ![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
 

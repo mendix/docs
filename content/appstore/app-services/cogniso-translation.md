@@ -137,7 +137,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 
    8. Set **Type** to **List**.
 
-   9. Set **Entity** to **Translation.Language**.
+   9. For **Entity**, select **Language** entity from **Translation** module 
 
    10. In the text box, enter *$translator/Translation.Translator_SupportedLanguages/Translation.Language*.
 
@@ -149,7 +149,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 
 3. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
 
-   1. Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
+   1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings.   
@@ -175,7 +175,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    7. For **Label caption**, enter *Language*.
    8. Click **OK** to save the settings.
 
-4. Inside the **Group box** widget, add a **Text area** widget.
+4. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
 
 5. Change the settings of the **Text area** widget as follows:
 
@@ -205,7 +205,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
     7. For **Label caption**, enter *Language*.
     8. Click **OK** to save the settings.
 
-8. Inside the **Group box** widget, add a **Text area** widget.
+8. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget .
 
 16. Change the settings of the **Text area** widget as follows:
 
@@ -216,11 +216,11 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 
     ![data-view](attachments/cogniso-translation/data-view.png)
 
-13. Inside the **Data view** widget, add a **Button** widget to your page.
+13. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 
 14. Change the settings of the **Button** widget as follows:
 
-    1. Double-click the button to open the **Action Button** dialog box.
+    1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Translate*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.

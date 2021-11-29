@@ -158,7 +158,7 @@ Follow these steps to configure the text-to-voice conversion:
    
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
-   1.  Double-click the **Data viewer** widget to open the **Edit Data View** dialog box.
+   1.  Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2.  For **Data source**, select **Nanoflow**.
    3.  **Select** the **CreateSpeechSynthsizer** nanoflow for **Nanoflow**.
    4.  Click **OK** to save the settings.
@@ -167,7 +167,7 @@ Follow these steps to configure the text-to-voice conversion:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. Set **Data source** to **SpeechSynthesizer_Voice/Voice/SpeechSynthesizer_Voice/SpeechSynthesizer/Text**.
    3. Click **OK** to save the settings.
-7. Inside the **Data view** widget, add a **Reference selector** widget.
+7. Inside the **Data view** widget, add a **Reference selector** widget below the **Text area** widget.
 8. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -177,7 +177,7 @@ Follow these steps to configure the text-to-voice conversion:
    6. Set **Data source** to **TextToSpeech.SpeechSynthesizer_Voice/TextToSpeech.Voice/TextToSpeech.Voice.Description**.
    7. For **Label caption**, enter *Language*.
    8. Click **OK** to save the settings.
-9. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget.
+9. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget below the **Reference selector** widget.
 10. Change the settings of the **Audio player** widget as follows:
     1.  Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
     2.  On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
@@ -186,9 +186,9 @@ Follow these steps to configure the text-to-voice conversion:
     ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
     4. Click **OK** to save the settings.
-11. Inside the **Data view** widget, add a **Button** widget.
+11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .
 12. Change the settings of the **Button** widget as follows:
-    1. Double-click the button to open the **Action Button** dialog box.
+    1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Synthesize Speech*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **SynthesizeSpeech** nanoflow from the **TextToSpeech** > **USE_ME **folder.

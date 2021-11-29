@@ -49,7 +49,7 @@ If this is the top level of the mapping, you can check **Decide this at the plac
 
 ### 1.3 Setting Associations
 
-After it obtain a mendix object (see 1.2.1), you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
+After obtaining a mendix object (see 1.2.1), you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
 {{% alert type="warning" %}}
 

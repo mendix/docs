@@ -285,17 +285,19 @@ Local users don't have tokens as they don't sign in via SSO.
 
 ### 6.1 Tokens in Mendix SSO v3 and Above
 
-Tokens are held in the `Token` entity, and are associated with the end-user via the `Token_User` association.
+Tokens are held in encrypted form in the `Token` entity, and are associated with the end-user via the `Token_User` association.
 
 ![](attachments/mendix-sso/domain-model-token.png)
 
-You can allow an administrator to see all the tokens by displaying them on an administration page of your app. For example, you can create a data grid sourced from the database entity `MendixSSO.Token` and display the attributes you require from the `Token` entity, and the associated `User` and `Session` entities.
+You can allow an administrator to see all the tokens by displaying them on an administration page of your app.
+
+For example, you can create a data grid sourced from the database entity `MendixSSO.Token` and display the attributes you require from the `Token` entity, and the associated `User` and `Session` entities. Remember that, in this case, the tokens will still be encrypted.
 
 ![](attachments/mendix-sso/token-datagrid.png)
 
 If you implement a page like this, ensure that security is set up to prevent unauthorized users accessing the page.
 
-The **SessionID** which is associated with a **TokenType** of `ID_TOKEN` is held in jwt format, so you can paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds.
+The **SessionID** which is associated with a **TokenType** of `ID_TOKEN` is held in jwt format, so you can decrypt it and then paste it into a [jwt decoder](https://jwt.io) to confirm what information it holds. To decrypt the token you can use the `Decrypt` microflow in the **Internal/Encryption/Implementation** folder of the MendixSSO module.
 
 ### 6.2 Tokens in Mendix SSO v2
 

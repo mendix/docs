@@ -122,7 +122,7 @@ The output is described in the table below:
 
 ## 5 substring
 
-Retrieves a substring of a string. Note that the first character of a string is located at position `'0'`, and the last character is located at position `length(string)-1`.
+Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
 ### 5.1 Input Parameters
 
@@ -188,7 +188,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The first location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 6.3 Example
 
@@ -248,7 +248,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The last location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The last location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 7.3 Example
 

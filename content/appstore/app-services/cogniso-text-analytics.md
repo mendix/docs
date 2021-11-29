@@ -382,7 +382,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateSentimentDetector** nanoflow for **Nanoflow**.
    4. Click **OK** to save the settings. 
-5. Inside the **Data view **widget, add a **Reference selector** widget to your page.
+5. Inside the **Data view **widget, add a **Reference selector** widget.
 6. Change the settings of the **Reference selector** widget as follows:
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
@@ -391,7 +391,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
    5. Go to the **General** tab.
    6. Set **Data source** to **TextAnalytics.Detector_InputLanguage/TextAnalytics.Language/TextAnalytics.Language.Name**.
    7. Click **OK** to save the settings. 
-7. Inside the **Data view **widget, add a **Text area** widget to your page below the **Reference selector** widget.
+7. Inside the **Data view **widget, add a **Text area** widget below the **Reference selector** widget.
 8. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, select the **InputText** attribute from **Data view**.
@@ -456,7 +456,7 @@ Use the **CreateKeyPhraseDetector** microflow and the **DetectKeyPhrases** nanof
    2. For **Data source**, select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings.
-8. Inside the **Data view** widget, add a **Button** widget to your page below the **Text area** widget.
+8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 9. Change the settings of the **Button** widget as follows:
    1. Double-click the **Button** to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Key Phrases*.
@@ -512,7 +512,7 @@ Use the **CreateEntityDetector** microflow and the **DetectEntities** nanoflow t
    2. For **Data source**, select the **InputText** attribute from **Data view**.
    3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
-8. Inside the **Data view** widget, add a **Button** widget to your page below the **Text area** widget.
+8. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 9. Change the settings of the **Button** widget as follows:
    1. Double-click the **Button** widget to open the **Action Button** dialog box.
    2. For Caption, enter *Detect Entities*.

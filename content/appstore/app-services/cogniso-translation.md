@@ -160,7 +160,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    2. For **Data source**, **Select** the **InputText** attribute from **Data view**.
    2. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
-11. Inside the **Data view** widget, add a second **Group box** widget to your page.
+11. Inside the **Data view** widget, add a second **Group box** widget.
 12. Change the settings of the **Group box** widget as follows:
     1. Double-click the **Reference selector** widget to open the **Edit Group Box** dialog box.
     2. For **Caption**, enter *Output*.

@@ -288,6 +288,8 @@ The output is:
 4
 ```
 
+As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
+
 ## 8 contains
 
 Determines whether the original string (first parameter) contains a substring (second parameter).

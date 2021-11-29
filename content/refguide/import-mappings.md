@@ -25,7 +25,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 ### 1.2 Attribute Mapping Properties
 
-#### 1.2.1 Obtain Mendix Object Methods
+#### 1.2.1 Obtain Mendix Object Methods{#obtain-object}
 
 | Property | Description |
 | --- | --- |
@@ -49,17 +49,17 @@ If this is the top level of the mapping, you can check **Decide this at the plac
 
 ### 1.3 Setting Associations
 
-After obtaining a mendix object (see 1.2.1), you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
+After obtaining a mendix object (see [Obtain Mendix Object Methods](#obtain-object), above), you can set an association to the parent object. If **Set association** is *Yes*, a dropdown of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
 {{% alert type="warning" %}}
 
-Be aware that lists are not stored ordered in the Mendix database. XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
+Be aware that lists are not stored ordered in the Mendix database. The XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
 
 {{% /alert %}}
 
 ## 2 Mapping Attributes in Import Mappings
 
-Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element. Once an attribute is mapped, it will be updated (if any), regardless of how you obtain the mendix object. For unmapped attribute, the original value will not be updated.
+Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element. When an attribute is mapped, any changes to the attribute will be reflected in the value of the mapped schema element, regardless of how you obtain the Mendix object. For an unmapped attribute, the original value in the schema will not be updated.
 
 ![](attachments/import-mappings/16843943.png)
 

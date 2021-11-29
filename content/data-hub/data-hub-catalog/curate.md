@@ -50,7 +50,7 @@ On the **Curation bar**, the following details are displayed:
 * Information about the role of the current user: **Owner** or **Curator**
 * When a data source is selected in the **Search Results**:
   * **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
-  * [Discoverable/Validated](#discoverability) – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu.
+  *  [Discoverable/Validated](#discoverability) – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu.
     * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source.
     * **Validate** indicates that the data source and datasets have been validated.
 * When a dataset is selected in the **Search Results**
@@ -228,7 +228,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog,  **Discoverable** is set to company default value, which is configured by company admin in [Control center](#settings). If a datasource  **Discoverable** is on, it means that all users can find the asset and see details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 

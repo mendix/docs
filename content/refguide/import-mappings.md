@@ -49,7 +49,7 @@ If this is the top level of the mapping, you can check **Decide this at the plac
 
 ### 1.3 Setting Associations
 
-Optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
+After it obtain a mendix object (see 1.2.1), optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
 {{% alert type="warning" %}}
 
@@ -59,7 +59,7 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 ## 2 Mapping Attributes in Import Mappings
 
-Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
+Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element. Once an attribute is mapped, it will be updated (if any), regardless of how you obtain the mendix object. For unmapped attribute, the original value will not be updated.
 
 ![](attachments/import-mappings/16843943.png)
 

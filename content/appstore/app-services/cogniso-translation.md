@@ -108,7 +108,6 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to perform text translation. Follow these steps to configure this text translation:
 
 1.  Create a nanoflow as follows:
-
     1.  Name the nanoflow *CreateTranslator*.
     2.  Add the **CreateTranslator** microflow from the **Translation** > **USE_ME** folder to the nanoflow.
     3.  Double-click the **CreateTranslator** microflow in the nanoflow, change the settings as shown in the screenshot below, and click **OK**.
@@ -119,53 +118,34 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 
         ![createtranslator-nanoflow](attachments/cogniso-translation/createtranslator-nanoflow.png)
 
-2. Create a microflow as follows:
+2.  Create a microflow as follows:
+    1. Name the microflow *GetTranslatorSupportedLanguages*. 
+    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu.
+    3. Double-click the parameter to open the **Parameter** dialog box.
+    4. Set **Data type** to **Object** and select **Translator** entity from **Translation** module as target object.
+    5. For **Name**, enter *translator*.
+    6. Click **OK** to save the changes.
+    7. Double-click the end event to open the **End Event** dialog box.
+    8. Set **Type** to **List**.
+    9. For **Entity**, select **Language** entity from **Translation** module 
+    10. In the text box, enter *$translator/Translation.Translator_SupportedLanguages/Translation.Language*.
+    11.  Click **OK** to save the settings.  
 
-   1. Name the microflow *GetTranslatorSupportedLanguages*. 
+         ![gettranslatorsupportedlanguages-microflow](attachments/cogniso-translation/gettranslatorsupportedlanguages-microflow.png)
 
-   2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu.
-
-   3. Double-click the parameter to open the **Parameter** dialog box.
-
-   4. Set **Data type** to **Object** and select **Translator** entity from **Translation** module as target object.
-
-   5. For **Name**, enter *translator*.
-
-   6. Click **OK** to save the changes.
-
-   7. Double-click the end event to open the **End Event** dialog box.
-
-   8. Set **Type** to **List**.
-
-   9. For **Entity**, select **Language** entity from **Translation** module 
-
-   10. In the text box, enter *$translator/Translation.Translator_SupportedLanguages/Translation.Language*.
-
-   11. Click **OK** to save the settings.  
-
-       ![gettranslatorsupportedlanguages-microflow](attachments/cogniso-translation/gettranslatorsupportedlanguages-microflow.png)
-
-2. Add a **Data view** widget to your page.
-
-3. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
-
+3. Add a **Data view** widget to your page.
+4. Set the **CreateTranslator** nanoflow as the data source of the **Data view** widget as follows:
    1. Double-click the **Data view** widget to open the **Edit Data View** dialog box.
    2. For **Data source**, select **Nanoflow**.
    3. **Select** the **CreateTranslator** nanoflow for **Nanoflow**.
-   4. Click **OK** to save the settings.   
-
-4. Inside the **Data view** widget, add a **Group box** widget.
-
+   4. Click **OK** to save the settings. 
+5. Inside the **Data view** widget, add a **Group box** widget.
 6. Change the settings of the **Group box** widget as follows:
-
    1. Double-click the **Reference selector** widget to open the **Edit Group Box** dialog box.
    2. For **Caption**, enter *Input*.
    3. Click **OK** to save the settings.
-
-4. Inside the **Group box** widget, add a **Reference selector **widget.
-
+7. Inside the **Group box** widget, add a **Reference selector **widget.
 8. Change the settings of the **Reference selector** widget as follows:
-
    1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
    2. Go to the **Selectable objects** tab.
    3. Set **Source** to **Microflow**.
@@ -174,28 +154,19 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
    6. Set **Data source** to **Translation.Translator_InputLanguage/Translation.Language/Translation.Language.Name**.
    7. For **Label caption**, enter *Language*.
    8. Click **OK** to save the settings.
-
-4. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
-
-5. Change the settings of the **Text area** widget as follows:
-
+9. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget.
+10. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, **Select** the **InputText** attribute from **Data view**.
    2. For **Label caption**, enter *Text*.
-   4. Click **OK** to save the settings.   
-
-8. Inside the **Data view** widget, add a second **Group box** widget to your page.
-
+   4. Click **OK** to save the settings. 
+11. Inside the **Data view** widget, add a second **Group box** widget to your page.
 12. Change the settings of the **Group box** widget as follows:
-
     1. Double-click the **Reference selector** widget to open the **Edit Group Box** dialog box.
     2. For **Caption**, enter *Output*.
     3. Click **OK** to save the settings.
-
-8. Inside the **Data view** widget, add a **Reference selector **widget.
-
+13. Inside the **Data view** widget, add a **Reference selector **widget.
 14. Change the settings of the **Reference selector** widget as follows:
-
     1. Double-click the **Reference selector** widget to open the **Edit Reference Selector** dialog box.
     2. Go to the **Selectable objects** tab.
     3. Set **Source** to **Microflow**.
@@ -204,31 +175,27 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
     6. Set **Data source** to **Translation.Translator_OutputLanguage/Translation.Language/Translation.Language.Name**.
     7. For **Label caption**, enter *Language*.
     8. Click **OK** to save the settings.
+15. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget .
+16.  Change the settings of the **Text area** widget as follows:
+     1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
+     2. For **Data source**, Select the **OutputText** attribute from **Data view**.
+     3. For **Label caption**, enter *Text*.
+     4.  Click **OK** to save the settings. 
 
-8. Inside the **Group box** widget, add a **Text area** widget below the **Reference selector** widget .
+         ![data-view](attachments/cogniso-translation/data-view.png)
 
-16. Change the settings of the **Text area** widget as follows:
+17. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
 
-    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
-    2. For **Data source**, Select the **OutputText** attribute from **Data view**.
-    2. For **Label caption**, enter *Text*.
-    4. Click **OK** to save the settings. 
-
-    ![data-view](attachments/cogniso-translation/data-view.png)
-
-13. Inside the **Data view** widget, add a **Button** widget below the **Text area** widget.
-
-14. Change the settings of the **Button** widget as follows:
-
+18. Change the settings of the **Button** widget as follows:
     1. Double-click the **Button** widget to open the **Action Button** dialog box.
     2. For **Caption**, enter *Translate*.
     3. In the **Event** section, set **On click** to **Call a nanoflow**.
     4. For **Nanoflow**, **Select** the **TranslateText** nanoflow from the **Translation** > **USE_ME** folder.
     5. Click **OK** to save the settings.  
 
-15. Run your app locally. You can perform text translation directly in the browser:
+19.  Run your app locally. You can perform text translation directly in the browser:
 
-![runlocally-translation](attachments/cogniso-translation/runlocally-translation.png)
+     ![runlocally-translation](attachments/cogniso-translation/runlocally-translation.png)
 
 ## 5 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

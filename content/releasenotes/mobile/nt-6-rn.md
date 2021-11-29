@@ -8,19 +8,17 @@ description: "Native Template 6 release notes."
 
 **Release date: November 29th, 2021**
 
-We added support for encryption of the authentication token, for iOS and Android, and all cookies on Android.
-
-The token will be encrypted only for clients built with Mendix Studio Pro 9.8 or later. Previous Studio Pro version do not support this feature and tokens will remain unencrypted.
-
-All new application specific cookies, on Android, from here on, will be automatically encrypted independently of Studio Pro 9 version.
-
 ### Improvements
 
-* We added support for the new native mobile encryption features introduced with Mendix Studio Pro 9.8.
+* We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
+* We added support for authentication token encryption for iOS and Android.
+  * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
+* We added support for all cookies on Android.
+  * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.
 
 ### Fixes
 
-* We added file storage support for Android 30 for the camera roll dependency.
+* We added file storage support for Android 30 to address the camera roll dependency.
 
 ## 6.2.6
 

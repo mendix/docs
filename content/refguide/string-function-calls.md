@@ -240,7 +240,7 @@ The input parameters are described in the table below:
 | ------------------------------------------------------ | ------- |
 | Original string, the string that you want to search in | String  |
 | Substring that you want to search for                  | String  |
-| Start location to begin the search from **(optional)** | Integer |
+| End location to finish search on **(optional)**        | Integer |
 
 ### 7.2 Output
 

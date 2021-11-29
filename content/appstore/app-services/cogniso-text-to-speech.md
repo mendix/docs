@@ -140,21 +140,21 @@ Follow these steps to configure the text-to-voice conversion:
     
         ![createspeechsynthesizer](attachments/cogniso-text-to-speech/createspeechsynthesizer-nanoflow.png)
    
-2. Create a microflow as follows:
-   1. Name the microflow *GetSupportedVoices*. 
-   2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
-   2. Double-click the parameter to open the **Parameter** dialog box.
-   4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
-   5. For **Name**, enter *speechSynthesizer*.
-   6. Click **OK** to save the changes.
-   7. Add a retrieve object activity to the microflow.
-   8. Double-click the retrieve object activity to open the **Retrieve Objects** dialog box.
-   9. Set the **Source** to **By association**.
-   10. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.
-   11. Click **OK** to save the settings.
-   12. Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
-   
-      ![getsupportedvoices-microflow](attachments/cogniso-text-to-speech/getsupportedvoices-microflow.png)
+2.  Create a microflow as follows:
+    1. Name the microflow *GetSupportedVoices*. 
+    2. Right-click the canvas and select **Add** > **Parameter** from the pop-up menu. 
+    3. Double-click the parameter to open the **Parameter** dialog box.
+    4. Set **Data type** to **Object** and select **SpeechSynthesizer** entity from **TextToSpeech** module as target object.
+    5. For **Name**, enter *speechSynthesizer*.
+    6. Click **OK** to save the changes.
+    7. Add a retrieve object activity to the microflow.
+    8. Double-click the retrieve object activity to open the **Retrieve Objects** dialog box.
+    9. Set the **Source** to **By association**.
+    10. Set **Association** to **$speechSynthesizer/SpeechSynthesizer_SupportedVoices**.
+    11. Click **OK** to save the settings.
+    12.  Right-click the **GetSupportedVoices** microflow and select **Set $Voices as return value** in the pop-up menu.
+      
+         ![getsupportedvoices-microflow](attachments/cogniso-text-to-speech/getsupportedvoices-microflow.png)
    
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSpeechSynthsizer** nanoflow as the data source of the **Data view** widget as follows:
@@ -178,12 +178,12 @@ Follow these steps to configure the text-to-voice conversion:
    7. For **Label caption**, enter *Language*.
    8. Click **OK** to save the settings.
 9. Inside the **Data view** widget, add an [Audio player](#audioplayer) widget below the **Reference selector** widget.
-10. Change the settings of the **Audio player** widget as follows:
-    1.  Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
-    2.  On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
-    3.  Set **Controls** to **true**.
+10.  Change the settings of the **Audio player** widget as follows:
+     1.  Double-click the **Audio Player** widget to open the **Audio Player** dialog box.
+     2.  On the **General** tab, set **Source** to **$currentObject/Audio** to bind the base64-encoded audio data string.
+     3.  Set **Controls** to **true**.
 
-    ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
+         ![audioplayer-datasource](attachments/cogniso-text-to-speech/audioplayer-datasource.png)
 
     4. Click **OK** to save the settings.
 11. Inside the **Data view** widget, add a **Button** widget below the **Audio player** widget .

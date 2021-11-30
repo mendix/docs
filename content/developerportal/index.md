@@ -74,9 +74,9 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
+To go to the [licensed environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
-## 3 My Company's Apps & Buzz {#my-company-apps}
+## 4 My Company's Apps & Buzz {#my-company-apps}
 
 In the header, you can click links to see your **Company Apps** and **Company Buzz**:
 
@@ -96,7 +96,7 @@ If you click an app for which you are not an team member, you will see the app d
 
 For details on **Company Buzz**, see the [Company Buzz](/developerportal/collaborate/buzz#company-buzz) section of *Buzz*.
 
-## 3 Getting Assistance
+## 5 Getting Assistance
 
 Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
 
@@ -106,7 +106,7 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 * **Check the documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
 * **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
 
-## 4 Guide Categories
+## 6 Guide Categories
 
 The *Developer Portal Guide* is divided into the following categories:
 

@@ -9,6 +9,26 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### November 18th, 2021
+
+#### Improvements
+
+* Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
+
+### November 11th, 2021
+
+#### Fixes
+
+* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/data-hub/data-hub-catalog/curate#curatelist).
+* We fixed an issue with the landscape view for datasets.
+
+### October 28th, 2021
+
+#### Fixes
+
+* We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search#busines-owner) name was not visible in the metadata of a data source.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/data-hub/data-hub-catalog/curate) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin#custom-owners) page in Control Center for Mendix Administrators.
+
 ### October 14th, 2021
 
 #### Improvements

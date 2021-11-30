@@ -1,0 +1,146 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            ca:60:76:6a:e9:60:6a:8b:8c:d8:a8:d3:52:67:c1:e4
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+        Validity
+            Not Before: Oct 29 00:00:00 2021 GMT
+            Not After : Oct 29 23:59:59 2022 GMT
+        Subject: CN = *.mendixcloud.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:c6:24:b1:b2:a6:98:81:26:6b:31:2d:34:f1:43:
+                    49:28:f6:70:e0:8e:6b:30:eb:f2:f4:45:9a:d7:7e:
+                    64:ee:c8:2d:68:0e:bd:18:06:68:b2:4c:4a:35:b6:
+                    8e:f1:34:da:ae:99:e9:04:07:22:57:d8:b4:e2:9c:
+                    a0:30:6d:d8:d9:d2:f8:34:69:08:09:96:d8:66:43:
+                    b7:c2:74:8e:62:73:e6:6b:5b:11:b8:e8:9d:e5:86:
+                    b6:54:61:8d:d4:ce:c9:4c:ce:d9:39:71:23:8f:a8:
+                    d8:2a:d6:44:35:54:9e:1b:22:68:0a:8b:2a:9f:5b:
+                    fa:9e:0d:4b:dd:10:77:cd:6b:fc:0f:83:38:16:15:
+                    59:08:98:8c:20:5d:a2:03:7d:52:7a:8c:ed:c0:b1:
+                    c0:2e:b2:dc:54:01:5e:e9:4b:0c:cb:c8:8f:af:c2:
+                    b4:da:5d:45:ad:96:a6:c8:c8:c2:ba:50:6b:35:2e:
+                    87:5e:cc:74:19:67:2b:6a:80:f5:a5:a8:1a:4f:4e:
+                    11:40:78:df:3d:ef:07:60:bc:8a:b5:81:c9:a8:a6:
+                    bf:51:69:ef:87:d6:08:5a:91:19:08:f9:a4:64:30:
+                    86:60:96:c4:38:22:c2:23:8e:c2:6f:d1:8e:ea:c2:
+                    d1:e5:d3:13:59:0b:82:c9:42:bb:0c:76:39:1f:db:
+                    0f:13
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier:
+                keyid:8D:8C:5E:C4:54:AD:8A:E1:77:E9:9B:F9:9B:05:E1:B8:01:8D:61:E1
+
+            X509v3 Subject Key Identifier:
+                D5:AC:AA:41:40:C3:C9:D0:30:0B:82:38:CA:6E:B6:91:9B:04:70:4F
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage:
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Certificate Policies:
+                Policy: 1.3.6.1.4.1.6449.1.2.2.7
+                  CPS: https://sectigo.com/CPS
+                Policy: 2.23.140.1.2.1
+
+            Authority Information Access:
+                CA Issuers - URI:http://crt.sectigo.com/SectigoRSADomainValidationSecureServerCA.crt
+                OCSP - URI:http://ocsp.sectigo.com
+
+            X509v3 Subject Alternative Name:
+                DNS:*.mendixcloud.com, DNS:mendixcloud.com
+            CT Precertificate SCTs:
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 46:A5:55:EB:75:FA:91:20:30:B5:A2:89:69:F4:F3:7D:
+                                11:2C:41:74:BE:FD:49:B8:85:AB:F2:FC:70:FE:6D:47
+                    Timestamp : Oct 29 11:35:48.588 2021 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:DA:B0:07:B2:8E:D1:4A:12:19:CF:D8:
+                                AB:6C:E9:A9:ED:3A:44:35:69:A8:8B:1A:53:D7:3C:54:
+                                0F:27:5E:9E:6D:02:21:00:B4:E4:06:89:F2:6B:38:D2:
+                                66:48:79:0D:A5:44:32:E1:09:0A:CF:D6:6C:72:C6:FC:
+                                DF:57:D0:4F:76:3B:52:50
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 41:C8:CA:B1:DF:22:46:4A:10:C6:A1:3A:09:42:87:5E:
+                                4E:31:8B:1B:03:EB:EB:4B:C7:68:F0:90:62:96:06:F6
+                    Timestamp : Oct 29 11:35:48.533 2021 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:44:02:20:2B:A6:41:63:52:6B:FF:33:45:BF:E5:46:
+                                90:0C:C4:A1:AB:DF:ED:57:10:D1:78:50:73:ED:E3:0F:
+                                7E:8C:7B:AD:02:20:0C:0C:57:B7:52:99:4C:CC:79:D6:
+                                2E:18:6A:B7:1C:B4:2F:DA:C4:2A:3E:02:86:4D:01:86:
+                                B4:2F:E4:8E:C7:71
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 29:79:BE:F0:9E:39:39:21:F0:56:73:9F:63:A5:77:E5:
+                                BE:57:7D:9C:60:0A:F8:F9:4D:5D:26:5C:25:5D:C7:84
+                    Timestamp : Oct 29 11:35:48.495 2021 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:44:02:20:7E:2D:EC:08:B1:33:18:15:A1:7E:AD:EF:
+                                70:70:88:A9:F5:EE:03:24:13:58:05:F1:55:94:8B:0A:
+                                98:C9:A1:2A:02:20:6C:A4:7F:87:5F:26:93:84:46:BB:
+                                7F:98:2B:0A:32:ED:5C:8A:01:04:69:23:72:6F:28:3B:
+                                35:90:AD:9A:7E:69
+    Signature Algorithm: sha256WithRSAEncryption
+         89:3e:7e:bf:ab:5c:7f:7c:9c:07:1f:72:86:39:ac:b2:9d:17:
+         2c:69:31:b0:b9:1a:db:38:18:a5:aa:4e:bd:76:61:fe:fb:07:
+         8b:9a:05:65:25:c4:bb:f8:66:f7:f2:79:96:a8:f3:e4:82:4e:
+         ac:43:6a:06:ed:71:70:f8:da:ff:9e:b4:e9:a6:2e:83:9e:55:
+         cf:51:fc:49:42:ba:ec:90:85:30:57:69:0b:6b:e1:f9:4e:89:
+         61:84:63:02:78:93:36:cd:a3:54:25:42:e0:79:45:ee:fd:17:
+         7a:42:4f:d0:9c:ae:ce:31:79:4a:7c:c9:72:18:d9:b9:b8:3f:
+         77:d3:c3:41:9e:5c:bf:a3:5d:5b:6b:79:52:0b:38:e7:23:8c:
+         8a:26:98:f7:d4:cb:29:d9:47:44:4c:a9:ca:2c:0c:c4:5e:83:
+         cd:84:58:a2:3e:67:0d:0b:fc:b4:90:19:5f:c1:b2:17:88:05:
+         e0:bc:ef:25:61:c2:ff:81:94:9e:3d:b5:35:f3:b7:5e:46:f2:
+         6c:cf:a0:89:e8:dc:6a:93:e1:3a:9a:5e:b5:52:b3:47:fd:d5:
+         bf:9b:3a:de:1e:4d:f7:c9:82:b3:4a:6a:d9:f8:18:bb:62:d2:
+         60:77:1e:e2:c1:27:2a:82:dd:7f:ce:68:1d:1f:71:3b:9b:79:
+         52:34:8f:63
+-----BEGIN CERTIFICATE-----
+MIIGPDCCBSSgAwIBAgIRAMpgdmrpYGqLjNio01JnweQwDQYJKoZIhvcNAQELBQAw
+gY8xCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoTD1NlY3RpZ28gTGltaXRlZDE3MDUGA1UE
+AxMuU2VjdGlnbyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD
+QTAeFw0yMTEwMjkwMDAwMDBaFw0yMjEwMjkyMzU5NTlaMBwxGjAYBgNVBAMMESou
+bWVuZGl4Y2xvdWQuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+xiSxsqaYgSZrMS008UNJKPZw4I5rMOvy9EWa135k7sgtaA69GAZoskxKNbaO8TTa
+rpnpBAciV9i04pygMG3Y2dL4NGkICZbYZkO3wnSOYnPma1sRuOid5Ya2VGGN1M7J
+TM7ZOXEjj6jYKtZENVSeGyJoCosqn1v6ng1L3RB3zWv8D4M4FhVZCJiMIF2iA31S
+eoztwLHALrLcVAFe6UsMy8iPr8K02l1FrZamyMjCulBrNS6HXsx0GWcraoD1paga
+T04RQHjfPe8HYLyKtYHJqKa/UWnvh9YIWpEZCPmkZDCGYJbEOCLCI47Cb9GO6sLR
+5dMTWQuCyUK7DHY5H9sPEwIDAQABo4IDAzCCAv8wHwYDVR0jBBgwFoAUjYxexFSt
+iuF36Zv5mwXhuAGNYeEwHQYDVR0OBBYEFNWsqkFAw8nQMAuCOMputpGbBHBPMA4G
+A1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjBJBgNVHSAEQjBAMDQGCysGAQQBsjEBAgIHMCUwIwYIKwYBBQUH
+AgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECATCBhAYIKwYBBQUH
+AQEEeDB2ME8GCCsGAQUFBzAChkNodHRwOi8vY3J0LnNlY3RpZ28uY29tL1NlY3Rp
+Z29SU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3J0MCMGCCsGAQUF
+BzABhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTAtBgNVHREEJjAkghEqLm1lbmRp
+eGNsb3VkLmNvbYIPbWVuZGl4Y2xvdWQuY29tMIIBfQYKKwYBBAHWeQIEAgSCAW0E
+ggFpAWcAdwBGpVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8cP5tRwAAAXzL1aRs
+AAAEAwBIMEYCIQDasAeyjtFKEhnP2Kts6antOkQ1aaiLGlPXPFQPJ16ebQIhALTk
+BonyazjSZkh5DaVEMuEJCs/WbHLG/N9X0E92O1JQAHUAQcjKsd8iRkoQxqE6CUKH
+Xk4xixsD6+tLx2jwkGKWBvYAAAF8y9WkNQAABAMARjBEAiArpkFjUmv/M0W/5UaQ
+DMShq9/tVxDReFBz7eMPfox7rQIgDAxXt1KZTMx51i4YarcctC/axCo+AoZNAYa0
+L+SOx3EAdQApeb7wnjk5IfBWc59jpXflvld9nGAK+PlNXSZcJV3HhAAAAXzL1aQP
+AAAEAwBGMEQCIH4t7AixMxgVoX6t73BwiKn17gMkE1gF8VWUiwqYyaEqAiBspH+H
+XyaThEa7f5grCjLtXIoBBGkjcm8oOzWQrZp+aTANBgkqhkiG9w0BAQsFAAOCAQEA
+iT5+v6tcf3ycBx9yhjmssp0XLGkxsLka2zgYpapOvXZh/vsHi5oFZSXEu/hm9/J5
+lqjz5IJOrENqBu1xcPja/5606aYug55Vz1H8SUK67JCFMFdpC2vh+U6JYYRjAniT
+Ns2jVCVC4HlF7v0XekJP0JyuzjF5SnzJchjZubg/d9PDQZ5cv6NdW2t5Ugs45yOM
+iiaY99TLKdlHREypyiwMxF6DzYRYoj5nDQv8tJAZX8GyF4gF4LzvJWHC/4GUnj21
+NfO3XkbybM+giejcapPhOppetVKzR/3Vv5s63h5N98mCs0pq2fgYu2LSYHce4sEn
+KoLdf85oHR9xO5t5UjSPYw==
+-----END CERTIFICATE-----

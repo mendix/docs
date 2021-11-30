@@ -67,6 +67,7 @@ These are the native widgets included in these resources along with links to the
 | [Repeater](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/repeater-native) | Iterates over a data source or nanoflow and repeats the content while changing the values assigned to it. |
 | [Safe Area View](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/safe-area-view-native) | Prevents content from being rendered in unsafe areas (iOS only). |
 | [Slider](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/slider-native) | Changes a numeric value using a slider. |
+| [Switch](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/switch-native) | Changes a boolean value using a switch. |
 | [Toggle Buttons](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |
 | [Video Player](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |

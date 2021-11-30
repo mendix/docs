@@ -27,7 +27,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 #### 1.2.1 Obtain Mendix Object Methods{#obtain-object}
 
-This is what will happen when you use an [Import with Mapping](import-mapping-action) in your microflow.
+This is what will happen when you use an [Import with Mapping](import-mapping-action) action in your microflow.
 
 | Property | Description |
 | --- | --- |

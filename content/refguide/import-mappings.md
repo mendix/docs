@@ -27,11 +27,13 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 #### 1.2.1 Obtain Mendix Object Methods{#obtain-object}
 
+This is what will happen when you use an [Import with Mapping](import-mapping-action) in your microflow.
+
 | Property | Description |
 | --- | --- |
-| **Create an object** | Simply creates a new object. An error can be thrown if there are any before create microflows that fail. |
-| **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query. If more than one object is returned by the XPath query, an error will be thrown. |
-| **Call a microflow** | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and of course any attributes in the current XML element. |
+| **Create an object** | Creates a new object. Attributes will be given the value from the XML or JSON input. Unmapped attributes will retain their default values.<b/>An error can be thrown if there are any *before create* microflows that fail. |
+| **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query. Attributes which are mapped will be overwritten by the value in the XML or JSON input. Unmapped attributes will retain their current values.<b/>If more than one object is returned by the XPath query, an error will be thrown. |
+| **Call a microflow** | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and of course any attributes in the current XML element. The returned object will be processed as described in **Find an object (by key), above** ||
 
 #### 1.2.2 If No Object Was Found
 
@@ -41,7 +43,7 @@ This is the action that the runtime will perform when an error occurred in the s
 
 | Property | Description |
 | --- | --- |
-| **Create** | Create an object of the correct entity to map to. |
+| **Create** | Create an object of the correct entity to map to and process as in **Create an object**, above. |
 | **Ignore** | Don't map this element and continue parsing the rest of the XML. |
 | **Error** | Explicitly stop parsing the XML and throw an error. This error needs to be handled in the calling microflow. |
 
@@ -59,7 +61,7 @@ Be aware that lists are not stored ordered in the Mendix database. The XML Schem
 
 ## 2 Mapping Attributes in Import Mappings
 
-Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element. When an attribute is mapped, any changes to the attribute will be reflected in the value of the mapped schema element, regardless of how you obtain the Mendix object. For an unmapped attribute, the original value in the schema will not be updated.
+Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
 ![](attachments/import-mappings/16843943.png)
 

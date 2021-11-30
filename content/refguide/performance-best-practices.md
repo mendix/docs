@@ -178,7 +178,7 @@ Consider the following alternatives:
 * Create entities with a one-to-one association instead of setting the generalization
 * Create a non-persistable entity that inherits from an outcome of your business logic
 
-## 9 Access rules are duplicated. {#mxp010}
+## 9 Duplicated Access Rules {#mxp010}
 
 Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
 

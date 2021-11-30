@@ -52,6 +52,10 @@ According to the [order-by-clause](https://www.ibm.com/support/knowledgecenter/S
 
 Taking this limitation into account, ordering by the associated attribute is not supported when a Mendix application is backed by DB2. Therefore, any associated attribute that is used for ordering is filtered out from the query and the result set is returned as if ordering by the associated attribute had not been presented in the query.
 
+{{% alert type="info" %}}
+This limitation has been removed in Studio Pro versions [9.8.0](/releasenotes/studio-pro/9.8) and above.
+{{% /alert %}}
+
 ### 5.4 Non-Blocking Read-Isolated Streaming with OData
 
 According to the [Isolation levels](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.admin.perf.doc/doc/c0004121.html) documentation in *IBM DB2 Application design*, non-blocking read-isolated queries are not supported by DB2. The default behavior of DB2 is that when one user is retrieving rows from a table and another user is making modifications on the same table at the same time, then those modifications will show up in the data in the retrieve query (which means database reads are not isolated). Configuring a stricter transaction isolation level to prevent this behavior puts locks on those same rows (which means concurrent database actions are blocking).

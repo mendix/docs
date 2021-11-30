@@ -90,6 +90,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 | --- | --- |
 | Studio Pro modernization | GA (enhancements in monthly releases) |
 | Studio Pro dark theme | Public Beta: Dec 2021 |
+| Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 | 
+| BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 | 
 
 ### 2.8 Data Hub 2.0
 

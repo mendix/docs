@@ -9,7 +9,7 @@ These activities can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Send External Object** can be used to persist changes to an external object.
+The **Send external object** activity can be used to persist changes to an external object.
 
 {{% alert type="info" %}}
 The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8)
@@ -29,6 +29,6 @@ Some services may have updatable attributes that are part of the key of the enti
 
 ## 3 Related
 
-Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use the **Send External Object** activity instead.
+Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use this activity instead.
 
-The [Save](button-widgets) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has the **Send External Object** activity.
+The [Save](button-widgets) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has this activity.

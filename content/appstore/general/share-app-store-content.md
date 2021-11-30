@@ -2,8 +2,8 @@
 title: "Share Marketplace Content"
 category: "General Info"
 menu_order: 40
-tags: ["marketplace", "public app store", "private app store", widget", "module"]
 description: "Describes how to create and share Mendix Marketplace content."
+tags: ["marketplace", "public app store", "private app store", widget", "module"]
 aliases:
     - /developerportal/app-store/share-app-store-content.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -150,8 +150,12 @@ Follow these steps to describe your content:
 
 ### 4.3 Package {#version}
 
-On the **Package** page, select your content source (note that if you are using **Solutions**, you will not see the option to select your content source).
-	
+On the **Package** page, select your content source. 
+
+{{% alert type="info" %}}
+If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
+{{% /alert %}}
+
 * If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
 	* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
 	* When you are finished, click **OK**
@@ -184,19 +188,24 @@ Follow the template for the recommended content:
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
-
-* Drag the image from file explorer to the editor (this will upload your image)
-* Click the Image button in the editor tools and enter a URL which points to an image
-
 <a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
 ![](attachments/share-app-store-content/enable.png)
 	
 You can optionally add a **Video** and **Demo**.
 	
+### 4.5 Capabilities
 
-### 4.5 Publish {#publish}
+On the **Capabilities** page, you can provide the following details about a solutions template:
+
+* A category recommendation in the **Industry Cloud** section
+* A **Banner** that will be displayed on your content page
+* One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
+* **External links** relevant to the content
+
+![](attachments/share-app-store-content/capabilities.png)
+
+### 4.6 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 

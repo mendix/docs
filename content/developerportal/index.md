@@ -74,7 +74,7 @@ The actions available depend on the app selected:
 * **Edit in Mendix Studio Pro**
 * **Delete App** – allows you to delete your app, provided you are the only team member (you will be warned of the consequences and asked for confirmation before the app is deleted)
 
-To go to the [environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
+To go to the [licensed environments](/developerportal/deploy/environments) of your deployed app, click the cloud icon in the bottom-right corner of the app tile.
 
 ## 4 My Company's Apps & Buzz {#my-company-apps}
 

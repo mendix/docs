@@ -41,7 +41,15 @@ User task properties consist of the following sections:
 
 **Entity** is an entity that stores data on the user task execution. Once you drag and drop a user task to the workflow, the entity is created automatically for every user task, which specializes from the **WorkflowUserTask** entity in the System module. For more information on entities, see [Workflow Entities in the System Module](workflows#workflow-entities) section in *Workflows*.
 
-You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.   
+{{% alert type="info" %}}
+
+When removing the user task from the workflow, the related entity remains in the domain model. You have to delete the entity manually.
+
+{{% /alert %}}
+
+You can set [entity access](module-security#entity-access) in the domain model to restrict access to a certain user task.  
+
+You can also add task-specific attributes, such as *Priority*. The *Priority* attribute can help you prioritize this user task across multiple instances. 
 
 ### 2.3 Display Information Section {#display-info}
 

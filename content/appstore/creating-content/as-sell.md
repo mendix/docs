@@ -1,16 +1,18 @@
 ---
 title: "Sell Your App Service in the Marketplace"
-category: "General Info"
-menu_order: 30
+category: "Creating Content"
+menu_order: 1
 description: "Describes how to start selling your app service in the Mendix Marketplace."
-tags: ["marketplace", "vendor", app service"]
+tags: ["marketplace", "vendor", "app service"]
+aliases:
+    - /appstore/general/sell.html
 ---
 
 ## 1 Introduction
 
-Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](share-app-store-content) your [app service](/appstore/app-services/) in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
+Whether you are an established ISV, an ambitious startup, or a pioneering independent developer, by [sharing](/appstore/general/share-app-store-content) your [app service](/appstore/app-services/) in the Mendix Marketplace, you will create customer value by fueling the resource library for Mendix developers. The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your app service, edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
 
-![](attachments/sell/benefits.png)
+![](attachments/as-sell/benefits.png)
 
 **This how-to will teach you how to do the following:**
 
@@ -81,11 +83,11 @@ For more information on what you need to do as a Mendix Vendor to submit an app 
 
 ## 3 Making Your App Service Marketplace-Ready
 
-The Marketplace provides a trustworthy experience for sharing and consuming app services.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
+The Marketplace provides a trustworthy experience for sharing and consuming app services.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](/appstore/general/share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
 
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your app service.
 
-![](attachments/sell/journey.png)
+![](attachments/as-sell/journey.png)
 
 To help us maintain the high quality of content available on the Marketplace, we provide clear guidelines below for what is necessary when preparing and submitting your app service. Use these comprehensive resources to turn your idea into reality by learning how to design, develop, market, and monetize your app service and get support via best practices and success stories from like-minded Mendix Vendors.
 
@@ -183,9 +185,9 @@ At this stage, you have signed up as a Mendix Vendor and confirmed the commercia
 
 ### 5.1 Preparing a Draft in the Marketplace
 
-While you are developing your app service, it is a good practice to [create a draft version](share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your app service to the Marketplace as soon as you finish creating it. 
+While you are developing your app service, it is a good practice to [create a draft version](/appstore/general/share-app-store-content#draft) in the Marketplace with basic information such as name, description, and keywords. Then you will be prepared to publish your app service to the Marketplace as soon as you finish creating it. 
 
-Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your app service. For more information, see the [Adding New Marketplace Content](share-app-store-content#adding) section of *How to Share Marketplace Content*.
+Remember that your listing represents your company brand, so be sure to keep it updated, use quality images, and clearly explain the benefits of your app service. For more information, see the [Adding New Marketplace Content](/appstore/general/share-app-store-content#adding) section of *How to Share Marketplace Content*.
 
 ### 5.2 Completing the Final Checklist
 
@@ -198,29 +200,29 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Technical Readiness**
 
-* Make sure you have prepared your app service according to the [Marketplace content development guidelines](share-app-store-content#submission).
+* Make sure you have prepared your app service according to the [Marketplace content development guidelines](/appstore/general/share-app-store-content#submission).
 * Verify  your app service for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
-* While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
+* While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](/appstore/general/share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
 
 **Accurate Metadata**
 
 * Users should know what they are getting when they download or buy your app service, so make sure all of your app service's metadata (including privacy information, app service description, and screenshots) is complete and accurately reflects the app service's core experience. Remember to keep this up-to-date with new versions.
 * Include detailed explanations of non-obvious features and include supporting documentation where appropriate.
-* Select the **App Service** [type](app-store-overview#types) for your app service.
+* Select the **App Service** [type](/appstore/general/app-store-overview#types) for your app service.
 * Make sure your [Mendix Profile](/developerportal/mendix-profile/) is up-to-date so that you can be contacted about your submission if necessary.
-* By default, you will see a template for the app service's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
+* By default, you will see a template for the app service's documentation, so make sure you update all the sections. If the template is not provided for any reason, make sure you provide all the details as described in the [Adding New Marketplace Content](/appstore/general/share-app-store-content#doc) section of *How to Share Marketplace Content*. In addition, ensure the styling (for example, font size, spacing, indentation) and headings for this documentation content are consistent.
 * Spell-check the content you are about to submit
 
 **Versioning**
 
 * Verify the app service works well for the specified Studio Pro version it is marked as being compatible with.
-* Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](share-app-store-content#updating).
-* Provide [release notes](share-app-store-content#version) for the app service release.
+* Keep the versioning pattern consistent in terms of naming and version numbers for your app service [releases](/appstore/general/share-app-store-content#updating).
+* Provide [release notes](/appstore/general/share-app-store-content#version) for the app service release.
 * Keep your app service up to date with new versions.
 
 **Branding**
 
-* Make sure [screenshots](share-app-store-content#screenshot) show the app service in use (and not merely the name, login page, or splash screen). These can also include text and image overlays.
+* Make sure [screenshots](/appstore/general/share-app-store-content#screenshot) show the app service in use (and not merely the name, login page, or splash screen). These can also include text and image overlays.
 * Screenshots should be of a similar size (if possible).
 * Do not upload any blurred or trimmed screenshots or other images.
 * Ensure the logo and images of your app service always relates to its functionality. Images uploaded that do not relate to your app service's functionality will lead to the rejection of your app service during the submission review.
@@ -234,7 +236,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Picking a license** 
 
-* Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin on the [Documentation](share-app-store-content#doc) tab if you need your users to accept your own commercial terms and conditions.
+* Ensure that as the supplier, you determine the appropriate license for your app service, which is an agreement between you, the supplying company, and the company of the user consuming it. We provide a default list of license types for you to choose from, or you can add a **License** bulletin on the [Documentation](/appstore/general/share-app-store-content#doc) tab if you need your users to accept your own commercial terms and conditions.
 
 **Setting pricing plan**
 
@@ -242,10 +244,10 @@ As a helping hand, the checklist below presents the final items to consider when
 
 ## 6 After You Submit Your App Service
 
-When your app service is submitted to the Marketplace, [Mendix reviews it for approval](share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
+When your app service is submitted to the Marketplace, [Mendix reviews it for approval](/appstore/general/share-app-store-content#approval). This review is vital to maintaining high-quality Marketplace content and an improved overall user experience.
 
 Mendix's mission in regards to the governance of Marketplace content is to manage quality while keeping the submission process as frictionless as possible. We achieve this by maintaining the comprehensive set of guidelines above, which when followed will maximize your chances of being approved for publication right away. The more complex your app service is, the more likely it will require multiple approval iterations to get it Marketplace-ready. We are on hand to advise you throughout the process.
 
 You can keep track of your submission by subscribing to receive status notifications. If you need more help, contact *DIS_AppServices_Supplier_Team@mendix.com*.
 
-Once your app service is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](app-store-overview#subscriptions). You can engage with your customers as they use your app service via [Reviews](app-store-overview#my-reviews).
+Once your app service is available in the public Marketplace, you can gain insights into its usage through the **Subscriptions** overview in the [Marketplace](/appstore/general/app-store-overview#subscriptions). You can engage with your customers as they use your app service via [Reviews](/appstore/general/app-store-overview#my-reviews).

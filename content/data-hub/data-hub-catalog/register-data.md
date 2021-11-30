@@ -354,4 +354,4 @@ Follow the steps below:
 
 Congratulations! Your OData service is registered in the Data Hub Catalog. 
 
-The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](data-hub-admin#settings) section of *Data Hub Administration*.
+The discoverable status of the OData service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/developerportal/control-center/data-hub-admin#settings) section of *Data Hub Administration*.

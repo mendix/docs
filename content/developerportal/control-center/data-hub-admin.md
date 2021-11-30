@@ -12,7 +12,7 @@ In the [Data Hub](/developerportal/control-center#data-hub) page of Control Cent
 * Assign and manage Data Hub [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Data Hub Catalog)
 * Invite and manage [External Users](#external-users)
-* Control the  default discoverability settings of your company's data source [Settings](#datasource-settings)
+* Control the default discoverability settings of your company's data source [Settings](#datasource-settings)
 
 ## 2 Curators {#curator}
 

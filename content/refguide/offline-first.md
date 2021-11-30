@@ -203,7 +203,7 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 
 * Passing an object or a list of a persistable entity is not supported
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
-* Passing a non-persistable entity that was created in another microflow is not supported
+* Passing a non-persistable entity that was created in another microflow is not supported for Mendix 9.7 and below.
 
 {{% alert type="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 

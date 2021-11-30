@@ -28,7 +28,7 @@ Push is only available in Git. In SVN, changes are automatically pushed together
 
 {{% /alert %}}
 
-The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](version-control#push) section in *Version Control*.
+The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](version-control#commit) section in *Version Control*.
 
 ## 4 Show Changes on Disk
 

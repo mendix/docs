@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an error where under certain circumstances it was not possible to edit a comment under a [Feedback](/developerportal/collaborate/feedback) item (tickets 134179, 136172)
+* We fixed an error where it was not possible to edit a comment under a [Feedback](/developerportal/collaborate/feedback) item. (Tickets 134179, 136172)
 
 ### November 18th, 2021
 

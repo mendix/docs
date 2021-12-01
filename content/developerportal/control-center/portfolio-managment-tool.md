@@ -161,7 +161,7 @@ At the end of the row for each user, there is an edit icon and a delete icon. Cl
 
 ### 3.1 Differences Between Portfolio Managers and Users {#difference-portfolio-managers-users}
 
-For the information about the differences between the two access roles, see below:
+{{% todo %}}[Replace "Yes" by emojis]{{% /todo %}}
 
 | Actions                           | Portfolio Manager                                            | Users     |
 | --------------------------------- | ------------------------------------------------------------ | --------- |

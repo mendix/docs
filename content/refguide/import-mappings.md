@@ -31,7 +31,7 @@ This is what will happen when you use an [Import with Mapping](import-mapping-ac
 
 | Property | Description |
 | --- | --- |
-| **Create an object** | Creates a new object. Attributes will be given the value from the XML or JSON input. Unmapped attributes will retain their default values.<b/>An error can be thrown if there are any *before create* microflows that fail. |
+| **Create an object** | Creates a new object. Attributes will be given the value from the XML or JSON input. Unmapped attributes will retain their default values.<b/>An error can be thrown if there are any [before create](event-handlers#when) microflows that fail. |
 | **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query. Attributes which are mapped will be overwritten by the value in the XML or JSON input. Unmapped attributes will retain their current values.<b/>If more than one object is returned by the XPath query, an error will be thrown. |
 | **Call a microflow** | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and of course any attributes in the current XML element. The returned object will be processed as described in **Find an object (by key), above** ||
 

@@ -71,7 +71,7 @@ Once the external user receives the invitation, they log into the Data Hub Catal
 
 ![Company selector](attachments/data-hub-admin/company_selector.png)
 
-## 4 Settings {#settings}
+## 5 Settings {#settings}
 
 Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
 

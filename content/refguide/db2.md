@@ -53,7 +53,7 @@ According to the [order-by-clause](https://www.ibm.com/support/knowledgecenter/S
 Taking this limitation into account, ordering by the associated attribute is not supported when a Mendix application is backed by DB2. Therefore, any associated attribute that is used for ordering is filtered out from the query and the result set is returned as if ordering by the associated attribute had not been presented in the query.
 
 {{% alert type="info" %}}
-This limitation has been removed in Studio Pro versions [9.8.0](/releasenotes/studio-pro/9.8) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6#963) and above.
+This limitation has been removed in Studio Pro version [9.8.0](/releasenotes/studio-pro/9.8) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6#963) and above.
 {{% /alert %}}
 
 ### 4.4 Non-Blocking Read-Isolated Streaming with OData

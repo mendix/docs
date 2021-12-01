@@ -7,15 +7,15 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [portfolio management tool](https://portfolio.mendix.com) empowers you to manage your projects throughout the project lifecycle – from it starts as an idea until it is live. Here, you have an overview of all projects, the stages of each project in the form of a Kanban board, the timeline and estimated value for each project, and much more.
+The [portfolio management tool](https://portfolio.mendix.com) empowers you to manage your projects throughout the whole project lifecycle – from its start as an idea until its release as a product.  With this tool, you can manage a portfolios within your company and outside your company.
 
-You need to log in to access the portfolio management tool. When you open the portfolio management tool, the system checks if you have access to any portfolios, and if so, you will see all the portfolios to which you have access.
+You can easily get an overview of all the projects, and manage their stages, the timelines and estimated values, and more other details.
 
-If you are an administrator of your company, you can access all the portfolios of your company.
+{{% alert type="info" %}}
+The portfolio management tool is a public tool on Mendix Cloud. It is not the same as the portfolio app in the Mendix App Factory Suite, which is private per customer.
+{{% /alert %}}
 
-If you are an administrator of your company, and there are no portfolio of your company, the system will create a portfolio for your company.
-
-You can be invited to access the portfolios of your company and also the portfolio outside of your company.
+If you are an administrator of the company, you can access all the portfolios of the company. If there is no portfolio in your company, the system will create a portfolio for your company.
 
 Click the portfolio to see the overview of all the projects in this portfolio.
 
@@ -25,39 +25,43 @@ Click the portfolio to see the overview of all the projects in this portfolio.
 
 On the **Portfolio Overview** page, you have an overview of all the projects in this portfolio.
 
-### 2.1 Switching Between the Kanban Board and a List View
+### 2.1 Switching Between the Kanban Board and the List View
 
-On the upper-right corner, there is view icon. You can switch between the Kanban view and a list view by clicking the view icon.
+In the **Projects Overview**, you can switch between the Kanban board and the list view. You can do so by clicking the view icon in the upper-right corner.
 
 #### 2.1.1 Kanban Board
 
-In a Kanban board, you can see the stages of each project. You can drag a project to a different column to change its stage.
+In the Kanban board, projects are put under different columns. Each column represents a different stage. You can drag a project to a different column to change its stage.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
 ### 2.1.2 List View
 
-In the list view, you can select a filter in the drop-down list on the upper-right corner to filter the projects.
+In the list view, you can select a filter in the drop-down list in the upper-right corner to filter the projects in the list.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-### 2.2 Viewing the Details of a Project
+### 2.2 Viewing the Project Details
 
-In the Kanboard board, {{% todo %}}to be determined{{% /todo %}}
+In the Kanboard board, {{% todo %}}to be determined by the development team{{% /todo %}}
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-In the list view, click the name of the project.
+In the list view, click the project name to see the project details.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
 {{% alert type="info" %}}
-When you view the details of a project, you can only add notes and cannot change the other info. To change the other info, [see Editing a Project][#edit-project].
+When you view the project details, you can add notes to the project, but you cannot change any other info. To change any other info, you should [editing the project][#edit-project].
 {{% /alert %}}
 
 ### 2.3 Creating a New Project
 
-To create a new project in this portfolio, perform the following steps:
+#### 2.3.1 Prerequisite
+
+* You access role must be [Portfolio Manager](#difference-portfolio-managers-users).
+
+#### 2.3.2 Procedure
 
 1. Go to **Projects Overview**.
 
@@ -155,6 +159,8 @@ On the **Access Management** page, you can see a table that shows all the users 
 
 Administrators of a company are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
 
+### 3.1 Differences Between Portfolio Managers and Users {#difference-portfolio-managers-users}
+
 For the information about the differences between the two access roles, see below:
 
 | Actions                           | Portfolio Manager                                            | Users     |
@@ -179,9 +185,15 @@ To remove a user, click the red trash can icon on the right side of the row.
 
 ### 3.1 Adding New Users
 
-To add new users to the portfolio, perform the following steps:
+#### 3.1.1 Prerequisite
 
-1. On the upper-right corner above the table, click **Add New Users**.
+* You access role must be [Portfolio Manager](#difference-portfolio-managers-users).
+
+#### 3.1.2 Procedure
+
+1. Go to **Access Management**.
+
+1. In the upper-right corner, click **Add New Users**.
 
 2. In the dialog box, enter the **Email Address** of the user. The user can be someone from your company or someone from outside of your company.
 

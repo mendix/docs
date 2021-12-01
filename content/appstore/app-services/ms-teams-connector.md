@@ -10,6 +10,8 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
+{{% todo %}}[**This is a test. This will be removed after the test**]{{% /todo %}}
+
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is a module that enables sending messages to a Microsoft Teams channel.
 
 ![](attachments/ms-teams-connector/message.png)

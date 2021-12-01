@@ -23,15 +23,39 @@ Click the portfolio to see the overview of all the projects in this portfolio.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-On the **Portfolio Overview** page, you have an overview of all the projects in this portfolio in a Kanban board. You can see the stages of each project. You can define custom stages in [Portfolio Settings](portfolio-settings).
+On the **Portfolio Overview** page, you have an overview of all the projects in this portfolio.
 
-To change the stage of a project, you can drag it to the relevant column.
+### 2.1 Switching Between the Kanban Board and a List View
 
-On the right side above the Kanban board, there is a drop-down list and a view icon. You can sort the projects using the drop-down list. You can change the Kanban view to a list view by clicking the view icon.
+On the upper-right corner, there is view icon. You can switch between the Kanban view and a list view by clicking the view icon.
+
+#### 2.1.1 Kanban Board
+
+In a Kanban board, you can see the stages of each project. You can drag a project to a different column to change its stage.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-### 2.1 Create a New Project
+### 2.1.2 List View
+
+In the list view, you can select a filter in the drop-down list on the upper-right corner to filter the projects.
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+### 2.2 Viewing the Details of a Project
+
+In the Kanboard board, {{% todo %}}to be determined{{% /todo %}}
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+In the list view, click the name of the project.
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+{{% alert type="info" %}}
+When you view the details of a project, you can only add notes and cannot change the other info. To change the other info, [see Editing a Project][#edit-project].
+{{% /alert %}}
+
+### 2.3 Creating a New Project
 
 To create a new project in this portfolio, perform the following steps:
 
@@ -43,12 +67,18 @@ To create a new project in this portfolio, perform the following steps:
 
 3. Enter the **Name** and the **Description** of the project.
 
-4.  Select the **Stage**, **Department**, **Country**, and **Owner** of the project.
+4.  Select the **Stage**, **Department**, **Country** the project.
 
     {{% alert type="info" %}}
-    You can customize the lists of **Stage**, **Department**, and **Country** in [Portfolio Settings](#portfolio-settings).<br/>You can only set **Owner** to a user who has access to this portfolio. To give a user access to the portfolio, go to [Access Management](#access-management).
+    Portfolio Managers can customize the lists of **Stage**, **Department**, and **Country** on the [Portfolio Settings](#portfolio-settings) page.
     {{% /alert %}}
 
+5.  Select the **Owner** the project.
+   
+    {{% alert type="info" %}}
+    You can only set **Owner** to a user who has access to this portfolio. Portfolio Managers can give a user access to the portfolio on the [Access Management](#access-management) page.
+    {{% /alert %}}
+   
 5.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
     1. In the search box below **Link Existing App**, search the app. The search displays the first 50 results.
     2. Select the app that should be linked.
@@ -59,7 +89,7 @@ To create a new project in this portfolio, perform the following steps:
 7.  Select the **Use Case** of the project.
 
     {{% alert type="info" %}}
-    You can customize the list of **Use Case** in [Portfolio Settings](#portfolio-settings). to the portfolio, go to [Access Management](#access-management).
+    Portfolio Managers can customize the list of **Use Case** on the [Portfolio Settings](#portfolio-settings) page.
     {{% /alert %}}
 
 8. Select the **App Size.**
@@ -73,20 +103,48 @@ To create a new project in this portfolio, perform the following steps:
 12. Select the **Value Type** for the value that this project will create.
 
     {{% alert type="info" %}}
-    You can customize the lists of **Value Type** in [Portfolio Settings](#portfolio-settings).
+    Portfolio Managers can customize the lists of **Value Type** on the [Portfolio Settings](#portfolio-settings) page.
     {{% /alert %}}
     
 13. Select whether the value is **one-off** or **Recurring**.    
+
 14. Enter the **Monetary Value** of the value.
+
 15. Enter **Supporting Information** for the estimated value.
+
 16. If necessary, click **Add Value** to add another value. After you enter all the values, system shows you the **Total Recurring Value** and the **Total One-Off Value**.
+
 17. Click **Planning** to show all the fields in this section. The **Planning** section defines the deadlines for the project. 
+
 18. Enter the **Start Date** and the **Go-Live Date**. You can use the go-live date to estimate when you need to start.
+
 19. Click **Notes** to show all the fields in this section.
+
 20. Enter **Notes** for the project.
+
 21. Click **Create Project**.
 
 You have successfully created a project. You can find your new project in the Kanban board in the **Projects Overview** page.
+
+### 2.3 Editing a Project {#edit-project}
+
+In the Kanban board, click the **...** on the upper-right corner of the project card and click **Edit**.
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+In the list view, click the pencil icon at the right end of the row.
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+### 2.4 Deleting a Project
+
+In the Kanban board, click the **...** on the upper-right corner of the project card and click **Delete**.
+
+{{% todo %}}[Add an image]{{% /todo %}}
+
+In the list view, click the trash can icon at the right end of the row.
+
+{{% todo %}}[Add an image]{{% /todo %}}
 
 
 ## 3 Access Management {#access-management}
@@ -117,22 +175,22 @@ For the information about the differences between the two access roles, see belo
 
 To update the permissions and roles of a user, click the edit icon on the right side of the row.
 
-To remove a user, click the red trash bin icon on the right side of the row.
+To remove a user, click the red trash can icon on the right side of the row.
 
-### 3.1 Add New Users
+### 3.1 Adding New Users
 
 To add new users to the portfolio, perform the following steps:
 
 1. On the upper-right corner above the table, click **Add New Users**.
 
-2. In the dialog box, enter the **Email Address** of the user. They can be someone from your company or from outside of your company.
+2. In the dialog box, enter the **Email Address** of the user. The user can be someone from your company or someone from outside of your company.
 
    {{% alert type="info" %}}
 
    The name and profile photo of the users from outside of the company will always be invisible in the portfolio.
    {{% /alert %}}
 
-3. Select an **Access Role** for this user: **Portfolio Manager** or **User**.
+3. Select an **Access Role** for this user: **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
 
 4. Click **Add to List**.
 
@@ -146,7 +204,14 @@ You have successfully sent an email invitation to the users. Their names are add
 
 {{% alert type="info" %}}
 
-For users from outside of the company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** is **Pending**. Their **Status** will become **Active** after they accept the invitation.
+For users from outside of your company, they need to accept the invitation via the link in the email that they will receive. Before they accept the invitation, their **Status** in the table in the **Access Management** page is shown as **Pending**. After they accept the invitation, their **Status** will become **Active**. <br />For users from your company who do not have a Mendix account, their **Status** in the table in the **Access Management** page is shown as **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
+
 {{% /alert %}}
 
 ## 4 Portfolio Settings {#portfolio-settings}
+
+The **Portfolio Settings** page is only available for Portfolio Managers. The **Portfolio Settings** page allows the Portfolio Managers to customize **Stages**, **Use Cases**, **Value Types**, **Departments**, and **Countries**.
+
+## 5 Read More
+
+{{% todo %}}[Add the learning path]{{% /todo %}}

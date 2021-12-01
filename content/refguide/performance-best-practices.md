@@ -184,4 +184,7 @@ Using duplicated access rules on entities can affect performance, especially whe
 
 ### 9.1 Steps to Fix
 
-To fix the issue, remove duplicated access rules from entity properties.
+To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+
+* Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
+* Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.

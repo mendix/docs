@@ -15,7 +15,7 @@ If you are an administrator of your company, you can access all the portfolios o
 
 If you are an administrator of your company, and there are no portfolio of your company, the system will create a portfolio for your company.
 
-You can be invited to access the portfolios of your company and also the portfolio outside your company.
+You can be invited to access the portfolios of your company and also the portfolio outside of your company.
 
 Click the portfolio to see the overview of all the projects in this portfolio.
 
@@ -124,18 +124,29 @@ To remove a user, click the red trash bin icon on the right side of the row.
 To add new users to the portfolio, perform the following steps:
 
 1. On the upper-right corner above the table, click **Add New Users**.
-2. In the dialog box, enter the **Email Address** of the user. The user can be someone in your company or outside your company.
-3. Select an **Access Role** for this user. It can be **Portfolio Manager** or **User**.
+
+2. In the dialog box, enter the **Email Address** of the user. They can be someone from your company or from outside of your company.
+
+   {{% alert type="info" %}}
+
+   The name and profile photo of the users from outside of the company will always be invisible in the portfolio.
+   {{% /alert %}}
+
+3. Select an **Access Role** for this user: **Portfolio Manager** or **User**.
+
 4. Click **Add to List**.
+
 5. Repeat steps 2 and 4 until you add all the users.
+
 6. Click **Send Invites**.
 
-You have successfully added new users to the portfolio. The names of these users are added to the table.
+You have successfully sent an email invitation to the users. Their names are added to the table.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
 {{% alert type="info" %}}
-For the users from outside the company, after you added them to the portfolio, their **Status** in the table is **Pending**. They will get an initiation email from the system. After they confirm the invitation via the link in the email, their **Status** will become **Active**.<br /> The name and profile photo of the users from outside the company will not be visible in the portfolio.
+
+For users from outside of the company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** is **Pending**. Their **Status** will become **Active** after they accept the invitation.
 {{% /alert %}}
 
 ## 4 Portfolio Settings {#portfolio-settings}

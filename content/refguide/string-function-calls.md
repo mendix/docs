@@ -102,7 +102,7 @@ The input parameters are described in the table below:
 
 | Value             | Type   |
 | ----------------- | ------ |
-| String to convert | String |
+| String to find length of | String |
 
 ### 4.2 Output
 
@@ -117,12 +117,12 @@ The output is described in the table below:
 | Input | Output |
 | --- | --- |
 | `length('thisismystring')` | 14 |
-| `length('$MyString')` and `MyString = 'qwer'` | 4 |
-| `length('$MyString')` and `MyString` is empty | 0 |
+| `length($MyString)` and `MyString = 'qwer'` | 4 |
+| `length($MyString)` and `MyString` is empty | 0 |
 
 ## 5 substring
 
-Retrieves a substring of a string. Note that the first character of a string is located at position `'0'`, and the last character is located at position `length(string)-1`.
+Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
 ### 5.1 Input Parameters
 
@@ -188,7 +188,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The first location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 6.3 Example
 
@@ -240,7 +240,7 @@ The input parameters are described in the table below:
 | ------------------------------------------------------ | ------- |
 | Original string, the string that you want to search in | String  |
 | Substring that you want to search for                  | String  |
-| Start location to begin the search from **(optional)** | Integer |
+| Last location to be searched **(optional)**            | Integer |
 
 ### 7.2 Output
 
@@ -248,7 +248,7 @@ The output is described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
-| The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string. | Integer |
+| The last location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
 ### 7.3 Example
 
@@ -287,6 +287,8 @@ The output is:
 ```java
 4
 ```
+
+As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
 
 ## 8 contains
 
@@ -435,7 +437,7 @@ The output is described in the table below:
 
 | Value                                                    | Type   |
 | -------------------------------------------------------- | ------ |
-| Same string but without spaces at the beginning and end. | String |
+| Same string, but without spaces at the beginning and end. | String |
 
 ### 11.3 Example
 
@@ -583,7 +585,7 @@ The input parameters are described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The string to search in                                      | String |
 | The regular expression to match; if you want to search for a literal string, enclose it between `\Q` and `\E` (for example, `\QPaul S. Mueller\E` will search for the string `Paul S. Mueller`, without interpreting the dot as a wildcard) | String |
-| The string to be substituted for each match (this does not support backreferences, substitutions, or captures) | String |
+| The string to be substituted for the first match (this does not support backreferences, substitutions, or captures) | String |
 
 {{% alert type="info" %}}
 The regular expression must be provided as a string. Although it uses the same format for regular expressions, you cannot use a [regular expression](regular-expressions) resource document in this function.

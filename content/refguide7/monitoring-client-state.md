@@ -1,6 +1,6 @@
 ---
 title: "Monitoring client state"
-parent: "runtime"
+category: "Mendix Runtime"
 ---
 
 In Mendix 7, the state has been moved from the server to the client (web browser). This allows the server to be scaled to multiple instances. As the state now resides in the client, it can be useful to monitor what's in the state and why at a given time.

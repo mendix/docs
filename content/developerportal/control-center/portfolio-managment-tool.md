@@ -130,23 +130,23 @@ When you view the project details, you can add notes to the project, but you can
 
 You have successfully created a project. You can find your new project in the Kanban board in the **Projects Overview** page.
 
-### 2.3 Editing a Project {#edit-project}
+### 2.4 Editing a Project {#edit-project}
 
 In the Kanban board, click the **...** on the upper-right corner of the project card and click **Edit**.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-In the list view, click the pencil icon at the right end of the row.
+In the list view, click the edit icon at the end of the row for the project.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-### 2.4 Deleting a Project
+### 2.5 Deleting a Project
 
 In the Kanban board, click the **...** on the upper-right corner of the project card and click **Delete**.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-In the list view, click the trash can icon at the right end of the row.
+In the list view, click the delete icon at the end of the row for the project.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
@@ -155,9 +155,9 @@ In the list view, click the trash can icon at the right end of the row.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-On the **Access Management** page, you can see a table that shows all the users who have access to this portfolio. The access roles of these accounts are either Portfolio Managers or Users. 
+On the **Access Management** page, you can see a table that shows all the users who have access to this portfolio. The access roles of these accounts are either Portfolio Managers or Users. Administrators of a company are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
 
-Administrators of a company are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
+At the end of the row for each user, there is an edit icon and a delete icon. Click the edit icon to update the permissions and roles of the user. Click the delete icon on to remove the user.
 
 ### 3.1 Differences Between Portfolio Managers and Users {#difference-portfolio-managers-users}
 
@@ -179,17 +179,13 @@ For the information about the differences between the two access roles, see belo
 | Delete notes                      | Own notes                                                    | Own notes |
 | View notes                        | Yes                                                          | Yes       |
 
-To update the permissions and roles of a user, click the edit icon on the right side of the row.
+### 3.2 Adding New Users
 
-To remove a user, click the red trash can icon on the right side of the row.
-
-### 3.1 Adding New Users
-
-#### 3.1.1 Prerequisite
+#### 3.2.1 Prerequisite
 
 * You access role must be [Portfolio Manager](#difference-portfolio-managers-users).
 
-#### 3.1.2 Procedure
+#### 3.2.2 Procedure
 
 1. Go to **Access Management**.
 

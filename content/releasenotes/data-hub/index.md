@@ -9,7 +9,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
-### December 1st, 2021
+### December 2nd, 2021
 
 #### New Features
 

@@ -48,7 +48,7 @@ The app service can only be used with Studio Pro 9 versions starting from [9.0](
 
    {{% todo %}}[**check how to set the arguments**]{{% /todo %}}
 
-3. Set the Microsoft Teams channel webhook (**channelEndpoint** is the webhook URL).
+3. Set the Microsoft Teams channel webhookId (**webhookId** is the unique id generated for added webhookUrl in console).
 
 4. Set the text message to post on the channel.
 

@@ -86,7 +86,7 @@ You can request an Operator license by doing the following:
 
 1. Open the [Request New App Node](https://newnode.mendix.com/) app.
 
-2. Click the link for requesting a license for the Operator for Mendix for Private Cloud at the top
+2. Click the link **Need a license for the Operator for Mendix for Private Cloud, click here** at the top to start the request process.
 
 3. Fill in the required information:
 * The name of the namespace(s) you want to request an Operator license for
@@ -96,7 +96,7 @@ Optionally, leave additional information in the _comment_ field.
 
 4. Save the request.
 
-You will receive your Operator license(s) from Mendix Support, together with instructions on how to configure them.
+You will receive your Operator license(s) from Mendix Support, together with instructions on how to configure it(them).
 
 You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 

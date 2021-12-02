@@ -143,7 +143,7 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 3. Debug the application in case of errors.
 
 `System.ProcessedQueueTasks` objects are by default never deleted. The user is free to delete them when desired.
-Use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
+If you are using Mendix version 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
 
 ### 2.7 Execution Context{#context}
 

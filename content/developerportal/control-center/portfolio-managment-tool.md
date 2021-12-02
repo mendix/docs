@@ -15,7 +15,7 @@ You can easily get an overview of all the projects, and manage their stages, the
 The portfolio management tool is a public tool on Mendix Cloud. It is not the same as the portfolio app in the Mendix App Factory Suite, which is private per customer.
 {{% /alert %}}
 
-If you are an administrator of the company, you can access all the portfolios of the company. If there is no portfolio in your company, the system will create a portfolio for your company.
+If you are an Mendix Admin in a company, you can access all the portfolios of the company. If there is no portfolio in your company, the system will create a portfolio for your company.
 
 Click the portfolio to see the overview of all the projects in this portfolio.
 
@@ -155,29 +155,29 @@ In the list view, click the delete icon at the end of the row for the project.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-On the **Access Management** page, you can see a table that shows all the users who have access to this portfolio. The access roles of these accounts are either Portfolio Managers or Users. Administrators of a company are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
+On the **Access Management** page, you can see a table that shows all the users who have access to this portfolio. Their access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
 
 At the end of the row for each user, there is an edit icon and a delete icon. Click the edit icon to update the permissions and roles of the user. Click the delete icon on to remove the user.
 
 ### 3.1 Differences Between Portfolio Managers and Users {#difference-portfolio-managers-users}
 
-{{% todo %}}[Replace "Yes" by emojis]{{% /todo %}}
+{{% todo %}}[Replace "![check-mark](attachments/portfolio-management-tool/check-mark.svg)" by emojis]{{% /todo %}}
 
-| Actions                           | Portfolio Manager                                            | Users     |
-| --------------------------------- | ------------------------------------------------------------ | --------- |
-| Invite new users                  | Yes                                                          |           |
-| Remove user permissions and roles | Yes<br /> {{% todo %}}Can Portfolio Managers be removed? How?{{% /todo %}} |           |
-| Update user permissions and roles | Yes<br /> {{% todo %}}Same as above.{{% /todo %}}}           |           |
-| View user access information      | Yes                                                          | Yes       |
-| Manage portfolio settings         | Yes                                                          |           |
-| Create new projects               | Yes                                                          |           |
-| Edit existing projects            | Yes                                                          |           |
-| Delete projects                   | Yes                                                          |           |
-| View project details              | Yes                                                          | Yes       |
-| Create notes                      | Yes                                                          | Yes       |
-| Edit notes                        | Own notes                                                    | Own notes |
-| Delete notes                      | Own notes                                                    | Own notes |
-| View notes                        | Yes                                                          | Yes       |
+| Action                            | Portfolio Manager                                            | User                                                         |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Invite new users                  | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Remove user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg)<br />{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Update user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg)<br />{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| View user access information      | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
+| Manage portfolio settings         | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Create new projects               | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Edit existing projects            | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Delete projects                   | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| View project details              | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
+| Create notes                      | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
+| Edit notes                        | Own notes                                                    | Own notes                                                    |
+| Delete notes                      | Own notes                                                    | Own notes                                                    |
+| View notes                        | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
 
 ### 3.2 Adding New Users
 

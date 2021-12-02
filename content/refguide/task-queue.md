@@ -54,7 +54,7 @@ Background execution is done in so called **Task Queues**. They can be created i
 
 3. Click **Task Queue**.
 
-4. Enter the value for **Threads** for each cluster node (maximum 40).
+4. Enter the value for **Threads** for each cluster node.
 
 Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     

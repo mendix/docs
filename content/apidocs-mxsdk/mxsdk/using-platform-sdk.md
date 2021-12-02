@@ -30,15 +30,15 @@ You can pass some options to `createNewApp`
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | repositoryType      | Type of repository to be used. Possible values: `svn` and `git`.                                                                                           |
 | summary             | Short description of the app.                                                                                                                              |
-| image               | Base64 encoded data of an app image (height and width between 200 and 400 px, maximum size 5 MB).                                                           |
-| useAppTemplate      | Indicates whether repository must be initialized with the given app template. Either `templateId` or `templateDownloadURL` is mandatory when this is true. |
+| image               | Base64 encoded data of an app image (height and width between 200 and 400 px, maximum size 5 MB).                                                          |
 | templateDownloadURL | URL of the download location of the app template package file (mpk). If the template package is private, this URL must be authenticated with a signature.  |
 | templateId          | UUID of the app template the app should be based on.                                                                                                       |
+
+If both `templateDownloadURL` and `templateId` are left blank the project will be created using the standard blank app template in the latest Mendix version.
 
 Example for creating Mendix app based on [Asset Management](https://marketplace.mendix.com/link/component/107652) template.
 ```ts
 const app = await client.createNewApp("My Asset Management", {
-    useAppTemplate: true,
     templateId: "6e66fe4d-6e96-4eb8-a2b6-a61dec37a799"
 });
 ```

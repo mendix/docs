@@ -26,7 +26,6 @@ After setting up all the prerequisites, you can start writing a first script tha
 
         const app = await client.createNewApp(`NewApp-${Date.now()}`, {
             repositoryType: "git",
-            useAppTemplate: true
         });
 
         const workingCopy = await app.createTemporaryWorkingCopy("main");
@@ -57,9 +56,8 @@ This line is where the MendixSdkClient object is instantiated.
 
 ```ts
 const app = await client.createNewApp(`NewApp-${Date.now()}`, {
-            repositoryType: "git",
-            useAppTemplate: true
-        });
+    repositoryType: "git",
+});
 
 const workingCopy = await app.createTemporaryWorkingCopy("main");
 ```

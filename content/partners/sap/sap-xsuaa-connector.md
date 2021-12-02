@@ -52,6 +52,8 @@ You cannot change the **xsappname** in the configurator – this is generated au
 
 2. Set up the configuration in the sections shown on the screen.
 
+    {{% image_container width="50%" %}}![](attachments/sap-xsuaa-connector/configurator.png){{% /image_container %}}
+
 3. Click **Upload Configuration To Service** to upload the configuration automatically. The configuration will be applied when your app is restarted.
 
     Alternatively, click **Download Configuration File** to save the file locally so that you can review it, or reuse it. You can upload it manually to the XSUAA service using the instructions in the next section.

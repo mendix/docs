@@ -60,7 +60,11 @@ Task Queues have a number threads. Each of these threads can process one task at
     
 #### 2.2.1 Thread Count Recommendation 
 
-In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
+{{% alert type="info" %}}
+In versions of Mendix below 9.9.0, there is a limit of 40 threads per cluster node.
+{{% /alert %}}
+
+In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed. Remember that, in a horizontally-scaled app, this is the number of threads for each *node*, not the total number of threads.
 
 When choosing the number of threads for a task queue, use the following guidelines:
 * If there are only a few tasks use a single thread.

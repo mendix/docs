@@ -82,7 +82,21 @@ Mendix for Private Cloud is a premium offering from Mendix, and you will need an
 
 You will need one license for each namespace you want to manage.
 
-You can get an Operator license from [Mendix Support](https://support.mendix.com), together with instructions on how to configure it. You will need to provide Mendix Support with the namespace where the operator is running, they will provide you with an operator license which needs to be installed in the cluster namespace. 
+You can request an Operator license by doing the following:
+
+1. Open the [Request New App Node](https://newnode.mendix.com/) app.
+
+2. Click the link for requesting a license for the Operator for Mendix for Private Cloud at the top
+
+3. Fill in the required information:
+* The name of the namespace(s) you want to request an Operator license for
+* The name of your company
+* The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information.
+Optionally, leave additional information in the _comment_ field.
+
+4. Save the request.
+
+You will receive your Operator license(s) from Mendix Support, together with instructions on how to configure them.
 
 You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
@@ -90,9 +104,24 @@ You can run the Mendix Operator in trial mode for evaluation purposes. When the 
 
 The Operator license is independent of a Mendix Runtime license which removes trial restrictions from a Mendix App itself. You will need both licenses to manage and run an application through Mendix for Private Cloud.
 
-You will also need to obtain this through [Mendix Support](https://support.mendix.com). What you receive will depend on how you are running your app.
+You can request a Runtime license by doing the following:
 
-#### 4.2.1 Online Private Cloud Apps
+1. Open the [Request New App Node](https://newnode.mendix.com/) app.
+
+2. Fill in the basic information, such as your company name and app name.
+
+3. For **Hosting Type**, select *Mendix for Private Cloud* and click **Next**
+
+4. Provide the required information:
+* The number of environments you require a Runtime license for
+* The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information.
+Optionally, leave additional information in the _comment_ field.
+
+5. Save the request.
+
+You will receive your Runtime license(s) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
+
+#### 4.2.1 Online Private Cloud Apps{#activate-online}
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
@@ -100,6 +129,6 @@ If your app is **Connected** to the Developer Portal, you can enter the subscrip
 
 If your app is **Standalone**, then you will have to provide the subscription secret by [editing the CR](private-cloud-operator#edit-cr) in the cluster.
 
-#### 4.2.2 Offline Private Cloud Apps
+#### 4.2.2 Offline Private Cloud Apps{#activate-offline}
 
 If your app is unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to provide these by [editing the CR](private-cloud-operator#edit-cr) in the cluster.

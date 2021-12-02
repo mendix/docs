@@ -52,11 +52,11 @@ If you make sure to commit any changes to persistable objects, they do not need 
 
 In other words, by reducing the number of requests during which objects are not committed, you reduce the network traffic necessary to use the app.
 
-## 5 Workflow Objects
+## 5 Objects in Multi-Page End-User Interactions
 
 ### 5.1 Scenario
 
-If an object is used during a flow that spans multiple pages but is not displayed on every one of those pages, the Mendix Client could incorrectly determine that the object is not necessary anymore. This situation can also happen if you allow users to navigate backwards through a flow using the **Close** button or a browser's **Back** button. In that case, the objects on the page that was previously displayed might have been removed already.
+If an object is used during an end-user interaction that spans multiple pages but is not displayed on every one of those pages, the Mendix Client could incorrectly determine that the object is not necessary anymore. This situation can also happen if you allow end-users to navigate to pages that they saw previously using the **Close** button or a browser's **Back** button. In that case, the objects on the page that was previously displayed might have been removed already.
 
 ### 5.2 Tip
 

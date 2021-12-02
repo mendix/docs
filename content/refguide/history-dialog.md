@@ -14,7 +14,7 @@ Use the **History** dialog box to look at all the changes that have been committ
 
 Each line in the grid represents a revision in the repository. For each revision the following information is shown:
 
-* **Revision** number – the number of the revision in the repository. Revision numbers do not have to be consecutive if there is also activity in other development lines. Revision numbers are unique for a whole repository.
+* **Revision** – a unique alphanumeric identifier of the revision in the repository. Revision is unique for a whole repository.
 * **Changes** – a visual summary of the changes in the selected revision. It shows whether there are model changes, disk changes and whether there was a change in Studio Pro version that was used to commit the revision (green arrow up). Hover over this column to get a textual summary.
 * **Author** – the person who committed this revision.
 * **Date** – the date of the commit.

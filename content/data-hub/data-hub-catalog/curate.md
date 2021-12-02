@@ -1,7 +1,7 @@
 ---
 title: "Curate Registered Assets"
 category: "Data Hub Catalog"
-menu_order: 40
+menu_order: 45
 description: "Curating and enhancing findability of data assets in Data Hub"
 tags: ["data hub", "data hub catalog", "curate", "description", "services", "tags"]
 ---
@@ -35,7 +35,7 @@ The list can be also be sorted by any of the columns by clicking on the column h
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
-## 3 Curate Bar
+## 3 Curation Bar
 
 Curation is performed from the [asset details screen](search#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
 
@@ -45,16 +45,16 @@ Curation is performed from the [asset details screen](search#search-details). If
 Owners of registered assets and can only curate their services.
 {{% /alert %}}
 
-On the **Curation bar**, the following details are displayed:
+On the **Curation bar**, information about the role of the current user is displayed: **Owner** or **Curator**.
 
-* Information about the role of the current user: **Owner** or **Curator**
-* When a data source is selected in the **Search Results**:
-  * **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
-  * [Discoverable/Validated](#discoverability) – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu.
-    * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source.
-    * **Validate** indicates that the data source and datasets have been validated.
-* When a dataset is selected in the **Search Results**
-  * **Edit Dataset Details** – to edit the dataset and attribute descriptions
+When a data source is selected in the **Search Results**, the following options are displayed:
+
+* **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
+* [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
+ * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+ * **Validate** indicates that the data source and datasets have been validated.
+
+When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
@@ -126,7 +126,7 @@ Currently, by default, the application icon is determined by the application typ
 
 When you want to upload a custom icon or image, the following apply:
 
-* The accepted file types are ***.png***, ***.jpg***, and ***.jpeg***
+* The accepted file types are *.png*, *.jpg*, and *.jpeg*
 
 * The maximum accepted file size is 50 KB
 
@@ -222,13 +222,13 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
-## 6 Discoverable & Validate {#discoverability}
+## 6 Discoverable & Validated {#discoverability}
 
-The discoverabile and validate properties of registered assets can be set from the Curate bar for the selected asset.
+The discoverable and validated properties of registered assets can be set from the Curate bar for the selected asset.
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. By default, when a data source is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 

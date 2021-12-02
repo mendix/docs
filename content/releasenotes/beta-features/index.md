@@ -1,5 +1,5 @@
 ---
-title: "Mendix Beta"
+title: "Beta Versions"
 tags: ["Beta", "Studio Pro", "Features", "Feature Flags", "products", "features and products"]
 #notoc: true
 #layout: wide
@@ -17,7 +17,7 @@ We release these Beta features and products to collect feedback on their impleme
 
 ## 2 What Are Mendix Beta Products?
 
-These are products which have new features which can be assessed and used by *early-adopter developers*. One example might be a new major version of Mendix Studio Pro. These products are released in Beta, as the feature sets may not be complete and developers may find gaps in functionality which Mendix is still working on.
+These are products which have new features that can be assessed and used by *early-adopter developers*. One example might be a new major version of Mendix Studio Pro. These products are released in Beta, as the feature sets may not be complete and developers may find gaps in functionality which Mendix is still working on.
 
 ## 3 Beta Features Overview
 

@@ -20,7 +20,7 @@ Mendix Data Hub is a licensed product. Using external entities to consume OData 
 
 For details on the features that a published OData service must support and how the conversion from and to the Mendix data model works, see [Consumed OData Service Requirements](consumed-odata-service-requirements).
 
-## 2 OData Services and External Entities
+## 2 OData Services and External Entities {#external-entities}
 
 When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.
 

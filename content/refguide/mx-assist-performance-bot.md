@@ -14,9 +14,9 @@ MxAssist Performance Bot is built using statistical analysis of thousands of ano
 
 It consists of a three-level assistance:
 
-1. **Detection** – the bot inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
-2. **Recommendation** – the bot explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a     dedicated step-by-step guideline of how to fix the issue.
-3. **Auto-fixing** – the bot can automatically implement the best practice and fix the issue.
+1. **Detection** – The bot inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
+2. **Recommendation** – The bot explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a dedicated step-by-step guideline of how to fix the issue.
+3. **Auto-fixing** – The bot can automatically implement the best practice and fix the issue.
 
 ## 2 MxAssist Performance Bot Pane
 
@@ -32,11 +32,9 @@ The pane gives you information on each anti-pattern and contains MxAssist Perfor
 
 At the top of the **MxAssist Performance Bot** pane you can see the following options: 
 
-* **Inspect now** – inspects your app model on performance issues. 
-
-* **Limit to current  tab** – limits the messages displayed in the pane to the current document.
-
-* **Configuration** – defines the modules and documents that the MxAssist  Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **Project Model** and **Best Practice** tabs.
+* **Inspect now** – Inspects your app model on performance issues. 
+* **Limit to current  tab** – Limits the messages displayed in the pane to the current document.
+* **Configuration** – Defines the modules and documents that the MxAssist Performance Bot will analyze. Click the **Configuration** button to open the **MxAssist Performance Bot Configuration** dialog box that contains the **Project Model** and **Best Practice** tabs.
 
     * The **Project Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
@@ -53,17 +51,11 @@ You can use both app model and best practice configuration together.
 Each anti-pattern line in the pane provides you with the following information: 
 
 * **Icon** – indicates if the anti-pattern can be automatically fixed; if the icon has the “A” letter, the issue can be auto-fixed
-
 * **Code** – a unique code that is specific to the anti-pattern type 
-
 * **Blue circle** – indicates a new detected anti-pattern
-
 * **Message** – description/explanation of the anti-pattern 
-
 * **Element** – the element causing the issue
-
 * **Document** – the document containing the element
-
 * **Module** – the module containing the document 
 
     ![Anti-Pattern Overview](attachments/mx-assist-performance-bot/anti-pattern-overview.jpg)
@@ -74,11 +66,11 @@ Right-clicking the message line of an anti-pattern in the pane opens the drop-do
 
 The following actions are available in the drop-down menu:
 
-* **Go to Cause** – takes you to the element causing the issue.
-* **Go to Usage** – opens the corresponding locations where the anti-pattern is used.
-* **View MxAssist Performance recommendation** – opens the pop-up window with recommendations (similar to double-clicking the message).
-* **Mark as read** – marks the issue as read. This will make the blue circle to disappear. 
-* **Suppress this recommendation** – suppresses the issue. This will gray out the issue and send it to the bottom of the list. The related indicator in the editor will disappear. 
+* **Go to Cause** – takes you to the element causing the issue
+* **Go to Usage** – opens the corresponding locations where the anti-pattern is used
+* **View MxAssist Performance recommendation** – opens the pop-up window with recommendations (similar to double-clicking the message)
+* **Mark as read** – marks the issue as read (this will make the blue circle to disappear)
+* **Suppress this recommendation** – suppresses the issue (this will gray out the issue and send it to the bottom of the list, and the related indicator in the editor will disappear)
 
 ## 3 Using MxAssist Performance Bot in App Development  
 
@@ -107,7 +99,6 @@ The second level of assistance is **recommendation** – giving you an overview 
 There are two ways to view the recommendations:
 
 1.  Right-click an anti-pattern message on the pane and select **View MxAssist Performance Recommendation** in the drop-down menu. 
-
 2. Click an indicator in the visual editor to view the detected issue:
 
    ![Indicator in the Editor](attachments/mx-assist-performance-bot/indicator-in-editor.jpg)
@@ -126,7 +117,6 @@ The third level of assistance is **auto-fixing** where the bot can automatically
 To auto-fix the issue, follow the steps below:
 
 1. Right-click the message line in the pane and select **View MxAssist Performance Recommendation** in the drop-down menu or click the corresponding indicator in the editor to open the recommendation.
-
 2. In the **MxAssist Performance Recommendation** pop-up window, click the available action button, for example, **Fix the Commit**: 
 
     ![Fix Performance Issue](attachments/mx-assist-performance-bot/fix-performance-issue.jpg)

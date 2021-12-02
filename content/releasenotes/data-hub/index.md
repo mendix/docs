@@ -9,6 +9,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### December 2nd, 2021
+
+#### New Features
+
+* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin#settings) page in Control Center with a default discoverability setting.
+* We added a discoverability radio button to the data source [registration](/data-hub/data-hub-catalog/register-data) form.
+
+#### Fixes
+
+* We fixed an issue with the icon size for the registered datasets.
+
 ### November 18th, 2021
 
 #### Improvements

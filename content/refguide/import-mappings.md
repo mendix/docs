@@ -31,8 +31,8 @@ This is what will happen when you use an [Import with Mapping](import-mapping-ac
 
 | Property | Description |
 | --- | --- |
-| **Create an object** | Creates a new object.<b/>An error can be thrown if there are any [before create](event-handlers#when) microflows that fail. |
-| **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query.<b/>If more than one object is returned by the XPath query, an error will be thrown. |
+| **Create an object** | Creates a new object.<br/>An error can be thrown if there are any [before create](event-handlers#when) microflows that fail. |
+| **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query.<br/>If more than one object is returned by the XPath query, an error will be thrown. |
 | **Call a microflow** | Calls a microflow to obtain an object and return it. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and any attributes in the current XML element. The microflow must return an object of the correct entity type. If it returns a null object, the selected **If no object was found** action will be performed. ||
 
 {{% alert type="info" %}}

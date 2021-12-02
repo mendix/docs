@@ -124,7 +124,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 | Configuration option                       | Example value | Explanation                                                                             |
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
-| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (off by default). |   
+| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <b/>*This setting was introduced in Mendix version 9.9.0* |   
 
 {{% alert type="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.

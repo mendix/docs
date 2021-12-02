@@ -70,7 +70,7 @@ When choosing the number of threads for a task queue, use the following guidelin
 * If there are only a few tasks use a single thread.
 * If the tasks perform only calculations and perform no blocking calls, use no more threads than the available number of cores.
 * Only use more threads than the available number of cores if there are a lot of tasks and they perform blocking calls.
-* Keep in mind using more threads than the number of cores will require additional scheduling and not necessarily makes it faster.
+* Keep in mind that using more threads than the number of cores will require additional scheduling and will not necessarily improve the queued task throughput.
     
 ### 2.3 Queueing Microflow Executions
 

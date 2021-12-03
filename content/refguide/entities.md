@@ -34,19 +34,15 @@ The entity type defines how the data is handled and there are two types:
 
 ![](attachments/domain-model/type-of-entities.jpg)
 
-
 {{% alert type="info" %}}
 You can also use data sources from other applications in your app through the [Data Hub](data-hub-pane) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
 
 For further information see [External Entities](external-entities).
 {{% /alert %}}
 
-
 ### 2.1 Persistable Entity {#persistable-entity}
 
 When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](persistability).
-
-
 
 ### 2.2 Non-Persistable Entity {#non-persistable-entity}
 
@@ -116,7 +112,7 @@ Define whether instances of this entity can be stored in the database. For more 
 
 ### 3.4 System Members Properties{#system-members}
 
-#### 3.4.1 Store 'createdDate' 
+#### 3.4.1 Store 'createdDate'
 
 This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type **Date and time** that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
 
@@ -125,7 +121,11 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
-#### 3.4.2 Store 'changedDate' 
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+{{% /alert %}}
+
+#### 3.4.2 Store 'changedDate'
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
 
@@ -136,6 +136,10 @@ This property defines whether the entity contains the system attribute 'changedD
 
 {{% alert type="info" %}}
 The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
 #### 3.4.3 Store 'owner' 

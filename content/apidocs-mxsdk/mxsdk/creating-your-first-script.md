@@ -6,7 +6,7 @@ menu_order: 20
 
 ## 1 Introduction
 
-In [Setting Up Your Development Environment](setting-up-your-development-environment) and [Setup your Personal Access Token](setup-your-pat), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
+In [How to Set Up Your Development Environment](setting-up-your-development-environment) and [How to Set Up Your Personal Access Token](setup-your-pat), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing a First Script
 
@@ -62,7 +62,7 @@ const app = await client.createNewApp(`NewApp-${Date.now()}`, {
 const workingCopy = await app.createTemporaryWorkingCopy("main");
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new app in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createTemporaryWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new app in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createTemporaryWorkingCopy()` will do exactly that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 
@@ -74,13 +74,13 @@ const entity = domainmodels.Entity.createIn(domainModel);
 entity.name = `NewEntity_${Date.now()}`;
 ```
 
-Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the domain model of the default module named "MyFirstModule". After finding your document you have to obtain it in its fully-loaded form to be able to change it because Model SDK does not load the entire model into the client's memory. It only loads the public elements and properties of the document. Once you have loaded the domain model in memory with the function `domainModelInterface.load()`, you create a new Entity in the domain model and give it a name.
+Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the domain model of the default module named **MyFirstModule**. After finding your document, you have to obtain it in its fully-loaded form to be able to change it. This is because the Model SDK does not load the entire model into the client's memory, it only loads the public elements and properties of the document. Once you have loaded the domain model in memory with the function `domainModelInterface.load()`, you create a new entity in the domain model and give it a name.
 
 ```ts
 await model.flushChanges();
 await workingCopy.commitToRepository("main");
 ```
-Once you're done with the model changes, you can flush the changes to make sure the changes have been sent and then commit the working copy back to the Team Server by calling `workingCopy.commitToRepository()`.
+Once you are done with the model changes, you can flush the changes to make sure they have been sent, and then commit the working copy back to the Team Server by calling `workingCopy.commitToRepository()`.
 
 ## 3 Compiling and Running the Script
 

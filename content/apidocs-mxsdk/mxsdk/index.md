@@ -18,9 +18,9 @@ Browse the reference documentation below about the Mendix Metamodel:
 Follow these step-by-step guides to learn everything you need about using the SDK:
 
 * [How to Set Up Your Development Environment](setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
-* [How to Set Up Your Personal Access Token](setup-your-pat) – guides you in the process of creating and saving your Personal Access token. This token is required to authenticate your script.
+* [How to Set Up Your Personal Access Token](setup-your-pat) – guides you in the process of creating and saving your personal access token, which is required to authenticate your script
 * [How to Create Your First Script](creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
-* [How to Use Mendix Pltatform SDK](using-platform-sdk) – guides you on how to use the Platform SDK to create/open/delete Mendix apps and how to make changes to your app
+* [How to Use Mendix Pltatform SDK](using-platform-sdk) – guides you on how to use the Platform SDK to create, open, and delete Mendix apps as well as how to make changes to your app
 * [How to Create the Domain Model](creating-the-domain-model) – guides you in the process of creating a more extensive domain model
 * [How to Manipulate Existing Models](manipulating-existing-models) – teaches you how to change things in the model, close the server connection, and find and load units and elements
 * [How to Generate Code from the Model](generating-code-from-the-model) – explains how to write code to alter your model
@@ -33,7 +33,7 @@ The [Use Case Examples](sdk-use-cases) provide examples from the four basic cate
 
 For Mendix Platform SDK versions below 5.0, see the following documentaion for details:
 
-* [Working with when.js and Promises in TypeScript](/apidocs-mxsdk/mxsdk/old-version/working-with-when-js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
+* [Working with when.js and Promises in TypeScript](/apidocs-mxsdk/mxsdk/old-version/working-with-when-js-and-promises-in-typescript) – explains what promises are, how to use them, and how to resolve common problems when using them
 * [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/old-version/setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
 * [How to Create Your First Script](old-version/creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
 

@@ -7,15 +7,11 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [portfolio management tool](https://portfolio.mendix.com) empowers you to manage your projects throughout the whole project lifecycle – from its start as an idea until its release as a product.  With this tool, you can manage a portfolios within your company and outside your company.
+The [portfolio management tool](https://portfolio.mendix.com) empowers you to manage your projects throughout the whole project lifecycle – from its start as an idea until its release as a product. It is a public tool on Mendix Cloud. Using the tool, you can get an overview of your projects and gain insights into the estimated values and other aspects of your projects. The portfolios that you manage can be from your company and from outside your company.
 
-You can easily get an overview of all the projects, and manage their stages, the timelines and estimated values, and more other details.
+The Mendix Admins can access all the portfolios of their company. If there is no portfolio from the company, after Mendix Admins log in to the portfolio management tool the first time, the system will create a portfolio.
 
-{{% alert type="info" %}}
-The portfolio management tool is a public tool on Mendix Cloud. It is not the same as the portfolio app in the Mendix App Factory Suite, which is private per customer.
-{{% /alert %}}
-
-If you are an Mendix Admin in a company, you can access all the portfolios of the company. If there is no portfolio in your company, the system will create a portfolio for your company.
+{{% todo %}}[Add an image]{{% /todo %}}
 
 Click the portfolio to see the overview of all the projects in this portfolio.
 
@@ -23,23 +19,23 @@ Click the portfolio to see the overview of all the projects in this portfolio.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-On the **Portfolio Overview** page, you have an overview of all the projects in this portfolio.
+The **Portfolio Overview** page gives you an overview of all the projects in this portfolio.
 
 ### 2.1 Switching Between the Kanban Board and the List View
 
-In the **Projects Overview**, you can switch between the Kanban board and the list view. You can do so by clicking the view icon in the upper-right corner.
+On the **Projects Overview** page, you can switch between the Kanban board and the list view. You can do so by clicking the view icon in the upper-right corner.
 
 #### 2.1.1 Kanban Board
 
-In the Kanban board, projects are put under different columns. Each column represents a different stage. You can drag a project to a different column to change its stage.
-
 {{% todo %}}[Add an image]{{% /todo %}}
+
+In the Kanban board, projects are put under different columns. Each column represents a different stage. You can drag a project to a different column to change its stage. You can click the name of a column to sort the table.
 
 ### 2.1.2 List View
 
-In the list view, you can select a filter in the drop-down list in the upper-right corner to filter the projects in the list.
-
 {{% todo %}}[Add an image]{{% /todo %}}
+
+In the list view, you can select a filter in the drop-down list in the upper-right corner to filter the projects in the list.
 
 ### 2.2 Viewing the Project Details
 
@@ -52,83 +48,60 @@ In the list view, click the project name to see the project details.
 {{% todo %}}[Add an image]{{% /todo %}}
 
 {{% alert type="info" %}}
-When you view the project details, you can add notes to the project, but you cannot change any other info. To change any other info, you should [editing the project][#edit-project].
+When you view the project details, you can only add notes. You cannot change any other info. To change other info, you need [edit the project][#edit-project].
 {{% /alert %}}
 
 ### 2.3 Creating a New Project
 
 #### 2.3.1 Prerequisite
 
-* You access role must be [Portfolio Manager](#difference-portfolio-managers-users).
+* Your access role must be [Portfolio Manager](#difference-portfolio-managers-users).
 
 #### 2.3.2 Procedure
 
-1. Go to **Projects Overview**.
+1.  Go to **Projects Overview**.
 
-   {{% todo %}}[Add an image]{{% /todo %}}
+    {{% todo %}}[Add an image]{{% /todo %}}
 
 2. Click **Create New Project**.
-
 3. Enter the **Name** and the **Description** of the project.
-
 4.  Select the **Stage**, **Department**, **Country** the project.
 
-    {{% alert type="info" %}}
-    Portfolio Managers can customize the lists of **Stage**, **Department**, and **Country** on the [Portfolio Settings](#portfolio-settings) page.
-    {{% /alert %}}
+    {{% alert type="info" %}}Portfolio Managers can customize the lists of **Stage**, **Department**, and **Country** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 5.  Select the **Owner** the project.
    
-    {{% alert type="info" %}}
-    You can only set **Owner** to a user who has access to this portfolio. Portfolio Managers can give a user access to the portfolio on the [Access Management](#access-management) page.
-    {{% /alert %}}
+    {{% alert type="info" %}}You can only set **Owner** to a user who has access to this portfolio. Portfolio Managers can give a user access to the portfolio on the [Access Management](#access-management) page.{{% /alert %}}
    
-5.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
-    1. In the search box below **Link Existing App**, search the app. The search displays the first 50 results.
-    2. Select the app that should be linked.
-    3. To see more information about a linked app, click the app.   
+6.  If there is an existing app that you want to change or if development is already in progress, you can link the app to this project as follows:
+    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
+    2. Select the app that you wan to link to the project.
+    3. To see more information about a linked app, click the app after it is linked.   
     
-6. Click **Scope** to show all the fields in this section. The **Scope** section helps you define the effort and risk profile of the project.
+7. Click **Scope** to show all the fields in this section. The **Scope** section helps you define the effort and risk profile of the project.
+8.  Select the **Use Case** of the project.
 
-7.  Select the **Use Case** of the project.
+    {{% alert type="info" %}}Portfolio Managers can customize the list of **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
-    {{% alert type="info" %}}
-    Portfolio Managers can customize the list of **Use Case** on the [Portfolio Settings](#portfolio-settings) page.
-    {{% /alert %}}
+9. Select the **App Size.**
+10. Enter the **Numbers of Users** who you expect will use the app.
+11. Select **Complexity** and **Exposure** of the project. For more information about complexity and exposure, see [The Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
+12. Click **Estimated Value** to show all the fields in this section. The **Estimated Value** section helps you solidify your business case and drive internal adoption. It also allows you to map the realised value upon completion.
+13. Select the **Value Type**, which is the type of the value that is created by the project.
 
-8. Select the **App Size.**
-
-9. Enter the **Numbers of Users** who you expect will use the app.
-
-10. Select **Complexity** and **Exposure** of the project. For more information about complexity and exposure, see [The Complexity Matrix](https://www.mendix.com/resources/digital-execution-manual/) in *Digital Execution Manual*.
-
-11. Click **Estimated Value** to show all the fields in this section. The **Estimated Value** section helps you solidify your business case and drive internal adoption. It also allows you to map the realised value upon completion.
-
-12. Select the **Value Type** for the value that this project will create.
-
-    {{% alert type="info" %}}
-    Portfolio Managers can customize the lists of **Value Type** on the [Portfolio Settings](#portfolio-settings) page.
-    {{% /alert %}}
+    {{% alert type="info" %}}Portfolio Managers can customize the lists of **Value Type** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
     
-13. Select whether the value is **one-off** or **Recurring**.    
+14. Select whether the value is **one-off** or **Recurring**.    
+15. Enter the **Monetary Value** of the value.
+16. Enter **Supporting Information** for the estimated value.
+17. If the project creates more than one type of value, click **Add Value** to add more value. After you enter all value, system shows the **Total Recurring Value** and the **Total One-Off Value**.
+18. Click **Planning** to show all the fields in this section. In the **Planning** section, you define the deadlines for the project. 
+19. Enter the **Start Date** and the **Go-Live Date**. You can use the go-live date to estimate when you need to start.
+20. Click **Notes** to show all the fields in this section.
+21. Enter **Notes** for the project.
+22. Click **Create Project**.
 
-14. Enter the **Monetary Value** of the value.
-
-15. Enter **Supporting Information** for the estimated value.
-
-16. If necessary, click **Add Value** to add another value. After you enter all the values, system shows you the **Total Recurring Value** and the **Total One-Off Value**.
-
-17. Click **Planning** to show all the fields in this section. The **Planning** section defines the deadlines for the project. 
-
-18. Enter the **Start Date** and the **Go-Live Date**. You can use the go-live date to estimate when you need to start.
-
-19. Click **Notes** to show all the fields in this section.
-
-20. Enter **Notes** for the project.
-
-21. Click **Create Project**.
-
-You have successfully created a project. You can find your new project in the Kanban board in the **Projects Overview** page.
+You have successfully created a project. Your new project is displayed on the **Projects Overview** page.
 
 ### 2.4 Editing a Project {#edit-project}
 
@@ -155,19 +128,17 @@ In the list view, click the delete icon at the end of the row for the project.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
-On the **Access Management** page, you can see a table that shows all the users who have access to this portfolio. Their access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers automatically. Portfolio Managers can give other users access to this portfolio and define their access roles. 
+The **Access Management** page has a table that shows all the users who have access to this portfolio. Their access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers by default. Portfolio Managers can give other users access to the portfolio and define their access roles.
 
-At the end of the row for each user, there is an edit icon and a delete icon. Click the edit icon to update the permissions and roles of the user. Click the delete icon on to remove the user.
+At the end of the row for each user, there is an edit icon and a delete icon. Click the edit icon to update the permissions and roles of a user. Click the delete icon on to remove a user.
 
 ### 3.1 Differences Between Portfolio Managers and Users {#difference-portfolio-managers-users}
-
-{{% todo %}}[Replace "![check-mark](attachments/portfolio-management-tool/check-mark.svg)" by emojis]{{% /todo %}}
 
 | Action                            | Portfolio Manager                                            | User                                                         |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Invite new users                  | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Remove user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg)<br />{{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
-| Update user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg)<br />{{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Remove user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg){{% alert type="info" %}}You cannot remove permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
+| Update user permissions and roles | ![check-mark](attachments/portfolio-management-tool/check-mark.svg){{% alert type="info" %}}You cannot update permissions and roles of Mendix Admins in a company.{{% /alert %}} | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
 | View user access information      | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) |
 | Manage portfolio settings         | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
 | Create new projects               | ![check-mark](attachments/portfolio-management-tool/check-mark.svg) | ![cross-mark](attachments/portfolio-management-tool/cross-mark.svg) |
@@ -183,36 +154,28 @@ At the end of the row for each user, there is an edit icon and a delete icon. Cl
 
 #### 3.2.1 Prerequisite
 
-* You access role must be [Portfolio Manager](#difference-portfolio-managers-users).
+* Your access role must be [Portfolio Manager](#difference-portfolio-managers-users).
 
 #### 3.2.2 Procedure
 
 1. Go to **Access Management**.
+2. In the upper-right corner, click **Add New Users**.
+3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone from your company or from outside of your company.
 
-1. In the upper-right corner, click **Add New Users**.
+   {{% alert type="info" %}}The name and profile photo of users from outside of the company are always invisible in the portfolio.{{% /alert %}}
 
-2. In the dialog box, enter the **Email Address** of the user. The user can be someone from your company or someone from outside of your company.
+4. Select an **Access Role** for the user: **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
+5. Click **Add to List**.
+6. Repeat steps 2 and 4 until you add all the users.
+7. Click **Send Invites**.
 
-   {{% alert type="info" %}}
-
-   The name and profile photo of the users from outside of the company will always be invisible in the portfolio.
-   {{% /alert %}}
-
-3. Select an **Access Role** for this user: **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
-
-4. Click **Add to List**.
-
-5. Repeat steps 2 and 4 until you add all the users.
-
-6. Click **Send Invites**.
-
-You have successfully sent an email invitation to the users. Their names are added to the table.
+You have successfully sent an email invitation to the users. Their names are added to the **Access Management** page.
 
 {{% todo %}}[Add an image]{{% /todo %}}
 
 {{% alert type="info" %}}
 
-For users from outside of your company, they need to accept the invitation via the link in the email that they will receive. Before they accept the invitation, their **Status** in the table in the **Access Management** page is shown as **Pending**. After they accept the invitation, their **Status** will become **Active**. <br />For users from your company who do not have a Mendix account, their **Status** in the table in the **Access Management** page is shown as **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
+For users from outside of your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**. <br />For users from your company who do not have a Mendix account, their **Status** on the **Access Management** page is also **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
 
 {{% /alert %}}
 

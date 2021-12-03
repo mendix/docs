@@ -161,9 +161,9 @@ At the end of the row for each user, there is an edit icon and a delete icon. Cl
 
 1. Go to **Access Management**.
 2. In the upper-right corner, click **Add New Users**.
-3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone from your company or from outside your company.
+3.  In the dialog box, enter the **Email Address** of the user who you want to invite. They can be someone within your company or outside your company.
 
-    {{% alert type="info" %}}The name and profile photo of users from outside your company are always invisible in the portfolio.{{% /alert %}}
+    {{% alert type="info" %}}For users outside your company, their names and profile pictures will not be displayed.{{% /alert %}}
 
 4. Select an **Access Role** for the user – **Portfolio Manager** or **User**. This determines the user's access level to all the projects in this portfolio.
 5. Click **Add to List**.
@@ -176,7 +176,7 @@ You have successfully sent an email invitation to the users. Their names are add
 
 {{% alert type="info" %}}
 
-For users from outside your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**. <br />For users from your company who do not have a Mendix account, their **Status** on the **Access Management** page is also **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
+For users outside your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**. <br />For users within your company who do not have a Mendix account, their **Status** on the **Access Management** page is also **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
 
 {{% /alert %}}
 

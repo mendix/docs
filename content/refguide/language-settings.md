@@ -94,8 +94,8 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Catalan | Spain | ca_ES | 9.0.5 |
 | Chinese (Simplified) | China | zh_CN | 9.0.5 |
 | Chinese (Simplified) | Singapore | zh_SG | 9.0.5 |
-| Chinese (Traditional) | Hong Kong | zh_HK | 9.0.5 |
-| Chinese (Traditional) | Taiwan | zh_TW | 9.0.5 |
+| Chinese (Traditional) | Hong Kong, China | zh_HK | 9.0.5 |
+| Chinese (Traditional) | Taiwan, China | zh_TW | 9.0.5 |
 | Croatian | Croatia | hr_HR | 9.0.5 |
 | Czech | Czech Republic | cs_CZ | 9.0.5 |
 | Dari | Afghanistan | fa_AF | 9.2.0 |

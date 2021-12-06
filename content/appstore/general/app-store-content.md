@@ -98,7 +98,29 @@ To add the Rating widget from the Marketplace via Studio Pro, follow these steps
 If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the *.mpk* file from the **widgets** folder.
 {{% /alert %}}
 
-#### 4.1.2 Configuring a Widget
+#### 4.1.2 Updating a Widget
+
+To update a widget in your app to a newer version, follow these steps:
+
+1. Open the app in which you want to update the widget.
+
+2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
+
+   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+
+3. Find the widget in the Marketplace.
+
+4. Click the component or **Read more** to view the details of the component.
+
+5. Go to the **All Versions** tab.
+
+   ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
+
+6. Click **Download** to download the latest version. Then the **Question** dialog box opens and asks if you want to overwrite the existing package.
+
+7. Click **Yes** to proceed. The widget is updated to the downloaded version.
+
+#### 4.1.3 Configuring a Widget
 
 After you place a widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane) pane. That is because you still need to configure the widget.
 

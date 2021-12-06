@@ -1,7 +1,7 @@
 ---
-title: "Set Up Your Development Environment"
-parent: "sdk-howtos"
-menu_order: 10
+title: "Set Up Your Development Environment (Old Version)"
+parent: "old-versions"
+menu_order: 1
 ---
 
 ## 1 Introduction

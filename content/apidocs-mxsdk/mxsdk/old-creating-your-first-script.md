@@ -1,7 +1,7 @@
 ---
-title: "Create Your First Script"
-parent: "sdk-howtos"
-menu_order: 20
+title: "Create Your First Script (Old Version)"
+parent: "old-versions"
+menu_order: 2
 ---
 
 ## 1 Introduction

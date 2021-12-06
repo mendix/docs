@@ -29,13 +29,9 @@ Follow these step-by-step guides to learn everything you need about using the SD
 
 The [Use Case Examples](sdk-use-cases) provide examples from the four basic categories of actions performed with the Mendix SDK: analyzing, exporting, modifying and importing.
 
-## 5 Old Version
+## 5 Old Versions (Below 5.0)
 
-For Mendix Platform SDK versions below 5.0, see the following documentaion for details:
-
-* [Working with when.js and Promises in TypeScript](/apidocs-mxsdk/mxsdk/old-version/working-with-when-js-and-promises-in-typescript) – explains what promises are, how to use them, and how to resolve common problems when using them
-* [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/old-version/setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
-* [How to Create Your First Script](old-version/creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
+For Mendix Platform SDK versions below 5.0, see [Old SDK Versions (Below 5.0)](old-versions).
 
 ## 6 Other Resources
 

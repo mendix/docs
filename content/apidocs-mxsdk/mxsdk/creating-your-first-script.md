@@ -120,4 +120,4 @@ Note that the steps for app creation and committing to the Team Server can take 
 
 ## 5 Next Step
 
-Continue with [How to Create the Domain Model](creating-the-domain-model).
+Continue with [How to Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model).

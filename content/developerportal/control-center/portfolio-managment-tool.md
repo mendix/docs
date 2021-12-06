@@ -41,7 +41,7 @@ In the list view, you can select a filter from the drop-down list in the upper-r
 
 ### 2.2 Viewing the Project Details
 
-In the Kanboard board, {{% todo %}}to be determined by the development team{{% /todo %}}
+In the Kanban board, {{% todo %}}to be determined by the development team{{% /todo %}}
 
 {{% todo %}}[Add an image]{{% /todo %}}
 

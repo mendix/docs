@@ -40,6 +40,8 @@ To add additional buttons to the control bar, do the following:
 
 {{% alert type="info" %}}
 It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.
+
+When setting the visibility of control bar buttons, it is not possible to use currently selected object(s) for conditional visibility expressions, or visibility based on the selected object’s attribute.
 {{% /alert %}}
 
 Sections below describe the purpose of each control bar button and their specific properties if any.

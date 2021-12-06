@@ -74,7 +74,7 @@ For more information on how a component works, check the **Documentation** tab o
 
 You can download a widget from the Marketplace and use it in your app. We will use the [Rating](/appstore/widgets/rating) widget as an example. You can follow the steps to use any widget from the Marketplace.
 
-#### 4.1.1 Adding the Widget
+#### 4.1.1 Adding a Widget
 
 To add the Rating widget from the Marketplace via Studio Pro, follow these steps:
 
@@ -147,7 +147,7 @@ You can also download an entire module from the Marketplace. A module includes t
 
 In this section, we will use the [Email with Templates](/appstore/modules/email-with-templates) module as an example. You can follow the steps to use any module from the Marketplace.
 
-#### 4.2.1 Adding the Module
+#### 4.2.1 Adding a Module
 
 To add the Email with Template module from the Marketplace via Studio Pro, follow these steps:
 
@@ -176,6 +176,30 @@ Unlike a widget, you can see a module in your App Explorer. A module contains a 
 {{% alert type="info" %}}
 Sometimes additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 {{% /alert %}}
+
+#### 4.2.1 Updating a Module
+
+1. Open the app in which you want to update the module.
+
+2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
+
+   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+
+3. Find the module in the Marketplace.
+
+4. Click the module or **Read more** to view the details of the module.
+
+5. Go to the **All Versions** tab.
+
+6. Click **Download** to download the latest version. The **Import Module** dialog box opens.
+
+   ![Import Module dialog box](attachments/app-store-content/import-module.png)
+
+7. Select **Replace existing module**. 
+
+8. When the **Warning** dialog box opens and shows a list of files will be overwritten, click **OK**.
+
+9. Wait until a pop-up window states that the module was successfully imported. Click **OK**. The module is updated to the downloaded version.
 
 #### 4.2.2 Configuring the Module
 

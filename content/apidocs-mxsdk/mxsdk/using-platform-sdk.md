@@ -37,11 +37,11 @@ You can pass the following options to `createNewApp`:
 
 | Name | Description | 
 |--- | --- |
-| repositoryType | The type of repository to be used. Possible values: `svn` and `git`. |
-| summary | A short description of the app. |
-| image | The Base64-encoded data of the app image (height and width between 200px and 400px, with a maximum size of 5 MB). |
-| templateDownloadURL | The URL of the download location of the app template package file (*.mpk*). If the template package is private, this URL must be authenticated with a signature. |
-| templateId | The UUID of the app template on which the app should be based. |
+| `repositoryType` | The type of repository to be used. Possible values: `svn` and `git`. |
+| `summary` | A short description of the app. |
+| `image` | The Base64-encoded data of the app image (height and width between 200px and 400px, with a maximum size of 5 MB). |
+| `templateDownloadURL` | The URL of the download location of the app template package file (*.mpk*). If the template package is private, this URL must be authenticated with a signature. |
+| `templateId` | The UUID of the app template on which the app should be based. |
 
 If both `templateDownloadURL` and `templateId` are left blank, the app project will be created using the standard blank app template in the latest Mendix version.
 
@@ -96,7 +96,7 @@ const workingCopy = await app.createTemporaryWorkingCopy("main");
 You can pass the following options to `createTemporaryWorkingCopy`:
 | Name | Description |
 |--- | --- |
-| commitId | The ID of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
+| `commitId` | The ID of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
 
 ## 8 Opening the Working Copy Model {#opening-working-copy}
 
@@ -108,27 +108,25 @@ const model = await workingCopy.openModel();
 
 ## 9 Committing a Temporary Working Copy {#committing}
 
-After making the changes, you need to commit the changes back to Team Server.
-
-Make sure to call `await model.flushChanges()` when committing right after making changes. This makes sure that the mendixmodelsdk has been able to send the changes.
+After making changes, you need to commit the changes back to Team Server. Make sure to call `await model.flushChanges()` when committing right after making changes, as this makes sure that the SDK has been able to send the changes:
 
 ```ts
 await model.flushChanges();
 await workingCopy.commitToRepository();
 ```
 
-You can pass some options to `commitToRepository`
+You can pass the following options to `commitToRepository`:
 
-| Name           | Description                                                                                                        |
-|----------------|--------------------------------------------------------------------------------------------------------------------|
-| branchName     | You can specify a branch other than the working copy base branch. In that case you should set `force` to `true`.   |
-| commitMessage  | Specify a custom commit message instead of the default message (`Imported model changes from online working copy`) |
-| targetCommitId | This commit ID will be set to the working copy base commit ID if not specified.                                    |
-| force          | Set to true to commit to a branch that is different from the working copy's base branch.                           |
+| Name | Description |
+|--- | --- |
+| `branchName` | You can specify a branch other than the working copy base branch. In that case, set `force` to `true`. |
+| `commitMessage` | Specify a custom commit message instead of the default message ("Imported model changes from online working copy"). |
+| `targetCommitId` | This commit ID will be set to the working copy base commit ID if not specified. |
+| `force` | Set to `true` to commit to a branch that is different from the working copy's base branch. |
 
 ## 10 Changing the Platfrom SDK Configurations {#changing}
 
-* By default, the Platform SDK reads your personal access token from the environment variable ([more details on how to create and store your personal access token](setup-your-pat)). But you can change this configuration, for example you can load it from a file like in the following example:
+By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](setup-your-pat)). However, you can change this configuration. For example, you can load it from a file, as in this example:
 
 ```ts
 setPlatformConfig({
@@ -136,7 +134,8 @@ setPlatformConfig({
 });
 ```
 
-* By default, the Platform SDK prints some logs to the console. You can customize the logging experience using the following APIs:
+By default, the Platform SDK prints some logs to the console. You can customize the logging experience using the following APIs:
+
 ```ts
 disableLogger()          // Disables all logging
 enableLogger()           // Enable logging through the console

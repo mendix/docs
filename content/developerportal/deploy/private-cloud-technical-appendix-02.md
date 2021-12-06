@@ -9,7 +9,7 @@ tags: ["Private Cloud", "Technical Appendix"]
 ## 1 Introduction
 
 
-This documentation provides an overview of how the Mendix for Private Cloud components interact with external services, and how Mendix for Private Cloud components interact with each other. It explains what happens when:
+This documentation provides an overview of how the Mendix for Private Cloud components interact both with external services, and with each other. It explains what happens when:
 
 * the Mendix Operator is installed and configured
 * an environment is created
@@ -20,18 +20,18 @@ The sequence diagrams in this document are simplified for clarity. Kubernetes Op
 
 ## 2 Installation Prerequisites
 
-For an up-to-date list of the Operator prerequisites, see https://docs.mendix.com/developerportal/deploy/private-cloud-supported-environments.
+For a full list of the Operator prerequisites, see https://docs.mendix.com/developerportal/deploy/private-cloud-supported-environments.
 
 Mendix for Private Cloud is the officially supported Mendix solution for deploying Mendix apps into a Kubernetes cluster.
-To provide a better integration with an existing ecosystem, Mendix for Private Cloud relies on external services for compute, storage, and networking resources. For example, Mendix for Private Cloud in the AWS ecosystem with the right setup will allow to 
+To provide a better integration with an existing ecosystem, Mendix for Private Cloud relies on external services for compute, storage, and networking resources. For example, Mendix for Private Cloud in the AWS ecosystem can allow you to:
 
 * benefit from AWS hyperscaling features
 * use a managed database and file storage solution
 * integrate with other workloads already running in the same AWS account
 
-Mendix for Private Cloud provides improved integration with some hyperscalers, but also supports self-hosted solutions. It is possible to run Mendix for Private Cloud in a local, self-contained Kubernetes VM – such as microk8s, k3s/k3os, or minikube.
+Mendix for Private Cloud provides improved integration with some hyperscalers, but also supports self-hosted solutions. It is possible to run Mendix for Private Cloud on a local, self-contained Kubernetes VM such as *microk8s*, *k3s/k3os*, or *minikube*.
 
-Before installing the Mendix for Private Cloud Operator, it is highly recommended to confirm the environment is working – by deploying a “hello world” test container app and testing that the database, file storage, and container registry can be reached from the Kubernetes cluster.
+Before installing the Mendix for Private Cloud Operator, it is highly recommended that you confirm the environment is working. For example, you can try deploying a “hello world” test container app and testing that the database, file storage, and container registry can be reached from the Kubernetes cluster.
 
 {{% alert type="info" %}}
 If your Kubernetes environment can be accessed from the public internet, ensure that the environment is secured and up to date.
@@ -39,50 +39,58 @@ If your Kubernetes environment can be accessed from the public internet, ensure 
 
 ### 2.1 Kubernetes
 
-Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. Mendix Operator includes [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow to control the Operator and get its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Private Cloud Portal can also be used to manage environments (using the Mendix Gateway agent as the Kubernetes API client).
-Mendix for Private Cloud doesn't access the base operating system. To call the Kubernetes API, Kubernetes service accounts are used, and [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) ensures that each Service Account only gets the minimal required permissions. All container images provided by Mendix run as a non-root user/group and don't require privilege escalation; container images don't require any configuration to run in OpenShift with randomized UIDs.
-During installation with the `mxpc-cli`, the current user's Kubernetes authorization is used to create namespace and install CRDs.
+The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Private Cloud Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
+
+Mendix for Private Cloud doesn't access the base operating system. Kubernetes service accounts are used to call the Kubernetes API and [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) ensures that each service account only gets the minimum required permissions. All container images provided by Mendix run as a non-root user/group and don't require privilege escalation. Container images can be run in OpenShift with randomized UIDs without any configuration.
+
+During [installation with `mxpc-cli`](#installation), the current user's Kubernetes authorization is used to create namespaces and install CRDs.
 
 ### 2.2 Database
 
 Each Mendix environment needs a dedicated database – two different applications/environments cannot share a database.
-Mendix for Private Cloud has built-in features to create/delete tenants in a database server, and this allows a single database server to be shared by multiple environments. This is called an “On-Demand” database: as soon as a new environment is created, the Operator can automatically create a database tenant for that environment.
-It is also possible to manually create a “Dedicated” database, and the Operator will just pass the database credentials directly to the Mendix Runtime. Dedicated databases cannot be shared between environments.
-Mendix for Private Cloud will not install, create, or maintain the database server – you will need to provide the database server and maintain it. As long as the database server is officially supported by Mendix for Private Cloud, any compatible database server can be used, (for example a geo-redundant AWS Aurora).
-For apps that don't need persistence (for example demo or frontend apps), an ephemeral database can be used – the Mendix Runtime will use an in-memory database which will not persist any data between restarts.
+Mendix for Private Cloud has built-in features to create and delete tenants on a database server, which allows a single database server to be shared by multiple environments. This is called an “On-Demand” database: as soon as a new environment is created, the Operator can automatically create a database tenant for that environment.
+
+You can also create a “Dedicated” database manually, and the Operator will just pass the database credentials directly to the Mendix Runtime. Dedicated databases cannot be shared between environments.
+
+Mendix for Private Cloud will not install, create, or maintain the database server – you will need to provide the database server and maintain it. You can use any compatible database server, as long as the database server is officially supported by Mendix for Private Cloud (for example a geo-redundant AWS Aurora).
+
+For apps that don't need persistence (for example demo or frontend apps), an ephemeral database can be used. The Mendix Runtime will use an in-memory database which will not persist any data between restarts.
 
 ### 2.3 File storage
 
-To store files, Mendix environments need access to a blob (object) storage server, such as AWS S3 or Minio. A specialized blob storage server is much easier to maintain and manage than block storage (CSI, mounted volumes). Unlike databases, a single blob storage bucket and account can be shared by multiple environments.
+To store files, Mendix environments need access to a blob (object) storage server, such as AWS S3 or Minio. A specialized blob storage server is much easier to maintain and manage than block storage (CSI or mounted volumes). Unlike databases, a single blob storage bucket and account can be shared by multiple environments.
 Depending on the storage provider, Mendix for Private Cloud can either provision the bucket and IAM user automatically when a new environment is created, or let an environment use a pre-provisioned bucket and IAM account.
+
 Mendix for Private Cloud will not install, create, or maintain the blob storage server (such as Minio) – you will need to install the blob storage server and maintain it. When using a managed storage solution such as AWS S3 or Azure Blob Storage, you will need to create the storage account and IAM role to be used by the Mendix Operator.
 
 ### 2.4 Network endpoint
 
-To allow HTTP clients communicate with the Mendix Runtime, you will need to set up the network infrastructure. which typically includes a DNS wildcard domain, a load balancer, and an ingress controller. This infrastructure depends on how exactly your network is set up and how Mendix apps should be reachable. For example, you might have a requirement to make Mendix apps might only be reachable from a private intranet and use domains from private DNS zone.
+To allow HTTP clients to communicate with the Mendix Runtime, you will need to set up the network infrastructure. This typically includes a DNS wildcard domain, a load balancer, and an ingress controller. The infrastructure will depend on how exactly your network is set up and how Mendix apps should be reachable. For example, you might have a requirement allow Mendix apps to only be reachable from a private intranet and use domains from a private DNS zone.
+
 Some Kubernetes vendors such as OpenShift will install and configure the entire network out of the box. Other vendors such as AWS offer multiple types of Ingress controllers and Load Balancers.
-Mendix for Private Cloud can either create a
+
+Mendix for Private Cloud can create one of:
 
 * A [Kubernetes Service](https://kubernetes.io/docs/concepts/services-networking/service/)
-* A [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/), plus an associated Service
-* An [OpenShift Route](https://docs.openshift.com/container-platform/4.9/networking/routes/route-configuration.html), plus an associated Service
+* A [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/), plus an associated service
+* An [OpenShift Route](https://docs.openshift.com/container-platform/4.9/networking/routes/route-configuration.html), plus an associated service
 
-Mendix for Private Cloud allows to customize certain Ingress, Route, and Service properties globally (for the entire namespace) or per environment.
+Mendix for Private Cloud allows you to customize some Ingress, Route, and Service properties either globally (for the entire namespace) or per environment.
 
 ### 2.5 Container registry
 
-Kubernetes uses container images to distribute software. Before running a Mendix app MDA file, Mendix for Private Cloud will repack the MDA into a container image and push this image into a container image registry such as ECR, quay.io, or Nexus. Using a centralized container registry simplifies cluster scaling and provides insights what is running in a cluster.
+Kubernetes uses container images to distribute software. Before deploying a Mendix app (.mda) file, Mendix for Private Cloud will repack the .mda file into a container image and push this image into a container image registry such as *ECR*, *quay.io*, or *Nexus*. Using a centralized container registry simplifies cluster scaling and provides insights what is running in a cluster.
 For example, it is possible to use [Trivy scanner](https://github.com/aquasecurity/trivy) to scan all images deployed in a cluster for CVEs.
 
-You will need to create the container registry and provide credentials to the Mendix Operator so that the Operator can push images to the registry. In addition, your Kubernetes cluster needs to be authorized to pull images from the registry.
+You will need to create the container registry and provide credentials to the Mendix Operator so that it can push images to the registry. In addition, your Kubernetes cluster needs to be authorized to pull images from the registry.
 
 ### 2.6 Network connectivity
 
-To communicate with the Private Cloud Portal, Mendix Operator doesn't require any internet-facing open ports (port forwarding). All communication with the Private Cloud Portal and other Mendix services is done over HTTPS and is initiated from the Kubernetes cluster side. It is even possible to run Mendix for Private Cloud behind a NAT or even a series of NATs.
-For Connected clusters, Mendix for Private Cloud needs to be able to connect to [Mendix services](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy.
-The cluster also needs network connectivity to the database and file (blob) storage.
+Your cluster needs network connectivity to the database and file (blob) storage.
 
-## 3 Installation
+For *Connected* clusters, Mendix for Private Cloud needs to be able to connect to [Mendix services](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy. The Mendix Operator doesn't require any internet-facing open ports (port forwarding) to communicate with Mendix services. All communication with the Developer Portal is over HTTPS and is initiated from the Kubernetes cluster. It is even possible to run Mendix for Private Cloud behind Network Address Translation (NAT) devices or even a series of NAT devices.
+
+## 3 Installation{#installation}
 
 The `mxpc-cli` Configuration Tool is used to configure and install Mendix for Private Cloud.
 This tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as Deployments, Pods, Secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, please switch to the target context before running the `mxpc-cli` tool.
@@ -92,7 +100,7 @@ This tool provides an interactive, terminal-based GUI to prepare and apply Kuber
 When a StoragePlan CR is successfully created or updated in Kubernetes, the `mxpc-cli` tool will call the Private Cloud Portal to create a label for that StoragePlan. Cluster members can then select this plan from a dropdown when creating a new environment. This is only used in Connected mode, and the `mxpc-cli` tool will not create StoragePlan labels when the cluster is installed in Standalone mode.
 
 {{% alert type="info" %}}
-The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
+The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
 {{% /alert %}}
 
 ## 4 App Deployment

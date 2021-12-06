@@ -31,7 +31,7 @@ The [Use Case Examples](sdk-use-cases) provide examples from the four basic cate
 
 ## 5 Old Versions (Below 5.0)
 
-For Mendix Platform SDK versions below 5.0, see [Old SDK Versions (Below 5.0)](old-versions).
+For how-to details on Mendix Platform SDK versions below 5.0, see [Old SDK Versions (Below 5.0)](sdk-howtos).
 
 ## 6 Other Resources
 

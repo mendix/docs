@@ -1,6 +1,6 @@
 ---
-title: "Set Up Your Development Environment (Old Version)"
-parent: "old-versions"
+title: "Set Up Your Development Environment (Old Versions)"
+parent: "sdk-old-versions-howtos"
 menu_order: 1
 ---
 
@@ -120,4 +120,4 @@ To set up a working directory for your script, follow these steps:
 
 ## 5 Next Step
 
-Continue with [How to Create Your First Script](creating-your-first-script).
+Continue with [How to Create Your First Script (Old Versions)](old-creating-your-first-script).

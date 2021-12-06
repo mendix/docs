@@ -1,6 +1,6 @@
 ---
-title: "Working with when.js and Promises in TypeScript (Old Version)"
-parent: "old-versions"
+title: "Working with when.js and Promises in TypeScript"
+parent: "sdk-refguide"
 menu_order: 3
 ---
 

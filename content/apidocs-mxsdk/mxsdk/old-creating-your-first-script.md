@@ -1,12 +1,12 @@
 ---
-title: "Create Your First Script (Old Version)"
-parent: "old-versions"
+title: "Create Your First Script (Old Versions)"
+parent: "sdk-old-versions-howtos"
 menu_order: 2
 ---
 
 ## 1 Introduction
 
-In [How to Set Up Your Development Environment](setting-up-your-development-environment), you set up all the development tools. Now you will create an SDK script that automatically bootstraps a new Mendix app.
+In [How to Set Up Your Development Environment](old-setting-up-your-development-environment), you set up all the development tools. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing Your First Script
 
@@ -145,6 +145,3 @@ The steps for app (project) creation (line 3) and committing to the Team Server 
 2.  Open the new app, and on the right side, click **Edit**.
 3.  If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
 
-## 5 Next Step
-
-Continue with [How to Create the Domain Model](creating-the-domain-model).

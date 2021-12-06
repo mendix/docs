@@ -65,7 +65,7 @@ Click **Edit…** to open a dialog box which will provide a full reference for t
 
 The most up-to-date list of supported languages in your version of Studio Pro is the one in the add languages menu. The list below is provided to enable you to quickly evaluate if Mendix supports your desired language.
 
-| Language | Country | Locale | Available Since |
+| Language | Region | Locale | Available Since |
 | --- | --- | --- | --- |
 | Albanian | Albania | sq_AL | 9.0.5 |
 | Amharic | Ethiopia | am_ET | 9.2.0 |

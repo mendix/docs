@@ -1,11 +1,13 @@
 ---
-title: "Using Platform SDK"
+title: "Use the Platform SDK"
 parent: "sdk-howtos"
 menu_order: 12
 ---
 
-# Using Platform SDK
+## Introduction 
+
 This article guides you on how to use the Platform SDK to:
+
 * [Create a new app](#create-a-new-app)
 * [Open an existing app](#open-an-existing-app)
 * [Delete an app](#delete-an-app)
@@ -14,13 +16,15 @@ This article guides you on how to use the Platform SDK to:
 * [Commit a temporary Working Copy](#commit-a-temporary-working-copy)
 * [Change the Platfrom SDK configurations](#change-the-platfrom-sdk-configurations)
 
-## The platfrom client
+## 2 Platfrom Client
+
 The entry point for Mendix Platform SDK is `MendixPlatformClient`. In most cases you will need to instantiate a new object from this class.
 ```ts
 const client = new MendixPlatformClient();
 ```
 
-## Create a new app
+## 3 Creating a New App
+
 The platform client allows you to create a new Mendix app by simply passing the app name
 ```ts
 const app = await client.createNewApp("My new App");
@@ -43,25 +47,29 @@ const app = await client.createNewApp("My Asset Management", {
 });
 ```
 
-## Open an existing app
+## 4 Opening an Existing App
+
 The platform client allows you to open an existing app using the app ID. You can get the app ID in the developer portal under 'General Settings'
 ```ts
 const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
-## Get information about the repository of the app
+## 5 Getting Information About the Repository of the App
+
 From the app object you can get some information about its repository. Such as repository type, url and the default branch name.
 ```ts
 const repositoryInfo = app.getRepositoryInfo();
 ```
 
-## Delete an app
+## 6 Deleting an App
+
 The app object allows you to delete the corresponding Mendix app. Please note that all resources of this app will be deleted permanently.
 ```ts
 await app.delete();
 ```
 
-## Create a temporary Working Copy
+## 7 Creating a Temporary Working Copy
+
 To change your app, you need to create a temporary working copy of a particular Team Server branch, make the changes there, and then submit that working copy to Team Server.
 ```ts
 const workingCopy = await app.createTemporaryWorkingCopy("main");
@@ -71,13 +79,15 @@ You can pass some options to `createTemporaryWorkingCopy`
 |----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | commitId | Id of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
 
-## Open the working copy model
+## 8 Opening the Working Copy Model
+
 After creating the working copy, you can load the model to make changes.
 ```ts
 const model = await workingCopy.openModel();
 ```
 
-## Commit a temporary Working Copy
+## 9 Committing a Temporary Working Copy
+
 After making the changes, you need to commit the changes back to Team Server.
 Make sure to call `await model.flushChanges()` when committing right after making changes. This makes sure that the mendixmodelsdk has been able to send the changes.
 ```ts
@@ -92,7 +102,8 @@ You can pass some options to `commitToRepository`
 | targetCommitId | This commit ID will be set to the working copy base commit ID if not specified.                                    |
 | force          | Set to true to commit to a branch that is different from the working copy's base branch.                           |
 
-## Change the Platfrom SDK configurations
+## 10 Changing the Platfrom SDK Configurations
+
 * By default, the Platform SDK reads your personal access token from the environment variable ([more details on how to create and store your personal access token](setup-your-pat)). But you can change this configuration, for example you can load it from a file like in the following example:
 ```ts
 setPlatformConfig({

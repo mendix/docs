@@ -6,15 +6,16 @@ menu_order: 12
 
 ## Introduction 
 
-This article guides you on how to use the Platform SDK to:
+This how-to provides guidance on how to use the Platform SDK to do the following:
 
-* [Create a new app](#create-a-new-app)
-* [Open an existing app](#open-an-existing-app)
-* [Delete an app](#delete-an-app)
-* [Create a temporary Working Copy](#create-a-temporary-working-copy)
-* [Open the working copy model](#open-the-working-copy-model)
-* [Commit a temporary Working Copy](#commit-a-temporary-working-copy)
-* [Change the Platfrom SDK configurations](#change-the-platfrom-sdk-configurations)
+* [Create a new app](#creating-app)
+* [Open an existing app](#opening-existing-app)
+* [Get information about the repository of the app](#getting)
+* [Delete an app](#deleting)
+* [Create a temporary working copy](#creating-temp)
+* [Open the working copy model](#opening-working-copy)
+* [Commit a temporary working copy](#committing)
+* [Change the Platfrom SDK configurations](#changing)
 
 ## 2 Platfrom Client
 
@@ -23,7 +24,7 @@ The entry point for Mendix Platform SDK is `MendixPlatformClient`. In most cases
 const client = new MendixPlatformClient();
 ```
 
-## 3 Creating a New App
+## 3 Creating a New App {#creating-app}
 
 The platform client allows you to create a new Mendix app by simply passing the app name
 ```ts
@@ -47,28 +48,28 @@ const app = await client.createNewApp("My Asset Management", {
 });
 ```
 
-## 4 Opening an Existing App
+## 4 Opening an Existing App {#opening-existing-app}
 
 The platform client allows you to open an existing app using the app ID. You can get the app ID in the developer portal under 'General Settings'
 ```ts
 const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
-## 5 Getting Information About the Repository of the App
+## 5 Getting Information About the Repository of the App {#getting}
 
 From the app object you can get some information about its repository. Such as repository type, url and the default branch name.
 ```ts
 const repositoryInfo = app.getRepositoryInfo();
 ```
 
-## 6 Deleting an App
+## 6 Deleting an App {#deleting}
 
 The app object allows you to delete the corresponding Mendix app. Please note that all resources of this app will be deleted permanently.
 ```ts
 await app.delete();
 ```
 
-## 7 Creating a Temporary Working Copy
+## 7 Creating a Temporary Working Copy {#creating-temp}
 
 To change your app, you need to create a temporary working copy of a particular Team Server branch, make the changes there, and then submit that working copy to Team Server.
 ```ts
@@ -79,14 +80,14 @@ You can pass some options to `createTemporaryWorkingCopy`
 |----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | commitId | Id of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
 
-## 8 Opening the Working Copy Model
+## 8 Opening the Working Copy Model {#opening-working-copy}
 
 After creating the working copy, you can load the model to make changes.
 ```ts
 const model = await workingCopy.openModel();
 ```
 
-## 9 Committing a Temporary Working Copy
+## 9 Committing a Temporary Working Copy {#committing}
 
 After making the changes, you need to commit the changes back to Team Server.
 Make sure to call `await model.flushChanges()` when committing right after making changes. This makes sure that the mendixmodelsdk has been able to send the changes.
@@ -102,7 +103,7 @@ You can pass some options to `commitToRepository`
 | targetCommitId | This commit ID will be set to the working copy base commit ID if not specified.                                    |
 | force          | Set to true to commit to a branch that is different from the working copy's base branch.                           |
 
-## 10 Changing the Platfrom SDK Configurations
+## 10 Changing the Platfrom SDK Configurations {#changing}
 
 * By default, the Platform SDK reads your personal access token from the environment variable ([more details on how to create and store your personal access token](setup-your-pat)). But you can change this configuration, for example you can load it from a file like in the following example:
 ```ts

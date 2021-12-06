@@ -13,6 +13,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### December 6th, 2021
+
+#### Mendix Operator v2.2.0 and Mendix Gateway Agent v2.2.0
+
+* To improve the security score of all Mendix for Private Cloud images, we replaced a deprecated [operator-sdk v0.18.2](https://v0-18-x.sdk.operatorframework.io/docs/) dependency with a maintained version of [kubebuilder](https://book.kubebuilder.io/).
+  * This update allows us to address [CVE-2020-8565](https://access.redhat.com/security/cve/cve-2020-8565), [CVE-2020-26160](https://access.redhat.com/security/cve/cve-2020-26160) and [CVE-2020-29652](https://access.redhat.com/security/cve/cve-2020-29652). These CVEs do not affect previously released versions of Mendix for Private Cloud.
+  * This internal library change does not change the behavior of any Mendix for Private Cloud components.
+* When switching to the *Review and Apply* screen in `mxpc-cli`, previous results will be cleared.
+* We have fixed an issue where attempting to apply a custom TLS configuration in non-interactive mode with `mxpc-cli` failed with a panic error.
+
 ### November 18th, 2021
 
 #### Portal Improvements

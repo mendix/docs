@@ -118,7 +118,9 @@ To update a widget in your app to a newer version, follow these steps:
 
 6. Click **Download** to download the latest version. The **Question** dialog box opens and asks if you want to overwrite the existing package.
 
-7. Click **Yes** to proceed. The widget is updated to the latest version.
+7. Click **Yes** to proceed. 
+
+The widget is updated to the latest version.
 
 #### 4.1.3 Configuring a Widget
 
@@ -199,7 +201,9 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 8. When the **Warning** dialog box shows the files that will be overwritten, click **OK**.
 
-9. Wait until a pop-up window states that the module was successfully imported. Click **OK**. The module is updated to the latest version.
+9. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+
+The module is updated to the latest version.
 
 #### 4.2.3 Configuring the Module
 

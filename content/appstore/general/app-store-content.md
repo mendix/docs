@@ -205,7 +205,7 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 The module is updated to the latest version.
 
-#### 4.2.3 Configuring the Module
+#### 4.2.3 Configuring a Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, when you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 

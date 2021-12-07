@@ -10,19 +10,19 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
-{{% todo %}}[**This is a test. This will be removed after the test**]{{% /todo %}}
+[Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) enables including MS teams component in your Mendix application. Just add the minimum required configuration and you are good to go. 
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is a module that enables sending messages to a Microsoft Teams channel.
+The app service works with [Mendix SSO](/appstore/modules/mendix-sso), so no additional authentication changes are required.
 
 ![](attachments/ms-teams-connector/message.png)
 
 ### 1.1 Typical Use Cases
 
-*  You can send messages to a Microsoft Teams channel using a microflow
+*  You can configure Microsoft Teams Connector in any of your microflow.
 
-   ![](attachments/ms-teams-connector/microflow.png)
+   ![](attachments/ms-teams-connector/Use_In_Microflow)
 
-*  You can send messages to a Microsoft Teams channel using a [workflow](/refguide/workflows)
+*  It can also be used in a [workflow](/refguide/workflows)
 
    ![](attachments/ms-teams-connector/workflow.png)
 
@@ -32,7 +32,7 @@ The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/11
 
 ### 1.3 Prerequisites
 
-The app service can only be used with Studio Pro 9 versions starting from [9.0](/releasenotes/studio-pro/9.0).
+The app service can only be used with Studio Pro 9 versions starting from [9.8](https://docs.mendix.com/releasenotes/studio-pro/9.8).
 
 ## 2 Installation
 

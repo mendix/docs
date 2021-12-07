@@ -179,7 +179,7 @@ Unlike a widget, you can see a module in your App Explorer. A module contains a 
 Sometimes additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 {{% /alert %}}
 
-#### 4.2.1 Updating a Module
+#### 4.2.2 Updating a Module
 
 1. Open the app in which you want to update the module.
 

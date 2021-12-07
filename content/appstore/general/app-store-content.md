@@ -116,9 +116,9 @@ To update a widget in your app to a newer version, follow these steps:
 
    ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
 
-6. Click **Download** to download the latest version. Then the **Question** dialog box opens and asks if you want to overwrite the existing package.
+6. Click **Download** to download the latest version. The **Question** dialog box opens and asks if you want to overwrite the existing package.
 
-7. Click **Yes** to proceed. The widget is updated to the downloaded version.
+7. Click **Yes** to proceed. The widget is updated to the latest version.
 
 #### 4.1.3 Configuring a Widget
 
@@ -195,13 +195,13 @@ Sometimes additional widgets are added when you download a module. For example, 
 
    ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
-7. Select **Replace existing module**. 
+7. Select **Replace existing module** and click **Import**.
 
-8. When the **Warning** dialog box opens and shows a list of files will be overwritten, click **OK**.
+8. When the **Warning** dialog box shows the files that will be overwritten, click **OK**.
 
-9. Wait until a pop-up window states that the module was successfully imported. Click **OK**. The module is updated to the downloaded version.
+9. Wait until a pop-up window states that the module was successfully imported. Click **OK**. The module is updated to the latest version.
 
-#### 4.2.2 Configuring the Module
+#### 4.2.3 Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, when you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 

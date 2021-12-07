@@ -15,7 +15,7 @@ This documentation provides an overview of how the Mendix for Private Cloud comp
 * an environment is created
 
 {{% alert type="info" %}}
-The sequence diagrams in this document are simplified for clarity. Kubernetes Operators are non-blocking, event-driven, and asynchronous. Instead of relying on blocking method calls, the Operator receives events when a CR or another Kubernetes Resource changes its status and, if changes are necessary, will send a request to create, update, or delete a Kubernetes Resource.
+The sequence diagrams in this document are simplified for clarity. Kubernetes Operators are non-blocking, event-driven, and asynchronous. Instead of relying on blocking method calls, the Operator receives events when a [Custom Resource (CR)](private-cloud-technical-appendix-01#operators) or another Kubernetes Resource changes its status and, if changes are necessary, will send a request to create, update, or delete a Kubernetes Resource.
 {{% /alert %}}
 
 ## 2 Installation Prerequisites
@@ -39,7 +39,7 @@ If your Kubernetes environment can be accessed from the public internet, ensure 
 
 ### 2.1 Kubernetes
 
-The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Private Cloud Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
+The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Developer Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
 
 Mendix for Private Cloud doesn't access the base operating system. Kubernetes service accounts are used to call the Kubernetes API and [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) ensures that each service account only gets the minimum required permissions. All container images provided by Mendix run as a non-root user/group and don't require privilege escalation. Container images can be run in OpenShift with randomized UIDs without any configuration.
 
@@ -92,12 +92,17 @@ For *Connected* clusters, Mendix for Private Cloud needs to be able to connect t
 
 ## 3 Installation{#installation}
 
-The `mxpc-cli` Configuration Tool is used to configure and install Mendix for Private Cloud.
-This tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as Deployments, Pods, Secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, please switch to the target context before running the `mxpc-cli` tool.
+The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Developer Portal knows about it. See [Creating a Private Cloud Cluster](private-cloud-cluster#create-cluster) for more information.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-installation.png)
 
-When a StoragePlan CR is successfully created or updated in Kubernetes, the `mxpc-cli` tool will call the Private Cloud Portal to create a label for that StoragePlan. Cluster members can then select this plan from a dropdown when creating a new environment. This is only used in Connected mode, and the `mxpc-cli` tool will not create StoragePlan labels when the cluster is installed in Standalone mode.
+First, you create the namespace in the Mendix Developer Portal.
+
+You can then download `mxpc-cli`, the configuration tool, which is used to configure and install Mendix for Private Cloud components and is customized for  your Kubernetes namespace.
+
+The configuration tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as deployments, pods, secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, you must switch to the correct target context before running the `mxpc-cli` tool.
+
+In *Connected Mode*, the `mxpc-cli` tool will call the Developer Portal to create a label for a storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Developer Portal when the cluster is installed in Standalone mode.
 
 {{% alert type="info" %}}
 The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
@@ -105,19 +110,33 @@ The configuration tool only creates configuration objects through the Kubernetes
 
 ## 4 App Deployment
 
-When you create a new environment from the Private Cloud Portal, it will send the `MendixApp` CR to the Mendix Gateway Agent. The Agent will then create the `MendixApp` CR in Kubernetes.
-Then the Operator will start processing all of the `MendixApp` dependencies – `StorageInstance`, `Build`, and  `Endpoint` CRs. Each dependency CR is handled by its own controller.
-Once all dependencies are processed (report their status as Ready), the Operator will process the `Runtime` CR.
-Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status, and forward this status back to the Private Cloud Portal.
-To get the latest status reported by the Mendix Gateway Agent in the Private Cloud Portal, press the Refresh button.
+When you want to create a new environment you need to create a `MendixApp` CR in Kubernetes.
+
+In connected mode, this is initiated in the Developer Portal, which sends the `MendixApp` CR to the Mendix Gateway Agent. The Agent will then create the `MendixApp` CR in Kubernetes.
+
+In standalone mode, you need to create the MendixApp CR directly in your Kubernetes namespace, using the `mxpc-cli` tool.
+
+When is finds the MendixApp CR, the Operator will initiate processing all of the `MendixApp` dependencies, as shown in the diagram below.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-deployment.png)
 
+These dependency CRs include  `StorageInstance`, `Build`, and  `Endpoint` CRs. Each dependency CR is handled by its own controller.
+
+Once all dependencies are processed (report their status as Ready), the Operator will process the `Runtime` CR.
+
+Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status.
+
+In connected mode, this status will be reported back to the Developer Portal.
+To ensure you see the latest status reported by the Mendix Gateway Agent in the Developer Portal, press the Refresh button.
+
 ### 4.1 Storage Provisioning
 
-This diagram provides a more detailed explanation how the Mendix Operator communicates with the `StorageInstance` controller when creating a new environment.
-The Operator doesn't communicate with the database or file storage directly – instead, the `StorageInstance` controller can run a provisioner pod (a “task” pod) to create a new storage tenant in the database or file server.
-The `StoragePlan` CR (created earlier when the Operator was configured with the `mxpc-cli` Configuration Tool) contains blueprints for the provisioner pod, such as:
+The diagram below provides a more detailed explanation how the Mendix Operator communicates with the `StorageInstance` controller when creating a new environment.
+
+![](attachments/private-cloud-tech-appendix/mx4pc-provision-storage.png)
+
+The Operator doesn't communicate with the database or file storage directly, instead, the `StorageInstance` controller runs a provisioner pod (a “task” pod) to create a new storage tenant in the database or file server.
+The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](private-cloud-cluster#configure-namespace)) contains blueprints for the provisioner pod, such as:
 
 * The provisioner image name
 * Name of the Kubernetes secret containing management credentials – such as the PostgreSQL admin username/password or AWS credentials
@@ -126,60 +145,70 @@ The `StoragePlan` CR (created earlier when the Operator was configured with the 
 
 To the Operator, all provisioner pods look identical, and work as plugins. The `StorageInstance` controller will create a provisioner pod and wait for it to successfully complete. If the provisioner terminated without an error and created a secret, the `StorageInstance` controller assumes that the storage was successfully provisioned and ready for use.
 
-Each storage type (PostgreSQL, JDBC, S3, Minio, and others) typically has its own provisioner image. For example, the PostgreSQL provisioner image will connect to the PostgreSQL server and create a new database and role that can only be used by one app.
+Each storage type (PostgreSQL, JDBC, S3, Minio, and others) typically has its own provisioner image. For example, the PostgreSQL provisioner image will connect to a PostgreSQL server and create a new database and role that can only be used by one app.
 
-When a provisioner pod successfully creates a new tenant for an environment, it will store the credentials that can be used by that environment in a new Kubernetes secret. The provisioner pod doesn't have permissions to read or modify secrets, only to create new secrets.
-Some provisioners (“basic” provisioners) don't communicate with a storage server and only create generate a Kubernetes secret – for example, this approach is used by the *****Dedicated JDBC* database option and the *S3 (existing bucket and account)* file storage option.
+When a provisioner pod successfully creates a new tenant for an environment, it will store the credentials for that environment in a new Kubernetes secret that can be used by that environment. The provisioner pod doesn't have permissions to read or modify secrets, only to create new secrets.
 
-If the provisioner pod fails with an error, it is likely to be because of a configuration issue, and the `StorageInstance` controller will not try to run the provisioner pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the provisioner pod. Only then the `StorageInstance` controller will attempt to provision storage again.
+Some provisioners (“basic” provisioners) don't communicate with a storage server at all and only generate a Kubernetes secret. This approach is used, for example, by the *Dedicated JDBC* database option and the *S3 (existing bucket and account)* file storage option.
 
-![](attachments/private-cloud-tech-appendix/mx4pc-provision-storage.png)
+If the provisioner pod fails with an error, it is likely to be because of a configuration issue, and the `StorageInstance` controller will not try to run the provisioner pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the provisioner pod. Only then will the `StorageInstance` controller attempt to provision storage again.
 
 ### 4.2 App Image Build
 
-When a new deployment package (MDA) is deployed from the Private Cloud Portal to an environment, the Private Cloud Portal will generate a new sourceURL (a URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
+When a new deployment package (MDA) is deployed from the Developer Portal to an environment, the Developer Portal will generate a new sourceURL (the URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
+
+For a standalone environment, you need to create the `MendixApp` CR yourself and apply it to the namespace where it should be deployed. You can find further instructions in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](private-cloud-operator).
+
+The processing of the `MendixApp` CR is shown in the diagram below.
+
+![](attachments/private-cloud-tech-appendix/mx4pc-build-image.png)
 
 When the `Build` controller detects that the `spec.sourceURL` attribute doesn't match the `status.sourceURL` in the `Build` CR, it will run the build pod.
 The build pod will then
 
 * download the MDA from the specified `spec.sourceURL`
 * convert the MDA into a OCI image layer (app layer)
-* append the app layer to a `runtime-base` image and push the resulting image to the image registry
-    - internally, this is done by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation
-    - `runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)
+* append the app layer to a `runtime-base` image
+    {{% alert type="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
+* push the resulting image to the image registry
 
 When the build pod successfully completes without errors, the container registry will contain an updated version of the app's image. The `Build` controller will then copy the `sourceURL` from the Pod to the `Build` CR's `status.sourceURL`. This way, the Mendix Operator knows which image is currently stored in the image registry.
+
 The `Build` CR's updated `status.sourceURL` will be transferred to the `MendixApp` CR's `status.sourceURL`, and every time this `status.sourceURL` is changed, the `Runtime` controller will restart the environment.
 
-If the build pod fails with an error, it is likely to be because of a configuration issue, and the `Build` controller will not try to run the build pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the build pod. Only then the `Build` controller will attempt to provision storage again.
-
-![](attachments/private-cloud-tech-appendix/mx4pc-build-image.png)
+If the build pod fails with an error, it is likely to be because of a configuration issue, and the `Build` controller will not try to run the build pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the build pod. Only then will the `Build` controller attempt to provision storage again.
 
 ### 4.3 Endpoint Allocation
 
-Mendix for Private Cloud offers three different ways to route traffic from an HTTP listener to a Mendix runtime:
+Mendix for Private Cloud offers three ways to route traffic from an HTTP listener to a Mendix runtime:
 
 * Kubernetes Ingress
 * OpenShift Routes
 * Service only
 
-The Ingress and Route options allow to quickly start using an existing Ingress controller or OpenShift router (a Kubernetes service would be created as well – to allow load balancing between replicas of your Mendix app). If you choose to only create a Service, it is possible to route traffic directly from a Load balancer such as AWS CLB or NLB, or manually create and manage Ingress resources.
+The Ingress and Route options allow you to quickly start using an existing Ingress controller or OpenShift router. With both these options a Kubernetes service is created as well to allow load balancing between replicas of your Mendix app. If you choose the service only option, you can route traffic directly from a load balancer such as AWS CLB or NLB, or manually create and manage Ingress resources.
 
-To use an Ingress controller, you will need to install it first:
+#### 4.3.1 Using Kubernetes Ingress
 
-* Install an ingress controller
-* Most ingress controllers will also create a Kubernetes load balancer service on installation
-* Set up DNS so that you app domain(s) (or wildcard domain) is resolved to the Load Balancer's external IP address
-    - For example, here is an article how to set up Route 53: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html
-    - As an alternative, you can install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
-* Create a test ingress object and deploy a test app to verify that the network setup is working
+To use an Ingress controller, you need to install it first:
+
+1. Install your chosen ingress controller
+    Most ingress controllers will also create a Kubernetes load balancer service on installation
+2. Set up DNS in one of two ways
+    * ensure that your app domain(s) (or wildcard domain) resolve to the load balancer's external IP address – see, for example, this article, [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), on how to set up Route 53
+    * install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
+3. Create a test ingress object and deploy a test app to verify that the network setup is working
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-ingress-controller.png)
 
+#### 4.3.2 Using OpenShift Routes
+
 If you are using OpenShift Routes, the OpenShift router is already configured and doesn't need additional configuration.
 
-When a new environment is created in the Mendix Operator, it will create a Service object (for all endpoint types: service only, ingress, or route) and the ingress or route object.
-After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl – so that a Mendix app can always know its URL.
+#### 4.3.3 The Endpoint Controller
+
+When a new environment is created in the Mendix Operator, the Operator will create a service object (for all endpoint types: service only, ingress, or route) together with the ingress or route object, if required.
+After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl so that a Mendix app can always know its URL.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-applicationrooturl.png)
 
@@ -187,7 +216,7 @@ When accessing an app from a web browser through an ingress or route, the path w
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-traffic-ingress.png)
 
-When accessing an app from a web browser through a Load Balancer service, the path would look like this:
+When accessing an app from a web browser through a load balancer service, the path would look like this:
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-traffic-service.png)
 
@@ -198,6 +227,6 @@ For logging and metering, Mendix for Private Cloud relies on open industry stand
 * Prometheus metrics
 * Standard output for container logs
 
-If your cluster doesn't already have a logging and monitoring solution, you can follow the [documentation](https://docs.mendix.com/developerportal/deploy/private-cloud-monitor) how to install Grafana and start collecting logs and metrics from Mendix apps.
+If your cluster doesn't already have a logging and monitoring solution, you can follow [Monitoring Environments in Mendix for Private Cloud](https://docs.mendix.com/developerportal/deploy/private-cloud-monitor) for information on how to install Grafana and start collecting logs and metrics from Mendix apps.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-logging-metering.png)

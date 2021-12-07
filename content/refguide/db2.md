@@ -34,34 +34,34 @@ In this case, the size of *LOGPRIMARY* must be increased.
 For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
 [SQL0964C – The transaction log for the database is full](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
 
-## 5 Limitations
+## 4 Limitations
 
-### 5.1 String Comparison Is Case-Sensitive {#making}
+### 4.1 String Comparison Is Case-Sensitive {#making}
 
 Sorting on string column values is case-sensitive in DB2. To mitigate this, IBM has introduced locale-aware Unicode collations in DB2 9.5 fixpack 1. These collations can be tailored to ignore case and/or accents.
 
 For more detailed information, see the sidenote in [Making DB2 case-insensitive](https://developer.ibm.com/technologies/databases/articles/making-db2-case-insensitive#refname) in *IBM Developer Works*.
 
-### 5.2 Sorting on Very Long Strings
+### 4.2 Sorting on Very Long Strings
 
 It is not possible to sort on unlimited strings or strings with a specified length greater than 8192 characters. This is because such long or unlimited strings are implemented with the data type NCLOB. DB2 does not allow sorting on columns with this data type. Technically, it is possible to cast this type during the execution of the query to a normal VARCHAR type and sort on this, but this increases the execution time. The question is if it really is user-friendly to show such long strings in a data grid. Consider decreasing the length of the string attribute or removing it from data grids. 
 
-### 5.3 ORDER BY a Correlated Scalar Fullselect or a Function with an External Action
+### 4.3 ORDER BY a Correlated Scalar Fullselect or a Function with an External Action
 
 According to the [order-by-clause](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0059211.html) documentation in the *IBM DB2 SQL reference*, DB2 does not support ORDER BY a correlated scalar fullselect (SQLSTATE 42703) or a function with an external action (SQLSTATE 42845).
 
 Taking this limitation into account, ordering by the associated attribute is not supported when a Mendix application is backed by DB2. Therefore, any associated attribute that is used for ordering is filtered out from the query and the result set is returned as if ordering by the associated attribute had not been presented in the query.
 
 {{% alert type="info" %}}
-This limitation has been removed in Studio Pro versions [9.8.0](/releasenotes/studio-pro/9.8) and above.
+This limitation has been removed in Studio Pro version [9.8.0](/releasenotes/studio-pro/9.8) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6#963) and above.
 {{% /alert %}}
 
-### 5.4 Non-Blocking Read-Isolated Streaming with OData
+### 4.4 Non-Blocking Read-Isolated Streaming with OData
 
 According to the [Isolation levels](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.admin.perf.doc/doc/c0004121.html) documentation in *IBM DB2 Application design*, non-blocking read-isolated queries are not supported by DB2. The default behavior of DB2 is that when one user is retrieving rows from a table and another user is making modifications on the same table at the same time, then those modifications will show up in the data in the retrieve query (which means database reads are not isolated). Configuring a stricter transaction isolation level to prevent this behavior puts locks on those same rows (which means concurrent database actions are blocking).
 
 Taking this limitation into account, preventing concurrent row modifications from being included in the result set of a data retrieve action is not supported when a Mendix application is using DB2 as a streaming OData datasource.
 
-### 5.5 Select DISTINCT attribute for Very Long Strings
+### 4.5 Select DISTINCT attribute for Very Long Strings
 
 Selecting DISTINCT attributes of type String with size > 8168 characters is not supported by Mendix due to a known DB2 limitation of selecting DISTINCT columns with a CLOB data type. When you run into this limitation, you may encounter an exception in the logs with a message like this: `DB2 SQL Error: SQLCODE=-727, SQLSTATE=56098, SQLERRMC=2;-134;42907`

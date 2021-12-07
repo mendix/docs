@@ -126,6 +126,10 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+{{% /alert %}}
+
 #### 3.4.2 Store 'changedDate' 
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
@@ -137,6 +141,10 @@ This property defines whether the entity contains the system attribute 'changedD
 
 {{% alert type="info" %}}
 The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
 #### 3.4.3 Store 'owner' 

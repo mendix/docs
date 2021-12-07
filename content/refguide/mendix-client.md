@@ -47,7 +47,7 @@ Mendix apps do not modify the client core, all logic is held in the model. Howev
 
 These are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
 
-### 2.3 Javascript Actions
+### 2.3 JavaScript Actions
 
 This runs custom JavaScript, added by the app developer, which is held as JavaScript actions in the client config.
 
@@ -121,7 +121,7 @@ Because all information is sent to the Mendix Client to build pages, everything 
 
 For a description of the Runtime Server, see [Runtime Server](runtime-server).
 
-## 3 Widget s{#widgets}
+## 3 Widgets{#widgets}
 
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
@@ -137,9 +137,24 @@ Mendix has a number of core widgets which support the standard functions of Mend
 
 In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#widgets). These Dojo implementations are gradually being replaced.
 
-### 3.1 Pluggable Widgets
+### 3.1 Pluggable Widgets {#pluggable-widgets}
 
 You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
+
+Mendix supports the following native libraries:
+
+* react
+* react-native
+* big.js
+
+Mendix supports the following third-party libraries:
+
+* react-dom
+* react-native-gesture-handler
+* react-native-reanimated
+* react-native-svg
+* react-native-vector-icons
+* react-navigation
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets).
 

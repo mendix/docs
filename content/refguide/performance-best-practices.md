@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxpnnn where n is a number> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp011> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -164,6 +164,20 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 8 Avoid Using Too Many Levels of Inheritance {#mxp009}
+
+Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
+
+### 8.1 Steps to Fix
+
+Do not use more than two levels of inheritance or overuse specializations on entities especially if you are using XPath for an entity access.  
+
+Consider the following alternatives:
+
+* Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
+* Create entities with a one-to-one association instead of setting the generalization
+* Create a non-persistable entity that inherits from an outcome of your business logic
+
 ## 10 Avoid Deeply Nested List Views [MXP011] {#mxp011}
 
 A list view is used on a page that is nested for two or more levels, for example, a list view is in list view and the second list view is in a data view. 
@@ -171,4 +185,5 @@ When you use two or more levels of nesting, page performance may be affected due
     
 ### 10.1 Steps to Fix
     
-To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page. 
+To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
+

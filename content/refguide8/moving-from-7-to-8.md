@@ -160,13 +160,19 @@ If any attributes have been converted during this process, the next time your ap
 **This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}
 
-## 6 64-Bit Studio Pro
+## 6 Using REST and Web Service Calls
+
+Mendix 8 introduces two [Custom Settings](custom-settings) which relate to **Call REST Service** and **Call Web Service** activities.
+
+If you use either of these activities, it is recommended that you increase the values of `http.client.MaxConnectionsPerRoute` and `http.client.MaxConnectionsTotal` to reduce the possibility of performance issues for concurrent end-users. For more information, see the [General Settings](custom-settings#general) of the *Custom Settings* documentation.
+
+## 7 64-Bit Studio Pro
 
 Mendix Desktop Modeler version 7 was 64-bit application but could also run on 32-bit.
 
 Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit versions of Windows. This must be the 64-bit version of Windows 7, Service Pack 1, or above.
 
-## 7 Mendix Cloud Version 3
+## 8 Mendix Cloud Version 3
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud v3 node, then we recommend that you upgrade to Mendix Cloud v4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
@@ -225,9 +231,9 @@ Studio Pro 8 will generate the following code for you:
 
 This code behaves as expected and works out of the box. However, if you previously changed your user code to comply with the way Mendix Modeler version 7 was generating this code, you just need to update your user code to use the new names of parameters.
 
-## 9 Troubleshooting
+## 10 Troubleshooting
 
-### 9.1 Cannot Open Project: `Layout … has an invalid value …`
+### 10.1 Cannot Open Project: `Layout … has an invalid value …`
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
@@ -241,7 +247,7 @@ See the image below for an indication of where you might find the error in your 
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
 
-### 9.2 DOM and Atlas UI Issues
+### 10.2 DOM and Atlas UI Issues
 
 Mendix 8 comes with several improvements to its DOM structure. These DOM changes will affect the Sass styling of app. Because of these updates, Mendix 8 app are designed to be completed using [Atlas UI Resources](/appstore/modules/atlas-ui-resources) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
 

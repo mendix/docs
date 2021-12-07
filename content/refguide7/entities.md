@@ -5,7 +5,6 @@ tags: ["domain model", "entity", "entities", "attribute", "validation rule", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
 An entity represents a class of real-world objects, such as customers, invoices, work items, etc. An instance of an entity is called an object. For example, the object representing the person 'Bob Marley' could be an instance of the entity 'Person'.
 
 The properties or features of an entity are described using [attributes](attributes). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
@@ -84,6 +83,10 @@ This property defines whether the entity contains the system attribute 'createdD
 
 _Default value:_ False
 
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+{{% /alert %}}
+
 ### Store 'changedDate'
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type DateTime that stores the most recent date and time when the object was changed.
@@ -94,6 +97,10 @@ This property defines whether the entity contains the system attribute 'changedD
 | False | Entity does not contain the system attribute 'changedDate'. |
 
 _Default value:_ False
+
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+{{% /alert %}}
 
 ### Store 'owner'
 

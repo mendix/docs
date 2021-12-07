@@ -162,3 +162,4 @@ For details on these tasks, see [Data Hub Administration](data-hub-admin).
 
 * [Data Hub Administration](data-hub-admin)
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
+* [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

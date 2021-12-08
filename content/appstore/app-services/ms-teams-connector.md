@@ -10,9 +10,10 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
-[Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) enables including MS teams component in your Mendix application. Just add the minimum required configuration and you are good to go. 
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is a module that enables sending messages to a Microsoft Teams channel.
 
-The app service works with [Mendix SSO](/appstore/modules/mendix-sso), so no additional authentication changes are required.
+![](attachments/ms-teams-connector/message.png)
+
 
 ### 1.1 Typical Use Cases
 

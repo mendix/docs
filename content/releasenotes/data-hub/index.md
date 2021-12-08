@@ -13,8 +13,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed an issue that caused uploading a contract as a zip file to fail
-* We fixed an issue that occurred when searching and clicking on a popular dataset
+* We fixed an issue that caused uploading a contract as a ZIP file to fail.
+* We fixed an issue that occurred when searching for and then clicking a popular dataset.
 
 ### December 2nd, 2021
 

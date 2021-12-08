@@ -18,7 +18,7 @@ The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/11
 ### 1.1 Typical Use Cases
 
 *  You can configure Microsoft Teams Connector in a microflow.
-   ![](attachments/ms-teams-connector/use_in_microflow)
+   ![](attachments/ms-teams-connector/use_in_microflow.png)
    
 *  It can also be used in a [workflow](/refguide/workflows).
    ![](attachments/ms-teams-connector/use_in_workflow.png)
@@ -38,18 +38,19 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 2.  To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
     1. In the tool bar,click **App** and select **Show App Directory in Explorer**.
     
-    2. Check if a folder with name **modules** is present in the directory.If not present, create a new folder with that name.
+    2. Check if a folder with name **modules** is present in the directory. If not present, create a new folder with that name.
          ![](attachments/ms-teams-connector/modules-folder-in-file-explorer.png)
     
     3. Copy the downloaded mxmodule file in the modules folder.
     
     4. Again click on **App** in tool bar and select **Synchronize App Directory**.
     
-    5. Check the App Explorer to view a module with name **Protected modules**.Collapse the Protected modules folder to see the Microsoft Teams Connector module.
+    5. Check the App Explorer to view a module with name **Protected modules**. Collapse the Protected modules folder to see the Microsoft Teams Connector module.
          ![](attachments/ms-teams-connector/connector_in_protected_module.png)
          
          {{% alert type="warning" %}} you cannot have different versions of the Microsoft Teams Connector in your project at the same time.{{% /alert %}}
          
+
 Once imported, the app service is visible in the **App Explorer** under **Protected modules** and in the **Communication Services** category in the **Toolbox**. 
 
 ## 3 Configuration
@@ -87,7 +88,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 3.  In the Edit Configuration popup, click on **Constants**.
 
 4.  Click **New** and navigate to the **Configurations** folder inside MSTeamsConnectorModule.You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
-  ![](attachments/ms-teams-connector/configuring-license-keys.png)
+    ![](attachments/ms-teams-connector/configuring-license-keys.png)
 
 5. Double-click **LicenseSecret** and enter the **LicenseSecret** that you got.
 
@@ -108,7 +109,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 #### 4.2.1 Using Microflow
 
-1. From the toolbox, drag and drop the Microsoft Teams Connector activity in your microflow.    
+1. From the toolbox, drag and drop the Microsoft Teams Connector activity in your microflow. 
      ![](attachments/ms-teams-connector/connector_in_microflow.png)     
 2. To configure the activity, double-click the activity and specify the following settings in the **Microsoft Teams Connector** dialog box with expression syntax
 
@@ -128,7 +129,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 2. Double click on this activity and in the **Edit Call Microflow** popup, click on select for microflow.
 3. In the **Select Microflow** popup, Go to  Protected modules -> MSTeamsConnectorModule -> USE_ME and select **ACT_PostMessageOnTeams** microflow.
 4. Click on select to close the popup.
-5. Now in the **Edit Call Microflow** popup. configure the webhook id and text message parameters with expression syntax.
+5. Now in the **Edit Call Microflow** popup, configure the webhook id and text message parameters with expression syntax.
 ![](attachments/ms-teams-connector/workflow_configure_parameters.png).
 5. Click **OK** to save the changes and close the window.    
    {{% alert type="info" %}}The miroflow returns a boolean value true if message gets sent successfully else false.{{% /alert %}}

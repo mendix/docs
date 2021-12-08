@@ -1,28 +1,27 @@
 ---
 title: "3D Viewer API"
+parent: "3d-viewer"
+description: "Information about 3D Viewer API"
+tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
 ## 1 Introduction
 
-The 3D Viewer API allows you to retrieve, create and update 3d model entities, actions, properties and more programmatically. You can easily create your custom logic on how you would like to interact and manipulate the 3D model.
+The 3D Viewer API allows you to retrieve, create, and update 3d model entities, actions, properties more programmatically. You can easily create your custom logic to interact and manipulate the 3D model.
 
-## 2 3D Viewer API Reference
+## 2 API Reference
 
-Browse [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html) for details.
+For details, see [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html).
 
-## 3 3D Viewer API Use Case Example
+## 3 Use Case Example
 
-### 3.1 Use Javascript actions to Get properties of a selected part
+### 3.1 Getting Properties of a Selected Part
 
-Say if you want to get properties of a selected part on the viewer, you can first retrieve selected object information as a string through Viewer widget's [On Selection Change](/3d-viewer.md#on-selection-change) event attribute.
+If you want to get properties of a selected part on the 3D Viewer, perform the following steps:
 
-Now that you have this selected object information string, you can make use of the [`mx.viewer3D.getObjects()`](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.mx.viewer3d.getobjects.html#mx-viewer3d-getobjects-function) API to get the object instances.
-
-Next step, you can use [`IPart.getProperties() `](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.ipart.getproperties.html), pass the selected object as parameter, then you will get the properties in key-value pair. 
-
-Let's see how it looks in javascript action. You can create javascript action that takes 2 parameters, for example, give them name `selectedObject` and `propertyObject`.
-
-Here is a sample code snippet of this simple javascript action
+1. Retrieve selected object information as a string through the [On Selection Change](3d-viewer.md#on-selection-change) event attribute of the 3D Viewer.
+2. Use the [`mx.viewer3D.getObjects()`](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.mx.viewer3d.getobjects.html#mx-viewer3d-getobjects-function) API to get the object instances.
+3.  Use [`IPart.getProperties() `](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.ipart.getproperties.html) to pass the selected object as parameter. Then you get the properties in key-value pairs. The following is the sample code in a JavaScript action. It takes 2 parameters `selectedObject` and `propertyObject`.
 
 ```js
 /**
@@ -69,17 +68,16 @@ export async function GetProperties(selectedObject, propertyObject) {
 }
 ```
 
-This javascript action can then be called in nanoflow to get all available properties of a given part.
+4. Call this JavaScript action in a nanoflow to get all available properties of a given part.
+5. Use a page to show all the properties returned :
+   ![show-properties](attachments/3d-viewer-api/show-properties.jpg)
 
-Use a page to show all the properties returned :
-![showproperties](attachments/3d-viewer-api/showproperties.jpg)
+### 3.2 Other Sample Code Snippets
 
-### 3.2 Other sample code snippets
+Starting from version xxx{{% todo %}}[Add the version number when it is decided]{{% /todo %}}, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via `RotatePart`, `ScalePart`, `SetPartColor`, `TranslatePart` API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the App Explorer in Studio Pro. You can directly use them to create your custom logic of manipulating models.
 
-Starting from version xxx(tbd), 3D Viewer module includes some out of box API actions, it allows you to manipulate model parts via `RotatePart`, `ScalePart`, `SetPartColor`, `TranslatePart` API actions. You can find them under **Viewer3D/USE_ME/API Actions**. You can directly use them to create your custom logic of manipulating models.
-
-Alternatively, take a look at the code implementation of these javascript actions, along with the [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html). This may give some insight on how you want to make use of 3D Viewer APIs
+Alternatively, check out the code implementation of these javascript actions{{% todo %}}[where is the code implantation?]{{% /todo %}}, along with the [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html). This may give you some ideas about how you want to make use of the 3D Viewer API.
 
 ### 3.3 Feedback
 
-If you have problem using the list of 3D Viewer APIs listed in [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html) or you would like more APIs to be exposed, please raise a ticket in [Mendix Support portal](https://support.mendix.com/hc/en-us). We will address them accordingly. 
+If you have problem using the 3D Viewer APIs listed in [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html) or you would like more APIs to be exposed, raise a ticket in [Mendix Support portal](https://support.mendix.com/hc/en-us). We will address them accordingly. 

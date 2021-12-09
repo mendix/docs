@@ -74,7 +74,7 @@ For more information on how a component works, check the **Documentation** tab o
 
 You can download a widget from the Marketplace and use it in your app. We will use the [Rating](/appstore/widgets/rating) widget as an example. You can follow the steps to use any widget from the Marketplace.
 
-#### 4.1.1 Adding the Widget
+#### 4.1.1 Adding a Widget
 
 To add the Rating widget from the Marketplace via Studio Pro, follow these steps:
 
@@ -98,7 +98,31 @@ To add the Rating widget from the Marketplace via Studio Pro, follow these steps
 If you want to delete a widget from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the *.mpk* file from the **widgets** folder.
 {{% /alert %}}
 
-#### 4.1.2 Configuring a Widget
+#### 4.1.2 Updating a Widget
+
+To update a widget in your app to a newer version, follow these steps:
+
+1. Open the app in which you want to update the widget.
+
+2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
+
+   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+
+3. Find the widget in the Marketplace.
+
+4. Click the component or **Read more** to view the details of the component.
+
+5. Go to the **All Versions** tab.
+
+   ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
+
+6. Click **Download** to download the latest version. The **Question** dialog box opens and asks if you want to overwrite the existing package.
+
+7. Click **Yes** to proceed. 
+
+The widget is updated to the latest version.
+
+#### 4.1.3 Configuring a Widget
 
 After you place a widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane) pane. That is because you still need to configure the widget.
 
@@ -125,7 +149,7 @@ You can also download an entire module from the Marketplace. A module includes t
 
 In this section, we will use the [Email with Templates](/appstore/modules/email-with-templates) module as an example. You can follow the steps to use any module from the Marketplace.
 
-#### 4.2.1 Adding the Module
+#### 4.2.1 Adding a Module
 
 To add the Email with Template module from the Marketplace via Studio Pro, follow these steps:
 
@@ -155,7 +179,33 @@ Unlike a widget, you can see a module in your App Explorer. A module contains a 
 Sometimes additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 {{% /alert %}}
 
-#### 4.2.2 Configuring the Module
+#### 4.2.2 Updating a Module
+
+1. Open the app in which you want to update the module.
+
+2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
+
+   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+
+3. Find the module in the Marketplace.
+
+4. Click the module or **Read more** to view the details of the module.
+
+5. Go to the **All Versions** tab.
+
+6. Click **Download** to download the latest version. The **Import Module** dialog box opens.
+
+   ![Import Module dialog box](attachments/app-store-content/import-module.png)
+
+7. Select **Replace existing module** and click **Import**.
+
+8. When the **Warning** dialog box shows the files that will be overwritten, click **OK**.
+
+9. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+
+The module is updated to the latest version.
+
+#### 4.2.3 Configuring a Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, when you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 

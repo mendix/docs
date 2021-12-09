@@ -131,7 +131,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 4. Click on select to close the popup.
 5. Now in the **Edit Call Microflow** popup, configure the webhook id and text message parameters with expression syntax.
 ![](attachments/ms-teams-connector/workflow_configure_parameters.png).
-5. Click **OK** to save the changes and close the window.
+5. Click **OK** to save the changes and close the window.    
    {{% alert type="info" %}}The miroflow returns a boolean value true if message gets sent successfully else false.{{% /alert %}}
    
    After the **ACT_PostMessageOnTeams** microflow is configured, once the workflow that uses this microflow is triggered, the app asynchronously sends out the message to the microsoft teams channel.

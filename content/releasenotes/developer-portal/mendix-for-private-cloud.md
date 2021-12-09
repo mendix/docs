@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2021
 
+### December 9th, 2021
+
+#### Portal Improvements
+
+* We have fixed an issue where the app URL is not editable when trying to deploy to an environment in a namespace with service-only ingress, type = ClusterIP.
+* We have replaced the placeholder app in environment creation with a deployment package. A valid deployment package is required to create a new environment.
+
 ### December 6th, 2021
 
 #### Mendix Operator v2.2.0 and Mendix Gateway Agent v2.2.0

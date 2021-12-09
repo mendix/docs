@@ -12,16 +12,11 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service is a module that enables sending messages to a Microsoft Teams channel.
 
-![](attachments/ms-teams-connector/message.png)
-
 
 ### 1.1 Typical Use Cases
 
 *  You can configure Microsoft Teams Connector in a microflow.
    ![](attachments/ms-teams-connector/use_in_microflow.png)
-   
-*  It can also be used in a [workflow](/refguide/workflows).
-   ![](attachments/ms-teams-connector/use_in_workflow.png)
 
 ### 1.2 Limitations
 
@@ -122,19 +117,6 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
    {{% alert type="info" %}}The activity returns a boolean value true if message gets sent successfully else false.{{% /alert %}}
    
    After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the microsoft teams channel.
-   
-#### 4.2.1 Using Workflow   
-
-1. From the toolbox, drag and drop the **Call microflow** activity in your workflow.    
-2. Double click on this activity and in the **Edit Call Microflow** popup, click on select for microflow.
-3. In the **Select Microflow** popup, Go to  Protected modules -> MSTeamsConnectorModule -> USE_ME and select **ACT_PostMessageOnTeams** microflow.
-4. Click on select to close the popup.
-5. Now in the **Edit Call Microflow** popup, configure the webhook id and text message parameters with expression syntax.
-![](attachments/ms-teams-connector/workflow_configure_parameters.png).
-5. Click **OK** to save the changes and close the window.    
-   {{% alert type="info" %}}The miroflow returns a boolean value true if message gets sent successfully else false.{{% /alert %}}
-   
-   After the **ACT_PostMessageOnTeams** microflow is configured, once the workflow that uses this microflow is triggered, the app asynchronously sends out the message to the microsoft teams channel.
 
      
 ### 5 Checking Statistics Using the Usage Dashboard

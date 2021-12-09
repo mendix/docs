@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "p
 The [Bootstrap Tooltip](https://marketplace.mendix.com/link/component/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
 
 {{% alert type="warning" %}}
-This widget is currently deprecated, please check [Tooltip](/appstore/tooltip.md) for more information.
+This widget is currently deprecated, please check [Tooltip](tooltip) for more information.
 {{% /alert %}}
 
 ### 1.1 Typical Usage Scenario

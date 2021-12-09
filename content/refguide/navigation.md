@@ -9,7 +9,7 @@ tags: ["studio pro", "navigation"]
 
 ## 1 Introduction
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](menu-widgets). 
+This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [Menus & Navigation](menu-widgets). 
 
 ![](attachments/navigation/navigation-profile-properties.png)
 
@@ -57,7 +57,7 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.5 Native Phone
+### 2.5 Native Phone {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 
@@ -97,7 +97,7 @@ This specifies the application icon. This icon is shown as favicon in the title 
 
 ### 4.2 Home Pages
 
-#### 4.2.1 Default Home Page
+#### 4.2.1 Default Home Page {#default-home-page}
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
@@ -115,7 +115,7 @@ If the sign-in page is set to none, a built-in pop-up window will appear instead
 
 ### 4.4 Menu
 
-Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](menu).
+Each device type contains a default menu. You can use these menus in [Menus & Navigation](menu-widgets). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](menu).
 
 {{% alert type="warning" %}}
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
@@ -129,7 +129,7 @@ Allows for changing the [profile type](navigation).
 
 #### 4.5.2 Delete
 
-This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+This deletes the profile. If [Menus & Navigation](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
 #### 4.5.2 Synchronization Configuration {#customize}
 

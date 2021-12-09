@@ -77,15 +77,15 @@ If the Web Modeler is enabled for this development line, the process first ensur
 
 ### 2.9 Development Line{#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of Development Line: *Main Lines* and *Branch Lines.*
+Development of an app is done in a development line where a set of related changes is made. There are two types of development lines: *main line* and *branch line.*
 
 #### 2.9.1 Main Line
 
-The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
+The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
 #### 2.9.2 Branch Line {#branch-line}
 
-A Branch line is a way of making an independent set of changes which can be tested away from the Main Line.
+A Branch line is a way of making an independent set of changes which can be tested away from the main line.
 
 See section 4, [Branches](#branches), for more information on how branch lines can be used.
 
@@ -108,7 +108,7 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 ## 3 Version Control Processes for a Single Branch
 
-The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 

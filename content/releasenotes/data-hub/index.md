@@ -9,7 +9,97 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
-### September 9th, 2021
+### December 9th, 2021
+
+#### Fixes
+
+* We fixed an issue that caused uploading a contract as a ZIP file to fail.
+* We fixed an issue that occurred when searching for and then clicking a popular dataset.
+
+### December 2nd, 2021
+
+#### New Features
+
+* We added a new **Settings** tab to the [Data Hub](/developerportal/control-center/data-hub-admin#settings) page in Control Center with a default discoverability setting.
+* We added a discoverability radio button to the data source [registration](/data-hub/data-hub-catalog/register-data) form.
+
+#### Fixes
+
+* We fixed an issue with the icon size for the registered datasets.
+
+### November 18th, 2021
+
+#### Improvements
+
+* Non-company admins are now navigated to the Control Center landing page instead of getting the **Access Denied** message.
+
+### November 11th, 2021
+
+#### Fixes
+
+* We fixed an issue where a Data Hub Curator could not access the fourth page or above of [Company Assets](/data-hub/data-hub-catalog/curate#curatelist).
+* We fixed an issue with the landscape view for datasets.
+
+### October 28th, 2021
+
+#### Fixes
+
+* We fixed an issue where the [Business Owner](/data-hub/data-hub-catalog/search#busines-owner) name was not visible in the metadata of a data source.
+* We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/data-hub/data-hub-catalog/curate) tab for Data Hub Curators and from the [Administration](/developerportal/control-center/data-hub-admin#custom-owners) page in Control Center for Mendix Administrators.
+
+### October 14th, 2021
+
+#### Improvements
+
+* We made several design changes, mainly on the [Catalog](/data-hub/data-hub-catalog/) page. We moved items like **Environment Name** and **Version** to the newly arranged right sidebar menu.
+* We moved the `ContractType` field to the `ServiceVersion` level. For more information, see [How to Register OData Resources in the Data Hub Catalog](/data-hub/data-hub-catalog/register-data).
+* We added an informative tooltip to the **Company** drop-down menu and a pop-up window for when the user is an external user for another company.
+* We added in-app guidance to notify that you can switch the company when you have accepted a participation invitaion.
+
+#### Fixes
+
+* We removed byte order mark (BOM) from the uploaded contract XMLs.
+* A consumed entity in Studio Pro now works after upgrading from OData v3 to OData v4.
+
+### October 7th, 2021
+
+#### Improvements
+
+* We upgraded the Data Hub Catalog search engine to OpenSearch 1.0.
+
+#### Fixes
+
+* We fixed an issue that caused older Studio Pro versions to not be able to connect to the Data Hub Catalog.
+
+### September 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where searching in the [Data Hub pane](/refguide/data-hub-pane) in Studio Pro caused an error.
+
+### September 23rd, 2021
+
+#### Data Hub Free Edition
+
+* The Data Hub Free edition is now available to all Mendix users! Publish your data sources in the Data Hub Catalog, curate them, and then consume them in another application. Learn more about it [here](/data-hub/#data-hub-licences).
+
+#### Fixes
+
+* We fixed an issue where the **Curate** button appeared in the navigation for users who were not able to curate any content.
+* We removed duplicate endpoints that had been created due to an issue fixed in the [September 9th](#nine) release.
+
+### September 16th, 2021
+
+#### Improvements
+
+* API responses are now sanitized and will no longer have a chance of containing executable code.
+
+#### Fixes
+
+* We fixed an issue with pagination for Applications and Environments in the API.
+* We fixed styling issues.
+
+### September 9th, 2021 {#nine}
 
 #### Fixes
 

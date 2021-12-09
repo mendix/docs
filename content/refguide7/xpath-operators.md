@@ -28,3 +28,7 @@ Additionally, the following operators are supported in Java code only:
 | `-` | Subtraction | `6 - 4` | 2 |
 | `*` | Multiplication | `6 * 4` | 24 |
 | `div` | Division | `8 div 4` | 2 |
+
+## 3 Operator Behavior
+
+The behavior of operators may differ based on the database type used for your Mendix application. The Mendix runtime generates a SQL query for the XPath you have configured. This query can be interpreted differently by different database types. For example, HSQLDB will ignore trailing spaces when using the = operator, whereas PostgreSQL will take those into consideration.

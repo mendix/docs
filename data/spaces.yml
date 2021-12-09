@@ -116,7 +116,9 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
-    - "Mendix Beta"
+    - "Security Advisories"
+    - "Beta Versions"
+    - "Feature Release Calendar (MxWorld 2021)"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
@@ -206,15 +208,18 @@ appstore:
   priority: false
   menu_categories:
     - "General Info"
+    - "Creating Content"
     - "App Services"
     - "Connectors"
     - "Modules"
-    - "Widgets" 
+    - "Widgets"
 data-hub:
   space: "Data Hub Guide"
   priority: false
   menu_categories:
     - "Share Data Between Apps"
+    - "Write Data to Another App"
+    - "General Info"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:

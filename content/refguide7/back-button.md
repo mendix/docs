@@ -3,7 +3,7 @@ title: "Close Page Button"
 parent: "button-widgets"
 ---
 
-Pressing this button will close the popup for popup pages, or navigate to the previously visited page for content pages.
+Pressing this button will close the pop-up for pop-up pages, or navigate to the previously visited page for content pages.
 
 ## Button properties
 

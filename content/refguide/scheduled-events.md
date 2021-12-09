@@ -59,7 +59,13 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 
 ## 5 Additional information
 
-### 5.1 Calculating Intervals
+### 5.1 Running Concurrently
+
+You cannot run more then 10 scheduled events in parallel.
+
+This limit cannot be overridden and is independent of how the app is scaled.
+
+### 5.2 Calculating Intervals
 
 The platform schedules the scheduled event by fixed intervals. That means that at startup, the platform schedules the next iterations/intervals the scheduled event should run. This is done by retrieving the intervals, and in addition the platform does some calculations.
 
@@ -128,7 +134,7 @@ formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%]
 ```
 {{% /alert %}}
 
-### 5.2 Specifying the Time
+### 5.3 Specifying the Time
 
 In addition to Monthly and Yearly scheduled events, you also want to be careful when scheduling daily events if they need to run every day at a specific time. This is because of daylight saving time.
 
@@ -138,7 +144,7 @@ This depends on the locale (timezone) your server is hosted in. Even if you choo
 
 Unfortunately there isn't a great workaround for this issue. If the scheduled event has to be run at a specific time you could create a similar solution to that described above, scheduling the event hourly and using 'HH' (0-23 hours), or 'kk' (1-24 hours) rather than 'dd' in the date format expression. Remember that this will increase the number of `ScheduledEventInformation` objects created.
 
-### 5.3 Long Running Events
+### 5.4 Long Running Events
 
 If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example, if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.
 

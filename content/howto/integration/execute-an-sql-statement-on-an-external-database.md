@@ -50,11 +50,9 @@ For example, if you want to connect to an Amazon RDS PostgreSQL database (for ex
 
 ## 4 Using the Execute Statement Action in a Microflow {#statement}
 
-To use an ExecuteStatement action in a microflow, follow these steps:
+To use an **Execute statement** action in a microflow, follow these steps:
 
-1. Find the **Database Connector** in the **Toolbox**.
-
-	![](attachments/19203493/19399122.png)
+1. Find the **Execute statement** in the **Toolbox**.
 
 2. Drag the **Execute statement** action to your microflow: 
 

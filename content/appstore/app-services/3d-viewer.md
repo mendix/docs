@@ -48,7 +48,7 @@ This app service enables doing the following:
 * Take snapshot of a model 
 * Perform 3D measurement on distance, angle, area, radius, and length
 
-### 1.3 Limitations
+### 1.3 Limitations {#limitations}
 
 The 3D Viewer app service includes a few 3D widgets. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 
@@ -78,7 +78,7 @@ First, download the *3DViewer.mpk* file for the [3D Viewer](https://marketplace.
 	
 	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
 
-3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
+3. Click **Import** on the **Import Module** dialog box, and a pop-up window stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4. Open the **Project Explorer** to view the Viewer3D module. You can see a collection of ready to use items under the Viewer3D folder. Besides, if you go to Toolbox window, you will also notice a  collection of 3D widgets are added to Toolbox widget list, under the **Add-on widget** category. 
 5. After importing, you need to map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 

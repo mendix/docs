@@ -280,21 +280,58 @@ if (/* check that all properties are filterable */) {
     console.log("Some attribute is not filterable");
 }
 ```
+### 2.5 Reloading {#listvalue-reload}
 
-### 2.5 Working With Actual Data
+It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`,`limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
+
+### 2.6 Working With Actual Data
 
 The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
 
-### 2.6 View State {#view-state}
+### 2.7 View State {#view-state}
 
 View state is a mechanism of storing the current state of a page when user navigates away from the page and restoring that state when user navigates back to the page. For example user has some sorting order applied in a DataGrid widget on an overview page and navigates away to a detail page. When user gets back to the overview page, the DataGrid widget will be initialized with previously used sorting order.
 
 View state works transparently for a widget, no additional steps needed from the widget in order to benefit from view state mechanism. 
 
-The following information of a `ListView` is getting automatically stored and restored: 
- - pagination state (`limit` and `offset` fields)
- - sorting state (`sortOrder` field)
- - filtering state (`filter` field)
+The following information of a `ListView` is getting automatically stored and restored:
+
+* Pagination state (`limit` and `offset` fields)
+* Sorting state (`sortOrder` field)
+* Filtering state (`filter` field)
+
+### 2.8 Status of the List Value Items {#status-of-the-list-value-items}
+
+The `status` property provides the component with additional information about the state of the items and how the component should handle them:
+
+```tsx
+export const enum ValueStatus {
+    Loading = "loading",
+    Unavailable = "unavailable",
+    Available = "available"
+}
+
+if (this.props.listValue.status === ValueStatus.Available) {
+    return (
+        <div>
+            ...
+        </div>
+    );
+} else if (this.props.listValue.status === ValueStatus.Loading) {
+    return <p>Loading... Please, wait...</p>;
+} else if (this.props.listValue.status === ValueStatus.Unavailable) {
+    return <p>There are no available items to show.</p>;
+}
+```
+
+More specifically, the `status` property functions as follows:
+
+* When `status` is `ValueStatus.Available`, then the list value items are accessible, and the result is exposed in the `items` array.
+* When `status` is `ValueStatus.Unavailable`, then the list does not have any available data and the `items` array is `undefined`. This can be the case if the data source depends on a surrounding data view which has no data.
+* When `status` is `ValueStatus.Loading`, then the list is waiting for new data to arrive. This can be triggered by a change in data that the data source depends on (such as a parent data view) or by an entity update, which occurs if an object of that type is committed or deleted. If this is done from a microflow, a [refresh in client](/refguide/change-object#refresh-in-client) is also required.
+	* If the list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This allows a component to keep showing the previous items if it does not need to handle the `Loading` state explicitly, which prevents flickering.
+	* In other cases, the `items` is `undefined`. This happens if a page is still being loaded or if the previous state was `ValueStatus.Unavailable`.
+
 
 ## 3 Linked Property Values
 

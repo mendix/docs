@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp008> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp009> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ There are two different performance issues with calculated attributes that you c
 
 Retrieve activities trigger the logic of calculated attributes, which can lead to database actions and microflow calls being executed (objects retrieving each other through calculated attributes).
 
-If data widgets (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
+If data containers (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
 
 #### 2.1.1 Steps to Fix
 
@@ -57,7 +57,7 @@ To fix the issue, delete the unused calculated attribute.
 
 ## 3 Add an Index to Attributes in Sort Bars {#mxp003}
 
-[Sort bars](sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
+[Sort bars](sort-bar) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
 - Data grid
 - Template grid
@@ -164,3 +164,16 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 8 Avoid Using Too Many Levels of Inheritance {#mxp009}
+
+Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
+
+### 8.1 Steps to Fix
+
+Do not use more than two levels of inheritance or overuse specializations on entities especially if you are using XPath for an entity access.  
+
+Consider the following alternatives:
+
+* Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
+* Create entities with a one-to-one association instead of setting the generalization
+* Create a non-persistable entity that inherits from an outcome of your business logic

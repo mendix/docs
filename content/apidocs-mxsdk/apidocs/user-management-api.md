@@ -36,9 +36,9 @@ The following errors might be returned by the service. In general, 4xx errors in
 | 404 (Not Found) | This service or resource does not exist. Please verify the URL you are using. |
 | 405 (Method Not allowed) | A service exists for this URL, but not in combination with the used HTTP method. |
 | 409 (Conflict) | There was a conflict with respect to the resource; for example, the resource which was attempted to be created already exists. |
-| 500 (Internal Server Error) / 560 (Internal Server Error) | The request is valid, but we failed to serve it. Please contact support. |
-| 502 (Bad Gateway) / 503 (Service Unavailable) | The server is currently offline. Please contact support if this problem persists. |
-| 504 (Gateway timeout) | Your request is being processed but the server aborted the response because the request took too long. Note that the request might have been applied still. Please contact support if this happens. |
+| 500 (Internal Server Error) / 560 (Internal Server Error) | The request is valid, but we failed to serve it. Please contact Support. |
+| 502 (Bad Gateway) / 503 (Service Unavailable) | The server is currently offline. Please contact Support if this problem persists. |
+| 504 (Gateway timeout) | Your request is being processed but the server aborted the response because the request took too long. Note that the request might have been applied still. Please contact Support if this happens. |
 
 ### 3.1 Error Codes
 
@@ -222,7 +222,7 @@ A JSON object with the following keys:
 *   _displayName_ (String, required) : This name is used for display purposes in the entire Mendix Platform.
 *   _password_ (String, required) : Should have at least 8 characters, an uppercase, lowercase, non-alphanumeric and numeric character.
 *   _emailAddress_ (String, required) : This will be the user's login name, and the address to which communications from the Mendix Platform will be sent.
-*   _country_ (String, required) : The user's country. See [countries reference](user-management-api).
+*   _country_ (String, required) : The user's country. See [countries reference](#countries).
 *   _changePasswordOnFirstLogin_ (Boolean, optional) : If set to true, the user will be forced to change his/her password on first login. Default value: false
 
 ##### 4.5.2.2 Example
@@ -752,233 +752,233 @@ None if successful, HTTP status 200.
 
 ### 4.16 Addendum
 
-#### 4.16.1 Countries Reference
+#### 4.16.1 Countries Reference {#countries}
 
-Afghanistan
-Albania
-Algeria
-American_Samoa
-Andorra
-Angola
-Anguilla
-Antigua_and_Barbuda
-Argentina
-Armenia
-Aruba
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bermuda
-Bhutan
-Bolivia
-Bosnia_and_Herzegovina
-Botswana
-Brazil
-British_Indian_Ocean_Territory
-British_Virgin_Islands
-Brunei
-Bulgaria
-Burkina_Faso
-Burma
-Burundi
-Cambodia
-Cameroon
-Canada
-Cape_Verde
-Cayman_Islands
-Central_African_Republic
-Chad
-Chile
-China
-Christmas_Island
-Cocos_Islands
-Colombia
-Comoros
-Cook_Islands
-Costa_Rica
-Croatia
-Cuba
-Cyprus
-Czech_Republic
-Democratic_Republic_of_the_Congo
-Denmark
-Djibouti
-Dominica
-Dominican_Republic
-Ecuador
-Egypt
-El_Salvador
-Equatorial_Guinea
-Eritrea
-Estonia
-Ethiopia
-Falkland_Islands
-Faroe_Islands
-Fiji
-Finland
-France
-French_Polynesia
-Gabon
-Gambia
-Georgia
-Germany
-Ghana
-Gibraltar
-Greece
-Greenland
-Grenada
-Guam
-Guatemala
-Guinea
-Guinea_Bissau
-Guyana
-Haiti
-Holy_See_Vatican_City
-Honduras
-Hong_Kong
-Hungary
-Iceland
-India
-Indonesia
-Iran
-Iraq
-Ireland
-Israel
-Italy
-Ivory_Coast
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Kiribati
-Kuwait
-Kyrgyzstan
-Laos
-Latvia
-Lebanon
-Lesotho
-Liberia
-Libya
-Liechtenstein
-Lithuania
-Luxembourg
-Macau
-Macedonia
-Madagascar
-Malawi
-Malaysia
-Maldives
-Mali
-Malta
-Marshall_Islands
-Mauritania
-Mauritius
-Mayotte
-Mexico
-Micronesia
-Moldova
-Monaco
-Mongolia
-Montenegro
-Montserrat
-Morocco
-Mozambique
-Namibia
-Nauru
-Nepal
-Netherlands
-Netherlands_Antilles
-New_Caledonia
-New_Zealand
-Nicaragua
-Niger
-Nigeria
-Niue
-North_Korea
-Northern_Mariana_Islands
-Norway
-Oman
-Pakistan
-Palau
-Panama
-Papua_New_Guinea
-Paraguay
-Peru
-Philippines
-Pitcairn_Islands
-Poland
-Portugal
-Puerto_Rico
-Qatar
-Republic_of_the_Congo
-Romania
-Russia
-Rwanda
-Saint_Helena
-Saint_Kitts_and_Nevis
-Saint_Lucia
-Saint_Pierre_and_Miquelon
-Saint_Vincent_and_the_Grenadines
-Samoa
-San_Marino
-Sao_Tome_and_Principe
-Saudi_Arabia
-Senegal
-Serbia
-Seychelles
-Sierra_Leone
-Singapore
-Slovakia
-Slovenia
-Solomon_Islands
-Somalia
-South_Africa
-South_Korea
-Spain
-Sri_Lanka
-Sudan
-Suriname
-Svalbard
-Swaziland
-Sweden
-Switzerland
-Syria
-Taiwan
-Tajikistan
-Tanzania
-Thailand
-Timor_Leste
-Togo
-Tokelau
-Tonga
-Trinidad_and_Tobago
-Tunisia
-Turkey
-Turkmenistan
-Turks_and_Caicos_Islands
-Tuvalu
-Uganda
-Ukraine
-United_Arab_Emirates
-United_Kingdom
-United_States
-Uruguay
-US_Virgin_Islands
-Uzbekistan
-Vanuatu
-Venezuela
-Vietnam
-Wallis_and_Futuna
-Western_Sahara
-Yemen
-Zambia
-Zimbabwe
+* Afghanistan
+* Albania
+* Algeria
+* American_Samoa
+* Andorra
+* Angola
+* Anguilla
+* Antigua_and_Barbuda
+* Argentina
+* Armenia
+* Aruba
+* Australia
+* Austria
+* Azerbaijan
+* Bahamas
+* Bahrain
+* Bangladesh
+* Barbados
+* Belarus
+* Belgium
+* Belize
+* Benin
+* Bermuda
+* Bhutan
+* Bolivia
+* Bosnia_and_Herzegovina
+* Botswana
+* Brazil
+* British_Indian_Ocean_Territory
+* British_Virgin_Islands
+* Brunei
+* Bulgaria
+* Burkina_Faso
+* Burma
+* Burundi
+* Cambodia
+* Cameroon
+* Canada
+* Cape_Verde
+* Cayman_Islands
+* Central_African_Republic
+* Chad
+* Chile
+* China
+* Christmas_Island
+* Cocos_Islands
+* Colombia
+* Comoros
+* Cook_Islands
+* Costa_Rica
+* Croatia
+* Cuba
+* Cyprus
+* Czech_Republic
+* Democratic_Republic_of_the_Congo
+* Denmark
+* Djibouti
+* Dominica
+* Dominican_Republic
+* Ecuador
+* Egypt
+* El_Salvador
+* Equatorial_Guinea
+* Eritrea
+* Estonia
+* Ethiopia
+* Falkland_Islands
+* Faroe_Islands
+* Fiji
+* Finland
+* France
+* French_Polynesia
+* Gabon
+* Gambia
+* Georgia
+* Germany
+* Ghana
+* Gibraltar
+* Greece
+* Greenland
+* Grenada
+* Guam
+* Guatemala
+* Guinea
+* Guinea_Bissau
+* Guyana
+* Haiti
+* Holy_See_Vatican_City
+* Honduras
+* Hong_Kong
+* Hungary
+* Iceland
+* India
+* Indonesia
+* Iran
+* Iraq
+* Ireland
+* Israel
+* Italy
+* Ivory_Coast
+* Jamaica
+* Japan
+* Jordan
+* Kazakhstan
+* Kenya
+* Kiribati
+* Kuwait
+* Kyrgyzstan
+* Laos
+* Latvia
+* Lebanon
+* Lesotho
+* Liberia
+* Libya
+* Liechtenstein
+* Lithuania
+* Luxembourg
+* Macau
+* Macedonia
+* Madagascar
+* Malawi
+* Malaysia
+* Maldives
+* Mali
+* Malta
+* Marshall_Islands
+* Mauritania
+* Mauritius
+* Mayotte
+* Mexico
+* Micronesia
+* Moldova
+* Monaco
+* Mongolia
+* Montenegro
+* Montserrat
+* Morocco
+* Mozambique
+* Namibia
+* Nauru
+* Nepal
+* Netherlands
+* Netherlands_Antilles
+* New_Caledonia
+* New_Zealand
+* Nicaragua
+* Niger
+* Nigeria
+* Niue
+* North_Korea
+* Northern_Mariana_Islands
+* Norway
+* Oman
+* Pakistan
+* Palau
+* Panama
+* Papua_New_Guinea
+* Paraguay
+* Peru
+* Philippines
+* Pitcairn_Islands
+* Poland
+* Portugal
+* Puerto_Rico
+* Qatar
+* Republic_of_the_Congo
+* Romania
+* Russia
+* Rwanda
+* Saint_Helena
+* Saint_Kitts_and_Nevis
+* Saint_Lucia
+* Saint_Pierre_and_Miquelon
+* Saint_Vincent_and_the_Grenadines
+* Samoa
+* San_Marino
+* Sao_Tome_and_Principe
+* Saudi_Arabia
+* Senegal
+* Serbia
+* Seychelles
+* Sierra_Leone
+* Singapore
+* Slovakia
+* Slovenia
+* Solomon_Islands
+* Somalia
+* South_Africa
+* South_Korea
+* Spain
+* Sri_Lanka
+* Sudan
+* Suriname
+* Svalbard
+* Swaziland
+* Sweden
+* Switzerland
+* Syria
+* Taiwan
+* Tajikistan
+* Tanzania
+* Thailand
+* Timor_Leste
+* Togo
+* Tokelau
+* Tonga
+* Trinidad_and_Tobago
+* Tunisia
+* Turkey
+* Turkmenistan
+* Turks_and_Caicos_Islands
+* Tuvalu
+* Uganda
+* Ukraine
+* United_Arab_Emirates
+* United_Kingdom
+* United_States
+* Uruguay
+* US_Virgin_Islands
+* Uzbekistan
+* Vanuatu
+* Venezuela
+* Vietnam
+* Wallis_and_Futuna
+* Western_Sahara
+* Yemen
+* Zambia
+* Zimbabwe

@@ -58,9 +58,7 @@ In the previous section you have set up a basic data structure and created some 
 	![](attachments/18448686/18581054.png)
 
 7.  Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
-8.  Open the **Toolbox**. It should be on the bottom right of .
-
-	![](attachments/8784287/8946802.png)
+8.  Open the **Toolbox** and search for the **Retrieve** action.
 
 9.  Drag a **Retrieve** action from the toolbox to the line between the green start and red end event. This inserts a retrieve action activity.
 

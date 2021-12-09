@@ -19,9 +19,7 @@ An enumeration consists of one or more [enumeration values](enumerations#enum-pr
 
 To create a new enumeration, do the following: 
 
-1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**:
-
-    ![](attachments/enumerations/add-enumeration.png)
+1.  In the [App Explorer](project-explorer), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**.
 
 2. In the **Add Enumeration** dialog box, fill out the name of the enumeration.
 

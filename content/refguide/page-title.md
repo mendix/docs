@@ -1,8 +1,8 @@
 ---
 title: "Page Title"
-parent: "common-widgets"
+parent: "text-widgets"
 menu_order: 50
-tags: ["studio pro", "page title", "common widgets"]
+tags: ["studio pro", "page title", "text widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ tags: ["studio pro", "page title", "common widgets"]
 
 This widget displays a page title of the current page that is set in [page properties](page-properties#title).
 
-![Page Title Example](attachments/common-widgets/page-title-example.png)
+![Page Title Example](attachments/text-widgets/page-title-example.png)
 
 {{% alert type="info" %}}
 
@@ -22,7 +22,7 @@ The page title widget makes it possible to embed the page title in a [layout](la
 
 An example of page title properties is represented in the image below:
 
-{{% image_container width="300" %}}![Page Title Properties](attachments/common-widgets/page-title-properties.png)
+{{% image_container width="300" %}}![Page Title Properties](attachments/text-widgets/page-title-properties.png)
 {{% /image_container %}}
 
 Page title properties consist of the following sections:
@@ -46,5 +46,5 @@ Page title properties consist of the following sections:
 ## 3 Read More
 
 * [Page](page)
-* [Common Widgets](common-widgets)
+* [Text Widgets](text-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

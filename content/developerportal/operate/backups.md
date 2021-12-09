@@ -24,6 +24,8 @@ The following backups are retained:
 * Monthly backups (First Sunday night of the month): one year
 * Manual (user-initiated) backups: three months
 
+### 2.1 Nightly Backups
+
 The **Start Time** of nightly backups in UTC is shown below. The **Local Time** indicates the time at the regional data center – this may vary if *Summer Time* or other adjustments are in place. The **Estimated Duration** indicates the period during which backups are expected to be taken from apps in that region – your app can be backed up at any time during this period and the exact period during which backups are taken can change due to factors at the data center which are outside Mendix's control.
 
 | Region | Start Time (UTC) | Local Time | Estimated Duration |
@@ -35,6 +37,12 @@ The **Start Time** of nightly backups in UTC is shown below. The **Local Time** 
 | Singapore | 17:00 | 01:00 | 1 hour |
 | Tokyo | 16:00 | 01:00 | 1 hour |
 | N. Virginia | 05:00 | 00:00 | 4 hours |
+
+Nightly backups will start once an app has been successfully deployed to, and started in, the environment.
+
+### 2.2 Notes on Retention
+
+The Monthly backup is from the *first* Sunday in the month. If the first nightly backup takes place after the first Sunday in the month, then there will be no monthly backup retained for that month. In this case, you can download a copy of a nightly or weekly backup if you need to retain a backup for longer than three months.
 
 ## 3 Backups{#backups}
 

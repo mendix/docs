@@ -215,7 +215,20 @@ The **Type** field defines the type of the output.
 
 The **Variable** field defines the name for the result of the operation.
 
-### 7.4  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
+#### 7.3.1 $latestHttpResponse Variable
+
+The `$latestHttpResponse` variable is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a **Call REST** activity.
+
+However, its `Content` attribute will be left empty in most cases to minimize memory usage.
+
+This attribute is filled when one of the following scenarios occur:
+
+* The **Response handling** is **Store in an HTTP response** and the call succeeded
+* The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
+
+This variable can be accessed from any microflow action in the scope.
+
+#### 7.3.2  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](error-event#errorhandlers).
 

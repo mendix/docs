@@ -25,7 +25,3 @@ This widget is compatible with the following products:
 
 * Mendix Studio
 * Mendix Studio Pro 8.3.1 and above
-
-## 5 Demo App
-
-For a demo app that has been deployed with this widget, click [here](https://fieldset-sandbox.mxapps.io).

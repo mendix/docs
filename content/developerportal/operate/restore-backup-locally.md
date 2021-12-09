@@ -74,7 +74,7 @@ After the backup has been restored as a local Postgres database, you have to lin
 1. Open your app in **Studio Pro**.
 2. Open **Project... > Settings** from the **App Explorer**.
 
-    ![](attachments/restore-backup-locally/modeler-settings.png)
+    ![](attachments/restore-backup-locally/app-settings.png)
 
 3. Under the tab **Configurations** click **New**.
 
@@ -105,7 +105,7 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
     ![](attachments/restore-backup-locally/backup-choice.png)
 
-2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu
+2. Select **Project > Show App Directory in Explorer** from the Studio Pro menu:
 
     ![](attachments/restore-backup-locally/project-directory.png)
 

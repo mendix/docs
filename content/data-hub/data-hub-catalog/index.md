@@ -75,7 +75,7 @@ For more details, see [How to Curate Registered Assets](curate).
 
 Mendix Data Hub enables organizations to manage the data that is shared from the different sources. Security of the shared datasets is crucial, and this includes access to the shared data and authentication of users.
 
-Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. This is described in [Data Hub License](/refguide/consumed-odata-service-requirements#license-limitations).
+Registered users on the Mendix platform have access to Data Hub. However to consume data through external entities in your Mendix app, you need a Data Hub license and the type of license that you have determines how much data you can consume. For more information, see the [Data Hub License Limitations](/refguide/consumed-odata-service-requirements#license-limitations) section of *Consumed OData Service Requirements*.
 
 For details on security and accessibility in the Data Hub Catalog and for registered services and datasets, see [Data Accessibility and Security](security).
 
@@ -102,5 +102,6 @@ The information that is registered for data sources and exposed datasets are as 
 * [How to Search for Registered Assets](search) – describes search and asset details
 * [How to Consume Registered Assets](consume) – gives general information on consuming registered datasets
 * [How to Register OData Resources in the Data Hub Catalog](register-data) – describes how to register OData resources in the Data Hub Catalog: through the Mendix Cloud, using the Registration API, or in the UI form
+* [How to Register Non-OData Resources in the Data Hub Catalog](register-non-odata-resources) – describes ways to register non-OData resources in the Data Hub Catalog
 * [How to Curate Registered Assets](curate) – describes the curate functions for managing assets
 * [Data Accessibility and Security](security) – describes access to datasets and security

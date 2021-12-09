@@ -21,8 +21,8 @@ Quick summary:
 | SauceLabs (SaaS) | ![](attachments/ht-one-upload-file-using-ats/red.png) No | ![](attachments/ht-one-upload-file-using-ats/red.png) No | ![](attachments/ht-one-upload-file-using-ats/red.png) No |
 | Selenium SaaS Agent | ![](attachments/ht-one-upload-file-using-ats/grey.png) Limited<sup>2</sup> | ![](attachments/ht-one-upload-file-using-ats/green.png) Yes | ![](attachments/ht-one-upload-file-using-ats/red.png) No |
 
-<sup>1</sup> This only possible when you prepare your own files on that server. <br>
-<sup>2</sup> This depends on where the agent is installed.
+<small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
+<sup>2</sup> This depends on where the agent is installed.</small>
 
 **This how-to will teach you how to do the following:**
 

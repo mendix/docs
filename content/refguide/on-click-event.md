@@ -14,9 +14,9 @@ aliases:
 Events specify actions which can be triggered when the end-user interacts with a widget. This interaction can occur in a number of ways:
 
 * [On click](#on-click) – this is the most common interaction and can be used with many widgets
-* [On change](#on-change) – for input widgets
-* [On enter](#on-enter) – for input widgets
-* [On leave](#on-leave) – for input widgets
+* [On change](#on-change) – for input elements
+* [On enter](#on-enter) – for input elements
+* [On leave](#on-leave) – for input elements
 
 ## 2 Triggering Actions
 
@@ -94,7 +94,7 @@ The **Call a microflow** event executes the specified microflow.
 
 {{%alert type="info" %}}
 
-When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input widgets) will be overwritten by the results of the microflow.
+When setting **Call a microflow** as an action for the **On change**, **On enter**, or **On leave** event of a widget, note that microflows require some time to complete. Any changes to the current form made in the meantime (for example, changing values in input elements) will be overwritten by the results of the microflow.
 Therefore, it is not recommended to change entities/attributes on the current page in a microflow triggered by an **On change**, **On enter**, or **On leave** event.
 
 {{%/alert %}}
@@ -267,7 +267,7 @@ The **Sign out** event signs the currently signed-in user out. When no user is s
 
 The **Call workflow** event triggers the specified workflow. 
 
-An element calling this event should be placed in a data container connected to the [workflow entity](workflow-properties#data) defined in the workflow properties. 
+An element calling this event should be placed in a data container connected to the [WorkflowContext entity](workflow-parameters#entity).
 
 The following properties are specific for this event:
 

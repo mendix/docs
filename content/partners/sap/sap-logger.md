@@ -12,11 +12,11 @@ The SAP Logging Connector allows a Mendix app to output logs in a format support
 
 By using this connector, logs will be output in a JSON format with the following fields:
 
-* `msg` - the actual log message
-* `level` - the log level
-* `written_at` - the log timestamp as reported by the Mendix app
-* `written_ts` - the log timestamp which can be used for ordering the logs
-* `stacktrace` - the stack trace attached to the log message (if it exists)
+* `msg` – the actual log message
+* `level` – the log level
+* `written_at` – the log timestamp as reported by the Mendix app
+* `written_ts` – the log timestamp which can be used for ordering the logs
+* `stacktrace` – the stack trace attached to the log message (if it exists)
 
 In addition, the Connector supports multiline log messages.
 
@@ -37,9 +37,10 @@ To initialize the connector, do the following:
     ![Runtime show After startup microflow](attachments/sap-logger/logger_project_runtime_show_startup.png)
 
     {{% alert type="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/>   
-    ![Runtime no After Startup](attachments/sap-logger/logger_project_runtime_nostartup.png){{% /alert %}}
+    ![Runtime no After Startup](attachments/sap-logger/logger_project_runtime_nostartup.png)
+    {{% /alert %}}
 
-4. Drag and drop the **RegisterSubscriber** action at the end of the *After startup* microflow:
+4. In the **App Explorer**, drag and drop the **RegisterSubscriber** action from the **SapApplicationLogs** > **USE_ME** folder at the end of the *After startup* microflow:
 
     ![Drag logging subscriber into After startup microflow](attachments/sap-logger/logger_drag_component.png)
 
@@ -50,7 +51,7 @@ To initialize the connector, do the following:
 6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Business Technology Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
 
     ![SapLogLevel is set to Info](attachments/sap-logger/edit_log_level_constant.png)
- 
+
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 
 ## 4 Notes

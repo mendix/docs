@@ -16,6 +16,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 #### Fixes
 
 * We fixed an issue with deleted files not being removed correctly during a native template upgrade operation.
+* We fixed an issue where Google API changes introduced problems for Android native app builds. For more information, see [Update Needed for Android Native Mobile Apps](https://www.mendix.com/blog/update-needed-for-android-native-mobile-apps/). 
 
 ### Release 1.0.105
 
@@ -61,7 +62,7 @@ App Center's CodePush OTA page improvements:
 {{% alert type="info" %}}
 This feature becomes available only for projects using Native Template 5.1.9 or later. For older projects, please update your Native Template.* 
 {{% /alert %}}
- 
+
 Until now, the Native Mobile Builder required at least GitHub to function correctly. With this release, it now possible to use the Mendix Native Mobile Builder to configure your project locally too. For more information on using this feature, see [How to Build a Mendix Native App Locally](/howto/mobile/native-build-locally).
 
 In the wizard, new projects can be configured to use one of 2 build types:  
@@ -121,7 +122,7 @@ Research has shown that animal sounds can relieve stress. As we work to simplify
 
 ##### OTA based on App Center CodePush
 
-We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
+We added OTA support based on App Center CodePush. Look for it under the Capabilities pages. For more information, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota-appcenter).
 
 #### Improvements 
 
@@ -142,7 +143,7 @@ still fail if the keystore values are invalid.
 #### Improvements 
 
 * Android keystore validation is now non-blocking if the tool cannot verify the validity of the key. The build will 
-still fail if the keystore values are invalid.
+  still fail if the keystore values are invalid.
   
 #### Fixes
 

@@ -1,7 +1,7 @@
 ---
-title: "3D Viewer API"
+title: "Use the 3D Viewer API"
 parent: "3d-viewer"
-description: "Information about 3D Viewer API"
+description: "Describes how to use the 3D Viewer API"
 tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 

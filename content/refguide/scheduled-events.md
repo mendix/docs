@@ -146,10 +146,12 @@ If a repeated scheduled event takes longer than the interval then the next sched
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` row in the database. Over time these accumulate and the table can grow large.
 
-The `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.
+In Mendix versions 9.9.0 and above, the `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.
 
 When this setting is not specified, no cleanup is performed.
 
 {{% alert type="info" %}}
 When turning on the automatic cleanup after having used scheduled events for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will nog block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
+
+In versions of Mendix below 9.9.0, you can clean up old events by creating a microflow for administrators to use if the table gets too large.

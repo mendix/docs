@@ -208,7 +208,9 @@ More information on these plans is available on the [Pricing](https://www.mendix
 
 ### 7.2 Cloud Resource Packs{#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs. The *Standard* resource packs can also be used with *all* plans, but *premium* resource packs can only be purchased with a *premium* plan.
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the *basic package* are fixed as described in [Mendix Basic Package](basic-package).
+
+The *Standard* resource packs can be used with both standard and premium plans, but *premium* resource packs can only be purchased with a *premium* plan.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |

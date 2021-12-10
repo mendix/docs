@@ -8,53 +8,57 @@ tags: ["marketplace", "marketplace component", "widget", "tooltip", "platform su
 
 ## 1 Introduction
 
-[//]: # (TODO: Add real marketplace link after publish.)
-You can use the [Tooltip](https://marketplace.mendix.com/link/component/) widget to add tooltip texts to any widget
-available in Mendix.
+You can use the [Tooltip](https://marketplace.mendix.com/link/component/) widget to add tooltip texts to any widget available in Mendix.
 
 ### 1.1 Trigger
 
-When placing the new Tooltip widget onto a page a composable region will be available to place the content which will trigger the tooltip. You can freely model and combine widgets at your own choice.
+When placing the new Tooltip widget onto a page, use the composable region to place the content which will trigger the tooltip. You can freely model and combine widgets per your use case.
 
 ## 2 Configuration
 
-Several options can be defined in the Tooltip widget:
+Several options can be defined in the Tooltip widget. For more information, see the sections below.
 
 ### 2.1 Render Method
 
-For the sake of simplicity, there are two methods available to create a tooltip:
+For the sake of simplicity, there are two methods for creating a tooltip:
 
-* **Text** – this is the default method in which you can enter a text with or without parameters to quickly implement a
-  tooltip in your app.
-* **Custom** – enable this mode to freely design what will be shown in the tooltip, such as the text, images, and
-  widgets.
+* **Text** (default) – this mode lets you can enter text with or without parameters to quickly implement a
+  tooltip in your app
+* **Custom** – enable this mode to freely design what will be shown in the tooltip such as the text, images, and
+  widgets
 
 ### 2.2 Tooltip Position
 
-You can define how to position the tooltip in relation to the trigger element. The available options are:
+You can define how to position the tooltip in relation to the trigger element. 
 
-- Top
-- Left
-- Bottom
-- Right
+The available options are as follows:
+
+* Top
+* Left
+* Bottom
+* Right
 
 ### 2.3 Arrow Position
 
 With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow
-is the connection between the trigger element and the tooltip content. The available options are:
+is the connection between the trigger element and the tooltip content. 
 
-- Start
-- Center
-- End
+The available options are as follows:
 
-### 2.4 Open on
+* Start
+* Center
+* End
 
-This option defines how the tooltip will be triggered. It can be one of the following:
+### 2.4 Open On
 
-- Click: will be triggered when the user clicks on the trigger content; 
-- Hover: will be triggered when the user hovers the mouse on it;
-- Hover and focus: will be triggered in both previous cases.
+This option defines how the tooltip will be triggered. 
+
+The available options are as follows:
+
+* **Click** – triggered when the user clicks on the trigger content
+* **Hover** – triggered when the user hovers the mouse over it
+* **Hover and focus** – triggered in both cases described above
 
 {{% alert type="warning" %}}
-On mobile devices the option “hover” will be triggered on touch.
+On mobile devices the **Hover** option will be triggered on touch.
 {{% /alert %}}

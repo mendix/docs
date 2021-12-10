@@ -135,19 +135,9 @@ To enable Mendix SSO in your app, follow these steps:
 
     {{% alert type="info" %}}If there is already an After startup microflow, you should not replace it, but rather add the MendixSSO_AfterStartup microflow as an action in the existing microflow{{% /alert %}}
 
-3. To use the *default* user administration pages, add the pages **MyAccountViewEdit** and **UserOverview** to the app navigation by performing the following steps:
-    1. Open **Navigation** from the **App Explorer**.
-    2. Click **New item** to add a new navigation item.
-    3. Enter the following values and click **OK**.
-        * **Caption** – *My Account*
-        * **Icon** – *Glyphicon 'user'* (click **Select…** and search for `user`)
-        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **User** > **MyAccountViewEdit**
-    4. Repeat the above to add another **New item** with the values.
-        * **Caption** – *User Overview*
-        * **Icon** – *Glyphicon 'lock'*
-        * **On click** – *Show a page* **Marketplace modules** > **MendixSSO** > **Default Implementation** > **Pages** > **Admin** > **UserOverview**
+3.  Add your own administration pages to monitor usage, if required.
 
-    {{% alert type="info" %}}If you want to implement your own administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
+    {{% alert type="info" %}}If you are using Mendix SSO version 2, you can use the *default* user administration pages, see [Customizing Mendix SSO](#customizing), below, for more information.{{% /alert %}}
 
 4. Turn on **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open **Project Security** from the **App Explorer**.

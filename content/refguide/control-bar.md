@@ -31,7 +31,7 @@ Most properties of control bar buttons are the same as properties of buttons. Fo
 
 To add additional buttons to the control bar, do the following:
 
-1. Right-click on the control bar, while it is highlighed.
+1. Right-click on the control bar while it is highlighed.
 1. Select **Add button**.
 1. Select the new type of button.
 1. Double click on the new button to customize.
@@ -41,7 +41,7 @@ To add additional buttons to the control bar, do the following:
 {{% alert type="info" %}}
 It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.
 
-When setting the visibility of control bar buttons, it is not possible to use currently selected object(s) for conditional visibility expressions, or visibility based on the selected object’s attribute.
+When setting the visibility of control bar buttons, it is not possible to use currently selected objects for conditional visibility expressions, or visibility based on the selected objects' attributes.
 {{% /alert %}}
 
 Sections below describe the purpose of each control bar button and their specific properties if any.

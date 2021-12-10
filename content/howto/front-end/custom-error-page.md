@@ -40,11 +40,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Create a new folder named *error_page*.
+3.  Go to **web**.
+
+    ![](attachments/customerror-page/web.png)
+
+4.  Create a new folder named *error_page*.
 
     ![](attachments/customerror-page/error-page.png)
 
-4.  In the **error_page** folder, place your *offline.html* file. 
+5.  In the **error_page** folder, place your *offline.html* file. 
 
     ![](attachments/customerror-page/offline.png)
 
@@ -52,7 +56,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     
     {{% alert type="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
-5. Commit the changes in Studio Pro.
+6. Commit the changes in Studio Pro.
 
 {{% alert type="warning" %}}
 It might take up to an hour to before the custom error page is visible when the app is offline.

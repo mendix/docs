@@ -31,7 +31,7 @@ For the sake of simplicity, there are two methods for creating a tooltip:
 
 You can define how to position the tooltip in relation to the trigger element. 
 
-The available options are as follows:
+**Tooltip Position** options are as follows:
 
 * Top
 * Left
@@ -43,7 +43,7 @@ The available options are as follows:
 With the new Tooltip widget you also can define how to position the tooltip arrow in relation to the tooltip. The arrow
 is the connection between the trigger element and the tooltip content. 
 
-The available options are as follows:
+**Arrow Position** options are as follows:
 
 * Start
 * Center
@@ -53,7 +53,7 @@ The available options are as follows:
 
 This option defines how the tooltip will be triggered. 
 
-The available options are as follows:
+**Open on** options are as follows:
 
 * **Click** – triggered when the user clicks on the trigger content
 * **Hover** – triggered when the user hovers the mouse over it

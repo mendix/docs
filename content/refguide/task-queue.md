@@ -71,9 +71,9 @@ In Studio Pro, a [Call Microflow](microflow-call) activity can start a microflow
 1. Edit the **Call Microflow** activity.
 2. Check the box **Execute this Microflow in a Task Queue**.
 3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
-4. (optionally) Select an automatic retry strategy:
-  - With "Fixed retry" the retries will be performed after the given delay, up to the given amount of attempts.
-  - With "Exponential retry" the amount of delay between the retries is doubled, up to the give maximum interval.
+4. (optionally – in Mendix version 9.9.0 and above) Select an automatic retry strategy:
+    - with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
+    - with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
 #### 2.3.2 Through the API
 

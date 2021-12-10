@@ -10,13 +10,12 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 {{% todo %}}[**Verify Marketplace Docs tabs**]{{% /todo %}}
 
-The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel.
+The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
 
 ### 1.1 Typical Use Cases
 
-*  You can configure Microsoft Teams Connector in a microflow
-   ![](attachments/ms-teams-connector/use_in_microflow.png)
+*  Support sending messages to a Microsoft Teams channel automatically
 
 ### 1.2 Limitations
 
@@ -29,16 +28,23 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 ## 2 Installation
 
 1. Go to the Marketplace and download the file *MSTeamsConnectorModule.mxmodule* for the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391).
+
 2.  To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
     1. On the menu bar, go to **App** > **Show App Directory in Explorer**.
+    
     2.  Check if a folder with the name **modules** is present in the directory. If not present, create a new folder with this name.
         ![](attachments/ms-teams-connector/modules-folder-in-file-explorer.png)
-    3. Copy the downloaded file *MSTeamsConnectorModule.mxmodule*  in the **modules** folder. 
-    4. In Studio Pro, go to **App** > **Synchronize App Directory**.   
-    5.  After the synchronization is finished, the app service is visible in the **App Explorer** under **Protected modules** and in the **Communication Services** category in the **Toolbox**. 
-       ![](attachments/ms-teams-connector/connector_in_protected_module.png)
+        
+    3.  Copy the downloaded file *MSTeamsConnectorModule.mxmodule*  in the **modules** folder. 
+       
+       {{% alert type="warning" %}} you cannot have different versions of the Microsoft Teams Connector in your app at the same time.{{% /alert %}}
+    
+    4. In Studio Pro, go to **App** > **Synchronize App Directory**. 
+    
 
-{{% alert type="warning" %}} you cannot have different versions of the Microsoft Teams Connector in your app at the same time.{{% /alert %}}
+After the synchronization is finished, you can find the app service in the **Protected modules** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**. 
+
+![](attachments/ms-teams-connector/connector_in_protected_module.png)
 
 ## 3 Configuration
 
@@ -66,36 +72,41 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 1.  In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
 2.  On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
-3.  Go to the **Constants** tab, click **New**. The **Select Constant** dialog box opens.
+3.  Go to the **Constants** tab.
+3.  Click **New**. The **Select Constant** dialog box opens.
 4.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
     ![](attachments/ms-teams-connector/configuring-license-keys.png)
 5.  Select **LicenseSecret**.
-5.  In the **New Constant Value** dialog box, enter the **Value** that you got and click **OK** to save the settings.
-7.  Do steps 3 to 4 again.
+5.  In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
+5.  Click **OK** to save the settings and closes the dialog box.
+7.  Do steps 4 to 5 again.
 7.  Select **LicenseKey**.
-7.  In the **New Constant Value** dialog box, enter the **Value** that you got and click **OK** to save the settings.
+7.  In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey that you got.
+7.  Click **OK** to save the settings and closes the dialog box.
 8. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 ## 4 Usage
 
-### 4.1 Configuring Webhooks in Communication Services Console 
- In Microsoft Teams, [create a webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send message.
+### 4.1 Configuring Webhooks in the Communication Services Console 
+ In Microsoft Teams, [create a webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages.
 {{% todo %}}Configuring Webhooks in communication console will be added once entire flow is ready{{% /todo %}}
 
 ### 4.2 Sending Message to a Teams Channel
 
 #### 4.2.1 Using Microflow
 
-1.  From the toolbox, drag and drop the Microsoft Teams Connector activity in your microflow. 
+1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity in your microflow. 
     ![](attachments/ms-teams-connector/connector_in_microflow.png)     
-2.  Double-click the Microsoft Teams Connector activity and specify the following settings with expression syntax in the **Microsoft Teams Connector** dialog box:
-    1.  Set the **webhookId** parameter to the **webhookId** generated for the Microsoft Teams channel webhookUrl you configured in Communication Services Console.
-    2.  Set the text message parameter with the message you want to send on the channel.
+2.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
+3.  Specify the following settings with expression syntax:
+    1.  Set the **webhookId** parameter to the **webhookId** generated when you configured the webhook URL in the Communication Services Console.
+    2.  Set the text message parameter with the message you want to send to the Microsoft Teams channel.
         ![](attachments/ms-teams-connector/microflow_configure_parameters.png)
-3. Click **OK** to save the changes and close the window.
-   {{% alert type="info" %}}If the message gets sent successfully, the activity returns a boolean value `true`; otherwise, the active returns `false`.{{% /alert %}}
+    3. Click **OK** to save the changes and close the dialog box.
 
-After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the microsoft teams channel.
+{{% alert type="info" %}}If the message gets sent successfully, the activity returns a boolean value `true`; otherwise, the active returns `false`.{{% /alert %}}
+
+After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel.
 
 ### 5 Checking Statistics Using the Usage Dashboard
 {{% todo %}}Will add content once  available{{% /todo %}}

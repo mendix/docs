@@ -7,7 +7,9 @@ tags: ["studio pro", "grid", "data grid", "template grid"]
 
 ## 1 Introduction
 
-Grids show a list of objects and include a [data grid](data-grid) and a [template grid](template-grid). The main difference between these grids is the way the list of objects is displayed: a data grid shows it in columns, while a template grid shows it in tiles. 
+Grids show a list of objects and include a [data grid](data-grid) and a [template grid](template-grid). The main difference between these grids is the way the list of objects is displayed: a data grid shows it in columns, while a template grid shows it in tiles.
+
+[Data grid 2](appstore/modules/data-grid-2) is a special type of grid, available as part of the [Data Widgets](https://marketplace.mendix.com/link/component/116540) Marketplace module.
 
 Grids have the following components in common:
 
@@ -17,18 +19,32 @@ Grids have the following components in common:
 
 ## 2 Choosing a Grid
 
-Choosing which grid to use, to display data on a page, doesn't have to be difficult. A few things to consider are:
+If your app needs to display data on a page, different widgets suit different use cases. Determine what type of data you need to display, imagine how you would like it presented, and then consult the options below.
 
-* What sort of data do you want to display?
-* How do you want the data to be presented?
+The [data grid](data-grid) widget is well suited for these cases:
 
-Do you want to display data as a table? With lots of rows and columns? Is the data simple text? Then data grid is likely the best choice.
+* Displaying data as a table
+* Employing several rows and columns
+* Displaying simple text data
 
-Do you want tiles or other widgets displayed with each list item? If you want to show an image, add a button, or want to make a custom layout for your items, then template grid is the better choice. 
+The [template grid](template-grid) widget is well suited for these cases:
+
+* Displaying tiles with each list item
+* Showing an image
+* Adding a button to your list item
+* Creating a custom layout for your items
+
+The [data grid 2](appstore/modules/data-grid-2) widget is an expanded version of the standard data grid widget for displaying content in a tabular form. It is well suited for these cases:
+
+* Using personalizable data ordering and filtering
+* Having a responsive layout
+* Customizing the look and behavior of table rows and columns
+* Adding many different widgets into the grid
 
 ## 3 Read More
 
 * [Data Grid](data-grid)
 * [Template Grid](template-grid)
+* [Data Grid 2](appstore/modules/data-grid-2)
 * [Data Containers](data-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

@@ -413,6 +413,10 @@ Value | Explanation
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+Databases larger than 1,000 GiB has a base performance that is equal or greater than the maximum burst performance, which means depleting the Database IOPS Burst Balance will not affect your performance.
+{{% /alert %}}
+
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as percentage; 100% means that the volume has accumulated the maximum number of credits.
 
 ![](attachments/trends-v4/db-burst-balance.png)

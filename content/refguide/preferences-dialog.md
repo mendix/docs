@@ -13,7 +13,7 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ## 2 General Tab
 
-### 2.1 Interface
+### 2.1 Interface {#interface}
 
 #### 2.1.1 Keep Active Document Selected in App Explorer
 

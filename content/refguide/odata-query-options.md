@@ -128,7 +128,7 @@ It is possible to sort on multiple attributes, which have to be comma-separated.
 
 You can select which attributes and associations to return by specifying the `$select` query option. For example: `?$select=Name,Age`.
 
-## 7 Paging
+## 7 Paging {#paging}
 
 ### 7.1 Top (Limit)
 

@@ -89,7 +89,7 @@ You can test in one of two ways:
 
 When you are ready, you can activate the IDP configuration from the overview page. Your users will immediately benefit from logging into the Mendix Developer Portal with the same credentials as they use in the IDP. Any user passwords currently held in the Mendix platform will be scrambled to prevent the users from bypassing your IDP authentication.
 
-As an option, you can inform your users of the change in the sign-in process via a preconfigured email message.
+As an option, you can inform your users of the change in the sign-in process via a standard email message. This email is a fixed template which cannot be configured. 
 
 Please be aware that there can be only one active IDP configuration at a time. When you activate an IDP configuration while another one is already active, the current active configuration will be de-activated automatically.
 
@@ -97,7 +97,7 @@ Please be aware that there can be only one active IDP configuration at a time. W
 
 You can deactivate the IDP configuration at any time. The changes become into effect immediately. Users will be forced to reset their Mendix passwords on first sign-in.
 
-Optionally you can inform your users of the change in the sign-in process via a preconfigured email message.
+Optionally you can inform your users of the change in the sign-in process via a a standard email message. This email is a fixed template which cannot be configured.
 
 ## 7 Microsoft Azure AD
 

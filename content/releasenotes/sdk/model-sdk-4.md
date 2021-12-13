@@ -8,7 +8,7 @@ parent: "model-sdk"
 
 **Release date: December 7th, 2021**
 
-* We added support for Mendix [9.9.0](../studio-pro/9).
+* We added support for Mendix [9.9.0](/releasenotes/studio-pro/9).
 * We added support for Mendix Metamodel [9.9.0](metamodel-9.9).
 
 ## 4.57.0 {#457}

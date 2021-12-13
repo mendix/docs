@@ -31,17 +31,15 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 
 2.  To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
     1. On the menu bar, go to **App** > **Show App Directory in Explorer**.
-    
     2.  Check if a folder with the name **modules** is present in the directory. If not present, create a new folder with this name.
         ![](attachments/ms-teams-connector/modules-folder-in-file-explorer.png)
         
-    3.  Copy the downloaded file *MSTeamsConnectorModule.mxmodule*  in the **modules** folder. 
+    3.  Copy the downloaded file *MSTeamsConnectorModule.mxmodule* into the **modules** folder. 
        
-       {{% alert type="warning" %}} you cannot have different versions of the Microsoft Teams Connector in your app at the same time.{{% /alert %}}
-    
+        {{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}
+
     4. In Studio Pro, go to **App** > **Synchronize App Directory**. 
     
-
 After the synchronization is finished, you can find the app service in the **Protected modules** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**. 
 
 ![](attachments/ms-teams-connector/connector_in_protected_module.png)
@@ -61,29 +59,27 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 4. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Click **Create Binding Keys**.
 6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Microsoft Teams Connector.
-
 7.  Click **Create Keys** to generate the **LicenseSecret** and **LicenseKey**. 
     ![](attachments/ms-teams-connector/binding-key-generation.png)
 
 8. **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
 
-
 ### 3.2 Configuring LicenseSecret and LicenseKey for App Deployment
 
-1.  In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
-2.  On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
-3.  Go to the **Constants** tab.
-3.  Click **New**. The **Select Constant** dialog box opens.
-4.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
+1. In the **App Explorer**, go to **Settings**. The **App Settings** dialog box opens. 
+2. On the **Configurations**, click **Edit**. The **Edit Configuration** dialog box opens.
+3. Go to the **Constants** tab.
+4. Click **New**. The **Select Constant** dialog box opens.
+5.  Go to **MSTeamsConnectorModule** > **Configurations**. You can see **LicenseSecret** and **LicenseKey** are defined as constants. 
     ![](attachments/ms-teams-connector/configuring-license-keys.png)
-5.  Select **LicenseSecret**.
-5.  In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
-5.  Click **OK** to save the settings and closes the dialog box.
-7.  Do steps 4 to 5 again.
-7.  Select **LicenseKey**.
-7.  In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey that you got.
-7.  Click **OK** to save the settings and closes the dialog box.
-8. After you finish building the app, click **Run** to deploy your app to the cloud.
+6. Select **LicenseSecret**.
+7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
+8. Click **OK** to save the settings and closes the dialog box.
+9. Do steps 4 to 5 again.
+10. Select **LicenseKey**.
+11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
+12. Click **OK** to save the settings and closes the dialog box.
+13. After you finish building the app, click **Run** to deploy your app to the cloud.
 
 ## 4 Usage
 
@@ -95,7 +91,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 #### 4.2.1 Using Microflow
 
-1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity in your microflow. 
+1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
     ![](attachments/ms-teams-connector/connector_in_microflow.png)     
 2.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
 3.  Specify the following settings with expression syntax:

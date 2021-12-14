@@ -44,7 +44,7 @@ Features which were already released (Generally Available) on September 8, 2021 
 | End-user services – app switcher | Dec 2021 |
 | End-user services – notifications | Mar 2022 |
 | End-user services – branding | Mar 2022 |
-| Studio workflow templates | Dec 2021 |
+| Studio workflow templates | Feb 2022 |
 | Studio expression editor | GA |
 
 ### 2.4 Control Center

@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We changed the minimum length of passwords from 8 to 12 characters
+* We changed the minimum length of passwords from 8 to 12 characters.
 
 ### December 2nd, 2021
 

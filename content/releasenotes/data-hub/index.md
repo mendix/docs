@@ -14,7 +14,6 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Fixes
 
 * We fixed an issue that caused uploading a contract as a ZIP file to fail when the compression ratio is too high.
-* We fixed an issue with load more button in landscape not loading more than 6 entity sets
 
 #### Improvements
 

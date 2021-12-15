@@ -10,7 +10,7 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-* We fixed an issue introduced with v6.2.9, that could crash the Android app when CodePush is enabled.
+* We fixed an issue introduced with v6.2.9 where an Android app crashed when CodePush was enabled.
 
 ## 6.2.9 {#6.2.9}
 

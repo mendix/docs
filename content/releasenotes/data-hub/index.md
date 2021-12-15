@@ -13,11 +13,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed an issue that caused uploading a contract as a ZIP file to fail when the compression ratio is too high.
+* We fixed an issue that caused uploading a contract as a ZIP file to fail when the compression ratio was too high.
 
 #### Improvements
 
-* Consolidated the existing edit metadata and discoverability/validate dropdown menus into one menu named edit
+* We consolidated the existing **Edit Metadata**, **Discoverability**, and **Validate** drop-down menus into one menu named **Edit**.
 
 ### December 9th, 2021
 

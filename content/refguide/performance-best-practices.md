@@ -177,3 +177,11 @@ Consider the following alternatives:
 * Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
 * Create entities with a one-to-one association instead of setting the generalization
 * Create a non-persistable entity that inherits from an outcome of your business logic
+
+## 11 Avoid Repeatedly Committing a Variable [MXP012] {mxp012}
+
+A microflow with a repeatedly committed variable may cause longer-running transactions, which may impact performance.
+
+### 11.1 Steps to Fix
+
+Refactor the microflow so that the variable is only committed once in the flow.

@@ -49,8 +49,11 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace, click **Subscribe** to order a subscription.
-2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+1. On the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial..
+2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
+
+    For the trial, you do not need to fill in this information.
+
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 4. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
@@ -90,7 +93,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
 
-    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You cab only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
 6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.

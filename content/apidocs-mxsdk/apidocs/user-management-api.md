@@ -200,64 +200,7 @@ A JSON object with two key-value pairs; _count_ indicating the total number of u
 }
 ```
 
-### 4.5 Create User Account
-
-Creates a new user account in your company. This is only allowed if the requesting user has permission to do so (member management privileges within the company). It is only possible to create new user accounts for email addresses that match one of the email domains owned by the company of the requester. After this request the user will be able to log in. No confirmations emails are sent if this API is used.
-
-```http
- HTTP Method: POST
- URL: https://usermanagement.mendix.com/legacy-api/1/users
-```
-
-#### 4.5.1 Can Be Invoked By
-
-Company Manager, Member Manager
-
-#### 4.5.2 Request
-
-##### 4.5.2.1 Payload
-
-A JSON object with the following keys:
-
-*   _displayName_ (String, required) : This name is used for display purposes in the entire Mendix Platform.
-*   _password_ (String, required) : Should have at least 8 characters, an uppercase, lowercase, non-alphanumeric and numeric character.
-*   _emailAddress_ (String, required) : This will be the user's login name, and the address to which communications from the Mendix Platform will be sent.
-*   _country_ (String, required) : The user's country. See [countries reference](#countries).
-*   _changePasswordOnFirstLogin_ (Boolean, optional) : If set to true, the user will be forced to change his/her password on first login. Default value: false
-
-##### 4.5.2.2 Example
-
-```http
-POST /legacy-api/1/users HTTP/1.1
-Host: usermanagement.mendix.com
-Content-Type: application/json
-Mendix-Username: janedoe@example.com
-Mendix-ApiKey: 87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
-
-{
-   "displayName" : "John Doe",
-   "password" : "Password1!",
-   "emailAddress" : "johndoe3@example.com",
-   "country" : "United_States",
-   "changePasswordOnFirstLogin" : true
-}
-
-```
-
-#### 4.5.3 Output
-
-A JSON object with a two key-value pairs; _openId_ containing the OpenID for the newly created user and _getUrl_ containing the URL from which the user account can be retrieved. HTTP status 201.
-
-##### 4.5.3.1 Example
-
-```json
-{
-    "openId" : "https://mxid2.mendixcloud.com/mxid2/id?id=bdddd12c-cc93-4600-82e4-88baa5314y79",
-    "getUrl" : "https://usermanagement.mendix.com/legacy-api/1/users/by-email/johndoe3@example.com"
-}
-```
-
-### 4.6 Update Active Status of User Account
+### 4.5 Update Active Status of User Account
 
 Activate/deactivate a user account in your company. Deactivating a user means that the user can no longer access the Mendix Platform. However, all data of this user is retained.
 
@@ -266,23 +209,23 @@ Activate/deactivate a user account in your company. Deactivating a user means th
  URL: https://usermanagement.mendix.com/legacy-api/1/users/<openId>
 ```
 
-#### 4.6.1 Can Be Invoked By
+#### 4.5.1 Can Be Invoked By
 
 Company Manager, Member Manager
 
-#### 4.6.2 Request
+#### 4.5.2 Request
 
-##### 4.6.2.1 Parameter
+##### 4.5.2.1 Parameter
 
 *   _openId_ : The OpenID of the user account you are trying to retrieve. Please note that since the OpenID is a URL itself, it should be URL-encoded.
 
-##### 4.6.2.2 Payload
+##### 4.5.2.2 Payload
 
 A JSON object with keys:
 
 *   _activeStatus_ (Boolean, optional) : The value to which the active status of the user should be changed. Default value: true
 
-##### 4.6.2.3 Example
+##### 4.5.2.3 Example
 
 ```http
 POST /legacy-api/1/users/https%3A%2F%2Fmxid2.mendix.dev%2Fmxid2%2Fid%3Fid%3D51b54074-a66c-4337-8488-aac89bf47a2d HTTP/1.1
@@ -297,17 +240,71 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.6.3 Output
+#### 4.5.3 Output
 
 None when successful, with HTTP status 200.
 
-### 4.7 Get Security Group by UUID
+### 4.6 Get Security Group by UUID
 
 Retrieves a security group based on its UUID.
 
 ```http
 HTTP Method: GET
 URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
+```
+
+#### 4.6.1 Can Be Invoked By
+
+Company Manager, Member Manager
+
+#### 4.6.2 Request
+
+##### 4.6.2.1 Parameter
+
+*   _securityGroupUuid_ : The UUID of the security group you want to retrieve.
+
+##### 4.6.2.2 Example
+
+```http
+GET /legacy-api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9 HTTP/1.1
+Host: usermanagement.mendix.com
+Content-Type: application/json
+Mendix-Username:janedoe@example.com
+Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
+
+```
+
+#### 4.6.3 Output
+
+A JSON object with the following key value pairs:
+
+*   _name_ : The name of the security group
+*   _description_ : Description of the security group.
+*   _uuid_ : UUID of the security group.
+*   _memberCount_ : Number of users in the security group.
+*   _userGroupLocked_ : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
+
+If the call is successful, it should return HTTP status 200.
+
+##### 4.6.3.1 Example
+
+```json
+{
+    "name": "RnD",
+    "description": "Research and Development",
+    "uuid": "86a2558b-b63b-4c76-a056-018d9eb8f1b9",
+    "memberCount": 57,
+    "userGroupLocked": true
+}
+```
+
+### 4.7 Get Security Group by Name
+
+Retrieves a security group based on its name.
+
+```http
+ HTTP Method: GET
+ URL: https://usermanagement.mendix.com/legacy-api/1/groups/by-name/<securityGroupName>
 ```
 
 #### 4.7.1 Can Be Invoked By
@@ -318,12 +315,13 @@ Company Manager, Member Manager
 
 ##### 4.7.2.1 Parameter
 
-*   _securityGroupUuid_ : The UUID of the security group you want to retrieve.
+*   _securityGroupName_ : The name of the security group you want to retrieve.
 
 ##### 4.7.2.2 Example
 
 ```http
-GET /legacy-api/1/groups/86a2558b-b63b-4c76-a056-018d9eb8f1b9 HTTP/1.1
+
+GET /legacy-api/1/groups/RnD HTTP/1.1
 Host: usermanagement.mendix.com
 Content-Type: application/json
 Mendix-Username:janedoe@example.com
@@ -355,62 +353,7 @@ If the call is successful, it should return HTTP status 200.
 }
 ```
 
-### 4.8 Get Security Group by Name
-
-Retrieves a security group based on its name.
-
-```http
- HTTP Method: GET
- URL: https://usermanagement.mendix.com/legacy-api/1/groups/by-name/<securityGroupName>
-```
-
-#### 4.8.1 Can Be Invoked By
-
-Company Manager, Member Manager
-
-#### 4.8.2 Request
-
-##### 4.8.2.1 Parameter
-
-*   _securityGroupName_ : The name of the security group you want to retrieve.
-
-##### 4.8.2.2 Example
-
-```http
-
-GET /legacy-api/1/groups/RnD HTTP/1.1
-Host: usermanagement.mendix.com
-Content-Type: application/json
-Mendix-Username:janedoe@example.com
-Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
-
-```
-
-#### 4.8.3 Output
-
-A JSON object with the following key value pairs:
-
-*   _name_ : The name of the security group
-*   _description_ : Description of the security group.
-*   _uuid_ : UUID of the security group.
-*   _memberCount_ : Number of users in the security group.
-*   _userGroupLocked_ : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal.
-
-If the call is successful, it should return HTTP status 200.
-
-##### 4.8.3.1 Example
-
-```json
-{
-    "name": "RnD",
-    "description": "Research and Development",
-    "uuid": "86a2558b-b63b-4c76-a056-018d9eb8f1b9",
-    "memberCount": 57,
-    "userGroupLocked": true
-}
-```
-
-### 4.9 Get All Security Groups in Your Company
+### 4.8 Get All Security Groups in Your Company
 
 Retrieves all security groups which exist in a company.
 
@@ -419,19 +362,19 @@ HTTP Method: GET
 URL: https://usermanagement.mendix.com/legacy-api/1/groups
 ```
 
-#### 4.9.1 Can Be Invoked By
+#### 4.8.1 Can Be Invoked By
 
 Company Manager, Member Manager
 
-#### 4.9.2 Request
+#### 4.8.2 Request
 
-##### 4.9.2.1 Optional Parameters
+##### 4.8.2.1 Optional Parameters
 
 *   _search_ : Search string to find groups by name. Defaults to empty.
 *   _offset_ : Offset within the dataset. Defaults to zero.
 *   _limit_ : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
 
-##### 4.9.2.2 Example
+##### 4.8.2.2 Example
 
 ```http
 GET /legacy-api/1/groups?limit=2 HTTP/1.1
@@ -442,7 +385,7 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.9.3 Output
+#### 4.8.3 Output
 
 JSON object with two key-value pairs; _count_ indicating the total number of security groups in the company satisfying the request (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _group_ containing an array of objects with the following key-value pairs:
 
@@ -454,7 +397,7 @@ JSON object with two key-value pairs; _count_ indicating the total number of sec
 
 If the call is successful, it should return HTTP status 200.
 
-##### 4.9.4 Example
+##### 4.8.4 Example
 
 ```json
 {
@@ -479,7 +422,7 @@ If the call is successful, it should return HTTP status 200.
 
 ```
 
-### 4.10 Get All User Accounts of a Security Group
+### 4.9 Get All User Accounts of a Security Group
 
 Retrieves all users that are a member of a certain security group.
 
@@ -488,23 +431,23 @@ HTTP Method: GET
 URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users
 ```
 
-#### 4.10.1 Can Be Invoked By
+#### 4.9.1 Can Be Invoked By
 
 Company Manager, Member Manager
 
-#### 4.10.2 Request
+#### 4.9.2 Request
 
-##### 4.10.2.1 Parameter
+##### 4.9.2.1 Parameter
 
 *   _securityGroupUuid_ : The UUID of the security group of which you want to retrieve the members.
 
-##### 4.10.2.2 Optional Parameters
+##### 4.9.2.2 Optional Parameters
 
 *   _search_ : Search string to filter members by name. Defaults to empty. Not supported yet.
 *   _offset_ : Offset within the dataset. Defaults to zero.
 *   _limit_ : Maximum amount of objects to be retrieved. Defaults to '-1' for unlimited.
 
-##### 4.10.2.3 Example
+##### 4.9.2.3 Example
 
 ```http
 
@@ -516,11 +459,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.10.3 Output
+#### 4.9.3 Output
 
 A JSON object with two key-value pairs; _count_ indicating the total number of users in the security group satisfying the search parameters (Note that depending on the chosen values for _limit_ and _offset_, the number of results in the response may be lower than the _count_.) and _users_ containing an array of objects with a single key-value pair _openId_ containing the OpenID of a user from the security group. HTTP Status 200.
 
-##### 4.10.3.1 Example
+##### 4.9.3.1 Example
 
 ```json
 {
@@ -537,7 +480,7 @@ A JSON object with two key-value pairs; _count_ indicating the total number of u
 
 ```
 
-### 4.11 Create Security Group
+### 4.10 Create Security Group
 
 Creates a security group in your company.
 
@@ -546,13 +489,13 @@ Creates a security group in your company.
  URL: https://usermanagement.mendix.com/legacy-api/1/groups
 ```
 
-#### 4.11.1 Can Be Invoked By
+#### 4.10.1 Can Be Invoked By
 
 Company Manager
 
-#### 4.11.2 Request
+#### 4.10.2 Request
 
-##### 4.11.2.1 Payload
+##### 4.10.2.1 Payload
 
 A JSON object with the following keys:
 
@@ -560,7 +503,7 @@ A JSON object with the following keys:
 *   _description_ (String, optional) : A description for the security group.
 *   _userGroupLocked_ (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
 
-##### 4.11.2.2 Example
+##### 4.10.2.2 Example
 
 ```http
 POST /legacy-api/1/groups HTTP/1.1
@@ -576,11 +519,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.11.3 Output
+#### 4.10.3 Output
 
 JSON object with two key-value pairs; _uuid_ containing the UUID of the security group and _getUrl_ containing the URL at which the group can be retrieved. HTTP status 201.
 
-##### 4.11.3.1 Example
+##### 4.10.3.1 Example
 
 ```json
 {
@@ -589,7 +532,7 @@ JSON object with two key-value pairs; _uuid_ containing the UUID of the security
 }
 ```
 
-### 4.12 Update Security Group
+### 4.11 Update Security Group
 
 Updates a security group in your company.
 
@@ -598,17 +541,17 @@ Updates a security group in your company.
  URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
 ```
 
-#### 4.12.1 Can Be Invoked By
+#### 4.11.1 Can Be Invoked By
 
 Company Manager
 
-#### 4.12.2 Request
+#### 4.11.2 Request
 
-##### 4.12.2.1 Parameter
+##### 4.11.2.1 Parameter
 
 *   _securityGroupUuid_ : The UUID of the security group you want to update.
 
-##### 4.12.2.2 Payload
+##### 4.11.2.2 Payload
 
 A JSON object with the following keys:
 
@@ -616,7 +559,7 @@ A JSON object with the following keys:
 *   _description_ (String, optional) : A description for the security group.
 *   _userGroupLocked_ (Boolean, optional) : This value determines whether the user group can be removed and whether users can be added/removed through the Mendix Platform Portal. True means that the user group cannot be removed and users cannot be added/removed through the Mendix Platform Portal. Default value: false.
 
-##### 4.12.2.3 Example
+##### 4.11.2.3 Example
 
 ```http
 PUT /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653 HTTP/1.1
@@ -632,11 +575,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.12.3 Output
+#### 4.11.3 Output
 
 None if successful, with HTTP status 200.
 
-### 4.13 Delete Security Group
+### 4.12 Delete Security Group
 
 Deletes a security group from your company.
 
@@ -645,17 +588,17 @@ Deletes a security group from your company.
  URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>
 ```
 
-#### 4.13.1 Can Be Invoked By
+#### 4.12.1 Can Be Invoked By
 
 Company Manager
 
-#### 4.13.2 Request
+#### 4.12.2 Request
 
-##### 4.13.2.1 Parameter
+##### 4.12.2.1 Parameter
 
 *   _securityGroupUuid_ : The UUID of the security group you want to delete.
 
-##### 4.13.2.2 Example
+##### 4.12.2.2 Example
 
 ```http
 
@@ -667,11 +610,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.13.3 Output
+#### 4.12.3 Output
 
 None if successful, with HTTP status 200.
 
-### 4.14 Add User Account to Security Group
+### 4.13 Add User Account to Security Group
 
 Adds a user account from your company to the specified security group.
 
@@ -680,22 +623,22 @@ HTTP Method: POST
 URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users
 ```
 
-#### 4.14.1 Can Be Invoked By
+#### 4.13.1 Can Be Invoked By
 
 Company Manager, Member Manager
 
-#### 4.14.2 Request
+#### 4.13.2 Request
 
-##### 4.14.2.1 Parameter
+##### 4.13.2.1 Parameter
 
 *   _securityGroupUuid_ : The UUID of the security group to which you want to add a user account.
 
-##### 4.14.2.2 Payload
+##### 4.13.2.2 Payload
 
 A JSON object with one key:
 "openId" (String, required) : The OpenID of the user account that should be added to the group.
 
-##### 4.14.2.3 Example
+##### 4.13.2.3 Example
 
 ```http
 POST /legacy-api/1/groups/a552a41b-5b30-41000-bab7-ad102eacd653/users HTTP/1.1
@@ -710,11 +653,11 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.14.3 Output
+#### 4.13.3 Output
 
 None if successful, HTTP status 200.
 
-### 4.15 Remove User Account from Security Group
+### 4.14 Remove User Account from Security Group
 
 Remove the specified user account from the security group.
 
@@ -723,18 +666,18 @@ Remove the specified user account from the security group.
  URL: https://usermanagement.mendix.com/legacy-api/1/groups/<securityGroupUuid>/users/<openId>
 ```
 
-#### 4.15.1 Can Be Invoked By
+#### 4.14.1 Can Be Invoked By
 
 Company Manager, Members Manager
 
-#### 4.15.2 Request
+#### 4.14.2 Request
 
-##### 4.15.2.1 Parameters
+##### 4.14.2.1 Parameters
 
 *   _securityGroupUuid_ : The UUID of the security group from which you want to remove a user account.
 *   _openId_ : The OpenID of the user account you want to remove from the security group. Please note that since the OpenID is a URL itself, it should be URL-encoded.
 
-##### 4.15.2.2 Example
+##### 4.14.2.2 Example
 
 ```http
 
@@ -746,239 +689,6 @@ Mendix-ApiKey:87a8a34d-5ee7-43ba-81f0-7b1b17d5ecd7
 
 ```
 
-#### 4.15.3 Output
+#### 4.14.3 Output
 
 None if successful, HTTP status 200.
-
-### 4.16 Addendum
-
-#### 4.16.1 Countries Reference {#countries}
-
-* Afghanistan
-* Albania
-* Algeria
-* American_Samoa
-* Andorra
-* Angola
-* Anguilla
-* Antigua_and_Barbuda
-* Argentina
-* Armenia
-* Aruba
-* Australia
-* Austria
-* Azerbaijan
-* Bahamas
-* Bahrain
-* Bangladesh
-* Barbados
-* Belarus
-* Belgium
-* Belize
-* Benin
-* Bermuda
-* Bhutan
-* Bolivia
-* Bosnia_and_Herzegovina
-* Botswana
-* Brazil
-* British_Indian_Ocean_Territory
-* British_Virgin_Islands
-* Brunei
-* Bulgaria
-* Burkina_Faso
-* Burma
-* Burundi
-* Cambodia
-* Cameroon
-* Canada
-* Cape_Verde
-* Cayman_Islands
-* Central_African_Republic
-* Chad
-* Chile
-* China
-* Christmas_Island
-* Cocos_Islands
-* Colombia
-* Comoros
-* Cook_Islands
-* Costa_Rica
-* Croatia
-* Cuba
-* Cyprus
-* Czech_Republic
-* Democratic_Republic_of_the_Congo
-* Denmark
-* Djibouti
-* Dominica
-* Dominican_Republic
-* Ecuador
-* Egypt
-* El_Salvador
-* Equatorial_Guinea
-* Eritrea
-* Estonia
-* Ethiopia
-* Falkland_Islands
-* Faroe_Islands
-* Fiji
-* Finland
-* France
-* French_Polynesia
-* Gabon
-* Gambia
-* Georgia
-* Germany
-* Ghana
-* Gibraltar
-* Greece
-* Greenland
-* Grenada
-* Guam
-* Guatemala
-* Guinea
-* Guinea_Bissau
-* Guyana
-* Haiti
-* Holy_See_Vatican_City
-* Honduras
-* Hong_Kong
-* Hungary
-* Iceland
-* India
-* Indonesia
-* Iran
-* Iraq
-* Ireland
-* Israel
-* Italy
-* Ivory_Coast
-* Jamaica
-* Japan
-* Jordan
-* Kazakhstan
-* Kenya
-* Kiribati
-* Kuwait
-* Kyrgyzstan
-* Laos
-* Latvia
-* Lebanon
-* Lesotho
-* Liberia
-* Libya
-* Liechtenstein
-* Lithuania
-* Luxembourg
-* Macau
-* Macedonia
-* Madagascar
-* Malawi
-* Malaysia
-* Maldives
-* Mali
-* Malta
-* Marshall_Islands
-* Mauritania
-* Mauritius
-* Mayotte
-* Mexico
-* Micronesia
-* Moldova
-* Monaco
-* Mongolia
-* Montenegro
-* Montserrat
-* Morocco
-* Mozambique
-* Namibia
-* Nauru
-* Nepal
-* Netherlands
-* Netherlands_Antilles
-* New_Caledonia
-* New_Zealand
-* Nicaragua
-* Niger
-* Nigeria
-* Niue
-* North_Korea
-* Northern_Mariana_Islands
-* Norway
-* Oman
-* Pakistan
-* Palau
-* Panama
-* Papua_New_Guinea
-* Paraguay
-* Peru
-* Philippines
-* Pitcairn_Islands
-* Poland
-* Portugal
-* Puerto_Rico
-* Qatar
-* Republic_of_the_Congo
-* Romania
-* Russia
-* Rwanda
-* Saint_Helena
-* Saint_Kitts_and_Nevis
-* Saint_Lucia
-* Saint_Pierre_and_Miquelon
-* Saint_Vincent_and_the_Grenadines
-* Samoa
-* San_Marino
-* Sao_Tome_and_Principe
-* Saudi_Arabia
-* Senegal
-* Serbia
-* Seychelles
-* Sierra_Leone
-* Singapore
-* Slovakia
-* Slovenia
-* Solomon_Islands
-* Somalia
-* South_Africa
-* South_Korea
-* Spain
-* Sri_Lanka
-* Sudan
-* Suriname
-* Svalbard
-* Swaziland
-* Sweden
-* Switzerland
-* Syria
-* Taiwan
-* Tajikistan
-* Tanzania
-* Thailand
-* Timor_Leste
-* Togo
-* Tokelau
-* Tonga
-* Trinidad_and_Tobago
-* Tunisia
-* Turkey
-* Turkmenistan
-* Turks_and_Caicos_Islands
-* Tuvalu
-* Uganda
-* Ukraine
-* United_Arab_Emirates
-* United_Kingdom
-* United_States
-* Uruguay
-* US_Virgin_Islands
-* Uzbekistan
-* Vanuatu
-* Venezuela
-* Vietnam
-* Wallis_and_Futuna
-* Western_Sahara
-* Yemen
-* Zambia
-* Zimbabwe

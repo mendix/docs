@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### December 9th, 2021
+
+#### Fixes
+
+* We fixed an issue that caused uploading a contract as a ZIP file to fail.
+* We fixed an issue that occurred when searching for and then clicking a popular dataset.
+
 ### December 2nd, 2021
 
 #### New Features

@@ -164,7 +164,7 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
-## 8 Avoid Using Too Many Levels of Inheritance {#mxp009}
+## 8 Avoid Using Too Many Levels of Inheritance [MXP009] {#mxp009}
 
 Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
 

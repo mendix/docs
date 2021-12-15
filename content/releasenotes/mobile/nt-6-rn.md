@@ -4,6 +4,14 @@ parent: "nt-studio-pro-9-parent"
 menu_order: 10
 description: "Native Template 6 release notes."
 ---
+## 6.2.10
+
+**Release date: December 14th, 2021**
+
+### Fixes
+
+* We fixed an issue introduced with v6.2.9 where an Android app crashed when CodePush was enabled.
+
 ## 6.2.9 {#6.2.9}
 
 **Release date: November 29th, 2021**

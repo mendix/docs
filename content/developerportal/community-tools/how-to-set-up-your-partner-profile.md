@@ -215,7 +215,3 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
-
-## 11 Read More
-
-* [Jobs Board](mendix-job-board)

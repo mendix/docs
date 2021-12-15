@@ -148,6 +148,16 @@ In this example we check the value of `StringAttribute` and then apply the class
 
 ![Example of dynamic cell class](attachments/data-grid-2/dynamic-cell-class.png)
 
+### 4.7 Wrap Text
+
+You can choose if you want to wrap the text content of a column and apply ellipsis in the end of it.
+
+{{% alert type="info" %}}
+If you are using **Custom content** in the **Show** option of the **General** tab, please make sure you are using a **Text Widget** without containers around it. Containers sometimes interfere with wrapping texts.
+{{% /alert %}}
+
+![Example of wrap text](attachments/data-grid-2/column-wrap-text.png)
+
 ## 5 Rows
 
 This section defines options for the rows of the grid.

@@ -14,7 +14,7 @@ These are the release notes for Mendix Application Test Suite version 2:
 * [2.20](ats-2.20)
 * [2.19](ats-2.19)
 * [2.18](ats-2.18)
-* [2.16](ats-2.17)
+* [2.17](ats-2.17)
 * [2.16](ats-2.16)
 * [2.15](ats-2.15)
 * [2.14](ats-2.14)

@@ -1,5 +1,5 @@
 ---
-title: "Using Workflows in Apps with Mendix Version 9.6"
+title: "Using Workflows in Apps with Mendix Version 9.6 and Above"
 category: "Workflows"
 menu_order: 05
 tags: ["workflow", "workflows", "9.6", "beta"]
@@ -10,7 +10,7 @@ tags: ["workflow", "workflows", "9.6", "beta"]
 
 Workflows were introduced as a [Beta functionality](/releasenotes/beta-features/) in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. Workflows are still a Beta feature, but we are introducing significant changes to the functionality. For more information on what Beta feature means, see [Beta Versions](/releasenotes/beta-features/).  
 
-During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we have to temporarily disable the workflow editor for apps with Mendix version 9.6 in Studio. 
+During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we have to temporarily disable the workflow editor for apps with Mendix version 9.6 and above in Studio. 
 
 However, you can still use workflows in Studio and Studio Pro. Below we provide some guidance to help you pick the right Mendix version based on the purpose of the app. 
 
@@ -28,7 +28,7 @@ To create an app with Mendix version 9.5, do the following:
 4. Click **Select This Template**.
 5. Name your app, choose a background color and an icon, and click **Create App**.
 
-## 3 Building an App with the Workflow Functionality in Mendix 9.6
+## 3 Building an App with the Workflow Functionality in Mendix 9.6 and Above
 
 Next to just exploring the functionality, you can also build an app in Studio that will later be published to production. 
 
@@ -36,11 +36,11 @@ Next to just exploring the functionality, you can also build an app in Studio th
 Since workflows are in Beta, there are limitations that apply to [Beta features](/releasenotes/beta-features/) and it might be better to not put the app in production until workflows are GA. 
 {{% /alert %}}
 
-You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps to Mendix 9.6](/refguide/workflow-beta-migration).
+You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 or above via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps to Mendix 9.6 and Above](/refguide/workflow-beta-migration).
 
-## 4 Building an App Together with Studio Pro Developers in Mendix 9.6
+## 4 Building an App Together with Studio Pro Developers in Mendix 9.6 and Above
 
-If your team is building a workflow app with Mendix version 9.6, you can work on workflows only in Studio Pro until workflows are available in Studio again. You can work in Studio on any other functionality in your app. 
+If your team is building a workflow app with Mendix version 9.6 or above, you can work on workflows only in Studio Pro until workflows are available in Studio again. You can work in Studio on any other functionality in your app. 
 
 
 

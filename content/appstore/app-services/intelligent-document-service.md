@@ -8,7 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 {{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
 
-The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies<sup>1</sup> to extract text and key value pairs from images of documents in bulk.
+The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies to extract text and key value pairs from images of documents in bulk. For more information, see the [Technical Provider](#technical-provider) section.
 
 
 ### 1.1 Features
@@ -79,7 +79,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
-    5. You can also log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
+    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)
@@ -105,12 +105,12 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 8.  To mark an image, perform the following steps:
     1. Click **Add Markers**. The **Mark Document** dialog box opens.
-    2. In the left pane **Choose fields to mark**, select a field of interest from which some meaningful data needs to be extracted.
-    3. On the right side, enter a **Marker ID** that is used for the area that you selected.
-    4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
+    2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
 
         ![Mark Document page](attachments/intelligent-document-service/mark-document-dialog-box.png)
 
+    3. On the right side, enter a **Marker ID** that is used for the area that you selected.
+    4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
     5. Click **Add Marker** to add the marker to the list of **Markers**.
     6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
@@ -118,7 +118,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
 
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, you will see this pop-up.  
+9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
     
     ![new model status included](attachments/intelligent-document-service/new-model-status-popup.png)
     
@@ -139,15 +139,15 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
         ![Sample Extraction dialog box](attachments/intelligent-document-service/sample-extraction-dialog-box.png)
 
-    6. Click **Download** to get the JSON Structure.
-2.  To add the JSON Structure to your app, perform the following steps:
+    6. Click **Download** to get the JSON structure.
+2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/intelligent-document-service/json-structure.png)
 
-    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
-    4. In the **JSON Snippet** box, add the content of the JSON Structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
+    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON structure and click **OK**. The **JSON Structure** dialog box opens.
+    4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
     5. Click **OK** to save the changes and close the dialog box.
 3.  To create the import mapping, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.     
@@ -156,7 +156,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
     4.  For **Schema source**, select **JSON structure** and **Select** the JSON structure that you created.
     
         ![schema-source-json-structure](attachments/intelligent-document-service/schema-source-json-structure.png)
-    6. Click **OK** to save the changes and close the dialog box.
+    5. Click **OK** to save the changes and close the dialog box.
 
 ### 4.3 Extracting the Data with the Trained Document Model {#extraction-activity}
 
@@ -184,8 +184,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
-## 5 Technical Provider
+## 5 Technical Provider{#technical-provider}
 
-<small><sup>1</sup> The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
+The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 
 ![Technical Provider ABBYY](attachments/intelligent-document-service/logo-powered-by-abbyy.png)

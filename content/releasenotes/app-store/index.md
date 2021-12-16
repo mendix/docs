@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2021
 
+### December 16th, 2021
+
+#### Improvements
+
+* We now support using rich text for your [component description](/appstore/general/share-app-store-content#general).
+
 ### November 18th, 2021
 
 #### New Features

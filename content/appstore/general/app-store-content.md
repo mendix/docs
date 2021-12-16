@@ -145,7 +145,7 @@ To configure the widget, follow these steps:
 
 ### 4.2 Using a Module {#module}
 
-You can also download an entire module from the Marketplace. A module includes the whole functionality and instegration that can be very helpful when you are building your application.
+You can also download an entire module from the Marketplace. A module includes the whole functionality and integration that can be very helpful when you are building your application.
 
 In this section, we will use the [Email with Templates](/appstore/modules/email-with-templates) module as an example. You can follow the steps to use any module from the Marketplace.
 

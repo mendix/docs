@@ -10,7 +10,6 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 The [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) app service uses AI and OCR technologies<sup>1</sup> to extract text and key value pairs from images of documents in bulk.
 
-<small><sup>1</sup> The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
 
 ### 1.1 Features
 
@@ -80,12 +79,12 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
-    5. Log into the application with your Mendix account.
+    5. You can also log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)
 
-    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
+    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
@@ -93,7 +92,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 4.  Enter a unique **Model Name**. select a **Language**, and then click **Create Model**.
 
-    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
 6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
@@ -106,7 +105,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 8.  To mark an image, perform the following steps:
     1. Click **Add Markers**. The **Mark Document** dialog box opens.
-    2. On the left side, select an area in the image where text is expected.
+    2. In the left pane **Choose fields to mark**, select a field of interest from which some meaningful data needs to be extracted.
     3. On the right side, enter a **Marker ID** that is used for the area that you selected.
     4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
 
@@ -119,32 +118,36 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
 
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-9.  Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
-
-    ![new model status completed](attachments/intelligent-document-service/new-model-status-completed.png)
+9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, you will see this pop-up.  
+    
+    ![new model status included](attachments/intelligent-document-service/new-model-status-popup.png)
+    
+    At this time, the model is ready to use. 
+    
+    ![new model status published](attachments/intelligent-document-service/new-model-status-completed.png)
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
 You need to use an [import mapping](/refguide/mapping-documents#import-mappings) to populate extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1.  To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
     2.  Click **Environment** to show the **Existing Models** list.
-    3.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
-    4.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
+    4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     5.  Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
 
         ![Sample Extraction dialog box](attachments/intelligent-document-service/sample-extraction-dialog-box.png)
 
-    6. Click **Download** to get the JSON file.
-2.  To add the JSON file to your app, perform the following steps:
-    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+    6. Click **Download** to get the JSON Structure.
+2.  To add the JSON Structure to your app, perform the following steps:
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/intelligent-document-service/json-structure.png)
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
-    4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
+    4. In the **JSON Snippet** box, add the content of the JSON Structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
     5. Click **OK** to save the changes and close the dialog box.
 3.  To create the import mapping, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.     
@@ -181,3 +184,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
+## 5 Technical Provider
+
+<small><sup>1</sup> The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
+
+    ![Technical Provider ABBYY](attachments/intelligent-document-service/abbyy-logo.png)

@@ -41,7 +41,7 @@ For all the map providers except OpenStreetMap, you need to have a token in orde
 After obtaining the access token, provide it to the widget in the **General** > **Configurations** widget settings. For Google Maps, the **Google Maps API Key** property should be used, while for the other map providers the **API key** property should be used.
 
 {{% alert type="warning" %}}
-The API key may be subject to a usage rate. Use the API key securely to avoid paying for a hacked API key. For more information about how to share an API key properly, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
+Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
 {{% /alert %}}
 
 {{% alert type="info" %}}

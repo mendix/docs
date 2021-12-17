@@ -24,20 +24,19 @@ The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/104
 	* Delete from server
 	* Move to a folder (for example, an archive)
 * Subscribe to incoming email
-	* Supports IMAP and IMAPS protocol only
+	* Supports the IMAP and IMAPS protocol only
 	* A microflow can be configured to execute for new incoming email
 * Unsubscribe from incoming email
-	* Removes the subscription if exists.
-
+	* Removes the subscription (if it exists)
 
 ## 2 Configuration
 
 The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
-To invoke receiving emails from an account, you can call the **RetrieveEmailMessages** Java action.
+To invoke receiving emails from an account, call the **RetrieveEmailMessages** Java action.
 
-To subscribe to incoming email from an account, you can call the **SubscribeToIncomingEmail** Java action.
+To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** Java action.
 
-To un-subscribe from incoming email from an account, you can call the **UnsubscribeFormIncomingEmail** Java action.
+To unsubscribe from incoming email from an account, call the **UnsubscribeFormIncomingEmail** Java action.
 
 Set the **EncryptionKey** constant for email account passowrd encryption.

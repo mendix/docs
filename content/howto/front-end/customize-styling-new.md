@@ -20,11 +20,27 @@ When tailoring your app's look, a simple first step is to change the theme setti
 
 For Studio users, use the [Theme Customizer](/studio/theme-customizer) to change the basic look and feel of your app. The differences will become visible immediately.
 
-For Studio Pro users there are more options to change the default theme settings. In the theme folder there is a *custom-variables* file (for both web apps and native mobile apps) which can be used to simply change many of the theme settings for the app. For more information on this topic, see the [File and Folder Structure](#file-and-folder) section below.
+For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
-### 2.2 Adding Custom Styling
+### 2.2 Using the Styling Editor {#styling-editor}
+
+The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App explorer, and edit them using this editor.
+By default, Studio Pro will show styling files on app-level and from UI resources modules, such as `Atlas_Core`. This can be changed inside the user preferences (`Edit > Preferences > General > Interface`) or by simply right-clicking the Styling node:
+
+![styling editor settings](attachments/customize-styling/styling-editor-settings.png)
+
+* **App Only**
+  * This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the `theme` directory inside the `App > Styling` node in the App explorer.
+* App and UI resources modules
+  * This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. Additionally to the above, this option adds a `Styling` node to modules that are marked as UI resources, containing the files from the corresponding `themesource` directory.
+* App and all modules
+  * Additionally to the option above, this adds a `Styling` node to all modules, regardless of whether they are marked as UI resources or not.
+
+To learn more about the file and folder structure, see the [File and Folder Structure](file-and-folder) section below.
+
+### 2.3 Adding Custom Styling
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
@@ -34,7 +50,7 @@ While custom styling can be added directly in the *main.scss* or *main.js* it is
 
 Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience.
 
-#### 2.2.1. Web Environment Example
+#### 2.3.1. Web Environment Example
 
 In the following example a custom style is added to change any matching element's font-size upon use.
 
@@ -60,7 +76,7 @@ Steps:
 
 This ensures the SCSS is included in CSS compilation.
 
-#### 2.2.2 Native Environment Example
+#### 2.3.2 Native Environment Example
 
 In this example we will be creating a custom style which will change the font size of text upon use:
 
@@ -84,7 +100,7 @@ In this example we will be creating a custom style which will change the font si
 	module.exports = {companyHeader};
 	```
 
-### 2.3 Importing CSS (Web Only)
+### 2.4 Importing CSS (Web Only)
 
 An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in *theme/web/settings.json*.
 

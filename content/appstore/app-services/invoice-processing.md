@@ -8,9 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 {{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
 
-Powered by AI and OCR technologies<sup>1</sup>, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
-
-<small><sup>1</sup> The AI and OCR technologies used by Invoice Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
+Powered by AI and OCR technologies, the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) app service can help you automate the processing of invoices in bulk. It supports invoices in the European Union and the United States.
 
 ### 1.2 Features
 
@@ -77,42 +75,46 @@ To use the Invoice Processing app service, first [train a model](#document-model
 
         ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
 
-    5. Log in to the app using your **Mendix Account**.
+    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
 
-    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **COMPLETED**. {{% /alert %}}
+    {{% alert type="info" %}} The model is ready to use only when the **Status** of this model is **Published**. {{% /alert %}}
 
 3.  To train a new model, click **Create New Model** on the page. The **Create New Model** dialog box opens.
 
     ![Create Invoice Model dialog box](attachments/invoice-processing/create-invoice-model-dialog-box.png)
 
 4.  Enter a unique **Model Name**, select a **Region**, and then click **Create Model**.
-
-    {{% alert type="info" %}} The model name has a length limit of 255 bytes. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
+    
+    {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
    
 5. Wait until **Invoice Model** page opens.
 6. Fill in **Vendor Information** and **Business Unit Information** from the sample Invoice. The more input you provide, the more accurate your trained model will be.
 7. Click **Create Model**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-8. Wait until the **Status** of the model becomes **COMPLETED**. At this time, the model is ready to use. 
+8. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+    
+    ![new model status included](attachments/invoice-processing/new-model-status-popup.png)
+    
+    At this time, the model is ready to use. 
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 
 You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into an entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1.  To create an Import Mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an Import Mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1.  Log into the [Document Model Training](#document-model-training) application with your Mendix account.
     2.  Click **Environment** to show the **Invoice Models** list.
-    3.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
-    4.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
+    4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     5.  Drag the sample invoice, which you used to train the document model, into the box where it says **Drag & Drop Image Here**. You can also click the box and select the file.
 
         ![Sample Extraction dialog box](attachments/invoice-processing/sample-extraction-dialog-box.png)
 
-    6. Click **Download** to get the JSON file.
-2.  To add the JSON file to your app, perform the following steps:
-    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+    6. Click **Download** to get the JSON structure.
+2.  To add the JSON structure to your app, perform the following steps:
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/receipt-processing/json-structure.png)
@@ -156,3 +158,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
 
+## 5 Technical Provider{#technical-provider}
+
+The AI and OCR technologies used by Invoice Processing Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+
+![Technical Provider ABBYY](attachments/invoice-processing/logo-powered-by-abbyy.png)

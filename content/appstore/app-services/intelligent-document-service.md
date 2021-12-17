@@ -20,7 +20,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 ### 1.2 Limitation
 
 * Currently only supports images in JPG and JPEG formats
-* Individual image file size cannot exceed 50MB.
+* Each image file size cannot exceed 50 MB.
 
 ### 1.3 Prerequisites
 
@@ -96,7 +96,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
+6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
 
     ![Import File page](attachments/intelligent-document-service/import-file-page.png)
     
@@ -121,11 +121,12 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
 
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-9.  Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
+9.  Wait until the **Status** of the model becomes **Published**.
+10. Once the model is published, this pop-up window opens:
     
     ![new model status included](attachments/intelligent-document-service/new-model-status-popup.png)
     
-    At this time, the model is ready to use. 
+    Click **OK** to close the pop-up window. The model is ready to use. 
     
     ![new model status published](attachments/intelligent-document-service/new-model-status-completed.png)
 

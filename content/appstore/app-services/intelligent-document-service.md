@@ -20,6 +20,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 ### 1.2 Limitation
 
 * Currently only supports images in JPG and JPEG formats
+* Individual image file size cannot exceed 50MB.
 
 ### 1.3 Prerequisites
 
@@ -95,10 +96,12 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
+6. Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
 
     ![Import File page](attachments/intelligent-document-service/import-file-page.png)
-
+    
+    {{% alert type="info" %}} Multiple files can be uploaded but individual image file size cannot exceed 50MB. {{% /alert %}}
+    
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
     ![Add Marker and IDs page](attachments/intelligent-document-service/add-marker-and-ids-image-unmarked.png)
@@ -135,11 +138,14 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
     2.  Click **Environment** to show the **Existing Models** list.
     3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    5.  Drag one of the sample images, which you used to trained the document model, into the box where it says **Drag & Drop Image Here**.
+    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag & Drop Image Here**.
 
         ![Sample Extraction dialog box](attachments/intelligent-document-service/sample-extraction-dialog-box.png)
 
     6. Click **Download** to get the JSON structure.
+
+    {{% alert type="info" %}} Generated JSON structure file size cannot exceed 50MB. {{% /alert %}}
+    
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the generated JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).

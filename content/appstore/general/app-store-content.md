@@ -106,7 +106,7 @@ To update a widget in your app to a newer version, follow these steps:
 
 2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
 
-   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+    ![Marketplace icon](attachments/app-store-content/toolbar.png)
 
 3. Find the widget in the Marketplace.
 
@@ -114,7 +114,7 @@ To update a widget in your app to a newer version, follow these steps:
 
 5. Go to the **All Versions** tab.
 
-   ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
+    ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
 
 6. Click **Download** to download the latest version. The **Question** dialog box opens and asks if you want to overwrite the existing package.
 
@@ -159,12 +159,11 @@ To add the Email with Template module from the Marketplace via Studio Pro, follo
 
     * **Add as a new module** – if you select this option, new entities are created in your app
     * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
-      
-
+    
     ![Import Module dialog box](attachments/app-store-content/import-module.png)
-
+    
     {{% alert type="warning" %}}When you select **Replace existing module**, a warning will show you which files in the app directory will be overwritten. If you click **OK**, these files will be replaced by the standard files. Be careful with this option when you have made changes to a module that you downloaded – once the files are replaced, you will have the standard Marketplace module again, with new entities and attributes. The entities and attributes that you renamed and their respective tables and columns represented in the database are all deleted. We recommend that you do not make changes to the downloaded modules, unless you will not update your component in the future and understand the implications of your changes.{{% /alert %}}
-
+    
 3. In the **Import Module** dialog box, click **Import**.
 
 4. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
@@ -179,13 +178,13 @@ Unlike a widget, you can see a module in your App Explorer. A module contains a 
 Sometimes additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 {{% /alert %}}
 
-#### 4.2.2 Updating a Module
+#### 4.2.2 Updating a Module {#update-module}
 
 1. Open the app in which you want to update the module.
 
 2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
 
-   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+    ![Marketplace icon](attachments/app-store-content/toolbar.png)
 
 3. Find the module in the Marketplace.
 
@@ -195,7 +194,7 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 6. Click **Download** to download the latest version. The **Import Module** dialog box opens.
 
-   ![Import Module dialog box](attachments/app-store-content/import-module.png)
+    ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
 7. Select **Replace existing module** and click **Import**.
 

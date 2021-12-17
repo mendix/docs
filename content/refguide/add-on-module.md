@@ -27,11 +27,17 @@ Mendix Studio does not support add-on modules, so you will not be able to open t
 
 {{% /alert %}}
 
-## 2 Adding and Updating an Add-On Module 
+## 2 Adding an Add-On Module to Your App
 
-For information on how to download a module, use it, and update it in your app, see the Downloading Content from the Marketplace and Using a Module sections in *Use Marketplace Content in Studio Pro*.
 
-## 3 Deleting an Add-On Module
+
+## 3 Updating an Add-On Module 
+
+For information on how to update a module in your app, see the [Updating a Module](/appstore/app-store-content#update-module) section in *Use Marketplace Content in Studio Pro*.
+
+## 4 Deleting an Add-On Module
 
 If you want to delete an add-on module from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the ZIP file from the **modules** folder.
+
+## 5 Read More
 

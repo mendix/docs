@@ -189,7 +189,7 @@ During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running
 Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
 {{% /alert %}}
 
-### 2.10 Cleaning up old processed tasks {cleanup}
+### 2.11 Cleaning up old processed tasks {#cleanup}
 
 The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
 

@@ -148,7 +148,7 @@ Unfortunately there isn't a great workaround for this issue. If the scheduled ev
 
 If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example, if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.
 
-### 5.4 Cleaning up old events {cleanup}
+### 5.5 Cleaning up old events {#cleanup}
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` row in the database. Over time these accumulate and the table can grow large.
 

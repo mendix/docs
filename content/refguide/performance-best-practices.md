@@ -178,6 +178,17 @@ Consider the following alternatives:
 * Create entities with a one-to-one association instead of setting the generalization
 * Create a non-persistable entity that inherits from an outcome of your business logic
 
+## 9 Duplicated Access Rules [MXP010] {#mxp010}
+
+Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
+
+### 9.1 Steps to Fix
+
+To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+
+* Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
+* Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.
+
 ## 10 Avoid Deeply Nested List Views [MXP011] {#mxp011}
 
 A list view is used on a page that is nested for two or more levels, for example, a list view is in list view and the second list view is in a data view. 
@@ -186,4 +197,3 @@ When you use two or more levels of nesting, page performance may be affected due
 ### 10.1 Steps to Fix
     
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
-

@@ -8,9 +8,7 @@ tags: ["Document Service", "AI", "ML", "OCR", "Industrial", "Manufacturing"]
 
 {{% todo %}}[update doc links on Documentation tabs for components already released ]{{% /todo %}}
 
-Powered by AI and OCR technologies<sup>1</sup>, the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built, ready-to-implement trained document model<sup>1</sup>. It extracts the information from the main fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service.
-
-<small><sup>1</sup> The AI and OCR technologies used by Receipt Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.</small>
+Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) app service has a pre-built, ready-to-implement trained document model. It extracts the information from the important fields, without need for any additional training. You can automate the processing of receipts in bulk using this app service. For more information, see the [Technical Provider](#technical-provider) section.
 
 ### 1.1 Features
 
@@ -49,8 +47,11 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription.
+1. On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
 2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+
+    For the trial, you do not need to fill in this information.
+    
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 4. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
@@ -71,7 +72,7 @@ To use the Receipt Processing app service, firstly create an [import mapping](#m
 
 You need to use an [import mapping](/refguide/mapping-documents#import-mappings) to populate the extracted data into entity. If necessary, you can further process the entity with [event handlers](/refguide/event-handlers).
 
-1.  To create an import mapping, you need a JSON mapping file. Perform the following steps to get the JSON mapping file:
+1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1. Log into the Marketplace with your Mendix account.
     2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
     3. Click **Receipt Processing** to open the service management dashboard.
@@ -79,23 +80,23 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
         ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
 
-    5.  Log in to the application using your Mendix account.
+    5.  Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
     6.  Click **Environment** to show the **Existing Models** list.
-    7.  Select your trained model. Make sure that the **Status** of the model is **COMPLETED**.
-    8.  Click **JSON Mapping File**. The **Generate JSON Mapping File** dialog box opens.
+    7.  Select your trained model. Make sure that the **Status** of the model is **Published**.
+    8.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
     9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts where data will be extracted. You can also click the box and select the file.
 
         ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 
-   10. Click **Download** to get the JSON file.
-2.  To add the JSON file to your app, perform the following steps:
-    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON file.
+   10. Click **Download** to get the JSON structure.
+2.  To add the JSON structure to your app, perform the following steps:
+    1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/receipt-processing/json-structure.png)
 
    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
-   4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
+   4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
    5. Click **OK** to save the changes and close the dialog box.
 3.  To create the import mapping, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.
@@ -131,3 +132,9 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 3. Click **Receipt Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard). On the **Overview** tab, the **Usage** dashboard shows the real-time statistics.
+
+## 5 Technical Provider{#technical-provider}
+
+The AI and OCR technologies used by Receipt Processing are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+
+![Technical Provider ABBYY](attachments/receipt-processing/logo-powered-by-abbyy.png)

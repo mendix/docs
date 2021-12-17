@@ -27,11 +27,11 @@ For more information on how changes can be quickly previewed, see the [Preview a
 ### 2.2 Using the Styling Editor {#styling-editor}
 
 The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App Explorer, and edit them using this editor.
-By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
+By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences-dialog) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
 ![styling editor settings](attachments/customize-styling/styling-editor-settings.png)
 
-To learn more about the file and folder structure, see the [File and Folder Structure](file-and-folder) section below.
+To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
 ### 2.3 Adding Custom Styling
 

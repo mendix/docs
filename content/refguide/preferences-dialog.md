@@ -19,9 +19,9 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
-#### 2.1.2 Show styling for
+#### 2.1.2 Show Styling For
 
-This configures, which styling files will be shown inside the App explorer. For more information about what each option does, see the [Styling Editor](/howto/front-end/customize-styling-new#styling-editor) documentation.
+The **Show styling for** setting configures, which styling files are shown in the App Explorer. For more information about what each option does, see the [Using the Styling Editor](/howto/front-end/customize-styling-new#styling-editor) section in *How to Customize Styling*.
 
 ### 2.2 Error List
 

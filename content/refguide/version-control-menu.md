@@ -20,6 +20,16 @@ The **Update** option updates the local app to the latest revision that was comm
 
 The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](commit-dialog).
 
+## 4 Push
+
+{{% alert type="info" %}}
+
+Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
+
+{{% /alert %}}
+
+The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](version-control#commit) section in *Version Control*.
+
 ## 4 Show Changes on Disk
 
 **Show Changes on Disk** opens a dialog that shows which files on disk have been changed since the last commit.  

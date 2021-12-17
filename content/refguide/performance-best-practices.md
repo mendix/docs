@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp008> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp010> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -164,3 +164,27 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 8 Avoid Using Too Many Levels of Inheritance {#mxp009}
+
+Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
+
+### 8.1 Steps to Fix
+
+Do not use more than two levels of inheritance or overuse specializations on entities especially if you are using XPath for an entity access.  
+
+Consider the following alternatives:
+
+* Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
+* Create entities with a one-to-one association instead of setting the generalization
+* Create a non-persistable entity that inherits from an outcome of your business logic
+
+## 9 Duplicated Access Rules [MXP010] {#mxp010}
+
+Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
+
+### 9.1 Steps to Fix
+
+To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+
+* Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
+* Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.

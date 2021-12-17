@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "google maps","platform support"]
 ---
 
 {{% alert type="warning" %}}
-This module is deprecated. You can use the [Google Maps](/appstore/widgets/google-maps) widget instead.
+This module is deprecated. You can use the [Maps](/appstore/widgets/maps) widget instead.
 {{% /alert %}}
 
 ## 1 Introduction

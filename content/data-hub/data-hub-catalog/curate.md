@@ -35,7 +35,7 @@ The list can be also be sorted by any of the columns by clicking on the column h
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
-## 3 Curate Bar
+## 3 Curation Bar
 
 Curation is performed from the [asset details screen](search#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
 
@@ -45,16 +45,16 @@ Curation is performed from the [asset details screen](search#search-details). If
 Owners of registered assets and can only curate their services.
 {{% /alert %}}
 
-On the **Curation bar**, the following details are displayed:
+On the **Curation bar**, information about the role of the current user is displayed: **Owner** or **Curator**.
 
-* Information about the role of the current user: **Owner** or **Curator**
-* When a data source is selected in the **Search Results**:
-  * **Edit Metadata** – edit the description of the data source and datasets, add tags or specify business and technical owners and add change the application icon
-  * [Discoverable/Validated](#discoverability) – set the the **Discoverable** and **Validated** settings for the data source from the drop-down menu.
-    * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source.
-    * **Validate** indicates that the data source and datasets have been validated.
-* When a dataset is selected in the **Search Results**
-  * **Edit Dataset Details** – to edit the dataset and attribute descriptions
+When a data source is selected in the **Search Results**, the following options are displayed via **Edit**:
+
+* **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
+* [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
+ * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+ * **Validate** indicates that the data source and datasets have been validated.
+
+When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
@@ -62,10 +62,7 @@ The curate functions that are available for a selected data source are to change
 
 You can curate Application Details from the **Application Details** screen as follows:
 
-1. In the **Curation Bar** click **Edit Metadata** > **Application Details**:
-
-   ![edit application](attachments/curate/edit-application-metadata.png)
-
+1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
    ![app metadata screen](attachments/curate/application-metadata-screen.png)
@@ -184,7 +181,7 @@ You can also specify if the OData service **Contract Description** or the **Cata
 
 To edit the asset metadata, follow these steps:
 
-1. In the **Curation Bar**, click **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
+1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
     ![service metadata](attachments/curate/service-metadata-box.png)
 
@@ -198,13 +195,13 @@ To edit the asset metadata, follow these steps:
 
 4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
-{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+{{% alert type="info" %}}If you leave a metadata editing session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
-1. In the **Search Details** screen of a selected service, click **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
+1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
 
 2. To add tags, click the empty **Tag** input area:
 
@@ -220,7 +217,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-    {{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+    {{% alert type="info" %}} If you leave a metadata editing session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ## 6 Discoverable & Validated {#discoverability}
 
@@ -228,7 +225,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. By default, when a data source is registered in the Data Hub catalog, it is set to **Discoverable**, which means that all users can find the asset and see details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Data Hub catalog, **Discoverable** is set to the company default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/data-hub-admin#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details of it. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service and curators and the Mendix Admin. All other users of Data Hub (also through the Data Hub integrations in Studio Pro and Studio) will not be able to see an asset whose discvorabilty is turned off.
 

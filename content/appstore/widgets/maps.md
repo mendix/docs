@@ -40,6 +40,10 @@ For all the map providers except OpenStreetMap, you need to have a token in orde
 
 After obtaining the access token, provide it to the widget in the **General** > **Configurations** widget settings. For Google Maps, the **Google Maps API Key** property should be used, while for the other map providers the **API key** property should be used.
 
+{{% alert type="warning" %}}
+Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
+{{% /alert %}}
+
 {{% alert type="info" %}}
 Placing markers based on addresses does not work without an access token set for **General** > **Configurations** > **Google Maps API key**. This is especially relevant if you are opting into one of the non-Google Maps providers, since you should still provide a Google Maps API access token if you want to specify markers through their address.
 The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers. If no Google Maps API token is provided, the map is still usable, but markers based on addresses will not be shown.

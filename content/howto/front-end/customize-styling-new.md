@@ -20,23 +20,16 @@ When tailoring your app's look, a simple first step is to change the theme setti
 
 For Studio users, use the [Theme Customizer](/studio/theme-customizer) to change the basic look and feel of your app. The differences will become visible immediately.
 
-For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
+For Studio Pro users there are more options to change the default theme settings. To customize the default theme settings, you can open and edit the *custom-variables* file from the App Explorer (**App** > **Styling** > **web** > **custom-variables.scss** for web apps, and **App** > **Styling** > **native** > **custom-variables.js** for native apps).
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
 ### 2.2 Using the Styling Editor {#styling-editor}
 
-The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App explorer, and edit them using this editor.
-By default, Studio Pro will show styling files on app-level and from UI resources modules, such as `Atlas_Core`. This can be changed inside the user preferences (`Edit > Preferences > General > Interface`) or by simply right-clicking the Styling node:
+The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) inside the App Explorer, and edit them using this editor.
+By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide/preferences) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
 ![styling editor settings](attachments/customize-styling/styling-editor-settings.png)
-
-* **App Only**
-  * This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the `theme` directory inside the `App > Styling` node in the App explorer.
-* App and UI resources modules
-  * This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. Additionally to the above, this option adds a `Styling` node to modules that are marked as UI resources, containing the files from the corresponding `themesource` directory.
-* App and all modules
-  * Additionally to the option above, this adds a `Styling` node to all modules, regardless of whether they are marked as UI resources or not.
 
 To learn more about the file and folder structure, see the [File and Folder Structure](file-and-folder) section below.
 

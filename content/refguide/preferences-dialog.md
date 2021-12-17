@@ -21,7 +21,15 @@ When enabled, **App Explorer** automatically highlights the document that is cur
 
 #### 2.1.2 Show Styling For
 
-The **Show styling for** setting configures, which styling files are shown in the App Explorer. For more information about what each option does, see the [Using the Styling Editor](/howto/front-end/customize-styling-new#styling-editor) section in *How to Customize Styling*.
+The **Show styling for** setting configures, which styling files are shown in the App Explorer. 
+
+You can select one of the following options:
+
+* **App Only** – This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the **theme** folder in App Explorer > **App** > **Styling**.
+* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
+* **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
+
+For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new#styling-editor) section in *How to Customize Styling*.
 
 ### 2.2 Error List
 

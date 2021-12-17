@@ -39,7 +39,7 @@ To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidoc
 
 #### 3.2.1 Geting the Latest Revision
 
-To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/apidocs/team-server-api#retrieve-branch) to get the `LatestRevisionNumber` from the output.
+To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/apidocs/old-version/team-server-api#retrieve-branch) to get the `LatestRevisionNumber` from the output.
 
 An example of how to do this call is below. Be aware that `<AppId>` is not a GUID, but the actual name of the cloud node. In the example below, the `<AppId>` is `ukservices`.
 

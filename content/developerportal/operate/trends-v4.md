@@ -55,11 +55,7 @@ You can find the trends by following these steps:
 
 As with all complex IT systems, there are many interrelated components which can cause performance issues. This document cannot cover all possibilities, but is intended as a general introduction to the information which is displayed and a few ideas about where to look for possible areas of concern.
 
-#### 3.2.1 Disk Partitions
-
-If there is more than one disk partition in the system, the `/srv` partition generally contains project files and uploaded files of the application, while `/var` generally holds the database storage.
-
-#### 3.2.2 Combining Information{#combine-info}
+#### 3.2.1 Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
 
@@ -233,6 +229,22 @@ The **Application node disk usage (percentage)** graph shows the relative amount
 This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
+
+### <a name="Trends-appnumberoffiles"></a>4.11 Application Number of Files
+
+The **Application Number of Files** graph shows the number of files that are stored in file storage.
+
+![](attachments/trends-v4/app-number-of-files.png)
+
+### <a name="Trends-appsizeoffiles"></a>4.12 Application Size of Files (in bytes)
+
+{{% alert type="info" %}}
+This metric was added on DATE to the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack). The data will only be visible if you have deployed your Mendix app after that date, and it will only be visible from the moment of deployment.
+{{% /alert %}}
+
+The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.
+
+![](attachments/trends-v4/app-size-of-files.png)
 
 ## 5 Database Statistics
 

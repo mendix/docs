@@ -158,6 +158,16 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 
 ![Example of wrap text](attachments/data-grid-2/column-wrap-text.png)
 
+### 4.8 Tooltip
+
+If you need to display advisory information for cell content you can specify tooltip text. This text will be shown when user is hovering over the cell content.
+
+{{% alert type="warning" %}}
+This property not available if you enable "Custom content" for the column
+{{% /alert %}}
+
+![Example of wrap text](attachments/data-grid-2/tooltip-prop.png)
+
 ## 5 Rows
 
 This section defines options for the rows of the grid.

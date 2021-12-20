@@ -12,6 +12,18 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### December 20th, 2021
+
+#### Improvements
+
+**Update of `*.mendix.com` TLS certificate**
+
+We will gradually replace the TLS certificate for `*.mendix.com` in January 2022. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
+
+Current Certificate Details: <https://crt.sh/?id=2349479044>
+
+New Certificate Details: <https://crt.sh/?id=5832398831>
+
 ### November 18th, 2021
 
 ### Fixes

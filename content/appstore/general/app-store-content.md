@@ -149,7 +149,7 @@ You can also download an entire module from the Marketplace. A module includes t
 
 In this section, we will use the [Email with Templates](/appstore/modules/email-with-templates) module as an example. You can follow the steps to use any module from the Marketplace.
 
-#### 4.2.1 Adding a Module
+#### 4.2.1 Adding a Module {#add-module}
 
 To add the Email with Template module from the Marketplace via Studio Pro, follow these steps:
 

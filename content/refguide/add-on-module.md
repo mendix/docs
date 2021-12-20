@@ -27,6 +27,10 @@ Mendix Studio does not support add-on modules, you will not be able to open the 
 
 ## 2 Importing an Add-On Module to Your App
 
+For information on how to import a module in your app, see the [Adding a Module](/appstore/app-store-content#add-module) section in *Use Marketplace Content in Studio Pro*.
+
+{{% todo %}}[Double-check which option to leave.]{{% /todo %}} 
+
 To import an add-on module, do the following:
 
 1. Download the add-on module from the Marketplace.

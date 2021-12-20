@@ -7,35 +7,35 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The  [portfolio management tool](https://portfolio.mendix.com) enables you to manage projects within your company and outside your company. Each portfolio contains multiple projects. The tool empowers you to manage projects throughout the whole project lifecycle – from the start as an idea until the release as a product. The tool shows you the project timelines, gives you insights into the value created by your projects, and provides you with other useful project details. The portfolio management tool is available to all Mendix Cloud customers.
+The  [portfolio management tool](https://portfolio.mendix.com) empowers you to manage projects within your company and outside your company. With this tool, you can manage projects throughout the whole project lifecycle – from the start as an idea until the release as a product. The portfolio management tool provides you with the project timelines, the insights into the value created by your projects, and other useful project details. The tool is available to all Mendix Cloud customers.
 
 {{% alert type="info" %}}
-Mendix Admins can access all portfolios within their company. If a company has no portfolio, when a Mendix Admin starts the portfolio management tool for the first time, the system will automatically create a portfolio for the company.
+Mendix Admins can access all portfolios within their company. When a Mendix Admin starts the portfolio management tool for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.
 {{% /alert %}}
 
-{{% todo %}}[Add an image]{{% /todo %}}
-
-When you start the portfolio management tool, click a portfolio to get an overview of all the projects in this portfolio.
+![landing-page](attachments/portfolio-management-tool/landing-page.png)
 
 ## 2 Projects Overview
 
-{{% todo %}}[Add an image]{{% /todo %}}
+When you start the portfolio management tool, click a portfolio to get an overview of all the projects in this portfolio.
 
-The **Portfolio Overview** page gives you an overview of all the projects in this portfolio.
+![projects-overview](attachments/portfolio-management-tool/projects-overview.png)
+
+The **Portfolio Overview** page gives you an overview of all the projects in this portfolio. You can search a project in the search bar.
 
 ### 2.1 Switching Between the Kanban Board and the List View
 
-On the **Projects Overview** page, you can switch between the Kanban board and the list view. You can do so by clicking the view icon in the upper-right corner.
+On the **Projects Overview** page, you can switch between the Kanban board and the list view. You can do so by clicking the view icon![view-icon](attachments/portfolio-management-tool/view-icon.png).
 
 #### 2.1.1 Kanban Board
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![kanban-board](attachments/portfolio-management-tool/kanban-board.png)
 
 In the Kanban board, projects are put in different columns. Each column represents a different stage. You can drag a project to a different column to change its stage. You can click the name of a column to sort the table.
 
 #### 2.1.2 List View
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![list-view](attachments/portfolio-management-tool/list-view.png)
 
 In the list view, you can select a filter from the drop-down list in the upper-right corner to filter the projects.
 
@@ -47,10 +47,10 @@ In the Kanban board, {{% todo %}}to be determined by the development team{{% /to
 
 In the list view, click the project name to see the project details.
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![project-details](attachments/portfolio-management-tool/project-details.png)
 
 {{% alert type="info" %}}
-When you view the project details, you can only add notes. You cannot change any other info. To change other info, you need [edit the project](#edit-project).
+When you view the project details, you can only **Post Note**. You cannot change any other info. To change other info, you need [edit the project](#edit-project).
 {{% /alert %}}
 
 ### 2.3 Creating a New Project
@@ -62,8 +62,6 @@ When you view the project details, you can only add notes. You cannot change any
 #### 2.3.2 Procedure
 
 1.  Go to **Projects Overview**.
-
-    {{% todo %}}[Add an image]{{% /todo %}}
 
 2. Click **Create New Project**.
 3. Enter the **Name** and the **Description** of the project.
@@ -106,28 +104,26 @@ You have successfully created a project. Your new project is displayed on the **
 
 ### 2.4 Editing a Project {#edit-project}
 
-In the Kanban board, click the **...** on the upper-right corner of the project card and click **Edit**.
+In the Kanban board, click the **...** icon on the upper-right corner of the project card and click **Edit**.
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![edit-project](attachments/portfolio-management-tool/edit-project-kanban-board.png)
 
 In the list view, click the edit icon at the end of the row for the project.
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![edit-project-list-view](attachments/portfolio-management-tool/edit-project-list-view.png)
 
 ### 2.5 Deleting a Project
 
-In the Kanban board, click the **...** on the upper-right corner of the project card and click **Delete**.
+In the Kanban board, click the **...** icon on the upper-right corner of the project card and click **Delete**.
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![delete-project-kanban-board](attachments/portfolio-management-tool/delete-project-kanban-board.png)
 
 In the list view, click the delete icon at the end of the row for the project.
-
-{{% todo %}}[Add an image]{{% /todo %}}
 
 
 ## 3 Access Management {#access-management}
 
-{{% todo %}}[Add an image]{{% /todo %}}
+![acess-management](attachments/portfolio-management-tool/acess-management.png)
 
 The **Access Management** page has a table that shows all the users who have access to this portfolio. Their access roles are either Portfolio Managers or Users. Mendix Admins are Portfolio Mangers by default. Portfolio Managers can give other users access to the portfolio and define their access roles.
 
@@ -172,12 +168,8 @@ At the end of the row for each user, there is an edit icon and a delete icon. Cl
 
 You have successfully sent an email invitation to the users. Their names are added to the **Access Management** page.
 
-{{% todo %}}[Add an image]{{% /todo %}}
-
 {{% alert type="info" %}}
-
 For users outside your company, they need to accept the invitation via the link in the email that they receive. Before they accept the invitation, their **Status** on the **Access Management** page is **Pending**. After they accept the invitation, their **Status** will change to **Active**. <br />For users within your company who do not have a Mendix account, their **Status** on the **Access Management** page is also **Pending**. After they make a Mendix account, their **Status** will become **Active**. 
-
 {{% /alert %}}
 
 ## 4 Portfolio Settings {#portfolio-settings}

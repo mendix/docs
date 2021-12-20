@@ -1,6 +1,7 @@
 ---
 title: "Portfolio Management Tool"
 category: "Control Center"
+menu_order: 9
 description: "Describes the Portfolio Management Tool "
 tags: ["Portfolio Management"]
 ---

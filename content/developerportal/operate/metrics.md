@@ -16,7 +16,7 @@ On the **Metrics** page you can monitor the performance and health of your App. 
 
 In this tab you can view graphs which display the following information about the app:
 
-*   Application Statistics 
+*   Application Statistics
 *   Database Statistics
 *   Application Node Statistics
 *   Database Node Statistics

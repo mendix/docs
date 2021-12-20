@@ -9,6 +9,22 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### December 20th, 2021
+
+#### Fixes
+
+* We updated Log4j dependency to 2.17.0, which addresses [CVE-2021-45105](https://cert-portal.siemens.com/productcert/pdf/ssa-501673.pdf).
+
+### December 16th, 2021
+
+#### Fixes
+
+* We fixed an issue that caused uploading a contract as a ZIP file to fail when the compression ratio was too high.
+
+#### Improvements
+
+* We consolidated the existing **Edit Metadata**, **Discoverability**, and **Validate** drop-down menus into one menu named **Edit**.
+
 ### December 9th, 2021
 
 #### Fixes

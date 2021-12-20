@@ -27,7 +27,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 | Feature | Expected Release Date |
 | --- | --- |
-| Studio Pro IP protection & module APIs | Dec 2021 |
+| Consuming add-on modules | Jan 2022 |
+| Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
 
 ### 2.2 App Services Framework
 

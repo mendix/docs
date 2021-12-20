@@ -30,7 +30,7 @@ In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Node and NPM](https://nodejs.org/en/download/)
+* Install [Node and NPM](https://nodejs.org/en/download/) and [Python](https://www.python.org/downloads/)
 
 For iOS builds:
 

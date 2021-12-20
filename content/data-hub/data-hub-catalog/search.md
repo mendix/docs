@@ -439,11 +439,10 @@ The **Curate Bar** is displayed in the asset detail screen if you are the owner 
 
 ![called out curate bar](attachments/search/curate-bar.png)
 
-The following actions can be carried out:
+In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-* **Edit Metadata** – edit information that is displayed in the Catalog for the asset:
-  * for a selected data source you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
-  * for a selected dataset you can edit [Dataset Details](./curate#curate-datasets)
+* For the selected data source, you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
+* For a selected dataset, you can edit [Dataset Details](./curate#curate-datasets)
 
 For further details, see [Curate Registered Assets](./curate).
 

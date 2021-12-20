@@ -47,7 +47,7 @@ Owners of registered assets and can only curate their services.
 
 On the **Curation bar**, information about the role of the current user is displayed: **Owner** or **Curator**.
 
-When a data source is selected in the **Search Results**, the following options are displayed:
+When a data source is selected in the **Search Results**, the following options are displayed via **Edit**:
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
@@ -62,10 +62,7 @@ The curate functions that are available for a selected data source are to change
 
 You can curate Application Details from the **Application Details** screen as follows:
 
-1. In the **Curation Bar** click **Edit Metadata** > **Application Details**:
-
-   ![edit application](attachments/curate/edit-application-metadata.png)
-
+1. In the **Curation Bar** click **Edit** > **Edit Metadata** > **Application Details**.
 2. The **Application Metadata** screen is displayed:
 
    ![app metadata screen](attachments/curate/application-metadata-screen.png)
@@ -184,7 +181,7 @@ You can also specify if the OData service **Contract Description** or the **Cata
 
 To edit the asset metadata, follow these steps:
 
-1. In the **Curation Bar**, click **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
+1. In the **Curation Bar**, click **Edit** > **Edit Metadata** > **Service Details** to display the **Service Metadata** box:
 
     ![service metadata](attachments/curate/service-metadata-box.png)
 
@@ -198,13 +195,13 @@ To edit the asset metadata, follow these steps:
 
 4. Click **Save Changes** to save the changes that you have made to the **Edit Service Metadata** screen and return to the **Service Details** screen, which will now display the selected description.
 
-{{% alert type="info" %}}If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+{{% alert type="info" %}}If you leave a metadata editing session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ### 5.2 Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
-1. In the **Search Details** screen of a selected service, click **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
+1. In the **Search Details** screen of a selected service, click **Edit** > **Edit Metadata** > **Service Details** in the **Curation Bar** to display the **Service Metadata** box.
 
 2. To add tags, click the empty **Tag** input area:
 
@@ -220,7 +217,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save Changes** to register the changes and the tags will be shown in the **Service Metadata** pane.
 
-    {{% alert type="info" %}} If you leave an **Edit Metadata** session without saving your change, you will loose all the changes from that session. {{% /alert %}}
+    {{% alert type="info" %}} If you leave a metadata editing session without saving your change, you will loose all the changes from that session. {{% /alert %}}
 
 ## 6 Discoverable & Validated {#discoverability}
 

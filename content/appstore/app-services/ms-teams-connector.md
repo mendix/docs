@@ -12,17 +12,18 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
+This app service is an add-on module. For more information, see [Add-ons]().
+
+{{% todo %}}[**Add link to the Add-ons doc**]{{% /todo %}}
+
 
 ### 1.1 Typical Use Cases
-* Send message to a specific channel in Microsoft Teams.
+* Send messages to pre-configured channels in Microsoft Teams
 
-* Create automated notifications on occurance of an event in your mendix application which will send message on specific channels.
+* Let your Mendix app send automated notifications to pre-configured channels, when events occur in your Mendix application (example : your Mendix app can automatically send a message to a pre-configured channel whenever a ticket is raised on the support portal application)
 
-    Example : Trigger a 'action required' message whenever a ticket is raised on the support portal application.
-    
-* User can perform an action when a message is received on a preconfigured channel.
+* Let your Mendix app send automated messages to a pre-configured channel to trigger users to perform an action (example: your Mendix app can automatically ask users to create a Jira ticket by sending them a message in a pre-configured channel)
 
-     Example : Create a Jira defect on receipt of a notification message in channel.
 
 ### 1.2 Limitations
 
@@ -47,6 +48,7 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 
     4. In Studio Pro, go to **App** > **Synchronize App Directory**. 
     
+
 After the synchronization is finished, you can find the app service in the **Protected modules** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**. 
 
 ![](attachments/ms-teams-connector/connector_in_protected_module.png)
@@ -112,11 +114,11 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel.
 
 ### 5 Checking Statistics Using the Usage Dashboard
-The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of MS Teams webhooks usage:
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams webhooks usage:
 
 1. Log into the Marketplace.
 2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-3. Click on **Usage Dashboard** corresponding to **Microsoft Teams connector** to open the Usage dashboard.It shows the following statistics:
-   * **This Month** – Shows statistics for current month usage
+3. Click on **Usage Dashboard** corresponding to **Microsoft Teams connector** to open the **Usage** dashboard. It shows the following statistics:
+   * **This Month** – Shows usage statistics for the current month
    * **Last Month** – Shows usage statistics for last month
    * **Total** – Shows usage statistics from the start of the subscription date to today

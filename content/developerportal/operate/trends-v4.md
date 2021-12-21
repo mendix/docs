@@ -233,7 +233,7 @@ The disk usage graph shows only the disk usage inside the container. This is usu
 
 ### <a name="Trends-appnumberoffiles"></a>4.11 Application Number of Files
 
-The **Application Number of Files** graph shows the number of files that are stored in file storage.
+The **Application Number of Files** graph shows the number of files created by entities which are based on `FileDocument` generalizations, that are stored in S3 file storage.
 
 ![](attachments/trends-v4/app-number-of-files.png)
 

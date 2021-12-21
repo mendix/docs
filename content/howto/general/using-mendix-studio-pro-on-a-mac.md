@@ -11,7 +11,7 @@ tags: ["Native", "Parallels", "Mac", "Mobile"]
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
 
 {{% alert type="warning" %}}
-Studio Pro does not run under Parallels on Apple Silicon Macs, such as the M1.
+To run Studio Pro on Apple Silicon Macs, such as the M1(X), Mendix Studio Pro 8.18.15 and 9.6.5 is required. For more information, see [System Requirements](/refguide/system-requirements).
 {{% /alert %}}
 
 To start making Mendix apps on your Mac, follow this how-to.
@@ -115,7 +115,26 @@ Congratulations! You have successfully viewed your app on a test device.
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto/mobile/getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 
-## 6 Read More
+## 6 Improving Performance
+
+To improve the performance, you can do the following: 
+
+* Run Parallels in a window, instead of Coherence mode
+* Store apps on disk C:\
+
+### 6.1 Increasing Network Speed
+
+Some users experience slow network speed. You try the following approach, which can increase the upload speed significantly:
+
+1. In Windows 10/11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
+
+2. Right-click **Parallels VirtIO Ethernet Adapter** and select **Properties** in the drop-down list. 
+3. On the **Advance** tab, find the **Large Send Offload** **(IPv4)** property and change its value to **Disabled**. 
+4. Click **OK**.
+
+Now the upload speed becomes faster! For more information, see [Parallels Forum](https://forum.parallels.com/threads/horribly-slow-upload-download-speeds.264819/).
+
+## 7 Read More
 
 * [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
 * [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

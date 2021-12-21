@@ -193,6 +193,6 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 ## 5 Technical Provider{#technical-provider}
 
-The AI and OCR technologies used by Intelligent Document Service are powered by ABBYY&reg;. Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
+The AI and OCR technologies used by Intelligent Document Service are powered by [ABBYY&reg;](https://www.abbyy.com). Application includes ABBYY® FlexiCapture® 12 SDK © 2019 ABBYY Production LLC., and also that ABBYY and FLEXICAPTURE are either registered trademarks or trademarks of ABBYY Software Ltd. and cannot be used without prior written consent of ABBYY Software Ltd.
 
 ![Technical Provider ABBYY](attachments/intelligent-document-service/logo-powered-by-abbyy.png)

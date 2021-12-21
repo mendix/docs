@@ -9,7 +9,7 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what CognisoSpeechToText contains:
+Here is an overview of what Cogniso SpeechToText contains:
 
 | Item                                        | Name                             |
 | ------------------------------------------- | -------------------------------- |
@@ -22,7 +22,7 @@ In most cases, you will only need what is contained in the **SpeechToText** > **
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to convert voice into text and trigger custom actions in your mendix apps. You can also customize these actions and set voice feedback messages that your app sends to users. You can offer users different language options in your mendix app.
+You can use this app service to convert voice into text and trigger custom actions in your Mendix apps. You can also customize these actions and set voice feedback messages that your app sends to users. You can offer users different language options in your Mendix app.
 
 ### 1.2 Features
 

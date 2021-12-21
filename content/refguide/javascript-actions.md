@@ -84,14 +84,6 @@ For apps with several parameters, descriptions serve as useful reminders of para
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
 
-## 3 Type Parameter
-
-A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
-
-{{% image_container width="450" %}}![type parameter](attachments/javascript-actions/type-parameter.png){{% /image_container %}}
-
-A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
-
 ### 2.4 Platform
 
 Javascript actions can be for a specific platform, it has an optional platform property with values:
@@ -99,6 +91,14 @@ All (default)
 Web - can be used in a browser or hybrid mobile app.
 Native - can be used in a native mobile app.
 To use a JavaScript action call from a nanoflow; then all actions in that nanoflow must be for the same platform.
+
+## 3 Type Parameter
+
+A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
+
+{{% image_container width="450" %}}![type parameter](attachments/javascript-actions/type-parameter.png){{% /image_container %}}
+
+A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
 ## 4 Expose as Nanoflow Action
 

@@ -66,7 +66,7 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 ## 4. Usage
 
-To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept your trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
+To use the Receipt Processing app service, firstly create an [import mapping](#mapping-file), and then include the receipt processing service activity in your microflow. This microflow should be set up to accept trained model and images, extract data from the images in bulk and then map the data to an entity using the import mapping that you created.
 
 ### 4.1 Creating an Import Mapping{#mapping-file}
 
@@ -82,9 +82,12 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
     5.  Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
     6.  Click **Environment** to show the **Existing Models** list.
-    7.  Select your trained model. Make sure that the **Status** of the model is **Published**.
+    7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
+
+        ![pre trained model published](attachments/receipt-processing/pre-trained-receipt-model-pub.png)
+        
     8.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts where data will be extracted. You can also click the box and select the file.
+    9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts from where data will be extracted. You can also click the box and select the file.
 
         ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 

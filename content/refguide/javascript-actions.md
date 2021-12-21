@@ -29,7 +29,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
+{{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-with-platform.png){{% /image_container %}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -91,6 +91,14 @@ A type parameter is a placeholder for an entity type which will be filled with a
 {{% image_container width="450" %}}![type parameter](attachments/javascript-actions/type-parameter.png){{% /image_container %}}
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
+
+### 2.4 Platform
+
+Javascript actions can be for a specific platform, it has an optional platform property with values:
+All (default)
+Web - can be used in a browser or hybrid mobile app.
+Native - can be used in a native mobile app.
+To use a JavaScript action call from a nanoflow; then all actions in that nanoflow must be for the same platform.
 
 ## 4 Expose as Nanoflow Action
 

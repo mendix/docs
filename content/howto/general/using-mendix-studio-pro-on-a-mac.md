@@ -11,7 +11,7 @@ tags: ["Native", "Parallels", "Mac", "Mobile"]
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
 
 {{% alert type="warning" %}}
-To run Studio Pro on Apple Silicon Macs, such as the M1(X), Mendix Studio Pro 8.18.15 and 9.6.5 is required. For more information, see [System Requirements](/refguide/system-requirements).
+To run Studio Pro on Apple Silicon Macs, such as the M1(X), Mendix Studio Pro 9.6.5 and above is required. For more information, see [System Requirements](/refguide/system-requirements).
 {{% /alert %}}
 
 To start making Mendix apps on your Mac, follow this how-to.
@@ -75,7 +75,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
-## 4 Viewing Your App on Your Testing Device
+## 4 Checking the Network Driver
 
 {{% alert type="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
@@ -85,7 +85,7 @@ Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so 
 If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
 {{% /alert %}}
 
-Read the tips and steps below to view your app on your testing device:
+Read the tips below to check the network driver before viewing your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
 
@@ -94,6 +94,8 @@ Read the tips and steps below to view your app on your testing device:
 * Incorrect network drives will always have **\\** at the start of their file location:
 
 	{{% image_container width="450" %}}![network drive](attachments/using-mendix-studio-pro-on-a-mac/network-drive.png){{% /image_container %}}
+
+## 5 Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:
 
@@ -111,18 +113,18 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 Congratulations! You have successfully viewed your app on a test device.
 
-## 5 Viewing Changes to Your App on Your Testing Device
+## 6 Viewing Changes to Your App on Your Testing Device
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto/mobile/getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 
-## 6 Improving Performance
+## 7 Improving Performance
 
 To improve the performance, you can do the following: 
 
 * Run Parallels in a window, instead of Coherence mode
 * Store apps on disk C:\
 
-### 6.1 Increasing Network Speed
+### 7.1 Increasing Network Speed
 
 Some users experience slow network speed. You try the following approach, which can increase the upload speed significantly:
 
@@ -134,7 +136,7 @@ Some users experience slow network speed. You try the following approach, which 
 
 Now the upload speed becomes faster! For more information, see [Parallels Forum](https://forum.parallels.com/threads/horribly-slow-upload-download-speeds.264819/).
 
-## 7 Read More
+## 8 Read More
 
 * [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile)
 * [Style Your Mendix Native Mobile App](/howto/mobile/how-to-use-native-styling)

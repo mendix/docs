@@ -79,6 +79,7 @@ To use the Invoice Processing app service, first [train a model](#document-model
         ![Document model training app login page](attachments/invoice-processing/document-model-training-app.png)
 
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
+    
 2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing Invoice models list](attachments/invoice-processing/existing-invoice-models.png)
@@ -94,16 +95,20 @@ To use the Invoice Processing app service, first [train a model](#document-model
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
    
 5. Wait until **Invoice Model** page opens.
+
 6. Fill in **Vendor Information** and **Business Unit Information** from the sample Invoice. The more input you provide, the more accurate your trained model will be.
 
     ![Vendor BU Information Dialog box](attachments/invoice-processing/vendor-business-unit-dialog-box.png)
     
 7. Click **Create Model**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
-8. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
-    
+
+8. Wait until the **Status** of the model becomes **Published**.
+   
+9. Once the model is published, this pop-up window opens:
+
     ![new model status included](attachments/invoice-processing/new-model-status-popup.png)
-    
-    At this time, the model is ready to use. 
+
+    Click **OK** to close the pop-up window. The model is ready to use. 
 
 ### 4.2 Creating an Import Mapping{#mapping-file}
 

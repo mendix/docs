@@ -65,7 +65,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 1.4 Prerequisites
 
-This app service can only be used with Studio Pro 8 versions starting with [8.15.1](../../releasenotes/studio-pro/8.15#8151).
+This app service can only be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15#8151).
 
 ## 2 Installation
 
@@ -332,7 +332,7 @@ Loading progress in the Viewer widget can be obtained via the **Progress status*
 
 Follow these steps to display the model loading progress:
 
-1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](../widgets/progress-bar) widget expects a decimal value).
+1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](/appstore/widgets/progress-bar) widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
 3. Wrap the [Container3D](#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
@@ -361,7 +361,7 @@ Usually, you will also need to manage the models that are uploaded and stored in
 The Mendix native [list view](/refguide8/list-view) can be used to display the model list by following these steps:
 
 1. Use the **View3D/USE_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
-2. Add a [pop-up page](../../refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
+2. Add a [pop-up page](/refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
 3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5.  Fill in the list item with the information you are interested in:

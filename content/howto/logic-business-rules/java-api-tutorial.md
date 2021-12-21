@@ -28,8 +28,7 @@ First, we will introduce a helper method that we will place in the section `BEGI
 private static String formatString(String inputString, IContext context) throws CoreException
 {
 	Map<String,Object> parameters = new HashMap<String, Object>();
-	parameters.put("inputString", inputString);
-	String formattedString = (String) Core.execute(context, "MyFirstModule.FormatString", parameters);
+	String formattedString = (String) Core.microflowCall ("MyFirstModule.FormatString") .inTransaction(true) .withParam("inputString", inputString) .execute(context);
 	return formattedString;
 }
 ```

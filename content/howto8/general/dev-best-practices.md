@@ -55,7 +55,7 @@ Each user role should correspond to only one module role per module. In other wo
 
 Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt and store and to retrieve and decrypt the information.
 
-Using either the default value of a constant or the project's configuration setting are unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
+Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
 
 ## 3 Naming Conventions
 

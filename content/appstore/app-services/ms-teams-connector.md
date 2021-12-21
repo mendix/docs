@@ -14,8 +14,15 @@ The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/11
 
 
 ### 1.1 Typical Use Cases
+* Send message to a specific channel in Microsoft Teams.
 
-*  Support sending messages to a Microsoft Teams channel automatically
+* Create automated notifications on occurance of an event in your mendix application which will send message on specific channels.
+
+    Example : Trigger a 'action required' message whenever a ticket is raised on the support portal application.
+    
+* User can perform an action when a message is received on a preconfigured channel.
+
+     Example : Create a Jira defect on receipt of a notification message in channel.
 
 ### 1.2 Limitations
 
@@ -75,7 +82,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 6. Select **LicenseSecret**.
 7. In the **New Constant Value** dialog box, enter the **Value** of the LicenseSecret you got.
 8. Click **OK** to save the settings and closes the dialog box.
-9. Do steps 4 to 5 again.
+9. Perform steps 4 and 5 again.
 10. Select **LicenseKey**.
 11. In the **New Constant Value** dialog box, enter the **Value** of the LicenseKey you got.
 12. Click **OK** to save the settings and closes the dialog box.
@@ -105,4 +112,11 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel.
 
 ### 5 Checking Statistics Using the Usage Dashboard
-{{% todo %}}Will add content once  available{{% /todo %}}
+The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of MS Teams webhooks usage:
+
+1. Log into the Marketplace.
+2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+3. Click on **Usage Dashboard** corresponding to **Microsoft Teams connector** to open the Usage dashboard.It shows the following statistics:
+   * **This Month** – Shows statistics for current month usage
+   * **Last Month** – Shows usage statistics for last month
+   * **Total** – Shows usage statistics from the start of the subscription date to today

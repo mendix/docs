@@ -11,9 +11,9 @@ An **add-on** module is a special kind of the Marketplace module that adds funct
 
 Add-on modules may have Intellectual Property (IP) protection enabled and have an extension `.mxmodule`. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
 
-An example of the add-on module is the Microsoft Teams Connector module. {{% todo %}}[Add a link to the Marketplace document.]{{% /todo %}} When you download it, it shows up in a new folder called **Add-ons** in your App Explorer. 
+An example of the add-on module is the **MS Teams Connector** module. {{% todo %}}[Add a link to the MS Teams Connector document.]{{% /todo %}} 
 
-When you import the add-on module to your app,  it shows up in a new folder called **Add-ons** in your App Explorer. The main difference of the add-on module is that some functionality and elements, such as microflows and entities, are protected and, therefore, *hidden* from other users by the publisher. This means that you cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
+When you download it, it shows up in a new **Add-ons** folder in the App Explorer. The main difference of the add-on module is that some functionality and elements, such as microflows and entities, are protected and, therefore, *hidden* from other users by the publisher. This means that you cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 
 ![Protected Microflow Example](attachments/add-on-module/protected-microflow.png)
 
@@ -29,7 +29,7 @@ Mendix Studio does not support add-on modules, you will not be able to open the 
 
 For information on how to import a module in your app, see the [Adding a Module](/appstore/app-store-content#add-module) section in *Use Marketplace Content in Studio Pro*.
 
-{{% todo %}}[Double-check which option to leave.]{{% /todo %}} 
+{{% todo %}}[Double-check which import option to leave.]{{% /todo %}} 
 
 To import an add-on module, do the following:
 
@@ -40,7 +40,7 @@ To import an add-on module, do the following:
 5. In the **Import Module** pop-up window, select **Add as new module** in **Action**.
 6. Go to **App** > **Synchronize App Directory**.
 
-You have imported the add-on module. {{% todo %}}[Verify and add screenshots.]{{% /todo %}} 
+You have imported the add-on module.  
 
 ## 3 Updating an Add-On Module 
 

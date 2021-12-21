@@ -87,7 +87,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
         ![pre trained model published](attachments/receipt-processing/pre-trained-receipt-model-pub.png)
         
     8.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts from where data will be extracted. You can also click the box and select the file.
+    9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
 
         ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
 

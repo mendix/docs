@@ -20,9 +20,9 @@ The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/11
 
     Example : Trigger a 'action required' message whenever a ticket is raised on the support portal application.
     
-* Perform an action when a message is received on a preconfigured channel.
+* User can perform an action when a message is received on a preconfigured channel.
 
-     Example : Jira defect creation on receipt of a notification message in channel.
+     Example : Create a Jira defect on receipt of a notification message in channel.
 
 ### 1.2 Limitations
 

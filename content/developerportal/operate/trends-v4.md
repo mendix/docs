@@ -48,6 +48,7 @@ You can find the trends by following these steps:
 1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
 2. Click **Metrics**.
 3. Select the environment you want to monitor under the tab **Trends**.
+4. Choose the period for which you want to see the trends: **Day**, **Week**, **Month**, or **Quarter**.
 
 ![](attachments/trends-v4/environment.png)
 

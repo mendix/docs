@@ -246,7 +246,7 @@ For instance, you can set **Voice feedback** as `model is rotated {0} degree aro
 
 ### 5.4 Using the Batch Mode
 
-When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
+When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any Mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 
 ## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
 

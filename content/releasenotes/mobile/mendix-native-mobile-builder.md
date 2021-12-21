@@ -11,28 +11,29 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ### Release 1.0.111
 
-**Release date: December 21nd, 2021**
+**Release date: December 21st, 2021**
 
 #### Improvements
 
-##### More default permissions for new projects
+##### More Default Permissions for New Projects
 
-To further simplify app permissions new projects will now have the following permissions enabled by default:
+To further simplify app permissions, new projects now have the following permissions enabled by default:
 
 * Camera
 * Location
 
 These permissions are not required and can be removed from the permission page if not needed.
-*Already configured projects should not be affected*.
 
-##### Support for the iOS NSUserTrackingUsageDescription permission
+{{% alert type="info" %}}
+Already configured projects should not be affected.
+{{% /alert %}}
 
-We added support for the NSUserTrackingUsageDescription permission on iOS. If your app calls the App Tracking
-Transparency API, you must provide custom text, known as a usage-description string, which displays as a
-system-permission alert request. The usage-description string tells the user why the app is requesting permission to use
-data for tracking the user or the device. The user has the option to grant or deny the authorization request. If you
-don’t include a usage-description string, your app may crash when a user first launches
-it. [Read more on Apple's App Tracking Transparency page.](https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription)
+##### Support for the iOS NSUserTrackingUsageDescription Permission
+
+We added support for the `NSUserTrackingUsageDescription` permission on iOS. If your app calls the App Tracking Transparency API, you must provide custom text (known as a usage-description string), which displays as a system-permission alert request. The usage-description string tells the end-user why the app is requesting permission to use
+data for tracking the end-user or the device. The end-user has the option to grant or deny the authorization request. If you do not include a usage-description string, your app may crash when an end-user first launches it. 
+
+For more details, see [NSUserTrackingUsageDescription](https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription) on Apple's App Tracking Transparency page.
 
 #### Fixes
 

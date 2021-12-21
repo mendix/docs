@@ -7,10 +7,16 @@ tags: ["workflow", "workflows", "Studio"]
 ---
 
 {{% alert type="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Mendix Beta Features](/releasenotes/beta-features/).
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. We introduced workflows as a Beta feature in Mendix 9 and are now incorporating feedback we received from our community to improve workflows.
+
+Workflows in Studio are available for apps with Mendix version 9.5.
 {{% /alert %}}
 
 ## 1 Introduction
+
+{{% alert type="warning" %}}
+This functionality is in Beta. For more information on Beta products, see [Beta Versions](/releasenotes/beta-features/).
+{{% /alert %}}
 
 Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to to solve your business problems that involve processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
@@ -191,6 +197,8 @@ The elements of this section are described in the table below:
 
 ![System Actions](attachments/workflows/system-actions.jpg)
 
-## 5 Read More
+## 5 Main Documents in This Category
 
-* [Workflow Properties](workflow-properties)
+* [Using Workflows in Apps with Mendix Version 9.6 and Above](workflows-9.6) – explains how to use workflow functionality in apps with Mendix version 9.6 and above
+* [Workflow Properties](workflow-properties) – describes workflow properties 
+* [User Task](workflows-user-task) – describes properties of a user task

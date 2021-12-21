@@ -42,9 +42,9 @@ The following examples demonstrate which output you get depending on input param
 
 Given a variable that is empty:
 
-* `parseDecimal($StingVariable)` will throw an error
-* `parseDecimal($StingVariable, empty)` returns an empty; the resulting variable may throw an error when used as a decimal (like in the expression `'$var > 0'`) 
-* `parseDecimal($StingVariable, 0)` returns `0`; the resulting variable will always be a decimal and never throw an exception
+* `parseDecimal($StringVariable)` will throw an error
+* `parseDecimal($StringVariable, empty)` returns an empty; the resulting variable may throw an error when used as a decimal (like in the expression `'$var > 0'`) 
+* `parseDecimal($StringVariable, 0)` returns `0`; the resulting variable will always be a decimal and never throw an exception
 
 ## 3 formatDecimal
 

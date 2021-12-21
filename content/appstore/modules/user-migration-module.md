@@ -22,7 +22,7 @@ To perform a user migration, you need the following prerequisites:
 * Add all attributes and associations that you want to migrate to the Domain Model of the new user management module
 * Add the microflow `StartMigrationWizard` in the **USE_ME** section of the **UserMigration** module to the navigation or pages which can be accessed by administrators of the app
 
-    ![Graphical user interface, text, application Description automatically generated](attachments/user-migration-module/image1.png)
+    ![Graphical user interface, text, application Description automatically generated](attachments/user-migration-module/start-migration-wizard-microflow.png)
 
 ## 3 Migrating Users
 
@@ -40,13 +40,13 @@ If you have specializations of the user entities you are migrating, you must mig
 
 3. Select the user entity being used by the old user management module. The dropdown list will show only entities which have a generalization of `System.User`. In our example, this is `Authentication.Account`.
 
-    ![](attachments/user-migration-module/image2.png)
+    ![](attachments/user-migration-module/user-migration-step1.png)
 
 4. Select the user entity being used by the new user management module. In our example, this is `SapAuthentication.SapUser`.
 
 5. Click **Map according to names** to map attributes with the same names. This means, for example, that data in the `Email` attribute in `Authentication.Account` will be migrated to the `Email` attribute in `SapAuthentication.SapUser`.
 
-    ![](attachments/user-migration-module/image3.png)
+    ![](attachments/user-migration-module/user-migration-step2.png)
 
 6. Edit any mappings which are missing or incorrect using the **Edit** buttons.
 
@@ -58,7 +58,7 @@ If you have specializations of the user entities you are migrating, you must mig
 
     {{% alert type="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new user management module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
 
-    ![](attachments/user-migration-module/image4.png)
+    ![](attachments/user-migration-module/user-migration-step3.png)
 
 9. Click **Next**.
 
@@ -66,7 +66,7 @@ If you have specializations of the user entities you are migrating, you must mig
 
     {{% alert type="info" %}}If you keep the old users after migration, the new user created will have the `_new` postfix for the *Name* attribute of `System.User`, since `System.User/Name` must be  unique.{{% /alert %}}
 
-    ![](attachments/user-migration-module/image5.png)
+    ![](attachments/user-migration-module/user-migration-step4.png)
 
 11. Click **Migrate**.
 

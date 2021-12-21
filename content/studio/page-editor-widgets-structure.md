@@ -208,7 +208,7 @@ The **Align Vertically** property overrides the [Align Columns Vertically](#alig
 
 ## 4 Container Overview {#container-overview}
 
-A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input widgets for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
+A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input elements for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
 
 {{% image_container width="300" %}}![Container Example](attachments/page-editor-widgets-structure/container.png)
 {{% /image_container %}}

@@ -1,7 +1,7 @@
 ---
 title: "Consumed OData Service Requirements"
 parent: "consumed-odata-services"
-menu-order: 20
+menu_order: 20
 description: "Requirements on OData services consumed in Mendix."
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,10 +26,11 @@ This section describes the features of a consumed OData service that are support
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
-* **Countable** – marking an entity set as `Countable="false"` prevents the user from adding the entity to the app
-* **Filterable** – marking an entity set as `Filterable="false"` sets all properties as non-filterable
-* **Sortable** – marking an entity set as `Sortable="false"` sets all properties as non-sortable
+* **Countable** – an entity set marked as `Countable="false"` prevents the user from adding the entity to the app
+* **Filterable** – an entity set marked as `Filterable="false"` sets all properties as non-filterable
+* **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable
 * Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable
+* **Updatable** - an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for instance, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change object action](change-object). For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` can be used to list the (navigation)properties that cannot be updated.
 
 An entity can only be used when it is accessible through an entity set.
 
@@ -66,9 +67,7 @@ Attribute types have to be primitive (not complex, collections, or enumerations)
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](call-rest-action) activity to call these operations.
 {{% /alert %}}
 
-<sup><small>[1]</small></sup>: In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.
-
-<sup><small>[2]</small></sup>: Decimal values outside of the range of a [Mendix decimal](attributes#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
+<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](attributes#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
 
 ### 3.3 Generalizations
 
@@ -94,14 +93,29 @@ An OData v3 association can only be used if it has two ends.
 
 An OData v4 navigation property can only be used as an association if it has a partner.
 
-## 4 Data Hub License Limitations {#license-limitations}
+## 4 Data Hub License
 
-Mendix Data Hub is a separately licensed product.
+### 4.1 Limitations {#license-limitations}
 
-Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error will occur when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the timezone of the Mendix Runtime scheduler (which can be defined in the app [Project Settings](project-settings#scheduled)).
+Mendix Data Hub is a separately licensed product. 
 
-With a Data Hub license, apps are not limited.
+Without a license, an app can retrieve a total of 1000 OData objects per day for each runtime instance. After that limit is exceeded, an error occurs when users try to retrieve more data. The number of consumed objects per day is reset at midnight in the time zone of the Mendix Runtime scheduler (which can be defined in the [Scheduled Event Time Zone](project-settings#scheduled) of the **App Settings**).
 
-{{% alert type="info" %}}Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.{{% /alert %}}
+With a Data Hub license, apps are not limited in retrieving OData objects.
 
-Contact your [Mendix Admin](/developerportal/control-center/#company) or Data Hub Admin to find out what type of Data Hub license your organization has.
+{{% alert type="info" %}}
+Apps running in development environments (and also when running from the Studios) do not have this limitation. This means that you can run your app from the Studios without Data Hub license limitations.
+{{% /alert %}}
+
+Contact your [Mendix Admin](/developerportal/control-center/#company) to find out what type of Data Hub license your organization has.
+
+### 4.1 Limitation Errors
+
+For each call, the app instance logs how many objects it has retrieved and how many are left within the license limitation. Once the limit of a 1000 objects has been reached, two different statements are logged.
+
+* On the `info` level, the following statement is logged when the limit is reached: `"Exceeded the daily limit. Retrieved $delta objects, which would increase the counter to $newCount (of max $max per day)."`
+* On the `error` level, the following statement is logged when the limit is reached: `"The limit of $max objects has been reached."`
+
+{{% alert type="warning" %}}
+It is up to the application to communicate to its end-users that the daily limit has been reached. If this is not done, the end-user gets a message that an error occurred.
+{{% /alert %}}

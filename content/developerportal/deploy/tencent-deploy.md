@@ -154,7 +154,7 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
-#### 3.3.2 Members
+#### 3.3.2 Members{#members}
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
@@ -577,9 +577,9 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a Free App.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as an unlicensed App.
 
-For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between free/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
+For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.

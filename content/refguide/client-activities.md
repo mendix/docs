@@ -7,9 +7,7 @@ tags: ["studio pro", "client activities", "activities"]
 
 ## 1 Introduction
 
-**Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows:
-
-![Client Activities](attachments/client-activities/client-activities.png)
+**Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows.
 
 The following are the client activities you can use in your microflow or nanoflow:
 

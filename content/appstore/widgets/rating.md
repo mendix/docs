@@ -14,7 +14,7 @@ The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables
 
 ## 2 Usage
 
-To use this widget, place it in a [data container](/refguide/data-sources) that has an Integer, Long or Decimal attribute.
+To use this widget, place it in a [data container](/refguide/data-sources) that has an Integer, Long, or Decimal attribute.
 
 The widget offers the following for configuration:
 

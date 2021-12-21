@@ -9,7 +9,6 @@ tags: ["mobile", "native", "react", "ios", "android"]
 These step-by-step guides will teach you to build native mobile applications and more. Many of these guides use the Native Builder UI tool included in Mendix Studio Pro v8.15 and above:
 
 * [Deploy Your First Mendix Native Mobile App](deploying-native-app) – Go from a blank slate to an app running on a device.
-* [Configure Parallels](using-mendix-studio-pro-on-a-mac) – Start making Mendix native mobile apps on your Mac.
 * [Build a Mendix Native App Locally](native-build-locally) – Follow this guide to build your apps locally using Mendix Native Mobile Builder.
 * [Build a Mendix Native App Locally Manually](native-build-locally-manually) – Follow this guide to build your apps locally and without an internet connection.
 * [Debug Native Mobile Apps (Advanced)](native-debug) – Debug native mobile apps using the Make It Native app.

@@ -13,6 +13,5 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 * [Marketplace Overview](app-store-overview) – presents an overview of all the details included with the content in the Mendix Marketplace
 * [Use Marketplace Content in Studio Pro](app-store-content) – describes how to download and install content from the Marketplace via Studio Pro
-* [Sell Your App Service in the Marketplace](sell) 
 * [Share Marketplace Content](share-app-store-content) – shows you how to add new content to share in the Mendix Marketplace as well as edit existing content
 * [Marketplace Content Support](app-store-content-support) – presents the different levels of Mendix support for Marketplace content

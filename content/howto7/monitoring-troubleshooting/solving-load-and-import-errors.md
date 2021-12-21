@@ -56,8 +56,6 @@ The problems described in this how-to can't be solved by editing the project in 
 
 The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK and, if this is the case, means you will also need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, you will probably know what to do to solve the problems by carefully reading the messages in the error dialog, and locating the relevant part of you SDK code, after which you can change your SDK script to make the project valid again. Be sure to check the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/) if you need information about constructing or altering models with SDK scripts.
 
-Finally, in the unlikely event that you encounter this error while working on your project with the Mendix Desktop Modeler, it's best to contact Mendix support and open a ticket to get help with the problem.
-
 ## 5 Read More
 
 * [Debug a Hybrid Mobile App](/howto7/mobile/debug-a-mobile-app)

@@ -38,7 +38,7 @@ The [Check Box Set Selector](https://marketplace.mendix.com/link/component/121/)
 
 ### 2.2 Appearance > Display Attribute
 
-* **Header text** – The text used for the header of the column
+* **Header text** – the text used for the header of the column
 * **Attribute** – the attribute that is to be shown
 * **Width** – the width of the column for this display attribute in pixels or percentage
 * **Currency type** – lets you display the attribute as a currency (leave on **None** if not applicable)

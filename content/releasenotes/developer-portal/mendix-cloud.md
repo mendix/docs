@@ -12,6 +12,39 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### November 18th, 2021
+
+### Fixes
+
+* We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
+* We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
+
+### October 26th, 2021
+
+#### Improvements
+
+Mendix Cloud V4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
+
+All newly-created applications will have a database running PostgreSQL 13.
+
+Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
+
+### October 7th, 2021
+
+### Fixes
+
+* We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
+
+### September 10th, 2021
+
+#### Improvements
+
+* We added a new [custom environment variable](/developerportal/deploy/environments-details#custom-environment-variables) `USAGE_METRICS_EMAIL_FIELDS` which allows you to identify which entities are used to hold your end user details.
+
+#### Fixes
+
+* In **Mendix Cloud v3** we fixed a problem with viewing the current log in a pop-up. We now display the current log in a new browser tab. 
+
 ### August 26th, 2021
 
 #### Improvements

@@ -39,20 +39,27 @@ Synchronization can also be configured via different places in your Mendix app, 
 
 Synchronization is performed on the database level. This means if you synchronize while having some uncommitted changes for an object, the attribute values in local database will be synchronized, ignoring the uncommitted changes. Uncommitted changes are still available after a synchronization.
 
-### 2.1 Synchronization Types
+### 2.1 Synchronization Types{#synchronization-types}
 
-You can perform synchronization on two levels:
+There are three different types of synchronization that can be triggered from the client:
 
 * [Full synchronization](#full-sync)
+* [Synchronize unsynchronized objects](#unsynchronized-objects)
 * [Selective synchronization](#selective-sync)
 
 #### 2.1.1 Full Synchronization {#full-sync}
 
 This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization).
 
-#### 2.1.2 Selective Synchronization {#selective-sync}
+#### 2.1.2 Synchronize Unsynchronized Objects {#unsynchronized-objects}
+
+This type of synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server.
+
+#### 2.1.3 Selective Synchronization {#selective-sync}
 
 Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, a specific set of objects will be synchronized. These objects can be either all unsynchronized objects when the [synchronize unsynchronized objects](synchronize#unsynchronized-objects) mode is selected, or a manually selected set of objects when the [synchronize selected object(s)](synchronize#selected-objects) mode is selected.
+
+Deleted objects cannot be synchronized using selective synchronization.
 
 Synchronization performed using a UI element (for example, a button or an on-change action) performs the full synchronization.
 
@@ -74,9 +81,11 @@ For example, synchronizing only a committed `City` object referencing an offline
 
 The upload phase executes the following operations after validation:
 
-1. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
-2. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run on the server as usual, after the data has been uploaded and before it is downloaded.
+1. The local database can be modified only by committing or deleting an object. Such an object can be a new object created while offline, or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
+2. There might be objects deleted from the local database since the last synchronization. The upload phase checks which objects have been deleted.
+3. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
+4. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
+
 
 #### 2.2.2 Download Phase {#download}
 
@@ -194,7 +203,7 @@ Microflows can be called from offline apps by using [microflow call](microflow-c
 
 * Passing an object or a list of a persistable entity is not supported
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
-* Passing a non-persistable entity that was created in another microflow is not supported
+* Passing a non-persistable entity that was created in another microflow is not supported for Mendix Studio Pro v9.7 and below.
 
 {{% alert type="info" %}}
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler(s) will run. 
@@ -228,7 +237,7 @@ To be able to switch the language of a Mendix app, a device must be online and h
 
 ### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
 
-To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Release Over the Air Updates with App Center's CodePush](/howto/mobile/how-to-ota).
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota).
 
 To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
 
@@ -245,6 +254,10 @@ If you want to deviate from the practices outlined above, introduce a new microf
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
 ### 4.4 Default Attribute Values {#default-attributive}
+
+{{% alert type="warning" %}}
+This limitation applies only to Mendix 9.7 and below. Mendix 9.8 and above supports default attributes.
+{{% /alert %}}
 
 Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
@@ -267,3 +280,7 @@ Excel and CSV export are not available in offline applications.
 ### 4.9 Hashed String Attributes {#hashed-strings}
 
 Attributes with the hashed string [attribute type](attributes#type) will not be synchronized.
+
+### 4.10 Access Rules with XPath Constraints {#access-rules}
+
+While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a **Customer** entity with **Locked** (Boolean) and **Name** (string) attributes. There is an access rule where the **Name** attribute of the customer is writable only when the **Locked** attribute is false. Changing and committing the **Locked** attribute’s value while offline will not change the read-only status of the **Name** attribute. Instead, this change will take effect after you synchronize the changed **Customer** object.

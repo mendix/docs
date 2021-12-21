@@ -19,6 +19,8 @@ Pluggable widgets, like core widgets, can have properties which a Mendix develop
 
 Pluggable widgets can also include a preview component for when they are rendered in Studio or previewed in Studio Pro's Design mode.
 
+For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client#pluggable-widgets) section of *Mendix Client*.
+
 ## 2 Client Component {#client-component}
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget to be used in [Native Mobile](/refguide/mobile#nativemobile) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
@@ -48,11 +50,14 @@ Manually building a widget package can be difficult, so Mendix recommends you us
 A widget package file is just a ZIP archive containing the following things:
 
 * A *package.xml* file describing the whole package
-* A widget definition XML file, preferably located in *{widgetName}.xml* where `widdgetName` is the last part of widget [ID](#widget-id)
-* A client component of a widget located, for example, in  `com/mendix/widget/MyProgressCircle.js` for a widget with the ID `com.mendix.widget.MyProgressCircle`
-* Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetDefinitionXmlName}.editorPreview.js*
+* A widget definition XML file, preferably located in *{widgetName}.xml* where `widgetName` is the last part of widget [ID](#widget-id)
+* A client component of a widget located, for example, in  *com/mendix/widget/MyProgressCircle.js* for a widget with the ID `com.mendix.widget.MyProgressCircle`
+* Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
+* Optionally, widget icons (which must be the PNG format):
+    * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
-	* Note that all CSS files you add, except the one located in the `lib` sub-directory, will automatically be loaded in an app via the widget
+	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 
@@ -81,8 +86,6 @@ A simple widget XML file might look like this:
     <?xml version="1.0" encoding="utf-8" ?>
     <widget [attibutes]>
         <name>{User friendly widget name}</name>
-        <icon>{base64 encoded icon}</icon>
-    
         <properties>
             [properties]
         </properties>
@@ -118,7 +121,6 @@ After widget attributes, you will see a description of a widget that will be pre
 
 ```xml
 	<name>My Progress Card</name>
-	<icon>[image base64]</icon>
 ```
 In Mendix Studio Pro, the widget described above would look like this:
 

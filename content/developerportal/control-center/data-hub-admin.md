@@ -7,11 +7,12 @@ tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 
 ## 1 Introduction
 
-In the [Data Hub](/developerportal/control-center#data-hub) page of the **Control Center**, you can perform the following operations:
+In the [Data Hub](/developerportal/control-center#data-hub) page of Control Center, you can perform the following operations:
 
 * Assign and manage Data Hub [Curators](#curator)
 * Invite and manage custom [Owners](#custom-owners) (who have already been added as business or technical owners in the Data Hub Catalog)
 * Invite and manage [External Users](#external-users)
+* Control the default discoverability settings of your company's data source [Settings](#settings)
 
 ## 2 Curators {#curator}
 
@@ -69,3 +70,19 @@ You can only invite users with a Mendix account. The invitation email will not b
 Once the external user receives the invitation, they log into the Data Hub Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Data Hub [Home](/data-hub/data-hub-catalog/#data-hub-home) page:
 
 ![Company selector](attachments/data-hub-admin/company_selector.png)
+
+## 5 Settings {#settings}
+
+Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
+
+The default value of this setting is **On**:
+
+![Settings](attachments/data-hub-admin/Admin-Settings.PNG)
+
+{{% alert type="info" %}}
+This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
+{{% /alert %}}

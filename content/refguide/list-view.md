@@ -121,6 +121,6 @@ To perform actions on a list view, select it on a page and right-click it. The l
 ## 4 Read More
 
 * [Page](page)
-* [Data Widgets](data-widgets)
+* [Data Containers](data-widgets)
 * [Data Sources](data-sources)
 * [Properties Common in the Page Editor](common-widget-properties)

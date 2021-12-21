@@ -64,9 +64,9 @@ The browser you use needs to have JavaScript turned on.
 * [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
-* [MySQL](mysql) 5.7, 8.0
+* [MySQL](mysql) 8.0
 * [Oracle Database](oracle) 12c Release 2, 19
-* PostgreSQL 9.6, 10, 11, 12, 13, 14
+* PostgreSQL 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

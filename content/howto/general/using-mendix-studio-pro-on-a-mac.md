@@ -75,7 +75,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
-## 4 Checking the Network Driver
+## 4 Checking Network Drive
 
 {{% alert type="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
@@ -85,7 +85,7 @@ Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so 
 If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
 {{% /alert %}}
 
-Read the tips below to check the network driver before viewing your app on your testing device:
+Read the tips below to check the network drive before viewing your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
 

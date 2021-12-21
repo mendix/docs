@@ -27,7 +27,7 @@ Mendix Studio does not support add-on modules, you will not be able to open the 
 
 ## 2 Importing an Add-On Module to Your App
 
-For information on how to import a module in your app, see the [Adding a Module](/appstore/app-store-content#add-module) section in *Use Marketplace Content in Studio Pro*.
+For information on how to import a module in your app, see the [Adding a Module](/appstore/general/app-store-content#add-module) section in *Use Marketplace Content in Studio Pro*.
 
 {{% todo %}}[Double-check which import option to leave.]{{% /todo %}} 
 
@@ -44,7 +44,7 @@ You have imported the add-on module.
 
 ## 3 Updating an Add-On Module 
 
-For information on how to update a module in your app, see the [Updating a Module](/appstore/app-store-content#update-module) section in *Use Marketplace Content in Studio Pro*.
+For information on how to update a module in your app, see the [Updating a Module](/appstore/general/app-store-content#update-module) section in *Use Marketplace Content in Studio Pro*.
 
 ## 4 Deleting an Add-On Module
 
@@ -58,5 +58,5 @@ The module is deleted from your app.
 ## 5 Read More
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection)
-* [Use Marketplace Content in Studio Pro](/appstore/app-store-content)
+* [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content)
 

@@ -62,8 +62,7 @@ When you view the project details, you can only **Post Note**. You cannot change
 
 #### 2.3.2 Procedure
 
-1.  Go to **Projects Overview**.
-
+1. Go to **Projects Overview**.
 2. Click **Create New Project**.
 3. Enter the **Name** and the **Description** of the project.
 4.  Select the **Stage**, **Department**, **Country** the project.
@@ -121,6 +120,7 @@ In the Kanban board, click the **...** icon on the upper-right corner of the pro
 
 In the list view, click the delete icon at the end of the row for the project.
 
+![list-view](attachments/portfolio-management-tool/delete-project-list-view.png)
 
 ## 3 Access Management {#access-management}
 

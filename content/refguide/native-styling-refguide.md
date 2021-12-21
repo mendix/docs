@@ -398,47 +398,78 @@ The widget’s render hierarchy is as follows for uniform:
 | `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
 | `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
 
-### 6.4 Check Box 
+### 6.4 Check Box
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A check box input widget can be used to display and edit Boolean attributes and is rendered as either a switch or a checkbox. This is how a check box widget in switch render mode looks by default:
 
 {{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+This is how a check box widget in checkbox render mode looks by default:
+
+{{% image_container width="350" %}}![check box in checkbox render mode](attachments/native-styling-refguide/check-box-checkbox.png){{% /image_container %}}
 
 The widget’s style properties structure is as follows:
 
 ```xml
-<container>
-	<label>Boolean switch</label>
-	<inputError>
-		<trackColorOff/>
-		<thumbColorOff/>
-	</inputError>
-	<validationMessage>Feedback switch input</validationMessage>
-</container>
-<container>
-	<label>Valid boolean</label>
-	<input>
-		<trackColorOn/>
-		<thumbColorOn/>
-	</input>
-</container>
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<checkboxInput>
+    <color/>
+    <size/>
+</checkboxInput>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<checkboxInputDisabled>
+    <color/>
+    <size/>
+</checkboxInputDisabled>
+<validationMessage/>
 ```
 
-| Element | Style Properties    | Description |
-| --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
-| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
-| `input` | This has all TextStyle properties.   |   |
-| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
-| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
-| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
-| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
-| `label` | This has all TextStyle properties   |  |
-| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
-| `validationMessage` | This has all TextStyle properties.   |  |
+| Element | Style Properties    | Description | Render mode |
+| --- | --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   | Both |
+| `containerDisabled` | Same properties as `container`. | Overrides `container` styles if the text box is non-editable. | Both |
+| `input` | This has all ViewStyle properties.   |   | Switch |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. | Switch  |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. | Switch |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. | Switch |
+| `inputError` | This has the same properties as `input`. | Overrides `input` styles if there are validation errors. | Switch |
+| `inputDisabled` | This has the same properties as `input`. | Overrides `input` styles if the check box is non-editable. | Switch |
+| `checkboxInput` | This has all ViewStyle properties. |  | Checkbox |
+| `checkboxInput` | `color` | Custom color for the tick icon. | Checkbox |
+| `checkboxInput` | `size` | Custom size for the tick icon. | Checkbox |
+| `checkboxInputDisabled` | This has the same properties as `checkboxInput`. | Overrides `checkboxInput` styles if the check box is non-editable. | Checkbox |
+| `checkboxInputError` | This has the same properties as `checkboxInput`. | Overrides `input` styles if there are validation errors. | Checkbox |
+| `label` | This has all TextStyle properties.   |  | Both |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. | Both |
+| `labelDisabled` | Same properties as `label`. | Overrides `label` styles if the check box is non-editable. | Both |
+| `validationMessage` | This has all TextStyle properties.   |  | Both |
 
 The default class to style all check box inputs is named `Checkbox`.
 
@@ -1432,7 +1463,7 @@ The default class to style all line chart widgets is named `com_mendix_widget_na
 
 ### 11.28 Bar Chart
 
-The bar chart widget renders a horizontal bar graph based on static and dynamic data sets.
+The [Bar Chart](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/bar-chart-native) widget renders a horizontal bar graph based on static and dynamic data sets.
 
 The widget consists of the following elements:
 
@@ -1454,15 +1485,15 @@ The widget consists of the following elements:
 	<label/>
 </legend>
 <domain>
-    </padding>
+    <padding/>
 </domain>
 <bars>
-    </barsOffset>
-    </barColorPalette>
+    <barsOffset/>
+    <barColorPalette/>
 	<customBarStyles>
 		<any_custom_bar_style_name>
-			</bar>
-			</label>
+			<bar/>
+			<label/>
 		</any_custom_bar_style_name>
 	</customBarStyles>
 </bars>
@@ -1514,6 +1545,107 @@ The widget consists of the following elements:
 | `bars` > `customBarStyles` > `any_custom_bar_style_name` > `label` | `fontWeight` | Applies a font weight to the bar label ("normal" or "bold" or "100" or "200" or "300" or "400" or "500" or "600" or "700" or "800" or "900"). |
 
 The default class to style all bar chart widgets is named `com_mendix_widget_native_barchart_BarChart`.
+
+### 11.29 Pie/Doughnut Chart
+
+The [Pie/Doughnut Chart](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/pie-doughnut-chart-native) widget renders a dataset as a pie or doughnut chart (depending on its configuration) based on static data sets.
+
+The widget consists of the following elements:
+
+```xml
+<container/>
+<slices>
+    <customStyles>
+        <any_custom_key>
+            <slice/>
+            <label/>
+        </any_custom_key>
+    </customStyles>
+    <colorPalette/>
+    <innerRadius/>
+    <padding/>
+    <paddingBottom/>
+    <paddingHorizontal/>
+    <paddingLeft/>
+    <paddingRight/>
+    <paddingTop/>
+    <paddingVertical/>
+</slices>
+```
+
+| Element | Style Properties | Description |
+| --- | --- | --- |
+| `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
+| `slices` > `customStyles` > `any_custom_key` > `slice` | `color` | Applies a color to the slice (string). If labels are configured to be shown, each label will be the same color as its corresponding slice. |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontFamily` | Applies a font type to the slice label (string). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontSize` | Applies a size to the slice label (number). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontStyle` | Applies a font style to the slice label (**normal** or **italic**). |
+| `slices` > `customStyles` > `any_custom_key` > `label` | `fontWeight` | Applies a font weight to the slice label ("normal" or "bold" or "100"-"900" ascending by increments of 100). |
+| `slices` | `colorPalette` | Provides colors to slices that do not have a slice color configured (string with list of colors separated by a ';'). |
+| `slices` | `innerRadius` | Applies an inner radius to the chart when in doughnut presentation mode (number). |
+| `slices` | `padding` | Applies padding to all sides of the chart (number). |
+| `slices` | `paddingBottom` | Applies padding to the bottom side of the chart (number). |
+| `slices` | `paddingHorizontal` | Applies padding to the horizontal sides of the chart (number). |
+| `slices` | `paddingLeft` | Applies padding to the left side of the chart (number). |
+| `slices` | `paddingRight` | Applies padding to the right side of the chart (number). |
+| `slices` | `paddingTop` | Applies padding to the top side of the chart (number). |
+| `slices` | `paddingVertical` | Applies padding to the vertical sides of the chart (number). |
+
+The default class to style all Pie/Doughnut Chart widgets is named `com_mendix_widget_native_piedoughnutchart_PieDoughnutChart`.
+
+### 11.30 Switch
+
+A switch input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a switch widget looks by default:
+
+{{% image_container width="350" %}}![check box](attachments/native-styling-refguide/check-box.png){{% /image_container %}}
+
+The widget’s style properties structure is as follows:
+
+```xml
+<container/>
+<containerDisabled/>
+<label>
+    <numberOfLines/>
+</label>
+<labelDisabled/>
+<input>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</input>
+<inputDisabled>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputDisabled>
+<inputError>
+    <thumbColorOn/>,
+    <trackColorOn/>
+    <trackColorOff/>
+    <thumbColorOff/>
+</inputError>
+<validationMessage/>
+```
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | This has all ViewStyle properties.   |   |
+| `containerDisabled` | Same properties as `container` | Overrides `container` styles if the text box is non-editable. |
+| `input` | This has all TextStyle properties.   |   |
+| `input` | `trackColorOn` | Custom color for the switch track when turned on. |
+| `input` | `trackColorOff` | Custom color for the switch track when turned off. |
+| `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
+| `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `label` | This has all TextStyle properties   |  |
+| `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `validationMessage` | This has all TextStyle properties.   |  |
+
+The default class to style all check box inputs is named `com_mendix_widget_native_switch_Switch`.
 
 ## 12 Read More
 

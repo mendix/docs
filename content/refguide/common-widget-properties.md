@@ -252,7 +252,7 @@ Default: *Fixed*
 | 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
 | 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
 
-<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+<small><sup>*</sup> The value is rounded to the nearest decimal with the defined number of decimal places.</small>
 
 ### 7.2 Decimal Precision{#decimal-precision}
 

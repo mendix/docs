@@ -12,6 +12,23 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
+### November 18th, 2021
+
+### Fixes
+
+* We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
+* We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
+
+### October 26th, 2021
+
+#### Improvements
+
+Mendix Cloud V4 now supports PostgreSQL 13. This adds significant performance improvements for some workloads.
+
+All newly-created applications will have a database running PostgreSQL 13.
+
+Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
+
 ### October 7th, 2021
 
 ### Fixes

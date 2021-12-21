@@ -19,6 +19,10 @@ Here is an example of a Gallery widget using filters:
 
 ### 1.2 Advanced Options
 
+{{% alert type="info" %}}
+The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
+{{% /alert %}}
+
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
 * Pagination type
@@ -100,7 +104,7 @@ In order to enable filtering within the gallery items you need to select the des
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `AND expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert type="info" %}}
 If a filter is being used and its type does not match with any selected attribute it will throw an error requesting you to select the correct filter widget.

@@ -44,7 +44,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 
 At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
-### 2.1 Actions{#actions}
+### 2.1 Actions {#actions}
 
 On the right side of the screen, you can find the following action buttons:
 
@@ -99,7 +99,7 @@ In Mendix Cloud v3 environments, you have two additional action buttons:
 * **View Current Log**
 * **Enable/Disable Debugging** – enables or disables the debugger option — for more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
-### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
+### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4 {#naming}
 
 If you are the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) of the app, you can rename the environments as you wish.
 
@@ -111,7 +111,7 @@ The name must be at least two characters and consist of alphanumeric characters 
 If you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
 {{% /alert %}}
 
-### 2.3 Scaling – Mendix Cloud v4{#scaling}
+### 2.3 Scaling – Mendix Cloud v4 {#scaling}
 
 If your app is hosted in Mendix Cloud v4, you will see a section named **Instances** in the **General** tab. Click the **Change scaling** button to see the options for changing the scaling.
 
@@ -132,7 +132,7 @@ If you have 1GB RAM of the **Total Allocated Memory**, you have one instance ava
 
 To scale your memory over multiple instances, you need more memory.
 
-### 2.4 Overviews{#overviews}
+### 2.4 Overviews {#overviews}
 
 At the bottom of the page, there are three overview grids with information about the information below.
 
@@ -211,7 +211,7 @@ You have to restart your application before the changes will be made.
 
 For more information, see [Constants](/refguide/constants).
 
-## 4 Network Tab{#network-tab}
+## 4 Network Tab {#network-tab}
 
 {{% image_container width="50%" %}}
 ![](attachments/environments-details/network1.png)
@@ -233,7 +233,7 @@ You can perform the following actions:
 
 For more information, see [Certificates](certificates) and [Custom Domains](custom-domains).
 
-### 4.2 HTTP Headers{#http-headers}
+### 4.2 HTTP Headers {#http-headers}
 
 HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
@@ -281,7 +281,7 @@ A number of non-configurable response headers are added automatically by Mendix 
 | strict-transport-security | TLS terminating webservers - this is set to `max-age=31536000` |
 | x-vcap-request-id | Cloud Foundry to track requests through CF |
 
-#### 4.2.2 Running Your App in an Iframe{#iframe}
+#### 4.2.2 Running Your App in an Iframe {#iframe}
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through SameSite cookies. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 
@@ -315,7 +315,7 @@ If you use a custom sign in page, your **index.html** will probably set the `ori
 To do this, find all the places in your theme folder where this cookie is set. It will look like `document.cookie = "originURI=/login.html"`.
 Change this to add the required attributes. For example, `document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")`.
 
-#### 4.2.3 Content Security Policy{#csp}
+#### 4.2.3 Content Security Policy {#csp}
 
 A Content Security Policy informs the client (browser) where your page will load resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
 
@@ -354,7 +354,7 @@ For each range where you define whitelisted IP addresses and ports, you can ente
 
 Click **Save** to save your range. The new values will be applied within a few minutes without needing an app restart.
 
-#### 4.3.2 Valid IP Ranges{#valid-ip}
+#### 4.3.2 Valid IP Ranges {#valid-ip}
 
 IP Addresses must be within the following ranges:
 
@@ -366,7 +366,7 @@ IP Addresses must be within the following ranges:
 | 172.32.0.0 | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions{#path-based-restrictions}
+### 4.4 Path-Based Access Restrictions {#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -393,7 +393,7 @@ For more information, see [How to Restrict Access for Incoming Requests](access-
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels Tab{#log-levels}
+## 5 Log Levels Tab {#log-levels}
 
 ![](attachments/environments-details/loglevels-tab.png)   
 
@@ -439,13 +439,13 @@ The log level types are the following:
 
 For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels).
 
-## 6 Runtime Tab{#runtime-tab}
+## 6 Runtime Tab {#runtime-tab}
 
 On this tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
 
 ![](attachments/environments-details/runtime.png)   
 
-### 6.1 Custom Runtime Settings{#custom-runtime-settings}
+### 6.1 Custom Runtime Settings {#custom-runtime-settings}
 
 Use the Custom Runtime Settings section to perform the following actions:
 
@@ -457,11 +457,13 @@ For more information about runtime settings, read the [Runtime Customization](/r
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
-* `com.mendix.core.localfilesystem.cleaning.isEnabled`
-* `com.mendix.core.localfilesystem.cleaning.time`
 * `CACertificates`
 * `ClientCertificatePasswords`
 * `ClientCertificates`
+* `com.mendix.core.localfilesystem.cleaning.isEnabled`
+* `com.mendix.core.localfilesystem.cleaning.time`
+* `com.mendix.storage.azure.*`
+* `com.mendix.storage.s3.*`
 * `DatabaseHost`
 * `DatabaseJdbcUrl`
 * `DatabaseName`
@@ -482,7 +484,7 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 * `TempPath`
 * `WebServiceClientCertificates`
 
-### 6.2 Custom Environment Variables{#custom-environment-variables}
+### 6.2 Custom Environment Variables {#custom-environment-variables}
 
 Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
 
@@ -507,7 +509,7 @@ In addition, to support features which are in beta, you can add **Unsupported** 
 The *Unsupported* environment variables can only be used for controlling Mendix beta features.
 {{% /alert %}}
 
-## 7 Maintenance Tab
+## 7 Maintenance Tab {#maintenance-tab}
 
 ![](attachments/environments-details/maintenance.png)   
 

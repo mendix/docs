@@ -507,7 +507,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 1. Click the ellipsis (**...**) next to the service you want to unbind in the **Bound Services** section.
 2. Select one of the following:
-    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound next time your app is restarted
+    * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound again next time your app is restarted
     * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
     ![](attachments/sap-cloud-platform/service-unbind.png)
@@ -521,7 +521,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     ![](attachments/sap-cloud-platform/service-unbind-warning.png)
 
-    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
+    Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound but not deleted, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
 **Removing an Unbound Service**
 
@@ -535,7 +535,9 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 #### 7.3.3 Add Binding Configuration
 
-When a service is in the **Services To Be Bound** section, you can add a new binding configuration.
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Developer Portal.
+
+If you want to change the configuration of a service which is already bound, you will need to unbind the service first, as described above.
 
 1. Click the ellipsis next to the service you want to (re)configure in the **Services To Be Bound** section.
 
@@ -659,16 +661,14 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
 {{% alert type="info" %}}
-If you are using a trial account created before November 2019, the SAP HANA Schema may not be available.
-
-If you do not have the three **SAP HANA Schemas & HDI Containers (Trial)** services in your subaccount entitlements, you can add the services in the SAP BTP cockpit. Select **Entitlements** > **Configure Entitlements** > **Add Service Plans**, and choose the three **SAP HANA Schemas & HDI Containers (Trial)** services.
+If you are using a trial account created before November 2019, the SAP HANA Schema may not be available. It is not possible to work around this, so we advise you to set up a new trial account if your account does not support the `hanatrial-schema` database.
 {{% /alert %}}
 
-For trial accounts which have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
+For trial accounts which do have the **SAP HANA Schemas & HDI Containers (Trial)** services, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-schema** from the drop-down of supported databases.
 
 ![](attachments/sap-cloud-platform/hanatrial-schema.png)
 
-If your trial account does not include the hanatrial schema, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
+If your trial account does not include `hanatrial-schema`, you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan schema is not found*.
 
 ## 9 Issues
 

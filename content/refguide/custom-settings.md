@@ -38,14 +38,16 @@ The following custom settings can be configured:
 | **ClientCertificateUsages** | Only use this when you have multiple client certificates and you want to configure specific certificates for specific servers.<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | **ClusterManagerActionInterval** | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | **com.mendix.core.isClusterSlave** | Set to `true` in a high-availability scenario when this is *not* the [Cluster Leader](clustered-mendix-runtime#cluster-leader-follower). The buildpack will usually enforce this setting, but it may need to be set for some on-premises deployments. | `false` |
-| **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `"Strict"`, `"Lax"`, and `"None"`. The default is `"Strict"`. Setting it to `"None"` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `"None"`. If the connection is plain HTTP, then this setting must be changed to `"Strict"` (recommended) or `"Lax"`. | |
+| **com.mendix.core.SameSiteCookies** | The [SameSite](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) property can be included in all cookies that are returned by the embedded HTTP server. The possible values are `Strict`, `Lax`, and `None`. The default is `Strict`. Setting it to `None` is typically needed only when an application is embedded in an iframe of another application with a different domain. Newer browsers may require the connection to be secure (HTTPS) when set to `None`. If the connection is plain HTTP, then this setting must be changed to `Strict` (recommended) or `Lax`. | |
+| **com.mendix.core.ScheduledEventsCleanupAge** | This setting specifies (in milliseconds) how old rows in the System.ScheduledEventInformation table have to be before they are removed from the database. See [Scheduled Events](scheduled-events#cleanup) for more details. | |
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **com.mendix.core.StorageService** | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage.localfilesystem`, `com.mendix.storage.s3`, `com.mendix.storage.azure`, and `com.mendix.storage.swift`. | com.mendix.storage.localfilesystem |
 | **com.mendix.storage.PerformDeleteFromStorage** | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
+| **com.mendix.core.ProcessedTasksCleanupAge** | This setting specifies (in milliseconds) how old rows in the System.ProcessedQueueTask have to be before they are removed from the database. See [Task Queue](task-queue#cleanup) for more details. |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](http://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 9.1.0 and later. | false |
 | **http.client.CleanupAfterSeconds** | For the call REST service and call web service activities, the first request to a new host will create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. A value of `0` means no cleanup.<br/>{{% alert type="warning" %}}If the infrastructure provider closes this connection before this cleanup time, you can receive a `java.net.SocketException: Connection reset` error. You can reduce this value to prevent this, or handle the error in your [REST call](call-rest-action#troubleshooting).{{% /alert %}} | 355 |
-| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities. | 2 |
-| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities. | 20 |
+| **http.client.MaxConnectionsPerRoute** | The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for call REST service and call web service activities.<br/>{{% alert type="warning" %}}If your app uses these calls, it is strongly recommended that this value is increased. The default could prevent multiple end-users accessing the API simultaneously. A good value is around the number of concurrent users you expect, with a maximum of 250. The value of `http.client.MaxConnectionsTotal` may also need to increase.{{% /alert %}} | 2 |
+| **http.client.MaxConnectionsTotal** | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert type="warning" %}}If you change the value of `http.client.MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | **JavaKeyStorePassword** | Password for the default Java keystore. | changeit |
 | **LongLivedSessionTimeout** | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
 | **MyScheduledEvents** | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
@@ -57,6 +59,7 @@ The following custom settings can be configured:
 | **TempPath** | The location of the temporary files. | [deployment folder]\data\tmp |
 | **TrackWebServiceUserLastLogin** | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | **UploadedFilesPath** | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
+| **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 9.6.1 and above. | false |
 
 ## 3 Log File Settings
 
@@ -75,7 +78,7 @@ The settings below influence the behavior of the log files. These settings can o
 | Name | Description | Default Value |
 | --- | --- | --- |
 | **ClientQueryTimeout** | Defines the timeout in seconds for most of the database queries which are executed to load data into client widgets, like data grids. After the duration as specified here, a query will be canceled and an exception will be thrown. |   |
-| **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE,` `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
+| **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | **DatabaseUserName** | Name required for authentication to the database. | |
 | **DatabasePassword** | Password for the `DatabaseUserName` supplied above. | |
 | **DatabaseHost** | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
@@ -117,7 +120,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseJdbcUrl** | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). This feature is not supported for PostgreSQL databases. |   |
 | **SourceDatabaseName** | The name of the source database. |   |
 | **SourceDatabasePassword** | The password for the connection to the source database. |   |
-| **SourceDatabaseType** | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, or `SQLSERVER`. |   |
+| **SourceDatabaseType** | The type of the source database. Possible values: `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. |   |
 | **SourceDatabaseUseIntegratedSecurity** | This setting defines whether integrated security should be used for SQL Server. If true, user name and password will not be used. | false |
 | **SourceDatabaseUseSsl** | For PostgreSQL databases, defines whether the connection to the source database will be made using SSL. | false |
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
@@ -152,7 +155,11 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 
 ## 6 Microsoft Azure SQL
 
-These settings can be changed to use a Microsoft Azure SQL database for your Mendix application. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
+These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
+
+{{% alert type="warning" %}}
+For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+{{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
 
@@ -166,7 +173,11 @@ First, you need to create an Azure SQL database (for information on how to do th
 
 ## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
 
-These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)). For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
+These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
+
+{{% alert type="warning" %}}
+For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+{{% /alert %}}
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -188,7 +199,11 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
 
-These settings can be used to store files using the IBM Cloud object storage service. For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you.
+These settings can be used to store files using the IBM Cloud object storage service.
+
+{{% alert type="warning" %}}
+For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+{{% /alert %}}
 
 Mendix supports unscoped authentication of OpenStack Identity (Keystone) v3. The credentials related settings must be filled with the corresponding values which can be found in the Service Credentials section of your object storage service.
 

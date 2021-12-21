@@ -48,7 +48,7 @@ This app service enables doing the following:
 * Take snapshot of a model 
 * Perform 3D measurement on distance, angle, area, radius, and length
 
-### 1.3 Limitations
+### 1.3 Limitations {#limitations}
 
 The 3D Viewer app service includes a few 3D widgets. These are some limitations on how these widgets should be placed in a page in Mendix Studio Pro:
 

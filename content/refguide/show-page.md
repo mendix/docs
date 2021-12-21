@@ -62,7 +62,7 @@ This feature allows you to re-use the same page for the **New** and **Edit** but
 ### 3.4 Close Pages {#close-pages}
 
 {{% alert type="info" %}}
-This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
+This option is only available for native mobile.
 {{% /alert %}}
 
 Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:

@@ -66,7 +66,7 @@ The browser you use needs to have JavaScript turned on.
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](mysql) 5.7, 8.0
 * [Oracle Database](oracle) 12c Release 2, 19
-* PostgreSQL 9.6, 10, 11, 12, 13
+* PostgreSQL 9.6, 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java

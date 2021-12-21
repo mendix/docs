@@ -7,6 +7,8 @@ tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow
 
 {{% alert type="warning" %}}
 This activity can only be used in **Microflows**.
+
+This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6#960).
 {{% /alert %}}
 
 ## 1 Introduction

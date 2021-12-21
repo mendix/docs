@@ -57,7 +57,7 @@ All the users accessing a Mendix app from a browser on a tablet will automatical
 
 All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
 
-### 2.5 Native Phone
+### 2.5 Native Phone {#native-phone}
 
 A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 
@@ -97,7 +97,7 @@ This specifies the application icon. This icon is shown as favicon in the title 
 
 ### 4.2 Home Pages
 
-#### 4.2.1 Default Home Page
+#### 4.2.1 Default Home Page {#default-home-page}
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 

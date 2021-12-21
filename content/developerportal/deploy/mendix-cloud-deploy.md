@@ -24,10 +24,10 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| **Number of Users** | Unlimited users. | Depends on your pricing plan.¹ |
+| **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.¹ |
-| **App vCPU**s | 0.5 | Depends on your pricing plan.¹ |
+| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
+| **App vCPU**s | 0.5 | Depends on your pricing plan.² |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -43,7 +43,9 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 | **Support** | No Support. | Depending on license option. |
 
-¹The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ Unlicensed apps running on a different cloud platform (for example SAP BTP) have similar restrictions to Free Apps. They have additional restrictions, including only allowing six concurrent users.
+
+² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
 {{% alert type="info" %}}
 Free Apps are part of our Free Edition.
@@ -74,6 +76,14 @@ In some circumstances, you might find that the two or three standard environment
 Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
 
 If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
+
+### 1.5 URLs and Ports
+
+When your app is running on the Mendix Cloud it will automatically be given its own URL. For licensed apps this is of the form `(appname){-environment}.mendixcloud.com`. The environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain. Free apps have a URL of the form `{appname}.mxapps.io`.
+
+You can customize a URL by adding [custom domains](custom-domains).
+
+Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
 ## 2 Deploying an App to the Mendix Cloud
 
@@ -198,7 +208,9 @@ More information on these plans is available on the [Pricing](https://www.mendix
 
 ### 7.2 Cloud Resource Packs{#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs. The *Standard* resource packs can also be used with *all* plans, but *premium* resource packs can only be purchased with a *premium* plan.
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the *basic package* are fixed as described in [Mendix Basic Package](basic-package).
+
+The *Standard* resource packs can be used with both standard and premium plans, but *premium* resource packs can only be purchased with a *premium* plan.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |

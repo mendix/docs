@@ -1027,6 +1027,10 @@ spec:
   runtimeDeploymentPodAnnotations:
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
+    # example: enable Prometheus metrics scraping
+    prometheus.io/path: /metrics
+    prometheus.io/port: '8900'
+    prometheus.io/scrape: 'true'
 ```
 
 You can change the following options:

@@ -47,8 +47,11 @@ The Invoice Processing app service is a premium Mendix product that is subject t
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) component page in the Marketplace, click **Subscribe** to order a subscription.
-2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+1. On the [Invoice Processing](https://marketplace.mendix.com/link/component/118389) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
+2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
+
+    For the trial, you do not need to fill in this information.
+
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 4. Click **Invoice Processing** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
@@ -92,6 +95,9 @@ To use the Invoice Processing app service, first [train a model](#document-model
    
 5. Wait until **Invoice Model** page opens.
 6. Fill in **Vendor Information** and **Business Unit Information** from the sample Invoice. The more input you provide, the more accurate your trained model will be.
+
+    ![Vendor BU Information Dialog box](attachments/invoice-processing/vendor-business-unit-dialog-box.png)
+    
 7. Click **Create Model**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 8. Wait until the **Status** of the model becomes **Published**. Once the model is published, this pop-up window opens:
     

@@ -8,7 +8,7 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The  [portfolio management tool](https://portfolio.mendix.com) empowers you to manage projects within your company and outside your company. With this tool, you can manage projects throughout the whole project lifecycle – from the start as an idea until the release as a product. The portfolio management tool provides you with the project timelines, the insights into the value created by your projects, and other useful project details. The tool is available to all Mendix Cloud customers.
+The [portfolio management tool](https://portfolio.mendix.com) empowers you to manage projects within your company and outside your company. With this tool, you can manage projects throughout the whole project lifecycle – from the start as an idea until the release as a product. The portfolio management tool provides you with the project timelines, the insights into the value created by your projects, and other useful project details. The tool is available to all Mendix Cloud customers.
 
 {{% alert type="info" %}}
 Mendix Admins can access all portfolios within their company. When a Mendix Admin starts the portfolio management tool for the first time and if their company has no portfolio, the system will automatically create a portfolio for the company.

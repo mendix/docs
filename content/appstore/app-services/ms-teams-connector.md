@@ -105,13 +105,13 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 5.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
-    ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.PNG)
+    ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.png)
     
 6. Enter a **Webhook Name** for the Webhook.
 7. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
 8.  **Save** the changes. The Webhook is added to the list.
     
-    ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.PNG)
+    ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
     
 9.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
     1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.

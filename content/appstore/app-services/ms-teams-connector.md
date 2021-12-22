@@ -96,22 +96,22 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
 2.  Sign in to **Communication Services Console** using Mendix SSO. The **Communication Services Console** shows all the communication services that you have subscribed. {{% todo %}}How to navigate/link to the communication services console{{% /todo %}} 
 
-    ![](attachments/ms-teams-connector/console_login_view.png)
+
     
 3.  Go to the **Microsoft Teams Connector** tab.
 4.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.{{% todo %}}Can we include the Add Webhook button in the screenshot?{{% /todo %}} 
   
-    ![](attachments/ms-teams-connector/console_after_login_view.png)
+
 
 5.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
-    ![](attachments/ms-teams-connector/webhook_adder_popup.png)
+
     
 6. Enter a **Webhook Name** for the Webhook.
 7. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
 8.  **Save** the changes. The Webhook is added to the list.
     
-    ![](attachments/ms-teams-connector/webhook_data_view.png)
+
     
 9.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
     1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
@@ -131,14 +131,14 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
 
-    ![](attachments/ms-teams-connector/connector_in_microflow.png) 
+
    
 2.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
 3.  Specify the following settings with expression syntax:
     1.  Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     2.  Set the **textMessage** parameter to the message you want to send to the Microsoft Teams channel.
       
-        ![](attachments/ms-teams-connector/microflow_configure_parameters.png)
+
         
     3. Click **OK** to save the changes and close the dialog box.
 
@@ -159,8 +159,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#key-generation) is correct.
 
-![](attachments/ms-teams-connector/license_invalid_popup.png)
+
 
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [**Usage** dashboard](#statistics).
 
-![](attachments/ms-teams-connector/quota_exhausted_popup.png)
+

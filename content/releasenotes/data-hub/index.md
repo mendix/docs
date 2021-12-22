@@ -9,6 +9,13 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### December 23rd, 2021
+
+#### Fixes
+
+* We fixed an issue of user logging out of application after changing technical owner of a datasource
+* We fixed an issue of scrolling on data source deeplink page
+
 ### December 20th, 2021
 
 #### Fixes

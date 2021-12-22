@@ -94,12 +94,12 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
-2.  Sign in to **Communication Services Console** using Mendix SSO. The **Communication Services Console** shows all the communication services that you have subscribed. {% todo %}}How to navigate/link to the communication services console{{% /todo %}} 
+2.  Sign in to **Communication Services Console** using Mendix SSO. The **Communication Services Console** shows all the communication services that you have subscribed. {{% todo %}}How to navigate/link to the communication services console{{% /todo %}} 
 
     ![](attachments/ms-teams-connector/console_login_view.png)
     
 3.  Go to the **Microsoft Teams Connector** tab.
-4.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.{% todo %}}Can we include the Add Webhook button in the screenshot?{{% /todo %}} 
+4.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.{{% todo %}}Can we include the Add Webhook button in the screenshot?{{% /todo %}} 
   
     ![](attachments/ms-teams-connector/console_after_login_view.png)
 

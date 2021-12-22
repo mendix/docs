@@ -53,7 +53,7 @@ This is a POST call, so you will need to pass the relevant fields in the body (f
 
 ![](attachments/implement-cicd-pipeline/03StartBuildingPackage.png)
 
-Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package API call](/apidocs-mxsdk/apidocs/old-version/build-api#retrieve-package). This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
+Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package API call](/apidocs-mxsdk/apidocs/build-api#retrieve-package). This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
 
 ![](attachments/implement-cicd-pipeline/04RetrievePackageStatus.png)
 

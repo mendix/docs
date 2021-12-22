@@ -181,9 +181,11 @@ You can click the **Add Stage**, **Add Use Case**, **Add Value Type**, **Add Dep
 
 For an existing item, when you hover over the end of the row, then you can see the **Delete** button or the **Edit** button. You can use these two buttons to delete or edit the existing item.
 
+![delete-edit-stage](attachments/portfolio-management-tool/delete-edit-stage.png)
+
 For stages, you can click the **^** icon or the **v** icon to move a stage upwards or downwards.
 
-![delete-edit-stage](/Users/Luyao.Zhang/Documents/GitHub/docs/content/developerportal/control-center/attachments/portfolio-management-tool/delete-edit-stage.png)
+![move-upwards-downwards](attachments/portfolio-management-tool/move-upwards-downwards.png)
 
 ## 5 Read More
 

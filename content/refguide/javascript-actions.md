@@ -29,7 +29,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-with-platform.png){{% /image_container %}}
+{{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -88,9 +88,9 @@ The return parameter type determines the type of data a JavaScript action return
 
 JavaScript actions can be for a specific platform, it has an optional platform property with values:
 
-* All *(default)*
-* Web - can be used in a browser or hybrid mobile app
-* Native – can be used in a native mobile app
+- All _(default)_
+- Web – can be used in a browser or hybrid mobile app
+- Native – can be used in a native mobile app
 
 When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. E.g. only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to "Native".
 

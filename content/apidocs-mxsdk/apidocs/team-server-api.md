@@ -4,13 +4,13 @@ category: "API Documentation"
 menu_order: 65
 ---
 
+{{% alert type="warning" %}}
+The API description on this page refers to the new team server API implementation. You can access the documentation for the previous team server API implementation [here](old-version/team-server-api.md).
+{{% /alert %}}
+
 ## 1 Introduction
 
-The team server API allows you to retrieve the information (branches, commits) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
-
-{{% alert type="warning" %}}
-The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
-{{% /alert %}}
+The team server API allows you to retrieve the information (branches, commits) of application models stored in our team server.
 
 The base URL for all Team Server API endpoints is:
 ```
@@ -222,7 +222,7 @@ List of objects with the following key-value pairs:
 
 Error Response format and examples are given in section: [Error response format](#3-error-response-format)
 
-### 4.3 Retrieve Branch
+### 4.3 Retrieve Branch {#retrieve-branch}
 
 Returns information about a specific branch of the version control repository for a Mendix project.
 
@@ -412,38 +412,3 @@ List of objects with the following key-value pairs:
 | 500 | Internal Server Error | Something went wrong |
 
 Error Response format and examples are given in section: [Error response format](#3-error-response-format)
-
-## 5 Webhook for new commits
-
-In addition to the REST API on repositories, it is possible to configure a webhook that is called when one or more new commits are pushed to the repository.
-Webhooks can be configured in the Developer Portal UI for a specific Mendix project.
-
-### 5.1 Webhook
-
-When triggered, the webhook will do a HTTP POST request to a configurable URL.
-
-### 5.1.1 Headers
-
-|Name|Value|
-|---|---|
-|Content-Type|`application/json; charset=utf-8`|
-
-### 5.1.2 Payload
-
-|Name|Type|Description|
-|---|---|---|
-|`projectId`|String|The project ID (also known as app ID) of the Mendix project.|
-|`branchName`|String|The name of the branch that received new commits.|
-|`previousCommitId`|String|The previous commit ID that the HEAD of the branch pointed to.|
-|`newCommitId`|String|The new commit ID that the HEAD of the branch points to.|
-
-### 5.1.2 Payload Example
-
-```json
-{
-  "projectId": "c0af1725-edae-4345-aea7-2f94f7760e33",
-  "branchName": "trunk",
-  "previousCommitId": "86",
-  "newCommitId": "87"
-}
-```

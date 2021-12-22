@@ -4,13 +4,13 @@ category: "API Documentation"
 menu_order: 65
 ---
 
+{{% alert type="warning" %}}
+The API description on this page refers to the new team server API implementation. You can access the previous team server API implementation [here](old-version/team-server-api.md).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The team server API allows you to retrieve the information (branches, commits) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
-
-{{% alert type="warning" %}}
-The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
-{{% /alert %}}
 
 The base URL for all Team Server API endpoints is:
 ```

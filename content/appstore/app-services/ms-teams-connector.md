@@ -101,26 +101,26 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 3.  Go to the **Microsoft Teams Connector** tab.
 4.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.{{% todo %}}Can we include the Add Webhook button in the screenshot?{{% /todo %}} 
   
-    ![](attachments/ms-teams-connector/console_after_login_view.png)
+    ![console_after_login_view](attachments/ms-teams-connector/console_after_login_view.png)
 
 5.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
-    ![](attachments/ms-teams-connector/webhook_adder_popup.png)
+    ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.PNG)
     
 6. Enter a **Webhook Name** for the Webhook.
 7. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
 8.  **Save** the changes. The Webhook is added to the list.
     
-    ![](attachments/ms-teams-connector/webhook_data_view.png)
+    ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.PNG)
     
 9.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
     1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
     
-        ![](attachments/ms-teams-connector/edit_webhook_popup.png)
+        ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png)
     
     2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
     
-        ![](attachments/ms-teams-connector/copied_popup.png)
+        ![copied_popup](attachments/ms-teams-connector/copied_popup.png)
         
         {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.
         {{% /alert %}}
@@ -159,8 +159,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#key-generation) is correct.
 
-![](attachments/ms-teams-connector/license_invalid_popup.png)
+![license_invalid_popup](attachments/ms-teams-connector/license_invalid_popup.png)
 
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [**Usage** dashboard](#statistics).
 
-![](attachments/ms-teams-connector/quota_exhausted_popup.png)
+![quota_exhausted_popup](attachments/ms-teams-connector/quota_exhausted_popup.png)

@@ -90,7 +90,7 @@ Javascript actions can be for a specific platform, it has an optional platform p
 All (default)
 Web - can be used in a browser or hybrid mobile app.
 Native - can be used in a native mobile app.
-To use a JavaScript action call from a nanoflow; then all actions in that nanoflow must be for the same platform.
+When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. E.g. only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to "Native".
 
 ## 3 Type Parameter
 

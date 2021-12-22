@@ -5,7 +5,7 @@ menu_order: 65
 ---
 
 {{% alert type="warning" %}}
-The API description on this page refers to the new team server API implementation. You can access the previous team server API implementation [here](old-version/team-server-api.md).
+The API description on this page refers to the new team server API implementation. You can access the documentation for the previous team server API implementation [here](old-version/team-server-api.md).
 {{% /alert %}}
 
 ## 1 Introduction

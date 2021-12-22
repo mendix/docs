@@ -12,7 +12,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2021
 
-### December 20th, 2021
+### December 22nd, 2021
 
 #### Improvements
 

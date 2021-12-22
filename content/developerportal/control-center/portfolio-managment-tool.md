@@ -177,6 +177,14 @@ For users outside your company, they need to accept the invitation via the link 
 
 The **Portfolio Settings** page is only available for Portfolio Managers. On this page, Portfolio Managers can customize **Stages**, **Use Cases**, **Value Types**, **Departments**, and **Countries**.
 
+You can click the **Add Stage**, **Add Use Case**, **Add Value Type**, **Add Department**, and **Add Country** to add an item.
+
+For an existing item, when you hover over the end of the row, then you can see the **Delete** button or the **Edit** button. You can use these two buttons to delete or edit the existing item.
+
+For stages, you can click the **^** icon or the **v** icon to move a stage upwards or downwards.
+
+![delete-edit-stage](/Users/Luyao.Zhang/Documents/GitHub/docs/content/developerportal/control-center/attachments/portfolio-management-tool/delete-edit-stage.png)
+
 ## 5 Read More
 
 {{% todo %}}[Add the learning path]{{% /todo %}}

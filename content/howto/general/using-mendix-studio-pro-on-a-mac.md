@@ -81,10 +81,6 @@ Congratulations! You have successfully configured port forwarding to enable test
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
 {{% /alert %}}
 
-{{% alert type="info" %}}
-If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
-{{% /alert %}}
-
 Read the tips below to check the network drive before viewing your app on your testing device:
 
 * Correct mapped drives will always have a letter at the start of their file location:
@@ -104,14 +100,20 @@ When running your app on your test device, you cannot use the QR code within Men
 Instead, you must enter your Mac's IP address into your Make It Native app. To run your app on your test device, follow the steps below:
 
 1. Make sure your test device and Mac are on the same Wi-Fi network.
+
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
+
 3.  In your Make It Native app's **Host** field, type *{your IP address}:8080*:
 
-	{{% image_container width="400" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
+	{{% image_container width="300" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
 
 4. Tap **Launch** to view your app.
 
 Congratulations! You have successfully viewed your app on a test device.
+
+{{% alert type="info" %}}
+If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/howto/mobile/common-issues#unable-load-script) section of *Troubleshoot Common Native Mobile Issues*
+{{% /alert %}}
 
 ## 6 Viewing Changes to Your App on Your Testing Device
 

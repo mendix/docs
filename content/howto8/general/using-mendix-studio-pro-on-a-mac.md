@@ -89,10 +89,12 @@ When running your app on your test device, you cannot use the QR code within Men
 Instead, you must enter your Mac's IP address into your Make It Native app. To run your app on your test device, follow the steps below:
 
 1. Make sure your test device and Mac are on the same Wi-Fi network.
+
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
+
 3.  In your Make It Native app's **Host** field, type *{your IP address}:8080*:
 
-	{{% image_container width="400" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
+	{{% image_container width="300" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
 
 4. Tap **Launch** to view your app.
 

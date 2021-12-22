@@ -20,11 +20,15 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 ### 1.2 Limitation
 
 * Currently only supports images in JPG and JPEG formats
-* Each image file size cannot exceed 50 MB.
+* Each image file size cannot exceed 50 MB
 
 ### 1.3 Prerequisites
 
-This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+* This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+* For optimal recognition results, make sure that documents with small fonts have high resolutions:
+  * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
+  * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
+
 
 ## 2 Installation
 
@@ -115,7 +119,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     3. On the right side, enter a **Marker ID** that is used for the area that you selected.
     4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
     5. Click **Add Marker** to add the marker to the list of **Markers**.
-    6. To delete a marker from the **Markers** list, select the marker and click the delete icon on top of the list.
+    6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
 
         ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)

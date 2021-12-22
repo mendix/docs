@@ -19,8 +19,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now do.
-* During the last release we accidently introduced an issue where the Developer Portal exposed projects without a repository to Studio Pro. We patched this issue on Friday 17 December with a band-aid. This release sees a more permanent solution.
+* We recently changed the password length requirement from 8 to 12 characters. We noticed this caused some confusion, because not all pages where the password can be reset or changed listed the password requirements. We made sure that all pages now list those requirements.
+* During the last release, we introduced an issue where the Developer Portal exposed apps without a repository to Studio Pro. We patched this issue on Friday December 17th, 2021 with a band-aid. This release sees a more permanent solution.
 
 ### December 15th, 2021
 

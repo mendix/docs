@@ -13,8 +13,8 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We fixed an issue of user logging out of application after changing technical owner of a datasource
-* We fixed an issue of scrolling on data source deeplink page
+* We fixed an issue where the user was logged out after changing the Technical Owner of a data source.
+* We fixed an issue that occurred with scrolling on a data source deep-link page.
 
 ### December 20th, 2021
 

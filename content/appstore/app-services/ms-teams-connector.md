@@ -12,9 +12,9 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
-This app service is an add-on module. For more information, see [Add-On Module](/refguide/add-on-module).
+This app service is an add-on module. For more information, see Add-On Module].
 
-{{% todo %}}[**Add link to the Add-ons doc**]{{% /todo %}}
+{{% todo %}}[Add a link to the Add-On Moduke doc. Path: /refguide/add-on-module]{{% /todo %}}
 
 
 ### 1.1 Typical Use Cases
@@ -40,6 +40,7 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 2.  To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
     1. On the menu bar, go to **App** > **Show App Directory in Explorer**.
     2.  Check if a folder with the name **modules** is present in the directory. If not present, create a new folder with this name.
+
         ![](attachments/ms-teams-connector/modules-folder-in-file-explorer.png)
         
     3.  Copy the downloaded file *MSTeamsConnectorModule.mxmodule* into the **modules** folder. 
@@ -48,7 +49,9 @@ The app service can only be used with Studio Pro 9 versions starting from [9.8](
 
     4. In Studio Pro, go to **App** > **Synchronize App Directory**. 
 
-After the synchronization is finished, you can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**. 
+After the synchronization is finished, you can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+
+![connector_in_protected_module](attachments/ms-teams-connector/connector_in_protected_module.png)
 
 ## 3 Configuration
 
@@ -57,22 +60,29 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 3.1  Subscribing to Get LicenseSecret and LicenseKey {#key-generation}
 
 1. On the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) page, click **Subscribe** to start a subscription or click **Try for Free** to start a trial.
+
 2.  To start a subscription, fill in [Technical Contact](https://docs.mendix.com/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information and then place the order. The Technical Contact receives an order confirmation email. 
 
     For the trial, you do not need to fill in this information.
 
 3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
 4. Click **Microsoft Teams Connector** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
 5. Click **Create Binding Keys**.
+
 6. Enter a meaningful name for the binding keys. Make sure that the name includes the name of the app which uses Microsoft Teams Connector.
+
 7.  Click **Create Keys** to generate the **LicenseSecret** and **LicenseKey**. 
+
     ![](attachments/ms-teams-connector/binding-key-generation.png)
 
 8. **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
-9. On this service management dashboard, you can edit the instance name for your subscription.
-    ![](attachments/ms-teams-connector/edit_instance_name.png)
- 
- {{% alert type="note" %}}It is a good practice to edit the instance name if you have purchased multiple subscriptions of a service{{% /alert %}}
+
+{{% alert type="note" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
+
+![](attachments/ms-teams-connector/edit_instance_name.png)
+
 
 ### 3.2 Configuring LicenseSecret and LicenseKey for App Deployment
 
@@ -98,42 +108,46 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
-2.  Navigate to the **Subscriptions** page and click on  **Microsoft Teams Connector**.
-3.  Click on **Manage Instances**.
-  {{% todo %}}Provide image when available{{% /todo %}}  
-4. You will be redirected to the **Communication Services Console** login page. Sign in to **Communication Services Console** using Mendix SSO. 
+2. Go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there.
+3. Click **Microsoft Teams Connector** to open the service management dashboard.
+4.  Click **Manage Instances**.
+    {{% todo %}}Provide image when available{{% /todo %}} 
+    
+    You are redirected to the **Communication Services Console** login page.
+    
+5.  Sign in to **Communication Services Console** using Mendix SSO.
+    
     ![](attachments/ms-teams-connector/console_login_view.png)
     
-    {{% alert type="note" %}}The **Communication Services Console** shows all the communication services that you have subscribed. {{% /alert %}}
-    
-5.  Go to the **Microsoft Teams Connector** tab.
-    
-    ![console_after_login_view](attachments/ms-teams-connector/console_after_login_view.png)
+    The **Communication Services Console** shows all the communication services that you have subscribed.
 
-6.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
+6.  Go to the **Microsoft Teams Connector** tab. 
+7.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
 
-    ![add_webhook_button_enabled](attachments/ms-teams-connector/add_webhook_button_enabled.png)      
+    ![add_webhook_button_enabled](attachments/ms-teams-connector/add_webhook_button_enabled.png)
 
-7.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
+8.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
     ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.png)
     
-8. Enter a **Webhook Name** for the Webhook.
-9. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
-10.  **Save** the changes. The Webhook is added to the list.    
-    ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
-    
-11.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
+9. Enter a **Webhook Name** for the Webhook.
+10. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
+11.  **Save** the changes. The Webhook is added to the list.
 
-  1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
+     ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
+     The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
     
-        ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png)    
-  2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
-    
-        ![copied_popup](attachments/ms-teams-connector/copied_popup.png)
+12.  Copy the **Webhook ID** as follows:
+     1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
         
-        {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.
-        {{% /alert %}}
+         ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png) 
+         
+     2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
+        
+         ![copied_popup](attachments/ms-teams-connector/copied_popup.png)
+        
+         {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.
+         {{% /alert %}}
 
 ### 4.2 Sending Message to a Teams Channel
 
@@ -171,6 +185,6 @@ When you get the following pop-up window, then your license is invalid. Check if
 
 ![license_invalid_popup](attachments/ms-teams-connector/license_invalid_popup.png)
 
-When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [**Usage** dashboard](#statistics).
+When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
 
 ![quota_exhausted_popup](attachments/ms-teams-connector/quota_exhausted_popup.png)

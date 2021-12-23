@@ -240,7 +240,7 @@ The **Application Number of Files** graph shows the number of files created by e
 ### <a name="Trends-appsizeoffiles"></a>4.12 Application Size of Files (in bytes)
 
 {{% alert type="info" %}}
-This metric was added on DATE to the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack). The data will only be visible if you have deployed your Mendix app after that date, and it will only be visible from the moment of deployment.
+This metric was added on DATE to the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack). The data will only be visible once you deploy your Mendix app after that date. Before you redeploy, the graph will show **No Data Available**. After the deployment, data will only be shown on the graph from that date onward.
 {{% /alert %}}
 
 The **Application Size of Files** graph shows the size of files (in bytes) that are stored in file storage.

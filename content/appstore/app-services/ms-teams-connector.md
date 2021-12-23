@@ -69,6 +69,10 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
     ![](attachments/ms-teams-connector/binding-key-generation.png)
 
 8. **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
+9. On this service management dashboard, you can edit the instance name for your subscription.
+    ![](attachments/ms-teams-connector/edit_instance_name.png)
+ 
+ {{% alert type="note" %}}It is a good practice to edit the instance name if you have purchased multiple subscriptions of a service{{% /alert %}}
 
 ### 3.2 Configuring LicenseSecret and LicenseKey for App Deployment
 
@@ -94,31 +98,37 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.1 Configuring Webhooks in the Communication Services Console
 
 1. In Microsoft Teams, [create a Webhook URL for the channel](https://docs.servicenow.com/bundle/quebec-it-service-management/page/product/site-reliability-ops/task/create-webhook-url-channel-ms-teams.html) to which you want to send messages. 
-2.  Sign in to **Communication Services Console** using Mendix SSO. The **Communication Services Console** shows all the communication services that you have subscribed. {{% todo %}}How to navigate/link to the communication services console{{% /todo %}} 
-
+2.  Navigate to the **Subscriptions** page and click on  **Microsoft Teams Connector**.
+3.  Click on **Manage Instances**.
+  {{% todo %}}Provide image when available{{% /todo %}}  
+4. You will be redirected to the **Communication Services Console** login page. Sign in to **Communication Services Console** using Mendix SSO. 
     ![](attachments/ms-teams-connector/console_login_view.png)
     
-3.  Go to the **Microsoft Teams Connector** tab.
-4.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.{{% todo %}}Can we include the Add Webhook button in the screenshot?{{% /todo %}} 
-  
+    {{% alert type="note" %}}The **Communication Services Console** shows all the communication services that you have subscribed. {{% /alert %}}
+    
+5.  Go to the **Microsoft Teams Connector** tab.
+    
     ![console_after_login_view](attachments/ms-teams-connector/console_after_login_view.png)
 
-5.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
+6.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
+
+    ![add_webhook_button_enabled](attachments/ms-teams-connector/add_webhook_button_enabled.png)      
+
+7.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
     ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.png)
     
-6. Enter a **Webhook Name** for the Webhook.
-7. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
-8.  **Save** the changes. The Webhook is added to the list.
-    
+8. Enter a **Webhook Name** for the Webhook.
+9. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
+10.  **Save** the changes. The Webhook is added to the list.    
     ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
     
-9.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
-    1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
+11.  The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. Copy the **Webhook ID** as follows:
+
+  1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
     
-        ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png)
-    
-    2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
+        ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png)    
+  2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
     
         ![copied_popup](attachments/ms-teams-connector/copied_popup.png)
         

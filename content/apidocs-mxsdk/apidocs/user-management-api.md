@@ -4,6 +4,11 @@ category: "API Documentation"
 menu_order: 70
 ---
 
+{{% alert type="warning" %}}
+The **User Management** API has been deprecated and will be removed during 2022.
+You are advised not to use this API.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.

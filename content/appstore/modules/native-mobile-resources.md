@@ -71,3 +71,4 @@ These are the native widgets included in these resources along with links to the
 | [Toggle Buttons](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/toggle-buttons-native) | Changes an enumeration value using a group of buttons. |
 | [Video Player](https://github.com/mendix/widgets-resources/blob/master/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/widgets-resources/tree/master/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |
+| [Radio Buttons](https://github.com/mendix/widgets-resources/tree/nc/radio-buttons/packages/pluggableWidgets/radio-buttons-native) | Flexible accessible radio button functionality. |

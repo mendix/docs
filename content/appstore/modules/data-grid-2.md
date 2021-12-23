@@ -193,7 +193,9 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
 {{% alert type="warning" %}}
-The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute. Also the desired attribute should be filterable (for example, not computed in a microflow).
+The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute.
+
+Also the desired attribute must be filterable. For example, not a value which is calculated.
 {{% /alert %}}
 
 ![Settings for data grid 2](attachments/data-grid-2/settings-show-column-filters.png)

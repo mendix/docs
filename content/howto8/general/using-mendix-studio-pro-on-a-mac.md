@@ -11,7 +11,7 @@ tags: ["Native", "Parallels", "Mac", "Mobile"]
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. 
 
 {{% alert type="warning" %}}
-To run Studio Pro on Apple Silicon Macs, such as the M1(X), Mendix Studio Pro 8.18.14 and above is required. For more information, see [System Requirements](/refguide8/system-requirements).
+To run Studio Pro on Apple Silicon Macs, such as the M1(X), an LTS version starting from Mendix Studio Pro 8.18.14 is required. For more information, see [System Requirements](/refguide8/system-requirements).
 {{% /alert %}}
 
 To start making Mendix native mobile apps on your Mac, follow this how-to.

@@ -521,6 +521,42 @@ The reference selector is an input widget that can be used to display and edit a
 
 The default class to style all reference selector inputs is named `ReferenceSelector`.
 
+### 6.7 Radio Buttons
+
+The radio buttons widget is a collection of radio buttons representing a set of related options. This is how a radio buttons widget could look in an app:
+
+{{% image_container width="300" %}}![radio buttons](attachments/native-styling-refguide/radio-buttons.png){{% /image_container %}}
+
+The widget style properties are as follows:
+
+```xml
+	<labelTextStyle />
+	<containerHorizontal/>
+	<radioButtonItemContainerStyle>
+	<radioButtonItemContainerHorizontalStyle/>
+		<radioButtonItemContainerDisabledStyle>
+			<circularButtonStyle>
+				<circularBtnDisabledStyle/>
+				<activeButtonStyle/>
+			</circularButtonStyle>
+			<radioButtonItemTitleStyle/>
+		</radioButtonItemContainerDisabledStyle>
+	</radioButtonItemContainerStyle>
+```
+
+| Element                                   | Style Properties                  | Description                                           |
+| ----------------------------------------- | --------------------------------- | ----------------------------------------------------- |
+| `labelTextStyle`                          | This has all TextStyle properties | Collection label style                                |
+| `containerHorizontal`                     | This has all ViewStyle properties | Styles for horizontal orientation                     |
+| `radioButtonItemContainerStyle`           | This has all ViewStyle properties | Radio item container style                            |
+| `radioButtonItemContainerHorizontalStyle` | This has all ViewStyle properties | Radio item container style for horizontal orientation |
+| `radioButtonItemContainerDisabledStyle`   | This has all ViewStyle properties | Radio item container style for read-only collection   |
+| `circularButtonStyle`                     | This has all ViewStyle properties | Radio circular button style                           |
+| `circularBtnDisabledStyle`                | This has all ViewStyle properties | Disabled radio circular button style                  |
+| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio inner circular button style              |
+| `radioButtonItemTitleStyle`               | This has all TextStyle properties | Radio item label text style                           |
+
+
 ## 7 Images, Videos & Files
 
 Images, videos & files help your user app manage images and other files. For more information on these widgets, see [Images, Videos & Files](image-and-file-widgets).

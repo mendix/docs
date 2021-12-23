@@ -122,7 +122,7 @@ You need to use an [Import Mapping](/refguide/mapping-documents#import-mappings)
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
-        ![json-structure](attachments/receipt-processing/json-structure.png)
+        ![json-structure](attachments/invoice-processing/json-structure.png)
 
     3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
     4. In the **JSON Snippet** box, add the content of the JSON mapping file that you generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the Import Mapping.

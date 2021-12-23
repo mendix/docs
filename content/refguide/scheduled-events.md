@@ -38,8 +38,7 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 | Property | Description |
 | --- | --- |
 | Name | The name of the scheduled event. This name is stored in the `ScheduledEventInformation` objects at runtime, so that runs of the scheduled event are recognizable. |
-| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users, is not displayed in the Developer Portal, and doesn't influence the behavior of your application. |
-
+| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
 
@@ -157,7 +156,7 @@ In Mendix versions 9.9.0 and above, the `System.ScheduledEventInformation` can b
 When this setting is not specified, no cleanup is performed.
 
 {{% alert type="info" %}}
-When turning on the automatic cleanup after having used scheduled events for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will nog block the startup. It is recommended not to do this during a busy period.
+When turning on the automatic cleanup after having used scheduled events for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 
 In versions of Mendix below 9.9.0, you can clean up old events by creating a microflow for administrators to use if the table gets too large.

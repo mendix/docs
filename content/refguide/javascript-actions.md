@@ -86,13 +86,13 @@ The return parameter type determines the type of data a JavaScript action return
 
 ### 2.4 Platform
 
-JavaScript actions can be for a specific platform, it has an optional platform property with values:
+JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
 
 * All *(default)*
-* Web - can be used in a browser or hybrid mobile app
+* Web – can be used in a browser or hybrid mobile app
 * Native – can be used in a native mobile app
 
-When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. E.g. only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to "Native".
+When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. For example, only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to **Native**.
 
 ## 3 Type Parameter
 

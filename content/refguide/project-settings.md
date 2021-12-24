@@ -99,7 +99,7 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
@@ -267,15 +267,15 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 **User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
 
-## 7.2 Execution
+### 7.2 Execution
 
 Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
 
-### 7.2.1 Parallel Workflow Executions
+#### 7.2.1 Parallel Workflow Executions
 
 Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
 
-### 7.2.2 Parallel Task Executions
+#### 7.2.2 Parallel Task Executions
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 

@@ -1,7 +1,9 @@
 ---
 title: "Use a Client Certificate"
 category: "Integration"
-tags: ["integration", "web service", "client certficate"]
+tags: ["integration", "web service", "client certificate"]
+
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -24,7 +26,7 @@ This how-to will teach you how to do the following:
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
-1. Open your app in the Modele and go to **App** > **Settings**.
+1. Open your app in the Modeler and go to **App** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
 3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (ClientCertificateUsages) to specify which service should use which certificate if you use more than one certificate in your app.
 

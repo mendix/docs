@@ -1,5 +1,5 @@
 ---
-title: "Find, Find Advanced, and Find Usages"
+title: "Find, Find Advanced & Find Usages"
 parent: "edit-menu"
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 menu_order: 10

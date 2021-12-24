@@ -1,6 +1,6 @@
 ---
 title: "Feature Release Calendar (MxWorld 2021)"
-tags: ["Mendix World", "announcements", "Features", "Feature Release", "products", "features and products", Calendar]
+tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
 #notoc: true
 #layout: wide
 #toc-level: "3"
@@ -19,7 +19,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 ![Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation.](attachments/index/innovations.png)
 
 {{% alert type="info" %}}
-Features which were already released (Generally Available) on September 8, 2021 are marked **GA**. For more information on **Public Beta** releases, see [Mendix Beta](/releasenotes/beta-features/).
+Features which were already released (Generally Available) on September 8, 2021 are marked **GA**. For more information on **Public Beta** releases, see [Beta Versions(/releasenotes/beta-features/).
 {{% /alert %}}
 
 
@@ -27,7 +27,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 | Feature | Expected Release Date |
 | --- | --- |
-| Studio Pro IP protection & module APIs | Dec 2021 |
+| Consuming add-on modules | Jan 2022 |
+| Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
 
 ### 2.2 App Services Framework
 
@@ -44,7 +45,7 @@ Features which were already released (Generally Available) on September 8, 2021 
 | End-user services – app switcher | Dec 2021 |
 | End-user services – notifications | Mar 2022 |
 | End-user services – branding | Mar 2022 |
-| Studio workflow templates | Dec 2021 |
+| Studio workflow templates | Feb 2022 |
 | Studio expression editor | GA |
 
 ### 2.4 Control Center
@@ -90,6 +91,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 | --- | --- |
 | Studio Pro modernization | GA (enhancements in monthly releases) |
 | Studio Pro dark theme | Public Beta: Dec 2021 |
+| Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
+| BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 
 ### 2.8 Data Hub 2.0
 
@@ -103,7 +106,7 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 | Feature | Component | Expected Release Date |
 | --- | --- | --- |
-| Workflow | | Currently in Public Beta<br/>GA: Dec 2021 |
+| Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
 | Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Sep 2021 |
 | Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Nov 2021 |
 | Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | Dec 2021 |

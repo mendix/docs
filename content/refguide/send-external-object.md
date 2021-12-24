@@ -9,19 +9,19 @@ These activities can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Send External Object** can be used to persist changes to an external object.
+The **Send external object** activity can be used to persist changes to an external object.
 
 {{% alert type="info" %}}
-This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
+The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8)
 {{% /alert %}}
 
-## 2 Updatable attributes
+## 2 Updatable External Entities
 
-External entities may have updatable attributes. The values of these attributes can change, for instance in a widget or by using the [change object activity](change-object).
+External entities may have updatable attributes. The values of these attributes can change, for instance in a widget or by using the [change object activity](change-object). Associations between two external entities from the same OData service may be updatable as well.
 
-Use the **Send External Object** activity to send these changes to the app that publishes the entity. That app will persist the changes, overwriting the previous values of the attributes.
+Use the **Send External Object** activity to send the changed attributes and the changed associations that the entity owns to the app that publishes the entity. That app will persist the changes, overwriting the previous values of the attributes and associations.
 
-Only the changes are being sent, when two users make changes to different attributes, these changes are both applied separately.
+Only the changes are sent. If two users make changes to different attributes or associations, these changes are applied separately. For changed associations, this activity sends only the object identifiers of the objects that have been added to or removed from the association.
 
 This activity can only send objects from an OData service.
 
@@ -29,6 +29,6 @@ Some services may have updatable attributes that are part of the key of the enti
 
 ## 3 Related
 
-Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use the **Send External Object** activity instead.
+Persistable objects are persisted by using the [commit activity](committing-objects). External entities cannot be committed. Use this activity instead.
 
-The [save button](button-widgets) does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has the **Send External Object** activity.
+The [Save](button-widgets) button does not work for external entities, either. To persist changes to an external object on a page, use a microflow that has this activity.

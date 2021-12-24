@@ -457,11 +457,13 @@ For more information about runtime settings, read the [Runtime Customization](/r
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
-* `com.mendix.core.localfilesystem.cleaning.isEnabled`
-* `com.mendix.core.localfilesystem.cleaning.time`
 * `CACertificates`
 * `ClientCertificatePasswords`
 * `ClientCertificates`
+* `com.mendix.core.localfilesystem.cleaning.isEnabled`
+* `com.mendix.core.localfilesystem.cleaning.time`
+* `com.mendix.storage.azure.*`
+* `com.mendix.storage.s3.*`
 * `DatabaseHost`
 * `DatabaseJdbcUrl`
 * `DatabaseName`

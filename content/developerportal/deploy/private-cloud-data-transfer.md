@@ -42,7 +42,7 @@ The following file storage options are supported:
 
 The data transfer tool needs the following:
 
-* [pg_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) and [pg_restore](https://www.postgresql.org/docs/9.6/app-pgrestore.html) binaries in a location listed in the system path
+* [pg_dump](https://www.postgresql.org/docs/12/app-pgdump.html) and [pg_restore](https://www.postgresql.org/docs/12/app-pgrestore.html) binaries in a location listed in the system path
 * Network access to the PostgreSQL server and S3/Minio storage
   * If the database is running inside the cluster or on a Virtual Private Cloud (VPC), it might not be reachable from outside the cluster
 * Permissions to call the Kubernetes API
@@ -143,7 +143,7 @@ spec:
   terminationGracePeriodSeconds: 0
   containers:
   - name: pgtools
-    image: docker.io/bitnami/postgresql:9.6
+    image: docker.io/bitnami/postgresql:12
     command: ["sleep", "infinity"]
     lifecycle:
       preStop:
@@ -152,10 +152,15 @@ spec:
 ```
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
+If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).
 
 {{% alert type="warning" %}}
 Before importing a backup file into an environment, the environment should be stopped (scaled down to 0 replicas).
 Importing data into a running environment might cause the environment to stop working.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+These instructions have been validated in Windows Subsystem for Linux and macOS and might not work in the Windows commandline terminal, Git Bash or Powershell. 
 {{% /alert %}}
 
 To export data from an environment into a backup file, run the following commands (replace `{namespace}` with the environment's namespace, and `{environment}` with the environment's internal name):

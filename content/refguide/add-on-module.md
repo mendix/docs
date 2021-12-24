@@ -7,11 +7,11 @@ tags: ["studio pro", "protected module", "module"]
 
 ## 1 Introduction
 
-An **add-on** module is a special kind of the Marketplace module that adds functionality to your app. 
+An **add-on** module is a special kind of Marketplace module that adds functionality to your app. 
 
 Add-on modules may have Intellectual Property (IP) protection enabled and have the `.mxmodule` extension. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection). 
 
-An example of the add-on module is the **MS Teams Connector** module. {{% todo %}}[Add a link to the MS Teams Connector document.]{{% /todo %}} 
+An example of an add-on module is the **MS Teams Connector** module. {{% todo %}}[Add a link to the MS Teams Connector document.]{{% /todo %}} 
 
 When you download it, it shows up in a new **Add-ons** folder in the App Explorer. The main difference of the add-on module is that some functionality and elements, such as microflows and entities, are protected and, therefore, *hidden* from other users by the publisher. This means that add-on modules has a clear API: you know which elements you can use. For example, you cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 

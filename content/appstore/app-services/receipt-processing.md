@@ -48,7 +48,7 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 ### 3.1  Subscribing to Get Keys
 
 1. On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
-2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+2.  Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
     For the trial, you do not need to fill in this information.
     
@@ -93,7 +93,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
       
     10. Click **Download** to get the JSON structure.
    
-    {{% alert type="info" %}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
+    {{% alert type="info" %}}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
    
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.

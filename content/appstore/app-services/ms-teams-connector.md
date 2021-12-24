@@ -31,8 +31,8 @@ This app service is an add-on module. For more information, see Add-On Module].
 
 ### 1.3 Prerequisites
 
-The app service can only be used with Studio Pro 9 versions starting from [9.8](https://docs.mendix.com/releasenotes/studio-pro/9.8).
- {{% alert type="warning" %}}If your organization restricts use of **Webhooks** in Microsoft Teams,the Microsoft Teams Connector would not work.{{% /alert %}}
+* Your organization should allow you to use Webhooks in Microsoft Teams
+* The app service can only be used with Studio Pro 9 versions starting from [9.8](https://docs.mendix.com/releasenotes/studio-pro/9.8)
 
 ## 2 Installation
 

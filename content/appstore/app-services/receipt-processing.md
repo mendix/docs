@@ -74,33 +74,36 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
 1.  To create an import mapping, you need a JSON structure. Perform the following steps to generate the JSON structure:
     1. Log into the Marketplace with your Mendix account.
-    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+    2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.    
     3. Click **Receipt Processing** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
-
+   
         ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
-
-    5.  Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
-    6.  Click **Environment** to show the **Existing Models** list.
+   
+    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
+    6. Click **Environment** to show the **Existing Models** list.   
     7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
 
         ![pre trained model published](attachments/receipt-processing/pre-trained-receipt-model-pub.png)
-        
-    8.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
+       
+    8. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens. 
     9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
-
+   
         ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
-
-   10. Click **Download** to get the JSON structure.
+   
+    10. Click **Download** to get the JSON structure.
+   
+    {{% alert type="info" %}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
+   
 2.  To add the JSON structure to your app, perform the following steps:
     1.  In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the JSON structure.
     2.  From the pop-up menu, select **Add other** > [JSON structure](/refguide/json-structures).
 
         ![json-structure](attachments/receipt-processing/json-structure.png)
 
-   3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
-   4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
-   5. Click **OK** to save the changes and close the dialog box.
+    3. In the **Add JSON Structure** dialog box, enter a **Name** for the JSON Structure and click **OK**. The **JSON Structure** dialog box opens.
+    4. In the **JSON Snippet** box, add the content of the JSON structure that you have generated. The system converts the JSON snippet into a schema structure automatically. You will need this schema structure to create the import mapping.
+    5. Click **OK** to save the changes and close the dialog box. 
 3.  To create the import mapping, perform the following steps:
     1. In the **App Explorer** or **Project Explorer**, right-click the module or the folder where you want to add the import mapping.
     2. From the pop-up menu, select **Add other** > **Import mapping**.
@@ -109,7 +112,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
         ![schema-source-json-structure](attachments/receipt-processing/schema-source-json-structure.png)
 
-   5. Click **OK** to save the changes and close the dialog box.
+    5. Click **OK** to save the changes and close the dialog box.
 
 ### 4.2 Extracting the Data with the Trained Document Model {#extraction-activity}
 
@@ -126,7 +129,9 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 5. For **Mapping**, **Select** the import mapping that you created to define how extracted data should be mapped into an entity.
 6. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="info" %}} Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert type="info" %}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
+
+{{% alert type="info" %}}Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.3 Checking Statistics on the Usage Dashboard
 

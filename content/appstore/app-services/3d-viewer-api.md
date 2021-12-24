@@ -74,9 +74,7 @@ export async function GetProperties(selectedObject, propertyObject) {
 
 ### 3.2 Other Sample Code Snippets
 
-Starting from version xxx{{% todo %}}[Add the version number when it is decided]{{% /todo %}}, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via `RotatePart`, `ScalePart`, `SetPartColor`, `TranslatePart` API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the App Explorer in Studio Pro. You can directly use them to create your custom logic of manipulating models.
-
-Alternatively, check out the code implementation of these javascript actions{{% todo %}}[where is the code implantation?]{{% /todo %}}, along with the [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html). This may give you some ideas about how you want to make use of the 3D Viewer API.
+Starting from version xxx{{% todo %}}[Add the version number when it is decided]{{% /todo %}}, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via `RotatePart`, `ScalePart`, `SetPartColor`, `TranslatePart` API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the App Explorer in Studio Pro. You can directly use them to create your custom logic of manipulating models. Check out the code implementation of these javascript actions, along with the [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-central-1.amazonaws.com/index/v2.1/apidoc/3dviewer.html). This may give you some ideas about how you want to make use of the 3D Viewer API.
 
 ### 3.3 Feedback
 

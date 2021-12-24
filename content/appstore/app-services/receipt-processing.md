@@ -77,9 +77,9 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
     2. Go to **My Marketplace** and click [Subscriptions](/appstore/general/app-store-overview#subscriptions) on the left navigation menu. The **Subscriptions** page gives an overview of all the subscriptions of your organization.    
     3. Click **Receipt Processing** to open the service management dashboard.
     4.  Click **Manage Instance** to open the **Document Model Training** application.
-   
+      
         ![Document model training app login page](attachments/receipt-processing/document-model-training-app.png)
-   
+      
     5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account. 
     6. Click **Environment** to show the **Existing Models** list.   
     7.  Select pre-trained model. Make sure that the **Status** of the model is **Published**.
@@ -88,9 +88,9 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
        
     8. Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens. 
     9.  Drag a sample receipt into the box where it says **Drag & Drop Image Here**. The sample receipt should represent the receipts from which data will be extracted. You can also click the box and select the file.
-   
+      
         ![Sample Extraction dialog box](attachments/receipt-processing/sample-extraction-dialog-box.png)
-   
+      
     10. Click **Download** to get the JSON structure.
    
     {{% alert type="info" %}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
@@ -131,7 +131,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
 {{% alert type="info" %}Since the document model is pre-trained, the system does not generate a `confidence level` during the receipt processing; instead it generates a `not applicable` string.{{% /alert %}}
 
-{{% alert type="info" %}}Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By dong this, you can achieve full end-to-end automation.{{% /alert %}}
+{{% alert type="info" %}}Optionally for further automation, add [event handlers](/refguide/event-handlers) on the entity where you populate the extracted data. You can call your own microflow to process the extracted data when inserted into the entity. For example, you can modify, validate, and pass the data to next steps. By doing this, you can achieve full end-to-end automation.{{% /alert %}}
 
 ### 4.3 Checking Statistics on the Usage Dashboard
 

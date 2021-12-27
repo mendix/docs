@@ -135,6 +135,16 @@ To create the worksheet layout, follow these steps:
 
 ### 6.3 Configuring the Dynamic Column Data
 
+#### 6.3.1 Configuring Columns Using an Excel File
+
+This **Upload existing excel file** option allows you to upload an Excel file as a template for columns. After you upload an Excel file, the system automatically create columns for you with the corresponding column numbers and headers set in the Excel file. You only need to link the columns to the correct entity and attributes.
+
+To upload an Excel file, click the following icon:
+
+![upload-excel-file](attachments/using-the-excel-exporter/upload-excel-file.png)
+
+#### 6.3.2 Configuring Dynamic Column Data
+
 To configure the dynamic column data, follow these steps:
 
 1. On the **Column Data** tab, select **New** to create a new export column:

@@ -137,7 +137,7 @@ To create the worksheet layout, follow these steps:
 
 To configure the dynamic column data, follow these steps:
 
-1. On the **Column Data tab**, select **New** to create a new export column:
+1. On the **Column Data** tab, select **New** to create a new export column:
 
 	![](attachments/using-the-excel-exporter/18581905.png)
 

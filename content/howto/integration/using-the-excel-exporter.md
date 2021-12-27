@@ -43,14 +43,14 @@ Depending on the layout selected when the app was created, errors in Studio Pro 
 
 In this section, you will learn how to add the required pages in the app's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 
-1.  In Studio Pro, open **App** > **Navigation**.
-2.  Add a new item to the Navigation to open the page **MxModelReflection.MxObjects_Overview**:
+1.  In the [App Explorer](/refguide/project-explorer), go to **Navigation**.
+2.  Add a **New item** to the navigation to open the page **MxModelReflection.MxObjects_Overview**:
 
-	![](attachments/using-the-excel-exporter/18581165.png)
+	![new-menu-item-mxreflection](attachments/using-the-excel-exporter/new-menu-item-mxreflection.png)
 
 3.  Add a new item to the Navigation to open the page **XLSReport.Excel_Document_Overview**:
 
-	![](attachments/using-the-excel-exporter/18581909.png)
+	![new-menu-item-excel-exporter](attachments/using-the-excel-exporter/new-menu-item-excel-exporter.png)
 
 4.  Open **App Security** and assign these two modules to the Administrator user role:
 

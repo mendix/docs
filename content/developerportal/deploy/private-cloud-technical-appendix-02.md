@@ -98,7 +98,7 @@ The diagram below shows the steps which you need to take to install Mendix for P
 
 First, you create the namespace in the Mendix Developer Portal.
 
-You can then download `mxpc-cli`, the configuration tool, which is used to configure and install Mendix for Private Cloud components and is customized for  your Kubernetes namespace.
+You can then download `mxpc-cli`, the configuration tool, which is used to install and configure Mendix for Private Cloud components and is customized for your Kubernetes namespace.
 
 The configuration tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as deployments, pods, secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, you must switch to the correct target context before running the `mxpc-cli` tool.
 
@@ -120,9 +120,11 @@ When is finds the MendixApp CR, the Operator will initiate processing all of the
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-deployment.png)
 
-These dependency CRs include  `StorageInstance`, `Build`, and  `Endpoint` CRs. Each dependency CR is handled by its own controller.
+These dependency CRs include `StorageInstance`, `Build`, and `Endpoint` CRs. Each dependency CR is handled by its own controller.
 
 Once all dependencies are processed (report their status as Ready), the Operator will process the `Runtime` CR.
+
+![](attachments/private-cloud-tech-appendix/crd-controller-hierarchy.png)
 
 Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status.
 
@@ -163,8 +165,8 @@ The processing of the `MendixApp` CR is shown in the diagram below.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-build-image.png)
 
-When the `Build` controller detects that the `spec.sourceURL` attribute doesn't match the `status.sourceURL` in the `Build` CR, it will run the build pod.
-The build pod will then
+When the `Build` controller detects that the source URL (`spec.sourceURL`) in the `Build` CR has changed, it will run the build pod.
+The build pod will then do the following:
 
 * download the MDA from the specified `spec.sourceURL`
 * convert the MDA into a OCI image layer (app layer)
@@ -172,9 +174,7 @@ The build pod will then
     {{% alert type="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
 * push the resulting image to the image registry
 
-When the build pod successfully completes without errors, the container registry will contain an updated version of the app's image. The `Build` controller will then copy the `sourceURL` from the Pod to the `Build` CR's `status.sourceURL`. This way, the Mendix Operator knows which image is currently stored in the image registry.
-
-The `Build` CR's updated `status.sourceURL` will be transferred to the `MendixApp` CR's `status.sourceURL`, and every time this `status.sourceURL` is changed, the `Runtime` controller will restart the environment.
+When the build pod successfully completes without errors, the container registry will contain an updated version of the app's image. The `Build` controller signals to the `MendixApp` CR that there is a new version of the app, and this change triggers the `Runtime` controller to restart the environment.
 
 If the build pod fails with an error, it is likely to be because of a configuration issue, and the `Build` controller will not try to run the build pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the build pod. Only then will the `Build` controller attempt to provision storage again.
 
@@ -186,7 +186,9 @@ Mendix for Private Cloud offers three ways to route traffic from an HTTP listene
 * OpenShift Routes
 * Service only
 
-The Ingress and Route options allow you to quickly start using an existing Ingress controller or OpenShift router. With both these options a Kubernetes service is created as well to allow load balancing between replicas of your Mendix app. If you choose the service only option, you can route traffic directly from a load balancer such as AWS CLB or NLB, or manually create and manage Ingress resources.
+The Ingress and Route options allow you to quickly start using an existing Ingress controller or OpenShift router to route traffic to a Kubernetes service. With both these options the Kubernetes service is created automatically. The Kubernetes service performs load balancing – routing traffic to the individual replicas (pods) of your Mendix app.
+
+If you choose the *service only* option, you can route traffic to the service directly from a load balancer such as AWS CLB or NLB, or manually create and manage Ingress resources.
 
 #### 4.3.1 Using Kubernetes Ingress
 
@@ -208,7 +210,7 @@ If you are using OpenShift Routes, the OpenShift router is already configured an
 #### 4.3.3 The Endpoint Controller
 
 When a new environment is created in the Mendix Operator, the Operator will create a service object (for all endpoint types: service only, ingress, or route) together with the ingress or route object, if required.
-After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl so that a Mendix app can always know its URL.
+After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl so that a Mendix app can always know its URL. Some marketplace modules, for example [SAML](https://marketplace.mendix.com/link/component/1174), need this information to work correctly.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-applicationrooturl.png)
 

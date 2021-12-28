@@ -69,4 +69,4 @@ To consume an OData entity, do the following:
  2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
  3. Drag the entity to the domain model.
 
-Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some [limitations](/refguide/external-entities#3-external-entity-limitations).
+Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities#limitations) section in *External Entities*. 

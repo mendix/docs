@@ -21,7 +21,7 @@ You also might not see the full domain model of the module, only entities, attri
 
 {{% alert type="warning" %}}
 
-Mendix Studio does not support add-on modules, you will not be able to open the app that uses them in Studio.
+Mendix Studio does not currently support add-on modules, you will not be able to open any apps in Studio that use add-on modules.
 
 {{% /alert %}}
 

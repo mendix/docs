@@ -41,7 +41,9 @@ When you publish an entity in a published OData service, clients can read the da
 2. Select the **Customer** entity and click **Edit**.
 3. Check the **Updatable** checkbox.
 
+{{% alert type="info" %}}
 Studio Pro version 9.9.1 does not support publishing insertable or deletable resources yet.
+{{% /alert %}}
 
 ## 4 Viewing OData Capabilities in Data Hub Catalog
 
@@ -67,11 +69,11 @@ To consume an OData entity, do the following:
  2. Select your entity from the **Data Hub** pane. By default it shows only results published to the production environment. If you also want to see results from other environments, click the filter icon and check the **Show development environment** checkbox.
  3. Drag the entity to the domain model.
 
-Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use them to model your app as you would normally do. The next section describes some limitations that you should be aware of.
+Now you have an external entity in your domain model. Depending on the capabilities, for example the **CRUD** capabilities, you can generally use external entities to model your app as you would normally do. The section below describes limitations to take into account.
 
-## 6 Limitations of external entities
+## 6 External Entities Limitations
 
- External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object) to persist changes to external entities. This means that:
+External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object) to persist changes to external entities. This means the following:
  
- 1. the Commit activity does not work. Use *Send External Object* instead.
- 2. on pages, the Save [button](/refguide/button-widgets) and the [Save Changes event](/refguide/on-click-event#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using *Send External Object* instead.
+ * The **Commit** activity does not work. Use **Send External Object** instead.
+ * On pages, the Save [button](/refguide/button-widgets) and the [Save Changes event](/refguide/on-click-event#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.

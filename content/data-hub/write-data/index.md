@@ -14,7 +14,7 @@ This how-to builds on the information provided in [How to Share Data Between App
 * See which capabilities a particular entity, attribute, or association has in the Data Hub Catalog
 * Consume an updatable OData resource in your Mendix app
 
-The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro version 9.6 and above takes advantage of some of these these capabilities. The Data Hub Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
+The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Data Hub Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro sticks with the OData definitions.
 
 Note the following terminology differences described in the table below:
 

@@ -33,7 +33,7 @@ There are three ways to install a Marketplace component:
 
 * [Download]( #downloading) the component from the Marketplace within Studio Pro (for all types of marketplace components)
 * [Import](#import) the component from the **App Explorer** (only for modules and connectors)
-* Manually [add](#add) the component into the app directory (only for widgets and *.mxmodule* files)
+* [Manually add](#add) the component into the app directory (only for widgets and *.mxmodule* files)
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
@@ -75,12 +75,11 @@ There are three ways to install a Marketplace component:
 
         * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-          {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
-          
+          {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration).{{% /alert %}}
         
     2. Click **Import**.
     
-    2. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
+    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
     
 9. If you download an app, the **Download Marketplace App** dialog box opens. Perform the following steps:
 
@@ -120,15 +119,17 @@ There are three ways to install a Marketplace component:
 
       * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-        {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
+        {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration).{{% /alert %}}
 
 6. Click **Import**. 
 
-7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
+7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
+
+You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Add Content into the App Directory
 
-{{% alert type="info" %}}You can only use this procedure to import widgets and *.mxmodule* files. You cannot use it to import modules that are *.mdk* files.{{% /alert %}}
+{{% alert type="info" %}}You can only use this procedure to import widgets and *.mxmodule* files. You cannot use it to import modules that are *.mpk* files.{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and with your Mendix credentials.
 
@@ -159,7 +160,9 @@ There are three ways to install a Marketplace component:
    
 8. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
 
-9. Wait until the synchronization is finished. You can find the added widget in the **Toolbox** and you can find the added *.mxmodule* in the **App Explorer**.
+9. Wait until the synchronization is finished.
+
+You can find the added widget in the **Toolbox** and you can find the added *.mxmodule* in the **App Explorer**.
 
 ## 4 Using Content in Studio Pro
 
@@ -244,15 +247,15 @@ To configure the widget, follow these steps:
 
 After you [install](#install) a module in your app, you can use it.
 
-A module includes the whole functionality and integration that can be very helpful when you are building your application. A module contains a domain model, pages, and microflow logic. Sometimes, additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
+A [module](/refguide/modules) includes the whole functionality and integration that can be very helpful when you are building your application. It can contain a domain model, pages, microflow logic, and other items. Sometimes, additional [widgets](/refguide/widgets) are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 
-A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
+A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
 #### 4.2.1 Updating a Module to a Newer Version{#update-module}
 
 To update a module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 
-{{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
+{{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration).{{% /alert %}}
 
 ![Import Module dialog box](attachments/app-store-content/import-module.png)
 
@@ -286,13 +289,19 @@ You cannot create a new app in an existing repository that is not empty.
 
 Downloading a theme is very similar to downloading a widget. Like a widget, a theme is added to the app structure – in the **theme** folder of your app. A theme downloaded from the Marketplace will immediately be set as the active theme for your app. You can find out which theme is active for your app in the app **Settings**.
 
-{{% alert type="info" %}}
-If you want to delete a theme from the app, go to **App** > **Show App Directory in Explorer** to open the app folder, and then remove the ZIP file from the **theme** folder.
-{{% /alert %}}
+#### 4.4.1 Deleting a Theme
+
+1. In Studio Pro, go to **App** > **Show App Directory in Explorer** on the menu bar to open the app directory.
+2. Go to the **theme** folder.
+3. Remove the ZIP file for the theme.
+4. In Studio Pro, go to **App** > **Synchronize App Directory**.
+
+The theme is removed from your app.
 
 ## 5 Read More
 
 * [Marketplace Overview](app-store-overview)
+* [Import & Export Objects](/howto/integration/importing-and-exporting-objects#3-exporting-objects)
 * [How to Share Marketplace Content](share-app-store-content)
 * [Marketplace Content Support](app-store-content-support)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties)

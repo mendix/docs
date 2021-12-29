@@ -536,7 +536,7 @@ The widget style properties are as follows:
 	<radioButtonItemContainerHorizontalStyle/>
 	<radioButtonItemContainerDisabledStyle/>
 		<circularButtonStyle>
-			<circularBtnDisabledStyle/>
+		<circularBtnDisabledStyle/>
 			<activeButtonStyle/>
 		</circularButtonStyle>
 		<radioButtonItemTitleStyle/>

@@ -1,6 +1,6 @@
 ---
 title: "CAB.10 - AutoComplete"
-parent: "ht-two-create-unsupported-widget-actions"
+parent: "ht-two-crt-unsup-widg-acts"
 description: "This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget."
 tags: ["ATS", "testing"]
 ---

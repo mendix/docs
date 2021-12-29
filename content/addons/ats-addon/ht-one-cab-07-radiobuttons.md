@@ -1,6 +1,6 @@
 ---
 title: "CAB.07 - Radio Buttons"
-parent: "ht-one-create-unsupported-widget-actions"
+parent: "ht-one-crt-unsup-widg-acts"
 description: "Explains step by step how to create an Unsupported Widget action for the Mendix Radio Buttons widget."
 tags: ["ATS", "testing"]
 ---

@@ -7,16 +7,16 @@ tags: ["mpk", "import", "export", "document", "module", "widget"]
 
 ## 1 Introduction
 
-In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use 's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
+In Mendix, you can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use built-in import and export functions to share content between your own apps, import unofficial modules, and share entire apps.
 
 {{% alert type="warning" %}}
-Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
+Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *app* package.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
 * Import and export the following Studio Pro objects:
-    * projects
+    * apps
     * modules
     * widgets
     * module documents such as pages or microflows
@@ -29,11 +29,11 @@ Be careful when importing objects, as you can overwrite your existing work. Pay 
 
 ### 2.1 Importing App Packages
 
-A Mendix package (*.mpk*) file can store a complete Mendix project.
+A Mendix package (*.mpk*) file can store a complete Mendix app.
 
 To import a complete Mendix app package, follow these steps:
 
-1. Click the **File** menu in  and select **Import App Package**:
+1. Click the **File** menu in and select **Import App Package**:
 
     ![](attachments/18448739/file-import-app-project.png)
 
@@ -47,13 +47,15 @@ To import a complete Mendix app package, follow these steps:
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
    
-3.  Click **OK**, and your app will be loaded in .
+3.  Click **OK**, and your app will be loaded in.
 
-### 2.2 Importing Module Packages
+### 2.2 Importing Module Packages {#import-module}
 
-A Mendix package (*.mpk*) file can store a Mendix app module.
+Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on modules](/refguide/add-on-module). 
 
-To import module packages, follow these steps:
+#### 2.2.1 Importing a Module Package Through the App Explorer
+
+To import module packages through the App Explorer in Studio Pro, follow these steps:
 
 1. Right-click your app in the **App Explorer** and select **Import Module Package**.
 
@@ -70,11 +72,29 @@ To import module packages, follow these steps:
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 
-5. Click **OK**. You will see your new or replaced module in the **App Explorer**.
+5. Click **OK**. 
 
-    You will also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
+You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** section. In this example, the existing module has been deleted and replaced by the newly imported module:
 
-    ![](attachments/18448739/18582109.png)
+![](attachments/18448739/18582109.png)
+
+#### 2.2.2 Importing a Add-On Module Package Through the App Directory
+
+{{% alert type="info" %}}
+
+You can only use this procedure to import add-on modules (*mxmodule* files).
+
+{{% /alert %}}
+
+If you would like to import an add-on module (the *mxmodule* file) to your app, you can add it manually to the app directory. Follow the steps below:
+
+1. Go to **App** > **Show App Directory in Explorer**. 
+2. Add *.mxmodule* file to the **modules** folder (you need to create this folder if it is not there). 
+3. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
+
+
+The add-on module is added to the **App Explorer**.
+
 
 ### 2.3 Importing Module Documents
 

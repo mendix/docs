@@ -31,9 +31,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three ways to install a Marketplace component:
 
-* [Download]( #downloading) the component from the Marketplace within Studio Pro
+* [Download]( #downloading) the component from the Marketplace within Studio Pro (for all types of marketplace components)
 * [Import](#import) the component from the **App Explorer** (only for modules and connectors)
-* Manually [add](#add) the component into the app directory (only for *.mxmodule* files for modules and *.mpk* files for widgets)
+* Manually [add](#add) the component into the app directory (only for widgets and *.mxmodule* files)
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
@@ -47,7 +47,7 @@ There are three ways to install a Marketplace component:
 
     The Marketplace opens within Studio Pro. The **Categories** menu item on the left side gives an overview of which types of content are available.
 
-4. Use the **Search** bar to find the component that you need to download.
+4. Use the **Search** bar to find the component that you want to download.
 
     {{% alert type="warning" %}}Results for Marketplace content searches within Studio Pro may differ from those in the [online Marketplace](app-store-overview) due to synchronization issues.{{% /alert %}}
 
@@ -65,33 +65,34 @@ There are three ways to install a Marketplace component:
 
     ![All Versions tab](attachments/app-store-content/versions.png)
 
-7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget or connector in the **Toobox**.
+7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toobox**.
 
 8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
 
     1. In the **Import Module** dialog box, select one of these options:
 
-        * **Add as a new module** – if you select this option, new entities are created in your app
+        * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
 
-        * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
+        * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-          {{% alert type="warning" %}}In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app. If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
-
+          {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
+          
+        
     2. Click **Import**.
-
+    
     2. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
-
+    
 9. If you download an app, the **Download Marketplace App** dialog box opens. Perform the following steps:
 
-    1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**.
-    2. After you do step 1, more settings become available. Change settings if needed.
+    1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. More settings become available.
+    2. Change settings if needed.
     3. Click **OK**.
 
-    After the app is downloaded, it opens automatically in Studio Pro.
+    After the app is downloaded, the app opens automatically in Studio Pro.
 
 ### 3.2 Import Content from the App Explorer
 
-{{% alert type="info" %}}This procedure is only used to import a module or a connector. You cannot use it to import a widget, a template, or an app.{{% /alert %}}
+{{% alert type="info" %}}You can only use this procedure to import modules and connectors. You cannot use it to import a widget, a template, or an app.{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and with your Mendix credentials.
 
@@ -107,36 +108,43 @@ There are three ways to install a Marketplace component:
 
       ![releases-download](attachments/app-store-content/releases-download.png)
 
-4. In the **App Explorer**, right-click the app, click **Import module package**, and then select the module or the connector that you downloaded.
+4. In the **App Explorer**, right-click the app, click **Import module package**, and then select the component that you downloaded.
 
       ![import-module-in-app-explorer](attachments/app-store-content/import-module-in-app-explorer.png)
 
       The **Import Module** dialog box opens. 
 
-5.  In the **Import Module** dialog box, select one of these options:
+5. In the **Import Module** dialog box, select one of these options:
 
-    * **Add as a new module** – if you select this option, new entities are created in your app
-    * **Replace existing module** – if you select this option, you need to specify which **Module to replace**
+      * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes will be created in your app
 
-    {{% alert type="warning" %}}In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app. If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
+      * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
+
+        {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
 
 6. Click **Import**. 
 
-7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**.
+7. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Add Content into the App Directory
 
-{{% alert type="info" %}}Only use this procedure to import *.mxmodule* files for modules and *.mdk* files for widgets. You cannot use it to import *.mdk* files for modules.{{% /alert %}}
+{{% alert type="info" %}}You can only use this procedure to import widgets and *.mxmodule* files. You cannot use it to import modules that are *.mdk* files.{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and with your Mendix credentials.
 
-2. **Search** the component and open the page.
+2. **Search** the component to find the component.
 
-3. Click **Download** to download the component.
+2. Open the component page.
 
-   {{% alert type="info" %}}Make sure that you download the correct version. The version must be compatible with the Studio Pro version that you use. Do check the **Mendix Version** on the **Overview** tab. Do not download a compontent that requires a higher **Mendix version** than the Studio Pro that you use. You can download older versions of the component on the **All Versions** tab.{{% /alert %}}
+4. Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
-   ![All Versions tab](attachments/app-store-content/versions.png)
+   * Click **Download** to download the latest version of the component
+
+   ![All Versions tab](attachments/app-store-content/marketplace-rating-version-requirement.png)
+
+   * To download an older version, go to the **Releases** tab and **Download** the right version
+
+     ![marketplace-rating-all-releases-download](attachments/app-store-content/marketplace-rating-all-releases-download.png)
 
 4. Open Studio Pro and sign in with your Mendix credentials.
 
@@ -146,21 +154,16 @@ There are three ways to install a Marketplace component:
 
 7. Add the component into the app directory as follows:
 
+   * If it is a widget, add it into the **widgets** folder
    * If it is an *.mxmodule* file, add it into the **modules** folder – you need to create this folder if it is not present
-
-   * If it is an *.mpk* file for a widget, add it into the **widgets** folder
-
+   
 8. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
 
-9. Wait until the synchronization is finished. You can find the added module in the **App Explorer**, and you can find the added widget in the **Toolbox**.
+9. Wait until the synchronization is finished. You can find the added widget in the **Toolbox** and you can find the added *.mxmodule* in the **App Explorer**.
 
 ## 4 Using Content in Studio Pro
 
-After you download a component, you can use the component in your app. 
-
-{{% alert type="info" %}}
-For more information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
-{{% /alert %}}
+After you download a component, you can use the component in your app. For detailed information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
 
 ![Documentation tab](attachments/app-store-content/widget-documentation.png)
 
@@ -168,7 +171,7 @@ For more information on how a component works, check the **Documentation** tab o
 
 #### 4.1.1 Adding a Widget to a Page
 
-After you [install](#install) the widget from the marketplace to your app, there are two ways to add the widget from the Marketplace via Studio Pro:
+After you [install](#install) the widget from the marketplace in your app, there are two ways to add the widget from the Marketplace via Studio Pro:
 
 * Add a widget from the **Toolbox**
 
@@ -178,7 +181,7 @@ After you [install](#install) the widget from the marketplace to your app, there
 
 1. Open the page where you want to add the widget.
 
-2. In the **Toolbox**, **search** the name of the widget, for example *Rating*. The widget is found.
+2. In the **Toolbox**, **search** the name of the widget, for example *Rating to find the widget.
 
    ![Rating widget found in the toolbox](attachments/app-store-content/toolbox-rating.png)
 
@@ -190,39 +193,19 @@ After you [install](#install) the widget from the marketplace to your app, there
 
     ![Add widget](attachments/app-store-content/add-widget.png)
 
-3. In the **Filter** bar, enter the name of the widget, for example *Rating*. The widget is found. 
+3. In the **Filter** bar, enter the name of the widget, for example *Rating*, to find the widget.
 
     ![Rating widget highlighted in Select Widget dialog box](attachments/app-store-content/select-widget.png)
 
 4. Click the widget and then click **Select**. 
 
-5. In the page of your app, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
+5. In the page, click where you want to drop the widget. The widget is added to the location where the mouse pointer is.
 
     ![Rating widget in the page](attachments/app-store-content/widget-dropped-in-page.png)
 
 #### 4.1.2 Updating a Widget to a Newer Version
 
-To update a widget in your app to a newer version, follow these steps:
-
-1. Open the app in which you want to update the widget.
-
-2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
-
-   ![Marketplace icon](attachments/app-store-content/toolbar.png)
-
-3. Find the widget in the Marketplace.
-
-4. Click the component or **Read more** to view the details of the component.
-
-5. Go to the **All Versions** tab.
-
-   ![all-versions-tab](attachments/app-store-content/all-versions-tab.png)
-
-6. Click **Download** to download the latest version. The **Question** dialog box opens and asks if you want to overwrite the existing package.
-
-7. Click **Yes** to proceed. 
-
-The widget is updated to the latest version.
+To update a widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
 #### 4.1.3 Deleting a Widget
 
@@ -238,7 +221,7 @@ The widget is removed from your app.
 
 #### 4.1.4 Configuring a Widget
 
-After you place a widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane) pane. That is because you still need to configure the widget.
+After you place a widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane) pane. That is because you still need to configure the widget. In this procedure, we use the Ratings widget as an example.
 
 To configure the widget, follow these steps:
 
@@ -255,47 +238,41 @@ To configure the widget, follow these steps:
 
     ![ProductRating selected in Select Attribute dialog box](attachments/app-store-content/select-attribute.png)
 
-4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane should disappear.
+4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
 ### 4.2 Using a Module {#module}
 
-After you [install](#install) a module, you can use it. A module includes the whole functionality and integration that can be very helpful when you are building your application.
+After you [install](#install) a module in your app, you can use it.
 
-A module contains a domain model, pages, and microflow logic. Sometimes, additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
+A module includes the whole functionality and integration that can be very helpful when you are building your application. A module contains a domain model, pages, and microflow logic. Sometimes, additional widgets are added when you download a module. For example, **Image Crop** module contains the **Image Cropper** widget.
 
-A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). In addition, a module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
+A module downloaded from the Marketplace stores files if the module contains files (for example, files that are contained in the **userlib** or **resource** folders). A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
-#### 4.2.2 Updating a Module
+#### 4.2.1 Updating a Module to a Newer Version{#update-module}
 
-1. Open the app in which you want to update the module.
+To update a module in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app. When the **Import Module** dialog box opens, select **Replace existing module** and click **Import**.
 
-2. Click the Marketplace icon in the top menu bar to open the Marketplace in Studio Pro:
+{{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. The user data will only stay if you have not changed the names and types of entities, attributes, and associations. {{% /alert %}}
 
-   ![Marketplace icon](attachments/app-store-content/toolbar.png)
+![Import Module dialog box](attachments/app-store-content/import-module.png)
 
-3. Find the module in the Marketplace.
+#### 4.2.2 Deleting a Module
 
-4. Click the module or **Read more** to view the details of the module.
+1. In the **App Explorer**, find the module that you want to delete.
 
-5. Go to the **All Versions** tab.
+2. Right-click the module and select **Delete** from the pop-up menu. A warning pop-up window opens.
 
-6. Click **Download** to download the latest version. The **Import Module** dialog box opens.
+   {{% alert type="warning" %}}
+   Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.
+   {{% /alert %}}
 
-   ![Import Module dialog box](attachments/app-store-content/import-module.png)
+3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
 
-7. Select **Replace existing module** and click **Import**.
-
-8. When the **Warning** dialog box shows the files that will be overwritten, click **OK**.
-
-9. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
-
-The module is updated to the latest version.
+The module and user data are removed from your app.
 
 #### 4.2.3 Configuring a Module
 
-Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, when you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
-
-For details on configuring the Email with Templates module in Studio Pro, see [Email with Templates](/appstore/modules/email-with-templates).
+Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the Email with Templates module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection) module and [Encryption](/appstore/modules/encryption) module to make the errors disappear. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
 ### 4.3  Using an App or Layout {#project-layout}
 

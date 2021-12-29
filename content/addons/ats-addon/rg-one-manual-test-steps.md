@@ -1,6 +1,6 @@
 ---
 title: "Manual Test Steps"
-parent: "rg-one-test-development"
+parent: "rg-one-test-dev"
 menu_order: 3
 ---
 

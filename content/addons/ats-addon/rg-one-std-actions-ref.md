@@ -1,6 +1,6 @@
 ---
 title: "Standard Actions Reference"
-parent: "rg-one-test-development"
+parent: "rg1-test-dev"
 ---
 
 These sections provide you with information on all the predefined actions in ATS:

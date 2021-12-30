@@ -9,7 +9,7 @@ tags: ["studio pro", "grid", "data grid", "template grid"]
 
 Grids show a list of objects and include a [data grid](data-grid) and a [template grid](template-grid). The main difference between these grids is the way the list of objects is displayed: a data grid shows it in columns, while a template grid shows it in tiles.
 
-[Data grid 2](appstore/modules/data-grid-2) is a special type of grid, available as part of the [Data Widgets](https://marketplace.mendix.com/link/component/116540) Marketplace module.
+[Data grid 2](/appstore/modules/data-grid-2) is a special type of grid, available as part of the [Data Widgets](https://marketplace.mendix.com/link/component/116540) Marketplace module.
 
 Grids have the following components in common:
 
@@ -21,11 +21,15 @@ Grids have the following components in common:
 
 If your app needs to display data on a page, different widgets suit different use cases. Determine what type of data you need to display, imagine how you would like it presented, and then consult the options below.
 
+### 2.1 Data Grid
+
 The [data grid](data-grid) widget is well suited for these cases:
 
 * Displaying data as a table
 * Employing several rows and columns
 * Displaying simple text data
+
+### 2.2 Template Grid
 
 The [template grid](template-grid) widget is well suited for these cases:
 
@@ -34,7 +38,9 @@ The [template grid](template-grid) widget is well suited for these cases:
 * Adding a button to your list item
 * Creating a custom layout for your items
 
-The [data grid 2](appstore/modules/data-grid-2) widget is an expanded version of the standard data grid widget for displaying content in a tabular form. It is well suited for these cases:
+### 2.3 Data Grid 2
+
+The [data grid 2](/appstore/modules/data-grid-2) widget is an expanded version of the standard data grid widget for displaying content in a tabular form. It is well suited for these cases:
 
 * Using personalizable data ordering and filtering
 * Having a responsive layout
@@ -45,6 +51,6 @@ The [data grid 2](appstore/modules/data-grid-2) widget is an expanded version of
 
 * [Data Grid](data-grid)
 * [Template Grid](template-grid)
-* [Data Grid 2](appstore/modules/data-grid-2)
+* [Data Grid 2](/appstore/modules/data-grid-2)
 * [Data Containers](data-widgets)
 * [Properties Common in the Page Editor](common-widget-properties)

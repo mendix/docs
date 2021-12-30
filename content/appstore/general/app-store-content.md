@@ -56,11 +56,11 @@ There are three ways to install a Marketplace component:
 
     * Click **Download** to download the latest version of the component
 
-    ![Details of Rating widget](attachments/app-store-content/item-details.png)
+        ![Details of Rating widget](attachments/app-store-content/item-details.png)
 
     * To download an older version, go to the **All Versions** tab and **Download** the right version.
 
-    ![All Versions tab](attachments/app-store-content/versions.png)
+        ![All Versions tab](attachments/app-store-content/versions.png)
 
 7. If you download a widget, wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported widget in the **Toobox**.
 8. If you download a component or a connector, the **Import Module** dialog box opens. Perform the following steps:
@@ -70,7 +70,7 @@ There are three ways to install a Marketplace component:
 
         * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
 
-        {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration).{{% /alert %}}
+            {{% alert type="warning" %}}If you have made any changes to the existing module, selecting **Replace existing module** option will replace all the changes that you made, for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced. Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration).{{% /alert %}}
         
     2. Click **Import**.
     3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
@@ -250,9 +250,7 @@ The widget is removed from your app.
 1. In the **App Explorer**, find the module that you want to delete.
 2.  Right-click the module and select **Delete** from the pop-up menu. A warning pop-up window opens.
 
-    {{% alert type="warning" %}}
-    Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.
-    {{% /alert %}}
+    {{% alert type="warning" %}} Once you delete a module, all your user data will be lost – even if you later install the module again. If you want to replace the existing module with a different version, do not delete the module – [update the module](#update-module) instead.{{% /alert %}}
 
 3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
 

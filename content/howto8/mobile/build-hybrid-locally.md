@@ -6,9 +6,9 @@ tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 
 {{% alert type="warning" %}}
-Hybrid mobile packages require Node JS 12 with NPM v6. Later versions fail to install and compile dependencies correctly. We are working to update the solution to support later versions the soonest.
+Hybrid mobile packages require Node.js v12 with npm v6. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
 
-To support multiple node/npm versions on windows you can use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
+To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
 {{% /alert %}}
 
 ## 1 Introduction

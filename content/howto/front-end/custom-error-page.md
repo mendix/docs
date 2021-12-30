@@ -7,17 +7,17 @@ tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 
 ## 1 Introduction
 
-Whenever your application is stopped, you are presented with the infamous green monsters. To present your app users with a more professional looking page when the application is down, Mendix enables the creation of custom error pages on *Mendix Cloud*.
+Whenever your application is stopped, you are presented with the default Mendix error page. However, you can make a custom error page on *Mendix Cloud* for a more tailored user experience. 
 
-You can create an `offline.html` page, a `404.html` page, and a `403.html` page.
+Specifically, you can create an `offline.html` page, a `404.html` page, and a `403.html` page.
 
 The different files serve different purposes:
 
 * `offline.html`: will be served when your application has been stopped manually
 * `404.html`: will be served whenever a path does not exist
-* `403.html`: will be served when access to a resource is denied, because an IP filter has been implemented or because of client certificate restrictions.
+* `403.html`: will be served when access to a resource is denied, because an IP filter has been implemented or because of client certificate restrictions
 
-If you do not create these files, the default "green monsters" will be used instead for each scenario.
+If you do not create these files, the default error page will be used for each scenario:
 
 ![](attachments/customerror-page/monsters.png)
 

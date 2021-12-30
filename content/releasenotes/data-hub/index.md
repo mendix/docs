@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2021
 
+### December 30th, 2021
+
+#### Fixes
+
+* We fixed an issue where a user registered an endpoint with an environment URL and the same relative path combination. As a result an endpoint got reused from a different company.
+
 ### December 23rd, 2021
 
 #### Fixes

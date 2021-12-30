@@ -19,7 +19,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default error page will be used for each scenario:
 
-![](attachments/customerror-page/monsters.png)
+![](attachments/customerror-page/custom-error-page.png)
 
 **This how-to will teach you how to do the following:**
 

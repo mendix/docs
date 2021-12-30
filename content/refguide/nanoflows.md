@@ -64,8 +64,8 @@ A nanoflow is composed of elements. The following categories are used:
 * [Decisions](#decisions) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Loop](loop) is used to iterate over a list of objects
-* [Parameter](#parameter) is data that serves as input for the microflow.
-* [Annotation](#annotation) is an element that can be used to put comments in a microflow.
+* [Parameter](#parameter) is data that serves as input for the nanoflow.
+* [Annotation](#annotation) is an element that can be used to put comments in a nanoflow.
 
 ### 4.1 Events {#events}
 

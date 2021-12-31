@@ -158,7 +158,7 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 10. Change the settings of the **Text area** widget as follows:
    1. Double-click the **Text area** widget to open the **Edit Text Area** dialog box.
    2. For **Data source**, **Select** the **InputText** attribute from **Data view**.
-   2. For **Label caption**, enter *Text*.
+   3. For **Label caption**, enter *Text*.
    4. Click **OK** to save the settings. 
 11. Inside the **Data view** widget, add a second **Group box** widget.
 12. Change the settings of the **Group box** widget as follows:

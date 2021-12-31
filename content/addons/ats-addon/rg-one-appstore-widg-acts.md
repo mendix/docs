@@ -1,6 +1,6 @@
 ---
 title: "Mendix Marketplace Widgets Actions"
-parent: "rg-one-standard-actions-reference"
+parent: "rg-one-std-actions-ref"
 ---
 
 **Mendix Marketplace Widget Actions** contains the following sections:

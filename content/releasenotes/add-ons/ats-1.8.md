@@ -144,13 +144,13 @@ These are the new widgets now supported by ATS:
 * [CKEditor](https://marketplace.mendix.com/link/component/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
 * [Bootstrap Wysiwyg Editor](https://marketplace.mendix.com/link/component/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)
 
-The [Action Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference) lists the new actions.
+The [Action Reference Guide](/addons/ats-addon/rg-one-std-actions-ref) lists the new actions.
 
 ### Action Reference Guide and Tutorial
 
 If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a Tutorial that explains how to create an action based on the example of the Boolean Slider widget.
 
-We've also documented all our actions in a [Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
+We've also documented all our actions in a [Reference Guide](/addons/ats-addon/rg-one-std-actions-ref). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
 
 ### Improved Recording
 

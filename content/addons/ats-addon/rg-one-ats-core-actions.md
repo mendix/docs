@@ -1,6 +1,6 @@
 ---
 title: "ATS Core Actions"
-parent: "rg-one-standard-actions-reference"
+parent: "rg-one-std-actions-ref"
 ---
 
 This section contains these documents:

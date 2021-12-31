@@ -1,6 +1,6 @@
 ---
 title: "Object Types in ATS"
-parent: "rg-one-test-development"
+parent: "rg-one-test-dev"
 menu_order: 1
 ---
 

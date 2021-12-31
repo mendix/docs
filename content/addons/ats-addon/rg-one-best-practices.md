@@ -1,6 +1,6 @@
 ---
 title: "Best Practices for Writing Custom Actions"
-parent: "rg-one-test-development"
+parent: "rg-one-test-dev"
 menu_order: 6
 ---
 

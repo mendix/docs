@@ -23,7 +23,7 @@ In most cases, you will only need what is contained in the **TextToSpeech** > **
 
 ### 1.1 Typical Use Cases
 
-You can use this app service to easily convert written text into voice in your mendix apps. You can perform some basic operations, such us synthesizing speech from given text with different language options, and playing synthesized audio with the **AudioPlayer** widget.
+You can use this app service to easily convert written text into voice in your Mendix apps. You can perform some basic operations, such us synthesizing speech from given text with different language options, and playing synthesized audio with the **AudioPlayer** widget.
 
 ### 1.2 Features
 

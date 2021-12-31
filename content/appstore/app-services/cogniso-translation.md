@@ -22,7 +22,7 @@ In most cases, you will only need what is contained in the **Translation** > **U
 
 ### 1.1 Typical Use Cases
 
-You can use this app service on mendix cloud that enables you to easily perform text translation with multi-language support in your mendix applications.
+You can use this app service on Mendix cloud that enables you to easily perform text translation with multi-language support in your Mendix applications.
 
 ### 1.2 Features
 

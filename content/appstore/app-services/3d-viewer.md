@@ -65,7 +65,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### 1.4 Prerequisites
 
-This app service can only be used with Studio Pro 8 versions starting with [8.15.1](../../releasenotes/studio-pro/8.15#8151).
+This app service can only be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15#8151).
 
 ## 2 Installation
 
@@ -263,7 +263,7 @@ No specific configuration is needed. With this widget, you can add, delete, and 
 
 This widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
 
-On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotatation. When set to **False**, the model will be unlocked and return to rotatable state.
+On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotation. When set to **False**, the model will be unlocked and return to rotatable state.
 
 Also on the **General** tab is the **markup color** property, which allows you to set the color of markup annotations. The valid values are [CSS legal color values](https://www.w3schools.com/CSSref/css_colors_legal.asp) (for example, RGB values, predefined color names, and hexadecimal color values).
 
@@ -332,7 +332,7 @@ Loading progress in the Viewer widget can be obtained via the **Progress status*
 
 Follow these steps to display the model loading progress:
 
-1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](../widgets/progress-bar) widget expects a decimal value).
+1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](/appstore/widgets/progress-bar) widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
 3. Wrap the [Container3D](#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4.  Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
@@ -361,7 +361,7 @@ Usually, you will also need to manage the models that are uploaded and stored in
 The Mendix native [list view](/refguide8/list-view) can be used to display the model list by following these steps:
 
 1. Use the **View3D/USE_ME/GetModelListFromMendix** nanoflow or copy it to your app module. A list of **ModelDocument** objects will be returned after calling the nanoflow.
-2. Add a [pop-up page](../../refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
+2. Add a [pop-up page](/refguide8/page-properties#pop-up) to display the model list via a button click or another event of your choice.
 3. Place a list view in the page and set the **GetModelListFromMendix** nanoflow as the **Data source**.
 4. As **GetModelListFromMendix** requires a **Pagination** parameter input, wrap the list view with a data view. Then, create a nanoflow called *CreatePaginationObject* nanoflow and set that nanoflow as the list view's **Data source**.
 5.  Fill in the list item with the information you are interested in:
@@ -441,9 +441,9 @@ Like other Mendix events, you can select from a list of actions upon a Viewer er
 
 By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](#pmi-tree).
 
-**Progress status** takes a String attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
+**Progress status** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
 
-**Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
+**Progress percentage** takes a Decimal attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress percentage information will be populated to this attribute.You can easily get this loading percentage and use it in the actions.
 
 ![viewer-onprogress](attachments/3d-viewer/viewer-onprogress.jpg) 
 
@@ -457,11 +457,11 @@ For more information, see [Displaying Model Loading Progress with Progress Bar W
 
 By selecting one attribute for the **Loaded** value, you can get the current loading status of the product structure tree.
 
-**OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this propoerty. In a running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
+**OnLoad** takes a Boolean type attribute. You can define an attribute and bind that attribute to this property. In a running app, when you open a model, product structure tree will need to be loaded first, the product structure tree load event will be triggered, and the product structure load information will be populated to this attribute. You can get the current loading status of product structure tree and use it in the actions.
 
 ![viewer-onload-result](attachments/3d-viewer/viewer-onload-result.jpg)
 
-Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. One possible use case is show a pop up page to let user know if product structure is successfuly loaded.
+Like other Mendix events, you can select from a list of actions upon the product structure tree loaded status for **Action**. One possible use case is show a pop up page to let user know if product structure is successfully loaded.
 
 ![viewer-onload-sample](attachments/3d-viewer/viewer-onload-sample.jpg)
 
@@ -487,7 +487,7 @@ The sections below present operations within the Section View widget.
 
 #### 5.6.2 Direction
 
-* **X Direction** –  sets the X axis of the default coordinate system as the reference.
+* **X Direction** –  sets the X axis of the default coordinate system as the reference
 * **Y Direction** –  sets the Y axis of the default coordinate system as the reference
 * **Z Direction** – sets the Z axis of the default coordinate system as the reference
 

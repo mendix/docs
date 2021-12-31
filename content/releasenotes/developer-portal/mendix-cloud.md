@@ -14,12 +14,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### December 23rd, 2021
 
-### Improvements
+#### Improvements
 
 * We added log entries to the activity log to record changes to members of the app team and any changes to the [permissions](/developerportal/deploy/node-permissions) that team members have.
 * We now display any documentation associated with [scheduled events](/refguide/scheduled-events#common-properties) in the [Model Options tab](/developerportal/deploy/environments-details#model-options) of the environment details.
 
-### Fixes
+#### Fixes
 
 * We fixed an issue where uploading a backup file got stuck and could not be completed. (Tickets 134454, 134887, 134898, 135007, 135325, 135359, 135692, 135894, and 137806)
 
@@ -37,7 +37,7 @@ New Certificate Details: <https://crt.sh/?id=5832398831>
 
 ### November 18th, 2021
 
-### Fixes
+#### Fixes
 
 * We fixed an issue with the custom HTTP header Content-Security-Policy to follow RFC and W3C specs during validation. (Tickets 133172)
 * We fixed an issue where a request handler path with '.' would break transport. (Tickets 132865, 133292)
@@ -54,7 +54,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 ### October 7th, 2021
 
-### Fixes
+#### Fixes
 
 * We fixed an issue where users could not see all their backups, and some backups were shown more than once. (Tickets 127908, 128966, 130090, and 130313)
 

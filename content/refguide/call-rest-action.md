@@ -130,7 +130,7 @@ The **Password** property defines the password that will be used to authenticate
 
 ### 5.4 Custom HTTP Headers
 
-These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression).
+These headers are added to the HTTP request header. Each custom header is a pair with a key and a value (a microflow expression). Do note that key values of custom HTTP headers may not contain an underscore (_). NGINX will silently drop HTTP headers with underscores (which are perfectly valid according to the HTTP standard). This is done in order to prevent ambiguities when mapping headers to CGI variables as both dashes and underscores are mapped to underscores during that process.
 
 ## 6 Request Tab {#request}
 

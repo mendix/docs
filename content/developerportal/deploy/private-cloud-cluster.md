@@ -41,7 +41,7 @@ Should you consider using a connected environment, the following URLs should be 
 
 ## 3 Creating a Cluster & Namespace
 
-### 3.1 Creating a Cluster
+### 3.1 Creating a Cluster{#create-cluster}
 
 1. Click **Cloud Settings** on the **General Settings** page of your Mendix app.
     

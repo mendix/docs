@@ -85,7 +85,7 @@ There are three ways to install a Marketplace component:
 
 {{% alert type="info" %}}You can only use this procedure to import modules and connectors. You cannot use it to import a widget, a template, or an app.{{% /alert %}}
 
-1. Go to the [Marketplace](https://marketplace.mendix.com/) and with your Mendix credentials.
+1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.
 3.  Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.
 
@@ -117,7 +117,7 @@ You can find the imported module or connector in the **App Explorer**.
 
 {{% alert type="info" %}}You can only use this procedure to import widgets and *.mxmodule* files. You cannot use it to import modules that are *.mpk* files.{{% /alert %}}
 
-1. Go to the [Marketplace](https://marketplace.mendix.com/) and with your Mendix credentials.
+1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component to find the component.
 3. Open the component page.
 4.  Check the **Usage** information on the right side. Do not download a component that requires a higher **Mendix version** than the Studio Pro that you use.

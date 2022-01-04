@@ -152,7 +152,7 @@ To create the worksheet layout, follow these steps:
     {{% alert type="info" %}}Specifying styles are addressed in the section below.
     {{% /alert %}}
 
-#### 6.4 Configuring Dynamic Column Data  {#configure-column-data}
+### 6.4 Configuring Dynamic Column Data  {#configure-column-data}
 
 To configure the dynamic column data, follow these steps:
 
@@ -170,7 +170,7 @@ To configure the dynamic column data, follow these steps:
 5. Specify the **Select attribute** to identify the attribute of the row object which will be stored in this column.
 6. Specify if the column should result in an aggregate. Note that  only types of decimal, integer, and long can be aggregated.
 
-### 6.4 Configuring Static Data in the Sheet
+### 6.5 Configuring Static Data in the Sheet
 
 To configure the static data in the sheet, follow these steps:
 
@@ -183,7 +183,7 @@ To configure the static data in the sheet, follow these steps:
 4.  Specify the **Type** by selecting if the cell is **Static Text, Object Data, or Aggregate Function.** This example uses **Static Text** (which changes the **Name** field into **Excel Text** upon selection).
 5.  Specify the **Style** that should be applied to the cell.
 
-### 6.5 Configuring Custom Cell Formatting & Styling
+### 6.6 Configuring Custom Cell Formatting & Styling
 
 To configure the custom formatting and styling for the cells, follow these steps:
 

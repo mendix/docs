@@ -116,36 +116,48 @@ The `executeAction` method is where all the magic happens:
 7. The list of new objects is returned.
 
 ```java
-@Override 
-public java.util.List<IMendixObject> executeAction() throws Exception
-{
-    // BEGIN USER CODE 
+  @Override
+  public List<IMendixObject> executeAction() throws Exception {
+    // BEGIN USER CODE
     logger.info(String.format("creating list of %d %s objects, initialized by %s",
-        this.ListSize, this.ResultEntity, this.InitializationMicroflow)); 
-    // Create a list to return with all the instantiated objects 
-    ArrayList<IMendixObject> resultList = new ArrayList<IMendixObject>(); 
-    for (int i = 0; i <= this.ListSize; i = i + 1) { 
-        // create new object of type resultentity 
-        IMendixObject newObject = Core.instantiate(getContext(), this.ResultEntity); 
-        if (this.DefaultObject ! = null) { 
-            // copy values from default object 
-            Map<String, ? extends IMendixObjectMember<?>> members = DefaultObject.getMembers(getContext());
-            for (String key : members.keySet()) { 
-                IMendixObjectMember<?> m = members.get(key); 
-                if (!(m instanceof MendixObjectReference) && !(m instanceof MendixObjectReferenceSet) && 
-                        !(m instanceof MendixAutoNumber) && !(m.isVirtual())) { 
-                    newObject.setValue(getContext(), key, m.getValue(getContext())); 
-                }
-            }
+        this.ListSize, this.ResultEntity, this.InitializationMicroflow));
+
+    // Create a list to return with all the instantiated objects
+    var resultList = new ArrayList<IMendixObject>();
+
+    for (int i = 0; i < this.ListSize; i++) {
+      // create new object of type resultentity
+      var newObject = Core.instantiate(getContext(), this.ResultEntity);
+
+      if (this.DefaultObject != null) {
+        // copy values from default object
+        for (var entry : DefaultObject.getMembers(getContext()).entrySet()) {
+          var member = entry.getValue();
+
+          if (member.isVirtual() ||
+              member instanceof MendixObjectReference ||
+              member instanceof MendixObjectReferenceSet ||
+              member instanceof MendixAutoNumber) {
+            continue;
+          }
+
+          newObject.setValue(this.getContext(), entry.getKey(), member.getValue(this.getContext()));
         }
-        // run the specified initialization microflow 
-        Core.microflowCall(this.InitiatizationMicroflow) .inTransaction(true) .withParams(newObject) .execute(getContext());
-        // add new object to list 
-        resultList.add(newObject);
+      }
+
+      // run the specified initialization microflow
+      Core.microflowCall(this.InitiatizationMicroflow)
+          .withParam("objectToInit", newObject)
+          .inTransaction(true)
+          .execute(this.getContext());
+
+      // add new object to list
+      resultList.add(newObject);
     }
-    return resultList; 
-    // END USER CODE 
-} 
+
+    return resultList;
+    // END USER CODE
+  }
 ```
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.

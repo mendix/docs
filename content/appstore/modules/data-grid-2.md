@@ -160,7 +160,7 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 
 ### 4.8 Tooltip
 
-If you need to display advisory information for cell content you can specify tooltip text. This text will be shown when user is hovering over the cell content.
+If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
 {{% alert type="warning" %}}
 This property not available if you enable "Custom content" for the column

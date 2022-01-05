@@ -13,7 +13,7 @@ Mendix releases Beta versions in two circumstances:
 * When a new product or product version is introduced and is made available to early adopters for assessment so that they can try new features of the product
 * When individual features are introduced within a non-Beta product which are, in principal, production-ready but are either subject to change or need to be reviewed by a broader audience
 
-We release these Beta features and products to collect feedback on their implementation so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product.
+We release Beta features and products to collect feedback on their implementation so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product. This also helps us prepare for the General Availability (GA) release.
 
 ## 2 What Are Mendix Beta Products?
 

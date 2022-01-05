@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Go to **web**.
+3.  Go to **web** (When using Mendix 8.x, skip this step).
 
     ![](attachments/customerror-page/web.png)
 

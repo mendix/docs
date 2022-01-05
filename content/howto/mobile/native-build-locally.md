@@ -89,7 +89,11 @@ In the sections below you can see the basic steps to get an app up and running o
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
 	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
-If no device is available use **AVD Manager** to add a device.
+
+	If no device is available use **AVD Manager** to add a device:
+
+		{{% image_container width="250" %}}![AVD Manager](attachments/native-build-locally/avd-manager.png){{% /image_container %}}
+
 
 ### 4.2 Building an iOS App with XCode
 

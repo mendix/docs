@@ -24,7 +24,10 @@ For iOS builds:
 
 For Android Builds:
 
-* Install [Android SDK](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
+* Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
+	* Take care to complete the **wizard** in Android Studio, which does the following:
+		* Installs a default set of the Android SDK (allowing you to accept important liscences) 
+		* Helps you set up an emulator
 
 ## 3 Use Mendix Native Mobile Builder to Set Up Your Local App
 
@@ -80,7 +83,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 
-   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences.
+   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences. If the **Build Variants** are not visible, click **View** > **Tool Windows** > **Build Variants** to display them. 
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
@@ -89,6 +92,10 @@ In the sections below you can see the basic steps to get an app up and running o
 1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
 
 	{{% image_container width="250" %}}![Android Build Toolbar](attachments/native-build-locally/as-start-build.png){{% /image_container %}}
+
+	If no device is available use **AVD Manager** to add a device:
+
+		{{% image_container width="250" %}}![AVD Manager](attachments/native-build-locally/avd-manager.png){{% /image_container %}}
 
 
 ### 4.2 Building an iOS App with XCode

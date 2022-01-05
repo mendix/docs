@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fixes
 
-* We fixed an issue where start environment deploy API failed to perform the action. (Tickets 132011)
+* We fixed an issue where the start environment call to the deploy API failed to start the environment. (Ticket 132011)
 
 ## 2021
 

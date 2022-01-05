@@ -119,7 +119,7 @@ The `executeAction` method is where all the magic happens:
   @Override
   public List<IMendixObject> executeAction() throws Exception {
     // BEGIN USER CODE
-    Core.getLogger("MyLogNode");
+    var logger = Core.getLogger("MyLogNode");
     logger.info(String.format("creating list of %d %s objects, initialized by %s",
         this.ListSize, this.ResultEntity, this.InitializationMicroflow));
 

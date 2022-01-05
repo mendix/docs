@@ -24,7 +24,10 @@ For iOS builds:
 
 For Android Builds:
 
-* Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools), taking care to complete the wizard in Android Studio which installs licenses and other necessary parts
+* Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
+	* Take care to complete the **wizard** in Android Studio, which does the following:
+		* Installs a default set of the Android SDK (allowing you to accept important liscences) 
+		* Helps you set up an emulator
 
 ## 3 Use Mendix Native Mobile Builder to Set Up Your Local App
 

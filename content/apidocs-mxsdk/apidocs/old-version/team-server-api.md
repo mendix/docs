@@ -5,7 +5,7 @@ menu_order: 65
 ---
 
 {{% alert type="warning" %}}
-The API described on this page will be deprecated in the future. Please use the [new team server API](../team-server-api.md).
+The API described on this page will be deprecated in the future. Please use the [new team server API](../team-server-api).
 {{% /alert %}}
 
 ## 1 Introduction

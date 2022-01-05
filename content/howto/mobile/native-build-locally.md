@@ -24,9 +24,7 @@ For iOS builds:
 
 For Android Builds:
 
-* Install [Android SDK](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
-
-accept the licenses with **sdkmanager --licenses** after installing in the bin directory
+* Install [Android Studio](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools), taking care to complete the wizard in Android Studio which installs licenses and other necessary parts
 
 ## 3 Use Mendix Native Mobile Builder to Set Up Your Local App
 
@@ -82,7 +80,7 @@ In the sections below you can see the basic steps to get an app up and running o
 
 	{{% image_container width="350" %}}![Android Studio](attachments/native-build-locally/as-home.png){{% /image_container %}}
 
-   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences. If the Build Variants are not visible use **View/Tool Windows/Build variants** to display them. 
+   Mendix native mobile apps make use of **Build Variants** to build a release app or a custom developer app. The idea of **Build Variants** is a Gradle build system concept for sharing the same codebase but delivering different experiences. If the **Build Variants** are not visible, click **View** > **Tool Windows** > **Build Variants** to display them. 
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 

@@ -6,11 +6,12 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 ---
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+
 ## 2022
 
-### January 6th, 2021
+### January 6th, 2022
 
-### Fixes 
+#### Fixes 
 
 * We updated the Log4j dependency to 2.17.1, which addresses [CVE-2021-44832](https://cert-portal.siemens.com/productcert/pdf/ssa-784507.pdf).
 

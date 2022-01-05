@@ -10,6 +10,14 @@ These release notes cover changes to deployment to [Mendix Cloud](/developerport
 
 For information on the current status of deployment to Mendix Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2022
+
+### January 6th, 2022
+
+#### Fixes
+
+* We fixed an issue where start/stop environment deploy API failed to perform the action. (Tickets 132011)
+
 ## 2021
 
 ### December 23rd, 2021

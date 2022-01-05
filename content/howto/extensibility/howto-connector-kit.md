@@ -111,14 +111,15 @@ The `executeAction` method is where all the magic happens:
 2. It has a for-loop to create the desired number of objects.
 3. The objects are created using `Core.instantiate()`. The entity name specified in the action is used as the input to specify what entity to instantiate.
 4. The system determines if a default object was specified. If so, it copies all the attribute values to the new object.
-5. The system executes the initialization microflow using `Core.execute()`.
-6. Add the newly instantiated and initialized object to the result list.
+5. The system executes the initialization microflow using `Core.microflowCall()`.
+6. The newly instantiated and initialized object is added to the result list.
 7. The list of new objects is returned.
 
 ```java
   @Override
   public List<IMendixObject> executeAction() throws Exception {
     // BEGIN USER CODE
+    Core.getLogger("MyLogNode");
     logger.info(String.format("creating list of %d %s objects, initialized by %s",
         this.ListSize, this.ResultEntity, this.InitializationMicroflow));
 
@@ -146,10 +147,10 @@ The `executeAction` method is where all the magic happens:
       }
 
       // run the specified initialization microflow
-      Core.microflowCall(this.InitiatizationMicroflow)
+      Core.microflowCall(this.InitializationMicroflow)
           .withParam("objectToInit", newObject)
           .inTransaction(true)
-          .execute(this.getContext());
+          .execute(getContext());
 
       // add new object to list
       resultList.add(newObject);

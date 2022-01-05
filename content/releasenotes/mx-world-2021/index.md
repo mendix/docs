@@ -1,5 +1,5 @@
 ---
-title: "Feature Release Calendar (MxWorld 2021)"
+title: "Feature Release Calendar"
 tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
 #notoc: true
 #layout: wide
@@ -19,20 +19,19 @@ Johan divided the new features into ten major announcements, which are shown in 
 ![Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation.](attachments/index/innovations.png)
 
 {{% alert type="info" %}}
-Features which were already released (Generally Available) on September 8, 2021 are marked **GA**. For more information on **Public Beta** releases, see [Beta Versions](/releasenotes/beta-features/).
+"GA" means General Availability for all users. A GA release is different than a Beta release. For more information on Private Beta and Public Beta releases, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
-
 
 ### 2.1 Solutions Platform
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| Consuming add-on modules | Jan 2022 |
+| Consuming add-on modules | GA: Jan 2022 |
 | Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
 
 ### 2.2 App Services Framework
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
 | Foundational APIs | Private Beta: Dec 2021 |
 | Usage-based metering and billing | Private Beta: Dec 2021 |
@@ -40,84 +39,84 @@ Features which were already released (Generally Available) on September 8, 2021 
 
 ### 2.3 End-User Services & Studio
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| End-user services – app switcher | Dec 2021 |
-| End-user services – notifications | Mar 2022 |
-| End-user services – branding | Mar 2022 |
-| Studio workflow templates | Feb 2022 |
-| Studio expression editor | GA |
+| End-user services – app switcher | GA: Dec 2021 |
+| End-user services – notifications | GA: Mar 2022 |
+| End-user services – branding | GA: Mar 2022 |
+| Studio workflow templates | GA: Feb 2022 |
+| Studio expression editor | Released for GA |
 
 ### 2.4 Control Center
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| Dashboards showing insight into employees on the platform and activity around apps | GA |
+| Dashboards showing insight into employees on the platform and activity around apps | Released for GA                           |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Dec 2021  |
 | Control platform user onboarding experience | Currently in Public Beta<br/>GA: Dec 2021 |
-| Apply company branding to end-user services | Mar 2022 |
-| Marketplace subscription dashboards | Mar 2022 |
-| Self-service subscription management | Jun 2022 |
+| Apply company branding to end-user services | GA: Mar 2022 |
+| Marketplace subscription dashboards | GA: Mar 2022 |
+| Self-service subscription management | GA: Jun 2022 |
 
 ### 2.5 Next-Level Front-End
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| Atlas UI 3.0 with full design system support | GA |
-| Styling editor in Studio Pro | Dec 2021 |
-| Multiple page parameters | Dec 2021 |
-| Native mobile – nanoflow home page | GA |
-| Native mobile – over the air (OTA) updates | Sep 2021 (enhancements in Q4 2021) |
-| Native mobile – delete | Dec 2021 |
-| Native mobile – simplified monitoring | Mar 2022 |
-| Native mobile – file and image background sync | Jun 2022 |
-| Data widgets – Gallery | Sep 2021 |
-| Data widgets – Tree View | Sep 2021 |
-| Data widgets – Tree Table | Jun 2022 |
-| Data widgets – Spread Sheet Grid | Jun 2022 |
+| Atlas UI 3.0 with full design system support | Released for GA |
+| Styling editor in Studio Pro | GA: Dec 2021 |
+| Multiple page parameters | GA: Dec 2021 |
+| Native mobile – nanoflow home page | Released for GA |
+| Native mobile – over the air (OTA) updates | Released for GA |
+| Native mobile – delete | GA: Dec 2021 |
+| Native mobile – simplified monitoring | GA: Mar 2022 |
+| Native mobile – file and image background sync | GA: Jun 2022 |
+| Data widgets – Gallery | Released for GA |
+| Data widgets – Tree View | Released for GA |
+| Data widgets – Tree Table | GA: Jun 2022 |
+| Data widgets – Spread Sheet Grid | GA: Jun 2022 |
 
 ### 2.6 Page Bot & Machine Learning Toolkit
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| MxAssist Logic Bot improvements | Oct 2021 |
-| MxAssist Performance Bot new best practices | Sep 2021 (enhancements in Q4 2021) |
+| MxAssist Logic Bot improvements | Released for GA |
+| MxAssist Performance Bot new best practices | Released for GA |
 | MxAssist Page Bot | Private Beta: Mar 2022 |
 | Machine learning toolkit | Private Beta: Dec 2021 |
 
 ### 2.7 Studio Pro Experience
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| Studio Pro modernization | GA (enhancements in monthly releases) |
+| Studio Pro modernization | Released for GA |
 | Studio Pro dark theme | Public Beta: Dec 2021 |
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 
 ### 2.8 Data Hub 2.0
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| External entity create and update (AKA write) | Dec 2021 |
+| External entity create and update (AKA write) | GA: Dec 2021 |
 | Connector framework (OData publish with microflows and Marketplace integration) | Private Beta: Dec 2021 |
 | Business events and event broker | Public Beta: Mar 2022 |
 
 ### 2.9 Intelligent Automation
 
-| Feature | Component | Expected Release Date |
+| Feature | Component | Expected Release |
 | --- | --- | --- |
 | Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
-| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Sep 2021 |
-| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Nov 2021 |
-| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | Dec 2021 |
+| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Released for GA |
+| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Released for GA |
+| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | GA: Dec 2021 |
 
 ### 2.10 Hybrid Cloud Automation
 
-| Feature | Expected Release Date |
+| Feature | Expected Release |
 | --- | --- |
-| New Mendix Cloud regions – Shanghai, Sydney, Montreal | GA |
-| Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | GA |
-| Mendix for Private Cloud – built-in CI/CD | Dec 2021 (enhancements in 2022) |
+| New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA |
+| Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA |
+| Mendix for Private Cloud – built-in CI/CD | GA: Dec 2021 |
 
 ### 2.11 Studio Pro Pluggability
 

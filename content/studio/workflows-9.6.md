@@ -8,7 +8,7 @@ tags: ["workflow", "workflows", "9.6", "beta"]
 
 ## 1 Introduction
 
-Workflows were introduced as a [Beta functionality](/releasenotes/beta-features/) in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. Workflows are still a Beta feature, but we are introducing significant changes to the functionality. For more information on what Beta feature means, see [Beta Versions](/releasenotes/beta-features/).  
+Workflows were introduced as a [Beta functionality](/releasenotes/beta-features/) in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. Workflows are still a Beta feature, but we are introducing significant changes to the functionality. For more information on what Beta feature means, see [Beta Releases](/releasenotes/beta-features/).  
 
 During the last months we have collected very valuable feedback and are now incorporating some of the major changes into an improved version of workflows before we release it to production. To bring these changes to our community as quickly as possible, we have to temporarily disable the workflow editor for apps with Mendix version 9.6 and above in Studio. 
 

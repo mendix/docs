@@ -117,8 +117,8 @@ releasenotes:
     - "SDKs"
     - "Quality Add-ons"
     - "Security Advisories"
-    - "Beta Versions"
-    - "Feature Release Calendar (MxWorld 2021)"
+    - "Beta Releases"
+    - "Feature Release Calendar"
 developerportal:
   space: "Developer Portal Guide"
   priority: false

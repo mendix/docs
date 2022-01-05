@@ -30,11 +30,15 @@ You can invoke the microflow directly using its proxy:
 myfirstmodule.proxies.microflows.Microflows.formatString(getContext(), "this is an unformatted string");
 ```
 
-But you can make your code more readable by first importing the proxy and then referring to the microflow directly. 
+But you can make your code more readable by first importing the proxy before the class declaration, and then referring to the microflow directly. 
 
 ```java
 import static myfirstmodule.proxies.microflows.Microflows.formatString;
+…
+public class …
+…
 String formattedString = formatString(getContext(), "this is an unformatted string");
+…
 ```
 
 Once we have the value of the formatted string, we can store this in an object and then commit the object.
@@ -43,9 +47,15 @@ The code below formats the string `"this is an unformatted string"` using the mi
 
 ```java
 import static myfirstmodule.proxies.microflows.Microflows.formatString;
+…
+public class …
+…
+// BEGIN USER CODE
 String formattedString = formatString(getContext(), "this is an unformatted string");
 testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
+// END USER CODE
+…
 ```
 
 ## 3 Copying FileDocuments

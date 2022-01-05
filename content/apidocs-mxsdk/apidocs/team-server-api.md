@@ -5,7 +5,7 @@ menu_order: 65
 ---
 
 {{% alert type="warning" %}}
-The API description on this page refers to the new team server API implementation. You can access the documentation for the previous team server API implementation [here](old-version/team-server-api.md).
+The API description on this page refers to the new team server API implementation. You can access the documentation for the previous team server API implementation [here](old-version/team-server-api).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -18,18 +18,19 @@ https://teamserver.api.mendix.com/v1
 ```
 
 All available endpoints are:
+
 | Method | Endpoint | Description |
 | --- | --- | --- |
-| GET | [`/repositories/<projectId>`](#41-retrieve-repository-info) | Get repository information for a project |
-| GET | [`/repositories/<projectId>/branches`](#42-retrieve-branches) | Get a list of branches of a repository |
-| GET | [`/repositories/<projectId>/branches/<branchName>`](#43-retrieve-branch) | Get information of a branch of a repository |
-| GET | [`/repositories/<projectId>/branches/<branchName>/commits`](#44-retrieve-commits) | Get a list of commits of a branch of a repository |
+| GET | [`/repositories/<appId>/info`](#retrieve-repository-info) | Get repository information for an app |
+| GET | [`/repositories/<appId>/branches`](#retrieve-branches) | Get a list of branches of a repository |
+| GET | [`/repositories/<appId>/branches/<branchName>`](#retrieve-branch) | Get information of a branch of a repository |
+| GET | [`/repositories/<appId>/branches/<branchName>/commits`](#retrieve-commits) | Get a list of commits of a branch of a repository |
 
 ## 2 Authentication
 
 The Team Server API requires a Personal Access Token (PAT) as authentication method.
 
-You can manage your Mendix personal access tokens via [warden](https://warden.mendix.com/). Press "add", then enter the token name and choose at least the following scope: `mx:modelrepository:repo:read`
+You can manage your Mendix personal access tokens via [Warden](https://warden.mendix.com/). Press "add", then enter the token name and choose at least the following scope: `mx:modelrepository:repo:read`
 
 ## 3 Error response format
 
@@ -52,19 +53,19 @@ Payload Example:
 ```
 {
     "errorCode": "RS400",
-    "errorMessage": "Please provide valid input to execute this request. Invalid project id"
+    "errorMessage": "Please provide valid input to execute this request. Invalid app id"
 }
 ```
 
 ## 4 API Calls
 
-### 4.1 Retrieve Repository Info
+### 4.1 Retrieve Repository Info {#retrieve-repository-info}
 
 <a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieve information about the version control repository for a Mendix app.
 
 ```http
 HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<appId>
+ URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/info
 ```
 
 #### 4.1.1 Request
@@ -73,12 +74,12 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The app ID (also known as project ID) of the Mendix project for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
 
 ##### 4.1.1.2 Example
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33 HTTP/1.1
+GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/info HTTP/1.1
 Host: teamserver.api.mendix.com
 Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
@@ -96,21 +97,17 @@ List of objects with the following key-value pairs:
 
 |Name|Type|Description|
 |---|---|---|
-|`projectId`|String|The project ID (also known as app ID) of the Mendix project.|
+|`appId`|String|The App ID (sometimes also known as Project ID) of the Mendix app.|
 |`type`|String|The type of repository. At the moment this will be either `"svn"` or `"git"`, but later on other repository types may be introduced.|
 |`url`|String|The URL of the repository.|
-|`isMendixHosted`|Boolean|Whether the repository is Mendix-hosted (i.e. a Team Server repository) or is using a custom repository URL. Note: If a repository is not Mendix-hosted (i.e. `isMendixHosted` is `false`), the other operations of the Team Server API will not work for this repository.|
-|`defaultBranchName`|String (optional)|The default branch name of the repository. Only available for Mendix-hosted projects. The value will be `"trunk"` for Subversion repositories and `"main"` for Git repositories.|
 
 ##### 4.1.3.1 Payload Example
 
 ```json
 {
-  "projectId": "c0af1725-edae-4345-aea7-2f94f7760e33",
+  "appId": "c0af1725-edae-4345-aea7-2f94f7760e33",
   "type": "svn",
-  "url": "https://teamserver.sprintr.com/c0af1725-edae-4345-aea7-2f94f7760e33/",
-  "isMendixHosted": true,
-  "defaultBranchName": "trunk"
+  "url": "https://teamserver.sprintr.com/c0af1725-edae-4345-aea7-2f94f7760e33/"
 }
 ```
 
@@ -126,15 +123,15 @@ List of objects with the following key-value pairs:
 
 Error Response format and examples are given in section: [Error response format](#3-error-response-format)
 
-### 4.2 Retrieve Branches
+### 4.2 Retrieve Branches {#retrieve-branches}
 
-Returns information about the branches of the version control repository for a Mendix project.
+Returns information about the branches of the version control repository for a Mendix app.
 
 The response is paginated using cursor-based pagination.
 
 ```http
 HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<appId>/branches
+ URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/branches
 ```
 
 #### 4.2.1 Request
@@ -143,7 +140,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The app ID (also known as project ID) of the Mendix project for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
 
 ##### 4.2.1.2 Query Parameter
 
@@ -224,7 +221,7 @@ Error Response format and examples are given in section: [Error response format]
 
 ### 4.3 Retrieve Branch {#retrieve-branch}
 
-Returns information about a specific branch of the version control repository for a Mendix project.
+Returns information about a specific branch of the version control repository for a Mendix app.
 
 ```http
 HTTP Method: GET
@@ -237,7 +234,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The app ID (also known as project ID) of the Mendix project for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 4.3.1.2 Example
@@ -299,7 +296,7 @@ An object with the following key-value pairs:
 
 | HTTP Status | Title | Detail |
 | --- | --- | --- |
-| 400 | Bad Request | Invalid project ID or branch name |
+| 400 | Bad Request | Invalid app ID or branch name |
 | 401 | Unauthorized | Invalid token |
 | 403 | Forbidden | Access denied |
 | 404 | Not Found | Repository or branch not found |
@@ -307,9 +304,9 @@ An object with the following key-value pairs:
 
 Error Response format and examples are given in section: [Error response format](#3-error-response-format)
 
-### 4.4 Retrieve Commits
+### 4.4 Retrieve Commits {#retrieve-commits}
 
-Returns information about the commits of a specific branch of the version control repository for a Mendix project.
+Returns information about the commits of a specific branch of the version control repository for a Mendix app.
 Commits are returned in reverse chronological order, starting from the head of the branch all the way to the first commit of the repository.
 
 The response is paginated using cursor-based pagination.
@@ -324,7 +321,7 @@ HTTP Method: GET
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The app ID (also known as project ID) of the Mendix project for which the repository information should be returned.|
+|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
 ##### 4.4.1.2 Path Parameters
@@ -405,7 +402,7 @@ List of objects with the following key-value pairs:
 
 | HTTP Status | Title | Detail |
 | --- | --- | --- |
-| 400 | Bad Request | Invalid project ID or branch name |
+| 400 | Bad Request | Invalid app ID or branch name |
 | 401 | Unauthorized | Invalid token |
 | 403 | Forbidden | Access denied |
 | 404 | Not Found | Repository or branch not found |

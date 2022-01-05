@@ -1,9 +1,9 @@
 ---
-title: "Build Microflow Actions Using the Mendix Connector Kit"
+title: "Build Microflow Actions with Java"
 category: "Extensibility"
-description: "Describes creating custom Microflow actions using advanced Connector Kit options."
+description: "Describes creating custom Microflow actions using Java."
 menu_order: 80
-tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
+tags: ["java", "connector kit", "microflow action", "parameter type", "generic actions", "type parameters", "mappings", "java action"]
 output:
   word_document: default
   html_document: default
@@ -12,9 +12,9 @@ output:
 
 ## 1 Introduction
 
-The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) is to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
+Mendix provides the tools to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java. This is particularly useful when building connectors to services.
 
-To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
+The diagram below illustrates the power of Mendix's integration with Java. It shows a Mendix Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
 ![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
@@ -24,7 +24,7 @@ This image shows what the microflow toolbox looks like after including all the m
 
  ![Slack Rekognition bot toolbox](attachments/how-to-connector-kit/slack-rekogition-bot-toolkit.png)
 
-For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
+For the basics of building toolbox actions, see the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). 
 
 **This how-to will teach you how to do the following:**
 

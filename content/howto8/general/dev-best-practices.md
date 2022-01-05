@@ -51,6 +51,12 @@ The [user roles](/refguide8/user-roles) should have logical names that reflect t
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
+### 2.5 Passwords and Other Secrets
+
+Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt and store and to retrieve and decrypt the information.
+
+Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. 
+
 ## 3 Naming Conventions
 
 ### 3.1 Modules

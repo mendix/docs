@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### Fixes 
 
-* We updated Log4j dependency to 2.17.1, which addresses CVE-2021-44832
+* We updated the Log4j dependency to 2.17.1, which addresses [CVE-2021-44832](https://cert-portal.siemens.com/productcert/pdf/ssa-784507.pdf).
 
 ## 2021
 
@@ -33,7 +33,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Fixes
 
-* We updated Log4j dependency to 2.17.0, which addresses [CVE-2021-45105](https://cert-portal.siemens.com/productcert/pdf/ssa-501673.pdf).
+* We updated the Log4j dependency to 2.17.0, which addresses [CVE-2021-45105](https://cert-portal.siemens.com/productcert/pdf/ssa-501673.pdf).
 
 ### December 16th, 2021
 

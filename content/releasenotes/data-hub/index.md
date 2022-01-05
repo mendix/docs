@@ -6,6 +6,13 @@ tags: ["data hub", "data hub catalog", "data hub Landscape"]
 ---
 
 These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
+## 2022
+
+### January 6th, 2021
+
+### Fixes 
+
+* We updated Log4j dependency to 2.17.1, which addresses CVE-2021-44832
 
 ## 2021
 

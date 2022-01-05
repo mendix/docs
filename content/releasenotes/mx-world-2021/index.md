@@ -83,7 +83,7 @@ Features which were already released (Generally Available) on September 8, 2021 
 | MxAssist Logic Bot improvements | Oct 2021 |
 | MxAssist Performance Bot new best practices | Sep 2021 (enhancements in Q4 2021) |
 | MxAssist Page Bot | Private Beta: Mar 2022 |
-| Machine learning toolkit | Private Beta: Dec 2021 |
+| Machine learning toolkit | Private Beta: Feb 2022 |
 
 ### 2.7 Studio Pro Experience
 

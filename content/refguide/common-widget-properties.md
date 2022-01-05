@@ -359,7 +359,7 @@ When selected, this shows the widget while a particular attribute has a certain 
 
 When selected, this shows the widget while a provided [expression](expressions) evaluates to true. The object of the containing data container is available inside an expression as a `$currentObject` variable. The expression can access objects of all the data containers enclosing that data container widget. These objects are available under the name of the widget they originate from (for example, `$dataView1`).
 
-An example would be wanting a button to only be visible if a condition is met. The object has an attribute called `myAttribute`, we want the button to be visible only if `myAttribute` actually has a value stored. The expression to put into the field would be: `$currentObject/myAttribute != empty`.
+For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
 
 ![Visibility Example](attachments/common-widget-properties/visibility-example.png)
 

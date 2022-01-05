@@ -36,19 +36,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Open the local folder of your app.
 
-2.  Go to **theme**.
+2.  Go to **theme**:
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Go to **web** (When using Mendix 8.x, skip this step).
+3.  Go to **web** (when using Mendix 8.x, skip this step):
 
     ![](attachments/customerror-page/web.png)
 
-4.  Create a new folder named *error_page*.
+4.  Create a new folder named *error_page*:
 
     ![](attachments/customerror-page/error-page.png)
 
-5.  In the **error_page** folder, place your *offline.html* file. 
+5.  In the **error_page** folder, place your *offline.html* file:
 
     ![](attachments/customerror-page/offline.png)
 

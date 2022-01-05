@@ -120,7 +120,7 @@ Here is an example of custom content using new Badge widget in Structure mode:
 
 ![Example of custom content using new Badge widget in Structure mode](attachments/data-grid-2/column-custom-content.png)
 
-For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties)
+For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties).
 
 ### 4.4 Column Width
 

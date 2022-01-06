@@ -51,10 +51,10 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Dashboards showing insight into employees on the platform and activity around apps | Released for GA                           |
-| Overview of cloud environments | Currently in Public Beta<br/>GA: Dec 2021  |
-| Control platform user onboarding experience | Currently in Public Beta<br/>GA: Dec 2021 |
-| Apply company branding to end-user services | GA: Mar 2022 |
+| Platform user onboarding experience | Released for GA |
+| Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
+| Overview of cloud environments | Currently in Public Beta<br/>GA: Apr 2022 |
+| Company branding for end-user services | GA: Mar 2022 |
 | Marketplace subscription dashboards | GA: Mar 2022 |
 | Self-service subscription management | GA: Jun 2022 |
 

@@ -58,7 +58,7 @@ In this section, you will learn how to add the required pages in the app's **Nav
 
 ## 4 Creating an Input Object Entity
 
-In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how to will use a **Policy** entity to hold the data.
+In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how-to will use a **Policy** entity to hold the data.
 
 1.  Open the domain model for your app and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
 2.  Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
@@ -107,18 +107,21 @@ To set up a template, follow these steps:
 
 ### 6.2 Using an Uploaded Excel File as an Template {#upload-excel-file-template}
 
-This **Upload existing excel file** option allows you to upload an Excel file as a template. The sheets, columns, and background colors that you already defined will be used, when you export an Excel file.
+This **Upload existing excel file** option allows you to upload an Excel file as a template. If you use this option, then the names of the sheets and columns that are defined in your template file will be used.
 
-To upload an Excel file as a template, perform the following steps::
+To upload an Excel file as a template, perform the following steps:
 
 1.  Click the following icon:
 
     ![upload-excel-file](attachments/using-the-excel-exporter/upload-excel-file.png)
 
 2. For **File**, click **Browse** and navigate to the Excel file that you want to use as a template.
+
 3. Select the file and click **Save**.
-4. [Create worksheet](#create-worksheet).
-5. [Create columns](#create-column).
+
+4. [Create the worksheet layout](#create-worksheet).
+
+5. [Create column data](#create-column).
 
 ### 6.3 Creating the Worksheet Layout {#create-worksheet}
 
@@ -130,7 +133,7 @@ To create the worksheet layout, follow these steps:
 
 2.  Specify the **Name** that will be given to the sheet when the file is exported.
 
-    {{% alert type="info" %}}If you upload an Excel file as a template, the **Name** that you enter here will not be used. The names of the sheets in your Excel template file will be used instead. For more information, see [Using an Uploaded Excel File as a Template][#upload-excel-file-template]
+    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template)
     {{% /alert %}}
 
 3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.
@@ -163,7 +166,7 @@ To configure the dynamic column data, follow these steps:
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
 3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
 
-    {{% alert type="info" %}If you upload an Excel file as a template, the **Name** that you enter here will not be used. The names of the columns in your Excel template file will be used instead. For more information, see [Using an Uploaded Excel File as a Template][#upload-excel-file-template]
+    {{% alert type="info" %}}If you upload an Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
     {{% /alert %}}
 
 4. Specify the **Retrieve type** to identify if this column will be an attribute or a reference.

@@ -124,7 +124,22 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Security {#security}
+## 8 Onboarding
+
+On the **Landing Page** tab of this page,  you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page to new platform users from your company,. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
+
+The landing page is easy to use and highly conﬁgurable. You can edit it, work on drafts and preview how it looks before publishing to your company’s users base.
+
+SCREENSHOT
+
+Once you publish your landing page, this will be where new users land after signing up with your company email on Mendix. It is also accessible via **Getting Started with Mendix** link in the navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
+
+SCREENSHOT
+
+OTHER TAB
+
+
+## 9 Security {#security}
 
 On the **Password Policy** tab of this page, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
 
@@ -134,7 +149,7 @@ On the **Security History** tab, you can click **Show Security History** to open
 
 ![](attachments/security.jpg)
 
-## 9 Cloud {#cloud}
+## 10 Cloud {#cloud}
 
 {{% alert type="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -156,14 +171,15 @@ These links will open in a new browser tab.
 
 The **Free Environments** tab presents details on your company's free environments.
 
-## 10 Data Hub {#data-hub}
+## 11 Data Hub {#data-hub}
 
 An organization's Data Hub requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
 For details on these tasks, see [Data Hub Administration](data-hub-admin).
 
-## 11 Read More
+## 12 Read More
 
+* [How to Set Up an SSO (BYOIDP)](set-up-sso-byoidp)
 * [Data Hub Administration](data-hub-admin)
 * [Control Center and Mendix 8.18: The Right Amount of Control](https://www.mendix.com/blog/control-center-and-mendix-8-18-the-right-amount-of-control/)
 * [Govern and Scale your App Landscape with Mendix Control Center](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)

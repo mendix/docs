@@ -105,7 +105,7 @@ To set up a template, follow these steps:
 
 8.  Specify the **Date time export format** which defines how the dates and times should appear in the Excel file once exported.
 
-### 6.2 Using an Uploaded Excel File as an Template {#upload-excel-file-template}
+### 6.2 Using an Uploaded Excel File as a Template {#upload-excel-file-template}
 
 This **Upload existing excel file** option allows you to upload an Excel file as a template. If you use this option, then the names of the sheets and columns that are defined in your template file will be used.
 

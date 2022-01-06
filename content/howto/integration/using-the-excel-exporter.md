@@ -130,7 +130,7 @@ To create the worksheet layout, follow these steps:
 
 2.  Specify the **Name** that will be given to the sheet when the file is exported.
 
-    {{% alert type="info" %}If you upload an Excel file as a template, the **Name** that you enter here will not be used. The names of the sheets in your Excel template file will be used instead. For more information, see [Using an Uploaded Excel File as a Template][#upload-excel-file-template]
+    {{% alert type="info" %}}If you upload an Excel file as a template, the **Name** that you enter here will not be used. The names of the sheets in your Excel template file will be used instead. For more information, see [Using an Uploaded Excel File as a Template][#upload-excel-file-template]
     {{% /alert %}}
 
 3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.

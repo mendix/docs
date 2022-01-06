@@ -71,8 +71,8 @@ Features which were already released (Generally Available) on September 8, 2021 
 | Native mobile – delete | Dec 2021 |
 | Native mobile – simplified monitoring | Mar 2022 |
 | Native mobile – file and image background sync | Jun 2022 |
-| Data widgets – Gallery | Sep 2021 |
-| Data widgets – Tree View | Sep 2021 |
+| Data widgets – Gallery | GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
+| Data widgets – Tree View | GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree Table | Jun 2022 |
 | Data widgets – Spread Sheet Grid | Jun 2022 |
 
@@ -107,9 +107,9 @@ Features which were already released (Generally Available) on September 8, 2021 
 | Feature | Component | Expected Release Date |
 | --- | --- | --- |
 | Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
-| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Sep 2021 |
-| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Nov 2021 |
-| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | Dec 2021 |
+| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393)<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022 |
+| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2021<br />GA: Jan 2021<br />GA: Jan 2021<br />GA: Jan 2021 |
+| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: March 2022 |
 
 ### 2.10 Hybrid Cloud Automation
 

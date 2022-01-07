@@ -90,6 +90,8 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ### October 1st, 2021 {#oct1}
 
+#### New Features
+
 * We have released the company [Onboarding](/developerportal/control-center/index#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
 ### September 23rd, 2021

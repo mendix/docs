@@ -121,7 +121,7 @@ To upload an Excel file as a template, perform the following steps:
 
 4. [Create the worksheet layout](#create-worksheet).
 
-5. [Create column data](#create-column).
+5. Configure [dynamic column data](#dynamic-column-data) and [static data](static-data) in the worksheet.
 
 ### 6.3 Creating the Worksheet Layout {#create-worksheet}
 
@@ -155,7 +155,7 @@ To create the worksheet layout, follow these steps:
     {{% alert type="info" %}}Specifying styles are addressed in the section below.
     {{% /alert %}}
 
-### 6.4 Configuring Dynamic Column Data  {#configure-column-data}
+### 6.4 Configuring Dynamic Column Data {#dynamic-column-data}
 
 To configure the dynamic column data, follow these steps:
 
@@ -173,7 +173,7 @@ To configure the dynamic column data, follow these steps:
 5. Specify the **Select attribute** to identify the attribute of the row object which will be stored in this column.
 6. Specify if the column should result in an aggregate. Note that  only types of decimal, integer, and long can be aggregated.
 
-### 6.5 Configuring Static Data in the Sheet
+### 6.5 Configuring Static Data in the Sheet {#static-data}
 
 To configure the static data in the sheet, follow these steps:
 

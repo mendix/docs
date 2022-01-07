@@ -62,18 +62,18 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Atlas UI 3.0 with full design system support | GA |
-| Styling editor in Studio Pro | Dec 2021 |
-| Multiple page parameters | Dec 2021 |
-| Native mobile – nanoflow home page | GA |
-| Native mobile – over the air (OTA) updates | Sep 2021 (enhancements in Q4 2021) |
-| Native mobile – delete | Dec 2021 |
-| Native mobile – simplified monitoring | Mar 2022 |
-| Native mobile – file and image background sync | Jun 2022 |
+| Atlas UI 3.0 with full design system support | Released for GA |
+| Styling editor in Studio Pro | GA: Dec 2021 |
+| Multiple page parameters | GA: Dec 2021 |
+| Native mobile – nanoflow home page | Released for GA |
+| Native mobile – over the air (OTA) updates | Released for GA |
+| Native mobile – delete | GA: Dec 2021 |
+| Native mobile – simplified monitoring | GA: Mar 2022 |
+| Native mobile – file and image background sync | GA: Jun 2022 |
 | Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
-| Data widgets – Tree Table | Jun 2022 |
-| Data widgets – Spread Sheet Grid | Jun 2022 |
+| Data widgets – Tree Table | GA: Jun 2022 |
+| Data widgets – Spread Sheet Grid | GA: Jun 2022 |
 
 ### 2.6 Page Bot & Machine Learning Toolkit
 

@@ -84,7 +84,7 @@ Mendix offers the following options for providing authentication for your servic
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 {{% alert type="info" %}}
-To authenticate a user for a REST API service, a user's role should be allowed to use the API service, and the attribute `WebServiceUser` for this user must be set to `false`.
+To authenticate a user for a REST API service, the user's role should be allowed to use the REST API service, and the attribute `WebServiceUser` for this user must be set to `false`.
 {{% /alert %}}
 
 ## 6 Using the Encryption Module When Storing Sensitive Information

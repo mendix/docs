@@ -285,3 +285,7 @@ Before you deploy your app, configure the app **Constants** in the deployment pa
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
 
 ![licensetoken-envdetails](attachments/cogniso-speech-to-text/licensetoken-envdetails.png)
+
+## 7 Read More
+
+* [Cogniso Speech to Text Learning Path]()

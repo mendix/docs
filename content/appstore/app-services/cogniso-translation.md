@@ -234,3 +234,7 @@ Before you deploy your app, configure the app **Constants** in the deployment pa
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
 
 ![licensetoken-envdetails](attachments/cogniso-translation/licensetoken-envdetails.png)
+
+## 6 Read More
+
+* [Cogniso Translation Learning Path]()

@@ -121,7 +121,7 @@ To upload an Excel file as a template, perform the following steps:
 
 4. [Create the worksheet layout](#create-worksheet).
 
-5. Configure [dynamic column data](#dynamic-column-data) and [static data](static-data) in the worksheet.
+5. Configure [dynamic column data](#dynamic-column-data) and [static data](#static-data) in the worksheet.
 
 ### 6.3 Creating the Worksheet Layout {#create-worksheet}
 

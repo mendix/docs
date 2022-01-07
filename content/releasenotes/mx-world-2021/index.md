@@ -107,9 +107,10 @@ Features which were already released (Generally Available) on September 8, 2021 
 | Feature | Component | Expected Release Date |
 | --- | --- | --- |
 | Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
-| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393)<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022 |
-| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022 |
-| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Jan 2022<br />GA: Mar 2022 |
+| Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
+| Smart app services integrated in workflows | Speech to Text)<br/>Text to Speech<br/>Text Analytics<br/>Translation | Feb 2022 |
+| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Jan 2022 |
+| Smart app services integrated in workflows | General Purpose OCR | Mar 2022 |
 
 ### 2.10 Hybrid Cloud Automation
 

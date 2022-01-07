@@ -139,7 +139,7 @@ Default: *enabled*
 With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
 
 {{% alert type="warning" %}}
-This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Versions](/releasenotes/beta-features/). 
+This is a Beta feature, and not yet suited for production usage. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). 
 {{% /alert %}}
 
 After applying this setting, you need to restart Studio Pro.

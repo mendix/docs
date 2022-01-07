@@ -24,7 +24,7 @@ Studio supports a range of **Mendix versions**. For example, Studio supports Men
 
 Studio introduces a new range when there are breaking changes in a model that prevent your app from functioning properly without an upgrade.  An example of a breaking change is introduction of a new functionality. 
 
-## 3 Upgrading to the Next Version
+## 3 Upgrading to the Next Version{#upgrade}
 
 The *Studio version* is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. No action is required from you, these updates are done automatically. However, when there is a new *Mendix version*, a top bar is displayed, informing you that you can upgrade your app to the next version.  
 

@@ -195,12 +195,12 @@ If you choose the *service only* option, you can route traffic to the service di
 
 To use an Ingress controller, you need to install it first:
 
-1. Install your chosen ingress controller
+1. Install your chosen ingress controller.
     Most ingress controllers will also create a Kubernetes load balancer service on installation
-2. Set up DNS in one of two ways
+2. Set up DNS in one of two ways:
     * ensure that your app domain(s) (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
     * install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
-3. Create a test ingress object and deploy a test app to verify that the network setup is working
+3. Create a test ingress object and deploy a test app to verify that the network setup is working.
 
 ![](attachments/private-cloud-tech-appendix/mx4pc-ingress-controller.png)
 

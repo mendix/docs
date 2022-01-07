@@ -126,18 +126,17 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ## 8 Onboarding
 
-On the **Landing Page** tab of this page,  you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page to new platform users from your company,. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
+On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
 
-The landing page is easy to use and highly conﬁgurable. You can edit it, work on drafts and preview how it looks before publishing to your company’s users base.
+You can start configuring the sections and blocks of your landing page from a standard template or from scratch. You can work on drafts and preview how the page looks before publishing for your company's new platform users.
 
-SCREENSHOT
+![](attachments/onboarding-landing.png)
 
-Once you publish your landing page, this will be where new users land after signing up with your company email on Mendix. It is also accessible via **Getting Started with Mendix** link in the navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
+Once you publish your landing page, this will be where new users land after signing up with your company's domains on Mendix. This page is also accessible via the **Getting Started with Mendix** link in the top-right navigation menu. If you do not have a company onboarding landing page set up, this link will lead to the default Mendix onboarding page.
 
-SCREENSHOT
+On the **Onboarding Email** tab, you can customize the onboarding email that users of your domains receive when they join the Mendix Platform. You can provide a link to your company's onboarding page, share a welcome message, or present company guidelines for using Mendix. You can create a draft email before sending it.
 
-OTHER TAB
-
+![](attachments/onboarding-email.png)
 
 ## 9 Security {#security}
 

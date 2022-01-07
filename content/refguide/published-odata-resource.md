@@ -101,3 +101,10 @@ A published OData resource is always readable. Use the checkbox for **Updatable 
 {{% alert type="info" %}}
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).
 {{% /alert %}}
+
+### 8.1 Update Microflow
+
+A published OData resource can be updatable, and the default behaviour is to save to the database. With update microflow, now, the default behaviour can be changed. You can define a microflow that accepts two parameters as input:
+
+- `System.HttpRequest`
+- Resource entity

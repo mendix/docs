@@ -213,4 +213,4 @@ The SPF record and MX record use the formats shown in the following table:
 |notification.domain.com | MX | 10 feedback-smtp.eu-central-1.amazonses.com|
 
 ## 6 Read More
-[Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)
+* [Send Emails from a Mendix App](https://academy.mendix.com/link/paths/117/Send-Emails-from-a-Mendix-App-)

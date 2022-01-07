@@ -124,7 +124,7 @@ You can set a **Cover image** to be the background header of your company page. 
 
 ![](attachments/brand.jpg)
 
-## 8 Onboarding
+## 8 Onboarding {#onboarding}
 
 On the **Landing Page** tab of this page, you can customize your company's onboarding landing page and use that instead of the standard Mendix Platform onboarding page for new platform users from your company. This helps users to understand your company’s way of working on the Mendix Platform and enables them to get started more quickly. You can share your company’s best practices on Mendix Platform usage, and you can link to videos, company documentation, and other content.
 

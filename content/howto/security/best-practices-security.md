@@ -72,7 +72,7 @@ Keep the following in mind:
 
 ## 5 Applying Authentication on Services
 
-When publishing a web or REST service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine-grained instead of generic) users enables an application to do the following:
+When publishing a web service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine-grained instead of generic) users enables an application to do the following:
 
 * Identify which user caused a change in your application (traceability)
 * Constrain access on the user (role) level
@@ -82,6 +82,10 @@ Mendix offers the following options for providing authentication for your servic
 
 * User name and password validation, specified within Mendix Studio Pro (for details, see [Published Web Services](/refguide/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
+
+{{% alert type="info" %}}
+To authenticate a user for a REST API service, a user's role should be allowed to use the API service, and the attribute `WebServiceUser` for this user must be set to `false`.
+{{% /alert %}}
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
 

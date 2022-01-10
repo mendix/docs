@@ -236,6 +236,7 @@ To update content that has already been published, follow these steps:
 	{{% /alert %}}
 
 3. You can edit all component details, as described in the [Adding New Marketplace Content](#adding) section above.
+
 4.  In the **Version** section of the **Package** page, update the **Major**, **Minor**, and **Patch** numbers so that the component is saved as a new version:
 
 	* **Major update** – a large change (which will save the component from version 5.0 to version 6.0, for example)
@@ -244,7 +245,13 @@ To update content that has already been published, follow these steps:
 
 5.  On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
 
-## 6 Read More
+## 6 Keeping Your Marketplace Content Up-to-date
+
+To make it easier for users to find relevant components, and reduce the chance for users to find outdated components, Mendix reviews the components on Marketplace and removes outdated components regularly. Therefore, it is good to keep your marketplace components up-to-date:
+
+
+
+## 7 Read More
 
 * [Marketplace Overview](app-store-overview)
 * [How to Sell Your App Service in the Marketplace](sell)

@@ -60,4 +60,24 @@ Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Ski
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Atlas UI marketplace guide](https://docs.mendix.com/appstore/modules/atlas-ui-resources).
 
+## 7 Implement the Data Widgets Module
+
+Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
+
+1. Open up the Marketplace from Studio Pro.
+1. Search for *Data Widgets*.
+1. Open the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module.
+1. Click **Download**.
+1. No further installation is required. If you want to know more about the module visit the [Data Widgets marketplace guide](https://docs.mendix.com/appstore/modules/data-widgets).
+
+## 8 Implement the Pop-Up Menu Widget
+
+Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
+
+1. Open up the Marketplace from Studio Pro.
+1. Search for *Pop-Up Menu*.
+1. Open the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget.
+1. Click **Download**.
+1. No further installation is required. If you want to know more about the widget visit the [Pop-Up Menu marketplace guide](https://docs.mendix.com/appstore/widgets/popup-menu).
+
 Now that you have installed the dependencies you need, you can move on to [Implement the Push Notifications Module](notif-implement-module).

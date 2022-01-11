@@ -103,11 +103,9 @@ If any are found, an error like **An error occured while initializing the Runtim
 
 ### 4.2 Mendix Object Changed Flag
 
-Starting with Mendix 9.5, when changing an object member, the member's state will now always become 'CHANGED', even if the old value and the new value are the same.
+In Mendix 9.5 and above, when an object member changes, the member state becomes 'CHANGED' even if the old value and the new value are the same.This also affects `objectHasChanged` and `memberHasChanged` Java actions of the Community Commons module.
 
-This change also affects the `objectHasChanged` and the `memberHasChanged` Java Actions of the Community Commons module.
-
-For example, suppose we have a committed object `$User` with `$User/Name = 'Alice'`. Applying a change to set `$User/Name` to `'Alice'` results in the member becoming 'CHANGED' even though the name is the same. Previously, this would have resulted in the member remaining 'UNCHANGED'.
+For example, you have a committed object `$User` with `$User/Name = 'Alice'`. Setting `$User/Name` to `'Alice'` results in the member state becoming 'CHANGED' even though the name is the same. Previously, this would have resulted in the member state remaining 'UNCHANGED'.
 
 ## 5 Testing Native Mobile Apps
 

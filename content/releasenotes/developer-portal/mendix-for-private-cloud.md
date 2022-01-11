@@ -10,6 +10,21 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2022
+
+### January 13th, 2021
+
+#### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
+
+* We have added a new field to set kubernetes ingress class as annotation in the installer.
+* We have added a new feature to customize Registry ImageNameTemplate [Custom ImageNameTemplate](/developerportal/deploy/private-cloud-cluster#5.3.4-customize-registry-imagenametemplate)
+
+
+#### Portal Improvements
+
+* We have added a new field cluster owner on the cluster details page. Now a cluster owner is also displayed as a cluster manager in the cluster managers tab.
+* We have updated the UX in create environment flow and more info button in environment details page.
+
 
 ## 2021
 

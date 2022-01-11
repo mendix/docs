@@ -51,7 +51,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Platform user onboarding experience | Released for GA on [October 1st, 2021](/releasenotes/developer-portal/index#oct1) |
+| Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/index#oct1) |
 | Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Apr 2022 |
 | Company branding for end-user services | GA: Mar 2022 |

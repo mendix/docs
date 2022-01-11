@@ -81,7 +81,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | --- | --- |
 | MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7#mx-assist-logic-bot) |
 | MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7); [Nov 30th, 2021](/releasenotes/studio-pro/9.8); [Dec 17th, 2021](/releasenotes/studio-pro/9.9) |
-| MxAssist Page Bot | Private Beta: Mar 2022 |
+| MxAssist Page Bot | Private Beta: Apr 2022 |
 | Machine learning toolkit | Private Beta: Dec 2021 |
 
 ### 2.7 Studio Pro Experience

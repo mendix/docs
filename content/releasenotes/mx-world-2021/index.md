@@ -79,8 +79,8 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| MxAssist Logic Bot improvements | Released for GA |
-| MxAssist Performance Bot new best practices | Released for GA |
+| MxAssist Logic Bot improvements | Released for GA on [October 26th, 2021](/studio-pro/9.7#mx-assist-logic-bot) |
+| MxAssist Performance Bot new best practices | Released for GA on  [October 26th, 2021](/studio-pro/9.7); [November 30th, 2021](/studio-pro/9.8); [December17th, 2021](/studio-pro/9.9) |
 | MxAssist Page Bot | Private Beta: Mar 2022 |
 | Machine learning toolkit | Private Beta: Dec 2021 |
 
@@ -89,7 +89,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Feature | Expected Release |
 | --- | --- |
 | Studio Pro modernization | Released for GA on [September 28th, 2021](/studio-pro/9.6#studio-pro-new-design) |
-| Studio Pro dark theme | Public Beta: Dec 2021 |
+| Studio Pro dark theme | Public Beta: Mar 2022 |
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 

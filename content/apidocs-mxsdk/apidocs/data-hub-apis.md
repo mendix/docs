@@ -10,7 +10,7 @@ tags: ["data hub", "Data Hub API", "Warden", "authentication", "personal access 
 
 The [Data Hub APIs](https://datahub-spec.s3.eu-central-1.amazonaws.com/index.html) are OpenAPI (formerly Swagger) specifications with the following APIs available:
 
-* [Search API](#search) — search and retrieve information on regisered assets that can be used in your app development
+* [Search API](#search) — search and retrieve information on registered assets that can be used in your app development
 * [Registration API](#registration) — register and update data sources to the organization's Mendix Data Hub
 * [Transform API](#transform) — for Mendix users deploying to a non-Mendix environment, generate the request bodies to register data sources published from your Mendix app
 

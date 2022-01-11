@@ -62,12 +62,12 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Atlas UI 3.0 with full design system support | Released for GA |
-| Styling editor in Studio Pro | GA: Dec 2021 |
+| Atlas UI 3.0 with full design system support | Released for GA on [March 31st, 2021](/releasenotes/studio-pro/9.0) (for more information, see the [Atlas 3 Change Summary](/refguide/atlas3-change-summary) |
+| Styling editor in Studio Pro | Released for GA on [December 17th, 2021](/releasenotes/studio-pro/9.9) |
 | Multiple page parameters | GA: Dec 2021 |
-| Native mobile – nanoflow home page | Released for GA |
-| Native mobile – over the air (OTA) updates | Released for GA |
-| Native mobile – delete | GA: Dec 2021 |
+| Native mobile – nanoflow home page | Released for GA on [July 27th, 2021](/releasenotes/studio-pro/9.4) |
+| Native mobile – over the air (OTA) updates | Released for GA on [October 26th, 2021](/releasenotes/studio-pro/9.7) (for more information, see [Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota)) |
+| Native mobile – delete | Released for GA on [October 26th, 2021](/releasenotes/studio-pro/9.7) |
 | Native mobile – simplified monitoring | GA: Mar 2022 |
 | Native mobile – file and image background sync | GA: Jun 2022 |
 | Data widgets – Gallery | Released for GA |

@@ -51,7 +51,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Platform user onboarding experience | Released for GA on [October 1st, 2021](/releasenotes/developer-portal/index#oct1) |
+| Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/index#oct1) |
 | Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Apr 2022 |
 | Company branding for end-user services | GA: Mar 2022 |
@@ -79,8 +79,8 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| MxAssist Logic Bot improvements | Released for GA on [October 26th, 2021](/studio-pro/9.7#mx-assist-logic-bot) |
-| MxAssist Performance Bot new best practices | Released for GA on  [October 26th, 2021](/studio-pro/9.7); [November 30th, 2021](/studio-pro/9.8); [December17th, 2021](/studio-pro/9.9) |
+| MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/studio-pro/9.7#mx-assist-logic-bot) |
+| MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/studio-pro/9.7); [Nov 30th, 2021](/studio-pro/9.8); [Dec 17th, 2021](/studio-pro/9.9) |
 | MxAssist Page Bot | Private Beta: Mar 2022 |
 | Machine learning toolkit | Private Beta: Dec 2021 |
 
@@ -88,7 +88,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Studio Pro modernization | Released for GA on [September 28th, 2021](/studio-pro/9.6#studio-pro-new-design) |
+| Studio Pro modernization | Released for GA on [Sept 28th, 2021](/studio-pro/9.6#studio-pro-new-design) |
 | Studio Pro dark theme | Public Beta: Mar 2022 |
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |

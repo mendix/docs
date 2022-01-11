@@ -101,6 +101,14 @@ If your app is still using Mendix runtime for uniqueness validation, then you sh
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
+### 4.2 Mendix Object Changed Flag
+
+Starting with Mendix 9.5, when changing an object member, the member's state will now always become 'CHANGED', even if the old value and the new value are the same.
+
+This change also affects the `objectHasChanged` and the `memberHasChanged` Java Actions of the Community Commons module.
+
+For example, suppose we have a committed object `$User` with `$User/Name = 'Alice'`. Applying a change to set `$User/Name` to `'Alice'` results in the member becoming 'CHANGED' even though the name is the same. Previously, this would have resulted in the member remaining 'UNCHANGED'.
+
 ## 5 Testing Native Mobile Apps
 
 To test and preview native mobile apps in Mendix 9, you must download the Mendix 9 version of the Make It Native app:

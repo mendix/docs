@@ -161,7 +161,7 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-### 2.6.3 Preventing Synchronization Issues {#prevent-sync-issues}
+### 2.7 Preventing Synchronization Issues {#prevent-sync-issues}
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
@@ -172,7 +172,7 @@ To avoid the problems mentioned above, we suggest following these best practices
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-### 2.6.4 Conflict Resolution {#conflict-res}
+### 2.8 Conflict Resolution {#conflict-res}
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 

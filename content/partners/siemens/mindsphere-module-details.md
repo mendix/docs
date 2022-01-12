@@ -229,7 +229,7 @@ Various changes have been made to the standard Mendix index.html file to ensure 
 
 You will only have to make the changes below if you are configuring your existing Mendix app manually, without importing Siemens MindSphere Web Content.
 
-Run your app locally, copy the *index.html* from the /deployment folder to /theme/web folder of your app project and apply the changes described below.
+Run your app locally, copy the *index.html* from the /deployment folder to /theme/web folder of your app and apply the changes described below.
 
 #### 5.1.1 XSRF
 

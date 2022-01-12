@@ -51,7 +51,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Platform user onboarding experience | Released for GA on [October 1st, 2021](/releasenotes/developer-portal/index#oct1) |
+| Platform user onboarding experience | Released for GA on [Oct 1st, 2021](/releasenotes/developer-portal/index#oct1) |
 | Dashboards with insights on platform employees and app activity | Currently in Public Beta<br/>GA: Feb 2022 |
 | Overview of cloud environments | Currently in Public Beta<br/>GA: Apr 2022 |
 | Company branding for end-user services | GA: Mar 2022 |
@@ -62,16 +62,16 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| Atlas UI 3.0 with full design system support | Released for GA |
-| Styling editor in Studio Pro | GA: Dec 2021 |
-| Multiple page parameters | GA: Dec 2021 |
-| Native mobile – nanoflow home page | Released for GA |
-| Native mobile – over the air (OTA) updates | Released for GA |
-| Native mobile – delete | GA: Dec 2021 |
+| Atlas UI 3.0 with full design system support | Released for GA on [Mar 31st, 2021](/releasenotes/studio-pro/9.0) |
+| Styling editor in Studio Pro | Released for GA on [Dec 17th, 2021](/releasenotes/studio-pro/9.9) |
+| Multiple page parameters | GA: Mar 2021 |
+| Native mobile – nanoflow home page | Released for GA on [Jul 27th, 2021](/releasenotes/studio-pro/9.4) |
+| Native mobile – over the air (OTA) updates | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7) |
+| Native mobile – delete | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7) |
 | Native mobile – simplified monitoring | GA: Mar 2022 |
 | Native mobile – file and image background sync | GA: Jun 2022 |
-| Data widgets – Gallery | Released for GA |
-| Data widgets – Tree View | Released for GA |
+| Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
+| Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree Table | GA: Jun 2022 |
 | Data widgets – Spread Sheet Grid | GA: Jun 2022 |
 
@@ -106,9 +106,10 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
 | Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
-| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Released for GA |
-| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Released for GA |
-| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | GA: Dec 2021 |
+| Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
+| Smart app services integrated in workflows | Speech to Text<br/>Text to Speech<br/>Text Analytics<br/>Translation | GA: Feb 2022 (except in China) |
+| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022 |
+| Smart app services integrated in workflows | General Purpose OCR | GA: Mar 2022 |
 
 ### 2.10 Hybrid Cloud Automation
 
@@ -120,4 +121,6 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 ### 2.11 Studio Pro Pluggability
 
-Johan also announced the Studio Pro pluggability feature, for which we do not have a public release date yet.
+| Feature | Expected Release |
+| --- | --- |
+|  Studio Pro pluggability | TBD |

@@ -25,6 +25,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have added a new field cluster owner on the cluster details page. Now a cluster owner is also displayed as a cluster manager in the cluster managers tab.
 * We have updated the UX in create environment flow and more info button in environment details page.
 
+### January 12th, 2022
+
+#### Prometheus Metrics
+
+* We have updated the [Grafana dashboard](/developerportal/deploy/private-cloud-monitor#import-dashboard) to be compatible with version 2.5.1 of the `grafana/loki-stack` Helm chart. If you're planning to upgrade the `loki-stack` Helm chart in your cluster, you will need to use the updated dashboard.
+* The monitoring solution is now compatible with Kubernetes version 1.22.
 
 ## 2021
 

@@ -59,7 +59,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 	If this is not the case, either enable **Network Conditioner** and set it to a profile that does not limit bandwidth, or click the **Options** tab then the **Optimization** pane and set **Resource usage** to **No limit**.
 6.  In the Parallels drop-down menu, select **Preferences**:
 
-	{{% image_container width="400" %}}![preferences in parallels](attachments/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png){{% /image_container %}}
+	{{% image_container width="200" %}}![preferences in parallels](attachments/using-mendix-studio-pro-on-a-mac/preferences-dropdown.png){{% /image_container %}}
 
 7.  Navigate to the **Network** tab, and select **Shared** from the left panel:
 
@@ -105,7 +105,7 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 3.  In your Make It Native app's **Host** field, type *{your IP address}:8080*:
 
-	{{% image_container width="300" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
+	{{% image_container width="200" %}}![ip in dev app](attachments/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png){{% /image_container %}}
 
 4. Tap **Launch** to view your app.
 
@@ -130,7 +130,7 @@ To improve the performance, you can do the following:
 
 Some users experience slow network speed. You try the following approach, which can increase the upload speed significantly:
 
-1. In Windows 10/11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
+1. In Windows 10 or 11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
 
 2. Right-click **Parallels VirtIO Ethernet Adapter** and select **Properties** in the drop-down list. 
 3. On the **Advance** tab, find the **Large Send Offload** **(IPv4)** property and change its value to **Disabled**. 

@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### January 13th, 2022
+
+#### Fixes
+
+* Fixed a bug where V3 contracts uploaded as single XML files were not downloadable from the Catalog UI Download Contract button.
+
 ### January 6th, 2022
 
 #### Fixes 

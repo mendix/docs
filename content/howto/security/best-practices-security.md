@@ -72,24 +72,31 @@ Keep the following in mind:
 
 ## 5 Applying Authentication on Services{#service-authentication}
 
-By exposing API's you provide a way for users and external systems to create/read/update/delete data within your Mendix application.
-As API's are just a different interface to access your data, it becomes extremely important to restrict data access through authentication and authorization best practices.
-This chapter will continue to explain how to setup security for API's in Mendix Studio Pro.
+When you expose APIs, you provide a way for users and external systems to access (create, read, update, and/or delete) data within your Mendix application.
+As APIs are just a different interface to access your data, it is extremely important to restrict data access through authentication and authorization best practices.
 
-### 5.1 Setting up any API security configuration:
+### 5.1 Turning On API Security
 
-The first configuration step is answering the statement "Requires authentication" with a "Yes" or "No".
-It is highly recommended to set this to "Yes" for any endpoint you create as this will restrict who and when users or external systems have access to your API endpoint.
-The "No" option only is a viable choice when it is used in combination with IP restrictions and certificates, creating for a secure bubble of trusted requesting users and systems.
-Choosing "No" without these will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, possibly to the point of server failure.
+First, you need to answer the question **Requires authentication** with *Yes* or *No*.
 
-API's that do require authentication have two or three options to fulfill that requirement based on whether it's a Published Web Service or OData/REST endpoint. 
-For any of these options, the authentication method will later be combined with the API's "Allowed roles" configuration.
-This can be any of the roles you've defined in [App Security -> User roles], including the role assigned to Anonymous users.
-Note that assigning this Anonymous user role as one of the API's allowed roles is similar as choosing "No" at "Requires authentiation".
+It is highly recommended to set this to *Yes* for any endpoint you create. This will restrict which users or external systems have access to your API endpoint, and when.
+
+*No* is only a viable choice when it is used in combination with IP restrictions and certificates, creating a secure bubble of trusted requesting users and systems.
+
+{{% alert type="warning" %}}
+Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
+{{% /alert %}}
+
+### 5.2 Selecting Authentication Option
+
+APIs that do require authentication have either two or three options to fulfill that requirement, based on whether they are Published Web Services or OData/REST endpoints.
+
+All these authentication options will later be combined with the API's [Allowed roles](/refguide/module-security#module-role) configuration.
+Allowed roles can be any of the roles you've defined in [App Security -> User roles], including the role assigned to Anonymous users.
+Note that assigning this Anonymous user role as one of the API's allowed roles is similar as choosing "No" at "Requires authentication".
 This also means that the same advice around certificate usage and IP restriction applies.
 
-#### 5.1.1 Authentication option 1, Username and password:
+#### 5.2.1 Authentication option 1, Username and password:
 
 The API will expect a Basic auth(*) HTTP request header to be set on each incoming request. 
 This "Authorization" header will be combined with the allowed roles, and checked against the records stored in the System.User(**) table.
@@ -97,7 +104,7 @@ This "Authorization" header will be combined with the allowed roles, and checked
 (*)Basic auth header format: "Authorization": "Basic userid:password" , where userid:password have been base64 encoded.
 (**)Credentials provided in the basic auth header for REST and OData endpoints will only look for accounts that have the attribute "WebServiceUser" set to "FALSE" for SOAP endpoints this boolean should be "TRUE". This means that you cannot create a singular account in Mendix that can both use Published Web Services, the application UI and OData/REST API's at the same time.
 
-#### 5.1.2 Authentication option 2, Active session:
+#### 5.2.2 Authentication option 2, Active session:
 
 The API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. 
 This session token is only available in non "Offline-first" apps, and can be acquired by calling mx.session.getConfig("csrftoken") in JavaScript.
@@ -105,9 +112,9 @@ This method call should be freshly applied to each API call to prevent cross-sit
 This authentication option is particularly interesting for custom JavaScript and widget implementations.
 This authentication option is not available for Published Web Services.
 
-#### 5.1.3 Authentication option 3, Custom:
+#### 5.2.3 Authentication option 3, Custom:
 
-The API passes the HttpRequest in including all the attached HTTP request headers, these can be used in your microflow to verify the existance of a valid custom Authorization header or different identifiers and should be used to return a newly created or existing System.User or entity specialization thereof based on that input.
+The API passes the HttpRequest in including all the attached HTTP request headers, these can be used in your microflow to verify the existence of a valid custom Authorization header or different identifiers and should be used to return a newly created or existing System.User or entity specialization thereof based on that input.
 This functionality in Mendix Studio Pro makes it possible for you to contact an external Identity Provider or verify the access to the API endpoint and resource based on for example scopes and claims encoded in a JWT token.
 
 In case more than 1 authentication option is toggled on the server will check each in the following order: Custom -> Username and Password -> Active Session

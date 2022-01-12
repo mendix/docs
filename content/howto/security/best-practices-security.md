@@ -91,38 +91,47 @@ Choosing *No* without these restrictions will allow anyone on the internet to ma
 
 APIs that do require authentication have either two or three options to fulfill that requirement, based on whether they are Published Web Services or OData/REST endpoints.
 
-All these authentication options will later be combined with the API's [Allowed roles](/refguide/module-security#module-role) configuration.
-Allowed roles can be any of the roles you've defined in [App Security -> User roles], including the role assigned to Anonymous users.
-Note that assigning this Anonymous user role as one of the API's allowed roles is similar as choosing "No" at "Requires authentication".
-This also means that the same advice around certificate usage and IP restriction applies.
+All these authentication options will later be combined with the API's [Allowed Roles](/refguide/published-rest-service#allowed-roles) configuration.
+Allowed roles can be any of the roles you have defined in [User Roles](/refguide/user-roles), including the role assigned to Anonymous users.
 
-#### 5.2.1 Authentication option 1, Username and password:
+{{% alert type="warning" %}}
+Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
+This means that the same advice around certificate usage and IP restrictions applies.
+{{% /alert %}}
 
-The API will expect a Basic auth(*) HTTP request header to be set on each incoming request. 
-This "Authorization" header will be combined with the allowed roles, and checked against the records stored in the System.User(**) table.
+You can choose one or more of the authentication options described below. If you choose more than one authentication option, they will be checked in the order: [Custom](#custom) -> [Username and Password](#basic) -> [Active Session](#active)
 
-(*)Basic auth header format: "Authorization": "Basic userid:password" , where userid:password have been base64 encoded.
-(**)Credentials provided in the basic auth header for REST and OData endpoints will only look for accounts that have the attribute "WebServiceUser" set to "FALSE" for SOAP endpoints this boolean should be "TRUE". This means that you cannot create a singular account in Mendix that can both use Published Web Services, the application UI and OData/REST API's at the same time.
+#### 5.2.1 Authentication Option 1, Username and Password{#basic}
 
-#### 5.2.2 Authentication option 2, Active session:
+If you choose this option, the API will expect a `Basic auth` HTTP request header to be set on each incoming request. The `basic auth` header format is: `"Authorization": "Basic userid:password"`, where userid:password have been base64 encoded.
 
-The API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. 
-This session token is only available in non "Offline-first" apps, and can be acquired by calling mx.session.getConfig("csrftoken") in JavaScript.
-This method call should be freshly applied to each API call to prevent cross-site request forgery (CSRF/XSRF).
-This authentication option is particularly interesting for custom JavaScript and widget implementations.
-This authentication option is not available for Published Web Services.
+This "Authorization" header will be combined with the allowed roles, and checked against the app users, recorded in the `System.User` entity.
+Credentials provided in the basic auth header will be checked as follows:
 
-#### 5.2.3 Authentication option 3, Custom:
+* for REST and OData endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
+* for SOAP endpoints `WebServiceUser` should be "TRUE"
 
-The API passes the HttpRequest in including all the attached HTTP request headers, these can be used in your microflow to verify the existence of a valid custom Authorization header or different identifiers and should be used to return a newly created or existing System.User or entity specialization thereof based on that input.
-This functionality in Mendix Studio Pro makes it possible for you to contact an external Identity Provider or verify the access to the API endpoint and resource based on for example scopes and claims encoded in a JWT token.
+    {{% alert type="info" %}}This means that you cannot create an account in Mendix that can use Published Web Services, the application UI, and OData/REST APIs at the same time.{{% /alert %}}
 
-In case more than 1 authentication option is toggled on the server will check each in the following order: Custom -> Username and Password -> Active Session
+#### 5.2.2 Authentication Option 2, Active Session{#active}
 
-After the request has been authenticated, the Role based security model of Mendix will be applied on the microflows that are executed as the result of the API endpoint, resources and paths that have been configured. If "Apply" entity access has been turned on the API call will also check for read / write access to the requested entities and the attributes before returning any data. 
+{{% alert type="info" %}}
+This authentication option is not available for Published Web Services and can only be used in apps which are not [Offline-First](/refguide/offline-first). 
+{{% /alert %}}
 
-To understand the full authentication flow, take a closer look at https://docs.mendix.com/refguide/published-rest-routing
+If you choose this option, the API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. This authentication option is particularly interesting for custom JavaScript and widget implementations.
 
+The session token can be acquired by calling `mx.session.getConfig("csrftoken")` in JavaScript. This method call should be used before each API call to prevent cross-site request forgery (CSRF/XSRF).
+
+#### 5.2.3 Authentication Option 3, Custom {#custom}
+
+If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be new or existing object, based on the content of the HTTP request headers.
+
+This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
+
+After the request has been authenticated, the role-based security model of Mendix will be applied to the microflows that are executed as the result of the API endpoint, resources, and paths that have been configured. If [Apply entity access](/refguide/microflow#security) has been turned on, the API call will also check for read/write access to the requested entities and attributes before returning any data. 
+
+To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide/published-rest-routing).
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
 

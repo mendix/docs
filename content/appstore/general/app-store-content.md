@@ -85,7 +85,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.2 Import Content from the App Explorer
 
-{{% alert type="info" %}}This procedure works for connectors and modules, including add-on modules.{{% /alert %}}
+{{% alert type="info" %}}This procedure only works for connectors and modules, including add-on modules.{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.
@@ -117,7 +117,7 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Add Content into the App Directory
 
-{{% alert type="info" %}}This procedure works for widgets and [add-on modules]().{{% /alert %}}
+{{% alert type="info" %}}This procedure only works for widgets and [add-on modules]().{{% /alert %}}
 
 {{% todo %}}[add file path to add-on modules link in the second bullet point]{{% /todo %}}
 

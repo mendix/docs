@@ -1256,7 +1256,7 @@ The following fields can be configured:
 * `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
-#### 5.3.4 Customize Registry ImageNameTemplate
+#### 5.3.4 Customize Registry ImageNameTemplate{#customize-registry-imagenametemplate}
 
 ImageNameTemplate is a [go template](https://pkg.go.dev/text/template) that is used to generate the image name and tag. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of imageNameTemplate may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
 

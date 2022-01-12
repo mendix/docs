@@ -120,4 +120,6 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 ### 2.11 Studio Pro Pluggability
 
-Johan also announced the Studio Pro pluggability feature, for which we do not have a public release date yet.
+| Feature | Expected Release |
+| --- | --- |
+|  Studio Pro pluggability | TBD |

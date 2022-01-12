@@ -70,8 +70,8 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Native mobile – delete | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7) |
 | Native mobile – simplified monitoring | GA: Mar 2022 |
 | Native mobile – file and image background sync | GA: Jun 2022 |
-| Data widgets – Gallery | Released for GA |
-| Data widgets – Tree View | Released for GA |
+| Data widgets – Gallery | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
+| Data widgets – Tree View | Released for GA on [Nov 16th, 2021](https://marketplace.mendix.com/link/component/116540https://marketplace.mendix.com/link/component/116540) |
 | Data widgets – Tree Table | GA: Jun 2022 |
 | Data widgets – Spread Sheet Grid | GA: Jun 2022 |
 
@@ -106,9 +106,10 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
 | Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
-| Smart app services integrated in workflows | Email<br/>Speech to Text (trial)<br/>Text to Speech (trial)<br/>Text Analytics (trial)<br/>Translation (trial) | Released for GA |
-| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | Released for GA |
-| Smart app services integrated in workflows | Speech to Text (try & buy)<br/>Text to Speech (try & buy)<br/>Text Analytics (try & buy)<br/>Translation (try & buy)<br/>General Purpose OCR | GA: Dec 2021 |
+| Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
+| Smart app services integrated in workflows | Speech to Text<br/>Text to Speech<br/>Text Analytics<br/>Translation | GA: Feb 2022 (except in China) |
+| Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022 |
+| Smart app services integrated in workflows | General Purpose OCR | GA: Mar 2022 |
 
 ### 2.10 Hybrid Cloud Automation
 

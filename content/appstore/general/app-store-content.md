@@ -31,9 +31,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 There are three ways to install a Marketplace component:
 
-* [Download]( #downloading) the component from the Marketplace within Studio Pro (for all types of marketplace components)
-* [Import](#import) the component from the **App Explorer** (only for modules and connectors)
-* [Manually add](#add) the component into the app directory (only for widgets and *.mxmodule* files)
+{{% todo %}}[add file path to add-on modules link in the second bullet point]{{% /todo %}}
+
+* [Download]( #downloading) the component from the Marketplace within Studio Pro – this works for all types of marketplace components
+* [Import](#import) the component from the **App Explorer** – this only works for connectors and modules, including [add-on modules]()
+* [Manually add](#add) the component into the app directory – this only works for widgets and add-on modules
 
 ### 3.1 Downloading Content from the Marketplace Within Studio Pro {#downloading}
 
@@ -83,7 +85,7 @@ There are three ways to install a Marketplace component:
 
 ### 3.2 Import Content from the App Explorer
 
-{{% alert type="info" %}}You can only use this procedure to import modules and connectors. You cannot use it to import a widget, a template, or an app.{{% /alert %}}
+{{% alert type="info" %}}This procedure works for connectors and modules, including add-on modules.{{% /alert %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component and open the component page.
@@ -115,7 +117,9 @@ You can find the imported module or connector in the **App Explorer**.
 
 ### 3.3 Manually Add Content into the App Directory
 
-{{% alert type="info" %}}You can only use this procedure to import widgets and *.mxmodule* files. You cannot use it to import modules that are *.mpk* files.{{% /alert %}}
+{{% alert type="info" %}}This procedure works for widgets and [add-on modules]().{{% /alert %}}
+
+{{% todo %}}[add file path to add-on modules link in the second bullet point]{{% /todo %}}
 
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. **Search** the component to find the component.

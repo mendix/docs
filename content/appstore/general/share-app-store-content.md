@@ -221,12 +221,12 @@ After you click **Publish Content**, your draft will be reviewed by Mendix befor
 
 All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. 
 
-Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission. Mendix checks a range of requirements (for example, that the component installs properly and reports no errors, and that the documentation is clear, accurate and of sufficient detail). 
+Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission. Mendix checks a range of requirements (for example, that the component installs properly and reports no errors, and that the documentation is clear, accurate, and of sufficient detail). 
 
 It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you follow the [content development guidelines](#guidelines) before you submit a component for approval.
 
 {{% alert type="info" %}}
-Review and approval by Mendix is required only for the first version of publicly listed content. Subsequent versions of public content do not need review or approval by Mendix.
+Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
 {{% /alert %}}
 
 {{% alert type="info" %}}

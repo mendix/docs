@@ -12,7 +12,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
-### January ???th, 2022
+### January 12th, 2022
 
 #### Prometheus Metrics
 

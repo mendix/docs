@@ -31,9 +31,9 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| Foundational APIs | Private Beta: Dec 2021 |
-| Usage-based metering and billing | Private Beta: Dec 2021 |
-| Supplier onboarding (including documentation) | Private Beta: Dec 2021 |
+| Foundational APIs | Currently in Private Beta<br/>GA: TBD |
+| Usage-based metering and billing | Currently in Private Beta<br/>GA: TBD |
+| Supplier onboarding (including documentation) | Currently in Private Beta<br/>GA: TBD |
 
 ## 4 End-User Services & Studio
 

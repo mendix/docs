@@ -137,7 +137,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
      ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
      
-     {{% alert type="info" %}}Every **Webhook URL** you add is counted as utilization towards the allocated app service quota. If the **Webhook URL** is incorrect,you can modify it by using edit option.{{% /alert %}}     
+     {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can edit or delete the Webhook.{{% /alert %}}     
     
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
@@ -154,8 +154,8 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.2 Sending Message to a Teams Channel
 
 #### 4.2.1 Using Microflow
-1.  You can use the Microsoft Teams Connector in a microflow to send plain text messages. The Microsoft Teams Connector module comes with predefined entity    SendMessageResponse whose object will be returned as a response from Microsoft Teams Connector activity.
-      ![](attachments/ms-teams-connector/SendMessageResponseEntity.png) 
+1.  You can use the Microsoft Teams Connector in a microflow to send plain text messages. The Microsoft Teams Connector module comes with predefined entity **SendMessageResponse** whose object will be returned as a response from Microsoft Teams Connector activity.
+      ![](attachments/ms-teams-connector/send-message-response-entity.png) 
 
 2.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
      This representative microflow contains activities with the required attributes, Microsoft Teams Connector activity and a placeholder to capture the returned object.

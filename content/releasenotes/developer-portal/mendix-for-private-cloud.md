@@ -12,6 +12,18 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### January 13th, 2022
+
+#### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0
+
+* We have added a new field to set the kubernetes ingress class as an annotation in the installer.
+* We have added a new feature to customize your image names in the registry using a [custom imageNameTemplate](/developerportal/deploy/private-cloud-cluster#customize-registry-imagenametemplate).
+
+#### Portal Improvements
+
+* We have added a new field, **cluster owner**, on the cluster details page. A cluster owner is now also displayed as a cluster manager in the cluster managers tab.
+* We have updated the UX in the create environment flow and added a **more info** button to the environment details page.
+
 ### January 12th, 2022
 
 #### Prometheus Metrics

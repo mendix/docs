@@ -45,7 +45,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | End-user services – notifications | GA: Mar 2022 |
 | End-user services – branding | GA: Mar 2022 |
 | Studio workflow templates | GA: Feb 2022 |
-| Studio expression editor | Released for GA |
+| Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6#expression-editor) |
 
 ### 2.4 Control Center
 
@@ -79,17 +79,17 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| MxAssist Logic Bot improvements | Released for GA |
-| MxAssist Performance Bot new best practices | Released for GA |
-| MxAssist Page Bot | Private Beta: Mar 2022 |
-| Machine learning toolkit | Private Beta: Dec 2021 |
+| MxAssist Logic Bot improvements | Released for GA on [Oct 26th, 2021](/releasenotes/studio-pro/9.7#mx-assist-logic-bot) |
+| MxAssist Performance Bot new best practices | Released for GA on  [Oct 26th, 2021](/releasenotes/studio-pro/9.7); [Nov 30th, 2021](/releasenotes/studio-pro/9.8); [Dec 17th, 2021](/releasenotes/studio-pro/9.9) |
+| MxAssist Page Bot | Private Beta: Apr 2022 |
+| Machine learning toolkit | Currently in Private Beta |
 
 ### 2.7 Studio Pro Experience
 
 | Feature | Expected Release |
 | --- | --- |
-| Studio Pro modernization | Released for GA |
-| Studio Pro dark theme | Public Beta: Dec 2021 |
+| Studio Pro modernization | Released for GA on [Sept 28th, 2021](/releasenotes/studio-pro/9.6#studio-pro-new-design) |
+| Studio Pro dark theme | Public Beta: Mar 2022 |
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 

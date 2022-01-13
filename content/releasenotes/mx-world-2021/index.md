@@ -97,9 +97,9 @@ Johan divided the new features into ten major announcements, which are shown in 
 
 | Feature | Expected Release |
 | --- | --- |
-| External entity create and update (AKA write) | GA: Dec 2021 |
-| Connector framework (OData publish with microflows and Marketplace integration) | Private Beta: Dec 2021 |
-| Business events and event broker | Public Beta: Mar 2022 |
+| External entity create, update, and delete (AKA write) | GA: Apr 2022 |
+| Connector framework (OData publish with microflows and Marketplace integration) | Public Beta:  May 2022 |
+| Business events and event broker | Public Beta: Jun 2022 |
 
 ### 2.9 Intelligent Automation
 

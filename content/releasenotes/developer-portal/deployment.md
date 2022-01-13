@@ -12,7 +12,7 @@ Follow the links in the table below to see the release notes you want:
 | Type of Deployment | Last Updated |
 | --- | --- |
 | [Mendix Cloud](mendix-cloud) | January 13th, 2022 |
-| [Mendix for Private Cloud](mendix-for-private-cloud) | January 12th, 2022 |
+| [Mendix for Private Cloud](mendix-for-private-cloud) | January 13th, 2022 |
 | [SAP Business Technology Platform (SAP BTP)](sap-cloud-platform) | December 9th, 2021 |
 | [Other Deployment Options](on-premises) | October 26th, 2020 |
 

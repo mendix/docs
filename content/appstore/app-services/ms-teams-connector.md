@@ -137,7 +137,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
      ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
      
-{{% alert type="info" %}}Every **Webhook URL** you add is counted as utilization towards the allocated app service quota. If the **Webhook URL** is incorrect,you can modify it by using edit option.{{% /alert %}}     
+     {{% alert type="info" %}}Every **Webhook URL** you add is counted as utilization towards the allocated app service quota. If the **Webhook URL** is incorrect,you can modify it by using edit option.{{% /alert %}}     
     
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.

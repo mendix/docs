@@ -19,6 +19,13 @@ Now that you have implemented push notifications, it is time to build and deploy
 1.  Scroll down and upload the Firebase configurations:</br>
     a. *google-services.json* for the Android build.</br>
     b. *GoogleServices-Info.plist* for the iOS build.</br>
+
+    These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. 
+
+    | **File**    | **Source**   | **Usage**      |
+    | -------- | -------- | ------- |
+    | **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
+    | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
 1. Save the configuration. Now you are ready to build.
 
 When building for local development, keep in mind that Mendix's Make it Native does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.

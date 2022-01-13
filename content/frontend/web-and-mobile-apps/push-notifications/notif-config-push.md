@@ -18,14 +18,14 @@ If you have completed [Add Module Dependencies](notif-add-module-depends) and [I
 1. Log in as the Administrator user you [previously designated](notif-implement-module#config).
 1. Navigate to the **Administration** page.
 
-The first time you open this page it will present you with a wizard to set up the Firebase configuration. If you have not set up Firebase yet, see [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). The wizard will mention the following files:
+The first time you open this page it will present you with a wizard to set up the Firebase configuration. If you have not set up Firebase yet, see [Set Up the Google Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server). 
+
+{{% image_container width="350" %}}![test entity](attachments/native-push/push-setup-wizard.png){{% /image_container %}}
+
+When selecting a platform to support, the wizard will ask for the Google Firebase project ID and service account private key. Upload the private key file here.
 
 | **File**    | **Source**   | **Usage**      |
 | -------- | -------- | ------- |
-| **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. | 
-| **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
-| **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
+| **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. |  
 
-These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. The private key for the Firebase service account must be uploaded in the configuration wizard (or manual configuration) in your Mendix app. The Android and iOS specific configuration files must be configured when you build your native apps for Android and iOS, see [Build a Native App with Push Notifications Enabled](notif-build-native).
-
-Before you build your app, make sure to implement push notifications in the native app first. See [Native Push Notification Implementation](notif-implement-native).
+Now you completed the initial setup wizard, you can move on to [Native Push Notification Implementation](notif-implement-native).

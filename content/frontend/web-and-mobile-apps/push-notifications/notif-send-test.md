@@ -24,6 +24,8 @@ To send your first test notification, do the following:
 1. Leave the remaining fields to the defaults.
 1. Click **Send**.
 
+{{% image_container width="350" %}}![test entity](attachments/native-push/push-send-message.png){{% /image_container %}}
+
 You should now receive the notification on your device. If the application is already opened, the action will log a message (on log node **ExampleNotification**) and show a dialog box in the app.
 
 If the app is not open (or running in the background) it will deliver and show the notification in the usual location for Android or iOS devices. Click on the notification to trigger the in-app action.

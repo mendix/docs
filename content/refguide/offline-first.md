@@ -65,27 +65,17 @@ Synchronization performed using a UI element (for example, a button or an on-cha
 
 ### 2.2 Synchronization Phases
 
-The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database.
+The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works on the database level.
 
 #### 2.2.1 Upload Phase {#upload}
 
-The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown (if the error is not caught).
+The upload phase executes the following operations:
 
-During [full synchronization](#full-sync) this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. Note that synchronization only works on the database level.
-
-For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): **Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)**. To fix this, such objects must also be committed before synchronizing (in this example, `Country` should be committed before synchronizing).
-
-During [selective synchronization](#selective-sync), an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
-
-For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. In this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object.
-
-The upload phase executes the following operations after validation:
-
-1. The local database can be modified only by committing or deleting an object. Such an object can be a new object created while offline, or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
-2. There might be objects deleted from the local database since the last synchronization. The upload phase checks which objects have been deleted.
-3. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-4. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
-
+1. As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline, or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. The detection logic differs per synchronization type. For Synchronize all, all committed objects in the local database are checked. For Synchronize objects, all committed objects from the list of selected objects are checked.
+2. There might be objects deleted from the device database since the last synchronization. The upload phase checks which objects have been deleted.
+3. If there are any changed or new file objects, their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request.
+4. All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (see the [Dangling references](#dangling-references) section for more info). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
+5. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
 
 #### 2.2.2 Download Phase {#download}
 
@@ -158,8 +148,35 @@ During the synchronization, changed and new objects are committed. An object's s
 * A member of the object has become inaccessible due to access rules
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
+* The object has a dangling reference (see the [Dangling references](#dangling-references) section for more info)
 
 {{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
+
+#### 2.6.3 Dangling references {#dangling-references}
+
+During the synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server.
+This validation ensures that none of the synchronized objects have associations pointing to an object that exists only in the device database.
+If an association doesn’t satisfy this condition, this is called a dangling reference.
+
+For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which is a dangling reference error.
+
+A dangling reference error is a modeling error.
+To prevent them from happening during selective synchronization make sure you either select both sides of the association for the synchronization
+or make sure the `Country` object is synchronized before synchronizing `City`.
+To prevent dangling reference errors during full synchronization make sure both sides of the association are committed before synchronizing.
+
+When some of the synchronized objects have dangling references, 
+the server will synchronize all other objects except the ones with dangling references,
+for each of which it will create a synchronization error and store it in
+`System.SynchronizationError` entity. The error message in such cases looks like the following:
+
+**Synchronizing an object of type City with guid ... has failed due to a modelling error. 
+The object has a reference to other objects (City_Country) that have not been synchronised to the runtime yet. 
+This breaks referential integrity of the object because it references a non-existing object in the runtime database. 
+Please make sure that you synchronize the referenced object together with the City 
+or before synchronising the City.**
+
+To prevent data loss, an error object contains a json representation of the data of an object that caused the error.
 
 ### 2.7 Preventing Synchronization Issues {#prevent-sync-issues}
 

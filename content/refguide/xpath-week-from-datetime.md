@@ -30,7 +30,7 @@ The HSQLDB database used for testing locally uses JVM's [Calendar.WEEK_OF_YEAR](
 
 PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601):
 
-* [PostgreSQL](https://www.postgresql.org/docs/11/functions-datetime.html)
+* [PostgreSQL](https://www.postgresql.org/docs/current/functions-datetime.html)
 * [Oracle](https://docs.oracle.com/cd/B28359_01/olap.111/b28126/dml_commands_1029.htm#OLADM780)
 * [MySQL](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_week)
 

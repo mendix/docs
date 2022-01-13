@@ -103,7 +103,7 @@ Having configured the Mendix app, just run the application locally and it will a
 
 ### 4.1 Exporting a PostgreSQL Database
 
-To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/9.5/static/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
+To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
@@ -125,7 +125,7 @@ Export the Mendix cloud database via the Developer Portal. This can be accessed 
 
 ### 5.1 Importing into an On-premises PostgreSQL Database
 
-To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/9.5/static/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
+To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 

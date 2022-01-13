@@ -1282,6 +1282,7 @@ An example of the imageNameTemplate in the operator configuration manifest is gi
 ```
 
 You can customize the registry imageNameTemplate in OperatorConfiguration with these available variables:
+
 * `{{.Name}}`: internal environment name.
 * `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.
 * `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.

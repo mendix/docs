@@ -116,9 +116,3 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA |
 | Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA |
 | Mendix for Private Cloud – built-in CI/CD | GA: Dec 2021 |
-
-## 12 Studio Pro Pluggability
-
-| Feature | Expected Release |
-| --- | --- |
-|  Studio Pro pluggability | TBD |

@@ -136,6 +136,8 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
      ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
+     
+     {{% alert type="info" %}}Every **Webhook URL** you add is counted as utilization towards the allocated app service quota. If the **Webhook URL** is incorrect,you can modify it by using edit option.{{% /alert %}}     
     
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
@@ -152,13 +154,15 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.2 Sending Message to a Teams Channel
 
 #### 4.2.1 Using Microflow
+1.  You can use the Microsoft Teams Connector in a microflow to send plain text messages. The Microsoft Teams Connector module comes with predefined entity    SendMessageResponse whose object will be returned as a response from Microsoft Teams Connector activity.
+      ![](attachments/ms-teams-connector/SendMessageResponseEntity.png) 
 
-1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
-
+2.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
+     This representative microflow contains activities with the required attributes, Microsoft Teams Connector activity and a placeholder to capture the returned object.
     ![](attachments/ms-teams-connector/connector_in_microflow.png) 
    
-2.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
-3.  Specify the following settings with expression syntax:
+3.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
+4.  Specify the following settings with expression syntax:
     1.  Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     2.  Set the **textMessage** parameter to the message you want to send to the Microsoft Teams channel.
       
@@ -166,7 +170,8 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
         
     3. Click **OK** to save the changes and close the dialog box.
 
-After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a boolean value `true`; otherwise, the activity returns `false`.
+5. After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a SendMessageReponse object.
+6. This object will contain SentMessage field as true when the message is successfully sent otherwise false.The Message attribute in object will contain the respective response message.
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

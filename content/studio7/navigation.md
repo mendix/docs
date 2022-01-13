@@ -1,7 +1,7 @@
 ---
 title: "Navigation Document"
 description: "Describes the navigation menu in Mendix Studio."
-menu_order: 40
+weight: 40
 tags: ["studio", "navigation", "app menu"]
 ---
 

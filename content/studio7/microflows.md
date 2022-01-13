@@ -1,7 +1,7 @@
 ---
 title: "Microflows"
 description: "Describes the microflows in Mendix Studio."
-menu_order: 50
+weight: 50
 tags: ["studio", "microflow"]
 #If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

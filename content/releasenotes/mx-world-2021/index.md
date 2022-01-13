@@ -10,11 +10,7 @@ tags: ["mendix world", "announcements", "features", "feature release", "products
 
 At Mendix World on September 8th, 2021, the keynote from Mendix CTO Johan den Haan announced a number of features which Mendix is releasing. Many of these are available immediately, but some are planned for future release in the months following Mendix World 2021. This document contains the calendar of expected release dates for these features.
 
-If you want to watch Johan's keynote again, you can find it at [Mendix World 2021](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1624031940353001Xclf) — you will need to register or have already registered for Mendix World 2021 to see this.
-
-## 2 Feature Release Calendar
-
-Johan divided the new features into ten major announcements, which are shown in the sections below.
+Johan divided the new features into these major announcements, which are described in the sections below:
 
 ![Announcements are solutions platform, app services framework, end-user services and studio, control center, next-level front-end, page bot and machine learning toolkit, studio pro experience, data hub 2.0, intelligent automation, and hybrid cloud automation.](attachments/index/innovations.png)
 
@@ -22,14 +18,16 @@ Johan divided the new features into ten major announcements, which are shown in 
 "GA" means General Availability for all users. A GA release is different than a Beta release. For more information on Private Beta and Public Beta releases, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-### 2.1 Solutions Platform
+If you want to watch Johan's keynote again, you can find it at [Mendix World 2021](https://events.mendixworld.com/widget/mendix/world21/catalog/session/1624031940353001Xclf) — you will need to register or have already registered for Mendix World 2021 to see this.
+
+## 2 Solutions Platform
 
 | Feature | Expected Release |
 | --- | --- |
 | Consuming add-on modules | GA: Jan 2022 |
 | Publishing add-on modules | Currently in Private Beta<br/>GA: Mar 2022 |
 
-### 2.2 App Services Framework
+## 3 App Services Framework
 
 | Feature | Expected Release |
 | --- | --- |
@@ -37,7 +35,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Usage-based metering and billing | Private Beta: Dec 2021 |
 | Supplier onboarding (including documentation) | Private Beta: Dec 2021 |
 
-### 2.3 End-User Services & Studio
+## 4 End-User Services & Studio
 
 | Feature | Expected Release |
 | --- | --- |
@@ -47,7 +45,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Studio workflow templates | GA: Feb 2022 |
 | Studio expression editor | Released for GA on [May 19th, 2021](/releasenotes/studio/9.0-9.6#expression-editor) |
 
-### 2.4 Control Center
+## 5 Control Center
 
 | Feature | Expected Release |
 | --- | --- |
@@ -58,7 +56,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Marketplace subscription dashboards | GA: Mar 2022 |
 | Self-service subscription management | GA: Jun 2022 |
 
-### 2.5 Next-Level Front-End
+## 6 Next-Level Front-End
 
 | Feature | Expected Release |
 | --- | --- |
@@ -75,7 +73,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Data widgets – Tree Table | GA: Jun 2022 |
 | Data widgets – Spread Sheet Grid | GA: Jun 2022 |
 
-### 2.6 Page Bot & Machine Learning Toolkit
+## 7 Page Bot & Machine Learning Toolkit
 
 | Feature | Expected Release |
 | --- | --- |
@@ -84,7 +82,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | MxAssist Page Bot | Private Beta: Apr 2022 |
 | Machine learning toolkit | Currently in Private Beta |
 
-### 2.7 Studio Pro Experience
+## 8 Studio Pro Experience
 
 | Feature | Expected Release |
 | --- | --- |
@@ -93,7 +91,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Team Server Git (Mendix Cloud) | Currently in Public Beta<br/>GA: Mar 2022 |
 | BYO Team Server Git (Bring Your Own) | Currently in Public Beta<br/>GA: Mar 2022 |
 
-### 2.8 Data Hub 2.0
+## 9 Data Hub 2.0
 
 | Feature | Expected Release |
 | --- | --- |
@@ -101,7 +99,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Connector framework (OData publish with microflows and Marketplace integration) | Public Beta:  May 2022 |
 | Business events and event broker | Public Beta: Jun 2022 |
 
-### 2.9 Intelligent Automation
+## 10 Intelligent Automation
 
 | Feature | Component | Expected Release |
 | --- | --- | --- |
@@ -111,7 +109,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022 |
 | Smart app services integrated in workflows | General Purpose OCR | GA: Mar 2022 |
 
-### 2.10 Hybrid Cloud Automation
+## 11 Hybrid Cloud Automation
 
 | Feature | Expected Release |
 | --- | --- |
@@ -119,7 +117,7 @@ Johan divided the new features into ten major announcements, which are shown in 
 | Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA |
 | Mendix for Private Cloud – built-in CI/CD | GA: Dec 2021 |
 
-### 2.11 Studio Pro Pluggability
+## 12 Studio Pro Pluggability
 
 | Feature | Expected Release |
 | --- | --- |

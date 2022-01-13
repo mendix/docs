@@ -15,8 +15,6 @@ For details, see [3D Viewer API Reference](http://3dviewer-apidoc.s3-website.eu-
 
 ## 3 Use Case Example
 
-### 3.1 Getting Properties of a Selected Part
-
 If you want to get properties of a selected part on the 3D Viewer, perform the following steps:
 
 1. Retrieve selected object information as a string through the [On Selection Change](3d-viewer#on-selection-change) event attribute of the 3D Viewer.
@@ -48,20 +46,20 @@ export async function GetProperties(selectedObject, propertyObject) {
 	return Promise.all(promises).then(()=>objects);
 
 	function createPropertyObject(objects, key, value) {
-        return new Promise(function (resolve, reject) {
-            mx.data.create({
-                entity: propertyObject,
-                callback: function(prop) {
-                    prop.set("Key", key);
-                    prop.set("Value", value);
+	return new Promise(function (resolve, reject) {
+	    mx.data.create({
+		entity: propertyObject,
+		callback: function(prop) {
+		    prop.set("Key", key);
+		    prop.set("Value", value);
 					objects.push(prop);
-                    resolve(prop);
-                },
-                error: function(error) {
-                    reject(error.message);
-                }
-            });
-        });
+		    resolve(prop);
+		},
+		error: function(error) {
+		    reject(error.message);
+		}
+	    });
+	});
     }
 
 	// END USER CODE

@@ -200,7 +200,7 @@ As a helping hand, the checklist below presents the final items to consider when
 
 **Technical Readiness**
 
-* Make sure you have prepared your app service according to the [Marketplace content development guidelines](/appstore/general/share-app-store-content#submission).
+* Make sure you have prepared your app service according to the [Marketplace content development guidelines](/appstore/general/share-app-store-content#guidelines).
 * Verify  your app service for errors and warnings before submitting it to Marketplace. Warnings are accepted, but they are not recommended.
 * While importing the app service, there might still be errors that exist, because it is expected that the user needs to hook up some information from their existing modules into the new app services. Make sure you explain how to set up the app service and how to address all errors in the [app service's documentation](/appstore/general/share-app-store-content#doc) when you are preparing for publication. There should be no errors displayed upon importing the app service that do not have an explanation.
 

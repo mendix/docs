@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "app service", "microsoft", "micr
 
 The [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391) app service enables sending messages to a Microsoft Teams channel automatically. You can add and configure the app service in a microflow. Once the microflow that uses the app service is triggered, your app asynchronously sends out the message to the Microsoft Teams channel. 
 
-This app service is an add-on module. For more information, see Add-On Module].
+This app service is an add-on module. For more information, see [Add-On Module]().
 
 {{% todo %}}[Add a link to the Add-On Moduke doc. Path: /refguide/add-on-module]{{% /todo %}}
 
@@ -21,9 +21,9 @@ This app service is an add-on module. For more information, see Add-On Module].
 
 * Send messages to pre-configured channels in Microsoft Teams
 
-* Let your Mendix app send automated notifications to pre-configured channels, when events occur in your Mendix application (example : your Mendix app can automatically send a message to a pre-configured channel whenever a ticket is raised on the support portal application)
+* Let your Mendix app send an automated notification to a pre-configured channel, when an event occurs in your Mendix application (for example, your Mendix app can automatically send a message to a pre-configured channel whenever a ticket is raised on the support portal application)
 
-* Let your Mendix app send automated messages to a pre-configured channel to trigger users to perform an action (example: your Mendix app can automatically ask users to create a Jira ticket by sending them a message in a pre-configured channel)
+* Let your Mendix app send an automated message to a pre-configured channel to trigger users to perform an action (for example, your Mendix app can automatically ask users to create a Jira ticket by sending them a message in a pre-configured channel)
 
 ### 1.2 Limitations
 
@@ -154,24 +154,32 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 ### 4.2 Sending Message to a Teams Channel
 
 #### 4.2.1 Using Microflow
-1.  You can use the Microsoft Teams Connector in a microflow to send plain text messages. The Microsoft Teams Connector module comes with predefined entity **SendMessageResponse** whose object will be returned as a response from Microsoft Teams Connector activity.
-      ![](attachments/ms-teams-connector/send-message-response-entity.png) 
 
-2.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow. 
-     This representative microflow contains activities with the required attributes, Microsoft Teams Connector activity and a placeholder to capture the returned object.
+You can use the **Microsoft Teams Connector** activity in a microflow to send messages to a Teams channel:
+
+1.  From the toolbox, drag and drop the **Microsoft Teams Connector** activity into your microflow.
+    
+    The following representative microflow contains activities with the required attributes, the **Microsoft Teams Connector** activity, and a placeholder to capture the returned object.
+    
     ![](attachments/ms-teams-connector/connector_in_microflow.png) 
-   
-3.  Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
-4.  Specify the following settings with expression syntax:
+    
+2. Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
+
+3.  Specify the following settings with expression syntax:
     1.  Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     2.  Set the **textMessage** parameter to the message you want to send to the Microsoft Teams channel.
-      
+    
         ![](attachments/ms-teams-connector/microflow_configure_parameters.png)
-        
-    3. Click **OK** to save the changes and close the dialog box.
+       
+   3. Click **OK** to save the changes and close the dialog box.
 
-5. After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a SendMessageReponse object.
-6. This object will contain SentMessage field as true when the message is successfully sent otherwise false.The Message attribute in object will contain the respective response message.
+After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
+
+![](attachments/ms-teams-connector/send-message-response-entity.png) 
+
+* If the message is successfully sent, the value of the `SentMessage` attribute is `true`
+* If the message is successfully sent, the value of the `SentMessage` attribute is `false`
+* The `Message` attribute contains the respective response message
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

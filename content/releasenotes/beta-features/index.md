@@ -1,6 +1,7 @@
 ---
 title: "Beta Releases"
 tags: ["Beta", "Private Beta", "Public Beta", "GA", "General Availability", "feature", "feature flag", "product"]
+weight: 55
 #notoc: true
 #layout: wide
 #toc-level: "3"

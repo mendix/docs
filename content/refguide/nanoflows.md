@@ -121,7 +121,7 @@ Parameters are filled at the location from where the nanoflow is triggered.
 
 ### 4.7 Annotation {#annotation}
 
-An [annotation](annotation) is an element that can be used to put comments in a microflow:
+An [annotation](annotation) is an element that can be used to put comments in a nanoflow:
 
 ![Annotation](attachments/microflows-and-nanoflows/annotation.png)
 

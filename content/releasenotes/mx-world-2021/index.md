@@ -113,6 +113,6 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 
 | Feature | Expected Release |
 | --- | --- |
-| New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA |
-| Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA |
-| Mendix for Private Cloud – built-in CI/CD | GA: Dec 2021 |
+| New Mendix Cloud regions – Shanghai, Sydney, Montreal | Released for GA in August 2021 |
+| Mendix for Private Cloud – automated installation and configuration of Mendix for Private Cloud on Kubernetes | Released for GA on [Sep 2nd, 2021](/releasenotes/developer-portal/mendix-for-private-cloud#20210902) |
+| Mendix for Private Cloud – built-in CI/CD | GA: Jun 2022 |

@@ -65,7 +65,7 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
             // END USER CODE
           }
     ```
-
+    
 4. Call this JavaScript action in a nanoflow to get all available properties of a given part.
 5. Use a page to show all the properties returned :
    ![show-properties](attachments/3d-viewer-api/show-properties.jpg)

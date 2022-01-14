@@ -9,6 +9,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### January 14th, 2022
+
+#### Fixes
+
+* We fixed a bug where an error occurred after selecting any curate menu item on the **Curation** page as a Data Hub Curator.
+
 ### January 13th, 2022
 
 #### Fixes

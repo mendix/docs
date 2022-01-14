@@ -73,6 +73,11 @@ The upload phase executes the following operations:
 
 1. As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline, or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. The detection logic differs per synchronization type. For Synchronize all, all committed objects in the local database are checked. For Synchronize objects, all committed objects from the list of selected objects are checked.
 2. There might be objects deleted from the device database since the last synchronization. The upload phase checks which objects have been deleted.
+   
+   {{% alert type="warning" %}}
+   Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
+   {{% /alert %}}
+   
 3. If there are any changed or new file objects, their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request.
 4. All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (see the [Dangling references](#dangling-references) section for more info). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
 5. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
@@ -158,7 +163,7 @@ During the synchronization the server performs referential integrity validation 
 This validation ensures that none of the synchronized objects have associations pointing to an object that exists only in the device database.
 If an association doesn’t satisfy this condition, this is called a dangling reference.
 
-For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which is a dangling reference error.
+For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which will trigger a dangling reference error upon synchronization.
 
 A dangling reference error is a modeling error.
 To prevent them from happening during selective synchronization make sure you either select both sides of the association for the synchronization

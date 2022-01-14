@@ -55,7 +55,9 @@ A widget package file is just a ZIP archive containing the following things:
 * Optionally, a widget preview for Studio and Studio Pro’s Design mode located in *{widgetName}.editorPreview.js*
 * Optionally, widget icons (which must be the PNG format):
     * *{widgetName}.icon.png* sets the widget icon inside the Studio Pro toolbox in list view (the ideal image size is 64x64 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.icon.dark.png* sets the dark mode equivalent to {widgetName}.icon.png
     * *{widgetName}.tile.png* sets the tile image inside the Studio Pro toolbox in tile view, as well as in Studio (the ideal image size is 256x192 pixels, but other sizes will be resized to fit)
+    * *{widgetName}.tile.dark.png* sets the dark mode equivalent to {widgetName}.tile.png
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
 	* Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
 

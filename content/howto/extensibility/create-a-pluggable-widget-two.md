@@ -59,8 +59,6 @@ To add these restrictions, follow the instructions below:
 		const value = this.props.textAttribute.value || "";
 		return <TextInput
 			value={value}
-			style={this.props.style}
-			className={this.props.class}
 			tabIndex={this.props.tabIndex}
 			onUpdate={this.onUpdateHandle}
 			disabled={this.props.textAttribute.readOnly}
@@ -184,8 +182,6 @@ This section will teach you to add validation to your TextBox widget. Using micr
 		return <Fragment>
 			<TextInput
 				value={value}
-				style={this.props.style}
-				className={this.props.class}
 				tabIndex={this.props.tabIndex}
 				onUpdate={this.onUpdateHandle}
 				disabled={this.props.textAttribute.readOnly}
@@ -320,8 +316,6 @@ Until now the components did not keep any state. Each keystroke passed through t
 			return <Fragment>
 				<TextInput
 					value={value}
-					style={this.props.style}
-					className={this.props.class}
 					tabIndex={this.props.tabIndex}
 					disabled={this.isReadOnly()}
 					onLeave={this.onLeaveHandle}
@@ -432,8 +426,6 @@ To make the input widget more accessible for people using screen readers, you wi
 			<TextInput
 				id={this.props.id}
 				value={value}
-				style={this.props.style}
-				className={this.props.class}
 				tabIndex={this.props.tabIndex}
 				disabled={this.isReadOnly()}
 				onLeave={this.onLeaveHandle}

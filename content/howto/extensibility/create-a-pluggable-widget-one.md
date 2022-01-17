@@ -303,11 +303,13 @@ While the Mendix input elements come with labels, you will need to add one to Te
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
-2. Preview the label in the page editor:
+2. In *TextBox.tsx* remove the usages of `{this.props.style}` and `{this.props.class}` because labeled widgets do not have them and the styling is applied to the surrounding FormGroup.
+
+3. Preview the label in the page editor:
 
 	![edit data view one](attachments/pluggable-part-one/editdataviewone.png)
 
-3. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
+4. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
 
 	![input elements with label](attachments/pluggable-part-one/inputwidgetswithlabel.png)
 

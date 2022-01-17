@@ -2,7 +2,7 @@
 title: "Translate Your App Content"
 category: "Collaboration & Requirements Management"
 menu_order: 50
-tags: []
+tags: ["translate", "collaboration"]
 ---
 
 ## 1 Introduction
@@ -32,7 +32,7 @@ If you want to set a different language as the default, you can do that in the *
 
 Any app language can be used as a development language in the Modeler (for details, see [4 Changing the Development Language](#changingthedevelopmentlanguage)).
 
-## <a name="changingthedevelopmentlanguage"></a>3 Changing the Development Language
+## 3 Changing the Development Language {#changingthedevelopmentlanguage}
 
 The development language is the language used to define translatable texts as you develop your app in the Modeler. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in the Modeler will be added to your app's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app default language will be used).
 
@@ -77,7 +77,7 @@ There may be some text in your app that occurs in more than one place, so before
 
 To search for phrases that look similar and replace them as a batch, follow these steps:
 
-1. Go to **Language > Batch Replace**.
+1. Go to **Language** > **Batch Replace**.
 2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
 3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
 

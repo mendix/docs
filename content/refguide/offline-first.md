@@ -65,7 +65,7 @@ Synchronization performed using a UI element (for example, a button or an on-cha
 
 ### 2.2 Synchronization Phases
 
-The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works on the database level.
+The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works on the database level. That means that new uncommitted objects and attribute changes are not synchronized.
 
 #### 2.2.1 Upload Phase {#upload}
 
@@ -78,9 +78,11 @@ The upload phase executes the following operations:
    Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
    {{% /alert %}}
    
-3. If there are any changed or new file objects, their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request.
+3. If there are any changed or new file objects, their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If upload of a file fails, the whole synchronization is aborted without causing any changes in both the server and device database.
 4. All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (see the [Dangling references](#dangling-references) section for more info). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
-5. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
+5. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated. 
+   This means that any further changes you make to the synchronized objects in the event handlers will be applied to the device database during the download phase, with one exception -- changing the contents of a file entity is not applied in that case.
+   Before- and after-commit event handlers for new objects will also be executed.
 
 #### 2.2.2 Download Phase {#download}
 
@@ -166,8 +168,9 @@ If an association doesn’t satisfy this condition, this is called a dangling re
 For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which will trigger a dangling reference error upon synchronization.
 
 A dangling reference error is a modeling error.
-To prevent them from happening during selective synchronization make sure you either select both sides of the association for the synchronization
-or make sure the `Country` object is synchronized before synchronizing `City`.
+
+To prevent dangling errors during selective synchronization, make sure that for every object selected for the synchronization, any other referenced object(s) that have been created on the device but not yet synchronized are also selected for the synchronization. Alternatively, you can synchronize these objects first.
+
 To prevent dangling reference errors during full synchronization make sure both sides of the association are committed before synchronizing.
 
 When some of the synchronized objects have dangling references, 

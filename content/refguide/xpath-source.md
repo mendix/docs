@@ -20,7 +20,7 @@ If you want to restrict data not for a single widget, but for several, you may w
 
 ## 2 Properties
 
-### 2.1 Entity (Path)
+### 2.1 Entity (Path) {#entity-path}
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 

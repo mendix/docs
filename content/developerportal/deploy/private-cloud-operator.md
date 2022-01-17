@@ -168,17 +168,9 @@ You need to make the following changes:
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 * **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
 
-    If you select production, then you will need to provide a **Subscription Secret** to ensure that your app runs as a licensed app — see [Free Apps](mendix-cloud-deploy#free-app) in *Mendix Cloud* for the differences between unlicensed/test apps and licensed apps
-    the subscription secret needs to be supplied via the **customConfiguration** using the following values:
-
-    * `"License.SubscriptionSecret":"{subscription secret}"`
-    * `"License.UseLicenseServer":"true"`
-    * `"License.LicenseServerURL":<https://subscription-api.test.mendix.com/activate>`
-    * `"License.EnvironmentName":"{environment name}"`
-
     {{% alert type="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/project-security). {{% /alert %}}
 
-    If you have an offline license, you cannot provide it through **customConfiguration**. You will need to configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
+    If you have an offline Runtime license, for example for a standalone cluster, you can configure it by adding a **runtimeLicense** section within the **runtime** section and setting **LicenseId** and **LicenseKey** to the values received from Mendix Support:
 
     ```yaml
     apiVersion: privatecloud.mendix.com/v1alpha1

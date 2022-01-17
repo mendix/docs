@@ -116,7 +116,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.
 * We have improved the page to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
 
-### September 2nd, 2021
+### September 2nd, 2021{#20210902}
 
 #### Mendix Operator v2.1.0 and Mendix Gateway Agent v2.1.0
 

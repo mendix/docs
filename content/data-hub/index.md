@@ -15,7 +15,7 @@ To use the Mendix Data Hub a license is required, which also includes the integr
 {{% /alert %}}
 
 {{% alert type="info" %}}
-The Data Hub integration is available in Studio Pro version [8.14](/releasenotes/studio-pro/8.14) and above. To use the latest functionality of Data Hub, download the [latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). {{% /alert %}}
+The Data Hub integration is available in Studio Pro version [8.14](/releasenotes/studio-pro/8.14) and above. To use the latest functionality of Data Hub, download the latest version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/). {{% /alert %}}
 
 Follow the journey for building an app using available datasets (or entity sets for services from Mendix apps) from the [Data Hub](https://hub.mendix.com) home page, or try building a quick app by following [How to Share Data Between Apps](share-data/).
 

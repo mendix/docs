@@ -61,6 +61,15 @@ As noted in the table above, a Free App will go to sleep after an hour or so of 
 
 You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. Instructions for doing this are here: [Licensing Mendix Cloud Apps](licensing-apps).
 
+#### 1.1.1 Free Apps Archival{#free-apps-archival}
+
+If a Free App has been in Sleep Mode for three months or longer, the Technical Contact will be informed that the Free App will be archived in another two weeks. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
+
+There are two ways to avoid Free Apps Archival:
+
+1. Visit the Free App.
+2. Deploy a new version of your app to your Free App environment.
+
 ### 1.2 Licensed App
 
 A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments.

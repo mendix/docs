@@ -25,19 +25,8 @@ A workflow is composed of elements that you can drag and drop on a path. Below i
 
 ### 2.1 Workflow Parameters {#parameters}
 
-[Workflow parameters](workflow-parameters) are input data for your workflow.
-
-In the workflow editor, there are the following parameters:
-
-* The **WorkflowInstance** parameter stores data on the workflow process:
-
-    ![Workflow Instance Example](attachments/workflows/workflow-instance.png)
-    
-    The entity of this parameter is automatically generated when you create a new workflow.
-
-* The **WorkflowContext** parameter is a business-related data that travels through the workflow:
-
-    ![Workflow Context Example](attachments/workflows/workflow-context.png)
+A [workflow parameter](workflow-parameters) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
+![Workflow Context Example](attachments/workflows/workflow-context.png)
 
 ### 2.2 General {#general}
 
@@ -177,6 +166,8 @@ Now when you run this microflow, it will trigger the selected workflow.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
+{{% todo %}}[Is information in this section still relevant?]{{% /todo %}}
+
 There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
 
 You can find the following workflow-related entities in the System module: 
@@ -187,6 +178,8 @@ You can find the following workflow-related entities in the System module:
 * **WorkflowUserTask** – This entity is created when the Runtime executes the user task and an end-user chooses an action (for example, clicks an **Approve** button to approve a request). This entity can be used for workflow overview pages and in an application logic.
 
 ## 5 Workflow Variables
+
+{{% todo %}}[Is information in this section still relevant?]{{% /todo %}}
 
 Workflows have dedicated variables that can be used in an XPath and Expressions inside the Workflow editor. 
 

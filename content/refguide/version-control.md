@@ -15,6 +15,10 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro, Studio, and the Developer Portal.
 
+{{% alert type="info" %}}
+Git is a Beta feature since Mendix 9.6.0 you can enable the Beta feature in the Mendix [preferences](preferences-dialog#new-features)
+{{% /alert %}}
+
 ## 2 Concepts {#concepts}
 
 ### 2.1 Team Server {#team-server}

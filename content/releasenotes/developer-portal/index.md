@@ -13,6 +13,14 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](deplo
 
 To see the current status of the Mendix Developer Portal and Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2022
+
+### January 18th, 2022
+
+#### Improvements
+
+* We improved the platform navigation; The **Switch to** menu on the left side of the top bar now also provides access to your recent used apps.  
+
 ## 2021
 
 ### December 23rd, 2021

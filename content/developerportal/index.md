@@ -43,6 +43,8 @@ You can then access the following parts of the Mendix Platform:
 * [Forum](/developerportal/community-tools/mendix-forum)
 * [Community](community-tools)
 
+You can also quickly access specific [Recent Apps](#my-apps) you have used.
+
 Click [Company Buzz](collaborate/buzz) to communicate with colleagues, team members, stakeholders, and any other Mendix users in your company.
 
 Click [Company Apps](/developerportal#my-company-apps) to see all the apps created by members of your company.

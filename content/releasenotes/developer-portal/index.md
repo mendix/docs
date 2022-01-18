@@ -19,7 +19,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We improved the platform navigation; The **Switch to** menu on the left side of the top bar now also provides access to your recent used apps.  
+* We improved the platform navigation. The [Switch to](/developerportal/index#navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
 
 ## 2021
 

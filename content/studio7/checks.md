@@ -1,7 +1,7 @@
 ---
 title: "Checks"
 description: "Describes checks during publishing process in Mendix Studio."
-menu_order: 60
+weight: 80
 tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 

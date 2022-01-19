@@ -1,5 +1,6 @@
 ---
 title: "Widget Development"
+weight: 90
 tags: ["widget", "develop widget", "customize"]
 ---
 

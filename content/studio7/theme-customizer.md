@@ -1,7 +1,7 @@
 ---
 title: "Theme Customizer"
 description: "Describes the Theme Customizer in Mendix Studio."
-menu_order: 80
+weight: 100
 tags: ["studio", "theme customizer", "atlas ui"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "API Documentation"
 description: "The Mendix Platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
+weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

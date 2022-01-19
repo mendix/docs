@@ -1,6 +1,7 @@
 ---
 title: "Studio 9 Guide"
 tags: ["studio", "web modeler"]
+weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

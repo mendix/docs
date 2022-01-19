@@ -2,6 +2,7 @@
 title: "Studio Pro 8 Guide"
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 tags: ["studio pro"]
+weight: 60
 ---
 
 ## 1 Introduction

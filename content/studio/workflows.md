@@ -1,7 +1,7 @@
 ---
 title: "Workflows"
 description: "Describes the workflows in Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["workflow", "workflows", "Studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

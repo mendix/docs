@@ -58,8 +58,14 @@ You can find the following microflows in Workflow Commons:
 *   **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
 *   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 *   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Continue** – Continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
 ## 3 Setting Up User Assignment and Security
+
+{{% todo %}}[I need input from the team here]{{% /todo %}}
 
 The Workflow Commons module has two module roles for you to make use of. Users with the **User** module role will gain access to the **MyTaskDashboard** and **MyTaskInbox** pages, as well as the ability to create and change their own attachments and notes on workflows. Giving someone **Administrator** privileges allows them to explore the **WorkflowAdminCenter**, manage attachments and notes from anyone, and abort workflows.
 
@@ -76,6 +82,8 @@ Finally, go to the Workflows tab in your [app settings](project-settings#workflo
 While Workflow Commons does provide useful documents out-of-the-box, you might have the need to change the content and, for example, make pages company-specific. When doing so, we recommend that you make a copy of the document that you will be changing to a local module called **WorkflowCommonsCustomizations**, so that you do not accidentally overwrite your changes in the future when upgrading to a newer version. Feel free to also browse around in the **Private** folder of the module to discover the snippets and sub-microflows.
 
 ## 5 Workflow Best Practices
+
+{{% todo %}}[Is information in this section still relevant?]{{% /todo %}}
 
 We recommend the following best practices when working with workflows:
 

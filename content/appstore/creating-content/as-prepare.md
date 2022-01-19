@@ -1,18 +1,14 @@
 ---
 title: "Prepare Your App Service to Sell in the Marketplace"
 category: "Creating Content"
-menu_order: 1
+menu_order: 2
 description: "Describes how to start selling your app service in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
-aliases:
-    - /appstore/general/sell.html
 ---
 
 ## 1 Introduction
 
-The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your solution or app service [**INCUDE BOTH?**], edit your listing, and submit it to the Marketplace today. In return, you will gain the following benefits:
-
-![](attachments/as-sell/benefits.png)
+The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your solution or app service [**INCUDE BOTH?**], edit your listing, and submit it to the Marketplace today.
 
 **This how-to will teach you how to do the following:**
 

@@ -104,7 +104,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
     ![Import File page](attachments/intelligent-document-service/import-file-page.png)
     
-    {{% alert type="info" %}} Multiple files can be uploaded but individual image file size cannot exceed 50MB. {{% /alert %}}
+    {{% alert type="warning" %}}If you upload multiple files, all your images must have a similar structure. Each image file size should not exceed 50 MB.{{% /alert %}}
     
 7.  Click **Next**. The **Add Marker and IDs** page opens. The status of the images you imported shows **Not Marked**.
 
@@ -112,18 +112,25 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
 8.  To mark an image, perform the following steps:
     1. Click **Add Markers**. The **Mark Document** dialog box opens.
+    
     2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
-
+    
         ![Mark Document page](attachments/intelligent-document-service/mark-document-dialog-box.png)
-
-    3. On the right side, enter a **Marker ID** that is used for the area that you selected.
-    4.  Select the **Marker Type**. It can be **Text** or **Checkmark**.
+        
+    3.  On the right side, enter a **Marker ID** that is used for the area that you selected. 
+    
+        {{% alert type="warning" %}}If you have uploaded multiple images for training, use the same **Marker ID** for the same part of input data in all images. The number of markers in each image should also be the same. Otherwise, the training process will fail.{{% /alert %}}
+    
+    4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
+    
     5. Click **Add Marker** to add the marker to the list of **Markers**.
+    
     6. To delete a marker from the **Markers** list, select the marker and click **Delete**.
+    
     7.  When you add all the markers for this image, click **Done** to close the **Mark Document** dialog box. The status of the images becomes **Marked**.
-
+    
         ![add markers and id status is marked](attachments/intelligent-document-service/add-marker-and-ids-image-status-marked.png)
-
+    
     8. Repeat the steps above until you mark all the images, and then Click **Publish**. The new model appears in the **Existing Models** list with the status **IN PROGRESS**.
 9.  Wait until the **Status** of the model becomes **Published**.
 10. Once the model is published, this pop-up window opens:

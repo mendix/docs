@@ -37,7 +37,11 @@ Should you consider using a connected environment, the following URLs should be 
 | https://privatecloud.mendixcloud.com | Registry for downloading MDA artifacts |
 | https://private-cloud.registry.mendix.com | Docker registry for downloading Runtime base images |
 | https://cdn.mendix.com | Registry for downloading placeholder MDA artifacts |
-| https://subscription-api.mendix.com | Service to verify call-home licence |
+| https://subscription-api.mendix.com | Service to verify call-home license |
+
+### 2.2 Proxies
+
+If you are using a proxy, you will need to ensure that any IP addresses on the cluster internal network and any services which cannot be reached via the proxy are specified with `NO_PROXY`.
 
 ## 3 Creating a Cluster & Namespace
 

@@ -541,17 +541,17 @@ The widget style properties are as follows:
 	<radioButtonItemTitleStyle/>
 ```
 
-| Element                                   | Style Properties                  | Description                                           |
-| ----------------------------------------- | --------------------------------- | ----------------------------------------------------- |
-| `labelTextStyle`                          | This has all TextStyle properties | Collection label style                                |
-| `containerHorizontal`                     | This has all ViewStyle properties | Styles for horizontal orientation                     |
-| `radioButtonItemContainerStyle`           | This has all ViewStyle properties | Radio item container style                            |
-| `radioButtonItemContainerHorizontalStyle` | This has all ViewStyle properties | Radio item container style for horizontal orientation |
-| `radioButtonItemContainerDisabledStyle`   | This has all ViewStyle properties | Radio item container style for read-only collection   |
-| `circularButtonStyle`                     | This has all ViewStyle properties | Radio circular button style                           |
-| `circularBtnDisabledStyle`                | This has all ViewStyle properties | Disabled radio circular button style                  |
-| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio inner circular button style              |
-| `radioButtonItemTitleStyle`               | This has all TextStyle properties | Radio item label text style                           |
+| Element                                   | Style Properties                  | Description                                            |
+| ----------------------------------------- | --------------------------------- | ------------------------------------------------------ |
+| `labelTextStyle`                          | This has all TextStyle properties | Collection label style.                                |
+| `containerHorizontal`                     | This has all ViewStyle properties | Styles for horizontal orientation.                     |
+| `radioButtonItemContainerStyle`           | This has all ViewStyle properties | Radio item container style.                            |
+| `radioButtonItemContainerHorizontalStyle` | This has all ViewStyle properties | Radio item container style for horizontal orientation. |
+| `radioButtonItemContainerDisabledStyle`   | This has all ViewStyle properties | Radio item container style for read-only collection.   |
+| `circularButtonStyle`                     | This has all ViewStyle properties | Radio circular button style.                           |
+| `circularBtnDisabledStyle`                | This has all ViewStyle properties | Disabled radio circular button style.                  |
+| `activeButtonStyle`                       | This has all ViewStyle properties | Active radio inner circular button style.              |
+| `radioButtonItemTitleStyle`               | This has all TextStyle properties | Radio item label text style.                           |
 
 
 ## 7 Images, Videos & Files

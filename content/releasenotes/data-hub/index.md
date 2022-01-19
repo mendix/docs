@@ -11,12 +11,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ### January 21st, 2022
 
-#### Fixes
+#### Improvements
 
 * The following OData contract parsing and validation improvements were added:
-	  * Improved detection and feedback on the OData version
-	  * Improved parsing and more detailed error messaging
-	  * Improved validation (after parsing succeeded) and more detailed error messaging
+	* Improved detection and feedback on the OData version
+	* Improved parsing and more detailed error messaging
+	* Improved validation (after parsing succeeded) and more detailed error messaging
 
 ### January 14th, 2022
 

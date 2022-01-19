@@ -2,6 +2,7 @@
 title: "Data Hub Catalog"
 description: "Introduces the processes and properties of Mendix Data Hub."
 tags: ["data hub", "data hub catalog"]
+weight: 30
 ---
 
 ## 1 Introduction

@@ -1,6 +1,7 @@
 ---
 title: "Feature Release Calendar"
 tags: ["mendix world", "announcements", "features", "feature release", "products", "features and products", "calendar"]
+weight: 60
 #notoc: true
 #layout: wide
 #toc-level: "3"

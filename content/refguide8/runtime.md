@@ -1,5 +1,6 @@
 ---
 title: "Mendix Runtime"
+weight: 40
 tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 

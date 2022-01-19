@@ -1,6 +1,7 @@
 ---
 title: "Security Advisories"
 tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens security advisory"]
+weight: 50
 #notoc: true
 #layout: wide
 #toc-level: "3"

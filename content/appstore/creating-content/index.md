@@ -2,6 +2,7 @@
 title: "Creating Content"
 description: "How to create content for the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app service", "solution"]
+weight: 20
 ---
 
 {{% alert type="info" %}}

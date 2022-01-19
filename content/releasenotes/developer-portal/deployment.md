@@ -2,6 +2,7 @@
 title: "Deployment"
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "SAP", "SAP BTP", "IBM", "on-premises", "free app", "Business Technology Platform"]
+weight: 25
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Collaboration"
+weight: 20
 tags: ["collaboration", "requirements", "management"]
 ---
 

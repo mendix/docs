@@ -2,6 +2,7 @@
 title: "Modules"
 description: "Presents details on the modules available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "module"]
+weight: 50
 ---
 
 ## 1 Introduction {#intro}

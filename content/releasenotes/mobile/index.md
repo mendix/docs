@@ -1,6 +1,7 @@
 ---
 title: "Mobile"
 frontpage_featured: true
+weight: 15
 ---
 
 This category includes the following release notes: 

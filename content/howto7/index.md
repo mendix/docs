@@ -2,6 +2,7 @@
 title: "Mendix 7 How-to's"
 notoc: true
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
+weight: 85
 ---
 
 Browse the Mendix how-to's to find step-by-step guides that will teach you how to build and customize apps with Mendix.

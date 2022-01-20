@@ -9,7 +9,7 @@ tags: ["studio pro", "workflow", "task", "onboarding"]
 
 ## 1 Introduction
 
-**Workflow Commons** is a workflow-specific module that contains a lot of preconfigured documents, such as pages, snippets, page templates and microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app, however, this requires some preparation first. 
+**Workflow Commons** is a workflow-specific module that contains a lot of preconfigured documents, such as pages, snippets, page templates, and microflows. You can download the [Workflow Commons module](https://marketplace.mendix.com/link/component/117066) from the Mendix Marketplace and integrate it in your app, however, this requires some preparation first. 
 
 Before adding the Workflow Commons module to your app, make sure you have completed the following:
 
@@ -54,14 +54,14 @@ You can find the following microflows in Workflow Commons:
 *   **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
 *   **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 *   **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
-*   **ACT_Workflow_Continue** – Continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
+*   **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
 *   **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
 ## 3 Setting Up User Assignment and Security
 
-The Workflow Commons module has two module roles for you to make use of. Users with the **User** module role will gain access to the **MyTaskInbox** pages, as well as the ability to create and change their own attachments and notes on workflows. Giving someone **Administrator** privileges allows them to explore the **WorkflowAdminCenter**, manage attachments and notes from anyone, and abort, pause and resume workflows and also take action on incompatible workflows.
+The Workflow Commons module has two module roles for you to make use of. Users with the **User** module role will gain access to the **MyTaskInbox** pages, as well as the ability to create and change their own attachments and notes on workflows. Giving someone **Administrator** privileges allows them to explore the **WorkflowAdminCenter**, manage attachments and notes from anyone, abort, pause, and resume workflows, as well as take actions on incompatible workflows.
 
 Depending on the required user roles for your application, you may have the need to distinguish workflow administrators from regular administrators. If that is the case, follow the steps below:
 

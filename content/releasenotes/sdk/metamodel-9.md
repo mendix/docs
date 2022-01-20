@@ -6,6 +6,7 @@ parent: "metamodel"
 
 These are the release notes for the Mendix Metamodel version 9:
 
+* [9.10](metamodel-9.10)
 * [9.9](metamodel-9.9)
 * [9.8](metamodel-9.8)
 * [9.7](metamodel-9.7)

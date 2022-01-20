@@ -1,7 +1,7 @@
 ---
 title: "Configure a Navigation Bar"
 description: "This how-to describes the process of configuring a navigation bar in Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["studio", "navigation", "how to", "navigation bar"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

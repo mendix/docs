@@ -1,7 +1,7 @@
 ---
 title: "Pages"
 description: "Describes the page editor in Mendix Studio."
-menu_order: 20
+weight: 20
 tags: ["studio", "page editor", "pages"]
 ---
 

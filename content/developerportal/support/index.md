@@ -2,6 +2,7 @@
 title: "Mendix Support"
 description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
+weight: 30
 aliases:
     - /howtogeneral/support/index.html
 ---

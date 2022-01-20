@@ -1,5 +1,6 @@
 ---
 title: "Front End"
+weight: 30
 tags: ["studio pro"]
 ---
 

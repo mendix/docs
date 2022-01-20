@@ -65,7 +65,7 @@ In this section, you will create an entity which will be used to export the Exce
 
 	  ![](attachments/using-the-excel-exporter/18581908.png)
 
-## 5 Configuring Mx Model Reflection
+## 5 Configuring Mx Model Reflection {#configure-mx-model-reflection}
 
 In this section, you will learn how to run the Mx Model Reflection synchronization so the app can leverage the output from that process to create highly customizable Excel export templates.
 

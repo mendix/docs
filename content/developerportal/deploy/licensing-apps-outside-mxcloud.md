@@ -23,7 +23,7 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 | Feature | Unlicensed App | Licensed App |
 | --- | --- | --- |
 | **Number of Concurrent Users** | 6 | Depends on your pricing plan.¹ |
-| **Sleep Mode** | Goes into Sleep Mode after two hours or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
+| **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity. | Does not have a time limitation. |
 | **Number of Named Users** | No Limit | Depends on your pricing plan.¹ |
 | **Data Hub** | No Limit | Depends on your pricing plan.¹ |
 

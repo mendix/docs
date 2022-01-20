@@ -1,5 +1,6 @@
 ---
 title: "Mendix Platform SDK"
+weight: 20
 ---
 
 ## 1 Introduction & FAQ

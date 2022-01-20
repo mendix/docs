@@ -55,7 +55,7 @@ A basic scenario using an *Employee* entity can be modeled in Mendix using the f
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
 
 {{% alert type="warning" %}}
-The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
+The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server (for example, in a microflow) to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
 {{% /alert %}}
 
 ### 3.1 Read the Objects Required to Display a Datagrid

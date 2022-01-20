@@ -95,7 +95,7 @@ For example, a customer is allowed to view the discount, but is not allowed to e
 ![](attachments/domain-model/access-rule-discount-read.png)
 
 {{% alert type="warning" %}}
-If a user cannot view the value of an attribute, that attribute will never be sent to the Mendix Client. Because Mendix is stateless, this can lead to unexpected results if changes to the attribute are not committed immediately. See [Basic CRUD Communication Pattern](communication-patterns#crud) in *Communication Patterns in the Mendix Runtime* for more information on how data is passed between the Runtime Server and the Mendix Client.
+If a user cannot view the value of an attribute because of security constraints, that attribute will never be sent to the Mendix Client. Because Mendix is stateless, this can lead to unexpected results (for example, loss of changes) if changes to the attribute in a microflow are not committed immediately. See [Basic CRUD Communication Pattern](communication-patterns#crud) in *Communication Patterns in the Mendix Runtime* for more information on how data is passed between the Runtime Server and the Mendix Client.
 {{% /alert %}}
 
 ### 2.4 XPath Constraint Tab {#xpath-constraint}

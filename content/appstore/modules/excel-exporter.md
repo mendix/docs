@@ -48,7 +48,7 @@ On the **Excel Exporter** page, there are the following items:
 
 * **Create report**: exports data to an Excel document using the selected template
 
-### 3.2 Template details page {#template-details}
+### 3.2 Template Details Page {#template-details}
 
 On the template details page, there are the following items:
 

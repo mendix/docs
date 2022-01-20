@@ -40,7 +40,7 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 ## 3 Usage
 
-After you have set up the connection with the broker (in the [Configuration](#Configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
+After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
 
 ### 3.1 Creating a broker connection directly in a microflow
 

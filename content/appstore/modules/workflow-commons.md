@@ -43,16 +43,13 @@ Download and install the following modules:
 
 1. Add the following pages to your navigation:
     1. TaskInbox
-    2. TaskDashboard  
-    3. WorkflowAdminCenter
-    4. MyInitiatedWorkflows
+    2. WorkflowAdminCenter
 2. Add Administrator and User module roles to the required App roles:
     1. Administrator role does the following:
-        1. Administers workflows.
-        2. Views workflow performance in the Admin Workflow Dashboard
+        - Administers workflows
+        - Views workflow performance in the Admin Workflow Dashboard
     2. User role does the following:
-        1. Executes workflows by completing user tasks.
-        2. Views personal performance in MyTaskDashboard.
+        - Executes workflows by completing user tasks.
 
 ## 4 Usage
 

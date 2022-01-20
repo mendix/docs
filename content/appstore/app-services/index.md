@@ -20,7 +20,8 @@ For details on participating in the Mendix Vendor program, see [How to Sell Your
 
 * [3D Viewer](3d-viewer) – enables uploading, visualizing, and operating on 3D JT files in your web apps 
 * [Email Service](email-service) – enables sending HTML and plain text emails with attachments in your web apps
-* [Cogniso Speech To Text](cogniso-speech-to-text) – enables converting audio and voice into written text in your web apps
-* [Cogniso Text To Speech](cogniso-text-to-speech) – enables converting text into voice in your web apps
-* [Cogniso Text Analytics](cogniso-text-analytics) – enables performing text analytics in your web apps
-* [Cogniso Translation](cogniso-translation) – enables performing text translation in your web apps
+* Cognitive AI Services
+    * [Speech To Text](speech-to-text) – enables converting audio and voice into written text in your web apps
+    * [Text To Speech](text-to-speech) – enables converting text into voice in your web apps
+    * [Text Analytics](text-analytics) – enables performing text analytics in your web apps
+    * [Translation](translation) – enables performing text translation in your web apps

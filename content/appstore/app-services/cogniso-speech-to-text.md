@@ -1,5 +1,5 @@
 ---
-title: "Cogniso Speech To Text"
+title: "Speech To Text"
 category: "App Services"
 description: " "
 tags: ["speech to text", "service", "app store", "marketplace", "component", "platform support"]
@@ -7,9 +7,9 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 ## 1 Introduction
 
-The [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
+The [Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what Cogniso SpeechToText contains:
+Here is an overview of what SpeechToText contains:
 
 | Item                                        | Name                             |
 | ------------------------------------------- | -------------------------------- |
@@ -40,27 +40,27 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4]
 
 ## 2 Installation
 
-1.  Go to the [Cogniso Speech to Text](https://marketplace.mendix.com/link/component/118408) component page in the Marketplace and download the *CognisoSpeechToText.mpk* file.
-2.  To add the Cogniso Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
+1.  Go to the [Speech to Text](https://marketplace.mendix.com/link/component/118408) component page in the Marketplace and download the *SpeechToText.mpk* file.
+2.  To add the Speech to Text app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
-    2.  Click **Import module package** and then select *CognisoSpeechToText.mpk*.
+    2.  Click **Import module package** and then select *SpeechToText.mpk*.
         
         In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your app.
         
-        ![import-speech-to-text](attachments/cogniso-speech-to-text/import-speech-to-text.png)
+        ![import-speech-to-text](attachments/speech-to-text/import-speech-to-text.png)
     
         {{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard Marketplace content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.{{% /alert %}}
     
    3. In the **Import Module** dialog box, click **Import**. 
    4. Wait until a pop-up box states that the module was successfully imported. Click **OK**.
-   5. Open the **App Explorer**  to view the **CognisoSpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
+   5. Open the **App Explorer**  to view the **SpeechToText** module. You can also find the app service in the **Cognitive AI widgets** category in the **Toolbox**.
 3. Map the **Administrator** and **User** module roles of the installed modules to the applicable user roles in your app.
 
-You have successfully added the Cogniso Speech To Text resources to your app.
+You have successfully added the Speech To Text resources to your app.
 
-## 3 Initializing Cogniso Speech To Text When App Starts
+## 3 Initializing Speech To Text When App Starts
 
-It can be useful to run the Cogniso Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Cogniso Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
+It can be useful to run the Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
 
 
 1.  If your app does not have an after-startup microflow, perform the following steps:
@@ -68,7 +68,7 @@ It can be useful to run the Cogniso Speech to Text service automatically when yo
    2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the new microflow that you created.
    3.  Set the return type of the microflow to **Boolean** with **true** as the **Return value**.
 
-       ![startup-microflow](attachments/cogniso-speech-to-text/startup-microflow.png)
+       ![startup-microflow](attachments/speech-to-text/startup-microflow.png)
 
 2. If you app has an after-startup microflow, perform the following:
    1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the existing after-startup microflow.
@@ -83,7 +83,7 @@ It can be useful to run the Cogniso Speech to Text service automatically when yo
 
 The **MediaDocument** entity is a conceptual entity that inherits from the **System.FileDocument** entity and incorporates all the information of media document. You can choose to inherit from this entity, set an association to the entity, or copy this entity to your module.
 
-![mediadocument](attachments/cogniso-speech-to-text/mediadocument.png)
+![mediadocument](attachments/speech-to-text/mediadocument.png)
 
 | Attribute        | Data Type | Description|
 | ---------------- | ---- | -----------|
@@ -94,9 +94,9 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 4.2.1 License Token
 
-The **LicenseToken** constant offers a valid CognisoSpeechToText license token to the app that uses CognisoSpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As CognisoSpeechToText is a commercial product, to use the CognisoSpeechToText functionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant offers a valid SpeechToText license token to the app that uses SpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As SpeechToText is a commercial product, to use the SpeechToText functionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to try how CognisoSpeechToText works, that is to say, you will only build and run an app that uses CognisoSpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+However, if you only plan to try how SpeechToText works, that is to say, you will only build and run an app that uses SpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
@@ -108,15 +108,15 @@ The **TokenEndpoint** constant provides a valid endpoint of security token servi
 
 #### 4.3.1 StartService
 
-The **StartService** microflow is a Java action which starts the Cogniso Speech To Text service. It is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Cogniso Speech To Text provides.
+The **StartService** microflow is a Java action which starts the Speech To Text service. It is used to set up a cognitive speech-to-text back-end server infrastructure, which is critical for realizing all the functions that Speech To Text provides.
 
-![startservice](attachments/cogniso-speech-to-text/startservice.png)
+![startservice](attachments/speech-to-text/startservice.png)
 
 #### 4.3.2 BatchTranscript {#batchtranscript}
 
 The **BatchTranscription** microflow takes a **MediaDocument** object as an input parameter and converts the based64-encoded audio string into text.
 
-![batchtranscription](attachments/cogniso-speech-to-text/batchtranscription.png)
+![batchtranscription](attachments/speech-to-text/batchtranscription.png)
 
 ### 4.4 Widgets {#widgets}
 
@@ -143,9 +143,9 @@ The only core widget required is the **Microphone** widget. You can make the fol
   *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
   *  **Fallback message** – the message to notify users when no action is matched
 
-## 5 Using Cogniso Speech To Text
+## 5 Using Speech To Text
 
-You can use Cogniso Speech To Text to convert voice to text and then trigger a customizable action.
+You can use Speech To Text to convert voice to text and then trigger a customizable action.
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up custom actions quickly.
 
@@ -167,7 +167,7 @@ Below are the steps to build an example web app which can convert speech to text
     4. **Select** the **Microphone** entity as the **Entity** and click **OK**. 
     5.  Right-click the create object activity and select **Set $NewMicrophone as return value** in the pop-up menu.
       
-        ![createmicrophoneentity-nanoflow](attachments/cogniso-speech-to-text/createmicrophoneentity-nanoflow.png)
+        ![createmicrophoneentity-nanoflow](attachments/speech-to-text/createmicrophoneentity-nanoflow.png)
    
 3. Add a **Data view** widget to your page.
 4. Set the **CreateMicrophoneObject** nanoflow as the data source of the Data View widget as follows:
@@ -183,7 +183,7 @@ Below are the steps to build an example web app which can convert speech to text
     4. Go to the **Voice to Action** tab.   
     5. For **Actions**, click **New** to open the **Edit Actions Item** dialog box and set up new actions, for example:
 
-       ![example-action-items-utterance-action-feedback](attachments/cogniso-speech-to-text/example-action-items-utterance-action-feedback.png)
+       ![example-action-items-utterance-action-feedback](attachments/speech-to-text/example-action-items-utterance-action-feedback.png)
     
        For more information, see the [Customizing Speech-Triggered Actions](#actions) section below.
     
@@ -202,11 +202,11 @@ By binding an attribute to the **transcript** event, the app can pick up the res
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
-![microphone-ontranscript-sample](attachments/cogniso-speech-to-text/microphone-ontranscript-sample.png) 
+![microphone-ontranscript-sample](attachments/speech-to-text/microphone-ontranscript-sample.png) 
 
 For example, you can set up the **Action** to make the app show all the voice-to-text conversion history.
 
-![show-transcript-history](attachments/cogniso-speech-to-text/show-transcript-history.png)
+![show-transcript-history](attachments/speech-to-text/show-transcript-history.png)
 
 #### 5.2.2 On Error {#on-error}
 
@@ -214,11 +214,11 @@ By binding an attribute to the **Error** event, the app can pick up an error rai
 
 **Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. When there is a problem with converting voice into text in a running app, the error event is triggered, and the error information is populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
-![microphone-onerror-sample](attachments/cogniso-speech-to-text/microphone-onerror-sample.png) 
+![microphone-onerror-sample](attachments/speech-to-text/microphone-onerror-sample.png) 
 
 For example, you can set up the **Action** to make the app show a pop-up window to show error details to users.
 
-![microphone-event-onerror](attachments/cogniso-speech-to-text/microphone-event-onerror.jpg)
+![microphone-event-onerror](attachments/speech-to-text/microphone-event-onerror.jpg)
 
 ### 5.3 Customizing Speech-Triggered Actions {#actions}
 
@@ -242,7 +242,7 @@ You can select an **Action** from a list of actions. This action is triggered wh
 
 For instance, you can set **Voice feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
-![microphone-voicetoaction-sample](attachments/cogniso-speech-to-text/microphone-voicetoaction-sample.png)
+![microphone-voicetoaction-sample](attachments/speech-to-text/microphone-voicetoaction-sample.png)
 
 ### 5.4 Using the Batch Mode
 
@@ -250,15 +250,15 @@ When you need to implement the speech conversion as a back-end service rather th
 
 ## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-Cogniso Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
+Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
 
 ### 6.1 Obtaining a LicenseToken with Trial version
 
-When you need to run your app with Cogniso Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
+When you need to run your app with Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
 
 ### 6.2  Obtaining a LicenseToken
 
-To receive information on how to get the license token for [Cogniso Speech To Text](https://marketplace.mendix.com/link/component/118408) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+To receive information on how to get the license token for [Speech To Text](https://marketplace.mendix.com/link/component/118408) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
 
 ### 6.3 Configuring a LicenseToken for App Deployment
 
@@ -270,7 +270,7 @@ To receive information on how to get the license token for [Cogniso Speech To Te
 4. Fill in the **Value** with your obtained LicenseToken.
 5.  Click **OK** to save the settings.
 
-    ![licensetoken-inmendix](attachments/cogniso-speech-to-text/licensetoken-inmendix.png)
+    ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
@@ -280,8 +280,8 @@ Alternatively, you can add or update LicenseToken as a constant in the [Develope
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
-![licensetoken-cloudportal](attachments/cogniso-speech-to-text/licensetoken-cloudportal.png)
+![licensetoken-cloudportal](attachments/speech-to-text/licensetoken-cloudportal.png)
 
 If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
 
-![licensetoken-envdetails](attachments/cogniso-speech-to-text/licensetoken-envdetails.png)
+![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)

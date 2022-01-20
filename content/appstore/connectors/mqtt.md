@@ -22,7 +22,7 @@ The MQTT Connector consists of microflow actions that enable doing the following
 
 The MQTT Connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 ### 2.1 Broker 
 

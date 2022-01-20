@@ -14,7 +14,7 @@ This how-to explains how to do the following:
 * Download the Marketplace modules
 * Configure your app to export the required data in the correct format
 
-## 2 Downloading the Required Marketplace Modules
+## 2 Downloading the Required Marketplace Modules {#download-modules}
 
 In this section, you will learn how to download the necessary modules from the Mendix Marketplace. The modules required for this process are [Mx Model Reflection](/appstore/modules/model-reflection) and [Excel Exporter](/appstore/modules/excel-exporter).
 
@@ -39,7 +39,7 @@ To download the modules, follow these steps:
 Depending on the layout selected when the app was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 {{% /alert %}}
 
-## 3 Adding Navigation Items to Allow Users to Configure Settings
+## 3 Adding Navigation Items to Allow Users to Configure Settings {#add-navigation-items}
 
 In this section, you will learn how to add the required pages in the app's **Navigation** that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the app.
 

@@ -250,19 +250,25 @@ When you need to implement the speech conversion as a back-end service rather th
 
 ## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
 
-Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
+Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
 
-### 6.1 Obtaining a LicenseToken with Trial version
+### 6.1  Subscribing to Get LicenseToken
 
-When you need to run your app with Speech To Text locally or deploy as a Mendix Free App for testing and trial purposes, you need a trial version of LicenseToken.
+1. On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, click **Subscribe** to order a subscription.
 
-### 6.2  Obtaining a LicenseToken
+2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-To receive information on how to get the license token for [Speech To Text](https://marketplace.mendix.com/link/component/118408) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+   For the trial, you do not need to fill in this information.
 
-### 6.3 Configuring a LicenseToken for App Deployment
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-#### 6.3.1 Configuring the LicenseToken in Studio Pro
+4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create **LicenseToken**.
+
+### 6.2 Configuring a LicenseToken for App Deployment
+
+#### 6.2.1 Configuring the LicenseToken in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
@@ -274,7 +280,7 @@ To receive information on how to get the license token for [Speech To Text](http
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 6.3.2 Configuring the LicenseToken in Developer Portal
+#### 6.2.2 Configuring the LicenseToken in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

@@ -46,10 +46,10 @@ Download and install the following modules:
     2. WorkflowAdminCenter
 2. Add Administrator and User module roles to the required App roles:
     1. Administrator role does the following:
-        - Administers workflows
-        - Views workflow performance in the Admin Workflow Dashboard
+        1. Administers workflows.
+        2. Views workflow performance in the Admin Workflow Dashboard.
     2. User role does the following:
-        - Executes workflows by completing user tasks.
+        1. Executes workflows by completing user tasks.
 
 ## 4 Usage
 

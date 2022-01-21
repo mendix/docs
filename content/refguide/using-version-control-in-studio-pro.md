@@ -271,7 +271,7 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, select the type of merge available for the version control you are using:
+Select **Version Control > Merge Changes Here**, select the option available for the version control you are using:
 
 * For SVN, **Port fix**, **Merge feature branch**, and **Advanced merge** options are available
 * For Git, **Port fix** and **Merge feature branch** options are available

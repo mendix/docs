@@ -17,11 +17,13 @@ To access the **Merge** dialog box, open [Version Control](version-control-menu)
 
 ![Merge Dialog](attachments/merge-dialog/merge-dialog.png)
 
-Available merge scenarios are described below.
+Available scenarios are described below
 
 ## 2 Port Fix
 
-This merge scenario allows you to merge a fix from a maintenance branch line to the main line. If you just want to merge a small fix, a single commit is often enough. It is however also possible to merge multiple commits at once.
+This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
+
+In SVN it is possible to port multiple commits at once.
 
 ### 2.1 Branch Line
 

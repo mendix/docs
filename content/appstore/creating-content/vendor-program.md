@@ -2,7 +2,7 @@
 title: "Mendix Vendor Program"
 category: "Creating Content"
 menu_order: 1
-description: "Describes how to start selling your app service in the Mendix Marketplace."
+description: "Describes how to join the Mendix Vendor Program to sell your content in the Mendix Marketplace."
 tags: ["marketplace", "vendor"]
 aliases:
     - /appstore/general/sell.html
@@ -22,7 +22,7 @@ The [Mendix Vendor Program](https://www.mendix.com/marketplace-vendor-program/) 
 
 ## 2 Applying to the Vendor Program
 
-Whether you are an individual supplier with your own business or you are supplying an app service on behalf of your company, you need to [apply](https://www.mendix.com/marketplace-vendor-program/#contactForm) to the Mendix Vendor Program. Since your Mendix Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
+Whether you are an individual supplier with your own business or you are supplying a component on behalf of your company, you need to [apply](https://www.mendix.com/marketplace-vendor-program/#contactForm) to the Mendix Vendor Program. Since your Mendix Vendor account will be associated with your Mendix ID, make sure you have a [Mendix Platform account](https://signup.mendix.com/). 
 
 When applying to the program, you will be asked for basic information, including your legal name and address. This information is used to check whether you want to sell your content or offer it for free.
 
@@ -48,26 +48,28 @@ If you want to offer a paid service, you must also provide the following details
 
 ## 3 Mendix Vendor License Agreement {#vendor-license}
 
-Whether you are offering a free or paid app service through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
+Whether you are offering a free or paid component through the Marketplace, you need to accept our Mendix Vendor License Agreement, which is an agreement between Mendix and you as a Mendix Vendor within the Mendix Vendor Program.
 
 For ease of reference, here are some of the main points of the license agreement you need to be aware of:
 
-* App services must be free from any known security vulnerabilities
-* App services must not contain default passwords, authorization keys, or any other credentials
-* App services must not include software that collects and exports customer data without the customer's knowledge and express consent
-* You must define the applicable laws, treaties, regulations for your app service, including, without limitation, those related to export control, data privacy, international communications, and the transmission of technical or personal data
-* App services must be production-ready and must include a defined support policy
-* Mendix reserves the right to reject app services that do not comply with these guidelines or the requirements described in the license agreement
+{{% todo %}}[**THIS LIST NEEDS VERIFICATION FOR GENERIC POINTS**]{{% /todo %}}
+
+* Your content must be free from any known security vulnerabilities
+* Your content must not contain default passwords, authorization keys, or any other credentials
+* Your content must not include software that collects and exports customer data without the customer's knowledge and express consent
+* You must define the applicable laws, treaties, regulations for your content, including, without limitation, those related to export control, data privacy, international communications, and the transmission of technical or personal data
+* Your content must be production-ready and must include a defined support policy
+* Mendix reserves the right to reject content that does not comply with these guidelines or the requirements described in the license agreement
 
 ## 4 Legal & Compliance Checks
 
 The company registered with your account is the legal entity against which Mendix will be bound. For this reason, Mendix performs screening checks to ensure we are legally permitted to undertake business transactions together.
 
-{{% todo %}}[**BELOW PART STILL RELEVANT/ACCURATE??**]{{% /todo %}}
+{{% todo %}}[**IS THIS PART ACCURATE? IS THIS REQUIREMENT GENERIC TO ALL COMPONENTS - STARTING WITH SOLUTIONS - SOLD VIA THE VENDOR PROGRAM, OR IS IT SPECIFIC TO APP SERVICES?**]{{% /todo %}}
 
-In addition, before your app service can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For details, see the [Export Control](#export-control) section below.
+In addition, before your content can be published in the Marketplace, it must be classified for export to the countries in which it will be sold and for how it will be used. For more details, see the [Export Control](as-prepare#export-control) section of *How to Prepare Your App Service to Sell in the Marketplace*.
 
-In addition to defining the business case for your content (including how it will be licensed, priced, and supported), make sure you meet the export control requirements for your product. We know export control can be confusing, so if you are unclear on what you need to do, contact Mendix at *DIS_AppServices_Supplier_Team@mendix.com*.
+## 5 Read More
 
-For more information on what you need to do as a Mendix Vendor to submit an app service, see the sections below.
-
+* [How to Prepare Your App Service to Sell in the Marketplace](as-prepare)
+* [Creating Solutions](sol-solutions-guide)

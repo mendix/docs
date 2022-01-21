@@ -45,7 +45,7 @@ This feature of using entities with keys that do not have a maximum length speci
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Please note that the list above for supported key fields does not include `Date` or `DateTime` data types.
+The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
 ### 3.2 Attributes

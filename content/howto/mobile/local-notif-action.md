@@ -77,5 +77,4 @@ Now you can show pages after notifications are tapped. Next, in [How to Use Loca
 
 ## 4 Read More
 
-* [Implement Push Notifications](implementation-guide)
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)

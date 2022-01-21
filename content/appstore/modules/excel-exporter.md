@@ -30,7 +30,7 @@ On the **Excel Exporter** page, there are the following items:
   * **Name**: the name of the template
   * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
 
-* **New**: opens the **New template** dialog box where you can set the following items:
+* **New**: opens the **New template** dialog box that contains the following items:
 
   * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
 
@@ -62,7 +62,7 @@ On the template details page, there are the following items:
 
 * **Description** (optional): the description of the template
 
-* **Date time export format**:
+* **Date time export format**: the format for exported data and time
 
 *  **Upload existing excel file**: uploads an Excel file the is used as a template
 
@@ -79,36 +79,58 @@ On the template details page, there are the following items:
    
 * Styles: contains the following items related to the style in an exported document:
 
-   * **New**: opens the **New Style** dialog box where you can set the following items:
-      * **Style name**
-      * **Bold**
-      * **Italic**
-      * **Uderline**
-      * **Text height**
-      * **Text color**
-      * **Horizontal alignment**
-      * **Background color**
-      * **Vertical alignment**
-      * **Rotation**
-      * **Wrap text**
+   * **New**: opens the **New Style** dialog box to create that contains the following items:
+      
+      * **Style name**: the name of the style
+      
+      * **Bold**: when selected, the text is in bold
+      
+      * **Italic**: when selected, the text is in italics
+      
+      * **Underline**: when selected, the text is underlined
+      
+      * **Text height**: the height of the text
+      
+      * **Text color**: the color of the text
+      
+      * **Horizontal alignment**: the alignment of the text horizentally 
+      
+      * **Background color**: the color of the background
+      
+      * **Vertical alignment**: the alignment of the text vertically
+      
+      * **Rotation**: the degrees that the text is rotated anti-clockwise
+      
+        {{% alert type="info" %}}The rotation must be between -90 and 90 degrees. If the number is negative, the rotation is clockwise.{{% /alert %}}
+      
+      * **Wrap text**: when selected, the text in a cell can be wrapped to a line
+      
       * **Border top**
+      
       * **Border bottom**
+      
       * **Border left**
+      
       * **Border right**
+      
       * **Border color**
-      * **Format**
-
+      
+      * **Format**:
+      
    * **Edit**: opens the **Edit style** dialog box where you can make changes for the selected style
+   
    * **Delete**: deletes the selected style
+   
+   * **Style name**: the name of the style
 
 
 ### 3.3 Sheet Details Page {#sheet-details}
 
 On the sheet details page, there are the following items:
 
-* **Name:**
+* **Name:** the name of the sheet
 * **Sequence**
-* **Row object** (optional)
+* **Row object**: the object for the rows
 * **Reference to template input object **(optional)
 * **Sheet input object**
 * **Start retrieved data at row**
@@ -139,49 +161,88 @@ On the **Static data** tab, there are the following items:
 
 On the **Column data** tab, there are the following items:
 
-* **New**
-* **Edit**
-* **Delete**
-* ⬆
-* ⬇ 
-* **Status**
-* **Sequence**
-* **Column name**
+* **New**: opens the **New column** dialog box that contains the following items:
+
+  * **Column number**: the number of the column
+
+    {{% alert type="info" %}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
+
+  * **Style**: the style of the column (not including the column header)
+
+  * **Name**: the name of the column
+
+  * **Use name as column header**:
+
+  * **Retrieve type**: the type of the data which is retrieved for the column
+
+  * **Aggregate on attribute**:
+
+  * **End column with aggregate**: when selected, **Aggregate type** becomes visible
+
+    * **Aggregate type**: the result of the selected mathematical operation is shown at the button of the column
+
+* **Edit**: opens the **Edit Mx column** dialog box where you can make changes to the selected column
+
+* **Delete**: deletes the selected column
+
+* ⬆: changes the sequence/column number to a lower number
+
+* ⬇: changes the sequence/column sequence to a higher number
+
+* **Status**: shows if the column is correctly configured
+
+* **Sequence**: the number of the column
+
+* **Column name**: the name of the column
+
 * **Object and attribute**
+
 * **Header**
-* **Specific style**
-* **Data aggregat**
-* **Function**
-* **Result aggregate**
+
+  * **Yes**: the column name is used as a header
+  * **No**: the attribute name is used as a header
+
+* **Specific style**: the style of the column (not including the column header)
+
+* **Data aggregate**:
+
+* **Function**: the mathematical operation that is carried out
+
+* **Result aggregate**: the result of the mathematical operation is shown at the button of the column
 
 #### 3.3.3 Associations, Constraints and Sorting Tab
 
 On the **Associations, constrains and sorting** tab, there are the following items:
 
 * **Associations**
-  * **New**
-  * **Edit**
-  * **Delete**
+  * **New**: opens the **Edit Mx Reference Handling** dialog box that contains the following items:
+    * **JOIN type**
+  * **Edit**:
+  * **Delete**: deletes the selected association
   * **Association**
   * **Join type**
 * **Constaints**
-  * **New**
+  * **New**: opens the **Edit Mx Constant dialog box** that contains the following items:
+    * **Retrieve type**:
   * **Edit**
-  * **Delete**
+  * **Delete**: deletes the selected constraint
   * **⬆**
   * **⬇** 
   * **Sequence**
   * **And/Or**
   * **Summary**
 * **Sorting**
-  * **New**
+  * **New**: opens the **Edit sorting** dialog box that contains the following items:
+    * **Sequence**
+    * **Sorting direction**
+    * **Retrieve type**
   * **Edit**
   * **Delete**
   * **⬆**
   * **⬇** 
   * **Sequence**
   * **Summary**
-  * **Direction**
+  * **Direction**: ascending or descending
 
 #### 3.3.4 Sheet Preferences Tab
 

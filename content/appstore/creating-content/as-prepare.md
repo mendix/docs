@@ -2,26 +2,30 @@
 title: "Prepare Your App Service to Sell in the Marketplace"
 category: "Creating Content"
 menu_order: 2
-description: "Describes how to start selling your app service in the Mendix Marketplace."
+description: "Describes how to prepare your your app service to sell in the Mendix Marketplace."
 tags: ["marketplace", "vendor", "app service"]
 ---
 
+{{% todo %}}[**SHOULD THIS DOC EVEN BE PUBLISHED IF THIRD-PARTY PRICING MODELS & SELLING FUNCTIONALITY WILL NOT BE AVAIALBLE THIS FY?**]{{% /todo %}}
+
 ## 1 Introduction
 
-The process is simple: sign up as a [Mendix Vendor](#vendor), design and build your solution or app service [**INCUDE BOTH?**], edit your listing, and submit it to the Marketplace today.
+To sell your app service in the Mendix Marketplace, you need to first sign up as a [Mendix Vendor](vendor-program). Once that process is complete, you need to prepare your app service to sell in the Marketplace. 
 
 **This how-to will teach you how to do the following:**
 
 * Make your app service ready to sell on the Marketplace
-* Complete specific tasks before you submit, as you submit, and after you submit your app service to the Mendix Marketplace
+* Complete specific tasks before you submit, as you submit, and after you submit your app service to the Marketplace
 
 ## 2 Prerequisites
 
-[**TO ADD**] - cross-reference to vendor program doc
+* Be registered and approved as a [Mendix Vendor](vendor-program)
 
 ## 3 Making Your App Service Marketplace-Ready
 
 The Marketplace provides a trustworthy experience for sharing and consuming app services.  This is achieved through proven curation and governance processes as well as compliance checks conducted at the point of consumption. To walk you through the process of submitting content to the Marketplace, the intuitive [Upload Content](/appstore/general/share-app-store-content#adding) wizard provides steps for adding and publishing your app service.
+
+{{% todo %}}[**HOWEVER, THERE ARE NO FEATURES FOR MONETIZING/SELLING CONTENT IN THAT WIZARD - HOW TO DESCRIBE MECHANISM/FLOW FOR SELLING CONTENT?**]{{% /todo %}}
 
 Mendix uses the industry-standard [Open Service Broker API (OSB API)](https://www.openservicebrokerapi.org/) to enable automatically provisioning, de-provisioning, updating, and connecting users to your app service.
 
@@ -69,7 +73,7 @@ App service metering consists of the following:
 	* Widget
 * Metering (via the app service’s own solution) 
 
-### 4.4 Product Documentation
+### 4.4 Documentation
 
 Comprehensive product documentation can have a significant impact on the success of your app service product. This is why we check for its completeness as part of our review prior to your product being published in the Marketplace.
 
@@ -90,6 +94,8 @@ If you are unclear what this means to you and your app service, there are useful
 As a Mendix Vendor, it is important that you choose the pricing model that will maximize the business opportunity for your app service. Once you have decided on your preferred pricing model and whether you want to offer your app service as a free trial, you can apply these these options to your app service via steps in the Add Content wizard.
 
 #### 4.6.1 Pricing Models
+
+{{% todo %}}[**WHEN WILL THIS APPEAR IN THE MARKETPLACE?**]{{% /todo %}}
 
 The Marketplace supports three pricing models:
 

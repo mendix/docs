@@ -52,7 +52,7 @@ Whether you are offering a free or paid component through the Marketplace, you n
 
 For ease of reference, here are some of the main points of the license agreement you need to be aware of:
 
-{{% todo %}}[**THIS LIST NEEDS VERIFICATION FOR GENERIC POINTS**]{{% /todo %}}
+{{% todo %}}[**THESE GENERIC POINTS NEED VERIFICATION**]{{% /todo %}}
 
 * Your content must be free from any known security vulnerabilities
 * Your content must not contain default passwords, authorization keys, or any other credentials

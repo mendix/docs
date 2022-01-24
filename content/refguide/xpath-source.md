@@ -60,7 +60,7 @@ XPath constraints are applied equally to all users and only apply to the data di
 
 XPath constraints for data sources have access to objects and attributes from all surrounding data containers. To refer to the immediately surrounding data widget, use `$currentObject`. You can refer to other surrounding data containers by adding a `$` to their name:
 
-![](attachments/xpath-source/xpath-variable-constraint.png)
+{{% image_container width="250" %}}![xpath variable constraint](attachments/xpath-source/xpath-variable-constraint.png){{% /image_container %}}
 
 For example `$customer/Name` would refer to the `Name` attribute of the surrounding data widget with the name `customer`.
 

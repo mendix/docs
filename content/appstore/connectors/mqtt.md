@@ -60,9 +60,9 @@ To publish data to the MQTT broker, follow these steps:
 1. Search for *Publish MQTT* in the **Toolbox**.
 2. Drag the *Publish MQTT* event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to which the payload is published.
-    * **Payload** – string message to be published.
-    * [QoS](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) [](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html)[(Quality of service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published.
+    * **Topic** – topic to which the payload is published
+    * **Payload** – string message to be published
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
     * **Retained** – the retained setting serves two purposes depending on whether the message it is associated with is being published or received:
         * **Retained** set to **Yes** – For messages being published, setting Retained to Yes indicates that the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, the flag being true indicates that the received message is not a new one, but one that has been retained by the MQTT server.
         * **Retained** set to **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message, received as a result of it being published to the server.
@@ -76,7 +76,7 @@ To subscribe to the MQTT broker, follow these steps:
 3. Edit the event to include the following details:
     * **Topic** – topic to subscribe to
     * **OnMessageMicroflow** – microflow to be executed when a message is received on subscribed topic
-    * [QoS](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) [](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html)[(Quality of service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
 
 ### 3.2.3 Unsubscribe
 

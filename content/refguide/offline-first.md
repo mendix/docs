@@ -81,7 +81,7 @@ The upload phase executes the following operations:
 3. If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
 4. All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
 5. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated. 
-   This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied in that case.
+   This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
    Before- and after-commit event handlers for new objects will also be executed.
 
 #### 2.2.2 Download Phase {#download}

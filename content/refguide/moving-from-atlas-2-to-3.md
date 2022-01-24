@@ -68,7 +68,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 1.  **Atlas Web Content** will appear as a new module inside **Marketplace Modules**
 
-	{{% image_container width="300" %}} ![Atlas web content folder](attachments/atlas-mig/atlas-web-content-folder-structure.png)
+	{{% image_container width="250" %}} ![Atlas web content folder](attachments/atlas-mig/atlas-web-content-folder-structure.png)
 	{{% /image_container %}}
 
 #### 2.2.3 Adding Atlas Native Content to Your App

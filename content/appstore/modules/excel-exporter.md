@@ -80,7 +80,7 @@ On the template details page, there are the following items:
 * Styles: contains the following items related to the style in an exported document:
 
    * **New**: opens the **New Style** dialog box to create that contains the following items:
-      
+     
       * **Style name**: the name of the style
       
       * **Bold**: when selected, the text is in bold
@@ -165,7 +165,7 @@ On the **Column data** tab, there are the following items:
 
   * **Column number**: the number of the column
 
-    {{% alert type="info" %}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
+    {{% alert type="info" %}}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
 
   * **Style**: the style of the column (not including the column header)
 

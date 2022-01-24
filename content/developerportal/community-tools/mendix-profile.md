@@ -237,7 +237,7 @@ Here you can tell the Mendix community about yourself and your work experience. 
 
 ### 10.3 Social {#social}
 
-Here you can connect your social accounts for **Twitter**, and **LinkedIn**.
+Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 

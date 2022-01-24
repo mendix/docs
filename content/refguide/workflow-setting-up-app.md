@@ -77,8 +77,6 @@ While Workflow Commons does provide useful documents out-of-the-box, you might h
 
 ## 5 Workflow Best Practices
 
-{{% todo %}}[Is information in this section still relevant?]{{% /todo %}}
-
 We recommend the following best practices when working with workflows:
 
 *   When creating a user task, add a short description of the target users to the caption of the task. An example could be **HR: Schedule onboarding training** in an employee onboarding workflow.

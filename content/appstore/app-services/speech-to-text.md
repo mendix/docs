@@ -248,11 +248,11 @@ For instance, you can set **Voice feedback** as `model is rotated {0} degree aro
 
 When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any Mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 
-## 6 Obtaining a LicenseToken to Deploy Your App {#obtain}
+## 6 Obtaining a License Token to Deploy Your App {#obtain}
 
 Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
 
-### 6.1  Subscribing to Get LicenseToken
+### 6.1  Subscribing to Get a License Token
 
 1. On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, click **Subscribe** to order a subscription.
 
@@ -264,23 +264,23 @@ Speech To Text is a premium Mendix product that is subject to a purchase and sub
 
 4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create **LicenseToken**.
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
 
-### 6.2 Configuring a LicenseToken for App Deployment
+### 6.2 Configuring the License Token for App Deployment
 
-#### 6.2.1 Configuring the LicenseToken in Studio Pro
+#### 6.2.1 Configuring the License Token in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
-4. Fill in the **Value** with your obtained LicenseToken.
+4. Fill in the **Value** with the license token that you obtained.
 5.  Click **OK** to save the settings.
 
     ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 6.2.2 Configuring the LicenseToken in Developer Portal
+#### 6.2.2 Configuring the License Token in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

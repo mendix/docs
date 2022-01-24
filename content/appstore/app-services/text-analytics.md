@@ -644,35 +644,39 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)
 
-## 5 Obtaining a LicenseToken to Deploy Your App {#obtain}
+## 5 Obtaining a License Token to Deploy Your App {#obtain}
 
-Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting; otherwise, the Cognitive AI service features may not work in your app.
+Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
 
-### 5.1 Obtaining a LicenseToken with Trial Version
+### 5.1 Subscribing to Get a License Token
 
-When you just need to run your app with Text Analytics locally or deploy as a Mendix Free App for testing and trial purposes, you will need a trial version of LicenseToken.
+1. On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page, click **Subscribe** to order a subscription.
 
-To receive information on how to get the license token for [Text Analytics](https://marketplace.mendix.com/link/component/118412) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
-### 5.2  Obtaining a LicenseToken
+   For the trial, you do not need to fill in this information.
 
-To receive information on how to get the license token for [Text Analytics](https://marketplace.mendix.com/link/component/118412) trial version, contact [Mendix Support](https://support.mendix.com/hc/en-us) and raise a ticket for Cognitive AI development team.
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
 
-### 5.3 Configuring a LicenseToken for App Deployment
+4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
 
-#### 5.3.1 Configuring the LicenseToken in Studio Pro
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+### 5.2 Configuring the License Token for App Deployment
+
+#### 5.2.1 Configuring the LicenseToken in Studio Pro
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-4. Fill in the **Value** with your obtained LicenseToken.
+4. Fill in the **Value** with the license token that you obtained.
 5.  Click **OK** to save the settings.
 
     ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 5.3.2 Configuring the LicenseToken in Developer Portal
+#### 5.2.2 Configuring the License Token in Developer Portal
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 

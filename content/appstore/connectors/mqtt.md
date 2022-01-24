@@ -34,7 +34,7 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 1. Open your certificates file in any text editor. 
 2. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
-3. Add the **Client Certificate Key** and **Certificate password** if one was set.
+3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
     * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
     * Currently supported key types are X.509 format (*.pem*, *.pkcs*)
 

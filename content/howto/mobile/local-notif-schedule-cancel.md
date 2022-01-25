@@ -15,7 +15,7 @@ Local notifications should rarely notify a user right after they perform an acti
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make It Native](/refguide8/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Scheduling a Notification
@@ -127,4 +127,4 @@ You will not see a notification at the end of the minute, proving your cancel ac
 
 ## 5 Read More
 
-* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

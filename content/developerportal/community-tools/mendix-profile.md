@@ -350,7 +350,7 @@ Mendix has been tracking these data changes since November 2018.
 
 #### 10.7.4 Removing Your Account
 
-If you do not want to use Mendix anymore, you can remove your account from here.
+If you do not want to use Mendix anymore, you can remove your account from here. All of your personal and identifiable information is then removed and deleted from our servers.
 
 ## 11 Point Penalties
 

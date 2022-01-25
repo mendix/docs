@@ -79,9 +79,9 @@ To set up your microflow, do the following:
 
 To make this microflow run after startup, do the following:
 
-1.  Double-click **Settings** in your Project Explorer:
+1.  Double-click **Settings** in your App Explorer:
 
-	{{% image_container width="400" %}}![project explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
+	{{% image_container width="400" %}}![app explorer](attachments/native-push/pe-settings.png){{% /image_container %}}
 
 2.  Click the **Runtime** tab:
 

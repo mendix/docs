@@ -11,7 +11,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
 
 {{% alert type="warning" %}}
-The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [How to Deploy a Native App](/howto8/mobile/deploying-native-app) and use that app to test local notification actions.
+The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [How to Deploy a Native App](/howto/mobile/deploying-native-app) and use that app to test local notification actions.
 {{% /alert %}}
 
 ## 2 Prerequisites
@@ -19,7 +19,7 @@ The Make It Native app is currently experiencing limitations which interfere wit
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make It Native](/refguide8/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Setting an Action for When a Notification is Tapped
@@ -77,4 +77,4 @@ Now you can show pages after notifications are tapped. Next, in [How to Use Loca
 
 ## 4 Read More
 
-* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

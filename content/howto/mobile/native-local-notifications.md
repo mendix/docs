@@ -20,7 +20,7 @@ This how-to will teach you to build local notifications for native mobile applic
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make It Native](/refguide8/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 
 {{% alert type="info" %}}
 To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](deploying-native-app) and the how-to's described in [Use Notifications](notifications)
@@ -182,4 +182,4 @@ Congratulations! You can now see local notifications on your device. Next, in [H
 
 ## 4 Read More
 
-* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

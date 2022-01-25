@@ -39,7 +39,16 @@ You can also open the dialog box by double-clicking the activity in the microflo
 
 ### 3.1 Name
 
-The name of the gauge for which you want to set a value.
+The name of the gauge for which you want to set a value, which must adhere to the following rules:.
+
+* The name can only contain alpha-numeric characters, dots or underscores.
+* The name must start with a letter.
+* The name cannot start with `mx`, because this prefix is reserved for Mendix internal metrics.
+* The name is case-insensitive.
+
+{{% alert type="info" %}}
+It is recommended to use a common prefix that uniquely defines your organisation and application.
+{{% /alert %}}
 
 ### 3.2 Value
 

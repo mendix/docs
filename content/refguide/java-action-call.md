@@ -67,6 +67,20 @@ If **User return value** is set to *Yes* you will be asked to give the return va
 
 The result of the Java action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned.
 
+### 3.6 Task Queue
+
+{{% alert type="warning" %}}
+You cannot execute Java actions in a task queue when calling them from a nanoflow.
+{{% /alert %}}
+
+If you want a microflow to call a Java action to run in the background using a task queue, then you need to do the following:
+
+1. Check **Execute this Java action in a Task Queue**.
+2. Identify which task queue it should run in in **Select Task Queue**.
+3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+
+For more information about task queues, see [Task Queue](task-queue).
+
 ## 4 Common Section {#common}
 
 {{% snippet file="refguide/microflow-common-section-link.md" %}}

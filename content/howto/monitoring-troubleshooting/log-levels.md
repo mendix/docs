@@ -92,13 +92,14 @@ C:\temp\LogDemoApp\python
 {"feedback":{},"result":0}
 ```
 
-### 3.2 Configuring the Log Levels for Standard Log Messages
+### 3.2 Configuring the Log Levels for Standard Log Messages{#standard-log-levels}
 
 To set the log levels for standard log messages, follow these steps:
 
-1. In the **Console** pane, click **Advanced** to open the menu of advanced options.
-2. Click **Set log levels**.
-3. For the relevant **Log node**, select the desired level from the drop-down in the **Log level** column.
+1. Ensure that your app is running locally – if not, the option to set log levels will not be clickable.
+2. In the **Console** pane, click **Advanced** to open the menu of advanced options.
+3. Click **Set log levels**.
+4. For the relevant **Log node**, select the desired level from the drop-down in the **Log level** column.
 
 ![](attachments/log-levels/18580029.png)
 

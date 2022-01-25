@@ -38,7 +38,7 @@ Only _Retrieve apps_, _Create Free App Environment_ and _Retrieve app_ API calls
 Retrieves all licensed apps and Free Apps to which the authenticated user has access as a regular user.
 
 {{% alert type="info" %}}
-The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal/apps-list/) screen shows both licensed apps and Free Apps.
+The [Nodes](/developerportal/deploy/node-permissions#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps, while the [My Apps](/developerportal#my-apps) screen shows both licensed apps and Free Apps.
 {{% /alert %}}
 
 
@@ -249,7 +249,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc-accp.mendixcloud.com",
         "ModelVersion" :  "1.1.0.253",
         "MendixVersion" :  "6.10.10",
-        "Production" :  "false"
+        "Production" :  false
 
     },
     {
@@ -259,7 +259,7 @@ List of objects with the following key-value pairs:
         "Url" :  "https://calc.mendixcloud.com",
         "ModelVersion" :  "175.0.0.3702",
         "MendixVersion" :  "6.10.12",
-        "Production" :  "false"
+        "Production" :  false
     }
 ]
 ```
@@ -323,7 +323,7 @@ An object with the following key-value pairs:
      "Url" :  "https://calc-accp.mendixcloud.com",
      "ModelVersion" :  "1.1.0.253",
      "MendixVersion" :  "6.10.10",
-     "Production" :  "false"
+     "Production" :  false
 }
 ```
 
@@ -693,7 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
-| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
+| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact Support. |
 
 **Example Output**
 
@@ -898,10 +898,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact support to upgrade your plan. |
+| 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact Support to upgrade your plan. |
 | 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024MB.|
 | 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
-| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact support to upgrade to the v4 Cloud to access this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud v4. Please contact Support to upgrade to the v4 Cloud to access this functionality. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -1089,12 +1089,6 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 - _Date_ (String): Date of the desired log in the format `YYYY-MM-DD`.
 
-* If *Date* is tomorrow or after, or before the date the app was created, the log will contain the response `[No data found in file and no logging heartbeat detected]`
-
-{{% alert type="info" %}}
-* Under some circumstances, if *Date* is tomorrow's date the log will be *empty* and the **REST response** will contain `[No data found in file and no logging heartbeat detected]` — the cause of this is being investigated
-{{% /alert %}}
-
 **Example Request**
 
 ```bash
@@ -1121,7 +1115,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 {
     "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
     "Date": 1536451200000,
-    "DownloadUrl": "https://boobafina.test.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2018-09-09&expire=20180810153345&startDate=2018-08-10&signature=893DC8D3EAB0372FF49DB0E2D6973C701D32B567B67E97A41FD9E53E4D957991F80E3AC83B29452AF205FC306C51EAE8D81BA19F82147E5147B72EE15A8AC11FD3BE0306C3SDADAF478CCC9B98B9CBE70F99C99EDFB4DC77020F44FE540847FBABED34ACE856878F908EB38AC35D03125E7EFC9AE5CC2A67B871FA36C9F48A022BC7905838DE67046B5E57E82C0FBDCDFF67456DD66A2C2B4642B7B34C2829730257818B53113B620057777496EBA6D823EAA58378357A7F6ADA4956B6D86C100D61C8AD3483961A2C5EBEFF35A27BDE230478186F9F4ABC6207684781F"
+    "DownloadUrl": "https://logsapi-prod-2-eu-central-1.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2021-06-12&expire=20210616105139&startDate=2021-06-12&signature=0D5D1D81153BD12634AB03DD388259A416AE55479E8A8983CB9E3BD524183A041767262B9A9355BB48407ABFC98FD42094DDAB61005E558F0DA0441F4C0DFA3DAB38D03A9CF8F713C2187040669709848795BD5B32715F6917523BF08CA1DFD79479D5B2ADD8EDC116BAFB7AE952BB6FF0F68276AF349B9FA9B7D2CE9AE7BB6BA220BF50FD6ED93BFC1073BCF641FF0FCE48B75DFD74E2FC6C856495B1285348C1EA38EF9BB04E0BFEF60DFA32C1C856446B8ED2E9BF87C4EC1C7950CC97FDB38659603431E90FCCF6F1F977C3E668784AC03395E02088FFF15ABA056C03F0262D84D1ECC9D287B3B7020F7DA68AEC74D1360BF906101F2D727C19AD0D9C77EC"
 }
 ```
 

@@ -17,13 +17,13 @@ The OData Connector for SAP solutions is an OData connector written specifically
 
 You can use the [OData Model Creator for SAP solutions](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the OData Model Creator for SAP Solutions](/partners/sap/use-sap-odata-model-creator).
 
-{{% alert type="warning" %}}
-OData Connector for SAP solutions only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% alert type="info" %}}
+Version 5.3.0 of the OData Connector for SAP solutions adds support for services using OData version 4. Currently, only **Get List** and **Get Entry** are supported for services using OData version 4.
 {{% /alert %}}
 
 If you are new to the OData Connector for SAP solutions, you can try it out by following our how-to: [How to Use the OData Connector](/partners/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
-When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [OData Connector for SAP Solutions](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector).
+When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [OData Connector for SAP Solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector).
 
 {{% alert type="info" %}}
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions
@@ -108,7 +108,7 @@ Here is the domain model of the OData Connector for SAP solutions:
 
 ![](attachments/sap-odata-connector/domainmodel-sapodataconnector.png)
 
-This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **App Store module** > **SAPODataConnector**. Each [entity](/refguide/entities) contains one or more [attributes](/refguide/attributes):
+This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **Marketplace modules** > **SAPODataConnector**. Each [entity](/refguide/entities) contains one or more [attributes](/refguide/attributes):
 
 * **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP OData service domain model are specializations of this
   * **meta objectURI** – the address given by the OData service to the OData object

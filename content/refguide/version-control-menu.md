@@ -10,8 +10,7 @@ tags: ["Studio Pro", "version control", "top bar"]
 
 In the **Version Control** menu, you can view and/or manipulate settings that are connected to version control. For example, you can view the history of the current development line.
 
-{{% image_container width="300" %}}![Version Control Menu](attachments/version-control-menu/version-control-menu.png)
-{{% /image_container %}}
+![Version Control Menu](attachments/version-control-menu/version-control-menu.png)
 
 ## 2 Update
 
@@ -20,6 +19,16 @@ The **Update** option updates the local app to the latest revision that was comm
 ## 3 Commit
 
 The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](commit-dialog).
+
+## 4 Push
+
+{{% alert type="info" %}}
+
+Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
+
+{{% /alert %}}
+
+The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](version-control#commit) section in *Version Control*.
 
 ## 4 Show Changes on Disk
 

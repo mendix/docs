@@ -1,7 +1,7 @@
 ---
 title: "General Info"
 description: "Describes various features of Mendix Studio."
-menu_order: 10
+weight: 10
 tags: ["studio", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -34,7 +34,7 @@ If you do not see **Edit in Studio**, go to [General Settings](/developerportal/
 
 You can also open your app in Studio via Studio Pro. Do the following:
 
-1. In Studio Pro, open the project in that you want to view in Studio.
+1. In Studio Pro, open the app in that you want to view in Studio.
 2.  Click the globe icon in the top right corner (only available if Studio is enabled).
 
 	![Globe Icon](attachments/general/globe-icon.png)

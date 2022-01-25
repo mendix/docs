@@ -25,7 +25,7 @@ To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Only the [Technical Contact](../collaborate/app-roles#technical-contact) is allowed to grant node permissions.
+Only the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) is allowed to grant node permissions.
 
 {{% /alert %}}
 
@@ -238,6 +238,10 @@ The disk usage graph shows only the disk usage inside the container. This is usu
 
 In this section you will find the statistics about the database that the application uses.
 
+{{% alert type="warning" %}}
+If you are using the [Basic License](/developerportal/deploy/basic-package) you will only see the first three graphs as these are the ones which show information specific to your app.
+{{% /alert %}}
+
 ### <a name="Trends-dbmxruntimeconnectionbus"></a>5.1 Number of Database Queries Being Executed
 
 The **Number of database queries being executed** graph shows the number of database queries that are executed by your Mendix application.
@@ -289,17 +293,31 @@ Value | Explanation
 **xact updated** | Number of tuples updated per second.
 **xact deleted** | Number of tuples deleted per second.
 
+The most common cause of rollbacks is a (unexpected) reboot of the application.
+
+Rollbacks appearing during normal operation indicate a problem and should be investigated. A common cause is that two or more processes are attempting a mutation of the same object. If you have more than one instance, remember that these processes might be running on different instances.
+
 ### <a name="Trends-dbmxruntimepgstatactivity"></a>5.4 Number of Database Connections
 
 The **Number of database connections** graph shows the number of connections to the PostgreSQL server.
 
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
+
 ![](attachments/trends-v4/no-db-connections.png)
 
-This should go up and down with the usage of the application. The number of connections is limited to 50.
+The number of connections will go up and down with the usage of the application.
+
+The standard configuration sets a maximum of 50 connections per instance. The graph displays the total number of connections for all instances in a multi-instance scaled runtime.
 
 ### <a name="Trends-dbmemory"></a>5.5 Database Node Operating System Memory
 
 The **Database node operating system memory** graph shows the distribution of operating system memory that is available for this server.
+
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
 
 ![](attachments/trends-v4/db-os-memory.png)
 
@@ -317,11 +335,19 @@ Type | Explanation
 
 The **Database node CPU usage** graph shows the amount of CPU usage over time, as a percentage.
 
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
+
 ![](attachments/trends-v4/db-cpu-usage.png)
 
 ### <a name="Trends-dbdiskstatsthroughput"></a>5.7 Database Node Disk Throughput
 
 The **Database node disk throughput** graph shows the amount of data that is being read from and written to disk.
+
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
 
 ![](attachments/trends-v4/db-disk-throughput.png)
 
@@ -330,6 +356,10 @@ If you see large values here which do not immediately drop back again, it may in
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
 
 The **Database node disk usage (in bytes)** graph displays both used storage (the absolute amount of data that is stored on disk), and free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 The units on the graph are mebibytes. One gibibyte is 1024 mebibytes, so if the total storage of your database is 10 GiB, it is 10240 MiB, and will appear like this on the graph.
@@ -345,6 +375,10 @@ The used storage metric was added in September 2020. The used storage metric wil
 
 The **Database node disk IO/s** graph shows the *number* of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
+
 ![](attachments/trends-v4/db-disk-ios.png)
 
 There are two sets of values:
@@ -358,6 +392,10 @@ Value | Explanation
 
 The **Database node disk latency** graph shows the average waiting times for disk operations to complete.
 
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
+
 ![](attachments/trends-v4/db-disk-latency.png)
 
 Interpreting the values in this graph should be done in combination with the other disk stats graphs, together with the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
@@ -370,6 +408,14 @@ Value | Explanation
 **write** | Write ops on the disk holding the database.
 
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
+
+{{% alert type="info" %}}
+You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance will not affect their performance.
+{{% /alert %}}
 
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as percentage; 100% means that the volume has accumulated the maximum number of credits.
 

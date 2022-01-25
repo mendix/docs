@@ -7,7 +7,7 @@ tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/activate-a-mendix-license-on-microsoft-windows.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/activate-a-mendix-license-on-microsoft-windows.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Have your MxID and password ready
 * Have login access and access to the Mendix Service Console on the server
 
-## 3 Retrieve the Server ID{#3RetrievetheServerID}
+## 3 Retrieve the Server ID {#retrieve-the-server-id}
 
 In this section, you will retrieve the server ID from your Mendix server, which is used in the license activation process. These steps should be executed on the Microsoft Windows server.
 
@@ -57,7 +57,7 @@ In this section, you will submit your server ID in the Mendix Support Portal to 
 
 In this section, you will enter the license key into the Mendix server, thus completing the license activation process.
 
-1. Return to the Mendix Service Console **License** dialog box (as described in [3 Retrieve the Server ID](#3RetrievetheServerID)).
+1. Return to the Mendix Service Console **License** dialog box (as described in [Retrieve the Server ID](#retrieve-the-server-id) section).
     ![](attachments/activate-mendix-license-on-windows/19398814.png) 
 2. Paste your license key into the **License key** text box.
     ![](attachments/activate-mendix-license-on-windows/19398816.png) 

@@ -7,6 +7,10 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-settings.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
@@ -31,7 +35,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -99,7 +103,7 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
@@ -196,10 +200,6 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 ##### 3.12.3.2 Switching from Database to Runtime
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
-
-### 3.13 Web Service Calls {#web-service-calls}
-
-The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
 
 ## 4 Languages Tab
 

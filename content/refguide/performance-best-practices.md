@@ -4,14 +4,14 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp008> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp011> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
 
 This document outlines performance issues and Mendix best practices for optimizing an app performance. 
 
-## 2 Calculated Attributes Best Practices {#mxp001} 
+## 2 Calculated Attributes Best Practices [MXP001][MXP002] {#mxp001}
 
 <a name="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](attributes).
 
@@ -26,11 +26,11 @@ There are two different performance issues with calculated attributes that you c
 1. [When you use calculated attributes on a page](#calculated-attribute-on-page)
 2. [When there are unused calculated attributes](#unused-calculated-attributes)
 
-### 2.1 Avoid Using Calculated Attributes on a Page {#calculated-attribute-on-page}
+### 2.1 Avoid Using Calculated Attributes on a Page [MXP001] {#calculated-attribute-on-page}
 
 Retrieve activities trigger the logic of calculated attributes, which can lead to database actions and microflow calls being executed (objects retrieving each other through calculated attributes).
 
-If data widgets (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
+If data containers (list view, data view, or data grid) on a page are using calculated attributes, this may affect the time to load and display the page. 
 
 #### 2.1.1 Steps to Fix
 
@@ -45,7 +45,7 @@ You will also need to migrate any existing data, since when the attribute is cha
 
 {{% /alert %}}
 
-### 2.2 Remove Unused Calculated Attributes {#unused-calculated-attributes}
+### 2.2 Remove Unused Calculated Attributes [MXP002] {#unused-calculated-attributes}
 
 As Retrieve activities trigger the logic of calculated attributes, it could lead to an execution chain of database actions and microflow calls (objects retrieving each other through calculated attributes).
 
@@ -55,9 +55,9 @@ If calculated attributes are not used, they can safely be removed to avoid redun
 
 To fix the issue, delete the unused calculated attribute.
 
-## 3 Add an Index to Attributes in Sort Bars {#mxp003}
+## 3 Add an Index to Attributes in Sort Bars [MXP003] {#mxp003}
 
-[Sort bars](https://docs.mendix.com/refguide/sort-bar) are used to sort items in data widgets. Sort bars can be used in three different types of data widgets:
+[Sort bars](sort-bar) are used to sort items in data containers. Sort bars can be used in three different types of data containers:
 
 - Data grid
 - Template grid
@@ -75,7 +75,7 @@ As totally different best practices apply for read-intensive and write-intensive
 
 To fix the issue, add an index on attributes which are used as sort items in sort bars on pages.
 
-## 4 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities {#mxp004} 
+## 4 Avoid Committing Objects Inside a Loop with Create Object, Change Object, or Commit Activities [MXP004][MXP005] {#mxp004}
 
 <a name="mxp005"></a>In a microflow, Mendix objects can be persisted to the database with three activities: the **Create object** activity, **Change object** activity, and **Commit** activity. For objects that are created or changed in a loop, it is not the best practice to commit them immediately in the loop, as this comes with an unnecessary performance overhead. Instead, it is recommended to perform a batch commit of several created/changed objects with the **Commit** activity outside of the loop to reduce database, application, and network overhead. For more information on **Create object**, **Change object**, and **Commit** activities, see [Create Object](create-object), [Change Object](change-object), and [Commit Object(s)](committing-objects).
 
@@ -89,18 +89,18 @@ Committing lists of objects has the following benefits compared to individual co
     - Auto-committed objects are retrieved from the database
     - Auto-committed objects are stored to the database (if relevant)
 
-### 4.1 Steps to Fix for Create or Change Object Activities
+### 4.1 Steps to Fix for Create or Change Object Activities [MXP004]
 
 To fix the issue for **Create** or **Change object** activities inside the loop, do the following:
 
 1. Change the **Commit** option of a **Create**/**Change** object activity from *No* and make sure created/changed objects are available in a list.
 2. Commit the list after the loop when the iteration has finished or when number of objects in the list reaches 1000 to avoid excessive memory usage.
 
-### 4.2 Steps to Fix for the Commit Activity
+### 4.2 Steps to Fix for the Commit Activity [MXP005]
 
 To fix the issue for the **Commit** activity, commit the list after the loop when the iteration has finished or when number of objects in the list reaches 1000 to avoid excessive memory usage.
 
-## 5 Convert Eligible Microflows to Nanoflows {#mxp006}
+## 5 Convert Eligible Microflows to Nanoflows [MXP006] {#mxp006}
 
 Nanoflows are executed directly on an end-user's device or browser. This makes them ideal for offline usage. In contrast, microflows run in the Runtime server, thus involve usage of network traffic. Converting an eligible microflow to a nanoflow helps avoiding communication over networks and significantly boosts app performance. For more information on when to use on nanoflows and when to use them, see [Nanoflows](nanoflows).
 
@@ -123,7 +123,7 @@ To fix the issue, do the following:
 3. Check usages of the microflow by right-clicking the microflow and selecting **Find usages**. Replace all usages with the newly created nanoflow.
 4. Delete the unused microflow. You can do this by selecting the microflow and pressing <kbd>Delete</kbd> or by right-clicking it and selecting **Delete**.
 
-## 6 Add Index to Attributes that Are Used in XPath Expressions {#mxp007}
+## 6 Add Index to Attributes that Are Used in XPath Expressions [MXP007] {#mxp007}
 
 [XPath expressions](xpath) can take a long time to run depending on how many records the underlying entities contain. For read-intensive entities, it makes sense to add an index on the attributes used in XPath expressions. This can significantly boost performance of object retrieval from the database. XPath expressions can also be optimized by ordering them in such a way that the first class excludes as many items as possible. This can be achieved by using indexed attributes earlier in the expression. This will make the rest of the data set to join/filter as small as possible and reduce the load on the database.
 
@@ -146,7 +146,7 @@ This optimization may not be very beneficial for data types like Boolean and enu
 
 {{% /alert %}}
 
-## 7 Avoid Caching Non-Persistable Entities {#mxp008}
+## 7 Avoid Caching Non-Persistable Entities [MXP008] {#mxp008}
 
 A non-persistable object is an object that is considered temporary and only exists in the memory. It is an instance of a non-persistable entity. For more information on persistable and non-persistable entities, see [Persistablity](persistability). As these objects exist only in memory, caching them is not useful. On the one hand, it is redundant to create associations of non-persistable entities with System.Session or System.User persistable entities. On the other hand, it is important to cache objects which do not change very often but are used frequently in logic. This will help avoid the overhead of database communication. Persistable entities can be connected to the System.Session of the user and be used as a cache of outcomes. For more information on objects and caching, see [Objects & Caching](objects-and-caching).
 
@@ -164,3 +164,36 @@ To fix the issue, do the following:
 1. For an entity that does not change very often, make it persistable if its objects are used frequently for your logic.
 2. If the above condition is not met, remove the association of the non persisted entity with System.User or System.Session.
 
+## 8 Avoid Using Too Many Levels of Inheritance [MXP009] {#mxp009}
+
+Using multiple levels of inheritance and too many specializations on entities may affect performance on large datasets, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries. 
+
+### 8.1 Steps to Fix
+
+Do not use more than two levels of inheritance or overuse specializations on entities especially if you are using XPath for an entity access.  
+
+Consider the following alternatives:
+
+* Combine attributes in one entity and add an enumeration instead of setting the [generalization](generalization-and-association)
+* Create entities with a one-to-one association instead of setting the generalization
+* Create a non-persistable entity that inherits from an outcome of your business logic
+
+## 9 Duplicated Access Rules [MXP010] {#mxp010}
+
+Using duplicated access rules on entities can affect performance, especially when you are using XPaths for [entity access rules](access-rules). This generates complex queries, adds XPaths for every specialization access rule, and leads to slow queries on a large dataset. 
+
+### 9.1 Steps to Fix
+
+To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+
+* Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
+* Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.
+
+## 10 Avoid Deeply Nested List Views [MXP011] {#mxp011}
+
+A list view is used on a page that is nested for two or more levels, for example, a list view is in list view and the second list view is in a data view. 
+When you use two or more levels of nesting, page performance may be affected due to the increased number of requests and transferred data volume.
+    
+### 10.1 Steps to Fix
+    
+To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.

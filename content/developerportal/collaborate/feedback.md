@@ -34,9 +34,9 @@ There are three types of feedback item:
 Feedback can go through four different stages:
 
 * **Open** – the feedback is awaiting a response from the team
-* **Handled ** – the team has looked into the feedback and has requested further information
-* **Accepted ** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
-* **Closed ** – the team has closed the feedback
+* **Handled** – the team has looked into the feedback and has requested further information
+* **Accepted** – the team has accepted the feedback and added this feedback as a story to the Sprint (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
+* **Closed** – the team has closed the feedback
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
@@ -49,7 +49,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
-## 4 Feedback Details
+## 4 Feedback Details {#feedback-details}
 
 Clicking **Details** or the title of a feedback item opens the item's details page, where you can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 
@@ -78,9 +78,9 @@ In the **Leave a comment** box, you can post a comment and start an exchange wit
 To process a feedback item, you can select one of the following in the **Actions** menu. The options available depend on the current status of your feedback.
 
 * **Accept feedback** – signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback item (for details, see the [Adding a Feedback Story to Your Backlog](#adding) section below)
-* **Mark 'Under review' ** – notifies the user who submitted the feedback as well as your team that the item is under review
-* **Mark as handled ** – changes the [feedback stage](#stages) of the item from **Open** to **Handled**, which then removes the item from your open items list but does not close it
-* * **Close feedback** – closes the feedback item; you can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted
+* **Mark 'Under review'** – notifies the user who submitted the feedback as well as your team that the item is under review
+* **Mark as handled** – changes the [feedback stage](#stages) of the item from **Open** to **Handled**, which then removes the item from your open items list but does not close it
+* **Close feedback** – closes the feedback item; you can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted
 
 If the feedback item has not yet been accepted, you can also change the feedback item's type by clicking **Convert to idea**, **Convert to question**, or **Convert to issue**. For more information, see the [Types of Feedback](#types) section.
 

@@ -16,29 +16,27 @@ We currently only support the options described here.
 
 ### 2.1 Retrieving All Objects
 
-All objects can be retrieved by specifying the URI. For example: `/odata/myservice/myresource`. You can see this if you specify the URI in a browser.
+All objects can be retrieved by specifying the URI. For example: `/odata/myservice/v1/Exployees`. You can see this if you specify the URI in a browser.
 
 ### 2.2 Retrieving a Single Object
 
-A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/myresource(8444249301330581)`.
+A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/v1/Exployees(8444249301330581)`.
 
 ### 2.3 Retrieving Associated Objects
 
-Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`.
-
-{{% alert type="info" %}}
-The `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11#8110).
-{{% /alert %}}
+Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/v1/Exployees?$expand=Cars,Address($expand=City)` (OData 4) or `/odata/myservice/v1/Exployees?$expand=Cars,Address/City` (OData 3).
 
 ## 3 Counting the Number of Objects
 
 ### 3.1 Retrieving a Count of Objects
 
-You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/myresource/$count`.
+You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/v1/Exployees/$count`.
 
-### 3.2 Inline Count
+### 3.2 (Inline) Count
 
-By setting the `$inlinecount` query option to 'allpages', a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
+For OData 4, by setting the `$count` query option to `true`, a count of the number of items returned will be included in the result. For example: `?$count=true`.
+
+For OData 3, by setting the `$inlinecount` query option to `allpages`, a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
 
 ## 4 Filtering
 
@@ -50,8 +48,8 @@ This table describes how to pass values for different attribute types:
 
 | Type | How to Pass |
 | --- | --- |
-| String and Enumeration | Enclosed in single quotes (for example, 'John') |
-| Datetime | Preceded with `datetime` and enclosed in single quotes (for example, datetime'2015-01-01' or datetime'&lt;epoch value here&gt;') |
+| String and Enumeration | Enclosed in single quotes (for example, `'John'`) |
+| Datetime | For OData 4: a plain value (for example, `2021-12-31`). For OData 3: Preceded with `datetime` and enclosed in single quotes (for example, `datetime'2021-12-31'` or `datetime'<epoch value here>'`) |
 | Other | Plain value (for example, 15) |
 
 ### 4.2 Comparison Operators
@@ -81,9 +79,9 @@ We support the following comparison operators:
 
 | Function     | Example                                 | Returns |
 | ---          | ---                                     | ---     |
-| substringof  | `/Employees?$filter=substringof('f', Name)`     | All employees with names that contain an 'f' |
-| endswith     | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with 'f' |
+| contains<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`     | All employees with names that contain an 'f' |
 | startswith   | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with 'f' |
+| endswith     | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with 'f' |
 | length       | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5 |
 | year         | `/Employees?$filter=year(DateOfBirth) eq 1990`  | All employees born in the year 1990 |
 | month        | `/Employees?$filter=month(DateOfBirth) eq 5`    | All employees born in May |
@@ -91,6 +89,8 @@ We support the following comparison operators:
 | hour         | `/Employees?$filter=hour(Registration) eq 13`   | All employees registered between 13:00 (1 PM) and 13:59 (1:59 PM) |
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
+
+<small><sup>1</sup> In OData 3, the `contains` function is called `substringof`, and its arguments are reversed For example, `/Employees?$filter=substringof('f', Name)`</small>
 
 ### 4.5 Combining Filters
 
@@ -128,7 +128,7 @@ It is possible to sort on multiple attributes, which have to be comma-separated.
 
 You can select which attributes and associations to return by specifying the `$select` query option. For example: `?$select=Name,Age`.
 
-## 7 Paging
+## 7 Paging {#paging}
 
 ### 7.1 Top (Limit)
 
@@ -145,3 +145,58 @@ You can compare values against the `null` literal. For example: `?$filter=Name e
 In this example, `Name` is a string attribute that can have no assigned value in the database. Note that `null` means *no value* as opposed to `''` (which is an empty string).
 
 When you filter against associations, null literals can be quite useful. For example: `?$filter=Association_A_B ne null`. In this example, you query for objects of entity type `A` that have at least one association set to objects of entity type `B`.
+
+## 9 Passing Query Options in the Request Body
+
+If the OData query is too long to be sent as a `GET` request, clients can send the query as a `POST` request to the `/$query` endpoint. For example, `GET /Products?$select=Name,Price` and `POST /Products/$query` with `$select=Name,Price` in the request body give the same result. These `POST` requests must specify the header `Content-Type: text/plain`. 
+
+{{% alert type="info" %}}
+The body must adhere to *URL encoding* principles. So, for instance, spaces, tabs, and newlines are not allowed.
+{{% /alert %}}
+
+## 10 Updating objects {#updating-objects}
+
+When a published resource has the [Updatable (write)](published-odata-resource#capabilities) capability, clients can update its attributes and associations by sending a `PATCH` request to the URL of the object (for example, `PATCH /odata/myservice/v1/Exployees(8444249301330581)`). 
+
+Specify new values for attributes in the body of the request. Here is an example:
+
+```json
+{
+  "Name": "John",
+  "FirstContact": "2012-12-03T07:16:23Z",
+  "DateOfBirth": null
+}
+```
+
+When the association refers to a single object, use the `@id` syntax to set an associated object, or use `null` to empty the associated object. Here is an example:
+
+```json
+{
+  "Birthplace": { "@id": "Cities(511342)" },
+  "Region": null
+}
+```
+
+When the association refers to multiple objects, add objects to or remove objects from the association by using the `@delta` syntax:
+
+```json
+{
+  "Customers@delta": [
+    {
+      "@id": "Customers(484)"
+    },
+    {
+      "@removed": {
+        "reason": "changed"
+      },
+      "@id": "Customers(712)"
+    }
+  ]
+}
+```
+
+Clients can only update an association from the entity that is the [owner](associations).
+
+{{% alert type="info" %}}
+The updating attributes functionality was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6). The updating associations functionality was introduced in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8).
+{{% /alert %}}

@@ -2,10 +2,10 @@
 title: "Get Started"
 parent: "atlas-ui"
 menu_order: 10
-tags: ["Atlas", "UI", "UX", "user experience"]
+tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
-## 1. Introduction
+## 1 Introduction
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
@@ -41,11 +41,9 @@ Our UI library is fully integrated into Mendix Studio. After choosing a navigati
 
 ## 4 Default Look and Feel
 
-Mendix apps contain a default look which is part of the [Atlas Core module](https://marketplace.mendix.com/link/component/117187). This offers the default look (styling and design properties) and feel for all the platform supported widgets and is the base for the designs of Mendix app. Check out the look and feel on the Atlas Design System website.
+Mendix apps contain a default look which is part of the [Atlas Core module](https://marketplace.mendix.com/link/component/117187). This offers the default look (styling and design properties) and feel for all the platform-supported widgets and forms the basis for Mendix app designs. To view these styling elements for yourself, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-{{% todo %}}[Atlas Design System website: https://atlasdesignsystem.mendixcloud.com]{{% /todo %}}
-
-Next to that, for both web and native mobile Mendix offers respectively [Atlas Web Content](https://marketplace.mendix.com/link/component/117176) and [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps ([Blank Web App](https://marketplace.mendix.com/link/component/51830) & [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511)), but can be removed if users do not want to use the default templates and building blocks.
+Next to that, for both web and native mobile Mendix offers respectively [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) and [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) as out of the box modules with standard page templates and building blocks. These are part of the blank starter apps ([Blank Web App](https://marketplace.mendix.com/link/component/51830) & [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511)), but can be removed if users do not want to use the default templates and building blocks.
 
 When Mendix releases a new version of these modules, these can be updated as regular modules.
 

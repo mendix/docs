@@ -78,14 +78,14 @@ This property is available for **Comparison** and **Drop-down** search fields.
 
 {{% /alert %}}
 
-Many input widgets (like text boxes and drop-down widgets) can be connected to the following:
+Many input elements (like text boxes and drop-down widgets) can be connected to the following:
 
 * An attribute of the entity of the data view that contains the widget; in this case, the widget is connected to an attribute
 * An attribute of an entity associated with the data view entity by following one or more associations of the reference type through the domain model; in this case, the widget is connected to an attribute path
 
 In the first case, we say the widget is connected to an attribute, and in the second case it is connected to an attribute path.
 
-You can edit attributes presented in input widgets over a path.
+You can edit attributes presented in input elements over a path.
 
 #### 3.2.2 Comparison
 

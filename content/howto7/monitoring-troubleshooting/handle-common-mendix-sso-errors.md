@@ -27,7 +27,7 @@ These are commonly caused by compatibility issues with JAR files in the `<projec
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [How to Test Web Services Using SoapUI](/howto7/testing/testing-web-services-using-soapui)
 * [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
 * [How to Configure Log Levels](log-levels)

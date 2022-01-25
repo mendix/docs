@@ -1,6 +1,7 @@
 ---
 title: "Message Definitions"
 parent: "integration"
+menu_order: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -20,8 +21,6 @@ To add a message definitions document do the following:
 1. Right-click your module or a folder within a module.
 
 2. Choose **Add other > Message definitions**.
-
-    ![Right-click menu - add Message definitions](attachments/message-definitions/add-definitions-document.png)
 
 3. Give your message definitions a name and click **OK**.
 

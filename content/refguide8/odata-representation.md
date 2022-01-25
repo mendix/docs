@@ -4,6 +4,10 @@ parent: "published-odata-services"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/odata-representation.pdf).
+{{% /alert %}}
+
 This document describes how entities are represented in a published OData service.
 
 ## 1 Attributes
@@ -22,10 +26,10 @@ This document describes how entities are represented in a published OData servic
 | Long <sup>2</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String <sup>4</sup> | Edm.String | John | John |
 
-<sup>1</sup>In the service's metadata, IDs are marked with `isAttribute="false"` (using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace) in order to indicate that these are not attributes that appear in the domain model. Note: the `isAttribute="false"` feature was introduced in Studio Pro [8.6.0](/releasenotes/studio-pro/8.6#860).<br />
-<sup>2</sup>When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).<br />
-<sup>3</sup>Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
-<sup>4</sup>When the string attribute has a limited length, the `MaxLength` attribute is specified. Note: this feature was introduced in Studio Pro [8.16.0](/releasenotes/studio-pro/8.16#8160).
+<small><sup>1</sup> In the service's metadata, IDs are marked with `isAttribute="false"` (using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace) in order to indicate that these are not attributes that appear in the domain model. Note: the `isAttribute="false"` feature was introduced in Studio Pro [8.6.0](/releasenotes/studio-pro/8.6#860).<br />
+<sup>2</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).<br />
+<sup>3</sup> Even though the binary data type is not supported, the FileDocument and Image system entities are supported and represented as Base64-encoded strings with the `Edm.Binary` type.<br />
+<sup>4</sup> When the string attribute has a limited length, the `MaxLength` attribute is specified. Note: this feature was introduced in Studio Pro [8.16.0](/releasenotes/studio-pro/8.16#8160).</small>
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 

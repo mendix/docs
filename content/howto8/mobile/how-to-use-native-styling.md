@@ -14,12 +14,12 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Native Mobile Quickstarter App template by following the [Creating a New App Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
-* Download the Make It Native app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
+* Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
+* Download the Make It Native 8 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181) so you can text your app and see your styling changes
 
 ### 3 Customizing the Quickstart App
 
-The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI resources package. This package consists of:
+The [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) is styled using an Atlas UI resources package. This package consists of:
 
 * Widgets
 * Building blocks
@@ -87,7 +87,7 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 	Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
-## 6 Creating Your Own Classes {#6-creating-your-own-classes}
+## 6 Creating Your Own Classes {#creating-your-own-classes}
 
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 
@@ -180,5 +180,5 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 * [How to Implement Native Mobile Styling](native-styling)
 * [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide)
-* [Mendix Atlas UI](../front-end/atlas-ui)
+* [Mendix Atlas UI](/howto8/front-end/atlas-ui)
 * [How to Get Started with Native Mobile](getting-started-with-native-mobile)

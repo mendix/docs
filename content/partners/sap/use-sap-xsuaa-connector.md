@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. Look in **App** > **Marketplace modules** for the module **SapAuthentication**. This is the XSUAA connector.
 
-If the XSUAA Connector for SAP Business Technology Platform is not already in your app, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://appstore.home.mendix.com/link/app/78091/).
+If the XSUAA Connector for SAP Business Technology Platform is not already in your app, download it from the Marketplace. It can be found here: [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091/).
 
 For more information, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
 
@@ -66,6 +66,10 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 
 * Add the SSO login button so the user can choose whether to use SSO or native Mendix credentials
 * Bypass the Mendix login page altogether and just display the XSUAA login page
+
+{{% alert type="info" %}}
+If you are using the [Deep Link](/appstore/modules/deep-link) module, you will also need to set the **LoginLocation** constant to `/xsauaalogin/`.
+{{% /alert %}}
 
 #### 4.2.1 Adding the SSO Login Button to the Login Page<a name="adding"></a>
 

@@ -6,6 +6,10 @@ tags: ["domain model", "entity", "entities", "attribute", "validation rule", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/entities.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 An entity usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
@@ -122,6 +126,10 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False *(default)* | Entity does not contain the system attribute 'createdDate'. |
 
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
+{{% /alert %}}
+
 #### 3.4.2 Store 'changedDate' 
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
@@ -133,6 +141,10 @@ This property defines whether the entity contains the system attribute 'changedD
 
 {{% alert type="info" %}}
 The 'changedDate' property is only updated on real changes. Simply changing and committing an entity with the same attribute values does not update 'changedDate'.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
 #### 3.4.3 Store 'owner' 

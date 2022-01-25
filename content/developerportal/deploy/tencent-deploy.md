@@ -7,6 +7,10 @@ tags: ["Deploy", "Tencent", "Environment", "Cluster", "Namespace"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/tencent-deploy.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 The Mendix Platform on Tencent Cloud is branded as **Siemens Low-Code Platform**.
 {{% /alert %}}
 
@@ -74,7 +78,7 @@ In the first tab you can see the **Namespaces** in the cluster and their current
 There are two other tabs:
 
 * **Cluster Managers** – where you can see other people who have access to the cluster and can manage them
-* **Activity** – where you can see perform the following actions on the entire cluster
+* **Activity** – where you can see the following actions on the entire cluster
 
 #### 3.2.1 Cluster Managers
 
@@ -150,11 +154,11 @@ If you are a team member of the app, click **Details** to go to the *Environment
 You can only see the environment details of an app if you are a member of the app team with the appropriate authorization.
 {{% /alert %}}
 
-#### 3.3.2 Members
+#### 3.3.2 Members{#members}
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager can invite and manage users of the cluster and its namespaces.
 
-The following rights are available to the person how purchased the cluster resources, and members of a namespace with appropriate authorization:
+The following rights are available to the person who purchased the cluster resources, and members of a namespace with appropriate authorization:
 
 * Set up operating URLs for the namespace
 * View all environments in the namespace
@@ -184,19 +188,19 @@ You can invite additional members to the namespace, and configure their role dep
 1. The **Members** tab displays a list of current members (if any).
 
 2. Click **Invite Member**.
-    
+   
     ![](attachments/tencent-deploy/namespace-members.png)
 
 3. Enter the **Tencent ID** of the person you want to invite.
 
 4. Give them the rights they need. This can be:
-    
+   
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
 
 5. Click **Invite** to send an invite to this person.
-    
+   
     ![](attachments/tencent-deploy/namespace-member-invite.png)
 
 6. The next time the user signs in to the Mendix Developer Portal, they will be added to the namespace.
@@ -250,15 +254,15 @@ First you need to create an environment:
 4. Use the drop-down **Select Namespace** to select an existing namespace. You will see all namespaces of which you are a member.
 
 5. Select the **Purpose**.
-    
+   
     1. For development of the app, for example acceptance testing, choose **Development**.
 
-    2. For production deployment, select **Production**. If you select production, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
+    2. For production deployment, select **Production**. If you select **Production**, then you will be asked for the **Subscription Secret** which you received when you purchased Tencent resources.
 
         {{% alert type="warning" %}}Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.{{% /alert %}}
 
 6. Click **Next**.
-    
+   
     ![](attachments/tencent-deploy/create-environment.png)
 
 7. Select **Core Resources**.
@@ -279,7 +283,7 @@ First you need to create an environment:
 8. Select a **Database plan** from the list of plans in the dropdown. This will have the format `db-plan-…` where the suffix reflects the environment.
 
 9. Select a **Storage plan** from the list of plans in the dropdown. This will have the format `file-plan-…` where the suffix reflects the environment.
-    
+   
     ![](attachments/tencent-deploy/image7.png)
 
 10. Click **Create Environment**.
@@ -294,16 +298,20 @@ You will not be able to deploy to this environment until it has been fully prepa
 
 Before you can deploy your app, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
+{{% alert type="warning" %}}
+There is a limit of 200MB on the size of a deployment package which can be deployed on the Tencent Cloud.
+{{% /alert %}}
+
 1. On the **Environments** page for your app in the Developer Portal, click **Create Package**.
-    
+   
     ![](attachments/tencent-deploy/image9.png)
 
 2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/tencent-deploy/image10.png)
 
 3. Select the revision/commit for which you want to create a deployment package and click **Next**.
-    
+   
     ![](attachments/tencent-deploy/image11.png)
 
 4. Enter a **New version** and **Tag description** according to your own deployment procedure.
@@ -311,7 +319,7 @@ Before you can deploy your app, you will need to create a deployment package. En
 5. Select an environment in **Environment for Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in [Deploying the Deployment Package](#deploy-package), below, where you can also see how to deploy a deployment package manually.
 
 6. Click **Build this revision.**
-    
+   
     ![](attachments/tencent-deploy/image12.png)
 
 7. Confirm the information message and you will be returned to the **Environments** page.
@@ -341,7 +349,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 3. Confirm that the **Status** is *Ready*.
 
 4. Click **Transport**.
-    
+   
     ![](attachments/tencent-deploy/image15.png)
 
 5. Change any constants in the **Constants** tab: select the constant you want to edit and then click **Edit**.
@@ -349,7 +357,7 @@ If everything has been created successfully, and the PlaceholderMDA has been bui
 6. Toggle any scheduled events in the **Scheduled Events** tab: select the scheduled event you want to enable or disable and click **Toggle**.
 
 7. Click **Continue** to continue to the Start Application confirmation page.
-    
+   
     ![](attachments/tencent-deploy/image16.png)
 
 8. Click **Apply Changes** to deploy the application to the selected environment. The app will start automatically once the deployment is successful.
@@ -366,7 +374,7 @@ The **Environments** page of the Developer Portal contains three sections:
 
 ### 5.1 Deployment Package Repository
 
-This lists the deployment packages which have been created for this app project.
+This lists the deployment packages which have been created for this app.
 
 ![](attachments/tencent-deploy/image17.png)
 
@@ -416,7 +424,7 @@ This deploys the package to an existing environment as described in [Deploying t
 
 ### 5.2 Environments {#environments}
 
-This section shows all the environments created for this app project.
+This section shows all the environments created for this app.
 
 ![](attachments/tencent-deploy/image19.png)
 
@@ -479,11 +487,11 @@ This opens the **Environment Details** page which is described in more detail in
 This button contains a list of actions which you can perform quickly on the environment. Most of these actions will be disabled if the app is currently starting or stopping. These actions are:
 
 * **Start Application** (only shown if app is stopped) – allows you to start a stopped application
-* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment
+* **Transport Package** – allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment
 * **Environment Logs** – takes you to the log page defined by the cluster manager when they registered the namespace
 * **Model Options** – allows you to change the running of scheduled events and the values of constants for your app by taking you to the **Model Options** tab of the **Environment Details** page
 * **Stop Application** (only shown if at least one replica is running) — stops the application by reducing the number of replicas to zero
-**Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
+* **Delete Environment** – this deletes the environment (see [Current Limitations](#limitations), below, for additional details about what is deleted) — you will be asked to confirm this action
 
 ### 5.3 Activity
 
@@ -539,7 +547,7 @@ If the app is currently running, clicking **Stop Application** immediately stops
 
 ##### 6.1.3.2 Transport Package
 
-Allows you to deploy the deployment package in the current environment to another environment within the app project, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
+Allows you to deploy the deployment package in the current environment to another environment within the app, or to redeploy it in the current environment. See [Deploying the Deployment Package](#deploy-package), above, for more information.
 
 ##### 6.1.3.3 Scale Application
 
@@ -553,7 +561,7 @@ To apply the new value, click **Restart the App and Scale**. Because you restart
 
 This allows you to clear the password for the local admin user in your app to disable the user without having to clear it in Studio Pro and redeploy the app.
 
-##### 6.1.3.5 Change Admin Password
+##### 6.1.3.5 Change Admin Password{#change-admin-password}
 
 This allows you to change the password for the local admin user in your app without having to change it in Studio Pro and redeploy the app.
 
@@ -569,9 +577,9 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 ##### 6.1.3.7 Change Purpose
 
-This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as a free app.
+This enables you to change the purpose of your app environment. You can label an environment as one used for development of the app, for example acceptance testing. In this case choose **Development** and the app will be deployed as an unlicensed App.
 
-For production deployment, select **Production**. If you select production, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. See <https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy#free-app> for the differences between free/test apps and licensed apps.
+For production deployment, select **Production**. If you select **Production**, then you will be asked for the Subscription Secret which ensures that your app runs as a licensed app. For the differences between unlicensed/test apps and licensed apps, see the [Free App](mendix-cloud-deploy#free-app) section in *Mendix Cloud*.
 
 {{% alert type="warning" %}}
 Your app can only be deployed to a production environment if security is set on. You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
@@ -595,19 +603,19 @@ To change any constants, select the constant you want to edit and then click **E
 
 ### 6.3 Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
+On the **Network** tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections.
 
 ![](attachments/tencent-deploy/network-tab.png)
 
 ### 6.4 Runtime Tab
 
-On the Runtime tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
+On the **Runtime** tab, you can change various runtime settings for your app environment. For more details of these, see the [Runtime Tab](environments-details#runtime-tab) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/runtime-tab.png)
 
 ### 6.5 Log Levels Tab
 
-On the Log Levels tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
+On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app. For more details of these, see the [Log Levels Tab](environments-details#log-levels) section of *Environment Details*.
 
 ![](attachments/tencent-deploy/log-levels-tab.png)
 
@@ -645,7 +653,7 @@ You will receive a warning that you have made some changes. Click **Apply Change
 
 ### 6.7 Debugger
 
-On the Debugger tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
+On the **Debugger** tab you can set up and view the credentials you need to debug your app when it is running on Tencent.
 
 ## 7 Current Limitations{#limitations}
 
@@ -665,7 +673,7 @@ If you attempt to deploy an app with security not set to production into a produ
 
 In some cases, your Mendix app will need to know its own URL - for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#2-general-settings) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 

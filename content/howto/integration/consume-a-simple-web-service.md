@@ -52,8 +52,6 @@ To create logic to call the web service, follow these steps:
 
 4.  Open the **Toolbox** and drag a **Create variable** activity to the line between the start and end event.
 
-    ![](attachments/8784287/8946802.png)
-
 5. Double-click the new activity to open the **Create Variable** properties editor.
 
 6. For the **Data Type**, select **Integer/Long** and enter *100* as the value. For the **Output Variable Name** enter *TemperatureInCelsius*:
@@ -102,16 +100,15 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582070.png)
 
-21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
+21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure).
 
 22. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Read More
 
-* [Create a Secure App](../security/create-a-secure-app)
+* [Create a Secure App](/howto/security/create-a-secure-app)
 * [Consume a Complex Web Service](consume-a-complex-web-service)
 * [Export XML Documents](export-xml-documents)
 * [Import Excel Documents](importing-excel-documents)
 * [Expose a Web Service](expose-a-web-service)
 * [Use Selenium Support](selenium-support)
-* [Security How-to's](../security/)

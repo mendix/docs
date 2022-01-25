@@ -13,7 +13,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 **Release date: February 8th, 2021**
 
-* <a name="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](../studio-pro/8.0) and above if that is not configured yet.
+* <a name="46ki"></a>We now find a correct AdoptOpenJDK version for [Studio Pro 8](/releasenotes/studio-pro/8.0) and above if that is not configured yet.
 * We changed the `Update-MxApp` cmdlet so that it no longer applies file access rights. Normally, you only need to do this once, so the Mendix Service Console will do this when you add a new app. If you still want this on an existing app, you can update the app manually in the Service Console and use the check box on the **Update App** form to apply the user rights again. For more information, see the release note about this check box for version [4.5.1](#451) below. (Ticket 67514)
 * We now allow you to not configure the main location of the files when starting the Mendix Service Console for the first time. The application will be closed in that case.
 * We fixed an issue where errors during the download or extraction of the server distribution file were not shown.
@@ -25,7 +25,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 **Release date: August 8th, 2019**
 
-* We added support for [Studio Pro 8](../studio-pro/8.0).
+* We added support for [Studio Pro 8](/releasenotes/studio-pro/8.0).
 * We added the option to download the applicable server distribution on the form where you add or update an app.
 * The default location in the **Browse** window is now selected when uploading or when a temporary files path is not set.
 * We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.

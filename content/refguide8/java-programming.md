@@ -1,6 +1,7 @@
 ---
 title: "Java Programming"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
+weight: 60
 tags: ["studio pro"]
 ---
 
@@ -8,7 +9,19 @@ tags: ["studio pro"]
 
 With Java actions, you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
+For a deep-dive look into Java programming in Mendix, check out this video:
+
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://videoshare.mendix.com/watch/aDNqicHTbTMAqYkQvvxAjc?.jpg"
+  data-uuid="aDNqicHTbTMAqYkQvvxAjc?"
+  data-v="4"
+  data-type="inline"
+/>
+
 For information about Java actions in Studio Pro, see [Java Actions](java-actions).
+
 
 ## 2 Writing Code in the .java Files of Your Java Actions
 

@@ -6,6 +6,10 @@ tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/event-handlers.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 Event handlers define microflows that handle certain events related to the entity. Depending on the chosen moment and type, a microflow is executed before or after creating, committing, deleting, or rolling back an object.

@@ -133,7 +133,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	* *TextBox.xml* is the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets#widget-definition) used in Studio Pro which reads the widget's capabilities
 	* The property `pluginWidget=true` will make the widget work with the new widget API
 	* The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
-	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#attribute) only allows the selection of string attributes from the domain model
+	* The property of the [type attribute](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#attribute) only allows the selection of string attributes from the domain model
   
 3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `$ npm run dev`.
 
@@ -232,7 +232,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 ### 3.4 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets#3-standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 
@@ -288,7 +288,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ### 3.5 Labeling the Input{#label-input}
 
-While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets#label) to any widget.
+While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8#label) to any widget.
 
 1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
 
@@ -390,5 +390,5 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets)
-* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets)
-* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets)
+* [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8)
+* [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8)

@@ -284,7 +284,7 @@ For example, your team member in Studio Pro has created a snippet and added a cu
 While you can call (use) snippets on your pages in Studio, you cannot create, change, or delete them. For more information on snippets in Studio Pro, see [Snippet](/refguide8/snippet).
 
 {{% alert type="info" %}}
-The **Snippet** widget is not displayed if your app project does not contain any snippets. 
+The **Snippet** widget is not displayed if your app does not contain any snippets. 
 {{% /alert %}}
 
 To call a snippet and add it to your page, do the following:

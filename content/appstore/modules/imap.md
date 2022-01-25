@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "imap", "pop3", "incoming email",
 
 ## 1 Introduction
 
-The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
+The [IMAP/POP3 Incoming Email](https://marketplace.mendix.com/link/component/1042/) module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers. In order for Mendix to act on incoming email, you can implement this module and model all the actions around it.
 
 ### 1.1 Typical Usage Scenario
 
@@ -16,24 +16,27 @@ The [IMAP/POP3 Incoming Email](https://appstore.home.mendix.com/link/app/1042/) 
 
 ### 1.2 Features
 
-* Configuration of multiple accounts.
+* Configuration of multiple accounts
 * Supported protocols:
 	* POP3 and POP3S
 	* IMAP and IMAPS
 * Actions to be performed after receiving emails:
 	* Delete from server
 	* Move to a folder (for example, an archive)
-
-### 1.3 Limitations
-
-* Does not retrieve meeting requests (*.ics*)
-
-### 1.4 Dependencies
-
-* [Encryption](encryption) (used to encrypt passwords of the email accounts)
+* Subscribe to incoming email
+	* Supports the IMAP and IMAPS protocol only
+	* A microflow can be configured to execute for new incoming email
+* Unsubscribe from incoming email
+	* Removes the subscription (if it exists)
 
 ## 2 Configuration
 
 The basic setup and reception of emails can be done using the **EmailAccount_Overview** example page.
 
-To invoke receiving emails from an account, you can call the **DS_ReceiveEmails** microflow.
+To invoke receiving emails from an account, call the **RetrieveEmailMessages** Java action.
+
+To subscribe to incoming email from an account, call the **SubscribeToIncomingEmail** Java action.
+
+To unsubscribe from incoming email from an account, call the **UnsubscribeFormIncomingEmail** Java action.
+
+Set the **EncryptionKey** constant for email account passowrd encryption.

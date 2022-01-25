@@ -1,6 +1,7 @@
 ---
 title: "Studio 8 How-to's"
 tags: ["studio", "how to"]
+weight: 75
 ---
 
 {{% alert type="warning" %}}

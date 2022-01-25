@@ -6,9 +6,13 @@ tags: ["marketplace", "marketplace component", "widget", "google maps", "platfor
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated. You can use the [Maps](maps) widget instead.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget can be used to show Google Maps locations in your app.
+The [Google Maps](https://marketplace.mendix.com/link/component/48911/) widget can be used to show Google Maps locations in your app.
 
 ### 1.1 Features
 
@@ -21,6 +25,14 @@ The [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget can b
 
 * The context and static data sources are offline-capable with Mendix data; however, they still need to be online to see the map.
 * The widget uses [Google Maps API v3](https://developers.google.com/maps/documentation/javascript/reference/), so the limitations from Google apply, especially for geocoding; advise geocoding your locations within your Mendix application and storing them for later use as coordinates on the widget is recommended
+
+### 1.3 Prerequisites
+
+To use the widget, you need to obtain a Google API Key.
+
+{{% alert type="warning" %}}
+Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
+{{% /alert %}}
 
 ## 2 How It Works
 

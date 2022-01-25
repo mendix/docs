@@ -37,7 +37,7 @@ It is technically required for you to upgrade your app to Mendix 8.12 first to b
 
 To upgrade to Mendix 8.18, follow these steps:
 
-1. Download the latest patch release of Studio Pro [v8.18](/releasenotes/studio-pro/8.18).
+1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18).
 1. Open your app in Studio Pro v8.18.
 1. Allow it to upgrade the app, if necessary.
 
@@ -101,6 +101,12 @@ If your app is still using Mendix runtime for uniqueness validation, then you sh
 
 If any are found, an error like **An error occured while initializing the Runtime: Detected unique constraing violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request).
 
+### 4.2 Mendix Object Changed Flag
+
+In Mendix 9.5 and above, when you change an object member, the member state becomes 'CHANGED' even if the old value and the new value are the same. This also affects `objectHasChanged` and `memberHasChanged` Java actions of the Community Commons module.
+
+For example, you have a committed object `$User` with `$User/Name = 'Alice'`. Setting `$User/Name` to `'Alice'` results in the member state becoming 'CHANGED' even though the name is the same. Previously, this would have resulted in the member state remaining 'UNCHANGED'.
+
 ## 5 Testing Native Mobile Apps
 
 To test and preview native mobile apps in Mendix 9, you must download the Mendix 9 version of the Make It Native app:
@@ -118,7 +124,7 @@ Client APIs that were deprecated and marked for removal in Mendix 9 were indeed 
 
 Mendix 9 native apps no longer include non-essential native libraries like `react-native-maps`, `react-native-ble-plx`, `react-native-geocoder`, and others by default. Instead, new functionality of declaring native dependencies for components has been introduced in Mendix 9. Every pluggable widget or JavaScript action must declare which native libraries it uses. This way, native apps can be bundled with only the libraries they need while unnecessary libraries are not included.
 
-If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/native-dependencies).
+If your pluggable widget or JavaScript action uses libraries that require native linking, please update your widgets and actions in order to define those native libraries as dependencies for your components. Read more about native dependencies in [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies).
 
 ## 8 XPath Query Engine 9 {#query-engine-9}
 

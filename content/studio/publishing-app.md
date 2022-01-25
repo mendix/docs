@@ -1,7 +1,7 @@
 ---
 title: "Previewing & Publishing Your App"
 description: "Describes previewing and publishing processes in the Mendix Studio."
-menu_order: 60
+weight: 60
 tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish", "preview"]
 ---
 
@@ -65,7 +65,7 @@ The Mendix Cloud is the default deployment option when you get started with the 
 
 ## 4 Viewing Your App {#viewing-your-app}
 
-After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
+After you have published your app, you are able to instantly view it in your browser or on a mobile device. You can also invite users to your app and manage app users. For more information on user roles and managing users, see the [Managing App Users](settings-security#managing-app-users) section in *Security, Roles & Permissions*. 
 
 ### 4.1 Viewing Your App in a Browser 
 
@@ -89,9 +89,8 @@ To view your app on a mobile device, follow these steps:
 
     ![View Current App](attachments/publishing-app/view-current-app.jpg)
 
-3. Scan the QR code to view your app on your mobile device: 
+3. Scan the QR code to view your app on your mobile device.
 
-    ![View on Mobile Device Option](attachments/publishing-app/view-on-mobile.jpg)
 
 Your app is opened on your mobile device.
 

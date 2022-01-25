@@ -6,6 +6,10 @@ tags: ["studio pro", "widget properties", "properties", "common", "widget", "cla
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/common-widget-properties.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 These are properties that are shared by many elements in the page editor, such as a page or widgets. For a complete list of properties, take a look at the relevant element.
@@ -262,7 +266,7 @@ Default: *Fixed*
 | 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
 | 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
 
-<sup><small>*</small></sup>The value is rounded to the nearest decimal with the defined number of decimal places.
+<sup><small>*</small></sup> The value is rounded to the nearest decimal with the defined number of decimal places.
 
 ### 7.2 Decimal Precision{#decimal-precision}
 

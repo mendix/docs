@@ -7,7 +7,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 ## 1 Introduction
 
-This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean project.
+This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
 **This how-to will teach you how to do the following:**
 
@@ -170,7 +170,7 @@ Variable ‘Variable’ is never used.
 ## 4 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Configure Log Levels](log-levels)

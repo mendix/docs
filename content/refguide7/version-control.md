@@ -1,6 +1,7 @@
 ---
 title: "Version Control"
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+weight: 30
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,7 +15,9 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-{{% alert type="warning" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
+{{% alert type="warning" %}}
+
+The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above. 
 
 You cannot sync your changes with the Web Modeler if your project has Mendix version 7.23.2 or below. You will still be able to open your project in the Web Modeler, but the Web Modeler will automatically upgrade it to the latest patch version of 7.23. 
 {{% /alert %}}
@@ -75,15 +78,15 @@ If the Web Modeler is enabled for this development line, the process first ensur
 
 ### 2.9 Development Line{#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of Development Line: *Main Lines* and *Branch Lines.*
+Development of an app is done in a development line where a set of related changes is made. There are two types of development lines: *main line* and *branch line.*
 
 #### 2.9.1 Main Line
 
-The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
+The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
-#### 2.9.2 Branch Line
+#### 2.9.2 Branch Line {#branch-line}
 
-A Branch line is a way of making an independent set of changes which can be tested away from the Main Line.
+A Branch line is a way of making an independent set of changes which can be tested away from the main line.
 
 See section 4, [Branches](#branches), for more information on how branch lines can be used.
 
@@ -106,7 +109,7 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 ## 3 Version Control Processes for a Single Branch
 
-The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the main line).
 
 ![](attachments/version-control/image1.png)
 

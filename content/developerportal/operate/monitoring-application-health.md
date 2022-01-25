@@ -6,6 +6,7 @@ description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
 aliases:
     - /mendixcloud/monitoring-application-health.html
+    - /howtogeneral/mendixcloud/monitoring-application-health.html
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,7 +30,7 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 	![](attachments/18580000.png)
 
-	{{% alert type="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
+	{{% alert type="warning" %}}The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.{{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
@@ -42,6 +43,8 @@ Any status that could cause your app to stop functioning will result in an alert
 ## 3 Cloud v4 Alerting Categories and Thresholds
 
 There are a number of categories on the status overview that are related to various technical parts of your application environment. Any category that does not display as *OK* needs to be investigated. Each category indicates a different part of the app infrastructure that is monitored.
+
+Some alerts listed in the tables below only appear when the alert is triggered. Therefore, an alert not being present in the overview is the same as the alert having an *OK* status.
 
 ### 3.1 Application Status
 
@@ -249,7 +252,20 @@ Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
 First actions to take | If this alert triggers, and visiting the application URL results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
-## 5 Alerts History
+## 5 Basic License
+
+### 5.1 CRITICAL: Health: Database error
+
+You may receive an email informing you of the following error: **CRITICAL: Health: Database error: SSL connection has been closed unexpectedly**.
+
+You do not have to do anything, your app will continue to work as expected.
+
+The reason you receive a message is this. When you are using a [basic license](/developerportal/deploy/basic-package), you are given your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will trigger this alert.
+
+The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
+
+
+## 6 Alerts History
 
 To access the history of the alerts from your app, follow these steps:
 
@@ -261,14 +277,14 @@ To access the history of the alerts from your app, follow these steps:
 
     The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
-    The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.
+    The drop-down at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your app's security settings.
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
-## 6 Read More
+## 7 Read More
 
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Cloud Status: Mendix Cloud](/developerportal/deploy/mendix-cloud-status)
-* [How to Submit Support Requests](../support/submit-support-request)
+* [How to Submit Support Requests](/developerportal/support/submit-support-request)

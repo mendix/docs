@@ -6,6 +6,10 @@ menu_order: 40
 tags: ["project", "go to", "navigation", "usage"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/go-to-option.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. A **Go to** option is commonly used to find your way in a project. It allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.

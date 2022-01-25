@@ -76,14 +76,14 @@ AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are 
 Binary<sup><small>[1]</small></sup> | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
 Boolean | True or false. | Boolean | 
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
-Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
+Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore, the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](enumerations). | Enumeration |
 Hashed string | A string which is hashed using the algorithm specified in the [app settings](project-settings#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
 Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long |
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
 
-<sup><small>[1]</small></sup>The maximum size that can approximately be stored in an attribute of type binary depends on the database:
+<sup><small>[1]</small></sup> The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
@@ -177,6 +177,10 @@ This property is shown if **Value** is set to **Stored**.
 {{% /alert %}}
 
 The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
+
+{{% alert type="warning" %}}
+Default value property is not supported for offline-first apps created in Mendix 9.7 and below. For such an attribute the value specified under the "Default Value When Not Specified" column will be used.
+{{% /alert %}}
 
 | Type of Attribute | Default Value When Not Specified | Additional Comments |
 | --- | --- | --- |

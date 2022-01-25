@@ -4,6 +4,10 @@ parent: "project-menu"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/deploy-to-the-cloud-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This menu option dialog creates a versioned deployment package and deploys it to your environment in the Mendix Cloud.

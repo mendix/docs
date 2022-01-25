@@ -34,7 +34,7 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](edit-menu), [View](view-menu), and [Version Control](version-control-menu). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](create-deployment-package-dialog), set [preferences](preferences-dialog), or view the [Errors](errors-pane) pane. 
 
 For more information on menus, see [Menus](menus). 
 
@@ -46,11 +46,11 @@ For more information on deployment in Mendix, see [Deployment](/developerportal/
 
 For more information on deploying your app and versioning it, see  the [Versioning an App Deployed to the Cloud](using-version-control-in-studio-pro#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to the Developer Portal & Marketplace {#links}
+### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the top-right corner of Studio Pro.
+You can find links to the [Mendix Studio](/studio) (if enabled), [Developer Portal](/developerportal), and [Marketplace](/appstore) in the top-right corner of Studio Pro.
 
-Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option.  
 
 ## 3 App Structure
 

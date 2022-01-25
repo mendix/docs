@@ -32,9 +32,9 @@ Open the [Firebase developer's console](https://console.firebase.google.com/) an
 To import your project, do the following:
 
 1. In the Firebase console, select **Import Google Project**. 
-1. Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**:
+1.  Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**:
 
-  ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Add_Firebase_to_a_Google_Project.png)
+	{{% image_container width="350" %}}![](attachments/set-up-firebase/Add_Firebase_to_a_Google_Project.png){{% /image_container %}}
 
 With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
@@ -52,7 +52,7 @@ To create a project, do the following:
 1. Fill in your application's project name and region. 
 1.  Click **Create**"
 
-	![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
+	{{% image_container width="350" %}}![](attachments/set-up-firebase/Create_Firebase_Project.png){{% /image_container %}}
 
 ## 4 Adding an Android or iOS App {#native-apps}
 
@@ -65,21 +65,21 @@ For a native mobile app, your bundle ID will be what you specify for the `--appl
 
 For a hybrid app, you can find this ID in your Project Dashboard. Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 
-![](attachments/push-server/firebase/hybrid_app_identifier.png)
+{{% image_container width="350" %}}![](attachments/push-server/firebase/hybrid_app_identifier.png){{% /image_container %}}
 
 Do the following to add your app to FCM:
 
 1.  Click the **Project Overview** cogwheel and select **Project settings**:
 
-	![](attachments/push-server/firebase/project_settings.png)
+	{{% image_container width="350" %}}![](attachments/push-server/firebase/project_settings.png){{% /image_container %}}
 
 1.  Go to the **General** tab and click **Add app**:
 
-	![](attachments/push-server/firebase/add_app.png)
+	{{% image_container width="350" %}}![](attachments/push-server/firebase/add_app.png){{% /image_container %}}
 
 1.  Select Android and, fill in the bundle_id, and skip the rest of the steps: 
 
-	![](attachments/push-server/firebase/android_setup.png)
+	{{% image_container width="350" %}}![](attachments/push-server/firebase/android_setup.png){{% /image_container %}}
 
 Bundle id must be matching with your package id. Make sure to repeat this step for IOS as well.
 
@@ -90,17 +90,17 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 1. Click in the top-left corner of the screen and select **Project settings**.
 1.  Navigate to the **Cloud messaging** tab:
 
-	![](attachments/push_notifications_cloud_messaging.png)
+	{{% image_container width="350" %}}![](attachments/push_notifications_cloud_messaging.png){{% /image_container %}}
 
 1. On this tab, upload either your APNs key or your APNs certificate(s).
 
-## 6 Setting Up a Service Account
+## 6 Setting Up a Service Account {#setting-up-a-service-account}
 
 In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
-![](attachments/push_notifications_service_accounts.png)
+{{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
-On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back-end of your Mendix application.
+On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back end of your Mendix application.
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
@@ -108,7 +108,7 @@ The file you just created gives API access to all available Firebase services fo
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab:
 
-![](attachments/push_notifications_platforms.png)
+{{% image_container width="350" %}}![](attachments/push_notifications_platforms.png){{% /image_container %}}
 
 The list at the bottom shows the Android and iOS applications that you have configured for your Firebase project. Select the Android application and click *google-services.json*. Then click the iOS application and click *GoogleService-Info.plist*. Store both files in a secure location. You will need these when building your mobile application.
 

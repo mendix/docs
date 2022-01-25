@@ -74,7 +74,7 @@ The API call returns the following json:
 ```json
 {
     "PackageId": "<packageID>",
-    "JobID": "<JobID>"
+    "JobId": "<JobID>"
 }
 ```
 

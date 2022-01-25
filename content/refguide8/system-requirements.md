@@ -7,13 +7,17 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/system-requirements.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
 ## 2 Mendix Studio Pro {#sp}
 
-Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1.
+Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1. LTS versions starting from Mendix Studio Pro 8.18.14 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -47,6 +51,10 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
+
+### 2.3 Graphics Card
+
+If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
 
 ## 3 Team Server {#ts}
 
@@ -105,13 +113,13 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [IBM DB2](db2) 11.1 for Linux, Unix, and Windows
-* [MariaDB](mysql) 10.2, 10.3
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2016, 2017, 2019
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 130 or higher
+* [IBM DB2](db2) 11.1 and 11.5 for Linux, Unix, and Windows
+* [MariaDB](mysql) 10.2, 10.3, 10.4, 10.5
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server) 2017, 2019
+* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017) v12 compatibility mode 140 or higher
 * [MySQL](mysql) 8.0
-* [Oracle Database](oracle) 18, 19
-* PostgreSQL 9.5, 9.6, 10, 11, 12, 13
+* [Oracle Database](oracle) 19
+* PostgreSQL 9.6, 10, 11, 12, 13, 14
 * [SAP HANA](saphana) 2.00.040.00.1545918182
 
 {{% alert type="warning" %}}

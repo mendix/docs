@@ -6,7 +6,7 @@ menu_order: 70
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -22,8 +22,8 @@ For a deep-dive look into this action, check out this video:
 <img
   style="width: 100%; margin: auto; display: block;"
   class="vidyard-player-embed"
-  src="https://play.vidyard.com/WZu7QtHZPjtYUTdcV58PKr.jpg"
-  data-uuid="WZu7QtHZPjtYUTdcV58PKr"
+  src="https://videoshare.mendix.com/watch/WZu7QtHZPjtYUTdcV58PKr?.jpg"
+  data-uuid="WZu7QtHZPjtYUTdcV58PKr?"
   data-v="4"
   data-type="inline"
 />

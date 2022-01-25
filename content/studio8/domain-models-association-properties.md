@@ -59,7 +59,7 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). <br />You can also specify an error message for your end-users when they try to delete an object that is associated with other entity's objects. For example: "You cannot delete this location, because a course is associated with it." |
 
-For examples of delete behavior configuring, see section [7 Delete Behavior](../../howto8/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
+For examples of delete behavior configuring, see section [7 Delete Behavior](/howto8/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
 
 
 ## 5 Cross-Module Associations {#cross-module-associations}

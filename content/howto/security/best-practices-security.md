@@ -39,7 +39,7 @@ Injection occurs when (user) input can be misused to influence the behavior of a
 
 When using Mendix-native components, there are no concerns about the possibility of injection. Queries (like XPath) are parametrized and therefore always escaped, making SQL-injection impossible. For the other way around, retrieved data shown in the user interface is escaped to the HTML format.
 
-When you are building an application, you may use [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
+When you are building an application, you may use [Mendix Marketplace](https://marketplace.mendix.com/) components and external interfaces. Remember that values which originate from user input or other systems should be escaped to avoid injection (and to ensure they are properly display).
 
 These are the common cases and best practices:
 
@@ -72,7 +72,7 @@ Keep the following in mind:
 
 ## 5 Applying Authentication on Services
 
-When publishing a web or REST service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine-grained instead of generic) users enables an application to do the following:
+When publishing a web service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine-grained instead of generic) users enables an application to do the following:
 
 * Identify which user caused a change in your application (traceability)
 * Constrain access on the user (role) level
@@ -82,6 +82,10 @@ Mendix offers the following options for providing authentication for your servic
 
 * User name and password validation, specified within Mendix Studio Pro (for details, see [Published Web Services](/refguide/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
+
+{{% alert type="info" %}}
+To authenticate a user for a REST API service, the user's role should be allowed to use the REST API service, and the attribute `WebServiceUser` for this user must be set to `false`.
+{{% /alert %}}
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
 
@@ -178,4 +182,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).

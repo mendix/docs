@@ -4,6 +4,10 @@ parent: "xpath-constraints"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-operators.pdf).
+{{% /alert %}}
+
 ## 1 For XPath Query Constraints
 
 The following operators can be used in XPath query constraints, both in Studio Pro and in Java code:
@@ -29,3 +33,7 @@ Additionally, the following operators are supported in Java code only:
 | `-` | Subtraction | `6 - 4` | 2 |
 | `*` | Multiplication | `6 * 4` | 24 |
 | `div` | Division | `8 div 4` | 2 |
+
+## 3 Operator Behavior
+
+The behavior of operators may differ based on the database type used for your Mendix application. The Mendix runtime generates a SQL query for the XPath you have configured. This query can be interpreted differently by different database types. For example, HSQLDB will ignore trailing spaces when using the = operator, whereas PostgreSQL will take those into consideration.

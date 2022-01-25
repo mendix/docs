@@ -8,6 +8,10 @@ tags: ["published REST", "resource", "entity", "operations", "expose", "studio p
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/generate-rest-resource.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.

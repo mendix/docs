@@ -5,6 +5,12 @@ menu_order: 9
 tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 
+{{% alert type="warning" %}}
+Hybrid mobile packages require Node.js v12 with npm v6. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
+
+To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes how to build your hybrid apps locally.
@@ -14,7 +20,7 @@ This document describes how to build your hybrid apps locally.
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
+* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
@@ -28,6 +34,18 @@ To prepare your app for building, follow these instructions:
    * Installs all required dependencies.
    * Packages the Cordova app for deployment.
    * Adds the iOS platform to Cordova.
+
+#### 2.1.1 Customizing a DTAP Endpoint	
+
+Optionally, you can set various environments in the **config/environments.json** file. This can help if you are trying to make your build from your own specific test or acceptance environment. 
+
+To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
+
+```
+$ npm run package -- --env.target=test  # target the test endpoint for ARM architecture
+```
+
+Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
 
 ### 2.2 Building Your Prepared Project
 
@@ -97,7 +115,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 * Install [AndroidStudio](https://developer.android.com/studio)
 * Install [NodeJS LTS](https://nodejs.org/en/download/) using the all-in-one installation option
 * Install JDK 1.8
-* Create a keystore using [generating-a-keystore](/refguide/managing-app-signing-keys#3-1-generating-a-keystore)
+* Create a keystore using [Generating a Keystore](/refguide/managing-app-signing-keys#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages#download-local-package) from Cloud Portal and unzip it in a known location
 
 ### 3.1 Prepare Your App for Building
@@ -140,9 +158,9 @@ The command to build your app locally for release is `npm run build -- android -
 
 	```
 	set PATH=%PATH%;C:\path-to-gradle-distribution
-
+      
 	set JAVA_HOME=C:\path-to-jdk-1.8-directory
-
+      
 	npm run build -- android --release -- --keystore=<keystore-path> --storePassword=<keystore-password> --alias=<keystore-alias> --password=<certificate-password>
 	```
 

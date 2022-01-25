@@ -6,6 +6,10 @@ description: "Describes suppression rules for warnings in Studio Pro."
 tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/suppression-rules.pdf).
+{{% /alert %}}
+
 ## 1 Introduction  {#intro}
 
 When you work on a project, Studio Pro performs consistency checks, which may result in warnings. Warnings identify issues that are not critical, but point to something that might be a problem. These warnings are shown in the **Errors** pane.

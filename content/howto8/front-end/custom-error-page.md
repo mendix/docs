@@ -1,8 +1,8 @@
 ---
 title: "Create Custom Error Pages"
-category: "Front-End"
+category: "Front End"
 menu_order: 55
-tags: ["theming", "UX", "Error page", "offline", "404", "403", "Front-End"]
+tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
 ## 1 Introduction
@@ -36,15 +36,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Open the local folder of your app.
 
-2.  Go to **theme**.
+2.  Go to **theme**:
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Create a new folder named *error_page*.
+3.  Create a new folder named *error_page*:
 
     ![](attachments/customerror-page/error-page.png)
 
-4.  In the **error_page** folder, place your *offline.html* file. 
+4.  In the **error_page** folder, place your *offline.html* file:
 
     ![](attachments/customerror-page/offline.png)
 

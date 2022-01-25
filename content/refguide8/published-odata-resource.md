@@ -4,6 +4,10 @@ parent: "published-odata-services"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-resource.pdf).
+{{% /alert %}}
+
 {{% alert type="warning" %}}
 
 This document describes the properties of a published OData resource. For an overview of OData services, see [Published OData Services](published-odata-services).

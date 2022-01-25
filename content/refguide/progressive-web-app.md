@@ -51,13 +51,13 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-menu.png){{% /image_container %}}
+![View menu](attachments/progressive-web-app/view-menu.png)
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
 {{% image_container width="350" %}}![View menu](attachments/progressive-web-app/view-dialog.png){{% /image_container %}}
 
-Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/mobile/using-mendix-studio-pro-on-a-mac).
+Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).
 
 {{% alert type="info" %}}
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
@@ -119,20 +119,59 @@ For more information on the available properties in the web app manifest, read t
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
-For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings#2-session-duration) section of the *Tricky Custom Settings in Mendix Runtime Reference Guide*.
+For more information on sessions and how to customize the timeout, see the [Session Duration](tricky-custom-runtime-settings#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
 ## 6 Accessing Device Features
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide/javascript-actions) or [Pluggable Widgets](/howto/extensibility/pluggable-widgets).
 
+This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
+
+| Feature | Chrome/Edge | Firefox | Safari |
+|---------|-----------|-------|------|
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) | ![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg) |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg) | ![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg) |
+
+**Legend** — The symbols above correspond to the following definitions:
+
+*  Fully compatible:
+
+	![Fully compatible](attachments/progressive-web-app/icons/check-mark.svg)
+	
+*  Compatible only when using HTTPS protocol:
+
+	![Compatible when using HTTPS](attachments/progressive-web-app/icons/warning.svg)
+	
+*  Not compatible:
+
+	![Not compatible](attachments/progressive-web-app/icons/cross-mark.svg)
+
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
+
+{{% alert type="info" %}}
+In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
+{{% /alert %}}
 
 ## 7 Deciding Between a PWA or Native Mobile App
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert type="info" %}}
-Important limitation: Apple does not support push notifications for PWAs on iOS. Currently it is not possible to create a fully offline-first PWA for iOS. Support for that is planned later in 2021.
+Important limitation: Apple does not support push notifications for PWAs on iOS.
+
+Currently, it is not possible to create a fully offline-first PWA for iOS — adding that support is part of our 2022 roadmap.
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:

@@ -20,10 +20,10 @@ You will start with the configuration of user and module roles for access to pag
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
-* Know how to add action buttons (for details, see [Button Widgets](/refguide/button-widgets))
+* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
+* Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -86,10 +86,8 @@ You have added one or more modules while the security was turned off, so there i
 
 To create module roles within a module, follow these steps:
 
-1.  Open the module **Security** of the **MyFirstModule** module:
+1.  Open the module **Security** of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  On the **Module Security Type 'Security'** properties editor, click **New**:
   
     ![](attachments/18448715/18581556.png)
@@ -127,10 +125,8 @@ The two module roles that have been created should be assigned to a user role. W
 
 To configure the page and microflow access of a module, follow these steps:
 
-1.  Open the module **Security** of the **MyFirstModule** module:
+1.  Open the module **Security** of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  Open the **Page access** tab:
   
     ![](attachments/18448715/18581547.png)
@@ -166,10 +162,8 @@ To set the security level to production, follow these steps:
 
 To configure the form entity access, follow these steps:
 
-1.  Open the **Security** module of the **MyFirstModule** module:
+1.  Open the **Security** module of the **MyFirstModule** module.
   
-    ![](attachments/18448715/18581558.png)
-
 2.  On the **Module Security Type 'Security'** dialog box, open the **Entity Access** tab:
   
     ![](attachments/18448715/18581541.png)

@@ -51,7 +51,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main();
     ```
 
-3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](../apidocs/authentication).
+3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" page, you can [generate an API Key](/apidocs-mxsdk/apidocs/authentication).
 
 ### 2.1 Code Explanation
 
@@ -141,7 +141,7 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 
 1.  In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
 2.  Open the new app, and on the right side, click **Edit**.
-3.  If you have the latest [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
+3.  If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
 
 ## 5 Next Step
 

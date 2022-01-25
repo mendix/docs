@@ -244,7 +244,7 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
 	// - the import list
 	// - the code between BEGIN USER CODE and END USER CODE
 	// - the code between BEGIN EXTRA CODE and END EXTRA CODE
-	// Other code you write will be lost the next time you deploy the project.
+	// Other code you write will be lost the next time you deploy the app.
 	import { Big } from "big.js";
 	import { PDFDocument } from "pdf-lib"
 
@@ -459,8 +459,6 @@ When testing, make sure you to check all compatible platforms (web, hybrid, and 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
 ## 5 Debugging JavaScript Actions
-
-Mendix Studio Pro does not support nanoflow debugging in the same way it supports microflow debugging. For validating intermediate results between actions, use the **Log message** activity.
 
 Debugging a JavaScript action's code can be done within a browser development tool. For details on how to do this, see your browser's developer tools documentation at either [Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/), [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools), [Microsoft Edge Developer Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium), or Safari's [Web Development Tools](https://developer.apple.com/safari/tools/). 
 

@@ -22,7 +22,7 @@ howto7:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Front-End"
+    - "Front End"
     - "Data Models"
     - "Logic & Business Rules"
     - "Mobile Development"
@@ -42,7 +42,7 @@ howto8:
   menu_categories:  
     - "General Info"
     - "Collaboration"
-    - "Front-End"
+    - "Front End"
     - "Mobile"
     - "Data Models"
     - "Logic & Business Rules"
@@ -58,7 +58,7 @@ howto:
   menu_categories:  
     - "General Info"
     - "Collaboration"
-    - "Front-End"
+    - "Front End"
     - "Mobile"
     - "Data Models"
     - "Logic & Business Rules"
@@ -116,17 +116,17 @@ releasenotes:
     - "Marketplace"
     - "SDKs"
     - "Quality Add-ons"
-    - "Mendix Beta Features"
+    - "Security Advisories"
+    - "Beta Releases"
+    - "Feature Release Calendar"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "Mendix Profile"
-    - "Apps List"
-    - "Control Center"
     - "Collaboration"
     - "Deployment"
     - "Operations"
+    - "Control Center"
     - "Community Tools"
     - "Mendix Support"
 studio:
@@ -139,6 +139,7 @@ studio:
     - "Working with Data"
     - "Navigation Document"
     - "Microflows"
+    - "Expressions"
     - "Previewing & Publishing Your App"
     - "Checks"
     - "Theme Customizer"
@@ -201,22 +202,22 @@ partners:
   menu_categories:
     - "Siemens"
     - "SAP"
-    - "IBM"
 appstore:
   space: "Marketplace Guide"
   priority: false
   menu_categories:
     - "General Info"
-    - "Widgets"
-    - "Themes"
+    - "Creating Content"
+    - "App Services"
     - "Connectors"
     - "Modules"
+    - "Widgets"
 data-hub:
   space: "Data Hub Guide"
   priority: false
   menu_categories:
     - "Share Data Between Apps"
-    - "General Info"
+    - "Write Data to Another App"
     - "Data Hub Catalog"
     - "Data Hub Landscape"
 product-naming:
@@ -228,4 +229,3 @@ product-naming:
     - "Other Mendix Terms"
     - "Strategic Partner Terms"
     - "Terminology History"
-    - "Maintaining Documentation Links"

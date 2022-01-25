@@ -96,7 +96,7 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
     ![](attachments/howto/sharing_appstoredetail_modeler.png)
 
-3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
+3. To download the UI resources inside your app, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
 
 ## 5 Read More
 

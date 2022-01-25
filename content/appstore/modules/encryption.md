@@ -8,24 +8,58 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 
 ## 1 Introduction
 
-The [Encryption](https://appstore.home.mendix.com/link/app/1011/) module takes care of the encryption of strings (for example, passwords) using AES.
+The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the following encryption needs:
 
-### 1.1 Typical Use Cases
+* Plain text encryption (for example, passwords)
+* FileDocument encryption (for example, files of photos)
 
-The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrpyted way in the database. The key used for encrypting passwords is configured as a constant and remains on the application server.
+## 2 Plain Text Encryption
 
-### 1.2 Limitations
+Encrypt and decrypt plain texts using the [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm. The key used for encryption is configured as a constant and remains on the application server.
 
-* Encryption using AES only
+### 2.1 Typical Use Cases
 
-## 2 Configuration
+The typical usage scenario is when a project/module consumes a service where a user name and password are required, you can store the password in an encrypted way in the database. 
+
+### 2.2 Limitations
+
+* Currently only AES is supported
+
+### 2.3 Configuration {#configuration}
+
+#### 2.3.1 EncryptionKey Constant
 
 Set the `EncryptionKey` constant located in the **Private - String en/de-cryption** folder. Make sure the key consists of 16 characters.
 
-Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. If you are using version 1.4.1 or above of this module, the value of this constant should be set to `{AES2}`.
+In version 2.2.0, the key length was increased from 128 to 256 bits. The `EncryptionKey` constant must now have a key with 32 characters. The `LegacyEncryptionKey` constant can be used for the 128 bits, in order to decrypt strings that were encrypted using an older version of the Encryption module.
 
-In version 1.4.1, the AES algorithm used for encrypting/decrypting text was switched from CBC to GCM mode, because CBC mode was vulnerable to Oracle padding attacks. For backward compatibility, the module still supports decrypting texts encrypted using CBC mode in older versions of the module. It does not support encrypting strings using the legacy CBC mode. So, strings encrypted in versions below 1.4.1 in CBC mode have the prefix `{AES}`, while strings encrypted in GCM mode in version 1.4.1 have the prefix `{AES2}`. If the the `EncryptionPrefix` constant is set to `{AES}`, the module in version 1.4.1 or above will still encrypt the string using a new GCM mode. Then, when decrypting the string, the module will detect the prefix `{AES}` and try to decrypt it using the legacy CBC mode, which will fail because the string was encrypted using GCM mode (which is incompatible with CBC). 
+#### 2.3.2 EncryptionPrefix Constant
+
+Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
+
+* For version 2.2.0 or above, set the constant to `{AES3}`
+* For versions 1.4.1–2.1.3 , set the constant to `{AES2}`
+
+{{% alert type="info" %}}
+In version 1.4.1, the AES algorithm used for encrypting/decrypting text was switched from CBC to GCM mode, because CBC mode was vulnerable to Oracle padding attacks. For backward compatibility, the module still supports decrypting texts encrypted using CBC mode in older versions of the module. It does not support encrypting strings using the legacy CBC mode. So, strings encrypted in versions below 1.4.1 in CBC mode have the prefix `{AES}`, while strings encrypted in GCM mode in version 1.4.1 have the prefix `{AES2}`. If the the `EncryptionPrefix` constant is set to `{AES}`, the module in version 1.4.1 or above will still encrypt the string using a new GCM mode. Then, when decrypting the string, the module will detect the prefix `{AES}` and try to decrypt it using the legacy CBC mode, which will fail because the string was encrypted using GCM mode (which is incompatible with CBC).
+{{% /alert %}}
 
 {{% alert type="warning" %}}
-If you are updating the module from a version below 1.4.1 to 1.4.1 or above, do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
+If you are updating the module from a version below 1.4.1 to 1.4.1 or above (including 2.2.0 and above), do not forget to update the `EncryptionPrefix` constant value when deploying your app to the Mendix Cloud. It is also advised to re-encrypt the encrypted data by first decrypting and then encrypting it again, in order to ensure it is encrypted with the new mechanism.
+{{% /alert %}}
+
+## 3 FileDocument Encryption
+
+Encrypt and decrypt the contents of FileDocument entities using the [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symetric encryption is embedded into encrypted file content. The certificate to use asymetric encryption of the symetric key is stored in the database.
+
+### 3.1 Typical Use Cases
+
+One of the typical usage scenarios may be a project/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
+
+### 3.2 Configuration
+
+No configuration is needed. However, you should generate or upload certificates upfront using the **CertificateManagement** page.
+
+{{% alert type="info" %}}
+To use the FileDocument encryption, you need to use these two microflows – **Encrypt_Document** and **Decrypt_Document**. The microflows are in the **USE ME** > **PGP** folder. They are annotated with explanations and you can find more details when you open them in Mendix Studio Pro.
 {{% /alert %}}

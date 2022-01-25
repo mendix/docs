@@ -17,7 +17,7 @@ To create a new app, follow the steps below:
 
 1. Do one of the following:
    1. Open the **File** menu in the top bar > **New App**.
-   2. Click **New App** on the Studio Pro landing page.
+   2. Click **Create New App** on the Studio Pro landing page.
    
 2. In **My Apps** tab, select a starting point (an app template).
 3.  Click **Use this app**.
@@ -31,13 +31,13 @@ When creating a new app, the **App Settings** dialog box is opened where you can
 
 ![App Settings](attachments/file-menu/app-settings-dialog.png)
 
-### 2.1 Name
+### 2.1 App Name
 
 The name of your new app. This name is used as the name of the app directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app in **My Apps**.
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](version-control), [cloud deployment](/developerportal/deploy/), and [collaboration](collaborative-development). When enabled, this will create a app in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](version-control), [cloud deployment](/developerportal/deploy/), and [collaboration](collaborative-development). When enabled, this will create an app in the Developer Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

@@ -12,7 +12,6 @@ The **Run** menu allows you to deploy and monitor your app:
 
 ![Run Menu](attachments/run-menu/run-menu.png)
 
-
 ## 2 Menu Items Overview 
 
 The **Run** menu items are described in the table below:

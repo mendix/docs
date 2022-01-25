@@ -8,13 +8,13 @@ tags: ["Marketplace", "Marketplace component", "OPC UA", "connector", ]
 
 ## 1 Introduction
 
-The [OPC UA Client connector](https://appstore.home.mendix.com/link/app/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
+The [OPC UA Client](https://marketplace.mendix.com/link/component/117391/) connector allows you to connect your Mendix application to [OPC](https://opcfoundation.org/) enabled servers using the functionality of [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/). The connector allows you to read from, write to, and subscribe to OPC UA servers.
 
 OPC is the platform-independent, multi-vendor interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. The OPC Unified Architecture (OPC UA) is an architecture that integrates all the OPC specifications into one extensible framework.
 
 This module uses the [Eclipse Milo library](https://github.com/eclipse/milo) an open-source implementation of OPC UA, and has been tested with the [Prosys OPC UA server](https://www.prosysopc.com/). All terminology in this module is per the OPC UA Documentation. 
 
-There is a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used.
+There is a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used.
 
 ### 1.1 Features
 
@@ -50,22 +50,14 @@ Recommended; Having an external OPC UA Client tool will make setup of the connec
 
 ## 2 Installation
 
-Import the [OPC UA Client connector](https://appstore.home.mendix.com/link/app/117391/) module into your app. Instructions for doing this are in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content).
-
-You will see the new module in the **Marketplace modules** section of the **App Explorer**.
-
-{{% image_container width="300" %}}
-![OPC UA Client connector in App Explorer](attachments/opc-ua/opc-ua-connector-module.png)
-{{% /image_container %}}
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content) to import the [OPC UA Client connector](https://marketplace.mendix.com/link/component/117391/) module into your app. You will see the new module in the **Marketplace modules** section of the **App Explorer**.
 
 When you edit a microflow, you will also see five additional actions in the **Toolbox**.
 
-{{% image_container width="300" %}}
 ![OPC UA Client connector actions in the microflow toolbox](attachments/opc-ua/opc-ua-toolbox.png)
-{{% /image_container %}}
 
+### 2.1 Configuration
 
-### 2.1 Configuration:  
 1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). 
 
 2. Find the constant: **UA_ApplicationName** in the `_USE_ME` folder and update this with the information specific to your Client. The application name must be unique to the OPC UA Server, the connector has no requirements to the contents of this constant. If you have a single Mendix application connecting to the server you could choose to leave the default value, if you have multiple Mendix applications connecting to the same server you **must** alter the name to be unique (as per the OPC UA spec).   
@@ -76,7 +68,7 @@ When you edit a microflow, you will also see five additional actions in the **To
 
 4. If you use subscriptions you **must** setup the After Startup & Before Shutdown microflow. When subscribing these actions make sure that you re-subscribe when you start your app & that you disconnect when shutting down. If you don't use the after startup subscriptions won't reconnect after a reboot. If you don't use the before shutdown, the server will keep the old subscriptions (potentially up to a few hours) and send duplicate messages for this period of time (and can cause exceptions in the client). 
 
-This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://appstore.home.mendix.com/link/app/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
+This is all you need to do to use the connector. However, there is also a sample module, [OPC UA Client example implementation](https://marketplace.mendix.com/link/component/114876/), which gives an example of how the connector can be used. If you want to look at the sample implementation described in [OPC UA Client example implementation](#example-implementation) you will need to import this into your app in addition to the OPC UA Client connector.
 
 ## 3 OPC UA Client connector
 
@@ -100,7 +92,6 @@ For each OPC UA server, the following information will need to be stored in a Op
 * CertificatePassword (String) – the encrypted password for the certificate, automatically takes the CertificatePassword and encrypts the value
 
 You can see an example of how this can be set up in the [OPC UA Client example implementation](#example-implementation) section.
-
 
 ### 3.2 Actions
 
@@ -132,6 +123,7 @@ All values are read as strings, you will need to convert them if you need a nume
 {{% /alert %}}
 
 #### 3.2.3 **Subscribe** to Updates of Data from a Node{#subscribe}
+
 The **Subscribe** action allows you to subscribe to receive a notification every time the value of a node changes. OPC UA allows many different ways to subscribe to different data changes, events, and many variations.  
 
 **Attention:** At this point the module only allows subscriptions on value changes. Events, and aggregates are currently not supported. 
@@ -141,8 +133,8 @@ With the subscription function you can configure exactly how you receive the dat
 1. the frequency with which the OPC UA Server collects the data points
 2. the frequency with which the OPC UA Server sends updates to your Mendix OPC UA Client — this is optional, if you don't specify this all values are requested every 2 seconds
 
-
 ##### 3.2.3.1 OPC UA Background
+
 To understand the subscription action it's important to understand the distinction in OPC when monitoring a Node. 
 As mentioned before there are two intervals that influence the behavior of the connection. The Sampling Interval & the Publishing Interval. The Sampling interval is part of the MonitoredItem and determines how frequently the OPC UA Serer records a Sample of the Node. When the OPC UA Server takes a sample, the value is placed in a Queue for transmission. The Publishing interval, which is part of the subscription, determines which Samples from which MonitoredItems get transmitted and how often this transmission occurs. 
 
@@ -183,7 +175,8 @@ Each subscription requires a microflow to process the data each time a notificat
 Subscriptions and MonitoredItems are automatically kept alive by the app & OPC UA Server and will continue to be sent as long as both the client and server are running. The OPC UA Connector automatically provides values for `requestedMaxKeepAliveCount` and `requestedLifetimeCount`and will keep the subscription alive. If these values are exceeded, then the subscription will lapse. This can happen, for example, if the app is redeployed.
 {{% /alert %}}
 
-##### 3.2.3.3 MonitoredItem  
+##### 3.2.3.3 MonitoredItem
+
 Information about nodes which are subscribed to is stored in the **MonitoredItem** entity associated with the **OpcUaServerCfg** server configuration & **Subscription** entity.  
 
 {{% image_container width="300" %}}
@@ -200,7 +193,8 @@ An object is created for each Node you request to monitor and contains the follo
 * LastStateChange (DateTime) - The last time the Status attribute changed, this is the moment the subscription got active, failed or was deleted.  
 * LastMessage (DateTime) - The moment the last full message was received from the OPC UA server on this monitored Item.  
 
-##### 3.2.3.4 Subscription  
+##### 3.2.3.4 Subscription
+
 Information about unique **Subscription**s that are active with the OPC UA Server. The subscription is associated to a **OpcUaServerCfg** server configuration & at least one **Monitored Item**.  
 The subscription reflects the connection configuration with the OPC UA Server. 
 
@@ -228,7 +222,6 @@ You can configure if the unsubscribe is permanent (and records are removed) or i
 * Monitored item ID – the ID of the item which is being monitored by the subscription — this is held as the **MonitoredItemID** in the **Subscription** entity
 * RestartSubscriptionOnNextReboot – Indicate if the registration entities should be kept by this action. When 'true' the **MonitoredItem** & **Subscription** will be kept in the database and their Status will be changed to 'New'. When 'false' the status of the monitoredItem will become 'Deleted' and the module will automatically remove the entities from the database. 
 
-
 #### 3.2.5 **Write** Data to a Node{#write}
 
 The **Write** action allows you to write a new value to a node to which you have write permissions.
@@ -239,7 +232,6 @@ If nothing is returned the action was successful, if the OPC UA Server refuses t
 * Opc ua server cfg – an object of entity type OpcUaServerCfg containing the configuration of the server to which the request is made
 * NodeId – The NodeId of the Node you want to write to. Expects the full Node Id as referenced by the OPC UA server. This is generally a combination of the namespace URI and Identifier but can have different variations. You can find this in most OPC UA Clients (including the Unified Automation client) and the Browse function returns this same value for each node. Example: "ns=4;id=3"
 * Value to write – the new value which you want to set for this node, this can be any supported type (see the limitations for all types that are currently supported). Make sure the value can easily be parsed as the type, i.e. Doubles must be formatted as 0.0, Integers may not have a decimal point, etc. 
-
 
 ### 3.3 Pages
 
@@ -327,7 +319,6 @@ The OPC UA Client example implementation is a sample app based on the [Prosys OP
 
 You can use the OpcUaClient_ExampleImplementation module (link) as template to start the consumption of your OPC UA Server information. Bear in mind that the node data structure from all servers will be different and it could be that the JSON to browse the Nodes is different in your server, so adjust your imports accordingly if needed.
 
-
 ### 4.1 Dependencies
 
 * Mendix 8.17.0 or higher
@@ -336,17 +327,16 @@ You can use the OpcUaClient_ExampleImplementation module (link) as template to s
 * Any OPC UA server
 
 ### 4.2 Initial Configuration
+
 1. Install the **OpcUaClientMx** module according to the instructions
 1. Add the **OpcUaServer_Overview** page to the navigation of the app, either through the **Navigation** settings, or by adding an **Open Page** button to a page which is already in the navigation (for example the home page). The page in this module contains the same functionality as the **OpcUaClientMx** module and can be used as a replacement. 
-
 
 ### 4.3 Pages
 
 The **OpcUaServer_View** page adds functionality through the **View server** button on the server overview page. By opening this page you are able to browse and search through the OPC UA nodes. The Tree view and Node View are different ways to interact with the nodes and open the node structure. For a full detailed view of all node properties either use an actual OPC UA browser or extend the module to parse the additional properties.
 
-
-
 ### 4.4 Example Consumption
+
 The module contains a folder '_Example Consumer' which shows the best way to structure the integration with an OPC UA Server.
 
 In this example you can see how to interact with a physical gate through a PLC. The dashboard shows an example of the runtime configuration of the Subscriptions, for an actual implementation you'd move this to an admin management page. The left side of the page shows the interaction with the OPC UA Server.  
@@ -359,8 +349,7 @@ All three subscription microflows lookup the MonitoredItem record, and through t
 
 Alternatives: It is possible for the OPC UA Node to hold a complex JSON structure as value instead of a simple integer in this example. If that is the case you'd implement the same microflow logic, but in addition you'd call an Import Mapping activity before processing the results. 
 
-
-## 5 Known Limitations
+## 5 Limitations
 
 1. Limited Value types.
 

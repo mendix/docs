@@ -1,7 +1,7 @@
 ---
 title: "Pages"
 description: "Describes the page editor in Mendix Studio."
-menu_order: 20
+weight: 20
 tags: ["studio", "page editor", "pages"]
 ---
 
@@ -16,7 +16,7 @@ To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in 
 
 {{% alert type="warning" %}}
 
-Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto8/front-end/atlas-ui).
+Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui).
 
 {{% /alert %}}
 
@@ -34,7 +34,7 @@ The diagram below explains function of layouts, templates, and widgets:
 
 ![](attachments/page-editor/page-structure.png)
 
-All elements described above (layouts, templates, widgets, and building blocks) are powered by Atlas UI. For more information on what Atlas UI is, see [Atlas UI](../../howto8/front-end/atlas-ui). 
+All elements described above (layouts, templates, widgets, and building blocks) are powered by Atlas UI. For more information on what Atlas UI is, see [Atlas UI](/howto8/front-end/atlas-ui). 
 
 ## 2 Performing Basic Functions {#page-editor-basic-functions}
 

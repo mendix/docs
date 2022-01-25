@@ -1,6 +1,6 @@
 ---
 title: "Create Deployment Package"
-parent: "project-menu"
+parent: "app-menu"
 tags: ["studio pro", "project menu", "deployment package"]
 ---
 
@@ -8,7 +8,21 @@ tags: ["studio pro", "project menu", "deployment package"]
 
 A deployment package can be deployed to the Mendix Cloud, another cloud provider (for example SAP BTP), or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your app elsewhere you will need to create a deployment package. For some platforms, this is done automatically as part of the deploy process but, for others, you will need to explicitly create the deployment package.
 
-![Create Deployment Package dialog](attachments/project-menu/create-deployment-package.png)
+![Create Deployment Package dialog](attachments/app-menu/create-deployment-package.png)
+
+{{% alert type="warning" %}}
+Most deployment targets have a limit on the uncompressed size of deployment package you can deploy. For example:
+
+| Target | Maximum Deployment Package Size |
+| --- | --- |
+| Mendix Cloud | 1GB |
+| SAP BTP | 1.5GB |
+| Mendix for Private Cloud | 200MB |
+
+This is the uncompressed size of the deployment package (.mda file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and look at the file properties or **Info**.
+
+Unfortunately, from the error shown on the log during deployment is not always clear that the package size is a problem. But if you have issues deploying your app you should check the package size as one possible cause.
+{{% /alert %}}
 
 ## 2 Versioned
 

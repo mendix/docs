@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/preferences-dialog.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **Preferences** option opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro.
@@ -47,7 +51,7 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 #### 2.4.2 Enable Run Optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts, or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
 ## 3 Model Tab
 
@@ -61,7 +65,7 @@ This setting defines the default response to the question whether to automatical
 
 #### 4.1.1 Executable
 
-This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](commit-dialog).
+This is the path and name of the program that is used to view the details of file changes in the [Commit dialog box](commit-dialog).
 
 #### 4.1.2 Argument Pattern
 

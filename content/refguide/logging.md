@@ -9,6 +9,8 @@ tags: ["studio pro"]
 Below we describe what the various log levels of the runtime will show as output.
 During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy) pages.
 
+You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto/monitoring-troubleshooting/log-levels#standard-log-levels) in *How To Set Log Levels* for more information.
+
 ## 2 Log Levels
 
 ### 2.1 Critical
@@ -39,12 +41,12 @@ This is the most verbose logging level, and can be used if you want even more fi
 
 This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](log-message) you use your own log node names to avoid confusion with the Mendix log messages.
 
-### 3.1 Default Mendix Log Nodes{#mendix-nodes}
+### 3.1 Default Mendix Log Nodes {#mendix-nodes}
 
 The following log nodes are used by Mendix when writing log messages.
 
 {{% alert type="info" %}}
-This list is currently incomplete and is being worked on.
+This list is currently incomplete and is being updated.
 {{% /alert %}}
 
 | Log Node | Description
@@ -89,7 +91,7 @@ This list is currently incomplete and is being worked on.
 | WebUI | |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |
 
-### 3.2 JSON{#json}
+### 3.2 JSON {#json}
 
 Has only one relevant level: *Debug*.
 

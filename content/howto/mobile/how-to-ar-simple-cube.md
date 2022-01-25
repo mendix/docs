@@ -31,7 +31,7 @@ For iOS:
 
 Create a new app by following these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Native Mobile Quickstart App**.
+1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
 1. Click **Use this starting point.**
 1. Name your app _Hello World_ and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the Intro screen widget and other containers.

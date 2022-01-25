@@ -40,7 +40,7 @@ String functions are **case insensitive** as they are implemented using the `ILI
 
 ### 2.3 DB2
 
-As of version [8.14.0](/releasenotes/studio-pro/8.14), sorting and comparing are **case sensitive**. For versions below 8.14, all operations are **case sensitive**. There is an exception for both version groups where collation is configured to **case insensitive**, which affects all operations. For more information, see the [Making DB2 Case-Insensitive](db2#making) section of *DB2*.
+Sorting and comparing are **case sensitive**. For versions below 8.14, all operations are **case sensitive**. There is an exception for both version groups where collation is configured to **case insensitive**, which affects all operations. For more information, see the [Making DB2 Case-Insensitive](db2#making) section of *DB2*.
 
 Does not support sorting on string attributes of unlimited length.
 

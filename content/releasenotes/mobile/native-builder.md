@@ -7,7 +7,11 @@ description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-The [Native Builder](/refguide/native-builder) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
+{{% alert type="warning" %}}
+The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Native Mobile Builder — a UI tool that integrates with Studio Pro. For Mendix Studio Pro 8.15 please use the Native Mobile Builder UI tool instead of the CLI tool. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app) using the Native Mobile Builder.
+{{% /alert %}}
+
+The [Native Builder](/refguide8/native-builder) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [How To Deploy Your First Mendix Native Mobile App](/howto/mobile/deploying-native-app).
 
@@ -44,7 +48,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 * Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps).
 * We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
-* We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide/native-builder).
+* We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide8/native-builder).
 
 ### Fixes
 

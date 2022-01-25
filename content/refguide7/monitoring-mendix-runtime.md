@@ -277,7 +277,7 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 
 This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Runtime. In "totals" the total number of objects per sessions are shown, in "user_totals" the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
 
-## 5 Server Statistics
+## 5 Server Statistics {#server-statistics}
 
 **Request**
 

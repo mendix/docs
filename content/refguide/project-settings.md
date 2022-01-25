@@ -31,7 +31,7 @@ If this option is enabled, the static resources for your mobile application are 
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls
+### 3.2 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
@@ -99,7 +99,7 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 | Option | Description |
 | --- | --- |
 | BCrypt (default, recommended) | Resistant to brute-force search attacks. |
-| SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
+| SSHA256 | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
@@ -134,13 +134,13 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode{#rounding}
+### 3.10 Rounding Numbers{#rounding}
 
-The rounding mode is used to select how to round numbers when performing calculations.
+The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
-This table presents the results of rounding the input to one digit with the given rounding mode:
+This table presents the results of rounding the input to one digit with the given method of rounding numbers:
 
 | Input Number | Half Away from Zero  *(default)* | Half to the Nearest Even Number |
 | --- | --- | --- |
@@ -167,41 +167,7 @@ In production, this only works with licenses based on concurrent users.
 
 Default: *Yes*
 
-### 3.12 Uniqueness Validation
-
-This option can have two different values: **Runtime** and **Database**. **Database** will be the default value.
-
-#### 3.12.1 Database
-
-When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
-
-Database is the recommended setting, because it ensures data accuracy at the highest level.
-
-#### 3.12.2 Runtime
-
-When **Runtime** is selected, the uniqueness of attributes and associations is handled in the Mendix Runtime and not at the database level.
-
-#### 3.12.3 Switching Uniqueness Validation Values
-
-You can always switch between **Runtime** and **Database**.
-
-##### 3.12.3.1 Switching from Runtime to Database
-
-Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
-
-Before switching to the Database option, the **DataStorage.EnableDiagnostics** custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
-
-For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
-
-##### 3.12.3.2 Switching from Database to Runtime
-
-Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
-
-### 3.13 Web Service Calls {#web-service-calls}
-
-The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
-
-## 4 Languages Tab
+## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](translatable-texts).
 
@@ -267,7 +233,7 @@ The look and feel of a Mendix application is governed by the [UI resources packa
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
@@ -281,21 +247,35 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
+### 6.3 Marking as a UI Resources Module
+
+Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
+
+![green module](attachments/project-settings/green-module.png)
+
+### 6.4 Ordering UI Resource Modules
+
+When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should overwrite styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
+
+You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
+
+![app theme settings](attachments/project-settings/app-theme-settings.png)
+
 ## 7 Workflows Tab {#workflows}
 
 ### 7.1 User Entity
 
 **User entity** defines the entity which is used in [assigning a user task](user-task#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](user-task#user-assignment) section in *User Task*.
 
-## 7.2 Execution
+### 7.2 Execution
 
 Allows you to set a maximum number of workflow and user task transactions that can be executed simultaneously by the runtime. This is an advanced setting that gives developers control over app performance.
 
-### 7.2.1 Parallel Workflow Executions
+#### 7.2.1 Parallel Workflow Executions
 
 Defines the maximum number of workflow transactions that the runtime will execute simultaneously. The limit is 10. 
 
-### 7.2.2 Parallel Task Executions
+#### 7.2.2 Parallel Task Executions
 
 Defines the maximum number of user task transactions that the runtime will execute simultaneously. The limit is 10.
 

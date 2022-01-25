@@ -44,11 +44,11 @@ For information on collaborative development from the Studio perspective, see [C
 
 ## 4 Studio Pro Perspective
 
-When you connect to an app that has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. 
+After opening an app in Studio Pro, you can see which development line (the main line or a branch line) Studio is enabled for by opening **Version Control** > **Manage Branch Lines**. The development line that Studio is enabled for (if any) is marked with a globe icon in the first column.
 
-Click the drop-down to select another line or click **OK** to open the currently selected line. 
+If you are on another line than the Studio-enabled line, you can select the branch and click the **Switch Branch** button:
 
-![Open App Dialog Window](attachments/collaborative-development/open-app-dialog.png)
+![Open App Dialog Window](attachments/collaborative-development/switch-branch.png)
 
 ### 4.1 Merging Latest Changes
 
@@ -116,9 +116,8 @@ If you disable Studio for a development line it was enabled for and do not enabl
 To disable Studio, do the following:
 
 1. Select the branch that is enabled for Studio.
-2.  Click the **Disable for Mendix Studio** button:
+2.  Click the **Disable for Mendix Studio** button.
 
-	![Disable for Mendix Studio](attachments/collaborative-development/disable-for-studio.png)
 
 Studio is disabled for your app.
 
@@ -135,25 +134,19 @@ To create a new branch line, do the following:
 
 	![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
-3.  In the **Create Branch Line** dialog box, set the following: <br/>
+3.  In the **Create Branch Line** dialog box, set the following: 
 
-	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. <br/> 
-	b. Select the **Revision**, if needed. <br/>
-	c. Type the name of the new line.<br/>
-
-	*  This is the dialog box for SVN:
+    1. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see the [Concepts](version-control#concepts) section in *Version Control*. 
+    2. Select the **Revision**, if needed. 
+    3. Type the name of the new line.
 		
-		![Create SVN Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
+		![Create Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
     
-	*  This is the dialog box for [Git](create-branch-line-git-dialog):
-
-		![Create Git Branch Line Dialog](attachments/collaborative-development/create-git-branch-dialog.png) 
-
 4.  After you have configured all the settings, click **OK**.
 
 You have created a new branch line.
 
-### 6.2 Deleting a Branch Line
+### 6.2 Deleting a Branch Line {#deleting}
 
 To delete a branch line, do the following:
 

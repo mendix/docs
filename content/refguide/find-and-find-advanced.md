@@ -1,5 +1,5 @@
 ---
-title: "Find, Find Advanced, and Find Usages"
+title: "Find, Find Advanced & Find Usages"
 parent: "edit-menu"
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 menu_order: 10
@@ -95,7 +95,7 @@ To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
 2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
-   ![Find Usages](attachments/find-and-find-advanced/find-usages.png)
+    {{% image_container width="350" %}}![Find Usages](attachments/find-and-find-advanced/find-usages.png){{% /image_container %}}
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 
 ![Find Results Pane](attachments/find-and-find-advanced/found-usages.png)

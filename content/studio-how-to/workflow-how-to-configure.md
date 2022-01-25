@@ -1,15 +1,21 @@
 ---
 title: "Configure a Workflow in Studio for the Employee Onboarding Process"
 description: "Describes how to configure a workflow in Mendix Studio."
-menu_order: 05
+weight: 05
 tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
+
+{{% alert type="warning" %}}
+Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. We introduced workflows as a Beta feature in Mendix 9 and are now incorporating feedback we received from our community to improve workflows.
+
+Workflows in Studio are available for apps with Mendix version 9.5.
+{{% /alert %}}
 
 ## 1 Introduction 
 
 Workflow is a new visual language in Mendix Studio and Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
-This how-to explains how to build an employee onboarding process using the workflow editor. For more information on how to build a similar process in Studio Pro, see [How to Configure a Workflow in Studio Pro for the Employee Onboarding Process](/howto/logic-business-rules/workflow-how-to-configure).
+This how-to explains how to build an employee onboarding process using the workflow editor. 
 
 **This how-to will teach you how to do the following:**
 
@@ -102,7 +108,7 @@ To start your workflow, you need to trigger it. In this use case, the workflow i
 
     2. Drag and drop the button inside the list view:
 
-       ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
+        ![Start Onboarding Button](attachments/workflow-how-to-configure/start-onboarding-button.png)
 
     3. Open the button properties and set the **Workflow** property to **Employee_Onboarding**. 
 
@@ -282,7 +288,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
 1. Open the [Navigation Document](/studio/navigation), where some menu items are already preconfigured for you.
 
-2. The HR roles needs to be able to access the **EmployeesToOnboard** page. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+2. The HR roles needs to be able to access the **EmployeesToOnboard** page. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation)):
 
     1. Set its **On-Click Action** to **Page**.
 
@@ -296,7 +302,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
         ![Navigation Item for HRs](attachments/workflow-how-to-configure/navigation-hr.png)
 
-3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see the [Creating a Menu Item](/studio/navigation#create-new-menu-items) section in *Navigation Document*):
+3. You need to add menu items for manager to be able to open their task inbox. Add a new menu item and do the following (for more information on how to add a new menu item, see [Navigation Document](/studio/navigation):
 
     1. Set its **On-Click Action** to **Page**.
 
@@ -317,8 +323,6 @@ You need to configure navigation otherwise the user roles will not be able to re
 You have configured the navigation for your app and now you can preview and test it 
 
 ![Configured Navigation](attachments/workflow-how-to-configure/configured-navigation.png)
-
-{{% todo %}}[Update this screenshot with preconfigured menu later]{{% /todo %}}
 
 ## 11 Testing the Workflow {#test-workflow}
 

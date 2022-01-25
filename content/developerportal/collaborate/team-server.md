@@ -24,15 +24,16 @@ On the **Team Server** page of the Developer Portal, an overview is presented of
 
 ## 2 Team Server URL
 
-The **Team Server URL** has the following form: `https://teamserver.sprintr.com/<your AppID>/` and takes you to the team server for your app. Here you can see all the files and branches of your app.
+The **Team Server URL** will take you to the repository for your app. Here, you can see all the files and branches of your app. The URL can have the following form:
+
+* `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app
+* `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 
 {{% alert type="info" %}}
-You may have to add the final slash manually to follow the link.
-
-You may be asked to re-enter your Mendix credentials. Single Sign-On (SSO) is not yet implemented for the Team Server.
+You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server.
 {{% /alert %}}
 
-## 3 Revision History
+## 3 Revision History {#revision-history}
 
 For each revision, you can see the following information:
 
@@ -63,7 +64,7 @@ Storage space is unlimited for apps connected to a commercial license. 1 GB of f
 
 ### 5.2 What Happens with My Valuable & Confidential Data?
 
-Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your project was deleted, by filing a [Mendix Support](https://support.mendix.com/hc/en-us) ticket.
+Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for trouble shooting. Your data is backed up for one year, and the backups are retained for one year after project deletion. You can get a backup of your data at any time by using default Subversion tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/hc/en-us) ticket.
 
 ## 6 Read More
 

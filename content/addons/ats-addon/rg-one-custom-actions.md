@@ -1,6 +1,6 @@
 ---
 title: "Custom Actions"
-parent: "rg-one-test-development"
+parent: "rg-one-test-dev"
 menu_order: 5
 ---
 
@@ -8,11 +8,11 @@ menu_order: 5
 
 If you want to create a new action from scratch, go to the Repository and switch to the **All Objects** tab.
 
-![Add Item button on Repository page](attachments/rg-one-test-development/repository.png)
+![Add Item button on Repository page](attachments/rg-one-test-dev/repository.png)
 
 Now click **Add Item**, a popup window will appear.
 
-![Create new Action](attachments/rg-one-test-development/sampleaction.png)
+![Create new Action](attachments/rg-one-test-dev/sampleaction.png)
 
 In that window you can choose wich type of item you want to create.
 Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
@@ -20,7 +20,7 @@ When you have entered all needed informations, click **Create**.
 
 Now open the newly created action by doubleclicking its name in the repository.
 
-![Edit Action page](attachments/rg-one-test-development/editaction.png)
+![Edit Action page](attachments/rg-one-test-dev/editaction.png)
 
 On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
 

@@ -3,7 +3,7 @@ title: "Mendix Cloud v4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
 description: "Frequently asked questions about Mendix Cloud v4"
-tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services"]
+tags: ["Cloud", "Mendix Cloud", "v4", "Version 4", "FAQ", "v3", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -34,21 +34,26 @@ For other considerations, refer to [Migrate to Mendix Cloud v4](migrating-to-v4)
 
 The primary hosting locations are as follows:
 
-*   Mendix Cloud EU: AWS Frankfurt
-*   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud Asia Pacific: AWS Singapore
+*   Mendix Cloud Asia Pacific: AWS Sydney
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud Canada: AWS Canada
+*   Mendix Cloud EU: AWS Dublin
+*   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud UK: AWS London
+*   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud US: AWS Oregon
 
-Backups will always be stored in at least one secondary location, separate from the primary hosting location.
+Backups will always be stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable, i.e. once it has been written to our storage location, it can no longer be modified or overwritten.
 
 Data will always be stored in the same political region for the following regions:
 
 *   Data in the EU, including backups, will stay within the EU
     * Data in the EU is not currently backed up in the UK
-    * Data in the UK is backed up elsewhere in the EU
+    * Data in the UK is backed up in the EU
 *   Data in the US, including backups, will stay within the US
 
-Data in Japan is currently backed up in Australia.
+Data in Japan is currently backed up in Japan.
 
 ## 4 Does Mendix Expose the Underlying Cloud Foundry API?
 
@@ -66,9 +71,9 @@ We add regions based on customer demand. If you would like a different region, c
 
 You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is information on how to do this in the [Docker](docker-deploy) documentation. If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
-## 7 What Other Considerations Are There When Running My App in Mendix Cloud v4?{#other-considerations}
+## 7 Behavior of My App in Mendix Cloud v4?{#other-considerations}
 
-There are a few other considerations to bear in mind when you are running in Mendix Cloud v4:
+There are certain limits and behaviors which apply to your app when running in Mendix Cloud v4. Here are a few considerations to bear in mind:
 
 * The Amazon RDS maintenance window is not aligned with the Mendix Developer Portal maintenance window for an application
 * It is not possible to deploy a model (*.mda*) larger than 4GB when uncompressed or a model that contains approximately 64,000 or more files
@@ -76,10 +81,17 @@ There are a few other considerations to bear in mind when you are running in Men
 * You can't download files bigger than 1GB from your app
 * To use the debugger, you need to scale down to one instance
 * Metrics for multi-instance nodes are not reported correctly – the information reported on the app's **Metrics** and **Alerts** pages only represents one instance of a multi-instance node
+* HTTP headers sent to the Mendix cloud do not always preserve their case (for example `X-SharedSecret` can be transformed to `X-Sharedsecret`) due to the behavior of one of the Cloud Foundry routing components – this has no practical effect as HTTP headers are defined as case insensitive
 * In some circumstances your app can run out of file connections as indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool* — to resolve this:
     * Update all Marketplace modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 7, upgrade to version 7.16 or above
     * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+* **Call REST** connections will be closed by the cloud infrastructure after a time if they are idle.
+    * Mendix Cloud uses AWS NAT gateways for outgoing traffic. These gateways will drop connections that are idle for more than 350 seconds. This can result in your outgoing REST or web service connection getting dropped if there is no traffic for 350 seconds.
+    
+        It is therefore recommend to [set the timeout for calls to consumed REST or web services](/refguide/call-rest-action#timeout) to less than 350. You should only set it to a higher value if you are sure that traffic will go back and forth at least every 350 seconds.
+        
+        If you have a REST or web service call that will be idle (waiting) for 350 seconds or more, you should try to minimize the wait time, for example by making multiple requests for smaller amounts of data instead of a single request for a large amount of data, or to make the call asynchronously.
 * The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!
 
     In the majority of cases, the platform will start a new instance of your application, before gracefully stopping the old one. This ensures that there is no downtime. You can verify this in the logs of your application.

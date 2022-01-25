@@ -1,14 +1,14 @@
 ---
 title: "Test Mendix Native Apps Using Appium"
 parent: "native-mobile"
-menu_order: 81
+menu_order: 95
 description: "This how-to will teach you how to write end-to-end tests once and run them on both platforms using Appium."
 tags: ["test", "testing", "appium", "mobile", "native"]
 ---
 
 ## 1 Introduction
 
-Mendix lets you create native mobile apps for both Android and iOS from a single project. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This how-to will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
+Mendix lets you create native mobile apps for both Android and iOS from a single app. To verify that your apps work as expected, you can test them using Appium. Using Appium can help you because it supports both iOS and Android with a single API that resembles Selenium's. This how-to will teach you how to write end-to-end tests once and run them on both platforms, all while using a familiar API. You will also learn how to run and test your apps on emulators.
 
 **This how-to will teach you how to do the following:**
 
@@ -34,7 +34,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 
 ## 4 Set Up Appium Desktop to Spy on a Mendix Native iOS App
 
-1. Build a native iOS app for your Mendix project (see [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
+1. Build a native iOS app for your Mendix app (see [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
 1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/).For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
 1. Start Appium Desktop
 1. Click **Start Server**.
@@ -58,7 +58,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 
 1. Add the Espresso dependencies by following the setup instructions [here](https://developer.android.com/training/testing/espresso/setup).
 
-1. Build a native Android app for your Mendix project (See [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
+1. Build a native Android app for your Mendix app (See [How to Build Native Apps](/howto/mobile/build-native-apps) for more information).
 
 1. Start Appium Desktop.
 
@@ -86,7 +86,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 1. Click on the blue **Select Elements** button, and then click on an element in the app preview to spy on that element.
 
 {{% alert type="info" %}}
-While using Espresso in combination with Mendix projects, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
+While using Espresso in combination with Mendix apps, we observed a `No static method lifecycleEventObserver` error. More information about this can be found [here](https://github.com/appium/appium-espresso-driver/issues/639). You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing:
 
 ```json
 {
@@ -97,7 +97,7 @@ While using Espresso in combination with Mendix projects, we observed a `No stat
 {{% /alert %}}
 
 {{% alert type="info" %}}
-While using Espresso in combination with Mendix projects, there have been occasional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
+While using Espresso in combination with Mendix apps, there have been occasional package conflicts. You can fix this by adding the `espressoBuildConfig` property to the capabilities. It should point to a JSON file containing your desired tools and versions:
 
 ```json
 {

@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "nanoflow", "nanoflow commons", "
 
 ## 1 Introduction
 
-The [Nanoflow Commons](https://appstore.home.mendix.com/link/app/109515/) module contains the following commonly used nanoflow actions that are usable across web, hybrid mobile, and native mobile apps:
+The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) module contains the following commonly used nanoflow actions that are usable across web, hybrid mobile, and native mobile apps:
 
 | Category            | Action                       |
 | :------------------ | :--------------------------- |

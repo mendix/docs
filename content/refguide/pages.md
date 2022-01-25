@@ -45,17 +45,17 @@ All the documents described above are built using widgets. There are many kinds 
 
 Widgets are grouped into the following categories:
 
-* [Data widgets](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
-* [Common widgets](common-widgets) are commonly found on any page, layout, or snippet
-* [Container widgets](container-widgets) can contain other widgets
-* [Input widgets](input-widgets) make it possible to show and edit the values of attributes and associations
-* [File widgets](file-widgets) allow you to work with files, including images stored in files
-* [Button widgets](button-widgets) are buttons that trigger actions
-* [Menu widgets](menu-widgets) allow the user to navigate through the application
-* [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
-* [Authentication widgets](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
-* Add-on widgets can be downloaded from the [Mendix Marketplace](https://appstore.mendix.com/) or created by yourself using JavaScript
-  * [Chart widgets](chart-widgets) are add-on widgets that graphically represent data using various chart types
+* [Data containers](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
+* [Text widgets](text-widgets) are used to display textual information to the end-user
+* [Structure  widgets](structure-widgets) can contain other widgets 
+* [Input elements](input-widgets) make it possible to show and edit the values of attributes and associations
+* [Images, videos & files](image-and-file-widgets) allow you to work with files, images, and videos 
+* [Buttons](button-widgets) are buttons that trigger actions
+* [Menus & navigation](menu-widgets) allow the user to navigate through the application
+* [Reports](report-widgets) aggregate data and show it in the form of a table or a chart
+* [Authentication](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
+* Add-ons can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) or created by yourself using JavaScript
+  * [Charts](chart-widgets) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More
 

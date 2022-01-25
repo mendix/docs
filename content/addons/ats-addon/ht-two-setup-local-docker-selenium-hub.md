@@ -82,7 +82,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 5.  Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
-	![](attachments/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png)
+	![](attachments/ht-two-setup-loc-sel-ix/ht-two-setup-local-docker-selenium-hub/docker_grid.png)
 
 	Congratulation, your local Selenium hub is running.
 

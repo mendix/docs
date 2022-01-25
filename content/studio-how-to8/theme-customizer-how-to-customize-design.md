@@ -1,6 +1,7 @@
 ---
 title: "Customize the Design of Your App"
 description: "This how-to describes how to change and customize design in Mendix Studio."
+weight: 60
 tags: ["studio", "theme customizer", "how to", "customize", "design"]
 ---
 

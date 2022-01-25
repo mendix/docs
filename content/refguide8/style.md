@@ -4,6 +4,10 @@ parent: "document-templates"
 tags: ["studio pro"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/style.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 In most document template widgets and components as well as on the top level document, a style can be defined. This style is designed in Cascading Style Sheets (CSS). However, many of the more common style attributes can be adjusted using the Style Editor. Depending on what type of widget you are styling, you will see different options in the Style Editor. You can also fully customize the style in the tab 'Custom Styles'.

@@ -1,5 +1,6 @@
 ---
 title: "Mobile"
+weight: 50
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -24,7 +25,7 @@ Mendix's hybrid mobile apps are versatile apps viewed through mobile web browser
 
 Mendix uses [Cordova](https://cordova.apache.org/) in combination with [local builds](/howto8/mobile/build-hybrid-locally) to build mobile apps which can leverage certain device features and be published to the Apple App Store or Google Play store. Cordova creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are called "hybrid" because they are hybrids of both web and native apps.
 
-For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix Marketplace](https://appstore.home.mendix.com/index3.html). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets) and [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions), respectively.
+For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix Marketplace](https://marketplace.mendix.com/). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto8/extensibility/pluggable-widgets) and [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions), respectively.
 
 ## 4 Offline-First Apps
 

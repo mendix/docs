@@ -1,5 +1,6 @@
 ---
 title: "APD"
+weight: 20
 aliases:
     - /addons/apm-addon/index.html
 ---
@@ -14,6 +15,6 @@ With version 3, the product has been renamed from **Mendix Application Performan
 
 ## 2 Main Documents in This Category
 
-* [APD Installation Guides](ig) – these describe how to install Mansystems APD and APM
+* [APD Installation Guides](ig) – these describe how to install CLEVR APD and APM
 * [APD Reference Guides](rg-apd) – these describe topics such as performance statistics, environments, and settings
 * [APD Use Cases](uc) – describes generic, development, test, production, and load test use cases

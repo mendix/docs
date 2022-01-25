@@ -8,7 +8,7 @@ tags: ["marketplace", "app store", "marketplace component", "app store component
 
 ## 1 Introduction
 
-The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value inside a colored badge or label.
+The [Badge](https://marketplace.mendix.com/link/component/50325/) widget shows a value inside a colored badge or label.
 
 The widget does the following:
 
@@ -29,22 +29,14 @@ Optionally, you can configure the widget further:
 * Select an On click action to convert the badge into a button, which will execute this action when clicked on or activated with an <kbd>{Enter}</kbd> or <kbd>{Space}</kbd> key press
 * Navigate to the **Appearance** tab and select a brand style with the **Style** design property to give the badge or label a suitable color
 
-## 3 Previous Versions' Documentation
-
-### Widgets below v2.0.0
-
-#### 1 Introduction
-
-The [Badge](https://appstore.home.mendix.com/link/app/50325/) widget shows a value inside a colored badge or label.
+## 3 Widgets Below Version 2.0.0
 
 Features:
 
-- Attach an on-click microflow or nanoflow
-- Set static data text when dynamic data is not specified
+* Attach an on-click microflow or nanoflow
+* Set static data text when dynamic data is not specified
 
+To configure the widget:
 
-#### 2 Configuration
-
-Place the widget in the context of an object that has a value attribute.
-
-On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified.
+1. Place the widget in the context of an object that has a value attribute.
+2. On the **General** tab, specifying the **Value attribute**  is optional. If this is not set, a static **Default value** should be specified.

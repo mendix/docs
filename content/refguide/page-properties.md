@@ -80,7 +80,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 #### 2.4.1 Visible For
 
-This property defines for what module roles the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](button-widgets) for editing).
+This property defines for what module roles the page is visible. This has an effect on [menus and navigation widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](button-widgets) for editing).
 
 For more information, see [Module Security](module-security).
 

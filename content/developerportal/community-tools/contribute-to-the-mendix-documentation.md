@@ -1,7 +1,7 @@
 ---
 title: "Contribute to the Documentation"
 category: "Community Tools"
-menu_order: 10
+menu_order: 5
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -40,7 +40,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com)
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Documentation in GitHub {#editing}
@@ -89,7 +89,7 @@ Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](documentation-writing-guidelines)
 * Make sure the document files comply with these naming conventions:
-	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your Project," the filename should be `create-your-project.md`)
+	* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your App," the filename should be `create-your-app.md`)
 	* Document file names should always be lower-case with a hyphen (`-`) between each word
 	* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * Make sure the image files comply with these naming conventions:

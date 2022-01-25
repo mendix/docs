@@ -1,8 +1,8 @@
 ---
 title: "Use Layouts and Snippets"
-category: "Front-End"
+category: "Front End"
 menu_order: 25
-tags: ["Front-End"]
+tags: ["front end"]
 ---
 
 ## 1 Introduction
@@ -210,6 +210,6 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 * [Atlas UI](atlas-ui)
 * [How to Use Layouts and Snippets](layouts-and-snippets)
-* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure)
 * [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Find the Root Cause of Runtime Errors](/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

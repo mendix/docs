@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Minikube
     * With Minikube, a local cluster can be created that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
     * Install Minikube based on the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-    
+
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
 
 ## 3 Architecture Overview{#architecture}
@@ -77,7 +77,7 @@ Once Minikube is running you'll need to configure your local environment to use 
 minikube docker-env
 ```
 
-You'll need to build your image in Minikube if you haven't done so yet. See [Docker](https://docs.mendix.com/developerportal/deploy/docker-deploy) for the steps to do this.
+You'll need to build your image in Minikube if you haven't done so yet. See [Docker](docker-deploy) for the steps to do this.
 
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
@@ -212,7 +212,7 @@ YOUR-DATABASE-ENDPOINT will be in the form `postgres://mendix:mendix@255.255.255
 kubectl get ep postgres-service
 ```
 
-See [Run a Mendix Docker Image](https://docs.mendix.com/developerportal/deploy/run-mendix-docker-image) for expected value formats.
+See [Run a Mendix Docker Image](run-mendix-docker-image) for expected value formats.
 
 To create the secrets in Kubernetes we execute the following command:
 

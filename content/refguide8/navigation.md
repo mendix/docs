@@ -7,6 +7,10 @@ tags: ["studio pro", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/navigation.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **Project** node in the **Project Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](menu-widgets). 
@@ -121,17 +125,17 @@ Each device type contains a default menu. You can use these menus in [menu widge
 If [security](project-security) is enabled, the menu will only show the items to which the user has access.
 {{% /alert %}}
 
-### 4.3 Profile Buttons
+### 4.5 Profile Buttons
 
-#### 4.3.1 Change Profile Type
+#### 4.5.1 Change Profile Type
 
 Allows for changing the [profile type](navigation).
 
-#### 4.3.2 Delete
+#### 4.5.2 Delete
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.3.2 Synchronization Configuration {#customize}
+#### 4.5.3 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

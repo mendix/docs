@@ -8,7 +8,7 @@ tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScrip
 
 ## 1 Introduction
 
-Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://appstore.home.mendix.com/index3.html).
+Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
 **This how-to will teach you how to do the following:**
 
@@ -23,11 +23,9 @@ Nanoflows are more powerful with pluggable nanoflow actions — called JavaScrip
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
-1.  Create a new **JavaScript action** in your Mendix app:
+1.  In the **App Explorer**, right-click the module you would like to add a new JavaScript action to and select **Add other** >**JavaScript action**.
 
-	![add javascript action from drop-down](attachments/write-javascript-actions/createanewjsaction.png)
-
-2.  Give it a descriptive name:
+2.  Give the JavaScript action a descriptive name:
 
 	![naming dialog](attachments/write-javascript-actions/descriptivename.png)
 
@@ -124,8 +122,6 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
-	![javascript action call](attachments/write-javascript-actions/selectjsactioncall.png)
-	
 	![select text to speech action](attachments/write-javascript-actions/selectjsactioncalldetail.png)
 	
 	Optionally, you can expose the JavaScript action as a nanoflow action. When you do, you can choose a **Caption**, **Category**, and **Icon**. Note that to choose an icon your image will need to be included in an existing [image collection](/refguide/image-collection). 
@@ -140,9 +136,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 	![edit text in call javascript action dialog](attachments/write-javascript-actions/calljsactionnanoflow.png)
 
-11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Button Widgets**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
-
-	![select widget dialog](attachments/write-javascript-actions/makingwidgetbuttonhighlights.png)
+11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Buttons**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
 
 12. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
 

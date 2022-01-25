@@ -6,9 +6,13 @@ tags: ["marketplace", "marketplace component", "widget", "list view swipe", "pla
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This widget is deprecated.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
+The [List View Swipe](https://marketplace.mendix.com/link/component/47781/) widget makes it possible for the app end-user to perform a swipe action on a list view.
 
 ### 1.1 Features
 
@@ -27,10 +31,6 @@ The [List View Swipe](https://appstore.home.mendix.com/link/app/47781/) widget m
 * This widget cannot handle a list view in a list view
 * The opened page should contain a data view of the **Item entity** type, but this is not checked for the widget in runtime.
 * Swiping should be horizontal – when the swiping involves too much movement, the swipe is canceled
-
-### 1.3 Demo App
-
-For a demo app that has been deployed with this widget, see [here](http://listviewswipeout.mxapps.io).
 
 ## 2 Configuration
 
@@ -65,7 +65,7 @@ Use the following details for styling:
 	* `.will-accept-swipe`
 	* `.swiping-right`
 	* `.swiping-left`
-	
+
 ### 3.1 Designing the Background
 
 To design the background of the view, follow these steps:
@@ -80,21 +80,4 @@ To design the background of the view, follow these steps:
 
 In some scenarios, swiping should be (conditionally) disabled. To disable a single swipe item, add the `.widget-listview-swipe-disabled`, `.widget-listview-swipe-disabled-left`, or `.widget-listview-swipe-disabled-right` CSS class to the list view item. To disable all the swipe actions, add the class to the list view .
 
-You can use other custom widgets (for example, [EnumClass](https://appstore.home.mendix.com/link/app/2641/)) to change the classes dynamically at runtime. 
-
-## 4 Developing This Marketplace Component
-
-To contribute to the development of this widget, follow these steps:
-
-1. Install the following:
-	* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-	* [npm](https://www.npmjs.com/)
-	* [webpack-cli](https://www.npmjs.com/package/webpack-cli)
-	* [grunt-cli](https://github.com/gruntjs/grunt-cli)
-2. Fork and clone the [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe.git) repository. The code is in Typescript.
-3. Set up the development environment by running `npm install`.
-4. Create a folder named *dist* in the project root.
-5. Create a Mendix test project in the *dist* folder and rename its root folder to *dist/MxTestProject*, or get the test project from [mendixlabs/listview-swipe releases](https://github.com/mendixlabs/listview-swipe/releases/latest). Changes to the widget code will be automatically pushed to this test project.
-6. To automatically compile, bundle, and push code changes to the running test project, run `grunt`.
-
-We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendixlabs/listview-swipe](https://github.com/mendixlabs/listview-swipe/issues).
+You can use other custom widgets (for example, [EnumClass](https://marketplace.mendix.com/link/component/2641/)) to change the classes dynamically at runtime. 

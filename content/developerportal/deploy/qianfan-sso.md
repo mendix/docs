@@ -1,7 +1,7 @@
 ---
 title: "千帆玉符 SSO – QianFan Single Sign-On"
 parent: "tencent-deploy"
-menu_order: 48
+menu_order: 20
 description: "Use the QianFan SSO module (千帆玉符 SSO) to add Single Sign-on to your Tencent app using the user's QianFan credentials"
 tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -10,13 +10,14 @@ tags: ["SSO", "Single Sign-on", "Tencent", "QianFan"]
 
 {{% alert type="info" %}}
 This documentation is only relevant to customers deploying their Mendix app on the Tencent Cloud.
+
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
 
 The Qianfan SSO module enables your app end-users to sign in with single sign-on (SSO) using an iDaaS account when your app is deployed to the Tencent Cloud. This document explains how to integrate the Qianfan SSO module with your Mendix app.
 
-Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 模块使用手册](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf).
 
 ## 2 Purchasing and Launching the Service
 
@@ -33,7 +34,7 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
 ## 3 Configuring Yufu iDaaS
 
 ### 3.1 Logging in to Yufu iDaaS
-    
+
 1. Log in to Yufu iDaaS using login address provided by the above-mentioned email, log in to Yufu iDaaS control panel.
 
     ![](attachments/qianfan-sso/image2.png)
@@ -43,7 +44,7 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
     ![](attachments/qianfan-sso/image3.png)
 
 ### 3.2 User Management
-    
+
 #### 3.2.1 Adding Users
 
 1. Select **对象管理** -> **部门管理** -> **部门数据** (Object Management -> Department Management -> Department Data).
@@ -63,7 +64,7 @@ Full documentation in Chinese can be downloaded as a PDF from [千帆玉符 SSO 
 4. Enter the user information and click **确定** (OK).
 
 ### 3.3 Application Management
-    
+
 #### 3.3.1 Adding an App
 
 1. Click the **添加应用** (Add App) button on the right side.
@@ -211,16 +212,16 @@ The permissions in Yufu are equivalent to the roles in Mendix.
     ![](attachments/qianfan-sso/image36.png)
 
 ## 4 Mendix Configuration
-    
+
 ### 4.1 Downloading the QianfanSSO Module
-        
+
 1. Download the QianfanSSO module from the following address.
 
     [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/QianfanSSO.mpk](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/QianFanSSO.mpk)
 
 ### 4.2 Importing the QianfanSSO Module
 
-1. Open an existing app project in Studio Pro. If you don't have one, create a new app project first. Right-click the project to select **Import module package…**.
+1. Open an existing app in Studio Pro. If you do not have one, create a new app first. Right-click the app to select **Import module package…**.
 
     ![](attachments/qianfan-sso/image37.png)
 
@@ -278,7 +279,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 ### 4.4 Configure the Login Page
 
-1. Choose the menu item **Project** -> **Show Project Directory in Explorer**.
+1. Choose the menu item **App** > **Show App Directory in Explorer**.
 
     ![](attachments/qianfan-sso/image43.png)
 
@@ -290,7 +291,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
     [https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/Qianfansso/yufu.png](https://mendix-cdn-prod-1305133312.cos.ap-shanghai.myqcloud.com/qianfansso/yufu.png)
 
-4. Choose **Project** ->  **Synchronize Project Directory** in Studio Pro.
+4. Choose **App** >  **Synchronize App Directory** in Studio Pro.
 
     ![](attachments/qianfan-sso/image44.png)
 
@@ -298,17 +299,21 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 1. Add a **Button** widget to the page.
 
-2. Set the **On click** event to *Call a microflow*.
+2. Double-click the **Button** widget to open the **Edit Action Button** dialog box.
 
-3. Set the **Microflow** to *QianfanSSO.QianfanSSO\_Logout*.
+3. Set the **On click** event to *Call a microflow*.
 
-4. Set the **Caption** to *logout*.
+4. Set the **Microflow** to *QianfanSSO.QianfanSSO\_Logout*.
+
+5. Set the **Caption** to *logout*.
 
     ![](attachments/qianfan-sso/image45.png)
 
 ### 4.6 Role Settings
 
 1. Open **Security** and set the **Security Level** to *Production*.
+
+    ![security-set-to-production](attachments/qianfan-sso/security-production.png)
 
 2. Make sure that, in the **User roles** tab, the role **Name**s are consistent with the part of the permission names after the underscore, as set in section 3.4.1. For example:
 
@@ -320,7 +325,7 @@ The permissions in Yufu are equivalent to the roles in Mendix.
 
 ### 4.7 Sign in for Verification
 
-1. Save the configuration, then click **Run Locally**. Once the app has started successfully, click **View**.
+1. Save the configuration, then click **Run Locally**. Once the app has started successfully, click **View App**.
 
     ![](attachments/qianfan-sso/image48.png)
 

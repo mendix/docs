@@ -73,7 +73,7 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 });
 ```
 
-For more information on creating your own classes, see the [Creating Your Own Classes](/howto8/mobile/how-to-use-native-styling#6-creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
+For more information on creating your own classes, see the [Creating Your Own Classes](/howto8/mobile/how-to-use-native-styling#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
 ## 3  Data Widgets {#understanding-data-widgets}
 
@@ -235,7 +235,7 @@ A container widget can be used to style or hide a group of widgets. This widget 
 
 The default class to style all page titles is named `Container`.
 
-### 5.2 Tab Container
+### 5.2 Tab Container {#tab-container}
 
 Tab containers are used to show information categorized into multiple tab pages. Tab containers can help display information which exceeds a device’s screen space. This is how a default tab container widget could look in an app:
 

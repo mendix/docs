@@ -7,7 +7,7 @@ tags: ["workflow", "workflows", "decision", "parallel split", "end activity"]
 
 ## 1 Introduction
 
-**General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** activity ends a path. 
+**General** activities allow you to manage paths in your workflow. A **Decision** allows you to add a condition and the workflow will follow one of the paths depending on this condition. With the help of the **Jump** activity you can jump to another activity in the workflow. **Parallel Split** adds several parallel paths (processes) to the workflow, and the **End** event ends a path. 
 
 ![General Activities](attachments/workflows/general.jpg)
 
@@ -102,12 +102,12 @@ The **Paths** property allows you to add as many paths as there are parallel pro
 
 To change the order of paths, click the **Paths** property and drag it.
 
-## 5 End Activity {#end}
+## 5 End Event {#end}
 
-The **End** activity ends the path of the workflow. 
+The **End** event ends the path of the workflow. 
 
 {{% alert type="warning" %}}
-You cannot use the **End** activity in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
+You cannot use the **End** event in a Parallel split or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
 
 ## 6 Read More

@@ -7,7 +7,7 @@ tags: ["extensibility", "connector", "adapter", "extensibility"]
 
 ## 1 Introduction
 
-One of the strengths of the Mendix Platform is that it is easy to connect your Mendix application with other systems. The [Mendix Marketplace](https://appstore.home.mendix.com/index3.html) is filled with all kinds of connectors and adapters. This document presents an overview of some of our connectors.
+One of the strengths of the Mendix Platform is that it is easy to connect your Mendix application with other systems. The [Mendix Marketplace](https://marketplace.mendix.com/) is filled with all kinds of connectors and adapters. This document presents an overview of some of our connectors.
 
 This document does not go into usage details for these specific connectors and adapters. For details on typical usage scenarios, installation, dependencies, and configuration, see the [Marketplace Guide](/appstore/)
 
@@ -49,7 +49,7 @@ For more information, see [Google Maps](/appstore/widgets/google-maps).
 
 ![](attachments/18448690/imap.png)
 
-This module enables your project to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
+This module enables your app to retrieve emails from POP3, POP3S, IMAP, and IMAPS servers.
 
 For more information, see [IMAP/POP3 Incoming Email](/appstore/modules/imap).
 

@@ -1,7 +1,7 @@
 ---
 title: "Domain Model"
 description: "Describes the domain models in Mendix Studio."
-menu_order: 20
+weight: 20
 tags: ["studio", "domain model"]
 ---
 

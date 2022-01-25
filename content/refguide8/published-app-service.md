@@ -5,6 +5,10 @@ tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-app-service.pdf).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 App services are deprecated and were removed in Studio Pro 9. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
 {{% /alert %}}
 

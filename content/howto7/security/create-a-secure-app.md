@@ -20,9 +20,9 @@ You will start with the configuration of user and module roles for access to pag
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](/howto7/data-models/create-a-basic-data-layer))
+* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -49,16 +49,16 @@ To see the results of this how-to, you must set up a test project with test data
 
 8. Double-click the new button and in the button's properties editor, enter *Set Processing to Complete* for the **Caption**.
 9. Set **On click** to **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow you just created:
-   
-    ![](attachments/8785360/8946804.png)
+
+	![](attachments/8785360/8946804.png)
 
 10. Add the following customer data to your app:
     
-    ![](attachments/18448705/18581374.png)
+	![](attachments/18448705/18581374.png)
 
 11. Add the following order data to your app:
     
-    ![](attachments/18448705/18581373.png)
+	![](attachments/18448705/18581373.png)
 
 ## 4 Setting the Security Level to Prototype/Demo
 

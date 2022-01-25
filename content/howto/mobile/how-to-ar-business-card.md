@@ -34,7 +34,7 @@ When you have completed the prerequisites, your work should look like this:
 
 ## 3 Creating an AR Business Card Demo
 
-For this project you will need to start a new project based on the Native Mobile Quickstart App, or use another project with the Native Mobile Resources module imported from the Mendix App Store. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
+For this app you will need to start a new app based on the Blank Native Mobile App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
 
 Ideally you should have several recognizable features on your image, specifically an image with a lot of edges and contrast. The business card you are using in this document possesses these traits:
 
@@ -62,7 +62,7 @@ Next you will add a virtual image of your business card to overlap the physical 
    your business card and Y for the height.
 6. Set **Rotation > X** to *-90* to ensure the virtual image is rotated correctly.
 
-Once this is all set up, run the project and check if it works in the Make It Native app. Here you should see the
+Once this is all set up, run the app and check if it works in the Make It Native app. Here you should see the
 virtual business card overlaying your physical card:
 
 {{% image_container width="300" %}}![Business card](attachments/how-to-ar-business-card/render-only-businesscard.png){{% /image_container %}}

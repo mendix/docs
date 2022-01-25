@@ -6,6 +6,10 @@ tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/attributes.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
@@ -83,7 +87,7 @@ Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 21
 Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
 
-<sup><small>[1]</small></sup>The maximum size that can approximately be stored in an attribute of type binary depends on the database:
+<sup><small>[1]</small></sup> The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |

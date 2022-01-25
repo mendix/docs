@@ -6,6 +6,10 @@ tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-properties.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 There are two ways to edit the properties of an [association](associations). This page describes the properties you can edit in the properties pane of the association in the domain model, or from opening the association properties dialog directly from the association or the association tab in the entity properties.
@@ -69,7 +73,7 @@ Despite it's name, navigability is usually only important when adding or changin
 | Delete {name of entity} object and {name of other entity} object(s) as well<sup><small>[1]</small></sup> | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity}<sup><small>[2]</small></sup> object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-<sup><small>[1]</small></sup>This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
+<sup><small>[1]</small></sup> This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
 ![](attachments/associations/association-delete-both.png)
 

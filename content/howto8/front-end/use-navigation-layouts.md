@@ -1,6 +1,6 @@
 ---
 title: "Use Navigation Layouts"
-category: "Front-End"
+category: "Front End"
 menu_order: 12
 description: "This guide will teach you to use navigation layouts."
 tags: ["Atlas UI", "User Experience", "Navigation", "Responsive Design", "Sidebar"]
@@ -119,7 +119,7 @@ To configure the toggled sidebar to shrinking content (initially open), follow t
 
 To toggle the sidebar for **Shrinking content (initially open)**, follow these steps:
 
-1.  Click **Run Locally** to run your project.
+1.  Click **Run Locally** to run your app.
 2.  In your browser, click the toggle button:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif){{% /image_container %}}
@@ -150,7 +150,7 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
 ### 3.4 Toggling the Sidebar for Shrinking Content (Initially Closed)
 
-1.  Click **Run Locally** to run your project.
+1.  Click **Run Locally** to run your app.
 2.  In your browser, click the toggle button:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif){{% /image_container %}}
@@ -187,7 +187,7 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
-1.  Click **Run Locally** to run your project.
+1.  Click **Run Locally** to run your app.
 2.  In your browser, right-click your web page and click **Inspect**:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.6_inspector.png){{% /image_container %}}
@@ -236,7 +236,7 @@ To configure the toggled sidebar to **Slide over content**, follow these steps:
 
 To toggle the sidebar for **Slide over content**, follow these steps:
 
-1.  Click **Run Locally** to run your project.
+1.  Click **Run Locally** to run your app.
 2.  In your browser, right-click your web page and click **Inspect**:
 
 	{{% image_container width="350" %}}![](attachments/use-navigation-layouts/3.8_inspector.png){{% /image_container %}}

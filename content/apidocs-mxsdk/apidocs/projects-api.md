@@ -8,6 +8,10 @@ menu_order: 50
 
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 
+{{% alert type="warning" %}}
+As of June 20th, 2021, you can no longer create apps using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+{{% /alert %}}
+
 ## 2 Error Handling
 
 The following errors might be returned by the service. As this API is implemented as an app service, it will only give a HTTP status code 500 in case an error occurs.
@@ -107,7 +111,7 @@ The ExposeTeamServerRevisionAsOnlineWorkingCopy operation takes a ProjectsAPI.Ex
 | Username | String | The email address of your Mendix account. |
 | ApiKey | String | An API key of your Mendix account. |
 | ProjectId | String | The ID of the project/app that you want to expose. |
-| Branch (can be `empty`) | String | Name of the branch to expose. If this value is `empty`, Main Line is exposed. |
+| Branch (can be `empty`) | String | Name of the branch to expose. If this value is `empty`, the main line is exposed. |
 | Revision (can be `empty`) | Integer/Long | Revision number to expose. If the value is `empty` or `-1`, the latest (HEAD) revision is exposed. |
 
 #### 3.4.2 Output
@@ -129,7 +133,7 @@ Reference this microflow:
 | Username | String | The email address of your Mendix account. |
 | ApiKey | String | An API key of your Mendix account. |
 | ProjectId | String | The ID of the project/app that you want to expose. |
-| Branch (can be `empty`) | String | Name of the branch to commit the changes to. If this value is `empty`, Main Line is used. |
+| Branch (can be `empty`) | String | Name of the branch to commit the changes to. If this value is `empty`, the main line is used. |
 | Revision   | Integer/Long | Revision number to base the changes on. If the value is `-1`, the latest (HEAD) revision is used. |
 
 #### 3.5.2 Output

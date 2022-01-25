@@ -1,6 +1,6 @@
 ---
 title: "Strategic Partner Terms"
-menu_order: 3
+weight: 30
 draft: true
 ---
 
@@ -26,7 +26,7 @@ Guidelines for usage.
 Example usage.
 {{% /alert %}}
 
-## Mansystems (Add-ons)
+## CLEVR (Formerly Known as Mansystems) (Add-ons)
 
 ### ATS Helper
 

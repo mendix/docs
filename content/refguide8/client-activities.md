@@ -5,6 +5,10 @@ menu_order: 50
 tags: ["studio pro", "client activities", "activities"]
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/client-activities.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 **Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows:

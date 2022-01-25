@@ -1,5 +1,6 @@
 ---
 title: "Mendix Runtime"
+weight: 40
 tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
@@ -87,7 +88,7 @@ You need a license to run an application in production mode. Without a license, 
 You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
 
 {{% alert type="info" %}}
-Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
+If the app contains published services, links to available API documentation such as [OpenAPI documentation](open-api) for [published REST services](published-rest-services), links to [published OData services](published-odata-services), and WSDLs for [published web services](published-web-services), are available on the URL path `/api-doc` (for example: `https://myapp.mendixcloud.com/api-doc/`).
 {{% /alert %}}
 
 ## 5 Main Documents in This Category

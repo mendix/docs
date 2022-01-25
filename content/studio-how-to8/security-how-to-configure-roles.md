@@ -1,7 +1,7 @@
 ---
 title: "Secure Your App and Configure Access to Its Functionality"
 description: "Describes how to configure security in Mendix Studio."
-menu_order: 40
+weight: 40
 tags: ["studio", "security", "user roles", "secure your app", "conditional visibility"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

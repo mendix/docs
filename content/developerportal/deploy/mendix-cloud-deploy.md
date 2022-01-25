@@ -24,10 +24,10 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature | Free App | Licensed App |
 | --- | --- | --- |
-| **Number of Users** | Unlimited users. | Depends on your pricing plan.¹ |
+| **Number of Users** | Unlimited users.¹ | Depends on your pricing plan.² |
 | **Sleep Mode** | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode. |
-| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.¹ |
-| **App vCPU**s | 0.5 | Depends on your pricing plan.¹ |
+| **Disk Storage** | 0.5Gb Database and 1Gb Files. | Depends on your pricing plan.² |
+| **App vCPU**s | 0.5 | Depends on your pricing plan.² |
 | **Scheduled Events** | Are not run. | Are run and can be configured from the Developer Portal. |
 | **Environments** | Single environment in the Mendix Cloud. | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment** | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -41,8 +41,11 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Metrics, Alerts, and Log Levels** | Not available. | Available. |
 | **Historic Archived Logs** | Not available, only live logs are available. | Available. |
 | **Backups** | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
+| **Support** | No Support. | Depending on license option. |
 
-¹The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ Unlicensed apps running on a different cloud platform (for example SAP BTP) have similar restrictions to Free Apps. They have additional restrictions, including only allowing six concurrent users.
+
+² The Mendix pricing plans are listed in [Mendix Pricing Plans](#plans), below. More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
 {{% alert type="info" %}}
 Free Apps are part of our Free Edition.
@@ -58,6 +61,15 @@ As noted in the table above, a Free App will go to sleep after an hour or so of 
 
 You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. Instructions for doing this are here: [Licensing Mendix Cloud Apps](licensing-apps).
 
+#### 1.1.1 Free Apps Archival{#free-apps-archival}
+
+If a Free App has been in Sleep Mode for three months or longer, the Technical Contact will be informed that the Free App will be archived in another two weeks. The project and model will be retained, but the running app, database, and files for the Free App will be deleted.
+
+There are two ways to avoid Free Apps Archival:
+
+1. Visit the Free App.
+2. Deploy a new version of your app to your Free App environment.
+
 ### 1.2 Licensed App
 
 A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments.
@@ -67,6 +79,20 @@ By default, apps are deployed to the Mendix Cloud **v4**. Features which are cov
 ### 1.3 Flexible Environments{#flexible-environments}
 
 In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud v4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
+
+### 1.4 Database
+
+Apps deployed to the Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to the Mendix Cloud.
+
+If you need to use a different database, you will need to look at deploying your app to a different platform. See the [Deployment](/developerportal/deploy/) page for more details.
+
+### 1.5 URLs and Ports
+
+When your app is running on the Mendix Cloud it will automatically be given its own URL. For licensed apps this is of the form `(appname){-environment}.mendixcloud.com`. The environment name will be added to the subdomain name for `test`, `acceptance`, and flexible environments. The production URL uses just the app name as the subdomain. Free apps have a URL of the form `{appname}.mxapps.io`.
+
+You can customize a URL by adding [custom domains](custom-domains).
+
+Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (80 and 443) with connections to HTTP (80) being redirected to HTTPS (443).
 
 ## 2 Deploying an App to the Mendix Cloud
 
@@ -94,6 +120,10 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 ## 3 Deploying a Licensed App to the Mendix Cloud
 
 There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
+
+{{% alert type="warning" %}}
+The Mendix Cloud has a limit of 1GB on the size of a deployment package.
+{{% /alert %}}
 
 ### 3.1 Deploying via the Studio Pro
 
@@ -125,7 +155,7 @@ An app can also be deployed without using Studio Pro. To do this, follow these s
 
 The package will now be deployed to the cloud.
 
-## 4 Deploy the App to an Environment
+## 4 Deploy the App to an Environment {#deploy-the-app-to-an-environment}
 
 The previous steps explained how to deploy a deployment package to the Mendix Cloud, but the actual app is not running yet! To deploy a deployment package to a node environment, follow these steps:
 
@@ -187,28 +217,32 @@ More information on these plans is available on the [Pricing](https://www.mendix
 
 ### 7.2 Cloud Resource Packs{#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs. The *Standard* resource packs can also be used with *all* plans, but *premium* resource packs can only be purchased with a *premium* plan.
+Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for standard and premium plans. Resources for the *basic package* are fixed as described in [Mendix Basic Package](basic-package).
+
+The *Standard* resource packs can be used with both standard and premium plans, but *premium* resource packs can only be purchased with a *premium* plan.
 
 | Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
 |Standard|||||||
-| XS | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XS21 | 1GB | 0.25 | 1GB | 2 | 5GB | 10GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 |Premium|||||||
-| S | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
-| M | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
-| L | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
-| XL | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
-| XXL | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| S21 | 2GB | 0.5 | 2GB | 2 | 10GB | 20GB |
+| M21 | 4GB | 1 | 4GB | 2 | 20GB | 40GB |
+| L21 | 8GB | 2 | 8GB | 2 | 40GB | 80GB |
+| XL21 | 16GB | 4 | 16GB | 4 | 80GB | 160GB |
+| XXL21 | 32GB | 8 | 32GB | 4 | 160GB | 320GB |
+| XXXL21 | 64GB | 16 | 32GB | 8 | 320GB | 640GB |
 
  The cloud resource packs below are still being used but are not available to new customers.
 
 | Legacy Pack | App RAM | App vCPU | DB RAM | DB vCPU | DB Storage | File Storage |
 | --- | --- | --- | --- | --- | --- | --- |
-| XS20 | 1GB | 0.5 | 1GB | 1  | 5GB | 10GB |
 | S20 | 2GB | 0.5 | 2GB | 1  | 10GB | 20GB |
 | M20 | 4GB | 1 | 4GB | 1  | 20GB | 40GB |
 | L20 | 8GB | 2 | 8GB | 1  | 40GB | 80GB |

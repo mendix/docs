@@ -1,7 +1,7 @@
 ---
 title: "Configure a Navigation Bar"
 description: "This how-to describes the process of configuring a navigation bar in Mendix Studio."
-menu_order: 15
+weight: 15
 tags: ["studio", "navigation", "how to", "navigation bar"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -23,13 +23,13 @@ In Studio, the navigation bar is build in most page templates and is available o
 
 ![Configured Menu](attachments/navigation-how-to-configure/navigation-previewed.png)
 
-Currently you have a page called **Home_web** that is set as a home page by default. Your navigation document currently looks the following way:
+Currently you have a page called **Home_Web** that is set as the default home page and is also set for the Home menu item. Your navigation document currently looks the following way:
 
 ![Navigation Default](attachments/navigation-how-to-configure/navigation-default.png)
 
 You have several pages that you would like to add to the navigation:
 
-* **Employees** – a page that lists all employees in your company and should be a home page
+* **Employees** – a page that lists all employees in your company and should be a default home page
 
 * **New_Employee** – a page for creating a new employee 
 
@@ -49,29 +49,31 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating Menu Items and Sub-Items
 
-### 3.1 Setting the Employees Page as the Home Page {#employees-page}
+### 3.1 Setting the Employees Page as the Default Home Page {#employees-page}
 
 Currently the **Home_web** page is set as the home page for your app. However, you would like to set the **Employees** page as the home page instead. Do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar. 
 
-2. Select the **Home** menu item:
+2. Open the Navigation Editor properties > **Default Home Page**.
 
-    ![Default Navigation](attachments/navigation-how-to-configure/navigation-default.png) 
-    
-3. Open its properties. The property **Set as Homepage** is enabled by default for the **Home** menu item. You need to change the page that is currently selected in properties for it. Do the following:
+3. Click the **Page** property to select a different page:
 
-    1.  Click the **Page** property to change the page that is currently set as home page:
+    ![Default Home Page](attachments/navigation-how-to-configure/default-home-page.png)
 
-        ![Home Page Properties](attachments/navigation-how-to-configure/home-page-properties.png)
+4. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
 
-    3. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
+5. Now you need to set the **Employees** page for the **Home** menu item otherwise it will not show in your navigation tree. Click the **Home** menu item and open its properties. 
 
-        ![Select Page Dialog Box](attachments/navigation-how-to-configure/select-page-dialog.png)
+6. Click the **Page** property:
 
-You have changed the page that was selected as the home page by default and set the **Employees** page as the new home page for your app.
+    ![Home Menu Item](attachments/navigation-how-to-configure/home-menu-item.png)
 
-### 3.2 Creating Menu Item for the New Employee Page
+7. In the **Select Page** dialog box, choose **Employees** and click **Select**. 
+
+You have set the **Employees** page as the new default home page for your app.
+
+### 3.2 Creating a Menu Item for the New Employee Page
 
 The **New_Employee** page contains a form with the details of the new employee, this means that it contains a data view that expects an *Employee* object. Thus, when creating a menu item for it, you need to pass this object.
 
@@ -79,7 +81,7 @@ To create the menu item for the **New_Employee** page, do the following:
 
 1. Click a plus at the bottom of the navigation tree to create a menu item:
 
-    {{% image_container width="350" %}}![Adding Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png){{% /image_container %}}
+    ![Adding Menu Item](attachments/navigation-how-to-configure/adding-menu-item.png)
 
 2. Open the new menu item properties and do the following:
 
@@ -95,10 +97,8 @@ To create the menu item for the **New_Employee** page, do the following:
 
     5. Click the **Page** property.
 
-    6. In the **Select Page** dialog box, choose **New_Employee** page and click **Select**:
+    6. In the **Select Page** dialog box, choose **New_Employee** page and click **Select**.
 
-         ![Select New Employee Page](attachments/navigation-how-to-configure/select-new-employee-page.png)
-    
     7. In the **Caption** property, delete the *Navigation item* caption and type in *New Employee*. 
     
     8. Click the **Icon** property to set the icon for the menu item.

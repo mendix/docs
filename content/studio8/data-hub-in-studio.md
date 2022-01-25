@@ -66,7 +66,7 @@ In the **Data Hub** tab, you can do the following:
     * **All Services** – all services will be shown in the **Data Hub** tab.
     * **Studio Compatible Services** – only services that are compatible with Studio are displayed in the **Data Hub** tab.
     
-* **View services used by your project** – services that are already used in your project are marked with a green check-mark.
+* **View services used by your app** – services that are already used in your app are marked with a green check-mark.
 
 * **Update services** – when a new version of the service is available, you can update it. However, it is best to check out the changes made to the service in the Data Hub Catalog first. 
 

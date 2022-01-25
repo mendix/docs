@@ -15,10 +15,11 @@ This reference guide describes how to use version control in Mendix Studio Pro. 
 
 To start a new app with version control do the following:
 
-1. Select **File** > **New App**.
-2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-3. Change the **App directory**, or leave the default suggested by Studio Pro.
-4. Click **Create app**.
+1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
+2. Select the starting point – an app template.
+3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
+4. Change the **App directory**, or leave the default suggested by Studio Pro.
+5. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -31,18 +32,14 @@ If there is already a Team Server-enabled app, you can be invited to join it (se
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
 1. Choose **Open App** in Studio Pro.
-2. Select **Mendix Team Server** for **Where is your app stored?**.
-3. Choose your app from the **Team Server App** drop-down.
-4. Change the **App directory**, or leave the default suggested by Studio Pro.
-5. Click **Create app**.
+2. Choose your app from the list of the **Open App** dialog box.
+4. Click **Open in Studio Pro**.
 
 The app will be downloaded from the Team Server and opened in Studio Pro.
 
-![](attachments/using-version-control-in-studio-pro/open-new-team-server-app.png)
-
 ## 4 Day-to-Day Development
 
-Let us say you have a working copy of a app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
+Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
 
 When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update and retrieve those changes.
 
@@ -52,7 +49,7 @@ You can also see a **history** of all the changes which have been committed, no 
 
 ### 4.1 Status
 
-The status of your proappject is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (documents, folders, and modules) that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
@@ -69,9 +66,7 @@ The **App Explorer** shows an icon in front of items (documents, folders, and mo
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
 {{% /alert %}}
 
-For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
-
-![](attachments/using-version-control-in-studio-pro/project-explorer-documents.png)
+For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. The folders and modules containing changes will be depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
 
 You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
@@ -85,7 +80,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
 
-To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **App** > **Commit...** menu item.
+To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
 
 ![Commit Button](attachments/using-version-control-in-studio-pro/commit-button.png)
 
@@ -100,7 +95,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message. This should be a summary of the changes you made
 * A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_13-50-03.png)
+    ![](attachments/using-version-control-in-studio-pro/2018-02-21_13-50-03.png)
 
 Studio Pro also attaches some information automatically:
 
@@ -113,23 +108,37 @@ If you also changed Java source code, added widgets or made other changes that a
 
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated, you will have to update first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
-### 4.3 Updating
+### 4.3 Pushing
+
+{{% alert type="info" %}}
+
+Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
+
+{{% /alert %}}
+
+Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
+
+To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
+
+![](attachments/using-version-control-in-studio-pro/commit-git.png)
+
+### 4.4 Updating
 
 Updating retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
-To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **App** > **Update** menu item.
+To update the working copy of your app, click the **Update** button in the **Changes** pane, or choose the **Version Control** > **Update** menu item.
 
 ![Update Button](attachments/using-version-control-in-studio-pro/update-button.png)
 
 Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update, the original of your working copy is updated as well.
 
-For example, if the last time you updated you received all changes up to and including revision 40, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new *original* to which your changes are compared.
+For example, if the last time you updated you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
 Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
 If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
 
-### 4.4 History {#history}
+### 4.5 History {#history}
 
 The *history* of the app is a list of all revisions that have been committed. To view the history of the app, click the **History** button in the **Changes** pane, or choose the **Version Control** > **History** menu item.
 
@@ -147,7 +156,7 @@ Changes that have not yet been committed can be reverted. Say, for example, that
 
 Deletes of documents, folders, and modules can also be reverted. This will bring them back into the app. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
 
-You can revert changes in the **Changes** pane, or from the right-click menu on the document you want to revert.
+You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
 ![Two ways of reverting](attachments/using-version-control-in-studio-pro/revertx2.png)
 
@@ -181,7 +190,7 @@ The involved document is marked as conflicted and you can see the reason in the 
 If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
-You can resolve a app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
+You can resolve an app conflict by choosing **Tasks > Use mine** or by deleting the involved documents or folders.
 
 ## 7 Using Branches
 
@@ -225,13 +234,23 @@ Now work on the branch until the feature is done and commit the completed work.
 When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
 1. Open the main line.
+
 2. Choose **Version Control > Merge changes here**.
-3. Choose **Merge feature branch**.
 
-    ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
+3. Depending on the version control you are using, do one of the following:
 
-4. Select the branch and click **Merge**.
+    1.  **For SVN**, choose **Merge feature branch**:
+
+        ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
+
+    1. **For Git**, select the branch you would like to merge from the **Branch line** drop-down list:
+
+        ![](attachments/using-version-control-in-studio-pro/merge-git.png)
+
+4. Click **Merge**.
+
 5. Resolve any conflicts and errors.
+
 6. Commit the new feature to the main line.
 
 You can delete the branch after merging it back, if you want.
@@ -252,11 +271,12 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control > Merge Changes Here**, then select the appropriate type of merge (for example, **Port fix**).
+Select **Version Control > Merge Changes Here**, do the following depending on the version control you are using:
 
-![](attachments/using-version-control-in-studio-pro/2018-02-21_14-19-47.png)
+1. **For SVN**, select the appropriate type of merge (**Port fix**, **Merge feature branch**, and **Advanced merge** options are available)
+2. **For Git,** select the branch line to merge to the current branch. 
 
-You can merge a single revision or a whole range of revisions from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
+For more information on merge settings, see [Merge Dialog](merge-dialog).
 
 #### 7.2.3 Reverse Merging
 
@@ -264,7 +284,13 @@ Reverting changes works for changes that have not been committed yet. Changes th
 
 Choose **Version Control > Reverse Merge Changes...**
 
+For SVN, you can choose a range (**Start revision** and **End revision**):
+
 ![](attachments/using-version-control-in-studio-pro/revert-committed-changes.png)
+
+For Git, reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, and so on.
+
+![](attachments/using-version-control-in-studio-pro/revert-changes-git.png)
 
 After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
@@ -272,7 +298,7 @@ After a reverse merge the app will look like the changes never happened; if you 
 
 There are two methods for fully replacing your main line with a branch line.
 
-The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts. To do this, follow these steps:
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
 1. Select **Version Control > Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
@@ -318,7 +344,7 @@ If you are using a different hosting environment, you create a deployment packag
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-28_13-44-04.png)
 
-## 9 Working Outside Studio Pro
+## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 
 Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 

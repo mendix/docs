@@ -1,6 +1,7 @@
 ---
 title: "Mapping Documents"
 parent: "integration"
+menu_order: 35
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -9,7 +10,7 @@ tags: ["studio pro"]
 
 Mapping documents are used to define how Mendix objects can be converted to and from XML or JSON, according to a specific XML schema or JSON structure. There are two types of mappings: [Import Mappings](import-mappings) and [Export Mappings](export-mappings).
 
-## 2 Import Mappings
+## 2 Import Mappings {#import-mappings}
 
 Import mappings are used to define how incoming XML or JSON is converted into Mendix objects, according to a specific XML schema or JSON structure. This is needed to be able to interpret data received from other systems. In Mendix there are three basic scenarios for creating Mendix objects from XML or JSON:
 

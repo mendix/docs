@@ -33,7 +33,7 @@ This is how the original chart looks:
 
 To create the required custom configuration easily, follow these steps:
 
-1. Open the project with the chart(s).
+1. Open the app with the chart(s).
 
 1. Open a page with a chart.
 
@@ -45,7 +45,7 @@ To create the required custom configuration easily, follow these steps:
 
     ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
 
-1. Run the project.
+1. Run the app.
 
 1. Open the page with the chart in the browser.
 
@@ -77,7 +77,7 @@ To create the required custom configuration easily, follow these steps:
 
 To add a theme file which will apply to all charts in the app, follow these steps:
 
-1. From the desktop modeler, go to the menu **Project > Show Project Directory in Explorer**.
+1. From the desktop modeler, go to the menu **App > Show App Directory in Explorer**.
 
 1. Open the **theme** folder.
 
@@ -93,7 +93,7 @@ To add a theme file which will apply to all charts in the app, follow these step
 
 To change the font in all charts in the app, follow these steps:
 
-1. Edit the *[project folder]/theme/com.mendix.charts.json* file in a plain text editor.
+1. Edit the *{app folder}/theme/com.mendix.charts.json* file in a plain text editor.
 
 1. Replace or update the content. In the **layout** section, place the style changes that were created in the first section of this how to.
 

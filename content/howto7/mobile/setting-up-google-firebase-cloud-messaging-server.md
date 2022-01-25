@@ -39,7 +39,7 @@ Open up the [Firebase developers console](https://console.firebase.google.com/) 
 
 In the Firebase console, select **Import Google Project**. Select your GCM project from the list of existing projects, select a region, and click **Add Firebase**.
 
-![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Add_Firebase_to_a_Google_Project.png)
+{{% image_container width="350" %}}![](attachments/set-up-firebase/Add_Firebase_to_a_Google_Project.png){{% /image_container %}}
 
 From here, continue with [Configuring APNs Credentials](#configuring) below.
 
@@ -53,7 +53,7 @@ Open up the [Firebase developers console](https://console.firebase.google.com/) 
 
 Click **Create new project** and fill in the project name and region for your application. Then click **Create**.
 
-![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
+{{% image_container width="350" %}}![](attachments/set-up-firebase/Create_Firebase_Project.png){{% /image_container %}}
 
 ## 4 Configuring APNs Credentials (Optional) {#configuring}
 
@@ -61,7 +61,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 Navigate to the **Cloud messaging** tab.
 
-![](attachments/push_notifications_cloud_messaging.png)
+{{% image_container width="350" %}}![](attachments/push_notifications_cloud_messaging.png){{% /image_container %}}
 
 On this tab, upload either your APNs key or your APNs certificate(s).
 
@@ -69,9 +69,9 @@ On this tab, upload either your APNs key or your APNs certificate(s).
 
 In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
-![](attachments/push_notifications_service_accounts.png)
+{{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
-On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back-end of your Mendix application.
+On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back end of your Mendix application.
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
@@ -79,7 +79,7 @@ The file you just created gives API access to all available Firebase services fo
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab.
 
-![](attachments/push_notifications_platforms.png)
+{{% image_container width="350" %}}![](attachments/push_notifications_platforms.png){{% /image_container %}}
 
 The list at the bottom shows the Android and iOS applications that you have configured for your Firebase project. Select the Android application and click **google-services.json**. Then click the iOS application and click **GoogleService-Info.plist**. Store both files in a secure location. You will need these when building your mobile application.
 

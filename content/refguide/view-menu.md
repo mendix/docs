@@ -54,10 +54,6 @@ When you drag a pane, you can see arrows that indicate where you can position th
 
    4. Full-window height – bottom
 
-The video below shows examples of how to position a pane:
-
-<video width="640" height="360" controls src="attachments/view-menu/positioning-panes.mp4">VIDEO</video>
-
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
 ## 3 Menu Items
@@ -108,11 +104,13 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.9 Stories
 
-For [Team Server](/developerportal/collaborate/team-server) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/collaborate/planning-development). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
+For [Team Server](/developerportal/collaborate/team-server) app, the **Stories** pane shows the [stories](/developerportal/collaborate/stories) of the current [Sprint](/developerportal/collaborate/stories). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](stories-pane). 
 
 ### 3.10 Toolbox {#toolbox}
 
-The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data widgets](data-widgets)) by dragging them from the **Toolbox** onto your page.
+The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](data-widgets)) by dragging them from the **Toolbox** onto your page.
+
+The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the bottom-right corner of the **Toolbox**. 
 
 ### 3.11 Debug Windows
 
@@ -126,18 +124,19 @@ The **Breakpoints** pane shows all the breakpoints in your app. You can enable a
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables
+#### 3.11.3 Variables {#variables}
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
 ### 3.12 Full Screen {#full-screen}
 
-The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
+The **Full Screen** mode hides the title bar and makes the window fill the entire screen. 
+
 Shortcut key: <kbd>F11</kbd>
 
 ### 3.13 Distraction Free Mode {#distraction-free}
 
-The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3#830).
+The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes.
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 

@@ -44,7 +44,7 @@ If the latest change on your branch line was committed by someone other than you
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [project package](../integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [project package](/howto7/integration/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the Project Yourself?
 
@@ -56,11 +56,9 @@ The problems described in this how-to can't be solved by editing the project in 
 
 The most likely cause for these kinds of errors is a faulty script that was run on the Mendix Model SDK and, if this is the case, means you will also need to use the SDK to fix the problems. If you created or edited the model yourself using the Mendix Model SDK, you will probably know what to do to solve the problems by carefully reading the messages in the error dialog, and locating the relevant part of you SDK code, after which you can change your SDK script to make the project valid again. Be sure to check the [Mendix Model SDK documentation](/apidocs-mxsdk/mxsdk/) if you need information about constructing or altering models with SDK scripts.
 
-Finally, in the unlikely event that you encounter this error while working on your project with the Mendix Desktop Modeler, it's best to contact Mendix support and open a ticket to get help with the problem.
-
 ## 5 Read More
 
-* [Debug a Hybrid Mobile App](../mobile/debug-a-mobile-app)
+* [Debug a Hybrid Mobile App](/howto7/mobile/debug-a-mobile-app)
 * [Clearing Warning Messages in Mendix](clear-warning-messages)
 * [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [Debugging Java Actions](debug-java-actions)

@@ -2,11 +2,12 @@
 title: "Deployment"
 description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage those deployments."
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
+weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy.pdf).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -72,7 +73,7 @@ From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 
-Instructions for using the buildpack are described in [How to Build a Docker Image from a Mendix App Project](/developerportal/deploy/docker-deploy). 
+Instructions for using the buildpack are described in [How to Build a Docker Image from a Mendix app](/developerportal/deploy/docker-deploy). 
 
 The Docker buildpack is available at [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack).
 
@@ -84,7 +85,13 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows) and [Unix Deployment](unix-like).
 
-## 12 Main Documents in This Category
+## 12 Mendix Applications on Industrial Edge
+
+You can bring your Mendix app to Industrial Edge, the SIEMENS platform to host applications from different vendors on a computing platform close to the shopfloor. Thus enables the extensions of automation, deployment of demanding streamprocessing and learning algorithms as well as the hosting from integration code to site automation.
+
+To find out how to do this, read [Mendix Applications on Industrial Edge](mendix-app-on-industrial-edge).
+
+## 13 Main Documents in This Category
 
 * [General](general) – information which applies to deployments in many different environments
 * [Mendix Cloud](mendix-cloud-deploy) – how to deploy to, and configure, the Mendix Cloud
@@ -95,5 +102,6 @@ To learn how to deploy your Mendix application on premises, see [How to Deploy M
 * [Cloud Foundry](cloud-foundry-deploy) – how to deploy to a Cloud Foundry-based platform
 * [Docker](docker-deploy) – how to deploy directly in a Docker container
 * [On-Premises](on-premises-design) – how to deploy on premises using Microsoft Windows or Un*x
+* [Mendix Applications on Industrial Edge](mendix-app-on-industrial-edge) – how to bring Mendix application on to the Industrial Edge
 * [Mobile App](mobileapp) – how to publish your mobile app
 * [App Services](app-services) – how to publish to the Mendix Marketplace

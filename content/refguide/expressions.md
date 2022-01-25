@@ -11,29 +11,49 @@ aliases:
 
 ## 1 Introduction
 
-Expressions changes a value based on a function or combination of functions. 
+Expressions change a value based on a function or combination of functions. 
 
 Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`).
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
-Starting from Studio Pro [8.10.0](/releasenotes/studio-pro/8.10#8100), attributes of associated objects can be accessed using multiple slashes (for example, the **Number** attribute of a single associated **CRM.Order** is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
+Attributes of associated objects can be accessed using multiple slashes (for example, the **Number** attribute of a single associated **CRM.Order** is referred to as `$customer/CRM.Customer_Order/CRM.Order/Number`).
 
 You can combine functions in an expression. In this case, you can use brackets to determine the priority and associativity of calculations. For example, the **SellingPrice** is being calculated based on the default **Price** and **Discount** attributes:
 
-```
+```sql
 $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 ```
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
 
-### 1.1 Example
+### 1.1 Examples
 
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
-```
+```sql
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
+
+{{% alert type="warning" %}}
+When an object is empty, accessing an attribute is considered invalid. If part of an expression is invalid, it will cause an exception and the result will return `false`. The object's attribute cannot be accessed and the expression cannot be evaluated. This can be crucial when evaluating multiple statements within an expression. See the examples below for more information.
+{{% /alert %}}
+
+Evaluating the expression:
+
+```sql
+$emptyObject/attribute != $validObject/attribute or $emptyObject = empty
+```
+
+will always return `false`, as long as `emptyObject` is empty. The second part of the statement never gets evaluated.
+
+To have both checks evaluated, the order of statements needs to be reversed:
+
+```sql
+$emptyObject = empty or $emptyObject/attribute != $validObject/attribute
+```
+
+This way the first statement gets evaluated.
 
 ### 1.2 Regular Expressions
 

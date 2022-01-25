@@ -445,15 +445,13 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 ## 4 Testing JavaScript Actions
 
-An extensive test project can help make a JavaScript action more robust. Within a test project, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
+An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
 When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide8/system-requirements#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
 ## 5 Debugging JavaScript Actions
-
-Mendix Studio Pro does not support nanoflow debugging in the same way it supports microflow debugging. For validating intermediate results between actions, use the **Log message** activity.
 
 Debugging a JavaScript action's code can be done within a browser development tool. For details on how to do this, see your browser's developer tools documentation at either [Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/), [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools), [Microsoft Edge Developer Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium), or Safari's [Web Development Tools](https://developer.apple.com/safari/tools/). 
 

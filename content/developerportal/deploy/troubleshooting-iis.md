@@ -8,7 +8,7 @@ tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Consol
 ---
 
 {{% alert type="info" %}}
-For the Simplified Chinese translation, click [here](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-iis.pdf).
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-iis.pdf).
 {{% /alert %}}
 
 ## 1 Introduction

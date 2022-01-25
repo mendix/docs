@@ -8,6 +8,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="info" %}}
+<img src="attachments/chinese-translation/china.png" style="display: inline-block; margin: 0" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/sort-bar.pdf).
+{{% /alert %}}
+
 ## 1 Introduction
 
 A sort bar allows end-user to sort items in a [data grid](data-grid), [template grid](template-grid) or a [reference set selector](reference-set-selector). 
@@ -16,7 +20,9 @@ The sort bar contains sort items. Each sort item specifies what attribute to sor
 
 If you do not specify any sort items, the objects will appear in the order in which they were created.
 
-For default ordering behavior of NULL values, refer to [NULL Order Behavior](null-ordering-behavior).
+{{% alert type="info" %}}
+There are special cases for ordering behavior. For more details, see [Order By Behavior](ordering-behavior).
+{{% /alert %}}
 
 ## 2 Read More
 

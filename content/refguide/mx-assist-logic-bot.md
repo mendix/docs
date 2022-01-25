@@ -9,7 +9,7 @@ tags: ["studio pro", "logic bot", mendix assist", "AI", "assist", "mx assist"]
 
 MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic (microflows) in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your microflow based on the already designed activities, parameters, and other context-related information. 
 
-MxAssist Logic Bot is built using machine learning analysis of over twelve million anonymized application logics (microflows)*—*built with Mendix*—*to detect and learn the best practice patterns in microflows.
+MxAssist Logic Bot is built using the machine learning analysis of over twelve million anonymized application logics (microflows) built with Mendix to detect and learn the best practice patterns in microflows.
 
 The key features of MxAssist Logic Bot are the following: 
 
@@ -20,29 +20,33 @@ The key features of MxAssist Logic Bot are the following:
 
 ## 2 MxAssist Logic Bot Settings
 
-To access settings of MxAssist Logic Bot, open **Edit** > **Preferences >**the **General** tab >the **MxAssist Logic Bot** tab. For more information, see [Preferences](preferences-dialog).
+You can switch MxAssist Logic Bot on and off using the **On-Off** button in the top right corner of the microflow editor:
 
-In the **MxAssist Logic Bot** tab, you can set the following: 
+![On-Off-Button](attachments/mx-assist-logic-bot/mx-assist-on-off-button.png)
+
+To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](preferences-dialog).
+
+In the **Mendix Assist** tab, section **Logic Bot**, you can set the following: 
 
 * **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
 
 * **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
 
-    ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
+  ![Suggestions for System Variables](attachments/mx-assist-logic-bot/mx-assist-system-variables.png)
 
 For more information on preferences, see [Preferences](preferences-dialog).
 
 ## 3 Using MxAssist Logic Bot to Build Microflows
 
-MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](https://docs.mendix.com/refguide/microflows). A bow-tie appears on the dot when you hover over it:
+MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows):
 
-{{% image_container width="350" %}}![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png){{% /image_container %}}
+![Logic Bot Icon](attachments/mx-assist-logic-bot/mendix-assist-icon.png)
 
 It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
 
 To use MxAssist Logic Bot, do the following:
 
-1. Click the bow-tie to see the next best action recommendations:
+1. Click the icon to see the next best action recommendations:
 
     ![Logic Bot Recommendations](attachments/mx-assist-logic-bot/mx-assist-recommendations.png)
 

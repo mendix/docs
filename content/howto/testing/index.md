@@ -1,5 +1,6 @@
 ---
 title: "Testing"
+weight: 100
 tags: ["test", "testing"]
 ---
 

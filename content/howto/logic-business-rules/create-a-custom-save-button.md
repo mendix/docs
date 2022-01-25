@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom Save Button"
 category: "Logic & Business Rules"
-menu_order: 3
+menu_order: 40
 tags: ["microflow", "logic", "save button", "how-to"]
 ---
 ## 1 Introduction
@@ -17,9 +17,9 @@ Mendix uses visual models called microflows to define the logic of your applicat
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create a basic data layer (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages))
+* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure))
 
 ## 3 Replacing the Default Save Button with a Custom One
 
@@ -57,9 +57,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
     
     ![](attachments/create-a-custom-save-button/created-microflow.png)
 
-2. Open the **Toolbox** and select the **Commit object(s)** activity there:
-
-    ![](attachments/8784287/8946802.png)
+2. Open the **Toolbox** and select the **Commit object(s)** activity there.
 
 3. Drag a **Commit object(s)** action from the **Toolbox** to the flow between the start and end events.
 4.  Double-click the **Commit object(s)** activity to open its properties.

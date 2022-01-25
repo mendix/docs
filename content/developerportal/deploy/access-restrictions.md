@@ -73,10 +73,6 @@ You can specify a number of different IP ranges. Click **New** to add a new one,
 
 For each IP range, you can specify a **Name** for the range, and a range of addresses. Mendix Cloud v4 supports both IPv4 and IPv6 format addresses.
 
-{{% alert type="info" %}}
-IPv6 addresses added to an access restriction profile will be ignored until support for IPv6 addresses is enabled on 1st July 2021.
-{{% /alert %}}
-
 ![](attachments/accessrestrict/ip-range.png)
 
 ### 2.2 Access Restriction Profiles for Mendix Cloud V3{#v3}
@@ -185,7 +181,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 10. Select your access restriction profile as the **New Restriction Profile**, and **Save** it.
 
-### 4.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
+### 4.2 Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
 
 This second scenario is an extended version of the first scenario.
 

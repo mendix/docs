@@ -1,9 +1,9 @@
 ---
 title: "Share Marketplace Content"
 category: "General Info"
-menu_order: 30
-tags: ["marketplace", "public app store", "private app store", widget", "module"]
+menu_order: 40
 description: "Describes how to create and share Mendix Marketplace content."
+tags: ["marketplace", "public app store", "private app store", widget", "module"]
 aliases:
     - /developerportal/app-store/share-app-store-content.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [Marketplace Overview](app-store-overview) and [How to Use Marketplace Content in Studio Pro](app-store-content)
 
-## 3 Marketplace Content Development Guidelines {#submission}
+## 3 Marketplace Content Development Guidelines {#guidelines}
 
 This section presents guidelines for developing content that you will submit to the Mendix Marketplace.
 
@@ -32,7 +32,7 @@ This section presents guidelines for developing content that you will submit to 
 Submitted Marketplace content will be reviewed within five working days.
 {{% /alert %}}
 
-### 3.1 General Guidelines
+### 3.1 General
 
 These are some general guidelines for creating new Marketplace content:
 
@@ -42,22 +42,21 @@ These are some general guidelines for creating new Marketplace content:
 
 You can add information the end-user should know to the component [Documentation](#doc) when you are adding the content to the Marketplace.
 
-### 3.2 Widget Guidelines
+### 3.2 For Widgets
 
 To develop widgets and submit them to Marketplace, follow these guidelines:
 
-* The widget (and test app) must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
+* The widget should be [pluggable](/howto/extensibility/create-a-pluggable-widget-one)
 * When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
 * Add code comments
 * Use descriptive variable and function names in both XML and JavaScript
-* Always add `"use strict";` functions
-* A function may not be larger than 200 lines of code
-* A function may only do one thing, and it should do it properly
-* Internal variables should start with an underscore (`_`)
-* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
-* Create test pages for mobile when content is mobile-supported
+* A function should not be more than 200 lines of code
+* A function should only do one thing, and it should do it properly
+* Use hooks and functional components over class components
+* Use TypeScript over JavaScript
+* Create test pages for mobile when content is made for mobile platforms
 
-### 3.3 Module Guidelines
+### 3.3 For Modules
 
 To develop modules and submit them to the Marketplace, follow these guidelines:
 
@@ -70,7 +69,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * Implement [user roles](/refguide/user-roles) and [security](/refguide/security)
-* Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
+* Creating a new release or module export should be done while the security level of the app containing the module is set to **Production**
 * The [status](/refguide/project-security#app-status) must be **Complete** for the following:
 	* Page access
 	* Microflow access
@@ -81,99 +80,157 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language
 
+### 3.4 For Selling App Services
+
+For details on preparing and selling your component, see [How to Sell Your App Service in the Marketplace](sell).
+
 ## 4 Adding New Marketplace Content {#adding}
 
-To add content to the Marketplace, follow these steps:
+To add content to the Marketplace, follow the steps in each section below.
 
-1.  Click **Add content** in the top-right corner of the Marketplace home screen:
+### 4.1 Getting Started
 
-	![](attachments/share-app-store-content/add-content-button.jpg)
+To start, click **Add content** in the top-right corner of the Marketplace home screen:
 
-2.  Select the type of content you would like to publish. The available types correspond to the content catalogs available on the [Marketplace home page](app-store-overview#home).
-3.  Depending on the category you selected, you may be asked to select a sub-category for your component, for example:
+![](attachments/share-app-store-content/add-content-button.jpg)
+
+Follow these steps to continue adding content:
+
+1.  On the **Upload Content** page, select the type of content you would like to publish (the available types correspond to the [Marketplace home page](app-store-overview#home)):
+
+	![](attachments/share-app-store-content/category.JPG)
+
+2.  Depending on the type you selected, you may be asked to select a sub-category for your component, for example:
 
 	![](attachments/share-app-store-content/sub-categories.jpg)
 	
-4.  Select the location where you want to publish your component:
+3.  Select the location where you want to publish your component:
 
 	* <a name="public-app-store"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private Marketplace (your company only)** – your content will receive the **Company only** label and be available only via your [Company Content](app-store-overview#company-content) page; selected private content of a user group can also be made available to [user group guests](app-store-overview#guests) for download; this content will not be reviewed by Mendix
 	
 	![](attachments/share-app-store-content/public-private.jpg)
 	
-	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
+	{{% alert type="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.
+	{{% /alert %}}
+	
+### 4.2 General {#general}
+
+On the **General** page,  you need to provide some details about your component. The information you entered above is pre-filled on this page.
+
+Follow these steps to describe your content:
+
+1. Enter a **Name** for your component.<br />
+2.  Enter a **Description** of your component.
+
+	{{% alert type="warning" %}}You can use rich text in the editor. However, using rich text at the beginning of the description is not recommended, as the rich text will not get rendered properly. You should add a few lines of regular text before using rich text.
 	{{% /alert %}}
 
-5.  The **General** page will open, where you need to provide information about your component. The information you entered above is pre-filled on this page. Enter the following details:<br />
-	a. Enter a **Name** for your component.<br />
-	b. Enter a **Description** of your component (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.").<br />
-	c. Select the **Studio Pro Version** on which you built the content.<br />
-	<a name="license"></a>d. Select the type of **License** you want applied to your app (if applicable):<br />
+3. The **Category** you selected earlier will be listed here. You can change this if necessary.
+	
+	{{% alert type="warning" %}}You can only set the category in the initial version of your content. You cannot change this setting after the inital version is published.
+	{{% /alert %}}
 
-	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)<br />
-	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)<br />
-	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<br />
-	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)<br />
-	* [MIT](https://opensource.org/licenses/MIT)<br />
-	* [SDISW Development License Agreement for Mendix Sample Apps EXTERNAL](https://diswlogin.siemens.com/login?state=g6Fo2SBHWTQ5ZWdjLUs3Znpia3dDLXR5cXJpLTd6S0VrTmpuYaN0aWTZIEtmSzh0VHZIX3NTekVOSmJxYVMzUkpyczdIZ3RWQnVno2NpZNkgRGwzckYzM25QNXlUM3BmeUpjVmlVOUtoUmRkbGN5VDI&client=Dl3rF33nP5yT3pfyJcViU9KhRddlcyT2&protocol=samlp)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Connectors_and_Widgets_EXTERNAL.pdf)<br />
-	* [SDISW End-User License Agreement for Mendix Sample Apps](https://download.industrysoftware.automation.siemens.com/download-n.php/teamcenter/product_updates/Tools/SDISW_End_User_License_Agreement_for_Mendix_Sample_Apps.pdf)
+4. Select the **Studio Pro Version** on which you built the content.
+5.  <a name="license"></a>Select the type of **License** you want applied to your app (if applicable):
 
-	![](attachments/share-app-store-content/general.jpg)
+	* [Apache V2](https://www.apache.org/licenses/LICENSE-2.0)
+	* [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+	* [Mendix EULA](https://www.mendix.com/terms-of-use/)<
+	* [MindSphere Development License Agreement](https://siemens.mindsphere.io/en/terms)
+	* [MIT](https://opensource.org/licenses/MIT)
+	* SDISW Development License Agreement for Mendix Sample Apps EXTERNAL
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets
+	* SDISW End-User License Agreement for Mendix Connectors and Widgets EXTERNAL
+	* SDISW End-User License Agreement for Mendix Sample Apps
+
+	![](attachments/share-app-store-content/general.png)
 
 6. Click **Upload an Image** to upload an icon for the component.
-7.  On each page of the upload flow, click one of the following buttons:
+7. <a name="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#drafts) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
+	* **Save Draft** to save the details you have entered so far to the [Drafts](app-store-overview#my-content) page of your Marketplace (which you can access via the **My Drafts** button in the top-right of the page)
 	* **Save & Continue** to go to the next page of the upload flow
 
-8.  On the **Package** page, select your content source:
+### 4.3 Package {#version}
 
-	* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
-		* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
-		* When you are finished, click **OK**
-	* If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
-		* When you are finished, click **Save**
-
-9.  If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. Enter **Release Notes** for the component in the box provided describing what is new in that release.
-
-	![](attachments/share-app-store-content/package.jpg)
-
-10. <a name="doc"></a>On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). Follow the template for the recommended content:
-
-	* You must fill out the following sections in order to submit your component:
-		* An extended **Description** of the component
-		* The **Typical usage scenario** for the component
-		* The **Features and limitations** of the component
-	* These sections are optional:
-		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
-		* The **Installation** steps and details
-		* The **Configuration** steps and details
-		* Any **Known bugs**
-		* Any **Frequently Asked Questions**
-
-	The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
-
-	You can attach images to your documentation in one of two ways (uploaded images cannot be resized, but linked images can):
-
-	* Drag the image from file explorer to the editor (this will upload your image)
-	* Click the Image button in the editor tools and enter a URL which points to an image
-
-11. Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
-
-	![](attachments/share-app-store-content/enable.jpg)
-	
-	You can also optionally add a **Video** and **Demo**.
-	
-12. Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
-
-	![](attachments/share-app-store-content/publish.jpg)
-
-<a name="approval"></a>After you click **Publish Content**, your draft will be reviewed by Mendix within approximately 5 working days before it is visible in the Marketplace.
+On the **Package** page, select your content source. 
 
 {{% alert type="info" %}}
-Review and approval by Mendix is required only for the first version of [Public Marketplace](#public-app-store) content. Subsequent versions of public content do not need review or approval by Mendix. [Private Marketplace](#private-app-store) content does not require any review or approval.
+If you are using **Solutions**, you will not see the option to select your content source. If you are using **Solutions Template**, selecting a content source is optional.
+{{% /alert %}}
+
+* If you select **Select from GitHub**, follow the steps in the dialog box for copying the link of the release you want to import
+	* To include the repo's *README.md* file on the component's [Documentation](#doc) tab, make sure you have checked the **Import Documentation** box 
+	* When you are finished, click **OK**
+* If you select **Manual upload**, follow the steps in the dialog box for uploading the package source file
+	* When you are finished, click **Save**
+
+If this is the first version of the component you are uploading, the number in the **Version** section of the **Package** page will be automatically set to **1.0.0**. 
+
+Enter **Release Notes** for the component in the box provided describing what is new in that release.
+
+![](attachments/share-app-store-content/package.jpg)
+
+### 4.4 Enable {#doc}
+
+On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that this documentation option is only available when the **Import Documentation** box has not been checked (on the **Package** page above). 
+
+Follow the template for the recommended content:
+
+* You must fill out the following sections in order to submit your component:
+	* An extended **Description** of the component
+	* The **Typical usage scenario** for the component
+	* The **Features and limitations** of the component
+* These sections are optional:
+	* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
+	* The **Installation** steps and details
+	* The **Configuration** steps and details
+	* Any **Compatibility** steps and details
+	* Any **Known bugs**
+	* Any **Frequently asked questions**
+
+The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
+
+<a name="screenshot"></a>Click **Add Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
+
+![](attachments/share-app-store-content/enable.png)
+	
+You can optionally add a **Video** and **Demo**.
+	
+### 4.5 Capabilities
+
+On the **Capabilities** page, you can provide the following details about a solutions template:
+
+* A category recommendation in the **Industry Cloud** section
+* A **Banner** that will be displayed on your content page
+* One or more key features to leverage in the **Solution Capabilities** section (for each capability, enter a **Name** and **Description**)
+* **External links** relevant to the content
+
+![](attachments/share-app-store-content/capabilities.png)
+
+### 4.6 Publish {#publish}
+
+Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
+
+![](attachments/share-app-store-content/publish.png)
+
+After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. See the next section on details for the approval process.
+
+### 4.7 Approval Process {#approval}
+
+All components that are to be listed in the [Public Marketplace](#public-app-store) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. 
+
+Component submissions are processed in a queue and reviewed on a first-come, first-served basis within 5 working days after submission. Mendix checks a range of requirements (for example, that the component installs properly and reports no errors, and that the documentation is clear, accurate, and of sufficient detail). 
+
+It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you follow the [content development guidelines](#guidelines) before you submit a component for approval.
+
+{{% alert type="info" %}}
+Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+[Private Marketplace](#private-app-store) content does not require any review or approval.
 {{% /alert %}}
 
 ## 5 Updating Existing Marketplace Content {#updating}
@@ -183,7 +240,7 @@ To update content that has already been published, follow these steps:
 1.  Find the component by clicking **My Marketplace** and selecting one of the following:
 	* **My Content**
 	* **Company Content**
-	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#content), you can only update the component if you are a member of that group)
+	* **User Groups** (note that if an existing Marketplace component is assigned to a [user group](app-store-overview#user-groups) as specific user group [content](app-store-overview#group-content), you can only update the component if you are a member of that group)
 	
 2.  Click **Manage** next to the component you want to update.
 
@@ -202,4 +259,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [Marketplace Overview](app-store-overview)
+* [How to Sell Your App Service in the Marketplace](sell)
 * [How to Use Marketplace Content in Studio Pro](app-store-content)

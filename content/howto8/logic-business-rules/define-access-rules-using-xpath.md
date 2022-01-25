@@ -25,17 +25,17 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     ![](attachments/18448705/18581378.png)
 
-    For more information on creating a domain model, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer).
-2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)).
-3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)).
-4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](../security/create-a-secure-app)).
+    For more information on creating a domain model, see [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer).
+2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How to Create Your First Two Overview & Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages)).
+3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure)).
+4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto8/security/create-a-secure-app)).
 
     ![](attachments/18448681/18581008.png)
     
-5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](../security/create-a-secure-app):
+5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto8/security/create-a-secure-app):
 
     ![](attachments/18448681/18581005.png)
-6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](../security/create-a-secure-app)):
+6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](/howto8/security/create-a-secure-app)):
 
     ![](attachments/18448681/18580997.png)
 

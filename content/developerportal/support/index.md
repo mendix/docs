@@ -2,6 +2,7 @@
 title: "Mendix Support"
 description: ""
 tags: ["Support", "SLA", "Gold", "Platinum"]
+weight: 30
 aliases:
     - /howtogeneral/support/index.html
 ---
@@ -90,7 +91,7 @@ If, after your analysis, you suspect there is an issue with the Mendix Platform 
 
 ## 8 Product Support Period
 
-Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your projects to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, we recommend that you upgrade your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
 
 ## 9 Support for Different Deployment Strategies {#support-by-strategy}
 
@@ -344,7 +345,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 
 If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request , create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/hc/en-us).
 
-If you wan to run Mendix apps on Windows server you will need the [Windows Service](https://docs.mendix.com/releasenotes/studio-pro/windows-service). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows).
+If you wan to run Mendix apps on Windows server you will need the [Windows Service](/releasenotes/studio-pro/windows-service). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows).
 
 If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/hc/en-us).
 
@@ -390,8 +391,8 @@ These components are not accessible for Mendix Support and issues in the applica
 
 ## 11 Main Documents in This Category
 
-* [Prepare Your App for Support](https://docs.mendix.com/developerportal/support/prepare-your-project) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
-* [Submit a Support Request](https://docs.mendix.com/developerportal/support/submit-support-request) – presents the details necessary for Mendix Support to process your request
-* [Make a New App Node Request](https://docs.mendix.com/developerportal/support/new-app-node-request-template) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
-* [Support Ticket Priority](https://docs.mendix.com/developerportal/support/ticket-priority) – describes how priority levels are determined for Mendix Support
-* [Support Escalation Process](https://docs.mendix.com/developerportal/support/escalation-management-process) – describes how a support request can be escalated to bring your issue to closure
+* [Prepare Your App for Support](prepare-your-project) – shows you how to configure project authorization to select the affected app(s) in the Mendix Support Portal
+* [Submit a Support Request](submit-support-request) – presents the details necessary for Mendix Support to process your request
+* [Make a New App Node Request](new-app-node-request-template) – describes how to deploy a new licensed node in the Mendix Cloud or on-premises/virtual private cloud
+* [Support Ticket Priority](ticket-priority) – describes how priority levels are determined for Mendix Support
+* [Support Escalation Process](escalation-management-process) – describes how a support request can be escalated to bring your issue to closure

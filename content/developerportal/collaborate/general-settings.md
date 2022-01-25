@@ -1,11 +1,12 @@
 ---
 title: "General Settings"
 category: "Collaboration"
-menu_order: 10
+menu_order: 8
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 aliases:
     - /developerportal/settings/general-settings
+    - /developerportal/settings/api-key
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.
@@ -17,7 +18,7 @@ The **General** settings page presents an overview of your app with the followin
 
 * A **Description** of the app
 * The [App Contact](/developerportal/collaborate/app-roles#app-contact) and [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) for the app
-* Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
+* Whether the app is enabled for **Mendix Studio** (for details, see the [Mendix Studio](#web) section below)
 * The **App ID**
 
 {{% image_container width="450" %}}
@@ -77,7 +78,7 @@ After clicking **Manage App Users**, you will see a list of environments for you
 
 ### 4.1 Manage Users
 
-When you click **Manage Uses** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
+When you click **Manage Users** on for your environment, you will see a page with a list of the current App Users you can remove or edit:
 
 {{% image_container width="450" %}}
 ![](attachments/general-settings/app-user-management-users.png)
@@ -106,7 +107,28 @@ The invitee will receive an email asking them to authorize access to their Mendi
 
 After they provide authorization, they will be brought to your deployed app.
 
-## 5 Editing App Info {#editing}
+## 5 API Keys {#api-keys}
+
+In **API Keys**, there is an overview of the API keys created for your app with the following information:
+
+*   **API Key Name**
+*   Date of **Creation**
+*   Date **Last Used**
+
+{{% image_container width="550" %}}![](attachments/general-settings/keys.png)
+{{% /image_container %}}
+
+To create a new app API key, click **Create API Key**  and follow these steps:
+
+1.  Fill in the **API key name**.	
+2.  Click **Generate API Key** to be able to use the app API key.
+
+	{{% alert type="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
+	{{% /alert %}}
+	
+Click **Revoke** to delete an app API key.
+
+## 6 Editing App Info {#editing}
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -123,9 +145,9 @@ Click **Edit App Info** to edit the following details:
 
 For details on the **Deactivate App**, **Leave App**, and **Delete App** options, see [How to Leave & Delete an App](/developerportal/collaborate/leave-delete-app).
 
-## 6 Managing Webhooks {#webhooks}
+## 7 Managing Webhooks {#webhooks}
 
-Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
+Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, Sprint updates and new stories) to that website. For example, if [CLEVR](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app in the Developer Portal are then sent to that URL.
 
 {{% alert type="info" %}}
 Only [Mendix Admins](/developerportal/control-center/#company) or users with the **App Settings** permission can manage webhooks.
@@ -154,11 +176,11 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
 {{% /alert %}}
 
-## 7 Leaving the App
+## 8 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 8 Read More
+## 9 Read More
 
 * [Leave & Delete an App](leave-delete-app)
 * [Manage Deep Links](manage-deeplinks)

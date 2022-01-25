@@ -70,7 +70,7 @@ The [Theme Customizer](/studio8/theme-customizer) allows you to customize your a
 
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [How to Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [How to Migrate Existing Apps to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [General Info](/studio8/general) 
 * [Page Editor](/studio8/page-editor)

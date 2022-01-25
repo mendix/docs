@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Common Native Mobile Issues"
-parent: "native-mobile"
-menu_order: 80
+parent: "get-started"
+menu_order: 40
 description: Troubleshoot common issues associated with building and running native mobile apps.
 tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 ---
@@ -16,7 +16,7 @@ To troubleshoot issues related to the [Make it Native](/refguide/getting-the-mak
 
 ### 2.1 Port Issues
 
-We recommend keeping the **Runtime port** in **App Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+We recommend keeping the **Runtime port** in your [configuration](/refguide/configuration#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 ### 2.2 Wifi Network Settings
 
@@ -50,11 +50,14 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
+### 2.4 Error: Unable to Detect Studio Pro
+
+If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
+
 ## 3 Configure Parallels
 
-To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](using-mendix-studio-pro-on-a-mac).
+To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [How to Configure Parallels](/howto/general/using-mendix-studio-pro-on-a-mac).
 
 ## 4 Read More
 
 * [How to Debug Native Mobile Apps (Advanced)](native-debug)
-* [Native Builder Reference Guide](/refguide/native-builder)

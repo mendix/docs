@@ -126,30 +126,31 @@ ATS now supports testing the recently released Mendix 7.
 
 **Release date: November 6th, 2016**
 
-### Supporting AppStore Widgets
+### Supporting Mendix Marketplace Widgets
 
 Everybody uses widgets from the Mendix Marketplace in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
 
-We've selected the top widgets from the App Store and added support for testing with ATS.
+We've selected the top widgets from the Marketplace and added support for testing with ATS.
 
 These are the new widgets now supported by ATS:
-* [Dropdown Div Converter](https://appstore.home.mendix.com/link/app/2089/Mendix/DropdownDivConverter)
-* [OnChange Inputbox/Textarea](https://appstore.home.mendix.com/link/app/89/Mendix/OnChange-Inputbox)
-* [Boolean Slider](https://appstore.home.mendix.com/link/app/1798/Mendix/Boolean-Slider)
-* [Simple Checkbox Set Selector](https://appstore.home.mendix.com/link/app/2349/Mendix/Simple-Checkbox-Set-Selector)
-* [Checkbox Set Selector](/appstore/widgets/check-box-set-selector)
-* [Grid Selector](/appstore/widgets/grid-selector)
-* [Input Reference Selector](https://appstore.home.mendix.com/link/app/99/Mendix/Input-Reference-Selector) (not supported in recording yet)
-* [CKEditor](https://appstore.home.mendix.com/link/app/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
-* [Bootstrap Wysiwyg Editor](https://appstore.home.mendix.com/link/app/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)
 
-The [Action Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference) lists the new actions.
+* [Dropdown Div Converter](https://marketplace.mendix.com/link/component/2089/Mendix/DropdownDivConverter)
+* [OnChange Inputbox/Textarea](https://marketplace.mendix.com/link/component/89/Mendix/OnChange-Inputbox)
+* [Boolean Slider](https://marketplace.mendix.com/link/component/1798/Mendix/Boolean-Slider)
+* [Simple Checkbox Set Selector](https://marketplace.mendix.com/link/component/2349/Mendix/Simple-Checkbox-Set-Selector)
+* [Checkbox Set Selector](/appstore/widgets/check-box-set-selector)
+* [Grid Selector](https://marketplace.mendix.com/link/component/266)
+* [Input Reference Selector](https://marketplace.mendix.com/link/component/99/Mendix/Input-Reference-Selector) (not supported in recording yet)
+* [CKEditor](https://marketplace.mendix.com/link/component/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
+* [Bootstrap Wysiwyg Editor](https://marketplace.mendix.com/link/component/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)
+
+The [Action Reference Guide](/addons/ats-addon/rg-one-std-actions-ref) lists the new actions.
 
 ### Action Reference Guide and Tutorial
 
 If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a Tutorial that explains how to create an action based on the example of the Boolean Slider widget.
 
-We've also documented all our actions in a [Reference Guide](/addons/ats-addon/rg-one-standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
+We've also documented all our actions in a [Reference Guide](/addons/ats-addon/rg-one-std-actions-ref). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
 
 ### Improved Recording
 

@@ -51,6 +51,7 @@ There are five main differences between nanoflows and microflows:
 3. Nanoflows are not run inside a transaction so, if an error occurs in a nanoflow, it will not roll back any previous changes.
 4. Nanoflows and microflows do not provide the same actions. Some actions available in microflows are not available in nanoflows, and vice versa.
 5. Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way expressions are executed.
+6. Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 
 ## 4 Notation & Categories
 
@@ -63,8 +64,8 @@ A nanoflow is composed of elements. The following categories are used:
 * [Decisions](#decisions) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Loop](loop) is used to iterate over a list of objects
-* [Parameter](#parameter) is data that serves as input for the microflow.
-* [Annotation](#annotation) is an element that can be used to put comments in a microflow.
+* [Parameter](#parameter) is data that serves as input for the nanoflow.
+* [Annotation](#annotation) is an element that can be used to put comments in a nanoflow.
 
 ### 4.1 Events {#events}
 
@@ -120,7 +121,7 @@ Parameters are filled at the location from where the nanoflow is triggered.
 
 ### 4.7 Annotation {#annotation}
 
-An [annotation](annotation) is an element that can be used to put comments in a microflow:
+An [annotation](annotation) is an element that can be used to put comments in a nanoflow:
 
 ![Annotation](attachments/microflows-and-nanoflows/annotation.png)
 
@@ -149,10 +150,6 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 6 Nanoflow Debugging
-
-Step-by-step debugging is not supported yet. For now, we recommend using a log message activity, which is shown in the console log of Studio Pro.
-
-## 7 Security
+## 6 Security
 
 Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.

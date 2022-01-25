@@ -17,6 +17,12 @@ The backup can be stored in the cloud, associated with the environment from whic
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions) for more information.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+You cannot transfer data from one app to another by restoring a backup from one app to a different app. This is because each app labels the entities uniquely, even if the name in the domain model is the same. See [Data Storage](/refguide/data-storage) for more information.
+
+If you want to copy data to another app, we recommend using the [Database Replication](/appstore/modules/database-replication) module.
+{{% /alert %}}
+
 ## 2 Restoring a Backup for the Same Licensed Cloud Node{#restore-cloud-backup}
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.
@@ -40,6 +46,12 @@ If you want to restore a backup to a different cloud node, or have your backup s
 {{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
+
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+
+You can choose to restore only the database by selecting **DB only restore**. Doing a DB only restore will not restore any of your files leading to a risk that data will be missing from your app or that your app will not work as expected. Use this option with caution.
 
 {{% /alert %}}
 
@@ -133,7 +145,7 @@ This contains the *db.backup* file. This is a PostgreSQL dump file created using
 {{% alert type="warning" %}}
 If the dump does not use the *custom format* then the restore will fail.
 
-The dump must be created with pg_dump version 9.6.17 or below. If it is created with a later version, then the upload will fail.
+The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12 and 13. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
 ### tree folder

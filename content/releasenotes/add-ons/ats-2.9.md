@@ -9,7 +9,7 @@ parent: "ats-2"
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22) can now be recorded and tested with ATS.
 
 ### Improvements
 
@@ -40,7 +40,7 @@ In previous versions, the Set Value function typed in a value in an input field 
 
 Since ATS version 2.9.4, the Set Value function unfocuses the widget after setting the value and waits for the on-change and on-leave microflows to finish before proceeding with the next steps in a test case. We hope that this makes tests more stable when on-change microflows are used, since the wait ensures that such microflows have finished executing before proceeding with the test.
 
-We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a support ticket.
+We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a Support ticket.
 
 ## 2.9.3
 

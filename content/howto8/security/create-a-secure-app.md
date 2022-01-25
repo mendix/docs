@@ -20,9 +20,9 @@ You will start with the configuration of user and module roles for access to pag
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](../front-end/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
+* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for details, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure))
 * Know how to add action buttons (for details, see [Button Widgets](/refguide8/button-widgets))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data

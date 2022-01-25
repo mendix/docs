@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "saml", "idp", "identity provider
 
 ## 1 Introduction
 
-The [SAML](https://appstore.home.mendix.com/link/app/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
+The [SAML](https://marketplace.mendix.com/link/component/1174/) module can be used as a replacement or extension of your supported authentication methods. The module allows you to authenticate your user using SAML 2.0 or the Shibboleth protocol.
 
 By configuring the information about all identity providers in this module, you will allow the users to sign in using the correct identity provider (IdP). There is no limit on the number of different identity providers you can configure.
 
@@ -27,6 +27,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 
 ### 1.4 Dependencies
 
+{{% alert type="warning" %}}
+If you are running your app outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements#file-storage) configured. The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
+{{% /alert %}}
+
 * [MxModelReflection](/appstore/modules/model-reflection)
 
 ## 2 Installation
@@ -42,6 +46,10 @@ With this module, you can authenticate against your Microsoft Active Directory s
 ## 3 Configuration
 
 Before any IdP can be configured, you need to configure the service provider (SP), which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+
+{{% alert type="info" %}}
+The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
+{{% /alert %}}
 
 You can choose what you want to enter for the entity ID, organization, and contact person. There are no limitations here. This should be in line with the policies of the IdP, since all this information is for their reference. 
 
@@ -75,6 +83,10 @@ Each IdP (entity descriptor) should have its own configuration set. Every IdP ca
 
 * **IdP Metadata Location** – The module is capable of re-importing all IdP metadata files on a daily basis. You can also choose to import the metadata from a file.
 	* **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
+
+{{% alert type="info" %}}
+If you want to automatically synchronize the IdP metadata, go to **\_USE ME** > **Scheduled Events** in the **App Explorer**, double-click **SE_SynchronizeIdPMetadata** and select **Yes** for **Enabled** to enable the automatic synchronization of the IdP metadata. 
+{{% /alert %}}
 
 #### 3.2.3 User Provisioning 
 

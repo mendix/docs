@@ -7,9 +7,9 @@ tags: ["studio pro", "import app package"]
 ---
 ## 1 Introduction
 
-To create a new app from a Mendix app package (*.mpk*) file, you need to import a app package. The new app can either be stored in a version control server or locally on disk.
+To create a new app from a Mendix app package (*.mpk*) file, you need to import an app package. The new app can either be stored in a version control server or locally on disk.
 
-To import a app package, do the following:
+To import an app package, do the following:
 
 1. Select the **File** menu in the top bar > **Import App Package** 
 

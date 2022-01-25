@@ -65,7 +65,7 @@ toc-level: 1
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](../studio-pro/7.4)).
+* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4).
 
 ### Limitation
 

@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
-* Install [Node.js](https://nodejs.org) v12.0.0 or any higher version.
+* Install the LTS version of [Node.js](https://nodejs.org).
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
 	```shell
@@ -91,7 +91,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 	* License: {*Apache-2.0*}
 	* Initial version: {*1.0.0*}
 	* Author: {*Mendix*}
-	* Mendix app path: {*./test/MxTestProject/*}
+	* Mendix app path: {*./test/MxTestApp/*}
 	* Programming language: {**TypeScript**}
 	* Widget type: {**For native mobile apps**}
 	* Widget template: {**Empty widget (recommended for more experienced developers)**}
@@ -103,7 +103,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 
 	`> Widget successfully built!! Please open Mendix Studio Pro and start playing with your new widget.`
 
-Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded pluggable widget app project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded pluggable widget app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
 ### 3.2 Creating a Mendix Test App
 
@@ -114,7 +114,7 @@ In order to test your group box widget, you will a Mendix application that uses 
 3. Select the **Blank** app (do not select **Blank App**).
 4. Click the **Use this starting point** button
 5. Fill in the following details in the **App Settings** dialog box:
-	* App name: *GroupBoxTestProject*
+	* App name: *GroupBoxTestApp*
 	* Enable online services: *No*
 6. Click **Create app**.
 
@@ -127,13 +127,13 @@ Optionally, you can remove all unused widgets to optimize the debugging process.
 Follow these steps to add the Mendix app as a test app to your widget app, so that you can start modeling with the new widget:
 
 1. Close the app in Mendix Studio Pro by clicking **File** > **Close App**.
-2. Move the contents of the Mendix app folder into **test/MxTestProject**, which is located inside your group box widget app folder.
+2. Move the contents of the Mendix app folder into **test/MxTestApp**, which is located inside your group box widget app folder.
 
 Create a test case by following these steps:
 
-1. Open the Mendix test app in **test/MxTestProject** by selecting **File** > **Open App**.
+1. Open the Mendix test app in **test/MxTestApp** by selecting **File** > **Open App**.
 2. In the **Open App** dialog box, select **Locally on disk**.
-3. Open the *GroupBoxTestProject.mpr* file inside your group box widget app folder.
+3. Open the *GroupBoxTestApp.mpr* file inside your group box widget app folder.
 4. Open **Home_Native** page.
 5.  Copy the **Home** container and paste it underneath that container:
 
@@ -202,12 +202,12 @@ Define the structure and default style of the group box widget with these steps:
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test app:
 
 	```shell
-	$ npm run dev
+	$ npm start
 	```
 
 	The executed script will keep watching your source files and rebundle the widget every time you save one of these files.
 
-6. Open your Mendix test app in **test/MxTestProject** in Mendix Studio Pro.
+6. Open your Mendix test app in **test/MxTestApp** in Mendix Studio Pro.
 7. Run the app locally.
 8. Verify with the Make It Native app that your app looks like the image below:
 
@@ -540,7 +540,7 @@ You will also want Mendix developers to be able to fill content in the group box
 	```tsx
 	render(): ReactNode {
 		const { children, headerCaption } = this.props;
-
+	
 		return (
 			<View style={this.styles.container}>
 				<View style={this.styles.header}>
@@ -860,9 +860,9 @@ The next step is to allow a Mendix developer to use a custom icon in the clickab
 				{this.renderIcon()}
 			</View>
 		);
-
+	
 		const Touchable: ComponentClass<any> = Platform.OS === "ios" ? TouchableOpacity : TouchableNativeFeedback;
-
+	
 		return <Touchable onPress={this.toggleCollapsed}>{view}</Touchable>;
 	};
 	```
@@ -1090,83 +1090,12 @@ First change the widget property configuration:
 
 	![Group box icon](attachments/build-native-widget/group-box.png)
 
-	b. Generate a Base64 representation of the *.png* file:
+	b. Rename the file to *GroupBox.icon.png*
 
-	**— For Windows**:
+	c. Add the file to the *src* folder which contains the *xml* file
 
-	i. Open command prompt.<br />
-	ii. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
-	iii. Execute the following command to generate the Base64 representation:<br />
-	
-	```shell
-	$ certutil -encode GroupBox.png data.b64
-	```
-	
-	Upon success, you will see a **data.b64** file in the same location as your original image.
-	
-	**— For Unix**:
-	
-	i. Open a terminal.<br />
-	ii. Change the current working directory to the folder where the "GroupBox.png" is stored.<br />
-	iii. Execute the following command to generate the Base64 representation:<br />
-	
-	```shell
-	$ base64 -i GroupBox.png -o data.b64
-	```
-	
-	Upon success, you will see a **data.b64** file in the same location as your original image.
-	
-	c. Add **data.b64** to the icon element in the *.xml* file. For ease, the contents of the file you made is included below. You can simply copy and paste this snippet with its binary Base64 representation included into your *xml* file:
-
- 	```xml
-	<?xml version="1.0" encoding="utf-8" ?>
-	<widget id="com.mendix.widget.native.groupbox.GroupBox" pluginWidget="true" offlineCapable="true" supportedPlatform="Native"
-		xmlns="http://www.mendix.com/widget/1.0/"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-		<name>Group box</name>
-		<description />
-		<icon>iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAHdbkFIAAAAAXNSR0IArs4c6QAA ArVJREFUeAHtWk12gjAQBl4X9Q72PsVFnxufN+ihegOfG18XtfeRO9gVNBMZDPlx gIAQGDcxmczMN99MQohGkc9nt9sVCWVgChNiAAloKbBuOaU9hTBJDPGjKI7HYyyJ 2u/3aZ7nP24y7BIw8AIiUIZO+v2XFnlhGPrdrmqOYC4i80oVGJLY0JodqH0UdUgW 7er30fEN3LGM9c0njZlI45sEjilpEwXqyEpExffT1Vj7AmJ23q6kp1Lp7lko1gxg yaJBva0qTxFUBhCSImv+tYsy6oxfiYwgirw56KeQmpfcBGfetnUBDEv7WRhxYVc5 QMcowH7frR6oAQAdpqfrRWxua+xTrb6VCUcXoVPpuwJzAsBNlHLskguHt+3eNaEc NwDoFBH63mIDgIsqb0+lAT1A753EFxgDYAaYAXUfyMSSWuvr1HeZsf7kGVAPJLXH 55DIkyTZHA6HM/hQl2H17B7SOdhWrwXUVSD9Lu5paDCA9Lc5ksVJvDl/vMqcor56 JFNzjnJs1RrAMdm2OQ9GefFVU751qpoSObfJ5SwnA/oh0+Lg4VDTWnIy8NB6j0KD gWc/C6bHQNPcdc2CzvDoDDAAZoAZYAaYAWaAGVjsiSjreqBhPWZgbgxU9yMYmPpO i2Mzams/HUNctgdB9U49o8AxFCM24zmAM7Ed+j0R/QzV6u+huh9bBehzZt0nK0CP vs29ma5L9dW/e7jmEnuUscZddnC8fQUk8ScARQN9tdKmsE3ZE5eNMMfmPytllIma vHUFlDehjX4PrnnqqVPervfmv30F9BTIVMyQFUDtolMJpCsOrgCKOT4HUAwFLl/8 EmACAq9gb/hcAd4UBm6AKyDwBHrD5wrwpjBwA1wBgSfQGz5XgDeFgRtYfAXwjZBe wfAXTzFmu3XVp4bWh1tjiI0/zIDCwD+0qr6OmQMSvQAAAABJRU5ErkJggg==</icon>
-		<properties>
-			<propertyGroup caption="General">
-				<propertyGroup caption="General">
-					<property key="content" type="widgets" required="false">
-						<caption>Content</caption>
-						<description>Widgets to place inside.</description>
-					</property>
-					<property key="collapsible" type="enumeration" defaultValue="no">
-						<caption>Collapsible</caption>
-						<description />
-						<enumerationValues>
-							<enumerationValue key="no">No</enumerationValue>
-							<enumerationValue key="yesStartExpanded">Yes (start expanded)</enumerationValue>
-							<enumerationValue key="yesStartCollapsed">Yes (start collapsed)</enumerationValue>
-						</enumerationValues>
-					</property>
-				</propertyGroup>
-				<propertyGroup caption="Header">
-					<property key="headerCaption" type="string" required="false">
-						<caption>Caption</caption>
-						<description />
-					</property>
-					<property key="expandIcon" type="icon" required="false">
-						<caption>Expand icon</caption>
-						<description>Icon used to indicate that the group box can be expanded.</description>
-					</property>
-					<property key="collapseIcon" type="icon" required="false">
-						<caption>Collapse icon</caption>
-						<description>Icon used to indicate that the group box can be collapsed.</description>
-					</property>
-				</propertyGroup>
-				<propertyGroup caption="Common">
-					<systemProperty key="Name" />
-					<systemProperty key="Visibility" />
-				</propertyGroup>
-			</propertyGroup>
-		</properties>
-	</widget>
-	```
-
-5. Save the *.xml* file.
+	{{% alert type="info" %}}This functionality was introduced in Studio Pro v9.6. To show a widget icon in Studio Pro v9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget#adding-a-collapsible-property) version of this document.
+	{{% /alert %}}
 
 Now support this section's two features with your display component:
 
@@ -1264,11 +1193,11 @@ Now support this section's two features with your display component:
 	render(): ReactNode {
 		const renderedHeader = this.renderHeader();
 		const renderedContent = this.renderContent();
-
+	
 		if (!renderedHeader && !renderedContent) {
 			return null;
 		}
-
+	
 		return (
 			<View style={this.styles.container}>
 				{renderedHeader}
@@ -1320,7 +1249,7 @@ The last thing to do is change the container component so that the properties ge
 
 Although you have an extensively featured group box widget, you can still improve its styling. Currently, the widget receives basic styling which has been baked its code. You can make the Mendix Client override this default styling by defining a custom default style for the widget in Atlas UI. To define a custom default style, follow these steps:
 
-1. Open **test/MxTestProject/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
+1. Open **test/MxTestApp/theme/styles/native/app/custom.js**. This file will let you define a custom default style for your group box widget.
 
 2. Add the following imports and constant to *custom.js* to define a default custom style:
 
@@ -1351,7 +1280,7 @@ Although you have an extensively featured group box widget, you can still improv
 
 It would be nice to provide the developer with some pre-defined styles that can be used for the group box. Create three style classes for the group box based on the brand colors success, warning, and danger:
 
-1. In **test/MxTestProject/theme/styles/native/app/custom.js**, add the following constants to end of the file:
+1. In **test/MxTestApp/theme/styles/native/app/custom.js**, add the following constants to end of the file:
 
 	```js
 	export const groupBoxSuccess = {
@@ -1398,11 +1327,11 @@ It would be nice to provide the developer with some pre-defined styles that can 
 
 	![warning styling](attachments/build-native-widget/10-warning-styling.png)
 
-Defining all the different styles inside **test/MxTestProject/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
+Defining all the different styles inside **test/MxTestApp/theme/styles/native/app/custom.js** can make your code less readable. To prevent this, extract the styles specifically for the group box widget and store them in a separate file:
 
-1. Create a new file **test/MxTestProject/theme/styles/native/app/group-box.js**.
-2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
-3. Add the following import to **test/MxTestProject/theme/styles/native/app/custom.js**:
+1. Create a new file **test/MxTestApp/theme/styles/native/app/group-box.js**.
+2. Move all the code from **test/MxTestApp/theme/styles/native/app/custom.js** into the new file.
+3. Add the following import to **test/MxTestApp/theme/styles/native/app/custom.js**:
 
 	```js
 	export * from "./group-box";
@@ -1414,7 +1343,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 
 The developer needs to have the class names memorized to apply a certain group box style. By using a design property this will no longer be necessary:
 
-1. Open **test/MxTestProject/theme/settings-native.json**.
+1. Open **test/MxTestApp/theme/settings-native.json**.
 2. At the bottom after the "com.mendix.widget.native.slider.Slider" property, add the following property:
 
 	```json
@@ -1456,7 +1385,6 @@ The developer needs to have the class names memorized to apply a certain group b
 7. Rerun the app locally and verify the new success style in the Make It Native App:
 
 	![mobile success](attachments/build-native-widget/11-success.png)
-	
 ## 4 Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets)

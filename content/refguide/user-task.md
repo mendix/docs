@@ -22,7 +22,6 @@ When the workflow reaches the user task activity, the task is created and will b
 User task properties consist of the following sections:
 
 * [Common](#common)
-* [Data]( #data)
 * [Display information](#display-info)
 * [Due date](#due-date)
 * [Events](#events)

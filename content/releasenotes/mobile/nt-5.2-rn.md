@@ -5,6 +5,15 @@ menu_order: 10
 description: "Native Template 5.2 release notes."
 ---
 
+## 5.2.8
+
+**Release date: January 25th, 2022** 
+
+### Fixes
+
+* We identified and fixed an issue that would stop the "Navigate To" action to launch Google Maps on Android OS version 11 and later.
+
+
 ## 5.2.7
 
 **Release date: November 5th, 2021** 

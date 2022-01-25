@@ -156,12 +156,10 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Win a Mendix Hackathon! | 300 | N/A |
 | Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
-| Organize a [Mendix Meetup ](https://www.meetup.com/nl-NL/pro/mendix-maker-community/)  | 100 | N/A |
 | Complete your Mendix Profile | 50 | N/A |
 | Make your Mendix Profile public | 50 | N/A |
 | Attend a Mendix Hackathon | 50 | N/A |
 | Successfully refer a friend to Mendix | 25 | N/A |
-| Attend a Mendix Meetup | 25 | N/A |
 | Invite a friend to Mendix | 5 | 50 |
 | Have a user sign up via your referral URL | 5 | 50 |
 
@@ -239,7 +237,7 @@ Here you can tell the Mendix community about yourself and your work experience. 
 
 ### 10.3 Social {#social}
 
-Here you can connect your social accounts for **Meetup**, **Twitter**, and **LinkedIn**.
+Here you can connect your social accounts for **Twitter** and **LinkedIn**.
 
 ### 10.4 Security {#security}
 

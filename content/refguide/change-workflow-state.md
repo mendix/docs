@@ -1,7 +1,7 @@
 ---
 title: "Change Workflow State"
 parent: "workflow-activities"
-menu_order: 15
+menu_order: 20
 tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
 

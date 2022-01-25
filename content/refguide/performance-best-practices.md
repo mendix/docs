@@ -4,7 +4,7 @@ description: "Describes Mendix best practices on optimizing an app performance."
 parent: "mx-assist-performance-bot"
 tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchors <mxp001-mxp011> below are all mapped, so they should not be removed or changed.
+#The anchors <mxp001-mxp012> below are all mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -197,3 +197,12 @@ When you use two or more levels of nesting, page performance may be affected due
 ### 10.1 Steps to Fix
     
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
+
+## 11 Avoid Repeatedly Committing a Variable [MXP012] {mxp012}
+
+A microflow with a repeatedly committed variable may cause longer-running transactions, which may impact performance.
+
+### 11.1 Steps to Fix
+
+Refactor the microflow so that the variable is only committed once in the flow.
+

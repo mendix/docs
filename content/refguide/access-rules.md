@@ -18,6 +18,10 @@ Access rules are not inherited from an entity's [generalization](entities#genera
 If the entity has a generalization with access rules defining XPath constraints, these will not apply to its specializations and will therefore not limit its visibility.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+The System.User entity has inbuilt access rules where access is given to its attributes if the user can manage the role of that user.
+Specializations of System.User (such as Administration.Account) can not restrict this access with their own access rules.
+{{% /alert %}}
 
 ## 2 Properties
 

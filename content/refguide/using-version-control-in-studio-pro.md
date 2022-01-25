@@ -237,15 +237,7 @@ When you want to merge the whole branch back to the main line to integrate the f
 
 2. Choose **Version Control > Merge changes here**.
 
-3. Depending on the version control you are using, do one of the following:
-
-    1.  **For SVN**, choose **Merge feature branch**:
-
-        ![](attachments/using-version-control-in-studio-pro/2018-02-28_14-05-23.png)
-
-    1. **For Git**, select the branch you would like to merge from the **Branch line** drop-down list:
-
-        ![](attachments/using-version-control-in-studio-pro/merge-git.png)
+3. Select **Merge feature branch** option.
 
 4. Click **Merge**.
 

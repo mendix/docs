@@ -19,7 +19,7 @@ In this document you will learn to add badge functionality to your app, as well 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
-* Install the [Make It Native](/refguide8/getting-the-make-it-native-app) app on your mobile device
+* Install the [Make It Native](/refguide/getting-the-make-it-native-app) app on your mobile device
 * Complete the preceding tutorial in this [Use Local Notifications](local-notif-parent) series
 
 ## 3 Setting a Badge Number
@@ -107,4 +107,4 @@ Congratulations! You successfully implemented basic badge clearing. Next, in [Ho
 
 ## 5 Read More
 
-* [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions)
+* [Build JavaScript Actions](/howto/extensibility/build-javascript-actions)

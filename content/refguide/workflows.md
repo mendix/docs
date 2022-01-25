@@ -162,8 +162,6 @@ Now when you run this microflow, it will trigger the selected workflow.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
-{{% todo %}}[Is information in this section still relevant?]{{% /todo %}}
-
 There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
 
 You can find the following workflow-related entities in the System module: 

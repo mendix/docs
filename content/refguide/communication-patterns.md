@@ -54,10 +54,6 @@ A basic scenario using an *Employee* entity can be modeled in Mendix using the f
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
 
-{{% alert type="warning" %}}
-The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server (for example, in a microflow) to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
-{{% /alert %}}
-
 ### 3.1 Read the Objects Required to Display a Datagrid
 
 Displaying a list of objects in a data grid consists of the following steps:
@@ -378,7 +374,17 @@ Refresh the data grid:
    }
 }
 ```
- 
+
+### 3.5 Security Issues
+
+The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server (for example, in a microflow) to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
+
+<!-- Diagram created here:
+https://www.plantuml.com/plantuml/uml/ZL9DRzD04BtxLmpD6QajAX8zL7NY-5IaYd3CPUATn4Fsm-pE9WJ2VySV8Tv64U9axvitRzxEs-SWw2KQdRsJcWp1IaVQU3naOSksGOy6LbXjDzv5gsPEEm-JVSr22I7GzqYs8lYLvPKuNpeh9-hjnuTYce_mWdyItDzckVTkVy7fe3Fdxdu4hcXDdLVaXq91r2osXwcEbBtmcbxOKbgVv1_c3-Lqh2NtIUklw8KhRj1AOlK2lZ3pEyFE3iH07JZBf-Mdh1axuEOpMSK_OAQPhDm01gZwt_FOD-mlqGeRWWNv7VcU7lfVc1HtvNrPlA4NABZ2G32PjtFBUTRRUF_qz7V68tprlDcqOEK9XPq5jmPBUt2hRrH9vvvtA7Hgo8PFBp7C7HKCLzwjjTk3k46E4gMbNP10S8O0HJoleb0OvGUnRFWaygt3l6dqeJrMqRCSm4TDOMddfcaFKgToxH6bnxfxBgroBMQTG8qx0gmg2Yt7ZLEIFIp8gfDhTRQyPwbT72HhLefiQbxHXVrqEp7qvWiEZSR3MV5I1NXmg0OUgNz45737TjC597MosYkXmFLKEWNgcizsNZ44K2W8Q-_CwH6c5nka_okdBb_gKqaJSQ1eZL4Bx5172adh-3mVOUQCORcoqkFnc3sJLT7eFm00
+-->
+
+![](attachments/communication-patterns/attribute-security.png)
+
 ## 4 Executing Business Logic
 
 The business logic is modeled using microflows in Mendix. The following sections present some typical flows involving microflows.

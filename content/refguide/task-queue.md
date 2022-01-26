@@ -74,13 +74,16 @@ When choosing the number of threads for a task queue, use the following guidelin
     
 ### 2.3 Queueing Microflow Executions
 
-#### 2.3.1 In Studio Pro
+#### 2.3.1 In Studio Pro {#sp}
 
 In Studio Pro, a [Call Microflow](microflow-call) activity can start a microflow in a Task Queue.
 
 1. Edit the **Call Microflow** activity.
 2. Check the box **Execute this Microflow in a Task Queue**.
 3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
+4. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy:
+    - with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
+    - with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
 #### 2.3.2 Through the API
 

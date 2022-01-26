@@ -75,6 +75,7 @@ If you want a microflow to call a microflow to run in the background using a tas
 
 1. Check **Execute this Microflow in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
+3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](task-queue).
 

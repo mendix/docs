@@ -65,27 +65,24 @@ Synchronization performed using a UI element (for example, a button or an on-cha
 
 ### 2.2 Synchronization Phases
 
-The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database.
+The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works at the database level. That means that new uncommitted objects and attribute changes are not synchronized.
 
 #### 2.2.1 Upload Phase {#upload}
 
-The upload phase begins with a referential integrity validation of the new or changed objects that should be committed to the server. This validation checks each to-be-committed object's references to other objects. If this validation fails, the synchronization is aborted and an error message is shown (if the error is not caught).
+The upload phase executes the following operations:
 
-During [full synchronization](#full-sync) this validation ensures that all referenced objects are committed to the local database. If a referenced object is created on the device and not yet committed to the local database, synchronization is aborted to prevent an invalid reference value on the server database. Note that synchronization only works on the database level.
-
-For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object will yield an invalid `Country` object reference, which will break the app's data integrity. If a synchronization is triggered while data integrity is broken, the following error message will appear (indicating an error in the model to fix): **Sync has failed due to a modeling error. Your database contains objects that reference uncommitted objects: object of type `City` (reference `City_Country`)**. To fix this, such objects must also be committed before synchronizing (in this example, `Country` should be committed before synchronizing).
-
-During [selective synchronization](#selective-sync), an additional referential integrity validation is performed to ensure that all referenced objects are at least synchronized once to the server database or included in the selection.
-
-For example, synchronizing only a committed `City` object referencing an offline `Country` object (created on the device and committed to the local database but not yet synchronized) would break the integrity of the `City` object on the server database since the `Country` object is not stored in the server database. In this case a similar error message will appear, indicating that it is a modeling error. To fix this, such objects must be selected for synchronization. In this example, `Country` should either be selected with synchronization or synchronized before attempting to synchronize `City` object.
-
-The upload phase executes the following operations after validation:
-
-1. The local database can be modified only by committing or deleting an object. Such an object can be a new object created while offline, or it can be an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last synchronization. This detection differs per synchronization type. For **Synchronize all**, all committed objects in the local database are selected. For **Synchronize objects**, all committed objects from the list of selected objects are selected.
-2. There might be objects deleted from the local database since the last synchronization. The upload phase checks which objects have been deleted.
-3. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-4. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request. Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before it is downloaded.
-
+1. <a name="upload-step-one"></a>As the local database can be modified only by committing or deleting an object, such an object can be either a new object created while offline or an existing object previously synced from the server. The upload phase detects which objects have been committed to the local database since the last sync. The detection logic differs per sync type. For **Synchronize all**, all committed objects in the local database are checked. For **Synchronize objects**, all committed objects from the list of selected objects are checked.
+2.  <a name="upload-step-two"></a>There might be objects deleted from the device database since the last sync. The upload phase checks which objects have been deleted.
+   
+   {{% alert type="warning" %}}
+   Deleting an object from the device database is only supported in Studio Pro 9.7 and higher.
+   {{% /alert %}}
+   
+3. <a name="upload-step-three"></a>If there are any changed or new file objects their content is uploaded to the server and stored there temporarily. Each file is uploaded in a separate network request. If a file upload fails, the whole sync is aborted without causing any changes to the server or device database.
+4. <a name="upload-step-four"></a>All the changed and new objects are sent to the server, and the content of the files is linked to the objects. The server performs referential integrity validation of the objects (for more information, see the [Dangling References](#dangling-references) section below). The objects are committed to the server database. Information about deleted objects is also sent to the server so the server can delete them from its database too. This step is performed in a single network request.
+5. <a name="upload-step-five"></a>Any configured before- or after-commit or before- or after-delete event handlers on these objects will run on the server as usual: after the data has been uploaded and before the device database is updated. 
+   This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
+   Before- and after-commit event handlers for new objects will also be executed.
 
 #### 2.2.2 Download Phase {#download}
 
@@ -140,11 +137,11 @@ Synchronization requires a connection to the server, so during synchronization, 
 
 The synchronization is atomic, which means that either everything or nothing is synchronized. Exceptions are described in the [Model- or Data-Related Errors](#othererrors) section below.
 
-If a network error happens during the file upload (via [step 2 in the upload phase](#steptwo)), Mendix retries to upload the failed files. If there is an error for the second time, the synchronization is aborted. The changes at that moment are kept on the local device, so it can be retried later.
+If a network error happens during the file upload (via [step 2 in the upload phase](#upload-step-two)), Mendix retries to upload the failed files. If there is an error for the second time, the synchronization is aborted. The changes at that moment are kept on the local device, so it can be retried later.
 
-If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
+If a network error occurs while uploading the data (via [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#upload-step-two) will be uploaded again during the next synchronization.
 
-If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
+If a network error (such as a timeout) occurs after uploading the data (at [step 3 in the upload phase](#upload-step-three)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device cannot distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -158,10 +155,31 @@ During the synchronization, changed and new objects are committed. An object's s
 * A member of the object has become inaccessible due to access rules
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
+* The object has a dangling reference (for more information, see the [Dangling References](#dangling-references) section below)
 
 {{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-### 2.6.3 Preventing Synchronization Issues {#prevent-sync-issues}
+#### 2.6.3 Dangling References {#dangling-references}
+
+During synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. his validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
+
+For example, when a committed `City` object refers to an uncommitted `Country` object, synchronizing the `City` object alone will yield an invalid `Country` object reference, which will trigger a dangling reference error upon synchronization.
+
+A dangling reference error is a modeling error.
+
+To prevent dangling errors during selective synchronization, make sure that for every object selected for the sync any other referenced objects that have been created on the device but not yet synchronized are also selected for the sync. Alternatively, you can synchronize these objects first.
+
+To prevent dangling reference errors during full synchronization, make sure both sides of the association are committed before synchronizing.
+
+When some of the synchronized objects have dangling references, the server will synchronize all other objects except the ones with dangling references. For the objects with dangling references, the server will create a synchronization error and store it in the `System.SynchronizationError` entity. In such a situation you will see an error message like this:
+
+```
+Synchronizing an object of type City with GUID {123} has failed due to a modelling error. The object has a reference to other objects (City_Country) that have not been synchronized to the runtime yet. This breaks referential integrity of the object because it references a non-existing object in the runtime database. Please make sure that you synchronize the referenced object together with the City or before synchronizing the City.
+```
+
+To prevent data loss, an error object contains a JSON representation of the data of an object that caused the error.
+
+### 2.7 Preventing Synchronization Issues {#prevent-sync-issues}
 
 To avoid the problems mentioned above, we suggest following these best practices:
 
@@ -172,7 +190,7 @@ To avoid the problems mentioned above, we suggest following these best practices
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-### 2.6.4 Conflict Resolution {#conflict-res}
+### 2.8 Conflict Resolution {#conflict-res}
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 
@@ -237,7 +255,7 @@ To be able to switch the language of a Mendix app, a device must be online and h
 
 ### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
 
-To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over the air updates, see [How to Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota).
+To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over-the-air updates, see [How to Release Over the Air Updates with Mendix](/howto/mobile/how-to-ota).
 
 To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
 

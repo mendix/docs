@@ -136,6 +136,7 @@ The most up-to-date list of supported languages in your version of Studio Pro is
 | Italian | Switzerland | it_CH | 9.0.5 |
 | Japanese (Gregorian calendar) | Japan | ja_JP | 9.0.5 |
 | Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 |
+| Kazakh | Kazakhstan | kk_KZ | 9.10.0 |
 | Khmer | Cambodia | km_KH | 9.0.5 |
 | Kinyarwanda | Rwanda | rw_RW | 9.3.0 |
 | Korean | South Korea | ko_KR | 9.0.5 |

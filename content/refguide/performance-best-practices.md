@@ -198,6 +198,14 @@ When you use two or more levels of nesting, page performance may be affected due
     
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
 
+## 11 Avoid Repeatedly Committing a Variable [MXP012] {#mxp012}
+
+A microflow with a repeatedly committed variable may cause longer-running transactions, which may impact performance.
+
+### 11.1 Steps to Fix
+
+Refactor the microflow so that the variable is only committed once in the flow.
+
 ## 12 Negating XPath Entity Access Rules [MXP013] {#mxp013}
 
 An entity with a large amount of data and access rules that are each negating one another, may cause performance issues.
@@ -207,3 +215,5 @@ If two access rules differ only by negation, either by using `not()` or `= false
 ### 12.1 Steps to Fix
 
 Try to avoid negating XPath rules. Otherwise your app may require database tuning if there are a large number of objects.
+
+

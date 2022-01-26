@@ -10,6 +10,17 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+## January 27th, 2022
+
+#### Improvements
+
+* Notification menu added to the top menu header.
+* Counts are added to the Catalog page, so that users can now see the total numbers of Associations, Attributes and Datasets.
+
+#### Fixes
+
+* We fixed a bug that was causing file uploader to get stuck in case of uploading an empty file.
+
 ### January 21st, 2022
 
 #### Improvements

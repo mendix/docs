@@ -104,7 +104,7 @@ This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/s
 
 ### 8.1 Update Microflow
 
-A published OData resource can be updatable, and the default behaviour is to save to the database. With update microflow, now, the default behaviour can be changed. You can define a microflow that accepts two parameters as input:
+A published OData resource can be updatable, and the default behavior is to save to the database. You can change the default behavior with **Update microflow** by defining a microflow that accepts two parameters as inputs:
 
-- `System.HttpRequest`
-- Resource entity
+* `System.HttpRequest`
+* Resource entity

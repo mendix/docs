@@ -198,7 +198,7 @@ When you use two or more levels of nesting, page performance may be affected due
     
 To fix this issue, consider restructuring your current page and adding a new one. For example, you can add a pop-up page.
 
-## 11 Avoid Repeatedly Committing a Variable [MXP012] {mxp012}
+## 11 Avoid Repeatedly Committing a Variable [MXP012] {#mxp012}
 
 A microflow with a repeatedly committed variable may cause longer-running transactions, which may impact performance.
 

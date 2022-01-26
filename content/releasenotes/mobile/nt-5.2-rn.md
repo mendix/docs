@@ -11,8 +11,7 @@ description: "Native Template 5.2 release notes."
 
 ### Fixes
 
-* We identified and fixed an issue that would stop the "Navigate To" action to launch Google Maps on Android OS version 11 and later.
-
+* We identified and fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
 
 ## 5.2.7
 

@@ -10,19 +10,16 @@ description: "Native Template 6 release notes."
 
 ### Fixes
 
-- We identified and fixed an issue that would stop the "Navigate To" action from launching Google Maps on Android OS version 11 and later.
+* We identified and fixed an issue that would stop the **Navigate To** action from launching Google Maps on Android v11 and above.
 
 ## 6.2.11
 
 **Release date: January 6th, 2022**
 
-We identified and fixed a bug introduced with Native Template v6.2.9 and Mendix clients built with Mendix Studio Pro 9.8.0 or later and that support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing users of the app to re-authenticate on each app restart.
-
-Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
-
 ### Fixes
 
-- iOS apps should correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 or later. (Ticket 138881)
+* We identified and fixed a bug introduced with Native Template v6.2.9 and Mendix Clients built with Mendix Studio Pro 9.8.0 and above which support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing app users to re-authenticate on each app restart. iOS apps now correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 and above. (Ticket 138881)
+ * Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.
 
 ## 6.2.10
 

@@ -112,7 +112,7 @@ Use the checkbox for **Updatable (write)** to indicate that clients can update t
 
 When the app receives a request to change values, it does the following:
 
-1. It checks that the request is formatted correcly, rejecting things like specifying a string value for an integer attribute.
+1. It checks that the request is formatted correctly, rejecting things like specifying a string value for an integer attribute.
 2. It checks that the requested changes are valid, rejecting things like strings that are longer than the maximum length and empty values for required attributes.
 3. It commits the changes to the database.
 

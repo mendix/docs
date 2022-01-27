@@ -37,7 +37,7 @@ If you already had an **App events** widget on your homepage, follow these steps
 
 The snippet also adds the **Notifications** widget which lets users interact with the notifications the app receives.
 
-By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
+By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide8/persistability#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
 ## 4 Customize Offline Synchronization
 

@@ -37,13 +37,13 @@ Data view consists of the following properties:
 
 ### 2.1 Data Source {#data-source-data-view} 
 
-The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide/data-sources) in the *Studio Pro Guide*. 
+The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide7/data-sources) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](microflows).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/context-source) in the *Studio Pro Guide*. |
-| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Studio Pro Guide*. |
-| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/listen-to-grid-source) in the *Studio Pro Guide*. |
+| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](microflows).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide7/context-source) in the *Studio Pro Guide*. |
+| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide7/microflow-source) in the *Studio Pro Guide*. |
+| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide7/listen-to-grid-source) in the *Studio Pro Guide*. |
 
 ### 2.2 General {#general-section-data-view}
 
@@ -69,14 +69,14 @@ List view consists of the following properties:
 
 ### 3.1 Data Source {#data-source-list-view}
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide/data-sources) in the *Studio Pro Guide*. 
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide7/data-sources) in the *Studio Pro Guide*. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](/refguide/database-source) in the *Studio Pro Guide*.<br />**Filter** – limits data in the list view. You can create a filter only after you specify an entity for the list view. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which items in the list view are shown. You can specify a sort order only after you select an entity for the list view. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
-| Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Studio Pro Guide*. |
-| XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
-| Nanoflow             | Currently, this data source can only be configured in Studio Pro. For more information, see [Nanoflows](/refguide/nanoflows). |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](/refguide7/database-source) in the *Studio Pro Guide*.<br />**Filter** – limits data in the list view. You can create a filter only after you specify an entity for the list view. For more information on data filtering, see [Data Filters](filters).<br />**Sort Order** – the order in which items in the list view are shown. You can specify a sort order only after you select an entity for the list view. You can add multiple sorting rules. For example, you can add two sorting rules: one is to sort item by name in ascending order, and the other one is to sort items by email in descending order. Unique items will be sorted by name in ascending order, but if two or more items have the same name, then these items will be sorted by email. |
+| Microflow            | A data source that runs a selected microflow and displays a return value (as in, a list of objects). For more technical information, see [Microflow Source](/refguide7/microflow-source) in the *Studio Pro Guide*. |
+| XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide7/xpath-source). |
+| Nanoflow             | Currently, this data source can only be configured in Studio Pro. For more information, see [Nanoflows](/refguide7/nanoflows). |
 | Association          | Available when a list view is placed inside another data container, for example, a data view. The list view is filled with the objects linked to the data view object by an association. For example, you can show all orders for a customer. |
 
 ### 3.2 Events

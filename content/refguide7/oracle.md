@@ -24,13 +24,13 @@ You cannot sort, group, or use aggregate functions such as `count()` on strings 
 
 ### 2.3 Selecting DISTINCT Attribute
 
-Using [SELECT DISTINCT](/refguide/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
+Using [SELECT DISTINCT](/refguide7/oql-select-clause) in OQL queries is not supported for strings longer than 2000 characters.
 
 If you run into this limitation, a message like `Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small` will be logged.
 
 ### 2.4 Uniqueness Constraint
 
-You cannot set a [uniqueness constraint](/refguide/validation-rules#uniqueness) on string attributes longer than 2000 characters.
+You cannot set a [uniqueness constraint](/refguide7/validation-rules#uniqueness) on string attributes longer than 2000 characters.
 
 If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQL: column of datatype LOB cannot be unique or a primary key` will be logged.
 

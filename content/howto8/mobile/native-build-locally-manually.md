@@ -106,7 +106,7 @@ Now that you have a copy of the Native Template checked out and ready, you can b
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
-For bundling your resources, Mendix Studio Pro comes with a helpfull tool called [MxBuild](/refguide/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (e.g. C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
+For bundling your resources, Mendix Studio Pro comes with a helpfull tool called [MxBuild](/refguide8/mxbuild). MxBuild can be found relatively to the location of the Studio Pro executable (e.g. C:\Program Files\Mendix\Studio Pro (version)\mxbuild.exe).
 
 1. Run the following command:
 

@@ -37,21 +37,16 @@ This app service is an add-on module. For more information, see [Add-On Module](
 ## 2 Installation
 
 1. Go to the Marketplace and download the file *MSTeamsConnectorModule.mxmodule* for the [Microsoft Teams Connector](https://marketplace.mendix.com/link/component/118391).
-2.  To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
-    1. On the menu bar, go to **App** > **Show App Directory in Explorer**.
-    2.  Check if a folder with the name **modules** is present in the directory. If not present, create a new folder with this name.
+2. To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
+    1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *MSTeamsConnectorModule.mxmodule*. 
 
-        ![](attachments/ms-teams-connector/modules-folder-in-file-explorer.png)
-        
-    3.  Copy the downloaded file *MSTeamsConnectorModule.mxmodule* into the **modules** folder. 
-       
-        {{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}
-
-    4. In Studio Pro, go to **App** > **Synchronize App Directory**. 
-
-After the synchronization is finished, you can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+    ![pop-up-menu-in-app-explorer](attachments/ms-teams-connector/pop-up-menu-in-app-explorer.png)   
+ 
+    2.  You can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 
 ![connector_in_protected_module](attachments/ms-teams-connector/connector_in_protected_module.png)
+
+{{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
 ## 3 Configuration
 

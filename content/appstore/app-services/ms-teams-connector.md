@@ -40,9 +40,15 @@ This app service is an add-on module. For more information, see [Add-On Module](
 2. To add the Microsoft Teams Connector to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app, click **Import module package**, and then select *MSTeamsConnectorModule.mxmodule*. 
 
-    ![pop-up-menu-in-app-explorer](attachments/ms-teams-connector/pop-up-menu-in-app-explorer.png)   
- 
-    2.  You can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
+        ![pop-up-menu-in-app-explorer](attachments/ms-teams-connector/import-module-in-app-explorer.png)
+
+        The **Import Module** dialog box opens.
+    
+    2. Click **Import**.
+    3. Wait until a pop-up window states that the module was successfully imported. Click **OK**.
+    
+
+You can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 
 ![connector_in_protected_module](attachments/ms-teams-connector/connector_in_protected_module.png)
 

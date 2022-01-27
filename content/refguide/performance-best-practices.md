@@ -210,7 +210,7 @@ Refactor the microflow so that the variable is only committed once in the flow.
 
 An entity with a large amount of data and access rules that are negating one another may cause performance issues.
 
-If two access rules differ only by negation, you can use either `not()` or `= false()` to remove the negating rule.
+If two access rules differ only by negation, you can try to remove the negating rule (the rule that contains `not()` or `= false()`).
 
 ### 12.1 Steps to Fix
 

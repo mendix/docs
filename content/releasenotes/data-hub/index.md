@@ -14,12 +14,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* We added a notification menu to the top menu header.
-* We added Counts to the **Catalog** page, so that users can now see the total numbers of **Associations**, **Attributes** and **Datasets**.
+* We added a notification menu to the upper-right menu header.
+* We added counts to the **Catalog** page so that you can now see the total numbers of **Associations**, **Attributes**, and **Datasets**. The counts appear in parentheses next to each heading.
 
 #### Fixes
 
-* We fixed a bug that was causing the file uploader to get stuck in case of uploading an empty file.
+* We fixed a bug that was causing the file uploader to get stuck when uploading an empty file.
 
 ### January 21st, 2022
 

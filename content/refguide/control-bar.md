@@ -29,7 +29,22 @@ The control bar can also include a number of selection options and spreadsheet e
 
 Most properties of control bar buttons are the same as properties of buttons. For more information on button properties, see [Buttons](button-properties).
 
-Sections below describe the purpose of each control bar button and their specific properties if any. 
+To add additional buttons to the control bar, do the following:
+
+1. Right-click on the control bar while it is highlighed.
+1. Select **Add button**.
+1. Select the new type of button.
+1. Double click on the new button to customize.
+
+![Add Button to Control Bar](attachments/data-widgets/control-bar-add-button.png)
+
+{{% alert type="info" %}}
+It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.
+
+When setting the visibility of control bar buttons, it is not possible to use currently selected objects for conditional visibility expressions, or visibility based on the selected objects' attributes.
+{{% /alert %}}
+
+Sections below describe the purpose of each control bar button and their specific properties if any.
 
 ### 2.1 Search Button {#search-button}
 

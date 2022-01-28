@@ -99,7 +99,7 @@ You start the implementation by creating an asset object in a page, or directly 
 
 After having set the **Asset name**, we trigger some validation, call the **Create asset** action, and save the **Asset ID** for later references. Reference the microflow below:
 
-![](../../howto/extensibility/attachments/how-to-get-started-with-the-timeseries-connector/create-asset-microflow.png)
+![](attachments/how-to-get-started-with-the-timeseries-connector/create-asset-microflow.png)
 
 ### 5.2 Create a Channel
 

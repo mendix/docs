@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
 
-For more information about Atlas UI, see [Atlas UI](index). 
+For more information about Atlas UI, see [Atlas UI](/howto7/front-end/atlas-ui). 
 
 ## 3 Editing Your App in the Web Modeler
 

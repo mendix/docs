@@ -193,7 +193,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
     * `GET` all environments for an application
     * `GET` all consumed endpoints
 * A change was made to the `POST` application API call to also allow for the `Opcenter` and `MindSphere` application types.
-* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/index#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added Data Hub Catalog integration with [Control Center](/developerportal/control-center/#data-hub). For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### August 19th, 2021
 
@@ -252,7 +252,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### Improvements
 
-* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home) page, the magnifying glass now appears on the right side.
+* In the search input boxes on the [Search result](/data-hub/data-hub-catalog/search#search-results) listings and [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home) page, the magnifying glass now appears on the right side.
 * In the [Search result](/data-hub/data-hub-catalog/search#search-results) listings, the filters have been restyled.
 * All cancel and discard buttons now have matching styles for improved usability.
 
@@ -293,7 +293,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/index#data-hub-home).
+* Improvements have been made to the styling of the [Data Hub Home](/data-hub/data-hub-catalog/#data-hub-home).
 
 ### April 22nd, 2021
 

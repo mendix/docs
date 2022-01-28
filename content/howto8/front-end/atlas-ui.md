@@ -16,7 +16,7 @@ Visit the [Atlas UI site](https://atlas2.mendix.com/) for detailed previews and 
 
 ### 1.1 Mendix Studio
 
-[Mendix Studio](/studio8) brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in Mendix Studio is styled with the Atlas UI framework. For more information, see [Get Started with Atlas UI](get-started-with-atlasui). 
+[Mendix Studio](/studio8/) brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in Mendix Studio is styled with the Atlas UI framework. For more information, see [Get Started with Atlas UI](get-started-with-atlasui). 
 
 ### 1.2 Design Principles
 

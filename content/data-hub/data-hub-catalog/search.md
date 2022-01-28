@@ -262,7 +262,7 @@ When searching in the Data Hub Catalog, the following fields are searched:
 
 From the **Data Hub Home** page, you can search the Catalog in the following ways:
 
-![data hub home page](../share-data/attachments/share-data/data-hub-home.png)
+![data hub home page](/data-hub/share-data/attachments/share-data/data-hub-home.png)
 
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the *tags* given in the **Search suggestions**
@@ -441,10 +441,10 @@ The **Curate Bar** is displayed in the asset detail screen if you are the owner 
 
 In **Edit** > **Edit Metadata**, you can edit the information that is displayed in the Catalog for an asset:
 
-* For the selected data source, you can edit [Application Details](./curate#curate-application) and [Data Source Details](./curate#service-details)
-* For a selected dataset, you can edit [Dataset Details](./curate#curate-datasets)
+* For the selected data source, you can edit [Application Details](curate#curate-application) and [Data Source Details](curate#service-details)
+* For a selected dataset, you can edit [Dataset Details](curate#curate-datasets)
 
-For further details, see [Curate Registered Assets](./curate).
+For further details, see [Curate Registered Assets](curate).
 
 ### 3.8 Data Source and Dataset URIs
 

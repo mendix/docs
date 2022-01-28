@@ -263,5 +263,5 @@ When configuring the activities of microflows you will notice icons above or und
 * [Mendix Assist](mx-assist) – describes an artificial intelligence-powered agent that helps you configure microflows
 * [Decision](microflows-decision) – explains what a decision is and describes its properties
 * [Loop](microflows-loop) – explains what a loop is and describes its properties
-* [Microflow Expressions](microflows-expressions) – explains how to use microflow expressions
+* [Microflow Expressions](expressions) – explains how to use microflow expressions
 * [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value) – explains how to set or/and change a value for microflow activities

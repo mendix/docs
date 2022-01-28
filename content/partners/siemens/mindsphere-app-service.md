@@ -45,7 +45,7 @@ Once your order is processed, your entitlement to MindSphere IIoT for Makers wil
 
 ### 2.2 Provisioning a MindSphere Tenant
 
-On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/index#company) for your company will need to initiate the creation of a dedicated tenant account within MindSphere.
+On receipt of your confirmation, a [Mendix Administrator](/developerportal/control-center/#company) for your company will need to initiate the creation of a dedicated tenant account within MindSphere.
 
 Once all the resources have been provisioned, the Mendix Administrator for your company will receive an email confirming that your MindSphere account has been created. The email will also contain the following:
 

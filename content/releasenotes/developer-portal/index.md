@@ -20,7 +20,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We improved the platform navigation. The [Switch to](/developerportal/index#navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
+* We improved the platform navigation. The [Switch to](/developerportal/#navigation) menu on the left side of the top bar now also provides access to your recently used apps.  
 
 ## 2021
 
@@ -49,7 +49,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 * The arrival of [Git support](/refguide/branch-line-manager-dialog#byo-server-app) means that a new version of the [Platform SDK](/apidocs-mxsdk/mxsdk/) is in order. We made some changes to the Developer Portal to accommodate this new version, which is currently being tested and will be published soon.
 * We introduced a new version of the [Feedback API](/apidocs-mxsdk/apidocs/feedback-api) that will be used by a new generation of [Feedback widgets](/appstore/widgets/mendix-feedback) coming to the Marketplace soon.
-* Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/index#my-apps) page is only displayed if your app is deployed to a licensed node.
+* Until now, you were not able to delete or deactivate an app if it was still deployed to an environment, regardless of whether it was a licensed environment or a sandbox for a Free App. We changed this behavior so that the only check is on whether the environment is licensed. A consequence of this change is that the cloud icon on the app tiles on the [My Apps](/developerportal/#my-apps) page is only displayed if your app is deployed to a licensed node.
 
 ### November 4th, 2021
 
@@ -101,7 +101,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We have released the company [Onboarding](/developerportal/control-center/index#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+* We have released the company [Onboarding](/developerportal/control-center/#onboarding) functionality in Control Center that enables setting up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
 
 ### September 23rd, 2021
 
@@ -149,7 +149,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Improvements
 
-* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/index#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
+* We added a new menu item for Mendix Admins to access [Data Hub](/developerportal/control-center/#data-hub) tasks in Control Center. For details, see [Data Hub Administration](/developerportal/control-center/data-hub-admin).
 
 ### August 19th, 2021
 
@@ -203,7 +203,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 #### Improvements
 
 * We added a tab on the [Cloud](/developerportal/control-center#cloud) page in Control Center that displays details on **Free Environments**.
-* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/index#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20th, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api) or the [Developer Portal](/developerportal/#navigation) using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23#72315) or above before creating apps based on those templates.
 
 ### May 17th, 2021
 
@@ -225,7 +225,7 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### Fixes
 
-* We fixed an issue where some graphs in the Contral Center [Dashboard](/developerportal/control-center/index#dashboard) were loading indefinitely. 
+* We fixed an issue where some graphs in the Contral Center [Dashboard](/developerportal/control-center/#dashboard) were loading indefinitely. 
 * We fixed the page title of the [Mendix Studio](/studio/) landing page.
 * Page links now open in the correct tab.
 
@@ -233,13 +233,13 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 #### New Features
 
-* We released the Control Center [Dashboard](/developerportal/control-center/index#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
+* We released the Control Center [Dashboard](/developerportal/control-center/#dashboard), which provides an overview of various activities for your company on the Mendix Platform. This feature is currently in [Beta](/releasenotes/beta-features/), and you can provide feedback via the feedback button on the right of the page.
 
 ### March 30th, 2021
 
 #### Improvements
 
-* We have released our new [platform navigation](/developerportal/index) solution with these main features:
+* We have released our new [platform navigation](/developerportal/) solution with these main features:
 	* The **Switch to** menu on the left side of the top bar provides access to different parts of the Mendix Platform.
 	* The top bar contains sub-navigation items (for example, **Company Buzz**).
 	* Clicking the **+** button on the right side of the top bar will create a new app from anywhere in the platform.

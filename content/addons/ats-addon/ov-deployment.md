@@ -84,15 +84,15 @@ Before you pick your option, you need to be aware of the differences. The follow
 
 Feature                       | Standard          | SaaS Selenium Provider | Public App On-Premises        | Private App On-Premises       | Customer-Hosted Selenium
 ----------------------------- | ----------------- | ---------------------- | ----------------------------- | ----------------------------- | -----------------------------
-Test Automation               | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-Test Recording                | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
-OS Selection                  | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Responsive Testing            | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Multiple Browsers<sup>1</sup> | ![][grey] Limited | ![][green] All         | ![][green] All                | ![][green] All                | ![][grey] Limited<sup>3</sup>
-Mobile Testing<sup>2</sup>    | ![][red] No       | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Mendix Platform Integration   | ![][green] All    | ![][green] All         | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup>
-Live View & Video<sup>2</sup> | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Future Proof<sup>5</sup>      | ![][green] Yes    | ![][green] Yes         | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Test Automation               | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes
+Test Recording                | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes
+OS Selection                  | ![](attachments/ov-deployment/red.png) No       | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Responsive Testing            | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Multiple Browsers<sup>1</sup> | ![](attachments/ov-deployment/grey.png) Limited | ![](attachments/ov-deployment/green.png) All         | ![](attachments/ov-deployment/green.png) All                | ![](attachments/ov-deployment/green.png) All                | ![](attachments/ov-deployment/grey.png) Limited<sup>3</sup>
+Mobile Testing<sup>2</sup>    | ![](attachments/ov-deployment/red.png) No       | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Mendix Platform Integration   | ![](attachments/ov-deployment/green.png) All    | ![](attachments/ov-deployment/green.png) All         | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup> | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup> | ![](attachments/ov-deployment/grey.png) Limited<sup>4</sup>
+Live View & Video<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
+Future Proof<sup>5</sup>      | ![](attachments/ov-deployment/green.png) Yes    | ![](attachments/ov-deployment/green.png) Yes         | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/green.png) Yes                | ![](attachments/ov-deployment/red.png) No
 
 <small><sup>1</sup> Only if supported by ATS.<br />
 <sup>2</sup> Feature not available yet.<br />
@@ -106,11 +106,11 @@ The following matrix compares the efforts for setup and maintenance of the diffe
 
 Aspect                                | Standard                   | SaaS Selenium Provider     | Public App On-Premises     | Private App On-Premises     | Customer-Hosted Selenium
 ------------------------------------- | ---------------------------| -------------------------- | -------------------------- | ----------------------------| ----------------------------
-Firewall Setup                        | ![][green] No              | ![][green] None<sup>1</sup>| ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
-Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
-Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No              | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
-Selenium<sup>2</sup> Maintenance      | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
-Selenium<sup>2</sup> Support          | ![][green] No              | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
+Firewall Setup                        | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) None<sup>1</sup>| ![](attachments/ov-deployment/red.png) Required          | ![](attachments/ov-deployment/green.png) None<sup>1</sup> | ![](attachments/ov-deployment/red.png) Required
+Selenium<sup>2</sup> Runner Setup     | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>  | ![](attachments/ov-deployment/green.png) No<sup>3</sup>   | ![](attachments/ov-deployment/red.png) Customer responsibility
+Selenium<sup>2</sup> SaaS Agent Setup | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) No<sup>4</sup>  | ![](attachments/ov-deployment/green.png) No<sup>4</sup>  | ![](attachments/ov-deployment/red.png) Yes                | ![](attachments/ov-deployment/green.png) No<sup>4</sup>
+Selenium<sup>2</sup> Maintenance      | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup>  | ![](attachments/ov-deployment/red.png) Customer responsibility
+Selenium<sup>2</sup> Support          | ![](attachments/ov-deployment/green.png) No              | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup> | ![](attachments/ov-deployment/green.png) Yes<sup>3</sup>  | ![](attachments/ov-deployment/red.png) No
 
 <small><sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.<br />
 <sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.<br />
@@ -288,6 +288,3 @@ Before you start, make sure that your server has internet access to download the
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
 
-[green]:attachments/ov-deployment/green.png
-[grey]:attachments/ov-deployment/grey.png
-[red]:attachments/ov-deployment/red.png

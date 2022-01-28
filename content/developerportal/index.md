@@ -85,7 +85,7 @@ In the header, you can click links to see your **Company Apps** and **Company Bu
 
 ![](attachments/company-links.png)
 
-On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/index#company).
+On the **My Company's Apps** page, you will see all the apps created by members of your [company](/developerportal/control-center/#company).
 
 You can also sort the order of the apps here.
 

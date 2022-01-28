@@ -97,7 +97,7 @@ If investigating the documentation and searching the [Mendix Forum](https://foru
 
 ## 4 Request Priority {#request-priority}
 
-You can select the priority that you feel the request should have. Please note the [SLA regulations](index#sla) for this priority.
+You can select the priority that you feel the request should have. Please note the [SLA regulations](/developerportal/support/#sla) for this priority.
 
 The priority is based on the combination of impact and urgency: 
 

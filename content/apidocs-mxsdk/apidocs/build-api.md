@@ -40,8 +40,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ##### 2.1.2.2 Example
 
 ```http
-GET https://deploy.mendix.com/api/1/apps/calc/packages
-
+GET /api/1/apps/calc/packages HTTP/1.1
+Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
@@ -113,8 +113,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ##### 2.2.2.2 Example
 
 ```http
-GET https://deploy.mendix.com/api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf
-
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
+Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
@@ -180,7 +180,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 *   _PackageId_ (String) : Id of the deployment package
 
 ```http
-DELETE https://deploy.mendix.com/api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf
+DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
+Host: deploy.mendix.com
 
 Accept: */*
 Mendix-Username: richard.ford51@example.com
@@ -212,8 +213,8 @@ Parameters
 *   _PackageId_ (String) : Id of the deployment package.
 
 ```http
-GET https://deploy.mendix.com/api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download
-
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
+Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
@@ -256,8 +257,8 @@ An object with the following key-value pairs:
 ##### 2.5.1.3 Example
 
 ```http
-POST https://deploy.mendix.com/api/1/apps/calc/packages
-
+POST /api/1/apps/calc/packages HTTP/1.1
+Host: deploy.mendix.com
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6

@@ -398,9 +398,7 @@ To install the reference dashboard, download the dashboard JSON to a local file.
 There are two dashboards available at the moment - if necessary, both can be installed at the same time:
 
 * [compatibility mode dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_compatibility-1.1.0.json) for metrics generated in compatibility mode
-* [native dashboard](https://mendix-private-cloud-resources-prod.s3.eu-west-1.amazonaws.com/grafana-dashboard/mendix_app_dashboard_native-1.0.0.json) for metrics generated in native mode
-
-<!-- TODO: upload native mode dashboard to CDN -->
+* [native dashboard](https://cdn.mendix.com/mendix-for-private-cloud/grafana-dashboard/mendix_app_dashboard_native-1.0.0.json) for metrics generated in native mode
 
 [Import](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) the downloaded JSON into Grafana:
 
@@ -521,17 +519,119 @@ spec:
 However when Mendix Operator v2.3.\* or an older version is upgraded to v2.4.0 (or a newer version), the upgrade process will set the default metrics mode to `compatibility`. 
 This way, upgrading an older Mendix Operator will not change the way it generates metrics.{{% /alert %}}
 
-{{% alert type="info" %}}It's not yet possible to configure metrics from the Developer Portal, although this feature will become available in the very near future.
-For connected clusters, metrics can only be configured globally for a namespace.{{% /alert %}}
-
 ### 5.1 Compatibility metrics mode
 
 To enable `compatibility` metrics mode, set the `mode` attribute to `compatibility`.
 In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
+#### 5.1.1 Enable compability metrics in Connected Mode
+
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+2. Click **Details** next to the namespace where your environment is deployed.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+    
+3. Click **Configure** next to the environment name where the compatibility mode should be used.
+
+    ![](attachments/private-cloud-cluster/image27.png)
+
+4. Click the **Runtime** tab.
+    
+    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+  
+5. Check the **Enable configuration** checkbox.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
+
+6. Click **Edit** next to **Mode**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
+
+7. Set **Mode** to **compatibility** and press **Save and Apply**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-compatibility.png)
+
+
+#### 5.1.2 Enable compability metrics in Standalone Mode
+
+{{% alert type="warning" %}}Do not use this approach in Connected mode - any configuration you set this way will be overridden by configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+
+Open an environment's `MendixApp` CR [for editing](private-cloud-operator#edit-cr) and set the `mode` attribute to `compatibility`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  # Existing configuration
+  # ...
+  # Metrics configuration
+  runtimeMetricsConfiguration:
+    # Set mode to compatibility
+    mode: compatibility
+```
+
+Save and apply the changes.
+
 ### 5.2 No metrics mode
 
-To completely disable metrics collection, delete the `runtimeMetricsConfiguration` block from the `OperatorConfiguration` CR and the environment's `MendixApp` CR.
+To completely disable metrics collection, delete the `runtimeMetricsConfiguration` block from the `OperatorConfiguration` CR, and update the environment to use the default metrics configuration.
+
+#### 5.2.1 No metrics in Connected Mode
+
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+2. Click **Details** next to the namespace where your environment is deployed.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+    
+3. Click **Configure** next to the environment name where metrics should be disabled.
+
+    ![](attachments/private-cloud-cluster/image27.png)
+
+4. Click the **Runtime** tab.
+    
+    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+  
+5. Check the **Enable configuration** checkbox.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
+
+6. Click **Edit** next to **Mode**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
+
+7. Set **Mode** to **default** and press **Save and Apply**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-default.png)
+
+
+#### 5.2.2 No metrics in Standalone Mode
+
+{{% alert type="warning" %}}Do not use this approach in Connected mode - any configuration you set this way will be overridden by configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+
+Open an environment's `MendixApp` CR [for editing](private-cloud-operator#edit-cr) and delete the `runtimeMetricsConfiguration` block:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  # Existing configuration
+  # ...
+  # Delete this runtimeMetricsConfiguration block
+  runtimeMetricsConfiguration:
+    ...
+```
+
+Save and apply the changes.
 
 ### 5.3 Native metrics mode
 
@@ -548,7 +648,85 @@ If a environment has a manually assigned `Metrics.Registries` value, it will be 
 
 It's also possible to add extra tags (Prometheus labels) by specifying then in the [Metrics.ApplicationTags](/refguide/metrics#application-tags) custom setting.
 
-#### 5.3.1 Configuring the Java instrumentation agent
+#### 5.3.1 Enable compability metrics in Connected Mode
+
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+
+    ![](attachments/private-cloud-cluster/cluster-manager.png)
+
+2. Click **Details** next to the namespace where your environment is deployed.
+
+    ![](attachments/private-cloud-cluster/cluster-details.png)
+    
+3. Click **Configure** next to the environment name where the native metrics mode should be used.
+
+    ![](attachments/private-cloud-cluster/image27.png)
+
+4. Click the **Runtime** tab.
+    
+    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+  
+5. Check the **Enable configuration** checkbox.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
+
+6. Click **Edit** next to **Mode**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
+
+7. Set **Mode** to **native** and press **Save**.
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-native.png)
+
+8. Set custom values for **Duration**, **MxAgent Config** and **MxAgent Instrumentation Config**.
+
+   These parameters are optional and can be left empty.
+   For more information about **MxAgent** see [Configuring the Java instrumentation agent](#configuring-mxagent).
+
+9. Click **Apply Changes**
+
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-apply.png)
+
+#### 5.3.2 Enable native metrics in Standalone Mode
+
+{{% alert type="warning" %}}Do not use this approach in Connected mode - any configuration you set this way will be overridden by configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+
+Open an environment's `MendixApp` CR [for editing](private-cloud-operator#edit-cr) and set the `mode` attribute to `native`:
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  # Existing configuration
+  # ...
+  # Metrics configuration
+  runtimeMetricsConfiguration:
+    # Set mode to native
+    mode: native
+    # Optional: set the scrape duration
+    duration: "PT1M"
+    # Optional: set the agent config
+    mxAgentConfig: |-
+      {
+        …
+      }
+    # Optional: set the agent instrumentation config
+    mxAgentInstrumentationConfig: |-
+      {
+        …
+      }
+  # …
+```
+
+If your Prometheus setup is using a custom scrape interval, specify the internal in the `duration` attribute in ISO 8601 Duration format (e.g. 'PT1M').
+
+If you would like to collect additional metrics, specify a non-empty configuration for `mxAgentConfig`, see [Configuring the Java instrumentation agent](#configuring-mxagent) for more details.
+
+Save and apply the changes.
+
+#### 5.3.3 Configuring the Java instrumentation agent{#configuring-mxagent}
 
 By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instrumentation agent](https://github.com/mendix/mx-agent) and collect additional metrics, such as execution times of microflows, OData/SOAP/REST endpoints and client activity.
 

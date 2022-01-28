@@ -48,7 +48,7 @@ For more information on deploying your app and versioning it, see  the [Versioni
 
 ### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Mendix Studio](/studio) (if enabled), [Developer Portal](/developerportal), and [Marketplace](/appstore) in the top-right corner of Studio Pro.
+You can find links to the [Mendix Studio](/studio) (if enabled), [Developer Portal](/developerportal), and [Marketplace](/appstore) in the upper-right corner of Studio Pro.
 
 Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option.  
 

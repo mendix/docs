@@ -53,7 +53,7 @@ The Native Builder needs to communicate with GitHub and App Center. Therefore, m
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
-2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the top-right corner of the page.
+2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the upper-right corner of the page.
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 5. In the **Note** field, write *Native Builder.*
@@ -178,7 +178,7 @@ The next steps differ depending on the type of app you want to configure.
 
 #### 5.1.1 Signing a Build for iOS
 
-1.  Click the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
+1.  Click the **Wrench icon** in the upper-right corner to open the **Build configuration** panel:
 
 	{{% image_container width="400" %}}!![Build Wrench](attachments/deploying-native-app/ios-build-wrench.png){{% /image_container %}}
 
@@ -193,7 +193,7 @@ The next steps differ depending on the type of app you want to configure.
 
 #### 5.1.2 Signing a Build for Android
 
-1. Select the **Wrench icon** in the top-right corner to open the **Build configuration** panel:
+1. Select the **Wrench icon** in the upper-right corner to open the **Build configuration** panel:
 
 	{{% image_container width="400" %}}![Build Wrench](attachments/deploying-native-app/android-build-wrench.png){{% /image_container %}}
 

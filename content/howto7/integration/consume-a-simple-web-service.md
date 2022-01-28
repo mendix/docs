@@ -60,7 +60,7 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582081.png)
 
-4.  Open the **Toolbox** (from the bottom-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
+4.  Open the **Toolbox** (from the lower-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
 
     ![](attachments/8784287/8946802.png)
 

@@ -151,7 +151,7 @@ This page contains private content shared with you by other companies who have m
 
 ### 4.3 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the bottom-right corner of the component's tile to receive email notifications on new versions of the component:
+This page presents the Marketplace content you have [saved](#saved). Click the bell icon in the lower-right corner of the component's tile to receive email notifications on new versions of the component:
 
 ![](attachments/app-store-overview/bell.png)
 

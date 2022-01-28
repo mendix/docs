@@ -132,7 +132,7 @@ Now you will set up the final logic necessary for your app to display a notifica
 
 Now you will set up the final piece of your nanoflow's logic. 
 
-1.  Delete the end event in the top-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
+1.  Delete the end event in the upper-right corner of your nanoflow, drag and drop a **Merge** in its place, and rebuild your connections:
 
 	{{% image_container width="400" %}}![app settings](attachments/native-push/merge.png){{% /image_container %}}
 

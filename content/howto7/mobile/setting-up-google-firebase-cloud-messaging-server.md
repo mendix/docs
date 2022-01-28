@@ -57,7 +57,7 @@ Click **Create new project** and fill in the project name and region for your ap
 
 ## 4 Configuring APNs Credentials (Optional) {#configuring}
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials. To do so, click in the top-left corner of the screen and select **Project settings**.
+If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials. To do so, click in the upper-left corner of the screen and select **Project settings**.
 
 Navigate to the **Cloud messaging** tab.
 
@@ -67,17 +67,17 @@ On this tab, upload either your APNs key or your APNs certificate(s).
 
 ## 5 Setting Up a Service Account
 
-In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
+In the upper-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
 {{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
 On this page, press **Generate new private key**. Store the resulting file in a secure location. You will use this file when configuring FCM in the back end of your Mendix application.
 
-The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
+The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** on the upper-right side of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
 ## 6 Downloading the Google Services Config Files
 
-In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab.
+In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab.
 
 {{% image_container width="350" %}}![](attachments/push_notifications_platforms.png){{% /image_container %}}
 

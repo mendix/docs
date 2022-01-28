@@ -19,7 +19,7 @@ For example, you have a web shop and you do not want to bother users with fillin
 
 You can also show a widget to a certain *user role* only. For example, you can show a widget showing salary amounts only to Finance Managers. 
 
-To see which widgets that have conditional visibility configured, click the eye icon is the **Show** option in the top-left corner of a page:
+To see which widgets that have conditional visibility configured, click the eye icon is the **Show** option in the upper-left corner of a page:
 ![](attachments/page-editor-widgets-visibility-section/highlight-conditional-items.png)
 
 ## 2 Conditional Visibility Properties

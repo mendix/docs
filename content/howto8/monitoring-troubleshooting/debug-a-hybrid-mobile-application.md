@@ -29,7 +29,7 @@ From your console, start weinre with the following parameters: `weinre --boundHo
 
 ## 3 Connect Your Mendix Developer App
 
-Click the settings icon in the top-right corner of the screen to configure your debugger:
+Click the settings icon in the upper-right corner of the screen to configure your debugger:
 
 ![](attachments/18448572/18580021.png)
 

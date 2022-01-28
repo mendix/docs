@@ -15,7 +15,7 @@ aliases:
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. 
 To get more involved in the Mendix community, your profile is the best way to start. 
 
-You can access your Mendix profile by clicking your picture in the top-right corner of the Developer Portal and then selecting **See Your Profile**.
+You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**.
 
 ## 2 Header {#header}
 

@@ -29,7 +29,7 @@ Unlicensed apps, running outside the Mendix Cloud, have a number of restrictions
 
 ¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
-To use your app in a production environment, you need to license it. The method for doing this differs depending on the environment to which you are deploying your app.
+For each environment for which you want to remove the restrictions placed on an unlicensed app, you need a license. The method for applying a license differs depending on where you are deploying your app.
 
 The app will check for a license each time it is started. If the license expires while the app is running, it will continue to run until the next time it is started, when the license will be checked again.
 

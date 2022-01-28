@@ -12,7 +12,7 @@ The Build API only works for apps which are deployed to the Mendix Cloud.
 
 ## 1 Introduction
 
-The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](team-server-api) as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
+The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
@@ -66,7 +66,7 @@ List of objects with the following key-value pairs:
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | APP_NOT_FOUND | App not found |
+| 400 | INVALID_APPID | Invalid AppId |
 
 ##### 2.1.3.2 Example
 

@@ -40,7 +40,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 ### 3.1 GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
-2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the top-right corner of the page.
+2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the upper-right corner of the page.
 3. Click [Developer settings](https://github.com/settings/apps) at the bottom of the left menu.
 4. Navigate to [Personal access tokens](https://github.com/settings/tokens) and then click **Generate new token** to create a new personal access token.
 5. In the **Note** field, write *Native Mobile Builder*.
@@ -51,7 +51,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 ### 3.2 App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
-2. Click your profile icon in the top-right corner, then click **Settings**, and then **Account Settings**.
+2. Click your profile icon in the upper-right corner, then click **Settings**, and then **Account Settings**.
 3. In the **API Tokens** tab, click **New API token**.
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.

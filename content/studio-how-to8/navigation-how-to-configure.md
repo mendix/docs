@@ -111,7 +111,7 @@ Good job! You have added a menu item for the **New Employee** page to your navig
 
 ![New Menu Item Created](attachments/navigation-how-to-configure/new-menu-item-created.png)
 
-Click **Preview** in the top-right corner to [preview your app](/studio8/publishing-app) and test how the navigation menu looks like:
+Click **Preview** in the upper-right corner to [preview your app](/studio8/publishing-app) and test how the navigation menu looks like:
 ![Previewed Menu Items](attachments/navigation-how-to-configure/previewed-menu-items.png)
 
 ### 3.3 Create a Menu Item for the Employee_Details Page and Configuring Its Sub-Items

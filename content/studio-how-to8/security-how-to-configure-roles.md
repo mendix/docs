@@ -99,7 +99,7 @@ You can test the roles that you set with [demo users](/studio8/settings-security
 
 1. Click the **pages** icon to exit the **Roles and Permissions** screen.
 
-2. Click the **Preview** button in the top-right corner to [preview your app](/studio8/publishing-app).
+2. Click the **Preview** button in the upper-right corner to [preview your app](/studio8/publishing-app).
 
 3. When your app is previewed, click a user icon in the right side of the screen: 
 
@@ -113,7 +113,7 @@ You can test the roles that you set with [demo users](/studio8/settings-security
 
     ![Testing Roles](attachments/security-how-to-configure-roles/testing-roles.png)
 
-6. Click **Close Preview** in the top-right corner to finish your test.
+6. Click **Close Preview** in the upper-right corner to finish your test.
 
 Congratulations! You have configured access for different user roles in your app. 
 

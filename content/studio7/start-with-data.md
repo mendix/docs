@@ -16,7 +16,7 @@ To create an app based on a spreadsheet, you need to use the **App from a spread
 
 1. Make sure your spreadsheet is in the *.xlsx* format
 
-2. Open the Developer Portal and click the **Create App** button in the top-right corner.
+2. Open the Developer Portal and click the **Create App** button in the upper-right corner.
 
 3. Choose **App from a spreadsheet** to create an app with the spreadsheet import functionality.
 

@@ -63,7 +63,7 @@ Upgrade your app to Mendix version 9.6-9.9. To upgrade to your app, follow these
 
 Update the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module to a new compatible version from the Marketplace, if applicable. Solve any consistency errors caused by pages/snippets that were removed.
 
-#### 3.1.5 Set Up Your Domain Model 
+#### 3.1.5 Set Up Your Domain Model {#domain-model}
 
 After upgrading to the Mendix version 9.6-9.9, you will notice that your workflow context entities have become non-persistable. This is due to the **WorkflowContext** entity being removed from the System module. You can simply remove the generalization and this will automatically make your entity persistable again. This entity represents your business data going through the workflow and is used for the **Workflow Context** parameter in the workflow editor. For more information on parameters, see the [Reconfigure Your Workflow](#reconfigure-workflow) section below.
 

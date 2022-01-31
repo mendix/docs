@@ -87,12 +87,6 @@ Securing user tasks now happens through the domain model by setting [entity acce
 
 If you would like to migrate your app with workflow functionality **from** Mendix versions 9.6-9.9 **to** Mendix version 9.10, follow the steps below.
 
-{{% alert type="info" %}}
-
-If you would like to migrate your app from the Mendix version **below** 9.6 to Mendix version 9.10, follow the [process of migrating your app to Mendix version 9.6-9.9](#migrate) first.
-
-{{% /alert %}}
-
 #### 3.2.1 Back Up Your App
 
 If you need to preserve the data in your current running app, **make a backup**! This migration will make changes to system module entities and you will need to adjust your own entities as well, so we expect data to be lost.

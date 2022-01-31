@@ -79,13 +79,8 @@ As APIs are just a different interface to access your data, it is extremely impo
 
 First, you need to answer the question **Requires authentication** with *Yes* or *No*.
 
-It is highly recommended to set this to *Yes* for any endpoint you create. This will restrict which users or external systems have access to your API endpoint, and when.
 
-*No* is only a viable choice when it is used in combination with IP restrictions and certificates, creating a secure bubble of trusted requesting users and systems.
 
-{{% alert type="warning" %}}
-Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
-{{% /alert %}}
 
 ### 5.2 Selecting Authentication Option
 

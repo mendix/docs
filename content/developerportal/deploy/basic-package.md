@@ -84,22 +84,12 @@ To order your Mendix Basic package, do the following:
 
 After 48 hours, your Mendix Basic package will be provisioned as a new licensed node. You will receive an email at the address entered in your order informing you that this has happened and linking you to the documentation on how to use the node.
 
-Linking your app to your licensed node is done in the same way as for any other sort of license. See [How To Migrate a Free App to Mendix Basic](migrate-free-app-to-basic) for instructions, and see [Linking Your App to a Licensed Node](licensing-apps#licensed-node) in *Licensing Mendix Cloud Apps* for full details.
+Linking your app to your licensed node is done in the same way as for any other sort of license. See the following documents for more information on how to do this:
 
-## 5 Deploy, transport and restart
+* [How To Migrate a Free App to Mendix Basic](migrate-free-app-to-basic) for brief instructions
+* [Linking Your App to a Licensed Node](licensing-apps#licensed-node) in *Licensing Mendix Cloud Apps* for full details
 
-Setting you new commits live, will require you to first create a deployment package, then transport that package to your production-environment, then restart. Here is that step-by-step guide:
-* Click on ‘App’ => ‘Deploy to licensed cloud node’ here:
-![image](https://user-images.githubusercontent.com/3594338/151657949-18bf04c3-879a-4ed1-a721-cfa5fe9cbb98.png)
-* Click ‘Deploy’ here: ![image](https://user-images.githubusercontent.com/3594338/151658061-5a670212-a6ec-4dda-8e88-869f2edadeca.png)
-* Click 'Show online' here: ![image](https://user-images.githubusercontent.com/3594338/151658071-b53ce072-77b0-47af-b702-f945ed6ee523.png)
-* It will take a minute or two to create the package. Then, once the package is ready, click on 'Deploy' here: ![image](https://user-images.githubusercontent.com/3594338/151658279-c5d4ccf5-72aa-46ba-b5f5-a469e56bb753.png)
-* Click on 'Transport' here: ![image](https://user-images.githubusercontent.com/3594338/151658149-2e08c0ef-9c5e-4f0f-a7e1-15dc62fb46bb.png)
-* Again, this will take a couple of minutes. Then click on 'Okay': ![image](https://user-images.githubusercontent.com/3594338/151658369-1cb798d3-ac62-4044-b5c1-af5b51b38a62.png)
-* This will bring you back to the Deploy-page in the Mendix cloud. Click 'Continue' here: ![image](https://user-images.githubusercontent.com/3594338/151658396-a71ca3ea-a9de-43eb-a934-98ff908eac7d.png)
-* and finally click on button 'Restart your application'.
-
-## 6 Invoicing for your Basic Package
+## 5 Invoicing for your Basic Package
 
 It will take 7-14 days to prepare your invoice. This will be sent to the address that you entered as the **invoice Email Address**.
 

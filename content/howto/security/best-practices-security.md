@@ -114,7 +114,7 @@ Allowed roles can be any of the roles you have defined in [User Roles](/refguide
 
 {{% alert type="warning" %}}
 Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
-This means that the same advice around certificate usage and IP restrictions applies.
+This means that the same advice around certificate usage and IP restrictions applies, and you should perform the authentication inside the API handling microflow itself.
 {{% /alert %}}
 
 You can choose one or more of the authentication options described below. If you choose more than one authentication option, they will be checked in the order: [Custom](#custom) -> [Username and Password](#basic) -> [Active Session](#active)

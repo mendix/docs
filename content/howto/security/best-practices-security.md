@@ -77,37 +77,33 @@ As APIs are just a different interface to access your data, it is extremely impo
 
 ### 5.1 Turning On API Security
 
-First, you need to answer the question **Requires authentication** with *Yes* or *No*.
+Firstly, you need to answer the question **Requires authentication** with *Yes* or *No*.
 
-Generally the platform guides you towards choosing *Yes* for the API endpoints you create. 
+The platform guides you towards choosing *Yes* for the API endpoints you create. 
 Intuitively this seems correct, as when the *Yes* option is toggled on. Mendix Studio Pro will reveal a variety of authentication options.
-And these options will restrict which users or external systems have access to your API endpoint.
+These options will restrict which users or external systems have access to your API endpoint.
 From a security perspective this is exactly what we want.
 
-However choosing between *Yes* and *No* is not this straight forward.
+However, choosing between *Yes* and *No* is not this straightforward.
 Choosing *Yes* will force your API requests to be executed in the context of a user account and requires an active session to be established. 
-Skipping this step where we retrieve the user account and establish a session can have a significant performance impact on your API.
-This is why choosing *No* can still be a viable for your API, and it might even be the recommended option in general.
+Skipping the step where we retrieve the user account and establish a session can have a significant performance improvement for your API.
+This is why choosing *No* can still be a viable option for your API, and it might even be the recommended option in many situations.
 
 The best practices when selecting *No* as **Requires authentication** option are:
-- Provide the HTTP Response as a parameter to the microflow used as the API handler.
-- Extract any required header information from the HTTP Request, this could for example be an "X-API-Key" header or "Authorization" header.
-- Perform your own validations on this header information at the very start of the API handling microflow.
-- Abort execution of the rest of the API handling microflow when validations fail.
-- Directly manipulate the status code and response in the HTTP response entity that was provided as a parameter.
-- Use this in combination with IP restrictions and certificates, creating a secure bubble of trusted requesting users and systems.
+- Provide the HTTP Response object as a parameter to the microflow used as the API handler
+- Extract any required header information from the HTTP Request – this could, for example, be an "X-API-Key" header or "Authorization" header
+- Perform your own validations on this header information at the very start of the API handling microflow
+- Abort execution of the rest of the API handling microflow when validations fail
+- Manipulate the status code and response directly in the HTTP response object that was provided as a parameter
+- Use the option in combination with IP restrictions and certificates, creating a secure bubble of trusted requesting users and systems
 
-By performing your authentication checks this way, you will have the flexibility of the Custom authentication option described in section 5.2.3, but it comes with the most minimal performance hit. At the expense of losing the user context, which in most scenario's is acceptable for API's.
+By performing your authentication checks this way, you will have the flexibility of the Custom authentication option described in section 5.2.3, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenario's is acceptable for API's.
 
 {{% alert type="warning" %}}
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
 {{% /alert %}}
 
 Choosing *Yes* comes with the benefits of having the timezone and language settings available for that API user account. And can also be used for better traceability of changes made through API requests. It also gives the possibility to apply restrictions to requested entities based on the System.User used for the API account.
-
-
-
-
 
 ### 5.2 Selecting Authentication Option
 

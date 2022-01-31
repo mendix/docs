@@ -63,7 +63,7 @@ This is the recommended approach if you are building a new application, as it wi
 
 Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
-1. Click the icon in the top-right of the menu bar to open the Mendix Marketplace.
+1. Click the icon in the upper right of the menu bar to open the Mendix Marketplace.
 
 	![](attachments/deploying-to-mindsphere/app-store-icon.png)
 

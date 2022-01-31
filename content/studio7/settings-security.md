@@ -175,7 +175,7 @@ You can assign the default or customized user roles for your app to app end-user
 You can manage App Users only after you publish your app.
 {{% /alert %}}
 
-To manage App Users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen:
+To manage App Users, open **Roles and Permissions** and click **Manage Users** on the upper-right side of the screen:
 
 ![](attachments/settings-security/manage-users-button.png)
 

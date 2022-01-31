@@ -34,7 +34,7 @@ Before you can start importing data into your application, you first need to set
 	Configure the **XLSFile** object to inherit from the **FileDocument** object (for more information, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files)).
 2. Create **Overview** and **Detail** pages to manage objects of the **Customer** and **Order** types.
 3.  Create menu items to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper-right side of Studio Pro).
+4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the Mendix Marketplace (available by clicking the shopping-cart icon in the upper right of Studio Pro).
 5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
 6.  Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 

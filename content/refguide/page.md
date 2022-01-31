@@ -153,7 +153,7 @@ Both modes allow you to edit your page by doing the following:
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
 
-* You can zoom a page in or out using the **Zoom** drop-down menu in the top-right corner of a page
+* You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
 
 * Widgets are shown with additional information easily visible – for example, data sources for data views and the width assigned to columns
 

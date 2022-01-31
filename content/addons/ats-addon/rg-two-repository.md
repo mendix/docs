@@ -89,4 +89,4 @@ There are different scenarios for exporting data from ATS:
   * Actions, test cases, and test suites
   * Folders, actions, test cases, and test suites
 
-To export the data, you have to mark the items in the **Repository** and then click **Export** in the top menu. You can also export the item right away from the edit view by clicking **Export** in the top-right of the screen.
+To export the data, you have to mark the items in the **Repository** and then click **Export** in the top menu. You can also export the item right away from the edit view by clicking **Export** on the upper-right side of the screen.

@@ -24,7 +24,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 Switch-to Menu {#switch-to}
 
-The **Switch-to** menu is located at the top-left of Studio Pro and is represented as a nine dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Switch-to** menu, see the [Navigation](/developerportal/index#navigation) section in the *Developer Portal Guide*.
+The **Switch-to** menu is located at the upper left of Studio Pro and is represented as a nine dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Switch-to** menu, see the [Navigation](/developerportal/index#navigation) section in the *Developer Portal Guide*.
 
 ## 3 File Menu {#file}
 

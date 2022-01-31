@@ -91,7 +91,7 @@ Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
 
 ### 6.4 Close Action
 
-Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
+Configures the behavior of the popup close button (the little cross in the upper-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
 
  _Default value:_ Default (cancel)
 

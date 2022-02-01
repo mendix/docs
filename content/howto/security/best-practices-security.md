@@ -70,22 +70,90 @@ Keep the following in mind:
 * If there are other app-specific request handlers that should have an access restriction applied, then click **New** to add them as additional paths
 * The URLs of test and acceptance environments can easily be guessed; in order to take effective measures, the restrictions should be applied to these environments also
 
-## 5 Applying Authentication on Services
+## 5 Applying Authentication on Services{#service-authentication}
 
-When publishing a web service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine-grained instead of generic) users enables an application to do the following:
+When you expose APIs, you provide a way for users and external systems to access (create, read, update, and/or delete) data within your Mendix application.
+As APIs are just a different interface to access your data, it is extremely important to restrict data access through authentication and authorization best practices.
 
-* Identify which user caused a change in your application (traceability)
-* Constrain access on the user (role) level
-* Log the usage of your service
+### 5.1 Turning On API Security
 
-Mendix offers the following options for providing authentication for your services:
+Firstly, you need to answer the question **Requires authentication** with *Yes* or *No*.
 
-* User name and password validation, specified within Mendix Studio Pro (for details, see [Published Web Services](/refguide/published-web-services))
-* Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
+The platform guides you towards choosing *Yes* for the API endpoints you create. 
+Intuitively this seems correct, as when the *Yes* option is toggled on. Mendix Studio Pro will reveal a variety of authentication options.
+These options will restrict which users or external systems have access to your API endpoint.
+From a security perspective this is exactly what we want.
+
+However, choosing between *Yes* and *No* is not this straightforward.
+Choosing *Yes* will force your API requests to be executed in the context of a user account and require an active session to be established. 
+Skipping the step where we retrieve the user account and establish a session can have a significant performance improvement for your API.
+This is why choosing *No* can still be a viable option for your API, and it might even be the recommended option in many situations.
+
+The best practices when selecting *No* as **Requires authentication** option are as follows.
+
+* Provide the HTTP Response object as a parameter to the microflow used as the API handler.
+* Configure the required headers for authentication as part of a published REST operation and add them explicitly to the API handling microflow as input parameters. This could, for example, be an "X-API-Key" header or "Authorization" header. By adding the header as an input parameter it will be included in the generated Swagger documentation hosted at `/rest-doc`. Here it can be manually set as a parameter and used as part of the "try it out" feature for that API operation.
+* Perform your own validations on this header information at the very start of the API handling microflow.
+* Abort execution of the rest of the API handling microflow when validations fail.
+* Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials to not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
+
+By performing your authentication checks in this way, you will have the flexibility of the [Custom authentication option](#custom) described below, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
+
+{{% alert type="warning" %}}
+Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
+{{% /alert %}}
+
+Choosing *Yes* comes with the benefits of having the timezone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the System.User object used for the API account.
+
+### 5.2 Selecting Authentication Option
+
+APIs that do require authentication have either two or three options to fulfill that requirement, based on whether they are Published Web Services or OData/REST endpoints.
+
+All these authentication options will later be combined with the API's [Allowed Roles](/refguide/published-rest-service#allowed-roles) configuration.
+Allowed roles can be any of the roles you have defined in [User Roles](/refguide/user-roles), including the role assigned to Anonymous users.
+
+{{% alert type="warning" %}}
+Assigning an Anonymous user role as one of the API's allowed roles is similar as choosing *No* at **Requires authentication**.
+This means that the same advice around certificate usage and IP restrictions applies, and you should perform the authentication inside the API handling microflow itself.
+{{% /alert %}}
+
+You can choose one or more of the authentication options described below. If you choose more than one authentication option, they will be checked in the order: [Custom](#custom) -> [Username and Password](#basic) -> [Active Session](#active)
+
+#### 5.2.1 Authentication Option 1, Username and Password{#basic}
+
+If you choose this option, the API will expect a `Basic auth` HTTP request header to be set on each incoming request. The `basic auth` header format is: `"Authorization": "Basic userid:password"`, where userid:password have been base64 encoded.
+
+This "Authorization" header will be combined with the allowed roles, and checked against the app users, recorded in the `System.User` entity.
+Credentials provided in the basic auth header will be checked as follows:
+
+* for REST and OData – endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
+* for SOAP endpoints – `WebServiceUser` should be "TRUE"
+
+    {{% alert type="info" %}}This means that you cannot create an account in Mendix that can use Published Web Services, the application UI, and OData/REST APIs at the same time.{{% /alert %}}
+
+#### 5.2.2 Authentication Option 2, Active Session{#active}
 
 {{% alert type="info" %}}
-To authenticate a user for a REST API service, the user's role should be allowed to use the REST API service, and the attribute `WebServiceUser` for this user must be set to `false`.
+This authentication option is not available for Published Web Services and can only be used in apps which are not [Offline-First](/refguide/offline-first). 
 {{% /alert %}}
+
+If you choose this option, the API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. This authentication option is particularly interesting for custom JavaScript and widget implementations.
+
+The session token can be acquired by calling `mx.session.getConfig("csrftoken")` in JavaScript. This method call should be used before each API call to prevent cross-site request forgery (CSRF/XSRF).
+
+#### 5.2.3 Authentication Option 3, Custom {#custom}
+
+If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
+
+This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
+
+After the request has been authenticated, the role-based security model of Mendix will be applied to the microflows that are executed as the result of the API endpoint, resources, and paths that have been configured. If [Apply entity access](/refguide/microflow#security) has been turned on, the API call will also check for read/write access to the requested entities and attributes before returning any data. 
+
+To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide/published-rest-routing).
+
+### 5.3 Limiting API Access through IP Restrictions and Certificates
+
+Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions), creating a secure bubble of trusted requesting users and systems.
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
 

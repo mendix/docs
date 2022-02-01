@@ -16,7 +16,7 @@ This document explains how to migrate your existing workflow apps depending on t
 
 ### 2.1 Changes in Mendix Versions 9.6-9.9
 
-The following is changed in the domain model of the System Module in Mendix version 9.6, 9.7, 9.8, and 9.9:
+The following is changed in the domain model of the System Module in **Mendix version 9.6, 9.7, 9.8, and 9.9**:
 
 1. The **WorkflowSystemTask**, and **WorkflowVersion** entities have been removed and are now handled in the background by the runtime.
 2. The **WorkflowTaskInstance** entity has been merged into the **WorkflowUserTask** entity.
@@ -26,7 +26,7 @@ The following is changed in the domain model of the System Module in Mendix vers
 
 ### 2.2 Changes in Mendix Version 9.10
 
-The following is changed in the domain model of the System Module in Mendix version 9.10:
+The following is changed in the domain model of the System Module in **Mendix version 9.10**:
 
 * Tasks do not require the WorkflowUserTask entity specialization anymore compared to 9.6-9.9
 * Workflows do not require the Workflow entity specialization anymore compared to 9.6-9.9
@@ -38,6 +38,10 @@ The following is changed in the domain model of the System Module in Mendix vers
 ## 3 Migrating Your App That Has Workflow Functionality 
 
 The following sub-sections explain the steps to take in migrating your app with the workflow functionality depending on the version you would like to migrate to.
+
+If you would like to migrate your app to **Mendix version 9.6-9.9**, see the [Migrating Your App to Mendix Version 9.6-9.9](#migrate) section below.
+
+If you would like to migrate your app to **Mendix version 9.10**, see the [Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10](#migrate-910) section below.
 
 ### 3.1 Migrating Your App to Mendix Version 9.6-9.9 {#migrate}
 
@@ -83,7 +87,7 @@ If you did not implement custom UI in your workflow pages, we highly recommend j
 
 Securing user tasks now happens through the domain model by setting [entity accesses](module-security#entity-access), and you no longer need to select which module roles are allowed to execute a task. Setting target users remains unchanged.
 
-### 3.2 Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10
+### 3.2 Migrating Your App from Mendix Version 9.6-9.9 to Mendix Version 9.10 {#migrate-910}
 
 If you would like to migrate your app with workflow functionality **from** Mendix versions 9.6-9.9 **to** Mendix version 9.10, follow the steps below.
 

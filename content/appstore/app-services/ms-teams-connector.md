@@ -27,8 +27,8 @@ This app service is an add-on module. For more information, see [Add-On Module](
 
 ### 1.2 Features
 
-* Send HTML,Markdown or plain text messages.
-* Send Microsoft Teams Actionable Message Cards.
+* Send HTML,Markdown or plain text messages
+* Send Microsoft Teams actionable message sards
 
 ### 1.3 Prerequisites
 
@@ -168,21 +168,27 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
 2. Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
 
 3.  Specify the following settings with expression syntax:
-    1.  Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
-    2.  Select either **Text** or **Card** in dropdown for **Message Type** parameter.    
-        2.1 **Text** must be selected for sending plain text,HTML or markdown.
-        
-        {{% alert type="info" %}}To know about the HTML and markdown tags supported by Microsoft Teams, visit [Format cards in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format){{% /alert %}}
-       
-       2.2 **Card** must be selected for sending Message Cards.                  
-     {{% alert type="info" %}}To know how to use Actionable Message Cards, visit [Actionable Message Card] (https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference){{% /alert %}}
-         
-    3.  The **Message** parameter must be given the message content as String.
-        ![](attachments/ms-teams-connector/microflow_configure_parameters.png)       
+    1. Set the **webhookId** parameter to the **Webhook ID** generated in the Communication Services Console.
     
+    2.  For **Message type**, select Text** or **Card** from the drop-down list:
+        
+        * If you send messages in plain text, HTML or markdown formatting, select **Text**
+        
+         {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format){{% /alert %}}
+       
+       * If you send actionable message cards, select **Card**
+       
+         {{% alert type="info" %}}Fore more information about message cards, see [*Actionable Message Card*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference).{{% /alert %}}
+       
+    3.  For **Message**, set up the message content in the String format. Below is an example:
+       
+        ![](attachments/ms-teams-connector/html_message.png)
+        This example will render in Microsoft Teams channel like this:
+        ![](attachments/ms-teams-connector/html_output.png)
+       
     4. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="warning" %}}All parameters are mandatory. Selecting empty or (none) will give you error{{% /alert %}}
+{{% alert type="warning" %}}All parameters are mandatory. Leaving the values empty or selecting **none** will cause an error.{{% /alert %}}
 
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
 
@@ -192,19 +198,6 @@ After the **Microsoft Teams Connector** activity is configured, once the microfl
 * If the message is successfully sent, the value of the `SentMessage` attribute is `false`
 * The `Message` attribute contains the respective response message
 
-### 4.2.2 Using **Text** as **Message Type**
-    1. Below example shows how to send HTML content as a message.
-       Step 1: Configure a valid Webhook id.
-       Step 2: Set Message type as Text.       
-       Step 3: Provide HTML string as input in Message parameter.       
-          ![](attachments/ms-teams-connector/html_message.png) 
-          
-    2. The HTML gets rendered in Microsoft Teams Channel.
-       
-       ![](attachments/ms-teams-connector/html_output.png)         
-    
-    Similarly, you can send plain text and Markdown content.
-    
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
 The **Usage** dashboard shows the real-time statistics about the usage of an app service. For the Microsoft Teams connector, perform the following steps to check the number of Microsoft Teams webhooks usage:

@@ -218,6 +218,8 @@ The **Application node CPU usage** graph shows the CPU utilization in percentage
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
+This graph is normalized so that 100% is the full capacity of a single CPU. If you have 2 CPUs, you would expect your graph to peak at 200%.
+
 Because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with 2 CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
 If your app consistently uses more CPU than specified for your container your app could suffer from performance issues if there are periods when there are insufficient CPU resources for it to burst above that specified for the container.
@@ -334,6 +336,8 @@ Type | Explanation
 ### <a name="Trends-dbcpu"></a>5.6 Database Node CPU Usage
 
 The **Database node CPU usage** graph shows the amount of CPU usage over time, as a percentage.
+
+This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself, so however many CPUs the database node has the graph will peak at 100%.
 
 {{% alert type="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package) as you are using a private schema on a shared database server.

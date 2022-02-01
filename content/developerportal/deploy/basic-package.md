@@ -84,7 +84,10 @@ To order your Mendix Basic package, do the following:
 
 After 48 hours, your Mendix Basic package will be provisioned as a new licensed node. You will receive an email at the address entered in your order informing you that this has happened and linking you to the documentation on how to use the node.
 
-Linking your app to your licensed node is done in the same way as for any other sort of license. See [How To Migrate a Free App to Mendix Basic](migrate-free-app-to-basic) for instructions, and see [Linking Your App to a Licensed Node](licensing-apps#licensed-node) in *Licensing Mendix Cloud Apps* for full details.
+Linking your app to your licensed node is done in the same way as for any other sort of license. See the following documents for more information on how to do this:
+
+* [How To Migrate a Free App to Mendix Basic](migrate-free-app-to-basic) for brief instructions
+* [Linking Your App to a Licensed Node](licensing-apps#licensed-node) in *Licensing Mendix Cloud Apps* for full details
 
 ## 5 Invoicing for your Basic Package
 

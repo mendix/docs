@@ -10,7 +10,7 @@ tags: ["mobile", "debug", "android", "ios", "native", "fonts"]
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. As you can see in the [Prerequisites](#prerecs) section below, Mendix offers two ways for you to add custom fonts: using the Mendix Native Mobile Builder or manually.
 
-### 1.2 Introduction to Fonts in Mendix Native Mobile Apps
+### 1.1 Introduction to Fonts in Mendix Native Mobile Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 

@@ -97,7 +97,7 @@ The best practices when selecting *No* as **Requires authentication** option are
 * Abort execution of the rest of the API handling microflow when validations fail.
 * Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials to not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
 
-By performing your authentication checks in this way, you will have the flexibility of the Custom authentication option described in section 5.2.3, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
+By performing your authentication checks in this way, you will have the flexibility of the [Custom authentication option](#custom) described below, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
 
 {{% alert type="warning" %}}
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
@@ -143,7 +143,7 @@ The session token can be acquired by calling `mx.session.getConfig("csrftoken")`
 
 #### 5.2.3 Authentication Option 3, Custom {#custom}
 
-If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be new or existing object, based on the content of the HTTP request headers.
+If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
 
 This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
 
@@ -151,7 +151,7 @@ After the request has been authenticated, the role-based security model of Mendi
 
 To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide/published-rest-routing).
 
-#### 5.3 Limiting API Access through IP Restrictions and Certificates
+### 5.3 Limiting API Access through IP Restrictions and Certificates
 
 Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions), creating a secure bubble of trusted requesting users and systems.
 

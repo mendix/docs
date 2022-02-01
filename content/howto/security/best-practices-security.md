@@ -85,24 +85,25 @@ These options will restrict which users or external systems have access to your 
 From a security perspective this is exactly what we want.
 
 However, choosing between *Yes* and *No* is not this straightforward.
-Choosing *Yes* will force your API requests to be executed in the context of a user account and requires an active session to be established. 
+Choosing *Yes* will force your API requests to be executed in the context of a user account and require an active session to be established. 
 Skipping the step where we retrieve the user account and establish a session can have a significant performance improvement for your API.
 This is why choosing *No* can still be a viable option for your API, and it might even be the recommended option in many situations.
 
-The best practices when selecting *No* as **Requires authentication** option are:
-- Provide the HTTP Response object as a parameter to the microflow used as the API handler
-- Configure the required headers for authentication as part of a published REST operation, and add them explicitly to the API handling microflow as input parameters. This could, for example, be an "X-API-Key" header or "Authorization" header. By adding the header as an input parameter it will be included in the generated swagger documentation hosted at `/rest-doc`. Here it can be manually set as a parameter and used as part of the "try it out" feature for that API operation.
-- Perform your own validations on this header information at the very start of the API handling microflow
-- Abort execution of the rest of the API handling microflow when validations fail
-- Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials to not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
+The best practices when selecting *No* as **Requires authentication** option are as follows.
 
-By performing your authentication checks this way, you will have the flexibility of the Custom authentication option described in section 5.2.3, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenario's is acceptable for API's.
+* Provide the HTTP Response object as a parameter to the microflow used as the API handler.
+* Configure the required headers for authentication as part of a published REST operation and add them explicitly to the API handling microflow as input parameters. This could, for example, be an "X-API-Key" header or "Authorization" header. By adding the header as an input parameter it will be included in the generated Swagger documentation hosted at `/rest-doc`. Here it can be manually set as a parameter and used as part of the "try it out" feature for that API operation.
+* Perform your own validations on this header information at the very start of the API handling microflow.
+* Abort execution of the rest of the API handling microflow when validations fail.
+* Manipulate the status code and response directly in the HTTP response object that was provided as a parameter. It is recommended that you return a `401 Unauthorized` in cases where authentication fails and a `403 Forbidden` in cases where the authentication was successful, but the provided credentials to not grant access to the requested resource or allow the rest of that API operation's logic to be executed.
+
+By performing your authentication checks in this way, you will have the flexibility of the Custom authentication option described in section 5.2.3, but it comes with the lowest performance hit. This is at the expense of losing the user context, which in most scenarios is acceptable for APIs.
 
 {{% alert type="warning" %}}
 Choosing *No* without these restrictions will allow anyone on the internet to make requests to your API endpoint at any time and at any rate, which can seriously affect your app's response and even cause server failure.
 {{% /alert %}}
 
-Choosing *Yes* comes with the benefits of having the timezone and language settings available for that API user account. And can also be used for better traceability of changes made through API requests. It also gives the possibility to apply restrictions to requested entities based on the System.User used for the API account.
+Choosing *Yes* comes with the benefits of having the timezone and language settings available for that API user account. It can also provide better traceability of changes made through API requests. Additionally, it gives the possibility of applying restrictions to requested entities based on the System.User object used for the API account.
 
 ### 5.2 Selecting Authentication Option
 
@@ -125,8 +126,8 @@ If you choose this option, the API will expect a `Basic auth` HTTP request heade
 This "Authorization" header will be combined with the allowed roles, and checked against the app users, recorded in the `System.User` entity.
 Credentials provided in the basic auth header will be checked as follows:
 
-* for REST and OData endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
-* for SOAP endpoints `WebServiceUser` should be "TRUE"
+* for REST and OData – endpoints will only look for accounts that have the attribute `WebServiceUser` set to "FALSE"
+* for SOAP endpoints – `WebServiceUser` should be "TRUE"
 
     {{% alert type="info" %}}This means that you cannot create an account in Mendix that can use Published Web Services, the application UI, and OData/REST APIs at the same time.{{% /alert %}}
 
@@ -150,9 +151,10 @@ After the request has been authenticated, the role-based security model of Mendi
 
 To understand the full authentication flow, take a closer look at [Published REST Request Routing](/refguide/published-rest-routing).
 
-#### 5.3 Limiting API access through IP restrictions and certificates
+#### 5.3 Limiting API Access through IP Restrictions and Certificates
 
 Additional API security measures can be implemented through the use of [IP restrictions and/or certificates](/developerportal/deploy/access-restrictions), creating a secure bubble of trusted requesting users and systems.
+
 ## 6 Using the Encryption Module When Storing Sensitive Information
 
 Your application might require sensitive information that should be extra encrypted. These are some examples:

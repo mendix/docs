@@ -188,7 +188,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
        
     4. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="warning" %}}All parameters are mandatory. Selecting the values empty or  **none** will cause an error.{{% /alert %}}
+{{% alert type="warning" %}}All parameters are mandatory. Selecting any values as empty or **none** will cause an error.{{% /alert %}}
 
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
 

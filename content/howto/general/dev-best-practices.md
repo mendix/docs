@@ -226,6 +226,11 @@ For integrations, you have the following types of microflow:
 
 | Document Type                             | Prefix    |
 |-------------------------------------------|-----------|
+| Layout for web                            | Atlas_  |
+| Layout for a phone                        | Phone_  |
+| Layout for a native phone                 | NativePhone_  |
+| Layout for a tablet                       | Tablet_ |
+| Layout for a popup                        | Phone_  |
 | Layout                                    | LAY\_  |
 | Snippet                                   | SNIP\_ |
 

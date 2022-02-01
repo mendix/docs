@@ -79,9 +79,9 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
     ![](attachments/ms-teams-connector/binding-key-generation.png)
 
-8. **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
+8.  **Copy** the **LicenseSecret** and **LicenseKey**. You will use them later for app deployment.
 
-{{% alert type="note" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
+{{% alert type="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
 
 ![](attachments/ms-teams-connector/edit_instance_name.png)
 
@@ -172,15 +172,15 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     
     2.  For **Message type**, select **Text** or **Card** from the drop-down list:
         
-        * If you wish to send message as plain text or in HTML or markdown formatting, select **Text**.
+        * If you want to send message as plain text or in HTML or markdown formatting, select **Text**
         
          {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format){{% /alert %}}
        
-       * If you want to use a actionable message card as message, select **Card**.
+       * If you want to use a actionable message card as message, select **Card**
        
          {{% alert type="info" %}}Fore more information about message cards, see [*Actionable Message Card*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference).{{% /alert %}}
        
-    3.  For **Message** parameter, set up the message content in the String format. Below is an example:
+    3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
        
         ![](attachments/ms-teams-connector/html_message.png)
         This example will render in Microsoft Teams channel like this:
@@ -188,7 +188,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
        
     4. Click **OK** to save the changes and close the dialog box.
 
-{{% alert type="warning" %}}All parameters are mandatory. Selecting any values as empty or **none** will cause an error.{{% /alert %}}
+{{% alert type="warning" %}}All parameters are mandatory. Setting any value to be empty or **none** will cause an error.{{% /alert %}}
 
 After the **Microsoft Teams Connector** activity is configured, once the microflow that uses this activity is triggered, the app asynchronously sends out the message to the Microsoft Teams channel. When the message is sent successfully, the activity returns a **SendMessageReponse** object. The **SendMessageReponse** entity for this object comes with the module and is predefined:
 

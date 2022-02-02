@@ -200,21 +200,24 @@ After the **Microsoft Teams Connector** activity is configured, once the microfl
 
 #### 4.2.2 Building a Message Card {#build-message-card}
 
-Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the app service. To build a message card, perform the following steps:
+Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using this app service. To build a message card, perform the following steps:
 
 1. Go to the [Card Playground](https://messagecardplayground.azurewebsites.net/). This playground contains sample message cards where you can modify the JSON for any sample card and view the corresponding generated card on the fly.
-2.  To view a message card sample, click the **Select Sample** drop-down list at the upper-right corner of the site. You can select any card and edit it. All sample cards are listed below the **Legacy MesssageCard samples** category. 
+
+2.  To view a message card sample, click the **Select Sample** drop-down list at the upper-right corner of the webpage. All sample cards are listed below the **Legacy MesssageCard samples** category. 
 
     ![](attachments/ms-teams-connector/sample-message-cards.png) 
     
+    You can select any sample card and edit it. The preview of the card is on the right side of the webpage. 
+
     The image below shows the basic structure of a card and their corresponding fields in JSON:
 
     ![](attachments/ms-teams-connector/card-json-structure.png)     
 
-    For example, the card above with **Add a comment action** expanded looks like this:
-
-    ![](attachments/ms-teams-connector/add-a-comment-expanded.png) 
+    The card right above with **Add a comment action** expanded will look like this:
     
+    ![](attachments/ms-teams-connector/add-a-comment-expanded.png) 
+
     {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}

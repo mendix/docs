@@ -86,8 +86,6 @@ This API enables retrieving information (branches, revisions) about application 
 
 For details, see [Team Server API](team-server-api).
 
-For details about the previous implementation, see [Team Server API](old-version/team-server-api.md).
-
 ## 15 User Management API
 
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your applications.

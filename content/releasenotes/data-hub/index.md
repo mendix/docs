@@ -10,6 +10,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### February 3rd, 2022
+
+#### Fixes
+
+* We fixed a bug that was on Contract Upload page.
+
 ### January 27th, 2022
 
 #### Improvements

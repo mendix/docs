@@ -80,19 +80,25 @@ Use this API to extend the [requirements and project management](/developerporta
 
 For details, see [Stories API](stories-api).
 
-## 14 Team Server API {#team-server-api}
+## 14 App Repository API
+
+This API enables retrieving information (branches, commits) of application models stored in our team server.
+
+For details, see [App Repository API](app-repository-api).
+
+## 15 Team Server API {#team-server-api}
 
 This API enables retrieving information (branches, revisions) about application models stored in Team Server. You always access an application model via the context of an application (for more information about retrieving apps and app identities, see [Deploy API](#deploy-api)).
 
 For details, see [Team Server API](team-server-api).
 
-## 15 User Management API
+## 16 User Management API
 
 Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your applications.
 
 For details, see [User Management API](user-management-api).
 
-## 16 Webhooks
+## 17 Webhooks
 
 Webhooks allow you to build or set up Mendix Platform connectors that subscribe to certain events on the [Developer Portal](/developerportal/).
 

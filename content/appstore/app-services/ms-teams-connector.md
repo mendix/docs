@@ -27,7 +27,7 @@ This app service is an add-on module. For more information, see [Add-On Module](
 
 ### 1.2 Features
 
-* Send HTML,Markdown or plain text messages
+* Send HTML, markdown, or plain text messages
 * Send Microsoft Teams actionable message sards
 
 ### 1.3 Prerequisites
@@ -51,7 +51,7 @@ This app service is an add-on module. For more information, see [Add-On Module](
 
 You can find the app service in the **Add-ons** folder in the **App Explorer** and in the **Communication Services** category in the **Toolbox**.
 
-![connector_in_protected_module](attachments/ms-teams-connector/connector_in_protected_module.png)
+![connector-in-protected-module](attachments/ms-teams-connector/connector-in-protected-module.png)
 
 {{% alert type="warning" %}}The app cannot contain different versions of the Microsoft Teams Connector at the same time.{{% /alert %}}        
 
@@ -83,7 +83,7 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 
 {{% alert type="info" %}}We recommend that you **Edit Instance Name** for your subscription on the service management dashboard. This is a good practice if you have purchased multiple subscriptions of a service.{{% /alert %}}
 
-![](attachments/ms-teams-connector/edit_instance_name.png)
+![](attachments/ms-teams-connector/edit-instance-name.png)
 
 
 ### 3.2 Configuring LicenseSecret and LicenseKey for App Deployment
@@ -119,24 +119,24 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
     
 5.  Sign in to **Communication Services Console** using Mendix SSO.
     
-    ![](attachments/ms-teams-connector/console_login_view.png)
+    ![](attachments/ms-teams-connector/console-login-view.png)
     
     The **Communication Services Console** shows all the communication services that you have subscribed.
 
 6.  Go to the **Microsoft Teams Connector** tab. 
 7.  Select the **Developer Instance** from the drop-down list against which you want to configure **Webhook URLs**. The **Add Webhook** button gets enabled.
 
-    ![add_webhook_button_enabled](attachments/ms-teams-connector/add_webhook_button_enabled.png)
+    ![add-webhook-button-enabled](attachments/ms-teams-connector/add-webhook-button-enabled.png)
 
 8.  Click **Add Webhook**. The **Webhook Adder** dialog box opens. 
    
-    ![webhook_adder_popup](attachments/ms-teams-connector/webhook_adder_popup.png)
+    ![webhook-adder-popup](attachments/ms-teams-connector/webhook-adder-popup.png)
     
 9. Enter a **Webhook Name** for the Webhook.
 10. Enter the **Webhook URL** which you configured for your Microsoft Teams Channel.
 11.  **Save** the changes. The Webhook is added to the list.
 
-     ![webhook_data_view](attachments/ms-teams-connector/webhook_data_view.png)
+     ![webhook-data-view](attachments/ms-teams-connector/webhook-data-view.png)
      The system automatically generates a unique **Webhook ID** for each **Webhook URL** you add. You will need to give **Webhook ID** as input to the **Microsoft Teams Connector** activity to send messages. 
      
      {{% alert type="info" %}}Each **Webhook URL** you add is counted as utilization towards the allocated app service quota. If a **Webhook URL** is incorrect, you can edit or delete the Webhook.{{% /alert %}}     
@@ -144,11 +144,11 @@ Microsoft Teams Connector is a premium Mendix product that is subject to a purch
 12.  Copy the **Webhook ID** as follows:
      1.  Hover over the **...** icon in the **Action** column to open the pop-up menu.
         
-         ![edit_webhook_popup](attachments/ms-teams-connector/edit_webhook_popup.png) 
+         ![edit-webhook-popup](attachments/ms-teams-connector/edit-webhook-popup.png) 
          
      2.  Click **Copy**. A pop-up window opens and shows the name of the Webhook that you have copied.
         
-         ![copied_popup](attachments/ms-teams-connector/copied_popup.png)
+         ![copied-popup](attachments/ms-teams-connector/copied-popup.png)
         
          {{% alert type="note" %}}You can select **Edit** or **Delete** to edit or delete a Webhook.
          {{% /alert %}}
@@ -163,7 +163,7 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
     
     The following representative microflow contains activities with the required attributes, the **Microsoft Teams Connector** activity, and a placeholder to capture the returned object.
     
-    ![](attachments/ms-teams-connector/connector_in_microflow.png) 
+    ![](attachments/ms-teams-connector/connector-in-microflow.png) 
     
 2. Double-click the **Microsoft Teams Connector** activity to open the **Microsoft Teams Connector** dialog box.
 
@@ -174,17 +174,17 @@ You can use the **Microsoft Teams Connector** activity in a microflow to send me
         
         * If you want to send message as plain text or in HTML or markdown formatting, select **Text**
         
-         {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format){{% /alert %}}
+         {{% alert type="info" %}}Fore more information about HTML and markdown tags supported by Microsoft Teams, see [*Format Cards in Microsoft Teams*](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format).{{% /alert %}}
        
        * If you want to use a actionable message card as message, select **Card**
        
-         {{% alert type="info" %}}Fore more information about message cards, see [*Actionable Message Card*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference).{{% /alert %}}
+         {{% alert type="info" %}}Fore more information about message cards, see [Building a Message Card](#build-message-card).{{% /alert %}}
        
     3.  For the **Message** parameter, set up the message content in the String format. Below is an example:
        
-        ![](attachments/ms-teams-connector/html_message.png)
-        This example will render in Microsoft Teams channel like this:
-        ![](attachments/ms-teams-connector/html_output.png)
+        ![](attachments/ms-teams-connector/html-message.png)
+        The example above will render in the Microsoft Teams channel like this:
+        ![](attachments/ms-teams-connector/html-output.png)
        
     4. Click **OK** to save the changes and close the dialog box.
 
@@ -198,22 +198,24 @@ After the **Microsoft Teams Connector** activity is configured, once the microfl
 * If the message could not be sent, the value of the `SentMessage` attribute is `false`
 * The `Message` attribute contains the respective response message
 
-#### 4.2.2 Building a Message Card
+#### 4.2.2 Building a Message Card {#build-message-card}
 
-1. Microsoft Teams support [*Actionable Message Card*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference).
-2. To create one with your content,you can navigate to [*Message Card Playground*](https://messagecardplayground.azurewebsites.net/).   
-3. This playground contains number of sample message cards where you can modify the JSON for any sample card and view the corresponding generated card on the fly.
-4. To view Message Card samples, click on **Select Sample** dropdown.
-5. In the dropdown,all sample cards listed under category **Legacy MesssageCard samples**.You can select any card and edit it. 
-        ![](attachments/ms-teams-connector/sample-message-cards.png) 
+Microsoft Teams support [actionable message cards](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). You can build a message card and send it to a Microsoft Teams channel using the app service. To build a message card, perform the following steps:
 
-6. Below is the basic structure of a card and corresponding fields in JSON:    
-        ![](attachments/ms-teams-connector/sample-message-cards.png)     
+1. Go to the [Card Playground](https://messagecardplayground.azurewebsites.net/). This playground contains sample message cards where you can modify the JSON for any sample card and view the corresponding generated card on the fly.
+2.  To view a message card sample, click the **Select Sample** drop-down list at the upper-right corner of the site. You can select any card and edit it. All sample cards are listed below the **Legacy MesssageCard samples** category. 
 
-Above card with **Add a comment action expanded** :
-      ![](attachments/ms-teams-connector/add_a_comment_expanded.png) 
+    ![](attachments/ms-teams-connector/sample-message-cards.png) 
+    
+    The image below shows the basic structure of a card and their corresponding fields in JSON:
 
-         {{% alert type="info" %}}To read more about design a message card, visit [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
+    ![](attachments/ms-teams-connector/card-json-structure.png)     
+
+    For example, the card above with **Add a comment action** expanded looks like this:
+
+    ![](attachments/ms-teams-connector/add-a-comment-expanded.png) 
+    
+    {{% alert type="info" %}}For more information about the design of a message card, see [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 
@@ -230,8 +232,8 @@ The **Usage** dashboard shows the real-time statistics about the usage of an app
 
 When you get the following pop-up window, then your license is invalid. Check if the configuration of your [LicenseSecret and LicenseKey](#key-generation) is correct.
 
-![license_invalid_popup](attachments/ms-teams-connector/license_invalid_popup.png)
+![license-invalid-popup](attachments/ms-teams-connector/license-invalid-popup.png)
 
 When you get the following pop-up window, then your quota is used up. You can check your usage statistics on the [Usage dashboard](#statistics).
 
-![quota_exhausted_popup](attachments/ms-teams-connector/quota_exhausted_popup.png)
+![quota-exhausted-popup](attachments/ms-teams-connector/quota-exhausted-popup.png)

@@ -195,8 +195,25 @@ After the **Microsoft Teams Connector** activity is configured, once the microfl
 ![](attachments/ms-teams-connector/send-message-response-entity.png) 
 
 * If the message is successfully sent, the value of the `SentMessage` attribute is `true`
-* If the message is successfully sent, the value of the `SentMessage` attribute is `false`
+* If the message could not be sent, the value of the `SentMessage` attribute is `false`
 * The `Message` attribute contains the respective response message
+
+#### 4.2.2 Building a Message Card
+
+1. Microsoft Teams support [*Actionable Message Card*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference).
+2. To create one with your content,you can navigate to [*Message Card Playground*](https://messagecardplayground.azurewebsites.net/).   
+3. This playground contains number of sample message cards where you can modify the JSON for any sample card and view the corresponding generated card on the fly.
+4. To view Message Card samples, click on **Select Sample** dropdown.
+5. In the dropdown,all sample cards listed under category **Legacy MesssageCard samples**.You can select any card and edit it. 
+        ![](attachments/ms-teams-connector/sample-message-cards.png) 
+
+6. Below is the basic structure of a card and corresponding fields in JSON:    
+        ![](attachments/ms-teams-connector/sample-message-cards.png)     
+
+Above card with **Add a comment action expanded** :
+      ![](attachments/ms-teams-connector/add_a_comment_expanded.png) 
+
+         {{% alert type="info" %}}To read more about design a message card, visit [*Design guidelines*](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#design-guidelines). {{% /alert %}}
 
 ## 5 Checking Statistics Using the Usage Dashboard {#statistics}
 

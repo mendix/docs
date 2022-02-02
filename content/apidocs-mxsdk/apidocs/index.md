@@ -89,9 +89,9 @@ For details, see [Stories API](stories-api).
 
 ## 14 App Repository API
 
-This API enables retrieving information (branches, commits) of application models stored in our team server.
+This API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/collaborate/team-server).
 
-For details, see [App Repository API](app-repository-api).
+For details, see [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api).
 
 ## 16 Team Server API {#team-server-api}
 

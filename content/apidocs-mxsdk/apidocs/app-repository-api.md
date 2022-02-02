@@ -47,7 +47,7 @@ This is the generic error response format. The payload example format applies to
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `errorCode` | String | A code that can be used to lookup the error. |
+| `errorCode` | String | A code that can be used to look up the error. |
 | `errorMessage` | String | A short, human-readable message explaining the error. |
 
 Payload Example:

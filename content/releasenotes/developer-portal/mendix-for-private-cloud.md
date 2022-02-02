@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### February 3rd, 2022
+
+#### Portal Improvement
+
+* We have improved the UX, also add a new button Save and Apply to directly apply changes made in an environment. The button will restart the environment.
+
 ### January 13th, 2022
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0

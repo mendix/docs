@@ -30,7 +30,7 @@ Log in to Apple Developer and navigate to [https://developer.apple.com/account/i
 
 ### 2.2 Creating a Key
 
-Click on the **+** icon in the top-right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then press **Contine**. On the next page, press **Confirm**.
+Click on the **+** icon on the upper-right side of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then press **Contine**. On the next page, press **Confirm**.
 
 ### 2.3 Downloading the Key
 

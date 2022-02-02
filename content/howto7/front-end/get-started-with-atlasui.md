@@ -30,7 +30,7 @@ For more information about Atlas UI, see [Atlas UI](/howto7/front-end/atlas-ui).
 
 ## 3 Editing Your App in the Web Modeler
 
-You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen.
+You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the upper-right corner of the screen.
 
 Note that when you click **Edit App** for any Atlas UI app, it will automatically open in the Web Modeler. If you need to edit the app in the Desktop Modeler, click the drop-down menu on the **Edit App** button and select **Edit in Desktop Modeler**.
 

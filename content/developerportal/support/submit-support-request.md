@@ -39,7 +39,7 @@ This is the basic information required for a ticket:
 
 To submit a request with Mendix Support, follow these steps:
 
-1. Click **Submit a request** in the top-right corner of the portal.
+1. Click **Submit a request** in the upper-right corner of the portal.
 2.  Select an issue from the drop-down menu:
 
 	![](attachments/submit/issue.png)
@@ -174,7 +174,7 @@ For Windows Phone, please contact Mendix Support for the current support conditi
 
 ## 6 Overview of Requests
 
-By clicking your name in the top-right side of  the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
+By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
 ![](attachments/submit/activities.png)
 

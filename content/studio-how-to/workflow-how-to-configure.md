@@ -308,7 +308,7 @@ You need to configure navigation otherwise the user roles will not be able to re
 
     2. Click the **Page** property.
 
-    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the top-right corner:
+    3. In the **Select Page** dialog box, switch from the current module to the Workflow Commons one using the drop-down menu in the upper-right corner:
 
         {{% image_container width="400" %}}![Select Page](attachments/workflow-how-to-configure/select-page-for-navigation.png){{% /image_container %}}
 

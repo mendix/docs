@@ -36,7 +36,7 @@ After opening a domain model, you will see an overview of all entities, attribut
 
 ![](attachments/domain-models/domain-overview.png)
 
-The **Auto Arrange** option in the top-left corner groups and aligns entities by associations. Entities with no associations will be vertically aligned. 
+The **Auto Arrange** option in the upper-left corner groups and aligns entities by associations. Entities with no associations will be vertically aligned. 
 
 ## 2 Components 
 
@@ -144,7 +144,7 @@ To create a new image/file entity with an association automatically, follow the 
 
 2. Click **New attribute** button.
 
-3.  In the **Create New Attribute** dialog box, click **Add image or file** in the bottom-right corner:
+3.  In the **Create New Attribute** dialog box, click **Add image or file** in the lower-right corner:
 
     ![Add Image or File](attachments/domain-models/add-image-or-file.png)
 

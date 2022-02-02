@@ -9,7 +9,7 @@ The recorder is a function/plugin in ATS that records the actions behind your te
 
 ## 2 Installing the Plugin
 
-To use the recorder function, you must have the Google Chrome browser installed on your system and install the **ATS Recorder** Chrome plugin. To install the plugin, click this icon in the top-right corner of the screen:
+To use the recorder function, you must have the Google Chrome browser installed on your system and install the **ATS Recorder** Chrome plugin. To install the plugin, click this icon in the upper-right corner of the screen:
 
 ![](attachments/rg-two-recorder/information-icon.png)
 

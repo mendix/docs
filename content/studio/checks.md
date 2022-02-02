@@ -33,7 +33,7 @@ If your app has consistency errors, the **Checks** button will have the red bord
 
 4. To view the exact place and element that the error refers to in the corresponding editor, click the row in the **Checks** panel (you can click any place of the row, the whole row is responsive), and the element that failed a check will be displayed and highlighted.
 
-5. To close the panel, either click the close button in the top-right corner of the panel, click **Checks** in the top-right corner of Studio, or press <kbd>C</kbd> . 
+5. To close the panel, either click the close button in the upper-right corner of the panel, click **Checks** in the upper-right corner of Studio, or press <kbd>C</kbd> . 
 
 To sort the errors, click the column header in the panel. Thus, you can sort errors in ascending or descending order by **Message**, **Code**, **Module**, **Document**, or **Element**. For more information on items displayed in the **Checks** panel, see the [Checks Panel Overview](#checks-panel-overview) section. 
 

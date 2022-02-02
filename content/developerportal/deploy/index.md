@@ -29,7 +29,7 @@ In *Studio Pro*, you can click the play button (▶) in the toolbar to run your 
 
 ### 2.2 Studio
 
-In *Studio*, you can click **Preview** in the top-right corner of Studio to see a preview of your app in the browser. 
+In *Studio*, you can click **Preview** in the upper-right corner of Studio to see a preview of your app in the browser. 
 
 For more information see [Previewing & Publishing Your App](/studio/publishing-app).
 

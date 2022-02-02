@@ -207,8 +207,8 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-	* **Show coordinate system**  – determines if a coordinate system will appear at the bottom-left corner of the viewer 
-	* **Show navigation cube**  – determines if a navigation cube will appear at the top-right corner of the viewer
+	* **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
+	* **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
 	* **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
 	* **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:

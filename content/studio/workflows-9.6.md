@@ -32,7 +32,7 @@ To create an app with Mendix version 9.5, do the following:
 
 Next to just exploring the functionality, you can also build an app in Studio that will later be published to production. 
 
-You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 or above via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps to Mendix 9.6 and Above](/refguide/workflow-beta-migration).
+You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6 or above via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
 
 ## 4 Building an App Together with Studio Pro Developers in Mendix 9.6 and Above
 

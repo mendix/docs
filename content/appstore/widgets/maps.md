@@ -83,11 +83,11 @@ Under the **Controls** properties tab, you can adjust the following settings rel
 
 If you are using the Google Maps provider, these additional controls are available:
 
-* **Street view** – when enabled, there is a button available in the bottom-right corner of the map to view the map in Google's Street View mode
-* **Map type** – when enabled, there are control buttons in the top-left corner of the map to change the type of the map
+* **Street view** – when enabled, there is a button available in the lower-right corner of the map to view the map in Google's Street View mode
+* **Map type** – when enabled, there are control buttons in the upper-left corner of the map to change the type of the map
 	* The available options are **Map**, with or without a **Terrain** layer, and **Satellite**, with or without a **Labels** layer
 	* By default, this is set to **Map** without the **Terrain** layer
-* **Full screen** – when enabled, there is a button available in the top-right corner of the map to view the map in full screen
+* **Full screen** – when enabled, there is a button available in the upper-right corner of the map to view the map in full screen
 
 ### 3.6 Dimensions
 

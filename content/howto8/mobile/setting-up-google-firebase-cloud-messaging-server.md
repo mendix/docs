@@ -87,7 +87,7 @@ Bundle ID must be matching with your package ID. Make sure to repeat this step f
 
 If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
 
-1. Click in the top-left corner of the screen and select **Project settings**.
+1. Click in the upper-left corner of the screen and select **Project settings**.
 1.  Navigate to the **Cloud messaging** tab:
 
 	{{% image_container width="350" %}}![](attachments/push_notifications_cloud_messaging.png){{% /image_container %}}
@@ -96,7 +96,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 ## 6 Setting Up a Service Account {#setting-up-a-service-account}
 
-In the top-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
+In the upper-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
 {{% image_container width="350" %}}![](attachments/push_notifications_service_accounts.png){{% /image_container %}}
 
@@ -106,7 +106,7 @@ The file you just created gives API access to all available Firebase services fo
 
 ## 7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
-In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab:
+In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the upper-left of the screen and select **Project settings**. Then navigate to the **General** tab:
 
 {{% image_container width="350" %}}![](attachments/push_notifications_platforms.png){{% /image_container %}}
 

@@ -36,7 +36,7 @@ For example, quickly configuring the data source of a data grid helps you avoid 
 
 ![](attachments/page-editor-widgets/quick-config.png)
 
-The pop-up window disappears once you start interacting with the page or the menu items, for example, if you start clicking elements on the page or if you open **Toolbox**, **Properties**, **Buzz**. To access the quick configuration pop-up window again, click the gear icon in the top-right corner of the widget:
+The pop-up window disappears once you start interacting with the page or the menu items, for example, if you start clicking elements on the page or if you open **Toolbox**, **Properties**, **Buzz**. To access the quick configuration pop-up window again, click the gear icon in the upper-right corner of the widget:
 
 ![](attachments/page-editor-widgets/quick-widget-icon.png)
 
@@ -69,8 +69,8 @@ Widgets in Studio can be divided by origin as shown in the table below:
 
 | Type                                                | Description                                                  | Origin                                                       |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Default widgets                                     | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](/developerportal/)) |
-| Marketplace widgets<a name="app-store-widgets"></a> | Widgets that you can download to your app directly from Studio. Some Marketplace widgets are already part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/)                                    |
+| Default widgets                                     | Widgets that are included into your app by default and do not have the information icon in the upper-right corner. | Apps created in the Developer Portal (for more information on the Developer Portal, see [Developer Portal](/developerportal/)) |
+| Marketplace widgets<a name="app-store-widgets"></a> | Widgets that you can download to your app directly from Studio. Some Marketplace widgets are already part of the app. Such widgets have the information icon in the upper-right corner of widgets in the **Toolbox**. <br />For more information on the Marketplace, see [Marketplace Overview](/appstore/general/app-store-overview). | [Marketplace](/appstore/)                                    |
 | Local widgets                                       | Either widgets that are a part of an app template, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto8/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see the [Widgets by Category](#widget-categories) section. | Apps created in the  Developer Portal/Studio Pro             |
 
 ## 6 Adding the Marketplace Widgets

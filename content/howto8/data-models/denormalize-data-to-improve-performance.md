@@ -70,7 +70,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
     ![](attachments/18448743/18582150.png)
 
-7.  Open the **Toolbox**, which should be docked in the bottom-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
+7.  Open the **Toolbox**, which should be docked in the lower-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
 
     ![](attachments/18448743/18582163.png)
 

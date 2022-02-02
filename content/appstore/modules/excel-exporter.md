@@ -105,15 +105,15 @@ On the template details page, there are the following items:
       
       * **Wrap text**: when selected, the text in a cell can be wrapped to a line
       
-      * **Border top**
+      * **Border top**: maximum value is 14
       
-      * **Border bottom**
+      * **Border bottom**: maximum value is 14
       
-      * **Border left**
+      * **Border left**: maximum value is 14
       
-      * **Border right**
+      * **Border right**: maximum value is 14
       
-      * **Border color**
+      * **Border color**: the color of the cell borders
       
       * **Format**:
       
@@ -129,33 +129,49 @@ On the template details page, there are the following items:
 On the sheet details page, there are the following items:
 
 * **Name:** the name of the sheet
-* **Sequence**
+* **Sequence**: the sequence of the sheet in the exported document
 * **Row object**: the object for the rows
 * **Reference to template input object **(optional)
 * **Sheet input object**
-* **Start retrieved data at row**
+* **Start retrieved data at row**: the row in which the header is
 * **Distinct duplicate data**
+  * When selected, the duplicate data are not exported
+  * When unselected, the duplicate data are exported
+
 * **Use static data**: when selected, the [Static data tab](#static-data-tab) becomes visible
 * **Column default width**
-* **Default text style**
+* **Default text style**: the default style of the text when no style is applied
 * **Row default height**
-* **Default header text style**
+  * When selected, the default row height is used
+  * When unselected, you can set a custom row height
+
+* **Default header text style**: the default style of the header text
 
 #### 3.3.1 Static Data Tab {#static-data-tab}
 
 On the **Static data** tab, there are the following items:
 
 * **Search**
-* **New**
-* **Edit**
-* **Delete**
-* **Status**
-* **Row**
-* **Column**
-* **Type**
-* **Name**
+* **New**: opens the **New static data** dialog box that contains the following items:
+  * **Row**: the row in which the static data is shown
+  * **Column**: the column in which the static data is shown
+  * **Name**: the text of the static data
+  * **Type**
+    * **Static Text**
+    * **Object data**
+    * **Aggregate function**
+
+  * **Style**
+
+* **Edit**: opens the Edit Mx static dialog box where you can make the changes to the selected static data settings
+* **Delete**: deletes the selected static data rowsettings
+* **Status** shows if the selected static data row settings are correctly configured
+* **Row**: the row in which the static data is shown
+* **Column**: the column in which the static data is shown
+* **Type**: the type of the static data
+* **Name**: the text of the static data
 * **Static type**
-* **Style**
+* **Style**: the style of the static data
 
 #### 3.3.2 Column Data Tab
 
@@ -217,50 +233,92 @@ On the **Associations, constrains and sorting** tab, there are the following ite
 * **Associations**
   * **New**: opens the **Edit Mx Reference Handling** dialog box that contains the following items:
     * **JOIN type**
-  * **Edit**:
+      * **LEFT JOIN**: all the records from the left table and the matched records from the right table
+      * **INNER JOIN**: records that have matching values in both tables
+      * **RIGHT JOIN**: all the records from the right table and the matched records from the left table
+      * **FULL JOIN**: all records when there is a match in either left or right table
+  * **Edit**: opens the **Edit Mx Reference Handling** dialog box where you can make changes to the selected association
   * **Delete**: deletes the selected association
   * **Association**
-  * **Join type**
+  * **Join type**: the type of JOIN
 * **Constaints**
   * **New**: opens the **Edit Mx Constant dialog box** that contains the following items:
-    * **Retrieve type**:
-  * **Edit**
+    * **Sheet row object**: the object of the rows
+    * **Retrieve type**
+      * **Attribute**: when selected, you use an attribute as a constraint
+        * **Select attribute**: the attribute that you use as a constraint
+        * **Constraint**: the rule of the constraint
+        * **Handling on previous constraint:** how this constraint is used with the previous constraint
+      * **Reference**
+        * **Select reference**
+        * **Select object**
+  * **Edit**: opens the **Edit Mx Constraint** dialog box where you can make changes to the selected constraint
   * **Delete**: deletes the selected constraint
-  * **⬆**
-  * **⬇** 
-  * **Sequence**
-  * **And/Or**
-  * **Summary**
+  * **⬆**: moves up the sequence of the selected constraint
+  * **⬇**: moves down the sequence of the selected constraint
+  * **Sequence**: the sequence of the constraint
+  * **And/Or**: how this constraint is used with the previous constraint
+  * **Summary**: the summary of the constraint
 * **Sorting**
   * **New**: opens the **Edit sorting** dialog box that contains the following items:
-    * **Sequence**
-    * **Sorting direction**
+    * **Sequence**: the sequence of the sorting
+    * **Sorting direction**: the direction of the sorting – **Ascending** or **Descending**
     * **Retrieve type**
-  * **Edit**
-  * **Delete**
-  * **⬆**
-  * **⬇** 
-  * **Sequence**
-  * **Summary**
-  * **Direction**: ascending or descending
+      * **Attribute**: when selected, you use an attribute for sorting
+        * **Select attribute**: the attribute that you use for sorting
+      * **Reference**: when selected, you use a reference for sorting
+      * **Select reference**: the reference that you use for sorting
+      * **Select object**: the object that you use for sorting
+  * **Edit**: opens the **Edit sorting** dialog box where you can make changes to the selected sorting
+  * **Delete**: deletes the selected sorting
+  * **⬆**: moves up the sequence of the selected sorting
+  * **⬇**: moves down the sequence of the selected sorting
+  * **Sequence**: the sequence of the sorting
+  * **Summary**: the summary of the sorting
+  * **Direction**: the direction of the sorting – **Ascending** or **Descending**
 
 #### 3.3.4 Sheet Preferences Tab
 
 On the **Sheet Preferences** tab, there are the following items:
 
 * **Column settings**
-  * **Search**
-  * **New**
-  * **Edit**
-  * **Delete**
-  * **Column index**
-  * **Auto size**
-  * **Column width**
+  * **Search**: enable searching for column settings using one or more of the following parameters:
+  
+    * **Column index**: the number of the column, same as **Column number**
+    * **Auto size**: if the column width is automatically adjusted 
+    * **Column width**: the fixed width of the column in pixels
+  
+  * **New**: opens the **Form title** dialog box that contains the following items:
+  
+    * **Column number**: the number of the column, same as **Column index**
+    * **Automatic resize**
+      * When selected, the column width is automatically adjusted and **Column width** is invisible
+      * When unselected, the **Column width** is visible
+    * **Column width (pixels)**: the fixed width of the column in pixels
+  
+  * **Edit**: opens the **Form title** dialog box where you can make changes to the selected column settings
+  
+    **Delete**: deletes the selected column settings
+  
+  * **Column index**: the number of the column, same as **Column number**
+  
+  * **Auto size**: if the column width is automatically adjusted 
+  
+  * **Column width**: the fixed width of the column in pixels
+  
 * **Row settings**
-  * **Search**
-  * **New**
-  * **Edit**
-  * **Delete**
-  * **Row number**
-  * **Default height**
-  * **Row height**
+  * **Search**: enable searching for row settings using one or more of the following parameters:
+    * **Row number**: the number of the row
+    * **Automatic height**: if the row uses the default height, same as **Default height**
+    * **Row height**: the fixed height of the row
+  * **New**: opens the **Edit Mx row settings** dialog box that contains the following items:
+    * **Row number**: the number of the row
+    * **Automatic height**
+      * When selected, the row height is automatically adjusted and **Row height** is invisible
+      * When unselected, the **Row height** is visible
+    * **Row height**: the fixed height of the row
+  * **Edit**: opens the **Edit Mx row settings** dialog box where you can make changes to the selected row settings
+  * **Delete**: deletes the selected row settings
+  * **Row number**: the number of the row
+  * **Default height**: if the row uses the default height, same as **Automatic height**
+  * **Row height**: the fixed height of the row

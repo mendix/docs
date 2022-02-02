@@ -4,6 +4,12 @@ category: "API Documentation"
 menu_order: 65
 ---
 
+{{% alert type="warning" %}}
+The Team Server API will be deprecated in the future.
+
+Please use the [App Repository API](app-repository-api) instead.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).

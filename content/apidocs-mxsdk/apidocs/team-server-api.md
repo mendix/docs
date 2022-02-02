@@ -4,408 +4,203 @@ category: "API Documentation"
 menu_order: 65
 ---
 
-{{% alert type="warning" %}}
-The API description on this page refers to the new team server API implementation. You can access the documentation for the previous team server API implementation [here](old-version/team-server-api).
-{{% /alert %}}
-
 ## 1 Introduction
 
-The team server API allows you to retrieve the information (branches, commits) of application models stored in our team server.
+The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
+The image below provides a domain model representation of the concepts discussed below and how these are related:
+![](attachments/131076/425989.png)
 
-The base URL for all Team Server API endpoints is:
-```
-https://teamserver.api.mendix.com/v1
-```
-
-All available endpoints are:
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | [`/repositories/<appId>/info`](#retrieve-repository-info) | Get repository information for an app |
-| GET | [`/repositories/<appId>/branches`](#retrieve-branches) | Get a list of branches of a repository |
-| GET | [`/repositories/<appId>/branches/<branchName>`](#retrieve-branch) | Get information of a branch of a repository |
-| GET | [`/repositories/<appId>/branches/<branchName>/commits`](#retrieve-commits) | Get a list of commits of a branch of a repository |
+{{% alert type="warning" %}}
+The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+{{% /alert %}}
 
 ## 2 Authentication
 
-The Team Server API requires a Personal Access Token (PAT) as authentication method.
+The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
-You can manage your Mendix personal access tokens via [Warden](https://warden.mendix.com/). Press "add", then enter the token name and choose at least the following scope: `mx:modelrepository:repo:read`
+## 3 API Calls
 
-## 3 Error response format
+### 3.1 Retrieve Branches
 
-This is the generic error response format. The payload example format applies to any error as listed per request.
-
-### 3.1 Heading
-
-| Name | Value |
-| --- | --- |
-| Content-Type | `application/json; charset=utf-8` |
-
-### 3.2 Payload
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `errorCode` | String | A code that can be used to lookup the error. |
-| `errorMessage` | String | A short, human-readable message explaining the error. |
-
-Payload Example:
-```
-{
-    "errorCode": "RS400",
-    "errorMessage": "Please provide valid input to execute this request. Invalid app id"
-}
-```
-
-## 4 API Calls
-
-### 4.1 Retrieve Repository Info {#retrieve-repository-info}
-
-<a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieve information about the version control repository for a Mendix app.
+<a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
 ```http
 HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/info
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches
 ```
 
-#### 4.1.1 Request
+#### 3.1.1 Request
 
-##### 4.1.1.1 Path Parameters
+##### 3.1.1.1 Parameter
 
-|Name|Type|Required|Description|
-|---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+*   _AppId_ (String) : Subdomain name of an app.
 
-##### 4.1.1.2 Example
+##### 3.1.1.2 Example
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/info HTTP/1.1
-Host: teamserver.api.mendix.com
+GET /api/1/apps/calc/branches HTTP/1.1
+Host: deploy.mendix.com
+
 Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.1.2 Response Headers
-
-|Name|Value|
-|---|---|
-|Content-Type|`application/json; charset=utf-8`|
-
-#### 4.1.3 Response Payload
+#### 3.1.2 Output
 
 List of objects with the following key-value pairs:
 
-|Name|Type|Description|
-|---|---|---|
-|`appId`|String|The App ID (sometimes also known as Project ID) of the Mendix app.|
-|`type`|String|The type of repository. At the moment this will be either `"svn"` or `"git"`, but later on other repository types may be introduced.|
-|`url`|String|The URL of the repository.|
+*   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
+*   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+*   _LatestRevisionNumber_ (Long) : Number of the latest revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
-##### 4.1.3.1 Payload Example
+##### 3.1.2.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_APPID | Invalid AppId. |
+| 404 | APP_NOT_FOUND | App not found. |
+
+##### 3.1.2.2 Example
 
 ```json
-{
-  "appId": "c0af1725-edae-4345-aea7-2f94f7760e33",
-  "type": "svn",
-  "url": "https://teamserver.sprintr.com/c0af1725-edae-4345-aea7-2f94f7760e33/"
-}
+[{
+     "Name" :  "trunk" ,
+     "LatestRevisionNumber" :  9 ,
+     "LatestRevisionMendixVersion" :  "5.6.0" ,
+     "DisplayName" :  "Main line"
+},{
+     "Name" :  "statistical functions" ,
+     "LatestRevisionNumber" :  13 ,
+     "LatestRevisionMendixVersion" :  "5.6.0" ,
+     "DisplayName" :  "statistical functions"
+}]
 ```
 
-##### 4.1.3.2 Error Codes
+### 3.2 Retrieve Branch {#retrieve-branch}
 
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
-
-### 4.2 Retrieve Branches {#retrieve-branches}
-
-Returns information about the branches of the version control repository for a Mendix app.
-
-The response is paginated using cursor-based pagination.
+Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
 ```http
-HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/branches
+ HTTP Method: GET
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
 
-#### 4.2.1 Request
+#### 3.2.1 Request
 
-##### 4.2.1.1 Path Parameter
+##### 3.2.1.1 Parameters
 
-|Name|Type|Required|Description|
-|---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
+*   _AppId_ (String) : Subdomain name of an app.
+*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
-##### 4.2.1.2 Query Parameter
-
-|Name|Type|Required|Description
-|---|---|---|---|
-|`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. Note: To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.|
-
-##### 4.2.1.3 Example
+##### 3.2.1.2 Example
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches HTTP/1.1
-Host: teamserver.api.mendix.com
+GET /api/1/apps/calc/branches/statistical%20functions HTTP/1.1
+Host: deploy.mendix.com
+
 Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.2.2 Response Headers
+#### 3.2.2 Output
 
-|Name|Value|
-|---|---|
-|Content-Type|`application/json; charset=utf-8`|
-
-#### 4.2.3 Response Payload
-
-List of objects with the following key-value pairs:
-
-|Name|Type|Description
-|---|---|---|
-|`items`|Array|An array of objects representing the branches of the repository. See [Retrieve Branch Response Payload](#432-response-payload) for the properties of a branch object.|
-|`cursors`|Object|An object containing cursors that can be used for pagination:|
-|||`first`: A cursor that can be used to retrieve the first page.|
-|||`prev`: A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
-|||`next`: A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
-|||`last`: A cursor that can be used to retrieve the last page.|
-
-##### 4.2.3.1 Payload Example
-
-```json
-{
-  "items": [
-    {
-      "name": "trunk",
-      "latestCommit": {
-        "id": "42",
-        "author": {
-          "name": "John Doe",
-          "email": "john.doe@example.com"
-        },
-        "date": "2021-05-31T15:00:00.000Z",
-        "message": "My commit message",
-        "mendixVersion": "8.18.5.18651",
-        "relatedStories": [{ "id": "1234567" }, { "id": "2345678" }]
-      }
-    },
-    <more items>...
-  ],
-  "cursors": {
-    "first": "Rmlyc3RQYWdlQ3Vyc29y",
-    "prev": "UHJldmlvdXNQYWdlQ3Vyc29y",
-    "next": "TmV4dFBhZ2VDdXJzb3I=",
-    "last": "TGFzdFBhZ2VDdXJzb3I="
-  }
-}
-```
-
-##### 4.2.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
-
-### 4.3 Retrieve Branch {#retrieve-branch}
-
-Returns information about a specific branch of the version control repository for a Mendix app.
-
-```http
-HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/branches/<Name>
-```
-
-#### 4.3.1 Request
-
-##### 4.3.1.1 Path Parameters
-
-|Name|Type|Required|Description|
-|---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
-|`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
-
-##### 4.3.1.2 Example
-
-```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk HTTP/1.1
-Host: teamserver.api.mendix.com
-Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
-```
-
-```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/branches%2Fdevelopment HTTP/1.1
-Host: teamserver.api.mendix.com
-Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
-```
-
-#### 4.3.2 Response Headers
-
-|Name|Value|
-|---|---|
-|Content-Type|`application/json; charset=utf-8`|
-
-#### 4.3.3 Response Payload
 An object with the following key-value pairs:
 
-|Name|Type|Description
-|---|---|---|
-|`name`|String|The name of the branch.|
-|`latestCommit`|Object|An object representing the latest commit done on the branch. Properties:|
-|||`id` (String): Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
-|||`author` (Object): An object with `name` (String) and `email` (String) properties. For Subversion repositories, `name` and `email` will have the same value.|
-|||`date` (String): The commit date and time in RFC 3339 format.|
-|||`message` (String): The commit message.|
-|||`relatedStories` (Array): An array of related user story IDs, if available.|
-|||`mendixVersion` (String, optional): The Mendix version used to make this commit, if available.|
+*   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
+*   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+*   _LatestRevisionNumber_ (Long) : Number of the latest revision.
+*   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app in the latest revision.
 
-##### 4.3.3.1 Example
+##### 3.2.2.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_APPID | Invalid AppId. |
+| 404 | APP_NOT_FOUND | App not found. |
+| 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
+
+##### 3.2.2.2 Example
 
 ```json
 {
-  "name": "trunk",
-  "latestCommit": {
-    "id": "42",
-    "author": {
-      "name": "john.doe@example.com",
-      "email": "john.doe@example.com"
-    },
-    "date": "2021-05-31T15:00:00.000Z",
-    "message": "My commit message",
-    "mendixVersion": "8.18.5.18651",
-    "relatedStories": [{ "id": "1234567" }, { "id": "2345678" }]
-  }
+    "Name": "statistical functions",
+    "LatestRevisionNumber": 13,
+    "LatestRevisionMendixVersion": "5.6.0",
+    "DisplayName": "statistical functions"
 }
 ```
 
-##### 4.3.3.2 Error Codes
+### 3.3 Retrieve Revisions
 
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID or branch name |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository or branch not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
-
-### 4.4 Retrieve Commits {#retrieve-commits}
-
-Returns information about the commits of a specific branch of the version control repository for a Mendix app.
-Commits are returned in reverse chronological order, starting from the head of the branch all the way to the first commit of the repository.
-
-The response is paginated using cursor-based pagination.
+Retrieves the last 20 revisions of a specific branch that belongs to the Team Server project of a specific app which the authenticated user has access to as a regular user.
 
 ```http
 HTTP Method: GET
- URL: https://teamserver.api.mendix.com/v1/repositories/<AppId>/branches/<Name>/commits
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions
 ```
-#### 4.4.1 Request
 
-##### 4.4.1.1 Path Parameters
+#### 3.3.1 Request
 
-|Name|Type|Required|Description|
-|---|---|---|---|
-|`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
-|`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
+##### 3.3.1.1 Parameters
 
-##### 4.4.1.2 Path Parameters
+*   _AppId_ (String) : Subdomain name of an app.
+*   _Name_ (String) : Name of the branch to get. Use `trunk` to get the main line or `branches%2FyourBranchName` for any other development branch.
 
-|Name|Type|Required|Description
-|---|---|---|---|
-|`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. Note: To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.|
-
-##### 4.4.1.3 Examples
+##### 3.3.1.2 Examples
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk/commits HTTP/1.1
-Host: teamserver.api.mendix.com
+GET /api/1/apps/calc/branches/trunk/revisions HTTP/1.1
+Host: deploy.mendix.com
+
 Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/branches%2Fdevelopment/commits HTTP/1.1
-Host: teamserver.api.mendix.com
+GET /api/1/apps/calc/branches/branches%2Fdevelopment/revisions HTTP/1.1
+Host: deploy.mendix.com
+
 Accept: */*
-Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.4.2 Response Headers
-
-|Name|Value|
-|---|---|
-|Content-Type|`application/json; charset=utf-8`|
-
-#### 4.4.3 Response Payload
+#### 3.3.2 Output
 
 List of objects with the following key-value pairs:
 
-|Name|Type|Description
-|---|---|---|
-|`items`|Array|An array of objects representing the commits of the specified repository branch. Each commit object has the following properties:|
-|||`id` (String): Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
-|||`author` (Object): An object with `name` (String) and `email` (String) properties. For Subversion repositories, `name` and `email` will have the same value.|
-|||`date` (String): The commit date and time in RFC 3339 format.|
-|||`message` (String): The commit message.|
-|||`relatedStories` (Array): An array of related user story IDs, if available.|
-|||`mendixVersion` (String, optional): The Mendix version used to make this commit, if available.|
-|`cursors`|Object|An object containing cursors that can be used for pagination:|
-|||`first`: A cursor that can be used to retrieve the first page.|
-|||`prev`: A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
-|||`next`: A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
-|||`last`: A cursor that can be used to retrieve the last page.|
+*   _Number_ (Long) : Number of the revision.
+*   _CommitMessage_ (String) : Commit message of the revision.
+*   _Date_ (Date) : Date when the revision is created (or the commit is done).
+*   _Author_ (String) : Creator of the revision (committer).
+*   _MendixVersion_ (String) : Version string of the Mendix version of the app in this revision.
 
-##### 4.4.3.1 Example
+##### 3.3.2.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_APPID | Invalid AppId. |
+| 404 | APP_NOT_FOUND | App not found. |
+| 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
+
+##### 3.3.2.2 Example
 
 ```json
-{
-  "items": [
-    {
-      "id": "42",
-      "author": {
-        "name": "John Doe",
-        "email": "john.doe@example.com"
-      },
-      "date": "2021-05-31T15:00:00.000Z",
-      "message": "My commit message",
-      "mendixVersion": "8.18.5.18651",
-      "relatedStories": [{ "id": "1234567" }, { "id": "2345678" }]
-    },
-    <more items>...
-  ],
-  "cursors": {
-    "first": "Rmlyc3RQYWdlQ3Vyc29y",
-    "prev": "UHJldmlvdXNQYWdlQ3Vyc29y",
-    "next": "TmV4dFBhZ2VDdXJzb3I=",
-    "last": "TGFzdFBhZ2VDdXJzb3I="
-  }
-}
+[{
+    "MendixVersion": "5.6.0",
+    "CommitMessage": "Implement C key",
+    "Date": 1394031450618,
+    "Number": 8,
+    "Author": "richard.ford51@example.com"
+},{
+    "MendixVersion": "5.6.0",
+    "CommitMessage": "Implement ^ key",
+    "Date": 1394031460618,
+    "Number": 9,
+    "Author": "richard.ford51@example.com"
+}]
 ```
-##### 4.4.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID or branch name |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository or branch not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)

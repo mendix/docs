@@ -33,7 +33,7 @@ The App Repository API requires a Personal Access Token (PAT) as authentication 
 
 You can manage your Mendix personal access tokens via [Warden](https://warden.mendix.com/). Click **Add**, then enter the token **Name**, choose at least the following scope: `mx:modelrepository:repo:read` and then click **Create**. 
 
-## 5 Error response format
+## 5 Error response format {#error-response-format}
 
 This is the generic error response format. The payload example format applies to any error as listed per request.
 
@@ -120,7 +120,7 @@ List of objects with the following key-value pairs:
 | 404 | Not Found | Repository not found |
 | 500 | Internal Server Error | Something went wrong |
 
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
+Error Response format and examples are given in section: [Error response format](#error-response-format)
 
 ### 6.2 Retrieve Branches {#retrieve-branches}
 
@@ -169,7 +169,7 @@ List of objects with the following key-value pairs:
 
 |Name|Type|Description
 |---|---|---|
-|`items`|Array|An array of objects representing the branches of the repository. See [Retrieve Branch Response Payload](#432-response-payload) for the properties of a branch object.|
+|`items`|Array|An array of objects representing the branches of the repository. See [Retrieve Branch Response Payload](#response-payload) for the properties of a branch object.|
 |`cursors`|Object|An object containing cursors that can be used for pagination:|
 |||`first`: A cursor that can be used to retrieve the first page.|
 |||`prev`: A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
@@ -216,7 +216,7 @@ List of objects with the following key-value pairs:
 | 404 | Not Found | Repository not found |
 | 500 | Internal Server Error | Something went wrong |
 
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
+Error Response format and examples are given in section: [Error response format](#error-response-format)
 
 ### 6.3 Retrieve Branch {#retrieve-branch}
 
@@ -258,7 +258,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 |---|---|
 |Content-Type|`application/json; charset=utf-8`|
 
-#### 6.3.3 Response Payload
+#### 6.3.3 Response Payload {#response-payload}
 An object with the following key-value pairs:
 
 |Name|Type|Description
@@ -301,7 +301,7 @@ An object with the following key-value pairs:
 | 404 | Not Found | Repository or branch not found |
 | 500 | Internal Server Error | Something went wrong |
 
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
+Error Response format and examples are given in section: [Error response format](#error-response-format)
 
 ### 6.4 Retrieve Commits {#retrieve-commits}
 
@@ -407,4 +407,4 @@ List of objects with the following key-value pairs:
 | 404 | Not Found | Repository or branch not found |
 | 500 | Internal Server Error | Something went wrong |
 
-Error Response format and examples are given in section: [Error response format](#3-error-response-format)
+Error Response format and examples are given in section: [Error response format](#error-response-format)

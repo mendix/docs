@@ -111,14 +111,14 @@ Upgrade your app to Mendix version 9.10. To upgrade to your app, follow these st
 
 Update the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module to a new compatible version from the Marketplace, if applicable. Solve any consistency errors caused by pages/snippets that were removed.
 
-#### 3.1.5 Set Up Your Domain Model
+#### 3.2.5 Set Up Your Domain Model
 
 Follow recommendations below to set up your domain model:
 
 * Remove all specializations of Workflow and WorkflowUserTask from your domain model. If entities had any specific attributes and/or associations, move them to the Workflow Context entity.
 * In some cases it might be necessary to add an association from the Workflow Context entity to the Workflow entity (for example, if you used any Workflow data/columns in a data grid displaying the context entity); or duplicate all relevant data to the Workflow Context entity.
 
-#### 3.1.6 Migrate Your Pages
+#### 3.2.6 Migrate Your Pages
 
 Follow recommendations below to migrate pages:
 

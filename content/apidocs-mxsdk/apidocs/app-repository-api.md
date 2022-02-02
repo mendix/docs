@@ -146,7 +146,7 @@ HTTP Method: GET
 |Name|Type|Required|Description
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. Note: To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="note" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.2.1.3 Example
 
@@ -328,7 +328,7 @@ HTTP Method: GET
 |Name|Type|Required|Description
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. Note: To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="note" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.4.1.3 Examples
 

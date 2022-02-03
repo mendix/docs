@@ -24,12 +24,11 @@ The Excel Exporter is compatible with the [Excel Importer](excel-importer) versi
 
 On the **Excel Exporter** page, there are the following items:
 
-* Search: enable searching for a template using one or more of the following parameters:
-
+* **Search**: enable searching for a template using one or more of the following parameters:
   * **Template ID**: the ID of a template, which is generated automatically by the system
   * **Name**: the name of the template
   * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
-
+  
 * **New**: opens the **New template** dialog box that contains the following items:
 
   * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
@@ -38,11 +37,9 @@ On the **Excel Exporter** page, there are the following items:
 
   * **Input object** (optional):
 
-    {{% todo %}}[Add the description of the input object]{{% /todo %}}
-
   * **Description** (optional): the description of the template
 
-* **Edit**: opens the [template details page](#template-details) so that you can make changes for the selected template
+* **Edit**: opens the [template details page](#template-details) so that you can make changes to the selected template
 
 * **Delete**: deletes the selected template
 
@@ -50,15 +47,13 @@ On the **Excel Exporter** page, there are the following items:
 
 ### 3.2 Template Details Page {#template-details}
 
-On the template details page, there are the following items:
-
-{{% todo %}}[Add the description of the input object and date time export format]{{% /todo %}}
+On the template details page, you can define the template with the following items:
 
 * **Template ID**: the ID of a template, which is generated automatically by the system
 
 * **Filename**: the name of the template
 
-* **Input object**(optional):
+* **Input object **(optional):
 
 * **Description** (optional): the description of the template
 
@@ -68,16 +63,16 @@ On the template details page, there are the following items:
 
    {{% alert type="info" %}}If you upload an Excel file, the names of the sheets and columns that are defined in your Excel template file will be used.{{% /alert %}}
    
-*  **Worksheets**: contains the following items related to the sheets in an exported document:
+*  **Worksheets**: contains the following items that you can use to define sheets in an exported document
 
    * **New**: opens a new [sheet details page](#sheet-details) to create a sheet
    * **Edit**: opens the sheet details page for the selected sheet so that you can make changes
    * **Delete**: deletes the selected sheet
    * **Status**: shows if the settings for the sheet are correct
-   * **Sequence**: the sequence of the sheet shown in an exported document {{% todo %}}[double check if this is true]]{{% /todo %}}
+   * **Sequence**: the sequence of the sheet shown in an exported document
    * **Name**: the name of the sheet
    
-* Styles: contains the following items related to the style in an exported document:
+* **Styles**: contains the following items that you can use to define the style in an exported document:
 
    * **New**: opens the **New Style** dialog box to create that contains the following items:
      
@@ -89,7 +84,7 @@ On the template details page, there are the following items:
       
       * **Underline**: when selected, the text is underlined
       
-      * **Text height**: the height of the text
+      * **Text height** (optional): the height of the text
       
       * **Text color**: the color of the text
       
@@ -115,7 +110,10 @@ On the template details page, there are the following items:
       
       * **Border color**: the color of the cell borders
       
-      * **Format**:
+      * **Format**: **General** or **Number**
+      
+        * When **Number** is selected, **Decimal places** becomes visible
+          * **Decimal places**
       
    * **Edit**: opens the **Edit style** dialog box where you can make changes for the selected style
    
@@ -126,66 +124,105 @@ On the template details page, there are the following items:
 
 ### 3.3 Sheet Details Page {#sheet-details}
 
-On the sheet details page, there are the following items:
+On the sheet details page, you can define sheets with the following items:
 
 * **Name:** the name of the sheet
-* **Sequence**: the sequence of the sheet in the exported document
-* **Row object**: the object for the rows
+
+  {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the sheet name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
+
+* **Sequence **(optional): the sequence of the sheet in the exported document
+
+  {{% alert type="info" %}}The sheets in the exported Excel document are shown in the ascending sequence. If the sequence of a sheet is set to empty, this sheet will become the first sheet.{{% /alert %}}
+
+* **Row object**: the object data used for the rows
+
 * **Reference to template input object **(optional)
+
 * **Sheet input object**
-* **Start retrieved data at row**: the row in which the header is
-* **Distinct duplicate data**
-  * When selected, the duplicate data are not exported
-  * When unselected, the duplicate data are exported
 
+* **Start retrieved data at row**: the row where the header is
+
+* **Distinct duplicate data**:
+  
+  * When selected, duplicate data are not exported
+  * When unselected, duplicate data are exported
+  
 * **Use static data**: when selected, the [Static data tab](#static-data-tab) becomes visible
-* **Column default width**
-* **Default text style**: the default style of the text when no style is applied
-* **Row default height**
-  * When selected, the default row height is used
-  * When unselected, you can set a custom row height
 
+* **Column default width**
+
+* **Default text style**: the default style of the text when no style is applied
+
+* **Row default height**
+  
+  * When selected, the default row height is used
+  * When unselected, you can set a new default row height in the **Default column width in pixels** field
+  
 * **Default header text style**: the default style of the header text
 
 #### 3.3.1 Static Data Tab {#static-data-tab}
 
-On the **Static data** tab, there are the following items:
+On the **Static data** tab, you can define static data with the following items:
 
-* **Search**
+* **Search**: enable searching for a template using one or more of the following parameters
+
+  * **Column place**: the column in which the static data is shown
+  * **Row place**:  the row in which the static data is shown
+  * **Static type**: the type of the static data
+  * **Name**: the text of the static data
+
 * **New**: opens the **New static data** dialog box that contains the following items:
   * **Row**: the row in which the static data is shown
+
+    {{% alert type="info" %}}The value of **Row** must be smaller than the value of **Start retrieved data at row**.{{% /alert %}}
+
   * **Column**: the column in which the static data is shown
-  * **Name**: the text of the static data
+
+  * **Name**: the text
+
   * **Type**
+    
     * **Static Text**
     * **Object data**
     * **Aggregate function**
+    
+  * **Style**: the style of the static data
 
-  * **Style**
+* **Edit**: opens the **Edit Mx static** dialog box where you can make the changes to the selected static data settings
 
-* **Edit**: opens the Edit Mx static dialog box where you can make the changes to the selected static data settings
-* **Delete**: deletes the selected static data rowsettings
+* **Delete**: deletes the selected static data row settings
+
 * **Status** shows if the selected static data row settings are correctly configured
+
 * **Row**: the row in which the static data is shown
+
 * **Column**: the column in which the static data is shown
+
 * **Type**: the type of the static data
-* **Name**: the text of the static data
-* **Static type**
+
+* **Name**: the name of the static data
+
+* **Static type**: the type of the static data
+
 * **Style**: the style of the static data
 
 #### 3.3.2 Column Data Tab
 
-On the **Column data** tab, there are the following items:
+On the **Column data** tab, you can define column data with the following items:
 
 * **New**: opens the **New column** dialog box that contains the following items:
 
-  * **Column number**: the number of the column
+  * **Column number**: the number of the column, same as **Sequence**
 
     {{% alert type="info" %}}The lowest column number is 0. This column becomes column A in the exported Excel document.{{% /alert %}}
 
-  * **Style**: the style of the column (not including the column header)
+  * **Style**: the style of the column
+
+    {{% alert type="info" %}}This style does not apply to the column header. The style of the header is defined by **Default header text style** on the [sheet details page](#sheet-details).{{% /alert %}}
 
   * **Name**: the name of the column
+
+    {{% alert type="info" %}}If you use **Upload existing excel file** on the [template details page](#template-details), the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used.{{% /alert %}}
 
   * **Use name as column header**:
 
@@ -193,17 +230,19 @@ On the **Column data** tab, there are the following items:
 
   * **Aggregate on attribute**:
 
-  * **End column with aggregate**: when selected, **Aggregate type** becomes visible
+    * **Aggregate type**
 
-    * **Aggregate type**: the result of the selected mathematical operation is shown at the button of the column
+  * **End column with aggregate**: when selected, the result of the function that you select in the **Aggregate type** drop-down list will be shown at the bottom of the column
+
+    * **Aggregate type**: the type of the function, the result of which will be shown at the bottom of the column
 
 * **Edit**: opens the **Edit Mx column** dialog box where you can make changes to the selected column
 
 * **Delete**: deletes the selected column
 
-* ⬆: changes the sequence/column number to a lower number
+* ⬆: changes the sequence (column number) to a lower number
 
-* ⬇: changes the sequence/column sequence to a higher number
+* ⬇: changes the sequence (column number) to a larger number
 
 * **Status**: shows if the column is correctly configured
 
@@ -211,7 +250,7 @@ On the **Column data** tab, there are the following items:
 
 * **Column name**: the name of the column
 
-* **Object and attribute**
+* **Object and attribute**: the source of the data used for the column
 
 * **Header**
 
@@ -222,15 +261,15 @@ On the **Column data** tab, there are the following items:
 
 * **Data aggregate**:
 
-* **Function**: the mathematical operation that is carried out
+* **Function**: the type of the function, the result of which will be shown at the bottom of the column
 
-* **Result aggregate**: the result of the mathematical operation is shown at the button of the column
+* **Result aggregate**: if the result of the function is shown at the button of the column
 
 #### 3.3.3 Associations, Constraints and Sorting Tab
 
-On the **Associations, constrains and sorting** tab, there are the following items:
+On the **Associations, constraints and sorting** tab, you can define the associations, constraints, and sorting with the following items:
 
-* **Associations**
+* **Associations**: contains the following items that you can use to define associations:
   * **New**: opens the **Edit Mx Reference Handling** dialog box that contains the following items:
     * **JOIN type**
       * **LEFT JOIN**: all the records from the left table and the matched records from the right table
@@ -244,26 +283,26 @@ On the **Associations, constrains and sorting** tab, there are the following ite
 * **Constaints**
   * **New**: opens the **Edit Mx Constant dialog box** that contains the following items:
     * **Sheet row object**: the object of the rows
-    * **Retrieve type**
+    * **Retrieve type**: type of the data used as a constraint
       * **Attribute**: when selected, you use an attribute as a constraint
         * **Select attribute**: the attribute that you use as a constraint
         * **Constraint**: the rule of the constraint
         * **Handling on previous constraint:** how this constraint is used with the previous constraint
-      * **Reference**
-        * **Select reference**
-        * **Select object**
+      * **Reference**: when selected, you use a reference as a constraint
+        * **Select reference**: the reference that you use for sorting
+        * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit Mx Constraint** dialog box where you can make changes to the selected constraint
   * **Delete**: deletes the selected constraint
-  * **⬆**: moves up the sequence of the selected constraint
-  * **⬇**: moves down the sequence of the selected constraint
+  * **⬆**: change the sequence of the selected constraint to a lower number
+  * **⬇**: change the sequence of the selected constraint to a larger number
   * **Sequence**: the sequence of the constraint
-  * **And/Or**: how this constraint is used with the previous constraint
+  * **And/Or**: how this constraint is used together with the previous constraint
   * **Summary**: the summary of the constraint
 * **Sorting**
   * **New**: opens the **Edit sorting** dialog box that contains the following items:
     * **Sequence**: the sequence of the sorting
-    * **Sorting direction**: the direction of the sorting – **Ascending** or **Descending**
-    * **Retrieve type**
+    * **Sorting direction**: the direction of the sorting (**Ascending** or **Descending**)
+    * **Retrieve type**: the type of the data used for sorting
       * **Attribute**: when selected, you use an attribute for sorting
         * **Select attribute**: the attribute that you use for sorting
       * **Reference**: when selected, you use a reference for sorting
@@ -271,15 +310,15 @@ On the **Associations, constrains and sorting** tab, there are the following ite
       * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit sorting** dialog box where you can make changes to the selected sorting
   * **Delete**: deletes the selected sorting
-  * **⬆**: moves up the sequence of the selected sorting
-  * **⬇**: moves down the sequence of the selected sorting
+  * **⬆**: change the sequence of the selected sorting to a lower number
+  * **⬇**: change the sequence of the selected sorting to a larger number
   * **Sequence**: the sequence of the sorting
   * **Summary**: the summary of the sorting
-  * **Direction**: the direction of the sorting – **Ascending** or **Descending**
+  * **Direction**: the direction of the sorting (**Ascending** or **Descending**)
 
 #### 3.3.4 Sheet Preferences Tab
 
-On the **Sheet Preferences** tab, there are the following items:
+On the **Sheet Preferences** tab, you can define sheet preferences with the following items:
 
 * **Column settings**
   * **Search**: enable searching for column settings using one or more of the following parameters:
@@ -294,7 +333,7 @@ On the **Sheet Preferences** tab, there are the following items:
     * **Automatic resize**
       * When selected, the column width is automatically adjusted and **Column width** is invisible
       * When unselected, the **Column width** is visible
-    * **Column width (pixels)**: the fixed width of the column in pixels
+        * **Column width (pixels)**: the fixed width of the column in pixels
   
   * **Edit**: opens the **Form title** dialog box where you can make changes to the selected column settings
   
@@ -316,9 +355,13 @@ On the **Sheet Preferences** tab, there are the following items:
     * **Automatic height**
       * When selected, the row height is automatically adjusted and **Row height** is invisible
       * When unselected, the **Row height** is visible
-    * **Row height**: the fixed height of the row
+        * **Row height**: the fixed height of the row
   * **Edit**: opens the **Edit Mx row settings** dialog box where you can make changes to the selected row settings
   * **Delete**: deletes the selected row settings
   * **Row number**: the number of the row
   * **Default height**: if the row uses the default height, same as **Automatic height**
   * **Row height**: the fixed height of the row
+
+## 4 Read More
+
+- [How to Export to Excel](https://docs.mendix.com/howto/integration/using-the-excel-exporter)

@@ -43,7 +43,7 @@ If you need to enable security, do one of the following:
 	![The Roles and Permissions Screen](attachments/settings-security/enabling-security.png)
 
 {{% alert type="info" %}}
-When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide7/studio-security-enabled).
+When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide8/studio-security-enabled).
 {{% /alert %}}
 
 ## 3 Roles and Permissions {#roles-and-permissions}
@@ -192,4 +192,4 @@ If you have created a new user role on the **Roles and Permissions** page, you n
 ## 6 Read More
 
 * [Security](/refguide7/security)
-* [Model Changes When Security Is Enabled in Studio](/refguide7/studio-security-enabled)
+* [Model Changes When Security Is Enabled in Studio](/refguide8/studio-security-enabled)

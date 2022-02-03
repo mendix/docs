@@ -10,6 +10,12 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 ## 2022
 
+### February 3rd, 2022
+
+#### Fixes
+
+* We fixed a bug on the **Contract Upload** page. The page incorrectly displayed a red warning border if you uploaded a document with non-blocking errors and then immediately deleted it. We have removed the red border in this scenario.
+
 ### January 27th, 2022
 
 #### Improvements

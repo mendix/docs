@@ -12,7 +12,7 @@ The **Studio 8 How-to's** space describes Mendix Studio functionality that corre
 
 ## 1 Introduction 
 
-Studio how-to's contain step-by-step guides that will help you create apps in Mendix Studio, customize them, and add logic to them. Studio how-to's describe a specific use case that they follow. For more general guidelines, such as how to create a microflow or how to add elements to your page, see the [Mendix Studio Guide](/studio). 
+Studio how-to's contain step-by-step guides that will help you create apps in Mendix Studio, customize them, and add logic to them. Studio how-to's describe a specific use case that they follow. For more general guidelines, such as how to create a microflow or how to add elements to your page, see the [Mendix Studio Guide](/studio8). 
 
 ## 2 How-to Categories
 

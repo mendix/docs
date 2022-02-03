@@ -6,7 +6,7 @@ tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "
 ---
 
 {{% alert type="warning" %}}
-The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto/mobile/deploying-native-app).
+The Native Builder CLI has been deprecated in favor of the Mendix Native Mobile Builder, a UI tool, that integrates with Studio Pro. Read more on how to deploy your app [here](/howto8/mobile/deploying-native-app).
 {{% /alert %}}
 
 {{% alert type="warning" %}}

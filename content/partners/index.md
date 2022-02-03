@@ -4,6 +4,9 @@ description: "Documentation for IBM, SAP, and Siemens widgets written and mainta
 tags: ["strategic partners", "ibm", "sap", "siemens"]
 weight: 45
 no_list: false
+cascade:
+    - space: "Strategic Partners Guide"
+    - mendix_version: ""
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

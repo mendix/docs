@@ -4,6 +4,9 @@ description: "Describes the sections of the Mendix Developer Portal and links to
 tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30
 no_list: false
+cascade:
+    - space: "Developer Portal Guide"
+    - mendix_version: ""
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

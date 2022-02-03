@@ -4,6 +4,11 @@ notoc: true
 description: "The various sections of the reference guide provide details on the features and functionality of the Mendix Platform."
 weight: 80
 no_list: false
+cascade:
+    - space: "Mendix 7 Reference Guide"
+    - mendix_version: "7"
+    - sitemap:
+        priority: 0.3
 ---
 
 The *Mendix Reference Guide* covers important topics on the  [Desktop Modeler](desktop-modeler), [Mendix Runtime](runtime), and other components of the Mendix Platform.

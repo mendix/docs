@@ -106,7 +106,7 @@ If you want to watch Johan's keynote again, you can find it at [Mendix World 202
 | --- | --- | --- |
 | Smart app services integrated in workflows | Email | Released for GA on [Sep 6th 2021](https://marketplace.mendix.com/link/component/118393) |
 | Smart app services integrated in workflows | Intelligent Document Service<br/>Receipt Processing<br/>Invoice Processing<br/>MS Team Connector | GA: Jan 2022 |
-| Workflow | | Currently in Public Beta<br/>GA: Feb 2022 |
+| Workflow | | Released for GA on [Jan 25th, 2022](/releasenotes/studio-pro/9.10#new-features) |
 | Smart app services integrated in workflows | Speech to Text<br/>Text to Speech<br/>Text Analytics<br/>Translation | GA: Feb 2022 (except in China) |
 | Smart app services integrated in workflows | General Purpose OCR | GA: Mar 2022 |
 

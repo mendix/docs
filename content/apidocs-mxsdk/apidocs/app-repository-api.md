@@ -170,11 +170,11 @@ List of objects with the following key-value pairs:
 |Name|Type|Description
 |---|---|---|
 |`items`|Array|An array of objects representing the branches of the repository. See [Retrieve Branch Response Payload](#response-payload) for the properties of a branch object.|
-|`cursors`|Object|An object containing cursors that can be used for pagination:|
-|||`first`: A cursor that can be used to retrieve the first page.|
-|||`prev`: A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
-|||`next`: A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
-|||`last`: A cursor that can be used to retrieve the last page.|
+|`cursors`|Object|An object containing cursors that can be used for pagination.|
+|`cursors.first`|String|A cursor that can be used to retrieve the first page.|
+|`cursors.prev`|String, optional|A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
+|`cursors.next`|String, optional|A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
+|`cursors.last`|String|A cursor that can be used to retrieve the last page.|
 
 ##### 6.2.3.1 Payload Example
 
@@ -264,13 +264,15 @@ An object with the following key-value pairs:
 |Name|Type|Description
 |---|---|---|
 |`name`|String|The name of the branch.|
-|`latestCommit`|Object|An object representing the latest commit done on the branch. Properties:|
-|||`id` (String): Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
-|||`author` (Object): An object with `name` (String) and `email` (String) properties. For Subversion repositories, `name` and `email` will have the same value.|
-|||`date` (String): The commit date and time in RFC 3339 format.|
-|||`message` (String): The commit message.|
-|||`relatedStories` (Array): An array of related user story IDs, if available.|
-|||`mendixVersion` (String, optional): The Mendix version used to make this commit, if available.|
+|`latestCommit`|Object|An object representing the latest commit done on the branch.|
+|`latestCommit.id`|String|Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
+|`latestCommit.author`|Object|An object with the commit author details.|
+|`latestCommit.author.name`|String|The full name of the commit author. Note: For Subversion repositories, this will be the same value as the email address of the author.|
+|`latestCommit.author.email`|String|The email address of the commit author.|
+|`latestCommit.date`|String|The commit date and time in RFC 3339 format.|
+|`latestCommit.message`|String|The comit message.|
+|`latestCommit.relatedStories`|Array|An array of related user story IDs, if available.|
+|`latestCommit.mendixVersion`|String, optional|The Mendix version used to make this commit, if available.|
 
 ##### 6.3.3.1 Example
 
@@ -358,18 +360,20 @@ List of objects with the following key-value pairs:
 
 |Name|Type|Description
 |---|---|---|
-|`items`|Array|An array of objects representing the commits of the specified repository branch. Each commit object has the following properties:|
-|||`id` (String): Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
-|||`author` (Object): An object with `name` (String) and `email` (String) properties. For Subversion repositories, `name` and `email` will have the same value.|
-|||`date` (String): The commit date and time in RFC 3339 format.|
-|||`message` (String): The commit message.|
-|||`relatedStories` (Array): An array of related user story IDs, if available.|
-|||`mendixVersion` (String, optional): The Mendix version used to make this commit, if available.|
-|`cursors`|Object|An object containing cursors that can be used for pagination:|
-|||`first`: A cursor that can be used to retrieve the first page.|
-|||`prev`: A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
-|||`next`: A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
-|||`last`: A cursor that can be used to retrieve the last page.|
+|`items`|Array|An array of objects representing the commits of the specified repository branch.|
+|`items.id`|String|Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
+|`items.author`|Object|An object with the commit author details.|
+|`items.author.name`|String|The full name of the commit author. Note: For Subversion repositories, this will be the same value as the email address of the author.|
+|`items.author.email`|String|The email address of the commit author.|
+|`items.date`|String|The commit date and time in RFC 3339 format.|
+|`items.message`|String|The commit message.|
+|`items.relatedStories`|Array|An array of related user story IDs, if available.|
+|`items.mendixVersion`|String, optional|The Mendix version used to make this commit, if available.|
+|`cursors`|Object|An object containing cursors that can be used for pagination.|
+|`cursors.first`|String|A cursor that can be used to retrieve the first page.|
+|`cursors.prev`|String, optional|A cursor that can be used to retrieve the previous page. The absence of this property indicates that this is the first page.|
+|`cursors.next`|String, optional|A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
+|`cursors.last`|String|A cursor that can be used to retrieve the last page.|
 
 ##### 6.4.3.1 Example
 

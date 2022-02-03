@@ -162,7 +162,7 @@ On the sheet details page, you can define sheets with the following items:
 
 #### 3.3.1 Static Data Tab {#static-data-tab}
 
-On the **Static data** tab, you can define static data with the following items:
+On the **Static data** tab, there are the following items:
 
 * **Search**: enable searching for a template using one or more of the following parameters
 
@@ -280,7 +280,7 @@ On the **Associations, constraints and sorting** tab, you can define the associa
   * **Delete**: deletes the selected association
   * **Association**
   * **Join type**: the type of JOIN
-* **Constaints**
+* **Constaints**: contains the following items that you can use to define constraints:
   * **New**: opens the **Edit Mx Constant dialog box** that contains the following items:
     * **Sheet row object**: the object of the rows
     * **Retrieve type**: type of the data used as a constraint
@@ -298,7 +298,7 @@ On the **Associations, constraints and sorting** tab, you can define the associa
   * **Sequence**: the sequence of the constraint
   * **And/Or**: how this constraint is used together with the previous constraint
   * **Summary**: the summary of the constraint
-* **Sorting**
+* **Sorting**: contains the following items that you can use to define sorting:
   * **New**: opens the **Edit sorting** dialog box that contains the following items:
     * **Sequence**: the sequence of the sorting
     * **Sorting direction**: the direction of the sorting (**Ascending** or **Descending**)
@@ -321,6 +321,7 @@ On the **Associations, constraints and sorting** tab, you can define the associa
 On the **Sheet Preferences** tab, you can define sheet preferences with the following items:
 
 * **Column settings**
+  
   * **Search**: enable searching for column settings using one or more of the following parameters:
   
     * **Column index**: the number of the column, same as **Column number**

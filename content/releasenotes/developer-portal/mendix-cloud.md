@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We now display deactivated users in the [node permission](/developerportal/deploy/node-permissions) section of the application environments page.
+* We now display deactivated users in the [node permissions](/developerportal/deploy/node-permissions) section of the application environments page.
 
 ### January 13th, 2022
 

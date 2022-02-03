@@ -25,11 +25,11 @@ Whether security is enabled for your app by default, depends on app's type and v
 	{{% image_container width="400" %}}![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)
 	{{% /image_container %}}<br/>
 
-    b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide7/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+    b. If security is set to the **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/roles-and-permissions-screen.png)
 
-    c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide7/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
+    c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide8/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
     ![](attachments/settings-security/security-read-only.png)
 

@@ -13,7 +13,7 @@ The **Studio 7 Guide** describes Mendix Studio functionality that corresponds to
 
 ## 1 Introduction 
 
-The Mendix Platform includes [Mendix Studio](general) in addition to [Mendix Studio Pro](/refguide7/modeling). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
+The Mendix Platform includes [Mendix Studio](general) in addition to [Mendix Studio Pro](/refguide7/desktop-modeler). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create web and mobile applications without having to know how to code.
 
 Studio enables you to do the following: 
 

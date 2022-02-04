@@ -34,7 +34,7 @@ The service name uniquely identifies the published OData service within the app.
 Use the **version** field to assign a version number to the service. This number will be shown in the API documentation.
 
 {{% alert type="info" %}}
-It is recommended to use semantic versioning for services that you publish.
+It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
 {{% /alert %}}
 
 ### 2.3 Location

@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-In Studio Pro, entities can be exposed as [OData resources](published-odata-resource) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
+In Studio Pro, entities can be exposed as [OData resources](published-odata-resource) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
 The standards used for OData in Mendix are:
 
@@ -27,25 +27,31 @@ This document describes the options available to you when you create a published
 
 ### 2.1 Service Name
 
-The service name is used to create a unique URI for the OData service. Thus, the service name should be well-formed in accordance with [RFC 3986](https://tools.ietf.org/html/rfc3986) and [RFC 3987](https://tools.ietf.org/html/rfc3987).
+The service name uniquely identifies the published OData service within the app.
 
 ### 2.2 Version
 
 Use the **version** field to assign a version number to the service. This number will be shown in the API documentation.
 
 {{% alert type="info" %}}
-
-It is recommended that you adopt semantic numbering for services that you publish.
-
+It is recommended to use semantic versioning for services that you publish.
 {{% /alert %}}
 
-### 2.3 Namespace
+### 2.3 Location
 
-In OData, the namespace is used to refer to data types. On the **Settings** tab, you can customize this namespace. You can change it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
+The location where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
 
-### 2.4 Resources
+### 2.4 Namespace
 
-A [resource](published-odata-resource) is a network-accessible data object represented by an entity and identified by a URI.
+In OData, the namespace is used to refer to data types. You can customize this namespace, changing it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
+
+### 2.5 Entities
+
+This list gives an overview of all entities published as [OData resources](published-odata-resource).
+
+### 2.6 Entity details
+
+This list gives an overview of all published attributes and associations.
 
 ## 3 Settings
 
@@ -159,7 +165,7 @@ You can write a *summary* and a *description* intended for people using the serv
 
 ### 5.1 General
 
-Once your app is published, the published OData services will be is available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`.
 
 {{% alert type="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.

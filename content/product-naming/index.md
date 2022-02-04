@@ -2,6 +2,10 @@
 title: "Mendix Product Naming Guide"
 draft: true
 weight: 5
+cascade:
+    - space: "Mendix Product Naming Guide"
+    - mendix_version: ""
+    - banner: "This is a draft and will not be rendered in the production website. Remove draft:true to make this document public."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

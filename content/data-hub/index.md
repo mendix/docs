@@ -5,6 +5,9 @@ tags: ["data hub", "data hub catalog", "data hub landscape"]
 weight: 40
 aliases:
     - /data-hub/data-catalog/index.html
+cascade:
+    - space: "Data Hub Guide"
+    - mendix_version: ""
 ---
 
 ## 1 Introduction

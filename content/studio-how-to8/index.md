@@ -2,6 +2,11 @@
 title: "Studio 8 How-to's"
 tags: ["studio", "how to"]
 weight: 75
+cascade:
+    - space: "Studio 8 How-to's"
+    - mendix_version: "8"
+    - sitemap:
+        priority: 0.3
 ---
 
 {{% alert type="warning" %}}

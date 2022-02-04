@@ -5,14 +5,13 @@ description: "Describes the configuration and usage of the Bootstrap Tooltip wid
 tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+{{% alert type="warning" %}}
+This widget is deprecated. For an alternative, see [Tooltip](tooltip).
+{{% /alert %}}
 
 ## 1 Introduction
 
 The [Bootstrap Tooltip](https://marketplace.mendix.com/link/component/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
-
-{{% alert type="warning" %}}
-This widget is deprecated. For more information, see [Tooltip](tooltip).
-{{% /alert %}}
 
 ### 1.1 Typical Usage Scenario
 

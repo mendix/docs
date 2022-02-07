@@ -29,7 +29,7 @@ All available endpoints are:
 
 ## 4 Authentication
 
-The App Repository API requires a Personal Access Token (PAT) as authentication method.
+The App Repository API requires a Personal Access Token (PAT) as authentication method. 
 
 You can manage your Mendix personal access tokens via [Warden](https://warden.mendix.com/). Click **Add**, then enter the token **Name**, choose at least the following scope: `mx:modelrepository:repo:read` and then click **Create**. 
 

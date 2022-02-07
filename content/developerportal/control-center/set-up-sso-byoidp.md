@@ -37,7 +37,7 @@ To set up an IDP configuration for the Mendix platform and your Mendix app, you 
 
 ## 3 Configuring Your BYOIDP Setup
 
-As a Mendix Administrator, you will find the IDP setup on the **Single Sign-On** tab of your Control Center's [Security](index#security) section.
+As a Mendix Administrator, you will find the IDP setup on the **Single Sign-On** tab of your Control Center's [Security](/developerportal/control-center/#security) section.
 
 In this overview, you will find your current IDP configurations, both draft versions and the active one. When you create a new configuration, the Control Center displays a pop-up screen to inform you of known limitations.
 

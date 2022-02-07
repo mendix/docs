@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the app in Eclipse
-* Read [How to Extend Your Application with Custom Java](../logic-business-rules/extending-your-application-with-custom-java)
+* Read [How to Extend Your Application with Custom Java](/howto/logic-business-rules/extending-your-application-with-custom-java)
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the app menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     ![](attachments/18448685/18581045.png)
 
@@ -64,7 +64,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)
-* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Test Web Services Using SoapUI](/howto/testing/testing-web-services-using-soapui)
 * [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Log Levels](log-levels)

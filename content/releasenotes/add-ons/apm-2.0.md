@@ -39,7 +39,7 @@ parent: "apm-2"
 ## 2.0.14
 
 * We released the Mendix 6 version of the agent for release [2.0.16](#2016) (which contains the Mendix 8 version).
-* 
+
 ## 2.0.13 {#2013}
 
 We made the following improvements to the browser agent:

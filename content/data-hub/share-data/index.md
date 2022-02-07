@@ -139,7 +139,7 @@ Do the following:
 
 	{{% alert type="info" %}}For more information about roles in Data Hub, see [Roles in Data Hub](/data-hub/#data-hub-roles).{{% /alert %}}
 
-For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](../data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
+For more details on searching in the Data Hub Catalog and the **Search Details** screen, see [How to Search in the Data Hub Catalog](/data-hub/data-hub-catalog/search). You can also explore registered services in the Data Hub Landscape. For more information, see [How to Use the Data Hub Landscape](/data-hub/data-hub-landscape/).
 
 ## 6 Using the Customer Dataset in Another App
 

@@ -48,11 +48,11 @@ The **Auto Arrange** option above the domain model groups and aligns entities by
 
 | Domain model components                                  | Description                                                  | Properties |
 | -------------------------------------------------------- | :----------------------------------------------------------- | ------------------- |
-| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. | Name<br />[Persistablity](/refguide/persistability) |
+| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. | Name<br />[Persistablity](/refguide7/persistability) |
 | [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties#multiplicity)<br />[Delete behavior](domain-models-association-properties#delete-behavior) |
 
-For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
+For examples and more technical details, see [Domain Model](/refguide7/domain-model), [Entities](/refguide7/entities), [Attributes](/refguide7/attributes), and [Associations](/refguide7/associations) in the *Studio Pro Guide*. 
 
 ## 3 Adding New Entities {#adding-new-entities}
 
@@ -128,7 +128,7 @@ You can manage the following properties of an entity:
 
 * The **Name** of the entity
 
-* [Persistability](/refguide/persistability) of the entity
+* [Persistability](/refguide7/persistability) of the entity
 
 	![](attachments/domain-models/entity-properties.png)
 

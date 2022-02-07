@@ -119,8 +119,6 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
         
     3.  On the right side, enter a **Marker ID** that is used for the area that you selected. 
     
-        {{% alert type="warning" %}}If you have uploaded multiple images for training, use the same **Marker ID** for the same part of input data in all images. The number of markers in each image should also be the same. Otherwise, the training process will fail.{{% /alert %}}
-    
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
     
     5. Click **Add Marker** to add the marker to the list of **Markers**.

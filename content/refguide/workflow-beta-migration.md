@@ -113,6 +113,8 @@ Upgrade your app to Mendix version 9.10. To upgrade to your app, follow these st
 
 Update the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module to a new compatible version from the Marketplace, if applicable. Solve any consistency errors caused by pages/snippets that were removed.
 
+Make sure the correct user entity is set in the App Settings: open **App Settings** > **Workflows** tab and set **User entity** to *Administration.Account*.
+
 #### 3.2.5 Set Up Your Domain Model
 
 Follow recommendations below to set up your domain model:

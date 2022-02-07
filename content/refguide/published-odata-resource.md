@@ -58,7 +58,7 @@ Use **Exposed entity name** in the **Edit published resource** window to customi
 
 {{% alert type="info" %}}
 
-Location URIs must be unique. Exposing two different resources at the same location will result in a consistency error.
+Location URIs must be unique. Exposing two different resources at the same location will result in a [consistency error](/refguide/consistency-errors).
 
 {{% /alert %}}
 
@@ -108,7 +108,7 @@ A published OData resource is always readable.
 
 ## 8.2 Updatable
 
-Use the checkbox for **Updatable (write)** to indicate that clients can update the values of attributes and associations.
+Select the check box for **Updatable (write)** to indicate that clients can update the values of attributes and associations.
 
 When the app receives a request to change values, it does the following:
 
@@ -118,10 +118,10 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-The action **Call a microflow** allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit activity](committing-objects) to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
+The action [Call a microflow](/refguide/on-click-event#call-microflow) allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
 
 {{% alert type="info" %}}
-This *Call a microflow* action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).
+This **Call a microflow** activity was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).
 {{% /alert %}}
 
 For more information, see [OData query options](odata-query-options#updating-objects).

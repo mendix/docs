@@ -50,6 +50,7 @@ Download and install the following modules:
         2. Views workflow performance in the Admin Workflow Dashboard.
     2. User role does the following:
         1. Executes workflows by completing user tasks.
+3. Make sure the correct user entity is set in the **App Settings**: open **App Settings** > **Workflows** tab and set **User entity** to *Administration.Account*.
 
 ## 4 Usage
 

@@ -96,7 +96,7 @@ Default: *10000*
 
 ## 8 Capabilities {#capabilities}
 
-The capabilities section gives an overview of what operations the resource supports.
+The **Capabilities** section gives an overview of what operations the resource supports.
 
 {{% alert type="info" %}}
 This *Capabilities* section was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6).

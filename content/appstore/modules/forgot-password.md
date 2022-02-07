@@ -25,7 +25,7 @@ Once you have downloaded the required modules listed in the [Dependencies](#depe
 
 The configuration page allows you to create the email and deep link templates that are used by this module. You should NOT create your own templates through the configuration of the Email with Templates and Dep Link modules. By clicking **Create**, all the default settings will be there to allow you to reset the password. The only thing you need to do is configure or validate your SMTP settings. 
 
-Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and emtpy the content of the **CreateNewUserFromSignUp** microflow.
+Signup and password reset are included into this module. To disable the signup functionality, remove the **Sign up** button from the login snippet and empty the content of the **CreateNewUserFromSignUp** microflow.
 
 The **ForgotPasswordConfiguration** page should be accessible to the administrator only. This snippet allows for configuring the email template and deep link, and it shows all the open password reset requests
 

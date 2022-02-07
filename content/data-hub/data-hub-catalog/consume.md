@@ -34,7 +34,7 @@ This is not compulsory, and users can continue to use an older version of a serv
 
 It is good practice for publishers of a service to serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint and Studio Pro users will get the option to **Switch** to the new version. 
 
-### 2.2 Consumed (External) Entities
+### 2.2 Consumed External Entities
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 
@@ -58,7 +58,7 @@ The data set that is associated with the consumed entity is maintained in the pu
 
 Access  to the data is through the published REST OData service, with "reading" and "querying" of the data by the consuming app.
 
-## 3 Operations on External Entities in Consuming Apps
+## 3 Operations Affected when using External Entities
 
 The following operations are affected when using external entities in a consuming app:
 

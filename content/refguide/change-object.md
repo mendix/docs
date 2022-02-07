@@ -48,6 +48,8 @@ You can also open the dialog box by double-clicking the activity in the microflo
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
 | No *(default)*| The object is changed without being saved in the database |
 
+This option is not shown for [external objects](external-entities). Use the [Send External Object](send-external-object) activity to save changes to external objects.
+
 #### 3.2.1 Use Cases for Setting Commit
 
 If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end-user can press the Save or Cancel button to commit or rollback the changes.

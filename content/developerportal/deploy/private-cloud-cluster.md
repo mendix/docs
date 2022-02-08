@@ -1333,7 +1333,7 @@ spec:
 
 You can set the following metrics configuration values:
 
-* `mode`: metrics mode, `native` or `compatibility`.
+* `mode`: metrics mode, `native` or `compatibility`. `native` mode is only available for Mendix versions 9.7 and above. See [Metrics Generation Modes](private-cloud-monitor#metrics-generation-modes) in *Monitoring Environments in Mendix for Private Cloud* for more information.
 * `duration`: Prometheus scrape duration interval in ISO 8601 Duration format (e.g. 'PT1M'), should be aligned with your Prometheus configuration; can be left empty, which defaults to 1 minute (matching the default Prometheus scrape interval). This attribute only works when `mode` is set to `native`.
 * `mxAgentConfig`: configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to disable the instrumentation agent. This attribute is only applicable when `mode` is `native`.
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.

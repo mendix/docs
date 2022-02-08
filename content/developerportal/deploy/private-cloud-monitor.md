@@ -526,33 +526,25 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 #### 5.1.1 Enable Compability Metrics in Connected Mode
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
 
-    ![](attachments/private-cloud-cluster/cluster-manager.png)
+    ![](attachments/private-cloud-monitor/environment-overview.png)
 
-2. Click **Details** next to the namespace where your environment is deployed.
+2. Click the **Runtime** tab.
 
-    ![](attachments/private-cloud-cluster/cluster-details.png)
-    
-3. Click **Configure** next to the environment where compatibility mode should be used.
-
-    ![](attachments/private-cloud-cluster/image27.png)
-
-4. Click the **Runtime** tab.
-    
-    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+    ![](attachments/private-cloud-monitor/environment-details-general.png)
   
-5. Check the **Enable configuration** checkbox.
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
 
-6. Click **Edit** next to **Mode**.
+4. Click **Edit** next to **Mode**.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-default.png)
 
-7. Set **Mode** to **compatibility** and click **Save and Apply**.
+5. Set **Mode** to **compatibility** and click **Save and Apply**.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-compatibility.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-mode-compatibility.png)
 
 
 #### 5.1.2 Enable Compatibility Metrics in Standalone Mode
@@ -583,33 +575,25 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### 5.2.1 Disable Metrics in Connected Mode
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
 
-    ![](attachments/private-cloud-cluster/cluster-manager.png)
+    ![](attachments/private-cloud-monitor/environment-overview.png)
 
-2. Click **Details** next to the namespace where your environment is deployed.
+2. Click the **Runtime** tab.
 
-    ![](attachments/private-cloud-cluster/cluster-details.png)
-    
-3. Click **Configure** next to the environment name where metrics should be disabled.
-
-    ![](attachments/private-cloud-cluster/image27.png)
-
-4. Click the **Runtime** tab.
-    
-    ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
+    ![](attachments/private-cloud-monitor/environment-details-general.png)
   
-5. Check the **Enable configuration** checkbox.
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
 
-6. Click **Edit** next to **Mode**.
+4. Click **Edit** next to **Mode**.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-default.png)
 
-7. Set **Mode** to **default** and click **Save and Apply**.
+5. Set **Mode** to **default** and click **Save and Apply**.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-default.png)
+    ![](attachments/private-cloud-monitor/environment-metrics-mode-default.png)
 
 
 #### 5.2.2 Disable Metrics in Standalone Mode
@@ -648,7 +632,40 @@ If a environment has a manually assigned `Metrics.Registries` key, it will be us
 
 It is also possible to add extra tags (Prometheus labels) by specifying them in the [Metrics.ApplicationTags](/refguide/metrics#application-tags) custom setting.
 
-#### 5.3.1 Enable Native Metrics in Connected Mode
+#### 5.3.1 Enable Native Metrics in Connected Mode{#enable-native-metrics-connected-mode}
+
+1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
+
+    ![](attachments/private-cloud-monitor/environment-overview.png)
+
+2. Click the **Runtime** tab.
+
+    ![](attachments/private-cloud-monitor/environment-details-general.png)
+  
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
+
+    ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
+
+4. Click **Edit** next to **Mode**.
+
+    ![](attachments/private-cloud-monitor/environment-metrics-default.png)
+
+5. Set **Mode** to **default**, then press the **Save** button.
+
+    ![](attachments/private-cloud-monitor/environment-metrics-mode-native.png)
+
+6. Set a custom value for **MxAgent Config**.
+
+    This parameter is optional and can be left empty.
+    For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
+
+7. Press **Apply Changes**.
+
+    ![](attachments/private-cloud-monitor/environment-metrics-apply.png)
+
+#### 5.3.2 Configure additional Native Metrics options in Connected Mode
+
+After an environment is [switched into native metrics mode](#enable-native-metrics-connected-mode), it's possible to configure additional options for that environemtn.
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
@@ -665,29 +682,19 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 4. Click the **Runtime** tab.
     
     ![](attachments/private-cloud-monitor/private-cloud-prometheus-annotations.png)
-  
-5. Check the **Enable configuration** checkbox.
 
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-disabled.png)
-
-6. Click **Edit** next to **Mode**.
-
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-default.png)
-
-7. Set **Mode** to **native** and click **Save**.
-
-    ![](attachments/private-cloud-monitor/private-cloud-metrics-mode-native.png)
-
-8. Set custom values for **Interval**, **MxAgent Config** and **MxAgent Instrumentation Config**.
+5. Set custom values for **Interval** and **MxAgent Instrumentation Config** by clicking the **Edit** button.
 
     These parameters are optional and can be left empty.
     For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
+    
+    ![](attachments/private-cloud-monitor/private-cloud-metrics-native.png)
 
-9. Click **Apply Changes**
+6. Click **Apply Changes**
 
     ![](attachments/private-cloud-monitor/private-cloud-metrics-apply.png)
 
-#### 5.3.2 Enable Native Metrics in Standalone Mode
+#### 5.3.3 Enable Native Metrics in Standalone Mode
 
 {{% alert type="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
 
@@ -726,7 +733,7 @@ If you would like to collect additional metrics, specify a non-empty configurati
 
 Save and apply the changes.
 
-#### 5.3.3 Configuring the Java Instrumentation Agent{#configuring-mxagent}
+#### 5.3.4 Configuring the Java Instrumentation Agent{#configuring-mxagent}
 
 By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instrumentation agent](https://github.com/mendix/mx-agent) and collect additional metrics such as the execution times of microflows, OData/SOAP/REST endpoints, and client activity.
 

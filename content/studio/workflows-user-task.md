@@ -22,7 +22,6 @@ User task properties consist of the following sections:
 * [Due Date](#due-date)
 * [Outcomes](#outcomes)
 * [Events](#events)
-* [Permissions](#permissions)
 
 ### 2.1 General Section {#general}
 
@@ -32,7 +31,7 @@ User task properties consist of the following sections:
 
 ### 2.2 User Assignment Section {#user-assignment}
 
-**Assign user task using** allows you to manage which users can pick up the task. You can filter users or implement a more complicated logic and add several checks using a microflow. 
+**Assign User Task Using** allows you to manage which users can pick up the task. You can filter users or implement a more complicated logic and add several checks using a microflow. 
 
 ![User Assignment](attachments/workflows-user-task/user-assignment.jpg)
 
@@ -45,7 +44,7 @@ Possible options of this property are described in the table below:
 
 ### 2.3 Task Page Section {#task-page}
 
-**Page** is the page that an assigned user will use to inspect their task and complete it: 
+**Page** is the page that an assigned user uses to inspect their task and complete it: 
 
 ![Task Page](attachments/workflows-user-task/task-page.jpg)
 
@@ -62,7 +61,7 @@ The **Display Information** section properties are described in the table below:
 | Task Name        | **Task Name** is displayed in the running app. The **Task Name** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **FullName** attribute value from the **Employee Onboarding** data to display the name of the new employee. |
 | Task Description | **Task Description** is a description of the workflow displayed in the running app. The **Task Description** can contain expression outcomes, which will be displayed to the end-users. For example, you can add the **PhoneModel** attribute value from the **Employee Onboarding** data to display what phone needs to be shipped for this employee. |
 
-### 2.4 Due Date Section {#due-date}
+### 2.5 Due Date Section {#due-date}
 
 The **Due Date** section allows you to set a deadline for the user task and keep track of it. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the workflow. For example, you can use this due date to show overdue tasks on a dashboard.
 
@@ -92,12 +91,6 @@ Possible options for this setting are the following:
 
 * **Microflow** – a microflow that is executed when users have been determined for a newly created task 
 * **Nothing** – no event is executed
-
-### 2.8 Permissions Section {#permissions}
-
-**Allowed roles** defines the [user role](settings-security#roles-and-permissions) that can execute the user task.
-
-![Permissions Section](attachments/workflows-user-task/permissions.jpg)
 
 ## 3 Read More
 

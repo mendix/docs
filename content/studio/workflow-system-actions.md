@@ -20,7 +20,7 @@ An example of **Call microflow** properties is represented in the image below:
 Call microflow properties consist of the following sections:
 
 * [General](#general)
-* [Parameters](#parameters)
+* [Input Parameters](#parameters)
 * [Outcomes](#outcomes)
 
 ### 2.1 General Section {#general}
@@ -34,11 +34,11 @@ The section properties are described in the table below:
 | Caption   | The **Caption** describes what happens in this element. It is displayed in the workflow editor to make the workflow easier to read and understand. |
 | Microflow | The microflow that is called by this element.                |
 
-### 2.3 Parameters Section {#parameters}
+### 2.3 Input Parameters Section {#parameters}
 
-Parameters pass data to the element. Currently the parameters can only be selected and configured in Studio Pro. For more information, see [Call Microflow](/refguide/call-microflow).
+Input parameters pass data to the element. Currently the parameters can only be selected and configured in Studio Pro. For more information, see [Call Microflow](/refguide/call-microflow).
 
-### 2.2 Outcomes Section {#outcomes}
+### 2.4 Outcomes Section {#outcomes}
 
 **Outcomes** depends on the return value of the microflow. For example, for the Boolean, you have **true** and **false** outcomes, while for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
 

@@ -7,9 +7,7 @@ tags: ["workflow", "workflows", "Studio"]
 ---
 
 {{% alert type="warning" %}}
-Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6 and above. For more information, see [Using Workflows in Apps with Mendix Version 9.6 and Above](workflows-9.6).
-
-Workflows in Studio are available for apps with Mendix version 9.5.
+Workflows in Studio are unavailable for apps with Mendix version 9.6-9.10. For more information, see [Using Workflows in Apps with Mendix Version 9.6-9.10](workflows-9.6).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -195,6 +193,6 @@ The elements of this section are described in the table below:
 
 ## 5 Main Documents in This Category
 
-* [Using Workflows in Apps with Mendix Version 9.6 and Above](workflows-9.6) – explains how to use workflow functionality in apps with Mendix version 9.6 and above
 * [Workflow Properties](workflow-properties) – describes workflow properties 
 * [User Task](workflows-user-task) – describes properties of a user task
+* [Using Workflows in Apps with Mendix Version 9.6 -9.10](workflows-9.6) – explains how to use workflow functionality in apps with Mendix version 9.6-9.10

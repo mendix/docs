@@ -6,9 +6,7 @@ tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
 {{% alert type="warning" %}}
-Workflows in Studio are temporarily unavailable for apps with Mendix version 9.6. For more information, see [Using Workflows in Apps with Mendix Version 9.6 and Above](/studio/workflows-9.6).
-
-Workflows in Studio are available for apps with Mendix version 9.5.
+Workflows in Studio are unavailable for apps with Mendix version 9.6-9.10. For more information, see [Using Workflows in Apps with Mendix Version 9.6-9.10](/studio/workflows-9.6).Workflows are available for Mendix versions outside this range. 
 {{% /alert %}}
 
 ## 1 Introduction 

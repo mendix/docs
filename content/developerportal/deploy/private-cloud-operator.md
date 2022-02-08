@@ -146,7 +146,7 @@ spec:
       }
   runtimeMetricsConfiguration: # Optional, can be omitted : set Runtime metrics configuration
     mode: native # Metrics collection mode : native or compatibility
-    duration: "PT1M" # Optional, can be omitted : set Prometheus scrape duration
+    interval: "PT1M" # Optional, can be omitted : set Prometheus scrape interval
     mxAgentConfig: |- # Optional, can be omitted : specify configuration for collecting additional metrics
       {
         …

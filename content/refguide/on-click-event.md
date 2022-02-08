@@ -239,7 +239,7 @@ The **Save changes** event commits all changes made on the page. The following p
 * **Close page** – specifies whether the current page should be closed.
 * **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
-This event cannot be used on pages that change [external objects](external-entities).
+This event cannot be used on pages that change [external entities](external-entities). Use the [Send External Object](send-external-object) activity to save changes to external entities.
 
 ### 3.8 Cancel Changes {#cancel-changes}
 

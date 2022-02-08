@@ -39,17 +39,19 @@ You can manage your Mendix personal access tokens via [Warden](https://warden.me
 4. Click **Create**. A pop-up window opens and shows the Personal Access Token.
 5. Keep the token safe. It is only displayed once. After you close the pop-up window, you cannot see it anymore.
 
-## 5 Error response format {#error-response-format}
+## 5 Error response
+
+### 5.1 Error response format {#error-response-format}
 
 This is the generic error response format. The payload example format applies to any error as listed per request.
 
-### 5.1 Heading
+#### 5.1.1 Heading
 
 | Name | Value |
 | --- | --- |
 | Content-Type | `application/json; charset=utf-8` |
 
-### 5.2 Payload
+#### 5.1.2 Payload
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -63,6 +65,18 @@ Payload Example:
     "errorMessage": "Please provide valid input to execute this request. Invalid app id"
 }
 ```
+
+### 5.2 Error Codes
+
+The following errors might be returned by the service. In general, 4xx errors indicate that something was wrong with the client’s request, and 5xx errors indicate that something went wrong at the server side.
+
+| HTTP Status | Title | Detail |
+| --- | --- | --- |
+| 400 | Bad Request | Invalid app ID or branch name |
+| 401 | Unauthorized | Invalid token |
+| 403 | Forbidden | Access denied |
+| 404 | Not Found | Repository or branch not found |
+| 500 | Internal Server Error | Something went wrong |
 
 ## 6 API Calls
 
@@ -115,18 +129,6 @@ List of objects with the following key-value pairs:
   "url": "https://teamserver.sprintr.com/c0af1725-edae-4345-aea7-2f94f7760e33/"
 }
 ```
-
-##### 6.1.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#error-response-format)
 
 ### 6.2 Retrieve Branches {#retrieve-branches}
 
@@ -212,18 +214,6 @@ List of objects with the following key-value pairs:
 }
 ```
 
-##### 6.2.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#error-response-format)
-
 ### 6.3 Retrieve Branch {#retrieve-branch}
 
 Returns information about a specific branch of the version control repository for a Mendix app.
@@ -298,18 +288,6 @@ An object with the following key-value pairs:
   }
 }
 ```
-
-##### 6.3.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID or branch name |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository or branch not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#error-response-format)
 
 ### 6.4 Retrieve Commits {#retrieve-commits}
 
@@ -407,14 +385,3 @@ List of objects with the following key-value pairs:
   }
 }
 ```
-##### 6.4.3.2 Error Codes
-
-| HTTP Status | Title | Detail |
-| --- | --- | --- |
-| 400 | Bad Request | Invalid app ID or branch name |
-| 401 | Unauthorized | Invalid token |
-| 403 | Forbidden | Access denied |
-| 404 | Not Found | Repository or branch not found |
-| 500 | Internal Server Error | Something went wrong |
-
-Error Response format and examples are given in section: [Error response format](#error-response-format)

@@ -7,16 +7,19 @@ weight: 35
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
+
 ## 2022
 
 ### February 10th, 2022
 
 #### Improvements
-* The maximum number of screenshots are restricted to 10 while onboarding a component.
-* Form validations are added while navigating between steps during onboarding.
+
+* When you onboard a component now, the maximum number of screenshots is restricted to ten.
+* You can use form validations now when you navigate between steps during onboarding.
 
 #### Fixes
-* Fixed logo cropper issue to get cropped image ratio as 600x420 pixels.
+
+* We fixed an issue with the logo cropper. Now the ratio of a cropped image is 600 x 420 pixels.
 
 ## 2021
 

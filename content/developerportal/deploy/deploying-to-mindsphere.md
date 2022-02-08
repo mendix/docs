@@ -184,7 +184,7 @@ Change the JSON to contain appropriate values for the following information:
 
 More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the MindSphere developer site.
 
-## 5 Deploying Your App
+## 5 Deploying Your App{#deploying-your-app}
 
 A Mendix based application for MindSphere can be deployed to Mendix or to MindSphere. Deploying to Mendix is quite easy and is the preferred option as you than also can use the **Auto Registration** process.
 

@@ -1289,7 +1289,7 @@ You can customize the registry imageNameTemplate in OperatorConfiguration with t
 * `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.
 
-### 5.5 Customize runtime metrics{#customize-runtime-metrics}
+### 5.5 Customize Runtime Metrics{#customize-runtime-metrics}
 
 Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 

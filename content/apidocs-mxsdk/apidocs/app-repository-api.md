@@ -89,6 +89,8 @@ HTTP Method: GET
 
 #### 6.1.1 Request
 
+Returns information about the version control repository for a Mendix app.
+
 ##### 6.1.1.1 Path Parameters
 
 |Name|Type|Required|Description|
@@ -117,7 +119,7 @@ List of objects with the following key-value pairs:
 |Name|Type|Description|
 |---|---|---|
 |`appId`|String|The App ID (sometimes also known as Project ID) of the Mendix app.|
-|`type`|String|The type of repository. At the moment this will be either `"svn"` or `"git"`, but later on other repository types may be introduced.|
+|`type`|String|The type of repository. At the moment this is either `"svn"` or `"git"`, but later on other repository types may be introduced.|
 |`url`|String|The URL of the repository.|
 
 ##### 6.1.3.1 Payload Example
@@ -154,7 +156,7 @@ HTTP Method: GET
 |Name|Type|Required|Description
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="note" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.2.1.3 Example
 
@@ -175,7 +177,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 List of objects with the following key-value pairs:
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
 |`items`|Array|An array of objects representing the branches of the repository. See [Retrieve Branch Response Payload](#response-payload) for the properties of a branch object.|
 |`cursors`|Object|An object containing cursors that can be used for pagination.|
@@ -257,11 +259,11 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 #### 6.3.3 Response Payload {#response-payload}
 An object with the following key-value pairs:
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
 |`name`|String|The name of the branch.|
 |`latestCommit`|Object|An object representing the latest commit done on the branch.|
-|`latestCommit.id`|String|Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
+|`latestCommit.id`|String|Commit ID. Will be a hash for Git repositories and a revision number for Subversion repositories.|
 |`latestCommit.author`|Object|An object with the commit author details.|
 |`latestCommit.author.name`|String|The full name of the commit author. Note: For Subversion repositories, this will be the same value as the email address of the author.|
 |`latestCommit.author.email`|String|The email address of the commit author.|
@@ -311,10 +313,10 @@ HTTP Method: GET
 
 ##### 6.4.1.2 Query Parameters
 
-|Name|Type|Required|Description
+|Name|Type|Required|Description|
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
-|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="note" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
+|`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert type="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
 ##### 6.4.1.3 Examples
 
@@ -342,10 +344,10 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 List of objects with the following key-value pairs:
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
 |`items`|Array|An array of objects representing the commits of the specified repository branch.|
-|`items.id`|String|Commit id. Will be a hash for Git repositories and a revision number for Subversion repositories.|
+|`items.id`|String|Commit ID. Will be a hash for Git repositories and a revision number for Subversion repositories.|
 |`items.author`|Object|An object with the commit author details.|
 |`items.author.name`|String|The full name of the commit author. Note: For Subversion repositories, this will be the same value as the email address of the author.|
 |`items.author.email`|String|The email address of the commit author.|

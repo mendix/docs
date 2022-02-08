@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure you have received confirmation that your Basic node is ready
 
-* Make sure you are the [technical contact](/developerportal/company-app-roles/technical-contact) of the app
+* Make sure you are the [technical contact](/developerportal/collaborate/app-roles#technical-contact) of the app
 
 * Ensure that [two-factor authentication](two-factor-authentication) is enabled on your account
 

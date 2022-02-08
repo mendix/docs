@@ -157,7 +157,7 @@ HTTP Method: GET
 ##### 6.2.1.3 Example
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches HTTP/1.1
+GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches?limit=20&cursor=Rmlyc3RQYWdlQ3Vyc29y HTTP/1.1
 Host: repository.api.mendix.com
 Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
@@ -331,7 +331,7 @@ HTTP Method: GET
 |`AppId`|String|Yes|The App ID (sometimes also known as Project ID) of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
-##### 6.4.1.2 Path Parameters
+##### 6.4.1.2 Query Parameters
 
 |Name|Type|Required|Description
 |---|---|---|---|
@@ -341,14 +341,14 @@ HTTP Method: GET
 ##### 6.4.1.3 Examples
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk/commits HTTP/1.1
+GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk/commits?limit=20&cursor=Rmlyc3RQYWdlQ3Vyc29y HTTP/1.1
 Host: repository.api.mendix.com
 Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
 ```
 
 ```http
-GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/branches%2Fdevelopment/commits HTTP/1.1
+GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/branches%2Fdevelopment/commits?limit=20&cursor=Rmlyc3RQYWdlQ3Vyc29y HTTP/1.1
 Host: repository.api.mendix.com
 Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN

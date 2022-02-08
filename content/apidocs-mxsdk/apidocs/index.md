@@ -9,17 +9,18 @@ weight: 10
 
 The API documentation is divided into the sections described below.
 
-## 2 App Repository API
+## 2 Authentication
+
+Most Mendix Platform APIs require their users to authenticate themselves. This is done by using API keys.
+
+Continue reading in [Authentication](authentication).
+
+## 3 App Repository API
 
 This API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/collaborate/team-server).
 
 For details, see [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api).
 
-## 3 Authentication
-
-Most Mendix Platform APIs require their users to authenticate themselves. This is done by using API keys.
-
-Continue reading in [Authentication](authentication).
 
 ## 4 Build API {#build-api}
 

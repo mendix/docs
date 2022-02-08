@@ -1,7 +1,7 @@
 ---
 title: "App Repository API"
 category: "API Documentation"
-menu_order: 4
+menu_order: 6
 ---
 
 ## 1 Introduction

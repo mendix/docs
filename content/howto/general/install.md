@@ -7,9 +7,7 @@ toc-level: "2"
 tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
-{{% image_container width="100" %}}
 [![](attachments/install/download.png)](https://marketplace.mendix.com/link/studiopro/)
-{{% /image_container %}}
 
 ## 1 Introduction
 

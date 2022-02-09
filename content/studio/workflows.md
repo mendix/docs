@@ -60,6 +60,20 @@ The selected workflow is opened.
 
 ### 4.2 Adding a Workflow {#create}
 
+There are two ways to create a workflow: you can set it up manually or use a wizard. 
+
+### 4.2.1 Creating a Workflow Using the Wizard
+
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you, including not only the workflow itself but also pages and navigation for it. 
+
+To create the workflow using the wizard, do the following:
+
+
+
+### 4.2.2 Creating a Workflow Manually
+
+If your use case is not an approval request form, then you might want to set your workflow manually instead of using the wizard. Follow the steps below:
+
 To add a workflow to your app in Studio, do the following:
 
 1. Click the workflow icon in the left menu bar.

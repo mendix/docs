@@ -5,6 +5,7 @@ weight: 75
 cascade:
     - space: "Studio 8 How-to's"
     - mendix_version: "8"
+    - old_content: true
     - sitemap:
         priority: 0.3
 ---

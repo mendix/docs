@@ -4,7 +4,7 @@ category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Metrics", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
+#The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -126,7 +126,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
 | **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#5-amazon-s3-storage-service-settings}
+## 5 S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 

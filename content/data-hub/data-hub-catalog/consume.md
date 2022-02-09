@@ -34,7 +34,7 @@ This is not compulsory, and users can continue to use an older version of a serv
 
 It is good practice for publishers of a service to serve a notice of deprecation on a service version that will be replaced with a new service that may contain breaking changes which would cause the consuming app to fail. In this case the updated service should be deployed to a new service endpoint and Studio Pro users will get the option to **Switch** to the new version. 
 
-### 2.2 Consumed (External) Entities
+### 2.2 Consumed External Entities
 
 When you use an external entity from a published OData service through the **Data Hub** pane in Studio Pro, you are consuming the dataset from the service (which is published from the app deployed in a specific environment). The OData endpoint for the dataset is used in the consuming app.
 
@@ -58,9 +58,9 @@ The data set that is associated with the consumed entity is maintained in the pu
 
 Access  to the data is through the published REST OData service, with "reading" and "querying" of the data by the consuming app.
 
-## 3 Operations on External Entities in Consuming Apps
+## 3 Operations Affected by Using External Entities
 
-The following operations are affected when using external entities in a consuming app:
+The following operations are affected by using external entities in a consuming app:
 
 * Aggregations – you can count a list of external entities, but you cannot show other aggregations such as sum, average, minimum, and maximum; this is because [OData version 3.0](https://www.odata.org/documentation/odata-version-3-0/) does not support these operations; the only exception is that you can use the [aggregate list](/refguide/aggregate-list) microflow activity, which for all aggregations except **Count** will retrieve everything and perform the aggregation in memory
 *  [XPath](/refguide/xpath) – you can use XPath to filter external entities; all XPath constructs are supported, except the following:

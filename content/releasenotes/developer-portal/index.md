@@ -16,6 +16,11 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### February 10th, 2022
+
+#### New Features
+* You can now more easily bookmark posts inside the Mendix forum for future reference.
+* We simplified the process of marking a post inside the Mendix forum as a bookmark and streamlined the used terminology to improve the user experience.
 ### January 18th, 2022
 
 #### Improvements

@@ -19,6 +19,7 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 #### Fixes
 
 * We made improvements to Data Hub security and UI.
+* We fixed a bug where Data Hub Catalog was not displaying the updatable status of an updateable entity
 
 ### February 3rd, 2022
 

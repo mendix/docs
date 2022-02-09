@@ -96,7 +96,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 #### Data migration tool (preview)
 
 * We have added a data migration tool - that can be used to transfer data between Mendix for Private Cloud environments.
-* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup#5-format-of-a-backup-file).
+* This tool is compatible with Mendix Cloud V4 [backup files](/developerportal/operate/restore-backup#format-of-backup-file).
 
 This tool is available as a technical preview. For documentation and download links, see the [documentation](/developerportal/deploy/private-cloud-data-transfer).
 

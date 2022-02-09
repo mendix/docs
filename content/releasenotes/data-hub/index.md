@@ -14,11 +14,11 @@ These release notes cover changes made to the [Mendix Data Hub](/data-hub/).
 
 #### New Features
 
-* We added a option for users with curation rights to delete a data source. To do this, go to the **Edit** menu of the data source and click **Delete Data Source**.
+* We added an option to delete a data source, available for users with [curation](data-hub/data-hub-catalog/curate) rights. To delete a data source, go to the [Curation Bar](/data-hub/data-hub-catalog/curate#3-curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 
-* We fixed a bug where the Data Hub Catalog did not display the correct status of an updateable entity.
+* We fixed a bug where the Data Hub Catalog did not display the correct status of an updatable entity.
 * We made various security and UI fixes.
 
 ### February 3rd, 2022

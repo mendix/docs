@@ -6,7 +6,7 @@ tags: ["studio", "workflow", "how to", task", "onboarding"]
 ---
 
 {{% alert type="warning" %}}
-Workflows in Studio are unavailable for apps with Mendix version 9.6-9.10. For more information, see [Using Workflows in Apps with Mendix Version 9.6-9.10](/studio/workflows-9.6).Workflows are available for Mendix versions outside this range. 
+Workflows in Studio are unavailable for apps with Mendix version 9.6-9.10. For more information, see [Using Workflows in Apps with Mendix Version 9.6-9.10](/studio/workflows-9.6). Workflows are available for Mendix versions outside this range. 
 {{% /alert %}}
 
 ## 1 Introduction 
@@ -36,7 +36,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
-* Make sure your app has Mendix version 9
+* Make sure your app has Mendix version 9.11
 * Make sure your app is based on the Blank app template 
 
 ## 3 Enabling Workflows {#enable-workflows}
@@ -57,17 +57,21 @@ First, you need to enable workflows for your app. Do the following:
     {{% image_container width="300" %}}![Create Workflow](attachments/workflow-how-to-configure/create-workflow.png)
     {{% /image_container %}}
 
-5. In the **Create new workflow** dialog box, set the **Title** to **Employee_Onboarding**, and then click the **Workflow Entity** field to create a new workflow entity.
+5. In the **Create new workflow** dialog box, set the **Title** to **Employee_Onboarding**, and click **Set Up Manually** button.
 
-6. In the **Select Workflow Entity** dialog box, click **Create Workflow Entity**.
+5. Click the **Parameter Entity** to create an entity that is used for the [Workflow Context parameter](/studio/workflow-parameter).
 
-7. In The **Create New Workflow Entity** dialog box, set the **Name** to **EmployeeOnboarding** and click **Create**. 
+6. In the **Select Entity** dialog box, click plus icon in the upper-right corner.
+
+7. In the **Create Entity** dialog box, set the **Name** to **EmployeeOnboarding** and click **Create**. 
 
 8. Click **Create** to confirm your choice once again.
 
-Good job! You have created a workflow and a workflow-specific entity. For more information on workflow entities, see the [Entities and Their Types](/studio/domain-models#entity-types) section in *Domain Model*.
+Good job! You have created a workflow and a Workflow Context parameter.
 
 ## 4 Configuring a Domain Model
+
+In the previous section, you created the entity that is set for the Workflow Context parameter. You now need to configure attributes for this entity:
 
 1. Open the [domain model](/studio/domain-models). 
 2.  The **EmployeeOnboarding** entity you have created will hold the information about the employee to onboard, as well as capture information added during execution of the workflow, such as the laptop model that the new employee requires. Add the following attributes to the **EmployeeOnboarding** entity (for more information on how to create attributes, see [Adding New Attributes](/studio/domain-models#adding-new-attributes) section in the *Domain Model*):
@@ -193,15 +197,13 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 11. As only the manager should specify details for the new employee, you need to make sure that the user task is assigned to users with the Manager role only. Do the following:
 
-    1. Make sure the **Assign Task Using** property is set to **Filter**. 
+     1. Make sure the **Assign Task Using** property is set to **Filter**. 
 
-    2. Click the **Filter** property.
+     2. Click the **Filter** property.
 
-    3. In the **Assign task to** dialog box, the **Where** condition is set to **User Role** by default. Set the other part of the condition to **Manager** and click **Add**:
+     3. In the **Assign task to** dialog box, the **Where** condition is set to **User Role** by default. Set the other part of the condition to **Manager** and click **Add**:
 
-        ![Assign Task to Manager](attachments/workflow-how-to-configure/assign-task-to-manager.png)
-
-12. In the **Allowed Roles** property deselect all roles except **Manager** to restrict access to this user task to the relevant role only.
+         ![Assign Task to Manager](attachments/workflow-how-to-configure/assign-task-to-manager.png)
 
 Great job! You have created the user task for the Manager role:
 
@@ -239,9 +241,7 @@ Do the following:
 
     2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to assign the user task to the Facilities role.
 
-    3. In the **Allowed Roles** property deselect all roles except **Facilities**. 
-
-    4. Create a new page called **PrepareDesk** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
+    3. Create a new page called **PrepareDesk** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
 
     5. You need to make sure that only the relevant information is displayed on the **PrepareDesk** page. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
 
@@ -261,9 +261,7 @@ Do the following:
 
     2. As only the Facilities department should prepare a desk for the new employee, you need to make sure that the user task is assigned to users with the Facilities role only. Refer to steps 11a-11c of the [Specifying Details of the New Hire](#specify-details) section to do so.
 
-    3. In the **Allowed Roles** property deselect all roles except **Facilities**. 
-
-    4. Create a new page called **ShipDevices** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
+    3. Create a new page called **ShipDevices** for the **Page** property referring to steps 7a-7d of the the [Specifying Details of the New Hire](#specify-details) section.
 
     5.  On the newly created **ShipDevices** page all attributes are added to the employee detail form by default. You need to make sure that the Facilities department will be able to view the fields but not change them: select the data view with the employee details and go to its properties.
 

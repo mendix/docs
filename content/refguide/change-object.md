@@ -48,7 +48,7 @@ You can also open the dialog box by double-clicking the activity in the microflo
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
 | No *(default)*| The object is changed without being saved in the database |
 
-This option is not shown for [external entities](external-entities) because they can't be committed. Use the [Send External Object](send-external-object) activity to save changes to external entities.
+This option is not shown for [external entities](external-entities) because they cannot be committed. Use the [Send External Object](send-external-object) activity to save changes to external entities.
 
 #### 3.2.1 Use Cases for Setting Commit
 

@@ -53,6 +53,7 @@ When a data source is selected in the **Search Results**, the following options 
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
  * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
  * **Validate** indicates that the data source and datasets have been validated.
+ * **Delete Data Source** allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company.
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 

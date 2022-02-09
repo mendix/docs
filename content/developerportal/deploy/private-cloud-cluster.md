@@ -1399,6 +1399,10 @@ The Mendix Runtime is based on Java, which preallocates memory and typically nev
 Memory-based metrics should not be used for autoscaling.
 {{% /alert %}}
 
+When an environment is scaled (manually or automatically), it will not be restarted. Adjusting the number of replicas will not cause downtime - as long as the number of replicas is higher than zero.
+Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP(S) requests.
+Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP(S) traffic will be routed to the remaining pods.
+
 #### 5.6.2 Vertical pod autoscaling
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.

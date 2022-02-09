@@ -534,7 +534,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
     ![](attachments/private-cloud-monitor/environment-details-general.png)
   
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
 
@@ -583,7 +583,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
     ![](attachments/private-cloud-monitor/environment-details-general.png)
   
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
 
@@ -642,7 +642,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
     ![](attachments/private-cloud-monitor/environment-details-general.png)
   
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then press the **Save** button.
+3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     ![](attachments/private-cloud-monitor/environment-metrics-disabled.png)
 
@@ -650,7 +650,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
     ![](attachments/private-cloud-monitor/environment-metrics-default.png)
 
-5. Set **Mode** to **default**, then press the **Save** button.
+5. Set **Mode** to **default**, then click **Save**.
 
     ![](attachments/private-cloud-monitor/environment-metrics-mode-native.png)
 
@@ -659,13 +659,13 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
     This parameter is optional and can be left empty.
     For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
 
-7. Press **Apply Changes**.
+7. Click **Apply Changes**.
 
     ![](attachments/private-cloud-monitor/environment-metrics-apply.png)
 
 #### 5.3.2 Configure additional Native Metrics options in Connected Mode
 
-After an environment is [switched into native metrics mode](#enable-native-metrics-connected-mode), it's possible to configure additional options for that environemtn.
+After an environment is [switched into native metrics mode](#enable-native-metrics-connected-mode), it is possible to configure additional options for that environment.
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 

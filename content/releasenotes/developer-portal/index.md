@@ -16,6 +16,16 @@ To see the current status of the Mendix Developer Portal and Control Center, see
 
 ## 2022
 
+### February 10th, 2022
+
+#### Improvements
+
+* In our continuous effort to change the Developer Portal from a monolith to microservices we have taken a big step in giving Company data its own service. This paves the way for an updated password maintenance experience, which we will release soon.
+
+#### Fixes
+
+* We fixed a bug where under certain circumstances editing a new task while [creating a story](/developerportal/collaborate/stories#new-story) would throw an error
+
 ### January 18th, 2022
 
 #### Improvements

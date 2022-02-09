@@ -2,7 +2,7 @@
 title: "Using Workflows in Apps with Mendix Version 9.6-9.10"
 category: "Workflows"
 menu_order: 40
-tags: ["workflow", "workflows", "9.6"]
+tags: ["workflow", "workflows", "9.6", "migration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,15 +10,15 @@ tags: ["workflow", "workflows", "9.6"]
 
 Workflows were introduced in Mendix version 9.0. for Mendix Studio and Mendix Studio Pro. 
 
-During the last months we have collected very valuable feedback and have incorporated some of the major changes into an improved version of workflows. Due to these changes, workflows are not available for apps with from Mendix version 9.6 to Mendix version 9.10. 
+Since then we have collected very valuable feedback and have incorporated some of the major changes into an improved version of workflows. Due to these changes, workflows are not available for apps with from Mendix version 9.6 to Mendix version 9.10. 
 
-However, you can still use workflows in Studio and Studio Pro. Below we provide some guidance to help you pick the right Mendix version based on the purpose of the app. 
+You can find some guidance below to help you pick the right Mendix version based on the purpose of the app. 
 
 ## 2 Exploring the Workflow Functionality 
 
 You can try workflows out and explore their functionality in an app that is not meant to go in production.
 
-If you want to just try workflows out and do not plan to publish the app to production, we recommend creating an app with *Mendix version 9.5*. In this version, workflows are available in Studio and you can build processes and explore the feature. 
+If you want to just try workflows out and do not plan to publish the app to production, we recommend creating an app with *Mendix version 9.5*. In this version, workflows are available in [Beta](/releasenotes/beta-features/) and you can build processes and explore the feature. 
 
 To create an app with Mendix version 9.5, do the following:
 
@@ -30,13 +30,13 @@ To create an app with Mendix version 9.5, do the following:
 
 ## 3 Building an App with the Workflow Functionality in Mendix 9.6-9.10
 
-Next to just exploring the functionality, you can also build an app in Studio that will later be published to production. 
+You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6-9.10 via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro and work in Studio on any other functionality. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
 
-You can start building an app with Mendix version 9.5  in Studio and manually migrate your app to Mendix version 9.6-9.10 via Mendix Studio Pro. Afterwards, you can continue working on workflows in Studio Pro until workflows are available in Studio again. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
+## 4 Building an App with the Workflow Functionality in Mendix 9.11
 
-## 4 Building an App Together with Studio Pro Developers in Mendix 9.6-9.10
+Workflows are available again in Studio from Mendix version 9.11 and are GA. This means you can build your app with the workflow functionality and publish it to production. We recommend creating a new app with Mendix version 9.11, but you can also migrate your existing app to this version via Studio Pro. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
 
-If your team is building a workflow app with Mendix version 9.6-9.10, you can work on workflows only in Studio Pro until workflows are available in Studio again. You can work in Studio on any other functionality in your app. 
+## 5 Read More
 
-
+* [Migrate Workflow Apps](/refguide/workflow-beta-migration)
 

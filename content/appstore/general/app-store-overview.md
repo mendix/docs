@@ -290,6 +290,6 @@ Refer to the documentation on specific [app services](/appstore/app-services/) f
 ## 5 Read More
 
 * [How to Use Marketplace Content in Studio Pro](app-store-content)
-* [How to Sell Your App Service in the Marketplace](as-sell) 
+* [How to Sell Your App Service in the Marketplace](/appstore/creating-content/as-sell) 
 * [How to Share Marketplace Content](share-app-store-content)
 * [Marketplace Content Support](app-store-content-support)

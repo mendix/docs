@@ -206,3 +206,11 @@ A microflow with a repeatedly committed variable may cause longer-running transa
 
 Refactor the microflow so that the variable is only committed once in the flow.
 
+## 13 Try to place CRUD activities closer to the end of the microflow [MXP014] {#mxp014}
+
+A microflow with CRUD (CReate/Update/Delete) activities that are placed too near the start event, may cause the database to acquire locks or resources earlier than necessary.
+This may impact application performance.
+
+### 13.1 Steps to Fix
+
+Refactor the microflow so that the CRUD activities are towards the end of the microflow (closer to the end events).

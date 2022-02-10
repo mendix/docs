@@ -68,7 +68,7 @@ Notice the following search details:
 
 To filter the questions that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **Filters** –  filters related to your own activities
+* **Filters** – filters related to your own activities
   * **My Bookmarks** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details and Answers Page](#question-description-page) section)
   * **My Own Questions** – the questions you have asked (for more information, see the [Asking Your Question](#asking-your-question) section)
   * **That I answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)

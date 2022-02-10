@@ -6,10 +6,6 @@ tags: ["workflow", "workflows", "Studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="warning" %}}
-Workflows in Studio are unavailable for apps with Mendix version 9.6-9.10. For more information, see [Using Workflows in Apps with Mendix Version 9.6-9.10](workflows-9.6). Workflows are available for Mendix versions outside this range. 
-{{% /alert %}}
-
 ## 1 Introduction
 
 Workflow is a visual language in Mendix Studio and Mendix Studio Pro that allows you to to solve your business problems that involve processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
@@ -23,6 +19,10 @@ To view the workflows of your app in Studio, click the **Workflows** icon in the
 Workflows are a visual way of processing logic in your application. A workflow looks like a flow chart. On a new workflow a *start event* (a starting point of the workflow) and an *end event* (an endpoint of the workflow) are created by default. You can add various activities to a flow of a workflow that is called a *path*.
 
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
+
+{{% alert type="note" %}}
+Workflows are GA and available in Studio from **Mendix version 9.11**. If you have an app with workflow functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration). 
+{{% /alert %}}
 
 ## 2 Workflow App Template
 
@@ -60,19 +60,41 @@ The selected workflow is opened.
 
 ### 4.2 Adding a Workflow {#create}
 
-There are two ways to create a workflow: you can set it up manually or use a wizard. 
+There are two ways to create a workflow: you [use a wizard](#wizard) or [set the workflow up manually](#manual). 
 
-### 4.2.1 Creating a Workflow Using the Wizard
+#### 4.2.1 Creating a Workflow Using the Wizard {#wizard}
 
-The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you, including not only the workflow itself but also pages and navigation for it. 
+The wizard helps you create the Approval Request workflow. If your workflow falls under the approval request use case, for example, approving vacation days for your employees, this is a good starting point that sets the whole app automatically for you, not only the workflow itself but also pages and navigation. 
 
-To create the workflow using the wizard, do the following:
+To create the workflow for the vacation approval via the wizard, do the following:
+
+1. Click the workflow icon in the left menu bar.
+
+2. Select the module you would like to add a new workflow to and click the plus icon next to this module:
+
+    ![New Workflow](attachments/workflows/new-workflow.jpg)
+    
+    For more information on what modules are, see [Domain Model](domain-models).
+    
+3. In the **Create Workflow** dialog box, set the workflow title to **Vacation Approval** and click **Start Wizard**.
+
+4. In the **Create Request Form**, click **Add Field**. 
+
+5. You can now define input fields that will be used by a person submitting the request. For example, an employee who wants to submit vacation days will fill in their name, department, and desired dates of the vacation. Do the following:
+
+    1. Fill in *Name* in the **Label** option, leave the **Type** as string, and mark this field as required. On the right you can see the preview of the future form.
+    2. Click the plus icon to add more fields. 
+    3. Follow steps 1-2 to add the *Department* of type string, *Start Date* of type Date and Time, and *End Date* of type Date and Time. 
+    4. Click the **Create** button.
+    
+6. Based on this form the app is set up: labels that you filled in are turned into attributes of an entity used by the workflows, workflow and pages are created, security is set up. Click **Take the tour** to get more information about your app.
+
+The app with the workflow is set up.
 
 
+#### 4.2.2 Creating a Workflow Manually {#manual}
 
-### 4.2.2 Creating a Workflow Manually
-
-If your use case is not an approval request form, then you might want to set your workflow manually instead of using the wizard. Follow the steps below:
+If your use case does not fall under an approval request, then you might want to set your workflow manually instead of using the wizard. Follow the steps below:
 
 To add a workflow to your app in Studio, do the following:
 
@@ -84,13 +106,17 @@ To add a workflow to your app in Studio, do the following:
     
     For more information on what modules are, see [Domain Model](domain-models).
 
-3. In the **Create new workflow** dialog box, fill in the name of the workflow and select a workflow entity (for more information on type of entities, see the [Entities and Their Types](domain-models#entity-types) section in *Domain Model*):  
+3. In the **Create Workflow** dialog box, fill in the workflow title and click **Set Up Manually**.
+
+3. Click **Parameter Entity** and either select the existing entity or create a new one:
 
     ![Create New Workflow](attachments/workflows/create-new-workflow.jpg)
+    
+    For more information on the Workflow Context parameter and how it is used, see [Workflow Context Parameter](workflow-parameter).
 
 4. Click **Create**.
 
-The workflow is created.
+The workflow is created. For a more information on how to configure the workflow manually, see [Configure a Workflow in Studio Manually](/studio-how-to/workflow-how-to-configure).
 
 ### 4.3 Duplicating a Workflow {#duplicate}
 

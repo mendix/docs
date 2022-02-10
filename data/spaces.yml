@@ -179,7 +179,7 @@ studio-how-to:
   space: "Studio 9 How-to's"
   priority: false
   menu_categories:
-    - "Configure a Workflow in Studio for the Employee Onboarding Process"
+    - "Configure a Workflow in Studio Manually"
     - "Pages"
     - "Configure a Navigation Bar"
     - "Configure a Domain Model"

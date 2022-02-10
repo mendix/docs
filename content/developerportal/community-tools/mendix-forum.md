@@ -20,9 +20,9 @@ There are two tabs available in the Mendix Forum: **Questions** and **Ideas**. O
 
 On the **Questions** tab, you can see an overview of the questions that have been asked. Here is an example question:
 
-![](attachments/mendix-forum/questions_example.jpg)
+![](attachments/mendix-forum/questions_example.png)
 
-Each question has a descriptive title (**1**). Clicking the question title opens the specific question and answers details page under the **Question** tab (for more information, see the [Question Details and Answers Page](#question-description-page) section).
+Each question has a descriptive title (**1**). Clicking the question title opens the specific [question and answers details page](#question-description-page) under the **Question** tab. After you click the question title, the dot ( • ) before the title will disappear.
 
 Each question specifies the following elements:
 
@@ -34,14 +34,14 @@ Each question specifies the following elements:
 * The tags applied to question (**7**) 
 	* These are set when asking a question (for details, see the [Asking Your Question](#asking-your-question) section)
 	* When you click a tag, the overview page will list questions with that same tag
-* The name, avatar, and level of the Mendix community member who asked the question (**8**)
-* The Mendix community members(s) who answered the question (**9**)
-* When the question was created (**10**)
+* When the question was created (**8**)
+* The name, avatar, and level of the Mendix community member who asked the question (**9**)
+* The Mendix community members(s) who answered the question (**10**)
 
 Hovering over the developer name brings up the profile card:
 
 {{% image_container width="200" %}}
-![](attachments/mendix-forum/questions_profile_card.jpg)
+![](attachments/mendix-forum/questions_profile_card.png)
 {{% /image_container %}}
 
 The profile card presents the Mendix points for the developer. Clicking the developer name on the card will bring you to their Mendix Profile.
@@ -68,9 +68,14 @@ Notice the following search details:
 
 To filter the questions that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **My favorites** – the questions you have marked as favorites (for details on how to favorite a question, see the [Question Details and Answers Page](#question-description-page) section)
-* **My own questions** – the questions you have asked (for more information, see the [Asking Your Question](#asking-your-question) section)
+* **Filters** –  filters related to your own activities
+  * **My Bookmarks** – the questions you have bookmarked (for details on how to bookmark a question, see the [Question Details and Answers Page](#question-description-page) section)
+  * **My Own Questions** – the questions you have asked (for more information, see the [Asking Your Question](#asking-your-question) section)
+  * **That I answered** – the questions you have answered (for more information, see the [Answering a Question](#answering-question) section)
+  * **That I commented on** – the questions that you have commented on (for details on how to comment on a question, see the [Question Details and Answers Page](#question-description-page) section)
+
 * **Status** – the status of a question according to whether it remains **Unanswered**, has been **Answered**, or has been **Accepted answered** (meaning, it has been answered and the answer has been accepted)
+* **Mendix version** – the Mendix version to which the question is related (for more information, see the [Asking Your Question](#asking-your-question) section)
 * **Categories** – the category set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
 * **Tags** – the tags set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
 
@@ -79,23 +84,20 @@ To filter the questions that appear on the overview page, select from the follow
 #### 2.2.1 Question Details
 
 Clicking the title of a question will bring you to the details page for that question:
-
-{{% image_container width="400" %}}
-![](attachments/mendix-forum/questions_specific_page.jpg)
-{{% /image_container %}}
+![](attachments/mendix-forum/questions_specific_page.png)
 
 On this page, you can read the full descriptive text of the question and do the following:
 
 * View the following question details (**1**):
-	* When the question was **Asked**
-	* How many times the question has been **Viewed**
+	* When the question was **Submitted**
 	* The date and time of the **Last activity** on the question (meaning, when it was last updated)
+	* How many times the question has been **Viewed**
 	* The **Category** of the question
 	* The **Tags** applied to the question (when you click a tag, the overview page will list questions with that same tag)
 	* The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#asking-your-question) section)
-* Click the up or down arrow buttons to upvote or downvote the question based on its usefulness (**2**)
-* Click the heart to favorite the question (**3**)
-* Click **Add comment** to write and submit a comment on the question (**4**)
+* Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness (**2**)
+* Click **Comment** to write and submit a comment on the question (**3**)
+* Click **Bookmark** to bookmark the question (**4**)
 
 If you want to follow the discussion on a question via email notifications, click **Subscribe to Email Notifications** below the question details. Please note that you are automatically subscribed for email notifications on questions that you have asked; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific question that you have asked.
 
@@ -105,15 +107,15 @@ The URL for each question is unique.
 
 #### 2.2.2 Answers {#answers}
 
-Below the question details are the answer(s) to the question. Click the up or down arrow buttons to upvote or downvote the answer based on how it addresses the question. You can also click **Add comment** to comment on an answer.
+Below the question details are the answer(s) to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-![](attachments/mendix-forum/questions_answer.jpg)
+![](attachments/mendix-forum/questions_answer.png)
 
-#### 2.2.3 Answering a Question
+#### 2.2.3 Answering a Question {#answering-question}
 
 Below the answer(s), you can contribute to the Mendix Forum by writing your own answer in the editor and then clicking **Submit answer**:
 
-![](attachments/mendix-forum/questions_answer_editor.jpg)
+![](attachments/mendix-forum/questions_answer_editor.png)
 
 {{% alert type="info" %}}
 
@@ -139,7 +141,7 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 	* The **Title** of your question (which is how Mendix Forum users will first see your question, so make the title descriptive and interesting)
 	* The text of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
-	* The **Mendix version** on which you encountered the issue you have a question about
+	* The **Mendix version** on which version you encountered the issue you have a question about
 	* The **Category** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
 	* The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
 
@@ -157,20 +159,20 @@ You should accept the answer that properly and accurately responds to your quest
 
 On the **Ideas** tab, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-![](attachments/mendix-forum/ideas_example.jpg)
+![](attachments/mendix-forum/ideas_example.png)
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific idea details page under the **Ideas** tab (for more information, see the [Idea Details Page](#IdeaDetails) section).
+All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific [idea details page](#IdeaDetails) under the **Ideas** tab.
 
 Each idea specifies the following elements:
 
 * The beginning of the idea description (**2**) (this is taken from the [idea details page](#IdeaDetails))
-* The number of **Votes** (**3**), **Comments** (**4**), and **Views** (**5**) for the idea
-* The status of the idea (**6**) (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
-* The category (**7**)
+* The number of votes (**3**), comments (**4**), and views (**5**) for the idea
+* The category (**6**)
 	* This is set when submitting an idea (for details, see the [Submitting an Idea](#submitting-an-idea) section)
-* Tags (**8**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
-* The name, avatar, and level of the Mendix community member who created the idea (**9**)
-* When the idea was created (**10**)
+* Tags (**7**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
+* The status of the idea (**8**) (for descriptions of the various statuses, see the [Idea Details Page](#IdeaDetails) section)
+* When the idea was created (**9**)
+* The name, avatar, and level of the Mendix community member who created the idea (**10**)
 
 #### 3.1.1 Sorting the Ideas
 
@@ -198,27 +200,30 @@ To filter the ideas that appear on the overview page, select from the following 
 
 Clicking the title of an idea will bring you to the details page for that idea:
 
-![](attachments/mendix-forum/ideas_specific_page.jpg)
+![](attachments/mendix-forum/ideas_specific_page.png)
 
 On this page, you can read the full descriptive text of the idea and do the following:
 
 * View the following idea details (**1**):
-    * When the ideas was **Submitted**
-    * How many times the idea has been **Viewed**
-    * The date and time of the **Last activity** on the idea (meaning, when it was last updated)
     * The **Status** of the idea – these are the possible statuses:
         * **Open** – the idea has not been reviewed yet
         * **Planned** – the idea has been accepted by the Mendix Product Managers and scheduled for implementation
         * **Implemented** – the idea has been implemented
         * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
+    * When the ideas was **Submitted**
+    * The date and time of the **Last activity** on the idea (meaning, when it was last updated)
+    * How many times the idea has been **Viewed**
     * The **Category** of the idea
     * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
+    
 * <a name="upvoting"></a>Click **Vote** to upvote the idea (**2**)
     * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform
 
 		{{% alert type="info" %}}The upvotes will be used as input for the Product Managers and Mendix community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
 		{{% /alert %}}
-* Click the star to favorite the idea (**3**)
+	
+* Click **Bookmark** to bookmark the idea (**3**)
+
 * Submit a comment on the idea (**4**)
 
 If you want to follow the discussion on an idea via email notifications, click **Subscribe to Email Notifications** below the idea details. Please note that you are automatically subscribed for email notifications on ideas that you have submitted; if you want to unsubscribe from these notifications, click **Unsubscribe from Email Notifications** on a specific idea that you have submitted.

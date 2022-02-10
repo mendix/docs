@@ -1256,7 +1256,7 @@ The following fields can be configured:
 * `runtimeResources`: this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
-#### 5.3.4 Customize Registry ImageNameTemplate{#customize-registry-imagenametemplate}
+### 5.4 Customize Registry ImageNameTemplate{#customize-registry-imagenametemplate}
 
 ImageNameTemplate allows you to specify how the image name and tag are generated. It allows both use of OpenShift-style "repository per app" and ECR-style "tag per app". For example, a value of imageNameTemplate may be `registry.example.com/mendix-apps/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}` which would generate an image for the build like `registry.example.com/mendix-apps/pgv9gw71-0.0.1.2-1640699175.392`
 
@@ -1269,16 +1269,16 @@ Any manual changes you make to the imageNameTemplate in the manifest are overwri
 An example of the imageNameTemplate in the operator configuration manifest is given below.
 
 ```yaml
-  apiVersion: privatecloud.mendix.com/v1alpha1
-  kind: OperatorConfiguration
-      # …
-  spec:
-    registry:
-      imageNameTemplate: 'my-registry/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}'
-      pullURL: 'image-registry.openshift-image-registry.svc:5000'
-      pushURL: 'image-registry.openshift-image-registry.svc:5000'
-      type: openshift
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
     # …
+spec:
+  registry:
+    imageNameTemplate: 'my-registry/{{.Name}}-{{.Version}}-{{.UnixTimestamp}}'
+    pullURL: 'image-registry.openshift-image-registry.svc:5000'
+    pushURL: 'image-registry.openshift-image-registry.svc:5000'
+    type: openshift
+  # …
 ```
 
 You can customize the registry imageNameTemplate in OperatorConfiguration with these available variables:
@@ -1289,6 +1289,64 @@ You can customize the registry imageNameTemplate in OperatorConfiguration with t
 * `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision e.g. 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.
 
+### 5.5 Customize Runtime Metrics{#customize-runtime-metrics}
+
+Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
+
+`runtimeMetricsConfiguration` allows you to specify the default metrics configuration for a namespace.
+Any configuration values from `runtimeMetricsConfiguration` can be overridden for an environment using the `MendixApp` CR (see [Generating Metrics](private-cloud-monitor#generating) for more details).
+
+An example of the `runtimeMetricsConfiguration` in the operator configuration manifest is given below.
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+    # …
+spec:
+  runtimeMetricsConfiguration:
+    mode: native
+    interval: "PT1M"
+    mxAgentConfig: |-
+      {
+        "requestHandlers": [
+          {
+            "name": "*"
+          }
+        ],
+        "microflows": [
+          {
+            "name": "*"
+          }
+        ],
+        "activities": [
+          {
+            "name": "*"
+          }
+        ]
+      }
+    mxAgentInstrumentationConfig: |-
+      {
+        …
+      }
+  # …
+```
+
+You can set the following metrics configuration values:
+
+* `mode`: metrics mode, `native` or `compatibility`. `native` mode is only available for Mendix versions 9.7 and above. See [Metrics Generation Modes](private-cloud-monitor#metrics-generation-modes) in *Monitoring Environments in Mendix for Private Cloud* for more information.
+* `interval`: Interval between Prometheus scrapes specified in ISO 8601 duration format (e.g. 'PT1M' would be an interval of one minute). This should be aligned with your Prometheus configuration. If left empty it defaults to 1 minute (matching the default Prometheus scrape interval). This attribute is only applicable when `mode` is `native`.
+* `mxAgentConfig`: configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to disable the instrumentation agent. This attribute is only applicable when `mode` is `native`.
+* `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
+
+{{% alert type="warning" %}}
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` section or set `mode` to an empty string.
+{{% /alert %}}
+
+For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](private-cloud-monitor).
 
 ## 6 Cluster and Namespace Management
 

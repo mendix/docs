@@ -12,6 +12,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2022
 
+### February 10th, 2022
+
+#### Mendix Operator v2.4.0 and Mendix Gateway Agent v2.4.0
+
+* We have added an option to use "native" or "compatibility" metrics. The native mode is only available for Mendix versions 9.7 and above, while compatibility mode is for the Mendix versions 9.6 and below. See [Customize Runtime Metrics](/developerportal/deploy/private-cloud-cluster#customize-runtime-metrics) in *Creating a Private Cloud Cluster* for more information.
+
+#### Portal Improvement
+
+* We have improved the UX, and added a new button, **Save and Apply** to directly apply changes made in an environment. This button restarts the environment.
+* We have added the ability to add metrics configuration to a environment.
+  
 ### January 13th, 2022
 
 #### Mendix Operator v2.3.0 and Mendix Gateway Agent v2.3.0

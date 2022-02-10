@@ -18,9 +18,9 @@ You can find some guidance below to help you pick the right Mendix version based
 
 You can try workflows out and explore their functionality in an app that is not meant to go in production.
 
-If you want to just try workflows out and do not plan to publish the app to production, we recommend creating an app with *Mendix version 9.5*. In this version, workflows are available in [Beta](/releasenotes/beta-features/) and you can build processes and explore the feature. 
+If you want to just try workflows out and do not plan to publish the app to production, we recommend creating an app with *Mendix version 9.5.1*. In this version, workflows are available in [Beta](/releasenotes/beta-features/) and you can build processes and explore the feature. 
 
-To create an app with Mendix version 9.5, do the following:
+To create an app with Mendix version 9.5.1, do the following:
 
 1. In the Developer Portal, click **Create App**.
 2. Choose any app template. Some templates like **Approval App** and **Purchase Request** already have predefined workflows and pages.
@@ -34,7 +34,11 @@ You can start building an app with Mendix version 9.5  in Studio and manually mi
 
 ## 4 Building an App with the Workflow Functionality in Mendix 9.11
 
-Workflows are available again in Studio from Mendix version 9.11 and are GA. This means you can build your app with the workflow functionality and publish it to production. We recommend creating a new app with Mendix version 9.11, but you can also migrate your existing app to this version via Studio Pro. For more information on how to migrate the app, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
+Workflows are available again in Studio from Mendix version 9.11 and are GA. This means you can build your app with the workflow functionality and publish it to production. 
+
+If you do **not** have workflow functionality in your app, you can upgrade your app from Mendix version 9.7-9.10 to Mendix version 9.11 via Studio. 
+
+If your app has workflow functionality, you can migrate it to Mendix version 9.11 via Studio Pro. For more information on how to migrate the app via Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration).
 
 ## 5 Read More
 

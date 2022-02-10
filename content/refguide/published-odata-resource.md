@@ -1,7 +1,7 @@
 ---
 title: "Published OData Resource"
 parent: "published-odata-services"
-tags: ["studio pro"]
+tags: ["studio pro", "OData"]
 ---
 
 ## 1 Introduction
@@ -118,10 +118,12 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-The action [Call a microflow](/refguide/on-click-event#call-microflow) allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
+### 8.2.1 Call a Microflow Instead of Writing to Database
+
+The **Call a microflow** action allows you to replace the third step (committing the changes to the database) with your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](http-request-and-response-entities) parameter. In the microflow, you can use the [Commit](committing-objects) activity to commit the changes to the database. If the microflow reports [validation feedback](validation-feedback), the runtime informs the client that the update request has failed.
 
 {{% alert type="info" %}}
-This **Call a microflow** activity was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).
+This **Call a microflow** action was introduced in Studio Pro [9.11.0](/releasenotes/studio-pro/9.11).
 {{% /alert %}}
 
 For more information, see [OData query options](odata-query-options#updating-objects).

@@ -22,7 +22,7 @@ On the **Questions** tab, you can see an overview of the questions that have bee
 
 ![](attachments/mendix-forum/questions_example.png)
 
-Each question has a descriptive title (**1**). Clicking the question title opens the specific [question and answers details page](#question-description-page) under the **Question** tab. After you click the question title, the dot ( • ) before the title will disappear.
+Each question has a descriptive title (**1**). Clicking the question title opens the specific [question and answers details page](#question-description-page) under the **Question** tab. After you click the question title, the dot ( • ) before the question title will disappear.
 
 Each question specifies the following elements:
 

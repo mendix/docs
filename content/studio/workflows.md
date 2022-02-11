@@ -242,5 +242,4 @@ The elements of this section are described in the table below:
 
 * [Workflow Context Parameter](workflow-parameter) – describes the Workflow Context parameter and its properties 
 * [Workflow Properties](workflow-properties) – describes workflow properties 
-* [User Task](workflows-user-task) – describes properties of a user task
-* [Using Workflows in Apps with Mendix Version 9.6-9.10](workflows-9.6) – explains how to use workflow functionality in apps with Mendix version 9.6-9.10
+* [User Task](workflows-user-task) – describes properties of a user task 

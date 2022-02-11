@@ -92,7 +92,7 @@ You can request an Operator license by doing the following:
 
 4. Fill in the required information:
 
-    * The name of your company
+    * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace(s) for which you want to request an Operator license
@@ -117,7 +117,7 @@ You can request a Runtime license by doing the following:
 
 4. Provide the required information:
 
-    * The name of your company
+    * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * If "Connected" please provide the namespace(s) for which you are requesting the runtime license(s)
@@ -138,7 +138,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 4. Fill in the required information:
 
-    * The name of your company
+    * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator and Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace(s) for which you want to request an Operator license

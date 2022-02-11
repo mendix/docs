@@ -107,7 +107,7 @@ To set up a template, follow these steps:
 
 ### 6.2 Using an Uploaded Excel File as a Template {#upload-excel-file-template}
 
-This **Upload existing excel file** option allows you to upload an Excel file as a template. If you use this option, then the names of the sheets and columns that are defined in your template file will be used.
+This **Upload existing excel file** option allows you to upload an Excel file as a template. If you use this option, then the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** you select for the [Styles](#styles) when the **Background color** is not set to **none**.
 
 To upload an Excel file as a template, perform the following steps:
 
@@ -166,7 +166,7 @@ To configure the dynamic column data, follow these steps:
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
 3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
 
-    {{% alert type="info" %}}If you upload an Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
+    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the column name defined in your Excel template file will be used, and the **Name** you enter here will not be used. For more information, see [Using an Uploaded Excel File as a Template](#upload-excel-file-template).
     {{% /alert %}}
 
 4. Specify the **Retrieve type** to identify if this column will be an attribute or a reference.
@@ -186,7 +186,7 @@ To configure the static data in the sheet, follow these steps:
 4.  Specify the **Type** by selecting if the cell is **Static Text, Object Data, or Aggregate Function.** This example uses **Static Text** (which changes the **Name** field into **Excel Text** upon selection).
 5.  Specify the **Style** that should be applied to the cell.
 
-### 6.6 Configuring Custom Cell Formatting & Styling
+### 6.6 Configuring Custom Cell Formatting & Styling {#styles}
 
 To configure the custom formatting and styling for the cells, follow these steps:
 
@@ -195,6 +195,9 @@ To configure the custom formatting and styling for the cells, follow these steps
     ![](attachments/using-the-excel-exporter/18581900.png)
 
 3.  Specify the properties of the style that will be applied to the cells. 
+
+    {{% alert type="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
+    
 4.  Click **Save** to make the style available for dynamic columns, static columns, and headers.
 
 ## 7 Calling the Excel Export Module via Microflow

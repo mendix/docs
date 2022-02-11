@@ -61,7 +61,7 @@ On the template details page, you can define the template with the following ite
 
 *  **Upload existing excel file**: uploads an Excel file which is used as a template
 
-   {{% alert type="info" %}}If you upload an Excel file, the names of the sheets and columns that are defined in your Excel template file will be used.{{% /alert %}}
+   {{% alert type="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** you select for the [Styles](#styles) when the **Background color** is not set to **none**{{% /alert %}}
    
 *  **Worksheets**: contains the following items that you can use to define sheets in an exported document
 
@@ -90,7 +90,9 @@ On the template details page, you can define the template with the following ite
       
       * **Horizontal alignment**: the horizontal alignment of the text 
       
-      * **Background color**: the color of the background
+      *  **Background color**: the color of the background
+      
+         {{% alert type="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
       
       * **Vertical alignment**: the vertical alignment of the text
       

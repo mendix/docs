@@ -3,7 +3,6 @@ title: "Configure a Workflow in Studio Pro for the Employee Onboarding Process"
 category: "Logic & Business Rules"
 description: "Describes how to configure a workflow in Mendix Studio Pro."
 menu_order: 10
-draft: true
 tags: ["studio pro", "workflow", "task", "onboarding"]
 ---
 
@@ -31,11 +30,11 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your app has the following modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/117212) modules. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
+* Your app has the following [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. Fore more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Setting Up the Basics](/refguide/workflow-setting-up-app).
 
-* Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
+* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
 
-* Make sure that the **User entity** is configured in your [App Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
+* Make sure that the **User entity** is set to *Administration.Account* in your [App Settings](/refguide/project-settings#workflows) > **Workflows** tab. 
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows). 
 
@@ -59,9 +58,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Add the following pages to your navigation (pages are part of the Workflow Commons module):
   * TaskInbox
-  * TaskDashboard
+  * WorkflowDashboard
   * WorkflowAdminCenter
-  * MyInitiatedWorkflows
 
 ## 3 Setting Up Security 
 
@@ -85,7 +83,7 @@ Do the following:
 
     ![](attachments/workflow-how-to-configure/edit-module-roles.png)
 
-7. In the **Select Module Roles** dialog box, tick the User role for Administration, MendixSSO, WorkflowCommons modules where no role is selected and click **OK**:
+7. In the **Select Module Roles** dialog box, tick the User role for Administration and WorkflowCommons modules where no role is selected and click **OK**:
 
     ![Module Roles](attachments/workflow-how-to-configure/modules-roles.png)
 
@@ -138,7 +136,7 @@ The next step in setting up security is to configure the entity access otherwise
 
     ![Entity Properties](attachments/workflow-how-to-configure/entity-properties.png) 
 
-4. In the **New Access rule** dialog box, do the following:
+4. In the **New Access rule** dialog box, do the following {{% todo %}}[Check if this is correct]{{% /todo %}}:
 
     1. In the **Rule applies to the following modules** section, select all roles.
 
@@ -168,21 +166,16 @@ To create a workflow that you will add activities to and create pages for, do th
 
 2.  In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
 
-3. To open the workflow properties, click the start event or make sure that no activity is selected in the workflow editor and navigate to the **Properties** pane. 
+3. Click the **WorkflowContext** parameter in the upper-left corner and navigate to the **Properties** pane.
 
-4. Click the **Allowed roles** property to set security for the workflow.
+4. Click the **Entity** property.  This entity will be used by the parameter to carry the business data that is added during the execution of the workflow. 
 
-5. In the **Select Module Roles** dialog box, select the **HR** role and click **OK**. This role is now able to start the workflow. 
-
-6. Click the **Workflow entity** property:
-
-    ![Context Entity](attachments/workflow-how-to-configure/workflow-entity.png)
-
-7. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**. This entity serves two purposes: it holds input data for executing the workflow and will carry the data that is added during the execution of the workflow.  
+4. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**.
 
     ![Select WorkflowContext Entity](attachments/workflow-how-to-configure/select-workflowcontext-entity.png)
 
-Good job! You have created a workflow and configured its properties. 
+
+Good job! You have created a workflow and configured parameter properties. 
 
 ![Newly Created Workflow](attachments/workflow-how-to-configure/newly-created-workflow.png)
 
@@ -230,9 +223,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     ![SpecifyDevice Properties](attachments/workflow-how-to-configure/specify-device-properties.png) 
 
-5. Set the **Allowed roles** to **Manager** for managers to be able to interact with the user task. 
-
-6. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Assign task using** is set to **Xpath** and click the ellipsis icon in the **XPath constraint** property.
+5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Assign task using** is set to **Xpath** and click the ellipsis icon in the **XPath constraint** property.
 
 7. In the **Edit XPath constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
@@ -248,7 +239,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
     3.  Select the **User Task Extended** template.
 
-    4. Click **OK**.
+    4. Click **OK**. A new page and a microflow are created.
 
 11. Now you need to make sure that only the relevant information is displayed on the **SpecifyDevice** page. In the App Explorer, double-click the **SpecifyDevice** page to open it.
 
@@ -273,8 +264,14 @@ The manager of a new employee will get a task to specify devices for the new hir
       2. In the **Select Module Roles** dialog box, select **Manager** and click **OK**:
 
           ![Select Module Roles](attachments/workflow-how-to-configure/select-module-roles.png)
+    
+13. A microflow was created together with the **SpecifyDevice** page called **DS_WorkflowUserTask_GetEmployee_OnboardingContext**. This microflow retrieves data of user tasks. You need to set up security for this microflow. In the App Explorer, double-click the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow to open it.
 
-Great job! You have created the user task for the Manager role:
+14. Navigate to microflow properties and click **Allowed roles**.
+
+14. In the **Select Module Roles** dialog box, select **Manager** and **Facilities** and click OK.
+
+Great job! You have configured the user task for the Manager role:
 
 ![Workflow with Specify Device User Task](attachments/workflow-how-to-configure/workflow-with-specify-device-task.png)
 
@@ -287,10 +284,9 @@ To proceed with the onboarding, the Manager needs to indicate whether the new hi
 2. Open the **Toolbox**, drag and drop a **User task** activity to the path, and do the following:
 
     1. Set **Name** to **Specify_Location** and set **Caption** to **Manager: Specify Location** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set the **Allowed roles** property to **Manager** for managers to be able to interact with the user task.
-    3. Configure the task to be assigned to the Manager role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Manager%]']` expression. 
+    2. Configure the task to be assigned to the Manager role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Manager%]']` expression. 
     4. Set a new page called **SpecifyLocation** for the **Page** property referring to steps 8-10 of the [Selecting a Device for the New Hire](#select-device) section.
-
+    
 3. Now you need to make sure that only the relevant information is displayed on the **SpecifyLocation** page and that only the Manager role has access to it. In the App Explorer, double-click the **SpecifyLocation** page to open it.
 
 4. By default, all attributes are added to the employee detail form, while you need to leave only the attributes which are related to the task. You also need to make sure that the Manager can change only specific fields in the form. 
@@ -325,7 +321,7 @@ Do the following:
 
     1. Set the **Caption** to **WFH?**.
     2. Click the ellipsis icon in the **Condition** property.
-    3. In the **Condition** dialog box, type in the expression that will split the flow into two depending on the **WFH** attribute: `$workflowData/WFH`.
+    3. In the **Condition** dialog box, type in the expression that will split the flow into two depending on the **WFH** attribute: `$WorkflowContext/WFH`.
 
         ![Decision Properties](attachments/workflow-how-to-configure/decision-properties.png)
 
@@ -339,9 +335,7 @@ Do the following:
 
         ![Prepare Desk](attachments/workflow-how-to-configure/prepare-desk.png)
 
-    2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
-
-    3. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
+    2. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
 
     4. Set a new page called **PrepareDesk** for the **Page** property it referring to steps 8-10 of the [Selecting a Device for the New Hire](#select-device) section.
 
@@ -362,8 +356,7 @@ Do the following:
 9. Open the **Toolbox**, drag and drop a **User task** activity to the **true** path, and do the following:
 
     1. Name the user task **Ship_Devices** and set its title to **Facilities: Ship Devices** referring to steps 2-4 of the [Selecting a Device for the New Hire](#select-device) section.
-    2. Set the **Allowed roles** property to **Facilities** for the Facilities department to be able to interact with the user task. 
-    3. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
+    2. Configure the task to be assigned to the Facilities role only referring to steps 6 and 7 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression. 
     4. Set a new page called **ShipDevices** for the **Page** property it referring to steps 8-10 of the [Selecting a Device for the New Hire](#select-device) section.
     
 10. You need to make sure that only relevant information is displayed on the **ShipDevices** page and that this page can be accessed by the Facilities department only. In the App Explorer, double-click the **ShipDevices** page to open it.

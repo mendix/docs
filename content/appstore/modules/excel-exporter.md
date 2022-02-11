@@ -24,7 +24,7 @@ The Excel Exporter is compatible with the [Excel Importer](excel-importer) versi
 
 On the **Excel Exporter** page, there are the following items:
 
-* **Search**: enable searching for a template using one or more of the following parameters:
+* **Search**: enables searching for a template using one or more of the following parameters:
   * **Template ID**: the ID of a template, which is generated automatically by the system
   * **Name**: the name of the template
   * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, or **CSV file**)
@@ -35,7 +35,7 @@ On the **Excel Exporter** page, there are the following items:
 
   * **Filename** : the name of the template
 
-  * **Input object** (optional):
+  * **Input object** (optional)
 
   * **Description** (optional): the description of the template
 
@@ -53,13 +53,13 @@ On the template details page, you can define the template with the following ite
 
 * **Filename**: the name of the template
 
-* **Input object **(optional):
+* **Input object **(optional)
 
 * **Description** (optional): the description of the template
 
-* **Date time export format**: the format for exported data and time
+* **Date time export format**: the format for exported date and time
 
-*  **Upload existing excel file**: uploads an Excel file the is used as a template
+*  **Upload existing excel file**: uploads an Excel file which is used as a template
 
    {{% alert type="info" %}}If you upload an Excel file, the names of the sheets and columns that are defined in your Excel template file will be used.{{% /alert %}}
    
@@ -68,7 +68,7 @@ On the template details page, you can define the template with the following ite
    * **New**: opens a new [sheet details page](#sheet-details) to create a sheet
    * **Edit**: opens the sheet details page for the selected sheet so that you can make changes
    * **Delete**: deletes the selected sheet
-   * **Status**: shows if the settings for the sheet are correct
+   * **Status**: shows if the sheet is correctly configured
    * **Sequence**: the sequence of the sheet shown in an exported document
    * **Name**: the name of the sheet
    
@@ -88,11 +88,11 @@ On the template details page, you can define the template with the following ite
       
       * **Text color**: the color of the text
       
-      * **Horizontal alignment**: the alignment of the text horizentally 
+      * **Horizontal alignment**: the horizontal alignment of the text 
       
       * **Background color**: the color of the background
       
-      * **Vertical alignment**: the alignment of the text vertically
+      * **Vertical alignment**: the vertical alignment of the text
       
       * **Rotation**: the degrees that the text is rotated anti-clockwise
       
@@ -115,7 +115,7 @@ On the template details page, you can define the template with the following ite
         * When **Number** is selected, **Decimal places** becomes visible
           * **Decimal places**
       
-   * **Edit**: opens the **Edit style** dialog box where you can make changes for the selected style
+   * **Edit**: opens the **Edit style** dialog box where you can make changes to the selected style
    
    * **Delete**: deletes the selected style
    
@@ -156,7 +156,7 @@ On the sheet details page, you can define sheets with the following items:
 * **Row default height**
   
   * When selected, the default row height is used
-  * When unselected, you can set a new default row height in the **Default column width in pixels** field
+  * When unselected, you can set a new default row height in the **Default column height in points** field
   
 * **Default header text style**: the default style of the header text
 
@@ -164,39 +164,39 @@ On the sheet details page, you can define sheets with the following items:
 
 On the **Static data** tab, there are the following items:
 
-* **Search**: enable searching for a template using one or more of the following parameters
+* **Search**: enables searching for a template using one or more of the following parameters
 
-  * **Column place**: the column in which the static data is shown
-  * **Row place**:  the row in which the static data is shown
+  * **Column place**: the column in which the static data are shown
+  * **Row place**:  the row in which the static data are shown
   * **Static type**: the type of the static data
-  * **Name**: the text of the static data
+  * –     **Name**: the name of the cell where the static data are placed
 
 * **New**: opens the **New static data** dialog box that contains the following items:
-  * **Row**: the row in which the static data is shown
+  * **Row**: the row in which the static data are placed
 
     {{% alert type="info" %}}The value of **Row** must be smaller than the value of **Start retrieved data at row**.{{% /alert %}}
 
-  * **Column**: the column in which the static data is shown
+  * **Column**: the column in which the static data are placed
 
-  * **Name**: the text
+  * **Name**: the name of the cell where the static data are placed
 
-  * **Type**
+  * **Type**: the type of the static data in the cell
     
-    * **Static Text**
-    * **Object data**
-    * **Aggregate function**
+    * **Static Text**: when selected, the cell shows static text, and **Name** is changed to **Excel Text**.
+    * **Object data**: when selected, the cell shows object data
+    * **Aggregate function**: when selected, the cell shows an aggregate function
     
   * **Style**: the style of the static data
 
 * **Edit**: opens the **Edit Mx static** dialog box where you can make the changes to the selected static data settings
 
-* **Delete**: deletes the selected static data row settings
+* **Delete**: deletes the selected static data
 
-* **Status** shows if the selected static data row settings are correctly configured
+* **Status**: shows if the selected static data are correctly configured
 
-* **Row**: the row in which the static data is shown
+* **Row**: the row in which the static data are shown
 
-* **Column**: the column in which the static data is shown
+* **Column**: the column in which the static data are shown
 
 * **Type**: the type of the static data
 
@@ -246,7 +246,7 @@ On the **Column data** tab, you can define column data with the following items:
 
 * **Status**: shows if the column is correctly configured
 
-* **Sequence**: the number of the column
+* **Sequence**: the number of the column, same as **Column number**
 
 * **Column name**: the name of the column
 
@@ -278,12 +278,12 @@ On the **Associations, constraints and sorting** tab, you can define the associa
       * **FULL JOIN**: all records when there is a match in either left or right table
   * **Edit**: opens the **Edit Mx Reference Handling** dialog box where you can make changes to the selected association
   * **Delete**: deletes the selected association
-  * **Association**
+  * **Association**: the reference that is used
   * **Join type**: the type of JOIN
 * **Constaints**: contains the following items that you can use to define constraints:
-  * **New**: opens the **Edit Mx Constant dialog box** that contains the following items:
+  * **New**: opens the **Edit Mx Constant** dialog box that contains the following items:
     * **Sheet row object**: the object of the rows
-    * **Retrieve type**: type of the data used as a constraint
+    * **Retrieve type**: type of the data used as a constraint2
       * **Attribute**: when selected, you use an attribute as a constraint
         * **Select attribute**: the attribute that you use as a constraint
         * **Constraint**: the rule of the constraint
@@ -293,8 +293,8 @@ On the **Associations, constraints and sorting** tab, you can define the associa
         * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit Mx Constraint** dialog box where you can make changes to the selected constraint
   * **Delete**: deletes the selected constraint
-  * **⬆**: change the sequence of the selected constraint to a lower number
-  * **⬇**: change the sequence of the selected constraint to a larger number
+  * **⬆**: changes the sequence of the selected constraint to a lower number
+  * **⬇**: changes the sequence of the selected constraint to a larger number
   * **Sequence**: the sequence of the constraint
   * **And/Or**: how this constraint is used together with the previous constraint
   * **Summary**: the summary of the constraint
@@ -310,8 +310,8 @@ On the **Associations, constraints and sorting** tab, you can define the associa
       * **Select object**: the object that you use for sorting
   * **Edit**: opens the **Edit sorting** dialog box where you can make changes to the selected sorting
   * **Delete**: deletes the selected sorting
-  * **⬆**: change the sequence of the selected sorting to a lower number
-  * **⬇**: change the sequence of the selected sorting to a larger number
+  * **⬆**: changes the sequence of the selected sorting to a lower number
+  * **⬇**: changes the sequence of the selected sorting to a larger number
   * **Sequence**: the sequence of the sorting
   * **Summary**: the summary of the sorting
   * **Direction**: the direction of the sorting (**Ascending** or **Descending**)
@@ -322,7 +322,7 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
 
 * **Column settings**
   
-  * **Search**: enable searching for column settings using one or more of the following parameters:
+  * **Search**: enables searching for column settings using one or more of the following parameters:
   
     * **Column index**: the number of the column, same as **Column number**
     * **Auto size**: if the column width is automatically adjusted 
@@ -347,7 +347,7 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
   * **Column width**: the fixed width of the column in pixels
   
 * **Row settings**
-  * **Search**: enable searching for row settings using one or more of the following parameters:
+  * **Search**: enables searching for row settings using one or more of the following parameters:
     * **Row number**: the number of the row
     * **Automatic height**: if the row uses the default height, same as **Default height**
     * **Row height**: the fixed height of the row

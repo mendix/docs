@@ -235,7 +235,7 @@ Here is an example of **Date filter** as **Between**:
 ![Date filter between](attachments/data-grid-2/date-filter-between.png)
 
 {{% alert type="warning" %}}
-When **Date filter** is defined with Between it is not possible to type the date manually. It also has a clear button in order to select the date range.
+When **Date filter** is defined with **Between** it is not possible to type the date manually. It also has a clear button in order to clean the date range.
 {{% /alert %}}
 
 You can select your filter criteria in the Date Filter settings:

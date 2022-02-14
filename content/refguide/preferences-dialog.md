@@ -110,31 +110,29 @@ The **New features** tab allows you to turn new features on and off. These are f
 You need to restart Studio Pro for changes to these settings to take effect.
 {{% /alert %}}
 
-### 7.1 New Version of the Connector {#new-connector}
+### 7.1 Dark mode {#dark-mode-preview}
 
-With this option, you can enable the new version of the [Connector](view-menu#connector). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+With this option, you can enable the Dark mode for the Studio Pro user interface.
+
+{{% alert type="warning" %}}
+Not all screens and controls support dark mode yet. Parts of Studio Pro will be in light mode when dark mode is enabled.
+{{% /alert %}}
+
+After applying this setting, you need to restart Studio Pro.
 
 Default: *disabled*
 
-### 7.2 New Version of the App Explorer {#new-project-explorer}
-
-With this option, you can enable the new version of the [App Explorer](project-explorer). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
+### 7.2 New version of My Apps screen
 
 Default: *enabled*
 
-### 7.3 New Version of the Toolbox {#new-toolbox}
-
-With this option, you can enable the new version of the [Toolbox](/refguide/view-menu#toolbox). Should you find any issues in the new version, you can switch back to the old version by clearing this check box.
-
-Default: *enabled*
-
-### 7.4 New Merge Algorithm with Fine-Grained Conflict Resolution
+### 7.3 New Merge Algorithm with Fine-Grained Conflict Resolution
 
 With this option, you can enable the new merge algorithm that is used when you update your app or merge changes in it. For more information on the algorithm, see [New Merge Algorithm with Fine-Grained Conflict Resolution](new-merge-algorithm).
 
 Default: *enabled*
 
-### 7.5 Team Server Git {#git}
+### 7.4 Team Server Git {#git}
 
 With this option, Studio Pro starts using the Git version of the Team Server. Your apps will be created with a Git Version Control back end and will be built and deployed to a Git-oriented infrastructure. 
 

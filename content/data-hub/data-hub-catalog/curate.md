@@ -8,7 +8,7 @@ tags: ["data hub", "data hub catalog", "curate", "description", "services", "tag
 
 ## 1 Introduction
 
-Owners of data assets, Data Hub Curators, and Mendix Admins can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes and deleting irrelevent or outdata data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
+Owners of data assets, Data Hub Curators, and Mendix Admins can curate registered assets. Curation in Data Hub is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevent or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in Data Hub include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
 Users who can curate assets in the Data Hub Catalog are as follows:
 
@@ -35,7 +35,7 @@ The list can be also be sorted by any of the columns by clicking on the column h
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog specific information to the asset metadata.
 
-## 3 Curation Bar {#curationbar}
+## 3 Curation Bar {#curation-bar}
 
 Curation is performed from the [asset details screen](search#search-details). If you are an owner of an asset or are a curator, you will see the **Curation Bar** for the selected item. The following shows the curation bar for a selected service:
 
@@ -51,9 +51,9 @@ When a data source is selected in the **Search Results**, the following options 
 
 * **Edit Metadata** – edit the description of the data source and datasets, add tags, or specify business and technical owners and add change the application icon
 * [Discoverable/Validated](#discoverability) – set the **Discoverable** and **Validated** settings for the data source from the drop-down menu
- * **Discoverable** defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
- * **Validate** indicates that the data source and datasets have been validated.
-* **Delete Data Source** allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company.
+   * **Discoverable** – defines whether the service is visible and can be found (and consumed) by users of the Data Hub; if a service is set to **Non-discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+   * **Validate** – indicates that the data source and datasets have been validated
+* **Delete Data Source** – allows Owners to delete their own data sources, while Curators or Admins can delete any data sources in the company
 
 When a dataset is selected in the **Search Results**, the **Edit Dataset Details** option is displayed for editing the dataset and attribute descriptions.
 
@@ -75,7 +75,7 @@ The **Business Owners** and **Technical Owners** are displayed as a link in the 
 By default, the **Technical Owner** for a registered asset is the user who registered the data source when registration is done through the deployment pipeline in Studio Pro. The owners can also be specified during manual registration using one of the connectors in the Data Hub Home and also when registering assets using the Data Hub API.
 
 {{% alert type="info" %}}
-**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog only if they are *registered users* on the Mendix Platform. If a **custom owner** is *created* with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}
+**Business Owners** and **Technical Owners** have curation rights for the registered data source in the Data Hub Catalog only if they are registered users on the Mendix Platform. If a custom owner(#custom-owner) is created with the process described in this section, the link to contact them will be displayed for the asset but this does not mean that they are able to access the asset in Data Hub or curate it.{{% /alert %}}
 
 App owners can be changed by users with curation rights (owners and curators) from the **Application Details** screen.
 
@@ -144,9 +144,7 @@ To **upload a different icon** for the app follow these steps:
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 
-3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**:
-
-    {{% image_container width="300" %}}![upload icon](attachments/curate/icon-crop.png){{% /image_container %}}
+3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
 
     {{% alert type="info" %}}For high-resolution images, if the selected are exceeds the size limit there will be a warning. Select a smaller area of the image to reduce the file size.{{% /alert %}}
 
@@ -257,7 +255,7 @@ Owners of a data source can delete their own data sources. Anyone with curation 
 
 Deleting something from Catalog only removes the metadata registration. It does not affect the publishing application or any of the applications that are consuming the data source.
 
-To delete a data source, go to the [Curation Bar](#3-curation-bar-curationbar) for the data source and click **Edit**, then click **Delete Data Source**.
+To delete a data source, go to the [Curation Bar](#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
 
 ## 8 Curating Datasets & Attributes {#curate-datasets}
 

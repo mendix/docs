@@ -34,8 +34,8 @@ Create a new app by following these steps:
 1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
 1. Click **Use this starting point.**
 1. Name your app _Hello World_ and click **Create app** to close the dialog box.
-1. Open the **Home_Native** page and remove the Intro screen widget and other containers.
-1. Download the AR widgets from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209)
+1. Open the **Home_Native** page and remove the intro screen widget and other containers.
+1. Download the Native Mobile AR module from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/117209) and import it to your app.
 
 You will begin by embedding the following widgets into your Mendix app:
 

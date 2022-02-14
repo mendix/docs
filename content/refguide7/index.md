@@ -7,6 +7,7 @@ no_list: false
 cascade:
     - space: "Mendix 7 Reference Guide"
     - mendix_version: "7"
+    - old_content: true
     - sitemap:
         priority: 0.3
 ---

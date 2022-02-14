@@ -5,6 +5,7 @@ weight: 90
 cascade:
     - space: "Mendix 7 Studio Guide"
     - mendix_version: "7"
+    - old_content: true
     - sitemap:
         priority: 0.3
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

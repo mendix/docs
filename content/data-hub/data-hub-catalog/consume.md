@@ -44,7 +44,7 @@ When security is enabled for your app, you can define access rules for external 
 
 You can associate external entities with both [persistable and non-persistable](/refguide/persistability) local entities. However, the external entity cannot be the owner of an association. This means that the association has to be from a local entity to the external entity in the domain model, and the value for the association [owner](/refguide/associations#ownership) must be set to **Default**.
 
-Mendix entities that are [specializations](/refguide/generalization-and-association#2-generalization-specialization-inheritance) in the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities, the inheritance relationship will not be present in the metadata contract or when both are consumed. 
+Mendix entities that are [specializations](/refguide/generalization-and-association) in the originating app will be published and consumed as discrete entities that include the inherited attributes and associations. When the generalized entity is also exposed in the same service as the specialized entities, the inheritance relationship will not be present in the metadata contract or when both are consumed. 
 
 {{% alert type="warning" %}}
 Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However the same association of the generalized entity is not supported for the specialization in the same domain model The same association cannot be exposed and consumed for two different external entities in the same domain model.
@@ -62,7 +62,8 @@ Access to the data is through the published REST OData service, with "reading" a
 
 The following operations are affected by using external entities in a consuming app:
 
-* Aggregations – You can count a list of external entities, but you cannot show other aggregations such as sum, average, minimum, and maximum. This is because [OData version 3.0](https://www.odata.org/documentation/odata-version-3-0/) does not support these operations; the only exception is that you can use the [aggregate list](/refguide/aggregate-list) microflow activity, which for all aggregations except **Count** will retrieve everything and perform the aggregation in memory.
+* Aggregations – you can count a list of external entities, but you cannot show other aggregations such as sum, average, minimum, and maximum.
+	* [OData version 3.0](https://www.odata.org/documentation/odata-version-3-0/) does not support these operations; the only exception is that you can use the [aggregate list](/refguide/aggregate-list) microflow activity, which for all aggregations except **Count** will retrieve everything and perform the aggregation in memory
 *  [XPath](/refguide/xpath) – you can use XPath to filter external entities; all XPath constructs are supported, except the following:
 	* Three conversions from date/time: `day-of-year-from-dateTime`, `weekday-from-dateTime`, and ` week-from-dateTime`
 	* Aggregations: `avg()`, `max()`, `min()`, and `sum()`

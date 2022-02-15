@@ -159,9 +159,28 @@ In the sections below you can see the basic steps to get an app up and running o
 ### 5.2 Building an iOS App with XCode
 
 1. If you have not ran it yet, run `npm install` in the app root to install the required dependencies.
-1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
+1. Change directory by running `cd ios`.
 
-	The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
+1. The following steps depend on which type of Mac you are using.
+
+   **Mac running Apple Silicon (M1):**
+
+   The Native Template does not yet support the ARM 64 Simulator architecture. For this reason it is required to install x86 pods and starting XCode with Rosetta. Todo so:
+
+   - [Ensure you have Rosetta installed on your system.](https://support.apple.com/en-us/HT211861)
+   - Run `arch -x86_64 pod install` to install the correct type of pods
+   - Right click on the XCode.app icon and select `get info`
+   - Check the checkbox `Open using Rosetta`
+   - Start XCode
+
+   If all was done correctly XCode will use x86_64 simulators and building should work as expected.
+
+   **Mac running Intel Silicon:**
+
+   - Run `pod install`
+   - Start XCode
+
+   The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:

@@ -9,7 +9,7 @@ tags: ["speech to text", "service", "app store", "marketplace", "component", "pl
 
 The [Speech To Text](https://marketplace.mendix.com/link/component/118408) app service enables you to build an app to convert speech to text with state-of-the-art speech recognition. With this app service, your app can easily convert speech into text and trigger actions that you have specified. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what SpeechToText contains:
+Here is an overview of what Speech To Text contains:
 
 | Item                                        | Name                             |
 | ------------------------------------------- | -------------------------------- |
@@ -62,20 +62,10 @@ You have successfully added the Speech To Text resources to your app.
 
 It can be useful to run the Speech to Text service automatically when your app starts. The app service contains a Java action – the **StartService** microflow, which can start the Speech To Text service for you. You can use the [After startup](/refguide/project-settings#after-startup) setting in your app to call the **StartService** microflow.
 
-
-1.  If your app does not have an after-startup microflow, perform the following steps:
-   1. Create a microphone in your module.
-   2. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the new microflow that you created.
-   3.  Set the return type of the microflow to **Boolean** with **true** as the **Return value**.
-
-       ![startup-microflow](attachments/speech-to-text/startup-microflow.png)
-
-2. If you app has an after-startup microflow, perform the following:
-   1. Add the **StartService** microflow from the **SpeechToText** > **USE_ME** folder to the existing after-startup microflow.
-   2. Set the return type of the new microflow to **Boolean** with **true** as the **Return value**.
-3. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
-4. Go to the **Runtime** tab. 
-5. Set **After startup** to the microflow that calls the **StartService** microflow.
+1. In the App Explorer, go to **Settings**. The [App Settings](/refguide/project-settings) dialog box opens.
+2. Go to the **Runtime** tab. 
+3. Select the **StartService** microflow from the **SpeechToText** > **USE_ME** folder.
+4. Set **After startup** to the microflow that calls the **StartService** microflow.
 
 ## 4 Configuration
 
@@ -94,15 +84,17 @@ The **MediaDocument** entity is a conceptual entity that inherits from the **Sys
 
 #### 4.2.1 License Token
 
-The **LicenseToken** constant offers a valid SpeechToText license token to the app that uses SpeechToText to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As SpeechToText is a commercial product, to use the SpeechToText functionality in a deployed app, you need a long term valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant offers a valid Speech To Text license token to the app that uses Speech To Text to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. 
 
-However, if you only plan to try how SpeechToText works, that is to say, you will only build and run an app that uses SpeechToText locally in Studio Pro or deploy to a Mendix Free App environment, then you need to subscribe a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
+As Speech To Text is a commercial product, to use the Speech To Text functionality in an app, you need a long term valid license token. If you are working with Mendix Licensed Cloud Node, you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting. You also need to set the value of the **LicenseToken** constant to that license token in the project environment setting to make sure your app works in your local environment as well.
+
+However, if you only plan to try how Speech To Text works, that is to say, you will only build and run an app that uses Speech To Text locally in Studio Pro or deploy to a Mendix Free App environment, then you need a trial version, and set the value of the **LicenseToken** constant to that license token in the project environment setting.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken for Your App](#obtain) section below.
 
 #### 4.2.2 TokenEndpoint
 
-The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the production environment of the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
+The **TokenEndpoint** constant provides a valid endpoint of security token service for the back-end authentication of the cognitive speech-to-text service. The constant comes with a default value which points to the deployed security token service. The security token service issues security tokens that authenticate user's identity. 
 
 ### 4.3 Microflows{#microflows}
 
@@ -124,9 +116,9 @@ The **BatchTranscription** microflow takes a **MediaDocument** object as an inpu
 
 The only core widget required is the **Microphone** widget. You can make the following settings for the **Microphone** widget:
 
-*   **General** tab
-  * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
-    * **language**  – sets the default language (if empty, the default language is US-English)
+* **General** tab
+   * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
+   * **language**  – sets the default language (if empty, the default language is US-English. If not empty, set language value like 'en-US')
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service and set a custom action that is executed when the transcript is received
      * **transcript**  – sets a string attribute as the voice input parameter
@@ -134,22 +126,66 @@ The only core widget required is the **Microphone** widget. You can make the fol
   * **On error** – by binding a string attribute to the **Error** property, you can obtain the error message raised by the back-end service and set a custom action that is executed when an error occurs
      * **Error** – sets a string attribute as the error message
      * **Action** – sets which action is executed when an error occurs
-*   **Voice to Action** tab
-  *  **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
+* **Voice to Action** tab
+   *  **Enable action** – when set to **Yes**, the following custom settings for actions are enabled:
      * **Actions** – a list of actions to execute when a transcript matches an utterance
          * **Utterance** – a string template following natural language syntax or a valid JavaScript regular expression.
          * **Action** – the action that is executed when the received transcript matches an utterance
          * **Feedback** – the voice feedback provided to users when an action is triggered
-  *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
-  *  **Fallback message** – the message to notify users when no action is matched
+   *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
+   *  **Fallback message** – the message to notify users when no action is matched
 
-## 5 Using Speech To Text
+## 5 Obtaining the License Token to use the service in your app {#obtain}
+
+Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
+
+### 5.1  Subscribing to Get a License Token
+
+1. On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, click **Subscribe** to order a subscription.
+
+2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+
+   For the trial, you do not need to fill in this information.
+
+3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+### 5.2 Configuring the License Token for App Deployment
+
+#### 5.2.1 Configuring the License Token in Studio Pro
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
+4. Fill in the **Value** with the license token that you obtained.
+5.  Click **OK** to save the settings.
+
+    ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
+
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
+
+#### 5.2.2 Configuring the License Token in Developer Portal
+
+Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+
+Before you deploy your app, configure the app **Constants** in the deployment package.
+
+![licensetoken-cloudportal](attachments/speech-to-text/licensetoken-cloudportal.png)
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+
+![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)
+
+## 6 Using Speech To Text
 
 You can use Speech To Text to convert voice to text and then trigger a customizable action.
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up custom actions quickly.
 
-### 5.1 Converting Speech into Text in Your Browser
+### 6.1 Converting Speech into Text in Your Browser
 
 To let the [Microphone](#microphone) widget convert speech to text and trigger a custom action, set these data source attributes: **transcript**, **Actions** and **Arguments**. 
 
@@ -180,35 +216,28 @@ Below are the steps to build an example web app which can convert speech to text
     1. Double-click the **Microphone** widget to open the **Edit Microphone** dialog box. 
     2. Go to the **Events** tab. 
     3. For **transcript**, **Select** the **NewTranscript** attribute. In this way, the app will pick up the result of speech conversion. For more information, see the [On Transcript](#on-transcript) section below.
-    4. Go to the **Voice to Action** tab.   
-    5. For **Actions**, click **New** to open the **Edit Actions Item** dialog box and set up new actions, for example:
-
-       ![example-action-items-utterance-action-feedback](attachments/speech-to-text/example-action-items-utterance-action-feedback.png)
-    
-       For more information, see the [Customizing Speech-Triggered Actions](#actions) section below.
-    
 7. For **Arguments**, **Select** the **Arguments** attribute.
 8. Run your app locally. Your app should be able to convert voice to text and trigger the related actions that you set up.
 
-### 5.2 Handling Microphone Events
+### 6.2 Handling Microphone Events
 
 Multiple events can be picked up by the [Microphone](#microphone) widget and can be used to build your customized event handling logic.
 
 There are two main types of events that can be picked up by the **Microphone** widget, which are described in the sections below.
 
-#### 5.2.1 On Transcript {#on-transcript}
+#### 6.2.1 On Transcript {#on-transcript}
 
-By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion.
+By binding an attribute to the **transcript** event, the app can pick up the result of speech conversion. Upon successful transcription, this attribute will then store real-time speech to text transcription result of the natural speech segment, such as a change in speaker or a pause in the audio.
 
 **transcript** takes a string attribute. You can define an attribute and bind this attribute to **transcript**. This attribute stores the result of text converted from voice. The app can trigger an action after the transcript is received. You can select the custom **Action** from a list of actions.
 
 ![microphone-ontranscript-sample](attachments/speech-to-text/microphone-ontranscript-sample.png) 
 
-For example, you can set up the **Action** to make the app show all the voice-to-text conversion history.
+For example, you can set up the **Action** to append transcription result of each segment (sentence) and show all transcription result of a long speech input.
 
 ![show-transcript-history](attachments/speech-to-text/show-transcript-history.png)
 
-#### 5.2.2 On Error {#on-error}
+#### 6.2.2 On Error {#on-error}
 
 By binding an attribute to the **Error** event, the app can pick up an error raised by the back-end service.
 
@@ -216,78 +245,35 @@ By binding an attribute to the **Error** event, the app can pick up an error rai
 
 ![microphone-onerror-sample](attachments/speech-to-text/microphone-onerror-sample.png) 
 
-For example, you can set up the **Action** to make the app show a pop-up window to show error details to users.
+For example, you can set up the **Action** to make the app show a pop-up window to show error details to users. In such a running app, when speech to text transcription fails, error event will be triggered, the error information will be populated to this Error attribute.
 
 ![microphone-event-onerror](attachments/speech-to-text/microphone-event-onerror.jpg)
 
-### 5.3 Customizing Speech-Triggered Actions {#actions}
+### 6.3 Customizing Speech-Triggered Actions {#actions}
 
-This app service allows you to set up rules of speech recognition that trigger actions. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
+This app service allows you to set up rules of speech recognition that trigger actions. In Microphone widget, go to the **Voice to Action** tab. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
 You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 
-#### 5.3.1 Utterance
+#### 6.3.1 Utterance
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
 For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set.
 
-#### 5.3.2 Actions
+#### 6.3.2 Actions
 
 You can select an **Action** from a list of actions. This action is triggered when the received transcript matches an utterance.
 
-#### 5.3.3 Voice Feedback
+#### 6.3.3 Voice Feedback
 
-**Voice feedback** can be a string template following natural language syntax, which is provided to users after an action is triggered.
+**Voice feedback** is an optional configuration for set action items of voice-to-action, which can be a string template following natural language syntax, which is provided to users after an action is triggered.
 
 For instance, you can set **Voice feedback** as `model is rotated {0} degree around {1} direction`, with `{0}` and `{1}` being the parameters passed through **Arguments** in the **Microphone** widget.
 
 ![microphone-voicetoaction-sample](attachments/speech-to-text/microphone-voicetoaction-sample.png)
 
-### 5.4 Using the Batch Mode
+### 6.4 Using the Batch Mode
 
 When you need to implement the speech conversion as a back-end service rather than in the user interface operation, batch transcription is your best option to convert any Mendix **mediaDocument** object into written text. In this case, use the [BatchTranscript microflow](#batchtranscript).
 
-## 6 Obtaining a License Token to Deploy Your App {#obtain}
-
-Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
-
-### 6.1  Subscribing to Get a License Token
-
-1. On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, click **Subscribe** to order a subscription.
-
-2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
-
-   For the trial, you do not need to fill in this information.
-
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
-
-### 6.2 Configuring the License Token for App Deployment
-
-#### 6.2.1 Configuring the License Token in Studio Pro
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
-
-    ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
-
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 6.2.2 Configuring the License Token in Developer Portal
-
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
-
-Before you deploy your app, configure the app **Constants** in the deployment package.
-
-![licensetoken-cloudportal](attachments/speech-to-text/licensetoken-cloudportal.png)
-
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
-
-![licensetoken-envdetails](attachments/speech-to-text/licensetoken-envdetails.png)

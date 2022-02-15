@@ -103,15 +103,20 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 Performance
+#### 3.9.1 BCrypt Cost
 
-This performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+This value is used to specify the cost for the BCrypt algorithm. The cost value defines the number of rounds in which its underlying hash algorithm is applied. The number of rounds are calculated by using the cost value as power of 2. Mendix uses a default cost value of 10, which means a number of 2<sup>10</sup> = 1024 rounds.
+The higher this value is, the slower the process of hashing values, see the next paragraphs.
 
-#### 3.9.2 Performance Tests
+#### 3.9.2 Performance
+
+If the BCrypt cost is not so high, this performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+
+#### 3.9.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt (with cost value 10), then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |

@@ -105,8 +105,7 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 #### 3.9.1 BCrypt Cost
 
-This value is used to specify the cost for the BCrypt algorithm. The cost value defines the number of rounds in which its underlying hash algorithm is applied. The number of rounds are calculated by using the cost value as power of 2. Mendix uses a default cost value of 10, which means a number of 2<sup>10</sup> = 1024 rounds.
-The higher this value is, the slower the process of hashing values, see the next paragraphs.
+This value is used to specify the cost for the BCrypt algorithm. This is 10 by default. The higher this value is, the slower the process of hashing values, see the next paragraphs.
 
 #### 3.9.2 Performance
 

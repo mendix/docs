@@ -195,7 +195,11 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 9. Only the Manager role can access the **SpecifyDevice_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
 
-10. When you created the page for the user task, a microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created automatically with it. This microflow is used to get 
+10. When you created the page for the user task, a microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created automatically with it. This microflow is used to get data of user tasks and pass it, for example, to one of the pages. You need to set up security for this microflow.
+
+10. Click the microflow icon in the left menu bar and open the **DS_WorkflowUserTask_GetEmployee_OnboardingContext** microflow.
+
+10. Navigate to the microflow properties pane > **Allowed** roles and deselect all roles except Manager and Administrator.
 
 10. Navigate back to the workflow and open the user task properties to finish the user task configuration. 
 

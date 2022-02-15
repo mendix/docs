@@ -21,7 +21,7 @@ Workflows are a visual way of processing logic in your application. A workflow l
 ![Workflow Example](attachments/workflows/workflow-example.jpg)
 
 {{% alert type="note" %}}
-Workflows are GA and available in Studio from **Mendix version 9.11**. If you have an app with workflow functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration). 
+Workflows are available in Studio from **Mendix version 9.11**. If you have an app with workflow functionality below this version, this app is likely to be created in Studio Pro and requires a manual migration. For more information on how to migrate your app using Studio Pro, see [Migrate Workflow Apps](/refguide/workflow-beta-migration). 
 {{% /alert %}}
 
 ## 2 Workflow App Template

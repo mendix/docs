@@ -23,7 +23,7 @@ Studio how-to's contain step-by-step guides that will help you create apps in Me
 
 The *Studio 9 How-to's* are divided into the following categories:
 
-* [Configure a Workflow in Studio Manually](workflow-how-to-configure) – describes  how to configure a workflow in Mendix Studio for the employee onboarding process
+* [Configure a Workflow in Studio Manually](workflow-how-to-configure) – describes an advanced case on how to configure a workflow without using a wizard in Mendix Studio 
 * [Pages](pages) – focuses on building various page patterns, such as building a form or a list, as well configuring different functionality, for example, filtering data in a list 
 * [How to Configure a Domain Model](domain-model-how-to-configure) – explains how to configure a domain model and its elements
 * [How to Secure Your App and Configure Access to Its Functionality](security-how-to-configure-roles) – explains how to secure you app and create different user roles

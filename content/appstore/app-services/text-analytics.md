@@ -44,7 +44,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace and download the *TextAnalytics.mpk* file.
+1. Go to the [Text Analytics](https://marketplace.mendix.com/link/component/118412) component page in the Marketplace, complete "try for free" or "subscribe", then download the *TextAnalytics.mpk* file.
 2.  To add the Text Analytics app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *TextAnalytics.mpk*. 

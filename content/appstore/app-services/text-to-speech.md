@@ -39,7 +39,7 @@ This app service can only be used with Studio Pro 9 versions starting with [9.4.
 
 ## 2 Installation
 
-1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace and download the *TextToSpeech.mpk* file.
+1. Go to the [Text To Speech](https://marketplace.mendix.com/link/component/118593) component page in the Marketplace, complete "try for free" or "subscribe", then download the *TextToSpeech.mpk* file.
 2.  To add the Text To Speech app service to your app in Mendix Studio Pro, follow these steps:
     1.  In the **App Explorer**, right-click the app.
     2.  Click **Import module package** and then select *TextToSpeech.mpk* file.

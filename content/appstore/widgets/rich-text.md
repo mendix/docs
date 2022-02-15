@@ -15,8 +15,18 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget ena
 * Format selected text
 * HTML output of formatted text
 * Show editor options either on a toolbar or as a bubble
-* Use the custom option to select which editing options you want to show
+* Use the toolbar tab to select which editor preset you want to show
+	* **Basic** - This package contains plugins suitable for quick input fields.
+	* **Standard** - This package contains plugins that can be used for creating standards-compliant content.
+	* **Full** - This heavier package contains plenty of plugins suitable for various different needs.
+	* **Custom** - The simplest way to configure the toolbar as you want.
 * Input and display text is sanitized
+* Use **Enter and Shift+Enter** mode to configure how you want to wrap your content
+	* Paragraph (`<p>`)
+	* Break lines (`<br>`)
+	* Blocks (`<div>`)
+* Use highlight code feature to insert rich code fragments and see a live preview with highlighted syntax.
+* Use advanced filter content to allow or disallow elements in your rich text or use auto configuration.
 
 ## 2 Configuration
 

@@ -22,7 +22,7 @@ Powered by AI and OCR technologies, the [Receipt Processing](https://marketplace
 
 ### 1.3 Prerequisites
 
-This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 
 ## 2 Installation
 
@@ -47,7 +47,10 @@ The Receipt Processing app service is a premium Mendix product that is subject t
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
+1.  On the [Receipt Processing](https://marketplace.mendix.com/link/component/118390) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
+
+    {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
+    
 2.  Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
 
     For the trial, you do not need to fill in this information.

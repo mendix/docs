@@ -24,7 +24,7 @@ The [Intelligent Document Service](https://marketplace.mendix.com/link/component
 
 ### 1.3 Prerequisites
 
-* This app service works best with Studio Pro 8 versions starting with [8.18.5](/releasenotes/studio-pro/8.18#8185) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
+* This app service works best with Studio Pro 8 versions starting with [8.18.15](/releasenotes/studio-pro/8.18#81815) and 9 versions starting with [9.0](/releasenotes/studio-pro/9.0).
 * For optimal recognition results, make sure that documents with small fonts have high resolutions:
   * If images are made using a scanner, it is recommended to use 300 dpi for texts in font size 10 pt or larger and 400-600 dpi for texts in font size 9 pt or smaller
   * If images are taken using a digital camera, it is recommend to use at least a 5-megapixel sensor with auto focusing and flash disabling features, fit the page entirely within the camera frame, and distribute lighting evenly across the page to avoid any dark areas or shadows on the image
@@ -53,13 +53,18 @@ The Intelligent Document Service is a premium Mendix product that is subject to 
 
 ### 3.1  Subscribing to Get Keys
 
-1. On the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial..
+1.  On the [Intelligent Document Service](https://marketplace.mendix.com/link/component/118388) component page in the Marketplace, click **Subscribe** to order a subscription or click **Try for Free** to start a trial.
+
+    {{% alert type="info" %}}For the trial, only one user per company is allowed.{{% /alert %}}
+
 2. Fill in the [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email. 
 
     For the trial, you do not need to fill in this information.
 
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-4. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+4. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in with your Mendix account. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+5. Click **Intelligent Document Service** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
 5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create binding keys.
 
 ### 3.2 Configuring Keys for Application Deployment

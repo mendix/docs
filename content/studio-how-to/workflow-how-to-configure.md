@@ -169,7 +169,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 7. In the **Create Page** dialog box, you can see the templates for workflow pages. Do the following:
 
-    1. Set the **Title** to **SpecifyDetails**.
+    1. Set the **Title** to **SpecifyDetails_Workflow**.
 
     2. Check that **Layout** is set to **Atlas_Default**.
 
@@ -179,7 +179,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
         ![Create New Page](attachments/workflow-how-to-configure/create-new-page.png)
 
-8. Now you need to make sure that only the relevant information is displayed on the **SpecifyDetails** page. By default, all attributes are added to the data view with the employee details and can be edited. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
+8. Now you need to make sure that only the relevant information is displayed on the **SpecifyDetails_Workflow** page. By default, all attributes are added to the data view with the employee details and can be edited. You need to leave only the attributes related to the task. You also need to make sure that the manager can change only a specific field in the form. For example, the name of the employee has been entered by the HR department, so the manager does not need to change it and should have this field as read-only. 
 
     Do the following:
 
@@ -193,7 +193,9 @@ The manager of a new employee will get a task to specify devices for the new hir
 
         ![Specify Details Form](attachments/workflow-how-to-configure/specify-details-form.png)
 
-9. Only the Manager role can access the **SpecifyDevice** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
+9. Only the Manager role can access the **SpecifyDevice_Workflow** page. Navigate to the page properties > **Allowed Roles** and deselect all roles except **Manager**.
+
+10. When you created the page for the user task, a microflow called **DS_WorkflowUserTask_GetEmployee_OnboardingContext** was created automatically with it. This microflow is used to get 
 
 10. Navigate back to the workflow and open the user task properties to finish the user task configuration. 
 
@@ -217,7 +219,7 @@ Depending on whether the new hire is working from the office or home, there are 
 
 Do the following:
 
-1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Location** user task. 
+1. Open the workflow editor > **Toolbox** and drag and drop the **Decision** activity after the **Manager: Specify Employee Details** user task. 
 
     ![Adding a Decision](attachments/workflow-how-to-configure/decision.png)
     

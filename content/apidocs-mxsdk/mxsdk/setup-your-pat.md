@@ -10,11 +10,15 @@ Before running your first script, you need to set up your personal access token 
 
 ## 2 Creating the Personal Access Token
 
-You can manage your Mendix personal access tokens with the [Mendix Warden](https://warden.mendix.com/). Click **Add**, enter the token name, and choose at least the following scopes:
-
-* **Model Server** – `mx:modelrepository:write`
-* **Sprintr Project API** – `mx:app:create` and `mx:app:delete`
-* **Team Server Git** – `mx:modelrepository:write`
+You can manage your Mendix personal access tokens with [Mendix Warden](https://warden.mendix.com/) as follows:
+1. Go to [Mendix Warden](https://warden.mendix.com/).
+1. Click **Add**.
+1. Enter the **Name** of the token.
+1. Choose at least the following scopes:
+    * **Model Repository** – `mx:modelrepository:repo:write`
+    * **Sprintr Project API** – `mx:app:create` and `mx:app:delete`
+1. Click **Create**. A pop-up window opens and shows the Personal Access Token.
+1. Keep the token safe. It is only displayed once. After you close the pop-up window, you cannot see it anymore.
 
 ![](attachments/sdk-intro/personal-access-token.png)
 

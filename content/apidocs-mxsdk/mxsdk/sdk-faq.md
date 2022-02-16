@@ -18,9 +18,9 @@ The Model API service is hosted in the European Union.
 
 Online working copies are automatically removed 24 hours after they have been created. It is not possible to extend their lifetime - you need to create a new online working copy.
 
-### 1.4 What Are the Limits on Project Size?
+### 1.4 What Are the Limits on App Size?
 
-The initial project mpk file that is uploaded is not allowed to exceed 250Mb (project mpr file and other files combined).
+The initial app mpk file that is uploaded is not allowed to exceed 250Mb (app mpr file and other files combined).
 
 ### 1.5 Which Parts of the Mendix App Model Can I Access with the Model API?
 

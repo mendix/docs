@@ -90,13 +90,9 @@ parent: "metamodel-9"
 * We introduced the `adminPage` property.
 * We deleted the `overviewPage` property. 
 
-#### PageReference (Element)
+#### PageReference & PageParameterMapping (Elements)
 
-* We introduced this element. 
-
-#### PageParameterMapping (Element)
-
-* We introduced this element. 
+* We introduced these element. 
 
 #### UserTask (Element)
 

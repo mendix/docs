@@ -222,6 +222,7 @@ Here is an example of dropzones for filters in Structure mode:
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
+* Between
 * Greater than
 * Greater than or equal
 * Equal
@@ -229,7 +230,15 @@ Here is an example of dropzones for filters in Structure mode:
 * Smaller than
 * Smaller than or equal
 
-You can select your filter criteria in the Date Filter settings:
+Here is an example of **Date filter** as **Between**:
+
+![Date filter between](attachments/data-grid-2/date-filter-between.png)
+
+{{% alert type="warning" %}}
+When **Date filter** is defined with **Between** it is not possible to type the date manually. It also has a clear button to clear the date range.
+{{% /alert %}}
+
+You can select your filter criteria in the **Date Filter** settings:
 
 ![Date filter settings](attachments/data-grid-2/date-filter-settings.png)
 
@@ -244,6 +253,10 @@ Here is an example of **Date Filter** with **Adjustable by user** defined as **N
 ![Example of Date filter with “Adjustable by user” set as No](attachments/data-grid-2/date-filter-not-adjustable.png)
 
 You can also define the default value of the widget which will be predefined as initial value when opening your data grid page.
+
+When **Default filter** is defined as **Between** these fields will appear to define the start and end dates:
+
+![Example of Date filter with “Default value” set as Between](attachments/data-grid-2/date-filter-between-settings.png)
 
 #### 7.1.1 Configurations
 

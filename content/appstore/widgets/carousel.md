@@ -12,6 +12,57 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 
 ### 1.1 Features
 
+* Supports widget as a content
+* Navigate to the next or previous image using arrows or dots
+* Autoplay your images
+* Set the timeout between each slide
+* Use the infinite loop to scroll the slides endlessly
+* Add animation when switching slides
+
+## 2 Usage
+
+The widget requires a context configured on the **Data Source** section in **General** tab. The possible data sources are described below.
+
+### 2.1 Data Source
+
+* Select **System.Image** type of entity as a data source
+* Place **Image** widget inside content and configure it as it is described in [Image](https://docs.mendix.com/appstore/widgets/image)
+
+## 3 Configuration
+
+The following sections will describe the different available widget properties and how to configure the widget using them.
+
+### 3.1 General tab
+
+* **Data source** - see [Data source](https://docs.mendix.com/refguide/data-sources) documentation for more details
+
+### 3.2 Display
+
+* **Pagination** - show pagination dots
+	* Default: **Yes**
+* **Navigation controls** - show arrows on left and right side
+	* Default: **Yes**
+* **Autoplay** - allow images to start sliding automatically when widget is ready
+	* Default: **Yes**
+* **Delay** - time interval between cycling an item
+	* Default: **1000ms**
+* **Infinite loop** - cycle between images endlessly
+	* Default: **Yes**
+* **Animation** - add fade animation on each cycle
+	* Default: **Yes**
+
+### 3.3 Events
+
+* **On click action** – executes an action when the carousel item is clicked
+
+## 4 Widgets Below Version 2.0.0
+
+## 1 Introduction
+
+The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
+
+### 1.1 Features
+
 * Supports different data sources:
 	* Set static images in Studio Pro
 	* Retrieve images from the database via XPath

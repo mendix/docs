@@ -5,85 +5,100 @@ parent: "metamodel-9"
 
 ## 9.11.0
 
+**Release date: February 16th, 2022**
+
 ### DomainModels
 
 #### MappedValue (Element)
+
 * We introduced the `creatableRuntime` property. 
 
 #### RemoteAssociationSource (Element)
-* We introduced the `creatableFromParentRuntime` property. 
-* We introduced the `creatableFromChildRuntime` property. 
+
+* We introduced the `creatableFromParentRuntime` and `creatableFromChildRuntime` properties.
 
 ### Projects
 
 #### Document (ModelUnit)
+
 * We made the `excluded` property public, which means you can use this without first loading the unit.
 
 ### Settings
 
 #### RuntimeSettings (Element)
+
 * We introduced the `bcryptCost` property. 
 
 ### Rest
 
 #### PublishedRestResource (Element)
-* We deleted the `updatable` property. Info: "Replaced by updateMode"
-* We deleted the `updateMicroflow` property. Info: "Replaced by updateMode"
-* We deleted the `insertable` property. Info: "Replaced by insertMode"
-* We deleted the `deletable` property. Info: "Replaced by deleteMode"
-* We introduced the `updateMode` property. Info: "The ChangeMode that defines the update functionality"
-* We introduced the `insertMode` property. Info: "The ChangeMode that defines the insert functionality"
-* We introduced the `deleteMode` property. Info: "The ChangeMode that defines the delete functionality"
+
+* We introduced the `updateMode` property for the `ChangeMode` that defines the update functionality.
+* We introduced the `insertMode` property for the `ChangeMode` that defines the insert functionality.
+* We introduced the `deleteMode` property for the `ChangeMode` that defines the delete functionality.
+* We deleted the `updatable` and `updateMicroflow` properties. This has been replaced by the `updateMode` property.
+* We deleted the `insertable` property. This has been replaced by the `insertMode` property.
+* We deleted the `deletable` property. This has been replaced by the `deleteMode` property.
 
 #### ChangeMode (Element)
-* We introduced this element. Info: "Details about insert, update or delete functionality"
+
+* We introduced this element for details about insert, update, or delete functionality.
 
 #### ChangeNotSupported (Element)
-* We introduced this element. Info: "The insert, update or delete functionality is not supported for this resource"
+
+* We introduced this element for the insert, update, or delete functionality that is not supported for this resource.
 
 #### ChangeSource (Element)
-* We introduced this element. Info: "Default insert, update or delete functionality that changes the source"
+
+* We introduced this element for the default insert, update, or delete functionality that changes the source,
 
 #### CallMicroflowToChange (Element)
-* We introduced this element. Info: "Call a microflow that implements the insert, update or delete functionality"
+
+* We introduced this element for calling a microflow that implements the insert, update, or delete functionality.
 
 #### ODataRemoteEntitySource (Element)
-* We introduced the `creatable` property. Info: "Can new objects be created?"
-* We introduced the `deletable` property. Info: "Can existing objects be deleted?"
+
+* We introduced the `creatable` property for answering whether new objects can be created.
+* We introduced the `deletable` property for answering whether existing objects can be deleted.
 
 #### ODataRemoteAssociationSource (Element)
-* We introduced the `creatableFromChild` property. Info: "When you create a child object, can you specify its associated parent?"
-* We introduced the `creatableFromParent` property. Info: "When you create a parent object, can you specify its associated child?"
+
+* We introduced the `creatableFromChild` property for when you create a child object and need to answer whether you can specify its associated parent.
+* We introduced the `creatableFromParent` property for when you create a parent object and need to answer whether you can specify its associated child.
 
 #### ODataMappedValue (Element)
-* We introduced the `representsStream` property. Info: "Does the attribute represent the stream?"
-* We introduced the `creatable` property. Info: "Can the attribute be sent when the object is new?"
+
+* We introduced the `representsStream` property for answering whether the attribute represents the stream.
+* We introduced the `creatable` property for answering whether the attribute can be sent when the object is new.
 
 ### WebServices
 
 #### DataMember (Element)
-* We introduced the `isWritable` property. Info: "Can this member possibly be changed through the exposed service?"
+
+* We introduced the `isWritable` property for answering whether it is possible to change this member through the exposed service.
 
 ### Pages
 
 #### ScrollContainer (Element)
+
 * We introduced the `nativeHideScrollbars` property. 
 
 ### Workflows
 
 #### Workflow (ModelUnit)
+
+* We introduced the `adminPage` property.
 * We deleted the `overviewPage` property. 
-* We introduced the `adminPage` property. 
 
 #### PageReference (Element)
+
 * We introduced this element. 
 
 #### PageParameterMapping (Element)
+
 * We introduced this element. 
 
 #### UserTask (Element)
-* We deleted the `page` property. 
-* We introduced the `taskPage` property. 
-* We introduced the `autoAssignSingleTargetUser` property. 
 
-This page has been generated automatically.
+* We introduced the `taskPage` and `autoAssignSingleTargetUser` properties. 
+* We deleted the `page` property. 

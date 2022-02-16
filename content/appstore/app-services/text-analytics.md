@@ -11,7 +11,7 @@ The [Text Analytics](https://marketplace.mendix.com/link/component/118412) app s
 
 With this app service, you do not have to build a text analytics application from scratch. All you need to do is drag and drop items and configure them.
 
-Here is an overview of what the TextAnalytics contains:
+Here is an overview of what the Text Analytics contains:
 
 | Item                                        | Name                                                         |
 | ------------------------------------------- | ------------------------------------------------------------ |
@@ -148,13 +148,13 @@ The **Response** entity is a conceptual entity that incorporates all the informa
 | `Text` | String | The word that was recognized in the source text. |
 | `BeginOffset` | Integer |The zero-based offset from the beginning of the source text to the first character in the word. |
 | `EndOffset` | Integer |The zero-based offset from the beginning of the source text to the last character in the word. |
-| `ConfidenceScore` | Decimal |The level of confidence that the TextAnalytics module has in the accuracy of the detection. |
+| `ConfidenceScore` | Decimal |The level of confidence that the Text Analytics module has in the accuracy of the detection. |
 
 ### 3.2 Constants {#constants}
 
-The **LicenseToken** constant is used to provide a valid TextAnalytics license token for the app that uses TextAnalytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As TextAnalytics is a commercial product and subject to a subscription fee, to use the TextAnalytics functionalities in a deployed app, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
+The **LicenseToken** constant is used to provide a valid Text Analytics license token for the app that uses Text Analytics to be successfully deployed to [Mendix Licensed Cloud Node](/developerportal/deploy/mendix-cloud-deploy) or your own environment. As Text Analytics is a commercial product and subject to a subscription fee, to use the Text Analytics functionalities in a deployed app, you need a valid license token, and you need to set the value of the **LicenseToken** constant to that license token in the deployment environment setting.
 
-However, if you only plan to try how TextAnalytics works  (meaning, build and run an app that uses TextAnalytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
+However, if you only plan to try how Text Analytics works  (meaning, build and run an app that uses Text Analytics locally in Studio Pro or deploy to a Mendix Free App environment), you do not need to subscribe to get a license token. Therefore, you do not need to set a value for the **LicenseToken** constant, just leave it empty.
 
 For details on how to get a license token, see the [Obtaining a LicenseToken to Deploy Your App](#obtain) section below.
 
@@ -285,6 +285,72 @@ The **PiiEntityType** is an enumeration that incorporates all the information of
 | MAC Address | MAC_Address |
 | All | All |
 
+## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
+
+Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
+
+### 4.1  Completing a Trial Order or Subscription Order & Download Mpk
+
+On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
+
+#### 4.1.1 Complete a trial order 
+
+1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
+
+2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+
+3. You will receive a Trial confirmation email with the trial details
+
+#### 4.1.2 Complete a subscription order
+
+1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
+
+2. Select a plan, fill in [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. You will see a order confirmation page upon successful order placement. 
+
+3. You will be then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+
+4. The Technical Contact receives an order confirmation email.
+
+### 4.2 Get a LicenseToken 
+
+Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
+
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+
+1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+2. Click **TextAnalytics** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+3. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+Note: Binding Keys and LicenseToken are used interchangeably across different app services but they are the same thing.
+
+### 4.3 Configuring the License Token 
+
+#### 4.3.1 Configuring the License Token in Studio Pro when running locally 
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
+4. Fill in the **Value** with the license token that you obtained.
+5. Click **OK** to save the settings.
+
+    ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
+
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
+
+#### 4.3.2 Configuring the License Token in Developer Portal when deploying to cloud
+
+Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+
+Before you deploy your app, configure the app **Constants** in the deployment package.
+
+![licensetoken-cloudportal](attachments/text-analytics/licensetoken-cloudportal.png)
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+
+![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)
+
 ## 4 Using Text Analytics
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up customizable text analytics actions quickly.
@@ -374,7 +440,7 @@ Use the **CreateSentimentDetector** microflow and the **DetectSentiment** nanofl
     10. In the text box, enter *$detector/TextAnalytics.Detector_SupportedLanguages/TextAnalytics.Language*.
     11.  Click **OK** to save the settings. 
 
-         ![getdetectorsupportedlanguages-microflow](attachments/translation/getdetectorsupportedlanguages-microflow.png)
+         ![getdetectorsupportedlanguages-microflow](attachments/text-analytics/getdetectorsupportedlanguages-microflow.png)
 
 3. Add a **Data view** widget to your page.
 4. Set the **CreateSentimentDetector** nanoflow as the data source of the **Data view** widget as follows:
@@ -643,47 +709,3 @@ Use the **CreateSyntaxDetector** microflow and the **DetectSyntax** nanoflow to 
 12.  Run your app locally. You can perform syntax detection directly in the browser:
 
      ![runlocally-syntax-detection](attachments/text-analytics/runlocally-syntax-detection.png)
-
-## 5 Obtaining a License Token to Deploy Your App {#obtain}
-
-Text Analytics is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
-
-### 5.1 Subscribing to Get a License Token
-
-1. On the [Text Analytics](https://marketplace.mendix.com/link/component/118412) page, click **Subscribe** to order a subscription.
-
-2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
-
-   For the trial, you do not need to fill in this information.
-
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
-
-### 5.2 Configuring the License Token for App Deployment
-
-#### 5.2.1 Configuring the LicenseToken in Studio Pro
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **TextAnalytics.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
-
-    ![licensetoken-inmendix](attachments/text-analytics/licensetoken-inmendix.png)
-
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 5.2.2 Configuring the License Token in Developer Portal
-
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
-
-Before you deploy your app, configure the app **Constants** in the deployment package
-
-![licensetoken-cloudportal](attachments/text-analytics/licensetoken-cloudportal.png)
-
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
-
-![licensetoken-envdetails](attachments/text-analytics/licensetoken-envdetails.png)

@@ -99,11 +99,77 @@ The **TranslatorText** microflow takes the **translator** object as an input par
 
 ![translatortext](attachments/translation/translatortext.png)
 
-## 4 Using Translation
+## 4 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
+
+Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
+
+### 4.1  Completing a Trial Order or Subscription Order & Download Mpk
+
+On the [Translation](https://marketplace.mendix.com/link/component/118411) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
+
+#### 4.1.1 Complete a trial order 
+
+1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
+
+2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+
+3. You will receive a Trial confirmation email with the trial details
+
+#### 4.1.2 Complete a subscription order
+
+1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
+
+2. Select a plan, fill in [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. You will see a order confirmation page upon successful order placement. 
+
+3. You will be then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+
+4. The Technical Contact receives an order confirmation email.
+
+### 4.2 Get a LicenseToken 
+
+Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
+
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+
+1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+2. Click **Translation** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+3. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+Note: Binding Keys and LicenseToken are used interchangeably across different app services but they are the same thing.
+
+### 4.3 Configuring the License Token 
+
+#### 4.3.1 Configuring the License Token in Studio Pro when running locally 
+
+1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
+2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
+3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
+4. Fill in the **Value** with the license token that you obtained.
+5. Click **OK** to save the settings.
+
+    ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
+
+6. When you finish building the app, click **Run** to deploy your app to the cloud.
+
+#### 4.3.2 Configuring the License Token in Developer Portal when deploying to cloud
+
+Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
+
+Before you deploy your app, configure the app **Constants** in the deployment package.
+
+![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
+
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
+
+![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)
+
+## 5 Using Translation
 
  When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up translation quickly.
 
-### 4.1 Performing Text Translation in Your Browser
+### 5.1 Performing Text Translation in Your Browser
 
 Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to perform text translation. Follow these steps to configure this text translation:
 
@@ -196,47 +262,3 @@ Use the **CreateTranslator** microflow and the **TranslateText** nanoflow to per
 19.  Run your app locally. You can perform text translation directly in the browser:
 
      ![runlocally-translation](attachments/translation/runlocally-translation.png)
-
-## 5 Obtaining a LicenseToken to Deploy Your App {#obtain}
-
-Translation is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
-
-### 5.1 Subscribing to Get a License Token
-
-1. On the [Translation](https://marketplace.mendix.com/link/component/118411) page, click **Subscribe** to order a subscription.
-
-2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
-
-   For the trial, you do not need to fill in this information.
-
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
-
-4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
-
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
-
-### 5.2 Configuring the License Token for App Deployment
-
-#### 5.2.1 Configuring the License Token in Studio Pro
-
-1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
-2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
-3. On the **Constants** tab, create a new constant with the predefined constant **Translation.LicenseToken**.
-4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
-
-    ![licensetoken-inmendix](attachments/translation/licensetoken-inmendix.png)
-
-6. When you finish building the app, click **Run** to deploy your app to the cloud.
-
-#### 5.2.2 Configuring the License Token in Developer Portal
-
-Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
-
-Before you deploy your app, configure the app **Constants** in the deployment package
-
-![licensetoken-cloudportal](attachments/translation/licensetoken-cloudportal.png)
-
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **Model Options** tab and restart the app:
-
-![licensetoken-envdetails](attachments/translation/licensetoken-envdetails.png)

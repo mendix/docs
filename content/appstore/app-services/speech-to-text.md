@@ -118,7 +118,7 @@ The only core widget required is the **Microphone** widget. You can make the fol
 
 * **General** tab
    * **Enable language selection** – when set to **Yes**, your users can select different languages in your app
-   * **language**  – sets the default language (if empty, the default language is US-English. If not empty, set language value like 'en-US')
+   * **language**  – sets the default language (if empty, the default language is US-English. If not empty, set language value like `en-US`)
 * **Events** tab
   * **On transcript** – by binding a string attribute to the **transcript** property, you can use this attribute as a voice input parameter sent to the back-end service and set a custom action that is executed when the transcript is received
      * **transcript**  – sets a string attribute as the voice input parameter
@@ -135,39 +135,61 @@ The only core widget required is the **Microphone** widget. You can make the fol
    *  **Arguments** – the captured arguments in a transcript as a comma-separated list that are passed to **Actions**
    *  **Fallback message** – the message to notify users when no action is matched
 
-## 5 Obtaining the License Token to use the service in your app {#obtain}
+## 5 Obtaining the service mpk and License Token to use the service in Your App {#obtain}
 
-Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this product in an app, you need to provide a valid **LicenseToken** as an environment variable in the deployment setting.
+Speech To Text is a premium Mendix product that is subject to a purchase and subscription fee. To successfully use this app service in an app, you need to complete either a trial order or a subscription order to get access to download the service mpk and get a valid **LicenseToken**. Then import the mpk and configure **LicenseToken** as an environment variable in the settings of your app. Follow below steps to get the mpk, license token, import the mpk and configure **LicenseToken** in your app.
 
-### 5.1  Subscribing to Get a License Token
+### 5.1  Completing a Trial Order or Subscription Order & Download Mpk
 
-1. On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, click **Subscribe** to order a subscription.
+On the [Speech To Text](https://marketplace.mendix.com/link/component/118408) page, you can see **Try for free** and **Subscribe** button.  **Try for free** will lead you to create a trial order, it grants you one month free access to the service, it's a simple flow.  **Subscribe** button will lead you to create a subscription order, it is more complex as it requires you to select plans, fill in billing information and pay to complete subscription. Based on your use case, click either button to complete an order, then you will get access to the service mpk and **LicenseToken**. 
 
-2. Fill in the **Number of End Users**, [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. The Technical Contact receives an order confirmation email.
+#### 5.1.1 Complete a trial order 
 
-   For the trial, you do not need to fill in this information.
+1. Click **Try for free** button, you will be directed to the confirmation page, by ticking "Agree to Terms & Conditions" and clicking **Enable trial**, you will see a page saying your Trial order is confirmed, meaning you have one month access to the service.
 
-3. Click the link in the order confirmation email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+2. You will then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
 
-4. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+3. You will receive a Trial confirmation email with the trial details
 
-5. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+#### 5.1.2 Complete a subscription order
 
-### 5.2 Configuring the License Token for App Deployment
+1. Click click **Subscribe** to order a subscription. you will be direct to an order confirmation page.
 
-#### 5.2.1 Configuring the License Token in Studio Pro
+2. Select a plan, fill in [Technical Contact](/developerportal/collaborate/app-roles#technical-contact) information (**First Name**, **Last Name**, **Email Address**), billing account information, and other required information, and then place the order. You will see a order confirmation page upon successful order placement. 
+
+3. You will be then be redirected to product page automatically, if not, go to product page again, you will see **Download** button is available for you to download the mpk. 
+
+4. The Technical Contact receives an order confirmation email.
+
+### 5.2 Get a LicenseToken 
+
+Now you have receive a Trial/Subscription confirmation email and can see the **Download** button download the mpk. Next step is to get a LicenseToken.
+
+Upon successful trial/subscription order, it takes a few minutes to provision your service instance. When you service instance is ready, you or the technical contact will receive a second email that notifying your service is ready to be used. When you or the technical contact receive this email: 
+
+1. Click the Subscription Management Overview link in the provisioning email to go to the Marketplace [Subscriptions](/appstore/general/app-store-overview#subscriptions) page and log in there. The **Subscriptions** page gives an overview of all the subscriptions of your organization.
+
+2. Click **Speech To Text** to open the [service management dashboard](/appstore/general/app-store-overview#service-management-dashboard).
+
+3. Follow the instructions in the [Creating Binding Keys](/appstore/general/app-store-overview#creating-binding-keys) section in the *Marketplace Overview* to create a license token.
+
+Note: Binding Keys and LicenseToken are used interchangeably across different app services but they are the same thing.
+
+### 5.3 Configuring the License Token 
+
+#### 5.3.1 Configuring the License Token in Studio Pro when running locally 
 
 1. In the App Explorer, go to **Settings** to open the [App Settings](/refguide/project-settings) dialog box.
 2. On the **Configurations** tab, click **Edit** to open the **Edit Configuration** dialog box.
 3. On the **Constants** tab, create a new constant with the predefined constant **SpeechToText.LicenseToken**.
 4. Fill in the **Value** with the license token that you obtained.
-5.  Click **OK** to save the settings.
+5. Click **OK** to save the settings.
 
     ![licensetoken-inmendix](attachments/speech-to-text/licensetoken-inmendix.png)
 
 6. When you finish building the app, click **Run** to deploy your app to the cloud.
 
-#### 5.2.2 Configuring the License Token in Developer Portal
+#### 5.3.2 Configuring the License Token in Developer Portal when deploying to cloud
 
 Alternatively, you can add or update LicenseToken as a constant in the [Developer Portal](/developerportal/deploy/environments-details).
 
@@ -181,7 +203,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 ## 6 Using Speech To Text
 
-You can use Speech To Text to convert voice to text and then trigger a customizable action.
+You can use Speech To Text to convert voice into text and then trigger a customizable action.
 
 When you start from a blank app template in Mendix Studio Pro, follow the steps below to set up custom actions quickly.
 
@@ -241,15 +263,15 @@ For example, you can set up the **Action** to append transcription result of eac
 
 By binding an attribute to the **Error** event, the app can pick up an error raised by the back-end service.
 
-**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. When there is a problem with converting voice into text in a running app, the error event is triggered, and the error information is populated to this **Error** attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
+**Error** takes a string attribute. You can define an attribute and bind this attribute to **Error**. In a running app, when speech to text transcription fails, error event will be triggered, the error information will be populated to this Error attribute. The app can obtain this error message and trigger a custom action. You can select the custom **Action** from a list of actions.
 
 ![microphone-onerror-sample](attachments/speech-to-text/microphone-onerror-sample.png) 
 
-For example, you can set up the **Action** to make the app show a pop-up window to show error details to users. In such a running app, when speech to text transcription fails, error event will be triggered, the error information will be populated to this Error attribute.
+For example, you can set up the Action to make the app show a pop-up window to show error details to users.
 
 ![microphone-event-onerror](attachments/speech-to-text/microphone-event-onerror.jpg)
 
-### 6.3 Customizing Speech-Triggered Actions {#actions}
+### 6.3 Add Speech-Triggered Actions to your App {#actions}
 
 This app service allows you to set up rules of speech recognition that trigger actions. In Microphone widget, go to the **Voice to Action** tab. For each action, you can set up an **Utterance**, an **Action** and a **Voice Feedback**. If the transcript received by the **Microphone** widget matches an utterance that you have specified, the app will run the action and give users the voice feedback.
 
@@ -259,7 +281,7 @@ You can use **New**, **Delete**, and **Edit** to manage all the **Actions**.
 
 **Utterance** can be a string template following natural language syntax or a valid JavaScript regular expression. It is self-defined rules used for matching the transcripts on speech conversion. Some internal trie filters are implemented to extract the key point of short sentences. 
 
-For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set.
+For instance, you can set **Utterance** as `{rotate|move} the model {0:deg} degree around {1:x|y|z} direction`. Then if you say `rotate model 35 degree around x direction`, the **Microphone** widget will match the transcript to this utterance and trigger an action that you set. In Utterance, you can setup multiple parameters like this `{order: name}` to make it more flexible, just like the params you are using in JavaScript.
 
 #### 6.3.2 Actions
 

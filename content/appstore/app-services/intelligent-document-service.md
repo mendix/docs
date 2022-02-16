@@ -89,7 +89,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
 
         ![Document model training app login page](attachments/intelligent-document-service/document-model-training-app.png)
 
-    5. Log into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
+    5. Sign into the [Document Model Training](https://datacapture-appservices.mendixcloud.com/login.html) application using your Mendix account.
 2.  Click **Environment** to show the **Existing Models** list.
 
     ![Existing models list](attachments/intelligent-document-service/existing-models-list.png)
@@ -105,7 +105,7 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     {{% alert type="info" %}} The model name should not exceed 55 characters. You can only use characters (a-z, A-Z), numbers (0-9), and underscore (\_). {{% /alert %}}
 
 5. Wait until the **Import File** page opens.
-6.  Drag sample images in JPG or JPEG format into the box where it says **Drag & Drop Image Here**. You can also click the box and select the files.
+6.  Drag sample images in JPG or JPEG format into the box where it says **Drag image files here**. You can also click **Browse** and select the files.
 
     ![Import File page](attachments/intelligent-document-service/import-file-page.png)
     
@@ -116,13 +116,13 @@ To use the Intelligent Document Service, first [train a model](#document-model-t
     ![Add Marker and IDs page](attachments/intelligent-document-service/add-marker-and-ids-image-unmarked.png)
 
 8.  To mark an image, perform the following steps:
-    1. Click **Add Markers**. The **Mark Document** dialog box opens.
+    1. Click **Add Marker**. The **Mark Document** dialog box opens.
     
-    2.  In the **Choose fields to mark** pane, select a field of interest from which some meaningful data needs to be extracted.
+    2.  In the **Mark the fields to be extracted** pane, select a field of interest from which some meaningful data needs to be extracted.
     
         ![Mark Document page](attachments/intelligent-document-service/mark-document-dialog-box.png)
         
-    3.  On the right side, enter a **Marker ID** that is used for the area that you selected. 
+    3.  On the right side, enter a **Marker Id** that is used for the area that you selected. 
     
     4. Select the **Marker Type**. It can be **Text** or **Checkmark**.
     
@@ -153,7 +153,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
     2.  Click **Environment** to show the **Existing Models** list.
     3.  Select your trained model. Make sure that the **Status** of the model is **Published**. Note down the **Model Id**. You will need it when you [extract data with the trained model ](#extraction-activity).
     4.  Click **Download JSON Structure**. The **Generate JSON Structure** dialog box opens.
-    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag & Drop Image Here**.
+    5.  Drag one of the sample images, which you used to train the document model, into the box where it says **Drag image files here**. You can also click **Browse** and select the file.
 
         ![Sample Extraction dialog box](attachments/intelligent-document-service/sample-extraction-dialog-box.png)
 

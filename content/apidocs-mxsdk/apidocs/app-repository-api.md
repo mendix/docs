@@ -10,7 +10,7 @@ The App Repository API enables retrieving information (branches, commits) of app
 
 ## 2 Base URL
 
-The base URL for all App Repository API endpoints is:
+Below is the base URL for all App Repository API endpoints:
 
 ```
 https://repository.api.mendix.com/v1
@@ -18,14 +18,14 @@ https://repository.api.mendix.com/v1
 
 ## 3 Endpoints
 
-All available endpoints are:
+All available endpoints are shown in the following table:
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
-| GET | [`/repositories/<appId>/info`](#retrieve-repository-info) | Get repository information for an app |
-| GET | [`/repositories/<appId>/branches`](#retrieve-branches) | Get a list of branches of a repository |
-| GET | [`/repositories/<appId>/branches/<branchName>`](#retrieve-branch) | Get information of a branch of a repository |
-| GET | [`/repositories/<appId>/branches/<branchName>/commits`](#retrieve-commits) | Get a list of commits of a branch of a repository |
+| GET | [`/repositories/<appId>/info`](#retrieve-repository-info) | Gets repository information for an app |
+| GET | [`/repositories/<appId>/branches`](#retrieve-branches) | Gets a list of branches of a repository |
+| GET | [`/repositories/<appId>/branches/<branchName>`](#retrieve-branch) | Gets information of a branch of a repository |
+| GET | [`/repositories/<appId>/branches/<branchName>/commits`](#retrieve-commits) | Gets a list of commits of a branch of a repository |
 
 ## 4 Authentication
 
@@ -33,11 +33,12 @@ The App Repository API requires a Personal Access Token (PAT) as authentication 
 
 You can manage your Mendix personal access tokens via [Warden](https://warden.mendix.com/) as follows:
 
-1. Click **Add**.
-2. Enter the token **Name**.
-3. Choose at least this scope: `mx:modelrepository:repo:read`.
-4. Click **Create**. A pop-up window opens and shows the Personal Access Token.
-5. Keep the token safe. It is only displayed once. After you close the pop-up window, you cannot see it anymore.
+1. Go to [Warden](https://warden.mendix.com/).
+2. Click **Add**.
+3. Enter the **Name** of the token.
+4. Choose at least this scope: `mx:modelrepository:repo:read`.
+5. Click **Create**. A pop-up window opens and shows the Personal Access Token.
+6. Keep the token safe. It is only displayed once. After you close the pop-up window, you cannot see it anymore.
 
 ## 5 Error response
 
@@ -68,7 +69,7 @@ Payload Example:
 
 ### 5.2 Error Codes
 
-The following errors might be returned by the service. In general, 4xx errors indicate that something was wrong with the client’s request, and 5xx errors indicate that something went wrong at the server side.
+The service can return the following errors. In general, 4xx errors indicate that something was wrong with the client’s request, and 5xx errors indicate that something went wrong at the server side.
 
 | HTTP Status | Title | Detail |
 | --- | --- | --- |

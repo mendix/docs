@@ -28,10 +28,11 @@ We are always curious about and grateful for your feedback. The way you communic
 
 The applicable level of service for Mendix-supported Marketplace content is equal to the Mendix SLA you have acquired. In other words, the same SLA conditions apply to support on Marketplace content.
 
-This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) h i
-to be followed.
+This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
-{{% alert type="warning" %}} Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported. {{% /alert %}}
+{{% alert type="warning" %}}
+Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported.
+{% /alert %}}
 
 ### 2.2 Deprecated Support Category
 

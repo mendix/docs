@@ -88,6 +88,7 @@ All the hot keys defined in previous documentation work here as well
 * Format selected text
 * HTML output of formatted text
 * Show editor options either on a toolbar or as a bubble
+* Use the custom option to select which editing options you want to show
 * Input and display text is sanitized
 
 ## 2 Configuration

@@ -185,7 +185,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
     ![intelligent-document-microflow](attachments/intelligent-document-service/intelligent-document-microflow.png)
 
-2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
+2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
 3.  Double-click the **Intelligent Document Service** activity to open the dialog box.
 
     ![Intelligent Document Service dialog box](attachments/intelligent-document-service/intelligent-document-service-dialog-box.png)

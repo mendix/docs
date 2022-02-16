@@ -123,7 +123,7 @@ You need to use an [import mapping](/refguide/mapping-documents#import-mappings)
 
     ![receipt-processing-microflow](attachments/receipt-processing/receipt-processing-microflow.png)
 
-2. Create a list of image that inherits from `System.Image`. Images where data are extracted should be passed as a list, as shown in the microflow above.
+2. Create a list of image that inherits from `System.Image`. Images from where data are extracted should be passed as a list, as shown in the microflow above.
 3.  Double-click the **Receipt Processing** activity to open the **Receipt Processing** dialog box.
 
     ![Receipt Processing](attachments/receipt-processing/receipt-processing-dialog-box.png)

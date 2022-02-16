@@ -16,7 +16,7 @@ Support for Marketplace content is determined by the content support category an
 
 | Category | Description |
 | --- | --- |
-| Platform | Mendix supports all the content in this category when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
+| Platform | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Gold**, or **Platinum**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | Deprecated | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
 | Community | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
 
@@ -28,7 +28,10 @@ We are always curious about and grateful for your feedback. The way you communic
 
 The applicable level of service for Mendix-supported Marketplace content is equal to the Mendix SLA you have acquired. In other words, the same SLA conditions apply to support on Marketplace content.
 
-This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
+This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) h i
+to be followed.
+
+{{% alert type="warning" %}} Content in this support category is supported as-is. When changing the content, the module will no longer be Platform-supported. {{% /alert %}}
 
 ### 2.2 Deprecated Support Category
 
